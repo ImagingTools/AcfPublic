@@ -47,10 +47,10 @@
 <a name="l00027"></a>00027        I_END_COMPONENT
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029        <span class="comment">// reimplemented (iqtgui::IDialog)</span>
-<a name="l00030"></a>00030        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_dialog_gui_comp.html#85c359cdd5d9d9276b1b6a081c42cfa8" title="Execute dialog instance.">Execute</a>();
+<a name="l00030"></a>00030        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_dialog_gui_comp.html#3c1d66bd2f6c166bb8f8a32194824cd9" title="Execute dialog instance.">ExecuteDialog</a>(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>* parentPtr);
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032 protected:
-<a name="l00033"></a>00033        virtual iqtgui::<a class="code" href="classiqtgui_1_1_c_gui_component_dialog.html" title="Class to display an ACF GUI component in a dialog.">CGuiComponentDialog</a>* <a class="code" href="classiqtgui_1_1_c_dialog_gui_comp.html#936022248866b1c6a277977e3a04efaa">CreateComponentDialog</a>(<span class="keywordtype">int</span> buttons) const;
+<a name="l00033"></a>00033        virtual iqtgui::<a class="code" href="classiqtgui_1_1_c_gui_component_dialog.html" title="Class to display an ACF GUI component in a dialog.">CGuiComponentDialog</a>* <a class="code" href="classiqtgui_1_1_c_dialog_gui_comp.html#fb30a131b9ab242f3f01d1aac318343b">CreateComponentDialog</a>(<span class="keywordtype">int</span> buttons, <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>* parentPtr) const;
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035 private:
 <a name="l00036"></a>00036        I_REF(iqtgui::<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>, m_guiCompPtr);

@@ -65,7 +65,7 @@ protected:
 	// reimplemented (CGuiComponentBase)
 	virtual void OnGuiCreated();
 	virtual void OnGuiDestroyed();
-	virtual void OnRetranslate();
+	virtual void OnGuiRetranslate();
 
 private:
 	I_REF(iqtgui::IGuiObject, m_slaveGuiCompPtr);

@@ -57,10 +57,9 @@ Inheritance diagram for iprm::IParamsManager:</div>
  }</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bitwise coded flags used to find out supported features.  <a href="classiprm_1_1_i_params_manager.html#828fad5fe35ddd65d23b2e7e49af7bb3">More...</a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_params_manager.html#46124baa6dd501af2dd542770efe4b0b">ChangeFlags</a> { <a class="el" href="classiprm_1_1_i_params_manager.html#46124baa6dd501af2dd542770efe4b0b2612aea3e70990ebed2b3b1702648490">CF_SET_INSERTED</a> =  0x1000, 
-<a class="el" href="classiprm_1_1_i_params_manager.html#46124baa6dd501af2dd542770efe4b0bd74712f5bcfea9abd8323f46d5e3b779">CF_SET_REMOVED</a> =  0x2000, 
-<a class="el" href="classiprm_1_1_i_params_manager.html#46124baa6dd501af2dd542770efe4b0bc101d999e270c31d7fb7bf4dee03ddb7">CF_SET_NAME_CHANGED</a> =  0x4000, 
-<a class="el" href="classiprm_1_1_i_params_manager.html#46124baa6dd501af2dd542770efe4b0b116e526dc65fefbf42c2eae64d8dcc57">CF_SELECTION_CHANGED</a> =  0x8000
+<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_params_manager.html#46124baa6dd501af2dd542770efe4b0b">ChangeFlags</a> { <a class="el" href="classiprm_1_1_i_params_manager.html#46124baa6dd501af2dd542770efe4b0b2612aea3e70990ebed2b3b1702648490">CF_SET_INSERTED</a> =  1 &lt;&lt; 14, 
+<a class="el" href="classiprm_1_1_i_params_manager.html#46124baa6dd501af2dd542770efe4b0bd74712f5bcfea9abd8323f46d5e3b779">CF_SET_REMOVED</a> =  1 &lt;&lt; 15, 
+<a class="el" href="classiprm_1_1_i_params_manager.html#46124baa6dd501af2dd542770efe4b0bc101d999e270c31d7fb7bf4dee03ddb7">CF_SET_NAME_CHANGED</a> =  1 &lt;&lt; 16
  }</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Possible changes of the manager's data model.  <a href="classiprm_1_1_i_params_manager.html#46124baa6dd501af2dd542770efe4b0b">More...</a><br></td></tr>
@@ -113,12 +112,10 @@ Possible changes of the manager's data model.
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" name="46124baa6dd501af2dd542770efe4b0bc101d999e270c31d7fb7bf4dee03ddb7"></a><!-- doxytag: member="CF_SET_NAME_CHANGED" ref="46124baa6dd501af2dd542770efe4b0bc101d999e270c31d7fb7bf4dee03ddb7" args="" -->CF_SET_NAME_CHANGED</em>&nbsp;</td><td>
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" name="46124baa6dd501af2dd542770efe4b0b116e526dc65fefbf42c2eae64d8dcc57"></a><!-- doxytag: member="CF_SELECTION_CHANGED" ref="46124baa6dd501af2dd542770efe4b0b116e526dc65fefbf42c2eae64d8dcc57" args="" -->CF_SELECTION_CHANGED</em>&nbsp;</td><td>
-</td></tr>
 </table>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#cd46630510ac7a16b6c6e73a7db43fb9">istd::IChangeable</a>.</p>
+<p>Reimplemented from <a class="el" href="classiprm_1_1_i_selection_param.html#092f5d4176d748b596be4ec0464827b3">iprm::ISelectionParam</a>.</p>
 
 <p>Definition at line <a class="el" href="_i_params_manager_8h_source.html#l00036">36</a> of file <a class="el" href="_i_params_manager_8h_source.html">IParamsManager.h</a>.</p>
 

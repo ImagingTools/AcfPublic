@@ -60,12 +60,12 @@ Inheritance diagram for iqtproc::CProgressManagerGuiComp:</div>
 <a class="el" href="classiqtgui_1_1_t_designer_gui_comp_base.html">iqtgui::TDesignerGuiCompBase</a><br class="typebreak">
 &lt; Ui::CProgressManagerGuiComp &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#0cd5b60469a5ab60db07d72102bd651a">BaseClass</a></td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <br class="typebreak">
+<a class="el" href="classiproc_1_1_c_delegated_progress_manager.html">iproc::CDelegatedProgressManager</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#d6815922b5d4715aea528dc65361c3e9">BaseClass2</a></td></tr>
+
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#43bb1afb50e87ae9c26cabb8a60dafc3">CProgressManagerGuiComp</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#36c1f395defe8b209b897c8a8e495e2e">IsCanceled</a> (int sessionId) const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if this processing operation should be canceled.  <a href="#36c1f395defe8b209b897c8a8e495e2e"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#2e8b4781b8198567f7f945c5ff03716f">on_CancelButton_clicked</a> ()</td></tr>
 
@@ -74,6 +74,13 @@ Inheritance diagram for iqtproc::CProgressManagerGuiComp:</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#ec08aedd2e1f6c144434f6afd335d8c5">UpdateProgressBar</a> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#386dbd37e5ed0db0436231d1ca3b7957">CProgressManagerGuiComp::OnCancelable</a> (bool cancelState)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#2d856c459f8af7b2a598a20bcbc5866a">CProgressManagerGuiComp::BeginProgressSession</a> (const std::string &amp;progressId, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;description, bool isCancelable)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#36c1f395defe8b209b897c8a8e495e2e">IsCanceled</a> (int sessionId) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if this processing operation should be canceled.  <a href="#36c1f395defe8b209b897c8a8e495e2e"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#08fd58045b2383be0c3703749cdac3a8">OnEndChanges</a> (int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *changeParamsPtr)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Callback function for end change event.  <a href="#08fd58045b2383be0c3703749cdac3a8"></a><br></td></tr>
@@ -104,6 +111,23 @@ Inheritance diagram for iqtproc::CProgressManagerGuiComp:</div>
 
 </div>
 </div><p>
+<a class="anchor" name="d6815922b5d4715aea528dc65361c3e9"></a><!-- doxytag: member="iqtproc::CProgressManagerGuiComp::BaseClass2" ref="d6815922b5d4715aea528dc65361c3e9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classiproc_1_1_c_delegated_progress_manager.html">iproc::CDelegatedProgressManager</a> <a class="el" href="classiproc_1_1_c_delegated_progress_manager.html">iqtproc::CProgressManagerGuiComp::BaseClass2</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>Definition at line <a class="el" href="_c_progress_manager_gui_comp_8h_source.html#l00025">25</a> of file <a class="el" href="_c_progress_manager_gui_comp_8h_source.html">CProgressManagerGuiComp.h</a>.</p>
+
+</div>
+</div><p>
 <hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="43bb1afb50e87ae9c26cabb8a60dafc3"></a><!-- doxytag: member="iqtproc::CProgressManagerGuiComp::CProgressManagerGuiComp" ref="43bb1afb50e87ae9c26cabb8a60dafc3" args="()" -->
 <div class="memitem">
@@ -125,6 +149,61 @@ Inheritance diagram for iqtproc::CProgressManagerGuiComp:</div>
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="2d856c459f8af7b2a598a20bcbc5866a"></a><!-- doxytag: member="iqtproc::CProgressManagerGuiComp::CProgressManagerGuiComp::BeginProgressSession" ref="2d856c459f8af7b2a598a20bcbc5866a" args="(const std::string &amp;progressId, const istd::CString &amp;description, bool isCancelable)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iqtproc::CProgressManagerGuiComp::CProgressManagerGuiComp::BeginProgressSession           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>progressId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>description</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>isCancelable</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="386dbd37e5ed0db0436231d1ca3b7957"></a><!-- doxytag: member="iqtproc::CProgressManagerGuiComp::CProgressManagerGuiComp::OnCancelable" ref="386dbd37e5ed0db0436231d1ca3b7957" args="(bool cancelState)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqtproc::CProgressManagerGuiComp::CProgressManagerGuiComp::OnCancelable           </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>cancelState</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
 <a class="anchor" name="36c1f395defe8b209b897c8a8e495e2e"></a><!-- doxytag: member="iqtproc::CProgressManagerGuiComp::IsCanceled" ref="36c1f395defe8b209b897c8a8e495e2e" args="(int sessionId) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +214,7 @@ Inheritance diagram for iqtproc::CProgressManagerGuiComp:</div>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>sessionId</em>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
+          <td> const<code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>

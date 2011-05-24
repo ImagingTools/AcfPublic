@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef iqtproc_CAcquisitonProcessorGuiComp_included
-#define iqtproc_CAcquisitonProcessorGuiComp_included
+#ifndef iqtproc_CProcessorControlGuiComp_included
+#define iqtproc_CProcessorControlGuiComp_included
 
 
 // Qt includes
@@ -50,7 +50,7 @@ namespace iqtproc
 {
 
 
-class CProcessorControlGuiComp: public iqtgui::TDesignerGuiCompBase<Ui::CProcessorControlGuiComp, QWidget>
+class CProcessorControlGuiComp: public iqtgui::TDesignerGuiCompBase<Ui::CProcessorControlGuiComp>
 {
 	Q_OBJECT
 
@@ -66,7 +66,7 @@ public:
 		I_ASSIGN(m_paramsSetModelCompPtr, "ParamsSet", "Parameters set", false, "ParamsSet");
 		I_ASSIGN(m_paramsLoaderCompPtr, "ParamsLoader", "Loads and saves parameters from and to file", false, "ParamsLoader");
 		I_ASSIGN(m_paramsSetGuiCompPtr, "ParamsSetGui", "Shows parameter set", false, "ParamsSetGui");
-		I_ASSIGN(m_paramsSetObserverCompPtr, "ParamsSetGui", "Shows parameter set", false, "ParamsSetGui");
+		I_ASSIGN_TO(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false);
 		I_ASSIGN(m_liveIntervalAttrPtr, "LiveInterval", "Interval (in seconds) of acquisition in continuous mode", true, 0.04);
 	I_END_COMPONENT
 
@@ -114,6 +114,6 @@ private:
 } // namespace iqtproc
 
 
-#endif // !iqtproc_CAcquisitonProcessorGuiComp_included
+#endif // !iqtproc_CProcessorControlGuiComp_included
 
 

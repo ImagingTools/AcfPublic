@@ -56,7 +56,7 @@ int CComposedLoaderComp::LoadFromFile(istd::IChangeable& data, const istd::CStri
 	int slavesCount = m_slaveLoadersCompPtr.GetCount();
 	for (int i = 0; i < slavesCount; ++i){
 		iser::IFileLoader* loaderPtr = m_slaveLoadersCompPtr[i];
-		if ((loaderPtr != NULL) && loaderPtr->IsOperationSupported(&data, &filePath, QF_NO_SAVING | QF_NAMED_ONLY)){
+		if ((loaderPtr != NULL) && loaderPtr->IsOperationSupported(&data, &filePath, QF_NO_SAVING | QF_FILE_ONLY)){
 			return loaderPtr->LoadFromFile(data, filePath);
 		}
 	}
@@ -70,7 +70,7 @@ int CComposedLoaderComp::SaveToFile(const istd::IChangeable& data, const istd::C
 	int slavesCount = m_slaveLoadersCompPtr.GetCount();
 	for (int i = 0; i < slavesCount; ++i){
 		iser::IFileLoader* loaderPtr = m_slaveLoadersCompPtr[i];
-		if ((loaderPtr != NULL) && loaderPtr->IsOperationSupported(&data, &filePath, QF_NO_LOADING | QF_NAMED_ONLY)){
+		if ((loaderPtr != NULL) && loaderPtr->IsOperationSupported(&data, &filePath, QF_NO_LOADING | QF_FILE_ONLY)){
 			return loaderPtr->SaveToFile(data, filePath);
 		}
 	}

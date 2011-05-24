@@ -24,9 +24,6 @@
 #define idoc_IDocumentTemplate_included
 
 
-#include "idoc/idoc.h"
-
-
 #include "istd/IChangeable.h"
 #include "istd/TIFactory.h"
 #include "istd/CString.h"
@@ -37,6 +34,7 @@
 #include "imod/IUndoManager.h"
 
 #include "ibase/ICommand.h"
+
 #include "idoc/IDocumentStateComparator.h"
 
 

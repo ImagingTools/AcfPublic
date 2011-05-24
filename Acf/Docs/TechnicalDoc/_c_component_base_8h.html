@@ -38,6 +38,7 @@
 <code>#include &quot;<a class="el" href="_t_attribute_static_info_8h_source.html">icomp/TAttributeStaticInfo.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_t_component_static_info_8h_source.html">icomp/TComponentStaticInfo.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_c_base_component_static_info_8h_source.html">icomp/CBaseComponentStaticInfo.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="_c_related_info_registrator_8h_source.html">icomp/CRelatedInfoRegistrator.h</a>&quot;</code><br>
 
 <p>
 <a href="_c_component_base_8h_source.html">Go to the source code of this file.</a><table border="0" cellpadding="0" cellspacing="0">
@@ -65,6 +66,9 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_component_base_8h.html#96fedf19d00e2efd7073095a60e354ff">I_TASSIGN_MULTI_BASE</a>(member, id, description, isObligatory, defaultValue)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Used to assign value for multiply parameters with template type (attributes, references or factories).  <a href="#96fedf19d00e2efd7073095a60e354ff"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_component_base_8h.html#07c8bc559dbc0c8403f6c24cf374fcb7">I_ASSIGN_TO</a>(member, baseAttribute, isObligatory)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Used to assign value for overloaded attributes or references.  <a href="#07c8bc559dbc0c8403f6c24cf374fcb7"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Functions</h2></td></tr>
 <tr><td class="memTemplParams" nowrap colspan="2">template&lt;class Dest &gt; </td></tr>
 <tr><td class="memTemplItemLeft" nowrap align="right" valign="top">Dest *&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_c_component_base_8h.html#75ac4c70f3db27294a53b02f68d62306">CompCastPtr</a> (<a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *objectPtr)</td></tr>
@@ -148,6 +152,40 @@
 <p>
 
 <p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00267">267</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="07c8bc559dbc0c8403f6c24cf374fcb7"></a><!-- doxytag: member="CComponentBase.h::I_ASSIGN_TO" ref="07c8bc559dbc0c8403f6c24cf374fcb7" args="(member, baseAttribute, isObligatory)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I_ASSIGN_TO          </td>
+          <td>(</td>
+          <td class="paramtype">member,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">baseAttribute,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">isObligatory&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+<b>Value:</b><div class="fragment"><pre class="fragment"><span class="keyword">static</span> <a class="code" href="classicomp_1_1_c_related_info_registrator.html">icomp::CRelatedInfoRegistrator</a> member##_Info(baseAttribute##_Info, <a class="code" href="classicomp_1_1_i_component_static_info.html#d81479e87967938dbcfdf09433c265eba60063b116f080e873800279d5429314" title="ID of meta group storing list of supported interfaces.">icomp::IComponentStaticInfo::MGI_INTERFACES</a>, istd::CClassInfo::GetInfo&lt;member##_Type::InterfaceType&gt;().GetName(), isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL);\
+       <span class="keywordflow">if</span> (componentPtr != <a class="code" href="istd_8h.html#070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){\
+              componentPtr-&gt;member.Init(componentPtr, baseAttribute##_Info);\
+       }
+</pre></div>Used to assign value for overloaded attributes or references. 
+<p>
+
+<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00373">373</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
 
 </div>
 </div><p>
@@ -250,7 +288,7 @@ Cast to specified interface trying to use component interface query.
 <p>
 It extends standard dynamic_cast functinality when you use composed components.<p>
 This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
-<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00400">400</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00409">409</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
 
 <p>References <a class="el" href="classicomp_1_1_i_component.html#62a9d2071e6afb0965827cb908c7a1ba">icomp::IComponent::GetInterface()</a>, <a class="el" href="classicomp_1_1_i_component.html#cd7fb900f29bdf88b53a35faa86f9e95">icomp::IComponent::GetParentComponent()</a>, and <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
 
@@ -278,7 +316,7 @@ template&lt;class Dest &gt; </div>
 Cast to specified interface trying to use component interface query. 
 <p>
 It extends standard dynamic_cast functinality when you use composed components. 
-<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00375">375</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00384">384</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
 
 <p>References <a class="el" href="classicomp_1_1_i_component.html#62a9d2071e6afb0965827cb908c7a1ba">icomp::IComponent::GetInterface()</a>, <a class="el" href="classicomp_1_1_i_component.html#cd7fb900f29bdf88b53a35faa86f9e95">icomp::IComponent::GetParentComponent()</a>, and <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
 

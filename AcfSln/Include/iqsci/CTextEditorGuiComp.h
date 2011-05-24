@@ -72,7 +72,7 @@ public:
 protected:
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();
-	virtual void OnRetranslate();
+	virtual void OnGuiRetranslate();
 
 protected Q_SLOTS:
 	virtual void OnTextChanged();

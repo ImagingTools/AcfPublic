@@ -28,6 +28,7 @@
 #include "iqtgui/CImagePropertyGuiComp.h"
 #include "iqtgui/CObjectPreviewGuiComp.h"
 #include "iqtgui/CModelEditorGuiComp.h"
+#include "iqtgui/CImagePropertiesFrameComp.h"
 
 #include "iqtprm/CFileNameParamGuiComp.h"
 #include "iqtprm/CComposedParamsSetGuiComp.h"
@@ -35,6 +36,7 @@
 #include "iqtprm/CParamsManagerGuiComp.h"
 #include "iqtprm/CSelectionParamGuiComp.h"
 #include "iqtprm/CSelectionParamIndexGuiComp.h"
+#include "iqtprm/CSelectableGuiComp.h"
 
 #include "iqtdoc/CMainWindowGuiComp.h"
 #include "iqtdoc/CSingleDocumentWorkspaceGuiComp.h"
@@ -43,6 +45,8 @@
 
 #include "iqtproc/CProgressManagerGuiComp.h"
 #include "iqtproc/CProcessorControlGuiComp.h"
+#include "iqtproc/CDocumentProcessingManagerComp.h"
+#include "iqtproc/CDocumentProcessingCommandComp.h"
 
 
 /**
@@ -75,6 +79,7 @@ typedef iqtgui::CFileSystemExplorerGuiComp FileSystemExplorerGui;
 typedef iqtgui::CImagePropertyGuiComp ImagePropertyGui;
 typedef iqtgui::CObjectPreviewGuiComp ObjectPreviewGui;
 typedef iqtgui::CModelEditorGuiComp ModelEditorGui;
+typedef iqtgui::CImagePropertiesFrameComp ImagePropertiesFrame;
 
 typedef iqtprm::CComposedParamsSetGuiComp ComposedParamsSetGui;
 typedef iqtprm::CVariableParamGuiComp VariableParamGui;
@@ -82,6 +87,7 @@ typedef iqtprm::CParamsManagerGuiComp ParamsManagerGui;
 typedef iqtprm::CFileNameParamGuiComp FileNameParamGui;
 typedef iqtprm::CSelectionParamGuiComp SelectionParamGui;
 typedef iqtprm::CSelectionParamIndexGuiComp SelectionParamIndexGui;
+typedef iqtprm::CSelectableGuiComp SelectableGui;
 
 typedef iqtdoc::CMainWindowGuiComp MainWindowGui;
 typedef icomp::TModelCompWrap<iqtdoc::CSingleDocumentWorkspaceGuiComp> SingleDocWorkspaceGui;
@@ -90,7 +96,8 @@ typedef iqtdoc::CHtmlHelpViewerComp HtmlHelpViewer;
 
 typedef iqtproc::CProgressManagerGuiComp ProgressManagerGui;
 typedef iqtproc::CProcessorControlGuiComp ProcessorControlGui;
-
+typedef iqtproc::CDocumentProcessingManagerComp DocumentProcessingManager;
+typedef iqtproc::CDocumentProcessingCommandComp DocumentProcessingCommand;
 
 } // namespace QtGuiPck
 

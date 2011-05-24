@@ -282,6 +282,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CSceneBinderComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CSceneConnectorGuiComp.cpp"
 				>
 			</File>
@@ -299,6 +303,10 @@
 			</File>
 			<File
 				RelativePath="..\CSceneProviderGuiComp.moc"
+				>
+			</File>
+			<File
+				RelativePath="..\CSelectableSceneExtenderComp.cpp"
 				>
 			</File>
 		</Filter>
@@ -394,6 +402,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CSceneBinderComp.h"
+				>
+			</File>
+			<File
 				RelativePath="..\CSceneConnectorGuiComp.h"
 				>
 			</File>
@@ -403,6 +415,10 @@
 			</File>
 			<File
 				RelativePath="..\CSceneProviderGuiComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CSelectableSceneExtenderComp.h"
 				>
 			</File>
 			<File

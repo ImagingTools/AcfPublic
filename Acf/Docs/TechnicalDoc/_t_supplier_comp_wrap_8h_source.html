@@ -69,7 +69,7 @@
 <a name="l00050"></a>00050               I_REGISTER_INTERFACE(SupplierInterface);
 <a name="l00051"></a>00051               I_ASSIGN(m_diagnosticNameAttrPtr, <span class="stringliteral">"DiagnosticName"</span>, <span class="stringliteral">"Name of this supplier for diagnostic, if it is not set, no diagnostic log message will be send"</span>, <span class="keyword">false</span>, <span class="stringliteral">""</span>);
 <a name="l00052"></a>00052               I_ASSIGN(m_paramsSetCompPtr, <span class="stringliteral">"ParamsSet"</span>, <span class="stringliteral">"Parameters set describing model parameter used to produce results"</span>, <span class="keyword">false</span>, <span class="stringliteral">"ParamsSet"</span>);
-<a name="l00053"></a>00053               I_ASSIGN(m_paramsSetModelCompPtr, <span class="stringliteral">"ParamsSet"</span>, <span class="stringliteral">"Parameters set describing model parameter used to produce results"</span>, <span class="keyword">false</span>, <span class="stringliteral">"ParamsSet"</span>);
+<a name="l00053"></a>00053               <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#9b448738771a401729f852d264b31b1c">I_ASSIGN_TO</a>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, <span class="keyword">false</span>);
 <a name="l00054"></a>00054        I_END_COMPONENT;
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056        <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#343f6bc269a60e4631ad9576818529bd">TSupplierCompWrap</a>();

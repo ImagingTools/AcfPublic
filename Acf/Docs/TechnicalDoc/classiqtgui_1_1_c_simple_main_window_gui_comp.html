@@ -61,6 +61,10 @@ Inheritance diagram for iqtgui::CSimpleMainWindowGuiComp:</div>
 &lt; QMainWindow &gt; &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#3ab0ae18afcd5903bd6ed541d4ae6bcd">BaseClass</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#16f541dd9a59ca9aee90604519a07e68">I_ASSIGN_TO</a> (m_workspaceCompPtr, m_workspaceCommandsCompPtr, true)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#e923392fe3ed75380ad3aeb82f52c695">I_ASSIGN_TO</a> (m_mainWindowComponentsCompPtr, m_mainWindowCommandsCompPtr, false)</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#c9989e751fd3aab8360af01bce735f04">CSimpleMainWindowGuiComp</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#0ac1b556080cb7f1e383727c0c2fe1f1">OnTryClose</a> (bool *ignoredPtr=NULL)</td></tr>
@@ -114,7 +118,7 @@ Inheritance diagram for iqtgui::CSimpleMainWindowGuiComp:</div>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called just before GUI is released.  <a href="#493cd92f664380729db892e1943e4cd6"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#f945677d33a6a50d1b32f3b759c10198">OnRetranslate</a> ()</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called from widget event filter when GUI should be retranslated.  <a href="#f945677d33a6a50d1b32f3b759c10198"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when non-GUI elements (like commands) should be retranslated.  <a href="#f945677d33a6a50d1b32f3b759c10198"></a><br></td></tr>
 <tr><td class="memTemplParams" nowrap colspan="2">template&lt;class MenuType &gt; </td></tr>
 <tr><td class="memTemplItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#b8e6bee0108bcbb48e7799b53892b0d4">CreateMenu</a> (const <a class="el" href="classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> &amp;command, MenuType &amp;result) const </td></tr>
 
@@ -284,6 +288,76 @@ template&lt;class MenuType &gt; </div>
 
 </div>
 </div><p>
+<a class="anchor" name="e923392fe3ed75380ad3aeb82f52c695"></a><!-- doxytag: member="iqtgui::CSimpleMainWindowGuiComp::I_ASSIGN_TO" ref="e923392fe3ed75380ad3aeb82f52c695" args="(m_mainWindowComponentsCompPtr, m_mainWindowCommandsCompPtr, false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtgui::CSimpleMainWindowGuiComp::I_ASSIGN_TO           </td>
+          <td>(</td>
+          <td class="paramtype">m_mainWindowComponentsCompPtr&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_mainWindowCommandsCompPtr&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="16f541dd9a59ca9aee90604519a07e68"></a><!-- doxytag: member="iqtgui::CSimpleMainWindowGuiComp::I_ASSIGN_TO" ref="16f541dd9a59ca9aee90604519a07e68" args="(m_workspaceCompPtr, m_workspaceCommandsCompPtr, true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtgui::CSimpleMainWindowGuiComp::I_ASSIGN_TO           </td>
+          <td>(</td>
+          <td class="paramtype">m_workspaceCompPtr&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_workspaceCommandsCompPtr&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">true&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
 <a class="anchor" name="f7d72fd382158a5717444c298311ce33"></a><!-- doxytag: member="iqtgui::CSimpleMainWindowGuiComp::OnAbout" ref="f7d72fd382158a5717444c298311ce33" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -391,7 +465,7 @@ Called just before GUI is released.
 <div class="memdoc">
 
 <p>
-Called from widget event filter when GUI should be retranslated. 
+Called when non-GUI elements (like commands) should be retranslated. 
 <p>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#3e04cf7eb9bba927ee9dd4e20f4f211b">iqtgui::CGuiComponentBase</a>.</p>

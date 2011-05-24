@@ -53,7 +53,7 @@
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        I_BEGIN_COMPONENT(<a class="code" href="classiqtex_1_1_c_tcp_terminal_gui_comp.html" title="Implementation of simple TCP terminal.">CTcpTerminalGuiComp</a>);
 <a name="l00035"></a>00035               I_ASSIGN(m_urlParamCompPtr, <span class="stringliteral">"UrlParam"</span>, <span class="stringliteral">"URL parameter used to find out address and socket for TCP connection"</span>, <span class="keyword">true</span>, <span class="stringliteral">"UrlParam"</span>);
-<a name="l00036"></a>00036               I_ASSIGN(m_urlParamModelCompPtr, <span class="stringliteral">"UrlParam"</span>, <span class="stringliteral">"URL parameter used to find out address and socket for TCP connection"</span>, <span class="keyword">false</span>, <span class="stringliteral">"UrlParam"</span>);
+<a name="l00036"></a>00036               <a class="code" href="classiqtex_1_1_c_tcp_terminal_gui_comp.html#7ae467ba7dd8476222308b827aa99e17">I_ASSIGN_TO</a>(m_urlParamModelCompPtr, m_urlParamCompPtr, <span class="keyword">false</span>);
 <a name="l00037"></a>00037               I_ASSIGN_MULTI_0(m_presetTextsAttrPtr, <span class="stringliteral">"PresetTexts"</span>, <span class="stringliteral">"Set of preset texts"</span>, <span class="keyword">false</span>);
 <a name="l00038"></a>00038        I_END_COMPONENT;
 <a name="l00039"></a>00039 

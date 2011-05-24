@@ -180,7 +180,7 @@
 <a name="l00169"></a>00169               <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00170"></a>00170        }
 <a name="l00171"></a>00171 
-<a name="l00172"></a>00172        <span class="keywordflow">if</span> ((flags &amp; <a class="code" href="classiser_1_1_i_file_loader.html#fc2afcdf99af4690e151f3956d2bab9823b1a54d8c4e2d38c2c28131c0f2450d" title="Only operations without specified file name (anonymous) should be considered.">QF_ANONYMOUS_ONLY</a>) != 0){
+<a name="l00172"></a>00172        <span class="keywordflow">if</span> ((flags &amp; (<a class="code" href="classiser_1_1_i_file_loader.html#fc2afcdf99af4690e151f3956d2bab98f5acafd5c0b64f8b35b269536287fbc0" title="Only operations with specified directory name should be considered.">QF_DIRECTORY_ONLY</a> | <a class="code" href="classiser_1_1_i_file_loader.html#fc2afcdf99af4690e151f3956d2bab9823b1a54d8c4e2d38c2c28131c0f2450d" title="Only operations without specified path (anonymous) should be considered.">QF_ANONYMOUS_ONLY</a>)) != 0){
 <a name="l00173"></a>00173               <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00174"></a>00174        }
 <a name="l00175"></a>00175 

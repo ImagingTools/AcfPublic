@@ -47,7 +47,7 @@
 <a name="l00027"></a>00027        I_BEGIN_COMPONENT(<a class="code" href="classisec_1_1_c_composed_authorization_verifier_comp.html" title="Allows to connect many authorisation versifiers into one.">CComposedAuthorizationVerifierComp</a>);
 <a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="code" href="classisec_1_1_i_authorization_verifier.html">IAuthorizationVerifier</a>);
 <a name="l00029"></a>00029               I_ASSIGN_MULTI_0(m_slaveVerifiersCompPtr, <span class="stringliteral">"SlaveVerifiers"</span>, <span class="stringliteral">"List of slave verifiers"</span>, <span class="keyword">true</span>);
-<a name="l00030"></a>00030               I_ASSIGN_MULTI_0(m_slaveVerifiersModelCompPtr, <span class="stringliteral">"SlaveVerifiers"</span>, <span class="stringliteral">"List of slave verifiers"</span>, <span class="keyword">true</span>);
+<a name="l00030"></a>00030               <a class="code" href="classisec_1_1_c_composed_authorization_verifier_comp.html#a5f3f7d493af00d3830c805e9f384227">I_ASSIGN_TO</a>(m_slaveVerifiersModelCompPtr, m_slaveVerifiersCompPtr, <span class="keyword">true</span>);
 <a name="l00031"></a>00031        I_END_COMPONENT;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <span class="comment">// reimplemented (isec::IAuthorizationVerifier)</span>

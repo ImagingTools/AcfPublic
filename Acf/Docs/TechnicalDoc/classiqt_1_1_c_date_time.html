@@ -71,10 +71,16 @@ Inheritance diagram for iqt::CDateTime:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_date_time.html#1d9ff541205dbef9093b0bd41707ef7b">FromCTime</a> (double ctime)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the datetime using the number of seconds passed since 1970-01-01T00:00:00, (Coordinated Universal Time).  <a href="#1d9ff541205dbef9093b0bd41707ef7b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_date_time.html#8d5ff032bd048a1ffeb48e3e9b910c0d">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Copy this object from another one.  <a href="#8d5ff032bd048a1ffeb48e3e9b910c0d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_date_time.html#fcb69876b5e5d78805863dab6a7a4b97">CloneMe</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Make a copy of this object.  <a href="#fcb69876b5e5d78805863dab6a7a4b97"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Implementation of <a class="el" href="classisys_1_1_i_date_time.html" title="Interface for date and time representation.">isys::IDateTime</a> interface based on Qt. 
-<p>Definition at line <a class="el" href="_c_date_time_8h_source.html#l00017">17</a> of file <a class="el" href="_c_date_time_8h_source.html">CDateTime.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_date_time_8h_source.html#l00020">20</a> of file <a class="el" href="_c_date_time_8h_source.html">CDateTime.h</a>.</p>
 <hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="3cbdbf7b1bb4805811a9f4945a7349b8"></a><!-- doxytag: member="iqt::CDateTime::CDateTime" ref="3cbdbf7b1bb4805811a9f4945a7349b8" args="()" -->
 <div class="memitem">
@@ -136,6 +142,54 @@ Implementation of <a class="el" href="classisys_1_1_i_date_time.html" title="Int
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="fcb69876b5e5d78805863dab6a7a4b97"></a><!-- doxytag: member="iqt::CDateTime::CloneMe" ref="fcb69876b5e5d78805863dab6a7a4b97" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* iqt::CDateTime::CloneMe           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Make a copy of this object. 
+<p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#f240df11c10ed6c8db9516c667cb2b04">istd::IChangeable</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="8d5ff032bd048a1ffeb48e3e9b910c0d"></a><!-- doxytag: member="iqt::CDateTime::CopyFrom" ref="8d5ff032bd048a1ffeb48e3e9b910c0d" args="(const istd::IChangeable &amp;object)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iqt::CDateTime::CopyFrom           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>object</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Copy this object from another one. 
+<p>
+Default implementation in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a> do nothing. 
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#48106c79905f877b7bcca41755bbde49">istd::IChangeable</a>.</p>
+
+</div>
+</div><p>
 <a class="anchor" name="1d9ff541205dbef9093b0bd41707ef7b"></a><!-- doxytag: member="iqt::CDateTime::FromCTime" ref="1d9ff541205dbef9093b0bd41707ef7b" args="(double ctime)" -->
 <div class="memitem">
 <div class="memproto">

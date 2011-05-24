@@ -389,8 +389,6 @@ void CSimpleMainWindowGuiComp::OnGuiCreated()
 		m_aboutDialogPtr.SetPtr(new iqtgui::CGuiComponentDialog(m_aboutGuiCompPtr.GetPtr(), 0, true, mainWindowPtr)); 
 	}
 
-	OnRetranslate();
-
 	CreateMenuBar();
 
 	CreateDefaultToolBar();
@@ -434,13 +432,6 @@ void CSimpleMainWindowGuiComp::OnRetranslate()
 {
 	BaseClass::OnRetranslate();
 
-	I_ASSERT(GetWidget() != NULL);
-
-	QWidget* parentWidgetPtr = GetWidget()->parentWidget();
-	if (parentWidgetPtr == NULL){
-		parentWidgetPtr = GetWidget();
-	}
-
 	// Main commands
 	m_viewCommand.SetName(iqt::GetCString(tr("&View")));
 	m_toolsCommand.SetName(iqt::GetCString(tr("&Tools")));
@@ -478,7 +469,7 @@ void CSimpleMainWindowGuiComp::OnAbout()
 void CSimpleMainWindowGuiComp::OnSettings()
 {
 	if (m_settingsGuiCompPtr.IsValid()){
-		m_settingsGuiCompPtr->Execute();
+		m_settingsGuiCompPtr->ExecuteDialog(this);
 	}
 }
 

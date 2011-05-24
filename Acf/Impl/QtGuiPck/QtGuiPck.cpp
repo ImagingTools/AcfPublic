@@ -226,6 +226,26 @@ I_EXPORT_COMPONENT(
 			"Object preview GUI",
 			"Observer Display GUI Preview" IM_TAG("GUI"));
 
+I_EXPORT_COMPONENT(
+			DocumentProcessingManager,
+			"Document processing manager",
+			"Processing Document" IM_TAG("Processing"));
+
+I_EXPORT_COMPONENT(
+			ImagePropertiesFrame,
+			"Frame with image properties",
+			"Image Properties" IM_TAG("GUI"));
+
+I_EXPORT_COMPONENT(
+			DocumentProcessingCommand,
+			"Document processing command",
+			"Processing Document Command" IM_TAG("Processing"));
+
+I_EXPORT_COMPONENT(
+			SelectableGui,
+			"Component to show a GUI from the list of options",
+			"Selection Stack" IM_TAG("GUI"));
+
 
 } // namespace QtGuiPck
 

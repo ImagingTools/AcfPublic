@@ -30,37 +30,41 @@
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="_i_serializable_8h.html">iser/ISerializable.h</a>"</span>
 <a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="preprocessor">#include "<a class="code" href="_i_date_time_8h.html">isys/IDateTime.h</a>"</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include "<a class="code" href="ibase_8h.html">ibase/ibase.h</a>"</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#include "<a class="code" href="ibase_8h.html">ibase/ibase.h</a>"</span>
-<a name="l00013"></a>00013 
-<a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="keyword">namespace </span>ibase
-<a name="l00016"></a>00016 {             
+<a name="l00012"></a>00012 
+<a name="l00013"></a><a class="code" href="namespaceisys.html">00013</a> <span class="keyword">namespace </span>isys
+<a name="l00014"></a>00014 {
+<a name="l00015"></a>00015        <span class="keyword">class </span><a class="code" href="classisys_1_1_i_date_time.html" title="Interface for date and time representation.">IDateTime</a>;
+<a name="l00016"></a>00016 }
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
-<a name="l00023"></a><a class="code" href="classibase_1_1_i_message.html">00023</a> <span class="keyword">class </span><a class="code" href="classibase_1_1_i_message.html" title="Common interface for an message.">IMessage</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
-<a name="l00024"></a>00024 {
-<a name="l00025"></a>00025 <span class="keyword">public</span>:
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classisys_1_1_i_date_time.html" title="Interface for date and time representation.">isys::IDateTime</a>&amp; <a class="code" href="classibase_1_1_i_message.html#100eb7aa6b0dcb377061df9f9ab4a210" title="Get time stamp of the message.">GetTimeStamp</a>() <span class="keyword">const</span> = 0;
-<a name="l00030"></a>00030 
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_logger.html#59b8f966e065927a722418a20bc42343" title="Category of message.">istd::ILogger::MessageCategory</a> <a class="code" href="classibase_1_1_i_message.html#c419210d5c43cd33ecf8f64d51e4219d" title="Get category of the message.">GetCategory</a>() <span class="keyword">const</span> = 0;
-<a name="l00036"></a>00036 
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_i_message.html#c604576a4563bae847ecda3cfed559f2" title="Get binary ID of the message using to automatical identification of this message...">GetId</a>() <span class="keyword">const</span> = 0;
-<a name="l00041"></a>00041 
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classibase_1_1_i_message.html#d8cd0662bc331594572e733a35d986b4" title="Get the text of the message.">GetText</a>() <span class="keyword">const</span> = 0;
-<a name="l00046"></a>00046 
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classibase_1_1_i_message.html#936f8fc255b36880add94b2a096f5d14" title="Get the source of the message.">GetSource</a>() <span class="keyword">const</span> = 0;
-<a name="l00051"></a>00051 
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_i_message.html#47acc83f6341e3cbd3e341405b61e733" title="Get flags of the message.">GetFlags</a>() <span class="keyword">const</span> = 0;
-<a name="l00057"></a>00057 };
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 } <span class="comment">// namespace ibase</span>
-<a name="l00061"></a>00061 
+<a name="l00019"></a>00019 <span class="keyword">namespace </span>ibase
+<a name="l00020"></a>00020 {             
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 
+<a name="l00027"></a><a class="code" href="classibase_1_1_i_message.html">00027</a> <span class="keyword">class </span><a class="code" href="classibase_1_1_i_message.html" title="Common interface for an message.">IMessage</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
+<a name="l00028"></a>00028 {
+<a name="l00029"></a>00029 <span class="keyword">public</span>:
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classisys_1_1_i_date_time.html" title="Interface for date and time representation.">isys::IDateTime</a>&amp; <a class="code" href="classibase_1_1_i_message.html#100eb7aa6b0dcb377061df9f9ab4a210" title="Get time stamp of the message.">GetTimeStamp</a>() <span class="keyword">const</span> = 0;
+<a name="l00034"></a>00034 
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_logger.html#59b8f966e065927a722418a20bc42343" title="Category of message.">istd::ILogger::MessageCategory</a> <a class="code" href="classibase_1_1_i_message.html#c419210d5c43cd33ecf8f64d51e4219d" title="Get category of the message.">GetCategory</a>() <span class="keyword">const</span> = 0;
+<a name="l00040"></a>00040 
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_i_message.html#c604576a4563bae847ecda3cfed559f2" title="Get binary ID of the message using to automatical identification of this message...">GetId</a>() <span class="keyword">const</span> = 0;
+<a name="l00045"></a>00045 
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classibase_1_1_i_message.html#d8cd0662bc331594572e733a35d986b4" title="Get the text of the message.">GetText</a>() <span class="keyword">const</span> = 0;
+<a name="l00050"></a>00050 
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classibase_1_1_i_message.html#936f8fc255b36880add94b2a096f5d14" title="Get the source of the message.">GetSource</a>() <span class="keyword">const</span> = 0;
+<a name="l00055"></a>00055 
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_i_message.html#47acc83f6341e3cbd3e341405b61e733" title="Get flags of the message.">GetFlags</a>() <span class="keyword">const</span> = 0;
+<a name="l00061"></a>00061 };
 <a name="l00062"></a>00062 
-<a name="l00063"></a>00063 <span class="preprocessor">#endif // !ibase_IMessage_included</span>
-<a name="l00064"></a>00064 <span class="preprocessor"></span>
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 } <span class="comment">// namespace ibase</span>
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="preprocessor">#endif // !ibase_IMessage_included</span>
+<a name="l00068"></a>00068 <span class="preprocessor"></span>
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

@@ -158,7 +158,7 @@ inline void CVector3d::SetY(double value)
 
 inline double CVector3d::GetZ() const
 {
-	return operator[](1);
+	return operator[](2);
 }
 
 

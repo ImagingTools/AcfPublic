@@ -446,9 +446,9 @@
     <path>E:/Work/Projects/Development/Acf/Include/ibase/</path>
     <filename>_i_file_convert_copy_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
-    <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <class kind="class">ibase::IFileConvertCopy</class>
+    <namespace>istd</namespace>
+    <namespace>iprm</namespace>
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
@@ -476,9 +476,9 @@
     <includes id="_i_logger_8h" name="ILogger.h" local="yes" imported="no">istd/ILogger.h</includes>
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <includes id="_i_date_time_8h" name="IDateTime.h" local="yes" imported="no">isys/IDateTime.h</includes>
     <includes id="ibase_8h" name="ibase.h" local="yes" imported="no">ibase/ibase.h</includes>
     <class kind="class">ibase::IMessage</class>
+    <namespace>isys</namespace>
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
@@ -1165,6 +1165,7 @@
     <includes id="_t_attribute_static_info_8h" name="TAttributeStaticInfo.h" local="yes" imported="no">icomp/TAttributeStaticInfo.h</includes>
     <includes id="_t_component_static_info_8h" name="TComponentStaticInfo.h" local="yes" imported="no">icomp/TComponentStaticInfo.h</includes>
     <includes id="_c_base_component_static_info_8h" name="CBaseComponentStaticInfo.h" local="yes" imported="no">icomp/CBaseComponentStaticInfo.h</includes>
+    <includes id="_c_related_info_registrator_8h" name="CRelatedInfoRegistrator.h" local="yes" imported="no">icomp/CRelatedInfoRegistrator.h</includes>
     <class kind="class">icomp::CComponentBase</class>
     <namespace>icomp</namespace>
     <member kind="define">
@@ -1194,6 +1195,13 @@
       <anchorfile>_c_component_base_8h.html</anchorfile>
       <anchor>96fedf19d00e2efd7073095a60e354ff</anchor>
       <arglist>(member, id, description, isObligatory, defaultValue)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>_c_component_base_8h.html</anchorfile>
+      <anchor>07c8bc559dbc0c8403f6c24cf374fcb7</anchor>
+      <arglist>(member, baseAttribute, isObligatory)</arglist>
     </member>
     <member kind="function">
       <type>Dest *</type>
@@ -1351,6 +1359,14 @@
     <filename>_c_registry_element_8h</filename>
     <includes id="_i_registry_element_8h" name="IRegistryElement.h" local="yes" imported="no">icomp/IRegistryElement.h</includes>
     <class kind="class">icomp::CRegistryElement</class>
+    <namespace>icomp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CRelatedInfoRegistrator.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/icomp/</path>
+    <filename>_c_related_info_registrator_8h</filename>
+    <includes id="_i_real_attribute_static_info_8h" name="IRealAttributeStaticInfo.h" local="yes" imported="no">icomp/IRealAttributeStaticInfo.h</includes>
+    <class kind="class">icomp::CRelatedInfoRegistrator</class>
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
@@ -1870,7 +1886,6 @@
     <name>IDocumentTemplate.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/idoc/</path>
     <filename>_i_document_template_8h</filename>
-    <includes id="idoc_8h" name="idoc.h" local="yes" imported="no">idoc/idoc.h</includes>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_t_i_factory_8h" name="TIFactory.h" local="yes" imported="no">istd/TIFactory.h</includes>
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
@@ -1940,33 +1955,6 @@
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_var_color_8h" name="CVarColor.h" local="yes" imported="no">icmm/CVarColor.h</includes>
     <class kind="class">iimg::IRasterImage</class>
-    <namespace>iimg</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TBitmapIterator.h</name>
-    <path>E:/Work/Projects/Development/Acf/Include/iimg/</path>
-    <filename>_t_bitmap_iterator_8h</filename>
-    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
-    <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
-    <includes id="_t_pixel_accessor_8h" name="TPixelAccessor.h" local="yes" imported="no">iimg/TPixelAccessor.h</includes>
-    <class kind="class">iimg::TBitmapIterator</class>
-    <namespace>iimg</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TBitmapIterator2d.h</name>
-    <path>E:/Work/Projects/Development/Acf/Include/iimg/</path>
-    <filename>_t_bitmap_iterator2d_8h</filename>
-    <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
-    <class kind="class">iimg::TBitmapIterator2d</class>
-    <class kind="class">iimg::TBitmapIterator2d::XIterator</class>
-    <class kind="class">iimg::TBitmapIterator2d::YIterator</class>
-    <namespace>iimg</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TPixelAccessor.h</name>
-    <path>E:/Work/Projects/Development/Acf/Include/iimg/</path>
-    <filename>_t_pixel_accessor_8h</filename>
-    <class kind="class">iimg::TPixelAccessor</class>
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
@@ -2491,6 +2479,7 @@
     <path>E:/Work/Projects/Development/Acf/Include/iprm/</path>
     <filename>_c_selectable_params_set_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
@@ -2628,6 +2617,16 @@
     <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <class kind="class">iproc::CIterativeProcessorComp</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CModelBasedProcessingTriggerComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iproc/</path>
+    <filename>_c_model_based_processing_trigger_comp_8h</filename>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <class kind="class">iproc::CModelBasedProcessingTriggerComp</class>
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
@@ -3488,6 +3487,16 @@
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CSceneBinderComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqt2d/</path>
+    <filename>_c_scene_binder_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">iqt2d/ISceneProvider.h</includes>
+    <includes id="_i_scene_extender_8h" name="ISceneExtender.h" local="yes" imported="no">iqt2d/ISceneExtender.h</includes>
+    <class kind="class">iqt2d::CSceneBinderComp</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSceneConnectorGuiComp.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/iqt2d/</path>
     <filename>_c_scene_connector_gui_comp_8h</filename>
@@ -3523,6 +3532,17 @@
     <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">iqt2d/ISceneProvider.h</includes>
     <class kind="class">iqt2d::CSceneProviderGuiComp</class>
     <class kind="class">iqt2d::CSceneProviderGuiComp::CScene</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSelectableSceneExtenderComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqt2d/</path>
+    <filename>_c_selectable_scene_extender_comp_8h</filename>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_scene_extender_8h" name="ISceneExtender.h" local="yes" imported="no">iqt2d/ISceneExtender.h</includes>
+    <class kind="class">iqt2d::CSelectableSceneExtenderComp</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -3619,8 +3639,8 @@
     <name>CExtendedDocumentTemplateComp.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/iqtdoc/</path>
     <filename>_c_extended_document_template_comp_8h</filename>
-    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_c_single_document_template_comp_8h" name="CSingleDocumentTemplateComp.h" local="yes" imported="no">idoc/CSingleDocumentTemplateComp.h</includes>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
     <includes id="iqtdoc_8h" name="iqtdoc.h" local="yes" imported="no">iqtdoc/iqtdoc.h</includes>
@@ -3866,6 +3886,15 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CImagePropertiesFrameComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqtgui/</path>
+    <filename>_c_image_properties_frame_comp_8h</filename>
+    <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">iqtgui::CImagePropertiesFrameComp</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CImagePropertyGuiComp.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/iqtgui/</path>
     <filename>_c_image_property_gui_comp_8h</filename>
@@ -3908,6 +3937,7 @@
     <filename>_c_model_dialog_gui_comp_8h</filename>
     <includes id="_i_observer_8h" name="IObserver.h" local="yes" imported="no">imod/IObserver.h</includes>
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_c_dialog_gui_comp_8h" name="CDialogGuiComp.h" local="yes" imported="no">iqtgui/CDialogGuiComp.h</includes>
     <class kind="class">iqtgui::CModelDialogGuiComp</class>
     <namespace>iqtgui</namespace>
@@ -4011,7 +4041,7 @@
     <path>E:/Work/Projects/Development/Acf/Include/iqtgui/</path>
     <filename>_i_dialog_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
+    <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
     <class kind="class">iqtgui::IDialog</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -4241,6 +4271,16 @@
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CSelectableGuiComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqtprm/</path>
+    <filename>_c_selectable_gui_comp_8h</filename>
+    <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">iqtprm::CSelectableGuiComp</class>
+    <namespace>iqtprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectionParamGuiComp.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/iqtprm/</path>
     <filename>_c_selection_param_gui_comp_8h</filename>
@@ -4280,6 +4320,36 @@
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CDocumentProcessingCommandComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqtproc/</path>
+    <filename>_c_document_processing_command_comp_8h</filename>
+    <includes id="_c_document_processing_manager_comp_base_8h" name="CDocumentProcessingManagerCompBase.h" local="yes" imported="no">iqtproc/CDocumentProcessingManagerCompBase.h</includes>
+    <class kind="class">iqtproc::CDocumentProcessingCommandComp</class>
+    <namespace>iqtproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CDocumentProcessingManagerComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqtproc/</path>
+    <filename>_c_document_processing_manager_comp_8h</filename>
+    <includes id="_c_document_processing_manager_comp_base_8h" name="CDocumentProcessingManagerCompBase.h" local="yes" imported="no">iqtproc/CDocumentProcessingManagerCompBase.h</includes>
+    <class kind="class">iqtproc::CDocumentProcessingManagerComp</class>
+    <namespace>iqtproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CDocumentProcessingManagerCompBase.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqtproc/</path>
+    <filename>_c_document_processing_manager_comp_base_8h</filename>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
+    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <class kind="class">iqtproc::CDocumentProcessingManagerCompBase</class>
+    <namespace>iqtproc</namespace>
+  </compound>
+  <compound kind="file">
     <name>CProcessorControlGuiComp.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/iqtproc/</path>
     <filename>_c_processor_control_gui_comp_8h</filename>
@@ -4308,6 +4378,8 @@
     <path>E:/Work/Projects/Development/Acf/Include/iqtproc/</path>
     <filename>iqtproc_8h</filename>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
+    <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
+    <includes id="iqtdoc_8h" name="iqtdoc.h" local="yes" imported="no">iqtdoc/iqtdoc.h</includes>
     <namespace>iqproc</namespace>
   </compound>
   <compound kind="file">
@@ -7985,10 +8057,17 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classibase_1_1_c_model_proxy_comp.html</anchorfile>
+      <anchor>46821550c5626ceda667bc7fd1e29eac</anchor>
+      <arglist>(m_selectionModelCompPtr, m_modelSelectionCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CModelProxyComp</name>
       <anchorfile>classibase_1_1_c_model_proxy_comp.html</anchorfile>
-      <anchor>99ab445e3552b5359d8d4e025a8dc04d</anchor>
+      <anchor>bdc4b34dea8e3b65f67fac540e9adbaf</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -9459,7 +9538,6 @@
     <name>ibase::TEnableableWrap</name>
     <filename>classibase_1_1_t_enableable_wrap.html</filename>
     <templarg>Base</templarg>
-    <base virtualness="virtual">ibase::Base</base>
     <member kind="typedef">
       <type>Base</type>
       <name>BaseClass</name>
@@ -11903,6 +11981,13 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>56458cd23853445cef23142b218d9897</anchor>
+      <arglist>(m_registryPropObserverCompPtr, m_registryPropGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CAttributeEditorComp</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>7080437833d523b1baad9011458c7a35</anchor>
@@ -12060,6 +12145,13 @@
       <anchorfile>classicmpstr_1_1_c_component_help_file_provider_comp.html</anchorfile>
       <anchor>32520efeac203eca187c178698476a60</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_component_help_file_provider_comp.html</anchorfile>
+      <anchor>f92279a2acf04297f97fed6cf4db2e1a</anchor>
+      <arglist>(m_externalMetaInfoManagerCompPtr, m_metaInfoManagerCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
@@ -12375,6 +12467,13 @@
       <anchor>8a9ca77b3736d032f88c58a389722480</anchor>
       <arglist>(const std::string &amp;path, const icomp::CComponentAddress &amp;address, const icomp::IComponentStaticInfo *staticInfoPtr)</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetCommandNames</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>ab7328d596d6fdd9417d02a912e70c00</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>eventFilter</name>
@@ -12496,6 +12595,13 @@
       <anchor>0bfa7fc89ddd4d6c9099f259a9fd4382</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_quick_help_viewer_comp.html</anchorfile>
+      <anchor>88a8c2e5c5bcc8568d193a6cc054be9c</anchor>
+      <arglist>(m_externalMetaInfoManagerCompPtr, m_metaInfoManagerCompPtr, false)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ShowHelp</name>
@@ -12604,6 +12710,13 @@
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
       <anchor>a1de6d51343fecb39f7d3534ab54ac61</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
+      <anchor>a2dc071addc8f3a2df5e780034a4880f</anchor>
+      <arglist>(m_externalMetaInfoManagerCompPtr, m_envManagerCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual icomp::IRegistry::Ids</type>
@@ -13210,6 +13323,13 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>9152e5cdb243f2e81ca63d4a4d97fdd2</anchor>
+      <arglist>(m_envManagerModelCompPtr, m_envManagerCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CVisualRegistryScenographerComp</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
       <anchor>bb13c1b4ad2ad687396ec9bc894d6170</anchor>
@@ -13666,6 +13786,7 @@
     <class kind="class">icomp::CReferenceAttribute</class>
     <class kind="class">icomp::CRegistry</class>
     <class kind="class">icomp::CRegistryElement</class>
+    <class kind="class">icomp::CRelatedInfoRegistrator</class>
     <class kind="class">icomp::CSimComponentContextBase</class>
     <class kind="class">icomp::IAttributeStaticInfo</class>
     <class kind="class">icomp::IComponent</class>
@@ -15132,6 +15253,17 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>icomp::CRelatedInfoRegistrator</name>
+    <filename>classicomp_1_1_c_related_info_registrator.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CRelatedInfoRegistrator</name>
+      <anchorfile>classicomp_1_1_c_related_info_registrator.html</anchorfile>
+      <anchor>5860c5dba33f80368efcf9ac916822f3</anchor>
+      <arglist>(IRealAttributeStaticInfo &amp;baseAttributeInfo, int metaGroupId, const std::string &amp;id, int flags)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>icomp::CSimComponentContextBase</name>
     <filename>classicomp_1_1_c_sim_component_context_base.html</filename>
     <base>icomp::IComponentContext</base>
@@ -15649,6 +15781,13 @@
       <anchorfile>classicomp_1_1_i_real_attribute_static_info.html</anchorfile>
       <anchor>3d7a7a61cb294dc2f73cebac60f9c12f</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>AddRelatedMetaId</name>
+      <anchorfile>classicomp_1_1_i_real_attribute_static_info.html</anchorfile>
+      <anchor>453b360e2f666040cbecbc2854066726</anchor>
+      <arglist>(int metaGroupId, const std::string &amp;id, int flags)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16238,6 +16377,13 @@
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
       <anchor>53e611df438e0fd82b62c9185e160bd7</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddRelatedMetaId</name>
+      <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
+      <anchor>8abc6b0b88290eedcc64c99e55a97929</anchor>
+      <arglist>(int metaGroupId, const std::string &amp;id, int flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const std::string &amp;</type>
@@ -17298,6 +17444,13 @@
       <arglist>(const istd::IPolymorphic &amp;view, DocumentInfo *documentInfoPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual istd::IPolymorphic *</type>
+      <name>AddViewToDocument</name>
+      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
+      <anchor>d2c2e32e53324c10493fbe29863237bd</anchor>
+      <arglist>(const istd::IChangeable &amp;document, const std::string &amp;viewTypeId=std::string())</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual std::string</type>
       <name>GetDocumentTypeId</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
@@ -17541,6 +17694,13 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classidoc_1_1_c_selected_doc_model_binder_comp.html</anchorfile>
+      <anchor>e56171f3694d45e22e23f0fc66239daf</anchor>
+      <arglist>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CSelectedDocModelBinderComp</name>
       <anchorfile>classidoc_1_1_c_selected_doc_model_binder_comp.html</anchorfile>
       <anchor>a79ae2cc2bbc2fce9b986d556c66e77a</anchor>
@@ -17667,6 +17827,13 @@
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
       <anchor>0350d61de1dadb7359a7a38116cff428</anchor>
       <arglist>(const istd::IPolymorphic &amp;view, DocumentInfo *documentInfoPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IPolymorphic *</type>
+      <name>AddViewToDocument</name>
+      <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
+      <anchor>25eaa73f10819e9bf514878cea340b34</anchor>
+      <arglist>(const istd::IChangeable &amp;document, const std::string &amp;viewTypeId=std::string())</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual std::string</type>
@@ -17875,6 +18042,13 @@
       <anchor>eaebc293774d20d1f2381ba23743ca31</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classidoc_1_1_c_single_document_template_comp.html</anchorfile>
+      <anchor>01c29c76c88954fc0afadcbdfcad415a</anchor>
+      <arglist>(m_modelCompFact, m_documentCompFact, true)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::IFileLoader *</type>
       <name>GetFileLoader</name>
@@ -18070,6 +18244,13 @@
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
       <anchor>53febd1a6f0bc272173af3afd93cbca5</anchor>
       <arglist>(const istd::IPolymorphic &amp;view, DocumentInfo *documentInfoPtr=NULL) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::IPolymorphic *</type>
+      <name>AddViewToDocument</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>67b5019ddacfcb2a8fef21e36cdd1fd8</anchor>
+      <arglist>(const istd::IChangeable &amp;document, const std::string &amp;viewTypeId=std::string())=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual std::string</type>
@@ -18302,9 +18483,6 @@
     <class kind="class">iimg::CGeneralBitmap</class>
     <class kind="class">iimg::IBitmap</class>
     <class kind="class">iimg::IRasterImage</class>
-    <class kind="class">iimg::TBitmapIterator</class>
-    <class kind="class">iimg::TBitmapIterator2d</class>
-    <class kind="class">iimg::TPixelAccessor</class>
     <class kind="class">iimg::TPixelConversion</class>
     <member kind="typedef">
       <type>TPixelConversion&lt; I_BYTE, I_BYTE &gt;</type>
@@ -18397,15 +18575,36 @@
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>6174b27eda9945d1e75c192804e0e78e</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, int pixelBitsCount=8, int componentsCount=1)</arglist>
+      <anchor>f43f6d1c2e9a047a4831028170d1fe2c</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, int pixelBitsCount=8, int componentsCount=1, PixelFormat pixelFormat=PF_USER)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>56ecdd8d2565e210b5b9b95af4169e95</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0, int pixelBitsCount=8, int componentsCount=1)</arglist>
+      <anchor>2cd2e5174dd9f3decd1410b11e4d837e</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0, int pixelBitsCount=8, int componentsCount=1, PixelFormat pixelFormat=PF_USER)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual PixelFormat</type>
+      <name>GetPixelFormat</name>
+      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
+      <anchor>2bbaf7e2d507700a01a1ca6435fe9506</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
+      <anchor>cc089ff6c0beb9d4aac7b0b7d814f1f8</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
+      <anchor>3a2c6b02d6532bf57d63a9ce209f8cd2</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -18482,19 +18681,74 @@
     <name>iimg::IBitmap</name>
     <filename>classiimg_1_1_i_bitmap.html</filename>
     <base virtualness="virtual">iimg::IRasterImage</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>CreateBitmap</name>
+    <member kind="enumeration">
+      <name>PixelFormat</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>6fac8b51f3dbff9372d57ea1c51918ed</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, int pixelBitsCount=8, int componentsCount=1)=0</arglist>
+      <anchor>0c4e5f4e61840ce1e0330048cfa5f10e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PF_UNKNOWN</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>0c4e5f4e61840ce1e0330048cfa5f10ed877d1825ea7c83cd83c377c4d8e4ba4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PF_USER</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>0c4e5f4e61840ce1e0330048cfa5f10e2d2cb16572347303c10cbe08359ad67b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PF_MONO</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>0c4e5f4e61840ce1e0330048cfa5f10ef49e4891287e4f4283902f7c20dc532d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PF_GRAY</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>0c4e5f4e61840ce1e0330048cfa5f10ec69d6ee4375ead4b1381f7e2d4b32eb8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PF_RGB</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>0c4e5f4e61840ce1e0330048cfa5f10ee1e0393b1a6897adbf4f73afe1c6a93d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PF_RGBA</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>0c4e5f4e61840ce1e0330048cfa5f10e941311bdd09e1a76a60d1993929f3738</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PF_GRAY32</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>0c4e5f4e61840ce1e0330048cfa5f10e0e484bc2610a25401c4164ebce16a475</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual PixelFormat</type>
+      <name>GetPixelFormat</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a71b5c7fe94cd389e8b831a56935415e</anchor>
+      <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>6a7838f10c14a2053bfdc35f08db821a</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0, int pixelBitsCount=8, int componentsCount=1)=0</arglist>
+      <anchor>6591ed392c0fa6e0d4b32f3a7ac7cf9d</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>25cc9d13fc16c753a6bf5adbd003ba87</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -18584,444 +18838,6 @@
       <anchorfile>classiimg_1_1_i_raster_image.html</anchorfile>
       <anchor>cdd19b40a08db5a6dc3610ee397276f1</anchor>
       <arglist>(const istd::CIndex2d &amp;position, const icmm::CVarColor &amp;color)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iimg::TBitmapIterator</name>
-    <filename>classiimg_1_1_t_bitmap_iterator.html</filename>
-    <templarg>PixelType</templarg>
-    <member kind="typedef">
-      <type>TPixelAccessor&lt; PixelType &gt;</type>
-      <name>PixelAccessor</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>76f40bbd18bfcbf5d0eac251c0871f52</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>PixelType</type>
-      <name>ValueType</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>32c83e9c8d4d666ea67f7cc3baf1d6ff</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TBitmapIterator</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>a5894702b07d164a0c0b5b9f16884ae1</anchor>
-      <arglist>(const iimg::IBitmap *bitmapPtr, const i2d::CRectangle *regionPtr=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TBitmapIterator</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>3b46968842df6adcd4a86012f202a7e6</anchor>
-      <arglist>(const TBitmapIterator &amp;iterator)</arglist>
-    </member>
-    <member kind="function">
-      <type>const PixelAccessor &amp;</type>
-      <name>operator*</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>52f7a1b3589952c7d85b21c994628d72</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>PixelAccessor &amp;</type>
-      <name>operator*</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>def31551e68308be0eeec6e0b2058f24</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator&lt;</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>5a0a523304ec4fae4c9a8f355071827b</anchor>
-      <arglist>(const TBitmapIterator &amp;iterator)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator&gt;</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>63f3d9c8ead8e4abe1dc2ddff344d3c5</anchor>
-      <arglist>(const TBitmapIterator &amp;iterator)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>92b1250a16a03a868736b2e405b77eae</anchor>
-      <arglist>(const TBitmapIterator &amp;iterator)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator</type>
-      <name>operator++</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>93511353cfe0d51b700d10cc818e4b58</anchor>
-      <arglist>(int)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator &amp;</type>
-      <name>operator++</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>02d7077d499cbf80219304688516eb0e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator</type>
-      <name>operator--</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>3d5c4d358ba2c42d9f2074d821a161d0</anchor>
-      <arglist>(int)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator &amp;</type>
-      <name>operator--</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>4dfb32731266d28d3968d06f4bb7c25f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator &amp;</type>
-      <name>operator+=</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>9534cada62eb92b4f764cdf9bdb06be7</anchor>
-      <arglist>(int difference)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator &amp;</type>
-      <name>operator-=</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>f29e3d99d2009e7ac209d276f360e887</anchor>
-      <arglist>(int difference)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator</type>
-      <name>operator+</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>2f55d9044d4a9adb33ba48b5fcad9e7b</anchor>
-      <arglist>(int difference) const </arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator</type>
-      <name>operator-</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>4819e695a11e50176556b7a3585ee777</anchor>
-      <arglist>(int difference) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsValid</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>1224f4d5357348de0715bb07ccbd416d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AtEnd</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>a3efcbb1c98a4df2c4e21332aa64602f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>MoveTo</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>2130c997ee7f57236a72b76f2b799b80</anchor>
-      <arglist>(int x, int y)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>MoveTo</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator.html</anchorfile>
-      <anchor>f7065f395e364aefcc63da47bbbd238a</anchor>
-      <arglist>(const istd::CIndex2d &amp;index)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iimg::TBitmapIterator2d</name>
-    <filename>classiimg_1_1_t_bitmap_iterator2d.html</filename>
-    <templarg>PixelType</templarg>
-    <class kind="class">iimg::TBitmapIterator2d::XIterator</class>
-    <class kind="class">iimg::TBitmapIterator2d::YIterator</class>
-    <member kind="typedef">
-      <type>PixelType</type>
-      <name>ValueType</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d.html</anchorfile>
-      <anchor>033dbce21fbc5ed087484e83d011190e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TBitmapIterator2d</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d.html</anchorfile>
-      <anchor>a58d6208585473574a8ad00369b1aa52</anchor>
-      <arglist>(const iimg::IBitmap *bitmapPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TBitmapIterator2d</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d.html</anchorfile>
-      <anchor>234cd49096fec2f9b964d2548e831257</anchor>
-      <arglist>(const TBitmapIterator2d &amp;iterator)</arglist>
-    </member>
-    <member kind="function">
-      <type>ValueType &amp;</type>
-      <name>operator*</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d.html</anchorfile>
-      <anchor>2d85231c8db53be95fc13fd68934c8cc</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator&lt;</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d.html</anchorfile>
-      <anchor>55a2ef1b06f616c118f298e154f1a3be</anchor>
-      <arglist>(const TBitmapIterator2d &amp;iterator)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator&gt;</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d.html</anchorfile>
-      <anchor>1e3912d08a6923abb6df584feb058641</anchor>
-      <arglist>(const TBitmapIterator2d &amp;iterator)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d.html</anchorfile>
-      <anchor>3bd686133a142e870828345f4196a164</anchor>
-      <arglist>(const TBitmapIterator2d &amp;iterator)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsValid</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d.html</anchorfile>
-      <anchor>4f98809d09de62fbbf4be13136e8fd10</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>MoveTo</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d.html</anchorfile>
-      <anchor>ddd4fcca0feff04856543f26647e3872</anchor>
-      <arglist>(int x, int y)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>MoveTo</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d.html</anchorfile>
-      <anchor>67f603dcb889d81ca2d7dad0fd17ece4</anchor>
-      <arglist>(const istd::CIndex2d &amp;index)</arglist>
-    </member>
-    <member kind="variable">
-      <type>XIterator</type>
-      <name>x</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d.html</anchorfile>
-      <anchor>4fdcb13c2f3a8866e3d0f7f4c075be8f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>YIterator</type>
-      <name>y</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d.html</anchorfile>
-      <anchor>b2467ebb1f222054ccdf470d604a1de5</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iimg::TBitmapIterator2d::XIterator</name>
-    <filename>classiimg_1_1_t_bitmap_iterator2d_1_1_x_iterator.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>XIterator</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_x_iterator.html</anchorfile>
-      <anchor>26f299bb2c5b5ef1a90cce671df42a4e</anchor>
-      <arglist>(TBitmapIterator2d &amp;iterator)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d</type>
-      <name>operator++</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_x_iterator.html</anchorfile>
-      <anchor>898799e93c9d922d39c6945211d915c5</anchor>
-      <arglist>(int)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d &amp;</type>
-      <name>operator++</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_x_iterator.html</anchorfile>
-      <anchor>4eb32e76c003a091c6b4056260fb0066</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d</type>
-      <name>operator--</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_x_iterator.html</anchorfile>
-      <anchor>ca433f1137946d6e3978738b0afd54fb</anchor>
-      <arglist>(int)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d &amp;</type>
-      <name>operator--</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_x_iterator.html</anchorfile>
-      <anchor>0e7ea7c1b9b3f23bdeb81444a72826ec</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d &amp;</type>
-      <name>operator+=</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_x_iterator.html</anchorfile>
-      <anchor>7807538e019932d98fa484932fc490f8</anchor>
-      <arglist>(int difference)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d &amp;</type>
-      <name>operator-=</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_x_iterator.html</anchorfile>
-      <anchor>ae6411651ff8839476f0c44b52abdf3f</anchor>
-      <arglist>(int difference)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d</type>
-      <name>operator+</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_x_iterator.html</anchorfile>
-      <anchor>d97c7a075986e8eef6043116aeef19b0</anchor>
-      <arglist>(int difference)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d</type>
-      <name>operator-</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_x_iterator.html</anchorfile>
-      <anchor>c2aaf11816d4fb72d8b631414cd1b2d6</anchor>
-      <arglist>(int difference)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iimg::TBitmapIterator2d::YIterator</name>
-    <filename>classiimg_1_1_t_bitmap_iterator2d_1_1_y_iterator.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>YIterator</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_y_iterator.html</anchorfile>
-      <anchor>cbebf8c92f1d0c5c8df2a4430d43db16</anchor>
-      <arglist>(TBitmapIterator2d &amp;iterator)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d</type>
-      <name>operator++</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_y_iterator.html</anchorfile>
-      <anchor>488beca9dddddc3472821a2ae2423941</anchor>
-      <arglist>(int)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d &amp;</type>
-      <name>operator++</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_y_iterator.html</anchorfile>
-      <anchor>f526633958399ab152affaf0cda68a1f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d</type>
-      <name>operator--</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_y_iterator.html</anchorfile>
-      <anchor>dc3e4691b0a8a5ba61fa6c6b9efce4bd</anchor>
-      <arglist>(int)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d &amp;</type>
-      <name>operator--</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_y_iterator.html</anchorfile>
-      <anchor>f87effa687dc2f27ee6e12543ee18c9c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d &amp;</type>
-      <name>operator+=</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_y_iterator.html</anchorfile>
-      <anchor>40a38fd1fa60d24b11d0098857ef6ee9</anchor>
-      <arglist>(int difference)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d &amp;</type>
-      <name>operator-=</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_y_iterator.html</anchorfile>
-      <anchor>a9c5ea378cda2e7ca8c08c47a0da6122</anchor>
-      <arglist>(int difference)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d</type>
-      <name>operator+</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_y_iterator.html</anchorfile>
-      <anchor>adf59d99f6315f224fcb0ba9ee98df28</anchor>
-      <arglist>(int difference)</arglist>
-    </member>
-    <member kind="function">
-      <type>TBitmapIterator2d</type>
-      <name>operator-</name>
-      <anchorfile>classiimg_1_1_t_bitmap_iterator2d_1_1_y_iterator.html</anchorfile>
-      <anchor>f9634333bde835f030d25737298e4c28</anchor>
-      <arglist>(int difference)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iimg::TPixelAccessor</name>
-    <filename>classiimg_1_1_t_pixel_accessor.html</filename>
-    <templarg>PixelType</templarg>
-    <member kind="typedef">
-      <type>PixelType</type>
-      <name>ValueType</name>
-      <anchorfile>classiimg_1_1_t_pixel_accessor.html</anchorfile>
-      <anchor>11a4b240f61d09c29fcdf7911ac6efaa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TPixelAccessor</name>
-      <anchorfile>classiimg_1_1_t_pixel_accessor.html</anchorfile>
-      <anchor>2abbbc5d435f497f2c5d47a575c0d571</anchor>
-      <arglist>(int componentsCount)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetPixelBuffer</name>
-      <anchorfile>classiimg_1_1_t_pixel_accessor.html</anchorfile>
-      <anchor>8930c47ebee1ee9991e2b83238a66698</anchor>
-      <arglist>(ValueType *imageBufferPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type>ValueType *</type>
-      <name>GetPixelBuffer</name>
-      <anchorfile>classiimg_1_1_t_pixel_accessor.html</anchorfile>
-      <anchor>c091e52b900191bb67f8bedf3c5d7d54</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ValueType *</type>
-      <name>GetPixelBuffer</name>
-      <anchorfile>classiimg_1_1_t_pixel_accessor.html</anchorfile>
-      <anchor>0b4bf9d2018d4533267365ad8ef5e304</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetComponentsCount</name>
-      <anchorfile>classiimg_1_1_t_pixel_accessor.html</anchorfile>
-      <anchor>2e1275f73c71a689044965029903ce92</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>const ValueType &amp;</type>
-      <name>operator[]</name>
-      <anchorfile>classiimg_1_1_t_pixel_accessor.html</anchorfile>
-      <anchor>3aa6cc1df8909c7345e6a5139eb840ae</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function">
-      <type>ValueType &amp;</type>
-      <name>operator[]</name>
-      <anchorfile>classiimg_1_1_t_pixel_accessor.html</anchorfile>
-      <anchor>0ecb77f9eb97c153e6df6fb9836a5baf</anchor>
-      <arglist>(int index)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23826,12 +23642,6 @@
       <anchor>46124baa6dd501af2dd542770efe4b0bc101d999e270c31d7fb7bf4dee03ddb7</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
-      <name>CF_SELECTION_CHANGED</name>
-      <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>46124baa6dd501af2dd542770efe4b0b116e526dc65fefbf42c2eae64d8dcc57</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetManagerFlags</name>
@@ -23942,6 +23752,18 @@
     <name>iprm::ISelectionParam</name>
     <filename>classiprm_1_1_i_selection_param.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
+      <anchor>092f5d4176d748b596be4ec0464827b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_SELECTION_CHANGED</name>
+      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
+      <anchor>092f5d4176d748b596be4ec0464827b3c597b3a6b80fed78027d9e3caf50db6d</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual const ISelectionConstraints *</type>
       <name>GetConstraints</name>
@@ -24017,6 +23839,7 @@
     <class kind="class">iproc::CCascadedProcessorComp</class>
     <class kind="class">iproc::CDelegatedProgressManager</class>
     <class kind="class">iproc::CIterativeProcessorComp</class>
+    <class kind="class">iproc::CModelBasedProcessingTriggerComp</class>
     <class kind="class">iproc::IBitmapAcquisition</class>
     <class kind="class">iproc::IBitmapSupplier</class>
     <class kind="class">iproc::IProcessor</class>
@@ -24179,19 +24002,26 @@
       <anchor>a9cbc1668f8d915d06bdaedfdb6a48b7</anchor>
       <arglist>(int sessionId) const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>GetOpenSessionsCount</name>
+      <anchorfile>classiproc_1_1_c_delegated_progress_manager.html</anchorfile>
+      <anchor>b05b62300e459c51976b3025409d0afa</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnCancelable</name>
+      <anchorfile>classiproc_1_1_c_delegated_progress_manager.html</anchorfile>
+      <anchor>f8b58cf48198277284749b929477d5ca</anchor>
+      <arglist>(bool cancelState)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndChanges</name>
       <anchorfile>classiproc_1_1_c_delegated_progress_manager.html</anchorfile>
       <anchor>62cb5c8536ea6268fec191da21e9256f</anchor>
       <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>m_isCanceled</name>
-      <anchorfile>classiproc_1_1_c_delegated_progress_manager.html</anchorfile>
-      <anchor>fdfe0a0e87bc10039fae63a0b0dffafa</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24260,6 +24090,47 @@
       <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
       <anchor>38ea594db0ebdfa99da890128d4a22c7</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::CModelBasedProcessingTriggerComp</name>
+    <filename>classiproc_1_1_c_model_based_processing_trigger_comp.html</filename>
+    <base>ibase::TLoggerCompWrap</base>
+    <base>imod::CSingleModelObserverBase</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
+      <anchor>1e77a85bac7e41c195721e403f6ba204</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CModelBasedProcessingTriggerComp</name>
+      <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
+      <anchor>9b77cdf39619f9f717c4c0fedf53338b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
+      <anchor>1ddfbca8893ef60ac3b1431a8ffd2130</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
+      <anchor>f760a88d6323de5015b9860bbb19f569</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
+      <anchor>f09dd325ea51accbb9ff63c452f247f4</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24886,6 +24757,13 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>9b448738771a401729f852d264b31b1c</anchor>
+      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>TSupplierCompWrap</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>343f6bc269a60e4631ad9576818529bd</anchor>
@@ -25424,18 +25302,25 @@
       <arglist>(const istd::IChangeable &amp;data, iimg::IBitmap &amp;objectSnap, const istd::CIndex2d &amp;size) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CreateBitmap</name>
+      <type>virtual PixelFormat</type>
+      <name>GetPixelFormat</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
-      <anchor>b5231da72dc47b53d76c29d2815879b4</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, int pixelBitsCount=8, int componentsCount=1)</arglist>
+      <anchor>b2b8a54ff3a7f546e35a22c259c79ba3</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
-      <anchor>3d1ef3746b3435d50b4e55ef41695e59</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0, int pixelBitsCount=8, int componentsCount=1)</arglist>
+      <anchor>6804f98a76c2d78bab8352b707960c8b</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
+      <anchor>321cd69a33bc5f1f700c4c1e727f5f2c</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -25511,8 +25396,15 @@
       <type>QImage::Format</type>
       <name>CalcQtFormat</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
-      <anchor>b57903303ffe3cd42b9dd59b9f69bcde</anchor>
-      <arglist>(int pixelBitsCount, int componentsCount) const </arglist>
+      <anchor>75ac7dc64c0c10b740e127a78c738ad7</anchor>
+      <arglist>(PixelFormat pixelFormat) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>PixelFormat</type>
+      <name>CalcFromQtFormat</name>
+      <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
+      <anchor>8749eedb96425fcb2af56cb8daefa1c1</anchor>
+      <arglist>(QImage::Format imageFormat) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -25853,6 +25745,20 @@
       <anchorfile>classiqt_1_1_c_date_time.html</anchorfile>
       <anchor>1d9ff541205dbef9093b0bd41707ef7b</anchor>
       <arglist>(double ctime)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiqt_1_1_c_date_time.html</anchorfile>
+      <anchor>8d5ff032bd048a1ffeb48e3e9b910c0d</anchor>
+      <arglist>(const istd::IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classiqt_1_1_c_date_time.html</anchorfile>
+      <anchor>fcb69876b5e5d78805863dab6a7a4b97</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -27552,9 +27458,11 @@
     <class kind="class">iqt2d::CQuadrangleShape</class>
     <class kind="class">iqt2d::CRectangleParamsGuiComp</class>
     <class kind="class">iqt2d::CRectangleShape</class>
+    <class kind="class">iqt2d::CSceneBinderComp</class>
     <class kind="class">iqt2d::CSceneConnectorGuiComp</class>
     <class kind="class">iqt2d::CSceneControllerGuiComp</class>
     <class kind="class">iqt2d::CSceneProviderGuiComp</class>
+    <class kind="class">iqt2d::CSelectableSceneExtenderComp</class>
     <class kind="class">iqt2d::ISceneExtender</class>
     <class kind="class">iqt2d::ISceneProvider</class>
     <class kind="class">iqt2d::TObjectShapeBase</class>
@@ -28058,6 +27966,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
+      <name>BeforeUpdate</name>
+      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
+      <anchor>452c5c24c1398a4334f1c7142ab62a4f</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
       <anchor>a86a22cb79f836367e9412725ba10a31</anchor>
@@ -28397,7 +28312,7 @@
       <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CRectangleParamsGuiComp, i2d::CRectangle &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
-      <anchor>ef785e13f9fde354e18595c2df43f96d</anchor>
+      <anchor>ffe2799a8a3419142eb26e8187cf1fc1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -28512,6 +28427,32 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqt2d::CSceneBinderComp</name>
+    <filename>classiqt2d_1_1_c_scene_binder_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_scene_binder_comp.html</anchorfile>
+      <anchor>90f7df03396ebbb72a1280ac3a1ef79b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqt2d_1_1_c_scene_binder_comp.html</anchorfile>
+      <anchor>abfbae181aa3f344edfb8c46ba2666d7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqt2d_1_1_c_scene_binder_comp.html</anchorfile>
+      <anchor>31b9360bdfd3a97878ee5304cc8fef28</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqt2d::CSceneConnectorGuiComp</name>
     <filename>classiqt2d_1_1_c_scene_connector_gui_comp.html</filename>
     <base>TDesignerGuiCompBase&lt; Ui::CSceneConnectorGuiComp, QWidget &gt;</base>
@@ -28522,6 +28463,34 @@
       <anchorfile>classiqt2d_1_1_c_scene_connector_gui_comp.html</anchorfile>
       <anchor>95c4409ea6ec80ac1b9a230e1ed43fae</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqt2d_1_1_c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>c91a58c117540dc24f5f42b70dddfdd8</anchor>
+      <arglist>(m_sceneCommandsCompPtr, m_sceneGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqt2d_1_1_c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>b6eb69af974c1a92d9545d4272e57976</anchor>
+      <arglist>(m_sceneProviderCompPtr, m_sceneGuiCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqt2d_1_1_c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>5fb2cb795151ce70cf79f64d1449934d</anchor>
+      <arglist>(m_extenderCommandsCompPtr, m_extenderGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqt2d_1_1_c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>97a6dfd9213c0f4b83b886fb5cc25d3d</anchor>
+      <arglist>(m_extenderCompPtr, m_extenderGuiCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT const ibase::IHierarchicalCommand *</type>
@@ -29010,6 +28979,76 @@
       <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
       <anchor>190be32e7fb08676dd13c263a27547d6</anchor>
       <arglist>(QGraphicsSceneDragDropEvent *eventPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::CSelectableSceneExtenderComp</name>
+    <filename>classiqt2d_1_1_c_selectable_scene_extender_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>TSingleModelObserverBase&lt; iprm::ISelectionParam &gt;</base>
+    <base virtualness="virtual">iqt2d::ISceneExtender</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_selectable_scene_extender_comp.html</anchorfile>
+      <anchor>2d2b416a239eadccd93929e46e4e430a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqt2d_1_1_c_selectable_scene_extender_comp.html</anchorfile>
+      <anchor>e1686836bdaeb07a7d8bea4f87944cfb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnDetached</name>
+      <anchorfile>classiqt2d_1_1_c_selectable_scene_extender_comp.html</anchorfile>
+      <anchor>895cef5cd8e646dd165d2134a8e9ac3f</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddItemsToScene</name>
+      <anchorfile>classiqt2d_1_1_c_selectable_scene_extender_comp.html</anchorfile>
+      <anchor>d7c626f2721cdfbf5aa3bd592f37606c</anchor>
+      <arglist>(iqt2d::ISceneProvider *providerPtr, int flags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveItemsFromScene</name>
+      <anchorfile>classiqt2d_1_1_c_selectable_scene_extender_comp.html</anchorfile>
+      <anchor>512be69885b4c700544428ebcbc96a5d</anchor>
+      <arglist>(iqt2d::ISceneProvider *providerPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>AttachCurrent</name>
+      <anchorfile>classiqt2d_1_1_c_selectable_scene_extender_comp.html</anchorfile>
+      <anchor>f7a71dcbba6fef8373d1b4dc1601facc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DetachCurrent</name>
+      <anchorfile>classiqt2d_1_1_c_selectable_scene_extender_comp.html</anchorfile>
+      <anchor>18b58f3bf92f73eed44fde8275a7f308</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeforeUpdate</name>
+      <anchorfile>classiqt2d_1_1_c_selectable_scene_extender_comp.html</anchorfile>
+      <anchor>1c44cac3d48628822bc08939fb203d6d</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiqt2d_1_1_c_selectable_scene_extender_comp.html</anchorfile>
+      <anchor>fc1343881214d55283f6cf7471fb17bc</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29758,6 +29797,20 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
+      <anchor>cb9f13784f7fe43f61460c8d7b4bb144</anchor>
+      <arglist>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
+      <anchor>e3ec01cbf92b9ae792820d627ccea9fb</anchor>
+      <arglist>(m_documentManagerCommandsCompPtr, m_documentManagerCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CMainWindowGuiComp</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
       <anchor>8b2dc9e130d2d76dd837ba0dd5fc5773</anchor>
@@ -30464,6 +30517,7 @@
     <class kind="class">iqtgui::CGuiComponentDialog</class>
     <class kind="class">iqtgui::CHierarchicalCommand</class>
     <class kind="class">iqtgui::CIconProviderComp</class>
+    <class kind="class">iqtgui::CImagePropertiesFrameComp</class>
     <class kind="class">iqtgui::CImagePropertyGuiComp</class>
     <class kind="class">iqtgui::CItemDelegate</class>
     <class kind="class">iqtgui::CLogGuiComp</class>
@@ -30507,13 +30561,6 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_c_about_widget_gui_comp.html</anchorfile>
       <anchor>564601653a4620572859dc3a8f447b6a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnRetranslate</name>
-      <anchorfile>classiqtgui_1_1_c_about_widget_gui_comp.html</anchorfile>
-      <anchor>87c2afcb0e9bab7cc5f745b72bae560a</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -30699,17 +30746,17 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT void</type>
-      <name>Execute</name>
+      <name>ExecuteDialog</name>
       <anchorfile>classiqtgui_1_1_c_dialog_gui_comp.html</anchorfile>
-      <anchor>85c359cdd5d9d9276b1b6a081c42cfa8</anchor>
-      <arglist>()</arglist>
+      <anchor>3c1d66bd2f6c166bb8f8a32194824cd9</anchor>
+      <arglist>(IGuiObject *parentPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iqtgui::CGuiComponentDialog *</type>
       <name>CreateComponentDialog</name>
       <anchorfile>classiqtgui_1_1_c_dialog_gui_comp.html</anchorfile>
-      <anchor>936022248866b1c6a277977e3a04efaa</anchor>
-      <arglist>(int buttons) const </arglist>
+      <anchor>fb30a131b9ab242f3f01d1aac318343b</anchor>
+      <arglist>(int buttons, IGuiObject *parentPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30754,9 +30801,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnRetranslate</name>
+      <name>OnGuiRetranslate</name>
       <anchorfile>classiqtgui_1_1_c_dock_widget_gui_comp.html</anchorfile>
-      <anchor>071fd3f0eefbfdeba684c0949f7ec137</anchor>
+      <anchor>e34f7d81706ef5396dcd8e5babf6454e</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -31121,6 +31168,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>b387d3bc706d5720fdd23a3d0192a239</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
       <anchor>b66ecf3d13faa48018f89d871bd32ae3</anchor>
@@ -31139,6 +31193,13 @@
       <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
       <anchor>f7d034ff8f69f4102e8df829f71802f5</anchor>
       <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>cbe64d5e28b4059b0c34111dd7e3cc8d</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual QWidget *</type>
@@ -31371,6 +31432,32 @@
       <anchorfile>classiqtgui_1_1_c_icon_provider_comp.html</anchorfile>
       <anchor>9cbddefa652bc2e5b39e392896c6d3e0</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CImagePropertiesFrameComp</name>
+    <filename>classiqtgui_1_1_c_image_properties_frame_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CImagePropertiesFrameComp, iimg::IBitmap &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CImagePropertiesFrameComp, iimg::IBitmap &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_image_properties_frame_comp.html</anchorfile>
+      <anchor>0c420e11f2220a57890fff01a5a2fc39</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateEditor</name>
+      <anchorfile>classiqtgui_1_1_c_image_properties_frame_comp.html</anchorfile>
+      <anchor>02d3784a4b46766a00307e0589250b5b</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtgui_1_1_c_image_properties_frame_comp.html</anchorfile>
+      <anchor>1edac47d45f91351be6f4643b7ffd533</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31691,6 +31778,7 @@
     <name>iqtgui::CModelDialogGuiComp</name>
     <filename>classiqtgui_1_1_c_model_dialog_gui_comp.html</filename>
     <base>iqtgui::CDialogGuiComp</base>
+    <base>TSingleModelObserverBase&lt; istd::IChangeable &gt;</base>
     <member kind="typedef">
       <type>iqtgui::CDialogGuiComp</type>
       <name>BaseClass</name>
@@ -31698,12 +31786,26 @@
       <anchor>d8fa18d9b19b5deb29c67b3aa232c445</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
-      <name>Execute</name>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; istd::IChangeable &gt;</type>
+      <name>BaseClass2</name>
       <anchorfile>classiqtgui_1_1_c_model_dialog_gui_comp.html</anchorfile>
-      <anchor>545d630504b30832841d4a7aa30d43ba</anchor>
-      <arglist>()</arglist>
+      <anchor>1002b22d110554dd7150d5ee5defd419</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_model_dialog_gui_comp.html</anchorfile>
+      <anchor>c7e9436fe8305fde110856f4df382ac8</anchor>
+      <arglist>(m_workingDataFactoryCompPtr, m_workingModelFactoryCompPtr, true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ExecuteDialog</name>
+      <anchorfile>classiqtgui_1_1_c_model_dialog_gui_comp.html</anchorfile>
+      <anchor>04b099512ab370208673f11a35bf7b75</anchor>
+      <arglist>(IGuiObject *parentPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31718,6 +31820,20 @@
       <anchorfile>classiqtgui_1_1_c_model_editor_gui_comp.html</anchorfile>
       <anchor>1371c7ed5bf8f44dc19bd2061752336e</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_model_editor_gui_comp.html</anchorfile>
+      <anchor>9b878cf5670e53a1ac6587a6df26a576</anchor>
+      <arglist>(m_slaveGuiCompPtr, m_slaveEditorCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_model_editor_gui_comp.html</anchorfile>
+      <anchor>2dfaf78b1fb1838cc062c7d57df8fa48</anchor>
+      <arglist>(m_slaveObserverCompPtr, m_slaveEditorCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type>I_END_COMPONENT</type>
@@ -31815,6 +31931,20 @@
       <anchor>1ffb8daf2774caee49a97a9fbe6ad01f</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
+      <anchor>ad4da33e555e70b3453b3cc9ae5534c2</anchor>
+      <arglist>(m_objectModelCompPtr, m_objectCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
+      <anchor>c3b9835a44bd0c9407403743590b8a78</anchor>
+      <arglist>(m_objectGuiCompPtr, m_objectObserverCompPtr, true)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateEditor</name>
@@ -31873,6 +32003,20 @@
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
       <anchor>3ab0ae18afcd5903bd6ed541d4ae6bcd</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
+      <anchor>16f541dd9a59ca9aee90604519a07e68</anchor>
+      <arglist>(m_workspaceCompPtr, m_workspaceCommandsCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
+      <anchor>e923392fe3ed75380ad3aeb82f52c695</anchor>
+      <arglist>(m_mainWindowComponentsCompPtr, m_mainWindowCommandsCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -32229,10 +32373,10 @@
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
-      <name>Execute</name>
+      <name>ExecuteDialog</name>
       <anchorfile>classiqtgui_1_1_i_dialog.html</anchorfile>
-      <anchor>d285825eebeaac662c185335bdbd392b</anchor>
-      <arglist>()=0</arglist>
+      <anchor>a8d420324be83339c8ffa28329c109ad</anchor>
+      <arglist>(IGuiObject *parentPtr)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33146,6 +33290,13 @@
       <anchor>b5217c2fcee2175a5732942aaccf0d0c</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtmm_1_1_c_video_player_gui_comp.html</anchorfile>
+      <anchor>7c830a57d6d4d338438108154e082ead</anchor>
+      <arglist>(m_urlParamModelCompPtr, m_urlParamCompPtr, true)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
@@ -33189,6 +33340,7 @@
     <class kind="class">iqtprm::CFileNameParamGuiComp</class>
     <class kind="class">iqtprm::CParamsManagerGuiComp</class>
     <class kind="class">iqtprm::CRelativeFileNameParamComp</class>
+    <class kind="class">iqtprm::CSelectableGuiComp</class>
     <class kind="class">iqtprm::CSelectionParamGuiComp</class>
     <class kind="class">iqtprm::CSelectionParamIndexGuiComp</class>
     <class kind="class">iqtprm::CVariableParamGuiComp</class>
@@ -33204,6 +33356,27 @@
       <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
       <anchor>e12950b89cff1c884e50ed90cfae2a7d</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>b9fa9effb192704b01eed9bb11fd0e0c</anchor>
+      <arglist>(m_guisCompPtr, m_editorsCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>6d5fcf02b7a217691dbc3bdf2e8f7196</anchor>
+      <arglist>(m_observersCompPtr, m_editorsCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>3d2d79322d1d3c55064801a7b2523b61</anchor>
+      <arglist>(m_extendersCompPtr, m_editorsCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -33509,6 +33682,53 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqtprm::CSelectableGuiComp</name>
+    <filename>classiqtprm_1_1_c_selectable_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CSelectableGuiComp, iprm::ISelectionParam &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSelectableGuiComp, iprm::ISelectionParam &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
+      <anchor>511f88ed3d578924f8fa8392db3e15e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
+      <anchor>f1305c8a5f9475383d4d665515f0225a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateEditor</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
+      <anchor>1aa805cf86507e1616fa90f3019dbaba</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
+      <anchor>f41f3b103f8fbd6cbd2ccbec433199b3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
+      <anchor>38f677a7fcd8d4d3633a792f0100be62</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
+      <anchor>8fc467b4153ba752ef11fe98b525f76b</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtprm::CSelectionParamGuiComp</name>
     <filename>classiqtprm_1_1_c_selection_param_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CSelectionParamGuiComp, iprm::ISelectionParam &gt;</base>
@@ -33602,6 +33822,27 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
+      <anchor>820149c75921895854413de2b42cf22c</anchor>
+      <arglist>(m_guisCompPtr, m_editorsCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
+      <anchor>8a8c1626c4cb4a96d4f01e5bb3ab3632</anchor>
+      <arglist>(m_observersCompPtr, m_editorsCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
+      <anchor>d47b4774be401ee0f87f35a4ad0724b8</anchor>
+      <arglist>(m_extendersCompPtr, m_editorsCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CVariableParamGuiComp</name>
       <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
       <anchor>7487d1354925af93454e12cf36e19b7b</anchor>
@@ -33681,19 +33922,144 @@
   <compound kind="namespace">
     <name>iqtproc</name>
     <filename>namespaceiqtproc.html</filename>
+    <class kind="class">iqtproc::CDocumentProcessingCommandComp</class>
+    <class kind="class">iqtproc::CDocumentProcessingManagerComp</class>
+    <class kind="class">iqtproc::CDocumentProcessingManagerCompBase</class>
     <class kind="class">iqtproc::CProcessorControlGuiComp</class>
     <class kind="class">iqtproc::CProgressManagerGuiComp</class>
   </compound>
   <compound kind="class">
+    <name>iqtproc::CDocumentProcessingCommandComp</name>
+    <filename>classiqtproc_1_1_c_document_processing_command_comp.html</filename>
+    <base>iqtproc::CDocumentProcessingManagerCompBase</base>
+    <member kind="typedef">
+      <type>iqtproc::CDocumentProcessingManagerCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_command_comp.html</anchorfile>
+      <anchor>fcb699b0f68c975b90235f9da695786e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DoDocumentProcessing</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_command_comp.html</anchorfile>
+      <anchor>174b91d7b92371112d79fe610f49697c</anchor>
+      <arglist>(const istd::IChangeable &amp;inputDocument, const std::string &amp;documentTypeId)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtproc::CDocumentProcessingManagerComp</name>
+    <filename>classiqtproc_1_1_c_document_processing_manager_comp.html</filename>
+    <base>iqtproc::CDocumentProcessingManagerCompBase</base>
+    <member kind="typedef">
+      <type>iqtproc::CDocumentProcessingManagerCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp.html</anchorfile>
+      <anchor>31baff53dfa8c45ed3951341f8c52088</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DoDocumentProcessing</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp.html</anchorfile>
+      <anchor>e14722215579054097dc6b52e2515db3</anchor>
+      <arglist>(const istd::IChangeable &amp;inputDocument, const std::string &amp;documentTypeId)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtproc::CDocumentProcessingManagerCompBase</name>
+    <filename>classiqtproc_1_1_c_document_processing_manager_comp_base.html</filename>
+    <base>QObject</base>
+    <base>ibase::TLoggerCompWrap</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>53e8e449a4a1d227b9bb17ee25716026</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CDocumentProcessingManagerCompBase</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>035479d4fa5bb05e8f203b61c28b4950</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetProcessingCommandEnabled</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>eb34491bf12adccd77c77a7089d3e3e6</anchor>
+      <arglist>(bool isProcessingCommandEnabled=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>33d98e4fcbc2f0a1bcde4071bbfa1041</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>f2a80304d31b65cdcc6bf2de0a4db20f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>51d09590da36a6e9ab9f0acda10a5608</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>DoDocumentProcessing</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>0cd91b25472f1c54992f0ef8de66cd56</anchor>
+      <arglist>(const istd::IChangeable &amp;inputDocument, const std::string &amp;documentTypeId)=0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_processingMenu</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>ac43a9bb9597e0f9b2deaa94b4f63deb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_rootCommands</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>ada893f7d2e651088ca04fe46d21b6fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_processingCommand</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>32607952e2d40660d23fafd36dfcb06b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtproc::CProcessorControlGuiComp</name>
     <filename>classiqtproc_1_1_c_processor_control_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CProcessorControlGuiComp, QWidget &gt;</base>
+    <base>TDesignerGuiCompBase&lt; Ui::CProcessorControlGuiComp &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CProcessorControlGuiComp, QWidget &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtproc_1_1_c_processor_control_gui_comp.html</anchorfile>
       <anchor>4dfca0435f44eea6c5d2f9fba9adf1ef</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtproc_1_1_c_processor_control_gui_comp.html</anchorfile>
+      <anchor>5a253c36a7c14e131b3abcc58a0262ea</anchor>
+      <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type>I_END_COMPONENT</type>
@@ -33785,19 +34151,19 @@
       <anchor>0cd5b60469a5ab60db07d72102bd651a</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>iproc::CDelegatedProgressManager</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>d6815922b5d4715aea528dc65361c3e9</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CProgressManagerGuiComp</name>
       <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
       <anchor>43bb1afb50e87ae9c26cabb8a60dafc3</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsCanceled</name>
-      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>36c1f395defe8b209b897c8a8e495e2e</anchor>
-      <arglist>(int sessionId) const </arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -33819,6 +34185,27 @@
       <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
       <anchor>ec08aedd2e1f6c144434f6afd335d8c5</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>CProgressManagerGuiComp::OnCancelable</name>
+      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>386dbd37e5ed0db0436231d1ca3b7957</anchor>
+      <arglist>(bool cancelState)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>CProgressManagerGuiComp::BeginProgressSession</name>
+      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>2d856c459f8af7b2a598a20bcbc5866a</anchor>
+      <arglist>(const std::string &amp;progressId, const istd::CString &amp;description, bool isCancelable)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsCanceled</name>
+      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>36c1f395defe8b209b897c8a8e495e2e</anchor>
+      <arglist>(int sessionId) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -33856,6 +34243,13 @@
       <anchorfile>classisec_1_1_c_composed_authorization_verifier_comp.html</anchorfile>
       <anchor>271081d3395148d217a452dc6933a02f</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classisec_1_1_c_composed_authorization_verifier_comp.html</anchorfile>
+      <anchor>a5f3f7d493af00d3830c805e9f384227</anchor>
+      <arglist>(m_slaveVerifiersModelCompPtr, m_slaveVerifiersCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -36045,9 +36439,15 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>QF_NAMED_ONLY</name>
+      <name>QF_FILE_ONLY</name>
       <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>fc2afcdf99af4690e151f3956d2bab982bd0d269690c48463069cdb0f3d4c091</anchor>
+      <anchor>fc2afcdf99af4690e151f3956d2bab98e62f0db855b6461a10c28696efa0f003</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QF_DIRECTORY_ONLY</name>
+      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
+      <anchor>fc2afcdf99af4690e151f3956d2bab98f5acafd5c0b64f8b35b269536287fbc0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -40797,15 +41197,15 @@
       <type>virtual std::string</type>
       <name>ToString</name>
       <anchorfile>classisys_1_1_c_date_time_base.html</anchorfile>
-      <anchor>dd17511e026c870abf02f34d14085def</anchor>
-      <arglist>(int fromComponent=TC_YEAR, int toComponent=TC_MICROSECOND) const </arglist>
+      <anchor>5b6c133bac4796c97b4edff119a4188c</anchor>
+      <arglist>(int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND, const TimeSeparator &amp;separator=TS_ISO) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>FromString</name>
       <anchorfile>classisys_1_1_c_date_time_base.html</anchorfile>
-      <anchor>c29496bff892dba8985ee773ef51af04</anchor>
-      <arglist>(const std::string &amp;dateTime, int fromComponent=TC_YEAR, int toComponent=TC_MICROSECOND)</arglist>
+      <anchor>8aa40be99dcd255a5c1e8fbda2b9452b</anchor>
+      <arglist>(const std::string &amp;dateTime, int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -40813,6 +41213,13 @@
       <anchorfile>classisys_1_1_c_date_time_base.html</anchorfile>
       <anchor>ec5a2c8dc82af0d8ef0895788464710d</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>ResetAllComponents</name>
+      <anchorfile>classisys_1_1_c_date_time_base.html</anchorfile>
+      <anchor>a1c2ffb5552d72e3613e3435583b14d4</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected" static="yes">
       <type>static iser::CArchiveTag</type>
@@ -41258,9 +41665,9 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>TC_MICROSECOND</name>
+      <name>TC_MILLISECOND</name>
       <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>1bba51eb345f78d6966c79e5d732a54e2069d204fab2b24391361ee65adfff99</anchor>
+      <anchor>1bba51eb345f78d6966c79e5d732a54e9b0976fd286092b6f378fcbc4c5aafa1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -41268,6 +41675,13 @@
       <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
       <anchor>1bba51eb345f78d6966c79e5d732a54e44a3469dbc292da97ce39c6427e54fec</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>char</type>
+      <name>TimeSeparator</name>
+      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
+      <anchor>818ed36af6d2de11837ae03cc1448491</anchor>
+      <arglist>[4]</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -41308,15 +41722,29 @@
       <type>virtual std::string</type>
       <name>ToString</name>
       <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>fac3caadb15892408ce8c16e63f89df0</anchor>
-      <arglist>(int fromComponent=TC_YEAR, int toComponent=TC_MICROSECOND) const =0</arglist>
+      <anchor>9a3e83651d6b0f9fe85c533c7e6cfc2c</anchor>
+      <arglist>(int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND, const TimeSeparator &amp;separator=TS_ISO) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>FromString</name>
       <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>dede29d0ba99a6be56ee605e38613dc5</anchor>
-      <arglist>(const std::string &amp;dateTime, int fromComponent=TC_YEAR, int toComponent=TC_MICROSECOND)=0</arglist>
+      <anchor>50cd073c853a94c33e3720041f12ed51</anchor>
+      <arglist>(const std::string &amp;dateTime, int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND)=0</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const TimeSeparator</type>
+      <name>TS_ISO</name>
+      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
+      <anchor>07b2d37aeb87e9bccd7728ff4b2cef05</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const TimeSeparator</type>
+      <name>TS_FILENAME</name>
+      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
+      <anchor>4dd73fd63d719c4e99dca1e6c3ace395</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">

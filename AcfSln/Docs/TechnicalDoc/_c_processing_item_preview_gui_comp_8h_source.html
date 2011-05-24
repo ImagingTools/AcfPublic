@@ -56,13 +56,13 @@
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        I_BEGIN_COMPONENT(<a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html">CProcessingItemPreviewGuiComp</a>)
 <a name="l00035"></a>00035               I_ASSIGN(m_inputPreviewObserverCompPtr, "InputPreview", "View of the input file", true, "InputPreview");
-<a name="l00036"></a>00036               I_ASSIGN(m_inputPreviewGuiCompPtr, "InputPreview", "View of the input file", true, "InputPreview");
+<a name="l00036"></a>00036               <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#8a76f8ec8b01d2ffb14159ad7ad939f9">I_ASSIGN_TO</a>(m_inputPreviewGuiCompPtr, m_inputPreviewObserverCompPtr, true);
 <a name="l00037"></a>00037               I_ASSIGN(m_outputPreviewObserverCompPtr, "OutputPreview", "View of the input file", true, "OutputPreview");
-<a name="l00038"></a>00038               I_ASSIGN(m_outputPreviewGuiCompPtr, "OutputPreview", "View of the output file", true, "OutputPreview");
+<a name="l00038"></a>00038               <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#8a76f8ec8b01d2ffb14159ad7ad939f9">I_ASSIGN_TO</a>(m_outputPreviewGuiCompPtr, m_outputPreviewObserverCompPtr, true);
 <a name="l00039"></a>00039               I_ASSIGN(m_inputFileNameParamCompPtr, "InputFileName", "File name parameter for the input file", true, "InputFileName");
-<a name="l00040"></a>00040               I_ASSIGN(m_inputFileNameParamModelCompPtr, "InputFileName", "File name parameter for the input file", true, "InputFileName");
+<a name="l00040"></a>00040               <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#8a76f8ec8b01d2ffb14159ad7ad939f9">I_ASSIGN_TO</a>(m_inputFileNameParamModelCompPtr, m_inputFileNameParamCompPtr, true);
 <a name="l00041"></a>00041               I_ASSIGN(m_outputFileNameParamCompPtr, "OutputFileName", "File name parameter for the output file", true, "OutputFileName");
-<a name="l00042"></a>00042               I_ASSIGN(m_outputFileNameParamModelCompPtr, "OutputFileName", "File name parameter for the output file", true, "OutputFileName");
+<a name="l00042"></a>00042               <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#8a76f8ec8b01d2ffb14159ad7ad939f9">I_ASSIGN_TO</a>(m_outputFileNameParamModelCompPtr, m_outputFileNameParamCompPtr, true);
 <a name="l00043"></a>00043        I_END_COMPONENT;
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045        <span class="comment">// reimplemented (imod::IModelEditor)</span>

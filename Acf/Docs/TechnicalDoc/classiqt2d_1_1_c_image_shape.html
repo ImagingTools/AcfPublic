@@ -71,6 +71,9 @@ Inheritance diagram for iqt2d::CImageShape:</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_shape.html#8fe0f355ff07ef90f1221cfdaf4a0355">paint</a> (QPainter *, const QStyleOptionGraphicsItem *, QWidget *)</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_shape.html#452c5c24c1398a4334f1c7142ab62a4f">BeforeUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This function will be called before update of the observer contents occures.  <a href="#452c5c24c1398a4334f1c7142ab62a4f"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_shape.html#a86a22cb79f836367e9412725ba10a31">AfterUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This function will be called after update of the observer contents occures.  <a href="#a86a22cb79f836367e9412725ba10a31"></a><br></td></tr>
@@ -168,6 +171,45 @@ This function will be called after update of the observer contents occures.
 
 </div>
 </div><p>
+<a class="anchor" name="452c5c24c1398a4334f1c7142ab62a4f"></a><!-- doxytag: member="iqt2d::CImageShape::BeforeUpdate" ref="452c5c24c1398a4334f1c7142ab62a4f" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqt2d::CImageShape::BeforeUpdate           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&nbsp;</td>
+          <td class="paramname"> <em>modelPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>updateFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&nbsp;</td>
+          <td class="paramname"> <em>updateParamsPtr</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+This function will be called before update of the observer contents occures. 
+<p>
+Please note, that in some cases no following AfterUpdate can be called. 
+<p>Reimplemented from <a class="el" href="classimod_1_1_c_single_model_observer_base.html#27b16edc19f76f96aec64bdf284ac0cb">imod::CSingleModelObserverBase</a>.</p>
+
+</div>
+</div><p>
 <a class="anchor" name="96ade44436f34443531f045a28b9a7e3"></a><!-- doxytag: member="iqt2d::CImageShape::boundingRect" ref="96ade44436f34443531f045a28b9a7e3" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -206,7 +248,7 @@ This function will be called after update of the observer contents occures.
 Get position mode defined as PositionMode. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_image_shape_8h_source.html#l00111">111</a> of file <a class="el" href="_c_image_shape_8h_source.html">CImageShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_image_shape_8h_source.html#l00112">112</a> of file <a class="el" href="_c_image_shape_8h_source.html">CImageShape.h</a>.</p>
 
 </div>
 </div><p>
@@ -227,7 +269,7 @@ Get position mode defined as PositionMode.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_image_shape_8h_source.html#l00089">89</a> of file <a class="el" href="_c_image_shape_8h_source.html">CImageShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_image_shape_8h_source.html#l00090">90</a> of file <a class="el" href="_c_image_shape_8h_source.html">CImageShape.h</a>.</p>
 
 <p>References <a class="el" href="namespaceiqt.html#df482c6567c3a43721aa2ea30e0d8707">iqt::GetCIndex2d()</a>.</p>
 
@@ -252,7 +294,7 @@ Get position mode defined as PositionMode.
 Check if frame is visible. 
 <p>
 The otlining frame is used to show real image borders. 
-<p>Definition at line <a class="el" href="_c_image_shape_8h_source.html#l00095">95</a> of file <a class="el" href="_c_image_shape_8h_source.html">CImageShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_image_shape_8h_source.html#l00096">96</a> of file <a class="el" href="_c_image_shape_8h_source.html">CImageShape.h</a>.</p>
 
 </div>
 </div><p>
@@ -335,7 +377,7 @@ This call back function will be called, if an observable object is about to be d
 Turn frame visibility on/off. 
 <p>
 The otlining frame is used to show real image borders. 
-<p>Definition at line <a class="el" href="_c_image_shape_8h_source.html#l00101">101</a> of file <a class="el" href="_c_image_shape_8h_source.html">CImageShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_image_shape_8h_source.html#l00102">102</a> of file <a class="el" href="_c_image_shape_8h_source.html">CImageShape.h</a>.</p>
 
 </div>
 </div><p>
@@ -359,7 +401,7 @@ The otlining frame is used to show real image borders.
 Set position mode defined as PositionMode. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_image_shape_8h_source.html#l00117">117</a> of file <a class="el" href="_c_image_shape_8h_source.html">CImageShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_image_shape_8h_source.html#l00118">118</a> of file <a class="el" href="_c_image_shape_8h_source.html">CImageShape.h</a>.</p>
 
 </div>
 </div><p>

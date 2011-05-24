@@ -44,8 +44,8 @@
 <a name="l00024"></a>00024 <span class="keyword">public</span>:
 <a name="l00025"></a><a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#4f76b9eab77276b84152d121cbfe600e">00025</a>        <span class="keyword">enum</span> <a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#4f76b9eab77276b84152d121cbfe600e">ChangeFlags</a>
 <a name="l00026"></a>00026        {
-<a name="l00027"></a><a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#4f76b9eab77276b84152d121cbfe600e01fb4df24a7b0352caec71fe9ea6c272">00027</a>               <a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#4f76b9eab77276b84152d121cbfe600e01fb4df24a7b0352caec71fe9ea6c272">CF_SESSIONS_NUMBER</a> = 0x1000000,
-<a name="l00028"></a><a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#4f76b9eab77276b84152d121cbfe600e6288d3dbd17c2764d7fc21fc7d6d817c">00028</a>               <a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#4f76b9eab77276b84152d121cbfe600e6288d3dbd17c2764d7fc21fc7d6d817c">CF_PROGRESS_CHANGED</a> = 0x2000000
+<a name="l00027"></a><a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#4f76b9eab77276b84152d121cbfe600e01fb4df24a7b0352caec71fe9ea6c272">00027</a>               <a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#4f76b9eab77276b84152d121cbfe600e01fb4df24a7b0352caec71fe9ea6c272">CF_SESSIONS_NUMBER</a> = 1 &lt;&lt; 22,
+<a name="l00028"></a><a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#4f76b9eab77276b84152d121cbfe600e6288d3dbd17c2764d7fc21fc7d6d817c">00028</a>               <a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#4f76b9eab77276b84152d121cbfe600e6288d3dbd17c2764d7fc21fc7d6d817c">CF_PROGRESS_CHANGED</a> = 1 &lt;&lt; 23
 <a name="l00029"></a>00029        };
 <a name="l00030"></a>00030 
 <a name="l00034"></a>00034        <a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#eeb79465c6bfc726b9495f428804c0da" title="Create progress manager without slave manager.">CDelegatedProgressManager</a>();
@@ -65,39 +65,40 @@
 <a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#a9cbc1668f8d915d06bdaedfdb6a48b7" title="Check if this processing operation should be canceled.">IsCanceled</a>(<span class="keywordtype">int</span> sessionId) <span class="keyword">const</span>;
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056 <span class="keyword">protected</span>:
-<a name="l00057"></a>00057        <span class="comment">// reimplemented (istd::IChangeable)</span>
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#62cb5c8536ea6268fec191da21e9256f" title="Callback function for end change event.">OnEndChanges</a>(<span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* changeParamsPtr);
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 <span class="keyword">protected</span>:
-<a name="l00061"></a><a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#fdfe0a0e87bc10039fae63a0b0dffafa">00061</a>        <span class="keywordtype">bool</span> <a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#fdfe0a0e87bc10039fae63a0b0dffafa">m_isCanceled</a>;
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063 <span class="keyword">private</span>:
-<a name="l00064"></a>00064        <span class="keyword">struct </span>ProgressInfo
-<a name="l00065"></a>00065        {
-<a name="l00066"></a>00066               <span class="keywordtype">double</span> progress;
-<a name="l00067"></a>00067               <span class="keywordtype">bool</span> isCancelable;
-<a name="l00068"></a>00068        };
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070        <span class="keyword">typedef</span> std::map&lt;int, ProgressInfo&gt; ProgressMap;
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072        ProgressMap m_progressMap;
+<a name="l00057"></a>00057        <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#b05b62300e459c51976b3025409d0afa">GetOpenSessionsCount</a>() <span class="keyword">const</span>;
+<a name="l00058"></a>00058 
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#f8b58cf48198277284749b929477d5ca" title="Called when state of cancel operation has changed.">OnCancelable</a>(<span class="keywordtype">bool</span> cancelState);
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064        <span class="comment">// reimplemented (istd::IChangeable)</span>
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_c_delegated_progress_manager.html#62cb5c8536ea6268fec191da21e9256f" title="Callback function for end change event.">OnEndChanges</a>(<span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* changeParamsPtr);
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="keyword">private</span>:
+<a name="l00068"></a>00068        <span class="keyword">struct </span>ProgressInfo
+<a name="l00069"></a>00069        {
+<a name="l00070"></a>00070               <span class="keywordtype">double</span> progress;
+<a name="l00071"></a>00071               <span class="keywordtype">bool</span> isCancelable;
+<a name="l00072"></a>00072        };
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074        <span class="keywordtype">int</span> m_nextSessionId;
-<a name="l00075"></a>00075        <span class="keywordtype">double</span> m_progressSum;
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077        <span class="keywordtype">int</span> m_cancelableSessionsCount;
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079        <a class="code" href="classiproc_1_1_i_progress_manager.html" title="Consume information about progress of some process.">IProgressManager</a>* m_slaveManagerPtr;
-<a name="l00080"></a>00080        <span class="keywordtype">int</span> m_slaveSessionId;
-<a name="l00081"></a>00081 };
+<a name="l00074"></a>00074        <span class="keyword">typedef</span> std::map&lt;int, ProgressInfo&gt; ProgressMap;
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076        ProgressMap m_progressMap;
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078        <span class="keywordtype">int</span> m_nextSessionId;
+<a name="l00079"></a>00079        <span class="keywordtype">double</span> m_progressSum;
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081        <span class="keywordtype">int</span> m_cancelableSessionsCount;
 <a name="l00082"></a>00082 
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084 } <span class="comment">// namespace iproc</span>
-<a name="l00085"></a>00085 
+<a name="l00083"></a>00083        IProgressManager* m_slaveManagerPtr;
+<a name="l00084"></a>00084        <span class="keywordtype">int</span> m_slaveSessionId;
+<a name="l00085"></a>00085 };
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087 <span class="preprocessor">#endif // !iproc_CDelegatedProgressManager_included</span>
-<a name="l00088"></a>00088 <span class="preprocessor"></span>
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 } <span class="comment">// namespace iproc</span>
 <a name="l00089"></a>00089 
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 <span class="preprocessor">#endif // !iproc_CDelegatedProgressManager_included</span>
+<a name="l00092"></a>00092 <span class="preprocessor"></span>
+<a name="l00093"></a>00093 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

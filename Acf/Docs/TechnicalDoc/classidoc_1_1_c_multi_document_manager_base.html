@@ -74,6 +74,9 @@ Inheritance diagram for idoc::CMultiDocumentManagerBase:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#01634956a7aeb28454da1dd39479d873">GetDocumentFromView</a> (const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> &amp;view, <a class="el" href="structidoc_1_1_i_document_manager_1_1_document_info.html">DocumentInfo</a> *documentInfoPtr=NULL) const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the document assigned to view.  <a href="#01634956a7aeb28454da1dd39479d873"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#d2c2e32e53324c10493fbe29863237bd">AddViewToDocument</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;document, const std::string &amp;viewTypeId=std::string())</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add a new view to the document.  <a href="#d2c2e32e53324c10493fbe29863237bd"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#4e33402af95fc7f7ee8b651525b561e0">GetDocumentTypeId</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;document) const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get ID of document type managed by this object.  <a href="#4e33402af95fc7f7ee8b651525b561e0"></a><br></td></tr>
@@ -163,7 +166,7 @@ Inheritance diagram for idoc::CMultiDocumentManagerBase:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00056">56</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00057">57</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 
 </div>
 </div><p>
@@ -180,7 +183,7 @@ Inheritance diagram for idoc::CMultiDocumentManagerBase:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00058">58</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00059">59</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 
 </div>
 </div><p>
@@ -197,7 +200,7 @@ Inheritance diagram for idoc::CMultiDocumentManagerBase:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00057">57</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00058">58</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 
 </div>
 </div><p>
@@ -214,7 +217,7 @@ Inheritance diagram for idoc::CMultiDocumentManagerBase:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00059">59</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00060">60</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 
 </div>
 </div><p>
@@ -231,7 +234,7 @@ Inheritance diagram for idoc::CMultiDocumentManagerBase:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00060">60</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00061">61</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 
 </div>
 </div><p>
@@ -256,6 +259,46 @@ Inheritance diagram for idoc::CMultiDocumentManagerBase:</div>
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="d2c2e32e53324c10493fbe29863237bd"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::AddViewToDocument" ref="d2c2e32e53324c10493fbe29863237bd" args="(const istd::IChangeable &amp;document, const std::string &amp;viewTypeId=std::string())" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* idoc::CMultiDocumentManagerBase::AddViewToDocument           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>document</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>viewTypeId</em> = <code>std::string()</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Add a new view to the document. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>document</em>&nbsp;</td><td>document instance </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>viewTypeId</em>&nbsp;</td><td>ID of view type, if it will be created. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>Created view object </dd></dl>
+
+<p>Implements <a class="el" href="classidoc_1_1_i_document_manager.html#67b5019ddacfcb2a8fef21e36cdd1fd8">idoc::IDocumentManager</a>.</p>
+
+</div>
+</div><p>
 <a class="anchor" name="c6b68c0e0f64f50c7a4b78cc66196560"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::CloseAllDocuments" ref="c6b68c0e0f64f50c7a4b78cc66196560" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -344,7 +387,7 @@ Close current view.
 <p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>documentIndex</em>&nbsp;</td><td>optional index of document to save. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>documentIndex</em>&nbsp;</td><td>optional index of document to close. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>ignoredPtr</em>&nbsp;</td><td>optional return flag indicating that closing was aborted by user. </td></tr>
   </table>
 </dl>

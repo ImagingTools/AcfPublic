@@ -62,11 +62,15 @@ Inheritance diagram for isys::IDateTime:</div>
 <br>
 &nbsp;&nbsp;<a class="el" href="classisys_1_1_i_date_time.html#1bba51eb345f78d6966c79e5d732a54e81e5c1ed65a5dac273f99577929516aa">TC_MINUTE</a>, 
 <a class="el" href="classisys_1_1_i_date_time.html#1bba51eb345f78d6966c79e5d732a54e966045093f4251fd9b9619c8bffa6f3c">TC_SECOND</a>, 
-<a class="el" href="classisys_1_1_i_date_time.html#1bba51eb345f78d6966c79e5d732a54e2069d204fab2b24391361ee65adfff99">TC_MICROSECOND</a>, 
-<a class="el" href="classisys_1_1_i_date_time.html#1bba51eb345f78d6966c79e5d732a54e44a3469dbc292da97ce39c6427e54fec">TC_LAST</a> =  TC_MICROSECOND
+<a class="el" href="classisys_1_1_i_date_time.html#1bba51eb345f78d6966c79e5d732a54e9b0976fd286092b6f378fcbc4c5aafa1">TC_MILLISECOND</a>, 
+<a class="el" href="classisys_1_1_i_date_time.html#1bba51eb345f78d6966c79e5d732a54e44a3469dbc292da97ce39c6427e54fec">TC_LAST</a> =  TC_MILLISECOND
 <br>
  }</td></tr>
 
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Date/Time basic components.  <a href="classisys_1_1_i_date_time.html#1bba51eb345f78d6966c79e5d732a54e">More...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_date_time.html#818ed36af6d2de11837ae03cc1448491">TimeSeparator</a> [4]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Separator token for the Date/Time string conversion given in the form: YEAR TimeSeparator[0] MONTH TimeSeparator[0] DAY TimeSeparator[1] HOUR TimeSeparator[2] MINUTE TimeSeparator[2] SECOND TimeSeparator[3] MILLISECOND.  <a href="#818ed36af6d2de11837ae03cc1448491"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_date_time.html#2ae1f50a3728b9147d9a2c89964d3ee1">GetComponent</a> (int component) const =0</td></tr>
 
@@ -83,16 +87,43 @@ Inheritance diagram for isys::IDateTime:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_date_time.html#879845430a7f95cf4fa2b02abe2ae776">FromCTime</a> (double ctime)=0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the datetime using the number of seconds passed since 1970-01-01T00:00:00, (Coordinated Universal Time).  <a href="#879845430a7f95cf4fa2b02abe2ae776"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_date_time.html#fac3caadb15892408ce8c16e63f89df0">ToString</a> (int fromComponent=TC_YEAR, int toComponent=TC_MICROSECOND) const =0</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_date_time.html#9a3e83651d6b0f9fe85c533c7e6cfc2c">ToString</a> (int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND, const <a class="el" href="classisys_1_1_i_date_time.html#818ed36af6d2de11837ae03cc1448491">TimeSeparator</a> &amp;separator=<a class="el" href="classisys_1_1_i_date_time.html#07b2d37aeb87e9bccd7728ff4b2cef05">TS_ISO</a>) const =0</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the datetime object as a string.  <a href="#fac3caadb15892408ce8c16e63f89df0"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_date_time.html#dede29d0ba99a6be56ee605e38613dc5">FromString</a> (const std::string &amp;dateTime, int fromComponent=TC_YEAR, int toComponent=TC_MICROSECOND)=0</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the datetime object as a string.  <a href="#9a3e83651d6b0f9fe85c533c7e6cfc2c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_date_time.html#50cd073c853a94c33e3720041f12ed51">FromString</a> (const std::string &amp;dateTime, int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND)=0</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Creates a datetime object from a string.  <a href="#dede29d0ba99a6be56ee605e38613dc5"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Creates a datetime object from a string.  <a href="#50cd073c853a94c33e3720041f12ed51"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Static Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static const <a class="el" href="classisys_1_1_i_date_time.html#818ed36af6d2de11837ae03cc1448491">TimeSeparator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_date_time.html#07b2d37aeb87e9bccd7728ff4b2cef05">TS_ISO</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Separator tokens for ISO string representation of a date/time object.  <a href="#07b2d37aeb87e9bccd7728ff4b2cef05"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static const <a class="el" href="classisys_1_1_i_date_time.html#818ed36af6d2de11837ae03cc1448491">TimeSeparator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_date_time.html#4dd73fd63d719c4e99dca1e6c3ace395">TS_FILENAME</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Separator tokens for string representation of a date/time object, which is valid as a name for a file system item.  <a href="#4dd73fd63d719c4e99dca1e6c3ace395"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Interface for date and time representation. 
 <p>Definition at line <a class="el" href="_i_date_time_8h_source.html#l00022">22</a> of file <a class="el" href="_i_date_time_8h_source.html">IDateTime.h</a>.</p>
+<hr><h2>Member Typedef Documentation</h2>
+<a class="anchor" name="818ed36af6d2de11837ae03cc1448491"></a><!-- doxytag: member="isys::IDateTime::TimeSeparator" ref="818ed36af6d2de11837ae03cc1448491" args="[4]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char <a class="el" href="classisys_1_1_i_date_time.html#818ed36af6d2de11837ae03cc1448491">isys::IDateTime::TimeSeparator</a>[4]          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Separator token for the Date/Time string conversion given in the form: YEAR TimeSeparator[0] MONTH TimeSeparator[0] DAY TimeSeparator[1] HOUR TimeSeparator[2] MINUTE TimeSeparator[2] SECOND TimeSeparator[3] MILLISECOND. 
+<p>
+
+<p>Definition at line <a class="el" href="_i_date_time_8h_source.html#l00029">29</a> of file <a class="el" href="_i_date_time_8h_source.html">IDateTime.h</a>.</p>
+
+</div>
+</div><p>
 <hr><h2>Member Enumeration Documentation</h2>
 <a class="anchor" name="1bba51eb345f78d6966c79e5d732a54e"></a><!-- doxytag: member="isys::IDateTime::TimeComponent" ref="1bba51eb345f78d6966c79e5d732a54e" args="" -->
 <div class="memitem">
@@ -105,6 +136,8 @@ Interface for date and time representation.
 </div>
 <div class="memdoc">
 
+<p>
+Date/Time basic components. 
 <p>
 <dl compact><dt><b>Enumerator: </b></dt><dd>
 <table border="0" cellspacing="2" cellpadding="0">
@@ -120,14 +153,14 @@ Interface for date and time representation.
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" name="1bba51eb345f78d6966c79e5d732a54e966045093f4251fd9b9619c8bffa6f3c"></a><!-- doxytag: member="TC_SECOND" ref="1bba51eb345f78d6966c79e5d732a54e966045093f4251fd9b9619c8bffa6f3c" args="" -->TC_SECOND</em>&nbsp;</td><td>
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" name="1bba51eb345f78d6966c79e5d732a54e2069d204fab2b24391361ee65adfff99"></a><!-- doxytag: member="TC_MICROSECOND" ref="1bba51eb345f78d6966c79e5d732a54e2069d204fab2b24391361ee65adfff99" args="" -->TC_MICROSECOND</em>&nbsp;</td><td>
+<tr><td valign="top"><em><a class="anchor" name="1bba51eb345f78d6966c79e5d732a54e9b0976fd286092b6f378fcbc4c5aafa1"></a><!-- doxytag: member="TC_MILLISECOND" ref="1bba51eb345f78d6966c79e5d732a54e9b0976fd286092b6f378fcbc4c5aafa1" args="" -->TC_MILLISECOND</em>&nbsp;</td><td>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" name="1bba51eb345f78d6966c79e5d732a54e44a3469dbc292da97ce39c6427e54fec"></a><!-- doxytag: member="TC_LAST" ref="1bba51eb345f78d6966c79e5d732a54e44a3469dbc292da97ce39c6427e54fec" args="" -->TC_LAST</em>&nbsp;</td><td>
 </td></tr>
 </table>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_date_time_8h_source.html#l00025">25</a> of file <a class="el" href="_i_date_time_8h_source.html">IDateTime.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_date_time_8h_source.html#l00046">46</a> of file <a class="el" href="_i_date_time_8h_source.html">IDateTime.h</a>.</p>
 
 </div>
 </div><p>
@@ -156,7 +189,7 @@ Set the datetime using the number of seconds passed since 1970-01-01T00:00:00, (
 
 </div>
 </div><p>
-<a class="anchor" name="dede29d0ba99a6be56ee605e38613dc5"></a><!-- doxytag: member="isys::IDateTime::FromString" ref="dede29d0ba99a6be56ee605e38613dc5" args="(const std::string &amp;dateTime, int fromComponent=TC_YEAR, int toComponent=TC_MICROSECOND)=0" -->
+<a class="anchor" name="50cd073c853a94c33e3720041f12ed51"></a><!-- doxytag: member="isys::IDateTime::FromString" ref="50cd073c853a94c33e3720041f12ed51" args="(const std::string &amp;dateTime, int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -176,7 +209,7 @@ Set the datetime using the number of seconds passed since 1970-01-01T00:00:00, (
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>toComponent</em> = <code>TC_MICROSECOND</code></td><td>&nbsp;</td>
+          <td class="paramname"> <em>toComponent</em> = <code>TC_MILLISECOND</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -191,7 +224,7 @@ Set the datetime using the number of seconds passed since 1970-01-01T00:00:00, (
 Creates a datetime object from a string. 
 <p>
 
-<p>Implemented in <a class="el" href="classisys_1_1_c_date_time_base.html#c29496bff892dba8985ee773ef51af04">isys::CDateTimeBase</a>.</p>
+<p>Implemented in <a class="el" href="classisys_1_1_c_date_time_base.html#8aa40be99dcd255a5c1e8fbda2b9452b">isys::CDateTimeBase</a>.</p>
 
 </div>
 </div><p>
@@ -299,7 +332,7 @@ Returns the datetime as the number of seconds passed since 1970-01-01T00:00:00, 
 
 </div>
 </div><p>
-<a class="anchor" name="fac3caadb15892408ce8c16e63f89df0"></a><!-- doxytag: member="isys::IDateTime::ToString" ref="fac3caadb15892408ce8c16e63f89df0" args="(int fromComponent=TC_YEAR, int toComponent=TC_MICROSECOND) const =0" -->
+<a class="anchor" name="9a3e83651d6b0f9fe85c533c7e6cfc2c"></a><!-- doxytag: member="isys::IDateTime::ToString" ref="9a3e83651d6b0f9fe85c533c7e6cfc2c" args="(int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND, const TimeSeparator &amp;separator=TS_ISO) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -313,7 +346,13 @@ Returns the datetime as the number of seconds passed since 1970-01-01T00:00:00, 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>toComponent</em> = <code>TC_MICROSECOND</code></td><td>&nbsp;</td>
+          <td class="paramname"> <em>toComponent</em> = <code>TC_MILLISECOND</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classisys_1_1_i_date_time.html#818ed36af6d2de11837ae03cc1448491">TimeSeparator</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>separator</em> = <code><a class="el" href="classisys_1_1_i_date_time.html#07b2d37aeb87e9bccd7728ff4b2cef05">TS_ISO</a></code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -328,7 +367,46 @@ Returns the datetime as the number of seconds passed since 1970-01-01T00:00:00, 
 Returns the datetime object as a string. 
 <p>
 
-<p>Implemented in <a class="el" href="classisys_1_1_c_date_time_base.html#dd17511e026c870abf02f34d14085def">isys::CDateTimeBase</a>.</p>
+<p>Implemented in <a class="el" href="classisys_1_1_c_date_time_base.html#5b6c133bac4796c97b4edff119a4188c">isys::CDateTimeBase</a>.</p>
+
+</div>
+</div><p>
+<hr><h2>Member Data Documentation</h2>
+<a class="anchor" name="4dd73fd63d719c4e99dca1e6c3ace395"></a><!-- doxytag: member="isys::IDateTime::TS_FILENAME" ref="4dd73fd63d719c4e99dca1e6c3ace395" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classisys_1_1_i_date_time.html#818ed36af6d2de11837ae03cc1448491">TimeSeparator</a> <a class="el" href="classisys_1_1_i_date_time.html#4dd73fd63d719c4e99dca1e6c3ace395">isys::IDateTime::TS_FILENAME</a><code> [static]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Separator tokens for string representation of a date/time object, which is valid as a name for a file system item. 
+<p>
+TS_FILENAME = {'-',' ','.','.'} 
+<p>Definition at line <a class="el" href="_i_date_time_8h_source.html#l00041">41</a> of file <a class="el" href="_i_date_time_8h_source.html">IDateTime.h</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="07b2d37aeb87e9bccd7728ff4b2cef05"></a><!-- doxytag: member="isys::IDateTime::TS_ISO" ref="07b2d37aeb87e9bccd7728ff4b2cef05" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classisys_1_1_i_date_time.html#818ed36af6d2de11837ae03cc1448491">TimeSeparator</a> <a class="el" href="classisys_1_1_i_date_time.html#07b2d37aeb87e9bccd7728ff4b2cef05">isys::IDateTime::TS_ISO</a><code> [static]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Separator tokens for ISO string representation of a date/time object. 
+<p>
+TS_ISO = {'-',' ',':', '.'}, for example: 2010-01-01 12:30:05.45 
+<p>Definition at line <a class="el" href="_i_date_time_8h_source.html#l00035">35</a> of file <a class="el" href="_i_date_time_8h_source.html">IDateTime.h</a>.</p>
 
 </div>
 </div><p>

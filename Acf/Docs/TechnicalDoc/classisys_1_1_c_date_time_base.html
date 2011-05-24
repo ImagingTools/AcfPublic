@@ -50,15 +50,18 @@ Inheritance diagram for isys::CDateTimeBase:</div>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_date_time_base.html#edba1428e0f3e11fa668188d3bb0ad0c">SerializeComponents</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, <a class="el" href="classisys_1_1_i_date_time.html#1bba51eb345f78d6966c79e5d732a54e">TimeComponent</a> fromComponent, <a class="el" href="classisys_1_1_i_date_time.html#1bba51eb345f78d6966c79e5d732a54e">TimeComponent</a> toComponent)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_date_time_base.html#dd17511e026c870abf02f34d14085def">ToString</a> (int fromComponent=TC_YEAR, int toComponent=TC_MICROSECOND) const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_date_time_base.html#5b6c133bac4796c97b4edff119a4188c">ToString</a> (int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND, const <a class="el" href="classisys_1_1_i_date_time.html#818ed36af6d2de11837ae03cc1448491">TimeSeparator</a> &amp;separator=<a class="el" href="classisys_1_1_i_date_time.html#07b2d37aeb87e9bccd7728ff4b2cef05">TS_ISO</a>) const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the datetime object as a string.  <a href="#dd17511e026c870abf02f34d14085def"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_date_time_base.html#c29496bff892dba8985ee773ef51af04">FromString</a> (const std::string &amp;dateTime, int fromComponent=TC_YEAR, int toComponent=TC_MICROSECOND)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the datetime object as a string.  <a href="#5b6c133bac4796c97b4edff119a4188c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_date_time_base.html#8aa40be99dcd255a5c1e8fbda2b9452b">FromString</a> (const std::string &amp;dateTime, int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Creates a datetime object from a string.  <a href="#c29496bff892dba8985ee773ef51af04"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Creates a datetime object from a string.  <a href="#8aa40be99dcd255a5c1e8fbda2b9452b"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_date_time_base.html#ec5a2c8dc82af0d8ef0895788464710d">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#ec5a2c8dc82af0d8ef0895788464710d"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_date_time_base.html#a1c2ffb5552d72e3613e3435583b14d4">ResetAllComponents</a> ()</td></tr>
+
 <tr><td colspan="2"><br><h2>Static Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_date_time_base.html#1a4c178a257d18ef0c094e2bae0af9a1">s_archiveTags</a> [TC_LAST+1]</td></tr>
 
@@ -67,7 +70,7 @@ Inheritance diagram for isys::CDateTimeBase:</div>
 
 <p>Definition at line <a class="el" href="_c_date_time_base_8h_source.html#l00014">14</a> of file <a class="el" href="_c_date_time_base_8h_source.html">CDateTimeBase.h</a>.</p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="c29496bff892dba8985ee773ef51af04"></a><!-- doxytag: member="isys::CDateTimeBase::FromString" ref="c29496bff892dba8985ee773ef51af04" args="(const std::string &amp;dateTime, int fromComponent=TC_YEAR, int toComponent=TC_MICROSECOND)" -->
+<a class="anchor" name="8aa40be99dcd255a5c1e8fbda2b9452b"></a><!-- doxytag: member="isys::CDateTimeBase::FromString" ref="8aa40be99dcd255a5c1e8fbda2b9452b" args="(const std::string &amp;dateTime, int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -87,7 +90,7 @@ Inheritance diagram for isys::CDateTimeBase:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>toComponent</em> = <code>TC_MICROSECOND</code></td><td>&nbsp;</td>
+          <td class="paramname"> <em>toComponent</em> = <code>TC_MILLISECOND</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -102,7 +105,26 @@ Inheritance diagram for isys::CDateTimeBase:</div>
 Creates a datetime object from a string. 
 <p>
 
-<p>Implements <a class="el" href="classisys_1_1_i_date_time.html#dede29d0ba99a6be56ee605e38613dc5">isys::IDateTime</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_date_time.html#50cd073c853a94c33e3720041f12ed51">isys::IDateTime</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="a1c2ffb5552d72e3613e3435583b14d4"></a><!-- doxytag: member="isys::CDateTimeBase::ResetAllComponents" ref="a1c2ffb5552d72e3613e3435583b14d4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isys::CDateTimeBase::ResetAllComponents           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
 
 </div>
 </div><p>
@@ -166,7 +188,7 @@ Type of operation is depending on archive type. <dl class="see" compact><dt><b>S
 
 </div>
 </div><p>
-<a class="anchor" name="dd17511e026c870abf02f34d14085def"></a><!-- doxytag: member="isys::CDateTimeBase::ToString" ref="dd17511e026c870abf02f34d14085def" args="(int fromComponent=TC_YEAR, int toComponent=TC_MICROSECOND) const " -->
+<a class="anchor" name="5b6c133bac4796c97b4edff119a4188c"></a><!-- doxytag: member="isys::CDateTimeBase::ToString" ref="5b6c133bac4796c97b4edff119a4188c" args="(int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND, const TimeSeparator &amp;separator=TS_ISO) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -180,7 +202,13 @@ Type of operation is depending on archive type. <dl class="see" compact><dt><b>S
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>toComponent</em> = <code>TC_MICROSECOND</code></td><td>&nbsp;</td>
+          <td class="paramname"> <em>toComponent</em> = <code>TC_MILLISECOND</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classisys_1_1_i_date_time.html#818ed36af6d2de11837ae03cc1448491">TimeSeparator</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>separator</em> = <code><a class="el" href="classisys_1_1_i_date_time.html#07b2d37aeb87e9bccd7728ff4b2cef05">TS_ISO</a></code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -195,7 +223,7 @@ Type of operation is depending on archive type. <dl class="see" compact><dt><b>S
 Returns the datetime object as a string. 
 <p>
 
-<p>Implements <a class="el" href="classisys_1_1_i_date_time.html#fac3caadb15892408ce8c16e63f89df0">isys::IDateTime</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_date_time.html#9a3e83651d6b0f9fe85c533c7e6cfc2c">isys::IDateTime</a>.</p>
 
 </div>
 </div><p>
@@ -213,7 +241,7 @@ Returns the datetime object as a string.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_date_time_base_8h_source.html#l00027">27</a> of file <a class="el" href="_c_date_time_base_8h_source.html">CDateTimeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_date_time_base_8h_source.html#l00029">29</a> of file <a class="el" href="_c_date_time_base_8h_source.html">CDateTimeBase.h</a>.</p>
 
 </div>
 </div><p>

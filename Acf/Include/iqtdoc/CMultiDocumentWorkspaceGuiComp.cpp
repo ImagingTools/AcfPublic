@@ -304,7 +304,7 @@ void CMultiDocumentWorkspaceGuiComp::CloseAllDocuments()
 
 istd::CStringList CMultiDocumentWorkspaceGuiComp::GetOpenFilePaths(const std::string* documentTypeIdPtr) const
 {
-	QString filter = CreateFileDialogFilter(documentTypeIdPtr, iser::IFileLoader::QF_NAMED_ONLY | iser::IFileLoader::QF_NO_SAVING);
+	QString filter = CreateFileDialogFilter(documentTypeIdPtr, iser::IFileLoader::QF_FILE_ONLY | iser::IFileLoader::QF_NO_SAVING);
 
 	QStringList files = QFileDialog::getOpenFileNames(GetWidget(), tr("Open Files..."), m_lastDirectory, filter);
 
@@ -318,7 +318,7 @@ istd::CStringList CMultiDocumentWorkspaceGuiComp::GetOpenFilePaths(const std::st
 
 istd::CString CMultiDocumentWorkspaceGuiComp::GetSaveFilePath(const std::string& documentTypeId) const
 {
-	QString filter = CreateFileDialogFilter(&documentTypeId, iser::IFileLoader::QF_NAMED_ONLY | iser::IFileLoader::QF_NO_LOADING);
+	QString filter = CreateFileDialogFilter(&documentTypeId, iser::IFileLoader::QF_FILE_ONLY | iser::IFileLoader::QF_NO_LOADING);
 
 	QString filePath = QFileDialog::getSaveFileName(NULL, tr("Save..."), m_lastDirectory, filter);
 
@@ -426,8 +426,6 @@ void CMultiDocumentWorkspaceGuiComp::OnGuiCreated()
 	}
 
 	OnViewsCountChanged();
-
-	OnRetranslate();
 }
 
 
@@ -441,6 +439,8 @@ void CMultiDocumentWorkspaceGuiComp::OnGuiDestroyed()
 
 void CMultiDocumentWorkspaceGuiComp::OnRetranslate()
 {
+	BaseClass::OnRetranslate();
+
 	m_windowCommand.SetName(iqt::GetCString(tr("&Window")));
 	// Window commands
 	m_cascadeCommand.SetVisuals(tr("Casca&de"), tr("Cascade"), tr("Lays out all document windows in cascaded mode"));

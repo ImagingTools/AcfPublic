@@ -43,7 +43,7 @@ public:
 	enum AttributeFlags
 	{
 		/**
-			Active if user declared this attrinute as obligatory.
+			Active if user declared this attribute as obligatory.
 		*/
 		AF_OBLIGATORY = 1 << 0,
 		/**

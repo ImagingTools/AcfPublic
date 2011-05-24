@@ -81,7 +81,7 @@ bool CSvgBitmapLoaderComp::IsOperationSupported(
 		}
 	}
 
-	return ((flags & (QF_ANONYMOUS_ONLY | QF_NO_LOADING)) == 0);
+	return ((flags & (QF_ANONYMOUS_ONLY | QF_DIRECTORY_ONLY | QF_NO_LOADING)) == 0);
 }
 
 
@@ -95,7 +95,7 @@ int CSvgBitmapLoaderComp::LoadFromFile(istd::IChangeable& data, const istd::CStr
 		if (filePath != m_lastFilePath){
 			QSvgRenderer renderer;
 			if (renderer.load(iqt::GetQString(filePath))){
-				if (!m_lastBitmap.CreateBitmap(istd::CIndex2d(*m_bitmapWidthAttrPtr, *m_bitmapHeightAttrPtr), 32, 4)){
+				if (!m_lastBitmap.CreateBitmap(iimg::IBitmap::PF_RGBA, istd::CIndex2d(*m_bitmapWidthAttrPtr, *m_bitmapHeightAttrPtr))){
 					m_lastFilePath.Reset();
 
 					SendInfoMessage(MI_BITMAP_TYPE, iqt::GetCString(QObject::tr("Cannot create bitmap")));

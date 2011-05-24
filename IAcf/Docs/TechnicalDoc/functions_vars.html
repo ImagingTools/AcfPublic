@@ -45,6 +45,7 @@
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_h"><span>h</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
+      <li><a href="#index_k"><span>k</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_n"><span>n</span></a></li>
@@ -149,6 +150,10 @@
 <li>isTriggerBitSet
 : <a class="el" href="structilolv_1_1_c_tracer_driver_base_1_1_inspection_unit_element.html#682caf8b39f405d421c5c966007c9442">ilolv::CTracerDriverBase::InspectionUnitElement</a>
 </ul>
+<h3><a class="anchor" name="index_k">- k -</a></h3><ul>
+<li>kernelWeight
+: <a class="el" href="structiipr_1_1_c_convolution_kernel2d_1_1_kernel_value.html#4b360c1b2689b37cf53b9a99545db5cb">iipr::CConvolutionKernel2d::KernelValue</a>
+</ul>
 <h3><a class="anchor" name="index_l">- l -</a></h3><ul>
 <li>lastBarrierState
 : <a class="el" href="structilolv_1_1_c_tracer_driver_base_1_1_inspection_unit_element.html#058e8c14e93866edbaaf97e0fc7fb294">ilolv::CTracerDriverBase::InspectionUnitElement</a>
@@ -205,7 +210,7 @@
 <li>m_isScaleEnabled
 : <a class="el" href="classiipr_1_1_c_search_params.html#0584125b6650dcc7e207d1ae4a0c824b">iipr::CSearchParams</a>
 <li>m_kernelSize
-: <a class="el" href="classiipr_1_1_t_kernel2d.html#fe813f7c22f82c80afe64eb7ff0e5e58">iipr::TKernel2d&lt; PixelType, KernelType &gt;</a>
+: <a class="el" href="classiipr_1_1_c_convolution_kernel2d.html#627d4cd92399fccc3f6f0022ca8a756b">iipr::CConvolutionKernel2d</a>
 <li>m_minScore
 : <a class="el" href="classiipr_1_1_c_search_params.html#7482c094c903d46c107c63f3a267a48e">iipr::CSearchParams</a>
 <li>m_nominalModelsCount
@@ -215,9 +220,9 @@
 <li>m_searchRegion
 : <a class="el" href="classiipr_1_1_c_search_params.html#60c53896a4df3b1aca74bb005dfb518a">iipr::CSearchParams</a>
 <li>m_sumWeights
-: <a class="el" href="classiipr_1_1_t_kernel2d.html#5c861a67ea53e210661f2b0ec12e2826">iipr::TKernel2d&lt; PixelType, KernelType &gt;</a>
+: <a class="el" href="classiipr_1_1_c_convolution_kernel2d.html#297acf81355464d3a3a944b1274b705b">iipr::CConvolutionKernel2d</a>
 <li>m_values
-: <a class="el" href="classiipr_1_1_t_kernel2d.html#9673b4548cfb6335387083d2a7c2634d">iipr::TKernel2d&lt; PixelType, KernelType &gt;</a>
+: <a class="el" href="classiipr_1_1_c_convolution_kernel2d.html#f4e84d932da8cfb64bb06bb7f6cb5282">iipr::CConvolutionKernel2d</a>
 <li>maxEjectorOnTime
 : <a class="el" href="structilolv_1_1_c_tracer_commands_1_1_ejector_params.html#6df752c090daed93cc211883849c726d">ilolv::CTracerCommands::EjectorParams</a>
 <li>maxKeepAliveTime
@@ -228,13 +233,12 @@
 : <a class="el" href="structilolv_1_1_c_inspection_unit_commands_1_1_set_mode.html#3d12186088dd07ac68e4d7ecb6269e98">ilolv::CInspectionUnitCommands::SetMode</a>
 </ul>
 <h3><a class="anchor" name="index_n">- n -</a></h3><ul>
-<li>nativeTimestamp
-: <a class="el" href="structilolv_1_1_c_inspection_unit_commands_1_1_single_trigger_1_1_result.html#60b9f4a6f5b91daabf8a6d246746b344">ilolv::CInspectionUnitCommands::SingleTrigger::Result</a>
 <li>nativeTimeStamp
 : <a class="el" href="structilolv_1_1_c_tracer_driver_base_1_1_inspection_info.html#89eabfc8d5970e255aa28eae155b03df">ilolv::CTracerDriverBase::InspectionInfo</a>
 <li>nativeTimestamp
 : <a class="el" href="structilolv_1_1_c_tracer_commands_1_1_single_trigger_1_1_result.html#5ce76013659f5bd383c4ad2e74195645">ilolv::CTracerCommands::SingleTrigger::Result</a>
 , <a class="el" href="structilolv_1_1_c_inspection_unit_commands_1_1_pop_id_1_1_result.html#26eb097f06332e80b1badb799a1c1d5d">ilolv::CInspectionUnitCommands::PopId::Result</a>
+, <a class="el" href="structilolv_1_1_c_inspection_unit_commands_1_1_single_trigger_1_1_result.html#60b9f4a6f5b91daabf8a6d246746b344">ilolv::CInspectionUnitCommands::SingleTrigger::Result</a>
 </ul>
 <h3><a class="anchor" name="index_o">- o -</a></h3><ul>
 <li>object
@@ -261,12 +265,14 @@
 : <a class="el" href="classiqtcntl_1_1_c_driver_controller_comp_1_1_unit_controller.html#2df887e357fd4776812b8f262a9fc8bc">iqtcntl::CDriverControllerComp::UnitController</a>
 , <a class="el" href="classiqtcntl_1_1_c_driver_controller_comp_1_1_line_controller.html#ae1ea54a8fe8aee9bc60807d8535d43e">iqtcntl::CDriverControllerComp::LineController</a>
 , <a class="el" href="classiqtcntl_1_1_c_driver_controller_comp_1_1_ejector_controller.html#494dfa356643e2ee0cb51dcda75ab9ac">iqtcntl::CDriverControllerComp::EjectorController</a>
+<li>pixelOffset
+: <a class="el" href="structiipr_1_1_c_convolution_kernel2d_1_1_kernel_value.html#2d744e9ba119b3b1f6eb2c905b4cfc1b">iipr::CConvolutionKernel2d::KernelValue</a>
 <li>points
 : <a class="el" href="structiipr_1_1_c_circle_find_processor_comp_1_1_ray.html#f6c9d49cfa6af518c73bff862b77be9e">iipr::CCircleFindProcessorComp::Ray</a>
 <li>position
-: <a class="el" href="structiipr_1_1_c_circle_find_processor_comp_1_1_point.html#767388a30a4f6875ab9be101295b9a6a">iipr::CCircleFindProcessorComp::Point</a>
-, <a class="el" href="structilolv_1_1_t_ordered_positions_queue_1_1_element.html#2f5c39b49e821c75db2afeeba65fa6e8">ilolv::TOrderedPositionsQueue&lt; Object, SizeBits &gt;::Element</a>
+: <a class="el" href="structilolv_1_1_t_ordered_positions_queue_1_1_element.html#2f5c39b49e821c75db2afeeba65fa6e8">ilolv::TOrderedPositionsQueue&lt; Object, SizeBits &gt;::Element</a>
 , <a class="el" href="structilolv_1_1_c_tracer_commands_1_1_ejector_params.html#2fec378703e6aa6d28fd81a17c4394e8">ilolv::CTracerCommands::EjectorParams</a>
+, <a class="el" href="structiipr_1_1_c_circle_find_processor_comp_1_1_point.html#767388a30a4f6875ab9be101295b9a6a">iipr::CCircleFindProcessorComp::Point</a>
 <li>positionTolerance
 : <a class="el" href="structilolv_1_1_c_tracer_commands_1_1_tracer_params.html#c4035bcc800627a92e78ea5b4c6dbca3">ilolv::CTracerCommands::TracerParams</a>
 </ul>

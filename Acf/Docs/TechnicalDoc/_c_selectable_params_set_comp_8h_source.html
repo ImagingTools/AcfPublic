@@ -27,67 +27,87 @@
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="preprocessor">#include "<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>"</span>
 <a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="_i_params_set_8h.html">iprm/IParamsSet.h</a>"</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="_i_selection_param_8h.html">iprm/ISelectionParam.h</a>"</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="_i_selection_constraints_8h.html">iprm/ISelectionConstraints.h</a>"</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include "<a class="code" href="_i_params_manager_8h.html">iprm/IParamsManager.h</a>"</span>
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="keyword">namespace </span>iprm
-<a name="l00014"></a>00014 {
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016 
-<a name="l00020"></a><a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html">00020</a> <span class="keyword">class </span><a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html" title="Interface allowing to select single option from list of options.">CSelectableParamsSetComp</a>:
-<a name="l00021"></a>00021                      <span class="keyword">public</span> icomp::CComponentBase,
-<a name="l00022"></a>00022                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>,
-<a name="l00023"></a>00023                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>,
-<a name="l00024"></a>00024                      <span class="keyword">virtual</span> <span class="keyword">protected</span> iprm::<a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>
-<a name="l00025"></a>00025 {
-<a name="l00026"></a>00026 <span class="keyword">public</span>:
-<a name="l00027"></a><a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#e14fd809d7d54d725a5fc82bfe9789ee">00027</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">BaseClass</a>;
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html" title="Interface allowing to select single option from list of options.">CSelectableParamsSetComp</a>)
-<a name="l00030"></a>00030               I_REGISTER_INTERFACE(iser::ISerializable)
-<a name="l00031"></a>00031               I_REGISTER_INTERFACE(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>)
-<a name="l00032"></a>00032               I_REGISTER_INTERFACE(<a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>)
-<a name="l00033"></a>00033               I_ASSIGN(m_selectionIdAttrPtr, "SelectionId", "ID of selection in parameter set", true, "Input")
-<a name="l00034"></a>00034               I_ASSIGN(m_paramsManagerCompPtr, "ParamsManager", "Manager of parameter set used to realize selection", true, "ParamsManager")
-<a name="l00035"></a>00035        I_END_COMPONENT
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037        <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html" title="Interface allowing to select single option from list of options.">CSelectableParamsSetComp</a>();
+<a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="_c_single_model_observer_base_8h.html">imod/CSingleModelObserverBase.h</a>"</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="_i_params_set_8h.html">iprm/IParamsSet.h</a>"</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include "<a class="code" href="_i_selection_param_8h.html">iprm/ISelectionParam.h</a>"</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include "<a class="code" href="_i_selection_constraints_8h.html">iprm/ISelectionConstraints.h</a>"</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include "<a class="code" href="_i_params_manager_8h.html">iprm/IParamsManager.h</a>"</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 <span class="keyword">namespace </span>iprm
+<a name="l00016"></a>00016 {
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 
+<a name="l00022"></a><a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html">00022</a> <span class="keyword">class </span><a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html" title="Interface allowing to select single option from list of options.">CSelectableParamsSetComp</a>:
+<a name="l00023"></a>00023                      <span class="keyword">public</span> icomp::CComponentBase,
+<a name="l00024"></a>00024                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>,
+<a name="l00025"></a>00025                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>,
+<a name="l00026"></a>00026                      <span class="keyword">virtual</span> <span class="keyword">protected</span> iprm::<a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>
+<a name="l00027"></a>00027 {
+<a name="l00028"></a>00028 <span class="keyword">public</span>:
+<a name="l00029"></a><a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#e14fd809d7d54d725a5fc82bfe9789ee">00029</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">BaseClass</a>;
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031        I_BEGIN_COMPONENT(<a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html" title="Interface allowing to select single option from list of options.">CSelectableParamsSetComp</a>)
+<a name="l00032"></a>00032               I_REGISTER_INTERFACE(iser::ISerializable)
+<a name="l00033"></a>00033               I_REGISTER_INTERFACE(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>)
+<a name="l00034"></a>00034               I_REGISTER_INTERFACE(<a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>)
+<a name="l00035"></a>00035               I_ASSIGN(m_selectionIdAttrPtr, "SelectionId", "ID of selection in parameter set", true, "Input")
+<a name="l00036"></a>00036               I_ASSIGN(m_paramsManagerCompPtr, "ParamsManager", "Manager of parameter set used to realize selection", true, "ParamsManager")
+<a name="l00037"></a>00037        I_END_COMPONENT
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039        <span class="comment">// reimplemented (iprm::IParamsSet)</span>
-<a name="l00040"></a>00040        virtual const iser::ISerializable* <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#90cb2ee3f8504c557c0bb614348d7319" title="Get any parameter.">GetParameter</a>(const std::<span class="keywordtype">string</span>&amp; <span class="keywordtype">id</span>) const;
-<a name="l00041"></a>00041        virtual iser::ISerializable* <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#35e8091a8a77fa6ee10dcd0c991dfa87" title="Get access to editable parameter.">GetEditableParameter</a>(const std::<span class="keywordtype">string</span>&amp; <span class="keywordtype">id</span>);
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043        <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
-<a name="l00044"></a>00044        virtual const <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>* <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#93aab94cd1be68889b46e10c63b40e31" title="Get constraints of this parameter.">GetConstraints</a>() const;
-<a name="l00045"></a>00045        virtual <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#749b6beac464544bd61aec916b1ce731" title="Get selected index.">GetSelectedOptionIndex</a>() const;
-<a name="l00046"></a>00046        virtual <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#29f358621cd59a848f5b603f18ba7334" title="Set index of selected option.">SetSelectedOptionIndex</a>(<span class="keywordtype">int</span> index);
-<a name="l00047"></a>00047        virtual <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>* <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#27d019f8c45d1b5bd1c31f3a4ea10364" title="Get subselection for specified option.">GetActiveSubselection</a>() const;
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00050"></a>00050        virtual <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#368e08ba23a7cfb1631a01a59bad2894" title="Load or store state of this object as a archive stream.">Serialize</a>(iser::IArchive&amp; archive);
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 protected:
-<a name="l00053"></a>00053        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
-<a name="l00054"></a>00054        virtual <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#fb132afb680e660db4e12567c955f43c" title="Get number of managed set.">GetOptionsCount</a>() const;
-<a name="l00055"></a>00055        virtual const istd::CString&amp; <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#01fcea66a5f43387f0b05ac43cd06df3" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) const;
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057 private:
-<a name="l00058"></a>00058        <span class="keywordtype">int</span> m_selectedIndex;
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060        I_ATTR(istd::CString, m_selectionIdAttrPtr);
-<a name="l00061"></a>00061        I_REF(<a class="code" href="classiprm_1_1_i_params_manager.html" title="Manager of parameters set.">IParamsManager</a>, m_paramsManagerCompPtr);
-<a name="l00062"></a>00062 };
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 } <span class="comment">// namespace iprm</span>
+<a name="l00039"></a>00039        <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html" title="Interface allowing to select single option from list of options.">CSelectableParamsSetComp</a>();
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041        <span class="comment">// reimplemented (iprm::IParamsSet)</span>
+<a name="l00042"></a>00042        virtual const iser::ISerializable* <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#90cb2ee3f8504c557c0bb614348d7319" title="Get any parameter.">GetParameter</a>(const std::<span class="keywordtype">string</span>&amp; <span class="keywordtype">id</span>) const;
+<a name="l00043"></a>00043        virtual iser::ISerializable* <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#35e8091a8a77fa6ee10dcd0c991dfa87" title="Get access to editable parameter.">GetEditableParameter</a>(const std::<span class="keywordtype">string</span>&amp; <span class="keywordtype">id</span>);
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045        <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
+<a name="l00046"></a>00046        virtual const <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>* <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#93aab94cd1be68889b46e10c63b40e31" title="Get constraints of this parameter.">GetConstraints</a>() const;
+<a name="l00047"></a>00047        virtual <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#749b6beac464544bd61aec916b1ce731" title="Get selected index.">GetSelectedOptionIndex</a>() const;
+<a name="l00048"></a>00048        virtual <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#29f358621cd59a848f5b603f18ba7334" title="Set index of selected option.">SetSelectedOptionIndex</a>(<span class="keywordtype">int</span> index);
+<a name="l00049"></a>00049        virtual <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>* <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#27d019f8c45d1b5bd1c31f3a4ea10364" title="Get subselection for specified option.">GetActiveSubselection</a>() const;
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00052"></a>00052        virtual <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#368e08ba23a7cfb1631a01a59bad2894" title="Load or store state of this object as a archive stream.">Serialize</a>(iser::IArchive&amp; archive);
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 protected:
+<a name="l00055"></a>00055        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
+<a name="l00056"></a>00056        virtual <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#fb132afb680e660db4e12567c955f43c" title="Get number of managed set.">GetOptionsCount</a>() const;
+<a name="l00057"></a>00057        virtual const istd::CString&amp; <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#01fcea66a5f43387f0b05ac43cd06df3" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) const;
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 private:
+<a name="l00065"></a>00065        <span class="keywordtype">void</span> SetupCurrentParamsSetBridge();
 <a name="l00066"></a>00066 
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="preprocessor">#endif // !iprm_CSelectableParamsSetComp_included</span>
-<a name="l00069"></a>00069 <span class="preprocessor"></span>
-<a name="l00070"></a>00070 
+<a name="l00067"></a>00067 private:
+<a name="l00072"></a>00072        class CurrentParamsSetObserver: public imod::CSingleModelObserverBase
+<a name="l00073"></a>00073        {
+<a name="l00074"></a>00074        <span class="keyword">public</span>:
+<a name="l00075"></a>00075               CurrentParamsSetObserver(CSelectableParamsSetComp&amp; parent);
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00078"></a>00078               <span class="keyword">virtual</span> <span class="keywordtype">void</span> BeforeUpdate(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00079"></a>00079               <span class="keyword">virtual</span> <span class="keywordtype">void</span> AfterUpdate(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00080"></a>00080        <span class="keyword">private</span>:
+<a name="l00081"></a>00081               CSelectableParamsSetComp&amp; m_parent;
+<a name="l00082"></a>00082        };
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 <span class="keyword">private</span>:
+<a name="l00085"></a>00085        <span class="keywordtype">int</span> m_selectedIndex;
+<a name="l00086"></a>00086        CurrentParamsSetObserver m_currentParamsSetObserver;
+<a name="l00087"></a>00087        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* m_currentParamsModelPtr;
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_selectionIdAttrPtr);
+<a name="l00090"></a>00090        I_REF(<a class="code" href="classiprm_1_1_i_params_manager.html" title="Manager of parameters set.">IParamsManager</a>, m_paramsManagerCompPtr);
+<a name="l00091"></a>00091 };
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 } <span class="comment">// namespace iprm</span>
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097 <span class="preprocessor">#endif // !iprm_CSelectableParamsSetComp_included</span>
+<a name="l00098"></a>00098 <span class="preprocessor"></span>
+<a name="l00099"></a>00099 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

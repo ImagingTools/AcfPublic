@@ -571,7 +571,7 @@ void CHotfolderGuiComp::OnRestart()
 void CHotfolderGuiComp::OnShowProcessingParamsDialog()
 {
 	if (m_processingParamsDialogCompPtr.IsValid()){
-		m_processingParamsDialogCompPtr->Execute();
+		m_processingParamsDialogCompPtr->ExecuteDialog(this);
 	}
 }
 

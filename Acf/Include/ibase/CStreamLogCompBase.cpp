@@ -23,6 +23,9 @@
 #include "ibase/CStreamLogCompBase.h"
 
 
+// ACF includes
+#include "isys/IDateTime.h"
+
 #include "ibase/IMessage.h"
 
 

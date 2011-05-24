@@ -63,9 +63,9 @@
 <a name="l00041"></a>00041               I_ASSIGN(m_sampleLoaderCompPtr, "SampleLoader", "Saves sample to file", false, "SampleLoader");
 <a name="l00042"></a>00042               I_ASSIGN(m_paramsLoaderCompPtr, "ParamsLoader", "Loads and saves parameters from and to file", false, "ParamsLoader");
 <a name="l00043"></a>00043               I_ASSIGN(m_paramsSetCompPtr, "ParamsSet", "Parameters set", false, "ParamsSet");
-<a name="l00044"></a>00044               I_ASSIGN(m_paramsSetModelCompPtr, "ParamsSet", "Parameters set", false, "ParamsSet");
+<a name="l00044"></a>00044               <a class="code" href="classiqtsig_1_1_c_sample_acquisition_gui_comp.html#c1d265b41bf65806df4d92dfc13f231e">I_ASSIGN_TO</a>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false);
 <a name="l00045"></a>00045               I_ASSIGN(m_paramsSetGuiCompPtr, "ParamsSetGui", "Shows parameter set", false, "ParamsSetGui");
-<a name="l00046"></a>00046               I_ASSIGN(m_paramsSetObserverCompPtr, "ParamsSetGui", "Shows parameter set", false, "ParamsSetGui");
+<a name="l00046"></a>00046               <a class="code" href="classiqtsig_1_1_c_sample_acquisition_gui_comp.html#c1d265b41bf65806df4d92dfc13f231e">I_ASSIGN_TO</a>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false);
 <a name="l00047"></a>00047               I_ASSIGN(m_minDisplayedValueAttrPtr, "MinDispValue", "Minimal displayed value", true, 0);
 <a name="l00048"></a>00048               I_ASSIGN(m_maxDisplayedValueAttrPtr, "MaxDispValue", "Maximal displayed value", true, 100);
 <a name="l00049"></a>00049               I_ASSIGN(m_liveIntervalAttrPtr, "LiveInterval", "Interval (in seconds) of acquisition in continuous mode", true, 0.04);

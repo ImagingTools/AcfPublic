@@ -107,6 +107,16 @@ I_EXPORT_COMPONENT(
 			"Scene controller allowing to control scale and other scene properties",
 			"Observer Display GUI Scene Controller Zoom Rotate" IM_TAG("GUI"));
 
+I_EXPORT_COMPONENT(
+			SceneBinder,
+			"Simple binder for scene provider and scene extender",
+			"Scene Extender Binder Console Connector Display" IM_TAG("2D"));
+
+I_EXPORT_COMPONENT(
+			SelectableSceneExtender,
+			"Selectable scene extender",
+			"Scene Extender Selection Console Connector Display" IM_TAG("2D"));
+
 
 } // namespace QtViewPck
 

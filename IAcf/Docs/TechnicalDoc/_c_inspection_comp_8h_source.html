@@ -57,7 +57,7 @@
 <a name="l00038"></a>00038               I_REGISTER_INTERFACE(<a class="code" href="classiinsp_1_1_i_inspection_task.html" title="Representation of complete inspection task.">IInspectionTask</a>);
 <a name="l00039"></a>00039               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>);
 <a name="l00040"></a>00040               I_ASSIGN_MULTI_0(m_inspectionsCompPtr, <span class="stringliteral">"InspectionTasks"</span>, <span class="stringliteral">"List of subinspections"</span>, <span class="keyword">true</span>);
-<a name="l00041"></a>00041               I_ASSIGN_MULTI_0(m_inspectionModelsCompPtr, <span class="stringliteral">"InspectionTasks"</span>, <span class="stringliteral">"List of subinspections"</span>, <span class="keyword">false</span>);
+<a name="l00041"></a>00041               <a class="code" href="classiinsp_1_1_c_inspection_comp.html#76dd4ca9d54afe82b9bdceb38cf54819">I_ASSIGN_TO</a>(m_inspectionModelsCompPtr, m_inspectionsCompPtr, <span class="keyword">false</span>);
 <a name="l00042"></a>00042               I_ASSIGN(m_generalParamsCompPtr, <span class="stringliteral">"GeneralParams"</span>, <span class="stringliteral">"Optional general parameter set, it will be always serialized"</span>, <span class="keyword">false</span>, <span class="stringliteral">"GeneralParams"</span>);
 <a name="l00043"></a>00043        I_END_COMPONENT;
 <a name="l00044"></a>00044 

@@ -43,26 +43,39 @@ void CObjectPreviewGuiComp::UpdateEditor(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 
+	if (!m_fileLoaderCompPtr.IsValid()){
+		return;
+	}
+
 	iprm::IFileNameParam* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
-		QString qtFilePath = iqt::GetQString(objectPtr->GetPath());
+		QString newFilePath = iqt::GetQString(objectPtr->GetPath());
 
-		if (m_lastFilePath != qtFilePath){
-			m_lastFilePath = qtFilePath;
+		int fileQueryFlags = iser::IFileLoader::QF_NO_SAVING;
 
-			m_fileSystemObserver.removePaths(m_fileSystemObserver.files());
-
-			if (QFile::exists(m_lastFilePath)){
-				m_fileSystemObserver.addPath(m_lastFilePath);
-			}
-			else{
-				m_lastFilePath = QString();
-			}
-
-			m_lastModificationTimeStamp = QDateTime();
+		QFileInfo newFileInfo(newFilePath);
+		if (newFileInfo.isFile()){
+			fileQueryFlags |= iser::IFileLoader::QF_FILE_ONLY;
+		}
+		else if (newFileInfo.isDir()){
+			fileQueryFlags |= iser::IFileLoader::QF_DIRECTORY_ONLY;
 		}
 
-		UpdateObjectFromFile();
+		if (m_fileLoaderCompPtr->IsOperationSupported(NULL, NULL, fileQueryFlags)){
+			if (m_lastFilePath != newFilePath){
+				m_lastFilePath = newFilePath;
+
+				m_fileSystemObserver.removePaths(m_fileSystemObserver.files());
+				m_fileSystemObserver.addPath(m_lastFilePath);
+
+				m_lastModificationTimeStamp = QDateTime();
+
+				UpdateObjectFromFile();
+			}
+		}
+		else{
+			m_lastFilePath = QString();
+		}
 	}
 }
 
@@ -79,7 +92,7 @@ void CObjectPreviewGuiComp::UpdateModel() const
 
 void CObjectPreviewGuiComp::OnGuiModelDetached()
 {
-	if (m_objectObserverCompPtr.IsValid() && m_objectModelCompPtr.IsValid()){
+	if (m_objectModelCompPtr.IsValid() && m_objectObserverCompPtr.IsValid()){
 		if (m_objectModelCompPtr->IsAttached(m_objectObserverCompPtr.GetPtr())){
 			m_objectModelCompPtr->DetachObserver(m_objectObserverCompPtr.GetPtr());
 		}
@@ -126,17 +139,9 @@ void CObjectPreviewGuiComp::OnFileChanged(const QString&/* filePath*/)
 void CObjectPreviewGuiComp::UpdateObjectFromFile()
 {
 	QFileInfo fileInfo(m_lastFilePath);
-	if (!fileInfo.exists()){
-		if (m_objectModelCompPtr->IsAttached(m_objectObserverCompPtr.GetPtr())){
-			m_objectModelCompPtr->DetachObserver(m_objectObserverCompPtr.GetPtr());
-		}
-	}
-	else{
-		if (!m_objectModelCompPtr->IsAttached(m_objectObserverCompPtr.GetPtr())){
-			m_objectModelCompPtr->AttachObserver(m_objectObserverCompPtr.GetPtr());
-		}
-	}
-	
+
+	bool disableView = !fileInfo.exists();
+
 	if (fileInfo.lastModified() != m_lastModificationTimeStamp){
 		m_lastModificationTimeStamp = fileInfo.lastModified();
 
@@ -145,9 +150,20 @@ void CObjectPreviewGuiComp::UpdateObjectFromFile()
 		if (m_fileLoaderCompPtr.IsValid()){
 			int retVal = m_fileLoaderCompPtr->LoadFromFile(*m_objectCompPtr.GetPtr(), iqt::GetCString(m_lastFilePath));
 			if (retVal != iser::IFileLoader::StateOk){
-				if (m_objectModelCompPtr->IsAttached(m_objectObserverCompPtr.GetPtr())){
-					m_objectModelCompPtr->DetachObserver(m_objectObserverCompPtr.GetPtr());
-				}
+				disableView = true;
+			}
+		}
+	}
+
+	if (m_objectModelCompPtr.IsValid() && m_objectObserverCompPtr.IsValid()){
+		if (disableView){
+			if (m_objectModelCompPtr->IsAttached(m_objectObserverCompPtr.GetPtr())){
+				m_objectModelCompPtr->DetachObserver(m_objectObserverCompPtr.GetPtr());
+			}
+		}
+		else{
+			if (!m_objectModelCompPtr->IsAttached(m_objectObserverCompPtr.GetPtr())){
+				m_objectModelCompPtr->AttachObserver(m_objectObserverCompPtr.GetPtr());
 			}
 		}
 	}

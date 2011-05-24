@@ -294,11 +294,35 @@
     <namespace>iqaxmm</namespace>
   </compound>
   <compound kind="file">
+    <name>CDataSequenceStatistics.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/imeas/</path>
+    <filename>_c_data_sequence_statistics_8h</filename>
+    <includes id="_i_data_sequence_statistics_8h" name="IDataSequenceStatistics.h" local="yes" imported="no">imeas/IDataSequenceStatistics.h</includes>
+    <includes id="_c_data_statistics_8h" name="CDataStatistics.h" local="yes" imported="no">imeas/CDataStatistics.h</includes>
+    <class kind="class">imeas::CDataSequenceStatistics</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CDataStatistics.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/imeas/</path>
+    <filename>_c_data_statistics_8h</filename>
+    <includes id="_i_data_statistics_8h" name="IDataStatistics.h" local="yes" imported="no">imeas/IDataStatistics.h</includes>
+    <class kind="class">imeas::CDataStatistics</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>CGeneralDataSequence.h</name>
     <path>E:/Work/Projects/Development/AcfSln/Include/imeas/</path>
     <filename>_c_general_data_sequence_8h</filename>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
     <class kind="class">imeas::CGeneralDataSequence</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CHistogramStatisticsProcessorComp.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/imeas/</path>
+    <filename>_c_histogram_statistics_processor_comp_8h</filename>
+    <class kind="class">imeas::CHistogramStatisticsProcessorComp</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -338,6 +362,20 @@
     <filename>_i_data_sequence_info_8h</filename>
     <includes id="imeas_8h" name="imeas.h" local="yes" imported="no">imeas/imeas.h</includes>
     <class kind="class">imeas::IDataSequenceInfo</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IDataSequenceStatistics.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/imeas/</path>
+    <filename>_i_data_sequence_statistics_8h</filename>
+    <class kind="class">imeas::IDataSequenceStatistics</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IDataStatistics.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/imeas/</path>
+    <filename>_i_data_statistics_8h</filename>
+    <class kind="class">imeas::IDataStatistics</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -610,11 +648,28 @@
     <namespace>iqtmeas</namespace>
   </compound>
   <compound kind="file">
+    <name>CDataStatisticsGuiComp.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/iqtmeas/</path>
+    <filename>_c_data_statistics_gui_comp_8h</filename>
+    <includes id="_i_data_statistics_8h" name="IDataStatistics.h" local="yes" imported="no">imeas/IDataStatistics.h</includes>
+    <class kind="class">iqtmeas::CDataStatisticsGuiComp</class>
+    <namespace>iqtmeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>iqtmeas.h</name>
     <path>E:/Work/Projects/Development/AcfSln/Include/iqtmeas/</path>
     <filename>iqtmeas_8h</filename>
     <includes id="imeas_8h" name="imeas.h" local="yes" imported="no">imeas/imeas.h</includes>
     <namespace>iqtmeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CHistogramViewComp.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/iqwt/</path>
+    <filename>_c_histogram_view_comp_8h</filename>
+    <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
+    <includes id="_i_data_sequence_statistics_8h" name="IDataSequenceStatistics.h" local="yes" imported="no">imeas/IDataSequenceStatistics.h</includes>
+    <class kind="class">iqwt::CHistogramViewComp</class>
+    <namespace>iqwt</namespace>
   </compound>
   <compound kind="file">
     <name>CProgressHistoryGuiComp.h</name>
@@ -2902,12 +2957,17 @@
   <compound kind="namespace">
     <name>imeas</name>
     <filename>namespaceimeas.html</filename>
+    <class kind="class">imeas::CDataSequenceStatistics</class>
+    <class kind="class">imeas::CDataStatistics</class>
     <class kind="class">imeas::CGeneralDataSequence</class>
+    <class kind="class">imeas::CHistogramStatisticsProcessorComp</class>
     <class kind="class">imeas::CMeasurementRange</class>
     <class kind="class">imeas::CSamplesInfo</class>
     <class kind="class">imeas::CWavSamplesLoaderComp</class>
     <class kind="class">imeas::IDataSequence</class>
     <class kind="class">imeas::IDataSequenceInfo</class>
+    <class kind="class">imeas::IDataSequenceStatistics</class>
+    <class kind="class">imeas::IDataStatistics</class>
     <class kind="class">imeas::IDiscrDataSequence</class>
     <class kind="class">imeas::IUnitInfo</class>
     <class kind="class">imeas::TDiscrDataSequence</class>
@@ -2934,10 +2994,104 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>imeas::CDataSequenceStatistics</name>
+    <filename>classimeas_1_1_c_data_sequence_statistics.html</filename>
+    <base virtualness="virtual">imeas::IDataSequenceStatistics</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetChannelStatistics</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_statistics.html</anchorfile>
+      <anchor>9a27490ea7b238ab5cb295bce7498e11</anchor>
+      <arglist>(const imeas::IDataStatistics &amp;channelStatistics, int channelIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetStatistics</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_statistics.html</anchorfile>
+      <anchor>d19399bef9c87527dbda7c879c4540b1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetChannelsCount</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_statistics.html</anchorfile>
+      <anchor>6972b699aa9cc79fc360a13bfe461438</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::IDataStatistics *</type>
+      <name>GetChannelStatistics</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_statistics.html</anchorfile>
+      <anchor>daa63b32fb7e492501e17e95e7217970</anchor>
+      <arglist>(int channelIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_statistics.html</anchorfile>
+      <anchor>102a23b9843d4b3687ef1c8c3b5924f5</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::CDataStatistics</name>
+    <filename>classimeas_1_1_c_data_statistics.html</filename>
+    <base virtualness="virtual">imeas::IDataStatistics</base>
+    <member kind="function">
+      <type></type>
+      <name>CDataStatistics</name>
+      <anchorfile>classimeas_1_1_c_data_statistics.html</anchorfile>
+      <anchor>6743dd3de985f25b9d66236d48658b01</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreateStatistics</name>
+      <anchorfile>classimeas_1_1_c_data_statistics.html</anchorfile>
+      <anchor>5f83d518fae3f53120817816079a5d51</anchor>
+      <arglist>(double average, double median, double standardDeviation, const istd::CRange &amp;dataBoundaries)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CRange</type>
+      <name>GetDataBoundaries</name>
+      <anchorfile>classimeas_1_1_c_data_statistics.html</anchorfile>
+      <anchor>2b789615205cf6e89ca609f2dec622ef</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetStandardDeviation</name>
+      <anchorfile>classimeas_1_1_c_data_statistics.html</anchorfile>
+      <anchor>e94ff40094389276dfb3d903b9ae1461</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetAverage</name>
+      <anchorfile>classimeas_1_1_c_data_statistics.html</anchorfile>
+      <anchor>cd110e726a2ff89d5f50feabc3ff9224</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetMedian</name>
+      <anchorfile>classimeas_1_1_c_data_statistics.html</anchorfile>
+      <anchor>f0daf9c948b767b3098197272903f50b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimeas_1_1_c_data_statistics.html</anchorfile>
+      <anchor>00fcc1465d1e41aae22cfa475ccd67a2</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>imeas::CGeneralDataSequence</name>
     <filename>classimeas_1_1_c_general_data_sequence.html</filename>
     <base virtualness="virtual">imeas::IDataSequence</base>
-    <base virtualness="virtual">TISampledFunction&lt; 2, 1 &gt;</base>
+    <base virtualness="virtual">imath::TISampledFunction</base>
     <member kind="function">
       <type></type>
       <name>CGeneralDataSequence</name>
@@ -3105,6 +3259,25 @@
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
       <anchor>0a4a53ba14c9e9b7915f3c3eb6223ee1</anchor>
       <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::CHistogramStatisticsProcessorComp</name>
+    <filename>classimeas_1_1_c_histogram_statistics_processor_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classimeas_1_1_c_histogram_statistics_processor_comp.html</anchorfile>
+      <anchor>5dfad5a0cbe509879e0acbc947c2eef7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual I_END_COMPONENT int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classimeas_1_1_c_histogram_statistics_processor_comp.html</anchorfile>
+      <anchor>5dfb346bff5d6cc262ea3598f3177379</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3489,6 +3662,79 @@
       <name>GetWeightMode</name>
       <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
       <anchor>05f4844ae3c9b5d23cb9c318f1e4d03d</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::IDataSequenceStatistics</name>
+    <filename>classimeas_1_1_i_data_sequence_statistics.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetChannelStatistics</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_statistics.html</anchorfile>
+      <anchor>ebccc701a28e055b4d14816685bc1e1e</anchor>
+      <arglist>(const imeas::IDataStatistics &amp;channelStatistics, int channelIndex)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ResetStatistics</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_statistics.html</anchorfile>
+      <anchor>c292d19387f488fc1cb3e566225c44d8</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetChannelsCount</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_statistics.html</anchorfile>
+      <anchor>131c5cacdf0789487352e2271b9e4679</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const imeas::IDataStatistics *</type>
+      <name>GetChannelStatistics</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_statistics.html</anchorfile>
+      <anchor>151c66f0a2325b24750e7733e7510041</anchor>
+      <arglist>(int channelIndex) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::IDataStatistics</name>
+    <filename>classimeas_1_1_i_data_statistics.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>CreateStatistics</name>
+      <anchorfile>classimeas_1_1_i_data_statistics.html</anchorfile>
+      <anchor>172f74ee14896a089d5359e761460f82</anchor>
+      <arglist>(double average, double median, double standardDeviation, const istd::CRange &amp;dataBoundaries)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CRange</type>
+      <name>GetDataBoundaries</name>
+      <anchorfile>classimeas_1_1_i_data_statistics.html</anchorfile>
+      <anchor>9b199b47cd80a5835f0f7b53b8c37c4c</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetStandardDeviation</name>
+      <anchorfile>classimeas_1_1_i_data_statistics.html</anchorfile>
+      <anchor>bfd5078435eda4453a0d8202eeaa7052</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetAverage</name>
+      <anchorfile>classimeas_1_1_i_data_statistics.html</anchorfile>
+      <anchor>d9e44aa72a54188771fa4cb89d5c66dd</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetMedian</name>
+      <anchorfile>classimeas_1_1_i_data_statistics.html</anchorfile>
+      <anchor>80c0db7541e99696db70c5e650bfb5f1</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -4033,9 +4279,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnRetranslate</name>
+      <name>OnGuiRetranslate</name>
       <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>fd758dd5d96c6faa3766dc8206c27ecd</anchor>
+      <anchor>e28a0159bc3b18e8fb256ea02851b155</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -4055,6 +4301,13 @@
       <anchorfile>classiqtex_1_1_c_tcp_terminal_gui_comp.html</anchorfile>
       <anchor>3af93ca5cd40147e040914152af1738d</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtex_1_1_c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>7ae467ba7dd8476222308b827aa99e17</anchor>
+      <arglist>(m_urlParamModelCompPtr, m_urlParamCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -4257,6 +4510,20 @@
       <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
       <anchor>48c08d1ef0441d20c77d9e1678d33de2</anchor>
       <arglist>(int changeFlags)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>0fe1f80a8ffd029f80df4039778cc130</anchor>
+      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>c3a29d6a6dea97dc91db69fef8c5000b</anchor>
+      <arglist>(m_directoryMonitorParamsIdAttrPtr, m_directoryPathIdAttrPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -4534,6 +4801,41 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>528edd61360e64485cc9dcc0ce824e78</anchor>
+      <arglist>(m_statisticsHotfolderObserverCompPtr, m_statisticsCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>9bcf9d1568d7ac00130991f06b3a5fd9</anchor>
+      <arglist>(m_directoryItemObserverFactCompPtr, m_directoryItemGuiFactCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>719b21c3850949f239088ba1d900073a</anchor>
+      <arglist>(m_directoryItemSelectionFactCompPtr, m_directoryItemGuiFactCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>f2f428fb0525d7e1a72a1e5cd4746b0c</anchor>
+      <arglist>(m_processingItemPreviewCompPtr, m_processingItemPreviewGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>fa69ffb1f016a11b46e2a3f7b0a47052</anchor>
+      <arglist>(m_inputDirectoriesParamsManagerModelCompPtr, m_inputDirectoriesParamsManagerCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CHotfolderGuiComp</name>
       <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
       <anchor>2733aadc5ee2b71ea880a954024e0980</anchor>
@@ -4601,6 +4903,13 @@
       <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp.html</anchorfile>
       <anchor>e8880beecfce17c304a3d9c7ed2ffb52</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp.html</anchorfile>
+      <anchor>1bccc6866240155f3c66db44a9dd4cb0</anchor>
+      <arglist>(m_hotfolderProcessingModelCompPtr, m_hotfolderProcessingInfoCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -4792,6 +5101,13 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtfpf_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
+      <anchor>57fd9873ba82c7cdac195f10bf314167</anchor>
+      <arglist>(m_hotfolderProcessingModelCompPtr, m_hotfolderProcessingInfoCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CHotfolderTaskManagerComp</name>
       <anchorfile>classiqtfpf_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
       <anchor>31e8c6896be7f495fcb67a7b9ce2fa7c</anchor>
@@ -4847,9 +5163,9 @@
     </member>
     <member kind="function" protection="protected">
       <type>QGraphicsItem *</type>
-      <name>CHotfolderWorkflowScenographerComp::AddShapeToScene</name>
+      <name>AddShapeToScene</name>
       <anchorfile>classiqtfpf_1_1_c_hotfolder_workflow_scenographer_comp.html</anchorfile>
-      <anchor>a5c5d964f7c7e78297d03aafdf05e2a2</anchor>
+      <anchor>eff04a996e38d1ba1b76a7507510e0d4</anchor>
       <arglist>(istd::IPolymorphic *elementPtr) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -4877,6 +5193,34 @@
       <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
       <anchor>c0156132be12e1fe25c99ddf68819667</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>8a76f8ec8b01d2ffb14159ad7ad939f9</anchor>
+      <arglist>(m_inputPreviewGuiCompPtr, m_inputPreviewObserverCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a146007e339de21a3d90a448b4d58eec</anchor>
+      <arglist>(m_outputPreviewGuiCompPtr, m_outputPreviewObserverCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>f888d86abb0d7bc4fe3cc9ed951144e0</anchor>
+      <arglist>(m_inputFileNameParamModelCompPtr, m_inputFileNameParamCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>46ca9188b976b62268badac6fe953d82</anchor>
+      <arglist>(m_outputFileNameParamModelCompPtr, m_outputFileNameParamCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -4925,6 +5269,7 @@
     <name>iqtmeas</name>
     <filename>namespaceiqtmeas.html</filename>
     <class kind="class">iqtmeas::CDataSequenceViewComp</class>
+    <class kind="class">iqtmeas::CDataStatisticsGuiComp</class>
   </compound>
   <compound kind="class">
     <name>iqtmeas::CDataSequenceViewComp</name>
@@ -5062,10 +5407,84 @@
       <arglist>(QPaintEvent *event)</arglist>
     </member>
   </compound>
+  <compound kind="class">
+    <name>iqtmeas::CDataStatisticsGuiComp</name>
+    <filename>classiqtmeas_1_1_c_data_statistics_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CDataStatisticsGuiComp, imeas::IDataStatistics &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CDataStatisticsGuiComp, imeas::IDataStatistics &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtmeas_1_1_c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>e3c57800ec3f89c47e6137caf48bffc9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtmeas_1_1_c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>cf7c774cd231a32d689195628a933cae</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateEditor</name>
+      <anchorfile>classiqtmeas_1_1_c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>48e5ee24ebcb64c0d6cde32e009ac747</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+  </compound>
   <compound kind="namespace">
     <name>iqwt</name>
     <filename>namespaceiqwt.html</filename>
+    <class kind="class">iqwt::CHistogramViewComp</class>
     <class kind="class">iqwt::CProgressHistoryGuiComp</class>
+  </compound>
+  <compound kind="class">
+    <name>iqwt::CHistogramViewComp</name>
+    <filename>classiqwt_1_1_c_histogram_view_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CHistogramViewComp, imeas::IDataSequence &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CHistogramViewComp, imeas::IDataSequence &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
+      <anchor>94274a946bd0ecf36d3e91956ddeefb3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
+      <anchor>2dc56673d7b99f4bc746993f42656806</anchor>
+      <arglist>(m_dataStatisticsObserverCompPtr, m_dataStatisticsGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
+      <anchor>025422c7a1faa63b849e4de5b51c1ad7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateEditor</name>
+      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
+      <anchor>45be03d3398ee0e49f0cb053ac19d3e3</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
+      <anchor>d4c5696abe89b2c78e22777a2dce49b9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
+      <anchor>cfd4757567b6d0d0750712ce1bbdbe10</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqwt::CProgressHistoryGuiComp</name>

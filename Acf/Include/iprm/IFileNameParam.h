@@ -50,7 +50,7 @@ public:
 	};
 
 	/**
-		Get type of provided path.
+		Get intended type of the path.
 		\sa PathType
 	*/
 	virtual int GetPathType() const = 0;

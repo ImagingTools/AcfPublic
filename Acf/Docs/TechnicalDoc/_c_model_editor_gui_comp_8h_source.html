@@ -51,8 +51,8 @@
 <a name="l00032"></a>00032               I_REGISTER_INTERFACE(iqtgui::<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>)
 <a name="l00033"></a>00033               I_REGISTER_INTERFACE(imod::IModelEditor)
 <a name="l00034"></a>00034               I_ASSIGN(m_slaveEditorCompPtr, "SlaveEditorGui", "Slave GUI <span class="keywordtype">object</span> will be connected to model", true, "SlaveEditor");
-<a name="l00035"></a>00035               I_ASSIGN(m_slaveGuiCompPtr, "SlaveEditorGui", "Slave GUI <span class="keywordtype">object</span> will be connected to model", true, "SlaveEditor");
-<a name="l00036"></a>00036               I_ASSIGN(m_slaveObserverCompPtr, "SlaveEditorGui", "Slave GUI <span class="keywordtype">object</span> will be connected to model", false, "SlaveEditor");
+<a name="l00035"></a>00035               <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#9b878cf5670e53a1ac6587a6df26a576">I_ASSIGN_TO</a>(m_slaveGuiCompPtr, m_slaveEditorCompPtr, true);
+<a name="l00036"></a>00036               <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#9b878cf5670e53a1ac6587a6df26a576">I_ASSIGN_TO</a>(m_slaveObserverCompPtr, m_slaveEditorCompPtr, false);
 <a name="l00037"></a>00037               I_ASSIGN(m_modelCompPtr, "Model", "Model will be observed and modify using editor", true, "Model");
 <a name="l00038"></a>00038        I_END_COMPONENT
 <a name="l00039"></a>00039 

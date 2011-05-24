@@ -40,22 +40,27 @@
 <a name="l00020"></a><a class="code" href="classiprm_1_1_i_selection_param.html">00020</a> <span class="keyword">class </span><a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00027"></a>00027        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>* <a class="code" href="classiprm_1_1_i_selection_param.html#352a2f8a8c8629f71a9e52ff22a4f9e1" title="Get constraints of this parameter.">GetConstraints</a>() <span class="keyword">const</span> = 0;
-<a name="l00028"></a>00028 
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_i_selection_param.html#0a417884429ac3874a717cfbb5a738f6" title="Get selected index.">GetSelectedOptionIndex</a>() <span class="keyword">const</span> = 0;
+<a name="l00023"></a><a class="code" href="classiprm_1_1_i_selection_param.html#092f5d4176d748b596be4ec0464827b3">00023</a>        <span class="keyword">enum</span> <a class="code" href="classiprm_1_1_i_selection_param.html#092f5d4176d748b596be4ec0464827b3">ChangeFlags</a>
+<a name="l00024"></a>00024        {
+<a name="l00025"></a><a class="code" href="classiprm_1_1_i_selection_param.html#092f5d4176d748b596be4ec0464827b3c597b3a6b80fed78027d9e3caf50db6d">00025</a>               <a class="code" href="classiprm_1_1_i_selection_param.html#092f5d4176d748b596be4ec0464827b3c597b3a6b80fed78027d9e3caf50db6d">CF_SELECTION_CHANGED</a> = 1 &lt;&lt; 17
+<a name="l00026"></a>00026        };
+<a name="l00027"></a>00027 
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>* <a class="code" href="classiprm_1_1_i_selection_param.html#352a2f8a8c8629f71a9e52ff22a4f9e1" title="Get constraints of this parameter.">GetConstraints</a>() <span class="keyword">const</span> = 0;
 <a name="l00033"></a>00033 
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_selection_param.html#312f0ee035e39cd63d7d1c55b1e3c68a" title="Set index of selected option.">SetSelectedOptionIndex</a>(<span class="keywordtype">int</span> index) = 0;
-<a name="l00039"></a>00039 
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>* <a class="code" href="classiprm_1_1_i_selection_param.html#5050ae7fc751c58748ebf67f7562fde1" title="Get subselection for specified option.">GetActiveSubselection</a>() <span class="keyword">const</span> = 0;
-<a name="l00045"></a>00045 };
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048 } <span class="comment">// namespace iprm</span>
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="preprocessor">#endif // !iprm_ISelectionParam_included</span>
-<a name="l00052"></a>00052 <span class="preprocessor"></span>
-<a name="l00053"></a>00053 
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_i_selection_param.html#0a417884429ac3874a717cfbb5a738f6" title="Get selected index.">GetSelectedOptionIndex</a>() <span class="keyword">const</span> = 0;
+<a name="l00038"></a>00038 
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_selection_param.html#312f0ee035e39cd63d7d1c55b1e3c68a" title="Set index of selected option.">SetSelectedOptionIndex</a>(<span class="keywordtype">int</span> index) = 0;
+<a name="l00044"></a>00044 
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>* <a class="code" href="classiprm_1_1_i_selection_param.html#5050ae7fc751c58748ebf67f7562fde1" title="Get subselection for specified option.">GetActiveSubselection</a>() <span class="keyword">const</span> = 0;
+<a name="l00050"></a>00050 };
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 } <span class="comment">// namespace iprm</span>
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 <span class="preprocessor">#endif // !iprm_ISelectionParam_included</span>
+<a name="l00057"></a>00057 <span class="preprocessor"></span>
+<a name="l00058"></a>00058 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

@@ -66,7 +66,7 @@
 <a name="l00046"></a>00046        I_BEGIN_COMPONENT(<a class="code" href="classiqtfpf_1_1_c_hotfolder_processing_comp.html" title="Hotfolder representation.">CHotfolderProcessingComp</a>);
 <a name="l00047"></a>00047               I_ASSIGN(m_fileConvertCompPtr, <span class="stringliteral">"FileConverter"</span>, <span class="stringliteral">"File converter"</span>, <span class="keyword">true</span>, <span class="stringliteral">"FileConverter"</span>);
 <a name="l00048"></a>00048               I_ASSIGN(m_hotfolderProcessingInfoCompPtr, <span class="stringliteral">"HotfolderProcessingInfo"</span>, <span class="stringliteral">"State data model of the hotfolder"</span>, <span class="keyword">true</span>, <span class="stringliteral">"HotfolderProcessingInfo"</span>);
-<a name="l00049"></a>00049               I_ASSIGN(m_hotfolderProcessingModelCompPtr, <span class="stringliteral">"HotfolderProcessingInfo"</span>, <span class="stringliteral">"State data model of the hotfolder"</span>, <span class="keyword">true</span>, <span class="stringliteral">"HotfolderProcessingInfo"</span>);
+<a name="l00049"></a>00049               <a class="code" href="classiqtfpf_1_1_c_hotfolder_processing_comp.html#1bccc6866240155f3c66db44a9dd4cb0">I_ASSIGN_TO</a>(m_hotfolderProcessingModelCompPtr, m_hotfolderProcessingInfoCompPtr, <span class="keyword">true</span>);
 <a name="l00050"></a>00050               I_ASSIGN(m_taskManagerCompPtr, <span class="stringliteral">"TaskManager"</span>, <span class="stringliteral">"Hotfolder task manager"</span>, <span class="keyword">true</span>, <span class="stringliteral">"TaskManager"</span>);
 <a name="l00051"></a>00051        I_END_COMPONENT();
 <a name="l00052"></a>00052 

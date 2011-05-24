@@ -16,6 +16,8 @@
 #include "iqt2d/CAnnulusSegmentParamsGuiComp.h"
 #include "iqt2d/CQuadrangleParamsGuiComp.h"
 #include "iqt2d/CSceneControllerGuiComp.h"
+#include "iqt2d/CSceneBinderComp.h"
+#include "iqt2d/CSelectableSceneExtenderComp.h"
 
 
 /**
@@ -36,6 +38,8 @@ typedef iqt2d::CAnnulusParamsGuiComp AnnulusParamsGui;
 typedef iqt2d::CAnnulusSegmentParamsGuiComp AnnulusSegmentParamsGui;
 typedef iqt2d::CQuadrangleParamsGuiComp QuadrangleParamsGui;
 typedef iqt2d::CSceneControllerGuiComp SceneControllerGui;
+typedef iqt2d::CSceneBinderComp SceneBinder;
+typedef iqt2d::CSelectableSceneExtenderComp SelectableSceneExtender;
 
 
 } // namespace QtViewPck

@@ -51,52 +51,52 @@
 <a name="l00029"></a>00029                             Ui::CSwissRangerAcquisitionDataViewComp,
 <a name="l00030"></a><a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#f773fd473324ca034d14192e75803d8f">00030</a>                             <a class="code" href="classiswr_1_1_i_swiss_ranger_acquisition_data.html" title="Definition of SwissRanger camera output.">iswr::ISwissRangerAcquisitionData</a>&gt; <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html">BaseClass</a>;
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032        I_BEGIN_COMPONENT(<a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html">CSwissRangerAcquisitionDataViewComp</a>)
-<a name="l00033"></a>00033               I_ASSIGN(m_depthImageGuiCompPtr, "DepthImageView", "", true, "DepthImageView")
-<a name="l00034"></a>00034               I_ASSIGN(m_depthImageObserverCompPtr, "DepthImageView", "", true, "DepthImageView")
-<a name="l00035"></a>00035               I_ASSIGN(m_depthImageGui3dCompPtr, "DepthImageView3D", "", true, "DepthImageView3D")
-<a name="l00036"></a>00036               I_ASSIGN(m_depthImageObserver3dCompPtr, "DepthImageView3D", "", true, "DepthImageView3D")
-<a name="l00037"></a>00037               I_ASSIGN(m_amplitudeImageGuiCompPtr, "AmplitudeImageView", "", true, "AmplitudeImageView")
-<a name="l00038"></a>00038               I_ASSIGN(m_amplitudeImageObserverCompPtr, "AmplitudeImageView", "", true, "AmplitudeImageView")
-<a name="l00039"></a>00039               I_ASSIGN(m_confidenceMapGuiCompPtr, "ConfidenceMapView", "", true, "ConfidenceMapView")
-<a name="l00040"></a>00040               I_ASSIGN(m_confidenceMapObserverCompPtr, "ConfidenceMapView", "", true, "ConfidenceMapView")
-<a name="l00041"></a>00041        I_END_COMPONENT
+<a name="l00032"></a>00032        I_BEGIN_COMPONENT(<a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html">CSwissRangerAcquisitionDataViewComp</a>);
+<a name="l00033"></a>00033               I_ASSIGN(m_depthImageGuiCompPtr, <span class="stringliteral">"DepthImageView"</span>, <span class="stringliteral">""</span>, <span class="keyword">true</span>, <span class="stringliteral">"DepthImageView"</span>);
+<a name="l00034"></a>00034               <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#3c3263c82ca32c57c15602f87f8b2e10">I_ASSIGN_TO</a>(m_depthImageObserverCompPtr, m_depthImageGuiCompPtr, <span class="keyword">true</span>);
+<a name="l00035"></a>00035               I_ASSIGN(m_depthImageGui3dCompPtr, <span class="stringliteral">"DepthImageView3D"</span>, <span class="stringliteral">""</span>, <span class="keyword">true</span>, <span class="stringliteral">"DepthImageView3D"</span>);
+<a name="l00036"></a>00036               <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#3c3263c82ca32c57c15602f87f8b2e10">I_ASSIGN_TO</a>(m_depthImageObserver3dCompPtr, m_depthImageGui3dCompPtr, <span class="keyword">true</span>);
+<a name="l00037"></a>00037               I_ASSIGN(m_amplitudeImageGuiCompPtr, <span class="stringliteral">"AmplitudeImageView"</span>, <span class="stringliteral">""</span>, <span class="keyword">true</span>, <span class="stringliteral">"AmplitudeImageView"</span>);
+<a name="l00038"></a>00038               <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#3c3263c82ca32c57c15602f87f8b2e10">I_ASSIGN_TO</a>(m_amplitudeImageObserverCompPtr, m_amplitudeImageGuiCompPtr, <span class="keyword">true</span>);
+<a name="l00039"></a>00039               I_ASSIGN(m_confidenceMapGuiCompPtr, <span class="stringliteral">"ConfidenceMapView"</span>, <span class="stringliteral">""</span>, <span class="keyword">true</span>, <span class="stringliteral">"ConfidenceMapView"</span>);
+<a name="l00040"></a>00040               <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#3c3263c82ca32c57c15602f87f8b2e10">I_ASSIGN_TO</a>(m_confidenceMapObserverCompPtr, m_confidenceMapGuiCompPtr, <span class="keyword">true</span>);
+<a name="l00041"></a>00041        I_END_COMPONENT;
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00044"></a>00044        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#039135825662300377a584be2d024ccb">UpdateModel</a>() const;
-<a name="l00045"></a>00045        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#f3d2f169867e660db0bcde4cd5a430a0">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#befd0fda1213240204042011052236ee">UpdateModel</a>() <span class="keyword">const</span>;
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#f3d2f169867e660db0bcde4cd5a430a0">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00048"></a>00048        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#e5c0288a3cd9f07d655dbdfadb7557aa">OnGuiModelAttached</a>();
-<a name="l00049"></a>00049        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#6c28ceb85daba37bc33e39c42b75c66f">OnGuiModelDetached</a>();
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#e5c0288a3cd9f07d655dbdfadb7557aa">OnGuiModelAttached</a>();
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#6c28ceb85daba37bc33e39c42b75c66f">OnGuiModelDetached</a>();
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051        <span class="comment">// reimplemented (iqtgui::CComponentBase)</span>
-<a name="l00052"></a>00052        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#8fcf98e960f87b3ba19de0b95471c19c">OnGuiCreated</a>();
-<a name="l00053"></a>00053        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#2ab7b5e17c41cdff4e2cd556b67a1273">OnGuiDestroyed</a>();
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#8fcf98e960f87b3ba19de0b95471c19c">OnGuiCreated</a>();
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html#2ab7b5e17c41cdff4e2cd556b67a1273">OnGuiDestroyed</a>();
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055 private:
+<a name="l00055"></a>00055 <span class="keyword">private</span>:
 <a name="l00056"></a>00056        <span class="keywordtype">void</span> Create3dModel();
 <a name="l00057"></a>00057 
-<a name="l00058"></a>00058 private Q_SLOTS:
+<a name="l00058"></a>00058 <span class="keyword">private</span> Q_SLOTS:
 <a name="l00059"></a>00059        <span class="keywordtype">void</span> on_ResolutionSlider_valueChanged(<span class="keywordtype">int</span> value);
 <a name="l00060"></a>00060        <span class="keywordtype">void</span> on_MaximalDistanceCropSlider_valueChanged(<span class="keywordtype">int</span> value);
 <a name="l00061"></a>00061        <span class="keywordtype">void</span> on_MinimalDistanceCropSlider_valueChanged(<span class="keywordtype">int</span> value);
 <a name="l00062"></a>00062        <span class="keywordtype">void</span> on_CoherenceThresholdSlider_valueChanged(<span class="keywordtype">int</span> value);
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064 private:
-<a name="l00065"></a>00065        I_REF(iqtgui::IGuiObject, m_depthImageGuiCompPtr);
-<a name="l00066"></a>00066        I_REF(imod::IObserver, m_depthImageObserverCompPtr);
+<a name="l00064"></a>00064 <span class="keyword">private</span>:
+<a name="l00065"></a>00065        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_depthImageGuiCompPtr);
+<a name="l00066"></a>00066        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_depthImageObserverCompPtr);
 <a name="l00067"></a>00067        
-<a name="l00068"></a>00068        I_REF(iqtgui::IGuiObject, m_depthImageGui3dCompPtr);
-<a name="l00069"></a>00069        I_REF(imod::IObserver, m_depthImageObserver3dCompPtr);
+<a name="l00068"></a>00068        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_depthImageGui3dCompPtr);
+<a name="l00069"></a>00069        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_depthImageObserver3dCompPtr);
 <a name="l00070"></a>00070        
-<a name="l00071"></a>00071        I_REF(iqtgui::IGuiObject, m_amplitudeImageGuiCompPtr);
-<a name="l00072"></a>00072        I_REF(imod::IObserver, m_amplitudeImageObserverCompPtr);
+<a name="l00071"></a>00071        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_amplitudeImageGuiCompPtr);
+<a name="l00072"></a>00072        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_amplitudeImageObserverCompPtr);
 <a name="l00073"></a>00073        
-<a name="l00074"></a>00074        I_REF(iqtgui::IGuiObject, m_confidenceMapGuiCompPtr);
-<a name="l00075"></a>00075        I_REF(imod::IObserver, m_confidenceMapObserverCompPtr);
+<a name="l00074"></a>00074        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_confidenceMapGuiCompPtr);
+<a name="l00075"></a>00075        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_confidenceMapObserverCompPtr);
 <a name="l00076"></a>00076 
-<a name="l00077"></a>00077        imod::TModelWrap&lt;imath::CSampledFunction2d&gt; m_depthImage3d;
+<a name="l00077"></a>00077        <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;imath::CSampledFunction2d&gt;</a> m_depthImage3d;
 <a name="l00078"></a>00078 };
 <a name="l00079"></a>00079 
 <a name="l00080"></a>00080 

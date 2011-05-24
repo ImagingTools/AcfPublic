@@ -426,6 +426,10 @@ icomp::IRegistry::Ids CRegistryConsistInfoComp::GetCompatibleSubcomponents(
 				++interfaceIter){
 		const std::string& interfaceName = *interfaceIter;
 
+		if ((interfaceName == "icomp::IComponent") || (interfaceName == "void")){
+			continue;
+		}
+
 		icomp::IComponentStaticInfo::Ids supportedInterfaces = elementStaticInfo.GetMetaIds(icomp::IComponentStaticInfo::MGI_INTERFACES);
 		if (supportedInterfaces.find(interfaceName) == supportedInterfaces.end()){
 			areInterfacesSupported = false;
@@ -706,6 +710,10 @@ bool CRegistryConsistInfoComp::CheckPointedElementInfoCompatibility(
 					interfaceIter != interfaceNames.end();
 					++interfaceIter){
 			const std::string& interfaceName = *interfaceIter;
+
+			if ((interfaceName == "icomp::IComponent") || (interfaceName == "void")){
+				continue;
+			}
 
 			if (supportedInterfaces.find(interfaceName) == supportedInterfaces.end()){
 				if (reasonConsumerPtr != NULL){

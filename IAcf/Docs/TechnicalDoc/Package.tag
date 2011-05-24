@@ -330,6 +330,15 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CConvolutionKernel2d.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <filename>_c_convolution_kernel2d_8h</filename>
+    <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
+    <class kind="class">iipr::CConvolutionKernel2d</class>
+    <class kind="struct">iipr::CConvolutionKernel2d::KernelValue</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CExtremumCaliperProcessorComp.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_c_extremum_caliper_processor_comp_8h</filename>
@@ -362,13 +371,6 @@
     <includes id="_i_feature_to_image_mapper_8h" name="IFeatureToImageMapper.h" local="yes" imported="no">iipr/IFeatureToImageMapper.h</includes>
     <includes id="_t_feature_wrap_8h" name="TFeatureWrap.h" local="yes" imported="no">iipr/TFeatureWrap.h</includes>
     <class kind="class">iipr::CFeatureToImageMapperProcessorComp</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CGaussian2dFilterParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
-    <filename>_c_gaussian2d_filter_params_8h</filename>
-    <class kind="class">iipr::CGaussian2dFilterParams</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -411,15 +413,6 @@
     <includes id="_i_line_projection_supplier_8h" name="ILineProjectionSupplier.h" local="yes" imported="no">iipr/ILineProjectionSupplier.h</includes>
     <includes id="_i_line_projection_processor_8h" name="ILineProjectionProcessor.h" local="yes" imported="no">iipr/ILineProjectionProcessor.h</includes>
     <class kind="class">iipr::CLineProjectionSupplierComp</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CLocalDifferenceProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
-    <filename>_c_local_difference_processor_comp_8h</filename>
-    <includes id="_i_multidimensional_filter_params_8h" name="IMultidimensionalFilterParams.h" local="yes" imported="no">iipr/IMultidimensionalFilterParams.h</includes>
-    <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
-    <class kind="class">iipr::CLocalDifferenceProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -666,7 +659,7 @@
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_t_convolution_processor_comp_8h</filename>
     <includes id="_t_image_param_processor_comp_base_8h" name="TImageParamProcessorCompBase.h" local="yes" imported="no">iipr/TImageParamProcessorCompBase.h</includes>
-    <includes id="_t_local_neighborhood_8h" name="TLocalNeighborhood.h" local="yes" imported="no">iipr/TLocalNeighborhood.h</includes>
+    <includes id="_c_convolution_kernel2d_8h" name="CConvolutionKernel2d.h" local="yes" imported="no">iipr/CConvolutionKernel2d.h</includes>
     <class kind="class">iipr::TConvolutionProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -679,85 +672,12 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
-    <name>TGaussianKernel2d.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
-    <filename>_t_gaussian_kernel2d_8h</filename>
-    <includes id="_t_kernel2d_8h" name="TKernel2d.h" local="yes" imported="no">iipr/TKernel2d.h</includes>
-    <class kind="class">iipr::TGaussianKernel2d</class>
-    <namespace>iipr</namespace>
-    <member kind="typedef">
-      <type>TGaussianKernel2d&lt; I_BYTE, float &gt;</type>
-      <name>CGaussianKernel2d</name>
-      <anchorfile>namespaceiipr.html</anchorfile>
-      <anchor>15591028faef5622f897692a08fb1c76</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>TGaussianProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
-    <filename>_t_gaussian_processor_comp_8h</filename>
-    <includes id="_t_convolution_processor_comp_8h" name="TConvolutionProcessorComp.h" local="yes" imported="no">iipr/TConvolutionProcessorComp.h</includes>
-    <includes id="_t_gaussian_kernel2d_8h" name="TGaussianKernel2d.h" local="yes" imported="no">iipr/TGaussianKernel2d.h</includes>
-    <includes id="_c_gaussian2d_filter_params_8h" name="CGaussian2dFilterParams.h" local="yes" imported="no">iipr/CGaussian2dFilterParams.h</includes>
-    <class kind="class">iipr::TGaussianProcessorComp</class>
-    <namespace>iipr</namespace>
-    <member kind="typedef">
-      <type>TGaussianProcessorComp&lt; I_BYTE &gt;</type>
-      <name>CGaussianFilterComp</name>
-      <anchorfile>namespaceiipr.html</anchorfile>
-      <anchor>cee75ab4a6f4d158e2d6986ab60b497a</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>TImageParamProcessorCompBase.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_t_image_param_processor_comp_base_8h</filename>
     <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
     <class kind="class">iipr::TImageParamProcessorCompBase</class>
     <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TKernel2d.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
-    <filename>_t_kernel2d_8h</filename>
-    <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
-    <class kind="class">iipr::TKernel2d</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TLocalNeighborhood.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
-    <filename>_t_local_neighborhood_8h</filename>
-    <class kind="class">iipr::TLocalNeighborhood</class>
-    <class kind="class">iipr::TLocalNeighborhood::Iterator</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TMorphoProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
-    <filename>_t_morpho_processor_comp_8h</filename>
-    <includes id="_i_multidimensional_filter_params_8h" name="IMultidimensionalFilterParams.h" local="yes" imported="no">iipr/IMultidimensionalFilterParams.h</includes>
-    <includes id="_t_image_param_processor_comp_base_8h" name="TImageParamProcessorCompBase.h" local="yes" imported="no">iipr/TImageParamProcessorCompBase.h</includes>
-    <class kind="class">iipr::MinimumFunction</class>
-    <class kind="class">iipr::MaximumFunction</class>
-    <class kind="class">iipr::TMorphoProcessorComp</class>
-    <namespace>iipr</namespace>
-    <member kind="typedef">
-      <type>TMorphoProcessorComp&lt; I_BYTE, MaximumFunction &gt;</type>
-      <name>CMorphoMaxOperatorComp</name>
-      <anchorfile>namespaceiipr.html</anchorfile>
-      <anchor>9bc09fa3d5e08df30cd8f66f39f12f82</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMorphoProcessorComp&lt; I_BYTE, MinimumFunction &gt;</type>
-      <name>CMorphoMinOperatorComp</name>
-      <anchorfile>namespaceiipr.html</anchorfile>
-      <anchor>f68bd9db14a2c8f3ce1ba45821a0da99</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="file">
     <name>TUnaryTransformProcessorComp.h</name>
@@ -1520,10 +1440,6 @@
   <compound kind="class">
     <name>TCopySerializedWrap</name>
     <filename>class_t_copy_serialized_wrap.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>ibase::ibase::TNamedWrap</name>
-    <filename>classibase_1_1ibase_1_1_t_named_wrap.html</filename>
   </compound>
   <compound kind="namespace">
     <name>iavt</name>
@@ -3048,6 +2964,13 @@
       <anchor>4a57a584f3964fbc1aa4d8c5241c78fc</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
+      <anchor>76dd4ca9d54afe82b9bdceb38cf54819</anchor>
+      <arglist>(m_inspectionModelsCompPtr, m_inspectionsCompPtr, false)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetTasksCount</name>
@@ -3247,17 +3170,16 @@
     <class kind="class">iipr::CCircleFinderParams</class>
     <class kind="class">iipr::CCircleFinderParamsComp</class>
     <class kind="class">iipr::CCircleFindProcessorComp</class>
+    <class kind="class">iipr::CConvolutionKernel2d</class>
     <class kind="class">iipr::CExtremumCaliperProcessorComp</class>
     <class kind="class">iipr::CFeatureBase</class>
     <class kind="class">iipr::CFeaturesContainer</class>
     <class kind="class">iipr::CFeatureToImageMapperProcessorComp</class>
-    <class kind="class">iipr::CGaussian2dFilterParams</class>
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
     <class kind="class">iipr::CImageNormalizeProcessorComp</class>
     <class kind="class">iipr::CImageProcessorCompBase</class>
     <class kind="class">iipr::CLineProjectionProcessorComp</class>
     <class kind="class">iipr::CLineProjectionSupplierComp</class>
-    <class kind="class">iipr::CLocalDifferenceProcessorComp</class>
     <class kind="class">iipr::CMultidimensionalFilterParamsComp</class>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <class kind="class">iipr::CProcessedAcquisitionComp</class>
@@ -3289,44 +3211,9 @@
     <class kind="class">iipr::ISearchParams</class>
     <class kind="class">iipr::TConvolutionProcessorComp</class>
     <class kind="class">iipr::TFeatureWrap</class>
-    <class kind="class">iipr::TGaussianKernel2d</class>
-    <class kind="class">iipr::TGaussianProcessorComp</class>
     <class kind="class">iipr::TImageParamProcessorCompBase</class>
-    <class kind="class">iipr::TKernel2d</class>
-    <class kind="class">iipr::TLocalNeighborhood</class>
-    <class kind="class">iipr::MinimumFunction</class>
-    <class kind="class">iipr::MaximumFunction</class>
-    <class kind="class">iipr::TMorphoProcessorComp</class>
     <class kind="class">iipr::InvertFunction</class>
     <class kind="class">iipr::TUnaryTransformProcessorComp</class>
-    <member kind="typedef">
-      <type>TGaussianKernel2d&lt; I_BYTE, float &gt;</type>
-      <name>CGaussianKernel2d</name>
-      <anchorfile>namespaceiipr.html</anchorfile>
-      <anchor>15591028faef5622f897692a08fb1c76</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TGaussianProcessorComp&lt; I_BYTE &gt;</type>
-      <name>CGaussianFilterComp</name>
-      <anchorfile>namespaceiipr.html</anchorfile>
-      <anchor>cee75ab4a6f4d158e2d6986ab60b497a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMorphoProcessorComp&lt; I_BYTE, MaximumFunction &gt;</type>
-      <name>CMorphoMaxOperatorComp</name>
-      <anchorfile>namespaceiipr.html</anchorfile>
-      <anchor>9bc09fa3d5e08df30cd8f66f39f12f82</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMorphoProcessorComp&lt; I_BYTE, MinimumFunction &gt;</type>
-      <name>CMorphoMinOperatorComp</name>
-      <anchorfile>namespaceiipr.html</anchorfile>
-      <anchor>f68bd9db14a2c8f3ce1ba45821a0da99</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>TUnaryTransformProcessorComp&lt; I_BYTE, InvertFunction&lt; I_BYTE &gt; &gt;</type>
       <name>CInvertOperatorComp</name>
@@ -3698,6 +3585,120 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::CConvolutionKernel2d</name>
+    <filename>classiipr_1_1_c_convolution_kernel2d.html</filename>
+    <class kind="struct">iipr::CConvolutionKernel2d::KernelValue</class>
+    <member kind="typedef">
+      <type>std::vector&lt; KernelValue &gt;</type>
+      <name>KernelValues</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>1d6235ce90303b71bcab0bdb582cd104</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KernelValues::const_iterator</type>
+      <name>Iterator</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>79ea4830d3973f2697fbc720f16f2b79</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CConvolutionKernel2d</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>f8decf5c6b96fdc39e8cffa917235cec</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CConvolutionKernel2d</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>ba74dfeb63f62964cdead2dc974811ca</anchor>
+      <arglist>(const imath::ISampledFunction2d &amp;function)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsValid</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>4b2ba4600ca1240a1a0ae5a544275d10</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>InitForBitmap</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>761f3af2b30709fa0b835a9995922eec</anchor>
+      <arglist>(const iimg::IBitmap &amp;bitmap) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Iterator</type>
+      <name>Begin</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>4bf75f9cb92e1c62b99240be0dcfe8d0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>Iterator</type>
+      <name>End</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>6d2593176e5c3b32eb823bf46981693d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetWeightsSum</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>a00450c5710872d9824673b2dae80b6e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>e694387374a1fe3c33617bdf906cb985</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>KernelValues</type>
+      <name>m_values</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>f4e84d932da8cfb64bb06bb7f6cb5282</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ibase::CSize</type>
+      <name>m_kernelSize</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>627d4cd92399fccc3f6f0022ca8a756b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>m_sumWeights</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>297acf81355464d3a3a944b1274b705b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iipr::CConvolutionKernel2d::KernelValue</name>
+    <filename>structiipr_1_1_c_convolution_kernel2d_1_1_kernel_value.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>pixelOffset</name>
+      <anchorfile>structiipr_1_1_c_convolution_kernel2d_1_1_kernel_value.html</anchorfile>
+      <anchor>2d744e9ba119b3b1f6eb2c905b4cfc1b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>kernelWeight</name>
+      <anchorfile>structiipr_1_1_c_convolution_kernel2d_1_1_kernel_value.html</anchorfile>
+      <anchor>4b360c1b2689b37cf53b9a99545db5cb</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::CExtremumCaliperProcessorComp</name>
     <filename>classiipr_1_1_c_extremum_caliper_processor_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -3830,67 +3831,6 @@
       <anchorfile>classiipr_1_1_c_feature_to_image_mapper_processor_comp.html</anchorfile>
       <anchor>b391e3374f5f8242b199d7351103e89d</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::CGaussian2dFilterParams</name>
-    <filename>classiipr_1_1_c_gaussian2d_filter_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="function">
-      <type></type>
-      <name>CGaussian2dFilterParams</name>
-      <anchorfile>classiipr_1_1_c_gaussian2d_filter_params.html</anchorfile>
-      <anchor>f25f08cadeff01191ea34dbb8b3a52fa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetSigma1</name>
-      <anchorfile>classiipr_1_1_c_gaussian2d_filter_params.html</anchorfile>
-      <anchor>170f8507ee23f2ea715751f5d16c1b6b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetSigma1</name>
-      <anchorfile>classiipr_1_1_c_gaussian2d_filter_params.html</anchorfile>
-      <anchor>a9939b26e8938ad835052c37544c32d2</anchor>
-      <arglist>(double sigma1)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetSigma2</name>
-      <anchorfile>classiipr_1_1_c_gaussian2d_filter_params.html</anchorfile>
-      <anchor>2b678b0ff4dea53c5afc2293e60bd72b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetSigma2</name>
-      <anchorfile>classiipr_1_1_c_gaussian2d_filter_params.html</anchorfile>
-      <anchor>ae31a69a6f8730a35c6861c1a7e0c2b4</anchor>
-      <arglist>(double sigma2)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetAngle</name>
-      <anchorfile>classiipr_1_1_c_gaussian2d_filter_params.html</anchorfile>
-      <anchor>977d5b62127433f649d1f98b8d4c6039</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetAngle</name>
-      <anchorfile>classiipr_1_1_c_gaussian2d_filter_params.html</anchorfile>
-      <anchor>6e98fc36da1070fcdfe00ed7dc241dd6</anchor>
-      <arglist>(double sigma1)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiipr_1_1_c_gaussian2d_filter_params.html</anchorfile>
-      <anchor>41cfb532c22f2d8ed59edd4a8b2f6ce7</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4073,25 +4013,6 @@
       <anchorfile>classiipr_1_1_c_line_projection_supplier_comp.html</anchorfile>
       <anchor>949009c368a09afc4275e4257471251f</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::CLocalDifferenceProcessorComp</name>
-    <filename>classiipr_1_1_c_local_difference_processor_comp.html</filename>
-    <base>iipr::CImageProcessorCompBase</base>
-    <member kind="typedef">
-      <type>CImageProcessorCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_local_difference_processor_comp.html</anchorfile>
-      <anchor>1fcd03a588786a813f5cb3f8df495f58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ProcessImage</name>
-      <anchorfile>classiipr_1_1_c_local_difference_processor_comp.html</anchorfile>
-      <anchor>58a05830b33ea5b57a3cf64b145c1d72</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5421,36 +5342,28 @@
   <compound kind="class">
     <name>iipr::TConvolutionProcessorComp</name>
     <filename>classiipr_1_1_t_convolution_processor_comp.html</filename>
-    <templarg>PixelType</templarg>
-    <templarg>ParameterType</templarg>
-    <templarg>Kernel</templarg>
+    <templarg></templarg>
+    <templarg></templarg>
     <base>TImageParamProcessorCompBase&lt; ParameterType &gt;</base>
     <member kind="typedef">
       <type>iipr::TImageParamProcessorCompBase&lt; ParameterType &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_t_convolution_processor_comp.html</anchorfile>
-      <anchor>abf5ea1a2b80aa2117591ff36f103fe5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iipr::TLocalNeighborhood&lt; iimg::TBitmapIterator&lt; PixelType &gt;, Kernel &gt;</type>
-      <name>Neighborhood</name>
-      <anchorfile>classiipr_1_1_t_convolution_processor_comp.html</anchorfile>
-      <anchor>1130cc1704a7742a53564fd9df7cbd10</anchor>
+      <anchor>3cbb69973b5e3ebc6bc37e552936f58e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual Kernel *</type>
+      <type>virtual CConvolutionKernel2d *</type>
       <name>CreateKernel</name>
       <anchorfile>classiipr_1_1_t_convolution_processor_comp.html</anchorfile>
-      <anchor>29c398a959c0acbcd71c945e3d7a0b58</anchor>
+      <anchor>ba7adcd591c86280738a0e88a34a9cd8</anchor>
       <arglist>(const ParameterType *paramsPtr)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ParamProcessImage</name>
       <anchorfile>classiipr_1_1_t_convolution_processor_comp.html</anchorfile>
-      <anchor>31e9167fddf49bebfcd8e86f47a32ce9</anchor>
+      <anchor>fc2f1d21205ea7870647666ed5c5c90c</anchor>
       <arglist>(const ParameterType *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
   </compound>
@@ -5489,61 +5402,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iipr::TGaussianKernel2d</name>
-    <filename>classiipr_1_1_t_gaussian_kernel2d.html</filename>
-    <templarg></templarg>
-    <templarg></templarg>
-    <base>TKernel2d&lt; PixelType, KernelType &gt;</base>
-    <member kind="typedef">
-      <type>iipr::TKernel2d&lt; PixelType, KernelType &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_t_gaussian_kernel2d.html</anchorfile>
-      <anchor>e0fee32ba83bdefbf57da5e009ff4743</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TGaussianKernel2d</name>
-      <anchorfile>classiipr_1_1_t_gaussian_kernel2d.html</anchorfile>
-      <anchor>e9fa59fd0836c6a7c5a68e75bcec1ad2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TGaussianKernel2d</name>
-      <anchorfile>classiipr_1_1_t_gaussian_kernel2d.html</anchorfile>
-      <anchor>90e0ee2fb1e652ff6da1d58302bb7ac3</anchor>
-      <arglist>(double sigma1, double sigma2, double angle, const iimg::IBitmap *bitmapPtr=NULL)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CreateKernel</name>
-      <anchorfile>classiipr_1_1_t_gaussian_kernel2d.html</anchorfile>
-      <anchor>14e0cda2ee91b1198cd0458048ebdafb</anchor>
-      <arglist>(double sigma1, double sigma2, double angle)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::TGaussianProcessorComp</name>
-    <filename>classiipr_1_1_t_gaussian_processor_comp.html</filename>
-    <templarg></templarg>
-    <base>TConvolutionProcessorComp&lt; PixelType, iipr::CGaussian2dFilterParams, iipr::CGaussianKernel2d &gt;</base>
-    <member kind="typedef">
-      <type>iipr::TConvolutionProcessorComp&lt; PixelType, iipr::CGaussian2dFilterParams, iipr::CGaussianKernel2d &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_t_gaussian_processor_comp.html</anchorfile>
-      <anchor>69abce037e60515200f848b01d9d5cf4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual iipr::CGaussianKernel2d *</type>
-      <name>CreateKernel</name>
-      <anchorfile>classiipr_1_1_t_gaussian_processor_comp.html</anchorfile>
-      <anchor>ec8efc5f66f8d7431d7e4dc319636dc1</anchor>
-      <arglist>(const iipr::CGaussian2dFilterParams *paramsPtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iipr::TImageParamProcessorCompBase</name>
     <filename>classiipr_1_1_t_image_param_processor_comp_base.html</filename>
     <templarg>ParameterType</templarg>
@@ -5568,220 +5426,6 @@
       <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
       <anchor>9d48a40b0bcb1644d116ca345c789f11</anchor>
       <arglist>(const ParameterType *parameterPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::TKernel2d</name>
-    <filename>classiipr_1_1_t_kernel2d.html</filename>
-    <templarg>PixelType</templarg>
-    <templarg>KernelType</templarg>
-    <member kind="typedef">
-      <type>iimg::TBitmapIterator2d&lt; PixelType &gt;</type>
-      <name>BitmapIterator</name>
-      <anchorfile>classiipr_1_1_t_kernel2d.html</anchorfile>
-      <anchor>8a38cb5fd760eb5ffc76bbd70dd12335</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::pair&lt; int, KernelType &gt;</type>
-      <name>KernelValue</name>
-      <anchorfile>classiipr_1_1_t_kernel2d.html</anchorfile>
-      <anchor>d6593fac136c839fe904c15163c0fcd1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::vector&lt; KernelValue &gt;</type>
-      <name>KernelValues</name>
-      <anchorfile>classiipr_1_1_t_kernel2d.html</anchorfile>
-      <anchor>afd34cb4afdbd714fdad18d4597fe341</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>KernelValues::const_iterator</type>
-      <name>Iterator</name>
-      <anchorfile>classiipr_1_1_t_kernel2d.html</anchorfile>
-      <anchor>0208df5cebe38f81da49b2b2f73b9914</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>InitForBitmap</name>
-      <anchorfile>classiipr_1_1_t_kernel2d.html</anchorfile>
-      <anchor>2bde06ea3990dc546f0071e1bd919325</anchor>
-      <arglist>(const iimg::IBitmap &amp;bitmap) const </arglist>
-    </member>
-    <member kind="function">
-      <type>Iterator</type>
-      <name>Begin</name>
-      <anchorfile>classiipr_1_1_t_kernel2d.html</anchorfile>
-      <anchor>0691b7e6ce554d2a703cc95efff48a83</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>Iterator</type>
-      <name>End</name>
-      <anchorfile>classiipr_1_1_t_kernel2d.html</anchorfile>
-      <anchor>84a01132e221cfcfa0f258ac21e340be</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetWeightsSum</name>
-      <anchorfile>classiipr_1_1_t_kernel2d.html</anchorfile>
-      <anchor>e792e0a784fd0a6fbabd202594e121a7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>i2d::CRectangle</type>
-      <name>GetBoundingBox</name>
-      <anchorfile>classiipr_1_1_t_kernel2d.html</anchorfile>
-      <anchor>66756ef6c0c015909e0c64e6321ef1a3</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>KernelValues</type>
-      <name>m_values</name>
-      <anchorfile>classiipr_1_1_t_kernel2d.html</anchorfile>
-      <anchor>9673b4548cfb6335387083d2a7c2634d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ibase::CSize</type>
-      <name>m_kernelSize</name>
-      <anchorfile>classiipr_1_1_t_kernel2d.html</anchorfile>
-      <anchor>fe813f7c22f82c80afe64eb7ff0e5e58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>m_sumWeights</name>
-      <anchorfile>classiipr_1_1_t_kernel2d.html</anchorfile>
-      <anchor>5c861a67ea53e210661f2b0ec12e2826</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::TLocalNeighborhood</name>
-    <filename>classiipr_1_1_t_local_neighborhood.html</filename>
-    <templarg></templarg>
-    <templarg></templarg>
-    <class kind="class">iipr::TLocalNeighborhood::Iterator</class>
-    <member kind="typedef">
-      <type>BitmapIterator::ValueType</type>
-      <name>PixelValue</name>
-      <anchorfile>classiipr_1_1_t_local_neighborhood.html</anchorfile>
-      <anchor>b67b3bf21b91bce7af71b7cbdff42e7b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TLocalNeighborhood</name>
-      <anchorfile>classiipr_1_1_t_local_neighborhood.html</anchorfile>
-      <anchor>e6e0e99a4f40fad573300ffe84075798</anchor>
-      <arglist>(const BitmapIterator &amp;bitmapIterator, const Kernel &amp;kernel)</arglist>
-    </member>
-    <member kind="function">
-      <type>Iterator</type>
-      <name>Begin</name>
-      <anchorfile>classiipr_1_1_t_local_neighborhood.html</anchorfile>
-      <anchor>89acb54d3ff06db6a38d2cc8ef5f2909</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>Iterator</type>
-      <name>End</name>
-      <anchorfile>classiipr_1_1_t_local_neighborhood.html</anchorfile>
-      <anchor>1a43405edc6cd86b45abfd89f8684497</anchor>
-      <arglist>() const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::TLocalNeighborhood::Iterator</name>
-    <filename>classiipr_1_1_t_local_neighborhood_1_1_iterator.html</filename>
-    <member kind="typedef">
-      <type>TLocalNeighborhood::PixelValue</type>
-      <name>PixelValue</name>
-      <anchorfile>classiipr_1_1_t_local_neighborhood_1_1_iterator.html</anchorfile>
-      <anchor>beec9fba952c087f31f8074fa21c29fd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Kernel::Iterator</type>
-      <name>KernelIterator</name>
-      <anchorfile>classiipr_1_1_t_local_neighborhood_1_1_iterator.html</anchorfile>
-      <anchor>dda16ee8e563fb1c0370e34d30e73837</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Iterator</name>
-      <anchorfile>classiipr_1_1_t_local_neighborhood_1_1_iterator.html</anchorfile>
-      <anchor>74c6b492969f6543cc6573a10c7138cf</anchor>
-      <arglist>(const PixelValue *imageBufferPtr, const KernelIterator &amp;kernelIterator)</arglist>
-    </member>
-    <member kind="function">
-      <type>const PixelValue &amp;</type>
-      <name>operator*</name>
-      <anchorfile>classiipr_1_1_t_local_neighborhood_1_1_iterator.html</anchorfile>
-      <anchor>42017e1a911489f55b47db2822e7daa0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>Iterator &amp;</type>
-      <name>operator++</name>
-      <anchorfile>classiipr_1_1_t_local_neighborhood_1_1_iterator.html</anchorfile>
-      <anchor>b2c4f483af6eb17dabe9e9a9a0eaf86d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Iterator</type>
-      <name>operator++</name>
-      <anchorfile>classiipr_1_1_t_local_neighborhood_1_1_iterator.html</anchorfile>
-      <anchor>954cbb585795e758545a737946bf11ed</anchor>
-      <arglist>(int)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::MinimumFunction</name>
-    <filename>classiipr_1_1_minimum_function.html</filename>
-    <member kind="function">
-      <type>I_BYTE</type>
-      <name>operator()</name>
-      <anchorfile>classiipr_1_1_minimum_function.html</anchorfile>
-      <anchor>040c6a64a3d2cec84ac344892946d4bd</anchor>
-      <arglist>(const I_BYTE &amp;value1, const I_BYTE &amp;value2)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::MaximumFunction</name>
-    <filename>classiipr_1_1_maximum_function.html</filename>
-    <member kind="function">
-      <type>I_BYTE</type>
-      <name>operator()</name>
-      <anchorfile>classiipr_1_1_maximum_function.html</anchorfile>
-      <anchor>1517de5b289e4d3f4303da7cbb5fff58</anchor>
-      <arglist>(const I_BYTE &amp;value1, const I_BYTE &amp;value2)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::TMorphoProcessorComp</name>
-    <filename>classiipr_1_1_t_morpho_processor_comp.html</filename>
-    <templarg></templarg>
-    <templarg></templarg>
-    <base>TImageParamProcessorCompBase&lt; IMultidimensionalFilterParams &gt;</base>
-    <member kind="typedef">
-      <type>iipr::TImageParamProcessorCompBase&lt; IMultidimensionalFilterParams &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_t_morpho_processor_comp.html</anchorfile>
-      <anchor>f9d0dba821610b5503dd42ad3e5ba4ab</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ParamProcessImage</name>
-      <anchorfile>classiipr_1_1_t_morpho_processor_comp.html</anchorfile>
-      <anchor>7149ee472e67e51258094058ce45074b</anchor>
-      <arglist>(const IMultidimensionalFilterParams *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9812,6 +9456,34 @@
       <arglist></arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
+      <anchor>403ad461a4eb12abdef546be5fd9737a</anchor>
+      <arglist>(m_bitmapModelCompPtr, m_bitmapCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
+      <anchor>d3ec78030023af7f6e39dad69b4cb734</anchor>
+      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
+      <anchor>6333db3415850d4e26916ff5cc7063bd</anchor>
+      <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
+      <anchor>c92a7492c29c88c35ae70b3fc8afa39e</anchor>
+      <arglist>(m_paramsSetExtenderCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
       <type>I_END_COMPONENT</type>
       <name>CSnapImageGuiComp</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
@@ -9967,6 +9639,13 @@
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
       <anchor>faa0f01ed530eb604e51944a556a3fb5</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
+      <anchor>ce4c8f485779b8880a9b560c85b52155</anchor>
+      <arglist>(m_multiLineModelCompPtr, m_multiLineParamsCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -10541,6 +10220,55 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>d76e132cd277dc7a99870a71bf756c1a</anchor>
+      <arglist>(m_guisCompPtr, m_editorsCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>b9de90683f30623b9318356ded411bf5</anchor>
+      <arglist>(m_observersCompPtr, m_editorsCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>bd19b6a62dc7042e2c4f68014753de67</anchor>
+      <arglist>(m_extendersCompPtr, m_editorsCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>c85e9cb36d628b5c9ba6edee679590b6</anchor>
+      <arglist>(m_previewObserversCompPtr, m_previewGuisCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>382d1b7091a1a22f56f1872e646e2b4b</anchor>
+      <arglist>(m_previewSceneProvidersCompPtr, m_previewGuisCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>7d19ed1ee264436b7194f0b58b83f0cf</anchor>
+      <arglist>(m_generalParamsObserverCompPtr, m_generalParamsGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>5c5f5b4c45efb71fe754894f5faa94b7</anchor>
+      <arglist>(m_generalParamsEditorCompPtr, m_generalParamsGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CInspectionTaskGuiComp</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>78984eb4157ca41fefa1a24af00cf62e</anchor>
@@ -10644,6 +10372,13 @@
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
       <anchor>2adfb74c07681ead8769eda99f2b3118</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>e9f00f25a17e65d9bd0f52db7b8e11fa</anchor>
+      <arglist>(m_paramsSetExtenderCompPtr, m_paramsSetObserverCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -10862,6 +10597,13 @@
       <anchor>20f5500aaa932ce8f0a1e72b7aa4f193</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>be8caf5790d925e9e82f39c98471e726</anchor>
+      <arglist>(m_projectionObserverGuiCompPtr, m_projectionObserverCompPtr, true)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
@@ -11032,6 +10774,34 @@
       <anchor>3b53977a981118c8b40f9bfa2e7855a5</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
+      <anchor>058138f97172bd1415df23252f0c3cf4</anchor>
+      <arglist>(m_searchResultsCompPtr, m_searchResultsModelCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
+      <anchor>4c20ad144c9483e3a01fa0f558b253d5</anchor>
+      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
+      <anchor>2f08efb78093a618afaf36ef8135f001</anchor>
+      <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
+      <anchor>626c80e934c44086b1d96c99fc6e5260</anchor>
+      <arglist>(m_bitmapModelCompPtr, m_bitmapCompPtr, true)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT void</type>
       <name>CreateShapes</name>
@@ -11071,6 +10841,13 @@
       <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
       <anchor>2bcf3e4478c2566fd4e77283ce8f1cd9</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
+      <anchor>d28de1e7375e67bfbdccce22239182dc</anchor>
+      <arglist>(m_modelObserverCompPtr, m_modelViewCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT void</type>
@@ -11254,6 +11031,20 @@
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
       <anchor>ca5ba7f42895aa248c99d9e6fe90e7c3</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>c1d265b41bf65806df4d92dfc13f231e</anchor>
+      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>1b21daacdcedc23868b320fae3e6a13d</anchor>
+      <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type>I_END_COMPONENT</type>
@@ -11499,11 +11290,39 @@
       <anchor>f773fd473324ca034d14192e75803d8f</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
+      <anchor>3c3263c82ca32c57c15602f87f8b2e10</anchor>
+      <arglist>(m_depthImageObserverCompPtr, m_depthImageGuiCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
+      <anchor>7123e7ac2755880edd4f5348dd4e6e52</anchor>
+      <arglist>(m_depthImageObserver3dCompPtr, m_depthImageGui3dCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
+      <anchor>cbe79828d81d3da573a8b2a6a90a5014</anchor>
+      <arglist>(m_amplitudeImageObserverCompPtr, m_amplitudeImageGuiCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
+      <anchor>fd983d0688a710a4b01db5da005b1285</anchor>
+      <arglist>(m_confidenceMapObserverCompPtr, m_confidenceMapGuiCompPtr, true)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
-      <anchor>039135825662300377a584be2d024ccb</anchor>
+      <anchor>befd0fda1213240204042011052236ee</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">

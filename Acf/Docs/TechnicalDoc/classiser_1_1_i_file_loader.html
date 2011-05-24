@@ -74,8 +74,9 @@ Inheritance diagram for iser::IFileLoader:</div>
  }</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">List of possible message ids used in context of this interface.  <a href="classiser_1_1_i_file_loader.html#885bc2cad957c89052cf890e68436bf4">More...</a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_loader.html#fc2afcdf99af4690e151f3956d2bab98">QueryFlags</a> { <a class="el" href="classiser_1_1_i_file_loader.html#fc2afcdf99af4690e151f3956d2bab982bd0d269690c48463069cdb0f3d4c091">QF_NAMED_ONLY</a> =  0x0004, 
-<a class="el" href="classiser_1_1_i_file_loader.html#fc2afcdf99af4690e151f3956d2bab9823b1a54d8c4e2d38c2c28131c0f2450d">QF_ANONYMOUS_ONLY</a> =  0x0008
+<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_loader.html#fc2afcdf99af4690e151f3956d2bab98">QueryFlags</a> { <a class="el" href="classiser_1_1_i_file_loader.html#fc2afcdf99af4690e151f3956d2bab98e62f0db855b6461a10c28696efa0f003">QF_FILE_ONLY</a> =  1 &lt;&lt; 2, 
+<a class="el" href="classiser_1_1_i_file_loader.html#fc2afcdf99af4690e151f3956d2bab98f5acafd5c0b64f8b35b269536287fbc0">QF_DIRECTORY_ONLY</a> =  1 &lt;&lt; 3, 
+<a class="el" href="classiser_1_1_i_file_loader.html#fc2afcdf99af4690e151f3956d2bab9823b1a54d8c4e2d38c2c28131c0f2450d">QF_ANONYMOUS_ONLY</a> =  1 &lt;&lt; 4
  }</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Describe detailed options of query.  <a href="classiser_1_1_i_file_loader.html#fc2afcdf99af4690e151f3956d2bab98">More...</a><br></td></tr>
@@ -170,10 +171,12 @@ Describe detailed options of query.
 <p>
 <dl compact><dt><b>Enumerator: </b></dt><dd>
 <table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" name="fc2afcdf99af4690e151f3956d2bab982bd0d269690c48463069cdb0f3d4c091"></a><!-- doxytag: member="QF_NAMED_ONLY" ref="fc2afcdf99af4690e151f3956d2bab982bd0d269690c48463069cdb0f3d4c091" args="" -->QF_NAMED_ONLY</em>&nbsp;</td><td>
+<tr><td valign="top"><em><a class="anchor" name="fc2afcdf99af4690e151f3956d2bab98e62f0db855b6461a10c28696efa0f003"></a><!-- doxytag: member="QF_FILE_ONLY" ref="fc2afcdf99af4690e151f3956d2bab98e62f0db855b6461a10c28696efa0f003" args="" -->QF_FILE_ONLY</em>&nbsp;</td><td>
 Only operations with specified file name should be considered. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="fc2afcdf99af4690e151f3956d2bab98f5acafd5c0b64f8b35b269536287fbc0"></a><!-- doxytag: member="QF_DIRECTORY_ONLY" ref="fc2afcdf99af4690e151f3956d2bab98f5acafd5c0b64f8b35b269536287fbc0" args="" -->QF_DIRECTORY_ONLY</em>&nbsp;</td><td>
+Only operations with specified directory name should be considered. </td></tr>
 <tr><td valign="top"><em><a class="anchor" name="fc2afcdf99af4690e151f3956d2bab9823b1a54d8c4e2d38c2c28131c0f2450d"></a><!-- doxytag: member="QF_ANONYMOUS_ONLY" ref="fc2afcdf99af4690e151f3956d2bab9823b1a54d8c4e2d38c2c28131c0f2450d" args="" -->QF_ANONYMOUS_ONLY</em>&nbsp;</td><td>
-Only operations without specified file name (anonymous) should be considered. </td></tr>
+Only operations without specified path (anonymous) should be considered. </td></tr>
 </table>
 </dl>
 

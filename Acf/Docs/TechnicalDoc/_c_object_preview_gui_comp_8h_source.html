@@ -56,9 +56,9 @@
 <a name="l00033"></a>00033        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_object_preview_gui_comp.html">CObjectPreviewGuiComp</a>);
 <a name="l00034"></a>00034               I_ASSIGN(m_fileLoaderCompPtr, <span class="stringliteral">"FileLoader"</span>, <span class="stringliteral">"Object loader"</span>, <span class="keyword">true</span>, <span class="stringliteral">"FileLoader"</span>);
 <a name="l00035"></a>00035               I_ASSIGN(m_objectCompPtr, <span class="stringliteral">"Object"</span>, <span class="stringliteral">"Object"</span>, <span class="keyword">true</span>, <span class="stringliteral">"Object"</span>);
-<a name="l00036"></a>00036               I_ASSIGN(m_objectModelCompPtr, <span class="stringliteral">"Object"</span>, <span class="stringliteral">"Object"</span>, <span class="keyword">true</span>, <span class="stringliteral">"Object"</span>);
+<a name="l00036"></a>00036               <a class="code" href="classiqtgui_1_1_c_object_preview_gui_comp.html#ad4da33e555e70b3453b3cc9ae5534c2">I_ASSIGN_TO</a>(m_objectModelCompPtr, m_objectCompPtr, <span class="keyword">true</span>);
 <a name="l00037"></a>00037               I_ASSIGN(m_objectObserverCompPtr, <span class="stringliteral">"ObjectView"</span>, <span class="stringliteral">"View component for the object"</span>, <span class="keyword">true</span>, <span class="stringliteral">"ObjectView"</span>);
-<a name="l00038"></a>00038               I_ASSIGN(m_objectGuiCompPtr, <span class="stringliteral">"ObjectView"</span>, <span class="stringliteral">"View component for the object"</span>, <span class="keyword">true</span>, <span class="stringliteral">"ObjectView"</span>);
+<a name="l00038"></a>00038               <a class="code" href="classiqtgui_1_1_c_object_preview_gui_comp.html#ad4da33e555e70b3453b3cc9ae5534c2">I_ASSIGN_TO</a>(m_objectGuiCompPtr, m_objectObserverCompPtr, <span class="keyword">true</span>);
 <a name="l00039"></a>00039        I_END_COMPONENT;
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 <span class="keyword">protected</span>:

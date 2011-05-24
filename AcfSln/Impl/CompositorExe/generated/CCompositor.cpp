@@ -347,16 +347,14 @@ CCompositor::CAcfGuiVocePck::CLogRegistry::CLogRegistry()
 		}
 	}
 
-	// element 'LogModelBinder' of type BasePck::ModelBinder
-	icomp::IRegistry::ElementInfo* infoLogModelBinderPtr = InsertElementInfo(
-				"LogModelBinder",
-				icomp::CComponentAddress("BasePck", "ModelBinder"),
+	// element 'ModelEditorGui' of type QtGuiPck::ModelEditorGui
+	icomp::IRegistry::ElementInfo* infoModelEditorGuiPtr = InsertElementInfo(
+				"ModelEditorGui",
+				icomp::CComponentAddress("QtGuiPck", "ModelEditorGui"),
 				true);
-	if ((infoLogModelBinderPtr != NULL) && infoLogModelBinderPtr->elementPtr.IsValid()){
-		infoLogModelBinderPtr->elementPtr->SetElementFlags(1);
-
+	if ((infoModelEditorGuiPtr != NULL) && infoModelEditorGuiPtr->elementPtr.IsValid()){
 		// create and set attribute value for 'Model'
-		icomp::IRegistryElement::AttributeInfo* attrInfoModelPtr = infoLogModelBinderPtr->elementPtr->InsertAttributeInfo("Model", "icomp::CReferenceAttribute");
+		icomp::IRegistryElement::AttributeInfo* attrInfoModelPtr = infoModelEditorGuiPtr->elementPtr->InsertAttributeInfo("Model", "icomp::CReferenceAttribute");
 		if (attrInfoModelPtr != NULL){
 			attrInfoModelPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
 			I_ASSERT(attrInfoModelPtr->attributePtr.IsValid());
@@ -366,17 +364,15 @@ CCompositor::CAcfGuiVocePck::CLogRegistry::CLogRegistry()
 			attrModelPtr->SetValue("LogModel");
 		}
 
-		// create and set attribute value for 'Observers'
-		icomp::IRegistryElement::AttributeInfo* attrInfoObserversPtr = infoLogModelBinderPtr->elementPtr->InsertAttributeInfo("Observers", "icomp::CMultiReferenceAttribute");
-		if (attrInfoObserversPtr != NULL){
-			attrInfoObserversPtr->attributePtr.SetPtr(new icomp::CMultiReferenceAttribute);
-			I_ASSERT(attrInfoObserversPtr->attributePtr.IsValid());
+		// create and set attribute value for 'SlaveEditorGui'
+		icomp::IRegistryElement::AttributeInfo* attrInfoSlaveEditorGuiPtr = infoModelEditorGuiPtr->elementPtr->InsertAttributeInfo("SlaveEditorGui", "icomp::CReferenceAttribute");
+		if (attrInfoSlaveEditorGuiPtr != NULL){
+			attrInfoSlaveEditorGuiPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoSlaveEditorGuiPtr->attributePtr.IsValid());
 
-			icomp::TMultiAttribute<std::string>* nattrInfoObserversPtr = dynamic_cast<icomp::TMultiAttribute<std::string>*>(attrInfoObserversPtr->attributePtr.GetPtr());
-			I_ASSERT(nattrInfoObserversPtr != NULL);
-
-			nattrInfoObserversPtr->Reset();
-			nattrInfoObserversPtr->InsertValue("LogGui");
+			icomp::TAttribute<std::string>* attrSlaveEditorGuiPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoSlaveEditorGuiPtr->attributePtr.GetPtr());
+			I_ASSERT(attrSlaveEditorGuiPtr != NULL);
+			attrSlaveEditorGuiPtr->SetValue("LogGui");
 		}
 	}
 
@@ -390,7 +386,7 @@ CCompositor::CAcfGuiVocePck::CLogRegistry::CLogRegistry()
 				"ibase::IMessageContainer",
 				true);
 	SetElementInterfaceExported(
-				"LogGui",
+				"ModelEditorGui",
 				"iqtgui::IGuiObject",
 				true);
 }
@@ -1194,7 +1190,7 @@ CCompositor::CAcfSlnVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(324);
+			attrVersionNumberPtr->SetValue(338);
 		}
 	}
 
@@ -1381,7 +1377,7 @@ CCompositor::CAcfVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(1750);
+			attrVersionNumberPtr->SetValue(1774);
 		}
 	}
 
@@ -3299,8 +3295,6 @@ CCompositor::CBasePck::CBasePck()
 	RegisterEmbeddedComponentInfo("FileTypeInfo", &infoFileTypeInfo);
 	const icomp::IComponentStaticInfo& infoLog = BasePck::Log::InitStaticInfo(NULL);
 	RegisterEmbeddedComponentInfo("Log", &infoLog);
-	const icomp::IComponentStaticInfo& infoModelBinder = BasePck::ModelBinder::InitStaticInfo(NULL);
-	RegisterEmbeddedComponentInfo("ModelBinder", &infoModelBinder);
 	const icomp::IComponentStaticInfo& infoRegistryCodeSaver = BasePck::RegistryCodeSaver::InitStaticInfo(NULL);
 	RegisterEmbeddedComponentInfo("RegistryCodeSaver", &infoRegistryCodeSaver);
 	const icomp::IComponentStaticInfo& infoSelectedDocModelBinder = BasePck::SelectedDocModelBinder::InitStaticInfo(NULL);
@@ -3365,6 +3359,8 @@ CCompositor::CQtGuiPck::CQtGuiPck()
 	RegisterEmbeddedComponentInfo("MainWindowGui", &infoMainWindowGui);
 	const icomp::IComponentStaticInfo& infoModelDialogGui = QtGuiPck::ModelDialogGui::InitStaticInfo(NULL);
 	RegisterEmbeddedComponentInfo("ModelDialogGui", &infoModelDialogGui);
+	const icomp::IComponentStaticInfo& infoModelEditorGui = QtGuiPck::ModelEditorGui::InitStaticInfo(NULL);
+	RegisterEmbeddedComponentInfo("ModelEditorGui", &infoModelEditorGui);
 	const icomp::IComponentStaticInfo& infoMultiDocWorkspaceGui = QtGuiPck::MultiDocWorkspaceGui::InitStaticInfo(NULL);
 	RegisterEmbeddedComponentInfo("MultiDocWorkspaceGui", &infoMultiDocWorkspaceGui);
 	const icomp::IComponentStaticInfo& infoSplashScreen = QtGuiPck::SplashScreen::InitStaticInfo(NULL);

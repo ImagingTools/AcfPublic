@@ -58,12 +58,12 @@ Inheritance diagram for idoc::IDocumentManager:</div>
 
 <tr><td colspan="2"><br><h2>Public Types</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#107e005cba647e72b873771fc3f073f7">ChangeFlags</a> { <br>
-&nbsp;&nbsp;<a class="el" href="classidoc_1_1_i_document_manager.html#107e005cba647e72b873771fc3f073f7110e7e4a41dfce474719b45d9bcbd34c">CF_DOCUMENT_RENAMED</a> =  0x10000, 
-<a class="el" href="classidoc_1_1_i_document_manager.html#107e005cba647e72b873771fc3f073f7edd0b3aec95885c3e2408b8bc791492c">CF_DOCUMENT_CREATED</a> =  0x20000, 
-<a class="el" href="classidoc_1_1_i_document_manager.html#107e005cba647e72b873771fc3f073f7ffcd0135f022a529b5975383a4f102a0">CF_DOCUMENT_REMOVED</a> =  0x40000, 
-<a class="el" href="classidoc_1_1_i_document_manager.html#107e005cba647e72b873771fc3f073f763bdf7a8cbdb010b7ee6686351e75ef0">CF_DOCUMENT_COUNT_CHANGED</a> =  0x80000, 
+&nbsp;&nbsp;<a class="el" href="classidoc_1_1_i_document_manager.html#107e005cba647e72b873771fc3f073f7110e7e4a41dfce474719b45d9bcbd34c">CF_DOCUMENT_RENAMED</a> =  1 &lt;&lt; 9, 
+<a class="el" href="classidoc_1_1_i_document_manager.html#107e005cba647e72b873771fc3f073f7edd0b3aec95885c3e2408b8bc791492c">CF_DOCUMENT_CREATED</a> =  1 &lt;&lt; 10, 
+<a class="el" href="classidoc_1_1_i_document_manager.html#107e005cba647e72b873771fc3f073f7ffcd0135f022a529b5975383a4f102a0">CF_DOCUMENT_REMOVED</a> =  1 &lt;&lt; 11, 
+<a class="el" href="classidoc_1_1_i_document_manager.html#107e005cba647e72b873771fc3f073f763bdf7a8cbdb010b7ee6686351e75ef0">CF_DOCUMENT_COUNT_CHANGED</a> =  1 &lt;&lt; 12, 
 <br>
-&nbsp;&nbsp;<a class="el" href="classidoc_1_1_i_document_manager.html#107e005cba647e72b873771fc3f073f7135e119f42ffae2b8dda97124c750817">CF_VIEW_ACTIVATION_CHANGED</a> =  0x100000
+&nbsp;&nbsp;<a class="el" href="classidoc_1_1_i_document_manager.html#107e005cba647e72b873771fc3f073f7135e119f42ffae2b8dda97124c750817">CF_VIEW_ACTIVATION_CHANGED</a> =  1 &lt;&lt; 13
 <br>
  }</td></tr>
 
@@ -113,6 +113,9 @@ Inheritance diagram for idoc::IDocumentManager:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#53febd1a6f0bc272173af3afd93cbca5">GetDocumentFromView</a> (const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> &amp;view, <a class="el" href="structidoc_1_1_i_document_manager_1_1_document_info.html">DocumentInfo</a> *documentInfoPtr=NULL) const =0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the document assigned to view.  <a href="#53febd1a6f0bc272173af3afd93cbca5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#67b5019ddacfcb2a8fef21e36cdd1fd8">AddViewToDocument</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;document, const std::string &amp;viewTypeId=std::string())=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add a new view to the document.  <a href="#67b5019ddacfcb2a8fef21e36cdd1fd8"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#415ab9abd38841db354894b89dea664f">GetDocumentTypeId</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;document) const =0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get ID of document type managed by this object.  <a href="#415ab9abd38841db354894b89dea664f"></a><br></td></tr>
@@ -227,6 +230,46 @@ Flags describing possible operations.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="67b5019ddacfcb2a8fef21e36cdd1fd8"></a><!-- doxytag: member="idoc::IDocumentManager::AddViewToDocument" ref="67b5019ddacfcb2a8fef21e36cdd1fd8" args="(const istd::IChangeable &amp;document, const std::string &amp;viewTypeId=std::string())=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* idoc::IDocumentManager::AddViewToDocument           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>document</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>viewTypeId</em> = <code>std::string()</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Add a new view to the document. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>document</em>&nbsp;</td><td>document instance </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>viewTypeId</em>&nbsp;</td><td>ID of view type, if it will be created. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>Created view object </dd></dl>
+
+<p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#d2c2e32e53324c10493fbe29863237bd">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#25eaa73f10819e9bf514878cea340b34">idoc::CSingleDocumentManagerBase</a>.</p>
+
+</div>
+</div><p>
 <a class="anchor" name="333b6a7c4cc31479099a1f35de46b777"></a><!-- doxytag: member="idoc::IDocumentManager::FileClose" ref="333b6a7c4cc31479099a1f35de46b777" args="(int documentIndex=&#45;1, bool *ignoredPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
@@ -257,7 +300,7 @@ Close current view.
 <p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>documentIndex</em>&nbsp;</td><td>optional index of document to save. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>documentIndex</em>&nbsp;</td><td>optional index of document to close. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>ignoredPtr</em>&nbsp;</td><td>optional return flag indicating that closing was aborted by user. </td></tr>
   </table>
 </dl>
@@ -401,7 +444,7 @@ Print current document.
 <p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>documentIndex</em>&nbsp;</td><td>optional index of document to save. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>documentIndex</em>&nbsp;</td><td>optional index of document to print. </td></tr>
   </table>
 </dl>
 

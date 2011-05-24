@@ -141,8 +141,10 @@ void CDockWidgetGuiComp::OnGuiDestroyed()
 }
 
 
-void CDockWidgetGuiComp::OnRetranslate()
+void CDockWidgetGuiComp::OnGuiRetranslate()
 {
+	BaseClass::OnGuiRetranslate();
+
 	QDockWidget* dockWidgetPtr = GetQtWidget();
 	I_ASSERT(dockWidgetPtr != NULL);
 

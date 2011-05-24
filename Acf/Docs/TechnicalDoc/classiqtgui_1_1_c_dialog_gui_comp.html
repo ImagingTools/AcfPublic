@@ -54,12 +54,12 @@ Inheritance diagram for iqtgui::CDialogGuiComp:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dialog_gui_comp.html#cd7fe5ded9a9e2fbb78cd1c38277d961">BaseClass</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual I_END_COMPONENT void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dialog_gui_comp.html#85c359cdd5d9d9276b1b6a081c42cfa8">Execute</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual I_END_COMPONENT void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dialog_gui_comp.html#3c1d66bd2f6c166bb8f8a32194824cd9">ExecuteDialog</a> (<a class="el" href="classiqtgui_1_1_i_gui_object.html">IGuiObject</a> *parentPtr)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Execute dialog instance.  <a href="#85c359cdd5d9d9276b1b6a081c42cfa8"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Execute dialog instance.  <a href="#3c1d66bd2f6c166bb8f8a32194824cd9"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <br class="typebreak">
-<a class="el" href="classiqtgui_1_1_c_gui_component_dialog.html">iqtgui::CGuiComponentDialog</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dialog_gui_comp.html#936022248866b1c6a277977e3a04efaa">CreateComponentDialog</a> (int buttons) const </td></tr>
+<a class="el" href="classiqtgui_1_1_c_gui_component_dialog.html">iqtgui::CGuiComponentDialog</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dialog_gui_comp.html#fb30a131b9ab242f3f01d1aac318343b">CreateComponentDialog</a> (int buttons, <a class="el" href="classiqtgui_1_1_i_gui_object.html">IGuiObject</a> *parentPtr) const </td></tr>
 
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
@@ -86,7 +86,7 @@ Dialog based represenation of any UI-Component.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="936022248866b1c6a277977e3a04efaa"></a><!-- doxytag: member="iqtgui::CDialogGuiComp::CreateComponentDialog" ref="936022248866b1c6a277977e3a04efaa" args="(int buttons) const " -->
+<a class="anchor" name="fb30a131b9ab242f3f01d1aac318343b"></a><!-- doxytag: member="iqtgui::CDialogGuiComp::CreateComponentDialog" ref="fb30a131b9ab242f3f01d1aac318343b" args="(int buttons, IGuiObject *parentPtr) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -94,9 +94,18 @@ Dialog based represenation of any UI-Component.
           <td class="memname">virtual <a class="el" href="classiqtgui_1_1_c_gui_component_dialog.html">iqtgui::CGuiComponentDialog</a>* iqtgui::CDialogGuiComp::CreateComponentDialog           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>buttons</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [protected, virtual]</code></td>
+          <td class="paramname"> <em>buttons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiqtgui_1_1_i_gui_object.html">IGuiObject</a> *&nbsp;</td>
+          <td class="paramname"> <em>parentPtr</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -106,14 +115,15 @@ Dialog based represenation of any UI-Component.
 
 </div>
 </div><p>
-<a class="anchor" name="85c359cdd5d9d9276b1b6a081c42cfa8"></a><!-- doxytag: member="iqtgui::CDialogGuiComp::Execute" ref="85c359cdd5d9d9276b1b6a081c42cfa8" args="()" -->
+<a class="anchor" name="3c1d66bd2f6c166bb8f8a32194824cd9"></a><!-- doxytag: member="iqtgui::CDialogGuiComp::ExecuteDialog" ref="3c1d66bd2f6c166bb8f8a32194824cd9" args="(IGuiObject *parentPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual I_END_COMPONENT void iqtgui::CDialogGuiComp::Execute           </td>
+          <td class="memname">virtual I_END_COMPONENT void iqtgui::CDialogGuiComp::ExecuteDialog           </td>
           <td>(</td>
-          <td class="paramname">          </td>
+          <td class="paramtype"><a class="el" href="classiqtgui_1_1_i_gui_object.html">IGuiObject</a> *&nbsp;</td>
+          <td class="paramname"> <em>parentPtr</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -125,9 +135,9 @@ Dialog based represenation of any UI-Component.
 Execute dialog instance. 
 <p>
 
-<p>Implements <a class="el" href="classiqtgui_1_1_i_dialog.html#d285825eebeaac662c185335bdbd392b">iqtgui::IDialog</a>.</p>
+<p>Implements <a class="el" href="classiqtgui_1_1_i_dialog.html#a8d420324be83339c8ffa28329c109ad">iqtgui::IDialog</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiqtgui_1_1_c_model_dialog_gui_comp.html#545d630504b30832841d4a7aa30d43ba">iqtgui::CModelDialogGuiComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqtgui_1_1_c_model_dialog_gui_comp.html#04b099512ab370208673f11a35bf7b75">iqtgui::CModelDialogGuiComp</a>.</p>
 
 </div>
 </div><p>

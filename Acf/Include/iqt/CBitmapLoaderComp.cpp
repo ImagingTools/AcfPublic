@@ -97,7 +97,7 @@ bool CBitmapLoaderComp::IsOperationSupported(
 		}
 	}
 
-	return ((flags & QF_ANONYMOUS_ONLY) == 0);
+	return ((flags & (QF_DIRECTORY_ONLY | QF_ANONYMOUS_ONLY)) == 0);
 }
 
 

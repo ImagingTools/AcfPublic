@@ -39,13 +39,15 @@ public:
 	bool SerializeComponents(iser::IArchive& archive, TimeComponent fromComponent, TimeComponent toComponent);
 
 	// reimplemented (isys::IDateTime)
-	virtual std::string ToString(int fromComponent = TC_YEAR, int toComponent = TC_MICROSECOND) const;
-	virtual bool FromString(const std::string& dateTime, int fromComponent = TC_YEAR, int toComponent = TC_MICROSECOND);
+	virtual std::string ToString(int fromComponent = TC_YEAR, int toComponent = TC_MILLISECOND, const TimeSeparator& separator = TS_ISO) const;
+	virtual bool FromString(const std::string& dateTime, int fromComponent = TC_YEAR, int toComponent = TC_MILLISECOND);
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
 protected:
+	void ResetAllComponents();
+
 	static iser::CArchiveTag s_archiveTags[TC_LAST + 1];
 };
 

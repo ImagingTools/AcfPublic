@@ -57,7 +57,7 @@ bool CClipboardSerializerComp::IsOperationSupported(
 		return false;
 	}
 
-	if ((flags & QF_NAMED_ONLY) != 0){
+	if ((flags & QF_FILE_ONLY) != 0){
 		return false;
 	}
 

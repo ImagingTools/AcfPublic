@@ -50,11 +50,11 @@
 <a name="l00027"></a>00027        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_scene_connector_gui_comp.html">CSceneConnectorGuiComp</a>)
 <a name="l00028"></a>00028               I_REGISTER_INTERFACE(ibase::ICommandsProvider);
 <a name="l00029"></a>00029               I_ASSIGN(m_sceneGuiCompPtr, "SceneGui", "Gui providing scene information", true, "SceneGui");
-<a name="l00030"></a>00030               I_ASSIGN(m_sceneCommandsCompPtr, "SceneGui", "Gui providing scene information", false, "SceneGui");
-<a name="l00031"></a>00031               I_ASSIGN(m_sceneProviderCompPtr, "SceneGui", "Gui providing scene information", true, "SceneGui");
+<a name="l00030"></a>00030               <a class="code" href="classiqt2d_1_1_c_scene_connector_gui_comp.html#c91a58c117540dc24f5f42b70dddfdd8">I_ASSIGN_TO</a>(m_sceneCommandsCompPtr, m_sceneGuiCompPtr, false);
+<a name="l00031"></a>00031               <a class="code" href="classiqt2d_1_1_c_scene_connector_gui_comp.html#c91a58c117540dc24f5f42b70dddfdd8">I_ASSIGN_TO</a>(m_sceneProviderCompPtr, m_sceneGuiCompPtr, true);
 <a name="l00032"></a>00032               I_ASSIGN(m_extenderGuiCompPtr, "ExtenderGui", "Gui providing parameters displayed on scene", true, "ExtenderGui");
-<a name="l00033"></a>00033               I_ASSIGN(m_extenderCommandsCompPtr, "ExtenderGui", "Gui providing parameters displayed on scene", false, "ExtenderGui");
-<a name="l00034"></a>00034               I_ASSIGN(m_extenderCompPtr, "ExtenderGui", "Gui providing parameters displayed on scene", true, "ExtenderGui");
+<a name="l00033"></a>00033               <a class="code" href="classiqt2d_1_1_c_scene_connector_gui_comp.html#c91a58c117540dc24f5f42b70dddfdd8">I_ASSIGN_TO</a>(m_extenderCommandsCompPtr, m_extenderGuiCompPtr, false);
+<a name="l00034"></a>00034               <a class="code" href="classiqt2d_1_1_c_scene_connector_gui_comp.html#c91a58c117540dc24f5f42b70dddfdd8">I_ASSIGN_TO</a>(m_extenderCompPtr, m_extenderGuiCompPtr, true);
 <a name="l00035"></a>00035        I_END_COMPONENT
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037        <span class="comment">// reimplemented (ibase::ICommandsProvider)</span>

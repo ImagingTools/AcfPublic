@@ -62,7 +62,7 @@
 <a name="l00039"></a>00039               I_ASSIGN(m_docuEditorFileParamsCompPtr, <span class="stringliteral">"DocuEditorFileParam"</span>, <span class="stringliteral">"Object storing path to html editor used to edit the description"</span>, <span class="keyword">true</span>, <span class="stringliteral">"DocuEditorFileParam"</span>);
 <a name="l00040"></a>00040               I_ASSIGN(m_techDocuViewerFileParamsCompPtr, <span class="stringliteral">"TechDocuViewerParam"</span>, <span class="stringliteral">"Object storing path to html viewer used to show technical documentation"</span>, <span class="keyword">true</span>, <span class="stringliteral">"TechDocuViewerParam"</span>);
 <a name="l00041"></a>00041               I_ASSIGN(m_metaInfoManagerCompPtr, <span class="stringliteral">"MetaInfoManager"</span>, <span class="stringliteral">"Allows access to component meta information"</span>, <span class="keyword">true</span>, <span class="stringliteral">"MetaInfoManager"</span>);
-<a name="l00042"></a>00042               I_ASSIGN(m_externalMetaInfoManagerCompPtr, <span class="stringliteral">"MetaInfoManager"</span>, <span class="stringliteral">"Allows access to component meta information"</span>, <span class="keyword">false</span>, <span class="stringliteral">"MetaInfoManager"</span>);
+<a name="l00042"></a>00042               <a class="code" href="classicmpstr_1_1_c_quick_help_viewer_comp.html#88a8c2e5c5bcc8568d193a6cc054be9c">I_ASSIGN_TO</a>(m_externalMetaInfoManagerCompPtr, m_metaInfoManagerCompPtr, <span class="keyword">false</span>);
 <a name="l00043"></a>00043        I_END_COMPONENT;
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045        <span class="comment">// reimplemented (idoc::IHelpViewer)</span>

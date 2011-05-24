@@ -27,7 +27,7 @@
   </div>
 </div>
 <div class="contents">
-<h1>iqtgui::CModelDialogGuiComp Class Reference</h1><!-- doxytag: class="iqtgui::CModelDialogGuiComp" --><!-- doxytag: inherits="iqtgui::CDialogGuiComp" -->Component for the dialog based model editing.  
+<h1>iqtgui::CModelDialogGuiComp Class Reference</h1><!-- doxytag: class="iqtgui::CModelDialogGuiComp" --><!-- doxytag: inherits="iqtgui::CDialogGuiComp,TSingleModelObserverBase&lt; istd::IChangeable &gt;" -->Component for the dialog based model editing.  
 <a href="#_details">More...</a>
 <p>
 <code>#include &lt;<a class="el" href="_c_model_dialog_gui_comp_8h_source.html">CModelDialogGuiComp.h</a>&gt;</code>
@@ -38,12 +38,16 @@ Inheritance diagram for iqtgui::CModelDialogGuiComp:</div>
 
 <p><center><img src="classiqtgui_1_1_c_model_dialog_gui_comp.png" usemap="#iqtgui::CModelDialogGuiComp_map" border="0" alt=""></center>
 <map name="iqtgui::CModelDialogGuiComp_map">
-<area href="classiqtgui_1_1_c_dialog_gui_comp.html" alt="iqtgui::CDialogGuiComp" shape="rect" coords="94,168,272,192">
-<area href="classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,112,178,136">
-<area href="classiqtgui_1_1_i_dialog.html" alt="iqtgui::IDialog" shape="rect" coords="188,112,366,136">
-<area href="classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,56,178,80">
-<area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="188,56,366,80">
-<area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,178,24">
+<area href="classiqtgui_1_1_c_dialog_gui_comp.html" alt="iqtgui::CDialogGuiComp" shape="rect" coords="166,168,489,192">
+<area href="classimod_1_1_t_single_model_observer_base.html" alt="imod::TSingleModelObserverBase< istd::IChangeable >" shape="rect" coords="666,168,989,192">
+<area href="classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,112,323,136">
+<area href="classiqtgui_1_1_i_dialog.html" alt="iqtgui::IDialog" shape="rect" coords="333,112,656,136">
+<area href="classimod_1_1_c_single_model_observer_base.html" alt="imod::CSingleModelObserverBase" shape="rect" coords="666,112,989,136">
+<area href="classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,56,323,80">
+<area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="333,56,656,80">
+<area href="classimod_1_1_i_observer.html" alt="imod::IObserver" shape="rect" coords="666,56,989,80">
+<area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,323,24">
+<area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="666,0,989,24">
 </map>
 </div>
 
@@ -53,14 +57,23 @@ Inheritance diagram for iqtgui::CModelDialogGuiComp:</div>
 <tr><td colspan="2"><br><h2>Public Types</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="el" href="classiqtgui_1_1_c_dialog_gui_comp.html">iqtgui::CDialogGuiComp</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_model_dialog_gui_comp.html#d8fa18d9b19b5deb29c67b3aa232c445">BaseClass</a></td></tr>
 
-<tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual I_END_COMPONENT void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_model_dialog_gui_comp.html#545d630504b30832841d4a7aa30d43ba">Execute</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <br class="typebreak">
+<a class="el" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase</a><br class="typebreak">
+&lt; <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_model_dialog_gui_comp.html#1002b22d110554dd7150d5ee5defd419">BaseClass2</a></td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Execute dialog instance.  <a href="#545d630504b30832841d4a7aa30d43ba"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_model_dialog_gui_comp.html#c7e9436fe8305fde110856f4df382ac8">I_ASSIGN_TO</a> (m_workingDataFactoryCompPtr, m_workingModelFactoryCompPtr, true)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_model_dialog_gui_comp.html#04b099512ab370208673f11a35bf7b75">ExecuteDialog</a> (<a class="el" href="classiqtgui_1_1_i_gui_object.html">IGuiObject</a> *parentPtr)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Execute dialog instance.  <a href="#04b099512ab370208673f11a35bf7b75"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Component for the dialog based model editing. 
-<p>Definition at line <a class="el" href="_c_model_dialog_gui_comp_8h_source.html#l00019">19</a> of file <a class="el" href="_c_model_dialog_gui_comp_8h_source.html">CModelDialogGuiComp.h</a>.</p>
+<p>
+You can use it on two ways: connection it to edited model by model/observer concept (<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>) or you can set optional reference "Model". </dd></dl>
+
+<p>Definition at line <a class="el" href="_c_model_dialog_gui_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_model_dialog_gui_comp_8h_source.html">CModelDialogGuiComp.h</a>.</p>
 <hr><h2>Member Typedef Documentation</h2>
 <a class="anchor" name="d8fa18d9b19b5deb29c67b3aa232c445"></a><!-- doxytag: member="iqtgui::CModelDialogGuiComp::BaseClass" ref="d8fa18d9b19b5deb29c67b3aa232c445" args="" -->
 <div class="memitem">
@@ -77,19 +90,37 @@ Component for the dialog based model editing.
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_dialog_gui_comp.html#cd7fe5ded9a9e2fbb78cd1c38277d961">iqtgui::CDialogGuiComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_model_dialog_gui_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_model_dialog_gui_comp_8h_source.html">CModelDialogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_model_dialog_gui_comp_8h_source.html#l00027">27</a> of file <a class="el" href="_c_model_dialog_gui_comp_8h_source.html">CModelDialogGuiComp.h</a>.</p>
 
 </div>
 </div><p>
-<hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="545d630504b30832841d4a7aa30d43ba"></a><!-- doxytag: member="iqtgui::CModelDialogGuiComp::Execute" ref="545d630504b30832841d4a7aa30d43ba" args="()" -->
+<a class="anchor" name="1002b22d110554dd7150d5ee5defd419"></a><!-- doxytag: member="iqtgui::CModelDialogGuiComp::BaseClass2" ref="1002b22d110554dd7150d5ee5defd419" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual I_END_COMPONENT void iqtgui::CModelDialogGuiComp::Execute           </td>
+          <td class="memname">typedef <a class="el" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase</a>&lt;<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>&gt; <a class="el" href="classimod_1_1_t_single_model_observer_base.html">iqtgui::CModelDialogGuiComp::BaseClass2</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>Definition at line <a class="el" href="_c_model_dialog_gui_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_model_dialog_gui_comp_8h_source.html">CModelDialogGuiComp.h</a>.</p>
+
+</div>
+</div><p>
+<hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="04b099512ab370208673f11a35bf7b75"></a><!-- doxytag: member="iqtgui::CModelDialogGuiComp::ExecuteDialog" ref="04b099512ab370208673f11a35bf7b75" args="(IGuiObject *parentPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CModelDialogGuiComp::ExecuteDialog           </td>
           <td>(</td>
-          <td class="paramname">          </td>
+          <td class="paramtype"><a class="el" href="classiqtgui_1_1_i_gui_object.html">IGuiObject</a> *&nbsp;</td>
+          <td class="paramname"> <em>parentPtr</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -101,7 +132,42 @@ Component for the dialog based model editing.
 Execute dialog instance. 
 <p>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_dialog_gui_comp.html#85c359cdd5d9d9276b1b6a081c42cfa8">iqtgui::CDialogGuiComp</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_dialog_gui_comp.html#3c1d66bd2f6c166bb8f8a32194824cd9">iqtgui::CDialogGuiComp</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="c7e9436fe8305fde110856f4df382ac8"></a><!-- doxytag: member="iqtgui::CModelDialogGuiComp::I_ASSIGN_TO" ref="c7e9436fe8305fde110856f4df382ac8" args="(m_workingDataFactoryCompPtr, m_workingModelFactoryCompPtr, true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtgui::CModelDialogGuiComp::I_ASSIGN_TO           </td>
+          <td>(</td>
+          <td class="paramtype">m_workingDataFactoryCompPtr&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_workingModelFactoryCompPtr&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">true&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
 
 </div>
 </div><p>

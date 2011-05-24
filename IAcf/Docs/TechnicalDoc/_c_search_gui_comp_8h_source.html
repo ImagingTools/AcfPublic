@@ -52,15 +52,15 @@
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        I_BEGIN_COMPONENT(<a class="code" href="classiqtipr_1_1_c_search_gui_comp.html">CSearchGuiComp</a>)
 <a name="l00032"></a>00032               I_ASSIGN(m_searchResultsModelCompPtr, "SearchResults", "Search results model", true, "SearchResults");
-<a name="l00033"></a>00033               I_ASSIGN(m_searchResultsCompPtr, "SearchResults", "Search results model", true, "SearchResults");
+<a name="l00033"></a>00033               <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#058138f97172bd1415df23252f0c3cf4">I_ASSIGN_TO</a>(m_searchResultsCompPtr, m_searchResultsModelCompPtr, true);
 <a name="l00034"></a>00034               I_ASSIGN(m_paramsSetCompPtr, "ParamsSet", "Parameters set", false, "ParamsSet");
-<a name="l00035"></a>00035               I_ASSIGN(m_paramsSetModelCompPtr, "ParamsSet", "Parameters set", false, "ParamsSet");
+<a name="l00035"></a>00035               <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#058138f97172bd1415df23252f0c3cf4">I_ASSIGN_TO</a>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false);
 <a name="l00036"></a>00036               I_ASSIGN(m_paramsSetGuiCompPtr, "ParamsSetGui", "Shows parameter set", false, "ParamsSetGui");
-<a name="l00037"></a>00037               I_ASSIGN(m_paramsSetObserverCompPtr, "ParamsSetGui", "Shows parameter set", false, "ParamsSetGui");
+<a name="l00037"></a>00037               <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#058138f97172bd1415df23252f0c3cf4">I_ASSIGN_TO</a>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false);
 <a name="l00038"></a>00038               I_ASSIGN(m_bitmapAcquisitionCompPtr, "BitmapAcquisition", "Gets image", true, "BitmapAcquisition");
 <a name="l00039"></a>00039               I_ASSIGN(m_searchProcessorCompPtr, "Processor", "Does model search in an image", true, "Processor");
 <a name="l00040"></a>00040               I_ASSIGN(m_bitmapCompPtr, "Bitmap", "Bitmap", true, "Bitmap");
-<a name="l00041"></a>00041               I_ASSIGN(m_bitmapModelCompPtr, "Bitmap", "Bitmap", true, "Bitmap");
+<a name="l00041"></a>00041               <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#058138f97172bd1415df23252f0c3cf4">I_ASSIGN_TO</a>(m_bitmapModelCompPtr, m_bitmapCompPtr, true);
 <a name="l00042"></a>00042        I_END_COMPONENT
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044        <span class="comment">// reimplemented (iqt2d::TSceneExtenderCompBase)</span>

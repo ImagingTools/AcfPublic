@@ -42,30 +42,30 @@
 <a name="l00022"></a><a class="code" href="classibase_1_1_c_model_proxy_comp.html#ac4419463be4d1b0eb9b6165a0ed506e">00022</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">BaseClass</a>;
 <a name="l00023"></a><a class="code" href="classibase_1_1_c_model_proxy_comp.html#fe876a44572176704385529bceb122bd">00023</a>        <span class="keyword">typedef</span> <a class="code" href="classimod_1_1_c_model_proxy.html" title="Implementation of the model proxy.">imod::CModelProxy</a> <a class="code" href="classimod_1_1_c_model_proxy.html" title="Implementation of the model proxy.">BaseClass2</a>;
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025        I_BEGIN_COMPONENT(<a class="code" href="classibase_1_1_c_model_proxy_comp.html" title="Implementation of a model proxy for containers containing selectable model objects...">CModelProxyComp</a>)
-<a name="l00026"></a>00026               I_REGISTER_INTERFACE(imod::IModel)
-<a name="l00027"></a>00027               I_ASSIGN(m_modelSelectionCompPtr, "ModelSelectionProvider", "Container of switchable models", true, "ModelSelectionProvider")
-<a name="l00028"></a>00028               I_ASSIGN(m_selectionModelCompPtr, "ModelSelectionProvider", "Container of switchable models", true, "ModelSelectionProvider")
-<a name="l00029"></a>00029        I_END_COMPONENT
+<a name="l00025"></a>00025        I_BEGIN_COMPONENT(<a class="code" href="classibase_1_1_c_model_proxy_comp.html" title="Implementation of a model proxy for containers containing selectable model objects...">CModelProxyComp</a>);
+<a name="l00026"></a>00026               I_REGISTER_INTERFACE(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>);
+<a name="l00027"></a>00027               I_ASSIGN(m_modelSelectionCompPtr, <span class="stringliteral">"ModelSelectionProvider"</span>, <span class="stringliteral">"Container of switchable models"</span>, <span class="keyword">true</span>, <span class="stringliteral">"ModelSelectionProvider"</span>);
+<a name="l00028"></a>00028               <a class="code" href="classibase_1_1_c_model_proxy_comp.html#46821550c5626ceda667bc7fd1e29eac">I_ASSIGN_TO</a>(m_selectionModelCompPtr, m_modelSelectionCompPtr, <span class="keyword">true</span>);
+<a name="l00029"></a>00029        I_END_COMPONENT;
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031        <a class="code" href="classibase_1_1_c_model_proxy_comp.html" title="Implementation of a model proxy for containers containing selectable model objects...">CModelProxyComp</a>();
+<a name="l00031"></a>00031        <a class="code" href="classibase_1_1_c_model_proxy_comp.html#bdc4b34dea8e3b65f67fac540e9adbaf">CModelProxyComp</a>();
 <a name="l00032"></a>00032 
-<a name="l00033"></a>00033 protected:
+<a name="l00033"></a>00033 <span class="keyword">protected</span>:
 <a name="l00034"></a>00034        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00035"></a>00035        virtual <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_model_proxy_comp.html#551fddefbe271a97dd69697b3d4e5cfa">OnComponentCreated</a>();
-<a name="l00036"></a>00036        virtual <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_model_proxy_comp.html#41351f38c6494814937c5cdd55099e6d">OnComponentDestroyed</a>();
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_model_proxy_comp.html#551fddefbe271a97dd69697b3d4e5cfa">OnComponentCreated</a>();
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_model_proxy_comp.html#41351f38c6494814937c5cdd55099e6d">OnComponentDestroyed</a>();
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038 private:
-<a name="l00039"></a>00039        class ModelSelectionListener: public imod::TSingleModelObserverBase&lt;imod::IModelSelection&gt;
+<a name="l00038"></a>00038 <span class="keyword">private</span>:
+<a name="l00039"></a>00039        <span class="keyword">class </span>ModelSelectionListener: <span class="keyword">public</span> imod::TSingleModelObserverBase&lt;imod::IModelSelection&gt;
 <a name="l00040"></a>00040        {
 <a name="l00041"></a>00041        <span class="keyword">public</span>:
-<a name="l00042"></a>00042               ModelSelectionListener(CModelProxyComp&amp; parent);
+<a name="l00042"></a>00042               ModelSelectionListener(<a class="code" href="classibase_1_1_c_model_proxy_comp.html" title="Implementation of a model proxy for containers containing selectable model objects...">CModelProxyComp</a>&amp; parent);
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
 <a name="l00045"></a>00045               <span class="keyword">virtual</span> <span class="keywordtype">void</span> AfterUpdate(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047        <span class="keyword">private</span>:
-<a name="l00048"></a>00048               CModelProxyComp&amp; m_parent;
+<a name="l00048"></a>00048               <a class="code" href="classibase_1_1_c_model_proxy_comp.html" title="Implementation of a model proxy for containers containing selectable model objects...">CModelProxyComp</a>&amp; m_parent;
 <a name="l00049"></a>00049        };
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051        ModelSelectionListener m_modelSelectionListener;

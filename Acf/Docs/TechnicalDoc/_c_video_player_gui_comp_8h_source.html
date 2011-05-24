@@ -54,7 +54,7 @@
 <a name="l00034"></a>00034               I_ASSIGN(m_urlParamsGuiCompPtr, <span class="stringliteral">"UrlGui"</span>, <span class="stringliteral">"Sequence directory selection GUI"</span>, <span class="keyword">false</span>, <span class="stringliteral">"UrlGui"</span>);
 <a name="l00035"></a>00035               I_ASSIGN(m_controllerBarGuiCompPtr, <span class="stringliteral">"ControllerBarGui"</span>, <span class="stringliteral">"Displayed on the bottom used typically to controll of playback"</span>, <span class="keyword">false</span>, <span class="stringliteral">"ControllerBarGui"</span>);
 <a name="l00036"></a>00036               I_ASSIGN(m_urlParamCompPtr, <span class="stringliteral">"UrlParams"</span>, <span class="stringliteral">"Parameter storing media URL or file or directory"</span>, <span class="keyword">true</span>, <span class="stringliteral">"UrlParams"</span>);
-<a name="l00037"></a>00037               I_ASSIGN(m_urlParamModelCompPtr, <span class="stringliteral">"UrlParams"</span>, <span class="stringliteral">"Parameter storing media URL or file or directory"</span>, <span class="keyword">true</span>, <span class="stringliteral">"UrlParams"</span>);
+<a name="l00037"></a>00037               <a class="code" href="classiqtmm_1_1_c_video_player_gui_comp.html#7c830a57d6d4d338438108154e082ead">I_ASSIGN_TO</a>(m_urlParamModelCompPtr, m_urlParamCompPtr, <span class="keyword">true</span>);
 <a name="l00038"></a>00038        I_END_COMPONENT;
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
