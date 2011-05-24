@@ -1,0 +1,345 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#include "iqt/CXmlFileReadArchive.h"
+
+
+// STL includes
+#include <sstream>
+#include <cstring>
+
+
+// Qt includes
+#include <QDomNodeList>
+#include <QFile>
+
+
+// ACF includes
+#include "istd/CBase64.h"
+
+
+namespace iqt
+{
+
+
+CXmlFileReadArchive::CXmlFileReadArchive(
+			const istd::CString& filePath,
+			bool serializeHeader,
+			const iser::CArchiveTag& rootTag)
+:	m_serializeHeader(serializeHeader),
+	m_rootTag(rootTag)
+{
+	if (!filePath.IsEmpty()){
+		OpenDocument(filePath);
+	}
+}
+
+
+bool CXmlFileReadArchive::OpenDocument(const istd::CString& filePath)
+{
+	QFile file(iqt::GetQString(filePath));
+	if (!file.open(QIODevice::ReadOnly)){
+		return false;
+	}
+
+	if (!m_document.setContent(&file)) {
+		file.close();
+
+		return false;
+	}
+
+	if (m_currentNode.nodeValue() != iqt::GetQString(m_rootTag.GetId())){
+		QDomElement mainElement = m_document.documentElement();
+
+		m_currentNode = mainElement.firstChild();
+	}
+
+	bool retVal = !m_currentNode.isNull();
+
+	if (m_serializeHeader){
+		retVal = retVal && SerializeAcfHeader();
+	}
+
+	return retVal;
+}
+
+
+// reimplemented (iser::IArchive)
+
+bool CXmlFileReadArchive::IsTagSkippingSupported() const
+{
+	return true;
+}
+
+
+bool CXmlFileReadArchive::BeginTag(const iser::CArchiveTag& tag)
+{
+	QString tagId(tag.GetId().c_str());
+
+	QDomElement element = m_currentNode.toElement();
+	if (		element.isNull() ||
+				(element.nodeName() != tagId)){
+		element = m_currentNode.nextSiblingElement(tagId);
+	}
+
+	if (element.isNull()){
+		return false;
+	}
+
+	m_currentNode = element.firstChild();
+
+	return !m_currentNode.isNull();
+}
+
+
+bool CXmlFileReadArchive::BeginMultiTag(const iser::CArchiveTag& tag, const iser::CArchiveTag& subTag, int& count)
+{
+	QString tagId(tag.GetId().c_str());
+
+	QDomElement element = m_currentNode.toElement();
+	if (		element.isNull() ||
+				(element.nodeName() != tagId)){
+		element = m_currentNode.nextSiblingElement(tagId);
+	}
+
+	if (element.isNull()){
+		return false;
+	}
+
+	QDomNodeList elementsList = element.elementsByTagName(QString(subTag.GetId().c_str()));
+
+	count = elementsList.size();
+
+	m_currentNode = element.firstChild();
+
+	return !m_currentNode.isNull();
+}
+
+
+bool CXmlFileReadArchive::EndTag(const iser::CArchiveTag& /*tag*/)
+{
+	m_currentNode = m_currentNode.parentNode();
+
+	return !m_currentNode.isNull();
+}
+
+
+bool CXmlFileReadArchive::Process(bool& value)
+{
+	QString text = PullTextNode();
+
+	if (text == "true"){
+		value = true;
+
+		return true;
+	}
+
+	if (text == "false"){
+		value = false;
+
+		return true;
+	}
+
+	return false;
+}
+
+
+bool CXmlFileReadArchive::Process(char& value)
+{
+	QString text = PullTextNode();
+
+	if (!text.isEmpty()){
+		value = text.at(0).toAscii();
+
+		return true;
+	}
+
+	return false;
+}
+
+
+bool CXmlFileReadArchive::Process(I_BYTE& value)
+{
+	QString text = PullTextNode();
+
+	bool retVal;
+	value = I_BYTE(text.toShort(&retVal));
+
+	return retVal;
+}
+
+
+bool CXmlFileReadArchive::Process(I_SBYTE& value)
+{
+	QString text = PullTextNode();
+
+	bool retVal;
+	value = I_SBYTE(text.toShort(&retVal));
+
+	return retVal;
+}
+
+
+bool CXmlFileReadArchive::Process(I_WORD& value)
+{
+	QString text = PullTextNode();
+
+	bool retVal;
+	value = text.toUShort(&retVal);
+
+	return retVal;
+}
+
+
+bool CXmlFileReadArchive::Process(I_SWORD& value)
+{
+	QString text = PullTextNode();
+
+	bool retVal;
+	value = text.toShort(&retVal);
+
+	return retVal;
+}
+
+
+bool CXmlFileReadArchive::Process(I_DWORD& value)
+{
+	QString text = PullTextNode();
+
+	bool retVal;
+	value = text.toInt(&retVal);
+
+	return retVal;
+}
+
+
+bool CXmlFileReadArchive::Process(I_SDWORD& value)
+{
+	QString text = PullTextNode();
+
+	bool retVal;
+	value = text.toUInt(&retVal);
+
+	return retVal;
+}
+
+
+bool CXmlFileReadArchive::Process(I_QWORD& value)
+{
+	QString text = PullTextNode();
+
+	bool retVal;
+	value = text.toULongLong(&retVal);
+
+	return retVal;
+}
+
+
+bool CXmlFileReadArchive::Process(I_SQWORD& value)
+{
+	QString text = PullTextNode();
+
+	bool retVal;
+	value = text.toLongLong(&retVal);
+
+	return retVal;
+}
+
+
+bool CXmlFileReadArchive::Process(float& value)
+{
+	QString text = PullTextNode();
+
+	bool retVal;
+	value = text.toFloat(&retVal);
+
+	return retVal;
+}
+
+
+bool CXmlFileReadArchive::Process(double& value)
+{
+	QString text = PullTextNode();
+
+	bool retVal;
+	value = text.toDouble(&retVal);
+
+	return retVal;
+}
+
+
+bool CXmlFileReadArchive::Process(std::string& value)
+{
+	QString text = PullTextNode();
+
+	value = text.toStdString();
+
+	return true;
+}
+
+
+bool CXmlFileReadArchive::Process(istd::CString& value)
+{
+	QString text = PullTextNode();
+
+	value = iqt::GetCString(text);
+
+	return !m_currentNode.isNull();
+}
+
+
+bool CXmlFileReadArchive::ProcessData(void* dataPtr, int size)
+{
+	QString text = PullTextNode();
+
+	I_BYTE* data = (I_BYTE*)dataPtr;
+
+	std::vector<I_BYTE> decodedData = istd::CBase64::ConvertFromBase64(text.toStdString());
+
+	I_ASSERT(size == int(decodedData.size()));
+
+	std::memcpy(data, &decodedData[0], size);
+
+	return !m_currentNode.isNull();
+}
+
+
+// protected methods
+
+QString CXmlFileReadArchive::PullTextNode()
+{
+	while (		!m_currentNode.isNull() &&
+				!m_currentNode.isText()){
+		m_currentNode = m_currentNode.nextSibling();
+	}
+
+	QString retVal = m_currentNode.nodeValue();
+
+	m_currentNode = m_currentNode.nextSibling();
+
+	return retVal;
+}
+
+
+} // namespace iqt
+
+

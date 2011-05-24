@@ -1,0 +1,171 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iqt_CPackagesLoaderComp_included
+#define iqt_CPackagesLoaderComp_included
+
+
+// Qt includes
+#include <QFileInfo>
+#include <QDir>
+
+// STL includes
+#include <map>
+
+#include "istd/TDelPtr.h"
+
+#include "iser/IFileLoader.h"
+
+#include "icomp/IRegistryLoader.h"
+#include "icomp/CRegistry.h"
+#include "icomp/CEnvironmentManagerBase.h"
+#include "icomp/CComponentBase.h"
+#include "icomp/CCompositePackageStaticInfo.h"
+
+#include "ibase/TLoggerCompWrap.h"
+
+#include "iprm/IFileNameParam.h"
+
+#include "iqt/CDllFunctionsProvider.h"
+
+
+namespace iqt
+{
+
+
+/**
+	Loads component packages from dynamic link libraries.
+*/
+class CPackagesLoaderComp:
+			public ibase::CLoggerComponentBase,
+			public icomp::CEnvironmentManagerBase,
+			virtual public icomp::IRegistryLoader
+{
+public:
+	typedef ibase::CLoggerComponentBase BaseClass;
+	typedef icomp::CEnvironmentManagerBase BaseClass2;
+
+	enum MessageId
+	{
+		MI_CANNOT_REGISTER = 650,
+		MI_CANNOT_CREATE_ELEMENT
+	};
+
+	I_BEGIN_COMPONENT(CPackagesLoaderComp);
+		I_REGISTER_INTERFACE(icomp::IRegistryLoader);
+		I_REGISTER_INTERFACE(icomp::IComponentEnvironmentManager);
+		I_REGISTER_INTERFACE(icomp::IComponentStaticInfo);
+		I_REGISTER_INTERFACE(icomp::IRegistriesManager);
+		I_REGISTER_INTERFACE(icomp::IMetaInfoManager);
+		I_ASSIGN(m_registryLoaderCompPtr, "RegistryLoader", "Loader used to read registry", true, "RegistryLoader");
+		I_ASSIGN(m_configFilePathCompPtr, "ConfigFilePath", "Path of packages configuration file will be loaded, if enabled", false, "ConfigFilePath");
+	I_END_COMPONENT;
+
+	// reimplemented (icomp::IRegistryLoader)
+	virtual const icomp::IRegistry* GetRegistryFromFile(const istd::CString& path) const;
+
+	// reimplemented (icomp::IComponentEnvironmentManager)
+	virtual bool ConfigureEnvironment(const istd::CString& configFilePath = istd::CString());
+	virtual istd::CString GetConfigFilePath() const;
+
+	// reimplemented (icomp::IRegistriesManager)
+	virtual const icomp::IRegistry* GetRegistry(const icomp::CComponentAddress& address, const icomp::IRegistry* contextRegistryPtr = NULL) const;
+	virtual istd::CString GetPackageDirPath(const std::string& packageId) const;
+
+	// reimplemented (icomp::IMetaInfoManager)
+	virtual ComponentAddresses GetComponentAddresses(int typeFlag = CTF_ALL) const;
+
+	// reimplemented (icomp::CComponentBase)
+	virtual void OnComponentCreated();
+
+protected:
+	class LogingRegistry: public icomp::CRegistry
+	{
+	public:
+		typedef icomp::CRegistry BaseClass;
+
+		LogingRegistry(CPackagesLoaderComp* parentPtr);
+
+		// reimplemented (icomp::IRegistry)
+		virtual ElementInfo* InsertElementInfo(
+					const std::string& elementId,
+					const icomp::CComponentAddress& address,
+					bool ensureElementCreated = true);
+
+	private:
+		CPackagesLoaderComp& m_parent;
+	};
+
+	virtual bool RegisterPackageFile(const istd::CString& file);
+	virtual bool RegisterPackagesDir(const istd::CString& subDir);
+	virtual bool LoadConfigFile(const istd::CString& configFile);
+
+	CDllFunctionsProvider& GetProviderRef(const QFileInfo& fileInfo);
+
+	bool CheckAndMarkPath(const QDir& directory, const istd::CString& path, istd::CString& resultPath) const;
+
+private:
+	typedef istd::TDelPtr<CDllFunctionsProvider> FunctionsProviderPtr;
+	typedef std::map<QString, FunctionsProviderPtr> DllCacheMap;
+
+	DllCacheMap m_dllCacheMap;
+
+	struct CompositePackageInfo
+	{
+		istd::TDelPtr<icomp::CCompositePackageStaticInfo> staticInfoPtr;
+		QDir directory;
+	};
+	/**
+		Map package ID to package file path.
+	*/
+	typedef std::map<std::string, istd::CString> NormalPackagesMap;
+	NormalPackagesMap m_normalPackagesMap;
+
+	/**
+		Map package ID to structure CompositePackageInfo.
+	*/
+	typedef std::map<std::string, CompositePackageInfo> CompositePackagesMap;
+	CompositePackagesMap m_compositePackagesMap;
+
+	typedef istd::TDelPtr<icomp::IRegistry> RegistryPtr;
+	typedef std::map<istd::CString, RegistryPtr> RegistriesMap;
+	typedef std::map<const icomp::IRegistry*, QFileInfo> InvRegistriesMap;
+
+	mutable RegistriesMap m_registriesMap;
+	mutable InvRegistriesMap m_invRegistriesMap;
+
+	typedef std::set<istd::CString> UsedFilesList;
+	mutable UsedFilesList m_usedFilesList;
+
+	istd::CString m_configFilePath;
+
+	I_REF(iser::IFileLoader, m_registryLoaderCompPtr);
+	I_REF(iprm::IFileNameParam, m_configFilePathCompPtr);
+};
+
+
+} // namespace iqt
+
+
+#endif // !iqt_CPackagesLoaderComp_included
+
+

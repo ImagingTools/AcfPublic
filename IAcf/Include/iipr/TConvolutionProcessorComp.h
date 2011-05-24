@@ -1,0 +1,121 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**	All rights reserved.
+**
+**	This file is part of the IACF Toolkit.
+**
+**	Licensees holding valid IACF Commercial licenses may use this file in
+**	accordance with the IACF Commercial License Agreement provided with the
+**	Software and appearing in the file License.txt or,
+**	alternatively, in accordance with the terms contained in
+**	a written agreement between you and Witold Gantzke & Kirill Lepskiy.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de or email info@imagingtools.de for further
+** 	information about the IACF.
+**
+********************************************************************************/
+
+
+#ifndef iipr_TConvolutionProcessorComp_included
+#define iipr_TConvolutionProcessorComp_included
+
+
+#include "iimg/TBitmapIterator.h"
+
+#include "iipr/TImageParamProcessorCompBase.h"
+#include "iipr/TLocalNeighborhood.h"
+
+
+namespace iipr
+{
+
+
+/**
+	Implementation of general convolution operator.
+*/
+template <typename PixelType, class ParameterType, class Kernel> 
+class TConvolutionProcessorComp: public iipr::TImageParamProcessorCompBase<ParameterType>
+{
+public:
+	typedef iipr::TImageParamProcessorCompBase<ParameterType> BaseClass;
+	typedef iipr::TLocalNeighborhood<iimg::TBitmapIterator<PixelType>, Kernel> Neighborhood;
+
+protected:		
+	// abstract methods
+	virtual Kernel* CreateKernel(const ParameterType* paramsPtr) = 0;
+
+	// reimplemented (iipr::TImageParamProcessorCompBase<ParameterType>)
+	virtual bool ParamProcessImage(
+				const ParameterType* paramsPtr,
+				const iimg::IBitmap& inputImage,
+				iimg::IBitmap& outputImage);
+};
+
+
+// reimplemented (iipr::TImageParamProcessorCompBase<ParameterType>)
+
+template <typename PixelType, class ParameterType, class Kernel> 
+bool TConvolutionProcessorComp<PixelType, ParameterType, Kernel>::ParamProcessImage(
+			const ParameterType* paramsPtr,
+			const iimg::IBitmap& inputImage,
+			iimg::IBitmap& outputImage)
+{
+	if (paramsPtr == NULL){
+		return false;
+	}
+
+	bool retVal = true;
+
+	istd::TDelPtr<Kernel> filterKernelPtr(CreateKernel(paramsPtr));
+	if (!filterKernelPtr.IsValid()){
+		return false;
+	}
+
+	// initialize kernel with input image:
+	filterKernelPtr->InitForBitmap(inputImage);
+
+	i2d::CRectangle kernelBoundingBox = filterKernelPtr->GetBoundingBox();
+	i2d::CRectangle bitmapRegion = i2d::CRectangle(inputImage.GetImageSize());
+	
+	bitmapRegion.Expand(i2d::CRectangle(
+				-kernelBoundingBox.GetWidth() * 0.5, 
+				-kernelBoundingBox.GetHeight() * 0.5,
+				kernelBoundingBox.GetWidth(),
+				kernelBoundingBox.GetHeight()));
+
+	iimg::TBitmapIterator<PixelType> inputIterator(&inputImage, &bitmapRegion);
+	iimg::TBitmapIterator<PixelType> outputIterator(&outputImage, &bitmapRegion);
+
+	while (!inputIterator.AtEnd()){
+		double outputValue = 0.0;
+
+		Neighborhood neighborhood(inputIterator, *filterKernelPtr); 
+		typename Neighborhood::Iterator neighIter = neighborhood.Begin();
+
+		for (		typename Kernel::Iterator kernelIter = filterKernelPtr->Begin();
+					kernelIter != filterKernelPtr->End();
+					++kernelIter){
+					
+			outputValue += (*kernelIter).second * (*neighIter);
+			++neighIter;
+		}
+
+		*outputIterator = PixelType(outputValue / filterKernelPtr->GetWeightsSum());
+
+		++inputIterator;
+		++outputIterator;
+	}
+
+	return retVal;
+}
+
+
+} // namespace iipr
+
+
+#endif // !iipr_TConvolutionProcessorComp_included
+

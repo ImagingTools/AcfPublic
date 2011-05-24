@@ -1,0 +1,92 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iprm_CSelectableParamsSetComp_included
+#define iprm_CSelectableParamsSetComp_included
+
+
+#include "icomp/CComponentBase.h"
+
+#include "iprm/IParamsSet.h"
+#include "iprm/ISelectionParam.h"
+#include "iprm/ISelectionConstraints.h"
+#include "iprm/IParamsManager.h"
+
+
+namespace iprm
+{
+
+
+/**
+	Interface allowing to select single option from list of options.
+*/
+class CSelectableParamsSetComp:
+			public icomp::CComponentBase,
+			virtual public IParamsSet,
+			virtual public ISelectionParam,
+			virtual protected iprm::ISelectionConstraints
+{
+public:
+	typedef icomp::CComponentBase BaseClass;
+
+	I_BEGIN_COMPONENT(CSelectableParamsSetComp)
+		I_REGISTER_INTERFACE(iser::ISerializable)
+		I_REGISTER_INTERFACE(IParamsSet)
+		I_REGISTER_INTERFACE(ISelectionParam)
+		I_ASSIGN(m_selectionIdAttrPtr, "SelectionId", "ID of selection in parameter set", true, "Input")
+		I_ASSIGN(m_paramsManagerCompPtr, "ParamsManager", "Manager of parameter set used to realize selection", true, "ParamsManager")
+	I_END_COMPONENT
+
+	CSelectableParamsSetComp();
+
+	// reimplemented (iprm::IParamsSet)
+	virtual const iser::ISerializable* GetParameter(const std::string& id) const;
+	virtual iser::ISerializable* GetEditableParameter(const std::string& id);
+
+	// reimplemented (iprm::ISelectionParam)
+	virtual const ISelectionConstraints* GetConstraints() const;
+	virtual int GetSelectedOptionIndex() const;
+	virtual bool SetSelectedOptionIndex(int index);
+	virtual ISelectionParam* GetActiveSubselection() const;
+
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive);
+
+protected:
+	// reimplemented (iprm::ISelectionConstraints)
+	virtual int GetOptionsCount() const;
+	virtual const istd::CString& GetOptionName(int index) const;
+
+private:
+	int m_selectedIndex;
+
+	I_ATTR(istd::CString, m_selectionIdAttrPtr);
+	I_REF(IParamsManager, m_paramsManagerCompPtr);
+};
+
+
+} // namespace iprm
+
+
+#endif // !iprm_CSelectableParamsSetComp_included
+
+

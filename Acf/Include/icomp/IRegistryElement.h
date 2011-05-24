@@ -1,0 +1,128 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef icomp_IRegistryElement_included
+#define icomp_IRegistryElement_included
+
+
+#include <set>
+#include <string>
+
+#include "istd/istd.h"
+#include "istd/TDelPtr.h"
+
+#include "iser/ISerializable.h"
+#include "iser/IObject.h"
+
+
+namespace icomp
+{
+
+
+class IComponentStaticInfo;
+
+
+/**
+	Represents element of registry describing component parameters.
+	Registry reflects state of registry files.
+
+	\ingroup ComponentConcept
+*/
+class IRegistryElement: virtual public iser::ISerializable
+{
+public:
+	typedef std::set< std::string> Ids;
+	typedef istd::TDelPtr<iser::IObject> AttributePtr;
+
+	enum ChangeFlags
+	{
+		/**
+			Indicate that data model is changed.
+		*/
+		CF_ATTRIBUTE_CHANGED = 0x10000000,
+		CF_FLAGS_CHANGED = 0x20000000
+	};
+
+	enum ElementFlags
+	{
+		/**
+			Indicate that instance of this element should be automatically created.
+		*/
+		EF_AUTO_INSTANCE = 0x0001
+	};
+
+	/**
+		Describe information stored with each attribute.
+	*/
+	struct AttributeInfo
+	{
+		AttributePtr attributePtr;
+		std::string exportId;
+		std::string attributeTypeName;
+	};
+
+	/**
+		Get flags of this registry element.
+		\sa	ElementFlags
+	*/
+	virtual I_DWORD GetElementFlags() const = 0;
+	/**
+		Set flags of this registry element.
+		\sa	ElementFlags
+	*/
+	virtual void SetElementFlags(I_DWORD flags) = 0;
+
+	/**
+		Get ID list of existing attributes.
+	*/
+	virtual Ids GetAttributeIds() const = 0;
+
+	/**
+		Insert new attribute info object to collection of attributes.
+		\param	attributeId		unique ID of new attribute.
+		\param	createAttribute	if it is true, new attribute instance will be created.
+	*/
+	virtual AttributeInfo* InsertAttributeInfo(const std::string& attributeId, const std::string& attributeType) = 0;
+
+	/**
+		Create attribute object for specified ID.
+	*/
+	virtual iser::IObject* CreateAttribute(const std::string& attributeType) const = 0;
+
+	/**
+		Get access to stored attribute info structure.
+	*/
+	virtual const AttributeInfo* GetAttributeInfo(const std::string& attributeId) const = 0;
+
+	/**
+		Removes attribute info structure from this collection.
+	*/
+	virtual bool RemoveAttribute(const std::string& attributeId) = 0;
+};
+
+
+}//namespace icomp
+
+
+#endif // !icomp_IRegistryElement_included
+
+

@@ -1,0 +1,178 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef icomp_TReferenceMember_included
+#define icomp_TReferenceMember_included
+
+
+#include "icomp/TAttributeMember.h"
+#include "icomp/CInterfaceManipBase.h"
+#include "icomp/CReferenceAttribute.h"
+
+
+namespace icomp
+{
+
+
+/**
+	Pointer to referenced component object.
+	Don't use direct this class, use macros \c I_REF and \c I_ASSIGN instead.
+*/
+template <class Interface>
+class TReferenceMember: public TAttributeMember<CReferenceAttribute>, public CInterfaceManipBase
+{
+public:
+	typedef TAttributeMember<CReferenceAttribute> BaseClass;
+	typedef CInterfaceManipBase BaseClass2;
+	typedef Interface InterfaceType;
+
+	TReferenceMember();
+
+	void Init(const IComponent* ownerPtr, const IRealAttributeStaticInfo& staticInfo);
+
+	/**
+		Check if this reference can be resolved.
+	*/
+	bool IsValid() const;
+
+	/**
+		Direct cccess to internal pointer.
+	*/
+	Interface* GetPtr() const;
+
+	/**
+		Access to internal pointer.
+	*/
+	Interface* operator->() const;
+
+protected:
+	TReferenceMember(const TReferenceMember& ptr);
+
+	bool EnsureInitialized() const;
+
+private:
+	const IComponent* m_definitionComponentPtr;
+
+	mutable Interface* m_componentPtr;
+	mutable bool m_isInitialized;
+};
+
+
+// public methods
+
+template <class Interface>
+TReferenceMember<Interface>::TReferenceMember()
+:	m_definitionComponentPtr(NULL), m_componentPtr(NULL), m_isInitialized(false)
+{
+}
+
+
+template <class Interface>
+void TReferenceMember<Interface>::Init(const IComponent* ownerPtr, const IRealAttributeStaticInfo& staticInfo)
+{
+	BaseClass::Init(ownerPtr, staticInfo, &m_definitionComponentPtr);
+
+	m_componentPtr = NULL;
+}
+
+
+template <class Interface>
+bool TReferenceMember<Interface>::IsValid() const
+{
+	return EnsureInitialized();
+}
+
+
+
+template <class Interface>
+Interface* TReferenceMember<Interface>::GetPtr() const
+{
+	EnsureInitialized();
+
+	return m_componentPtr;
+}
+
+
+template <class Interface>
+Interface* TReferenceMember<Interface>::operator->() const
+{
+	EnsureInitialized();
+	I_ASSERT(m_componentPtr != NULL);
+
+	return GetPtr();
+}
+
+
+// protected methods
+
+template <class Interface>
+TReferenceMember<Interface>::TReferenceMember(const TReferenceMember& ptr)
+:	BaseClass(ptr),
+	m_definitionComponentPtr(ptr.m_definitionComponentPtr),
+	m_componentPtr(ptr.m_componentPtr),
+	m_isInitialized(ptr.m_isInitialized)
+{
+}
+
+
+template <class Interface>
+bool TReferenceMember<Interface>::EnsureInitialized() const
+{
+	if (!m_isInitialized && (m_definitionComponentPtr != NULL) && BaseClass::IsValid()){
+		const IComponent* parentPtr = m_definitionComponentPtr->GetParentComponent();
+		if (parentPtr != NULL){
+			const std::string& componentId = BaseClass::operator*();
+
+			std::string baseId;
+			std::string subId;
+			BaseClass2::SplitId(componentId, baseId, subId);
+
+			IComponent* componentPtr = parentPtr->GetSubcomponent(baseId);
+
+			m_componentPtr = BaseClass2::ExtractInterface<Interface>(componentPtr, subId);
+
+			m_isInitialized = true;
+		}
+	}
+
+	return (m_componentPtr != NULL);
+}
+
+
+}//namespace icomp
+
+
+inline void operator*(const icomp::TReferenceMember<void>& /*ref*/)
+{
+}
+
+
+template <class Interface>
+inline Interface& operator*(const icomp::TReferenceMember<Interface>& ref)
+{
+	return *ref.GetPtr();
+}
+
+
+#endif // !icomp_TReferenceMember_included
+
+

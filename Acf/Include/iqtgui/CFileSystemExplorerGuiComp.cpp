@@ -1,0 +1,264 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+// Qt includes
+#include <QHeaderView>
+#include <QToolButton>
+#include <QDesktopServices>
+#include <QUrl>
+
+
+// ACF includes
+#include "istd/TChangeNotifier.h"
+
+#include "iqt/CFileSystem.h"
+
+#include "iqtgui/CFileSystemExplorerGuiComp.h"
+
+
+namespace iqtgui
+{
+
+
+// public methods
+
+// reimplemented (imod::IModelEditor)
+
+void CFileSystemExplorerGuiComp::UpdateModel() const
+{
+	I_ASSERT(IsGuiCreated() && (GetObjectPtr() != NULL));
+}
+
+
+void CFileSystemExplorerGuiComp::UpdateEditor(int /*updateFlags*/)
+{
+	I_ASSERT(IsGuiCreated());
+
+	iprm::IFileNameParam* objectPtr = GetObjectPtr();
+	if (objectPtr != NULL){
+		QString currentFilePath = iqt::CFileSystem::GetEnrolledPath(iqt::GetQString(objectPtr->GetPath()));
+
+		InvalidateFileSystemModel(currentFilePath);
+
+		QModelIndex index = m_fileSystemModel.index(currentFilePath);
+		if (index.isValid()){
+			QItemSelectionModel* selectionModelPtr = FileTree->selectionModel();
+			if (selectionModelPtr != NULL){
+				selectionModelPtr->select(index, QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
+
+				FileTree->scrollTo(index, QAbstractItemView::PositionAtCenter);
+			}
+		}
+	}
+}
+
+
+// protected methods
+
+QStringList CFileSystemExplorerGuiComp::GetDefaultFilters() const
+{
+	QStringList retVal;
+
+	if (m_filterInfoCompPtr.IsValid()){
+		istd::CStringList extensions;
+		if (m_filterInfoCompPtr->GetFileExtensions(extensions, iser::IFileTypeInfo::QF_NO_SAVING)){
+			for (		istd::CStringList::const_iterator iter = extensions.begin();
+						iter != extensions.end();
+						++iter){
+				retVal += "*." + iqt::GetQString(*iter);
+			}
+		}
+	}
+
+	return retVal;
+}
+
+
+// reimplemented (CGuiComponentBase)
+
+void CFileSystemExplorerGuiComp::OnGuiCreated()
+{
+	if (!m_useSystemDecoratedIconsAttrPtr.IsValid() || !*m_useSystemDecoratedIconsAttrPtr){
+		m_fileSystemModel.setIconProvider(&m_fileIconProvider);
+	}
+
+	FileTree->header()->hide();
+
+	FileTree->setSelectionMode(QAbstractItemView::SingleSelection);
+
+	FileTree->setModel(&m_fileSystemModel);
+
+	QModelIndex rootIndex = m_fileSystemModel.setRootPath(m_fileSystemModel.myComputer().toString());
+	
+	FileTree->setRootIndex(rootIndex);
+
+	QItemSelectionModel* selectionModelPtr = FileTree->selectionModel();
+	if (selectionModelPtr != NULL){
+		connect(selectionModelPtr,
+					SIGNAL(selectionChanged(const QItemSelection&, const QItemSelection&)),
+					this,
+					SLOT(OnSelectionChanged(const QItemSelection&, const QItemSelection&)));
+	}
+
+	QStringList fileFilters = GetDefaultFilters();
+
+	m_fileSystemModel.setNameFilters(fileFilters);
+	m_fileSystemModel.setNameFilterDisables(false);
+
+	FilterFrame->setVisible(*m_showUserFilterAttrPtr);
+	QLayout* filterLayoutPtr = FilterFrame->layout();
+	if (filterLayoutPtr != NULL){
+		m_filterEdit = new iqtgui::CExtLineEdit(tr("Enter text to filter file items"), 2, FilterFrame);
+
+		// add "clear" button:
+		QToolButton* clearButton = new QToolButton(m_filterEdit);
+		clearButton->setToolButtonStyle(Qt::ToolButtonIconOnly);
+		clearButton->setIcon(QIcon(":/Icons/Clear"));
+		connect(clearButton, SIGNAL(clicked()), m_filterEdit, SLOT(clear()));
+
+		m_filterEdit->AddWidget(clearButton, Qt::AlignRight);
+
+		filterLayoutPtr->addWidget(m_filterEdit);
+
+		connect(m_filterEdit, SIGNAL(editingFinished()), this, SLOT(OnFilterChanged()));
+	}
+
+	FileTree->setDragDropMode(QTreeView::DragDrop);
+	FileTree->setDragEnabled(true);
+
+	QHeaderView* headerPtr = FileTree->header();
+	if (headerPtr != NULL){
+		if (*m_showFileTypeAttrPtr){
+			headerPtr->setSectionHidden(2, false);
+		}
+		else{
+			headerPtr->setSectionHidden(2, true);
+		}
+
+		headerPtr->setSectionHidden(1, true);
+
+		if (*m_showFileModificationTimeAttrPtr){
+			headerPtr->setSectionHidden(3, false);
+		}
+		else{
+			headerPtr->setSectionHidden(3, true);
+		}
+	}
+
+	if (m_allowOpenFileAttrPtr.IsValid() && *m_allowOpenFileAttrPtr){
+		connect(FileTree, SIGNAL(doubleClicked(const QModelIndex&)), this, SLOT(OnDoubleClicked(const QModelIndex&)));
+	}
+
+	BaseClass::OnGuiCreated();
+}
+
+
+// private slots:
+
+void CFileSystemExplorerGuiComp::OnFilterChanged()
+{
+	QString filterText = m_filterEdit->GetText();
+
+	QStringList fileFilters = GetDefaultFilters();
+
+	if (!filterText.isEmpty()){
+		fileFilters << filterText;
+	}
+
+	m_fileSystemModel.setNameFilters(fileFilters);
+}
+
+
+void CFileSystemExplorerGuiComp::OnSelectionChanged(const QItemSelection& selected, const QItemSelection&/* deselected*/)
+{
+	if (!selected.indexes().isEmpty()){
+		QModelIndex selectedIndex = selected.indexes().at(0);
+
+		QString currentFilePath = m_fileSystemModel.filePath(selectedIndex);
+		QFileInfo fileInfo = m_fileSystemModel.fileInfo(selectedIndex);
+
+		bool isFile = fileInfo.isFile();
+		bool isDir = fileInfo.isDir();
+
+		int fileType = iprm::IFileNameParam::PT_UNKNOWN;
+
+		if (isFile){
+			fileType = iprm::IFileNameParam::PT_FILE;
+		}
+
+		if (isDir){
+			fileType = iprm::IFileNameParam::PT_DIRECTORY;
+		}
+
+		iprm::IFileNameParam* objectPtr = GetObjectPtr();
+		if (objectPtr != NULL){
+			if (objectPtr->GetPathType() == fileType){
+				objectPtr->SetPath(iqt::GetCString(currentFilePath));
+			}
+			else{
+				objectPtr->SetPath(istd::CString());
+			}
+		}
+	}
+}
+
+
+void CFileSystemExplorerGuiComp::OnDoubleClicked(const QModelIndex& modelIndex)
+{
+	QFileInfo fileInfo = m_fileSystemModel.fileInfo(modelIndex);
+	if (fileInfo.isDir()){
+		return;
+	}
+
+	QDesktopServices::openUrl(fileInfo.canonicalFilePath());
+}
+
+
+void CFileSystemExplorerGuiComp::InvalidateFileSystemModel(const QString& currentFilePath)
+{
+	QString currentPath = QFileInfo(currentFilePath).absolutePath();
+
+	QString saveRootPath = m_fileSystemModel.rootPath();
+
+	m_fileSystemModel.setRootPath(currentPath);
+
+	m_fileSystemModel.setRootPath(saveRootPath);
+}
+
+
+// public methods of the embedded class FileIconProvider
+
+// reimplemented (QFileIconProvider)
+
+QIcon CFileSystemExplorerGuiComp::FileIconProvider::icon(const QFileInfo& fileInfo) const
+{
+	if (fileInfo.isDir()){
+		return BaseClass::icon(Folder);
+	}
+
+	return BaseClass::icon(fileInfo);
+}
+
+
+} // namespace iqtgui
+
+

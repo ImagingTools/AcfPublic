@@ -1,0 +1,109 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iprm_IParamsManager_included
+#define iprm_IParamsManager_included
+
+
+#include "istd/CString.h"
+
+#include "iprm/ISelectionParam.h"
+
+
+namespace iprm
+{
+
+
+class IParamsSet;
+
+
+/**
+	Manager of parameters set.
+*/
+class IParamsManager: virtual public iprm::ISelectionParam
+{
+public:
+	/**
+		Bitwise coded flags used to find out supported features.
+	*/
+	enum ManagerFlags{
+		MF_COUNT_FIXED = 1,
+		MF_NAME_FIXED = 2,
+		MF_NO_INSERT = 4,
+		MF_NO_DELETE = 8
+	};
+
+	/**
+		Possible changes of the manager's data model.
+	*/
+	enum ChangeFlags
+	{
+		CF_SET_INSERTED = 0x1000,
+		CF_SET_REMOVED = 0x2000,
+		CF_SET_NAME_CHANGED = 0x4000,
+		CF_SELECTION_CHANGED = 0x8000
+	};
+
+	/**
+		Get control flags of this manager.
+		\sa ManagerFlags.
+	*/
+	virtual int GetManagerFlags() const = 0;
+
+	/**
+		Get number of managed set.
+	*/
+	virtual int GetParamsSetsCount() const = 0;
+
+	/**
+		Insert new parameters set at selected position or at the and of the list.
+	*/
+	virtual bool InsertParamsSet(int index = -1) = 0;
+
+	/**
+		Remove parameters set at selected position.
+	*/
+	virtual bool RemoveParamsSet(int index) = 0;
+
+	/**
+		Get selected parameter set.
+	*/
+	virtual IParamsSet* GetParamsSet(int index) const = 0;
+
+	/**
+		Get name of specified parameter set.
+	*/
+	virtual const istd::CString& GetParamsSetName(int index) const = 0;
+
+	/**
+		Set name of specified parameter set.
+	*/
+	virtual bool SetParamsSetName(int index, const istd::CString& name) = 0;
+};
+
+
+} // namespace iprm
+
+
+#endif // !iprm_IParamsManager_included
+
+

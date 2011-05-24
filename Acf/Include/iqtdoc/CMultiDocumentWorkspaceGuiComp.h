@@ -1,0 +1,178 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iqtdoc_CMultiDocumentWorkspaceGuiComp_included
+#define iqtdoc_CMultiDocumentWorkspaceGuiComp_included
+
+
+// Qt includes
+#include <QMdiArea>
+#include <QMdiSubWindow>
+
+
+// ACF includes
+#include "ibase/ICommandsProvider.h"
+#include "idoc/CMultiDocumentManagerBase.h"
+
+#include "iqt/ISettingsProvider.h"
+
+#include "iqtgui/TGuiComponentBase.h"
+#include "iqtgui/TRestorableGuiWrap.h"
+#include "iqtgui/CHierarchicalCommand.h"
+
+#include "iqtdoc/TQtDocumentManagerWrap.h"
+
+
+namespace iqtdoc
+{
+
+
+/**	
+	This class is a Qt-based workspace implementation of a document manager.
+*/
+class CMultiDocumentWorkspaceGuiComp:
+			public iqtgui::TRestorableGuiWrap<iqtgui::TGuiComponentBase<QMdiArea> >, 
+			public iqtdoc::TQtDocumentManagerWrap<idoc::CMultiDocumentManagerBase>,
+			public ibase::ICommandsProvider
+{
+	Q_OBJECT
+
+public:
+	typedef iqtgui::TRestorableGuiWrap<iqtgui::TGuiComponentBase<QMdiArea> > BaseClass;
+	typedef idoc::CMultiDocumentManagerBase BaseClass2;
+
+	I_BEGIN_COMPONENT(CMultiDocumentWorkspaceGuiComp)
+		I_REGISTER_INTERFACE(idoc::IDocumentManager)
+		I_REGISTER_INTERFACE(ibase::ICommandsProvider)
+		I_ASSIGN(m_showMaximizedAttrPtr, "ShowViewMaximized", "At start shows the document view maximized", false, true)
+		I_ASSIGN(m_documentTemplateCompPtr, "DocumentTemplate", "Document template", true, "DocumentTemplate")
+	I_END_COMPONENT
+
+	enum GroupId
+	{
+		GI_WINDOW = 0x300,
+		GI_DOCUMENT,
+		GI_VIEW
+	};
+
+	CMultiDocumentWorkspaceGuiComp();
+
+	// reimplemented (ibase::ICommandsProvider)
+	virtual const ibase::IHierarchicalCommand* GetCommands() const;
+
+	// reimplemented (iqtgui::IGuiObject)
+	virtual void OnTryClose(bool* ignoredPtr = NULL);
+
+protected:
+	/**
+		Update titles of views or all views of specified document.
+		\param	optional document object, if you want to update only views of single document.
+	*/
+	void UpdateAllTitles();
+
+	/**
+		Find view object associated with specified Qt widget.
+		\param	widget	Qt widget representing view.
+		\return	associated view or NULL if nothing is found.
+	*/
+	iqtgui::IGuiObject* GetViewFromWidget(const QWidget& widget) const;
+
+	/**
+		Creates signal/slot connnections for the implementation.
+	*/
+	virtual void CreateConnections();
+
+	/**
+		Creates the filter for the file selection dialog.
+		\param	documentTypeIdPtr	optional ID of document type if only filter for single document type should be created.
+	*/
+	QString CreateFileDialogFilter(const std::string* documentTypeIdPtr = NULL, int flags = 0) const;
+
+	/**
+		Called when number of windows changed.
+	*/
+	void OnViewsCountChanged();
+
+	// reimplemented (QObject)
+	virtual bool eventFilter(QObject* sourcePtr, QEvent* eventPtr);
+
+	// reimplemented (TRestorableGuiWrap)
+	virtual void OnRestoreSettings(const QSettings& settings);
+	virtual void OnSaveSettings(QSettings& settings) const;
+
+	// reimplemented (idoc::CMultiDocumentManagerBase)
+	virtual void CloseAllDocuments();
+	virtual istd::CStringList GetOpenFilePaths(const std::string* documentTypeIdPtr = NULL) const;
+	virtual istd::CString GetSaveFilePath(const std::string& documentTypeId) const;
+	virtual void OnViewRegistered(istd::IPolymorphic* viewPtr);
+	virtual void OnViewRemoved(istd::IPolymorphic* viewPtr);
+	virtual void QueryDocumentClose(const SingleDocumentData& info, bool* ignoredPtr);
+
+	// reimplemented (iqt:CGuiComponentBase)
+	virtual void OnGuiCreated();	
+	virtual void OnGuiDestroyed();
+	virtual void OnRetranslate();
+
+	// reimplemented (icomp::CComponentBase)
+	virtual void OnComponentCreated();
+
+	// reimplemented (istd:IChangeable)
+	virtual void OnEndChanges(int changeFlags, istd::IPolymorphic* changeParamsPtr);
+
+protected slots:
+	void OnWindowActivated(QMdiSubWindow* window);
+	void OnTileHorizontally();
+	void OnTile();
+	void OnCascade();
+	void OnCloseAllViews();
+	void OnWorkspaceModeChanged();
+
+private:
+	void UpdateLastDirectory(const QString& filePath) const;
+
+	iqtgui::CHierarchicalCommand m_commands;
+
+	// global commands
+	iqtgui::CHierarchicalCommand m_windowCommand;
+	// window menu group
+	iqtgui::CHierarchicalCommand m_cascadeCommand;
+	iqtgui::CHierarchicalCommand m_tileHorizontallyCommand;
+	iqtgui::CHierarchicalCommand m_tileVerticallyCommand;
+	iqtgui::CHierarchicalCommand m_closeAllDocumentsCommand;
+	iqtgui::CHierarchicalCommand m_workspaceModeCommand;
+	iqtgui::CHierarchicalCommand m_subWindowCommand;
+	iqtgui::CHierarchicalCommand m_tabbedCommand;
+
+	I_ATTR(bool, m_showMaximizedAttrPtr);
+	I_REF(idoc::IDocumentTemplate, m_documentTemplateCompPtr);
+	
+	mutable QString m_lastDirectory;
+
+	int m_viewsCount;
+};
+
+
+} // namespace iqtdoc
+
+
+#endif // !iqtdoc_CMultiDocumentWorkspaceGuiComp_included
+

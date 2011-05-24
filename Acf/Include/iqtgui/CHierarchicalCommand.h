@@ -1,0 +1,153 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iqtgui_CHierarchicalCommand_included
+#define iqtgui_CHierarchicalCommand_included
+
+
+// Qt includes
+#include <QAction>
+#include <QString>
+
+
+// ACF includes
+#include "istd/TOptPointerVector.h"
+
+#include "ibase/TNamedWrap.h"
+#include "ibase/THierarchicalBase.h"
+#include "ibase/TEnableableWrap.h"
+
+#include "ibase/ICommand.h"
+
+#include "iqtgui/iqtgui.h"
+
+
+namespace iqtgui
+{
+
+
+/**
+	Implementation of hierarchical command based on \c QAction from Qt.
+*/
+class CHierarchicalCommand:
+			public QAction,
+			public ibase::TEnableableWrap<
+						ibase::THierarchicalBase<
+									ibase::TNamedWrap<ibase::IHierarchicalCommand> > >
+{
+	Q_OBJECT
+
+public:
+	typedef QAction BaseClass;
+	typedef ibase::TEnableableWrap<
+					ibase::THierarchicalBase<
+								ibase::TNamedWrap<ibase::IHierarchicalCommand> > > BaseClass2;
+
+	explicit CHierarchicalCommand(const istd::CString& name = "", int priority = 100, int staticFlags = CF_GLOBAL_MENU, int groupId = GI_NORMAL);
+
+	void SetPriority(int priority);
+	void SetStaticFlags(int flags);
+	void SetGroupId(int groupId);
+
+	/**
+		Reset list of childs.
+	*/
+	void ResetChilds();
+
+	/**
+		Insert command to child list.
+		Please note, this pointer is not owned by this container and will not be removed.
+		\param	commandPtr	pointer to child command instance. It cannot be NULL.
+		\param	releaseFlag	if true, command instance will be automatically removed.
+		\param	index		index position of command to be inserted. Negative value indicate end of collection.
+							Please note, that position can be other in merged tree.
+	*/
+	void InsertChild(CHierarchicalCommand* commandPtr, bool releaseFlag = false, int index = -1);
+
+	/**
+		Remove child at specified index.
+	*/
+	void RemoveChild(int index);
+
+	/**
+		Joint the second root as links.
+		\param	rootPtr	pointer to root of commands tree. It cannot be NULL.
+	*/
+	void JoinLinkFrom(const ibase::IHierarchicalCommand* rootPtr);
+
+	/**
+		Set all visual elements of this command.
+		This method is designed to use in OnRetranslate() imaplementation and that's why it uses Qt \c QString.
+		\param	name		general name, used in menus.
+		\param	shortName	short version of name used in toolbars.
+		\param	description	description used as tool tip.
+		\param	icon		icon shown in menus and toolbars.
+	*/
+	void SetVisuals(const QString& name, const QString& shortName, const QString& description, const QIcon& icon = QIcon());
+
+	// reimplemented (ibase::ICommand)
+	virtual int GetPriority() const;
+	virtual int GetGroupId() const;
+	virtual int GetStaticFlags() const;
+	virtual bool Execute(istd::IPolymorphic* contextPtr);
+
+	// reimplemented (istd::TIHierarchical<ibase::ICommand>)
+	virtual int GetChildsCount() const;
+	virtual ibase::ICommand* GetChild(int index) const;
+
+	// reimplemented (istd::INamed)
+	virtual void SetName(const istd::CString& name);
+
+	// reimplemented (istd::IEnableable)
+	virtual void SetEnabled(bool isEnabled = true);
+
+protected slots:
+	void OnTriggered();
+
+protected:
+	/**
+		Find the same command in child list.
+		\param	command	command will be used as search template.
+		\return	index of found child or negative value, if no child is found.
+	*/
+	int FindTheSameCommand(const ibase::IHierarchicalCommand& command) const;
+	/**
+		Find index where element with specified priority should be inserted.
+	*/
+	int FindInsertingIndex(int priority) const;
+
+private:
+	int m_priority;
+	int m_staticFlags;
+	int m_groupId;
+
+	typedef istd::TOptPointerVector<CHierarchicalCommand> Childs;
+	Childs m_childs;
+};
+
+
+} // namespace iqtgui
+
+
+#endif // !iqtgui_CHierarchicalCommand_included
+
+

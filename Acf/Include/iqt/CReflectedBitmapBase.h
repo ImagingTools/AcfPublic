@@ -1,0 +1,73 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iqt_CReflectedBitmapBase_included
+#define iqt_CReflectedBitmapBase_included
+
+
+#include "istd/TCachedUpdateManagerWrap.h"
+
+#include "iimg/CGeneralBitmap.h"
+
+#include "iqt/IQImageProvider.h"
+
+
+namespace iqt
+{
+
+
+/**
+	Implementation of bitmap storing internal additionaly QImage object reflecting state of main bitmap after conversion to Qt formats.
+	It allows to working with Qt with other bitmap formats.
+*/
+class CReflectedBitmapBase:
+			public istd::TCachedUpdateManagerWrap<iimg::CGeneralBitmap>,
+			virtual public IQImageProvider
+{
+public:
+	enum ChangeFlags
+	{
+		CF_BLOCK_BITMAP_CONVERSION = 0x200000
+	};
+
+	// reimplemented (iqt::IQImageProvider)
+	virtual const QImage& GetQImage() const;
+	virtual bool CopyImageFrom(const QImage& image);
+
+protected:
+	virtual bool ConvertFromQImage(const QImage& image) = 0;
+	virtual bool ConvertToQImage(QImage& result) const = 0;
+
+	// reimplmented (istd::TCachedUpdateManagerWrap)
+	virtual bool CalculateCache(int changeFlags);
+
+private:
+	QImage m_image;
+};
+
+
+} // namespace iqt
+
+
+#endif // !iqt_CReflectedBitmapBase_included
+
+

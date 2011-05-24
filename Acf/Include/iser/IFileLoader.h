@@ -1,0 +1,126 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iser_IFileLoader_included
+#define iser_IFileLoader_included
+
+
+// ACF includes
+#include "istd/IChangeable.h"
+#include "istd/CString.h"
+
+#include "iser/IFileTypeInfo.h"
+
+
+namespace iser
+{
+
+
+/**
+	Provide loading and saving of objects.
+
+	\ingroup Persistence
+*/
+class IFileLoader: virtual public IFileTypeInfo
+{
+public:
+	/**
+		Result of operation.
+	*/
+	enum OperationState
+	{
+		/**
+			Operation was successfull.
+		*/
+		StateOk,
+		/**
+			Operation was aborted by user.
+		*/
+		StateAborted,
+		/**
+			Operation failed.
+		*/
+		StateFailed
+	};
+
+	/**
+		List of possible message ids used in context of this interface.
+	*/
+	enum MessageId
+	{
+		MI_BAD_OBJECT_TYPE = 0xabf0,
+		MI_CANNOT_LOAD,
+		MI_CANNOT_SAVE
+	};
+
+	/**
+		Describe detailed options of query.
+	*/
+	enum QueryFlags
+	{
+		/**
+			Only operations with specified file name should be considered.
+		*/
+		QF_NAMED_ONLY = 0x0004,
+
+		/**
+			Only operations without specified file name (anonymous) should be considered.
+		*/
+		QF_ANONYMOUS_ONLY = 0x0008
+	};
+
+	/**
+		Returns \c true if object \c dataObject can be loaded/saved.
+		\param	dataObjectPtr	optional pointer to data object should be loaded/stored.
+								It can be NULL if any object is meant.
+		\param	filePathPtr		optional pointer to file should be loaded/stored.
+								It can be NULL if any file is meant.
+								If it points at empty string, anonymous loading is mean.
+		\param	flags			combination of flags defined in \c QueryFlags and \c iser::IFileTypeInfo::QueryFlags.
+		\param	beQuiet			if true, no user message output is allowed.
+	*/
+	virtual bool IsOperationSupported(
+				const istd::IChangeable* dataObjectPtr,
+				const istd::CString* filePathPtr = NULL,
+				int flags = 0,
+				bool beQuiet = true) const = 0;
+
+	/**
+		This function loads data \c data from file \c filePath
+		\returns serialization state. \sa SerializationState
+	*/
+	virtual int LoadFromFile(istd::IChangeable& data, const istd::CString& filePath = istd::CString()) const = 0;
+
+	/**
+		This function saves data \c data to file \c filePath
+		\returns serialization state. \sa SerializationState
+	*/
+	virtual int SaveToFile(const istd::IChangeable& data, const istd::CString& filePath = istd::CString()) const = 0;
+};
+
+
+} // namespace iser
+
+
+#endif // !iser_IFileLoader_included
+
+

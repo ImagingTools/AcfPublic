@@ -1,0 +1,133 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**	All rights reserved.
+**
+**	This file is part of the IACF Toolkit.
+**
+**	Licensees holding valid IACF Commercial licenses may use this file in
+**	accordance with the IACF Commercial License Agreement provided with the
+**	Software and appearing in the file License.txt or,
+**	alternatively, in accordance with the terms contained in
+**	a written agreement between you and Witold Gantzke & Kirill Lepskiy.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de or email info@imagingtools.de for further
+** 	information about the IACF.
+**
+********************************************************************************/
+
+
+#ifndef iqtcam_CSnapImageGuiComp_included
+#define iqtcam_CSnapImageGuiComp_included
+
+
+// Qt includes
+#include <QTimer>
+
+
+// ACF includes
+#include "iser/IFileLoader.h"
+
+#include "imod/IModel.h"
+#include "imod/IObserver.h"
+
+#include "iimg/IBitmap.h"
+
+#include "icmm/IColorTransformation.h"
+
+#include "iprm/IParamsSet.h"
+
+#include "iqtgui/IGuiObject.h"
+#include "iqtgui/TDesignerGuiCompBase.h"
+#include "iqt2d/TSceneExtenderCompBase.h"
+
+#include "iproc/IBitmapAcquisition.h"
+
+#include "iqtcam/iqtcam.h"
+
+#include "iqtcam/Generated/ui_CSnapImageGuiComp.h"
+
+
+namespace iqtcam
+{
+
+
+class CSnapImageGuiComp: public iqt2d::TSceneExtenderCompBase<iqtgui::TDesignerGuiCompBase<Ui::CSnapImageGuiComp, QWidget> >
+{
+	Q_OBJECT
+
+public:
+	typedef iqt2d::TSceneExtenderCompBase<iqtgui::TDesignerGuiCompBase<Ui::CSnapImageGuiComp, QWidget> > BaseClass;
+
+	I_BEGIN_COMPONENT(CSnapImageGuiComp)
+		I_ASSIGN(m_bitmapCompPtr, "Bitmap", "Bitmap will be shown", true, "Bitmap");
+		I_ASSIGN(m_bitmapModelCompPtr, "Bitmap", "Bitmap will be shown", true, "Bitmap");
+		I_ASSIGN(m_bitmapAcquisitionCompPtr, "BitmapAcquisition", "Bitmap acquision obje for image snap", false, "BitmapAcquisition");
+		I_ASSIGN(m_lookupTableCompPtr, "LookupTable", "Lookup table for pseudo colors in the image view", false, "LookupTable");
+		I_ASSIGN(m_bitmapLoaderCompPtr, "BitmapLoader", "Saves bitmap to file", false, "BitmapLoader");
+		I_ASSIGN(m_paramsLoaderCompPtr, "ParamsLoader", "Loads and saves parameters from and to file", false, "ParamsLoader");
+		I_ASSIGN(m_paramsSetCompPtr, "ParamsSet", "Parameters set", false, "ParamsSet");
+		I_ASSIGN(m_paramsSetModelCompPtr, "ParamsSet", "Parameters set", false, "ParamsSet");
+		I_ASSIGN(m_paramsSetGuiCompPtr, "ParamsSetGui", "Shows parameter set", false, "ParamsSetGui");
+		I_ASSIGN(m_paramsSetObserverCompPtr, "ParamsSetGui", "Shows parameter set", false, "ParamsSetGui");
+		I_ASSIGN(m_paramsSetExtenderCompPtr, "ParamsSetGui", "Shows parameter set", false, "ParamsSetGui");
+		I_ASSIGN(m_liveIntervalAttrPtr, "LiveInterval", "Interval (in seconds) of acquisition in continuous mode", true, 0.04);
+	I_END_COMPONENT
+
+	CSnapImageGuiComp();
+
+	// reimplemented (iqt2d::ISceneExtender)
+	virtual void AddItemsToScene(iqt2d::ISceneProvider* providerPtr, int flags);
+	virtual void RemoveItemsFromScene(iqt2d::ISceneProvider* providerPtr);
+
+protected:
+	bool SnapImage();
+
+	// reimplemented (iqt2d::TSceneExtenderCompBase)
+	virtual void CreateShapes(int sceneId, bool inactiveOnly, Shapes& result);
+
+	// reimplemented (iqtgui::CGuiComponentBase)
+	virtual void OnGuiCreated();
+	virtual void OnGuiDestroyed();
+
+	// reimplemented (icomp::CComponentBase)
+	virtual void OnComponentCreated();
+
+protected slots:
+	void on_SnapImageButton_clicked();
+	void on_LiveImageButton_toggled(bool checked);
+	void on_SaveImageButton_clicked();
+	void on_LoadParamsButton_clicked();
+	void on_SaveParamsButton_clicked();
+	void OnTimerReady();
+
+private:
+	I_REF(iimg::IBitmap, m_bitmapCompPtr);
+	I_REF(imod::IModel, m_bitmapModelCompPtr);
+	I_REF(iproc::IBitmapAcquisition, m_bitmapAcquisitionCompPtr);
+	I_REF(icmm::IColorTransformation, m_lookupTableCompPtr);
+
+	I_REF(iser::IFileLoader, m_bitmapLoaderCompPtr);
+	I_REF(iser::IFileLoader, m_paramsLoaderCompPtr);
+
+	I_REF(iprm::IParamsSet, m_paramsSetCompPtr);
+	I_REF(imod::IModel, m_paramsSetModelCompPtr);
+	I_REF(iqtgui::IGuiObject, m_paramsSetGuiCompPtr);
+	I_REF(imod::IObserver, m_paramsSetObserverCompPtr);
+	I_REF(iqt2d::ISceneExtender, m_paramsSetExtenderCompPtr);
+
+	I_ATTR(double, m_liveIntervalAttrPtr);
+
+	QTimer m_timer;
+};
+
+
+} // namespace iqtcam
+
+
+#endif // !iqtcam_CSnapImageGuiComp_included
+
+

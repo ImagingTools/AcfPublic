@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Acf>
+  <AcfHeader>
+    <VersionInfos count="1">
+      <Version>
+        <Id>
+          0
+        </Id>
+        <Number>
+          1401
+        </Number>
+        <Description>
+          ACF
+        </Description>
+      </Version>
+    </VersionInfos>
+  </AcfHeader>
+  <PositionMap count="2">
+    <Element>
+      <ComponentName>
+        HotfolderId
+      </ComponentName>
+      <X>
+        450
+      </X>
+      <X>
+        275
+      </X>
+    </Element>
+    <Element>
+      <ComponentName>
+        HotfolderUniqueId
+      </ComponentName>
+      <X>
+        775
+      </X>
+      <X>
+        275
+      </X>
+    </Element>
+  </PositionMap>
+</Acf>

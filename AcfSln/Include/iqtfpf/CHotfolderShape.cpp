@@ -1,0 +1,201 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
+#include "iqtfpf/CHotfolderShape.h"
+
+
+// Qt includes
+#include <QPainter>
+#include <QFont>
+#include <QFontMetrics>
+#include <QStyleOptionGraphicsItem>
+#include <QGraphicsScene>
+#include <QApplication>
+#include <QDir>
+#include <QGraphicsProxyWidget>
+#include <QLabel>
+#include <QGraphicsTextItem>
+
+
+// ACF includes
+#include "iqtfpf/CHotfolderShape.h"
+
+
+namespace iqtfpf
+{
+
+
+CHotfolderShape::CHotfolderShape(const iqt2d::ISceneProvider* providerPtr)
+:	BaseClass(true, providerPtr)
+{
+	m_hotfolderName = new QGraphicsTextItem(this);
+
+	m_hotfolderName->setPlainText("SUPER TEXT");
+}
+
+
+QRectF CHotfolderShape::GetViewRect() const
+{
+	QRectF retVal = rect();
+	retVal.moveCenter(pos());
+
+	return retVal;
+}
+
+
+// reimplemented (QGraphicsItem)
+
+QRectF CHotfolderShape::boundingRect() const
+{
+	QRectF retVal = rect();
+
+	retVal.adjust(0, 0, SHADOW_OFFSET, SHADOW_OFFSET);
+
+	return retVal;
+}
+
+
+void CHotfolderShape::paint(QPainter* painterPtr, const QStyleOptionGraphicsItem* /*stylePtr*/, QWidget* /*widgetPtr*/)
+{
+	const ifpf::CVisualHotfolderWorkflowItem* objectPtr = GetObjectPtr();
+	if (objectPtr == NULL){
+		return;
+	}
+
+	painterPtr->setRenderHints(QPainter::Antialiasing, true);
+
+	QRectF mainRect = rect();
+
+	QRectF shadowRect = mainRect;
+	shadowRect.adjust(SHADOW_OFFSET, SHADOW_OFFSET, SHADOW_OFFSET, SHADOW_OFFSET);
+
+	if (isSelected()){
+		painterPtr->setBrush(QColor(10, 242, 126, 50));
+		painterPtr->setPen(Qt::NoPen);
+		painterPtr->drawRoundedRect(shadowRect, 5, 5);
+
+		painterPtr->setBrush( QColor(10, 242, 126, 255));
+		painterPtr->drawRoundedRect(mainRect, 5, 5);
+	}
+	else{
+		painterPtr->setBrush(QColor(0, 0, 0, 30));
+		painterPtr->setPen(Qt::NoPen);
+		painterPtr->drawRoundedRect(shadowRect, 5, 5);
+
+		painterPtr->setBrush(Qt::white);
+		painterPtr->drawRoundedRect(mainRect, 5, 5);
+	}
+
+	painterPtr->setPen(Qt::black);
+	painterPtr->setBrush(Qt::NoBrush);
+
+	painterPtr->drawRoundedRect(mainRect, 5, 5);
+
+	mainRect.adjust(SIDE_OFFSET, SIDE_OFFSET, -SIDE_OFFSET, -SIDE_OFFSET);
+
+	QString hotfolderName = iqt::GetQString(objectPtr->GetName());
+
+	// draw component name:
+	QFont nameFont;
+	nameFont.setPointSize(12);
+	nameFont.setBold(true);
+	painterPtr->setFont(nameFont);
+	painterPtr->drawText(mainRect, hotfolderName, Qt::AlignTop | Qt::AlignLeft);
+
+	QString hotfolderId = iqt::GetQString(objectPtr->GetHotfolderId());
+	QFont detailFont = QApplication::font();
+	painterPtr->setFont(detailFont);
+	painterPtr->drawText(
+				mainRect,
+				hotfolderId,
+				Qt::AlignBottom | Qt::AlignLeft);
+}
+
+
+// reimplemented (imod::IObserver)
+
+bool CHotfolderShape::OnAttached(imod::IModel* modelPtr)
+{
+	const ifpf::CVisualHotfolderWorkflowItem* objectPtr = dynamic_cast<const ifpf::CVisualHotfolderWorkflowItem*>(modelPtr);
+	if (objectPtr == NULL){
+		return false;
+	}
+
+	return BaseClass::OnAttached(modelPtr);
+}
+
+
+// protected methods
+
+// reimplemented (iqt2d::TObjectShapeBase)
+
+void CHotfolderShape::UpdateGraphicsItem(const ifpf::CVisualHotfolderWorkflowItem& element)
+{
+	setPos(iqt::GetQPointF(element.GetCenter()));
+
+	QFont nameFont;
+	nameFont.setPointSize(12);
+	nameFont.setBold(true);
+	QFont detailFont = QApplication::font();
+	QFontMetrics nameFontInfo(nameFont);
+	QFontMetrics detailFontInfo(detailFont);
+
+	QStringList inputDirectories = iqt::GetQStringList(element.GetInputDirectories());
+	QString outputDirectory = iqt::GetQString(element.GetOutputDirectory());
+
+	QString hotfolderName = iqt::GetQString(element.GetName());
+
+	int titleWidth = nameFontInfo.width(hotfolderName);
+	int height = nameFontInfo.height() + detailFontInfo.height();
+
+	int width = istd::Max(titleWidth, detailFontInfo.width(iqt::GetQString(element.GetHotfolderId()))) + SIDE_OFFSET * 2;
+ 
+	width += SIDE_OFFSET * 2;
+	height += SIDE_OFFSET * 2;
+
+	double gridSize;
+	const iqt2d::ISceneProvider* providerPtr = GetSceneProvider();
+	if ((providerPtr != NULL) && providerPtr->GetSceneAlignment(gridSize)){
+		gridSize *= 2;
+		width = ::ceil(width / gridSize) * gridSize;
+		height = ::ceil(height / gridSize) * gridSize;
+	}
+
+	setRect(QRectF(-width * 0.5, -height * 0.5, width, height));
+
+	m_hotfolderName->setPos(QPointF(-width * 0.5, -height * 0.5));	
+}
+
+
+// reimplemented (TShapeBase)
+
+void CHotfolderShape::OnSelectionChanged(bool isSelected)
+{
+	BaseClass::OnSelectionChanged(isSelected);
+
+	Q_EMIT SelectionChanged(isSelected);
+}
+
+
+} // namespace iqtfpf
+
+

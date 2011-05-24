@@ -1,0 +1,90 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef icomp_CComponentContext_included
+#define icomp_CComponentContext_included
+
+
+// STL includes
+#include <map>
+#include <string>
+
+
+// ACF includes
+#include "icomp/IComponentContext.h"
+
+
+namespace icomp
+{
+
+
+class IRegistryElement;
+
+
+/**
+	Base implementation of component session context.
+	This implementation uses icomp::IRegistryElement to generate lilst of attributes.
+	Please note that resolving of exported attribute is done.
+*/
+class CComponentContext: virtual public IComponentContext
+{
+public:
+	CComponentContext(
+				const IRegistryElement* elementPtr,
+				const IComponentStaticInfo* staticInfoPtr,
+				const IComponentContext* parentPtr = NULL,
+				const std::string& contextId = "");
+
+	const std::string& GetContextId() const;
+
+	// reimplemented (icomp::IComponentContext)
+	virtual const IRegistryElement& GetRegistryElement() const;
+	virtual const IComponentStaticInfo& GetStaticInfo() const;
+	virtual const IComponentContext* GetParentContext() const;
+	virtual const iser::IObject* GetAttribute(const std::string& attributeId, int* definitionLevelPtr = NULL) const;
+
+private:
+	const IRegistryElement& m_registryElement;
+	const IComponentStaticInfo& m_staticInfo;
+
+	const IComponentContext* m_parentPtr;
+
+	typedef std::map<std::string, const iser::IObject*> AttributeMap;
+	AttributeMap m_attributeMap;
+	std::string m_contextId;
+};
+
+
+// inline methods
+
+inline const std::string& CComponentContext::GetContextId() const
+{
+	return m_contextId;
+}
+
+
+}//namespace icomp
+
+
+#endif // !icomp_CComponentContext_included
+
+

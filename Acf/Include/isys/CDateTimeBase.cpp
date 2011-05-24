@@ -1,0 +1,138 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#include "isys/CDateTimeBase.h"
+
+
+// STL includes
+#include <sstream>
+#include <iomanip>
+
+
+// ACF includes
+#include "iser/IArchive.h"
+#include "iser/CArchiveTag.h"
+
+
+namespace isys
+{
+
+
+bool CDateTimeBase::SerializeComponents(iser::IArchive& archive, TimeComponent fromComponent, TimeComponent toComponent)
+{
+	bool retVal = true;
+
+	if (archive.IsStoring()){
+		for (int i = fromComponent; i <= toComponent; ++i){
+			int componentValue = GetComponent(i);
+
+			retVal = retVal && archive.BeginTag(s_archiveTags[i]);
+			retVal = retVal && archive.Process(componentValue);
+			retVal = retVal && archive.EndTag(s_archiveTags[i]);
+		}
+	}
+	else{
+		for (int i = fromComponent; i <= toComponent; ++i){
+			int componentValue = 0;
+
+			retVal = retVal && archive.BeginTag(s_archiveTags[i]);
+			retVal = retVal && archive.Process(componentValue);
+			retVal = retVal && archive.EndTag(s_archiveTags[i]);
+
+			SetComponent(i, componentValue);
+		}
+	}
+
+	return retVal;
+}
+
+
+// reimplemented (isys::IDateTime)
+ 
+std::string CDateTimeBase::ToString(int fromComponent, int toComponent) const
+{
+	std::ostringstream stream;
+
+	for (int i = fromComponent; i <= toComponent; ++i){
+		stream << std::setfill('0') << std::setw(2) << GetComponent(i);
+
+		if (i < toComponent){
+			if (i < TC_HOUR){
+				stream << '-';
+			}
+			else if (i < TC_MICROSECOND){
+				stream << ':';
+			}
+			else{
+				stream << '\'';
+			}
+		}
+	}
+
+	return stream.str();
+}
+
+
+bool CDateTimeBase::FromString(const std::string& text, int fromComponent, int toComponent)
+{
+	std::istringstream stream(text);
+
+	for (int i = fromComponent; i <= toComponent; ++i){
+		int value;
+		stream >> value;
+
+		SetComponent(i, value);
+
+		if (i < toComponent){
+			std::string dummy;
+			stream >> dummy;
+		}
+	}
+
+	return true;
+}
+
+
+// reimplemented (iser::ISerializable)
+
+bool CDateTimeBase::Serialize(iser::IArchive& archive)
+{
+	return SerializeComponents(archive, TC_YEAR, TC_MICROSECOND);
+}
+
+
+// protected static attributes
+
+iser::CArchiveTag CDateTimeBase::s_archiveTags[TC_LAST + 1] = {
+	iser::CArchiveTag("Year", "Year"),
+	iser::CArchiveTag("Month", "Month"),
+	iser::CArchiveTag("Day", "Day"),
+	iser::CArchiveTag("Hour", "Hour"),
+	iser::CArchiveTag("Minute", "Minute"),
+	iser::CArchiveTag("Second", "Second"),
+	iser::CArchiveTag("Miliecond", "Miliecond")
+};
+
+
+} // namespace isys
+
+

@@ -1,0 +1,135 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iproc_ISupplier_included
+#define iproc_ISupplier_included
+
+
+#include "istd/IChangeable.h"
+
+#include "iprm/IParamsSet.h"
+
+#include "iproc/iproc.h"
+
+
+namespace iproc
+{
+
+
+/**
+	Base interface for suppliers providing synchrone processing of single object with <em>"pull data" model</em>.
+	Derivated interfaces should provide access to intern stored produced object for specified object ID.
+	For example image supplier should provide method \c{const iimg::IBitmap* GetBitmap(const I_DWORD* objectIdPtr) const}.
+	The internal stored object should be created on demand.
+*/
+class ISupplier: virtual public istd::IChangeable
+{
+public:
+	enum WorkStatus
+	{
+		/**
+			No status is provided, no work was done.
+		*/
+		WS_NONE,
+		/**
+			New work is initialized.
+		*/
+		WS_INIT,
+		/**
+			Supplier is locked becouse it is doing processing step.
+		*/
+		WS_LOCKED,
+		/**
+			Work was done correctly and no error occure.
+		*/
+		WS_OK,
+		/**
+			Work was canceled.
+		*/
+		WS_CANCELED,
+		/**
+			Work was done, but there were errors.
+		*/
+		WS_ERROR,
+		/**
+			Work cannot be done.
+		*/
+		WS_CRITICAL
+	};
+
+	enum ChangeFlags
+	{
+		CF_SUPPLIER_RESULTS = 0x4000000
+	};
+
+	/**
+		Called to signalize that this supplier is invalid.
+		This signal will be transfered to all supplier which are registered as output.
+	*/
+	virtual void InvalidateSupplier() = 0;
+
+	/**
+		Ensure that all objects are produced.
+	*/
+	virtual void EnsureWorkFinished() = 0;
+
+	/**
+		Remove all stored work results.
+		This set also work state to \c WS_INIT.
+	*/
+	virtual void ClearWorkResults() = 0;
+
+	/**
+		Get status of last work.
+		\return	work status defined in iproc::ISupplier::WorkStatus.
+	*/
+	virtual int GetWorkStatus() const = 0;
+
+	/**
+		Get duration time of work.
+		\return	time of duration or negative value if this time is unknown.
+	*/
+	virtual double GetWorkDurationTime() const = 0;
+
+	/**
+		Get parameter set using by this supplier.
+	*/
+	virtual iprm::IParamsSet* GetModelParametersSet() const = 0;
+
+	/**
+		Register output supplier object.
+		The output object will be informed about invalidate of this supplier.
+	*/
+	virtual void OnOutputSubscribed(ISupplier* outputSupplierPtr) = 0;
+	/**
+		Unregister output supplier object.
+	*/
+	virtual void OnOutputUnsubscribed(const ISupplier* outputSupplierPtr) = 0;
+};
+
+
+} // namespace iproc
+
+
+#endif // !iproc_ISupplier_included
+
+

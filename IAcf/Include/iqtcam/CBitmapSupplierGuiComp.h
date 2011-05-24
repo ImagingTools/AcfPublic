@@ -1,0 +1,100 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**	All rights reserved.
+**
+**	This file is part of the IACF Toolkit.
+**
+**	Licensees holding valid IACF Commercial licenses may use this file in
+**	accordance with the IACF Commercial License Agreement provided with the
+**	Software and appearing in the file License.txt or,
+**	alternatively, in accordance with the terms contained in
+**	a written agreement between you and Witold Gantzke & Kirill Lepskiy.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de or email info@imagingtools.de for further
+** 	information about the IACF.
+**
+********************************************************************************/
+
+
+#ifndef iqtcam_CBitmapSupplierGuiComp_included
+#define iqtcam_CBitmapSupplierGuiComp_included
+
+
+// ACF includes
+#include "iser/IFileLoader.h"
+#include "imod/IObserver.h"
+#include "imod/TModelWrap.h"
+#include "iproc/IBitmapSupplier.h"
+#include "iqt/CBitmap.h"
+#include "iqtgui/IGuiObject.h"
+#include "iqtgui/TDesignerGuiObserverCompBase.h"
+
+#include "iqtinsp/TSupplierGuiCompBase.h"
+
+#include "iqtcam/iqtcam.h"
+
+#include "iqtcam/Generated/ui_CBitmapSupplierGuiComp.h"
+
+
+namespace iqtcam
+{
+
+
+class CBitmapSupplierGuiComp: public iqtinsp::TSupplierGuiCompBase<
+			Ui::CBitmapSupplierGuiComp,
+			iproc::IBitmapSupplier>
+{
+	Q_OBJECT
+
+public:
+	typedef iqtinsp::TSupplierGuiCompBase<
+				Ui::CBitmapSupplierGuiComp,
+				iproc::IBitmapSupplier> BaseClass;
+
+	I_BEGIN_COMPONENT(CBitmapSupplierGuiComp);
+		I_ASSIGN(m_bitmapLoaderCompPtr, "BitmapLoader", "Saves bitmap to file", false, "BitmapLoader");
+	I_END_COMPONENT;
+
+	// reimplemented (imod::IModelEditor)
+	virtual void UpdateModel() const;
+	virtual void UpdateEditor(int updateFlags = 0);
+
+protected slots:
+	void on_SnapImageButton_clicked();
+	void on_SaveImageButton_clicked();
+	void on_LoadParamsButton_clicked();
+	void on_SaveParamsButton_clicked();
+
+protected:
+	// reimplemented (iqtgui::CGuiComponentBase)
+	virtual void OnGuiCreated();
+
+	// reimplemented (iqtinsp::TSupplierGuiCompBase)
+	virtual QWidget* GetParamsWidget() const;
+
+	// reimplemented (iqt2d::TSceneExtenderCompBase)
+	virtual void CreateShapes(int sceneId, bool inactiveOnly, Shapes& result);
+
+	// reimplemented (iqtgui::TGuiObserverWrap)
+	virtual void OnGuiModelAttached();
+
+	// reimplemented (imod::IObserver)
+	virtual void AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
+
+private:
+	I_REF(iser::IFileLoader, m_bitmapLoaderCompPtr);
+
+	imod::TModelWrap<iqt::CBitmap> m_bitmap;
+};
+
+
+} // namespace iqtcam
+
+
+#endif // !iqtcam_CBitmapSupplierGuiComp_included
+
+

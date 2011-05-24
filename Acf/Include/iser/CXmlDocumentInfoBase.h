@@ -1,0 +1,120 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iser_CXmlDocumentInfoBase_included
+#define iser_CXmlDocumentInfoBase_included
+
+
+// STL includes
+#include <map>
+
+
+// ACF includes
+#include "istd/CString.h"
+
+
+namespace iser
+{
+
+
+/**
+	Base class for all XML implementations for ACF documents.
+	This helper class can be used e.g. to implement XML archives.
+*/
+class CXmlDocumentInfoBase
+{
+public:
+	/**
+		Check if comments in XML document are enabled.
+		It can be used e.g. to store tag descriptions as comments.
+	*/
+	bool IsCommentEnabled() const;
+	/**
+		Allows comments in XML document.
+		\sa IsCommentEnabled()
+	*/
+	void SetCommentEnabled(bool state = true);
+
+	// static methods
+	static void EncodeXml(const std::string& text, std::string& xmlText);
+	static void DecodeXml(const std::string& xmlText, std::string& text);
+	static void EncodeXml(const std::wstring& text, std::string& xmlText);
+	static void DecodeXml(const std::string& xmlText, std::wstring& text);
+	static const istd::CString& GetElementSeparator();
+
+protected:
+	class CharToEntityMap: public std::map<char, std::string>
+	{
+	public:
+		CharToEntityMap();
+	};
+
+	class EntityToChartMap: public std::map<std::string, char>
+	{
+	public:
+		EntityToChartMap();
+	};
+
+	class WideCharToEntityMap: public std::map<wchar_t, std::string >
+	{
+	public:
+		WideCharToEntityMap();
+	};
+
+	class EntityToWideChartMap: public std::map<std::string, wchar_t>
+	{
+	public:
+		EntityToWideChartMap();
+	};
+
+private:
+	bool m_isCommentEnabled;
+
+	static CharToEntityMap s_charToEntityMap;
+	static EntityToChartMap s_entityToChartMap;
+	static WideCharToEntityMap s_wideCharToEntityMap;
+	static EntityToWideChartMap s_entityToWideChartMap;
+
+	static istd::CString s_elementSeparator;
+};
+
+
+// inline methods
+
+inline bool CXmlDocumentInfoBase::IsCommentEnabled() const
+{
+	return m_isCommentEnabled;
+}
+
+
+inline void CXmlDocumentInfoBase::SetCommentEnabled(bool state)
+{
+	m_isCommentEnabled = state;
+}
+
+
+} // namespace iser
+
+
+#endif // !iser_CXmlDocumentInfoBase_included
+
+

@@ -1,0 +1,181 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef ibase_TContainer_included
+#define ibase_TContainer_included
+
+
+// STL includes
+#include <vector>
+
+
+// ACF includes
+#include "istd/IContainerInfo.h"
+#include "istd/IChangeable.h"
+
+#include "istd/TChangeNotifier.h"
+
+
+namespace ibase
+{
+
+
+/**
+	Common implementation of an abstract container. 
+*/
+template <typename ItemClass, typename ContainerClass = std::vector<ItemClass> >
+class TContainer: virtual public istd::IContainerInfo, virtual public istd::IChangeable
+{
+public:
+	enum ChangeFlags
+	{
+		CF_ELEMENT_ADDED = 0x1000000,
+		CF_ELEMENT_REMOVED = 0x2000000,
+		CF_RESET = 0x4000000
+	};
+
+	const ItemClass& GetAt(int index) const;
+	ItemClass& GetAt(int index);
+	void PushBack(const ItemClass& item);
+	void PushFront(const ItemClass& item);
+	void PopBack();
+	void PopFront();
+	void RemoveAt(int index);
+	virtual void Reset();
+
+	// reimplemented (istd::IContainerInfo)
+	virtual int GetItemsCount() const;
+	virtual bool IsEmpty() const;
+	virtual bool IsIndexValid(int index) const;
+
+protected:
+	typedef ContainerClass Items;
+	Items m_items;
+};
+
+
+template <typename ItemClass, typename ContainerClass>
+ItemClass& TContainer<ItemClass, ContainerClass>::GetAt(int index)
+{
+	I_ASSERT(IsIndexValid(index));
+
+	return *(m_items.begin() + index);
+}
+
+
+template <typename ItemClass, typename ContainerClass>
+const ItemClass& TContainer<ItemClass, ContainerClass>::GetAt(int index) const
+{
+	I_ASSERT(IsIndexValid(index));
+
+	return *(m_items.begin() + index);
+}
+
+
+template <typename ItemClass, typename ContainerClass>
+void TContainer<ItemClass, ContainerClass>::PushBack(const ItemClass& item)
+{
+	istd::CChangeNotifier changePtr(this, CF_ELEMENT_ADDED);
+
+	std::back_inserter<ContainerClass>(m_items) = item;
+}
+
+
+template <typename ItemClass, typename ContainerClass>
+void TContainer<ItemClass, ContainerClass>::PushFront(const ItemClass& item)
+{
+	istd::CChangeNotifier changePtr(this, CF_ELEMENT_ADDED);
+
+	std::front_inserter<ContainerClass>(m_items) = item;
+}
+
+
+template <typename ItemClass, typename ContainerClass>
+void TContainer<ItemClass, ContainerClass>::PopBack()
+{
+	istd::CChangeNotifier changePtr(this, CF_ELEMENT_REMOVED);
+
+	m_items.pop_back();
+}
+
+
+template <typename ItemClass, typename ContainerClass>
+void TContainer<ItemClass, ContainerClass>::PopFront()
+{
+	istd::CChangeNotifier changePtr(this, CF_ELEMENT_REMOVED);
+
+	m_items.pop_front();
+}
+
+
+template <typename ItemClass, typename ContainerClass>
+void TContainer<ItemClass, ContainerClass>::RemoveAt(int index)
+{
+	I_ASSERT(index >= 0);
+	I_ASSERT(index < int(m_items.size()));
+
+	if (index < int(m_items.size())){
+		istd::CChangeNotifier changePtr(this, CF_ELEMENT_REMOVED);
+	
+		m_items.erase(m_items.begin()  + index);
+	}
+}
+
+
+template <typename ItemClass, typename ContainerClass>
+void TContainer<ItemClass, ContainerClass>::Reset()
+{
+	istd::CChangeNotifier changePtr(this, CF_RESET);
+
+	m_items.clear();
+}
+
+
+// reimplemented (istd::IContainerInfo)
+
+template <typename ItemClass, typename ContainerClass>
+int TContainer<ItemClass, ContainerClass>::GetItemsCount() const
+{
+	return int(m_items.size());
+}
+
+
+template <typename ItemClass, typename ContainerClass>
+bool TContainer<ItemClass, ContainerClass>::IsEmpty() const
+{
+	return m_items.empty();
+}
+
+
+template <typename ItemClass, typename ContainerClass>
+bool TContainer<ItemClass, ContainerClass>::IsIndexValid(int index) const
+{
+	return (index >= 0 && index < int(m_items.size()));
+}
+
+
+} // namespace ibase
+
+
+#endif // !ibase_TContainer_included
+
+

@@ -1,0 +1,111 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iqtdoc_TQtDocumentManagerWrap_included
+#define iqtdoc_TQtDocumentManagerWrap_included
+
+
+// Qt includes
+#include <QPrintDialog>
+
+
+// ACF includes
+#include "idoc/IDocumentManager.h"
+
+#include "iqtdoc/IPrintable.h"
+
+
+
+namespace iqtdoc
+{
+
+
+/**	
+	Wrapper for general functionality of a Qt based document workspace.
+*/
+template <typename Base>
+class TQtDocumentManagerWrap: public Base
+{
+public:
+	typedef Base BaseClass;
+
+	// pseudo-reimplemented (idoc::IDocumentManager)
+	virtual int GetAllowedOperationFlags(const istd::IPolymorphic* viewPtr = NULL) const;
+	virtual void FilePrint(int documentIndex = -1) const;
+};
+
+
+
+// reimplemented (idoc::IDocumentManager)
+
+template <typename Base>
+int TQtDocumentManagerWrap<Base>::GetAllowedOperationFlags(const istd::IPolymorphic* viewPtr) const
+{
+	int retVal = BaseClass::GetAllowedOperationFlags(viewPtr);
+
+	if (viewPtr == NULL){
+		viewPtr = BaseClass::GetActiveView();
+	}
+
+	if (dynamic_cast<const iqtdoc::IPrintable*>(viewPtr) != NULL){
+		retVal |= idoc::IDocumentManager::OF_FILE_PRINT;
+	}
+
+	return retVal;
+}
+
+
+template <typename Base>
+void TQtDocumentManagerWrap<Base>::FilePrint(int documentIndex) const
+{
+	istd::IPolymorphic* activeViewPtr = NULL;
+	if (documentIndex >= 0){
+		I_ASSERT(documentIndex < GetDocumentsCount());
+
+		if (BaseClass::GetViewsCount(documentIndex) > 0){
+			activeViewPtr = BaseClass::GetViewFromIndex(documentIndex, 0);
+		}
+	}
+	else{
+		activeViewPtr = BaseClass::GetActiveView();
+	}
+
+	if (activeViewPtr != NULL){
+		iqtdoc::IPrintable* printablePtr = dynamic_cast<iqtdoc::IPrintable*>(activeViewPtr);
+		if (printablePtr != NULL){
+			QPrinter printer(QPrinter::HighResolution);
+			QPrintDialog printerDialog(&printer);
+
+			if (printerDialog.exec() == QDialog::Accepted){
+				printablePtr->Print(printerDialog.printer());
+			}
+		}
+	}
+}
+
+
+} // namespace iqtdoc
+
+
+#endif // !iqtdoc_TQtDocumentManagerWrap_included
+
+

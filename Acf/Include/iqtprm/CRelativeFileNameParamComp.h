@@ -1,0 +1,64 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iqtprm_CRelativeFileNameParamComp_included
+#define iqtprm_CRelativeFileNameParamComp_included
+
+
+#include "iprm/CFileNameParamComp.h"
+
+#include "iqtprm/iqtprm.h"
+
+
+namespace iqtprm
+{
+
+
+class CRelativeFileNameParamComp: public iprm::CFileNameParamComp
+{
+public:
+	typedef iprm::CFileNameParamComp BaseClass;
+
+	I_BEGIN_COMPONENT(CRelativeFileNameParamComp);
+		I_ASSIGN(m_relativeToCompPtr, "ReferencePath", "Reference path, relative to this file or directory internal path representation will be calculated", false, "ReferencePath");
+	I_END_COMPONENT;
+
+	// reimplemented (iprm::IFileNameParam)
+	virtual const istd::CString& GetPath() const;
+	virtual void SetPath(const istd::CString& path);
+
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive);
+
+private:
+	I_REF(iprm::IFileNameParam, m_relativeToCompPtr);
+
+	mutable istd::CString m_relativePath;
+};
+
+
+} // namespace iqtprm
+
+
+#endif // !iqtprm_CRelativeFileNameParamComp_included
+
+

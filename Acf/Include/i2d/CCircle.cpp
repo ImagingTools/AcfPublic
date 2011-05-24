@@ -1,0 +1,88 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#include "i2d/CCircle.h"
+
+
+#include "istd/TChangeNotifier.h"
+
+#include "i2d/CRectangle.h"
+
+#include "iser/IArchive.h"
+#include "iser/CArchiveTag.h"
+
+
+namespace i2d
+{	
+
+
+CCircle::CCircle()
+:	m_radius(0)
+{
+}
+
+
+CCircle::CCircle(double radius, const CVector2d& center)
+:	BaseClass(center), m_radius(radius)
+{
+}
+
+
+void CCircle::SetRadius(double radius)
+{
+	if (radius != m_radius){
+		istd::CChangeNotifier notifier(this);
+
+		m_radius = radius;
+	}
+}
+
+
+CRectangle CCircle::GetBoundingBox() const
+{
+	return CRectangle(
+				m_position.GetX() - m_radius, 
+				m_position.GetY() - m_radius, 
+				2 * m_radius, 
+				2 * m_radius); 
+}
+
+
+// reimplemented (iser::ISerializable)
+
+bool CCircle::Serialize(iser::IArchive& archive)
+{
+	bool retVal = true;
+
+	retVal = retVal && BaseClass::Serialize(archive);
+
+	static iser::CArchiveTag radiusTag("Radius", "Circle radius");
+	retVal = retVal && archive.BeginTag(radiusTag);
+	retVal = retVal && archive.Process(m_radius);
+	retVal = retVal && archive.EndTag(radiusTag);
+
+	return retVal;
+}
+
+
+} // namespace i2d
+

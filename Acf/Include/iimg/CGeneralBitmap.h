@@ -1,0 +1,77 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iimg_CGeneralBitmap_included
+#define iimg_CGeneralBitmap_included
+
+
+#include "istd/TOptDelPtr.h"
+
+#include "iimg/CBitmapBase.h"
+
+
+namespace iimg
+{
+
+
+/**
+	Standard device- and platform-independent bitmap definition.
+*/
+class CGeneralBitmap: public CBitmapBase
+{
+public:
+	CGeneralBitmap();
+
+	// reimplemented (iimg::IBitmap)
+	virtual bool CreateBitmap(const istd::CIndex2d& size, int pixelBitsCount = 8, int componentsCount = 1);
+	virtual bool CreateBitmap(const istd::CIndex2d& size, void* dataPtr, bool releaseFlag, int linesDifference = 0, int pixelBitsCount = 8, int componentsCount = 1);
+	virtual int GetLinesDifference() const;
+	virtual int GetPixelBitsCount() const;
+	virtual const void* GetLinePtr(int positionY) const;
+	virtual void* GetLinePtr(int positionY);
+
+	// reimplemented (iimg::IRasterImage)
+	virtual void ResetImage();
+	virtual istd::CIndex2d GetImageSize() const;
+	virtual int GetComponentsCount() const;
+
+	// reimplemented (istd::IChangeable)
+	virtual int GetSupportedOperations() const;
+	virtual bool CopyFrom(const istd::IChangeable& object);
+	virtual istd::IChangeable* CloneMe() const;
+
+private:
+	istd::TOptDelPtr<I_BYTE, true> m_buffer;
+
+	istd::CIndex2d m_size;
+	int m_linesDifference;
+	int m_pixelBitsCount;
+	int m_componentsCount;
+};
+
+
+} // namespace iimg
+
+
+#endif // !iimg_CGeneralBitmap_included
+
+

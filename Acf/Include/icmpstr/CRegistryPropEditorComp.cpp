@@ -1,0 +1,301 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#include "icmpstr/CRegistryPropEditorComp.h"
+
+
+// ACF includes
+#include "istd/TChangeNotifier.h"
+
+#include "icomp/CComponentMetaDescriptionEncoder.h"
+
+
+// public methods
+	
+namespace icmpstr
+{
+
+
+// reimplmented (imod::IModelEditor)
+
+void CRegistryPropEditorComp::UpdateEditor(int /*updateFlags*/)
+{
+	I_ASSERT(IsGuiCreated());
+
+	const icomp::IRegistry* registryPtr = GetObjectPtr();
+	if (registryPtr == NULL){
+		return;
+	}
+
+	DescriptionEdit->setText(iqt::GetQString(registryPtr->GetDescription()));
+
+	icomp::CComponentMetaDescriptionEncoder metaDescriptionEncoder(registryPtr->GetKeywords());
+
+	QStringList companyList = iqt::GetQStringList(metaDescriptionEncoder.GetValues("Company"));
+	QStringList projectsList = iqt::GetQStringList(metaDescriptionEncoder.GetValues("Project"));
+	QStringList authorsList = iqt::GetQStringList(metaDescriptionEncoder.GetValues("Author"));
+	QStringList categoriesList = iqt::GetQStringList(metaDescriptionEncoder.GetValues("Category"));
+	QStringList tagsList = iqt::GetQStringList(metaDescriptionEncoder.GetValues("Tag"));
+	QStringList keywords = iqt::GetQStringList(metaDescriptionEncoder.GetUnassignedKeywords());
+
+	CompanyEdit->setText(companyList.join(","));
+	CategoryEdit->setText(categoriesList.join(","));
+	ProjectEdit->setText(projectsList.join(","));
+	AuthorEdit->setText(authorsList.join(","));
+	TagsEdit->setText(tagsList.join(","));
+	KeywordsEdit->setText(keywords.join(","));
+
+	CreateOverview();
+}
+
+
+void CRegistryPropEditorComp::UpdateModel() const
+{
+	I_ASSERT(IsGuiCreated() && (GetObjectPtr() != NULL));
+}
+
+
+// reimplemented (imod::TGuiObserverWrap)
+
+void CRegistryPropEditorComp::OnGuiModelAttached()
+{
+	BaseClass::OnGuiModelAttached();
+
+	DescriptionEdit->setEnabled(true);
+	RegistryInfoFrame->setEnabled(true);
+}
+
+
+void CRegistryPropEditorComp::OnGuiModelDetached()
+{
+	DescriptionEdit->clear();
+	CompanyEdit->clear();
+	CategoryEdit->clear();
+	ProjectEdit->clear();
+	AuthorEdit->clear();
+	TagsEdit->clear();
+	KeywordsEdit->clear();
+
+	DescriptionEdit->setDisabled(true);
+	RegistryInfoFrame->setDisabled(true);
+
+	OverviewTree->clear();
+
+	ErrorsLabel->clear();
+
+	BaseClass::OnGuiModelDetached();
+}
+
+
+// protected methods
+
+void CRegistryPropEditorComp::CreateOverview()
+{
+	// reset view:
+	OverviewTree->clear();
+
+	// setup colors:
+	QFont boldFont = qApp->font();
+	boldFont.setBold(true);
+
+	// create overview infos:
+	icomp::IRegistry* registryPtr = GetObjectPtr();
+	if (registryPtr != NULL){
+		const icomp::IRegistry::ExportedInterfacesMap& exportedInterfaces = registryPtr->GetExportedInterfacesMap();
+		if (!exportedInterfaces.empty()){
+			QTreeWidgetItem* exportedInterfacesItemPtr = new QTreeWidgetItem();
+			exportedInterfacesItemPtr->setText(0, tr("Exported Interfaces"));
+			exportedInterfacesItemPtr->setFont(0, boldFont);
+			
+			OverviewTree->addTopLevelItem(exportedInterfacesItemPtr);
+
+			for (		icomp::IRegistry::ExportedInterfacesMap::const_iterator iter = exportedInterfaces.begin();
+						iter != exportedInterfaces.end();
+						iter++){
+				QTreeWidgetItem* exportedInterfaceItemPtr = new QTreeWidgetItem();
+				exportedInterfaceItemPtr->setText(0, QString(iter->second.c_str()));
+				exportedInterfaceItemPtr->setText(1, QString(iter->first.c_str()));
+				exportedInterfacesItemPtr->addChild(exportedInterfaceItemPtr);		
+			}
+
+			exportedInterfacesItemPtr->setExpanded(true);
+		}
+
+		const icomp::IRegistry::ExportedComponentsMap& exportedComponents = registryPtr->GetExportedComponentsMap();
+		if (!exportedComponents.empty()){
+			QTreeWidgetItem* exportedComponentsItemPtr = new QTreeWidgetItem();
+			exportedComponentsItemPtr->setText(0, tr("Exported Components"));
+			exportedComponentsItemPtr->setFont(0, boldFont);
+
+			OverviewTree->addTopLevelItem(exportedComponentsItemPtr);
+
+			for (		icomp::IRegistry::ExportedComponentsMap::const_iterator iter = exportedComponents.begin();
+						iter != exportedComponents.end();
+						iter++){
+				QTreeWidgetItem* exportedComponentItemPtr = new QTreeWidgetItem();
+				exportedComponentItemPtr->setText(0, QString(iter->second.c_str()));
+				exportedComponentItemPtr->setText(1, QString(iter->first.c_str()));
+				exportedComponentsItemPtr->addChild(exportedComponentItemPtr);		
+			}
+
+			exportedComponentsItemPtr->setExpanded(true);
+		}
+
+		if (m_consistInfoCompPtr.IsValid()){
+			TextLog textLog;
+			if (!m_consistInfoCompPtr->IsRegistryValid(*registryPtr, false, true, &textLog)){
+				ErrorsLabel->setText(iqt::GetQString(textLog));
+				ErrorsFrame->setVisible(true);
+			}
+			else{
+				ErrorsFrame->setVisible(false);
+			}
+		}
+	}
+}
+
+
+// reimplemented (iqtgui::CGuiComponentBase)
+
+void CRegistryPropEditorComp::OnGuiCreated()
+{
+	BaseClass::OnGuiCreated();
+
+	connect(CompanyEdit, SIGNAL(editingFinished()), this, SLOT(OnUpdateKeywords()));
+	connect(ProjectEdit, SIGNAL(editingFinished()), this, SLOT(OnUpdateKeywords()));
+	connect(AuthorEdit, SIGNAL(editingFinished()), this, SLOT(OnUpdateKeywords()));
+	connect(CategoryEdit, SIGNAL(editingFinished()), this, SLOT(OnUpdateKeywords()));
+	connect(TagsEdit, SIGNAL(editingFinished()), this, SLOT(OnUpdateKeywords()));
+	connect(KeywordsEdit, SIGNAL(editingFinished()), this, SLOT(OnUpdateKeywords()));
+
+	OverviewTree->header()->setResizeMode(QHeaderView::ResizeToContents);
+	OverviewTree->setStyleSheet("QTreeView {background: palette(window)} QTreeView::branch {background: palette(window);} QTreeView::item {min-height: 25px}");
+}
+
+
+// protected slots:
+
+void CRegistryPropEditorComp::on_DescriptionEdit_editingFinished()
+{
+	icomp::IRegistry* registryPtr = GetObjectPtr();
+	if (registryPtr != NULL){
+		istd::CString description = iqt::GetCString(DescriptionEdit->text());
+
+		if (description != registryPtr->GetDescription()){
+			istd::CChangeNotifier notifier(registryPtr);
+
+			registryPtr->SetDescription(description);
+		}
+	}
+}
+
+
+void CRegistryPropEditorComp::OnUpdateKeywords()
+{
+	icomp::IRegistry* registryPtr = GetObjectPtr();
+	if (registryPtr != NULL){
+		QString company = ConvertToKeyword(CompanyEdit->text(), "Company");
+		QString project = ConvertToKeyword(ProjectEdit->text(), "Project");
+		QString author = ConvertToKeyword(AuthorEdit->text(), "Author");
+		QString category = ConvertToKeyword(CategoryEdit->text(), "Category");
+		QString tags = ConvertToKeyword(TagsEdit->text(), "Tag");
+		QString unassignedKeywords = ConvertToKeyword(KeywordsEdit->text());
+
+		QString allKeywords =
+					unassignedKeywords + QString(" ") + 
+					company + QString(" ") + 
+					project + QString(" ") + 
+					author + QString(" ") + 
+					category + QString(" ") + 
+					tags;
+		
+		istd::CString keywords = iqt::GetCString(allKeywords.simplified());
+
+		if (keywords != registryPtr->GetKeywords()){
+			istd::CChangeNotifier notifier(registryPtr);
+
+			registryPtr->SetKeywords(keywords);
+		}
+	}
+}
+
+
+// private static methods
+
+QString CRegistryPropEditorComp::ConvertToKeyword(const QString& input, const QString& key)
+{
+	static QString emptyString;
+	if (input.isEmpty()){
+		return emptyString;
+	}
+
+	QString keyword = !key.isEmpty() ? key + "=\'" : key;
+
+	QStringList inputPartList = input.split(",", QString::SkipEmptyParts);
+
+	for (int inputPartIndex = 0; inputPartIndex < inputPartList.count(); inputPartIndex++){
+		QString inputPart = inputPartList[inputPartIndex].simplified();
+		if (inputPart.contains(" ")){
+			inputPart = QString("\"") + inputPart + QString("\"");
+		}
+
+		keyword += inputPart + QString(" ");
+	}
+
+	keyword = keyword.simplified();
+	
+	if (!key.isEmpty()){
+		keyword += "\'";
+	}
+
+	return keyword;
+}
+
+
+// public methods of embedded class TextLog
+
+// reimplemented (ibase::IMessageConsumer)
+
+bool CRegistryPropEditorComp::TextLog::IsMessageSupported(
+			int /*messageCategory*/,
+			int /*messageId*/,
+			const ibase::IMessage* /*messagePtr*/) const
+{
+	return true;
+}
+
+
+void CRegistryPropEditorComp::TextLog::AddMessage(const MessagePtr& messagePtr)
+{
+	if (messagePtr.IsValid()){
+		if (!IsEmpty()){
+			operator+=("\n");
+		}
+
+		operator+=(messagePtr->GetText());
+	}
+}
+
+
+} // namespace icmpstr
+
+

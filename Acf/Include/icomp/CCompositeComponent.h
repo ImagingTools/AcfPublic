@@ -1,0 +1,141 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef icomp_CCompositeComponent_included
+#define icomp_CCompositeComponent_included
+
+
+// STL includes
+#include <map>
+#include <string>
+
+#include "istd/CClassInfo.h"
+
+#include "icomp/IRegistry.h"
+#include "icomp/IComponentContext.h"
+#include "icomp/CInterfaceManipBase.h"
+
+
+namespace icomp
+{
+
+
+class IMetaInfoManager;
+
+
+class CCompositeComponent:
+			public CInterfaceManipBase,
+			virtual public IComponent
+{
+public:
+	CCompositeComponent();
+	virtual ~CCompositeComponent();
+
+	template <class InterfaceType>
+	InterfaceType* GetComponentInterface(const std::string& subId = "");
+
+	/**
+		Begin of blocking of automatic component initialization.
+	*/
+	void BeginAutoInitBlock();
+	/**
+		End of blocking of automatic component initialization.
+	*/
+	bool EndAutoInitBlock();
+
+	// reimplemented (icomp::IComponent)
+	virtual const IComponent* GetParentComponent(bool ownerOnly = false) const;
+	virtual void* GetInterface(const istd::CClassInfo& interfaceType, const std::string& subId = "");
+	virtual const IComponentContext* GetComponentContext() const;
+	virtual void SetComponentContext(
+				const icomp::IComponentContext* contextPtr,
+				const IComponent* parentPtr,
+				bool isParentOwner);
+	virtual IComponent* GetSubcomponent(const std::string& componentId) const;
+	virtual const IComponentContext* GetSubcomponentContext(const std::string& componentId) const;
+	virtual IComponent* CreateSubcomponent(const std::string& componentId) const;
+	virtual void OnSubcomponentDeleted(const IComponent* subcomponentPtr);
+
+protected:
+	typedef istd::TDelPtr<icomp::IComponent> ComponentPtr;
+	typedef istd::TDelPtr<icomp::IComponentContext> ContextPtr;
+
+	/**
+		Create information objects and subcomponent.
+		\param	componentId		ID of subcomponent.
+		\param	subContextPtr	pointer to subcomponent context will be set to new context object if needed.
+		\param	subComponentPtr	optional pointer to subcomponent will be set to new component object.
+		\param	isOwned			true, if created component will be owned by this component.
+		\return					true if success.
+	*/
+	bool CreateSubcomponentInfo(
+				const std::string& componentId,
+				ContextPtr& subContextPtr,
+				ComponentPtr* subComponentPtr,
+				bool isOwned) const;
+
+	bool EnsureAutoInitComponentsCreated() const;
+
+private:
+	struct ComponentInfo
+	{
+		ComponentInfo(): isInitialized(false){}
+		ComponentInfo(const ComponentInfo& info)
+		:	componentPtr(info.componentPtr),
+			contextPtr(info.contextPtr),
+			isInitialized(false){}
+
+		ComponentPtr componentPtr;
+		ContextPtr contextPtr;
+		bool isInitialized;
+	};
+
+	typedef std::map< std::string, ComponentInfo > ComponentMap;
+
+	mutable ComponentMap m_componentMap;
+
+	mutable IRegistry::Ids m_autoInitComponentIds;
+	int m_isAutoInitBlockCount;
+
+	const IComponentContext* m_contextPtr;
+	const IComponent* m_parentPtr;
+	bool m_isParentOwner;
+};
+
+
+// inline methods
+
+template <class InterfaceType>
+inline InterfaceType* CCompositeComponent::GetComponentInterface(const std::string& subId)
+{
+	static istd::CClassInfo info(typeid(InterfaceType));
+
+	return static_cast<InterfaceType*>(GetInterface(info, subId));
+}
+
+
+} // namespace icomp
+
+
+#endif // !icomp_CCompositeComponent_included
+
+

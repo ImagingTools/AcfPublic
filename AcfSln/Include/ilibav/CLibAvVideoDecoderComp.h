@@ -1,0 +1,153 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
+#ifndef ilibav_CLibAvVideoDecoderComp_included
+#define ilibav_CLibAvVideoDecoderComp_included
+
+
+// STL includes
+#include <vector>
+
+// LIBAV includes
+extern "C"{
+#define inline _inline
+#include "libavformat/avformat.h"
+#undef inline
+}
+
+// ACF includes
+#include "icomp/CComponentBase.h"
+#include "iproc/IBitmapAcquisition.h"
+#include "iproc/TSyncProcessorCompBase.h"
+#include "imm/IVideoController.h"
+
+#include "imeas/IDataSequence.h"
+
+
+namespace ilibav
+{
+
+
+/**
+	Implementation of imm::IVideoController and iproc::IBitmapAcquisition interfaces using LibAv library.
+*/
+class CLibAvVideoDecoderComp:
+			public iproc::TSyncProcessorCompBase<iproc::IBitmapAcquisition>,
+			virtual public imm::IVideoController
+{
+public:
+	typedef iproc::TSyncProcessorCompBase<iproc::IBitmapAcquisition> BaseClass;
+
+	enum MessageId
+	{
+		MI_CANNOT_OPEN = 0x56a20,
+		MI_FORMAT_PROBLEM
+	};
+
+	I_BEGIN_COMPONENT(CLibAvVideoDecoderComp);
+		I_REGISTER_INTERFACE(istd::IChangeable);
+		I_REGISTER_INTERFACE(imm::IMediaController);
+		I_REGISTER_INTERFACE(imm::IVideoInfo);
+		I_REGISTER_INTERFACE(imm::IVideoController);
+		I_ASSIGN(m_bitmapObjectCompPtr, "Bitmap", "Bitmap object where current bitmap is stored", false, "Bitmap");
+		I_ASSIGN(m_audioSequenceCompPtr, "AudioSequence", "Sample sequence object where current audio sample is stored", false, "AudioSequence");
+		I_ASSIGN(m_autoAudioGrabLengthAttrPtr, "AutoAudioGrabLength", "If enabled, audio will be automatically grabbed", false, 1.0);
+	I_END_COMPONENT();
+
+	CLibAvVideoDecoderComp();
+	virtual ~CLibAvVideoDecoderComp();
+
+	// reimplemented (iproc::IBitmapAcquisition)
+	virtual istd::CIndex2d GetBitmapSize(const iprm::IParamsSet* paramsPtr) const;
+
+	// reimplemented (iproc::IProcessor)
+	virtual int DoProcessing(
+				const iprm::IParamsSet* paramsPtr,
+				const istd::IPolymorphic* inputPtr,
+				istd::IChangeable* outputPtr,
+				iproc::IProgressManager* progressManagerPtr = NULL);
+
+	// reimplemented (imm::IMediaController)
+	virtual istd::CString GetOpenedMediumUrl() const;
+	virtual bool OpenMediumUrl(const istd::CString& url, bool autoPlay = true);
+	virtual void CloseMedium();
+	virtual bool IsPlaying() const;
+	virtual bool SetPlaying(bool state = true);
+	virtual double GetMediumLength() const;
+	virtual double GetCurrentPosition() const;
+	virtual bool SetCurrentPosition(double position);
+	virtual int	GetSupportedFeatures() const;
+
+	// reimplemented (imm::IVideoInfo)
+	virtual int GetFramesCount() const;
+	virtual double GetFrameIntervall() const;
+	virtual istd::CIndex2d GetFrameSize() const;
+	virtual double GetPixelAspectRatio() const;
+
+	// reimplemented (imm::IVideoController)
+	virtual int GetCurrentFrame() const;
+	virtual bool SetCurrentFrame(int frameIndex);
+
+protected:
+	bool ReadNextFrame();
+
+	// reimplemented (icomp::CComponentBase)
+	void OnComponentCreated();
+	void OnComponentDestroyed();
+
+private:
+	int m_videoStreamId;
+	int m_audioStreamId;
+	AVFormatContext* m_formatContextPtr;
+	AVCodecContext* m_videoCodecContextPtr;
+	AVCodecContext* m_audioCodecContextPtr;
+	AVCodec* m_videoCodecPtr;
+	AVCodec* m_audioCodecPtr;
+
+	AVFrame* m_framePtr;
+	AVFrame* m_frameRgbPtr;
+
+	uint8_t* m_audioInputBuffer;
+	int16_t* m_audioOutputBuffer;
+	bool m_ignoreFirstAudioFrame;
+
+	std::vector<I_BYTE> m_imageBuffer;
+
+	AVPacket m_packet;
+	int m_bytesRemaining;
+	uint8_t* m_rawDataPtr;
+
+	istd::CString m_currentUrl;
+
+	I_REF(iimg::IBitmap, m_bitmapObjectCompPtr);
+	I_REF(imeas::IDataSequence, m_audioSequenceCompPtr);
+	I_ATTR(double, m_autoAudioGrabLengthAttrPtr);
+
+	int m_currentFrame;
+};
+
+
+} // namespace ilibav
+
+
+#endif // !ilibav_CLibAvVideoDecoderComp_included
+
