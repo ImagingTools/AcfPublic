@@ -666,6 +666,12 @@ CCompositor::CAcfGuiVocePck::CMultiDocAppRegistry::CMultiDocAppRegistry()
 			I_ASSERT(attrStyleSheetPtr != NULL);
 			attrStyleSheetPtr->SetValue(L":/Style/Resources/Style/AcfStyle.ass");
 		}
+
+		// create and set attribute value for 'TranslationManager'
+		icomp::IRegistryElement::AttributeInfo* attrInfoTranslationManagerPtr = infoAppPtr->elementPtr->InsertAttributeInfo("TranslationManager", "icomp::CReferenceAttribute");
+		if (attrInfoTranslationManagerPtr != NULL){
+			attrInfoTranslationManagerPtr->exportId = "TranslationManager";
+		}
 	}
 
 	// element 'ApplicationInfo' of type BasePck::ApplicationInfo
@@ -1132,6 +1138,7 @@ CCompositor::CAcfSlnVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"0.4.1");
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"0.4.2");
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"0.4.3");
+			nattrInfoKnownVersionNamesPtr->InsertValue(L"0.4.4");
 		}
 
 		// create and set attribute value for 'KnownVersions'
@@ -1152,6 +1159,7 @@ CCompositor::CAcfSlnVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 			nattrInfoKnownVersionsPtr->InsertValue(292);
 			nattrInfoKnownVersionsPtr->InsertValue(307);
 			nattrInfoKnownVersionsPtr->InsertValue(313);
+			nattrInfoKnownVersionsPtr->InsertValue(341);
 		}
 
 		// create and set attribute value for 'SlaveVersionInfo'
@@ -1190,7 +1198,7 @@ CCompositor::CAcfSlnVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(338);
+			attrVersionNumberPtr->SetValue(342);
 		}
 	}
 
@@ -1262,7 +1270,71 @@ CCompositor::CAcfVocePck::CAcfVocePck(const icomp::IComponentEnvironmentManager*
 :	icomp::CCompositePackageStaticInfo("AcfVoce", managerPtr)
 
 {
+	RegisterEmbeddedComponent("AcfLocalization");
 	RegisterEmbeddedComponent("VersionInfo");
+}
+
+
+// Embedded class CAcfLocalizationRegistry
+
+CCompositor::CAcfVocePck::CAcfLocalizationRegistry::CAcfLocalizationRegistry()
+{
+	// element 'AcfLocalization' of type QtPck::TranslationManager
+	icomp::IRegistry::ElementInfo* infoAcfLocalizationPtr = InsertElementInfo(
+				"AcfLocalization",
+				icomp::CComponentAddress("QtPck", "TranslationManager"),
+				true);
+	if ((infoAcfLocalizationPtr != NULL) && infoAcfLocalizationPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'LanguageIds'
+		icomp::IRegistryElement::AttributeInfo* attrInfoLanguageIdsPtr = infoAcfLocalizationPtr->elementPtr->InsertAttributeInfo("LanguageIds", "icomp::TMultiAttribute<istd::CString>");
+		if (attrInfoLanguageIdsPtr != NULL){
+			attrInfoLanguageIdsPtr->exportId = "LanguageIds";
+			attrInfoLanguageIdsPtr->attributePtr.SetPtr(new icomp::TMultiAttribute<istd::CString>);
+			I_ASSERT(attrInfoLanguageIdsPtr->attributePtr.IsValid());
+
+			icomp::CMultiStringAttribute* nattrInfoLanguageIdsPtr = dynamic_cast<icomp::CMultiStringAttribute*>(attrInfoLanguageIdsPtr->attributePtr.GetPtr());
+			I_ASSERT(nattrInfoLanguageIdsPtr != NULL);
+
+			nattrInfoLanguageIdsPtr->Reset();
+			nattrInfoLanguageIdsPtr->InsertValue(L"de_DE");
+			nattrInfoLanguageIdsPtr->InsertValue(L"ru_RU");
+			nattrInfoLanguageIdsPtr->InsertValue(L"pl_PL");
+		}
+
+		// create and set attribute value for 'SlaveTranslationManager'
+		icomp::IRegistryElement::AttributeInfo* attrInfoSlaveTranslationManagerPtr = infoAcfLocalizationPtr->elementPtr->InsertAttributeInfo("SlaveTranslationManager", "icomp::CReferenceAttribute");
+		if (attrInfoSlaveTranslationManagerPtr != NULL){
+			attrInfoSlaveTranslationManagerPtr->exportId = "SlaveTranslationManager";
+		}
+
+		// create and set attribute value for 'TranslationFilePath'
+		icomp::IRegistryElement::AttributeInfo* attrInfoTranslationFilePathPtr = infoAcfLocalizationPtr->elementPtr->InsertAttributeInfo("TranslationFilePath", "icomp::TAttribute<istd::CString>");
+		if (attrInfoTranslationFilePathPtr != NULL){
+			attrInfoTranslationFilePathPtr->attributePtr.SetPtr(new icomp::TAttribute<istd::CString>);
+			I_ASSERT(attrInfoTranslationFilePathPtr->attributePtr.IsValid());
+
+			icomp::CStringAttribute* attrTranslationFilePathPtr = dynamic_cast<icomp::CStringAttribute*>(attrInfoTranslationFilePathPtr->attributePtr.GetPtr());
+			I_ASSERT(attrTranslationFilePathPtr != NULL);
+			attrTranslationFilePathPtr->SetValue(L":/Translations");
+		}
+
+		// create and set attribute value for 'TranslationFilePrefix'
+		icomp::IRegistryElement::AttributeInfo* attrInfoTranslationFilePrefixPtr = infoAcfLocalizationPtr->elementPtr->InsertAttributeInfo("TranslationFilePrefix", "icomp::TAttribute<istd::CString>");
+		if (attrInfoTranslationFilePrefixPtr != NULL){
+			attrInfoTranslationFilePrefixPtr->attributePtr.SetPtr(new icomp::TAttribute<istd::CString>);
+			I_ASSERT(attrInfoTranslationFilePrefixPtr->attributePtr.IsValid());
+
+			icomp::CStringAttribute* attrTranslationFilePrefixPtr = dynamic_cast<icomp::CStringAttribute*>(attrInfoTranslationFilePrefixPtr->attributePtr.GetPtr());
+			I_ASSERT(attrTranslationFilePrefixPtr != NULL);
+			attrTranslationFilePrefixPtr->SetValue(L"Acf");
+		}
+	}
+
+	// interface export
+	SetElementInterfaceExported(
+				"AcfLocalization",
+				"iqt::ITranslationManager",
+				true);
 }
 
 
@@ -1312,6 +1384,7 @@ CCompositor::CAcfVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"1.1.0");
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"1.2.0");
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"1.3.0");
+			nattrInfoKnownVersionNamesPtr->InsertValue(L"1.4.0");
 		}
 
 		// create and set attribute value for 'KnownVersions'
@@ -1339,6 +1412,7 @@ CCompositor::CAcfVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 			nattrInfoKnownVersionsPtr->InsertValue(1644);
 			nattrInfoKnownVersionsPtr->InsertValue(1688);
 			nattrInfoKnownVersionsPtr->InsertValue(1705);
+			nattrInfoKnownVersionsPtr->InsertValue(1779);
 		}
 
 		// create and set attribute value for 'SlaveVersionInfo'
@@ -1377,7 +1451,7 @@ CCompositor::CAcfVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(1774);
+			attrVersionNumberPtr->SetValue(1781);
 		}
 	}
 
@@ -1456,6 +1530,7 @@ CCompositor::CCmpstrVocePck::CCmpstrVocePck(const icomp::IComponentEnvironmentMa
 	RegisterEmbeddedComponent("CompositorSettings");
 	RegisterEmbeddedComponent("CompositorSettingsDialog");
 	RegisterEmbeddedComponent("CompositorTemplate");
+	RegisterEmbeddedComponent("CompositorTranslationManager");
 	RegisterEmbeddedComponent("PackageOverviewDock");
 	RegisterEmbeddedComponent("VisualRegistryView");
 }
@@ -1895,6 +1970,17 @@ CCompositor::CCmpstrVocePck::CCompositorApplicationRegistry::CCompositorApplicat
 			attrSplashScreenImagePtr->SetValue(L":/Images/CompositorSplashScreen");
 		}
 
+		// create and set attribute value for 'TranslationManager'
+		icomp::IRegistryElement::AttributeInfo* attrInfoTranslationManagerPtr = infoApplicationPtr->elementPtr->InsertAttributeInfo("TranslationManager", "icomp::CReferenceAttribute");
+		if (attrInfoTranslationManagerPtr != NULL){
+			attrInfoTranslationManagerPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoTranslationManagerPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrTranslationManagerPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoTranslationManagerPtr->attributePtr.GetPtr());
+			I_ASSERT(attrTranslationManagerPtr != NULL);
+			attrTranslationManagerPtr->SetValue("TranslationManager");
+		}
+
 		// create and set attribute value for 'VersionInfo'
 		icomp::IRegistryElement::AttributeInfo* attrInfoVersionInfoPtr = infoApplicationPtr->elementPtr->InsertAttributeInfo("VersionInfo", "icomp::CReferenceAttribute");
 		if (attrInfoVersionInfoPtr != NULL){
@@ -1936,6 +2022,11 @@ CCompositor::CCmpstrVocePck::CCompositorApplicationRegistry::CCompositorApplicat
 		}
 	}
 
+	// element 'TranslationManager' of type CmpstrVoce::CompositorTranslationManager
+	InsertElementInfo(
+				"TranslationManager",
+				icomp::CComponentAddress("CmpstrVoce", "CompositorTranslationManager"),
+				true);
 	// element 'VersionInfo' of type AcfSlnVoce::VersionInfo
 	icomp::IRegistry::ElementInfo* infoVersionInfoPtr = InsertElementInfo(
 				"VersionInfo",
@@ -2948,6 +3039,23 @@ CCompositor::CCmpstrVocePck::CCompositorTemplateRegistry::CCompositorTemplateReg
 }
 
 
+// Embedded class CCompositorTranslationManagerRegistry
+
+CCompositor::CCmpstrVocePck::CCompositorTranslationManagerRegistry::CCompositorTranslationManagerRegistry()
+{
+	// element 'CompositorTranslationManager' of type AcfVoce::AcfLocalization
+	InsertElementInfo(
+				"CompositorTranslationManager",
+				icomp::CComponentAddress("AcfVoce", "AcfLocalization"),
+				true);
+	// interface export
+	SetElementInterfaceExported(
+				"CompositorTranslationManager",
+				"iqt::ITranslationManager",
+				true);
+}
+
+
 // Embedded class CPackageOverviewDockRegistry
 
 CCompositor::CCmpstrVocePck::CPackageOverviewDockRegistry::CPackageOverviewDockRegistry()
@@ -3378,6 +3486,8 @@ CCompositor::CQtPck::CQtPck()
 	RegisterEmbeddedComponentInfo("ExtendedDocumentTemplate", &infoExtendedDocumentTemplate);
 	const icomp::IComponentStaticInfo& infoSettingsSerializer = QtPck::SettingsSerializer::InitStaticInfo(NULL);
 	RegisterEmbeddedComponentInfo("SettingsSerializer", &infoSettingsSerializer);
+	const icomp::IComponentStaticInfo& infoTranslationManager = QtPck::TranslationManager::InitStaticInfo(NULL);
+	RegisterEmbeddedComponentInfo("TranslationManager", &infoTranslationManager);
 }
 
 
@@ -3407,6 +3517,7 @@ CCompositor::CLocalEnvironmentManager::CLocalEnvironmentManager()
 	m_registriesMap[icomp::CComponentAddress("AcfGuiVoce", "MultiDocApp")].SetPtr(new CAcfGuiVocePck::CMultiDocAppRegistry());
 	m_registriesMap[icomp::CComponentAddress("AcfGuiVoce", "SettingsPersistence")].SetPtr(new CAcfGuiVocePck::CSettingsPersistenceRegistry());
 	m_registriesMap[icomp::CComponentAddress("AcfSlnVoce", "VersionInfo")].SetPtr(new CAcfSlnVocePck::CVersionInfoRegistry());
+	m_registriesMap[icomp::CComponentAddress("AcfVoce", "AcfLocalization")].SetPtr(new CAcfVocePck::CAcfLocalizationRegistry());
 	m_registriesMap[icomp::CComponentAddress("AcfVoce", "VersionInfo")].SetPtr(new CAcfVocePck::CVersionInfoRegistry());
 	m_registriesMap[icomp::CComponentAddress("CmpstrVoce", "AttributeEditorDock")].SetPtr(new CCmpstrVocePck::CAttributeEditorDockRegistry());
 	m_registriesMap[icomp::CComponentAddress("CmpstrVoce", "ClassHelpDock")].SetPtr(new CCmpstrVocePck::CClassHelpDockRegistry());
@@ -3415,6 +3526,7 @@ CCompositor::CLocalEnvironmentManager::CLocalEnvironmentManager()
 	m_registriesMap[icomp::CComponentAddress("CmpstrVoce", "CompositorSettings")].SetPtr(new CCmpstrVocePck::CCompositorSettingsRegistry());
 	m_registriesMap[icomp::CComponentAddress("CmpstrVoce", "CompositorSettingsDialog")].SetPtr(new CCmpstrVocePck::CCompositorSettingsDialogRegistry());
 	m_registriesMap[icomp::CComponentAddress("CmpstrVoce", "CompositorTemplate")].SetPtr(new CCmpstrVocePck::CCompositorTemplateRegistry());
+	m_registriesMap[icomp::CComponentAddress("CmpstrVoce", "CompositorTranslationManager")].SetPtr(new CCmpstrVocePck::CCompositorTranslationManagerRegistry());
 	m_registriesMap[icomp::CComponentAddress("CmpstrVoce", "PackageOverviewDock")].SetPtr(new CCmpstrVocePck::CPackageOverviewDockRegistry());
 	m_registriesMap[icomp::CComponentAddress("CmpstrVoce", "VisualRegistryView")].SetPtr(new CCmpstrVocePck::CVisualRegistryViewRegistry());
 

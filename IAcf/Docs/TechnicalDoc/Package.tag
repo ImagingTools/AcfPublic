@@ -11551,10 +11551,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const istd::CString &amp;</type>
+      <type>virtual istd::CString</type>
       <name>GetOptionName</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>4365d6c1fec1f89dbd2f05c539502409</anchor>
+      <anchor>75c9b3d67fec6f18db4add906ed9c619</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="slot" protection="protected">

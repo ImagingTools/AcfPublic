@@ -28,7 +28,7 @@
 
 #include "iwin/CFileSystem.h"
 #include "iwin/CTimer.h"
-#include "iwin/CApplicationEnvironment.h"
+#include "iwin/CProcessEnvironment.h"
 #include "iwin/CCriticalSection.h"
 #include "iwin/CSystemEnvironment.h"
 #include "iwin/CSystemInfo.h"
@@ -40,8 +40,8 @@ namespace iwin
 
 void CDefaultServicesProvider::RegisterServices()
 {
-	static iwin::CApplicationEnvironment applicationEnvironment;
-	istd::CStaticServicesProvider::RegisterService<isys::IApplicationEnvironment>(&applicationEnvironment);
+	static iwin::CProcessEnvironment applicationEnvironment;
+	istd::CStaticServicesProvider::RegisterService<isys::IProcessEnvironment>(&applicationEnvironment);
 
 	static iwin::CCriticalSection criticalSection;
 	istd::CStaticServicesProvider::RegisterService<isys::ICriticalSection>(&criticalSection);

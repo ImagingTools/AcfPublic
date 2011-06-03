@@ -28,6 +28,8 @@
 #include <QDir>
 #include <QStringList>
 
+
+// ACF includes
 #include "iser/IFileLoader.h"
 
 #include "icomp/CComponentBase.h"
@@ -45,6 +47,7 @@ namespace iqt
 	Bitmap loader component implementing interfaces \c iser::IFileLoader.
 */
 class CBitmapLoaderComp:
+			public QObject,
 			public ibase::CLoggerComponentBase,
 			virtual public iser::IFileLoader
 {

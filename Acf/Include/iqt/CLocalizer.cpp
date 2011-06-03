@@ -20,36 +20,33 @@
 ********************************************************************************/
 
 
-#ifndef iqt_CApplicationEnvironment_included
-#define iqt_CApplicationEnvironment_included
+#include "iqt/CLocalizer.h"
 
 
-#include "isys/IApplicationEnvironment.h"
-
-#include "iqt/iqt.h"
+// Qt includes
+#include <QCoreApplication>
 
 
 namespace iqt
 {
 
 
-/**
-	Qt-based implementation of application environment information.
-*/
-class CApplicationEnvironment: virtual public isys::IApplicationEnvironment
+// public methods
+
+// reimplemented (istd::ILocalizer)
+
+istd::CString CLocalizer::GetTranslatedText(
+			const std::string& context,
+			const istd::CString& text,
+			const std::string& disambiguation) const
 {
-public:
-	// reimplemented (isys::IApplicationEnvironment)
-	virtual istd::CString GetTempDirPath() const;
-	virtual istd::CString GetWorkingDirectory() const;
-	virtual istd::CStringList GetApplicationArguments() const;
-	virtual istd::CString GetModulePath(bool useApplicationModule = false, bool onlyDirectory = false) const;
-	virtual EnvironmentVariables GetEnvironmentVariables() const;
-	virtual void SetEnvironmentVariableValue(const istd::CString& variableName, const istd::CString& value);
-};
+	std::string textKey = text.ToString();
+
+	return iqt::GetCString(
+				QCoreApplication::translate(context.c_str(), textKey.c_str(), disambiguation.c_str()));
+}
 
 
 } // namespace iqt
 
 
-#endif // !iqt_CApplicationEnvironment_included

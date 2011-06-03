@@ -133,7 +133,7 @@ int CSelectableFileConverterComp::GetOptionsCount() const
 }
 
 
-const istd::CString& CSelectableFileConverterComp::GetOptionName(int index) const
+istd::CString CSelectableFileConverterComp::GetOptionName(int index) const
 {
 	I_ASSERT(m_slaveConverterNamesAttrPtr.IsValid());
 

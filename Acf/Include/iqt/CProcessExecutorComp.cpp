@@ -47,7 +47,7 @@ CProcessExecutorComp::CProcessExecutorComp()
 
 // reimplemented (ibase::IProcessExecutor)
 	
-void CProcessExecutorComp::SetEnvironment(const isys::IApplicationEnvironment& processEnvironment)
+void CProcessExecutorComp::SetEnvironment(const isys::IProcessEnvironment& processEnvironment)
 {
 	QMutexLocker blockProcessing(&m_lock);
 
@@ -57,11 +57,11 @@ void CProcessExecutorComp::SetEnvironment(const isys::IApplicationEnvironment& p
 		return;
 	}
 
-	isys::IApplicationEnvironment::EnvironmentVariables environmentVariables = processEnvironment.GetEnvironmentVariables();
+	isys::IProcessEnvironment::EnvironmentVariables environmentVariables = processEnvironment.GetEnvironmentVariables();
 
 	QProcessEnvironment qtProcessEvironment;
 
-	for (		isys::IApplicationEnvironment::EnvironmentVariables::const_iterator index = environmentVariables.begin();
+	for (		isys::IProcessEnvironment::EnvironmentVariables::const_iterator index = environmentVariables.begin();
 				index != environmentVariables.end();
 				index++){
 		qtProcessEvironment.insert(iqt::GetQString(index->first), iqt::GetQString(index->second));
@@ -73,7 +73,7 @@ void CProcessExecutorComp::SetEnvironment(const isys::IApplicationEnvironment& p
 }
 
 
-int CProcessExecutorComp::Execute(const istd::CString& executablePath, const istd::CStringList& processArguments)
+int CProcessExecutorComp::ExecuteProcess(const istd::CString& executablePath, const istd::CStringList& processArguments)
 {
 	QMutexLocker blockProcessing(&m_lock);
 

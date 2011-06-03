@@ -533,7 +533,7 @@
     <filename>_i_process_executor_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
-    <includes id="_i_application_environment_8h" name="IApplicationEnvironment.h" local="yes" imported="no">isys/IApplicationEnvironment.h</includes>
+    <includes id="_i_process_environment_8h" name="IProcessEnvironment.h" local="yes" imported="no">isys/IProcessEnvironment.h</includes>
     <class kind="class">ibase::IProcessExecutor</class>
     <namespace>ibase</namespace>
   </compound>
@@ -592,6 +592,7 @@
     <filename>_t_file_serializer_comp_8h</filename>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <includes id="_c_static_services_provider_8h" name="CStaticServicesProvider.h" local="yes" imported="no">istd/CStaticServicesProvider.h</includes>
+    <includes id="itr_8h" name="itr.h" local="yes" imported="no">istd/itr.h</includes>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_file_system_8h" name="IFileSystem.h" local="yes" imported="no">isys/IFileSystem.h</includes>
@@ -2777,15 +2778,6 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>CApplicationEnvironment.h</name>
-    <path>E:/Work/Projects/Development/Acf/Include/iqt/</path>
-    <filename>_c_application_environment_8h</filename>
-    <includes id="_i_application_environment_8h" name="IApplicationEnvironment.h" local="yes" imported="no">isys/IApplicationEnvironment.h</includes>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CApplicationEnvironment</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
     <name>CApplicationSettingsProviderComp.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/iqt/</path>
     <filename>_c_application_settings_provider_comp_8h</filename>
@@ -2959,6 +2951,15 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
+    <name>CLocalizer.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqt/</path>
+    <filename>_c_localizer_8h</filename>
+    <includes id="_i_localizer_8h" name="ILocalizer.h" local="yes" imported="no">istd/ILocalizer.h</includes>
+    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
+    <class kind="class">iqt::CLocalizer</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
     <name>CNetworkWriteArchive.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/iqt/</path>
     <filename>_c_network_write_archive_8h</filename>
@@ -2983,6 +2984,15 @@
     <includes id="_c_dll_functions_provider_8h" name="CDllFunctionsProvider.h" local="yes" imported="no">iqt/CDllFunctionsProvider.h</includes>
     <class kind="class">iqt::CPackagesLoaderComp</class>
     <class kind="class">iqt::CPackagesLoaderComp::LogingRegistry</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CProcessEnvironment.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqt/</path>
+    <filename>_c_process_environment_8h</filename>
+    <includes id="_i_process_environment_8h" name="IProcessEnvironment.h" local="yes" imported="no">isys/IProcessEnvironment.h</includes>
+    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
+    <class kind="class">iqt::CProcessEnvironment</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -3107,6 +3117,18 @@
     <includes id="_i_timer_8h" name="ITimer.h" local="yes" imported="no">isys/ITimer.h</includes>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <class kind="class">iqt::CTimer</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTranslationManagerComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqt/</path>
+    <filename>_c_translation_manager_comp_8h</filename>
+    <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_translation_manager_8h" name="ITranslationManager.h" local="yes" imported="no">iqt/ITranslationManager.h</includes>
+    <class kind="class">iqt::CTranslationManagerComp</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -3322,7 +3344,6 @@
     <name>ITranslationManager.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/iqt/</path>
     <filename>_i_translation_manager_8h</filename>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <class kind="class">iqt::ITranslationManager</class>
     <namespace>iqt</namespace>
@@ -3740,6 +3761,7 @@
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
     <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_translation_manager_8h" name="ITranslationManager.h" local="yes" imported="no">iqt/ITranslationManager.h</includes>
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
     <includes id="_i_gui_application_8h" name="IGuiApplication.h" local="yes" imported="no">iqtgui/IGuiApplication.h</includes>
     <class kind="class">iqtgui::CApplicationComp</class>
@@ -4456,6 +4478,7 @@
     <name>CBinaryReadArchiveBase.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/iser/</path>
     <filename>_c_binary_read_archive_base_8h</filename>
+    <includes id="itr_8h" name="itr.h" local="yes" imported="no">istd/itr.h</includes>
     <includes id="_c_read_archive_base_8h" name="CReadArchiveBase.h" local="yes" imported="no">iser/CReadArchiveBase.h</includes>
     <class kind="class">iser::CBinaryReadArchiveBase</class>
     <namespace>iser</namespace>
@@ -4901,6 +4924,14 @@
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
+    <name>ILocalizer.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/istd/</path>
+    <filename>_i_localizer_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <class kind="class">istd::ILocalizer</class>
+    <namespace>istd</namespace>
+  </compound>
+  <compound kind="file">
     <name>ILogger.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/istd/</path>
     <filename>_i_logger_8h</filename>
@@ -5144,6 +5175,21 @@
       <anchorfile>istd_8h.html</anchorfile>
       <anchor>72b20680a1401ded1768261f3e776916</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>itr.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/istd/</path>
+    <filename>itr_8h</filename>
+    <includes id="_i_localizer_8h" name="ILocalizer.h" local="yes" imported="no">istd/ILocalizer.h</includes>
+    <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
+    <includes id="_c_static_services_provider_8h" name="CStaticServicesProvider.h" local="yes" imported="no">istd/CStaticServicesProvider.h</includes>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_DECLARE_TR_FUNCTION</name>
+      <anchorfile>itr_8h.html</anchorfile>
+      <anchor>3ea6b2fead5c65dc46064b2a2bab8b8f</anchor>
+      <arglist>(ContextName)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -5430,16 +5476,6 @@
     <namespace>isys</namespace>
   </compound>
   <compound kind="file">
-    <name>IApplicationEnvironment.h</name>
-    <path>E:/Work/Projects/Development/Acf/Include/isys/</path>
-    <filename>_i_application_environment_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
-    <includes id="isys_8h" name="isys.h" local="yes" imported="no">isys/isys.h</includes>
-    <class kind="class">isys::IApplicationEnvironment</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
     <name>ICriticalSection.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/isys/</path>
     <filename>_i_critical_section_8h</filename>
@@ -5484,6 +5520,16 @@
     <includes id="isys_8h" name="isys.h" local="yes" imported="no">isys/isys.h</includes>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <class kind="class">isys::IFunctionsProvider</class>
+    <namespace>isys</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IProcessEnvironment.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/isys/</path>
+    <filename>_i_process_environment_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
+    <includes id="isys_8h" name="isys.h" local="yes" imported="no">isys/isys.h</includes>
+    <class kind="class">isys::IProcessEnvironment</class>
     <namespace>isys</namespace>
   </compound>
   <compound kind="file">
@@ -5664,10 +5710,10 @@
     <class kind="class">iqt::CDefaultServicesProvider</class>
     <class kind="class">istd::CStaticServicesProvider</class>
     <class kind="class">isys::CFileInfo</class>
-    <class kind="class">isys::IApplicationEnvironment</class>
     <class kind="class">isys::ICriticalSection</class>
     <class kind="class">isys::IDateTime</class>
     <class kind="class">isys::IFileSystem</class>
+    <class kind="class">isys::IProcessEnvironment</class>
     <class kind="class">isys::ISystemEnvironment</class>
     <class kind="class">isys::ISystemInfo</class>
     <class kind="class">isys::ITimer</class>
@@ -8497,10 +8543,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const istd::CString &amp;</type>
+      <type>virtual istd::CString</type>
       <name>GetOptionName</name>
       <anchorfile>classibase_1_1_c_selectable_file_converter_comp.html</anchorfile>
-      <anchor>a51095951a772fc6d996623d53dc4985</anchor>
+      <anchor>290829b2f2c8f53b87a64b1011de7a1c</anchor>
       <arglist>(int index) const </arglist>
     </member>
   </compound>
@@ -9353,14 +9399,14 @@
       <type>virtual void</type>
       <name>SetEnvironment</name>
       <anchorfile>classibase_1_1_i_process_executor.html</anchorfile>
-      <anchor>67e7b95702f1ad021e055233a43d0656</anchor>
-      <arglist>(const isys::IApplicationEnvironment &amp;processEnvironment)=0</arglist>
+      <anchor>c34fbab12b75f42b9cad451c7f24dd3a</anchor>
+      <arglist>(const isys::IProcessEnvironment &amp;processEnvironment)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
-      <name>Execute</name>
+      <name>ExecuteProcess</name>
       <anchorfile>classibase_1_1_i_process_executor.html</anchorfile>
-      <anchor>2ffd046e215e645f9f6d2deda79c1561</anchor>
+      <anchor>f7d2d2375f8294464e63b2746c186438</anchor>
       <arglist>(const istd::CString &amp;executablePath, const istd::CStringList &amp;processArguments)=0</arglist>
     </member>
   </compound>
@@ -12490,13 +12536,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>4d23199a694f8f9c9bd5dca41e2f9336</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
       <anchor>9fba419020f348e96b8997c35a65525f</anchor>
@@ -12507,6 +12546,13 @@
       <name>OnRetranslate</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
       <anchor>70908ffbb93dc94b6cd35a825147d0c5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>277a7b1ca10749405ab7cc185d339987</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="friend" protection="private">
@@ -21171,6 +21217,7 @@
     <name>imath::TMathVectorWrap</name>
     <filename>classimath_1_1_t_math_vector_wrap.html</filename>
     <templarg>Base</templarg>
+    <base>ibase::Base</base>
     <member kind="typedef">
       <type>Base</type>
       <name>BaseClass</name>
@@ -23130,10 +23177,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const istd::CString &amp;</type>
+      <type>virtual istd::CString</type>
       <name>GetOptionName</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>b05af149bed91824af8d322b8ee7bfbd</anchor>
+      <anchor>5d2eb7ca76cc8efee6db14758ae564b0</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -23345,10 +23392,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const istd::CString &amp;</type>
+      <type>virtual istd::CString</type>
       <name>GetOptionName</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>01fcea66a5f43387f0b05ac43cd06df3</anchor>
+      <anchor>ae6b92bf0b46593dc5e65ddd6c0f4a1a</anchor>
       <arglist>(int index) const </arglist>
     </member>
   </compound>
@@ -23741,10 +23788,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const istd::CString &amp;</type>
+      <type>virtual istd::CString</type>
       <name>GetOptionName</name>
       <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>8d9886a75b9ce23daf17c1e0f999a14a</anchor>
+      <anchor>62f01670db997af122efa4eeb20d89be</anchor>
       <arglist>(int index) const =0</arglist>
     </member>
   </compound>
@@ -24071,10 +24118,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const istd::CString &amp;</type>
+      <type>virtual istd::CString</type>
       <name>GetOptionName</name>
       <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
-      <anchor>720654878f5229dc0158ac10a527475d</anchor>
+      <anchor>bdfa8daae307a43f4b95b360da352a2b</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -24986,7 +25033,6 @@
   <compound kind="namespace">
     <name>iqt</name>
     <filename>namespaceiqt.html</filename>
-    <class kind="class">iqt::CApplicationEnvironment</class>
     <class kind="class">iqt::CApplicationSettingsProviderComp</class>
     <class kind="class">iqt::CBitmap</class>
     <class kind="class">iqt::CBitmapLoaderComp</class>
@@ -25004,8 +25050,10 @@
     <class kind="class">iqt::CFileListProviderComp</class>
     <class kind="class">iqt::CFileSystem</class>
     <class kind="class">iqt::CIniSettingsProviderComp</class>
+    <class kind="class">iqt::CLocalizer</class>
     <class kind="class">iqt::CNetworkWriteArchive</class>
     <class kind="class">iqt::CPackagesLoaderComp</class>
+    <class kind="class">iqt::CProcessEnvironment</class>
     <class kind="class">iqt::CProcessExecutorComp</class>
     <class kind="class">iqt::CReflectedBitmapBase</class>
     <class kind="class">iqt::CRegistriesManagerComp</class>
@@ -25019,6 +25067,7 @@
     <class kind="class">iqt::CSignalBlocker</class>
     <class kind="class">iqt::CSystemEnvironment</class>
     <class kind="class">iqt::CTimer</class>
+    <class kind="class">iqt::CTranslationManagerComp</class>
     <class kind="class">iqt::CXmlFileReadArchive</class>
     <class kind="class">iqt::CXmlFileWriteArchive</class>
     <class kind="class">iqt::IQImageProvider</class>
@@ -25163,53 +25212,6 @@
       <anchorfile>namespaceiqt.html</anchorfile>
       <anchor>e36880c4f1ca011484ac14f02bf5a10a</anchor>
       <arglist>(const QDateTime &amp;dateTime)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CApplicationEnvironment</name>
-    <filename>classiqt_1_1_c_application_environment.html</filename>
-    <base virtualness="virtual">isys::IApplicationEnvironment</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetTempDirPath</name>
-      <anchorfile>classiqt_1_1_c_application_environment.html</anchorfile>
-      <anchor>7dbf60ba29ac67481fc32ecefe6f6ca6</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetWorkingDirectory</name>
-      <anchorfile>classiqt_1_1_c_application_environment.html</anchorfile>
-      <anchor>e82450044829a05805550fdbfd3a199b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CStringList</type>
-      <name>GetApplicationArguments</name>
-      <anchorfile>classiqt_1_1_c_application_environment.html</anchorfile>
-      <anchor>32b32d2c8fd983b2630064be4332c47c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetModulePath</name>
-      <anchorfile>classiqt_1_1_c_application_environment.html</anchorfile>
-      <anchor>9e7b39208760739acc381e59c3212e07</anchor>
-      <arglist>(bool useApplicationModule=false, bool onlyDirectory=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual EnvironmentVariables</type>
-      <name>GetEnvironmentVariables</name>
-      <anchorfile>classiqt_1_1_c_application_environment.html</anchorfile>
-      <anchor>323416d889f430742cc40e908e5dac2a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetEnvironmentVariableValue</name>
-      <anchorfile>classiqt_1_1_c_application_environment.html</anchorfile>
-      <anchor>d1a562648b01e2285f3a8b10ddc9e613</anchor>
-      <arglist>(const istd::CString &amp;variableName, const istd::CString &amp;value)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25417,6 +25419,7 @@
   <compound kind="class">
     <name>iqt::CBitmapLoaderComp</name>
     <filename>classiqt_1_1_c_bitmap_loader_comp.html</filename>
+    <base>QObject</base>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">iser::IFileLoader</base>
     <member kind="enumeration">
@@ -25655,13 +25658,6 @@
       <name>CCriticalSection</name>
       <anchorfile>classiqt_1_1_c_critical_section.html</anchorfile>
       <anchor>0bd5da41df8a206a6ba8cec1a6ac169f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~CCriticalSection</name>
-      <anchorfile>classiqt_1_1_c_critical_section.html</anchorfile>
-      <anchor>1b38f93277934d56b7a044e1d6270660</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -26119,6 +26115,18 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqt::CLocalizer</name>
+    <filename>classiqt_1_1_c_localizer.html</filename>
+    <base virtualness="virtual">istd::ILocalizer</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetTranslatedText</name>
+      <anchorfile>classiqt_1_1_c_localizer.html</anchorfile>
+      <anchor>adebaa2b4f4567e3617ba42125e33937</anchor>
+      <arglist>(const std::string &amp;context, const istd::CString &amp;text, const std::string &amp;disambiguation=std::string()) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqt::CNetworkWriteArchive</name>
     <filename>classiqt_1_1_c_network_write_archive.html</filename>
     <base>QObject</base>
@@ -26310,6 +26318,67 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqt::CProcessEnvironment</name>
+    <filename>classiqt_1_1_c_process_environment.html</filename>
+    <base virtualness="virtual">isys::IProcessEnvironment</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetMainThreadId</name>
+      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
+      <anchor>6a5ed130f50dce92fc4fa0b339055540</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Sleep</name>
+      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
+      <anchor>602cf25d704f149a73521659fc810087</anchor>
+      <arglist>(double seconds)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetTempDirPath</name>
+      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
+      <anchor>7d67a7bff2699c0a46e5fed1460adc02</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetWorkingDirectory</name>
+      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
+      <anchor>92539f31d7b56c7940919854edfcc3f3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CStringList</type>
+      <name>GetApplicationArguments</name>
+      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
+      <anchor>f75541e8ca72259611d0e1a09ae1035a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetModulePath</name>
+      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
+      <anchor>035ad325f6ff7cab32ddd2ceecadda48</anchor>
+      <arglist>(bool useApplicationModule=false, bool onlyDirectory=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual EnvironmentVariables</type>
+      <name>GetEnvironmentVariables</name>
+      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
+      <anchor>8918e350d02277088ccc6211c05cbbbe</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetEnvironmentVariableValue</name>
+      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
+      <anchor>26d2c604f8aded0e8373f2abb3af58ce</anchor>
+      <arglist>(const istd::CString &amp;variableName, const istd::CString &amp;value)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqt::CProcessExecutorComp</name>
     <filename>classiqt_1_1_c_process_executor_comp.html</filename>
     <base>QObject</base>
@@ -26333,14 +26402,14 @@
       <type>virtual void</type>
       <name>SetEnvironment</name>
       <anchorfile>classiqt_1_1_c_process_executor_comp.html</anchorfile>
-      <anchor>efa2f82960f4346b7ac1b23b2f1ead95</anchor>
-      <arglist>(const isys::IApplicationEnvironment &amp;processEnvironment)</arglist>
+      <anchor>d8972e220f13ed2282d19464036aa33d</anchor>
+      <arglist>(const isys::IProcessEnvironment &amp;processEnvironment)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>Execute</name>
+      <name>ExecuteProcess</name>
       <anchorfile>classiqt_1_1_c_process_executor_comp.html</anchorfile>
-      <anchor>b39d48ac136f4a0055e8b94c9799570d</anchor>
+      <anchor>f3eea8a4b87e5cdaf5f1b247ba2c67e1</anchor>
       <arglist>(const istd::CString &amp;executablePath, const istd::CStringList &amp;processArguments)</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -27013,6 +27082,119 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqt::CTranslationManagerComp</name>
+    <filename>classiqt_1_1_c_translation_manager_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iqt::ITranslationManager</base>
+    <base virtualness="virtual">iprm::ISelectionParam</base>
+    <base virtualness="virtual">iprm::ISelectionConstraints</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>0a86a84402f838d1e70e147e4e4148ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CTranslationManagerComp</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>9cfbd2bce1984296b73fa9261e72e78f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>9213a679ed205d7d17242eb88d41bed7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetLanguagesCount</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>41338a4bf9ebc70192095cc0286d897d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QTranslator *</type>
+      <name>GetLanguageTranslator</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>983be71b5d0c03dd21160431a209dbda</anchor>
+      <arglist>(int languageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ITranslationManager *</type>
+      <name>GetSlaveTranslationManager</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>100760380eb9ebd0cbb820087bb55d29</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SwitchLanguage</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>7a8520d15825bc603a5d24fbd08c2476</anchor>
+      <arglist>(int languageIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetSystemLanguage</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>7664d8f172b83f6e919d206ca041955a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::ISelectionConstraints *</type>
+      <name>GetConstraints</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>45228b62da8c5b0d2c2082b7a933efa3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSelectedOptionIndex</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>13f010bacf3dc3324fadc4b99a47a50a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetSelectedOptionIndex</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>e907c396f8c4bfb4c2b99e0d0d43a327</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iprm::ISelectionParam *</type>
+      <name>GetActiveSubselection</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>330e7a6314a124298b6f08b6692ed6dc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>332815e5227548cca6183ad8bf0ca468</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>b1b7a86af47cd5d76ae628c71dc31a18</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>34663c20522f0bb3c3f19c9f85d563fa</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqt::CXmlFileReadArchive</name>
     <filename>classiqt_1_1_c_xml_file_read_archive.html</filename>
     <base>iser::CReadArchiveBase</base>
@@ -27398,45 +27580,38 @@
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
-      <name>GetLanguageCount</name>
+      <name>GetLanguagesCount</name>
       <anchorfile>classiqt_1_1_i_translation_manager.html</anchorfile>
-      <anchor>e243ee3ed8522cae6e95c5e54c64d6f7</anchor>
+      <anchor>498ebb8cfaf7473f1adc14fa06602a2a</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetLanguageId</name>
+      <type>virtual const QTranslator *</type>
+      <name>GetLanguageTranslator</name>
       <anchorfile>classiqt_1_1_i_translation_manager.html</anchorfile>
-      <anchor>971d4009ce87848837cc7dca15b4296c</anchor>
-      <arglist>(int index) const =0</arglist>
+      <anchor>858f4aebe6c49894adb7b5c44b7fad68</anchor>
+      <arglist>(int languageIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual QIcon</type>
-      <name>GetLanguageIcon</name>
+      <type>virtual const ITranslationManager *</type>
+      <name>GetSlaveTranslationManager</name>
       <anchorfile>classiqt_1_1_i_translation_manager.html</anchorfile>
-      <anchor>4ea7b9ba8108c0c5abfa0309f9139924</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetSelectedLanguageId</name>
-      <anchorfile>classiqt_1_1_i_translation_manager.html</anchorfile>
-      <anchor>1e916b5b1addd3d86df76b7a93591315</anchor>
+      <anchor>4d6a1a11b7866f06f20f40edf21086d6</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
-      <name>SetSelectedLanguage</name>
+      <name>SwitchLanguage</name>
       <anchorfile>classiqt_1_1_i_translation_manager.html</anchorfile>
-      <anchor>ab8f124ea34fc0e96b0ff17a5e0a9c52</anchor>
-      <arglist>(const QString &amp;languageId)=0</arglist>
+      <anchor>dd6d42b1f13e3be1614be0c66db4da9f</anchor>
+      <arglist>(int languageIndex)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
-      <name>SetDefaultLanguage</name>
+      <name>SetSystemLanguage</name>
       <anchorfile>classiqt_1_1_i_translation_manager.html</anchorfile>
-      <anchor>1127dde82a8963db8bbfbda99a5f1026</anchor>
-      <arglist>(const QString &amp;laguageId)=0</arglist>
+      <anchor>57b9ec2f907adde61d09c840a8e6543b</anchor>
+      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -28904,6 +29079,13 @@
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>f3703a56eda005886cfb4d8d7d27ed5b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnRetranslate</name>
+      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>5e7878399772755a858075f359354d6a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -30563,6 +30745,13 @@
       <anchor>564601653a4620572859dc3a8f447b6a</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtgui_1_1_c_about_widget_gui_comp.html</anchorfile>
+      <anchor>0c33657f979f6d3d3094cdf4733aaee5</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtgui::CApplicationComp</name>
@@ -32212,6 +32401,13 @@
       <anchor>38937135aed53a58846672b3e5f9ded7</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtgui_1_1_c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>9b7a8ca5f00380c1561a00d8f341e42e</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtgui::CStatusBarWidgetComp</name>
@@ -32530,9 +32726,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnRetranslate</name>
+      <name>OnGuiRetranslate</name>
       <anchorfile>classiqtgui_1_1_t_designer_gui_comp_base.html</anchorfile>
-      <anchor>36636a0f0ce7b31b31817ee00d2bcb31</anchor>
+      <anchor>e9a330a839953277316a1e44204d88d2</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -36820,6 +37016,7 @@
     <class kind="class">istd::IContainerInfo</class>
     <class kind="class">istd::IEnableable</class>
     <class kind="class">istd::IFactoryInfo</class>
+    <class kind="class">istd::ILocalizer</class>
     <class kind="class">istd::ILogger</class>
     <class kind="class">istd::INamed</class>
     <class kind="class">istd::IPolymorphic</class>
@@ -38718,6 +38915,18 @@
       <anchorfile>classistd_1_1_i_factory_info.html</anchorfile>
       <anchor>bbebd5ef1ef5acf2ce6ab20dee51e902</anchor>
       <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>istd::ILocalizer</name>
+    <filename>classistd_1_1_i_localizer.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CString</type>
+      <name>GetTranslatedText</name>
+      <anchorfile>classistd_1_1_i_localizer.html</anchorfile>
+      <anchor>34d5095169ba8a97dd99e9466c2be50d</anchor>
+      <arglist>(const std::string &amp;context, const istd::CString &amp;text, const std::string &amp;disambiguation=std::string()) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -41172,12 +41381,12 @@
     <class kind="class">isys::CSimpleDateTime</class>
     <class kind="class">isys::CSystemEnvironmentBase</class>
     <class kind="class">isys::CSystemInfoBase</class>
-    <class kind="class">isys::IApplicationEnvironment</class>
     <class kind="class">isys::ICriticalSection</class>
     <class kind="class">isys::IDateTime</class>
     <class kind="class">isys::IFileInfo</class>
     <class kind="class">isys::IFileSystem</class>
     <class kind="class">isys::IFunctionsProvider</class>
+    <class kind="class">isys::IProcessEnvironment</class>
     <class kind="class">isys::ISystemEnvironment</class>
     <class kind="class">isys::ISystemInfo</class>
     <class kind="class">isys::ITimer</class>
@@ -41539,60 +41748,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>isys::IApplicationEnvironment</name>
-    <filename>classisys_1_1_i_application_environment.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="typedef">
-      <type>std::map&lt; istd::CString, istd::CString &gt;</type>
-      <name>EnvironmentVariables</name>
-      <anchorfile>classisys_1_1_i_application_environment.html</anchorfile>
-      <anchor>77cdf3bf3f20c63958fb3b40f54a1d6a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
-      <name>GetTempDirPath</name>
-      <anchorfile>classisys_1_1_i_application_environment.html</anchorfile>
-      <anchor>697ddf8004f88263655f03af2b12de49</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
-      <name>GetWorkingDirectory</name>
-      <anchorfile>classisys_1_1_i_application_environment.html</anchorfile>
-      <anchor>ea7c2cbe52580d246fc4ef8ba2f39273</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual istd::CStringList</type>
-      <name>GetApplicationArguments</name>
-      <anchorfile>classisys_1_1_i_application_environment.html</anchorfile>
-      <anchor>6ceddc2780381692c6fef1b2b3c20d47</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
-      <name>GetModulePath</name>
-      <anchorfile>classisys_1_1_i_application_environment.html</anchorfile>
-      <anchor>d8bb701d8ecde316a98b3a1123d43afa</anchor>
-      <arglist>(bool useApplicationModule=false, bool onlyDirectory=false) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual EnvironmentVariables</type>
-      <name>GetEnvironmentVariables</name>
-      <anchorfile>classisys_1_1_i_application_environment.html</anchorfile>
-      <anchor>096c8499024103e9d6da24189c4ea3b2</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetEnvironmentVariableValue</name>
-      <anchorfile>classisys_1_1_i_application_environment.html</anchorfile>
-      <anchor>359e8381d5bb081a1c0d00a432d4c811</anchor>
-      <arglist>(const istd::CString &amp;variableName, const istd::CString &amp;value)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>isys::ICriticalSection</name>
     <filename>classisys_1_1_i_critical_section.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -41844,6 +41999,74 @@
       <anchorfile>classisys_1_1_i_functions_provider.html</anchorfile>
       <anchor>f23fa290dde501e0d387f273fd2ffa1c</anchor>
       <arglist>(const std::string &amp;id) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>isys::IProcessEnvironment</name>
+    <filename>classisys_1_1_i_process_environment.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="typedef">
+      <type>std::map&lt; istd::CString, istd::CString &gt;</type>
+      <name>EnvironmentVariables</name>
+      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
+      <anchor>94ffe73af4421dc5da3d11917fcf85c7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetMainThreadId</name>
+      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
+      <anchor>fd7889def17b39a9e0ea05956d778ee8</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>Sleep</name>
+      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
+      <anchor>14f56a0de997006ff86e0d9aeabffcb3</anchor>
+      <arglist>(double seconds)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CString</type>
+      <name>GetTempDirPath</name>
+      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
+      <anchor>bf9c02e7e3f88a97eab1c9e9bc09f854</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CString</type>
+      <name>GetWorkingDirectory</name>
+      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
+      <anchor>5fa9d125e9db95f7385bf56d68c501fa</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CStringList</type>
+      <name>GetApplicationArguments</name>
+      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
+      <anchor>703e4dbe04a6910a398cce021c3d931a</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CString</type>
+      <name>GetModulePath</name>
+      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
+      <anchor>7112a9b8707381997819efed05e98db4</anchor>
+      <arglist>(bool useApplicationModule=false, bool onlyDirectory=false) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual EnvironmentVariables</type>
+      <name>GetEnvironmentVariables</name>
+      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
+      <anchor>1311c2e71f1a8f25dda6afcd8d41af14</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetEnvironmentVariableValue</name>
+      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
+      <anchor>847282282112788a5f9676bddbd26852</anchor>
+      <arglist>(const istd::CString &amp;variableName, const istd::CString &amp;value)=0</arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -698,13 +698,6 @@
     <namespace>iqwt3d</namespace>
   </compound>
   <compound kind="file">
-    <name>CApplicationEnvironment.h</name>
-    <path>E:/Work/Projects/Development/AcfSln/Include/iwin/</path>
-    <filename>_c_application_environment_8h</filename>
-    <class kind="class">iwin::CApplicationEnvironment</class>
-    <namespace>iwin</namespace>
-  </compound>
-  <compound kind="file">
     <name>CDefaultServicesProvider.h</name>
     <path>E:/Work/Projects/Development/AcfSln/Include/iwin/</path>
     <filename>_c_default_services_provider_8h</filename>
@@ -718,6 +711,13 @@
     <filename>_c_file_system_8h</filename>
     <includes id="iwin_8h" name="iwin.h" local="yes" imported="no">iwin/iwin.h</includes>
     <class kind="class">iwin::CFileSystem</class>
+    <namespace>iwin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CProcessEnvironment.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/iwin/</path>
+    <filename>_c_process_environment_8h</filename>
+    <class kind="class">iwin::CProcessEnvironment</class>
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
@@ -5666,62 +5666,15 @@
   <compound kind="namespace">
     <name>iwin</name>
     <filename>namespaceiwin.html</filename>
-    <class kind="class">iwin::CApplicationEnvironment</class>
     <class kind="class">iwin::CCriticalSection</class>
     <class kind="class">iwin::CDefaultServicesProvider</class>
     <class kind="class">iwin::CDllFunctionsProvider</class>
     <class kind="class">iwin::CFileSystem</class>
+    <class kind="class">iwin::CProcessEnvironment</class>
     <class kind="class">iwin::CSystemEnvironment</class>
     <class kind="class">iwin::CSystemInfo</class>
     <class kind="class">iwin::CTimer</class>
     <class kind="class">iwin::TComPtr</class>
-  </compound>
-  <compound kind="class">
-    <name>iwin::CApplicationEnvironment</name>
-    <filename>classiwin_1_1_c_application_environment.html</filename>
-    <base virtualness="virtual">isys::IApplicationEnvironment</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetTempDirPath</name>
-      <anchorfile>classiwin_1_1_c_application_environment.html</anchorfile>
-      <anchor>955396f2e47e72db06cdd9c9d1dff62a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetWorkingDirectory</name>
-      <anchorfile>classiwin_1_1_c_application_environment.html</anchorfile>
-      <anchor>550e7d9857ea2aa1ac9b582091889248</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CStringList</type>
-      <name>GetApplicationArguments</name>
-      <anchorfile>classiwin_1_1_c_application_environment.html</anchorfile>
-      <anchor>8b28e1c1183017143719f9cb55486714</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetModulePath</name>
-      <anchorfile>classiwin_1_1_c_application_environment.html</anchorfile>
-      <anchor>abf44af9961655abfa69c4ef20fab4e8</anchor>
-      <arglist>(bool useApplicationModule=false, bool onlyDirectory=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual EnvironmentVariables</type>
-      <name>GetEnvironmentVariables</name>
-      <anchorfile>classiwin_1_1_c_application_environment.html</anchorfile>
-      <anchor>80fc2d3d19bc9e0a7b17a49ecdcf0e8d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetEnvironmentVariableValue</name>
-      <anchorfile>classiwin_1_1_c_application_environment.html</anchorfile>
-      <anchor>26b04b78e03c1d655c8d730032fd1bf1</anchor>
-      <arglist>(const istd::CString &amp;variableName, const istd::CString &amp;value)</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iwin::CCriticalSection</name>
@@ -5838,6 +5791,67 @@
       <anchorfile>classiwin_1_1_c_file_system.html</anchorfile>
       <anchor>8c9a5d14b3e150ce44786a8beda621c1</anchor>
       <arglist>(const istd::CString &amp;inputFile, const istd::CString &amp;outputFile, bool overwriteExisting=false) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwin::CProcessEnvironment</name>
+    <filename>classiwin_1_1_c_process_environment.html</filename>
+    <base virtualness="virtual">isys::IProcessEnvironment</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetMainThreadId</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>558962f636f2bff47176543a249d0583</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Sleep</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>b65fc64a9bc3d13b86beb29438ea5499</anchor>
+      <arglist>(double seconds)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetTempDirPath</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>fdd6c78a695db0a4ad327b64f44bfb19</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetWorkingDirectory</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>51896426e191a08d648e687d9368ce14</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CStringList</type>
+      <name>GetApplicationArguments</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>1bcbce7dafd246e6b93593e0b2a659f4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetModulePath</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>f98c086e528427a6ea1e7e48eb76017c</anchor>
+      <arglist>(bool useApplicationModule=false, bool onlyDirectory=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual EnvironmentVariables</type>
+      <name>GetEnvironmentVariables</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>8e826ba4f050c47e7849e152a8196031</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetEnvironmentVariableValue</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>2911c49b4eff2cbba2c0685124dad136</anchor>
+      <arglist>(const istd::CString &amp;variableName, const istd::CString &amp;value)</arglist>
     </member>
   </compound>
   <compound kind="class">

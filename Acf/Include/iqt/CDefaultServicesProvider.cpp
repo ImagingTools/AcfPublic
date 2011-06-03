@@ -29,11 +29,12 @@
 
 #include "iqt/CTimer.h"
 #include "iqt/CDateTime.h"
-#include "iqt/CApplicationEnvironment.h"
+#include "iqt/CProcessEnvironment.h"
 #include "iqt/CCriticalSection.h"
 #include "iqt/CFileSystem.h"
 #include "iqt/CDefaultRegistryLoaderProvider.h"
 #include "iqt/CSystemEnvironment.h"
+#include "iqt/CLocalizer.h"
 
 
 namespace iqt
@@ -42,8 +43,8 @@ namespace iqt
 
 void CDefaultServicesProvider::RegisterServices()
 {
-	static iqt::CApplicationEnvironment applicationEnvironment;
-	istd::CStaticServicesProvider::RegisterService<isys::IApplicationEnvironment>(&applicationEnvironment);
+	static iqt::CProcessEnvironment applicationEnvironment;
+	istd::CStaticServicesProvider::RegisterService<isys::IProcessEnvironment>(&applicationEnvironment);
 
 	static iqt::CCriticalSection criticalSection;
 	istd::CStaticServicesProvider::RegisterService<isys::ICriticalSection>(&criticalSection);
@@ -56,6 +57,9 @@ void CDefaultServicesProvider::RegisterServices()
 
 	static iqt::CSystemEnvironment systemEnvironment;
 	istd::CStaticServicesProvider::RegisterService<isys::ISystemEnvironment>(&systemEnvironment);
+
+	static iqt::CLocalizer localizer;
+	istd::CStaticServicesProvider::RegisterService<istd::ILocalizer>(&localizer);
 
 	static istd::TSingleFactory<isys::ITimer, iqt::CTimer> timerFactory("");
 	istd::CStaticServicesProvider::RegisterFactory(&timerFactory);

@@ -28,11 +28,7 @@ namespace iqt
 
 
 CCriticalSection::CCriticalSection()
-{
-}
-
-
-CCriticalSection::~CCriticalSection()
+	:m_section(QMutex::Recursive)
 {
 }
 

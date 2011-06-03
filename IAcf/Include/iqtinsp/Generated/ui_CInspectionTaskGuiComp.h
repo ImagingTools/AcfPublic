@@ -23,7 +23,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'CInspectionTaskGuiComp.ui'
 **
-** Created: Thu 21. Apr 15:49:21 2011
+** Created: Fri 3. Jun 13:46:42 2011
 **      by: Qt User Interface Compiler version 4.7.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

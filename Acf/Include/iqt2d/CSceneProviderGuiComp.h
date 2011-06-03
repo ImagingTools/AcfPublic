@@ -58,7 +58,6 @@ class CSceneProviderGuiComp:
 			virtual public i2d::ISceneController
 {
 	Q_OBJECT
-
 public:
 	typedef iqtgui::TDesignerGuiCompBase<Ui::CSceneProviderGuiComp> BaseClass;
 
@@ -140,7 +139,7 @@ public:
 	virtual double GetScale() const;
 	virtual bool SetScale(int scaleMode = SM_SET, double value = 1.0);
 
-public slots:
+public Q_SLOTS:
 	void OnZoomIncrement();
 	void OnZoomDecrement();
 	void OnFitToView();
@@ -191,6 +190,7 @@ protected:
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();
 	virtual void OnGuiDestroyed();
+	virtual void OnRetranslate();
 
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();

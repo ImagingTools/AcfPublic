@@ -101,6 +101,15 @@ protected:
 		CAcfVocePck(const icomp::IComponentEnvironmentManager* managerPtr);
 
 		/**
+			ACF strings localization.
+		*/
+		class CAcfLocalizationRegistry: public icomp::CRegistry
+		{
+		public:
+			CAcfLocalizationRegistry();
+		};
+
+		/**
 			Version information for modules based directly on ACF.
 		*/
 		class CVersionInfoRegistry: public icomp::CRegistry
@@ -176,6 +185,12 @@ protected:
 		{
 		public:
 			CCompositorTemplateRegistry();
+		};
+
+		class CCompositorTranslationManagerRegistry: public icomp::CRegistry
+		{
+		public:
+			CCompositorTranslationManagerRegistry();
 		};
 
 		class CPackageOverviewDockRegistry: public icomp::CRegistry

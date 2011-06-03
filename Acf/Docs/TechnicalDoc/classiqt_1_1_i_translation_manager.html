@@ -35,7 +35,8 @@ Inheritance diagram for iqt::ITranslationManager:</div>
 
 <p><center><img src="classiqt_1_1_i_translation_manager.png" usemap="#iqt::ITranslationManager_map" border="0" alt=""></center>
 <map name="iqt::ITranslationManager_map">
-<area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,146,24">
+<area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,184,24">
+<area href="classiqt_1_1_c_translation_manager_comp.html" alt="iqt::CTranslationManagerComp" shape="rect" coords="0,112,184,136">
 </map>
 </div>
 
@@ -43,35 +44,32 @@ Inheritance diagram for iqt::ITranslationManager:</div>
 <a href="classiqt_1_1_i_translation_manager-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_i_translation_manager.html#e243ee3ed8522cae6e95c5e54c64d6f7">GetLanguageCount</a> () const =0</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_i_translation_manager.html#498ebb8cfaf7473f1adc14fa06602a2a">GetLanguagesCount</a> () const =0</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns number of languages supported by translation manager.  <a href="#e243ee3ed8522cae6e95c5e54c64d6f7"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_i_translation_manager.html#971d4009ce87848837cc7dca15b4296c">GetLanguageId</a> (int index) const =0</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get number of provided languages.  <a href="#498ebb8cfaf7473f1adc14fa06602a2a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const QTranslator *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_i_translation_manager.html#858f4aebe6c49894adb7b5c44b7fad68">GetLanguageTranslator</a> (int languageIndex) const =0</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns language ID for the language with the index <code>index</code>.  <a href="#971d4009ce87848837cc7dca15b4296c"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual QIcon&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_i_translation_manager.html#4ea7b9ba8108c0c5abfa0309f9139924">GetLanguageIcon</a> (int index) const =0</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get Qt translator for a given language.  <a href="#858f4aebe6c49894adb7b5c44b7fad68"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <a class="el" href="classiqt_1_1_i_translation_manager.html">ITranslationManager</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_i_translation_manager.html#4d6a1a11b7866f06f20f40edf21086d6">GetSlaveTranslationManager</a> () const =0</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns language icon for the language with the index <code>index</code>.  <a href="#4ea7b9ba8108c0c5abfa0309f9139924"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_i_translation_manager.html#1e916b5b1addd3d86df76b7a93591315">GetSelectedLanguageId</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get slave translation manager, if set.  <a href="#4d6a1a11b7866f06f20f40edf21086d6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_i_translation_manager.html#dd6d42b1f13e3be1614be0c66db4da9f">SwitchLanguage</a> (int languageIndex)=0</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns currently selected language ID.  <a href="#1e916b5b1addd3d86df76b7a93591315"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_i_translation_manager.html#ab8f124ea34fc0e96b0ff17a5e0a9c52">SetSelectedLanguage</a> (const QString &amp;languageId)=0</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Switch the current language to the language with the index <code>languageIndex</code>.  <a href="#dd6d42b1f13e3be1614be0c66db4da9f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_i_translation_manager.html#57b9ec2f907adde61d09c840a8e6543b">SetSystemLanguage</a> ()=0</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Select a language.  <a href="#ab8f124ea34fc0e96b0ff17a5e0a9c52"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_i_translation_manager.html#1127dde82a8963db8bbfbda99a5f1026">SetDefaultLanguage</a> (const QString &amp;laguageId)=0</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets default language.  <a href="#1127dde82a8963db8bbfbda99a5f1026"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set default system's language.  <a href="#57b9ec2f907adde61d09c840a8e6543b"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 
-<p>Definition at line <a class="el" href="_i_translation_manager_8h_source.html#l00018">18</a> of file <a class="el" href="_i_translation_manager_8h_source.html">ITranslationManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_translation_manager_8h_source.html#l00016">16</a> of file <a class="el" href="_i_translation_manager_8h_source.html">ITranslationManager.h</a>.</p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="e243ee3ed8522cae6e95c5e54c64d6f7"></a><!-- doxytag: member="iqt::ITranslationManager::GetLanguageCount" ref="e243ee3ed8522cae6e95c5e54c64d6f7" args="() const =0" -->
+<a class="anchor" name="498ebb8cfaf7473f1adc14fa06602a2a"></a><!-- doxytag: member="iqt::ITranslationManager::GetLanguagesCount" ref="498ebb8cfaf7473f1adc14fa06602a2a" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int iqt::ITranslationManager::GetLanguageCount           </td>
+          <td class="memname">virtual int iqt::ITranslationManager::GetLanguagesCount           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -82,20 +80,22 @@ Inheritance diagram for iqt::ITranslationManager:</div>
 <div class="memdoc">
 
 <p>
-Returns number of languages supported by translation manager. 
+Get number of provided languages. 
 <p>
+
+<p>Implemented in <a class="el" href="classiqt_1_1_c_translation_manager_comp.html#41338a4bf9ebc70192095cc0286d897d">iqt::CTranslationManagerComp</a>.</p>
 
 </div>
 </div><p>
-<a class="anchor" name="4ea7b9ba8108c0c5abfa0309f9139924"></a><!-- doxytag: member="iqt::ITranslationManager::GetLanguageIcon" ref="4ea7b9ba8108c0c5abfa0309f9139924" args="(int index) const =0" -->
+<a class="anchor" name="858f4aebe6c49894adb7b5c44b7fad68"></a><!-- doxytag: member="iqt::ITranslationManager::GetLanguageTranslator" ref="858f4aebe6c49894adb7b5c44b7fad68" args="(int languageIndex) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual QIcon iqt::ITranslationManager::GetLanguageIcon           </td>
+          <td class="memname">virtual const QTranslator* iqt::ITranslationManager::GetLanguageTranslator           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>index</em>          </td>
+          <td class="paramname"> <em>languageIndex</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -104,39 +104,19 @@ Returns number of languages supported by translation manager.
 <div class="memdoc">
 
 <p>
-Returns language icon for the language with the index <code>index</code>. 
+Get Qt translator for a given language. 
 <p>
+
+<p>Implemented in <a class="el" href="classiqt_1_1_c_translation_manager_comp.html#983be71b5d0c03dd21160431a209dbda">iqt::CTranslationManagerComp</a>.</p>
 
 </div>
 </div><p>
-<a class="anchor" name="971d4009ce87848837cc7dca15b4296c"></a><!-- doxytag: member="iqt::ITranslationManager::GetLanguageId" ref="971d4009ce87848837cc7dca15b4296c" args="(int index) const =0" -->
+<a class="anchor" name="4d6a1a11b7866f06f20f40edf21086d6"></a><!-- doxytag: member="iqt::ITranslationManager::GetSlaveTranslationManager" ref="4d6a1a11b7866f06f20f40edf21086d6" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual QString iqt::ITranslationManager::GetLanguageId           </td>
-          <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>index</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Returns language ID for the language with the index <code>index</code>. 
-<p>
-
-</div>
-</div><p>
-<a class="anchor" name="1e916b5b1addd3d86df76b7a93591315"></a><!-- doxytag: member="iqt::ITranslationManager::GetSelectedLanguageId" ref="1e916b5b1addd3d86df76b7a93591315" args="() const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual QString iqt::ITranslationManager::GetSelectedLanguageId           </td>
+          <td class="memname">virtual const <a class="el" href="classiqt_1_1_i_translation_manager.html">ITranslationManager</a>* iqt::ITranslationManager::GetSlaveTranslationManager           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -147,20 +127,21 @@ Returns language ID for the language with the index <code>index</code>.
 <div class="memdoc">
 
 <p>
-Returns currently selected language ID. 
+Get slave translation manager, if set. 
 <p>
+
+<p>Implemented in <a class="el" href="classiqt_1_1_c_translation_manager_comp.html#100760380eb9ebd0cbb820087bb55d29">iqt::CTranslationManagerComp</a>.</p>
 
 </div>
 </div><p>
-<a class="anchor" name="1127dde82a8963db8bbfbda99a5f1026"></a><!-- doxytag: member="iqt::ITranslationManager::SetDefaultLanguage" ref="1127dde82a8963db8bbfbda99a5f1026" args="(const QString &amp;laguageId)=0" -->
+<a class="anchor" name="57b9ec2f907adde61d09c840a8e6543b"></a><!-- doxytag: member="iqt::ITranslationManager::SetSystemLanguage" ref="57b9ec2f907adde61d09c840a8e6543b" args="()=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqt::ITranslationManager::SetDefaultLanguage           </td>
+          <td class="memname">virtual void iqt::ITranslationManager::SetSystemLanguage           </td>
           <td>(</td>
-          <td class="paramtype">const QString &amp;&nbsp;</td>
-          <td class="paramname"> <em>laguageId</em>          </td>
+          <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -169,20 +150,22 @@ Returns currently selected language ID.
 <div class="memdoc">
 
 <p>
-Sets default language. 
+Set default system's language. 
 <p>
+
+<p>Implemented in <a class="el" href="classiqt_1_1_c_translation_manager_comp.html#7664d8f172b83f6e919d206ca041955a">iqt::CTranslationManagerComp</a>.</p>
 
 </div>
 </div><p>
-<a class="anchor" name="ab8f124ea34fc0e96b0ff17a5e0a9c52"></a><!-- doxytag: member="iqt::ITranslationManager::SetSelectedLanguage" ref="ab8f124ea34fc0e96b0ff17a5e0a9c52" args="(const QString &amp;languageId)=0" -->
+<a class="anchor" name="dd6d42b1f13e3be1614be0c66db4da9f"></a><!-- doxytag: member="iqt::ITranslationManager::SwitchLanguage" ref="dd6d42b1f13e3be1614be0c66db4da9f" args="(int languageIndex)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqt::ITranslationManager::SetSelectedLanguage           </td>
+          <td class="memname">virtual void iqt::ITranslationManager::SwitchLanguage           </td>
           <td>(</td>
-          <td class="paramtype">const QString &amp;&nbsp;</td>
-          <td class="paramname"> <em>languageId</em>          </td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>languageIndex</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -191,8 +174,10 @@ Sets default language.
 <div class="memdoc">
 
 <p>
-Select a language. 
+Switch the current language to the language with the index <code>languageIndex</code>. 
 <p>
+
+<p>Implemented in <a class="el" href="classiqt_1_1_c_translation_manager_comp.html#7a8520d15825bc603a5d24fbd08c2476">iqt::CTranslationManagerComp</a>.</p>
 
 </div>
 </div><p>

@@ -76,6 +76,10 @@ bool CApplicationComp::InitializeApplication(int argc, char** argv)
 			return false;
 		}
 
+		if (m_translationManagerCompPtr.IsValid()){
+			m_translationManagerCompPtr->SetSystemLanguage();
+		}
+
 		m_applicationPtr->setStyle(appStyle.c_str());
 
 		QIcon icon;

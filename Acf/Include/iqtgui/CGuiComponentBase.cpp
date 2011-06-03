@@ -27,6 +27,7 @@
 #include <QLayout>
 #include <QEvent>
 #include <QMetaMethod>
+#include <QCoreApplication>
 
 
 namespace iqtgui
@@ -34,7 +35,9 @@ namespace iqtgui
 
 
 CGuiComponentBase::CGuiComponentBase()
-:	m_widgetPtr(NULL), m_isGuiShown(false)
+:	m_widgetPtr(NULL),
+	m_isGuiShown(false),
+	m_languageChangeEventFilter(*this)
 {
 }
 
@@ -62,6 +65,12 @@ bool CGuiComponentBase::CreateGui(QWidget* parentPtr)
 			}
 
 			m_widgetPtr->installEventFilter(this);
+
+			QCoreApplication* applicationPtr = QCoreApplication::instance();
+			I_ASSERT(applicationPtr != NULL);
+			if (applicationPtr != NULL){
+				applicationPtr->installEventFilter(&m_languageChangeEventFilter);
+			}
 
 			MakeAutoSlotConnection();
 
@@ -189,6 +198,11 @@ void CGuiComponentBase::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
+	QCoreApplication* applicationPtr = QCoreApplication::instance();
+	if (applicationPtr != NULL){
+		applicationPtr->installEventFilter(&m_languageChangeEventFilter);
+	}
+
 	OnRetranslate();
 }
 
@@ -244,5 +258,32 @@ void CGuiComponentBase::MakeAutoSlotConnection()
 }
 
 
+// public methods of the embedded class LanguageChangeEventFilter
+
+CGuiComponentBase::LanguageChangeEventFilter::LanguageChangeEventFilter(CGuiComponentBase& parent)
+	:m_parent(parent)
+{
+}
+
+
+// 	protected methods
+	
+// reimplemented (QObject)
+
+bool CGuiComponentBase::LanguageChangeEventFilter::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
+{
+	if (eventPtr->type() == QEvent::LanguageChange){
+		m_parent.OnRetranslate();
+
+		if (m_parent.IsGuiCreated()){
+			m_parent.OnGuiRetranslate();
+		}
+	}
+
+	return BaseClass::eventFilter(sourcePtr, eventPtr);
+}
+
+
 } // namespace iqtgui
+
 

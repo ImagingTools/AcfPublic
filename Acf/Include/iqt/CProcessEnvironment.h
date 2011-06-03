@@ -2,7 +2,7 @@
 **
 **	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF-Solutions Toolkit.
+**	This file is part of the ACF Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,31 +15,33 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
-**  by Skype to ACF_infoline for further information about the ACF-Solutions.
+**  by Skype to ACF_infoline for further information about the ACF.
 **
 ********************************************************************************/
 
 
-#ifndef iwin_CApplicationEnvironment_included
-#define iwin_CApplicationEnvironment_included
+#ifndef iqt_CProcessEnvironment_included
+#define iqt_CProcessEnvironment_included
 
 
-#include "isys/IApplicationEnvironment.h"
+#include "isys/IProcessEnvironment.h"
+
+#include "iqt/iqt.h"
 
 
-namespace iwin
+namespace iqt
 {
 
 
 /**
-	Windows based implementation of interface \c isys::IApplicationEnvironment.
-
-	\ingroup Windows
+	Qt-based implementation of application environment information.
 */
-class CApplicationEnvironment: virtual public isys::IApplicationEnvironment
+class CProcessEnvironment: virtual public isys::IProcessEnvironment
 {
 public:
-	// reimplemented (isys::IApplicationEnvironment)
+	// reimplemented (isys::IProcessEnvironment)
+	virtual int GetMainThreadId() const;
+	virtual void Sleep(double seconds);
 	virtual istd::CString GetTempDirPath() const;
 	virtual istd::CString GetWorkingDirectory() const;
 	virtual istd::CStringList GetApplicationArguments() const;
@@ -49,7 +51,7 @@ public:
 };
 
 
-} // namespace iwin
+} // namespace iqt
 
 
-#endif // !iwin_CApplicationEnvironment_included
+#endif // !iqt_CProcessEnvironment_included

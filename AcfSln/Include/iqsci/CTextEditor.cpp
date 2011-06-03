@@ -261,6 +261,6 @@ void CTextEditor::RegisterLexers()
 }
 
 
-}
+} // namespace iqsci
 
 
