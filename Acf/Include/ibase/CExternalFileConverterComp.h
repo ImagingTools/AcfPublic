@@ -53,7 +53,7 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (ibase::IFileConvertCopy)
-	virtual bool CopyFile(
+	virtual bool ConvertFile(
 				const istd::CString& inputFilePath,
 				const istd::CString& outputFilePath,
 				const iprm::IParamsSet* paramsPtr = NULL) const;

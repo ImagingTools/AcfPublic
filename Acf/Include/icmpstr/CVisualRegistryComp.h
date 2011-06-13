@@ -24,6 +24,11 @@
 #define icmpstr_CVisualRegistryComp_included
 
 
+// Qt includes
+#include <QObject>
+
+
+// ACF includes
 #include "icomp/IComponentEnvironmentManager.h"
 #include "icomp/CRegistry.h"
 
@@ -37,6 +42,7 @@ namespace icmpstr
 
 
 class CVisualRegistryComp:
+			public QObject,
 			public ibase::CLoggerComponentBase,
 			public icomp::CRegistry
 {
@@ -89,4 +95,5 @@ private:
 
 
 #endif // !icmpstr_CVisualRegistryComp_included
+
 

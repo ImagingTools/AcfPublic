@@ -42,7 +42,7 @@ CFileConvertOverProcessorComp::CFileConvertOverProcessorComp()
 
 // reimplemented (ibase::IFileConvertCopy)
 
-bool CFileConvertOverProcessorComp::CopyFile(
+bool CFileConvertOverProcessorComp::ConvertFile(
 			const istd::CString& inputFilePath,
 			const istd::CString& outputFilePath,
 			const iprm::IParamsSet* /*paramsSetPtr*/) const

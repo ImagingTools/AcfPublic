@@ -27,8 +27,8 @@ LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0, 4, 4, 1
- PRODUCTVERSION 0, 4, 4, 1
+ FILEVERSION 0, 4, 4, 2
+ PRODUCTVERSION 0, 4, 4, 2
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -43,15 +43,15 @@ BEGIN
     BEGIN
         BLOCK "040704b0"
         BEGIN
-            VALUE "Comments", "Internal build version (342), base on ACF version 1.4.0.2 (1781), build on Fr 3. Jun 12:25:40 2011 (VC9)"
+            VALUE "Comments", "Internal build version (343), base on ACF version 1.4.0.5 (1784), build on Mi 8. Jun 14:46:29 2011 (VC9)"
             VALUE "CompanyName", "Witold Gantzke and Kirill Lepskiy"
             VALUE "FileDescription", "ACF Compositor"
-            VALUE "FileVersion", "0.4.4.1"
+            VALUE "FileVersion", "0.4.4.2"
             VALUE "InternalName", "Compositor"
             VALUE "LegalCopyright", "Copyright (C) 2009-2011 Witold Gantzke and Kirill Lepskiy"
             VALUE "OriginalFilename", "Compositor.exe"
             VALUE "ProductName", "ACF Compositor"
-            VALUE "ProductVersion", "0.4.4.1"
+            VALUE "ProductVersion", "0.4.4.2"
         END
     END
     BLOCK "VarFileInfo"

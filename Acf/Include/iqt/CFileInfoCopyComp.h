@@ -46,6 +46,7 @@ namespace iqt
 	Copy of text files with some tags substitution and optional license attachment.
 */
 class CFileInfoCopyComp:
+			public QObject,
 			public ibase::CLoggerComponentBase,
 			virtual public ibase::IFileConvertCopy
 {
@@ -72,7 +73,7 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (ibase::IFileConvertCopy)
-	virtual bool CopyFile(
+	virtual bool ConvertFile(
 				const istd::CString& inputFilePath,
 				const istd::CString& outputFilePath,
 				const iprm::IParamsSet* paramsPtr = NULL) const;

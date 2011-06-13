@@ -46,63 +46,64 @@
 <a name="l00023"></a>00023 {
 <a name="l00024"></a>00024 
 <a name="l00030"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html">00030</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html" title="File dialog component.">CFileDialogLoaderComp</a>: 
-<a name="l00031"></a>00031                      <span class="keyword">public</span> ibase::<a class="code" href="group___main.html#g8ef64a77c28b704454f15c826587cc93" title="Type defininig base class for simple components outputing log messages.">CLoggerComponentBase</a>, 
-<a name="l00032"></a>00032                      <span class="keyword">virtual</span> <span class="keyword">public</span> iser::IFileLoader,
-<a name="l00033"></a>00033                      <span class="keyword">virtual</span> <span class="keyword">public</span> iser::IFileLoaderInfo
-<a name="l00034"></a>00034 {
-<a name="l00035"></a>00035 <span class="keyword">public</span>:
-<a name="l00036"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#5491a127e57ab7b5c15946deaf7c334a">00036</a>        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">ibase::CLoggerComponentBase</a> <a class="code" href="classibase_1_1_t_logger_wrap.html">BaseClass</a>;
-<a name="l00037"></a>00037 
-<a name="l00038"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#1c6505cec393c4178dea87867e891199">00038</a>        <span class="keyword">enum</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#1c6505cec393c4178dea87867e891199" title="List of possible message ids used in context of this interface.">MessageId</a>
-<a name="l00039"></a>00039        {
-<a name="l00040"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#1c6505cec393c4178dea87867e8911992021640d9a4af7e47d6d3cf17292846a">00040</a>               <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#1c6505cec393c4178dea87867e8911992021640d9a4af7e47d6d3cf17292846a">MI_NONE_SUPPORTS</a> = 0xf8e0
-<a name="l00041"></a>00041        };
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html" title="File dialog component.">CFileDialogLoaderComp</a>)
-<a name="l00044"></a>00044               I_REGISTER_INTERFACE(iser::IFileTypeInfo);
-<a name="l00045"></a>00045               I_REGISTER_INTERFACE(iser::IFileLoader)
-<a name="l00046"></a>00046               I_REGISTER_INTERFACE(iser::IFileLoaderInfo)
-<a name="l00047"></a>00047               I_ASSIGN_MULTI_0(m_loadersCompPtr, "Loaders", "List of file serializers will be used as slaves", true)
-<a name="l00048"></a>00048        I_END_COMPONENT
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050        <span class="comment">// reimplemented (iser::IFileLoader)</span>
-<a name="l00051"></a>00051        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#376d367dff9ff7c4803538df3226e759" title="Returns true if object dataObject can be loaded/saved.">IsOperationSupported</a>(
-<a name="l00052"></a>00052                             const istd::IChangeable* dataObjectPtr,
-<a name="l00053"></a>00053                             const istd::CString* filePathPtr = <a class="code" href="istd_8h.html#070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
-<a name="l00054"></a>00054                             <span class="keywordtype">int</span> flags = 0,
-<a name="l00055"></a>00055                             <span class="keywordtype">bool</span> beQuiet = true) const;
-<a name="l00056"></a>00056        virtual <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#611d1cafefbc070d6de2fa7c2dcb7b40" title="This function loads data data from file filePath.">LoadFromFile</a>(istd::IChangeable&amp; data, const istd::CString&amp; filePath = istd::CString()) const;
-<a name="l00057"></a>00057        virtual <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#78712c32071a07d43d4c27e30110ea34" title="This function saves data data to file filePath.">SaveToFile</a>(const istd::IChangeable&amp; data, const istd::CString&amp; filePath = istd::CString()) const;
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059        <span class="comment">// reimplemented (iser::IFileTypeInfo)</span>
-<a name="l00060"></a>00060        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#82fb88ace0e4ae6b0e3271891e7d397d" title="Get file extensions supported by this loader.">GetFileExtensions</a>(istd::<a class="code" href="namespaceistd.html#816ed4e230067b70de1f8b9d8b6ec814">CStringList</a>&amp; result, <span class="keywordtype">int</span> flags = 0, <span class="keywordtype">bool</span> doAppend = false) const;
-<a name="l00061"></a>00061        virtual istd::CString <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#138c2714c27008edd1a8a08752dfde01" title="Get description of object type associated with single extension.">GetTypeDescription</a>(const istd::CString* extensionPtr = NULL) const;
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063        <span class="comment">// reimplemented (iser::IFileLoaderInfo)</span>
-<a name="l00064"></a>00064        virtual istd::CString <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#1284d88440e483fd5b3aeb97ddd73799" title="Returns the last opened file name.">GetLastFilePath</a>(<a class="code" href="classiser_1_1_i_file_loader_info.html#fa52073c8b31934db93706e6bd3bf457">OperationType</a> operationType = <a class="code" href="classiser_1_1_i_file_loader_info.html#fa52073c8b31934db93706e6bd3bf457a836ba53a798d7284c3b837e3cab042a">OT_UNKNOWN</a>, <a class="code" href="classiser_1_1_i_file_loader_info.html#b6db5c7833e043db2c7c27ad6c24b87d">PathType</a> pathType = <a class="code" href="classiser_1_1_i_file_loader_info.html#b6db5c7833e043db2c7c27ad6c24b87d2141650c9527b91c510833a6d35b34f2">PT_COMPLETE</a>) const;
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066        <span class="comment">// static methods</span>
-<a name="l00074"></a>00074 <span class="comment"></span>       static <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#8fcc858151f100578b7c5304b3bc613f" title="Append filters extracted from file loader to Qt filter list accepted by QFileDialog...">AppendLoaderFilterList</a>(const iser::IFileTypeInfo&amp; fileTypeInfo, <span class="keywordtype">int</span> flags, QString&amp; allExt, QString&amp; result);
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 protected:
-<a name="l00077"></a>00077        istd::CString <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#75ece9fc86d015f62e6ad1f94f29e8ed">GetPathForType</a>(const QFileInfo&amp; fileInfo, <a class="code" href="classiser_1_1_i_file_loader_info.html#b6db5c7833e043db2c7c27ad6c24b87d">PathType</a> pathType) const;
-<a name="l00078"></a>00078        virtual QString <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#fa719f026c179e2ddcda9ffd74def085">GetFileName</a>(const istd::CString&amp; filePath, <span class="keywordtype">bool</span> isSaving, <span class="keywordtype">int</span>&amp; selectionIndex) const;
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080        iser::IFileLoader* <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a7f52aeb2d19650c3ae0064ce682d19c">GetLoaderFor</a>(const QString&amp; filePath, <span class="keywordtype">int</span> selectionIndex, <span class="keywordtype">int</span> flags, <span class="keywordtype">bool</span> beQuiet) const;
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082 private:
-<a name="l00083"></a>00083        I_MULTIREF(iser::IFileLoader, m_loadersCompPtr);
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085        mutable QFileInfo m_lastOpenInfo;
-<a name="l00086"></a>00086        mutable QFileInfo m_lastSaveInfo;
-<a name="l00087"></a>00087 };
-<a name="l00088"></a>00088          
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090 } <span class="comment">// namespace iqtgui</span>
-<a name="l00091"></a>00091 
+<a name="l00031"></a>00031                      <span class="keyword">public</span> <a class="code" href="class_q_object.html">QObject</a>,
+<a name="l00032"></a>00032                      <span class="keyword">public</span> ibase::<a class="code" href="group___main.html#g8ef64a77c28b704454f15c826587cc93" title="Type defininig base class for simple components outputing log messages.">CLoggerComponentBase</a>, 
+<a name="l00033"></a>00033                      <span class="keyword">virtual</span> <span class="keyword">public</span> iser::IFileLoader,
+<a name="l00034"></a>00034                      <span class="keyword">virtual</span> <span class="keyword">public</span> iser::IFileLoaderInfo
+<a name="l00035"></a>00035 {
+<a name="l00036"></a>00036 <span class="keyword">public</span>:
+<a name="l00037"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#5491a127e57ab7b5c15946deaf7c334a">00037</a>        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">ibase::CLoggerComponentBase</a> <a class="code" href="classibase_1_1_t_logger_wrap.html">BaseClass</a>;
+<a name="l00038"></a>00038 
+<a name="l00039"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#1c6505cec393c4178dea87867e891199">00039</a>        <span class="keyword">enum</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#1c6505cec393c4178dea87867e891199" title="List of possible message ids used in context of this interface.">MessageId</a>
+<a name="l00040"></a>00040        {
+<a name="l00041"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#1c6505cec393c4178dea87867e8911992021640d9a4af7e47d6d3cf17292846a">00041</a>               <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#1c6505cec393c4178dea87867e8911992021640d9a4af7e47d6d3cf17292846a">MI_NONE_SUPPORTS</a> = 0xf8e0
+<a name="l00042"></a>00042        };
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html" title="File dialog component.">CFileDialogLoaderComp</a>)
+<a name="l00045"></a>00045               I_REGISTER_INTERFACE(iser::IFileTypeInfo);
+<a name="l00046"></a>00046               I_REGISTER_INTERFACE(iser::IFileLoader)
+<a name="l00047"></a>00047               I_REGISTER_INTERFACE(iser::IFileLoaderInfo)
+<a name="l00048"></a>00048               I_ASSIGN_MULTI_0(m_loadersCompPtr, "Loaders", "List of file serializers will be used as slaves", true)
+<a name="l00049"></a>00049        I_END_COMPONENT
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051        <span class="comment">// reimplemented (iser::IFileLoader)</span>
+<a name="l00052"></a>00052        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#376d367dff9ff7c4803538df3226e759" title="Returns true if object dataObject can be loaded/saved.">IsOperationSupported</a>(
+<a name="l00053"></a>00053                             const istd::IChangeable* dataObjectPtr,
+<a name="l00054"></a>00054                             const istd::CString* filePathPtr = <a class="code" href="istd_8h.html#070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
+<a name="l00055"></a>00055                             <span class="keywordtype">int</span> flags = 0,
+<a name="l00056"></a>00056                             <span class="keywordtype">bool</span> beQuiet = true) const;
+<a name="l00057"></a>00057        virtual <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#611d1cafefbc070d6de2fa7c2dcb7b40" title="This function loads data data from file filePath.">LoadFromFile</a>(istd::IChangeable&amp; data, const istd::CString&amp; filePath = istd::CString()) const;
+<a name="l00058"></a>00058        virtual <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#78712c32071a07d43d4c27e30110ea34" title="This function saves data data to file filePath.">SaveToFile</a>(const istd::IChangeable&amp; data, const istd::CString&amp; filePath = istd::CString()) const;
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060        <span class="comment">// reimplemented (iser::IFileTypeInfo)</span>
+<a name="l00061"></a>00061        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#82fb88ace0e4ae6b0e3271891e7d397d" title="Get file extensions supported by this loader.">GetFileExtensions</a>(istd::<a class="code" href="namespaceistd.html#816ed4e230067b70de1f8b9d8b6ec814">CStringList</a>&amp; result, <span class="keywordtype">int</span> flags = 0, <span class="keywordtype">bool</span> doAppend = false) const;
+<a name="l00062"></a>00062        virtual istd::CString <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#138c2714c27008edd1a8a08752dfde01" title="Get description of object type associated with single extension.">GetTypeDescription</a>(const istd::CString* extensionPtr = NULL) const;
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064        <span class="comment">// reimplemented (iser::IFileLoaderInfo)</span>
+<a name="l00065"></a>00065        virtual istd::CString <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#1284d88440e483fd5b3aeb97ddd73799" title="Returns the last opened file name.">GetLastFilePath</a>(<a class="code" href="classiser_1_1_i_file_loader_info.html#fa52073c8b31934db93706e6bd3bf457">OperationType</a> operationType = <a class="code" href="classiser_1_1_i_file_loader_info.html#fa52073c8b31934db93706e6bd3bf457a836ba53a798d7284c3b837e3cab042a">OT_UNKNOWN</a>, <a class="code" href="classiser_1_1_i_file_loader_info.html#b6db5c7833e043db2c7c27ad6c24b87d">PathType</a> pathType = <a class="code" href="classiser_1_1_i_file_loader_info.html#b6db5c7833e043db2c7c27ad6c24b87d2141650c9527b91c510833a6d35b34f2">PT_COMPLETE</a>) const;
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067        <span class="comment">// static methods</span>
+<a name="l00075"></a>00075 <span class="comment"></span>       static <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#8fcc858151f100578b7c5304b3bc613f" title="Append filters extracted from file loader to Qt filter list accepted by QFileDialog...">AppendLoaderFilterList</a>(const iser::IFileTypeInfo&amp; fileTypeInfo, <span class="keywordtype">int</span> flags, QString&amp; allExt, QString&amp; result);
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 protected:
+<a name="l00078"></a>00078        istd::CString <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#75ece9fc86d015f62e6ad1f94f29e8ed">GetPathForType</a>(const QFileInfo&amp; fileInfo, <a class="code" href="classiser_1_1_i_file_loader_info.html#b6db5c7833e043db2c7c27ad6c24b87d">PathType</a> pathType) const;
+<a name="l00079"></a>00079        virtual QString <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#fa719f026c179e2ddcda9ffd74def085">GetFileName</a>(const istd::CString&amp; filePath, <span class="keywordtype">bool</span> isSaving, <span class="keywordtype">int</span>&amp; selectionIndex) const;
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081        iser::IFileLoader* <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a7f52aeb2d19650c3ae0064ce682d19c">GetLoaderFor</a>(const QString&amp; filePath, <span class="keywordtype">int</span> selectionIndex, <span class="keywordtype">int</span> flags, <span class="keywordtype">bool</span> beQuiet) const;
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 private:
+<a name="l00084"></a>00084        I_MULTIREF(iser::IFileLoader, m_loadersCompPtr);
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086        mutable QFileInfo m_lastOpenInfo;
+<a name="l00087"></a>00087        mutable QFileInfo m_lastSaveInfo;
+<a name="l00088"></a>00088 };
+<a name="l00089"></a>00089          
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 } <span class="comment">// namespace iqtgui</span>
 <a name="l00092"></a>00092 
-<a name="l00093"></a>00093 <span class="preprocessor">#endif // !iqtgui_CFileDialogSerializerComp_included</span>
-<a name="l00094"></a>00094 <span class="preprocessor"></span>
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 <span class="preprocessor">#endif // !iqtgui_CFileDialogSerializerComp_included</span>
+<a name="l00095"></a>00095 <span class="preprocessor"></span>
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

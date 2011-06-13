@@ -65,7 +65,7 @@ int CCopyAppComp::Execute(int argc, char** argv)
 		}
 	}
 
-	if (!m_fileCopyCompPtr->CopyFile(inputFilePath, outputFilePath)){
+	if (!m_fileCopyCompPtr->ConvertFile(inputFilePath, outputFilePath)){
 		return 20;
 	}
 

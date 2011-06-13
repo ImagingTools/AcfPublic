@@ -7782,9 +7782,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>CopyFile</name>
+      <name>ConvertFile</name>
       <anchorfile>classibase_1_1_c_external_file_converter_comp.html</anchorfile>
-      <anchor>0f1408ac8f83fee5e7d548b97c93470a</anchor>
+      <anchor>f64bae8788b74ea045ee59c083171425</anchor>
       <arglist>(const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
     </member>
   </compound>
@@ -7809,9 +7809,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>CopyFile</name>
+      <name>ConvertFile</name>
       <anchorfile>classibase_1_1_c_file_convert_over_processor_comp.html</anchorfile>
-      <anchor>971e1c9a245685f2ba5009ad977fd10e</anchor>
+      <anchor>153fef0d88ab2224b3ec3beecca898c8</anchor>
       <arglist>(const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
     </member>
   </compound>
@@ -7829,9 +7829,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>CopyFile</name>
+      <name>ConvertFile</name>
       <anchorfile>classibase_1_1_c_file_copy_over_loader_comp.html</anchorfile>
-      <anchor>fa2d7a94ee6de8dfee43a63347ee9f4d</anchor>
+      <anchor>729ae9a2b0c343e8193d5543b9fa9466</anchor>
       <arglist>(const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
     </member>
   </compound>
@@ -8488,9 +8488,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>CopyFile</name>
+      <name>ConvertFile</name>
       <anchorfile>classibase_1_1_c_selectable_file_converter_comp.html</anchorfile>
-      <anchor>6336f3bae69ad123806fd0730937e5d4</anchor>
+      <anchor>ebd546bdd2744946227ea2c5140b405e</anchor>
       <arglist>(const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9108,9 +9108,9 @@
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>CopyFile</name>
+      <name>ConvertFile</name>
       <anchorfile>classibase_1_1_i_file_convert_copy.html</anchorfile>
-      <anchor>3aba3a2cc5418f385a842b9c7f185b60</anchor>
+      <anchor>eb8ad9ad5c486d63a88e3df68dc155bf</anchor>
       <arglist>(const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const =0</arglist>
     </member>
   </compound>
@@ -12694,6 +12694,7 @@
   <compound kind="class">
     <name>icmpstr::CRegistryConsistInfoComp</name>
     <filename>classicmpstr_1_1_c_registry_consist_info_comp.html</filename>
+    <base>QObject</base>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">icmpstr::IRegistryConsistInfo</base>
     <member kind="enumeration">
@@ -12960,6 +12961,7 @@
   <compound kind="class">
     <name>icmpstr::CRegistryLoaderComp</name>
     <filename>classicmpstr_1_1_c_registry_loader_comp.html</filename>
+    <base>QObject</base>
     <base>TFileSerializerComp&lt; iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive &gt;</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -13184,6 +13186,7 @@
   <compound kind="class">
     <name>icmpstr::CVisualRegistryComp</name>
     <filename>classicmpstr_1_1_c_visual_registry_comp.html</filename>
+    <base>QObject</base>
     <base>ibase::TLoggerCompWrap</base>
     <base>icomp::CRegistry</base>
     <member kind="enumeration">
@@ -25588,6 +25591,7 @@
   <compound kind="class">
     <name>iqt::CCopyProcessorComp</name>
     <filename>classiqt_1_1_c_copy_processor_comp.html</filename>
+    <base>QObject</base>
     <base>ibase::TLoggerCompWrap</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -25884,6 +25888,7 @@
   <compound kind="class">
     <name>iqt::CFileInfoCopyComp</name>
     <filename>classiqt_1_1_c_file_info_copy_comp.html</filename>
+    <base>QObject</base>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">ibase::IFileConvertCopy</base>
     <member kind="enumeration">
@@ -25931,9 +25936,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>CopyFile</name>
+      <name>ConvertFile</name>
       <anchorfile>classiqt_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>263f15dc55a47add26f39d946300799f</anchor>
+      <anchor>ce39c2c907f3c5483a2e68260ec08c6c</anchor>
       <arglist>(const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -26170,6 +26175,7 @@
   <compound kind="class">
     <name>iqt::CPackagesLoaderComp</name>
     <filename>classiqt_1_1_c_packages_loader_comp.html</filename>
+    <base>QObject</base>
     <base>ibase::TLoggerCompWrap</base>
     <base>icomp::CEnvironmentManagerBase</base>
     <base virtualness="virtual">icomp::IRegistryLoader</base>
@@ -31066,6 +31072,7 @@
   <compound kind="class">
     <name>iqtgui::CFileDialogLoaderComp</name>
     <filename>classiqtgui_1_1_c_file_dialog_loader_comp.html</filename>
+    <base>QObject</base>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">iser::IFileLoader</base>
     <base virtualness="virtual">iser::IFileLoaderInfo</base>
@@ -33134,6 +33141,7 @@
   <compound kind="class">
     <name>iqtmm::CMediaLoaderComp</name>
     <filename>classiqtmm_1_1_c_media_loader_comp.html</filename>
+    <base>QObject</base>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">iser::IFileLoader</base>
     <member kind="enumeration">
@@ -33399,6 +33407,7 @@
   <compound kind="class">
     <name>iqtmm::CSvgBitmapLoaderComp</name>
     <filename>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</filename>
+    <base>QObject</base>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">iser::IFileLoader</base>
     <member kind="enumeration">
