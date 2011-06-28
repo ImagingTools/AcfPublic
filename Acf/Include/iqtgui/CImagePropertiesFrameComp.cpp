@@ -27,11 +27,11 @@ namespace iqtgui
 {
 
 
-// public methods
+// protected methods
 
-// reimplemented (imod::IModelEditor)
+// reimplemented (iqtgui::TGuiObserverWrap)
 
-void CImagePropertiesFrameComp::UpdateEditor(int /*updateFlags*/)
+void CImagePropertiesFrameComp::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 
@@ -40,12 +40,6 @@ void CImagePropertiesFrameComp::UpdateEditor(int /*updateFlags*/)
 		SizeLabel->setText(QString("%1x%2").arg(bitmapPtr->GetImageSize().GetX()).arg(bitmapPtr->GetImageSize().GetY()));
 		DepthLabel->setText(QString("%1 bits").arg(bitmapPtr->GetComponentBitsCount() * bitmapPtr->GetComponentsCount()));
 	}
-}
-
-
-void CImagePropertiesFrameComp::UpdateModel() const
-{
-	I_ASSERT(IsGuiCreated() && (GetObjectPtr() != NULL));
 }
 
 

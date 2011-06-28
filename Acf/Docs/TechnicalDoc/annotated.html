@@ -52,6 +52,7 @@
   <tr><td class="indexkey"><a class="el" href="classiqt_1_1_c_bitmap.html">iqt::CBitmap</a></td><td class="indexvalue">Bitmap implementation based on Qt QImage </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiimg_1_1_c_bitmap_base.html">iimg::CBitmapBase</a></td><td class="indexvalue"><a class="el" href="class_base.html">Base</a> implementation of some <code><a class="el" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a></code> methods </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiqt_1_1_c_bitmap_loader_comp.html">iqt::CBitmapLoaderComp</a></td><td class="indexvalue">Bitmap loader component implementing interfaces <code><a class="el" href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects.">iser::IFileLoader</a></code> </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classiimg_1_1_c_bitmap_region.html">iimg::CBitmapRegion</a></td><td class="indexvalue">Representation of a 2D-region as container of bitmap line scans </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiqt_1_1_c_bitmap_surface.html">iqt::CBitmapSurface</a></td><td class="indexvalue">Bitmap implementation based on Qt QImage </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiser_1_1_c_bit_memory_read_archive.html">iser::CBitMemoryReadArchive</a></td><td class="indexvalue">This class provides bitwise access to the byte data </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiser_1_1_c_bit_memory_write_archive.html">iser::CBitMemoryWriteArchive</a></td><td class="indexvalue">This is an archive implementation which provides bitwise write of data </td></tr>
@@ -247,6 +248,7 @@
   <tr><td class="indexkey"><a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html">ibase::CSelectableFileConverterComp</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classiqtprm_1_1_c_selectable_gui_comp.html">iqtprm::CSelectableGuiComp</a></td><td class="indexvalue">Component to show any selected GUI, implemented as observer of <a class="el" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a> </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html">iprm::CSelectableParamsSetComp</a></td><td class="indexvalue">Interface allowing to select single option from list of options </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classiqtprm_1_1_c_selectable_params_set_gui_comp.html">iqtprm::CSelectableParamsSetGuiComp</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classiqt2d_1_1_c_selectable_scene_extender_comp.html">iqt2d::CSelectableSceneExtenderComp</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classidoc_1_1_c_selected_doc_model_binder_comp.html">idoc::CSelectedDocModelBinderComp</a></td><td class="indexvalue">Conditional model-observer binder depending on actual selection </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiprm_1_1_c_selection_param_comp.html">iprm::CSelectionParamComp</a></td><td class="indexvalue">Basic implementation of selection parameter </td></tr>
@@ -330,11 +332,10 @@
   <tr><td class="indexkey"><a class="el" href="classisec_1_1_i_authorization_verifier.html">isec::IAuthorizationVerifier</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classiimg_1_1_i_bitmap.html">iimg::IBitmap</a></td><td class="indexvalue">Definition of single plane bitmap </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiproc_1_1_i_bitmap_acquisition.html">iproc::IBitmapAcquisition</a></td><td class="indexvalue">Bitmap acquisition processor </td></tr>
-  <tr><td class="indexkey"><a class="el" href="classiproc_1_1_i_bitmap_supplier.html">iproc::IBitmapSupplier</a></td><td class="indexvalue">Bitmap supplier allowing to access of produced bitmap </td></tr>
   <tr><td class="indexkey"><a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a></td><td class="indexvalue">Common interface for model objects, which can be changed </td></tr>
   <tr><td class="indexkey"><a class="el" href="classicmm_1_1_i_color_transformation.html">icmm::IColorTransformation</a></td><td class="indexvalue">Basic interface for a color transformation </td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_i_command.html">ICommand</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classibase_1_1_i_command.html">ibase::ICommand</a></td><td class="indexvalue">Provides single command for interaction with user </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_i_command.html">ICommand</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classicomp_1_1_i_component.html">icomp::IComponent</a></td><td class="indexvalue">Main component interface </td></tr>
   <tr><td class="indexkey"><a class="el" href="classicomp_1_1_i_component_context.html">icomp::IComponentContext</a></td><td class="indexvalue">Provide session context of component </td></tr>
@@ -436,6 +437,7 @@
   <tr><td class="indexkey"><a class="el" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html">iqt::CPackagesLoaderComp::LogingRegistry</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classiqt_1_1_notification_target.html">iqt::NotificationTarget</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="structiprm_1_1_c_params_set_1_1_parameter_info.html">iprm::CParamsSet::ParameterInfo</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html">iimg::CBitmapRegion::PixelRange</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classistd_1_1_c_static_services_provider_1_1_provider.html">istd::CStaticServicesProvider::Provider</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_q_graphics_ellipse_item.html">QGraphicsEllipseItem</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_q_graphics_line_item.html">QGraphicsLineItem</a></td><td class="indexvalue"></td></tr>
@@ -527,6 +529,7 @@
   <tr><td class="indexkey"><a class="el" href="classiqt2d_1_1_t_scenographer_comp_base.html">iqt2d::TScenographerCompBase&lt; Observer &gt;</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classibase_1_1_t_serializable_container.html">ibase::TSerializableContainer&lt; ItemClass, ContainerClass &gt;</a></td><td class="indexvalue">Common implementation for an abstract serializable container </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiqt2d_1_1_t_shape_base.html">iqt2d::TShapeBase&lt; GraphicsItemClass &gt;</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">iqt2d::TShapeParamsGuiCompBase&lt; Ui, Shape, ShapeModel &gt;</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classicomp_1_1_t_sim_components_factory.html">icomp::TSimComponentsFactory&lt; Base &gt;</a></td><td class="indexvalue">Simulation wrapper of component </td></tr>
   <tr><td class="indexkey"><a class="el" href="classicomp_1_1_t_sim_component_wrap.html">icomp::TSimComponentWrap&lt; Base &gt;</a></td><td class="indexvalue">Simulation wrapper of component </td></tr>
   <tr><td class="indexkey"><a class="el" href="classistd_1_1_t_single_factory.html">istd::TSingleFactory&lt; Interface, Implementation &gt;</a></td><td class="indexvalue">Template based object factory interface </td></tr>

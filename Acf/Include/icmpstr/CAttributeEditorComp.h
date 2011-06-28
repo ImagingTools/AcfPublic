@@ -120,13 +120,6 @@ public:
 	const icomp::IAttributeStaticInfo* GetStaticAttributeInfo(const std::string& id) const;
 	QStringList GetExportAliases(const std::string& attributeName) const;
 
-	// reimplemented (iqt::TGuiObserverWrap)
-	virtual void OnGuiModelDetached();
-
-	// reimplemented (imod::IModelEditor)
-	virtual void UpdateEditor(int updateFlags = 0);
-	virtual void UpdateModel() const;
-
 protected Q_SLOTS:
 	void on_AttributeTree_itemSelectionChanged();
 	void on_AttributeTree_itemChanged(QTreeWidgetItem* item, int column);
@@ -154,6 +147,10 @@ protected:
 				QTreeWidgetItem& rootItem) const;
 
 	void UpdateExportIcon();
+
+	// reimplemented (iqt::TGuiObserverWrap)
+	virtual void OnGuiModelDetached();
+	virtual void UpdateGui(int updateFlags = 0);
 
 	// reimplemented (CGuiComponentBase)
 	virtual void OnGuiCreated();

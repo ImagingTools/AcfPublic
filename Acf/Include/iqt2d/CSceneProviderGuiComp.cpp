@@ -537,7 +537,9 @@ void CSceneProviderGuiComp::OnGuiCreated()
 			break;
 	}
 
-	SceneView->setViewportUpdateMode(QGraphicsView::SmartViewportUpdate);
+	SceneView->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+	SceneView->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+	SceneView->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
 	SceneView->installEventFilter(this);
 
 	if (m_useAntialiasingAttrPtr.IsValid() && *m_useAntialiasingAttrPtr){
@@ -545,6 +547,7 @@ void CSceneProviderGuiComp::OnGuiCreated()
 	}
 
 	m_isotropyFactor = *m_isotropyFactorAttrPtr;
+
 
 	if (m_fitModeAttrPtr.IsValid()){
 		SetFitMode(FitMode(*m_fitModeAttrPtr));

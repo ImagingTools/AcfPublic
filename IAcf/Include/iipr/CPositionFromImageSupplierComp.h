@@ -28,8 +28,9 @@
 #include "i2d/CVector2d.h"
 #include "iproc/IProcessor.h"
 #include "iproc/TSupplierCompWrap.h"
-#include "iproc/IBitmapSupplier.h"
 #include "iproc/IValueSupplier.h"
+
+#include "iipr/IBitmapSupplier.h"
 
 
 namespace iipr
@@ -63,7 +64,7 @@ protected:
 	virtual void OnComponentCreated();
 
 private:
-	I_REF(iproc::IBitmapSupplier, m_bitmapSupplierCompPtr);
+	I_REF(iipr::IBitmapSupplier, m_bitmapSupplierCompPtr);
 	I_REF(iproc::IProcessor, m_processorCompPtr);
 };
 

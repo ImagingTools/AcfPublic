@@ -23,7 +23,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'CMultidimensionalFilterParamsGuiComp.ui'
 **
-** Created: Fri 3. Jun 13:43:24 2011
+** Created: Fri 17. Jun 09:28:27 2011
 **      by: Qt User Interface Compiler version 4.7.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -67,6 +67,7 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         FilterWidthLabel = new QLabel(CMultidimensionalFilterParamsGuiComp);
         FilterWidthLabel->setObjectName(QString::fromUtf8("FilterWidthLabel"));
+        FilterWidthLabel->setText(QString::fromUtf8("Filter Width"));
 
         gridLayout->addWidget(FilterWidthLabel, 0, 0, 1, 1);
 
@@ -80,6 +81,7 @@ public:
 
         FilterHeightLabel = new QLabel(CMultidimensionalFilterParamsGuiComp);
         FilterHeightLabel->setObjectName(QString::fromUtf8("FilterHeightLabel"));
+        FilterHeightLabel->setText(QString::fromUtf8("Filter Height"));
 
         gridLayout->addWidget(FilterHeightLabel, 1, 0, 1, 1);
 
@@ -93,21 +95,25 @@ public:
 
         FilterWidthValueLabel = new QLabel(CMultidimensionalFilterParamsGuiComp);
         FilterWidthValueLabel->setObjectName(QString::fromUtf8("FilterWidthValueLabel"));
+        FilterWidthValueLabel->setText(QString::fromUtf8("1"));
 
         gridLayout->addWidget(FilterWidthValueLabel, 0, 2, 1, 1);
 
         FilterHeightValueLabel = new QLabel(CMultidimensionalFilterParamsGuiComp);
         FilterHeightValueLabel->setObjectName(QString::fromUtf8("FilterHeightValueLabel"));
+        FilterHeightValueLabel->setText(QString::fromUtf8("1"));
 
         gridLayout->addWidget(FilterHeightValueLabel, 1, 2, 1, 1);
 
         WidthUnitNameLabel = new QLabel(CMultidimensionalFilterParamsGuiComp);
         WidthUnitNameLabel->setObjectName(QString::fromUtf8("WidthUnitNameLabel"));
+        WidthUnitNameLabel->setText(QString::fromUtf8("-"));
 
         gridLayout->addWidget(WidthUnitNameLabel, 0, 3, 1, 1);
 
         HeightUnitNameLabel = new QLabel(CMultidimensionalFilterParamsGuiComp);
         HeightUnitNameLabel->setObjectName(QString::fromUtf8("HeightUnitNameLabel"));
+        HeightUnitNameLabel->setText(QString::fromUtf8("-"));
 
         gridLayout->addWidget(HeightUnitNameLabel, 1, 3, 1, 1);
 
@@ -120,12 +126,6 @@ public:
     void retranslateUi(QWidget *CMultidimensionalFilterParamsGuiComp)
     {
         CMultidimensionalFilterParamsGuiComp->setWindowTitle(QApplication::translate("CMultidimensionalFilterParamsGuiComp", "Form", 0, QApplication::UnicodeUTF8));
-        FilterWidthLabel->setText(QApplication::translate("CMultidimensionalFilterParamsGuiComp", "Filter Width", 0, QApplication::UnicodeUTF8));
-        FilterHeightLabel->setText(QApplication::translate("CMultidimensionalFilterParamsGuiComp", "Filter Height", 0, QApplication::UnicodeUTF8));
-        FilterWidthValueLabel->setText(QApplication::translate("CMultidimensionalFilterParamsGuiComp", "1", 0, QApplication::UnicodeUTF8));
-        FilterHeightValueLabel->setText(QApplication::translate("CMultidimensionalFilterParamsGuiComp", "1", 0, QApplication::UnicodeUTF8));
-        WidthUnitNameLabel->setText(QApplication::translate("CMultidimensionalFilterParamsGuiComp", "-", 0, QApplication::UnicodeUTF8));
-        HeightUnitNameLabel->setText(QApplication::translate("CMultidimensionalFilterParamsGuiComp", "-", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

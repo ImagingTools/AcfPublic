@@ -70,15 +70,12 @@ Inheritance diagram for iqtgui::CObjectPreviewGuiComp:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_object_preview_gui_comp.html#c3b9835a44bd0c9407403743590b8a78">I_ASSIGN_TO</a> (m_objectGuiCompPtr, m_objectObserverCompPtr, true)</td></tr>
 
 <tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_object_preview_gui_comp.html#6b95c3f3fcb3ecd04d89ab110984d31f">UpdateEditor</a> (int updateFlags=0)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates editor with model data.  <a href="#6b95c3f3fcb3ecd04d89ab110984d31f"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_object_preview_gui_comp.html#fbcbc370415c944d421d0e8ff017ec69">UpdateModel</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates model from editor.  <a href="#fbcbc370415c944d421d0e8ff017ec69"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_object_preview_gui_comp.html#3daf5e173d6dec22db4bd28242b40a67">OnGuiModelDetached</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#3daf5e173d6dec22db4bd28242b40a67"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_object_preview_gui_comp.html#d4b78f0c1995c56bc4ccf5b8206ab7ae">UpdateGui</a> (int updateFlags=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do update of the model GUI.  <a href="#d4b78f0c1995c56bc4ccf5b8206ab7ae"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_object_preview_gui_comp.html#a9ccc86acad1661b3dbcb840847bac51">OnGuiCreated</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a9ccc86acad1661b3dbcb840847bac51"></a><br></td></tr>
@@ -249,12 +246,12 @@ Called when model is detached or GUI is destroyed.
 
 </div>
 </div><p>
-<a class="anchor" name="6b95c3f3fcb3ecd04d89ab110984d31f"></a><!-- doxytag: member="iqtgui::CObjectPreviewGuiComp::UpdateEditor" ref="6b95c3f3fcb3ecd04d89ab110984d31f" args="(int updateFlags=0)" -->
+<a class="anchor" name="d4b78f0c1995c56bc4ccf5b8206ab7ae"></a><!-- doxytag: member="iqtgui::CObjectPreviewGuiComp::UpdateGui" ref="d4b78f0c1995c56bc4ccf5b8206ab7ae" args="(int updateFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqtgui::CObjectPreviewGuiComp::UpdateEditor           </td>
+          <td class="memname">virtual void iqtgui::CObjectPreviewGuiComp::UpdateGui           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>updateFlags</em> = <code>0</code>          </td>
@@ -266,38 +263,10 @@ Called when model is detached or GUI is destroyed.
 <div class="memdoc">
 
 <p>
-Updates editor with model data. 
+Do update of the model GUI. 
 <p>
-This method will be called only if GUI is connected. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>updateFlags</em>&nbsp;</td><td>the same as <code>changeFlag</code> in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>. </td></tr>
-  </table>
-</dl>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#806337a93835b5e6b1c577ce85a65674">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CObjectPreviewGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::IFileNameParam &gt; &gt;</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="fbcbc370415c944d421d0e8ff017ec69"></a><!-- doxytag: member="iqtgui::CObjectPreviewGuiComp::UpdateModel" ref="fbcbc370415c944d421d0e8ff017ec69" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqtgui::CObjectPreviewGuiComp::UpdateModel           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Updates model from editor. 
-<p>
-This method will be called only if GUI is connected and model is attached. 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#39ad878eb561d7510fa512c9a985a92b">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CObjectPreviewGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::IFileNameParam &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CObjectPreviewGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::IFileNameParam &gt; &gt;</a>.</p>
 
 </div>
 </div><p>

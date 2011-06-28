@@ -35,11 +35,23 @@ namespace iqtgui
 {
 
 
-// public methods
+// protected methods
 
-// reimplemented (imod::IModelEditor)
+// reimplemented (imod::TGuiObserverWrap)
 
-void CObjectPreviewGuiComp::UpdateEditor(int /*updateFlags*/)
+void CObjectPreviewGuiComp::OnGuiModelDetached()
+{
+	if (m_objectModelCompPtr.IsValid() && m_objectObserverCompPtr.IsValid()){
+		if (m_objectModelCompPtr->IsAttached(m_objectObserverCompPtr.GetPtr())){
+			m_objectModelCompPtr->DetachObserver(m_objectObserverCompPtr.GetPtr());
+		}
+	}
+
+	BaseClass::OnGuiModelDetached();
+}
+
+
+void CObjectPreviewGuiComp::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 
@@ -77,28 +89,6 @@ void CObjectPreviewGuiComp::UpdateEditor(int /*updateFlags*/)
 			m_lastFilePath = QString();
 		}
 	}
-}
-
-
-void CObjectPreviewGuiComp::UpdateModel() const
-{
-	I_ASSERT(IsGuiCreated() && (GetObjectPtr() != NULL));
-}
-
-
-// protected methods
-
-// reimplemented (imod::TGuiObserverWrap)
-
-void CObjectPreviewGuiComp::OnGuiModelDetached()
-{
-	if (m_objectModelCompPtr.IsValid() && m_objectObserverCompPtr.IsValid()){
-		if (m_objectModelCompPtr->IsAttached(m_objectObserverCompPtr.GetPtr())){
-			m_objectModelCompPtr->DetachObserver(m_objectObserverCompPtr.GetPtr());
-		}
-	}
-
-	BaseClass::OnGuiModelDetached();
 }
 
 

@@ -26,9 +26,9 @@
 
 #include "i2d/CAnnulus.h"
 
-#include "iqtgui/TDesignerGuiObserverCompBase.h"
+#include "iqt2d/TShapeParamsGuiCompBase.h"
+#include "iqt2d/CAnnulusShape.h"
 
-#include "iqt2d/TSceneExtenderCompBase.h"
 #include "iqt2d/Generated/ui_CAnnulusParamsGuiComp.h"
 
 
@@ -36,44 +36,36 @@ namespace iqt2d
 {
 
 
-class CAnnulusParamsGuiComp: public iqt2d::TSceneExtenderCompBase<iqtgui::TDesignerGuiObserverCompBase<
-			Ui::CAnnulusParamsGuiComp,
-			i2d::CAnnulus> >
+class CAnnulusParamsGuiComp:
+			public iqt2d::TShapeParamsGuiCompBase<
+						Ui::CAnnulusParamsGuiComp,
+						iqt2d::CAnnulusShape,
+						i2d::CAnnulus>
 {
 	Q_OBJECT
 
 public:
-	typedef iqt2d::TSceneExtenderCompBase<iqtgui::TDesignerGuiObserverCompBase<
+	typedef iqt2d::TShapeParamsGuiCompBase<
 				Ui::CAnnulusParamsGuiComp,
-				i2d::CAnnulus> > BaseClass;
+				iqt2d::CAnnulusShape,
+				i2d::CAnnulus> BaseClass;
 
 	I_BEGIN_COMPONENT(CAnnulusParamsGuiComp);
-		I_ASSIGN(m_unitNameAttrPtr, "UnitName", "Name of geometric units e.g. mm", false, "mm");
-		I_ASSIGN(m_annulusZValueAttrPtr, "AnnulusZValue", "Describe draw priority on display console (the objects with bigger value will overlap the other ones)", true, 1);
 	I_END_COMPONENT
 
 	// reimplemented (imod::IModelEditor)
 	virtual void UpdateModel() const;
-	virtual void UpdateEditor(int updateFlags = 0);
-
-	// reimplemented (imod::IObserver)
-	virtual bool OnAttached(imod::IModel* modelPtr);
-	virtual bool OnDetached(imod::IModel* modelPtr);
-
-	// reimplemented (iqt2d::TSceneExtenderCompBase)
-	virtual void CreateShapes(int sceneId, bool inactiveOnly, Shapes& result);
 
 protected:
+	// reimplemenented (iqtgui::TGuiObserverWrap)
+	virtual void UpdateGui(int updateFlags = 0);
+
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();
 	virtual void OnGuiDestroyed();
 
-protected slots:
+protected Q_SLOTS:
 	void OnParamsChanged(double value);
-
-private:
-	I_ATTR(istd::CString, m_unitNameAttrPtr);
-	I_ATTR(double, m_annulusZValueAttrPtr);
 };
 
 

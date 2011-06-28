@@ -57,7 +57,11 @@ void CSelectionParamGuiComp::UpdateModel() const
 }
 
 
-void CSelectionParamGuiComp::UpdateEditor(int /*updateFlags*/)
+// protected methods
+
+// reimplemented (iqtgui::TGuiObserverWrap)
+
+void CSelectionParamGuiComp::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 
@@ -120,7 +124,7 @@ void CSelectionParamGuiComp::OnGuiDestroyed()
 void CSelectionParamGuiComp::OnSelectionChanged(int /*index*/)
 {
 	if (!IsUpdateBlocked()){
-		UpdateBlocker blockUpdate(const_cast<CSelectionParamGuiComp*>(this));
+		UpdateBlocker updateBlocker(const_cast<CSelectionParamGuiComp*>(this));
 
 		UpdateModel();
 	}

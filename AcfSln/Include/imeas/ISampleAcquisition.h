@@ -2,7 +2,7 @@
 **
 **	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,42 +15,42 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
-**  by Skype to ACF_infoline for further information about the ACF.
+**  by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
 
 
-#ifndef iproc_IBitmapSupplier_included
-#define iproc_IBitmapSupplier_included
+#ifndef imeas_ISampleAcquisition_included
+#define imeas_ISampleAcquisition_included
 
 
+// ACF includes
 #include "istd/CIndex2d.h"
-
 #include "iimg/IBitmap.h"
+#include "iproc/IProcessor.h"
 
-#include "iproc/ISupplier.h"
 
-
-namespace iproc
+namespace imeas
 {
 
 
 /**
-	Bitmap supplier allowing to access of produced bitmap.
+	Sample acquisition processor.
 */
-class IBitmapSupplier: virtual public iproc::ISupplier
+class ISampleAcquisition: virtual public iproc::IProcessor
 {
 public:
 	/**
-		Get access to produced bitmap object.
-		\return	pointer to bitmap instance if this bitmap is accessible, or NULL.
+		Get sampling rate.
+		\return		number of samples per second.
 	*/
-	virtual const iimg::IBitmap* GetBitmap() const = 0;
+	virtual double GetSamplingRate(const iprm::IParamsSet* paramsPtr) const = 0;
 };
 
 
-} // namespace iproc
+} // namespace imeas
 
 
-#endif // !iproc_IBitmapSupplier_included
+#endif // !imeas_ISampleAcquisition_included
+
 

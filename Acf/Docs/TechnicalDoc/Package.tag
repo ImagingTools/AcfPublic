@@ -1925,6 +1925,18 @@
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
+    <name>CBitmapRegion.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iimg/</path>
+    <filename>_c_bitmap_region_8h</filename>
+    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
+    <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
+    <includes id="_c_annulus_8h" name="CAnnulus.h" local="yes" imported="no">i2d/CAnnulus.h</includes>
+    <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
+    <class kind="class">iimg::CBitmapRegion</class>
+    <class kind="struct">iimg::CBitmapRegion::PixelRange</class>
+    <namespace>iimg</namespace>
+  </compound>
+  <compound kind="file">
     <name>CGeneralBitmap.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/iimg/</path>
     <filename>_c_general_bitmap_8h</filename>
@@ -2481,9 +2493,9 @@
     <filename>_c_selectable_params_set_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
     <class kind="class">iprm::CSelectableParamsSetComp</class>
     <namespace>iprm</namespace>
@@ -2639,16 +2651,6 @@
     <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">iproc::IBitmapAcquisition</class>
-    <namespace>iproc</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IBitmapSupplier.h</name>
-    <path>E:/Work/Projects/Development/Acf/Include/iproc/</path>
-    <filename>_i_bitmap_supplier_8h</filename>
-    <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
-    <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <class kind="class">iproc::IBitmapSupplier</class>
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
@@ -3125,6 +3127,7 @@
     <filename>_c_translation_manager_comp_8h</filename>
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
     <includes id="_i_translation_manager_8h" name="ITranslationManager.h" local="yes" imported="no">iqt/ITranslationManager.h</includes>
@@ -3353,8 +3356,8 @@
     <path>E:/Work/Projects/Development/Acf/Include/iqt2d/</path>
     <filename>_c_annulus_params_gui_comp_8h</filename>
     <includes id="_c_annulus_8h" name="CAnnulus.h" local="yes" imported="no">i2d/CAnnulus.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_t_scene_extender_comp_base_8h" name="TSceneExtenderCompBase.h" local="yes" imported="no">iqt2d/TSceneExtenderCompBase.h</includes>
+    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="_c_annulus_shape_8h" name="CAnnulusShape.h" local="yes" imported="no">iqt2d/CAnnulusShape.h</includes>
     <class kind="class">iqt2d::CAnnulusParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3363,8 +3366,8 @@
     <path>E:/Work/Projects/Development/Acf/Include/iqt2d/</path>
     <filename>_c_annulus_segment_params_gui_comp_8h</filename>
     <includes id="_c_annulus_segment_8h" name="CAnnulusSegment.h" local="yes" imported="no">i2d/CAnnulusSegment.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_t_scene_extender_comp_base_8h" name="TSceneExtenderCompBase.h" local="yes" imported="no">iqt2d/TSceneExtenderCompBase.h</includes>
+    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="_c_annulus_segment_shape_8h" name="CAnnulusSegmentShape.h" local="yes" imported="no">iqt2d/CAnnulusSegmentShape.h</includes>
     <class kind="class">iqt2d::CAnnulusSegmentParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3392,8 +3395,8 @@
     <path>E:/Work/Projects/Development/Acf/Include/iqt2d/</path>
     <filename>_c_circle_params_gui_comp_8h</filename>
     <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_t_scene_extender_comp_base_8h" name="TSceneExtenderCompBase.h" local="yes" imported="no">iqt2d/TSceneExtenderCompBase.h</includes>
+    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="_c_circle_shape_8h" name="CCircleShape.h" local="yes" imported="no">iqt2d/CCircleShape.h</includes>
     <class kind="class">iqt2d::CCircleParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3442,8 +3445,8 @@
     <path>E:/Work/Projects/Development/Acf/Include/iqt2d/</path>
     <filename>_c_line2d_params_gui_comp_8h</filename>
     <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_t_scene_extender_comp_base_8h" name="TSceneExtenderCompBase.h" local="yes" imported="no">iqt2d/TSceneExtenderCompBase.h</includes>
+    <includes id="_c_line2d_shape_8h" name="CLine2dShape.h" local="yes" imported="no">iqt2d/CLine2dShape.h</includes>
+    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
     <class kind="class">iqt2d::CLine2dParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3472,8 +3475,8 @@
     <path>E:/Work/Projects/Development/Acf/Include/iqt2d/</path>
     <filename>_c_quadrangle_params_gui_comp_8h</filename>
     <includes id="_c_quadrangle_8h" name="CQuadrangle.h" local="yes" imported="no">i2d/CQuadrangle.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_t_scene_extender_comp_base_8h" name="TSceneExtenderCompBase.h" local="yes" imported="no">iqt2d/TSceneExtenderCompBase.h</includes>
+    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="_c_quadrangle_shape_8h" name="CQuadrangleShape.h" local="yes" imported="no">iqt2d/CQuadrangleShape.h</includes>
     <class kind="class">iqt2d::CQuadrangleParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3492,8 +3495,8 @@
     <path>E:/Work/Projects/Development/Acf/Include/iqt2d/</path>
     <filename>_c_rectangle_params_gui_comp_8h</filename>
     <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_t_scene_extender_comp_base_8h" name="TSceneExtenderCompBase.h" local="yes" imported="no">iqt2d/TSceneExtenderCompBase.h</includes>
+    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="_c_rectangle_shape_8h" name="CRectangleShape.h" local="yes" imported="no">iqt2d/CRectangleShape.h</includes>
     <class kind="class">iqt2d::CRectangleParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3644,6 +3647,15 @@
     <filename>_t_shape_base_8h</filename>
     <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">iqt2d/ISceneProvider.h</includes>
     <class kind="class">iqt2d::TShapeBase</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TShapeParamsGuiCompBase.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqt2d/</path>
+    <filename>_t_shape_params_gui_comp_base_8h</filename>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="_t_scene_extender_comp_base_8h" name="TSceneExtenderCompBase.h" local="yes" imported="no">iqt2d/TSceneExtenderCompBase.h</includes>
+    <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -4300,6 +4312,14 @@
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtprm::CSelectableGuiComp</class>
+    <namespace>iqtprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSelectableParamsSetGuiComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqtprm/</path>
+    <filename>_c_selectable_params_set_gui_comp_8h</filename>
+    <includes id="_c_selectable_gui_comp_8h" name="CSelectableGuiComp.h" local="yes" imported="no">iqtprm/CSelectableGuiComp.h</includes>
+    <class kind="class">iqtprm::CSelectableParamsSetGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
@@ -5792,16 +5812,16 @@
     <filename>class_xml_file_serializer.html</filename>
   </compound>
   <compound kind="class">
-    <name>iproc::Base</name>
-    <filename>classiproc_1_1_base.html</filename>
-  </compound>
-  <compound kind="class">
     <name>Base</name>
     <filename>class_base.html</filename>
   </compound>
   <compound kind="class">
     <name>ibase::Base</name>
     <filename>classibase_1_1_base.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>iproc::Base</name>
+    <filename>classiproc_1_1_base.html</filename>
   </compound>
   <compound kind="class">
     <name>iqt2d::GraphicsItemClass</name>
@@ -12060,27 +12080,6 @@
       <anchor>dc5e4e97e84b92710f8488dec26228fb</anchor>
       <arglist>(const std::string &amp;attributeName) const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>becebea584444d4ef69a39284085492a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a32b170ad7a15b0846b6eabbf1268f35</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>540abe48f978bbbbcb692c9f9586f174</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_AttributeTree_itemSelectionChanged</name>
@@ -12150,6 +12149,20 @@
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>bf0f501161131b8560f88f40d1c619d6</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>becebea584444d4ef69a39284085492a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>cb0af3380168193e389704b9e94847a0</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -12486,6 +12499,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateInterfaceList</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>88405540569440d3cb98c1bedbe92ddf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
       <type>icomp::IMetaInfoManager::ComponentAddresses</type>
       <name>GetFilteredComponentAdresses</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
@@ -12529,9 +12549,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateEditor</name>
+      <name>UpdateGui</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>6df6160aa66062415f38b5da59ac465d</anchor>
+      <anchor>60eadf25d6215b97ea125aec323ea4bf</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -13106,34 +13126,6 @@
       <anchor>7f563286d72f70f0876c597aab4df7fb</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>f852c10d9451160234c078ddf93f7101</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>cd7ba8d2becda1fc28d6e2643f135de2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>1a6ec3f05188e0b4aad670e538b6aa62</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>1dba68bf8aa43f57270dfafafabca5b8</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_DescriptionEdit_editingFinished</name>
@@ -13154,6 +13146,27 @@
       <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
       <anchor>bcf81cdf39601a8fa85a5314b38cd1ea</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>1a6ec3f05188e0b4aad670e538b6aa62</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>1dba68bf8aa43f57270dfafafabca5b8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>2ef0b396eda6f0a1e4297c466f4c7ea0</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -18529,6 +18542,7 @@
     <name>iimg</name>
     <filename>namespaceiimg.html</filename>
     <class kind="class">iimg::CBitmapBase</class>
+    <class kind="class">iimg::CBitmapRegion</class>
     <class kind="class">iimg::CGeneralBitmap</class>
     <class kind="class">iimg::IBitmap</class>
     <class kind="class">iimg::IRasterImage</class>
@@ -18607,6 +18621,86 @@
       <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
       <anchor>136e4c19f5859a78d3866ac80095d022</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iimg::CBitmapRegion</name>
+    <filename>classiimg_1_1_c_bitmap_region.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <class kind="struct">iimg::CBitmapRegion::PixelRange</class>
+    <member kind="typedef">
+      <type>std::vector&lt; PixelRange &gt;</type>
+      <name>PixelRanges</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>bcffd855c377d8ea8080839a5b60cfec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CBitmapRegion</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>42d2ffebae7eca34d038088abcdb48d7</anchor>
+      <arglist>(const IBitmap *bitmapPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>CreateFromGeometry</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>b321459a10fef69da3a538a293ffc9ac</anchor>
+      <arglist>(const i2d::IObject2d &amp;geometry)</arglist>
+    </member>
+    <member kind="function">
+      <type>const PixelRanges *</type>
+      <name>GetPixelRanges</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>e632bef52c5e3d6c7e61916fb89cda23</anchor>
+      <arglist>(int lineIndex) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::CRectangle &amp;</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>0b7534151852fbe28d0230b7f3c9ebc8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ResetBitmapRegion</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>f5339e3fb1b62a062b69d0a6cf878449</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsBitmapRegionEmpty</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>fe9b6912ee6dfda4f00457a53ec33cfc</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iimg::CBitmapRegion::PixelRange</name>
+    <filename>structiimg_1_1_c_bitmap_region_1_1_pixel_range.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>PixelRange</name>
+      <anchorfile>structiimg_1_1_c_bitmap_region_1_1_pixel_range.html</anchorfile>
+      <anchor>68ac51d222f908dae16b478c2ce91d4e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::CRange</type>
+      <name>range</name>
+      <anchorfile>structiimg_1_1_c_bitmap_region_1_1_pixel_range.html</anchorfile>
+      <anchor>1e3cd8ae22c21afeee87b334f11a807c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const void *</type>
+      <name>pixelBufferPtr</name>
+      <anchorfile>structiimg_1_1_c_bitmap_region_1_1_pixel_range.html</anchorfile>
+      <anchor>fc7afaad2f7812ba782eefe90b5c5b60</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23891,7 +23985,6 @@
     <class kind="class">iproc::CIterativeProcessorComp</class>
     <class kind="class">iproc::CModelBasedProcessingTriggerComp</class>
     <class kind="class">iproc::IBitmapAcquisition</class>
-    <class kind="class">iproc::IBitmapSupplier</class>
     <class kind="class">iproc::IProcessor</class>
     <class kind="class">iproc::IProgressManager</class>
     <class kind="class">iproc::ISupplier</class>
@@ -23943,13 +24036,6 @@
       <anchorfile>classiproc_1_1_c_cascaded_processor_comp.html</anchorfile>
       <anchor>7fba1e11c55b50eefabe9682d8979971</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ResetAllTasks</name>
-      <anchorfile>classiproc_1_1_c_cascaded_processor_comp.html</anchorfile>
-      <anchor>eced1b05837bfa947a0d3833618f0238</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -24196,18 +24282,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iproc::IBitmapSupplier</name>
-    <filename>classiproc_1_1_i_bitmap_supplier.html</filename>
-    <base virtualness="virtual">iproc::ISupplier</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual const iimg::IBitmap *</type>
-      <name>GetBitmap</name>
-      <anchorfile>classiproc_1_1_i_bitmap_supplier.html</anchorfile>
-      <anchor>a5529f422f2a1d742383e07f1b172dc7</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iproc::IProcessor</name>
     <filename>classiproc_1_1_i_processor.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -24303,13 +24377,6 @@
       <arglist>(const iprm::IParamsSet *paramsPtr) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>ResetAllTasks</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>727885ec11e35ad1b8d7361cfd5bea96</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>AreParamsAccepted</name>
       <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
@@ -24336,6 +24403,13 @@
       <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
       <anchor>bb082ed0fb7e87d975848e53aad84f89</anchor>
       <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a73693c6c682f31cf5bb344c6e816d6f</anchor>
+      <arglist>(int taskId=-1)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -24980,13 +25054,6 @@
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ResetAllTasks</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>685e9a282f2c3171806e7fdab0e64c9a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>AreParamsAccepted</name>
       <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
@@ -25006,6 +25073,13 @@
       <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
       <anchor>5e249d7e56f018e4e4f3ce872f1d622d</anchor>
       <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -27092,7 +27166,6 @@
     <filename>classiqt_1_1_c_translation_manager_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iqt::ITranslationManager</base>
-    <base virtualness="virtual">iprm::ISelectionParam</base>
     <base virtualness="virtual">iprm::ISelectionConstraints</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -27100,6 +27173,13 @@
       <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
       <anchor>0a86a84402f838d1e70e147e4e4148ba</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>282b44f6fd043160a0269e1894f8611b</anchor>
+      <arglist>(m_languageSelectionModelCompPtr, m_languageSelectionCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -27116,10 +27196,24 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>784c826ebbffc8781be58caa7fc15d61</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetLanguagesCount</name>
       <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
       <anchor>41338a4bf9ebc70192095cc0286d897d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCurrentLanguageIndex</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>439f659a139087217396bf4c2f4543a5</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -27151,34 +27245,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const iprm::ISelectionConstraints *</type>
-      <name>GetConstraints</name>
-      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
-      <anchor>45228b62da8c5b0d2c2082b7a933efa3</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSelectedOptionIndex</name>
-      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
-      <anchor>13f010bacf3dc3324fadc4b99a47a50a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetSelectedOptionIndex</name>
-      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
-      <anchor>e907c396f8c4bfb4c2b99e0d0d43a327</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual iprm::ISelectionParam *</type>
-      <name>GetActiveSubselection</name>
-      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
-      <anchor>330e7a6314a124298b6f08b6692ed6dc</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetOptionsCount</name>
       <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
@@ -27191,13 +27257,6 @@
       <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
       <anchor>b1b7a86af47cd5d76ae628c71dc31a18</anchor>
       <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
-      <anchor>34663c20522f0bb3c3f19c9f85d563fa</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -27592,6 +27651,13 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetCurrentLanguageIndex</name>
+      <anchorfile>classiqt_1_1_i_translation_manager.html</anchorfile>
+      <anchor>253a71ab19a57ec78225aeb07b4cbdf6</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual const QTranslator *</type>
       <name>GetLanguageTranslator</name>
       <anchorfile>classiqt_1_1_i_translation_manager.html</anchorfile>
@@ -27651,6 +27717,7 @@
     <class kind="class">iqt2d::TSceneExtenderDelgatorCompWrap</class>
     <class kind="class">iqt2d::TScenographerCompBase</class>
     <class kind="class">iqt2d::TShapeBase</class>
+    <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
     <member kind="typedef">
       <type>TSceneExtenderDelgatorCompWrap&lt; icomp::CComponentBase &gt;</type>
       <name>CSceneExtenderDelgatorComp</name>
@@ -27662,12 +27729,12 @@
   <compound kind="class">
     <name>iqt2d::CAnnulusParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_annulus_params_gui_comp.html</filename>
-    <base>TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CAnnulusParamsGuiComp, i2d::CAnnulus &gt; &gt;</base>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iqt2d::CAnnulusShape, i2d::CAnnulus &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CAnnulusParamsGuiComp, i2d::CAnnulus &gt; &gt;</type>
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iqt2d::CAnnulusShape, i2d::CAnnulus &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_annulus_params_gui_comp.html</anchorfile>
-      <anchor>99c98bd8531fbbcf7b196a7adc504c69</anchor>
+      <anchor>5b92a08fa8e59880fdc4701ae852f8ce</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -27677,40 +27744,19 @@
       <anchor>1054509b475b77bdabc2154fd377e7a8</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_params_gui_comp.html</anchorfile>
-      <anchor>56277e5ff237b4f7e22e22d2f82a05e0</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_params_gui_comp.html</anchorfile>
-      <anchor>3dc72d5f93c21bd69a1e8cb6f2b636b2</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDetached</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_params_gui_comp.html</anchorfile>
-      <anchor>37ae51b66320887b62cd5b1db47eb16e</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CreateShapes</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_params_gui_comp.html</anchorfile>
-      <anchor>34c2aa755508231df7734f634c7a8558</anchor>
-      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnParamsChanged</name>
       <anchorfile>classiqt2d_1_1_c_annulus_params_gui_comp.html</anchorfile>
       <anchor>2778a67b02da7387dc928bdb3435ca56</anchor>
       <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_c_annulus_params_gui_comp.html</anchorfile>
+      <anchor>5068e7a1a02f4454fcf1869a669afbd3</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -27730,12 +27776,12 @@
   <compound kind="class">
     <name>iqt2d::CAnnulusSegmentParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_annulus_segment_params_gui_comp.html</filename>
-    <base>TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, i2d::CAnnulusSegment &gt; &gt;</base>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, iqt2d::CAnnulusSegmentShape, i2d::CAnnulusSegment &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, i2d::CAnnulusSegment &gt; &gt;</type>
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, iqt2d::CAnnulusSegmentShape, i2d::CAnnulusSegment &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_annulus_segment_params_gui_comp.html</anchorfile>
-      <anchor>1004b54472a2912574e9c3e3537593a3</anchor>
+      <anchor>c0f907f1fe9b58da88c7e9038020512a</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -27745,40 +27791,19 @@
       <anchor>d09cb1f71b6e0d4f46f4b90eac787d0d</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_segment_params_gui_comp.html</anchorfile>
-      <anchor>12d3c02f38eef0f96f2c2bcc41af8935</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_segment_params_gui_comp.html</anchorfile>
-      <anchor>4fbc5745c2c25f8eb9d7fcb77867df4c</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDetached</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_segment_params_gui_comp.html</anchorfile>
-      <anchor>c9396d6791fd1c575c76920ff7ca55de</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CreateShapes</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_segment_params_gui_comp.html</anchorfile>
-      <anchor>6875500b1b0ff9984a39130e8bbfdbfd</anchor>
-      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnParamsChanged</name>
       <anchorfile>classiqt2d_1_1_c_annulus_segment_params_gui_comp.html</anchorfile>
       <anchor>eb05a8d2cbdfeb875834b2b0e635ee2e</anchor>
       <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>5aaa61f62bebd9338b6921e9460e54f6</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -27885,62 +27910,20 @@
   <compound kind="class">
     <name>iqt2d::CCircleParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_circle_params_gui_comp.html</filename>
-    <base>TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CCircleParamsGuiComp, i2d::CCircle &gt; &gt;</base>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iqt2d::CCircleShape, i2d::CCircle &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CCircleParamsGuiComp, i2d::CCircle &gt; &gt;</type>
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iqt2d::CCircleShape, i2d::CCircle &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>7a1f1608fdf0787e6538aa8d162dee8c</anchor>
+      <anchor>fe11ba9d2fe376797798ba94c772c408</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>78ac68048eb86b910ec715a75d05c7a8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>48fb4fde3b242e415c08b6fc8119cd9f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>2583ba5148363c31c957d1cc44a2f242</anchor>
+      <anchor>04228cb85f2014ffa4d86ff6a6b5a36b</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>a1e96e553573681ce2d5217148854090</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
-      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>4c3ee4c435b7ce198edbb94f2a2ed9c7</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDetached</name>
-      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>43ae7c2280acf80211eb802c49a10a6a</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CreateShapes</name>
-      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>42ae5e92d91641013eaba99debe42757</anchor>
-      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -27948,6 +27931,27 @@
       <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
       <anchor>55f85e6bfb1d1febeb5a8a4151b619a2</anchor>
       <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
+      <anchor>2d70a6c4987519a7100186ba8ea5eff8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
+      <anchor>48fb4fde3b242e415c08b6fc8119cd9f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
+      <anchor>4d31720672516f003690bf36e7de4c48</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28179,25 +28183,18 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>5088205754b1f90cd7cb3a2bb4c403ba</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>51f0ef25f4bb9d4d7ebcda88649d3feb</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual I_END_COMPONENT bool</type>
       <name>OnDetached</name>
       <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>3ef397bc23b7b85b76e2669570353305</anchor>
+      <anchor>a5447ae133069ff9fb3efb908ef83a16</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
+      <anchor>0d0aaa63924c63662b4d9e95029fcca9</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -28217,62 +28214,20 @@
   <compound kind="class">
     <name>iqt2d::CLine2dParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_line2d_params_gui_comp.html</filename>
-    <base>TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CLine2dParamsGuiComp, i2d::CLine2d &gt; &gt;</base>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iqt2d::CLine2dShape, i2d::CLine2d &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CLine2dParamsGuiComp, i2d::CLine2d &gt; &gt;</type>
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iqt2d::CLine2dShape, i2d::CLine2d &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
-      <anchor>9b13049fe8508c28ebb0f3277b11e0ea</anchor>
+      <anchor>61bdb63b6d319f03b3dbbaca1e40b712</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
-      <anchor>3449829226abcf00d5d9b19083416934</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
-      <anchor>23b64a133a77664d80d8294e92fc1d49</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
-      <anchor>fa5f1cd8c311b44d74c8af433a86d85d</anchor>
+      <anchor>433f3e07629ff7a7de6e8f3aadbb3a3f</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
-      <anchor>c9fa2328f20088a3ad536492b16ab022</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
-      <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
-      <anchor>9941762da2f647d35ca8680a6f0834eb</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDetached</name>
-      <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
-      <anchor>dda1b08d5103aef9c3c934048285b255</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CreateShapes</name>
-      <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
-      <anchor>7fa77f7d6730171f698defd429312a11</anchor>
-      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -28280,6 +28235,27 @@
       <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
       <anchor>a339de3ab8aa6f7689ea9c5a093fa434</anchor>
       <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>fc5bac637d0ae67f77a5450aec149479</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>23b64a133a77664d80d8294e92fc1d49</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>f54d69ad10fc16e61e227d407abe563d</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28366,62 +28342,20 @@
   <compound kind="class">
     <name>iqt2d::CQuadrangleParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</filename>
-    <base>TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CQuadrangleParamsGuiComp, i2d::CQuadrangle &gt; &gt;</base>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iqt2d::CQuadrangleShape, i2d::CQuadrangle &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CQuadrangleParamsGuiComp, i2d::CQuadrangle &gt; &gt;</type>
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iqt2d::CQuadrangleShape, i2d::CQuadrangle &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</anchorfile>
-      <anchor>cbd1d2e798339b5f54bf4441b15b55d3</anchor>
+      <anchor>22bb057b5f36a58b5dffb89d091b1457</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</anchorfile>
-      <anchor>cb221dce2565dbc64efe84cd144a900a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</anchorfile>
-      <anchor>4ee5eff9d9eeef96a486e74ab6356309</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</anchorfile>
-      <anchor>7962915cad8738c41ab016a5002cf607</anchor>
+      <anchor>a7f2c44a4bc8672a39984ecdfeeed3c2</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</anchorfile>
-      <anchor>4152815da725d1c1eda4b361c656bb03</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
-      <anchorfile>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</anchorfile>
-      <anchor>d18b12ad93c9ad27cee1243f373c66fb</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDetached</name>
-      <anchorfile>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</anchorfile>
-      <anchor>aef2eb69042fd3d21b89cd9bb627c644</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CreateShapes</name>
-      <anchorfile>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</anchorfile>
-      <anchor>638207d512d2f798535f1b37b86e46f4</anchor>
-      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -28429,6 +28363,27 @@
       <anchorfile>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</anchorfile>
       <anchor>0aeddf557421141376255b3e37a379b6</anchor>
       <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>f657c1a9526ceb8463a33fcc76a7ff55</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>4ee5eff9d9eeef96a486e74ab6356309</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>8bbb81c90f47a6afe08bbf3271207089</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28488,62 +28443,20 @@
   <compound kind="class">
     <name>iqt2d::CRectangleParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_rectangle_params_gui_comp.html</filename>
-    <base>TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CRectangleParamsGuiComp, i2d::CRectangle &gt; &gt;</base>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CRectangleParamsGuiComp, iqt2d::CRectangleShape, i2d::CRectangle &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CRectangleParamsGuiComp, i2d::CRectangle &gt; &gt;</type>
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CRectangleParamsGuiComp, iqt2d::CRectangleShape, i2d::CRectangle &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
-      <anchor>ffe2799a8a3419142eb26e8187cf1fc1</anchor>
+      <anchor>a0a342c4dac4a9302c4dd4673ea98044</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
-      <anchor>ff8cc914b4456ce4698069bab975e94d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
-      <anchor>5c4cff6ecd149f3b4d7baa75a348b6a5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
-      <anchor>f7c3cf891907f4c5a530e3e0e4a72ced</anchor>
+      <anchor>0833c20626506add1e4716a9378d2a8d</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
-      <anchor>685c9095eafdb086878b217fc23a463a</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
-      <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
-      <anchor>692b66ff47d31fcb1a58892b0d749908</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDetached</name>
-      <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
-      <anchor>c0d7058770c6c8f4f8b01ed11a888dd5</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CreateShapes</name>
-      <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
-      <anchor>48bd38b188027fabc5c7e052448c8c60</anchor>
-      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -28551,6 +28464,27 @@
       <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
       <anchor>28d90ca3ebea0876d1757f2584fb0b96</anchor>
       <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>ea05751ddff8247fe7d2550bfa236c8b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>5c4cff6ecd149f3b4d7baa75a348b6a5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>c4550561fd3225603bcfd3026cf9f638</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29189,6 +29123,20 @@
       <anchor>e1686836bdaeb07a7d8bea4f87944cfb</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CSelectableSceneExtenderComp</name>
+      <anchorfile>classiqt2d_1_1_c_selectable_scene_extender_comp.html</anchorfile>
+      <anchor>9fb12f9ca307aab9f0b2053b526f99c6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classiqt2d_1_1_c_selectable_scene_extender_comp.html</anchorfile>
+      <anchor>c1f0a4b11796b90bfb6213221b281b33</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnDetached</name>
@@ -29796,6 +29744,42 @@
       <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
       <anchor>b2f433b5c65bea87d8b38db555875efd</anchor>
       <arglist>(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget=NULL)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::TShapeParamsGuiCompBase</name>
+    <filename>classiqt2d_1_1_t_shape_params_gui_comp_base.html</filename>
+    <templarg>Ui</templarg>
+    <templarg>Shape</templarg>
+    <templarg>ShapeModel</templarg>
+    <base>TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui, ShapeModel &gt; &gt;</base>
+    <member kind="typedef">
+      <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui, ShapeModel &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>22bd4848cc6063a548e4ec15bf99f84e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual I_END_COMPONENT bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>7251aef8234d39513e85129dbbb4d2ae</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnDetached</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>ba51796f5924e076cd2d9312024d1e4d</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreateShapes</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>065de61285326f12b547600de2e6cd9c</anchor>
+      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -30495,6 +30479,13 @@
       <name>OnRetranslate</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
       <anchor>dcf6b5c3fc6195386fe8307f0c91b690</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
+      <anchor>55f35caeaef529733737bf0761ecaee2</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -31210,26 +31201,19 @@
       <anchor>a369ab65ec17024dd82119a1842f1096</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtgui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
-      <anchor>f725e9b0ac595aa6260de92634f39330</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtgui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
-      <anchor>d22e89f57cfed531a2679a1a960d8f67</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>QStringList</type>
       <name>GetDefaultFilters</name>
       <anchorfile>classiqtgui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
       <anchor>fc477a01d70604290be4ebe38f811526</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtgui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>4fde1a1b3312c920073c243dff3d2e9a</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -31641,19 +31625,12 @@
       <anchor>0c420e11f2220a57890fff01a5a2fc39</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateEditor</name>
+      <name>UpdateGui</name>
       <anchorfile>classiqtgui_1_1_c_image_properties_frame_comp.html</anchorfile>
-      <anchor>02d3784a4b46766a00307e0589250b5b</anchor>
+      <anchor>27eb391c449d7019a43d049a308f5ea9</anchor>
       <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtgui_1_1_c_image_properties_frame_comp.html</anchorfile>
-      <anchor>1edac47d45f91351be6f4643b7ffd533</anchor>
-      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31667,19 +31644,12 @@
       <anchor>14cb0181b6db5dc4ba17c13dff3e8e2c</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateEditor</name>
+      <name>UpdateGui</name>
       <anchorfile>classiqtgui_1_1_c_image_property_gui_comp.html</anchorfile>
-      <anchor>305a4b1e4cac1e31cb2f6c4fe8881d6d</anchor>
+      <anchor>b27526403fda96f79f4646c6787c42b0</anchor>
       <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtgui_1_1_c_image_property_gui_comp.html</anchorfile>
-      <anchor>60027548348c1ae98b78848cc984cb55</anchor>
-      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31957,9 +31927,9 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>UpdateGui</name>
+      <name>UpdateGuiElements</name>
       <anchorfile>classiqtgui_1_1_c_login_gui_comp.html</anchorfile>
-      <anchor>7cf1365de9bdf16b7c05b1a153ffaaa0</anchor>
+      <anchor>dbf2276ce890544700ef23e7f6e91bd9</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -32143,24 +32113,17 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
-      <anchor>6b95c3f3fcb3ecd04d89ab110984d31f</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
-      <anchor>fbcbc370415c944d421d0e8ff017ec69</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnGuiModelDetached</name>
       <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
       <anchor>3daf5e173d6dec22db4bd28242b40a67</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
+      <anchor>d4b78f0c1995c56bc4ccf5b8206ab7ae</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -32860,6 +32823,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>4006cbfcb625457199435c24a00f581a</anchor>
+      <arglist>(int updateFlags)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateEditor</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>806337a93835b5e6b1c577ce85a65674</anchor>
@@ -33368,19 +33338,12 @@
       <anchor>09014012bec5d4bf6438029815b23f6f</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateEditor</name>
+      <name>UpdateGui</name>
       <anchorfile>classiqtmm_1_1_c_playback_controller_gui_comp.html</anchorfile>
-      <anchor>775354d03d0bea7b36b1b4e00895b48c</anchor>
+      <anchor>4eb4b21cb9bc3b9efe904f5cc2010bb6</anchor>
       <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtmm_1_1_c_playback_controller_gui_comp.html</anchorfile>
-      <anchor>bddb5de2cf0956949174d1615ed463e9</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -33546,6 +33509,7 @@
     <class kind="class">iqtprm::CParamsManagerGuiComp</class>
     <class kind="class">iqtprm::CRelativeFileNameParamComp</class>
     <class kind="class">iqtprm::CSelectableGuiComp</class>
+    <class kind="class">iqtprm::CSelectableParamsSetGuiComp</class>
     <class kind="class">iqtprm::CSelectionParamGuiComp</class>
     <class kind="class">iqtprm::CSelectionParamIndexGuiComp</class>
     <class kind="class">iqtprm::CVariableParamGuiComp</class>
@@ -33709,17 +33673,17 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
-      <anchor>e11cefecf0988f11b89e69bcf4efd4b6</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
       <anchor>db92085eb9f5d8d8c6b4a2951d1a7298</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
+      <anchor>ddafbf399505795d48c48a4acaed131e</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -33760,20 +33724,6 @@
       <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
       <anchor>c5cf5f27006360059f771c6bd0a1a4b7</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>03132fdbb3984d002ed8e2f4291e89bd</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>1a8a655eeaa7324f75ed30e37b3f4761</anchor>
-      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -33852,6 +33802,27 @@
       <anchor>b60f4eec6585d422f4d6a834de53e63b</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
+      <anchor>84a30d8ba21ccad5d68149892424dd95</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
+      <anchor>44198abdf51405019a50dc7d85e7027b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
+      <anchor>169c3d22ab4fd905eaba95b02b04e6f8</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtprm::CRelativeFileNameParamComp</name>
@@ -33897,39 +33868,79 @@
       <anchor>511f88ed3d578924f8fa8392db3e15e6</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
-      <anchor>f1305c8a5f9475383d4d665515f0225a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
-      <anchor>1aa805cf86507e1616fa90f3019dbaba</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
       <anchor>f41f3b103f8fbd6cbd2ccbec433199b3</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelDetached</name>
       <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
       <anchor>38f677a7fcd8d4d3633a792f0100be62</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
+      <anchor>ea7c24117354c372b886e3b5a91d75bd</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
       <anchor>8fc467b4153ba752ef11fe98b525f76b</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtprm::CSelectableParamsSetGuiComp</name>
+    <filename>classiqtprm_1_1_c_selectable_params_set_gui_comp.html</filename>
+    <base>iqtprm::CSelectableGuiComp</base>
+    <member kind="typedef">
+      <type>iqtprm::CSelectableGuiComp</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_params_set_gui_comp.html</anchorfile>
+      <anchor>1e1962650d454e056cb5f2e673a5fe0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSelectableParamsSetGuiComp</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_params_set_gui_comp.html</anchorfile>
+      <anchor>172545f13297b57294d025a43500b33c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeforeUpdate</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_params_set_gui_comp.html</anchorfile>
+      <anchor>e25102ae2c71823cd311ec7f74d4880f</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_params_set_gui_comp.html</anchorfile>
+      <anchor>8a943978a19001474d6c1d1de6714e55</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_params_set_gui_comp.html</anchorfile>
+      <anchor>652882f26745c0d5a0c99051ea1e0660</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_params_set_gui_comp.html</anchorfile>
+      <anchor>552b9c3b73517fbc580fb0c54b9eba9e</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -33951,33 +33962,33 @@
       <anchor>3328f8e6cd33cdb75e7528e3718f2391</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
-      <anchor>e16a8848b49427ecad6ba77b1a8342dc</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
-      <anchor>9fe4691ae12e6aecfe32a25bc415a2bd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
-      <anchor>7bc1c19b4ddad3b775c6681e0f0bc808</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnSelectionChanged</name>
       <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
       <anchor>1b98819d273224667c32201f45e37fb2</anchor>
       <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>2f56abc8c29885436625c37772435a1d</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>9fe4691ae12e6aecfe32a25bc415a2bd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>7bc1c19b4ddad3b775c6681e0f0bc808</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33998,19 +34009,19 @@
       <anchor>3de7b008af49dccaf507f9663b07d190</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtprm_1_1_c_selection_param_index_gui_comp.html</anchorfile>
-      <anchor>324836291d51663e262198afdd669589</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_OptionIndexSlider_valueChanged</name>
       <anchorfile>classiqtprm_1_1_c_selection_param_index_gui_comp.html</anchorfile>
       <anchor>907e41e7db242b07322ca72774fbb3fc</anchor>
       <arglist>(int value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_index_gui_comp.html</anchorfile>
+      <anchor>97b557162c545ae1eea0f03d725b1bfc</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34054,39 +34065,11 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
-      <anchor>a0daaa527dcb8ecafe475a968034a952</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
-      <anchor>6fe7704be074fe1fbade0fa53f7694eb</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnDetached</name>
       <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
       <anchor>e293812d7001eec2733342aa0b7a4b85</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
-      <anchor>f13fd6a926b99606d8f1b9b89f47cdf4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
-      <anchor>7ba45acc51cb57e86abece3bc2cecba7</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -34121,6 +34104,27 @@
       <name>DetachCurrentType</name>
       <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
       <anchor>564376827eb3a81f766059e8291f6891</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
+      <anchor>be7ed27a4662ffca4a5c41da67f16b02</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
+      <anchor>f13fd6a926b99606d8f1b9b89f47cdf4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
+      <anchor>7ba45acc51cb57e86abece3bc2cecba7</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

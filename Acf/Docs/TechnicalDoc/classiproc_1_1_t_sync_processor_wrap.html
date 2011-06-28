@@ -53,13 +53,13 @@ Inheritance diagram for iproc::TSyncProcessorWrap&lt; Base &gt;:</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#dc1704c346843a8bcaf57e055e902b71">GetProcessorState</a> (const <a class="el" href="classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr) const </td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#685e9a282f2c3171806e7fdab0e64c9a">ResetAllTasks</a> ()</td></tr>
-
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#e97572f44492b12a88117a22db51483d">AreParamsAccepted</a> (const <a class="el" href="classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *inputPtr, const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *outputPtr) const </td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#f4ec587c11a28b59b22c3f7c0efc5903">BeginTask</a> (const <a class="el" href="classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *inputPtr, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *outputPtr, <a class="el" href="classiproc_1_1_i_progress_manager.html">IProgressManager</a> *progressManagerPtr=NULL)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#5e249d7e56f018e4e4f3ce872f1d622d">WaitTaskFinished</a> (int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#0a5cd08f5800f4d01eeae041dd5a5aa7">CancelTask</a> (int taskId=-1)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#7644b6e2edc8e32f3e4a9987a2a97ab9">GetReadyTask</a> ()</td></tr>
 
@@ -160,7 +160,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classiproc_1_1_c_cascaded_processor_comp.html#835018bd3713fe9708d509c7ba8c1ce9">iproc::CCascadedProcessorComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_sync_processor_wrap_8h_source.html#l00086">86</a> of file <a class="el" href="_t_sync_processor_wrap_8h_source.html">TSyncProcessorWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_sync_processor_wrap_8h_source.html#l00079">79</a> of file <a class="el" href="_t_sync_processor_wrap_8h_source.html">TSyncProcessorWrap.h</a>.</p>
 
 </div>
 </div><p>
@@ -205,7 +205,31 @@ template&lt;class Base &gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_sync_processor_wrap_8h_source.html#l00096">96</a> of file <a class="el" href="_t_sync_processor_wrap_8h_source.html">TSyncProcessorWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_sync_processor_wrap_8h_source.html#l00089">89</a> of file <a class="el" href="_t_sync_processor_wrap_8h_source.html">TSyncProcessorWrap.h</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="0a5cd08f5800f4d01eeae041dd5a5aa7"></a><!-- doxytag: member="iproc::TSyncProcessorWrap::CancelTask" ref="0a5cd08f5800f4d01eeae041dd5a5aa7" args="(int taskId=&#45;1)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html">iproc::TSyncProcessorWrap</a>&lt; Base &gt;::CancelTask           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>taskId</em> = <code>-1</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>Definition at line <a class="el" href="_t_sync_processor_wrap_8h_source.html#l00138">138</a> of file <a class="el" href="_t_sync_processor_wrap_8h_source.html">TSyncProcessorWrap.h</a>.</p>
 
 </div>
 </div><p>
@@ -254,7 +278,7 @@ template&lt;class Base &gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_sync_processor_wrap_8h_source.html#l00145">145</a> of file <a class="el" href="_t_sync_processor_wrap_8h_source.html">TSyncProcessorWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_sync_processor_wrap_8h_source.html#l00150">150</a> of file <a class="el" href="_t_sync_processor_wrap_8h_source.html">TSyncProcessorWrap.h</a>.</p>
 
 </div>
 </div><p>
@@ -278,7 +302,7 @@ template&lt;class Base &gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_sync_processor_wrap_8h_source.html#l00157">157</a> of file <a class="el" href="_t_sync_processor_wrap_8h_source.html">TSyncProcessorWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_sync_processor_wrap_8h_source.html#l00162">162</a> of file <a class="el" href="_t_sync_processor_wrap_8h_source.html">TSyncProcessorWrap.h</a>.</p>
 
 </div>
 </div><p>
@@ -304,32 +328,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classiproc_1_1_c_cascaded_processor_comp.html#fca74bcd67ce8a03e9ef1f1d02a07b26">iproc::CCascadedProcessorComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_sync_processor_wrap_8h_source.html#l00183">183</a> of file <a class="el" href="_t_sync_processor_wrap_8h_source.html">TSyncProcessorWrap.h</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="685e9a282f2c3171806e7fdab0e64c9a"></a><!-- doxytag: member="iproc::TSyncProcessorWrap::ResetAllTasks" ref="685e9a282f2c3171806e7fdab0e64c9a" args="()" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Base &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html">iproc::TSyncProcessorWrap</a>&lt; Base &gt;::ResetAllTasks           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-
-<p>Reimplemented in <a class="el" href="classiproc_1_1_c_cascaded_processor_comp.html#eced1b05837bfa947a0d3833618f0238">iproc::CCascadedProcessorComp</a>.</p>
-
-<p>Definition at line <a class="el" href="_t_sync_processor_wrap_8h_source.html#l00079">79</a> of file <a class="el" href="_t_sync_processor_wrap_8h_source.html">TSyncProcessorWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_sync_processor_wrap_8h_source.html#l00188">188</a> of file <a class="el" href="_t_sync_processor_wrap_8h_source.html">TSyncProcessorWrap.h</a>.</p>
 
 </div>
 </div><p>
@@ -368,7 +367,9 @@ template&lt;class Base &gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_sync_processor_wrap_8h_source.html#l00112">112</a> of file <a class="el" href="_t_sync_processor_wrap_8h_source.html">TSyncProcessorWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_sync_processor_wrap_8h_source.html#l00105">105</a> of file <a class="el" href="_t_sync_processor_wrap_8h_source.html">TSyncProcessorWrap.h</a>.</p>
+
+<p>References <a class="el" href="_i_processor_8h_source.html#l00068">iproc::IProcessor::TS_NONE</a>.</p>
 
 </div>
 </div><p>

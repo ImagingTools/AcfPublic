@@ -62,59 +62,56 @@
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041        <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#7d8efb5edf206b772927592e9e447f89">CValueSupplierGuiComp</a>();
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#c05e9f9a0639056d92e9fdfaa939fe9b">UpdateModel</a>() <span class="keyword">const</span>;
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#3fd9207763f60ed94deb54f23d65fa2b">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="keyword">protected</span> slots:
-<a name="l00048"></a>00048        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#2a069ba016951766ebff106d2ab12d1e">on_TestButton_clicked</a>();
-<a name="l00049"></a>00049        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#90e391a9826f908325672bd356a807f7">on_LoadParamsButton_clicked</a>();
-<a name="l00050"></a>00050        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#9b3f30ba419e41290f655ec6806fae5a">on_SaveParamsButton_clicked</a>();
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="keyword">protected</span>:
-<a name="l00053"></a><a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html">00053</a>        <span class="keyword">class </span><a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html">ParamsObserver</a>: <span class="keyword">public</span> imod::CSingleModelObserverBase
-<a name="l00054"></a>00054        {
-<a name="l00055"></a>00055        <span class="keyword">public</span>:
-<a name="l00056"></a>00056               <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html#5145b7e8b579f7ee70c48e081abec0e5">ParamsObserver</a>(<a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html">CValueSupplierGuiComp</a>* parentPtr);
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058               <span class="keyword">using</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimod_1_1_c_single_model_observer_base.html#e0588b14d7c19ff3e4c7d328828ac63e">imod::CSingleModelObserverBase::EnsureDetached</a>;
+<a name="l00043"></a>00043 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00044"></a>00044        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#2a069ba016951766ebff106d2ab12d1e">on_TestButton_clicked</a>();
+<a name="l00045"></a>00045        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#90e391a9826f908325672bd356a807f7">on_LoadParamsButton_clicked</a>();
+<a name="l00046"></a>00046        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#9b3f30ba419e41290f655ec6806fae5a">on_SaveParamsButton_clicked</a>();
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="keyword">protected</span>:
+<a name="l00049"></a><a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html">00049</a>        <span class="keyword">class </span><a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html">ParamsObserver</a>: <span class="keyword">public</span> imod::CSingleModelObserverBase
+<a name="l00050"></a>00050        {
+<a name="l00051"></a>00051        <span class="keyword">public</span>:
+<a name="l00052"></a>00052               <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html#5145b7e8b579f7ee70c48e081abec0e5">ParamsObserver</a>(<a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html">CValueSupplierGuiComp</a>* parentPtr);
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054               <span class="keyword">using</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimod_1_1_c_single_model_observer_base.html#e0588b14d7c19ff3e4c7d328828ac63e">imod::CSingleModelObserverBase::EnsureDetached</a>;
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056        <span class="keyword">protected</span>:
+<a name="l00057"></a>00057               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00058"></a>00058               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html#810879a03b633f6a863612453e50020c">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060        <span class="keyword">protected</span>:
-<a name="l00061"></a>00061               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00062"></a>00062               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html#810879a03b633f6a863612453e50020c">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00060"></a>00060        <span class="keyword">private</span>:
+<a name="l00061"></a>00061               <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html">CValueSupplierGuiComp</a>&amp; m_parent;
+<a name="l00062"></a>00062        };
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064        <span class="keyword">private</span>:
-<a name="l00065"></a>00065               <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html">CValueSupplierGuiComp</a>&amp; m_parent;
-<a name="l00066"></a>00066        };
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068        <span class="comment">// reimplemented (iqtinsp::TSupplierGuiCompBase)</span>
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#8a9dfb272378b56fc59c478ff601aa78" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span>;
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071        <span class="comment">// reimplemented (iqt2d::TSceneExtenderCompBase)</span>
-<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#4cfce61899a27800165748d2cc4a3416">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <span class="keywordtype">bool</span> inactiveOnly, <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Shapes</a>&amp; result);
+<a name="l00064"></a>00064        <span class="comment">// reimplemented (iqtinsp::TSupplierGuiCompBase)</span>
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#8a9dfb272378b56fc59c478ff601aa78" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span>;
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067        <span class="comment">// reimplemented (iqt2d::TSceneExtenderCompBase)</span>
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#4cfce61899a27800165748d2cc4a3416">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <span class="keywordtype">bool</span> inactiveOnly, <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Shapes</a>&amp; result);
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#b36269efd80ebc95485d9b7cfccfbc75">OnGuiModelAttached</a>();
+<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#fbfa844c008eb0d274bd8dd48d0a5b40">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#b36269efd80ebc95485d9b7cfccfbc75">OnGuiModelAttached</a>();
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077        <span class="comment">// reimplemented (iqtgui::IGuiObject)</span>
-<a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#b5160a7f3c50ad892ae7d549b2e9b913">OnGuiCreated</a>();
-<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#81524cf0dd4f101573bb6a44bb62dee8">OnGuiDestroyed</a>();
+<a name="l00074"></a>00074        <span class="comment">// reimplemented (iqtgui::IGuiObject)</span>
+<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#b5160a7f3c50ad892ae7d549b2e9b913">OnGuiCreated</a>();
+<a name="l00076"></a>00076        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#81524cf0dd4f101573bb6a44bb62dee8">OnGuiDestroyed</a>();
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 <span class="keyword">private</span>:
+<a name="l00079"></a>00079        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_intermediateResultsGuiCompPtr);
 <a name="l00080"></a>00080 
-<a name="l00081"></a>00081 <span class="keyword">private</span>:
-<a name="l00082"></a>00082        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_intermediateResultsGuiCompPtr);
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084        <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;i2d::CCircle&gt;</a> m_foundModel;
+<a name="l00081"></a>00081        <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;i2d::CCircle&gt;</a> m_foundModel;
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083        <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html">ParamsObserver</a> m_paramsObserver;
+<a name="l00084"></a>00084 };
 <a name="l00085"></a>00085 
-<a name="l00086"></a>00086        <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html">ParamsObserver</a> m_paramsObserver;
-<a name="l00087"></a>00087 };
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 } <span class="comment">// namespace iqtipr</span>
 <a name="l00088"></a>00088 
 <a name="l00089"></a>00089 
-<a name="l00090"></a>00090 } <span class="comment">// namespace iqtipr</span>
-<a name="l00091"></a>00091 
+<a name="l00090"></a>00090 <span class="preprocessor">#endif // !iqtipr_CValueSupplierGuiComp_included</span>
+<a name="l00091"></a>00091 <span class="preprocessor"></span>
 <a name="l00092"></a>00092 
-<a name="l00093"></a>00093 <span class="preprocessor">#endif // !iqtipr_CValueSupplierGuiComp_included</span>
-<a name="l00094"></a>00094 <span class="preprocessor"></span>
-<a name="l00095"></a>00095 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

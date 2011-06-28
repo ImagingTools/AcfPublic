@@ -60,28 +60,31 @@
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038        <span class="comment">// reimplemented (imod::IModelEditor)</span>
 <a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#3328f8e6cd33cdb75e7528e3718f2391" title="Updates model from editor.">UpdateModel</a>() <span class="keyword">const</span>;
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#e16a8848b49427ecad6ba77b1a8342dc" title="Updates editor with model data.">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#9fe4691ae12e6aecfe32a25bc415a2bd" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#7bc1c19b4ddad3b775c6681e0f0bc808" title="Called just before GUI is released.">OnGuiDestroyed</a>();
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00047"></a>00047        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#1b98819d273224667c32201f45e37fb2">OnSelectionChanged</a>(<span class="keywordtype">int</span> index);
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 <span class="keyword">protected</span>:
+<a name="l00042"></a>00042        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#2f56abc8c29885436625c37772435a1d" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#9fe4691ae12e6aecfe32a25bc415a2bd" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#7bc1c19b4ddad3b775c6681e0f0bc808" title="Called just before GUI is released.">OnGuiDestroyed</a>();
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="keyword">private</span>:
-<a name="l00050"></a>00050        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_optionsLabelAttrPtr);
+<a name="l00049"></a>00049 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00050"></a>00050        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#1b98819d273224667c32201f45e37fb2">OnSelectionChanged</a>(<span class="keywordtype">int</span> index);
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QComboBox&gt;</a> m_comboBoxes;
-<a name="l00053"></a>00053 };
+<a name="l00052"></a>00052 <span class="keyword">private</span>:
+<a name="l00053"></a>00053        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_optionsLabelAttrPtr);
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056 } <span class="comment">// namespace iqtprm</span>
+<a name="l00055"></a>00055        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QComboBox&gt;</a> m_comboBoxes;
+<a name="l00056"></a>00056 };
 <a name="l00057"></a>00057 
 <a name="l00058"></a>00058 
-<a name="l00059"></a>00059 <span class="preprocessor">#endif // !iqtprm_CSelectionParamGuiComp_included</span>
-<a name="l00060"></a>00060 <span class="preprocessor"></span>
+<a name="l00059"></a>00059 } <span class="comment">// namespace iqtprm</span>
+<a name="l00060"></a>00060 
 <a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="preprocessor">#endif // !iqtprm_CSelectionParamGuiComp_included</span>
+<a name="l00063"></a>00063 <span class="preprocessor"></span>
+<a name="l00064"></a>00064 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

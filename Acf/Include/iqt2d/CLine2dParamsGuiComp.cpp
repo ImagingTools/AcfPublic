@@ -26,14 +26,41 @@
 // ACF includes
 #include "istd/TChangeNotifier.h"
 
-#include "iqt2d/CLine2dShape.h"
-
 #include "iqt/CSignalBlocker.h"
 
 
 namespace iqt2d
 {
 
+
+// public methods
+
+// reimplemented (imod::IModelEditor)
+
+void CLine2dParamsGuiComp::UpdateModel() const
+{
+	I_ASSERT(IsGuiCreated());
+
+	i2d::CLine2d* objectPtr = GetObjectPtr();
+	I_ASSERT(objectPtr != NULL);
+
+	istd::CChangeNotifier notifier(NULL);
+
+	i2d::CVector2d point1(Point1XSB->value(), Point1YSB->value());
+	if (objectPtr->GetPoint1() != point1){
+		notifier.SetPtr(objectPtr);
+		objectPtr->SetPoint1(point1);
+	}
+
+	i2d::CVector2d point2(Point2XSB->value(), Point2YSB->value());
+	if (objectPtr->GetPoint2() != point2){
+		notifier.SetPtr(objectPtr);
+		objectPtr->SetPoint2(point2);
+	}
+}
+
+
+// protected methods
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
@@ -70,84 +97,7 @@ void CLine2dParamsGuiComp::OnGuiModelDetached()
 }
 
 
-// reimplemented (imod::IObserver)
-
-bool CLine2dParamsGuiComp::OnAttached(imod::IModel* modelPtr)
-{
-	if (BaseClass::OnAttached(modelPtr)){
-		const ShapesMap& shapesMap = GetShapesMap();
-		for (		ShapesMap::const_iterator iter = shapesMap.begin();
-					iter != shapesMap.end();
-					++iter){
-			const Shapes& shapes = iter->second;
-			int shapesCount = shapes.GetCount();
-			for (int shapeIndex = 0; shapeIndex < shapesCount; ++shapeIndex){
-				iqt2d::CLine2dShape* shapePtr = dynamic_cast<iqt2d::CLine2dShape*>(shapes.GetAt(shapeIndex));
-				if (shapePtr != NULL){
-					modelPtr->AttachObserver(shapePtr);
-				}
-			}
-		}
-
-		return true;
-	}
-	else{
-		return false;
-	}
-}
-
-
-bool CLine2dParamsGuiComp::OnDetached(imod::IModel* modelPtr)
-{
-	if (BaseClass::OnDetached(modelPtr)){
-		const ShapesMap& shapesMap = GetShapesMap();
-		for (		ShapesMap::const_iterator iter = shapesMap.begin();
-					iter != shapesMap.end();
-					++iter){
-			const Shapes& shapes = iter->second;
-			int shapesCount = shapes.GetCount();
-			for (int shapeIndex = 0; shapeIndex < shapesCount; ++shapeIndex){
-				iqt2d::CLine2dShape* shapePtr = dynamic_cast<iqt2d::CLine2dShape*>(shapes.GetAt(shapeIndex));
-				if (shapePtr != NULL){
-					modelPtr->DetachObserver(shapePtr);
-				}
-			}
-		}
-
-		return true;
-	}
-	else{
-		return false;
-	}
-}
-
-
-// reimplemented (imod::IModelEditor)
-
-void CLine2dParamsGuiComp::UpdateModel() const
-{
-	I_ASSERT(IsGuiCreated());
-
-	i2d::CLine2d* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
-
-	istd::CChangeNotifier notifier(NULL);
-
-	i2d::CVector2d point1(Point1XSB->value(), Point1YSB->value());
-	if (objectPtr->GetPoint1() != point1){
-		notifier.SetPtr(objectPtr);
-		objectPtr->SetPoint1(point1);
-	}
-
-	i2d::CVector2d point2(Point2XSB->value(), Point2YSB->value());
-	if (objectPtr->GetPoint2() != point2){
-		notifier.SetPtr(objectPtr);
-		objectPtr->SetPoint2(point2);
-	}
-}
-
-
-void CLine2dParamsGuiComp::UpdateEditor(int /*updateFlags*/)
+void CLine2dParamsGuiComp::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 
@@ -171,31 +121,12 @@ void CLine2dParamsGuiComp::UpdateEditor(int /*updateFlags*/)
 }
 
 
-// reimplemented (iqt2d::TSceneExtenderCompBase)
-
-void CLine2dParamsGuiComp::CreateShapes(int /*sceneId*/, bool inactiveOnly, Shapes& result)
-{
-	I_ASSERT(m_lineZValueAttrPtr.IsValid());	// this attribute is obligatory
-
-	CLine2dShape* shapePtr = new CLine2dShape(!inactiveOnly);
-	if (shapePtr != NULL){
-		shapePtr->setZValue(*m_lineZValueAttrPtr);
-		result.PushBack(shapePtr);
-
-		imod::IModel* modelPtr = GetModelPtr();
-		if (modelPtr != NULL){
-			modelPtr->AttachObserver(shapePtr);
-		}
-	}
-}
-
-
 // protected slots
 
 void CLine2dParamsGuiComp::OnParamsChanged(double /*value*/)
 {
 	if (!IsUpdateBlocked()){
-		UpdateBlocker blockUpdate(this);
+		UpdateBlocker updateBlocker(this);
 
 		UpdateModel();
 	}

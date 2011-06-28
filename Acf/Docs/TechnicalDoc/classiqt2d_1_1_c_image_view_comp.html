@@ -56,15 +56,12 @@ Inheritance diagram for iqt2d::CImageViewComp:</div>
 <a class="el" href="classiqt2d_1_1_c_image_shape.html">CImageShape</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#5c60057226772e2d22399c92b6679c31">BaseClass</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual I_END_COMPONENT void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#5088205754b1f90cd7cb3a2bb4c403ba">UpdateModel</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates model from editor.  <a href="#5088205754b1f90cd7cb3a2bb4c403ba"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#51f0ef25f4bb9d4d7ebcda88649d3feb">UpdateEditor</a> (int updateFlags=0)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates editor with model data.  <a href="#51f0ef25f4bb9d4d7ebcda88649d3feb"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#3ef397bc23b7b85b76e2669570353305">OnDetached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual I_END_COMPONENT bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a5447ae133069ff9fb3efb908ef83a16">OnDetached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
 
 <tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#0d0aaa63924c63662b4d9e95029fcca9">UpdateGui</a> (int updateFlags=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do update of the model GUI.  <a href="#0d0aaa63924c63662b4d9e95029fcca9"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#86eab23c6253d004a56d7b0aa1bc8377">OnGuiCreated</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#93c2502b98b18d61ddf5b9cd76b7d279">OnGuiDestroyed</a> ()</td></tr>
@@ -94,12 +91,12 @@ This class extends standard scene provider to provide background bitmap object.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="3ef397bc23b7b85b76e2669570353305"></a><!-- doxytag: member="iqt2d::CImageViewComp::OnDetached" ref="3ef397bc23b7b85b76e2669570353305" args="(imod::IModel *modelPtr)" -->
+<a class="anchor" name="a5447ae133069ff9fb3efb908ef83a16"></a><!-- doxytag: member="iqt2d::CImageViewComp::OnDetached" ref="a5447ae133069ff9fb3efb908ef83a16" args="(imod::IModel *modelPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool iqt2d::CImageViewComp::OnDetached           </td>
+          <td class="memname">virtual I_END_COMPONENT bool iqt2d::CImageViewComp::OnDetached           </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&nbsp;</td>
           <td class="paramname"> <em>modelPtr</em>          </td>
@@ -158,55 +155,27 @@ This class extends standard scene provider to provide background bitmap object.
 
 </div>
 </div><p>
-<a class="anchor" name="51f0ef25f4bb9d4d7ebcda88649d3feb"></a><!-- doxytag: member="iqt2d::CImageViewComp::UpdateEditor" ref="51f0ef25f4bb9d4d7ebcda88649d3feb" args="(int updateFlags=0)" -->
+<a class="anchor" name="0d0aaa63924c63662b4d9e95029fcca9"></a><!-- doxytag: member="iqt2d::CImageViewComp::UpdateGui" ref="0d0aaa63924c63662b4d9e95029fcca9" args="(int updateFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqt2d::CImageViewComp::UpdateEditor           </td>
+          <td class="memname">virtual void iqt2d::CImageViewComp::UpdateGui           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>updateFlags</em> = <code>0</code>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Updates editor with model data. 
+Do update of the model GUI. 
 <p>
-This method will be called only if GUI is connected. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>updateFlags</em>&nbsp;</td><td>the same as <code>changeFlag</code> in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>. </td></tr>
-  </table>
-</dl>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#806337a93835b5e6b1c577ce85a65674">iqtgui::TGuiObserverWrap&lt; CSceneProviderGuiComp, CImageShape &gt;</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="5088205754b1f90cd7cb3a2bb4c403ba"></a><!-- doxytag: member="iqt2d::CImageViewComp::UpdateModel" ref="5088205754b1f90cd7cb3a2bb4c403ba" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual I_END_COMPONENT void iqt2d::CImageViewComp::UpdateModel           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Updates model from editor. 
-<p>
-This method will be called only if GUI is connected and model is attached. 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#39ad878eb561d7510fa512c9a985a92b">iqtgui::TGuiObserverWrap&lt; CSceneProviderGuiComp, CImageShape &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; CSceneProviderGuiComp, CImageShape &gt;</a>.</p>
 
 </div>
 </div><p>

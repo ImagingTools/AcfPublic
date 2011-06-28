@@ -27,62 +27,54 @@
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="preprocessor">#include "<a class="code" href="_c_line2d_8h.html">i2d/CLine2d.h</a>"</span>
 <a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>"</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="_t_scene_extender_comp_base_8h.html">iqt2d/TSceneExtenderCompBase.h</a>"</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include "iqt2d/Generated/ui_CLine2dParamsGuiComp.h"</span>
-<a name="l00011"></a>00011 
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="_c_line2d_shape_8h.html">iqt2d/CLine2dShape.h</a>"</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="_t_shape_params_gui_comp_base_8h.html">iqt2d/TShapeParamsGuiCompBase.h</a>"</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="preprocessor">#include "iqt2d/Generated/ui_CLine2dParamsGuiComp.h"</span>
 <a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="keyword">namespace </span>iqt2d
-<a name="l00014"></a>00014 {
-<a name="l00015"></a>00015 
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="keyword">namespace </span>iqt2d
+<a name="l00015"></a>00015 {
 <a name="l00016"></a>00016 
-<a name="l00017"></a><a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html">00017</a> <span class="keyword">class </span><a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html">CLine2dParamsGuiComp</a>: <span class="keyword">public</span> iqt2d::<a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html">TSceneExtenderCompBase</a>&lt;iqtgui::TDesignerGuiObserverCompBase&lt;
-<a name="l00018"></a>00018                      Ui::CLine2dParamsGuiComp,
-<a name="l00019"></a>00019                      i2d::CLine2d&gt; &gt;
-<a name="l00020"></a>00020 {
-<a name="l00021"></a>00021        Q_OBJECT
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <span class="keyword">public</span>:
-<a name="l00024"></a>00024        <span class="keyword">typedef</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt;<a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI componentes.">iqtgui::TDesignerGuiObserverCompBase</a>&lt;
-<a name="l00025"></a>00025                             Ui::CLine2dParamsGuiComp,
-<a name="l00026"></a><a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#9b13049fe8508c28ebb0f3277b11e0ea">00026</a>                             <a class="code" href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space.">i2d::CLine2d</a>&gt; &gt; <a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html">BaseClass</a>;
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html">CLine2dParamsGuiComp</a>)
-<a name="l00029"></a>00029               I_ASSIGN(m_unitNameAttrPtr, "UnitName", "Name of geometric units e.g. mm", false, "mm");
-<a name="l00030"></a>00030               I_ASSIGN(m_lineZValueAttrPtr, "LineZValue", "Describe draw priority on display console (the objects with bigger value will overlap the other ones)", true, 1);
-<a name="l00031"></a>00031        I_END_COMPONENT
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00034"></a>00034        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#3449829226abcf00d5d9b19083416934" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
-<a name="l00035"></a>00035        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#23b64a133a77664d80d8294e92fc1d49" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00038"></a>00038        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#fa5f1cd8c311b44d74c8af433a86d85d" title="Updates model from editor.">UpdateModel</a>() const;
-<a name="l00039"></a>00039        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#c9fa2328f20088a3ad536492b16ab022" title="Updates editor with model data.">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00042"></a>00042        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#9941762da2f647d35ca8680a6f0834eb" title="This call back function will be called, if an observable object is about to be attached...">OnAttached</a>(imod::IModel* modelPtr);
-<a name="l00043"></a>00043        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#dda1b08d5103aef9c3c934048285b255" title="This call back function will be called, if an observable object is about to be detached...">OnDetached</a>(imod::IModel* modelPtr);
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045        <span class="comment">// reimplemented (iqt2d::TSceneExtenderCompBase)</span>
-<a name="l00046"></a>00046        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#7fa77f7d6730171f698defd429312a11">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <span class="keywordtype">bool</span> inactiveOnly, <a class="code" href="classistd_1_1_t_pointer_vector.html" title="Implementation of a pointer container, which controls the live cycle of the pointer...">Shapes</a>&amp; result);
+<a name="l00017"></a>00017 
+<a name="l00018"></a><a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html">00018</a> <span class="keyword">class </span><a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html">CLine2dParamsGuiComp</a>:
+<a name="l00019"></a>00019                      <span class="keyword">public</span> iqt2d::<a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">TShapeParamsGuiCompBase</a>&lt;
+<a name="l00020"></a>00020                                           Ui::CLine2dParamsGuiComp,
+<a name="l00021"></a>00021                                           iqt2d::CLine2dShape,
+<a name="l00022"></a>00022                                           i2d::CLine2d&gt;
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024        Q_OBJECT
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 <span class="keyword">public</span>:
+<a name="l00027"></a>00027        <span class="keyword">typedef</span> <a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">iqt2d::TShapeParamsGuiCompBase</a>&lt;
+<a name="l00028"></a>00028                             Ui::CLine2dParamsGuiComp,
+<a name="l00029"></a>00029                             <a class="code" href="classiqt2d_1_1_c_line2d_shape.html">iqt2d::CLine2dShape</a>,
+<a name="l00030"></a><a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#61bdb63b6d319f03b3dbbaca1e40b712">00030</a>                             <a class="code" href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space.">i2d::CLine2d</a>&gt; <a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">BaseClass</a>;
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html">CLine2dParamsGuiComp</a>)
+<a name="l00033"></a>00033        I_END_COMPONENT
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035        <span class="comment">// reimplemented (imod::IModelEditor)</span>
+<a name="l00036"></a>00036        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#433f3e07629ff7a7de6e8f3aadbb3a3f" title="Updates model from editor.">UpdateModel</a>() const;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 protected:
+<a name="l00039"></a>00039        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00040"></a>00040        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#fc5bac637d0ae67f77a5450aec149479" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
+<a name="l00041"></a>00041        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#23b64a133a77664d80d8294e92fc1d49" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
+<a name="l00042"></a>00042        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#f54d69ad10fc16e61e227d407abe563d" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 protected Q_SLOTS:
+<a name="l00045"></a>00045        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#a339de3ab8aa6f7689ea9c5a093fa434">OnParamsChanged</a>(<span class="keywordtype">double</span> value);
+<a name="l00046"></a>00046 };
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 protected slots:
-<a name="l00049"></a>00049        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#a339de3ab8aa6f7689ea9c5a093fa434">OnParamsChanged</a>(<span class="keywordtype">double</span> value);
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 } <span class="comment">// namespace iqt2d</span>
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051 private:
-<a name="l00052"></a>00052        I_ATTR(istd::CString, m_unitNameAttrPtr);
-<a name="l00053"></a>00053        I_ATTR(<span class="keywordtype">double</span>, m_lineZValueAttrPtr);
-<a name="l00054"></a>00054 };
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057 } <span class="comment">// namespace iqt2d</span>
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 <span class="preprocessor">#endif // !iqt2d_CLine2dParamsGuiComp_included</span>
-<a name="l00061"></a>00061 <span class="preprocessor"></span>
-<a name="l00062"></a>00062 
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="preprocessor">#endif // !iqt2d_CLine2dParamsGuiComp_included</span>
+<a name="l00053"></a>00053 <span class="preprocessor"></span>
+<a name="l00054"></a>00054 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

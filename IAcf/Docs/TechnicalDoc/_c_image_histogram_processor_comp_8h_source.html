@@ -46,7 +46,7 @@
 <a name="l00027"></a><a class="code" href="classiipr_1_1_c_image_histogram_processor_comp.html#7e9e8bdbd3ba7feb0ca85e824b3cc9d3">00027</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiproc_1_1_t_sync_processor_comp_base.html">iproc::CSyncProcessorCompBase</a> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_wrap.html">BaseClass</a>;
 <a name="l00028"></a>00028        
 <a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_image_histogram_processor_comp.html" title="Implementation of a processor for the image histogram calculation.">CImageHistogramProcessorComp</a>);
-<a name="l00030"></a>00030               I_ASSIGN(m_aoiParamsIdAttrPtr, <span class="stringliteral">"AoiParamsId"</span>, <span class="stringliteral">"ID of the AOI rectangle in the parameter set"</span>, <span class="keyword">false</span>, <span class="stringliteral">"AoiParams"</span>);
+<a name="l00030"></a>00030               I_ASSIGN(m_aoiParamsIdAttrPtr, <span class="stringliteral">"AoiParamsId"</span>, <span class="stringliteral">"ID of the AOI parameter in the parameter set"</span>, <span class="keyword">false</span>, <span class="stringliteral">"AoiParams"</span>);
 <a name="l00031"></a>00031        I_END_COMPONENT
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <span class="comment">// reimplemented (iproc::IProcessor)</span>
@@ -57,18 +57,21 @@
 <a name="l00038"></a>00038                             <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a>* progressManagerPtr = NULL);
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040 <span class="keyword">private</span>:
-<a name="l00041"></a>00041        <span class="keywordtype">bool</span> CalculateHistogramFromBitmap(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; input, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rectangle.html">i2d::CRectangle</a>* aoiPtr, <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_discr_data_sequence.html">imeas::IDiscrDataSequence</a>&amp; histogram) <span class="keyword">const</span>;
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="keyword">private</span>:
-<a name="l00044"></a>00044        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_aoiParamsIdAttrPtr);
-<a name="l00045"></a>00045 };
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048 } <span class="comment">// namespace iipr</span>
+<a name="l00041"></a>00041        <span class="keywordtype">bool</span> CalculateHistogramFromBitmap(
+<a name="l00042"></a>00042                                    <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; input,
+<a name="l00043"></a>00043                                    <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html">i2d::IObject2d</a>* aoiPtr,
+<a name="l00044"></a>00044                                    <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_discr_data_sequence.html">imeas::IDiscrDataSequence</a>&amp; histogram) <span class="keyword">const</span>;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="keyword">private</span>:
+<a name="l00047"></a>00047        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_aoiParamsIdAttrPtr);
+<a name="l00048"></a>00048 };
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="preprocessor">#endif // !iipr_CImageHistogramProcessorComp_included</span>
-<a name="l00052"></a>00052 <span class="preprocessor"></span>
+<a name="l00051"></a>00051 } <span class="comment">// namespace iipr</span>
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="preprocessor">#endif // !iipr_CImageHistogramProcessorComp_included</span>
+<a name="l00055"></a>00055 <span class="preprocessor"></span>
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

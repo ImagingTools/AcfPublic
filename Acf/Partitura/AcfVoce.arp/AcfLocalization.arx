@@ -4,7 +4,7 @@
     <VersionInfos count="0">
     </VersionInfos>
   </AcfHeader>
-  <ElementsList count="1">
+  <ElementsList count="2">
     <Element>
       <Id>
         AcfLocalization
@@ -22,7 +22,7 @@
         <Flags>
           0
         </Flags>
-        <AttributeInfoMap count="4">
+        <AttributeInfoMap count="5">
           <AttributeInfo>
             <Id>
               LanguageIds
@@ -46,6 +46,127 @@
                 </Value>
                 <Value>
                   pl_PL
+                </Value>
+              </Values>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              LanguageSelection
+            </Id>
+            <Type>
+              icomp::CReferenceAttribute
+            </Type>
+            <ExportId>
+              LanguageSelection
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                false
+              </IsEnabled>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              SlaveTranslationManager
+            </Id>
+            <Type>
+              icomp::CReferenceAttribute
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                QtLocalization
+              </Value>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              TranslationFilePath
+            </Id>
+            <Type>
+              icomp::TAttribute&lt;istd::CString&gt;
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                :/Translations
+              </Value>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              TranslationFilePrefix
+            </Id>
+            <Type>
+              icomp::TAttribute&lt;istd::CString&gt;
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                Acf
+              </Value>
+            </Data>
+          </AttributeInfo>
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        QtLocalization
+      </Id>
+      <PackageId>
+        QtPck
+      </PackageId>
+      <ComponentId>
+        TranslationManager
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="4">
+          <AttributeInfo>
+            <Id>
+              LanguageIds
+            </Id>
+            <Type>
+              icomp::TMultiAttribute&lt;istd::CString&gt;
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Values count="3">
+                <Value>
+                  de
+                </Value>
+                <Value>
+                  ru
+                </Value>
+                <Value>
+                  pl
                 </Value>
               </Values>
             </Data>
@@ -100,7 +221,7 @@
                 true
               </IsEnabled>
               <Value>
-                Acf
+                qt
               </Value>
             </Data>
           </AttributeInfo>
@@ -110,10 +231,34 @@
   </ElementsList>
   <EmbeddedRegistriesList count="0">
   </EmbeddedRegistriesList>
-  <ExportedInterfaces count="1">
+  <ExportedInterfaces count="4">
+    <Interface>
+      <InterfaceId>
+        imod::IModel
+      </InterfaceId>
+      <ComponentId>
+        AcfLocalization
+      </ComponentId>
+    </Interface>
+    <Interface>
+      <InterfaceId>
+        iprm::ISelectionConstraints
+      </InterfaceId>
+      <ComponentId>
+        AcfLocalization
+      </ComponentId>
+    </Interface>
     <Interface>
       <InterfaceId>
         iqt::ITranslationManager
+      </InterfaceId>
+      <ComponentId>
+        AcfLocalization
+      </ComponentId>
+    </Interface>
+    <Interface>
+      <InterfaceId>
+        istd::IChangeable
       </InterfaceId>
       <ComponentId>
         AcfLocalization

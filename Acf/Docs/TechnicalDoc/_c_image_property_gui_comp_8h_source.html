@@ -48,9 +48,9 @@
 <a name="l00025"></a>00025        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_image_property_gui_comp.html">CImagePropertyGuiComp</a>);
 <a name="l00026"></a>00026        I_END_COMPONENT;
 <a name="l00027"></a>00027 
-<a name="l00028"></a>00028        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_image_property_gui_comp.html#305a4b1e4cac1e31cb2f6c4fe8881d6d" title="Updates editor with model data.">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_image_property_gui_comp.html#60027548348c1ae98b78848cc984cb55" title="Updates model from editor.">UpdateModel</a>() <span class="keyword">const</span>;
+<a name="l00028"></a>00028 <span class="keyword">protected</span>:
+<a name="l00029"></a>00029        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_image_property_gui_comp.html#b27526403fda96f79f4646c6787c42b0" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00031"></a>00031 };
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033 

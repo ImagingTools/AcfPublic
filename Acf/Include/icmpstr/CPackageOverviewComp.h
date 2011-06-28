@@ -93,6 +93,7 @@ protected:
 
 	void GenerateComponentTree(bool forceUpdate);
 	void UpdateComponentGroups();
+	void UpdateInterfaceList();
 
 	/**
 		Get component list, that match to the filter criteria.
@@ -113,8 +114,8 @@ protected:
 	// reimplemented (QObject)
 	virtual bool eventFilter(QObject* sourcePtr, QEvent* eventPtr);
 
-	// reimplemented (imod::IModelEditor)
-	virtual void UpdateEditor(int updateFlags = 0);
+	// reimplemented (iqtgui::TGuiObserverWrap)
+	virtual void UpdateGui(int updateFlags = 0);
 
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();

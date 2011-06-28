@@ -71,12 +71,12 @@ Inheritance diagram for iqtprm::CFileNameParamGuiComp:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#6db58d566316b88b81125871c1806707">UpdateModel</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates model from editor.  <a href="#6db58d566316b88b81125871c1806707"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#e11cefecf0988f11b89e69bcf4efd4b6">UpdateEditor</a> (int updateFlags=0)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates editor with model data.  <a href="#e11cefecf0988f11b89e69bcf4efd4b6"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#db92085eb9f5d8d8c6b4a2951d1a7298">OnGuiModelAttached</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#db92085eb9f5d8d8c6b4a2951d1a7298"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#ddafbf399505795d48c48a4acaed131e">UpdateGui</a> (int updateFlags=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do update of the model GUI.  <a href="#ddafbf399505795d48c48a4acaed131e"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#45ba3d7e7eb9a027dca57c8c1c165a40">on_BrowseButton_clicked</a> ()</td></tr>
 
@@ -213,12 +213,12 @@ Called when model is attached and GUI is created.
 
 </div>
 </div><p>
-<a class="anchor" name="e11cefecf0988f11b89e69bcf4efd4b6"></a><!-- doxytag: member="iqtprm::CFileNameParamGuiComp::UpdateEditor" ref="e11cefecf0988f11b89e69bcf4efd4b6" args="(int updateFlags=0)" -->
+<a class="anchor" name="ddafbf399505795d48c48a4acaed131e"></a><!-- doxytag: member="iqtprm::CFileNameParamGuiComp::UpdateGui" ref="ddafbf399505795d48c48a4acaed131e" args="(int updateFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqtprm::CFileNameParamGuiComp::UpdateEditor           </td>
+          <td class="memname">virtual void iqtprm::CFileNameParamGuiComp::UpdateGui           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>updateFlags</em> = <code>0</code>          </td>
@@ -230,15 +230,10 @@ Called when model is attached and GUI is created.
 <div class="memdoc">
 
 <p>
-Updates editor with model data. 
+Do update of the model GUI. 
 <p>
-This method will be called only if GUI is connected. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>updateFlags</em>&nbsp;</td><td>the same as <code>changeFlag</code> in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>. </td></tr>
-  </table>
-</dl>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#806337a93835b5e6b1c577ce85a65674">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CFileNameParamGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::IFileNameParam &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CFileNameParamGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::IFileNameParam &gt; &gt;</a>.</p>
 
 </div>
 </div><p>

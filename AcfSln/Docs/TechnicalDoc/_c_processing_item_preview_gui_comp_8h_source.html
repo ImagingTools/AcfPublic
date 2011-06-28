@@ -65,39 +65,36 @@
 <a name="l00042"></a>00042               <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#8a76f8ec8b01d2ffb14159ad7ad939f9">I_ASSIGN_TO</a>(m_outputFileNameParamModelCompPtr, m_outputFileNameParamCompPtr, true);
 <a name="l00043"></a>00043        I_END_COMPONENT;
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00046"></a>00046        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#3a90c5ebf8727e1ad793c391b4aa6766">UpdateModel</a>() const;
-<a name="l00047"></a>00047        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#9424a5ad806e1abb7bb1a180aac6fba0">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049        <span class="comment">// reimplemented (TGuiObserverWrap)</span>
-<a name="l00050"></a>00050        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#6d2308472859c754e9cdc2bce0559fff">OnGuiModelAttached</a>();
-<a name="l00051"></a>00051        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#8e2649ce75757e0eafc50c73131cce88">OnGuiModelDetached</a>();
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00054"></a>00054        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#aa4c021145972e447c3a9c1450a9e47e">OnGuiCreated</a>();
-<a name="l00055"></a>00055        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#71e1620de6631083e707215000e7b665">OnGuiDestroyed</a>();
+<a name="l00045"></a>00045        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00046"></a>00046        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#761a5380f7386d96526680d086f4320c">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00047"></a>00047        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#6d2308472859c754e9cdc2bce0559fff">OnGuiModelAttached</a>();
+<a name="l00048"></a>00048        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#8e2649ce75757e0eafc50c73131cce88">OnGuiModelDetached</a>();
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00051"></a>00051        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#aa4c021145972e447c3a9c1450a9e47e">OnGuiCreated</a>();
+<a name="l00052"></a>00052        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#71e1620de6631083e707215000e7b665">OnGuiDestroyed</a>();
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 private:
+<a name="l00055"></a>00055        <span class="keywordtype">void</span> ResetEditor();
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057 private:
-<a name="l00058"></a>00058        <span class="keywordtype">void</span> ResetEditor();
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 private:
-<a name="l00061"></a>00061        I_REF(imod::IObserver, m_inputPreviewObserverCompPtr);
-<a name="l00062"></a>00062        I_REF(iqtgui::IGuiObject, m_inputPreviewGuiCompPtr);
-<a name="l00063"></a>00063        I_REF(imod::IObserver, m_outputPreviewObserverCompPtr);
-<a name="l00064"></a>00064        I_REF(iqtgui::IGuiObject, m_outputPreviewGuiCompPtr);
-<a name="l00065"></a>00065        I_REF(iprm::IFileNameParam, m_inputFileNameParamCompPtr);
-<a name="l00066"></a>00066        I_REF(imod::IModel, m_inputFileNameParamModelCompPtr);
-<a name="l00067"></a>00067        I_REF(iprm::IFileNameParam, m_outputFileNameParamCompPtr);
-<a name="l00068"></a>00068        I_REF(imod::IModel, m_outputFileNameParamModelCompPtr);
-<a name="l00069"></a>00069 };
+<a name="l00058"></a>00058        I_REF(imod::IObserver, m_inputPreviewObserverCompPtr);
+<a name="l00059"></a>00059        I_REF(iqtgui::IGuiObject, m_inputPreviewGuiCompPtr);
+<a name="l00060"></a>00060        I_REF(imod::IObserver, m_outputPreviewObserverCompPtr);
+<a name="l00061"></a>00061        I_REF(iqtgui::IGuiObject, m_outputPreviewGuiCompPtr);
+<a name="l00062"></a>00062        I_REF(iprm::IFileNameParam, m_inputFileNameParamCompPtr);
+<a name="l00063"></a>00063        I_REF(imod::IModel, m_inputFileNameParamModelCompPtr);
+<a name="l00064"></a>00064        I_REF(iprm::IFileNameParam, m_outputFileNameParamCompPtr);
+<a name="l00065"></a>00065        I_REF(imod::IModel, m_outputFileNameParamModelCompPtr);
+<a name="l00066"></a>00066 };
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 } <span class="comment">// namespace iqtfpf</span>
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071 
-<a name="l00072"></a>00072 } <span class="comment">// namespace iqtfpf</span>
-<a name="l00073"></a>00073 
+<a name="l00072"></a>00072 <span class="preprocessor">#endif // !iqtfpf_CProcessingItemPreviewGuiComp_included</span>
+<a name="l00073"></a>00073 <span class="preprocessor"></span>
 <a name="l00074"></a>00074 
-<a name="l00075"></a>00075 <span class="preprocessor">#endif // !iqtfpf_CProcessingItemPreviewGuiComp_included</span>
-<a name="l00076"></a>00076 <span class="preprocessor"></span>
-<a name="l00077"></a>00077 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

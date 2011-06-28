@@ -48,6 +48,7 @@
     <name>CSnapBitmapSupplierComp.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/icam/</path>
     <filename>_c_snap_bitmap_supplier_comp_8h</filename>
+    <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
     <class kind="class">icam::CSnapBitmapSupplierComp</class>
     <namespace>icam</namespace>
   </compound>
@@ -374,10 +375,25 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CImageCropProcessorComp.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <filename>_c_image_crop_processor_comp_8h</filename>
+    <class kind="class">iipr::CImageCropProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CImageHistogramProcessorComp.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_c_image_histogram_processor_comp_8h</filename>
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CImageInterpolationParams.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <filename>_c_image_interpolation_params_8h</filename>
+    <includes id="_i_image_interpolation_params_8h" name="IImageInterpolationParams.h" local="yes" imported="no">iipr/IImageInterpolationParams.h</includes>
+    <class kind="class">iipr::CImageInterpolationParams</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -386,6 +402,13 @@
     <filename>_c_image_normalize_processor_comp_8h</filename>
     <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
     <class kind="class">iipr::CImageNormalizeProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CImagePolarTransformProcessorComp.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <filename>_c_image_polar_transform_processor_comp_8h</filename>
+    <class kind="class">iipr::CImagePolarTransformProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -410,6 +433,7 @@
     <name>CLineProjectionSupplierComp.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_c_line_projection_supplier_comp_8h</filename>
+    <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
     <includes id="_i_line_projection_supplier_8h" name="ILineProjectionSupplier.h" local="yes" imported="no">iipr/ILineProjectionSupplier.h</includes>
     <includes id="_i_line_projection_processor_8h" name="ILineProjectionProcessor.h" local="yes" imported="no">iipr/ILineProjectionProcessor.h</includes>
     <class kind="class">iipr::CLineProjectionSupplierComp</class>
@@ -428,6 +452,7 @@
     <name>CPositionFromImageSupplierComp.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_c_position_from_image_supplier_comp_8h</filename>
+    <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -465,9 +490,25 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CRingPatternGeneratorComp.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <filename>_c_ring_pattern_generator_comp_8h</filename>
+    <class kind="class">iipr::CRingPatternGeneratorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CRingPatternGeneratorParamsComp.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <filename>_c_ring_pattern_generator_params_comp_8h</filename>
+    <includes id="_i_ring_pattern_generator_params_8h" name="IRingPatternGeneratorParams.h" local="yes" imported="no">iipr/IRingPatternGeneratorParams.h</includes>
+    <class kind="class">iipr::CRingPatternGeneratorParamsComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSearchBasedFeaturesSupplierComp.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_c_search_based_features_supplier_comp_8h</filename>
+    <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
     <includes id="_i_features_supplier_8h" name="IFeaturesSupplier.h" local="yes" imported="no">iipr/IFeaturesSupplier.h</includes>
     <includes id="_c_features_container_8h" name="CFeaturesContainer.h" local="yes" imported="no">iipr/CFeaturesContainer.h</includes>
     <class kind="class">iipr::CSearchBasedFeaturesSupplierComp</class>
@@ -495,6 +536,13 @@
     <filename>_c_single_feature_consumer_8h</filename>
     <includes id="_i_features_container_8h" name="IFeaturesContainer.h" local="yes" imported="no">iipr/IFeaturesContainer.h</includes>
     <class kind="class">iipr::CSingleFeatureConsumer</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IBitmapSupplier.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <filename>_i_bitmap_supplier_8h</filename>
+    <class kind="class">iipr::IBitmapSupplier</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -577,6 +625,13 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>IImageInterpolationParams.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <filename>_i_image_interpolation_params_8h</filename>
+    <class kind="class">iipr::IImageInterpolationParams</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>IImageToFeatureProcessor.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_i_image_to_feature_processor_8h</filename>
@@ -635,6 +690,13 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>IRingPatternGeneratorParams.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <filename>_i_ring_pattern_generator_params_8h</filename>
+    <class kind="class">iipr::IRingPatternGeneratorParams</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>ISearchModel.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_i_search_model_8h</filename>
@@ -677,6 +739,14 @@
     <filename>_t_image_param_processor_comp_base_8h</filename>
     <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
     <class kind="class">iipr::TImageParamProcessorCompBase</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TImagePixelInterpolator.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <filename>_t_image_pixel_interpolator_8h</filename>
+    <includes id="_i_image_interpolation_params_8h" name="IImageInterpolationParams.h" local="yes" imported="no">iipr/IImageInterpolationParams.h</includes>
+    <class kind="class">iipr::TImagePixelInterpolator</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -1036,6 +1106,7 @@
     <name>CBitmapSupplierGuiComp.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/iqtcam/</path>
     <filename>_c_bitmap_supplier_gui_comp_8h</filename>
+    <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtcam_8h" name="iqtcam.h" local="yes" imported="no">iqtcam/iqtcam.h</includes>
     <class kind="class">iqtcam::CBitmapSupplierGuiComp</class>
@@ -1806,12 +1877,12 @@
   <compound kind="class">
     <name>icam::CSnapBitmapSupplierComp</name>
     <filename>classicam_1_1_c_snap_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; iproc::IBitmapSupplier, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; iipr::IBitmapSupplier, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; iproc::IBitmapSupplier, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; iipr::IBitmapSupplier, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>c5696d95431ccab2a8742f6305ba81f4</anchor>
+      <anchor>25f05c5ceac6ebcb724aa55e8928e9d1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -3175,8 +3246,11 @@
     <class kind="class">iipr::CFeatureBase</class>
     <class kind="class">iipr::CFeaturesContainer</class>
     <class kind="class">iipr::CFeatureToImageMapperProcessorComp</class>
+    <class kind="class">iipr::CImageCropProcessorComp</class>
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
+    <class kind="class">iipr::CImageInterpolationParams</class>
     <class kind="class">iipr::CImageNormalizeProcessorComp</class>
+    <class kind="class">iipr::CImagePolarTransformProcessorComp</class>
     <class kind="class">iipr::CImageProcessorCompBase</class>
     <class kind="class">iipr::CLineProjectionProcessorComp</class>
     <class kind="class">iipr::CLineProjectionSupplierComp</class>
@@ -3186,10 +3260,13 @@
     <class kind="class">iipr::CRectDerivativeProcessor</class>
     <class kind="class">iipr::CRectDerivativeProcessorComp</class>
     <class kind="class">iipr::CRectImageSmoothProcessorComp</class>
+    <class kind="class">iipr::CRingPatternGeneratorComp</class>
+    <class kind="class">iipr::CRingPatternGeneratorParamsComp</class>
     <class kind="class">iipr::CSearchBasedFeaturesSupplierComp</class>
     <class kind="class">iipr::CSearchFeature</class>
     <class kind="class">iipr::CSearchParams</class>
     <class kind="class">iipr::CSingleFeatureConsumer</class>
+    <class kind="class">iipr::IBitmapSupplier</class>
     <class kind="class">iipr::ICaliperParams</class>
     <class kind="class">iipr::ICaliperProcessor</class>
     <class kind="class">iipr::ICircleFinderParams</class>
@@ -3200,6 +3277,7 @@
     <class kind="class">iipr::IFeatureToFeatureProcessor</class>
     <class kind="class">iipr::IFeatureToImageMapper</class>
     <class kind="class">iipr::IFeatureToProjectionMapper</class>
+    <class kind="class">iipr::IImageInterpolationParams</class>
     <class kind="class">iipr::IImageToFeatureProcessor</class>
     <class kind="class">iipr::ILineProjectionProcessor</class>
     <class kind="class">iipr::ILineProjectionSupplier</class>
@@ -3207,11 +3285,13 @@
     <class kind="class">iipr::IMultidimensionalFilterParams</class>
     <class kind="class">iipr::IProjectionConstraints</class>
     <class kind="class">iipr::IProjectionParams</class>
+    <class kind="class">iipr::IRingPatternGeneratorParams</class>
     <class kind="class">iipr::ISearchModel</class>
     <class kind="class">iipr::ISearchParams</class>
     <class kind="class">iipr::TConvolutionProcessorComp</class>
     <class kind="class">iipr::TFeatureWrap</class>
     <class kind="class">iipr::TImageParamProcessorCompBase</class>
+    <class kind="class">iipr::TImagePixelInterpolator</class>
     <class kind="class">iipr::InvertFunction</class>
     <class kind="class">iipr::TUnaryTransformProcessorComp</class>
     <member kind="typedef">
@@ -3834,6 +3914,25 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::CImageCropProcessorComp</name>
+    <filename>classiipr_1_1_c_image_crop_processor_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_image_crop_processor_comp.html</anchorfile>
+      <anchor>584cdfe173a47336e27482953b2f9489</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual I_END_COMPONENT int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_image_crop_processor_comp.html</anchorfile>
+      <anchor>11f0082918027d17f1def230e5f37e23</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::CImageHistogramProcessorComp</name>
     <filename>classiipr_1_1_c_image_histogram_processor_comp.html</filename>
     <base>iproc::TSyncProcessorCompBase</base>
@@ -3853,6 +3952,39 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::CImageInterpolationParams</name>
+    <filename>classiipr_1_1_c_image_interpolation_params.html</filename>
+    <base virtualness="virtual">iipr::IImageInterpolationParams</base>
+    <member kind="function">
+      <type></type>
+      <name>CImageInterpolationParams</name>
+      <anchorfile>classiipr_1_1_c_image_interpolation_params.html</anchorfile>
+      <anchor>e503800b301424c7f81ce18387e64858</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetInterpolationMode</name>
+      <anchorfile>classiipr_1_1_c_image_interpolation_params.html</anchorfile>
+      <anchor>5c5f229090dc6163e0c2b4dc9ad1ca1f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetInterpolationMode</name>
+      <anchorfile>classiipr_1_1_c_image_interpolation_params.html</anchorfile>
+      <anchor>5c96adc3e956068401f29150c00491ac</anchor>
+      <arglist>(int interpolationMode)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiipr_1_1_c_image_interpolation_params.html</anchorfile>
+      <anchor>89fea018e32246d01c6eaa7422c6c850</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::CImageNormalizeProcessorComp</name>
     <filename>classiipr_1_1_c_image_normalize_processor_comp.html</filename>
     <base>iipr::CImageProcessorCompBase</base>
@@ -3869,6 +4001,25 @@
       <anchorfile>classiipr_1_1_c_image_normalize_processor_comp.html</anchorfile>
       <anchor>7ca838eb449c5d4a8a1d86c894d0f5c7</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CImagePolarTransformProcessorComp</name>
+    <filename>classiipr_1_1_c_image_polar_transform_processor_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_image_polar_transform_processor_comp.html</anchorfile>
+      <anchor>a578ff557e1f7fca78b1b9a5c164a8eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual I_END_COMPONENT int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_image_polar_transform_processor_comp.html</anchorfile>
+      <anchor>ce93c67ff5bca73aac845308b9281382</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4425,6 +4576,87 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::CRingPatternGeneratorComp</name>
+    <filename>classiipr_1_1_c_ring_pattern_generator_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_ring_pattern_generator_comp.html</anchorfile>
+      <anchor>20c906ad62725ae792e35b8fd94309e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual I_END_COMPONENT int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_ring_pattern_generator_comp.html</anchorfile>
+      <anchor>04f7e83bb8b8f0a61c49ee8793166581</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CRingPatternGeneratorParamsComp</name>
+    <filename>classiipr_1_1_c_ring_pattern_generator_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iipr::IRingPatternGeneratorParams</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
+      <anchor>c9f1bcac1b6bc7801ad3c798b238d5d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRingPatternGeneratorParamsComp</name>
+      <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
+      <anchor>e759945e8058cdc90dd511e50d190c44</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPatternMode</name>
+      <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
+      <anchor>cd49efed181f08653f8d1e3cab659612</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPatternMode</name>
+      <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
+      <anchor>1e21bd1c6027447e7937558adbfce7fc</anchor>
+      <arglist>(int patternMode)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetWaveLength</name>
+      <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
+      <anchor>4060542ab1a155391083afd43bd26414</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetWaveLength</name>
+      <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
+      <anchor>3acdb72f9b382c1fb0d8508f8c1d5663</anchor>
+      <arglist>(double waveLength)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
+      <anchor>0c93120390844315c80eecb14f6e9146</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
+      <anchor>4271db5ded816feb2fdcdf288631d8e5</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::CSearchBasedFeaturesSupplierComp</name>
     <filename>classiipr_1_1_c_search_based_features_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; iipr::IFeaturesSupplier, CFeaturesContainer &gt;</base>
@@ -4732,6 +4964,18 @@
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
       <anchor>1c6931be6a8162f5a1b0440325792192</anchor>
       <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::IBitmapSupplier</name>
+    <filename>classiipr_1_1_i_bitmap_supplier.html</filename>
+    <base virtualness="virtual">iproc::ISupplier</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiipr_1_1_i_bitmap_supplier.html</anchorfile>
+      <anchor>b9a9ce2b3d9306db73ec531a36af6c74</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5043,6 +5287,49 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::IImageInterpolationParams</name>
+    <filename>classiipr_1_1_i_image_interpolation_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="enumeration">
+      <name>InterpolationMode</name>
+      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
+      <anchor>3f5eaf6d182d9706c9751576996898b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IM_NO_INTERPOLATION</name>
+      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
+      <anchor>3f5eaf6d182d9706c9751576996898b97c6a2bf96b3cfef55d066705272cc756</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IM_BILINEAR</name>
+      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
+      <anchor>3f5eaf6d182d9706c9751576996898b93c12d59a96fcaf8dbff8a0b7cf54e43d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IM_BICUBIC</name>
+      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
+      <anchor>3f5eaf6d182d9706c9751576996898b90852c8e1474636b67406bb440f8383bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetInterpolationMode</name>
+      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
+      <anchor>167081918bf0f926cd1675cbe24c9558</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetInterpolationMode</name>
+      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
+      <anchor>79119c4cbe02fb2579e7d633730ccd03</anchor>
+      <arglist>(int interpolationMode)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::IImageToFeatureProcessor</name>
     <filename>classiipr_1_1_i_image_to_feature_processor.html</filename>
     <base virtualness="virtual">iproc::IProcessor</base>
@@ -5201,6 +5488,57 @@
       <anchorfile>classiipr_1_1_i_projection_params.html</anchorfile>
       <anchor>fe1a793dbd40b162aca47cfdaa3a090c</anchor>
       <arglist>(int size)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::IRingPatternGeneratorParams</name>
+    <filename>classiipr_1_1_i_ring_pattern_generator_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="enumeration">
+      <name>PatternType</name>
+      <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
+      <anchor>b0eb05ccf4f5043115303d2e02d54fd6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_FIXED_WAVELENGTH</name>
+      <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
+      <anchor>b0eb05ccf4f5043115303d2e02d54fd6f0a7bff0f5f63c5e5c4521091fa4bf85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_DYNAMIC_WAVELENGTH</name>
+      <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
+      <anchor>b0eb05ccf4f5043115303d2e02d54fd63682f898ddb8894121d74d20ed611a0c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetPatternMode</name>
+      <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
+      <anchor>9b5258fc6be18f20ee5baf38bce0674c</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetPatternMode</name>
+      <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
+      <anchor>0c6ffe43881dba5fc25b9bb83cf01874</anchor>
+      <arglist>(int patternMode)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetWaveLength</name>
+      <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
+      <anchor>3bca07b7d191f19337247602c99b99aa</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetWaveLength</name>
+      <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
+      <anchor>263fab37810a8242efae6416f34a064c</anchor>
+      <arglist>(double waveLength)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5426,6 +5764,32 @@
       <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
       <anchor>9d48a40b0bcb1644d116ca345c789f11</anchor>
       <arglist>(const ParameterType *parameterPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::TImagePixelInterpolator</name>
+    <filename>classiipr_1_1_t_image_pixel_interpolator.html</filename>
+    <templarg>PixelComponentType</templarg>
+    <member kind="typedef">
+      <type>PixelComponentType</type>
+      <name>PixelComponent</name>
+      <anchorfile>classiipr_1_1_t_image_pixel_interpolator.html</anchorfile>
+      <anchor>092e365c0b415ddef7c5c5ad2babac30</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TImagePixelInterpolator</name>
+      <anchorfile>classiipr_1_1_t_image_pixel_interpolator.html</anchorfile>
+      <anchor>a205c5f67dcc4fe98c9c29a049c0550d</anchor>
+      <arglist>(const iimg::IBitmap &amp;image, int interpolationMode)</arglist>
+    </member>
+    <member kind="function">
+      <type>PixelComponentType</type>
+      <name>GetInterpolatedValue</name>
+      <anchorfile>classiipr_1_1_t_image_pixel_interpolator.html</anchorfile>
+      <anchor>f982690722c84baed74f922aa1efd37f</anchor>
+      <arglist>(double x, double y, int componentIndex) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8524,13 +8888,6 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classimil_1_1_c_mil_search_params_gui_comp.html</anchorfile>
-      <anchor>68b933845e7c0550a23ff70864528b37</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classimil_1_1_c_mil_search_params_gui_comp.html</anchorfile>
       <anchor>5fa82f0c685bd7ea517f5acced991018</anchor>
@@ -8549,6 +8906,13 @@
       <anchorfile>classimil_1_1_c_mil_search_params_gui_comp.html</anchorfile>
       <anchor>4e8b45d02a7cfef3b5644b37c8e2b641</anchor>
       <arglist>(int filterType)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classimil_1_1_c_mil_search_params_gui_comp.html</anchorfile>
+      <anchor>3a2c99e0b323b23482a5e929f6cf052c</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -9244,27 +9608,13 @@
   <compound kind="class">
     <name>iqtcam::CBitmapSupplierGuiComp</name>
     <filename>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</filename>
-    <base>TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp, iproc::IBitmapSupplier &gt;</base>
+    <base>TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp, iipr::IBitmapSupplier &gt;</base>
     <member kind="typedef">
-      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp, iproc::IBitmapSupplier &gt;</type>
+      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp, iipr::IBitmapSupplier &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>4cfd6f24807074273e0704f6200bfe35</anchor>
+      <anchor>434d1d7a17b256c1df8e6c944442c9b9</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>70fbfdbe4392169bbce369e3419bbf45</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>b0a7329686342bb963677742f7693b22</anchor>
-      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -9324,6 +9674,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>ce6a629516d2430b02e4ef4dad4268b3</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
       <anchor>09679cc02dbb54b0470d77ac459f0fae</anchor>
@@ -9357,17 +9714,17 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>d17ddebf3c197a1dafc87bfc23a1ecb2</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
       <anchor>4de1e6df00d310222b60b095ae465b88</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
-      <anchor>e3f5b2956f5bdb57ff231473e5cdb0cc</anchor>
-      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -9607,19 +9964,19 @@
       <anchor>39e21f733905a3a169104705b946506a</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtcntl_1_1_c_automatic_controller_gui_comp.html</anchorfile>
-      <anchor>4b437ae04ad6cb3a4bc0058b8da5458e</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_AutomaticButton_toggled</name>
       <anchorfile>classiqtcntl_1_1_c_automatic_controller_gui_comp.html</anchorfile>
       <anchor>2f647b3e55756086a32263e4dc590b4f</anchor>
       <arglist>(bool checked)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtcntl_1_1_c_automatic_controller_gui_comp.html</anchorfile>
+      <anchor>e91a4753e66f0b70318c34391cb23df2</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10150,20 +10507,6 @@
       <anchor>2b8eb2bb23d7a1577dfbefb662e6cdb4</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>d385addf9bf5273372341155d95b3428</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>3dc46bba627edbfa37137e2ca1677c01</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_TestButton_clicked</name>
@@ -10198,6 +10541,13 @@
       <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
       <anchor>292de76a8651f5a98731df87c0d6c82a</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a635fb30331f46d5efc33b4adb2f192f</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10503,13 +10853,6 @@
       <anchor>a67dc317f6424c63d853f2fd48fb2794</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtipr_1_1_c_caliper_params_gui_comp.html</anchorfile>
-      <anchor>afafc3cb965681f54b2aac1adda43212</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_ThresholdSB_valueChanged</name>
@@ -10531,6 +10874,13 @@
       <anchor>e7517f929bb0035783307753d57fd4d4</anchor>
       <arglist>(int index)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtipr_1_1_c_caliper_params_gui_comp.html</anchorfile>
+      <anchor>ec23a0f33b5231159b8cd1d5b728ecf6</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtipr::CCircleFinderParamsGuiComp</name>
@@ -10549,13 +10899,6 @@
       <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
       <anchor>fe838b9e0e22dbe86cadc4505ae1f7fb</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
-      <anchor>af62b8a30165a40bc44225a2b6e4ef9e</anchor>
-      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -10585,6 +10928,13 @@
       <anchor>c3a823b15cf3464be10108e075d9de70</anchor>
       <arglist>(int index)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>c7946e515605ac530c82aff1f6e0475d</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtipr::CLineProjectionSupplierGuiComp</name>
@@ -10603,20 +10953,6 @@
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
       <anchor>be8caf5790d925e9e82f39c98471e726</anchor>
       <arglist>(m_projectionObserverGuiCompPtr, m_projectionObserverCompPtr, true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>9753bbc5d46868b215fedf615bdba30e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>4a06a7b67e761b91ae2f52ddc7fc2fbf</anchor>
-      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -10662,6 +10998,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>4bfc1b681d2ac1f8a401e332c72c7b17</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
       <anchor>838d4130fc62181b43bf052244d23ff3</anchor>
@@ -10700,13 +11043,6 @@
       <anchor>cfd5c1cb55eae75331c12cfc293c6099</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtipr_1_1_c_multidimensional_filter_params_gui_comp.html</anchorfile>
-      <anchor>b832b674055990b0ed219c30f61fadeb</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_FilterWidthSlider_valueChanged</name>
@@ -10734,6 +11070,13 @@
       <anchorfile>classiqtipr_1_1_c_multidimensional_filter_params_gui_comp.html</anchorfile>
       <anchor>d3366cad3a5a1206c2b3e5949587c6f1</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtipr_1_1_c_multidimensional_filter_params_gui_comp.html</anchorfile>
+      <anchor>4379a9e6b2d4cef72a59d544d381015c</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10851,16 +11194,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>b93a56951c56d04d47c36ae7f321f88d</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>dc7316aed2f2c18079b341a6c63a074d</anchor>
+      <anchor>92aa297a44b7fd88c8da694efdcafbcf</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -10869,6 +11205,13 @@
       <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
       <anchor>dd8d7032a32e5870a17dd298bc37d199</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
+      <anchor>180977f89cdd4712d842018f314ee61f</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -10923,20 +11266,6 @@
       <anchor>7d8efb5edf206b772927592e9e447f89</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>c05e9f9a0639056d92e9fdfaa939fe9b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>3fd9207763f60ed94deb54f23d65fa2b</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_TestButton_clicked</name>
@@ -10978,6 +11307,13 @@
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
       <anchor>b36269efd80ebc95485d9b7cfccfbc75</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>fbfa844c008eb0d274bd8dd48d0a5b40</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -11177,24 +11513,17 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtsig_1_1_c_sampling_params_gui_comp.html</anchorfile>
-      <anchor>998e4429768e906de3ca6df4214fe351</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtsig_1_1_c_sampling_params_gui_comp.html</anchorfile>
-      <anchor>9454a92421901eec2b08ec20e04c3183</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtsig_1_1_c_sampling_params_gui_comp.html</anchorfile>
-      <anchor>48a624f6f1e89a526932ccbbb1804af3</anchor>
+      <anchor>6f1d7aeebdaac0e12378aab93f63b481</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtsig_1_1_c_sampling_params_gui_comp.html</anchorfile>
+      <anchor>7bd0afc921e1c8eae36bf3bca954927d</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -11327,13 +11656,6 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
-      <anchor>f3d2f169867e660db0bcde4cd5a430a0</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
       <anchor>e5c0288a3cd9f07d655dbdfadb7557aa</anchor>
@@ -11345,6 +11667,13 @@
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
       <anchor>6c28ceb85daba37bc33e39c42b75c66f</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
+      <anchor>b6fb0c08117fe5b4c9e8a148493cbfa8</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -11381,17 +11710,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateEditor</name>
+      <name>UpdateGui</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_params_gui_comp.html</anchorfile>
-      <anchor>ff25cd09b58d9b524ba5d50f543b17ce</anchor>
+      <anchor>a31f37c6c28beb235181cc4809c433ea</anchor>
       <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtswr_1_1_c_swiss_ranger_params_gui_comp.html</anchorfile>
-      <anchor>29ae18625b78d382e423b613d6dd7416</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>

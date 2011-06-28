@@ -48,7 +48,7 @@ public:
 	I_END_COMPONENT;
 
 protected:
-	void UpdateGui();
+	void UpdateGuiElements();
 
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();

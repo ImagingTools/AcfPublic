@@ -113,15 +113,6 @@ Inheritance diagram for icmpstr::CAttributeEditorComp:</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">QStringList&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#dc5e4e97e84b92710f8488dec26228fb">GetExportAliases</a> (const std::string &amp;attributeName) const </td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#becebea584444d4ef69a39284085492a">OnGuiModelDetached</a> ()</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#becebea584444d4ef69a39284085492a"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a32b170ad7a15b0846b6eabbf1268f35">UpdateEditor</a> (int updateFlags=0)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates editor with model data.  <a href="#a32b170ad7a15b0846b6eabbf1268f35"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#540abe48f978bbbbcb692c9f9586f174">UpdateModel</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates model from editor.  <a href="#540abe48f978bbbbcb692c9f9586f174"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#6b767eb6dc450ef91ca391343ce65bb2">on_AttributeTree_itemSelectionChanged</a> ()</td></tr>
 
@@ -144,6 +135,12 @@ Inheritance diagram for icmpstr::CAttributeEditorComp:</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#bf0f501161131b8560f88f40d1c619d6">UpdateExportIcon</a> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#becebea584444d4ef69a39284085492a">OnGuiModelDetached</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#becebea584444d4ef69a39284085492a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#cb0af3380168193e389704b9e94847a0">UpdateGui</a> (int updateFlags=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do update of the model GUI.  <a href="#cb0af3380168193e389704b9e94847a0"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#7310e6015410d5e1cdb1bb1e21ba74a8">OnGuiCreated</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#7310e6015410d5e1cdb1bb1e21ba74a8"></a><br></td></tr>
@@ -702,7 +699,7 @@ Called just before GUI is released.
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -763,35 +760,6 @@ Called when model is detached or GUI is destroyed.
 
 </div>
 </div><p>
-<a class="anchor" name="a32b170ad7a15b0846b6eabbf1268f35"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::UpdateEditor" ref="a32b170ad7a15b0846b6eabbf1268f35" args="(int updateFlags=0)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void icmpstr::CAttributeEditorComp::UpdateEditor           </td>
-          <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>updateFlags</em> = <code>0</code>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Updates editor with model data. 
-<p>
-This method will be called only if GUI is connected. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>updateFlags</em>&nbsp;</td><td>the same as <code>changeFlag</code> in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>. </td></tr>
-  </table>
-</dl>
-
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#806337a93835b5e6b1c577ce85a65674">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; IElementSelectionInfo &gt; &gt;</a>.</p>
-
-</div>
-</div><p>
 <a class="anchor" name="bf0f501161131b8560f88f40d1c619d6"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::UpdateExportIcon" ref="bf0f501161131b8560f88f40d1c619d6" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -811,26 +779,27 @@ This method will be called only if GUI is connected. <dl compact><dt><b>Paramete
 
 </div>
 </div><p>
-<a class="anchor" name="540abe48f978bbbbcb692c9f9586f174"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::UpdateModel" ref="540abe48f978bbbbcb692c9f9586f174" args="() const " -->
+<a class="anchor" name="cb0af3380168193e389704b9e94847a0"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::UpdateGui" ref="cb0af3380168193e389704b9e94847a0" args="(int updateFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void icmpstr::CAttributeEditorComp::UpdateModel           </td>
+          <td class="memname">virtual void icmpstr::CAttributeEditorComp::UpdateGui           </td>
           <td>(</td>
-          <td class="paramname">          </td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>updateFlags</em> = <code>0</code>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Updates model from editor. 
+Do update of the model GUI. 
 <p>
-This method will be called only if GUI is connected and model is attached. 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#39ad878eb561d7510fa512c9a985a92b">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; IElementSelectionInfo &gt; &gt;</a>.</p>
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; IElementSelectionInfo &gt; &gt;</a>.</p>
 
 </div>
 </div><p>

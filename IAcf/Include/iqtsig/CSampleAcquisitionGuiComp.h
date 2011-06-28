@@ -85,7 +85,7 @@ protected:
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
 
-protected slots:
+protected Q_SLOTS:
 	void on_StartButton_toggled(bool checked);
 	void on_SaveSampleButton_clicked();
 	void on_LoadParamsButton_clicked();

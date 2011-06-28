@@ -55,11 +55,7 @@ public:
 
 	CParamsManagerGuiComp();
 
-	// reimplemented (imod::IModelEditor)
-	virtual void UpdateModel() const;
-	virtual void UpdateEditor(int updateFlags = 0);
-
-protected slots:
+protected Q_SLOTS:
 	void on_AddButton_clicked();
 	void on_RemoveButton_clicked();
 	void on_ParamsTree_itemSelectionChanged();
@@ -75,6 +71,11 @@ protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void OnGuiModelAttached();
 	virtual void OnGuiModelDetached();
+	virtual void UpdateGui(int updateFlags = 0);
+
+	// reimplemented (iqtgui::CComponentBase)
+	virtual void OnGuiCreated();
+	virtual void OnGuiDestroyed();
 
 private:
 	I_REF(iqtgui::IGuiObject, m_paramsGuiCompPtr);

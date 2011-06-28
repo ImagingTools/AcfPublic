@@ -49,31 +49,33 @@
 <a name="l00027"></a>00027               <a class="code" href="classiqtipr_1_1_c_search_params_gui_comp.html#d28de1e7375e67bfbdccce22239182dc">I_ASSIGN_TO</a>(m_modelObserverCompPtr, m_modelViewCompPtr, false);
 <a name="l00028"></a>00028        I_END_COMPONENT
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030               <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00031"></a>00031        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_params_gui_comp.html#b93a56951c56d04d47c36ae7f321f88d">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00032"></a>00032        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_params_gui_comp.html#dc7316aed2f2c18079b341a6c63a074d">UpdateModel</a>() const;
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 protected slots:
-<a name="l00035"></a>00035        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_params_gui_comp.html#dd8d7032a32e5870a17dd298bc37d199">OnParameterChanged</a>();
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 protected:
-<a name="l00038"></a>00038        <span class="comment">// reimplemented (iqt::CGuiObjectBase)</span>
-<a name="l00039"></a>00039        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_params_gui_comp.html#561a06b857067639cd49a87f796778e4">OnGuiCreated</a>();
-<a name="l00040"></a>00040        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_params_gui_comp.html#dd406bb60ec8fa85ceea3ea466e601b8">OnGuiDestroyed</a>();
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 private:
-<a name="l00043"></a>00043        imod::TModelWrap&lt;iqt::CBitmap&gt; m_modelBitmap;
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045        I_REF(iqtgui::IGuiObject, m_modelViewCompPtr);
-<a name="l00046"></a>00046        I_REF(imod::IObserver, m_modelObserverCompPtr);
-<a name="l00047"></a>00047 };
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 } <span class="comment">// namespace iqtipr</span>
+<a name="l00030"></a>00030        <span class="comment">// reimplemented (imod::IModelEditor)</span>
+<a name="l00031"></a>00031        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_params_gui_comp.html#92aa297a44b7fd88c8da694efdcafbcf">UpdateModel</a>() const;
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033 protected Q_SLOTS:
+<a name="l00034"></a>00034        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_params_gui_comp.html#dd8d7032a32e5870a17dd298bc37d199">OnParameterChanged</a>();
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 protected:
+<a name="l00037"></a>00037        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00038"></a>00038        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_params_gui_comp.html#180977f89cdd4712d842018f314ee61f">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040        <span class="comment">// reimplemented (iqt::CGuiObjectBase)</span>
+<a name="l00041"></a>00041        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_params_gui_comp.html#561a06b857067639cd49a87f796778e4">OnGuiCreated</a>();
+<a name="l00042"></a>00042        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_params_gui_comp.html#dd406bb60ec8fa85ceea3ea466e601b8">OnGuiDestroyed</a>();
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 private:
+<a name="l00045"></a>00045        imod::TModelWrap&lt;iqt::CBitmap&gt; m_modelBitmap;
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047        I_REF(iqtgui::IGuiObject, m_modelViewCompPtr);
+<a name="l00048"></a>00048        I_REF(imod::IObserver, m_modelObserverCompPtr);
+<a name="l00049"></a>00049 };
+<a name="l00050"></a>00050 
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="preprocessor">#endif // !iqtipr_CSearchParamsGuiComp_h</span>
-<a name="l00054"></a>00054 <span class="preprocessor"></span>
+<a name="l00052"></a>00052 } <span class="comment">// namespace iqtipr</span>
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="preprocessor">#endif // !iqtipr_CSearchParamsGuiComp_h</span>
+<a name="l00056"></a>00056 <span class="preprocessor"></span>
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

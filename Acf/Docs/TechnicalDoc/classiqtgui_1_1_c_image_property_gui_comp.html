@@ -64,13 +64,10 @@ Inheritance diagram for iqtgui::CImagePropertyGuiComp:</div>
 &lt; Ui::CImagePropertyGuiComp, <br class="typebreak">
 <a class="el" href="classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_image_property_gui_comp.html#14cb0181b6db5dc4ba17c13dff3e8e2c">BaseClass</a></td></tr>
 
-<tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_image_property_gui_comp.html#305a4b1e4cac1e31cb2f6c4fe8881d6d">UpdateEditor</a> (int updateFlags=0)</td></tr>
+<tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_image_property_gui_comp.html#b27526403fda96f79f4646c6787c42b0">UpdateGui</a> (int updateFlags=0)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates editor with model data.  <a href="#305a4b1e4cac1e31cb2f6c4fe8881d6d"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_image_property_gui_comp.html#60027548348c1ae98b78848cc984cb55">UpdateModel</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates model from editor.  <a href="#60027548348c1ae98b78848cc984cb55"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do update of the model GUI.  <a href="#b27526403fda96f79f4646c6787c42b0"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 
@@ -96,55 +93,27 @@ Inheritance diagram for iqtgui::CImagePropertyGuiComp:</div>
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="305a4b1e4cac1e31cb2f6c4fe8881d6d"></a><!-- doxytag: member="iqtgui::CImagePropertyGuiComp::UpdateEditor" ref="305a4b1e4cac1e31cb2f6c4fe8881d6d" args="(int updateFlags=0)" -->
+<a class="anchor" name="b27526403fda96f79f4646c6787c42b0"></a><!-- doxytag: member="iqtgui::CImagePropertyGuiComp::UpdateGui" ref="b27526403fda96f79f4646c6787c42b0" args="(int updateFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqtgui::CImagePropertyGuiComp::UpdateEditor           </td>
+          <td class="memname">virtual void iqtgui::CImagePropertyGuiComp::UpdateGui           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>updateFlags</em> = <code>0</code>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Updates editor with model data. 
+Do update of the model GUI. 
 <p>
-This method will be called only if GUI is connected. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>updateFlags</em>&nbsp;</td><td>the same as <code>changeFlag</code> in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>. </td></tr>
-  </table>
-</dl>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#806337a93835b5e6b1c577ce85a65674">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CImagePropertyGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iimg::IBitmap &gt; &gt;</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="60027548348c1ae98b78848cc984cb55"></a><!-- doxytag: member="iqtgui::CImagePropertyGuiComp::UpdateModel" ref="60027548348c1ae98b78848cc984cb55" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqtgui::CImagePropertyGuiComp::UpdateModel           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Updates model from editor. 
-<p>
-This method will be called only if GUI is connected and model is attached. 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#39ad878eb561d7510fa512c9a985a92b">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CImagePropertyGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iimg::IBitmap &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CImagePropertyGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iimg::IBitmap &gt; &gt;</a>.</p>
 
 </div>
 </div><p>

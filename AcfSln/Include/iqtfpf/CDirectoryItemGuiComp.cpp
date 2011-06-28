@@ -30,17 +30,11 @@ namespace iqtfpf
 {
 
 
+// public methods
+
 CDirectoryItemGuiComp::CDirectoryItemGuiComp()
 	:m_setIndex(-1)
 {
-}
-
-
-// public methods
-
-void CDirectoryItemGuiComp::SetDirectoryPath(const QString& directoryPath)
-{
-	m_directoryPath = directoryPath;
 }
 
 
@@ -69,12 +63,16 @@ bool CDirectoryItemGuiComp::SetSelectedOptionIndex(int index)
 
 			iprm::IParamsSet* paramSetPtr = m_inputDirectoriesParamsManagerCompPtr->GetParamsSet(m_setIndex);
 
-			std::string fileNameParamId = "DirectoryPath"; 
+			std::string fileNameParamId;
+			if (m_directoryPathIdAttrPtr.IsValid()){
+				fileNameParamId = (*m_directoryPathIdAttrPtr).ToString();
+			}
+
+			m_hotfolderInputName = iqt::GetQString(setName);
 
 			const iprm::IFileNameParam* fileNameParamPtr = dynamic_cast<const iprm::IFileNameParam*>(paramSetPtr->GetParameter(fileNameParamId));
-
 			if (fileNameParamPtr != NULL){
-				SetDirectoryPath(iqt::GetQString(fileNameParamPtr->GetPath()));
+				m_directoryPath = iqt::GetQString(fileNameParamPtr->GetPath());
 			}
 		}
 	}
@@ -97,15 +95,9 @@ bool CDirectoryItemGuiComp::Serialize(iser::IArchive& /*archive*/)
 }
 
 
-// reimplemented (imod::IModelEditor)
+// reimplemenented (iqtgui::TGuiObserverWrap)
 
-void CDirectoryItemGuiComp::UpdateModel() const
-{
-	I_ASSERT(IsGuiCreated() && (GetObjectPtr() != NULL));
-}
-
-
-void CDirectoryItemGuiComp::UpdateEditor(int /*updateFlags*/)
+void CDirectoryItemGuiComp::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 
@@ -113,6 +105,7 @@ void CDirectoryItemGuiComp::UpdateEditor(int /*updateFlags*/)
 	if (objectPtr != NULL){
 		DirectoryLabel->setVisible(!m_directoryPath.isEmpty());
 		DirectoryLabel->setText(m_directoryPath);
+		PathNameLabel->setText(m_hotfolderInputName);
 
 		UpdateProgressBar(*objectPtr);
 	}

@@ -104,6 +104,8 @@ Inheritance diagram for icmpstr::CPackageOverviewComp:</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#86ea72e853678f9b6816f0fcc6eafa08">UpdateComponentGroups</a> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#88405540569440d3cb98c1bedbe92ddf">UpdateInterfaceList</a> ()</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classicomp_1_1_i_meta_info_manager.html#3910cc2d0502d41961d1c0560a94ddb2">icomp::IMetaInfoManager::ComponentAddresses</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#60b7162d99110a87588dc39878076a8b">GetFilteredComponentAdresses</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get component list, that match to the filter criteria.  <a href="#60b7162d99110a87588dc39878076a8b"></a><br></td></tr>
@@ -118,9 +120,9 @@ Inheritance diagram for icmpstr::CPackageOverviewComp:</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#04fbe6679bc12ea0450fa4347ce9d978">eventFilter</a> (<a class="el" href="class_q_object.html">QObject</a> *sourcePtr, QEvent *eventPtr)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#6df6160aa66062415f38b5da59ac465d">UpdateEditor</a> (int updateFlags=0)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#60eadf25d6215b97ea125aec323ea4bf">UpdateGui</a> (int updateFlags=0)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates editor with model data.  <a href="#6df6160aa66062415f38b5da59ac465d"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do update of the model GUI.  <a href="#60eadf25d6215b97ea125aec323ea4bf"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#9fba419020f348e96b8997c35a65525f">OnGuiCreated</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#9fba419020f348e96b8997c35a65525f"></a><br></td></tr>
@@ -683,12 +685,12 @@ Called when non-GUI elements (like commands) should be retranslated.
 
 </div>
 </div><p>
-<a class="anchor" name="6df6160aa66062415f38b5da59ac465d"></a><!-- doxytag: member="icmpstr::CPackageOverviewComp::UpdateEditor" ref="6df6160aa66062415f38b5da59ac465d" args="(int updateFlags=0)" -->
+<a class="anchor" name="60eadf25d6215b97ea125aec323ea4bf"></a><!-- doxytag: member="icmpstr::CPackageOverviewComp::UpdateGui" ref="60eadf25d6215b97ea125aec323ea4bf" args="(int updateFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void icmpstr::CPackageOverviewComp::UpdateEditor           </td>
+          <td class="memname">virtual void icmpstr::CPackageOverviewComp::UpdateGui           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>updateFlags</em> = <code>0</code>          </td>
@@ -700,15 +702,29 @@ Called when non-GUI elements (like commands) should be retranslated.
 <div class="memdoc">
 
 <p>
-Updates editor with model data. 
+Do update of the model GUI. 
 <p>
-This method will be called only if GUI is connected. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>updateFlags</em>&nbsp;</td><td>the same as <code>changeFlag</code> in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>. </td></tr>
-  </table>
-</dl>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#806337a93835b5e6b1c577ce85a65674">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CPackageOverviewComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; IElementSelectionInfo &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CPackageOverviewComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; IElementSelectionInfo &gt; &gt;</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="88405540569440d3cb98c1bedbe92ddf"></a><!-- doxytag: member="icmpstr::CPackageOverviewComp::UpdateInterfaceList" ref="88405540569440d3cb98c1bedbe92ddf" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void icmpstr::CPackageOverviewComp::UpdateInterfaceList           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
 
 </div>
 </div><p>
@@ -726,7 +742,7 @@ This method will be called only if GUI is connected. <dl compact><dt><b>Paramete
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_package_overview_comp_8h_source.html#l00207">207</a> of file <a class="el" href="_c_package_overview_comp_8h_source.html">CPackageOverviewComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_package_overview_comp_8h_source.html#l00208">208</a> of file <a class="el" href="_c_package_overview_comp_8h_source.html">CPackageOverviewComp.h</a>.</p>
 
 </div>
 </div><p>

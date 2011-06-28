@@ -111,7 +111,7 @@ void CProcessExecutorComp::OnComponentDestroyed()
 }
 
 
-// protected slots:
+// protected slots
 
 void CProcessExecutorComp::OnError(QProcess::ProcessError error)
 {   

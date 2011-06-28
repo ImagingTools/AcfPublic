@@ -27,7 +27,7 @@
   </div>
 </div>
 <div class="contents">
-<h1>iqt2d::CQuadrangleParamsGuiComp Class Reference</h1><!-- doxytag: class="iqt2d::CQuadrangleParamsGuiComp" --><!-- doxytag: inherits="TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CQuadrangleParamsGuiComp, i2d::CQuadrangle &gt; &gt;" --><code>#include &lt;<a class="el" href="_c_quadrangle_params_gui_comp_8h_source.html">CQuadrangleParamsGuiComp.h</a>&gt;</code>
+<h1>iqt2d::CQuadrangleParamsGuiComp Class Reference</h1><!-- doxytag: class="iqt2d::CQuadrangleParamsGuiComp" --><!-- doxytag: inherits="TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iqt2d::CQuadrangleShape, i2d::CQuadrangle &gt;" --><code>#include &lt;<a class="el" href="_c_quadrangle_params_gui_comp_8h_source.html">CQuadrangleParamsGuiComp.h</a>&gt;</code>
 <p>
 <div class="dynheader">
 Inheritance diagram for iqt2d::CQuadrangleParamsGuiComp:</div>
@@ -35,6 +35,7 @@ Inheritance diagram for iqt2d::CQuadrangleParamsGuiComp:</div>
 
 <p><center><img src="classiqt2d_1_1_c_quadrangle_params_gui_comp.png" usemap="#iqt2d::CQuadrangleParamsGuiComp_map" border="0" alt=""></center>
 <map name="iqt2d::CQuadrangleParamsGuiComp_map">
+<area href="classiqt2d_1_1_t_shape_params_gui_comp_base.html" alt="iqt2d::TShapeParamsGuiCompBase< Ui::CQuadrangleParamsGuiComp, iqt2d::CQuadrangleShape, i2d::CQuadrangle >" shape="rect" coords="3213,504,4121,528">
 <area href="classiqt2d_1_1_t_scene_extender_comp_base.html" alt="iqt2d::TSceneExtenderCompBase< iqtgui::TDesignerGuiObserverCompBase< Ui::CQuadrangleParamsGuiComp, i2d::CQuadrangle > >" shape="rect" coords="3213,448,4121,472">
 <area href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" alt="iqtgui::TDesignerGuiObserverCompBase< Ui::CQuadrangleParamsGuiComp, i2d::CQuadrangle >" shape="rect" coords="2754,392,3662,416">
 <area href="classiqt2d_1_1_i_scene_extender.html" alt="iqt2d::ISceneExtender" shape="rect" coords="3672,392,4580,416">
@@ -63,46 +64,39 @@ Inheritance diagram for iqt2d::CQuadrangleParamsGuiComp:</div>
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Types</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <br class="typebreak">
-<a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a><br class="typebreak">
-&lt; <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a><br class="typebreak">
+<a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">iqt2d::TShapeParamsGuiCompBase</a><br class="typebreak">
 &lt; Ui::CQuadrangleParamsGuiComp, <br class="typebreak">
-<a class="el" href="classi2d_1_1_c_quadrangle.html">i2d::CQuadrangle</a> &gt; &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#cbd1d2e798339b5f54bf4441b15b55d3">BaseClass</a></td></tr>
+<a class="el" href="classiqt2d_1_1_c_quadrangle_shape.html">iqt2d::CQuadrangleShape</a>, <br class="typebreak">
+<a class="el" href="classi2d_1_1_c_quadrangle.html">i2d::CQuadrangle</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#22bb057b5f36a58b5dffb89d091b1457">BaseClass</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual I_END_COMPONENT void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#cb221dce2565dbc64efe84cd144a900a">OnGuiModelAttached</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual I_END_COMPONENT void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#a7f2c44a4bc8672a39984ecdfeeed3c2">UpdateModel</a> () const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#cb221dce2565dbc64efe84cd144a900a"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#4ee5eff9d9eeef96a486e74ab6356309">OnGuiModelDetached</a> ()</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#4ee5eff9d9eeef96a486e74ab6356309"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#7962915cad8738c41ab016a5002cf607">UpdateModel</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates model from editor.  <a href="#7962915cad8738c41ab016a5002cf607"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#4152815da725d1c1eda4b361c656bb03">UpdateEditor</a> (int updateFlags=0)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates editor with model data.  <a href="#4152815da725d1c1eda4b361c656bb03"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#d18b12ad93c9ad27cee1243f373c66fb">OnAttached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#d18b12ad93c9ad27cee1243f373c66fb"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#aef2eb69042fd3d21b89cd9bb627c644">OnDetached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be detached.  <a href="#aef2eb69042fd3d21b89cd9bb627c644"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#638207d512d2f798535f1b37b86e46f4">CreateShapes</a> (int sceneId, bool inactiveOnly, <a class="el" href="classistd_1_1_t_pointer_vector.html">Shapes</a> &amp;result)</td></tr>
-
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates model from editor.  <a href="#a7f2c44a4bc8672a39984ecdfeeed3c2"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#0aeddf557421141376255b3e37a379b6">OnParamsChanged</a> (double value)</td></tr>
 
+<tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#f657c1a9526ceb8463a33fcc76a7ff55">OnGuiModelAttached</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#f657c1a9526ceb8463a33fcc76a7ff55"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#4ee5eff9d9eeef96a486e74ab6356309">OnGuiModelDetached</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#4ee5eff9d9eeef96a486e74ab6356309"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#8bbb81c90f47a6afe08bbf3271207089">UpdateGui</a> (int updateFlags=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do update of the model GUI.  <a href="#8bbb81c90f47a6afe08bbf3271207089"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 
 <p>Definition at line <a class="el" href="_c_quadrangle_params_gui_comp_8h_source.html#l00017">17</a> of file <a class="el" href="_c_quadrangle_params_gui_comp_8h_source.html">CQuadrangleParamsGuiComp.h</a>.</p>
 <hr><h2>Member Typedef Documentation</h2>
-<a class="anchor" name="cbd1d2e798339b5f54bf4441b15b55d3"></a><!-- doxytag: member="iqt2d::CQuadrangleParamsGuiComp::BaseClass" ref="cbd1d2e798339b5f54bf4441b15b55d3" args="" -->
+<a class="anchor" name="22bb057b5f36a58b5dffb89d091b1457"></a><!-- doxytag: member="iqt2d::CQuadrangleParamsGuiComp::BaseClass" ref="22bb057b5f36a58b5dffb89d091b1457" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt;<a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a>&lt; Ui::CQuadrangleParamsGuiComp, <a class="el" href="classi2d_1_1_c_quadrangle.html">i2d::CQuadrangle</a>&gt; &gt; <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::CQuadrangleParamsGuiComp::BaseClass</a>          </td>
+          <td class="memname">typedef <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">iqt2d::TShapeParamsGuiCompBase</a>&lt; Ui::CQuadrangleParamsGuiComp, <a class="el" href="classiqt2d_1_1_c_quadrangle_shape.html">iqt2d::CQuadrangleShape</a>, <a class="el" href="classi2d_1_1_c_quadrangle.html">i2d::CQuadrangle</a>&gt; <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">iqt2d::CQuadrangleParamsGuiComp::BaseClass</a>          </td>
         </tr>
       </table>
 </div>
@@ -110,108 +104,23 @@ Inheritance diagram for iqt2d::CQuadrangleParamsGuiComp:</div>
 
 <p>
 
-<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a84d65318184c8ebda8617619bbc17ee">iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CQuadrangleParamsGuiComp, i2d::CQuadrangle &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iqt2d::CQuadrangleShape, i2d::CQuadrangle &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_quadrangle_params_gui_comp_8h_source.html#l00026">26</a> of file <a class="el" href="_c_quadrangle_params_gui_comp_8h_source.html">CQuadrangleParamsGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_quadrangle_params_gui_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_quadrangle_params_gui_comp_8h_source.html">CQuadrangleParamsGuiComp.h</a>.</p>
 
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="638207d512d2f798535f1b37b86e46f4"></a><!-- doxytag: member="iqt2d::CQuadrangleParamsGuiComp::CreateShapes" ref="638207d512d2f798535f1b37b86e46f4" args="(int sceneId, bool inactiveOnly, Shapes &amp;result)" -->
+<a class="anchor" name="f657c1a9526ceb8463a33fcc76a7ff55"></a><!-- doxytag: member="iqt2d::CQuadrangleParamsGuiComp::OnGuiModelAttached" ref="f657c1a9526ceb8463a33fcc76a7ff55" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqt2d::CQuadrangleParamsGuiComp::CreateShapes           </td>
-          <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>sceneId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>inactiveOnly</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_t_pointer_vector.html">Shapes</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>result</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-
-<p>Implements <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#234d9e955c1224937d65b4882ddcebfe">iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CQuadrangleParamsGuiComp, i2d::CQuadrangle &gt; &gt;</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="d18b12ad93c9ad27cee1243f373c66fb"></a><!-- doxytag: member="iqt2d::CQuadrangleParamsGuiComp::OnAttached" ref="d18b12ad93c9ad27cee1243f373c66fb" args="(imod::IModel *modelPtr)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iqt2d::CQuadrangleParamsGuiComp::OnAttached           </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&nbsp;</td>
-          <td class="paramname"> <em>modelPtr</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-This call back function will be called, if an observable object is about to be attached. 
-<p>
-This function returns a <code>true</code>, if observable object is accepted by the implementation logic of the observer, otherwise the function returns a <code>false</code>. 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#1e5ea143e01a0798090e8989ded7fb94">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; i2d::CQuadrangle &gt; &gt;</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="aef2eb69042fd3d21b89cd9bb627c644"></a><!-- doxytag: member="iqt2d::CQuadrangleParamsGuiComp::OnDetached" ref="aef2eb69042fd3d21b89cd9bb627c644" args="(imod::IModel *modelPtr)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iqt2d::CQuadrangleParamsGuiComp::OnDetached           </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&nbsp;</td>
-          <td class="paramname"> <em>modelPtr</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-This call back function will be called, if an observable object is about to be detached. 
-<p>
-
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#dc9cd1c668357a08d839a51b6403a40c">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; i2d::CQuadrangle &gt; &gt;</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="cb221dce2565dbc64efe84cd144a900a"></a><!-- doxytag: member="iqt2d::CQuadrangleParamsGuiComp::OnGuiModelAttached" ref="cb221dce2565dbc64efe84cd144a900a" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual I_END_COMPONENT void iqt2d::CQuadrangleParamsGuiComp::OnGuiModelAttached           </td>
+          <td class="memname">virtual void iqt2d::CQuadrangleParamsGuiComp::OnGuiModelAttached           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -234,7 +143,7 @@ Called when model is attached and GUI is created.
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -268,41 +177,36 @@ Called when model is detached or GUI is destroyed.
 
 </div>
 </div><p>
-<a class="anchor" name="4152815da725d1c1eda4b361c656bb03"></a><!-- doxytag: member="iqt2d::CQuadrangleParamsGuiComp::UpdateEditor" ref="4152815da725d1c1eda4b361c656bb03" args="(int updateFlags=0)" -->
+<a class="anchor" name="8bbb81c90f47a6afe08bbf3271207089"></a><!-- doxytag: member="iqt2d::CQuadrangleParamsGuiComp::UpdateGui" ref="8bbb81c90f47a6afe08bbf3271207089" args="(int updateFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqt2d::CQuadrangleParamsGuiComp::UpdateEditor           </td>
+          <td class="memname">virtual void iqt2d::CQuadrangleParamsGuiComp::UpdateGui           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>updateFlags</em> = <code>0</code>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Updates editor with model data. 
+Do update of the model GUI. 
 <p>
-This method will be called only if GUI is connected. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>updateFlags</em>&nbsp;</td><td>the same as <code>changeFlag</code> in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>. </td></tr>
-  </table>
-</dl>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#806337a93835b5e6b1c577ce85a65674">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; i2d::CQuadrangle &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; i2d::CQuadrangle &gt; &gt;</a>.</p>
 
 </div>
 </div><p>
-<a class="anchor" name="7962915cad8738c41ab016a5002cf607"></a><!-- doxytag: member="iqt2d::CQuadrangleParamsGuiComp::UpdateModel" ref="7962915cad8738c41ab016a5002cf607" args="() const " -->
+<a class="anchor" name="a7f2c44a4bc8672a39984ecdfeeed3c2"></a><!-- doxytag: member="iqt2d::CQuadrangleParamsGuiComp::UpdateModel" ref="a7f2c44a4bc8672a39984ecdfeeed3c2" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqt2d::CQuadrangleParamsGuiComp::UpdateModel           </td>
+          <td class="memname">virtual I_END_COMPONENT void iqt2d::CQuadrangleParamsGuiComp::UpdateModel           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>

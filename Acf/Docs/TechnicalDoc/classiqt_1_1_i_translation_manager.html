@@ -47,6 +47,9 @@ Inheritance diagram for iqt::ITranslationManager:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_i_translation_manager.html#498ebb8cfaf7473f1adc14fa06602a2a">GetLanguagesCount</a> () const =0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get number of provided languages.  <a href="#498ebb8cfaf7473f1adc14fa06602a2a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_i_translation_manager.html#253a71ab19a57ec78225aeb07b4cbdf6">GetCurrentLanguageIndex</a> () const =0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get current language index.  <a href="#253a71ab19a57ec78225aeb07b4cbdf6"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const QTranslator *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_i_translation_manager.html#858f4aebe6c49894adb7b5c44b7fad68">GetLanguageTranslator</a> (int languageIndex) const =0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get Qt translator for a given language.  <a href="#858f4aebe6c49894adb7b5c44b7fad68"></a><br></td></tr>
@@ -64,6 +67,29 @@ Inheritance diagram for iqt::ITranslationManager:</div>
 
 <p>Definition at line <a class="el" href="_i_translation_manager_8h_source.html#l00016">16</a> of file <a class="el" href="_i_translation_manager_8h_source.html">ITranslationManager.h</a>.</p>
 <hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="253a71ab19a57ec78225aeb07b4cbdf6"></a><!-- doxytag: member="iqt::ITranslationManager::GetCurrentLanguageIndex" ref="253a71ab19a57ec78225aeb07b4cbdf6" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iqt::ITranslationManager::GetCurrentLanguageIndex           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get current language index. 
+<p>
+
+<p>Implemented in <a class="el" href="classiqt_1_1_c_translation_manager_comp.html#439f659a139087217396bf4c2f4543a5">iqt::CTranslationManagerComp</a>.</p>
+
+</div>
+</div><p>
 <a class="anchor" name="498ebb8cfaf7473f1adc14fa06602a2a"></a><!-- doxytag: member="iqt::ITranslationManager::GetLanguagesCount" ref="498ebb8cfaf7473f1adc14fa06602a2a" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">

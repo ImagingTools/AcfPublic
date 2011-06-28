@@ -67,14 +67,10 @@ Inheritance diagram for iqtmm::CPlaybackControllerGuiComp:</div>
 &lt; Ui::CPlaybackControllerGuiComp, <br class="typebreak">
 <a class="el" href="classimm_1_1_i_video_controller.html">imm::IVideoController</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtmm_1_1_c_playback_controller_gui_comp.html#09014012bec5d4bf6438029815b23f6f">BaseClass</a></td></tr>
 
-<tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtmm_1_1_c_playback_controller_gui_comp.html#775354d03d0bea7b36b1b4e00895b48c">UpdateEditor</a> (int updateFlags=0)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates editor with model data.  <a href="#775354d03d0bea7b36b1b4e00895b48c"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtmm_1_1_c_playback_controller_gui_comp.html#bddb5de2cf0956949174d1615ed463e9">UpdateModel</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates model from editor.  <a href="#bddb5de2cf0956949174d1615ed463e9"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtmm_1_1_c_playback_controller_gui_comp.html#4eb4b21cb9bc3b9efe904f5cc2010bb6">UpdateGui</a> (int updateFlags=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do update of the model GUI.  <a href="#4eb4b21cb9bc3b9efe904f5cc2010bb6"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtmm_1_1_c_playback_controller_gui_comp.html#eb22f89ddc60e74bbf9a14007eab226f">OnGuiCreated</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#eb22f89ddc60e74bbf9a14007eab226f"></a><br></td></tr>
@@ -172,55 +168,27 @@ Called just after GUI is initialized.
 
 </div>
 </div><p>
-<a class="anchor" name="775354d03d0bea7b36b1b4e00895b48c"></a><!-- doxytag: member="iqtmm::CPlaybackControllerGuiComp::UpdateEditor" ref="775354d03d0bea7b36b1b4e00895b48c" args="(int updateFlags=0)" -->
+<a class="anchor" name="4eb4b21cb9bc3b9efe904f5cc2010bb6"></a><!-- doxytag: member="iqtmm::CPlaybackControllerGuiComp::UpdateGui" ref="4eb4b21cb9bc3b9efe904f5cc2010bb6" args="(int updateFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqtmm::CPlaybackControllerGuiComp::UpdateEditor           </td>
+          <td class="memname">virtual void iqtmm::CPlaybackControllerGuiComp::UpdateGui           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>updateFlags</em> = <code>0</code>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Updates editor with model data. 
+Do update of the model GUI. 
 <p>
-This method will be called only if GUI is connected. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>updateFlags</em>&nbsp;</td><td>the same as <code>changeFlag</code> in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>. </td></tr>
-  </table>
-</dl>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#806337a93835b5e6b1c577ce85a65674">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CPlaybackControllerGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; imm::IVideoController &gt; &gt;</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="bddb5de2cf0956949174d1615ed463e9"></a><!-- doxytag: member="iqtmm::CPlaybackControllerGuiComp::UpdateModel" ref="bddb5de2cf0956949174d1615ed463e9" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqtmm::CPlaybackControllerGuiComp::UpdateModel           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Updates model from editor. 
-<p>
-This method will be called only if GUI is connected and model is attached. 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#39ad878eb561d7510fa512c9a985a92b">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CPlaybackControllerGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; imm::IVideoController &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CPlaybackControllerGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; imm::IVideoController &gt; &gt;</a>.</p>
 
 </div>
 </div><p>

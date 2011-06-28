@@ -28,10 +28,11 @@
 #include "iser/IFileLoader.h"
 #include "imod/IObserver.h"
 #include "imod/TModelWrap.h"
-#include "iproc/IBitmapSupplier.h"
 #include "iqt/CBitmap.h"
 #include "iqtgui/IGuiObject.h"
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
+
+#include "iipr/IBitmapSupplier.h"
 
 #include "iqtinsp/TSupplierGuiCompBase.h"
 
@@ -46,24 +47,20 @@ namespace iqtcam
 
 class CBitmapSupplierGuiComp: public iqtinsp::TSupplierGuiCompBase<
 			Ui::CBitmapSupplierGuiComp,
-			iproc::IBitmapSupplier>
+			iipr::IBitmapSupplier>
 {
 	Q_OBJECT
 
 public:
 	typedef iqtinsp::TSupplierGuiCompBase<
 				Ui::CBitmapSupplierGuiComp,
-				iproc::IBitmapSupplier> BaseClass;
+				iipr::IBitmapSupplier> BaseClass;
 
 	I_BEGIN_COMPONENT(CBitmapSupplierGuiComp);
 		I_ASSIGN(m_bitmapLoaderCompPtr, "BitmapLoader", "Saves bitmap to file", false, "BitmapLoader");
 	I_END_COMPONENT;
 
-	// reimplemented (imod::IModelEditor)
-	virtual void UpdateModel() const;
-	virtual void UpdateEditor(int updateFlags = 0);
-
-protected slots:
+protected Q_SLOTS:
 	void on_SnapImageButton_clicked();
 	void on_SaveImageButton_clicked();
 	void on_LoadParamsButton_clicked();
@@ -81,6 +78,7 @@ protected:
 
 	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void OnGuiModelAttached();
+	virtual void UpdateGui(int updateFlags = 0);
 
 	// reimplemented (imod::IObserver)
 	virtual void AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);

@@ -27,7 +27,7 @@
   </div>
 </div>
 <div class="contents">
-<h1>iqt2d::CAnnulusParamsGuiComp Class Reference</h1><!-- doxytag: class="iqt2d::CAnnulusParamsGuiComp" --><!-- doxytag: inherits="TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CAnnulusParamsGuiComp, i2d::CAnnulus &gt; &gt;" --><code>#include &lt;<a class="el" href="_c_annulus_params_gui_comp_8h_source.html">CAnnulusParamsGuiComp.h</a>&gt;</code>
+<h1>iqt2d::CAnnulusParamsGuiComp Class Reference</h1><!-- doxytag: class="iqt2d::CAnnulusParamsGuiComp" --><!-- doxytag: inherits="TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iqt2d::CAnnulusShape, i2d::CAnnulus &gt;" --><code>#include &lt;<a class="el" href="_c_annulus_params_gui_comp_8h_source.html">CAnnulusParamsGuiComp.h</a>&gt;</code>
 <p>
 <div class="dynheader">
 Inheritance diagram for iqt2d::CAnnulusParamsGuiComp:</div>
@@ -35,6 +35,7 @@ Inheritance diagram for iqt2d::CAnnulusParamsGuiComp:</div>
 
 <p><center><img src="classiqt2d_1_1_c_annulus_params_gui_comp.png" usemap="#iqt2d::CAnnulusParamsGuiComp_map" border="0" alt=""></center>
 <map name="iqt2d::CAnnulusParamsGuiComp_map">
+<area href="classiqt2d_1_1_t_shape_params_gui_comp_base.html" alt="iqt2d::TShapeParamsGuiCompBase< Ui::CAnnulusParamsGuiComp, iqt2d::CAnnulusShape, i2d::CAnnulus >" shape="rect" coords="3066,504,3932,528">
 <area href="classiqt2d_1_1_t_scene_extender_comp_base.html" alt="iqt2d::TSceneExtenderCompBase< iqtgui::TDesignerGuiObserverCompBase< Ui::CAnnulusParamsGuiComp, i2d::CAnnulus > >" shape="rect" coords="3066,448,3932,472">
 <area href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" alt="iqtgui::TDesignerGuiObserverCompBase< Ui::CAnnulusParamsGuiComp, i2d::CAnnulus >" shape="rect" coords="2628,392,3494,416">
 <area href="classiqt2d_1_1_i_scene_extender.html" alt="iqt2d::ISceneExtender" shape="rect" coords="3504,392,4370,416">
@@ -63,30 +64,22 @@ Inheritance diagram for iqt2d::CAnnulusParamsGuiComp:</div>
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Types</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <br class="typebreak">
-<a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a><br class="typebreak">
-&lt; <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a><br class="typebreak">
+<a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">iqt2d::TShapeParamsGuiCompBase</a><br class="typebreak">
 &lt; Ui::CAnnulusParamsGuiComp, <br class="typebreak">
-<a class="el" href="classi2d_1_1_c_annulus.html">i2d::CAnnulus</a> &gt; &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#99c98bd8531fbbcf7b196a7adc504c69">BaseClass</a></td></tr>
+<a class="el" href="classiqt2d_1_1_c_annulus_shape.html">iqt2d::CAnnulusShape</a>, <br class="typebreak">
+<a class="el" href="classi2d_1_1_c_annulus.html">i2d::CAnnulus</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#5b92a08fa8e59880fdc4701ae852f8ce">BaseClass</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual I_END_COMPONENT void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#1054509b475b77bdabc2154fd377e7a8">UpdateModel</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates model from editor.  <a href="#1054509b475b77bdabc2154fd377e7a8"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#56277e5ff237b4f7e22e22d2f82a05e0">UpdateEditor</a> (int updateFlags=0)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates editor with model data.  <a href="#56277e5ff237b4f7e22e22d2f82a05e0"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#3dc72d5f93c21bd69a1e8cb6f2b636b2">OnAttached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#3dc72d5f93c21bd69a1e8cb6f2b636b2"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#37ae51b66320887b62cd5b1db47eb16e">OnDetached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be detached.  <a href="#37ae51b66320887b62cd5b1db47eb16e"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#34c2aa755508231df7734f634c7a8558">CreateShapes</a> (int sceneId, bool inactiveOnly, <a class="el" href="classistd_1_1_t_pointer_vector.html">Shapes</a> &amp;result)</td></tr>
-
 <tr><td colspan="2"><br><h2>Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#2778a67b02da7387dc928bdb3435ca56">OnParamsChanged</a> (double value)</td></tr>
 
 <tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#5068e7a1a02f4454fcf1869a669afbd3">UpdateGui</a> (int updateFlags=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do update of the model GUI.  <a href="#5068e7a1a02f4454fcf1869a669afbd3"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#2a3acff6702b3034d0c628a03c3f00bd">OnGuiCreated</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#2a3acff6702b3034d0c628a03c3f00bd"></a><br></td></tr>
@@ -98,12 +91,12 @@ Inheritance diagram for iqt2d::CAnnulusParamsGuiComp:</div>
 
 <p>Definition at line <a class="el" href="_c_annulus_params_gui_comp_8h_source.html#l00017">17</a> of file <a class="el" href="_c_annulus_params_gui_comp_8h_source.html">CAnnulusParamsGuiComp.h</a>.</p>
 <hr><h2>Member Typedef Documentation</h2>
-<a class="anchor" name="99c98bd8531fbbcf7b196a7adc504c69"></a><!-- doxytag: member="iqt2d::CAnnulusParamsGuiComp::BaseClass" ref="99c98bd8531fbbcf7b196a7adc504c69" args="" -->
+<a class="anchor" name="5b92a08fa8e59880fdc4701ae852f8ce"></a><!-- doxytag: member="iqt2d::CAnnulusParamsGuiComp::BaseClass" ref="5b92a08fa8e59880fdc4701ae852f8ce" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt;<a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a>&lt; Ui::CAnnulusParamsGuiComp, <a class="el" href="classi2d_1_1_c_annulus.html">i2d::CAnnulus</a>&gt; &gt; <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::CAnnulusParamsGuiComp::BaseClass</a>          </td>
+          <td class="memname">typedef <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">iqt2d::TShapeParamsGuiCompBase</a>&lt; Ui::CAnnulusParamsGuiComp, <a class="el" href="classiqt2d_1_1_c_annulus_shape.html">iqt2d::CAnnulusShape</a>, <a class="el" href="classi2d_1_1_c_annulus.html">i2d::CAnnulus</a>&gt; <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">iqt2d::CAnnulusParamsGuiComp::BaseClass</a>          </td>
         </tr>
       </table>
 </div>
@@ -111,98 +104,13 @@ Inheritance diagram for iqt2d::CAnnulusParamsGuiComp:</div>
 
 <p>
 
-<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a84d65318184c8ebda8617619bbc17ee">iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CAnnulusParamsGuiComp, i2d::CAnnulus &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iqt2d::CAnnulusShape, i2d::CAnnulus &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_annulus_params_gui_comp_8h_source.html#l00026">26</a> of file <a class="el" href="_c_annulus_params_gui_comp_8h_source.html">CAnnulusParamsGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_annulus_params_gui_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_annulus_params_gui_comp_8h_source.html">CAnnulusParamsGuiComp.h</a>.</p>
 
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="34c2aa755508231df7734f634c7a8558"></a><!-- doxytag: member="iqt2d::CAnnulusParamsGuiComp::CreateShapes" ref="34c2aa755508231df7734f634c7a8558" args="(int sceneId, bool inactiveOnly, Shapes &amp;result)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqt2d::CAnnulusParamsGuiComp::CreateShapes           </td>
-          <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>sceneId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>inactiveOnly</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_t_pointer_vector.html">Shapes</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>result</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-
-<p>Implements <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#234d9e955c1224937d65b4882ddcebfe">iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CAnnulusParamsGuiComp, i2d::CAnnulus &gt; &gt;</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="3dc72d5f93c21bd69a1e8cb6f2b636b2"></a><!-- doxytag: member="iqt2d::CAnnulusParamsGuiComp::OnAttached" ref="3dc72d5f93c21bd69a1e8cb6f2b636b2" args="(imod::IModel *modelPtr)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iqt2d::CAnnulusParamsGuiComp::OnAttached           </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&nbsp;</td>
-          <td class="paramname"> <em>modelPtr</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-This call back function will be called, if an observable object is about to be attached. 
-<p>
-This function returns a <code>true</code>, if observable object is accepted by the implementation logic of the observer, otherwise the function returns a <code>false</code>. 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#1e5ea143e01a0798090e8989ded7fb94">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; i2d::CAnnulus &gt; &gt;</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="37ae51b66320887b62cd5b1db47eb16e"></a><!-- doxytag: member="iqt2d::CAnnulusParamsGuiComp::OnDetached" ref="37ae51b66320887b62cd5b1db47eb16e" args="(imod::IModel *modelPtr)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iqt2d::CAnnulusParamsGuiComp::OnDetached           </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&nbsp;</td>
-          <td class="paramname"> <em>modelPtr</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-This call back function will be called, if an observable object is about to be detached. 
-<p>
-
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#dc9cd1c668357a08d839a51b6403a40c">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; i2d::CAnnulus &gt; &gt;</a>.</p>
-
-</div>
-</div><p>
 <a class="anchor" name="2a3acff6702b3034d0c628a03c3f00bd"></a><!-- doxytag: member="iqt2d::CAnnulusParamsGuiComp::OnGuiCreated" ref="2a3acff6702b3034d0c628a03c3f00bd" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -269,32 +177,27 @@ Called just before GUI is released.
 
 </div>
 </div><p>
-<a class="anchor" name="56277e5ff237b4f7e22e22d2f82a05e0"></a><!-- doxytag: member="iqt2d::CAnnulusParamsGuiComp::UpdateEditor" ref="56277e5ff237b4f7e22e22d2f82a05e0" args="(int updateFlags=0)" -->
+<a class="anchor" name="5068e7a1a02f4454fcf1869a669afbd3"></a><!-- doxytag: member="iqt2d::CAnnulusParamsGuiComp::UpdateGui" ref="5068e7a1a02f4454fcf1869a669afbd3" args="(int updateFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqt2d::CAnnulusParamsGuiComp::UpdateEditor           </td>
+          <td class="memname">virtual void iqt2d::CAnnulusParamsGuiComp::UpdateGui           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>updateFlags</em> = <code>0</code>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Updates editor with model data. 
+Do update of the model GUI. 
 <p>
-This method will be called only if GUI is connected. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>updateFlags</em>&nbsp;</td><td>the same as <code>changeFlag</code> in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>. </td></tr>
-  </table>
-</dl>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#806337a93835b5e6b1c577ce85a65674">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; i2d::CAnnulus &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; i2d::CAnnulus &gt; &gt;</a>.</p>
 
 </div>
 </div><p>

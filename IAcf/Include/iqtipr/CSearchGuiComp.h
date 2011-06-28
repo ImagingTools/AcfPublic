@@ -71,7 +71,7 @@ protected:
 	virtual void OnGuiCreated();
 	virtual void OnGuiDestroyed();
 
-protected slots:
+protected Q_SLOTS:
 	void on_FindButton_clicked();
 
 private:

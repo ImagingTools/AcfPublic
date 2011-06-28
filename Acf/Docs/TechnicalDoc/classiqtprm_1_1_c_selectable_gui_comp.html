@@ -55,6 +55,7 @@ Inheritance diagram for iqtprm::CSelectableGuiComp:</div>
 <area href="classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="890,56,1770,80">
 <area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="1780,56,2660,80">
 <area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="890,0,1770,24">
+<area href="classiqtprm_1_1_c_selectable_params_set_gui_comp.html" alt="iqtprm::CSelectableParamsSetGuiComp" shape="rect" coords="2670,504,3550,528">
 </map>
 </div>
 
@@ -67,19 +68,16 @@ Inheritance diagram for iqtprm::CSelectableGuiComp:</div>
 &lt; Ui::CSelectableGuiComp, <br class="typebreak">
 <a class="el" href="classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selectable_gui_comp.html#511f88ed3d578924f8fa8392db3e15e6">BaseClass</a></td></tr>
 
-<tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selectable_gui_comp.html#f1305c8a5f9475383d4d665515f0225a">UpdateModel</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates model from editor.  <a href="#f1305c8a5f9475383d4d665515f0225a"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selectable_gui_comp.html#1aa805cf86507e1616fa90f3019dbaba">UpdateEditor</a> (int updateFlags=0)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates editor with model data.  <a href="#1aa805cf86507e1616fa90f3019dbaba"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selectable_gui_comp.html#f41f3b103f8fbd6cbd2ccbec433199b3">OnGuiModelAttached</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#f41f3b103f8fbd6cbd2ccbec433199b3"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selectable_gui_comp.html#38f677a7fcd8d4d3633a792f0100be62">OnGuiModelDetached</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#38f677a7fcd8d4d3633a792f0100be62"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selectable_gui_comp.html#ea7c24117354c372b886e3b5a91d75bd">UpdateGui</a> (int updateFlags=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do update of the model GUI.  <a href="#ea7c24117354c372b886e3b5a91d75bd"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selectable_gui_comp.html#8fc467b4153ba752ef11fe98b525f76b">OnGuiCreated</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#8fc467b4153ba752ef11fe98b525f76b"></a><br></td></tr>
@@ -105,6 +103,8 @@ The view for no selection
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html#4db84ac5f380ecdc510e2866d34e4a99">iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSelectableGuiComp, iprm::ISelectionParam &gt;</a>.</p>
 
+<p>Reimplemented in <a class="el" href="classiqtprm_1_1_c_selectable_params_set_gui_comp.html#1e1962650d454e056cb5f2e673a5fe0f">iqtprm::CSelectableParamsSetGuiComp</a>.</p>
+
 <p>Definition at line <a class="el" href="_c_selectable_gui_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_selectable_gui_comp_8h_source.html">CSelectableGuiComp.h</a>.</p>
 
 </div>
@@ -119,7 +119,7 @@ The view for no selection
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -142,7 +142,7 @@ Called just after GUI is initialized.
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -153,6 +153,8 @@ Called when model is attached and GUI is created.
 <p>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#ff6d896cdddc470303094516269eaecd">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CSelectableGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt; &gt;</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classiqtprm_1_1_c_selectable_params_set_gui_comp.html#552b9c3b73517fbc580fb0c54b9eba9e">iqtprm::CSelectableParamsSetGuiComp</a>.</p>
 
 </div>
 </div><p>
@@ -165,7 +167,7 @@ Called when model is attached and GUI is created.
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -177,57 +179,31 @@ Called when model is detached or GUI is destroyed.
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#b80f93ad4b306c693eac5fde8f975112">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CSelectableGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt; &gt;</a>.</p>
 
+<p>Reimplemented in <a class="el" href="classiqtprm_1_1_c_selectable_params_set_gui_comp.html#652882f26745c0d5a0c99051ea1e0660">iqtprm::CSelectableParamsSetGuiComp</a>.</p>
+
 </div>
 </div><p>
-<a class="anchor" name="1aa805cf86507e1616fa90f3019dbaba"></a><!-- doxytag: member="iqtprm::CSelectableGuiComp::UpdateEditor" ref="1aa805cf86507e1616fa90f3019dbaba" args="(int updateFlags=0)" -->
+<a class="anchor" name="ea7c24117354c372b886e3b5a91d75bd"></a><!-- doxytag: member="iqtprm::CSelectableGuiComp::UpdateGui" ref="ea7c24117354c372b886e3b5a91d75bd" args="(int updateFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqtprm::CSelectableGuiComp::UpdateEditor           </td>
+          <td class="memname">virtual void iqtprm::CSelectableGuiComp::UpdateGui           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>updateFlags</em> = <code>0</code>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Updates editor with model data. 
+Do update of the model GUI. 
 <p>
-This method will be called only if GUI is connected. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>updateFlags</em>&nbsp;</td><td>the same as <code>changeFlag</code> in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>. </td></tr>
-  </table>
-</dl>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#806337a93835b5e6b1c577ce85a65674">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CSelectableGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt; &gt;</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="f1305c8a5f9475383d4d665515f0225a"></a><!-- doxytag: member="iqtprm::CSelectableGuiComp::UpdateModel" ref="f1305c8a5f9475383d4d665515f0225a" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqtprm::CSelectableGuiComp::UpdateModel           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Updates model from editor. 
-<p>
-This method will be called only if GUI is connected and model is attached. 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#39ad878eb561d7510fa512c9a985a92b">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CSelectableGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CSelectableGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt; &gt;</a>.</p>
 
 </div>
 </div><p>

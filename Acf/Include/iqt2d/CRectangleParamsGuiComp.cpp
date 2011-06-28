@@ -26,8 +26,6 @@
 // ACF includes
 #include "istd/TChangeNotifier.h"
 
-#include "iqt2d/CRectangleShape.h"
-
 #include "iqt/CSignalBlocker.h"
 
 
@@ -35,29 +33,7 @@ namespace iqt2d
 {
 
 
-// reimplemented (iqtgui::TGuiObserverWrap)
-
-void CRectangleParamsGuiComp::OnGuiModelAttached()
-{
-	BaseClass::OnGuiModelAttached();
-
-	QObject::connect(LeftSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
-	QObject::connect(RightSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
-	QObject::connect(BottomSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
-	QObject::connect(TopSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
-}
-
-
-void CRectangleParamsGuiComp::OnGuiModelDetached()
-{
-	QObject::disconnect(LeftSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
-	QObject::disconnect(RightSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
-	QObject::disconnect(BottomSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
-	QObject::disconnect(TopSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
-
-	BaseClass::OnGuiModelDetached();
-}
-
+// public methods
 
 // reimplemented (imod::IModelEditor)
 
@@ -92,7 +68,33 @@ void CRectangleParamsGuiComp::UpdateModel() const
 }
 
 
-void CRectangleParamsGuiComp::UpdateEditor(int /*updateFlags*/)
+// protected methods
+
+// reimplemented (iqtgui::TGuiObserverWrap)
+
+void CRectangleParamsGuiComp::OnGuiModelAttached()
+{
+	BaseClass::OnGuiModelAttached();
+
+	QObject::connect(LeftSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
+	QObject::connect(RightSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
+	QObject::connect(BottomSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
+	QObject::connect(TopSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
+}
+
+
+void CRectangleParamsGuiComp::OnGuiModelDetached()
+{
+	QObject::disconnect(LeftSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
+	QObject::disconnect(RightSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
+	QObject::disconnect(BottomSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
+	QObject::disconnect(TopSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
+
+	BaseClass::OnGuiModelDetached();
+}
+
+
+void CRectangleParamsGuiComp::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 
@@ -113,84 +115,12 @@ void CRectangleParamsGuiComp::UpdateEditor(int /*updateFlags*/)
 }
 
 
-// reimplemented (imod::IObserver)
-
-bool CRectangleParamsGuiComp::OnAttached(imod::IModel* modelPtr)
-{
-	if (BaseClass::OnAttached(modelPtr)){
-		const ShapesMap& shapesMap = GetShapesMap();
-		for (		ShapesMap::const_iterator iter = shapesMap.begin();
-					iter != shapesMap.end();
-					++iter){
-			const Shapes& shapes = iter->second;
-			int shapesCount = shapes.GetCount();
-			for (int shapeIndex = 0; shapeIndex < shapesCount; ++shapeIndex){
-				iqt2d::CRectangleShape* shapePtr = dynamic_cast<iqt2d::CRectangleShape*>(shapes.GetAt(shapeIndex));
-				if (shapePtr != NULL){
-					modelPtr->AttachObserver(shapePtr);
-				}
-			}
-		}
-
-		return true;
-	}
-	else{
-		return false;
-	}
-}
-
-
-bool CRectangleParamsGuiComp::OnDetached(imod::IModel* modelPtr)
-{
-	if (BaseClass::OnDetached(modelPtr)){
-		const ShapesMap& shapesMap = GetShapesMap();
-		for (		ShapesMap::const_iterator iter = shapesMap.begin();
-					iter != shapesMap.end();
-					++iter){
-			const Shapes& shapes = iter->second;
-			int shapesCount = shapes.GetCount();
-			for (int shapeIndex = 0; shapeIndex < shapesCount; ++shapeIndex){
-				iqt2d::CRectangleShape* shapePtr = dynamic_cast<iqt2d::CRectangleShape*>(shapes.GetAt(shapeIndex));
-				if (shapePtr != NULL){
-					modelPtr->DetachObserver(shapePtr);
-				}
-			}
-		}
-
-		return true;
-	}
-	else{
-		return false;
-	}
-}
-
-
-// reimplemented (iqt2d::TSceneExtenderCompBase)
-
-void CRectangleParamsGuiComp::CreateShapes(int /*sceneId*/, bool inactiveOnly, Shapes& result)
-{
-	imod::IModel* modelPtr = GetModelPtr();
-	if (modelPtr != NULL){
-		CRectangleShape* shapePtr = new CRectangleShape(!inactiveOnly);
-		if (shapePtr != NULL){
-			shapePtr->setZValue(*m_rectZValueAttrPtr);
-			result.PushBack(shapePtr);
-
-			imod::IModel* modelPtr = GetModelPtr();
-			if (modelPtr != NULL){
-				modelPtr->AttachObserver(shapePtr);
-			}
-		}
-	}
-}
-
-
 // protected slots
 
 void CRectangleParamsGuiComp::OnParamsChanged(double /*value*/)
 {
 	if (!IsUpdateBlocked()){
-		UpdateBlocker blockUpdate(this);
+		UpdateBlocker updateBlocker(this);
 
 		UpdateModel();
 	}
@@ -198,4 +128,5 @@ void CRectangleParamsGuiComp::OnParamsChanged(double /*value*/)
 
 
 } // namespace iqt2d
+
 

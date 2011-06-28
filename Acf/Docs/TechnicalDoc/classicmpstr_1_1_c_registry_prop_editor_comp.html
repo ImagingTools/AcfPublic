@@ -67,19 +67,6 @@ Inheritance diagram for icmpstr::CRegistryPropEditorComp:</div>
 &lt; Ui::CRegistryPropEditorComp, <br class="typebreak">
 <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#7f563286d72f70f0876c597aab4df7fb">BaseClass</a></td></tr>
 
-<tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#f852c10d9451160234c078ddf93f7101">UpdateEditor</a> (int updateFlags=0)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates editor with model data.  <a href="#f852c10d9451160234c078ddf93f7101"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#cd7ba8d2becda1fc28d6e2643f135de2">UpdateModel</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates model from editor.  <a href="#cd7ba8d2becda1fc28d6e2643f135de2"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#1a6ec3f05188e0b4aad670e538b6aa62">OnGuiModelAttached</a> ()</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#1a6ec3f05188e0b4aad670e538b6aa62"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#1dba68bf8aa43f57270dfafafabca5b8">OnGuiModelDetached</a> ()</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#1dba68bf8aa43f57270dfafafabca5b8"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#19c2cba91104605272949b3fdd7ece2b">on_DescriptionEdit_editingFinished</a> ()</td></tr>
 
@@ -88,6 +75,15 @@ Inheritance diagram for icmpstr::CRegistryPropEditorComp:</div>
 <tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#bcf81cdf39601a8fa85a5314b38cd1ea">CreateOverview</a> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#1a6ec3f05188e0b4aad670e538b6aa62">OnGuiModelAttached</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#1a6ec3f05188e0b4aad670e538b6aa62"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#1dba68bf8aa43f57270dfafafabca5b8">OnGuiModelDetached</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#1dba68bf8aa43f57270dfafafabca5b8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#2ef0b396eda6f0a1e4297c466f4c7ea0">UpdateGui</a> (int updateFlags=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do update of the model GUI.  <a href="#2ef0b396eda6f0a1e4297c466f4c7ea0"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#4be1f620ac6ad44b1bf868d447b57a73">OnGuiCreated</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#4be1f620ac6ad44b1bf868d447b57a73"></a><br></td></tr>
@@ -186,7 +182,7 @@ Called just after GUI is initialized.
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -209,7 +205,7 @@ Called when model is attached and GUI is created.
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -242,55 +238,27 @@ Called when model is detached or GUI is destroyed.
 
 </div>
 </div><p>
-<a class="anchor" name="f852c10d9451160234c078ddf93f7101"></a><!-- doxytag: member="icmpstr::CRegistryPropEditorComp::UpdateEditor" ref="f852c10d9451160234c078ddf93f7101" args="(int updateFlags=0)" -->
+<a class="anchor" name="2ef0b396eda6f0a1e4297c466f4c7ea0"></a><!-- doxytag: member="icmpstr::CRegistryPropEditorComp::UpdateGui" ref="2ef0b396eda6f0a1e4297c466f4c7ea0" args="(int updateFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void icmpstr::CRegistryPropEditorComp::UpdateEditor           </td>
+          <td class="memname">virtual void icmpstr::CRegistryPropEditorComp::UpdateGui           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>updateFlags</em> = <code>0</code>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Updates editor with model data. 
+Do update of the model GUI. 
 <p>
-This method will be called only if GUI is connected. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>updateFlags</em>&nbsp;</td><td>the same as <code>changeFlag</code> in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>. </td></tr>
-  </table>
-</dl>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#806337a93835b5e6b1c577ce85a65674">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CRegistryPropEditorComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="cd7ba8d2becda1fc28d6e2643f135de2"></a><!-- doxytag: member="icmpstr::CRegistryPropEditorComp::UpdateModel" ref="cd7ba8d2becda1fc28d6e2643f135de2" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void icmpstr::CRegistryPropEditorComp::UpdateModel           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Updates model from editor. 
-<p>
-This method will be called only if GUI is connected and model is attached. 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#39ad878eb561d7510fa512c9a985a92b">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CRegistryPropEditorComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CRegistryPropEditorComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</a>.</p>
 
 </div>
 </div><p>

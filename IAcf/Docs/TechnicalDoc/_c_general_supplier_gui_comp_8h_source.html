@@ -49,30 +49,27 @@
 <a name="l00027"></a>00027        I_BEGIN_COMPONENT(<a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html">CGeneralSupplierGuiComp</a>);
 <a name="l00028"></a>00028        I_END_COMPONENT;
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#d385addf9bf5273372341155d95b3428">UpdateModel</a>() <span class="keyword">const</span>;
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#3dc46bba627edbfa37137e2ca1677c01">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="keyword">protected</span> slots:
-<a name="l00035"></a>00035        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#de039256b336e4c8d2069f7548e9d5d4">on_TestButton_clicked</a>();
-<a name="l00036"></a>00036        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#b6db33e28929b7b8fe20b22e54b808d2">on_LoadParamsButton_clicked</a>();
-<a name="l00037"></a>00037        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#42dc82083fec12373815fe696ddd5d17">on_SaveParamsButton_clicked</a>();
+<a name="l00030"></a>00030 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00031"></a>00031        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#de039256b336e4c8d2069f7548e9d5d4">on_TestButton_clicked</a>();
+<a name="l00032"></a>00032        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#b6db33e28929b7b8fe20b22e54b808d2">on_LoadParamsButton_clicked</a>();
+<a name="l00033"></a>00033        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#42dc82083fec12373815fe696ddd5d17">on_SaveParamsButton_clicked</a>();
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 <span class="keyword">protected</span>:
+<a name="l00036"></a>00036        <span class="comment">// reimplemented (iqtinsp::TSupplierGuiCompBase)</span>
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#b8ca1190d3a8ced0d9b69bac1ed5c497" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span>;
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039 <span class="keyword">protected</span>:
-<a name="l00040"></a>00040        <span class="comment">// reimplemented (iqtinsp::TSupplierGuiCompBase)</span>
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#b8ca1190d3a8ced0d9b69bac1ed5c497" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span>;
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#292de76a8651f5a98731df87c0d6c82a">OnGuiModelAttached</a>();
-<a name="l00045"></a>00045 };
+<a name="l00039"></a>00039        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#292de76a8651f5a98731df87c0d6c82a">OnGuiModelAttached</a>();
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#a635fb30331f46d5efc33b4adb2f192f">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00042"></a>00042 };
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 } <span class="comment">// namespace iqtinsp</span>
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 } <span class="comment">// namespace iqtinsp</span>
-<a name="l00049"></a>00049 
+<a name="l00048"></a>00048 <span class="preprocessor">#endif // !iqtinsp_CGeneralSupplierGuiComp_included</span>
+<a name="l00049"></a>00049 <span class="preprocessor"></span>
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="preprocessor">#endif // !iqtinsp_CGeneralSupplierGuiComp_included</span>
-<a name="l00052"></a>00052 <span class="preprocessor"></span>
-<a name="l00053"></a>00053 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

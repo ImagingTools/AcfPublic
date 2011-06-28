@@ -78,9 +78,6 @@ Inheritance diagram for iproc::IProcessor:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#21bebcb085e8e93dc6920ad3dcf6c4ce">GetProcessorState</a> (const <a class="el" href="classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr) const =0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get state of this processor for processing of specified parameters.  <a href="#21bebcb085e8e93dc6920ad3dcf6c4ce"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#727885ec11e35ad1b8d7361cfd5bea96">ResetAllTasks</a> ()=0</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remove all task from queue.  <a href="#727885ec11e35ad1b8d7361cfd5bea96"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#18d945c422d423fa69be5c2a136e1258">AreParamsAccepted</a> (const <a class="el" href="classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *inputPtr, const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *outputPtr) const =0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if specified parameter set is accepted for this processor.  <a href="#18d945c422d423fa69be5c2a136e1258"></a><br></td></tr>
@@ -93,6 +90,9 @@ Inheritance diagram for iproc::IProcessor:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#bb082ed0fb7e87d975848e53aad84f89">WaitTaskFinished</a> (int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)=0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wait for task is finished.  <a href="#bb082ed0fb7e87d975848e53aad84f89"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#a73693c6c682f31cf5bb344c6e816d6f">CancelTask</a> (int taskId=-1)=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remove task from queue.  <a href="#a73693c6c682f31cf5bb344c6e816d6f"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#4afcb910ebe56624cb240a09b998581a">GetReadyTask</a> ()=0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the ID of any ready task.  <a href="#4afcb910ebe56624cb240a09b998581a"></a><br></td></tr>
@@ -106,7 +106,7 @@ Inheritance diagram for iproc::IProcessor:</div>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Interface for all synchrone and assynchrone processors with <em>"push data"</em> model. 
 <p>
-Synchrone processors are blocking and can process single task. Thats why is not necessary to use task ID. Synchrone processing is provide by method DoProcessing. Assynchrone processors can process many tasks parallel. Each task is identified using its ID. New assynchrone processing task can be started using method <code>BeginTask</code> and finish using <code>WaitTaskFinished</code> or <code>ResetAllTasks</code>. Each task has its input object, output object and parameter set. <dl compact><dt><b>Parameters:</b></dt><dd>
+Synchrone processors are blocking and can process single task. Thats why is not necessary to use task ID. Synchrone processing is provide by method DoProcessing. Assynchrone processors can process many tasks parallel. Each task is identified using its ID. New assynchrone processing task can be started using method <code>BeginTask</code> and finish using <code>WaitTaskFinished</code> or <code>CancelTask</code>. Each task has its input object, output object and parameter set. <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>Input</em>&nbsp;</td><td>type of input object. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>Output</em>&nbsp;</td><td>type of output object. </td></tr>
@@ -291,7 +291,7 @@ Check if specified parameter set is accepted for this processor.
 <p>
 Begin new task for this processor and add them to queue. 
 <p>
-If this method success, new task is added into the queue. To remove it from queue you have to call <code>WaitTaskFinished</code> or <code>ResetAllTasks</code>. <dl compact><dt><b>Parameters:</b></dt><dd>
+If this method success, new task is added into the queue. To remove it from queue you have to call <code>WaitTaskFinished</code> or <code>CancelTask</code>. <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>paramsPtr</em>&nbsp;</td><td>set of parameters controlling processing task. Pointed object can be used till task is finished. It can be NULL. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>inputPtr</em>&nbsp;</td><td>input object typically being source object used to processing. Pointed object can be used till task is finished. It can be NULL. </td></tr>
@@ -301,6 +301,35 @@ If this method success, new task is added into the queue. To remove it from queu
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>task ID or -1 if it was not possible to add new task. </dd></dl>
 
 <p>Implemented in <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#f4ec587c11a28b59b22c3f7c0efc5903">iproc::TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</a>, and <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#f4ec587c11a28b59b22c3f7c0efc5903">iproc::TSyncProcessorWrap&lt; IProcessor &gt;</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="a73693c6c682f31cf5bb344c6e816d6f"></a><!-- doxytag: member="iproc::IProcessor::CancelTask" ref="a73693c6c682f31cf5bb344c6e816d6f" args="(int taskId=&#45;1)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iproc::IProcessor::CancelTask           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>taskId</em> = <code>-1</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Remove task from queue. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>taskId</em>&nbsp;</td><td>ID of task returned by <a class="el" href="classiproc_1_1_i_processor.html#dfbc0edfe58d7ec3b9db47190b5b85c7" title="Begin new task for this processor and add them to queue.">BeginTask()</a> or -1 if all tasks are mean. </td></tr>
+  </table>
+</dl>
+
+<p>Implemented in <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#0a5cd08f5800f4d01eeae041dd5a5aa7">iproc::TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</a>, and <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#0a5cd08f5800f4d01eeae041dd5a5aa7">iproc::TSyncProcessorWrap&lt; IProcessor &gt;</a>.</p>
 
 </div>
 </div><p>
@@ -463,29 +492,6 @@ Please note, that initalizing will be also done automatically in method <code>Be
 </dl>
 
 <p>Implemented in <a class="el" href="classiproc_1_1_c_cascaded_processor_comp.html#fca74bcd67ce8a03e9ef1f1d02a07b26">iproc::CCascadedProcessorComp</a>, <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#6f942530e7a40f0cb4f7f3b0076e8410">iproc::TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</a>, and <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#6f942530e7a40f0cb4f7f3b0076e8410">iproc::TSyncProcessorWrap&lt; IProcessor &gt;</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="727885ec11e35ad1b8d7361cfd5bea96"></a><!-- doxytag: member="iproc::IProcessor::ResetAllTasks" ref="727885ec11e35ad1b8d7361cfd5bea96" args="()=0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iproc::IProcessor::ResetAllTasks           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Remove all task from queue. 
-<p>
-
-<p>Implemented in <a class="el" href="classiproc_1_1_c_cascaded_processor_comp.html#eced1b05837bfa947a0d3833618f0238">iproc::CCascadedProcessorComp</a>, <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#685e9a282f2c3171806e7fdab0e64c9a">iproc::TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</a>, and <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#685e9a282f2c3171806e7fdab0e64c9a">iproc::TSyncProcessorWrap&lt; IProcessor &gt;</a>.</p>
 
 </div>
 </div><p>

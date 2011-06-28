@@ -65,24 +65,24 @@
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043        <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#7487d1354925af93454e12cf36e19b7b">CVariableParamGuiComp</a>();
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#a0daaa527dcb8ecafe475a968034a952" title="Updates model from editor.">UpdateModel</a>() <span class="keyword">const</span>;
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#6fe7704be074fe1fbade0fa53f7694eb" title="Updates editor with model data.">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046        <span class="comment">// reimplemented (imod::IObserver)</span>
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#e293812d7001eec2733342aa0b7a4b85" title="This call back function will be called, if an observable object is about to be detached...">OnDetached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#e293812d7001eec2733342aa0b7a4b85" title="This call back function will be called, if an observable object is about to be detached...">OnDetached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#f13fd6a926b99606d8f1b9b89f47cdf4" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#7ba45acc51cb57e86abece3bc2cecba7" title="Called just before GUI is released.">OnGuiDestroyed</a>();
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056        <span class="comment">// reimplemented (iqt2d::ISceneExtender)</span>
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#b2ed10b3acb98913cd62e1a2ba1452ff" title="Called when items should be added to specified scene.">AddItemsToScene</a>(<a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">iqt2d::ISceneProvider</a>* providerPtr, <span class="keywordtype">int</span> flags);
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#65314fde1ca8cfa494e7d103c5e0b3e3" title="Called when items should be removed from specified scene.">RemoveItemsFromScene</a>(<a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">iqt2d::ISceneProvider</a>* providerPtr);
+<a name="l00049"></a>00049        <span class="comment">// reimplemented (iqt2d::ISceneExtender)</span>
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#b2ed10b3acb98913cd62e1a2ba1452ff" title="Called when items should be added to specified scene.">AddItemsToScene</a>(<a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">iqt2d::ISceneProvider</a>* providerPtr, <span class="keywordtype">int</span> flags);
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#65314fde1ca8cfa494e7d103c5e0b3e3" title="Called when items should be removed from specified scene.">RemoveItemsFromScene</a>(<a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">iqt2d::ISceneProvider</a>* providerPtr);
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="keyword">protected</span>:
+<a name="l00054"></a>00054        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#8f3d9f2e4436f53996c408959ae4a313">AttachCurrentType</a>();
+<a name="l00055"></a>00055        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#564376827eb3a81f766059e8291f6891">DetachCurrentType</a>();
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#be7ed27a4662ffca4a5c41da67f16b02" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060 <span class="keyword">protected</span>:
-<a name="l00061"></a>00061        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#8f3d9f2e4436f53996c408959ae4a313">AttachCurrentType</a>();
-<a name="l00062"></a>00062        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#564376827eb3a81f766059e8291f6891">DetachCurrentType</a>();
+<a name="l00060"></a>00060        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#f13fd6a926b99606d8f1b9b89f47cdf4" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#7ba45acc51cb57e86abece3bc2cecba7" title="Called just before GUI is released.">OnGuiDestroyed</a>();
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064 <span class="keyword">protected</span> slots:
 <a name="l00065"></a>00065        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#6c9b992d59471866329485f15649e393">on_TypeSelectorCB_currentIndexChanged</a>(<span class="keywordtype">int</span> index);

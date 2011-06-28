@@ -27,15 +27,9 @@ namespace iqtmeas
 {
 
 
-// reimplemented (imod::IModelLabelor)
+// reimplemenented (iqtgui::TGuiObserverWrap)
 
-void CDataStatisticsGuiComp::UpdateModel() const
-{
-	I_ASSERT(IsGuiCreated() && (GetObjectPtr() != NULL));
-}
-
-
-void CDataStatisticsGuiComp::UpdateEditor(int /*updateFlags*/)
+void CDataStatisticsGuiComp::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 

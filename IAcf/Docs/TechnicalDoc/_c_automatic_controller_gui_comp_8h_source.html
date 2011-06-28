@@ -52,19 +52,22 @@
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        <span class="comment">// reimplemented (imod::IModelEditor)</span>
 <a name="l00032"></a>00032        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtcntl_1_1_c_automatic_controller_gui_comp.html#39e21f733905a3a169104705b946506a">UpdateModel</a>() const;
-<a name="l00033"></a>00033        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtcntl_1_1_c_automatic_controller_gui_comp.html#4b437ae04ad6cb3a4bc0058b8da5458e">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035 protected slots:
-<a name="l00036"></a>00036        <span class="keywordtype">void</span> <a class="code" href="classiqtcntl_1_1_c_automatic_controller_gui_comp.html#2f647b3e55756086a32263e4dc590b4f">on_AutomaticButton_toggled</a>(<span class="keywordtype">bool</span> checked);
-<a name="l00037"></a>00037 };
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 } <span class="comment">// namespace iqtcntl</span>
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 protected:
+<a name="l00035"></a>00035        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00036"></a>00036        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtcntl_1_1_c_automatic_controller_gui_comp.html#e91a4753e66f0b70318c34391cb23df2">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 protected Q_SLOTS:
+<a name="l00039"></a>00039        <span class="keywordtype">void</span> <a class="code" href="classiqtcntl_1_1_c_automatic_controller_gui_comp.html#2f647b3e55756086a32263e4dc590b4f">on_AutomaticButton_toggled</a>(<span class="keywordtype">bool</span> checked);
+<a name="l00040"></a>00040 };
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="preprocessor">#endif // !iqtcntl_CAutomaticControllerGuiComp_included</span>
-<a name="l00044"></a>00044 <span class="preprocessor"></span>
+<a name="l00043"></a>00043 } <span class="comment">// namespace iqtcntl</span>
+<a name="l00044"></a>00044 
 <a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="preprocessor">#endif // !iqtcntl_CAutomaticControllerGuiComp_included</span>
+<a name="l00047"></a>00047 <span class="preprocessor"></span>
+<a name="l00048"></a>00048 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

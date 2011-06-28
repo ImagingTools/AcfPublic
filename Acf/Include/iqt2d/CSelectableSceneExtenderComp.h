@@ -47,6 +47,8 @@ public:
 	typedef icomp::CComponentBase BaseClass;
 	typedef imod::TSingleModelObserverBase<iprm::ISelectionParam> BaseClass2;
 
+	CSelectableSceneExtenderComp();
+
 	I_BEGIN_COMPONENT(CSelectableSceneExtenderComp);
 		I_REGISTER_INTERFACE(iqt2d::ISceneExtender);
 		I_REGISTER_INTERFACE(imod::IObserver);
@@ -54,6 +56,7 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (imod::IObserver)
+	virtual bool OnAttached(imod::IModel* modelPtr);
 	virtual bool OnDetached(imod::IModel* modelPtr);
 
 	// reimplemented (iqt2d::ISceneExtender)
@@ -73,6 +76,8 @@ private:
 
 	typedef std::map<iqt2d::ISceneProvider*, int> ConnectedSceneFlags;	// maps connected scene provider to connection flags
 	ConnectedSceneFlags m_connectedSceneFlags;
+
+	int m_currentSelectedIndex;
 };
 
 

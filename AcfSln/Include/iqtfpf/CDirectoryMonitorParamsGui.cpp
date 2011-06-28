@@ -105,8 +105,10 @@ void CDirectoryMonitorParamsGui::UpdateModel() const
 	objectPtr->SetIgnorePatterns(ignorePatterns);
 }
 
+	
+// reimplemenented (iqtgui::TGuiObserverWrap)
 
-void CDirectoryMonitorParamsGui::UpdateEditor(int /*updateFlags*/)
+void CDirectoryMonitorParamsGui::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 
@@ -309,7 +311,7 @@ void CDirectoryMonitorParamsGui::ResetEditor()
 void CDirectoryMonitorParamsGui::OnModelUpdate()
 {
 	if (!IsUpdateBlocked()){
-		UpdateBlocker blockUpdate(this);
+		UpdateBlocker updateBlocker(this);
 
 		UpdateModel();
 	}

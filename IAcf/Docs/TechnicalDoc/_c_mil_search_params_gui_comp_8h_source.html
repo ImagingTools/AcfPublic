@@ -50,32 +50,34 @@
 <a name="l00028"></a>00028        <a class="code" href="classimil_1_1_c_mil_search_params_gui_comp.html">CMilSearchParamsGuiComp</a>();
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00031"></a>00031        virtual <span class="keywordtype">void</span> <a class="code" href="classimil_1_1_c_mil_search_params_gui_comp.html#68b933845e7c0550a23ff70864528b37">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00032"></a>00032        virtual <span class="keywordtype">void</span> <a class="code" href="classimil_1_1_c_mil_search_params_gui_comp.html#5fa82f0c685bd7ea517f5acced991018">UpdateModel</a>() const;
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 protected slots:
-<a name="l00035"></a>00035        <span class="keywordtype">void</span> <a class="code" href="classimil_1_1_c_mil_search_params_gui_comp.html#325f7288ba537ca032e0f3bd9015e442">OnParameterChanged</a>();
-<a name="l00036"></a>00036        <span class="keywordtype">void</span> <a class="code" href="classimil_1_1_c_mil_search_params_gui_comp.html#4e8b45d02a7cfef3b5644b37c8e2b641">OnFilterTypeChanged</a>(<span class="keywordtype">int</span> filterType);
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 protected:
-<a name="l00039"></a>00039        <span class="comment">// reimplemented (iqt::CGuiObjectBase)</span>
-<a name="l00040"></a>00040        virtual <span class="keywordtype">void</span> <a class="code" href="classimil_1_1_c_mil_search_params_gui_comp.html#3bf1d09dc5af502a9cef65d2a36c5d2f">OnGuiCreated</a>();
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 private:
-<a name="l00043"></a>00043        imod::TModelWrap&lt;iqt::CBitmap&gt; m_modelBitmap;
-<a name="l00044"></a>00044        QMap&lt;<span class="keywordtype">int</span>,<span class="keywordtype">int</span>&gt; m_speedMap;
-<a name="l00045"></a>00045        QMap&lt;<span class="keywordtype">int</span>,<span class="keywordtype">int</span>&gt; m_accuracyMap;
-<a name="l00046"></a>00046        QMap&lt;<span class="keywordtype">int</span>,<span class="keywordtype">int</span>&gt; m_detailLevelMap;
-<a name="l00047"></a>00047        QMap&lt;<span class="keywordtype">int</span>,<span class="keywordtype">int</span>&gt; m_polarityMap;
-<a name="l00048"></a>00048 };
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 } <span class="comment">// namespace imil</span>
+<a name="l00031"></a>00031        virtual <span class="keywordtype">void</span> <a class="code" href="classimil_1_1_c_mil_search_params_gui_comp.html#5fa82f0c685bd7ea517f5acced991018">UpdateModel</a>() const;
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033 protected Q_SLOTS:
+<a name="l00034"></a>00034        <span class="keywordtype">void</span> <a class="code" href="classimil_1_1_c_mil_search_params_gui_comp.html#325f7288ba537ca032e0f3bd9015e442">OnParameterChanged</a>();
+<a name="l00035"></a>00035        <span class="keywordtype">void</span> <a class="code" href="classimil_1_1_c_mil_search_params_gui_comp.html#4e8b45d02a7cfef3b5644b37c8e2b641">OnFilterTypeChanged</a>(<span class="keywordtype">int</span> filterType);
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 protected:
+<a name="l00038"></a>00038        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00039"></a>00039        virtual <span class="keywordtype">void</span> <a class="code" href="classimil_1_1_c_mil_search_params_gui_comp.html#3a2c99e0b323b23482a5e929f6cf052c">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041        <span class="comment">// reimplemented (iqt::CGuiObjectBase)</span>
+<a name="l00042"></a>00042        virtual <span class="keywordtype">void</span> <a class="code" href="classimil_1_1_c_mil_search_params_gui_comp.html#3bf1d09dc5af502a9cef65d2a36c5d2f">OnGuiCreated</a>();
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 private:
+<a name="l00045"></a>00045        imod::TModelWrap&lt;iqt::CBitmap&gt; m_modelBitmap;
+<a name="l00046"></a>00046        QMap&lt;<span class="keywordtype">int</span>,<span class="keywordtype">int</span>&gt; m_speedMap;
+<a name="l00047"></a>00047        QMap&lt;<span class="keywordtype">int</span>,<span class="keywordtype">int</span>&gt; m_accuracyMap;
+<a name="l00048"></a>00048        QMap&lt;<span class="keywordtype">int</span>,<span class="keywordtype">int</span>&gt; m_detailLevelMap;
+<a name="l00049"></a>00049        QMap&lt;<span class="keywordtype">int</span>,<span class="keywordtype">int</span>&gt; m_polarityMap;
+<a name="l00050"></a>00050 };
+<a name="l00051"></a>00051 
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="preprocessor">#endif // !imil_CMilSearchParamsGuiComp_h</span>
-<a name="l00055"></a>00055 <span class="preprocessor"></span>
-<a name="l00056"></a>00056 
+<a name="l00053"></a>00053 } <span class="comment">// namespace imil</span>
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 <span class="preprocessor">#endif // !imil_CMilSearchParamsGuiComp_h</span>
+<a name="l00057"></a>00057 <span class="preprocessor"></span>
+<a name="l00058"></a>00058 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

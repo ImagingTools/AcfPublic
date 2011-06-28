@@ -32,7 +32,25 @@ namespace iqt2d
 {
 
 
+CSelectableSceneExtenderComp::CSelectableSceneExtenderComp()
+	:m_currentSelectedIndex(-1)	
+{
+}
+
+
 // reimplemented (imod::IObserver)
+
+bool CSelectableSceneExtenderComp::OnAttached(imod::IModel* modelPtr)
+{
+	if (BaseClass2::OnAttached(modelPtr)){
+		AttachCurrent();
+
+		return true;
+	}
+
+	return false;
+}
+
 
 bool CSelectableSceneExtenderComp::OnDetached(imod::IModel* modelPtr)
 {
@@ -97,7 +115,10 @@ void CSelectableSceneExtenderComp::AttachCurrent()
 		return;
 	}
 
+	DetachCurrent();
+
 	int currentIndex = objectPtr->GetSelectedOptionIndex();
+	m_currentSelectedIndex = currentIndex;
 
 	if (currentIndex >= 0 && currentIndex < m_extendersCompPtr.GetCount()){
 		iqt2d::ISceneExtender* extenderPtr = m_extendersCompPtr[currentIndex];
@@ -117,15 +138,8 @@ void CSelectableSceneExtenderComp::AttachCurrent()
 
 void CSelectableSceneExtenderComp::DetachCurrent()
 {
-	iprm::ISelectionParam* objectPtr = GetObjectPtr();
-	if (objectPtr == NULL){
-		return;
-	}
-
-	int currentIndex = objectPtr->GetSelectedOptionIndex();
-
-	if (currentIndex >= 0 && currentIndex < m_extendersCompPtr.GetCount()){
-		iqt2d::ISceneExtender* extenderPtr = m_extendersCompPtr[currentIndex];
+	if (m_currentSelectedIndex >= 0 && m_currentSelectedIndex < m_extendersCompPtr.GetCount()){
+		iqt2d::ISceneExtender* extenderPtr = m_extendersCompPtr[m_currentSelectedIndex];
 		if (extenderPtr != NULL){
 			for (		ConnectedSceneFlags::const_iterator sceneIter = m_connectedSceneFlags.begin();
 						sceneIter != m_connectedSceneFlags.end();

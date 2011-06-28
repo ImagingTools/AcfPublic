@@ -58,25 +58,24 @@ public:
 		I_ASSIGN(m_noSelectionIconAttrPtr, "NoSelectionIcon", "File path to the image to be shown for empty selection", false, "");
 	I_END_COMPONENT;
 
-	// reimplemented (imod::IModelEditor)
-	virtual void UpdateModel() const;
-	virtual void UpdateEditor(int updateFlags = 0);
-
+protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void OnGuiModelAttached();
 	virtual void OnGuiModelDetached();
+	virtual void UpdateGui(int updateFlags = 0);
 
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();
+
+protected:
+	I_MULTIREF(iqtgui::IGuiObject, m_slaveGuisCompPtr);
+	I_ATTR(istd::CString, m_noSelectionLabelAttrPtr);
+	I_ATTR(istd::CString, m_noSelectionIconAttrPtr);
 
 private:
 	typedef std::map<QWidget*, iqtgui::IGuiObject*> WidgetGuiMap;
 
 	WidgetGuiMap m_widgetToGuiMap;
-
-	I_MULTIREF(iqtgui::IGuiObject, m_slaveGuisCompPtr);
-	I_ATTR(istd::CString, m_noSelectionLabelAttrPtr);
-	I_ATTR(istd::CString, m_noSelectionIconAttrPtr);
 };
 
 

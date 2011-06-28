@@ -27,9 +27,11 @@
 // GigEVision includes
 #include "gige_cpp/IGigEVisionAPI.h"
 
+
 // STL includes
 #include <vector>
 #include <map>
+
 
 // ACF includes
 #include "i2d/CRectangle.h"
@@ -168,7 +170,7 @@ protected:
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
 
-protected slots:
+protected Q_SLOTS:
 	void OnCameraEventLog(int type, QString message);
 
 private:

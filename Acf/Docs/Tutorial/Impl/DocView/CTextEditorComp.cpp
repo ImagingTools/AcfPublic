@@ -58,7 +58,9 @@ void CTextEditorComp::UpdateModel() const
 }
 
 
-void CTextEditorComp::UpdateEditor(int /*updateFlags*/)
+// reimplemented (iqtgui::TGuiObserverWrap)
+
+void CTextEditorComp::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 
@@ -101,7 +103,7 @@ void CTextEditorComp::OnSelectionChanged()
 void CTextEditorComp::OnTextChanged()
 {
 	if (!IsUpdateBlocked()){
-		UpdateBlocker blockUpdate(this);
+		UpdateBlocker updateBlocker(*this);
 
 		UpdateModel();
 	}
@@ -123,7 +125,7 @@ void CTextEditorComp::OnToLowercase()
 	OnSelectionChanged();
 
 	if (!IsUpdateBlocked()){
-		UpdateBlocker blockUpdate(this);
+		UpdateBlocker updateBlocker(*this);
 
 		UpdateModel();
 	}
@@ -145,7 +147,7 @@ void CTextEditorComp::OnToUppercase()
 	OnSelectionChanged();
 
 	if (!IsUpdateBlocked()){
-		UpdateBlocker blockUpdate(this);
+		UpdateBlocker updateBlocker(*this);
 
 		UpdateModel();
 	}

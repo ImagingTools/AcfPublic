@@ -45,22 +45,6 @@ CParamsManagerGuiComp::CParamsManagerGuiComp()
 }
 
 
-// reimplemented (imod::IModelEditor)
-
-void CParamsManagerGuiComp::UpdateModel() const
-{
-	I_ASSERT(IsGuiCreated() && (GetObjectPtr() != NULL));
-}
-
-
-void CParamsManagerGuiComp::UpdateEditor(int /*updateFlags*/)
-{
-	I_ASSERT(IsGuiCreated());
-
-	UpdateTree();
-}
-
-
 // protected slots
 
 void CParamsManagerGuiComp::on_AddButton_clicked()
@@ -235,6 +219,10 @@ void CParamsManagerGuiComp::UpdateParamsView(int selectedIndex)
 	}
 
 	RemoveButton->setEnabled(selectedIndex >= 0);
+
+	if (selectedIndex == -1){
+		ParamsFrame->setVisible(false);
+	}
 }
 
 
@@ -268,6 +256,8 @@ void CParamsManagerGuiComp::EnsureParamsGuiDetached()
 }
 
 
+// protected methods
+
 // reimplemented (iqtgui::TGuiObserverWrap)
 
 void CParamsManagerGuiComp::OnGuiModelAttached()
@@ -283,23 +273,47 @@ void CParamsManagerGuiComp::OnGuiModelAttached()
 		}
 	}
 
-	if (m_paramsGuiCompPtr.IsValid()){
-		m_paramsGuiCompPtr->CreateGui(ParamsFrame);
-	}
-
 	ParamsTree->setItemDelegate(new iqtgui::CItemDelegate());
 }
 
 
 void CParamsManagerGuiComp::OnGuiModelDetached()
 {
+	EnsureParamsGuiDetached();
+
+	BaseClass::OnGuiModelDetached();
+}
+
+
+void CParamsManagerGuiComp::UpdateGui(int /*updateFlags*/)
+{
+	I_ASSERT(IsGuiCreated());
+
+	UpdateTree();
+}
+
+
+// reimplemented (iqtgui::CComponentBase)
+
+void CParamsManagerGuiComp::OnGuiCreated()
+{
+	BaseClass::OnGuiCreated();
+
+	if (m_paramsGuiCompPtr.IsValid()){
+		m_paramsGuiCompPtr->CreateGui(ParamsFrame);
+
+		ParamsFrame->setVisible(false);
+	}
+}
+
+
+void CParamsManagerGuiComp::OnGuiDestroyed()
+{
 	if (m_paramsGuiCompPtr.IsValid()){
 		m_paramsGuiCompPtr->DestroyGui();
 	}
 
-	EnsureParamsGuiDetached();
-
-	BaseClass::OnGuiModelDetached();
+	BaseClass::OnGuiDestroyed();
 }
 
 

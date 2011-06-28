@@ -309,7 +309,6 @@ void CHotfolderProcessingComp::ItemProcessor::run()
 {
 	m_startTime = QDateTime::currentDateTime(); 
 	
-	I_ASSERT(m_parent.m_fileConvertCompPtr.IsValid());
 	if (!m_parent.m_fileConvertCompPtr.IsValid()){
 		return;
 	}

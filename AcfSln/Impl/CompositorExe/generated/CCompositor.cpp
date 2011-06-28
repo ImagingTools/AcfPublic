@@ -1198,7 +1198,7 @@ CCompositor::CAcfSlnVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(343);
+			attrVersionNumberPtr->SetValue(349);
 		}
 	}
 
@@ -1301,10 +1301,21 @@ CCompositor::CAcfVocePck::CAcfLocalizationRegistry::CAcfLocalizationRegistry()
 			nattrInfoLanguageIdsPtr->InsertValue(L"pl_PL");
 		}
 
+		// create and set attribute value for 'LanguageSelection'
+		icomp::IRegistryElement::AttributeInfo* attrInfoLanguageSelectionPtr = infoAcfLocalizationPtr->elementPtr->InsertAttributeInfo("LanguageSelection", "icomp::CReferenceAttribute");
+		if (attrInfoLanguageSelectionPtr != NULL){
+			attrInfoLanguageSelectionPtr->exportId = "LanguageSelection";
+		}
+
 		// create and set attribute value for 'SlaveTranslationManager'
 		icomp::IRegistryElement::AttributeInfo* attrInfoSlaveTranslationManagerPtr = infoAcfLocalizationPtr->elementPtr->InsertAttributeInfo("SlaveTranslationManager", "icomp::CReferenceAttribute");
 		if (attrInfoSlaveTranslationManagerPtr != NULL){
-			attrInfoSlaveTranslationManagerPtr->exportId = "SlaveTranslationManager";
+			attrInfoSlaveTranslationManagerPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoSlaveTranslationManagerPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrSlaveTranslationManagerPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoSlaveTranslationManagerPtr->attributePtr.GetPtr());
+			I_ASSERT(attrSlaveTranslationManagerPtr != NULL);
+			attrSlaveTranslationManagerPtr->SetValue("QtLocalization");
 		}
 
 		// create and set attribute value for 'TranslationFilePath'
@@ -1330,10 +1341,72 @@ CCompositor::CAcfVocePck::CAcfLocalizationRegistry::CAcfLocalizationRegistry()
 		}
 	}
 
+	// element 'QtLocalization' of type QtPck::TranslationManager
+	icomp::IRegistry::ElementInfo* infoQtLocalizationPtr = InsertElementInfo(
+				"QtLocalization",
+				icomp::CComponentAddress("QtPck", "TranslationManager"),
+				true);
+	if ((infoQtLocalizationPtr != NULL) && infoQtLocalizationPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'LanguageIds'
+		icomp::IRegistryElement::AttributeInfo* attrInfoLanguageIdsPtr = infoQtLocalizationPtr->elementPtr->InsertAttributeInfo("LanguageIds", "icomp::TMultiAttribute<istd::CString>");
+		if (attrInfoLanguageIdsPtr != NULL){
+			attrInfoLanguageIdsPtr->attributePtr.SetPtr(new icomp::TMultiAttribute<istd::CString>);
+			I_ASSERT(attrInfoLanguageIdsPtr->attributePtr.IsValid());
+
+			icomp::CMultiStringAttribute* nattrInfoLanguageIdsPtr = dynamic_cast<icomp::CMultiStringAttribute*>(attrInfoLanguageIdsPtr->attributePtr.GetPtr());
+			I_ASSERT(nattrInfoLanguageIdsPtr != NULL);
+
+			nattrInfoLanguageIdsPtr->Reset();
+			nattrInfoLanguageIdsPtr->InsertValue(L"de");
+			nattrInfoLanguageIdsPtr->InsertValue(L"ru");
+			nattrInfoLanguageIdsPtr->InsertValue(L"pl");
+		}
+
+		// create and set attribute value for 'SlaveTranslationManager'
+		icomp::IRegistryElement::AttributeInfo* attrInfoSlaveTranslationManagerPtr = infoQtLocalizationPtr->elementPtr->InsertAttributeInfo("SlaveTranslationManager", "icomp::CReferenceAttribute");
+		if (attrInfoSlaveTranslationManagerPtr != NULL){
+			attrInfoSlaveTranslationManagerPtr->exportId = "SlaveTranslationManager";
+		}
+
+		// create and set attribute value for 'TranslationFilePath'
+		icomp::IRegistryElement::AttributeInfo* attrInfoTranslationFilePathPtr = infoQtLocalizationPtr->elementPtr->InsertAttributeInfo("TranslationFilePath", "icomp::TAttribute<istd::CString>");
+		if (attrInfoTranslationFilePathPtr != NULL){
+			attrInfoTranslationFilePathPtr->attributePtr.SetPtr(new icomp::TAttribute<istd::CString>);
+			I_ASSERT(attrInfoTranslationFilePathPtr->attributePtr.IsValid());
+
+			icomp::CStringAttribute* attrTranslationFilePathPtr = dynamic_cast<icomp::CStringAttribute*>(attrInfoTranslationFilePathPtr->attributePtr.GetPtr());
+			I_ASSERT(attrTranslationFilePathPtr != NULL);
+			attrTranslationFilePathPtr->SetValue(L":/Translations");
+		}
+
+		// create and set attribute value for 'TranslationFilePrefix'
+		icomp::IRegistryElement::AttributeInfo* attrInfoTranslationFilePrefixPtr = infoQtLocalizationPtr->elementPtr->InsertAttributeInfo("TranslationFilePrefix", "icomp::TAttribute<istd::CString>");
+		if (attrInfoTranslationFilePrefixPtr != NULL){
+			attrInfoTranslationFilePrefixPtr->attributePtr.SetPtr(new icomp::TAttribute<istd::CString>);
+			I_ASSERT(attrInfoTranslationFilePrefixPtr->attributePtr.IsValid());
+
+			icomp::CStringAttribute* attrTranslationFilePrefixPtr = dynamic_cast<icomp::CStringAttribute*>(attrInfoTranslationFilePrefixPtr->attributePtr.GetPtr());
+			I_ASSERT(attrTranslationFilePrefixPtr != NULL);
+			attrTranslationFilePrefixPtr->SetValue(L"qt");
+		}
+	}
+
 	// interface export
 	SetElementInterfaceExported(
 				"AcfLocalization",
+				"imod::IModel",
+				true);
+	SetElementInterfaceExported(
+				"AcfLocalization",
+				"iprm::ISelectionConstraints",
+				true);
+	SetElementInterfaceExported(
+				"AcfLocalization",
 				"iqt::ITranslationManager",
+				true);
+	SetElementInterfaceExported(
+				"AcfLocalization",
+				"istd::IChangeable",
 				true);
 }
 
@@ -1451,7 +1524,7 @@ CCompositor::CAcfVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(1784);
+			attrVersionNumberPtr->SetValue(1797);
 		}
 	}
 
@@ -2010,6 +2083,17 @@ CCompositor::CCmpstrVocePck::CCompositorApplicationRegistry::CCompositorApplicat
 			attrApplicationInfoPtr->SetValue("Application");
 		}
 
+		// create and set attribute value for 'LanguageSelectionConstraints'
+		icomp::IRegistryElement::AttributeInfo* attrInfoLanguageSelectionConstraintsPtr = infoSettingsPtr->elementPtr->InsertAttributeInfo("LanguageSelectionConstraints", "icomp::CReferenceAttribute");
+		if (attrInfoLanguageSelectionConstraintsPtr != NULL){
+			attrInfoLanguageSelectionConstraintsPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoLanguageSelectionConstraintsPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrLanguageSelectionConstraintsPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoLanguageSelectionConstraintsPtr->attributePtr.GetPtr());
+			I_ASSERT(attrLanguageSelectionConstraintsPtr != NULL);
+			attrLanguageSelectionConstraintsPtr->SetValue("TranslationManager");
+		}
+
 		// create and set attribute value for 'VersionInfo'
 		icomp::IRegistryElement::AttributeInfo* attrInfoVersionInfoPtr = infoSettingsPtr->elementPtr->InsertAttributeInfo("VersionInfo", "icomp::CReferenceAttribute");
 		if (attrInfoVersionInfoPtr != NULL){
@@ -2023,10 +2107,23 @@ CCompositor::CCmpstrVocePck::CCompositorApplicationRegistry::CCompositorApplicat
 	}
 
 	// element 'TranslationManager' of type CmpstrVoce::CompositorTranslationManager
-	InsertElementInfo(
+	icomp::IRegistry::ElementInfo* infoTranslationManagerPtr = InsertElementInfo(
 				"TranslationManager",
 				icomp::CComponentAddress("CmpstrVoce", "CompositorTranslationManager"),
 				true);
+	if ((infoTranslationManagerPtr != NULL) && infoTranslationManagerPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'LanguageSelection'
+		icomp::IRegistryElement::AttributeInfo* attrInfoLanguageSelectionPtr = infoTranslationManagerPtr->elementPtr->InsertAttributeInfo("LanguageSelection", "icomp::CReferenceAttribute");
+		if (attrInfoLanguageSelectionPtr != NULL){
+			attrInfoLanguageSelectionPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoLanguageSelectionPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrLanguageSelectionPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoLanguageSelectionPtr->attributePtr.GetPtr());
+			I_ASSERT(attrLanguageSelectionPtr != NULL);
+			attrLanguageSelectionPtr->SetValue("Settings/LanguageSelection");
+		}
+	}
+
 	// element 'VersionInfo' of type AcfSlnVoce::VersionInfo
 	icomp::IRegistry::ElementInfo* infoVersionInfoPtr = InsertElementInfo(
 				"VersionInfo",
@@ -2283,6 +2380,19 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsRegistry::CCompositorSettingsReg
 		}
 	}
 
+	// element 'LanguageSelection' of type BasePck::SelectionParam
+	icomp::IRegistry::ElementInfo* infoLanguageSelectionPtr = InsertElementInfo(
+				"LanguageSelection",
+				icomp::CComponentAddress("BasePck", "SelectionParam"),
+				true);
+	if ((infoLanguageSelectionPtr != NULL) && infoLanguageSelectionPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'Constraints'
+		icomp::IRegistryElement::AttributeInfo* attrInfoConstraintsPtr = infoLanguageSelectionPtr->elementPtr->InsertAttributeInfo("Constraints", "icomp::CReferenceAttribute");
+		if (attrInfoConstraintsPtr != NULL){
+			attrInfoConstraintsPtr->exportId = "LanguageSelectionConstraints";
+		}
+	}
+
 	// element 'PreviewCommandFile' of type BasePck::FileNameParam
 	icomp::IRegistry::ElementInfo* infoPreviewCommandFilePtr = InsertElementInfo(
 				"PreviewCommandFile",
@@ -2332,6 +2442,7 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsRegistry::CCompositorSettingsReg
 			nattrInfoParametersPtr->InsertValue("PreviewCommandFile");
 			nattrInfoParametersPtr->InsertValue("HtmlBrowserFile");
 			nattrInfoParametersPtr->InsertValue("HtmlEditorFile");
+			nattrInfoParametersPtr->InsertValue("LanguageSelection");
 		}
 
 		// create and set attribute value for 'ParametersId'
@@ -2348,6 +2459,7 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsRegistry::CCompositorSettingsReg
 			nattrInfoParametersIdPtr->InsertValue(L"PreviewCommandFile");
 			nattrInfoParametersIdPtr->InsertValue(L"HtmlBrowserFile");
 			nattrInfoParametersIdPtr->InsertValue(L"HtmlEditorFile");
+			nattrInfoParametersIdPtr->InsertValue(L"LanguageSelection");
 		}
 	}
 
@@ -2379,6 +2491,9 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsRegistry::CCompositorSettingsReg
 	SetElementExported(
 				"HtmlEditorFile",
 				"HtmlEditorFile");
+	SetElementExported(
+				"LanguageSelection",
+				"LanguageSelection");
 	SetElementExported(
 				"PreviewCommandFile",
 				"PreviewCommandFile");
@@ -2450,6 +2565,11 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsDialogRegistry::CCompositorSetti
 				"HtmlEditorFileGui",
 				icomp::CComponentAddress("QtGuiPck", "FileNameParamGui"),
 				true);
+	// element 'LanguageSelectionGui' of type QtGuiPck::SelectionParamGui
+	InsertElementInfo(
+				"LanguageSelectionGui",
+				icomp::CComponentAddress("QtGuiPck", "SelectionParamGui"),
+				true);
 	// element 'PreviewCommandFileGui' of type QtGuiPck::FileNameParamGui
 	icomp::IRegistry::ElementInfo* infoPreviewCommandFileGuiPtr = InsertElementInfo(
 				"PreviewCommandFileGui",
@@ -2504,10 +2624,18 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsDialogRegistry::CCompositorSetti
 	}
 
 	// element 'Settings' of type CmpstrVoce::CompositorSettings
-	InsertElementInfo(
+	icomp::IRegistry::ElementInfo* infoSettingsPtr = InsertElementInfo(
 				"Settings",
 				icomp::CComponentAddress("CmpstrVoce", "CompositorSettings"),
 				true);
+	if ((infoSettingsPtr != NULL) && infoSettingsPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'LanguageSelectionConstraints'
+		icomp::IRegistryElement::AttributeInfo* attrInfoLanguageSelectionConstraintsPtr = infoSettingsPtr->elementPtr->InsertAttributeInfo("LanguageSelectionConstraints", "icomp::CReferenceAttribute");
+		if (attrInfoLanguageSelectionConstraintsPtr != NULL){
+			attrInfoLanguageSelectionConstraintsPtr->exportId = "LanguageSelectionConstraints";
+		}
+	}
+
 	// element 'SettingsDialog' of type QtGuiPck::ModelDialogGui
 	icomp::IRegistry::ElementInfo* infoSettingsDialogPtr = InsertElementInfo(
 				"SettingsDialog",
@@ -2612,6 +2740,7 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsDialogRegistry::CCompositorSetti
 			nattrInfoEditorsPtr->InsertValue("PreviewCommandFileGui");
 			nattrInfoEditorsPtr->InsertValue("HtmlBrowserFileGui");
 			nattrInfoEditorsPtr->InsertValue("HtmlEditorFileGui");
+			nattrInfoEditorsPtr->InsertValue("LanguageSelectionGui");
 		}
 
 		// create and set attribute value for 'Ids'
@@ -2628,6 +2757,7 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsDialogRegistry::CCompositorSetti
 			nattrInfoIdsPtr->InsertValue(L"PreviewCommandFile");
 			nattrInfoIdsPtr->InsertValue(L"HtmlBrowserFile");
 			nattrInfoIdsPtr->InsertValue(L"HtmlEditorFile");
+			nattrInfoIdsPtr->InsertValue(L"LanguageSelection");
 		}
 
 		// create and set attribute value for 'Names'
@@ -2644,6 +2774,7 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsDialogRegistry::CCompositorSetti
 			nattrInfoNamesPtr->InsertValue(L"ACF Command Path");
 			nattrInfoNamesPtr->InsertValue(L"HTML Browser");
 			nattrInfoNamesPtr->InsertValue(L"HTML Editor");
+			nattrInfoNamesPtr->InsertValue(L"Language");
 		}
 	}
 
@@ -2711,11 +2842,17 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsDialogRegistry::CCompositorSetti
 				"HtmlEditorFile",
 				"Settings/HtmlEditorFile");
 	SetElementExported(
+				"LanguageSelection",
+				"Settings/LanguageSelection");
+	SetElementExported(
 				"PreviewCommandFile",
 				"Settings/PreviewCommandFile");
 	SetElementExported(
 				"SettingsGui",
 				"SettingsGui");
+	SetElementExported(
+				"TranslationManager",
+				"Settings/TranslationManager");
 }
 
 
@@ -3044,11 +3181,23 @@ CCompositor::CCmpstrVocePck::CCompositorTemplateRegistry::CCompositorTemplateReg
 CCompositor::CCmpstrVocePck::CCompositorTranslationManagerRegistry::CCompositorTranslationManagerRegistry()
 {
 	// element 'CompositorTranslationManager' of type AcfVoce::AcfLocalization
-	InsertElementInfo(
+	icomp::IRegistry::ElementInfo* infoCompositorTranslationManagerPtr = InsertElementInfo(
 				"CompositorTranslationManager",
 				icomp::CComponentAddress("AcfVoce", "AcfLocalization"),
 				true);
+	if ((infoCompositorTranslationManagerPtr != NULL) && infoCompositorTranslationManagerPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'LanguageSelection'
+		icomp::IRegistryElement::AttributeInfo* attrInfoLanguageSelectionPtr = infoCompositorTranslationManagerPtr->elementPtr->InsertAttributeInfo("LanguageSelection", "icomp::CReferenceAttribute");
+		if (attrInfoLanguageSelectionPtr != NULL){
+			attrInfoLanguageSelectionPtr->exportId = "LanguageSelection";
+		}
+	}
+
 	// interface export
+	SetElementInterfaceExported(
+				"CompositorTranslationManager",
+				"iprm::ISelectionConstraints",
+				true);
 	SetElementInterfaceExported(
 				"CompositorTranslationManager",
 				"iqt::ITranslationManager",
@@ -3407,6 +3556,8 @@ CCompositor::CBasePck::CBasePck()
 	RegisterEmbeddedComponentInfo("RegistryCodeSaver", &infoRegistryCodeSaver);
 	const icomp::IComponentStaticInfo& infoSelectedDocModelBinder = BasePck::SelectedDocModelBinder::InitStaticInfo(NULL);
 	RegisterEmbeddedComponentInfo("SelectedDocModelBinder", &infoSelectedDocModelBinder);
+	const icomp::IComponentStaticInfo& infoSelectionParam = BasePck::SelectionParam::InitStaticInfo(NULL);
+	RegisterEmbeddedComponentInfo("SelectionParam", &infoSelectionParam);
 	const icomp::IComponentStaticInfo& infoVersionInfo = BasePck::VersionInfo::InitStaticInfo(NULL);
 	RegisterEmbeddedComponentInfo("VersionInfo", &infoVersionInfo);
 	const icomp::IComponentStaticInfo& infoXmlFileSerializer = BasePck::XmlFileSerializer::InitStaticInfo(NULL);
@@ -3471,6 +3622,8 @@ CCompositor::CQtGuiPck::CQtGuiPck()
 	RegisterEmbeddedComponentInfo("ModelEditorGui", &infoModelEditorGui);
 	const icomp::IComponentStaticInfo& infoMultiDocWorkspaceGui = QtGuiPck::MultiDocWorkspaceGui::InitStaticInfo(NULL);
 	RegisterEmbeddedComponentInfo("MultiDocWorkspaceGui", &infoMultiDocWorkspaceGui);
+	const icomp::IComponentStaticInfo& infoSelectionParamGui = QtGuiPck::SelectionParamGui::InitStaticInfo(NULL);
+	RegisterEmbeddedComponentInfo("SelectionParamGui", &infoSelectionParamGui);
 	const icomp::IComponentStaticInfo& infoSplashScreen = QtGuiPck::SplashScreen::InitStaticInfo(NULL);
 	RegisterEmbeddedComponentInfo("SplashScreen", &infoSplashScreen);
 }

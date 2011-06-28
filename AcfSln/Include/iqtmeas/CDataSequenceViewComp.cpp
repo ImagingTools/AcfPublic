@@ -36,6 +36,8 @@ namespace iqtmeas
 {
 
 
+// public methods
+
 CDataSequenceViewComp::CDataSequenceViewComp()
 :	m_lastChannelsCount(0),
 	m_channelsSelectorModel(1, 1)
@@ -44,15 +46,9 @@ CDataSequenceViewComp::CDataSequenceViewComp()
 }
 
 
-// reimplemented (imod::IModelEditor)
+// reimplemenented (iqtgui::TGuiObserverWrap)
 
-void CDataSequenceViewComp::UpdateModel() const
-{
-	I_ASSERT(IsGuiCreated() && (GetObjectPtr() != NULL));
-}
-
-
-void CDataSequenceViewComp::UpdateEditor(int /*updateFlags*/)
+void CDataSequenceViewComp::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 
@@ -113,43 +109,43 @@ void CDataSequenceViewComp::OnGuiCreated()
 
 void CDataSequenceViewComp::on_TimeSpanCB_toggled(bool /*state*/)
 {
-	UpdateEditor();
+	UpdateGui();
 }
 
 
 void CDataSequenceViewComp::on_ScaleCB_toggled(bool /*state*/)
 {
-	UpdateEditor();
+	UpdateGui();
 }
 
 
 void CDataSequenceViewComp::on_TimeBeginSB_valueChanged(double /*value*/)
 {
-	UpdateEditor();
+	UpdateGui();
 }
 
 
 void CDataSequenceViewComp::on_TimeEndSB_valueChanged(double /*value*/)
 {
-	UpdateEditor();
+	UpdateGui();
 }
 
 
 void CDataSequenceViewComp::on_ValueMinSB_valueChanged(double /*value*/)
 {
-	UpdateEditor();
+	UpdateGui();
 }
 
 
 void CDataSequenceViewComp::on_ValueMaxSB_valueChanged(double /*value*/)
 {
-	UpdateEditor();
+	UpdateGui();
 }
 
 
 void CDataSequenceViewComp::on_ChannelSelectorCB_currentIndexChanged(int /*index*/)
 {
-	UpdateEditor();
+	UpdateGui();
 }
 
 
@@ -167,7 +163,7 @@ void CDataSequenceViewComp::on_ZoomInButton_clicked()
 	TimeBeginSB->setValue((TimeBeginSB->value() + center) * 0.5);
 	TimeEndSB->setValue((TimeEndSB->value() + center) * 0.5);
 
-	UpdateEditor();
+	UpdateGui();
 }
 
 
@@ -194,7 +190,7 @@ void CDataSequenceViewComp::on_ZoomOutButton_clicked()
 	TimeBeginSB->setValue(istd::Max(0.0, TimeBeginSB->value() * 2 - center));
 	TimeEndSB->setValue(istd::Min(TimeEndSB->value() * 2 - center, maxTimeSpan));
 
-	UpdateEditor();
+	UpdateGui();
 }
 
 
@@ -219,7 +215,7 @@ void CDataSequenceViewComp::on_PrevButton_clicked()
 	TimeBeginSB->setValue(TimeBeginSB->value() - shift);
 	TimeEndSB->setValue(TimeEndSB->value() - shift);
 
-	UpdateEditor();
+	UpdateGui();
 }
 
 
@@ -253,7 +249,7 @@ void CDataSequenceViewComp::on_NextButton_clicked()
 	TimeBeginSB->setValue(TimeBeginSB->value() + shift);
 	TimeEndSB->setValue(TimeEndSB->value() + shift);
 
-	UpdateEditor();
+	UpdateGui();
 }
 
 

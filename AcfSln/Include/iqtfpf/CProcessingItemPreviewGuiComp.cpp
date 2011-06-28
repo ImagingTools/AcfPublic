@@ -42,15 +42,9 @@ namespace iqtfpf
 
 // public methods
 
-// reimplemented (imod::IModelEditor)
+// reimplemented (iqtgui::TGuiObserverWrap)
 
-void CProcessingItemPreviewGuiComp::UpdateModel() const
-{
-	I_ASSERT(IsGuiCreated() && (GetObjectPtr() != NULL));
-}
-
-
-void CProcessingItemPreviewGuiComp::UpdateEditor(int updateFlags)
+void CProcessingItemPreviewGuiComp::UpdateGui(int updateFlags)
 {
 	I_ASSERT(IsGuiCreated());
 
@@ -120,8 +114,6 @@ void CProcessingItemPreviewGuiComp::UpdateEditor(int updateFlags)
 	}
 }
 
-
-// reimplemented TGuiObserverWrap
 
 void CProcessingItemPreviewGuiComp::OnGuiModelAttached()
 {

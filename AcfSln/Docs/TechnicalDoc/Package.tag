@@ -277,6 +277,7 @@
     <path>E:/Work/Projects/Development/AcfSln/Include/ilibav/</path>
     <filename>_c_lib_av_video_decoder_comp_8h</filename>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
+    <includes id="_i_sample_acquisition_8h" name="ISampleAcquisition.h" local="yes" imported="no">imeas/ISampleAcquisition.h</includes>
     <class kind="class">ilibav::CLibAvVideoDecoderComp</class>
     <namespace>ilibav</namespace>
     <member kind="define">
@@ -284,6 +285,13 @@
       <name>inline</name>
       <anchorfile>_c_lib_av_video_decoder_comp_8h.html</anchorfile>
       <anchor>00d24c7231be28dbaf71f5408f30e44c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>__STDC_CONSTANT_MACROS</name>
+      <anchorfile>_c_lib_av_video_decoder_comp_8h.html</anchorfile>
+      <anchor>786132414c30f947907be33a4c28125a</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -390,6 +398,13 @@
     <name>imeas.h</name>
     <path>E:/Work/Projects/Development/AcfSln/Include/imeas/</path>
     <filename>imeas_8h</filename>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ISampleAcquisition.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/imeas/</path>
+    <filename>_i_sample_acquisition_8h</filename>
+    <class kind="class">imeas::ISampleAcquisition</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -2772,7 +2787,9 @@
   <compound kind="class">
     <name>ilibav::CLibAvVideoDecoderComp</name>
     <filename>classilibav_1_1_c_lib_av_video_decoder_comp.html</filename>
-    <base>TSyncProcessorCompBase&lt; iproc::IBitmapAcquisition &gt;</base>
+    <base>ibase::TLoggerCompWrap</base>
+    <base virtualness="virtual">iproc::IBitmapAcquisition</base>
+    <base virtualness="virtual">imeas::ISampleAcquisition</base>
     <base virtualness="virtual">imm::IVideoController</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -2793,10 +2810,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iproc::TSyncProcessorCompBase&lt; iproc::IBitmapAcquisition &gt;</type>
+      <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>fa078c9cc07d36e32bbfae5c7d8bd7a8</anchor>
+      <anchor>e152b91bfd916beff426586f2bc2e73d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -2821,11 +2838,74 @@
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetSamplingRate</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>121259e880df91d448acf7410f8e8704</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>45e71b723848df89aa2d89a2d5baf4d8</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>fdf4663d84c9d257f4451bf12ca489ec</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
       <anchor>d17e9bd91aa3f6b0083ca8a9aaf52752</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>64b721845ad9a932ed37664c5f53569f</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>445f06f357addbda5a5bf6c8d53666ed</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>4ca9e8303f0c9fefea43345fe18366ac</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>5dcb2cf145db80ee4f505fff004a6a95</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>9631c1296147481b7c0900a01db68fac</anchor>
+      <arglist>(int taskId=-1) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>103b44d5c716bb2a4bfe684451f6db60</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -2932,11 +3012,67 @@
       <anchor>48118e9d420d4d263f56d7e9bc4a3ffe</anchor>
       <arglist>(int frameIndex)</arglist>
     </member>
+    <member kind="enumeration">
+      <name>FrameType</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>b98135d5291c87415f4bfd03727bb113</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FT_ERROR</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>b98135d5291c87415f4bfd03727bb113f0e448932695ba5e7b7b81dc0b1b93c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FT_END</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>b98135d5291c87415f4bfd03727bb113cc2dd7b18d9d6a02a0c0ce25cba5ea98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FT_AUDIO_SAMPLE</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>b98135d5291c87415f4bfd03727bb1138f56ca8d22864c5343d53accfb76815b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FT_IMAGE</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>b98135d5291c87415f4bfd03727bb11350335d24b1847f1560e407ca732fc022</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FT_SKIPPED_AUDIO_SAMPLE</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>b98135d5291c87415f4bfd03727bb11398a52e2fa584ff8dd900df58d2cb7dc5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FT_SKIPPED_IMAGE</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>b98135d5291c87415f4bfd03727bb11368a6fed94fdcfc7b1e0e7d3165a68ede</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected">
-      <type>bool</type>
+      <type>FrameType</type>
       <name>ReadNextFrame</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>93d41a59b95fc563d46115b7d86467ca</anchor>
+      <anchor>29343028654b62f11c26217fbf1dcad1</anchor>
+      <arglist>(iimg::IBitmap *bitmapPtr, imeas::IDataSequence *audioSequencePtr, int minimalImageFrame=-1, int minimalAudioFrame=-1)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>FinishNextTask</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>f73e0499cbc6789ca76929403cf858c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>TryTracePosition</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>2f4281baeb014f7583d4622fb89bf92e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -2969,6 +3105,7 @@
     <class kind="class">imeas::IDataSequenceStatistics</class>
     <class kind="class">imeas::IDataStatistics</class>
     <class kind="class">imeas::IDiscrDataSequence</class>
+    <class kind="class">imeas::ISampleAcquisition</class>
     <class kind="class">imeas::IUnitInfo</class>
     <class kind="class">imeas::TDiscrDataSequence</class>
     <member kind="typedef">
@@ -3772,6 +3909,18 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>imeas::ISampleAcquisition</name>
+    <filename>classimeas_1_1_i_sample_acquisition.html</filename>
+    <base virtualness="virtual">iproc::IProcessor</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetSamplingRate</name>
+      <anchorfile>classimeas_1_1_i_sample_acquisition.html</anchorfile>
+      <anchor>aa1397d31afa7898d533fd04efd29f72</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>imeas::IUnitInfo</name>
     <filename>classimeas_1_1_i_unit_info.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -4244,9 +4393,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateEditor</name>
+      <name>UpdateGui</name>
       <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>154b9ef45a4c7a0270fc1aa5b7137219</anchor>
+      <anchor>c2664adf63eb9bae26d7b38c21efb313</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4428,13 +4577,6 @@
       <anchor>8565fef677fc07a9b254ee80b42e8dc1</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetDirectoryPath</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>4c630662fe3dea059424cf3306e4de6e</anchor>
-      <arglist>(const QString &amp;directoryPath)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iprm::ISelectionConstraints *</type>
       <name>GetConstraints</name>
@@ -4472,16 +4614,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateModel</name>
+      <name>UpdateGui</name>
       <anchorfile>classiqtfpf_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>169b6b6782383ed3daf187c496e1e790</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>1e44d08c5750140f18f1b698e3c893c1</anchor>
+      <anchor>3e988133a9bda258395cc2a69f168bce</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
@@ -4517,13 +4652,6 @@
       <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
       <anchor>0fe1f80a8ffd029f80df4039778cc130</anchor>
       <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>c3a29d6a6dea97dc91db69fef8c5000b</anchor>
-      <arglist>(m_directoryMonitorParamsIdAttrPtr, m_directoryPathIdAttrPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -4602,9 +4730,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateEditor</name>
+      <name>UpdateGui</name>
       <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>889372a44a330c729ca43c9e3ccea7a2</anchor>
+      <anchor>3607dc55e2d69e0cb4329355572a6674</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4850,16 +4978,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateModel</name>
+      <name>UpdateGui</name>
       <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>85020dc3c96446d940744413a38600ae</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>0b2ee7cc4f925d56a59ae727a2f74d8e</anchor>
+      <anchor>02b2f22b3a4c7f56d6900743ca0cef26</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -5224,16 +5345,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateModel</name>
+      <name>UpdateGui</name>
       <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>3a90c5ebf8727e1ad793c391b4aa6766</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>9424a5ad806e1abb7bb1a180aac6fba0</anchor>
+      <anchor>761a5380f7386d96526680d086f4320c</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -5292,16 +5406,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateModel</name>
+      <name>UpdateGui</name>
       <anchorfile>classiqtmeas_1_1_c_data_sequence_view_comp.html</anchorfile>
-      <anchor>876d9c5f021cae883f576f9356980aec</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtmeas_1_1_c_data_sequence_view_comp.html</anchorfile>
-      <anchor>ea303bbd17e8aa44df6be1f020e5d533</anchor>
+      <anchor>988b5d25cbcef08e6e9fe1cb5ec5f089</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -5420,16 +5527,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateModel</name>
+      <name>UpdateGui</name>
       <anchorfile>classiqtmeas_1_1_c_data_statistics_gui_comp.html</anchorfile>
-      <anchor>cf7c774cd231a32d689195628a933cae</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtmeas_1_1_c_data_statistics_gui_comp.html</anchorfile>
-      <anchor>48e5ee24ebcb64c0d6cde32e009ac747</anchor>
+      <anchor>95585af16a644d1ae1888a4c5cc4d5c9</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
@@ -5459,16 +5559,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateModel</name>
+      <name>UpdateGui</name>
       <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
-      <anchor>025422c7a1faa63b849e4de5b51c1ad7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
-      <anchor>45be03d3398ee0e49f0cb053ac19d3e3</anchor>
+      <anchor>a88a1d049ee6c41896d36d6254ac9c46</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -5594,16 +5687,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateModel</name>
+      <name>UpdateGui</name>
       <anchorfile>classiqwt3d_1_1_c_surface_view_comp.html</anchorfile>
-      <anchor>51b2aff7f03918bdd0815a006cb8aa74</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqwt3d_1_1_c_surface_view_comp.html</anchorfile>
-      <anchor>c9cd14cee2a42c313b23743823840964</anchor>
+      <anchor>a34808beb19fd88d8dc07960869a3a14</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">

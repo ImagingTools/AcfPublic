@@ -68,18 +68,19 @@ Inheritance diagram for iqtprm::CSelectionParamGuiComp:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#3328f8e6cd33cdb75e7528e3718f2391">UpdateModel</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates model from editor.  <a href="#3328f8e6cd33cdb75e7528e3718f2391"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#e16a8848b49427ecad6ba77b1a8342dc">UpdateEditor</a> (int updateFlags=0)</td></tr>
+<tr><td colspan="2"><br><h2>Protected Slots</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#1b98819d273224667c32201f45e37fb2">OnSelectionChanged</a> (int index)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates editor with model data.  <a href="#e16a8848b49427ecad6ba77b1a8342dc"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#2f56abc8c29885436625c37772435a1d">UpdateGui</a> (int updateFlags=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do update of the model GUI.  <a href="#2f56abc8c29885436625c37772435a1d"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#9fe4691ae12e6aecfe32a25bc415a2bd">OnGuiCreated</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#9fe4691ae12e6aecfe32a25bc415a2bd"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#7bc1c19b4ddad3b775c6681e0f0bc808">OnGuiDestroyed</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called just before GUI is released.  <a href="#7bc1c19b4ddad3b775c6681e0f0bc808"></a><br></td></tr>
-<tr><td colspan="2"><br><h2>Protected Slots</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#1b98819d273224667c32201f45e37fb2">OnSelectionChanged</a> (int index)</td></tr>
-
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 
@@ -114,7 +115,7 @@ Inheritance diagram for iqtprm::CSelectionParamGuiComp:</div>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -137,7 +138,7 @@ Called just after GUI is initialized.
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -171,32 +172,27 @@ Called just before GUI is released.
 
 </div>
 </div><p>
-<a class="anchor" name="e16a8848b49427ecad6ba77b1a8342dc"></a><!-- doxytag: member="iqtprm::CSelectionParamGuiComp::UpdateEditor" ref="e16a8848b49427ecad6ba77b1a8342dc" args="(int updateFlags=0)" -->
+<a class="anchor" name="2f56abc8c29885436625c37772435a1d"></a><!-- doxytag: member="iqtprm::CSelectionParamGuiComp::UpdateGui" ref="2f56abc8c29885436625c37772435a1d" args="(int updateFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqtprm::CSelectionParamGuiComp::UpdateEditor           </td>
+          <td class="memname">virtual void iqtprm::CSelectionParamGuiComp::UpdateGui           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>updateFlags</em> = <code>0</code>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Updates editor with model data. 
+Do update of the model GUI. 
 <p>
-This method will be called only if GUI is connected. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>updateFlags</em>&nbsp;</td><td>the same as <code>changeFlag</code> in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>. </td></tr>
-  </table>
-</dl>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#806337a93835b5e6b1c577ce85a65674">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CSelectionParamGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CSelectionParamGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt; &gt;</a>.</p>
 
 </div>
 </div><p>

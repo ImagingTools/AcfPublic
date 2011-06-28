@@ -88,10 +88,10 @@ protected:
 	virtual void OnGuiCreated();
 	virtual void OnGuiDestroyed();
 
-signals:
+Q_SIGNALS:
 	void DoAutoTest();
 
-protected slots:
+protected Q_SLOTS:
 	void OnEditorChanged(int index);
 	void OnAutoTest();
 	void on_TestAllButton_clicked();

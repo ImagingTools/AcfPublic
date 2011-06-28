@@ -35,36 +35,7 @@ namespace iqt2d
 {
 
 
-// reimplemented (imod::IModelEditor)
-
-void CImageViewComp::UpdateModel() const
-{
-	I_ASSERT(IsGuiCreated() && (GetObjectPtr() != NULL));
-}
-
-
-void CImageViewComp::UpdateEditor(int /*updateFlags*/)
-{
-	I_ASSERT(IsGuiCreated());
-
-	istd::CIndex2d imageSize = GetSize();
-	if (imageSize == istd::CIndex2d::GetZero() || imageSize == istd::CIndex2d::GetInvalid()){
-		QGraphicsScene* scenePtr = GetScene();
-		if (scenePtr != NULL){
-			scenePtr->update();
-		}
-
-		return;
-	}
-
-	QGraphicsScene* scenePtr = GetScene();
-	if (scenePtr != NULL){
-		scenePtr->setSceneRect(boundingRect());
-
-		SetFittedScale(GetFitMode());
-	}
-}
-
+// public methods
 
 // reimplemented (imod::IObserver)
 
@@ -84,6 +55,35 @@ bool CImageViewComp::OnDetached(imod::IModel* modelPtr)
 
 
 // protected methods
+
+// reimplemented (iqtgui::TGuiObserverWrap)
+
+void CImageViewComp::UpdateGui(int /*updateFlags*/)
+{
+	I_ASSERT(IsGuiCreated());
+
+	istd::CIndex2d imageSize = GetSize();
+	if (imageSize == istd::CIndex2d::GetZero() || imageSize == istd::CIndex2d::GetInvalid()){
+		QGraphicsScene* scenePtr = GetScene();
+		if (scenePtr != NULL){
+			scenePtr->update();
+		}
+
+		return;
+	}
+
+	QGraphicsScene* scenePtr = GetScene();
+	if (scenePtr != NULL){
+		scenePtr->setSceneRect(boundingRect());
+
+		if (m_fitToViewOnChangeAttrPtr.IsValid() && *m_fitToViewOnChangeAttrPtr){
+			OnFitToView();
+		}
+
+		SetFittedScale(GetFitMode());
+	}
+}
+
 
 // reimplemented (iqtgui::CGuiComponentBase)
 

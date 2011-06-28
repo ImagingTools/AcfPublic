@@ -27,7 +27,7 @@
   </div>
 </div>
 <div class="contents">
-<h1>iqt::CTranslationManagerComp Class Reference</h1><!-- doxytag: class="iqt::CTranslationManagerComp" --><!-- doxytag: inherits="icomp::CComponentBase,iqt::ITranslationManager,iprm::ISelectionParam,iprm::ISelectionConstraints" --><code>#include &lt;<a class="el" href="_c_translation_manager_comp_8h_source.html">CTranslationManagerComp.h</a>&gt;</code>
+<h1>iqt::CTranslationManagerComp Class Reference</h1><!-- doxytag: class="iqt::CTranslationManagerComp" --><!-- doxytag: inherits="icomp::CComponentBase,iqt::ITranslationManager,iprm::ISelectionConstraints" --><code>#include &lt;<a class="el" href="_c_translation_manager_comp_8h_source.html">CTranslationManagerComp.h</a>&gt;</code>
 <p>
 <div class="dynheader">
 Inheritance diagram for iqt::CTranslationManagerComp:</div>
@@ -35,17 +35,13 @@ Inheritance diagram for iqt::CTranslationManagerComp:</div>
 
 <p><center><img src="classiqt_1_1_c_translation_manager_comp.png" usemap="#iqt::CTranslationManagerComp_map" border="0" alt=""></center>
 <map name="iqt::CTranslationManagerComp_map">
-<area href="classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,168,184,192">
-<area href="classiqt_1_1_i_translation_manager.html" alt="iqt::ITranslationManager" shape="rect" coords="194,168,378,192">
-<area href="classiprm_1_1_i_selection_param.html" alt="iprm::ISelectionParam" shape="rect" coords="388,168,572,192">
-<area href="classiprm_1_1_i_selection_constraints.html" alt="iprm::ISelectionConstraints" shape="rect" coords="582,168,766,192">
-<area href="classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,112,184,136">
-<area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="194,112,378,136">
-<area href="classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="388,112,572,136">
-<area href="classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="582,112,766,136">
-<area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,56,184,80">
+<area href="classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,112,184,136">
+<area href="classiqt_1_1_i_translation_manager.html" alt="iqt::ITranslationManager" shape="rect" coords="194,112,378,136">
+<area href="classiprm_1_1_i_selection_constraints.html" alt="iprm::ISelectionConstraints" shape="rect" coords="388,112,572,136">
+<area href="classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,56,184,80">
+<area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="194,56,378,80">
 <area href="classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="388,56,572,80">
-<area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="582,56,766,80">
+<area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,184,24">
 <area href="classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="388,0,572,24">
 </map>
 </div>
@@ -57,13 +53,20 @@ Inheritance diagram for iqt::CTranslationManagerComp:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#0a86a84402f838d1e70e147e4e4148ba">BaseClass</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#282b44f6fd043160a0269e1894f8611b">I_ASSIGN_TO</a> (m_languageSelectionModelCompPtr, m_languageSelectionCompPtr, false)</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#9cfbd2bce1984296b73fa9261e72e78f">CTranslationManagerComp</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#9213a679ed205d7d17242eb88d41bed7">OnComponentCreated</a> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#784c826ebbffc8781be58caa7fc15d61">OnComponentDestroyed</a> ()</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#41338a4bf9ebc70192095cc0286d897d">GetLanguagesCount</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get number of provided languages.  <a href="#41338a4bf9ebc70192095cc0286d897d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#439f659a139087217396bf4c2f4543a5">GetCurrentLanguageIndex</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get current language index.  <a href="#439f659a139087217396bf4c2f4543a5"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const QTranslator *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#983be71b5d0c03dd21160431a209dbda">GetLanguageTranslator</a> (int languageIndex) const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get Qt translator for a given language.  <a href="#983be71b5d0c03dd21160431a209dbda"></a><br></td></tr>
@@ -76,32 +79,16 @@ Inheritance diagram for iqt::CTranslationManagerComp:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#7664d8f172b83f6e919d206ca041955a">SetSystemLanguage</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set default system's language.  <a href="#7664d8f172b83f6e919d206ca041955a"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <br class="typebreak">
-<a class="el" href="classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#45228b62da8c5b0d2c2082b7a933efa3">GetConstraints</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get constraints of this parameter.  <a href="#45228b62da8c5b0d2c2082b7a933efa3"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#13f010bacf3dc3324fadc4b99a47a50a">GetSelectedOptionIndex</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get selected index.  <a href="#13f010bacf3dc3324fadc4b99a47a50a"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#e907c396f8c4bfb4c2b99e0d0d43a327">SetSelectedOptionIndex</a> (int index)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set index of selected option.  <a href="#e907c396f8c4bfb4c2b99e0d0d43a327"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#330e7a6314a124298b6f08b6692ed6dc">GetActiveSubselection</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get subselection for specified option.  <a href="#330e7a6314a124298b6f08b6692ed6dc"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#332815e5227548cca6183ad8bf0ca468">GetOptionsCount</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get number of managed set.  <a href="#332815e5227548cca6183ad8bf0ca468"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#b1b7a86af47cd5d76ae628c71dc31a18">GetOptionName</a> (int index) const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get name of specified option.  <a href="#b1b7a86af47cd5d76ae628c71dc31a18"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_translation_manager_comp.html#34663c20522f0bb3c3f19c9f85d563fa">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#34663c20522f0bb3c3f19c9f85d563fa"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 
-<p>Definition at line <a class="el" href="_c_translation_manager_comp_8h_source.html#l00026">26</a> of file <a class="el" href="_c_translation_manager_comp_8h_source.html">CTranslationManagerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_translation_manager_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_translation_manager_comp_8h_source.html">CTranslationManagerComp.h</a>.</p>
 <hr><h2>Member Typedef Documentation</h2>
 <a class="anchor" name="0a86a84402f838d1e70e147e4e4148ba"></a><!-- doxytag: member="iqt::CTranslationManagerComp::BaseClass" ref="0a86a84402f838d1e70e147e4e4148ba" args="" -->
 <div class="memitem">
@@ -116,7 +103,7 @@ Inheritance diagram for iqt::CTranslationManagerComp:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_translation_manager_comp_8h_source.html#l00033">33</a> of file <a class="el" href="_c_translation_manager_comp_8h_source.html">CTranslationManagerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_translation_manager_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_translation_manager_comp_8h_source.html">CTranslationManagerComp.h</a>.</p>
 
 </div>
 </div><p>
@@ -141,12 +128,12 @@ Inheritance diagram for iqt::CTranslationManagerComp:</div>
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="330e7a6314a124298b6f08b6692ed6dc"></a><!-- doxytag: member="iqt::CTranslationManagerComp::GetActiveSubselection" ref="330e7a6314a124298b6f08b6692ed6dc" args="() const " -->
+<a class="anchor" name="439f659a139087217396bf4c2f4543a5"></a><!-- doxytag: member="iqt::CTranslationManagerComp::GetCurrentLanguageIndex" ref="439f659a139087217396bf4c2f4543a5" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>* iqt::CTranslationManagerComp::GetActiveSubselection           </td>
+          <td class="memname">virtual int iqt::CTranslationManagerComp::GetCurrentLanguageIndex           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -157,33 +144,10 @@ Inheritance diagram for iqt::CTranslationManagerComp:</div>
 <div class="memdoc">
 
 <p>
-Get subselection for specified option. 
+Get current language index. 
 <p>
-Please note, that returned options tree belongs to selection data model. 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#5050ae7fc751c58748ebf67f7562fde1">iprm::ISelectionParam</a>.</p>
 
-</div>
-</div><p>
-<a class="anchor" name="45228b62da8c5b0d2c2082b7a933efa3"></a><!-- doxytag: member="iqt::CTranslationManagerComp::GetConstraints" ref="45228b62da8c5b0d2c2082b7a933efa3" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a>* iqt::CTranslationManagerComp::GetConstraints           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get constraints of this parameter. 
-<p>
-Constraints describes some additional information about allowed parameter ranges and related informations. 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#352a2f8a8c8629f71a9e52ff22a4f9e1">iprm::ISelectionParam</a>.</p>
+<p>Implements <a class="el" href="classiqt_1_1_i_translation_manager.html#253a71ab19a57ec78225aeb07b4cbdf6">iqt::ITranslationManager</a>.</p>
 
 </div>
 </div><p>
@@ -281,29 +245,6 @@ Get number of managed set.
 
 </div>
 </div><p>
-<a class="anchor" name="13f010bacf3dc3324fadc4b99a47a50a"></a><!-- doxytag: member="iqt::CTranslationManagerComp::GetSelectedOptionIndex" ref="13f010bacf3dc3324fadc4b99a47a50a" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int iqt::CTranslationManagerComp::GetSelectedOptionIndex           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get selected index. 
-<p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#0a417884429ac3874a717cfbb5a738f6">iprm::ISelectionParam</a>.</p>
-
-</div>
-</div><p>
 <a class="anchor" name="100760380eb9ebd0cbb820087bb55d29"></a><!-- doxytag: member="iqt::CTranslationManagerComp::GetSlaveTranslationManager" ref="100760380eb9ebd0cbb820087bb55d29" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -324,6 +265,41 @@ Get slave translation manager, if set.
 <p>
 
 <p>Implements <a class="el" href="classiqt_1_1_i_translation_manager.html#4d6a1a11b7866f06f20f40edf21086d6">iqt::ITranslationManager</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="282b44f6fd043160a0269e1894f8611b"></a><!-- doxytag: member="iqt::CTranslationManagerComp::I_ASSIGN_TO" ref="282b44f6fd043160a0269e1894f8611b" args="(m_languageSelectionModelCompPtr, m_languageSelectionCompPtr, false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqt::CTranslationManagerComp::I_ASSIGN_TO           </td>
+          <td>(</td>
+          <td class="paramtype">m_languageSelectionModelCompPtr&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_languageSelectionCompPtr&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
 
 </div>
 </div><p>
@@ -348,15 +324,14 @@ Get slave translation manager, if set.
 
 </div>
 </div><p>
-<a class="anchor" name="34663c20522f0bb3c3f19c9f85d563fa"></a><!-- doxytag: member="iqt::CTranslationManagerComp::Serialize" ref="34663c20522f0bb3c3f19c9f85d563fa" args="(iser::IArchive &amp;archive)" -->
+<a class="anchor" name="784c826ebbffc8781be58caa7fc15d61"></a><!-- doxytag: member="iqt::CTranslationManagerComp::OnComponentDestroyed" ref="784c826ebbffc8781be58caa7fc15d61" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool iqt::CTranslationManagerComp::Serialize           </td>
+          <td class="memname">virtual void iqt::CTranslationManagerComp::OnComponentDestroyed           </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>archive</em>          </td>
+          <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -365,36 +340,8 @@ Get slave translation manager, if set.
 <div class="memdoc">
 
 <p>
-Load or store state of this object as a archive stream. 
-<p>
-Type of operation is depending on archive type. <dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a> </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_serializable.html#7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="e907c396f8c4bfb4c2b99e0d0d43a327"></a><!-- doxytag: member="iqt::CTranslationManagerComp::SetSelectedOptionIndex" ref="e907c396f8c4bfb4c2b99e0d0d43a327" args="(int index)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iqt::CTranslationManagerComp::SetSelectedOptionIndex           </td>
-          <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>index</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Set index of selected option. 
-<p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>true if selection change was possible. </dd></dl>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#312f0ee035e39cd63d7d1c55b1e3c68a">iprm::ISelectionParam</a>.</p>
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_base.html#007550438603368acd5133e97547d73f">icomp::CComponentBase</a>.</p>
 
 </div>
 </div><p>

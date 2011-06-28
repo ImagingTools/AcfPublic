@@ -35,6 +35,39 @@ namespace iqt2d
 {
 
 
+// public methods
+
+// reimplemented (imod::IModelEditor)
+
+void CQuadrangleParamsGuiComp::UpdateModel() const
+{
+	I_ASSERT(IsGuiCreated());
+
+	i2d::CQuadrangle* objectPtr = GetObjectPtr();
+	I_ASSERT(objectPtr != NULL);
+
+	i2d::CVector2d point1(FirstDiagPoint1XSpin->value(), FirstDiagPoint1YSpin->value());
+	i2d::CVector2d point2(FirstDiagPoint2XSpin->value(), FirstDiagPoint2YSpin->value());
+
+	i2d::CVector2d point3(SecondDiagPoint1XSpin->value(), SecondDiagPoint1YSpin->value());
+	i2d::CVector2d point4(SecondDiagPoint2XSpin->value(), SecondDiagPoint2YSpin->value());
+
+	i2d::CLine2d firstDiag(point1, point2);
+	i2d::CLine2d secondDiag(point3, point4);
+
+	istd::CChangeNotifier changePtr(NULL);
+
+	if (firstDiag != objectPtr->GetFirstDiagonal() || secondDiag != objectPtr->GetSecondDiagonal()){
+		changePtr.SetPtr(objectPtr);
+	
+		objectPtr->SetFirstDiagonal(i2d::CLine2d(point1, point2));
+		objectPtr->SetSecondDiagonal(i2d::CLine2d(point3, point4));
+	}
+}
+
+
+// protected methods
+
 // reimplemented (iqtgui::TGuiObserverWrap)
 
 void CQuadrangleParamsGuiComp::OnGuiModelAttached()
@@ -87,88 +120,7 @@ void CQuadrangleParamsGuiComp::OnGuiModelDetached()
 }
 
 
-// reimplemented (imod::IObserver)
-
-bool CQuadrangleParamsGuiComp::OnAttached(imod::IModel* modelPtr)
-{
-	if (BaseClass::OnAttached(modelPtr)){
-		const ShapesMap& shapesMap = GetShapesMap();
-		for (		ShapesMap::const_iterator iter = shapesMap.begin();
-					iter != shapesMap.end();
-					++iter){
-			const Shapes& shapes = iter->second;
-			int shapesCount = shapes.GetCount();
-			for (int shapeIndex = 0; shapeIndex < shapesCount; ++shapeIndex){
-				iqt2d::CQuadrangleShape* shapePtr = dynamic_cast<iqt2d::CQuadrangleShape*>(shapes.GetAt(shapeIndex));
-				if (shapePtr != NULL){
-					modelPtr->AttachObserver(shapePtr);
-				}
-			}
-		}
-
-		return true;
-	}
-	else{
-		return false;
-	}
-}
-
-
-bool CQuadrangleParamsGuiComp::OnDetached(imod::IModel* modelPtr)
-{
-	if (BaseClass::OnDetached(modelPtr)){
-		const ShapesMap& shapesMap = GetShapesMap();
-		for (		ShapesMap::const_iterator iter = shapesMap.begin();
-					iter != shapesMap.end();
-					++iter){
-			const Shapes& shapes = iter->second;
-			int shapesCount = shapes.GetCount();
-			for (int shapeIndex = 0; shapeIndex < shapesCount; ++shapeIndex){
-				iqt2d::CQuadrangleShape* shapePtr = dynamic_cast<iqt2d::CQuadrangleShape*>(shapes.GetAt(shapeIndex));
-				if (shapePtr != NULL){
-					modelPtr->DetachObserver(shapePtr);
-				}
-			}
-		}
-
-		return true;
-	}
-	else{
-		return false;
-	}
-}
-
-
-// reimplemented (imod::IModelEditor)
-
-void CQuadrangleParamsGuiComp::UpdateModel() const
-{
-	I_ASSERT(IsGuiCreated());
-
-	i2d::CQuadrangle* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
-
-	i2d::CVector2d point1(FirstDiagPoint1XSpin->value(), FirstDiagPoint1YSpin->value());
-	i2d::CVector2d point2(FirstDiagPoint2XSpin->value(), FirstDiagPoint2YSpin->value());
-
-	i2d::CVector2d point3(SecondDiagPoint1XSpin->value(), SecondDiagPoint1YSpin->value());
-	i2d::CVector2d point4(SecondDiagPoint2XSpin->value(), SecondDiagPoint2YSpin->value());
-
-	i2d::CLine2d firstDiag(point1, point2);
-	i2d::CLine2d secondDiag(point3, point4);
-
-	istd::CChangeNotifier changePtr(NULL);
-
-	if (firstDiag != objectPtr->GetFirstDiagonal() || secondDiag != objectPtr->GetSecondDiagonal()){
-		changePtr.SetPtr(objectPtr);
-	
-		objectPtr->SetFirstDiagonal(i2d::CLine2d(point1, point2));
-		objectPtr->SetSecondDiagonal(i2d::CLine2d(point3, point4));
-	}
-}
-
-
-void CQuadrangleParamsGuiComp::UpdateEditor(int /*updateFlags*/)
+void CQuadrangleParamsGuiComp::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 
@@ -194,31 +146,12 @@ void CQuadrangleParamsGuiComp::UpdateEditor(int /*updateFlags*/)
 }
 
 
-// reimplemented (iqt2d::TSceneExtenderCompBase)
-
-void CQuadrangleParamsGuiComp::CreateShapes(int /*sceneId*/, bool inactiveOnly, Shapes& result)
-{
-	I_ASSERT(m_shapeZValueAttrPtr.IsValid());	// this attribute is obligatory
-
-	CQuadrangleShape* shapePtr = new CQuadrangleShape(!inactiveOnly);
-	if (shapePtr != NULL){
-		shapePtr->setZValue(*m_shapeZValueAttrPtr);
-		result.PushBack(shapePtr);
-
-		imod::IModel* modelPtr = GetModelPtr();
-		if (modelPtr != NULL){
-			modelPtr->AttachObserver(shapePtr);
-		}
-	}
-}
-
-
 // protected slots
 
 void CQuadrangleParamsGuiComp::OnParamsChanged(double /*value*/)
 {
 	if (!IsUpdateBlocked()){
-		UpdateBlocker blockUpdate(this);
+		UpdateBlocker updateBlocker(this);
 
 		UpdateModel();
 	}

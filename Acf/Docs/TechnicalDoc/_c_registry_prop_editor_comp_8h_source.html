@@ -53,52 +53,49 @@
 <a name="l00030"></a>00030               I_ASSIGN(m_consistInfoCompPtr, <span class="stringliteral">"ConsistencyInfo"</span>, <span class="stringliteral">"Allows to check consistency of registries and attributes"</span>, <span class="keyword">false</span>, <span class="stringliteral">"ConsistencyInfo"</span>);
 <a name="l00031"></a>00031        I_END_COMPONENT;
 <a name="l00032"></a>00032 
-<a name="l00033"></a>00033        <span class="comment">// reimplmented (imod::IModelEditor)</span>
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#f852c10d9451160234c078ddf93f7101" title="Updates editor with model data.">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#cd7ba8d2becda1fc28d6e2643f135de2" title="Updates model from editor.">UpdateModel</a>() <span class="keyword">const</span>;
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037        <span class="comment">// reimplemented (imod::TGuiObserverWrap)</span>
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#1a6ec3f05188e0b4aad670e538b6aa62" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#1dba68bf8aa43f57270dfafafabca5b8" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="keyword">protected</span>:
-<a name="l00042"></a><a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html">00042</a>        <span class="keyword">class </span><a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html">TextLog</a>:
-<a name="l00043"></a>00043                             <span class="keyword">public</span> istd::CString,
-<a name="l00044"></a>00044                             <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::IMessageConsumer
-<a name="l00045"></a>00045        {
-<a name="l00046"></a>00046        <span class="keyword">public</span>:
-<a name="l00047"></a>00047               <span class="comment">// reimplemented (ibase::IMessageConsumer)</span>
-<a name="l00048"></a>00048               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html#9ea674016746ce00b4fcd3faed652034" title="Check if some messge is supported.">IsMessageSupported</a>(
-<a name="l00049"></a>00049                                    <span class="keywordtype">int</span> messageCategory = -1,
-<a name="l00050"></a>00050                                    <span class="keywordtype">int</span> messageId = -1,
-<a name="l00051"></a>00051                                    <span class="keyword">const</span> <a class="code" href="classibase_1_1_i_message.html" title="Common interface for an message.">ibase::IMessage</a>* messagePtr = <a class="code" href="istd_8h.html#070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
-<a name="l00052"></a>00052               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html#ff2fb5b7f38432d593e83ae1ac25730f" title="Adds a message item to the container.">AddMessage</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">MessagePtr</a>&amp; messagePtr);
-<a name="l00053"></a>00053        };
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#bcf81cdf39601a8fa85a5314b38cd1ea">CreateOverview</a>();
+<a name="l00033"></a>00033 <span class="keyword">protected</span>:
+<a name="l00034"></a><a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html">00034</a>        <span class="keyword">class </span><a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html">TextLog</a>:
+<a name="l00035"></a>00035                             <span class="keyword">public</span> istd::CString,
+<a name="l00036"></a>00036                             <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::IMessageConsumer
+<a name="l00037"></a>00037        {
+<a name="l00038"></a>00038        <span class="keyword">public</span>:
+<a name="l00039"></a>00039               <span class="comment">// reimplemented (ibase::IMessageConsumer)</span>
+<a name="l00040"></a>00040               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html#9ea674016746ce00b4fcd3faed652034" title="Check if some messge is supported.">IsMessageSupported</a>(
+<a name="l00041"></a>00041                                    <span class="keywordtype">int</span> messageCategory = -1,
+<a name="l00042"></a>00042                                    <span class="keywordtype">int</span> messageId = -1,
+<a name="l00043"></a>00043                                    <span class="keyword">const</span> <a class="code" href="classibase_1_1_i_message.html" title="Common interface for an message.">ibase::IMessage</a>* messagePtr = <a class="code" href="istd_8h.html#070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
+<a name="l00044"></a>00044               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html#ff2fb5b7f38432d593e83ae1ac25730f" title="Adds a message item to the container.">AddMessage</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">MessagePtr</a>&amp; messagePtr);
+<a name="l00045"></a>00045        };
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#bcf81cdf39601a8fa85a5314b38cd1ea">CreateOverview</a>();
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049        <span class="comment">// reimplemented (imod::TGuiObserverWrap)</span>
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#1a6ec3f05188e0b4aad670e538b6aa62" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#1dba68bf8aa43f57270dfafafabca5b8" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#2ef0b396eda6f0a1e4297c466f4c7ea0" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#4be1f620ac6ad44b1bf868d447b57a73" title="Called just after GUI is initialized.">OnGuiCreated</a>();
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#4be1f620ac6ad44b1bf868d447b57a73" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00061"></a>00061        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#19c2cba91104605272949b3fdd7ece2b">on_DescriptionEdit_editingFinished</a>();
-<a name="l00062"></a>00062        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#2c333abe41d8d056a4abddea54268c84">OnUpdateKeywords</a>();
+<a name="l00057"></a>00057 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00058"></a>00058        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#19c2cba91104605272949b3fdd7ece2b">on_DescriptionEdit_editingFinished</a>();
+<a name="l00059"></a>00059        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#2c333abe41d8d056a4abddea54268c84">OnUpdateKeywords</a>();
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="keyword">private</span>:
+<a name="l00062"></a>00062        <span class="keyword">static</span> QString ConvertToKeyword(<span class="keyword">const</span> QString&amp; input, <span class="keyword">const</span> QString&amp; key = QString());
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064 <span class="keyword">private</span>:
-<a name="l00065"></a>00065        <span class="keyword">static</span> QString ConvertToKeyword(<span class="keyword">const</span> QString&amp; input, <span class="keyword">const</span> QString&amp; key = QString());
+<a name="l00065"></a>00065        I_REF(<a class="code" href="classicmpstr_1_1_i_registry_consist_info.html">IRegistryConsistInfo</a>, m_consistInfoCompPtr);
 <a name="l00066"></a>00066 
-<a name="l00067"></a>00067 <span class="keyword">private</span>:
-<a name="l00068"></a>00068        I_REF(<a class="code" href="classicmpstr_1_1_i_registry_consist_info.html">IRegistryConsistInfo</a>, m_consistInfoCompPtr);
+<a name="l00067"></a>00067        <a class="code" href="classiqtgui_1_1_c_checkable_combo_box.html">iqtgui::CCheckableComboBox</a>* m_categoryComboBox;
+<a name="l00068"></a>00068 };
 <a name="l00069"></a>00069 
-<a name="l00070"></a>00070        <a class="code" href="classiqtgui_1_1_c_checkable_combo_box.html">iqtgui::CCheckableComboBox</a>* m_categoryComboBox;
-<a name="l00071"></a>00071 };
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 } <span class="comment">// namespace icmpstr</span>
 <a name="l00072"></a>00072 
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074 } <span class="comment">// namespace icmpstr</span>
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 <span class="preprocessor">#endif // !icmpstr_CRegistryPropEditorComp_included</span>
-<a name="l00078"></a>00078 <span class="preprocessor"></span>
+<a name="l00074"></a>00074 <span class="preprocessor">#endif // !icmpstr_CRegistryPropEditorComp_included</span>
+<a name="l00075"></a>00075 <span class="preprocessor"></span>
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

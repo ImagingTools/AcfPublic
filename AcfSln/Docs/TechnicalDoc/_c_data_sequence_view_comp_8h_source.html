@@ -68,62 +68,61 @@
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046        <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#11638b79e13f44686373f0edceb0e3b3">CDataSequenceViewComp</a>();
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#876d9c5f021cae883f576f9356980aec">UpdateModel</a>() <span class="keyword">const</span>;
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#ea303bbd17e8aa44df6be1f020e5d533">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="keyword">protected</span>:
-<a name="l00053"></a><a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp_1_1_diagram_widget.html">00053</a>        <span class="keyword">class </span><a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp_1_1_diagram_widget.html">DiagramWidget</a>: <span class="keyword">public</span> QWidget
-<a name="l00054"></a>00054        {
-<a name="l00055"></a>00055        <span class="keyword">public</span>:
-<a name="l00056"></a>00056               <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp_1_1_diagram_widget.html#38fab80b146fbe40028c2af6b0679237">DiagramWidget</a>(QWidget* parentWidgetPtr, <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html">CDataSequenceViewComp</a>* parentPtr);
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058        <span class="keyword">protected</span>:
-<a name="l00059"></a>00059               <span class="comment">// reimplemented (QWidget)</span>
-<a name="l00060"></a>00060               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp_1_1_diagram_widget.html#0f9e8a57d75986412f58caef0550e8c2">paintEvent</a>(QPaintEvent* event);
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062        <span class="keyword">private</span>:
-<a name="l00063"></a>00063               <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html">CDataSequenceViewComp</a>&amp; m_parent;
-<a name="l00064"></a>00064        };
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#19a10bad1af5aebad267d6c6873bcb8f">OnGuiCreated</a>();
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="keyword">protected</span> slots:
-<a name="l00070"></a>00070        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#1f02b813541c843ecfe9c2cabb212d8a">on_TimeSpanCB_toggled</a>(<span class="keywordtype">bool</span> state);
-<a name="l00071"></a>00071        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#904a50b07baf13e84373bc07ba96deec">on_ScaleCB_toggled</a>(<span class="keywordtype">bool</span> state);
-<a name="l00072"></a>00072        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#f241a290aceb4ae8971b75caf895b125">on_TimeBeginSB_valueChanged</a>(<span class="keywordtype">double</span> value);
-<a name="l00073"></a>00073        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#8fb6d668600eacd7bbe9748cccd716de">on_TimeEndSB_valueChanged</a>(<span class="keywordtype">double</span> value);
-<a name="l00074"></a>00074        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#d15d0253fefd4aa8123cbb0a8c28f861">on_ValueMinSB_valueChanged</a>(<span class="keywordtype">double</span> value);
-<a name="l00075"></a>00075        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#f4dba8454821849425e7f55ed149163d">on_ValueMaxSB_valueChanged</a>(<span class="keywordtype">double</span> value);
-<a name="l00076"></a>00076        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#f285c962320b5084549c1b47d3a9b2a1">on_ChannelSelectorCB_currentIndexChanged</a>(<span class="keywordtype">int</span> index);
-<a name="l00077"></a>00077        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#5e29f136f624cf691c17327cd715b313">on_ZoomInButton_clicked</a>();
-<a name="l00078"></a>00078        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#0618266c4fdbd55ecb07eef1e34cccac">on_ZoomOutButton_clicked</a>();
-<a name="l00079"></a>00079        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#3ca4770c47cdaed68639062c00a65c6f">on_PrevButton_clicked</a>();
-<a name="l00080"></a>00080        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#45b8e6658aade32a779d38caade6fa7d">on_NextButton_clicked</a>();
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082 <span class="keyword">private</span>:
-<a name="l00083"></a>00083        I_ATTR(<span class="keywordtype">bool</span>, m_showScalePanelAttrPtr);
-<a name="l00084"></a>00084        I_ATTR(<span class="keywordtype">bool</span>, m_showTimeSpanPanelAttrPtr);
-<a name="l00085"></a>00085        I_ATTR(<span class="keywordtype">bool</span>, m_showChannelPanelAttrPtr);
-<a name="l00086"></a>00086        I_ATTR(<span class="keywordtype">double</span>, m_minValueAttrPtr);
-<a name="l00087"></a>00087        I_ATTR(<span class="keywordtype">double</span>, m_maxValueAttrPtr);
-<a name="l00088"></a>00088        I_ATTR(<span class="keywordtype">bool</span>, m_isScaledValueAttrPtr);
-<a name="l00089"></a>00089        I_ATTR(<span class="keywordtype">double</span>, m_minTimeSpanAttrPtr);
-<a name="l00090"></a>00090        I_ATTR(<span class="keywordtype">double</span>, m_maxTimeSpanAttrPtr);
-<a name="l00091"></a>00091        I_ATTR(<span class="keywordtype">bool</span>, m_isScaledTimeSpanAttrPtr);
-<a name="l00092"></a>00092 
-<a name="l00093"></a>00093        <span class="keywordtype">int</span> m_lastChannelsCount;
-<a name="l00094"></a>00094        QStandardItemModel m_channelsSelectorModel;
-<a name="l00095"></a>00095 };
+<a name="l00048"></a>00048        <span class="comment">// reimplemenented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#988b5d25cbcef08e6e9fe1cb5ec5f089">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="keyword">protected</span>:
+<a name="l00052"></a><a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp_1_1_diagram_widget.html">00052</a>        <span class="keyword">class </span><a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp_1_1_diagram_widget.html">DiagramWidget</a>: <span class="keyword">public</span> QWidget
+<a name="l00053"></a>00053        {
+<a name="l00054"></a>00054        <span class="keyword">public</span>:
+<a name="l00055"></a>00055               <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp_1_1_diagram_widget.html#38fab80b146fbe40028c2af6b0679237">DiagramWidget</a>(QWidget* parentWidgetPtr, <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html">CDataSequenceViewComp</a>* parentPtr);
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057        <span class="keyword">protected</span>:
+<a name="l00058"></a>00058               <span class="comment">// reimplemented (QWidget)</span>
+<a name="l00059"></a>00059               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp_1_1_diagram_widget.html#0f9e8a57d75986412f58caef0550e8c2">paintEvent</a>(QPaintEvent* event);
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061        <span class="keyword">private</span>:
+<a name="l00062"></a>00062               <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html">CDataSequenceViewComp</a>&amp; m_parent;
+<a name="l00063"></a>00063        };
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#19a10bad1af5aebad267d6c6873bcb8f">OnGuiCreated</a>();
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="keyword">protected</span> slots:
+<a name="l00069"></a>00069        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#1f02b813541c843ecfe9c2cabb212d8a">on_TimeSpanCB_toggled</a>(<span class="keywordtype">bool</span> state);
+<a name="l00070"></a>00070        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#904a50b07baf13e84373bc07ba96deec">on_ScaleCB_toggled</a>(<span class="keywordtype">bool</span> state);
+<a name="l00071"></a>00071        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#f241a290aceb4ae8971b75caf895b125">on_TimeBeginSB_valueChanged</a>(<span class="keywordtype">double</span> value);
+<a name="l00072"></a>00072        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#8fb6d668600eacd7bbe9748cccd716de">on_TimeEndSB_valueChanged</a>(<span class="keywordtype">double</span> value);
+<a name="l00073"></a>00073        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#d15d0253fefd4aa8123cbb0a8c28f861">on_ValueMinSB_valueChanged</a>(<span class="keywordtype">double</span> value);
+<a name="l00074"></a>00074        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#f4dba8454821849425e7f55ed149163d">on_ValueMaxSB_valueChanged</a>(<span class="keywordtype">double</span> value);
+<a name="l00075"></a>00075        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#f285c962320b5084549c1b47d3a9b2a1">on_ChannelSelectorCB_currentIndexChanged</a>(<span class="keywordtype">int</span> index);
+<a name="l00076"></a>00076        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#5e29f136f624cf691c17327cd715b313">on_ZoomInButton_clicked</a>();
+<a name="l00077"></a>00077        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#0618266c4fdbd55ecb07eef1e34cccac">on_ZoomOutButton_clicked</a>();
+<a name="l00078"></a>00078        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#3ca4770c47cdaed68639062c00a65c6f">on_PrevButton_clicked</a>();
+<a name="l00079"></a>00079        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_data_sequence_view_comp.html#45b8e6658aade32a779d38caade6fa7d">on_NextButton_clicked</a>();
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="keyword">private</span>:
+<a name="l00082"></a>00082        I_ATTR(<span class="keywordtype">bool</span>, m_showScalePanelAttrPtr);
+<a name="l00083"></a>00083        I_ATTR(<span class="keywordtype">bool</span>, m_showTimeSpanPanelAttrPtr);
+<a name="l00084"></a>00084        I_ATTR(<span class="keywordtype">bool</span>, m_showChannelPanelAttrPtr);
+<a name="l00085"></a>00085        I_ATTR(<span class="keywordtype">double</span>, m_minValueAttrPtr);
+<a name="l00086"></a>00086        I_ATTR(<span class="keywordtype">double</span>, m_maxValueAttrPtr);
+<a name="l00087"></a>00087        I_ATTR(<span class="keywordtype">bool</span>, m_isScaledValueAttrPtr);
+<a name="l00088"></a>00088        I_ATTR(<span class="keywordtype">double</span>, m_minTimeSpanAttrPtr);
+<a name="l00089"></a>00089        I_ATTR(<span class="keywordtype">double</span>, m_maxTimeSpanAttrPtr);
+<a name="l00090"></a>00090        I_ATTR(<span class="keywordtype">bool</span>, m_isScaledTimeSpanAttrPtr);
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092        <span class="keywordtype">int</span> m_lastChannelsCount;
+<a name="l00093"></a>00093        QStandardItemModel m_channelsSelectorModel;
+<a name="l00094"></a>00094 };
+<a name="l00095"></a>00095 
 <a name="l00096"></a>00096 
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098 } <span class="comment">// namespace iqtmeas</span>
+<a name="l00097"></a>00097 } <span class="comment">// namespace iqtmeas</span>
+<a name="l00098"></a>00098 
 <a name="l00099"></a>00099 
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101 <span class="preprocessor">#endif // !iqtmeas_CDataSequenceViewComp_included</span>
-<a name="l00102"></a>00102 <span class="preprocessor"></span>
-<a name="l00103"></a>00103 
+<a name="l00100"></a>00100 <span class="preprocessor">#endif // !iqtmeas_CDataSequenceViewComp_included</span>
+<a name="l00101"></a>00101 <span class="preprocessor"></span>
+<a name="l00102"></a>00102 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

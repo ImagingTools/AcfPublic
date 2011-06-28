@@ -67,17 +67,13 @@ Inheritance diagram for iqtgui::CFileSystemExplorerGuiComp:</div>
 &lt; Ui::CFileSystemExplorerGuiComp, <br class="typebreak">
 <a class="el" href="classiprm_1_1_i_file_name_param.html">iprm::IFileNameParam</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#a369ab65ec17024dd82119a1842f1096">BaseClass</a></td></tr>
 
-<tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#f725e9b0ac595aa6260de92634f39330">UpdateModel</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates model from editor.  <a href="#f725e9b0ac595aa6260de92634f39330"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#d22e89f57cfed531a2679a1a960d8f67">UpdateEditor</a> (int updateFlags=0)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates editor with model data.  <a href="#d22e89f57cfed531a2679a1a960d8f67"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">QStringList&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#fc477a01d70604290be4ebe38f811526">GetDefaultFilters</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get default list of filters.  <a href="#fc477a01d70604290be4ebe38f811526"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#4fde1a1b3312c920073c243dff3d2e9a">UpdateGui</a> (int updateFlags=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do update of the model GUI.  <a href="#4fde1a1b3312c920073c243dff3d2e9a"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#1ef1571cc99744eded39e878e8612f83">OnGuiCreated</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#1ef1571cc99744eded39e878e8612f83"></a><br></td></tr>
@@ -152,55 +148,27 @@ Called just after GUI is initialized.
 
 </div>
 </div><p>
-<a class="anchor" name="d22e89f57cfed531a2679a1a960d8f67"></a><!-- doxytag: member="iqtgui::CFileSystemExplorerGuiComp::UpdateEditor" ref="d22e89f57cfed531a2679a1a960d8f67" args="(int updateFlags=0)" -->
+<a class="anchor" name="4fde1a1b3312c920073c243dff3d2e9a"></a><!-- doxytag: member="iqtgui::CFileSystemExplorerGuiComp::UpdateGui" ref="4fde1a1b3312c920073c243dff3d2e9a" args="(int updateFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqtgui::CFileSystemExplorerGuiComp::UpdateEditor           </td>
+          <td class="memname">virtual void iqtgui::CFileSystemExplorerGuiComp::UpdateGui           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>updateFlags</em> = <code>0</code>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Updates editor with model data. 
+Do update of the model GUI. 
 <p>
-This method will be called only if GUI is connected. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>updateFlags</em>&nbsp;</td><td>the same as <code>changeFlag</code> in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>. </td></tr>
-  </table>
-</dl>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#806337a93835b5e6b1c577ce85a65674">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CFileSystemExplorerGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::IFileNameParam &gt; &gt;</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="f725e9b0ac595aa6260de92634f39330"></a><!-- doxytag: member="iqtgui::CFileSystemExplorerGuiComp::UpdateModel" ref="f725e9b0ac595aa6260de92634f39330" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqtgui::CFileSystemExplorerGuiComp::UpdateModel           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Updates model from editor. 
-<p>
-This method will be called only if GUI is connected and model is attached. 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#39ad878eb561d7510fa512c9a985a92b">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CFileSystemExplorerGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::IFileNameParam &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CFileSystemExplorerGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::IFileNameParam &gt; &gt;</a>.</p>
 
 </div>
 </div><p>
