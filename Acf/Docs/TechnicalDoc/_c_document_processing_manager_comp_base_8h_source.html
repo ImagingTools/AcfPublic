@@ -65,61 +65,65 @@
 <a name="l00042"></a>00042               I_ASSIGN(m_paramsGuiCompPtr, "ProcessingParamsGui", "UI for processing parameters", false, "ProcessingParamsGui");
 <a name="l00043"></a>00043               I_ASSIGN(m_commandNameAttrPtr, "ProcessingCommandName", "Name of the processing action in menu", true, "");
 <a name="l00044"></a>00044               I_ASSIGN(m_menuNameAttrPtr, "ProcessingMenuName", "Name of the processing menu", true, "Processing");
-<a name="l00045"></a>00045        I_END_COMPONENT;
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047        <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html">CDocumentProcessingManagerCompBase</a>();
-<a name="l00048"></a>00048 
-<a name="l00052"></a>00052        <span class="keywordtype">void</span> <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#eb34491bf12adccd77c77a7089d3e3e6" title="Enable or disable processing command.">SetProcessingCommandEnabled</a>(<span class="keywordtype">bool</span> isProcessingCommandEnabled = true);
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054        <span class="comment">// reimpemented (ibase::ICommandsProvider)</span>
-<a name="l00055"></a>00055        virtual const ibase::<a class="code" href="namespaceibase.html#662cd115f05118f6247d8bb781cdd7fd" title="Hierarchical command structure used to create dynamic menu structures.">IHierarchicalCommand</a>* <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#33d98e4fcbc2f0a1bcde4071bbfa1041" title="Get list of menu commands.">GetCommands</a>() const;
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057        <span class="comment">// reimpemented (icomp::IComponent)</span>
-<a name="l00058"></a>00058        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#f2a80304d31b65cdcc6bf2de0a4db20f">OnComponentCreated</a>();
-<a name="l00059"></a>00059        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#51d09590da36a6e9ab9f0acda10a5608">OnComponentDestroyed</a>();
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061        <span class="comment">// abstract methods</span>
+<a name="l00045"></a>00045               I_ASSIGN(m_inputDocumentRequiredAttrPtr, "InputDocumentRequired", "If enabled, the input document is required for processing", false, true);
+<a name="l00046"></a>00046        I_END_COMPONENT;
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048        <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html">CDocumentProcessingManagerCompBase</a>();
+<a name="l00049"></a>00049 
+<a name="l00053"></a>00053        <span class="keywordtype">bool</span> <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#7daa3801021ab985bf29f88f79f98564" title="Return true, if the input document is required for processing.">IsInputDocumentRequired</a>() const;
+<a name="l00054"></a>00054 
+<a name="l00058"></a>00058        <span class="keywordtype">void</span> <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#eb34491bf12adccd77c77a7089d3e3e6" title="Enable or disable processing command.">SetProcessingCommandEnabled</a>(<span class="keywordtype">bool</span> isProcessingCommandEnabled = true);
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060        <span class="comment">// reimpemented (ibase::ICommandsProvider)</span>
+<a name="l00061"></a>00061        virtual const ibase::<a class="code" href="namespaceibase.html#662cd115f05118f6247d8bb781cdd7fd" title="Hierarchical command structure used to create dynamic menu structures.">IHierarchicalCommand</a>* <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#33d98e4fcbc2f0a1bcde4071bbfa1041" title="Get list of menu commands.">GetCommands</a>() const;
 <a name="l00062"></a>00062 
-<a name="l00066"></a>00066        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#0cd91b25472f1c54992f0ef8de66cd56" title="Process the current document.">DoDocumentProcessing</a>(const istd::IChangeable&amp; inputDocument, const std::<span class="keywordtype">string</span>&amp; documentTypeId) = 0;
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 private Q_SLOTS:
-<a name="l00069"></a>00069        <span class="keywordtype">void</span> OnDoProcessing();
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071 protected:
-<a name="l00072"></a>00072        I_REF(idoc::IDocumentManager, m_documentManagerCompPtr);
-<a name="l00073"></a>00073        I_REF(iproc::IProcessor, m_processorCompPtr);
-<a name="l00074"></a>00074        I_REF(iproc::IProgressManager, m_progressManagerCompPtr);
-<a name="l00075"></a>00075        I_REF(iprm::IParamsSet, m_paramsSetCompPtr);
-<a name="l00076"></a>00076        I_REF(iqtgui::IGuiObject, m_paramsGuiCompPtr);
-<a name="l00077"></a>00077        I_ATTR(istd::CString, m_commandNameAttrPtr);
-<a name="l00078"></a>00078        I_ATTR(istd::CString, m_menuNameAttrPtr);
-<a name="l00079"></a>00079 
-<a name="l00080"></a><a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#ac43a9bb9597e0f9b2deaa94b4f63deb">00080</a>        iqtgui::CHierarchicalCommand <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#ac43a9bb9597e0f9b2deaa94b4f63deb">m_processingMenu</a>;
-<a name="l00081"></a><a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#ada893f7d2e651088ca04fe46d21b6fc">00081</a>        iqtgui::CHierarchicalCommand <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#ada893f7d2e651088ca04fe46d21b6fc">m_rootCommands</a>;
-<a name="l00082"></a><a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#32607952e2d40660d23fafd36dfcb06b">00082</a>        iqtgui::CHierarchicalCommand <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#32607952e2d40660d23fafd36dfcb06b">m_processingCommand</a>;
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084 private:
-<a name="l00085"></a>00085        class DocumentManagerObserver: public imod::TSingleModelObserverBase&lt;idoc::IDocumentManager&gt;
-<a name="l00086"></a>00086        {
-<a name="l00087"></a>00087        <span class="keyword">public</span>:
-<a name="l00088"></a>00088               DocumentManagerObserver(<a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html">CDocumentProcessingManagerCompBase</a>&amp; parent);
-<a name="l00089"></a>00089        <span class="keyword">protected</span>:
-<a name="l00090"></a>00090               <span class="comment">// reimplemented (imod::TSingleModelObserverBase)</span>
-<a name="l00091"></a>00091               <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnUpdate(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00092"></a>00092        <span class="keyword">private</span>:
-<a name="l00093"></a>00093               <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html">CDocumentProcessingManagerCompBase</a>&amp; m_parent;
-<a name="l00094"></a>00094        };
-<a name="l00095"></a>00095 
-<a name="l00096"></a>00096        DocumentManagerObserver m_documentManagerObserver;
-<a name="l00097"></a>00097 };
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100 } <span class="comment">// namespace iproc</span>
-<a name="l00101"></a>00101 
+<a name="l00063"></a>00063        <span class="comment">// reimpemented (icomp::IComponent)</span>
+<a name="l00064"></a>00064        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#f2a80304d31b65cdcc6bf2de0a4db20f">OnComponentCreated</a>();
+<a name="l00065"></a>00065        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#51d09590da36a6e9ab9f0acda10a5608">OnComponentDestroyed</a>();
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067        <span class="comment">// abstract methods</span>
+<a name="l00068"></a>00068 
+<a name="l00072"></a>00072        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#d153c1bfe80cd1c712353efe3f1271f8" title="Process the current document.">DoDocumentProcessing</a>(const istd::IChangeable* inputDocumentPtr, const std::<span class="keywordtype">string</span>&amp; documentTypeId) = 0;
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074 private Q_SLOTS:
+<a name="l00075"></a>00075        <span class="keywordtype">void</span> OnDoProcessing();
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 protected:
+<a name="l00078"></a>00078        I_REF(idoc::IDocumentManager, m_documentManagerCompPtr);
+<a name="l00079"></a>00079        I_REF(iproc::IProcessor, m_processorCompPtr);
+<a name="l00080"></a>00080        I_REF(iproc::IProgressManager, m_progressManagerCompPtr);
+<a name="l00081"></a>00081        I_REF(iprm::IParamsSet, m_paramsSetCompPtr);
+<a name="l00082"></a>00082        I_REF(iqtgui::IGuiObject, m_paramsGuiCompPtr);
+<a name="l00083"></a>00083        I_ATTR(istd::CString, m_commandNameAttrPtr);
+<a name="l00084"></a>00084        I_ATTR(istd::CString, m_menuNameAttrPtr);
+<a name="l00085"></a>00085        I_ATTR(<span class="keywordtype">bool</span>, m_inputDocumentRequiredAttrPtr);
+<a name="l00086"></a>00086 
+<a name="l00087"></a><a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#ac43a9bb9597e0f9b2deaa94b4f63deb">00087</a>        iqtgui::CHierarchicalCommand <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#ac43a9bb9597e0f9b2deaa94b4f63deb">m_processingMenu</a>;
+<a name="l00088"></a><a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#ada893f7d2e651088ca04fe46d21b6fc">00088</a>        iqtgui::CHierarchicalCommand <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#ada893f7d2e651088ca04fe46d21b6fc">m_rootCommands</a>;
+<a name="l00089"></a><a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#32607952e2d40660d23fafd36dfcb06b">00089</a>        iqtgui::CHierarchicalCommand <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#32607952e2d40660d23fafd36dfcb06b">m_processingCommand</a>;
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 private:
+<a name="l00092"></a>00092        class DocumentManagerObserver: public imod::TSingleModelObserverBase&lt;idoc::IDocumentManager&gt;
+<a name="l00093"></a>00093        {
+<a name="l00094"></a>00094        <span class="keyword">public</span>:
+<a name="l00095"></a>00095               DocumentManagerObserver(<a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html">CDocumentProcessingManagerCompBase</a>&amp; parent);
+<a name="l00096"></a>00096        <span class="keyword">protected</span>:
+<a name="l00097"></a>00097               <span class="comment">// reimplemented (imod::TSingleModelObserverBase)</span>
+<a name="l00098"></a>00098               <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnUpdate(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00099"></a>00099        <span class="keyword">private</span>:
+<a name="l00100"></a>00100               <a class="code" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html">CDocumentProcessingManagerCompBase</a>&amp; m_parent;
+<a name="l00101"></a>00101        };
 <a name="l00102"></a>00102 
-<a name="l00103"></a>00103 <span class="preprocessor">#endif // !iqtproc_CDocumentProcessingManagerCompBase_included</span>
-<a name="l00104"></a>00104 <span class="preprocessor"></span>
+<a name="l00103"></a>00103        DocumentManagerObserver m_documentManagerObserver;
+<a name="l00104"></a>00104 };
 <a name="l00105"></a>00105 
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107 } <span class="comment">// namespace iproc</span>
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 <span class="preprocessor">#endif // !iqtproc_CDocumentProcessingManagerCompBase_included</span>
+<a name="l00111"></a>00111 <span class="preprocessor"></span>
+<a name="l00112"></a>00112 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

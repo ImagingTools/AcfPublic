@@ -20,32 +20,27 @@
 ********************************************************************************/
 
 
-#include "ibase/CRectangleComp.h"
+#include "i2d/CPosition2dComp.h"
 
 
-namespace ibase
+namespace i2d
 {		
 
 // protected methods
 
 // reimplemented (icomp::CComponentBase)
 
-void CRectangleComp::OnComponentCreated()
+void CPosition2dComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	I_ASSERT(m_leftAttrPtr.IsValid());
-	I_ASSERT(m_topAttrPtr.IsValid());
-	I_ASSERT(m_widthAttrPtr.IsValid());
-	I_ASSERT(m_heightAttrPtr.IsValid());
+	I_ASSERT(m_xAttrPtr.IsValid());
+	I_ASSERT(m_yAttrPtr.IsValid());
 
-	SetLeft(*m_leftAttrPtr);
-	SetTop(*m_topAttrPtr);
-	SetRight(*m_leftAttrPtr + *m_widthAttrPtr);
-	SetBottom(*m_topAttrPtr + *m_heightAttrPtr);
+	SetPosition(i2d::CVector2d(*m_xAttrPtr, *m_yAttrPtr));
 }
 
 
-} // namespace ibase
+} // namespace i2d
 
 

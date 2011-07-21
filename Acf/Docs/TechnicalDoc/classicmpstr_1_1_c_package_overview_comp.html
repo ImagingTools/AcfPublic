@@ -72,6 +72,8 @@ Inheritance diagram for icmpstr::CPackageOverviewComp:</div>
 <a class="el" href="classicmpstr_1_1_i_element_selection_info.html">IElementSelectionInfo</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#5bb11af954b4b08f97e4ebe20290ec04">BaseClass</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#4b366692a2ed8f973b30ecc682a8dd14">I_ASSIGN_TO</a> (m_configFilePathModelCompPtr, m_configFilePathCompPtr, false)</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#6e7340b3f8c46f19c0d5fd2e2fa391ca">CPackageOverviewComp</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <br class="typebreak">
@@ -126,6 +128,9 @@ Inheritance diagram for icmpstr::CPackageOverviewComp:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#9fba419020f348e96b8997c35a65525f">OnGuiCreated</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#9fba419020f348e96b8997c35a65525f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#cf1d4838d86ed1ba6cbb209d0edd505f">OnGuiDestroyed</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called just before GUI is released.  <a href="#cf1d4838d86ed1ba6cbb209d0edd505f"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#70908ffbb93dc94b6cd35a825147d0c5">OnRetranslate</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when non-GUI elements (like commands) should be retranslated.  <a href="#70908ffbb93dc94b6cd35a825147d0c5"></a><br></td></tr>
@@ -138,7 +143,7 @@ Inheritance diagram for icmpstr::CPackageOverviewComp:</div>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 
-<p>Definition at line <a class="el" href="_c_package_overview_comp_8h_source.html#l00035">35</a> of file <a class="el" href="_c_package_overview_comp_8h_source.html">CPackageOverviewComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_package_overview_comp_8h_source.html#l00037">37</a> of file <a class="el" href="_c_package_overview_comp_8h_source.html">CPackageOverviewComp.h</a>.</p>
 <hr><h2>Member Typedef Documentation</h2>
 <a class="anchor" name="5bb11af954b4b08f97e4ebe20290ec04"></a><!-- doxytag: member="icmpstr::CPackageOverviewComp::BaseClass" ref="5bb11af954b4b08f97e4ebe20290ec04" args="" -->
 <div class="memitem">
@@ -155,7 +160,7 @@ Inheritance diagram for icmpstr::CPackageOverviewComp:</div>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html#4db84ac5f380ecdc510e2866d34e4a99">iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPackageOverviewComp, IElementSelectionInfo &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_package_overview_comp_8h_source.html#l00043">43</a> of file <a class="el" href="_c_package_overview_comp_8h_source.html">CPackageOverviewComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_package_overview_comp_8h_source.html#l00045">45</a> of file <a class="el" href="_c_package_overview_comp_8h_source.html">CPackageOverviewComp.h</a>.</p>
 
 </div>
 </div><p>
@@ -328,6 +333,41 @@ This commands will be integrated in global menu system undependent of actual sel
 
 <p>
 Get component list, that match to the filter criteria. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="4b366692a2ed8f973b30ecc682a8dd14"></a><!-- doxytag: member="icmpstr::CPackageOverviewComp::I_ASSIGN_TO" ref="4b366692a2ed8f973b30ecc682a8dd14" args="(m_configFilePathModelCompPtr, m_configFilePathCompPtr, false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">icmpstr::CPackageOverviewComp::I_ASSIGN_TO           </td>
+          <td>(</td>
+          <td class="paramtype">m_configFilePathModelCompPtr&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_configFilePathCompPtr&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
 <p>
 
 </div>
@@ -582,6 +622,29 @@ Called just after GUI is initialized.
 
 </div>
 </div><p>
+<a class="anchor" name="cf1d4838d86ed1ba6cbb209d0edd505f"></a><!-- doxytag: member="icmpstr::CPackageOverviewComp::OnGuiDestroyed" ref="cf1d4838d86ed1ba6cbb209d0edd505f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void icmpstr::CPackageOverviewComp::OnGuiDestroyed           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Called just before GUI is released. 
+<p>
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#e6d3a0820a47c572289ddd3d07a7da51">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CPackageOverviewComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; IElementSelectionInfo &gt; &gt;</a>.</p>
+
+</div>
+</div><p>
 <a class="anchor" name="277a7b1ca10749405ab7cc185d339987"></a><!-- doxytag: member="icmpstr::CPackageOverviewComp::OnGuiRetranslate" ref="277a7b1ca10749405ab7cc185d339987" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -742,7 +805,7 @@ Do update of the model GUI.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_package_overview_comp_8h_source.html#l00208">208</a> of file <a class="el" href="_c_package_overview_comp_8h_source.html">CPackageOverviewComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_package_overview_comp_8h_source.html#l00229">229</a> of file <a class="el" href="_c_package_overview_comp_8h_source.html">CPackageOverviewComp.h</a>.</p>
 
 </div>
 </div><p>

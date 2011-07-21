@@ -31,20 +31,20 @@ namespace iqtproc
 
 // reimplemented (iqtproc::CDocumentProcessingManagerCompBase)
 
-void CDocumentProcessingManagerComp::DoDocumentProcessing(const istd::IChangeable& inputDocument, const std::string& documentTypeId)
+void CDocumentProcessingManagerComp::DoDocumentProcessing(const istd::IChangeable* inputDocumentPtr, const std::string& documentTypeId)
 {
 	if (m_inPlaceProcessingAttrPtr.IsValid() && *m_inPlaceProcessingAttrPtr){
-		DoInPlaceProcessing(const_cast<istd::IChangeable&>(inputDocument));
+		DoInPlaceProcessing(const_cast<istd::IChangeable*>(inputDocumentPtr));
 	}
 	else{
-		DoProcessingToOutput(inputDocument, documentTypeId);
+		DoProcessingToOutput(inputDocumentPtr, documentTypeId);
 	}
 }
 
 
 // private methods
 
-void CDocumentProcessingManagerComp::DoProcessingToOutput(const istd::IChangeable& inputDocument, const std::string& documentTypeId)
+void CDocumentProcessingManagerComp::DoProcessingToOutput(const istd::IChangeable* inputDocumentPtr, const std::string& documentTypeId)
 {
 	istd::IChangeable* outputDocumentPtr = NULL;
 	if (!m_documentManagerCompPtr->FileNew(documentTypeId, false, "", &outputDocumentPtr)){
@@ -72,7 +72,7 @@ void CDocumentProcessingManagerComp::DoProcessingToOutput(const istd::IChangeabl
 
 	int retVal = m_processorCompPtr->DoProcessing(
 				m_paramsSetCompPtr.GetPtr(),
-				&inputDocument,
+				inputDocumentPtr,
 				outputDocumentPtr,
 				m_progressManagerCompPtr.GetPtr());
 	
@@ -96,11 +96,17 @@ void CDocumentProcessingManagerComp::DoProcessingToOutput(const istd::IChangeabl
 }
 
 
-void CDocumentProcessingManagerComp::DoInPlaceProcessing(istd::IChangeable& inputDocument)
+void CDocumentProcessingManagerComp::DoInPlaceProcessing(istd::IChangeable* inputDocumentPtr)
 {
-	istd::CChangeNotifier changePtr(&inputDocument);
+	if (inputDocumentPtr == NULL){
+		SendErrorMessage(0, "No input document", "Document processing manager");
 
-	istd::TDelPtr<istd::IChangeable> outputDocumentPtr(inputDocument.CloneMe());
+		return;
+	}
+
+	istd::CChangeNotifier changePtr(inputDocumentPtr);
+
+	istd::TDelPtr<istd::IChangeable> outputDocumentPtr(inputDocumentPtr->CloneMe());
 	if (!outputDocumentPtr.IsValid()){
 		SendErrorMessage(0, "Result object could not be created", "Document processing manager");
 		
@@ -109,7 +115,7 @@ void CDocumentProcessingManagerComp::DoInPlaceProcessing(istd::IChangeable& inpu
 
 	int retVal = m_processorCompPtr->DoProcessing(
 				m_paramsSetCompPtr.GetPtr(),
-				&inputDocument,
+				inputDocumentPtr,
 				outputDocumentPtr.GetPtr(),
 				m_progressManagerCompPtr.GetPtr());
 	
@@ -119,7 +125,7 @@ void CDocumentProcessingManagerComp::DoInPlaceProcessing(istd::IChangeable& inpu
 		return;
 	}
 
-	if (!inputDocument.CopyFrom(*outputDocumentPtr.GetPtr())){
+	if (!inputDocumentPtr->CopyFrom(*outputDocumentPtr.GetPtr())){
 		SendErrorMessage(0, "Result object is incompatible", "Document processing manager");
 
 		return;

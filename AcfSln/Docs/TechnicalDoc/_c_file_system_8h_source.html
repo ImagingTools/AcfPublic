@@ -40,16 +40,19 @@
 <a name="l00020"></a>00020 <span class="keyword">public</span>:
 <a name="l00021"></a>00021        <span class="comment">// reimplemented (isys::IFileSystem)</span>
 <a name="l00022"></a>00022        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_c_file_system.html#9d4d54b90eb02e1932aa001bdfbd0965">IsPresent</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; filePath) <span class="keyword">const</span>;
-<a name="l00023"></a>00023        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_c_file_system.html#8c9a5d14b3e150ce44786a8beda621c1">CopyFile</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; inputFile, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; outputFile, <span class="keywordtype">bool</span> overwriteExisting = <span class="keyword">false</span>) <span class="keyword">const</span>;
-<a name="l00024"></a>00024 };
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026 
-<a name="l00027"></a>00027 } <span class="comment">// namespace iwin</span>
+<a name="l00023"></a>00023        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_c_file_system.html#d9c3798ea83458bd6379dc7f4f359399">CreateFileCopy</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; inputFile, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; outputFile, <span class="keywordtype">bool</span> overwriteExisting = <span class="keyword">false</span>) <span class="keyword">const</span>;
+<a name="l00024"></a>00024        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_c_file_system.html#4885cf592bd9de31ff7a842e871a9713">RemoveFile</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; filePath) <span class="keyword">const</span>;
+<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_c_file_system.html#2804491a1e9ee8d869c6cefc402112b3">RemoveFolder</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; directoryPath, <span class="keywordtype">bool</span> ignoreNonEmpty = <span class="keyword">false</span>) <span class="keyword">const</span>;
+<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_c_file_system.html#ea036ef11a67dbac5feb479e7dcce08d">CreateFolder</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; directoryPath) <span class="keyword">const</span>;
+<a name="l00027"></a>00027 };
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030 <span class="preprocessor">#endif // !iwin_CFileSystem_included</span>
-<a name="l00031"></a>00031 <span class="preprocessor"></span>
+<a name="l00030"></a>00030 } <span class="comment">// namespace iwin</span>
+<a name="l00031"></a>00031 
 <a name="l00032"></a>00032 
+<a name="l00033"></a>00033 <span class="preprocessor">#endif // !iwin_CFileSystem_included</span>
+<a name="l00034"></a>00034 <span class="preprocessor"></span>
+<a name="l00035"></a>00035 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

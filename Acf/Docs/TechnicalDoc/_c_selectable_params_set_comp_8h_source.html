@@ -72,42 +72,41 @@
 <a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#368e08ba23a7cfb1631a01a59bad2894" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
 <a name="l00053"></a>00053 
 <a name="l00054"></a>00054 <span class="keyword">protected</span>:
-<a name="l00055"></a>00055        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#fb132afb680e660db4e12567c955f43c" title="Get number of managed set.">GetOptionsCount</a>() <span class="keyword">const</span>;
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#ae6b92bf0b46593dc5e65ddd6c0f4a1a" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 <span class="keyword">private</span>:
-<a name="l00065"></a>00065        <span class="keywordtype">void</span> SetupCurrentParamsSetBridge();
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 <span class="keyword">private</span>:
-<a name="l00072"></a>00072        <span class="keyword">class </span>CurrentParamsSetObserver: <span class="keyword">public</span> imod::CSingleModelObserverBase
-<a name="l00073"></a>00073        {
-<a name="l00074"></a>00074        <span class="keyword">public</span>:
-<a name="l00075"></a>00075               CurrentParamsSetObserver(<a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html" title="Interface allowing to select single option from list of options.">CSelectableParamsSetComp</a>&amp; parent);
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00078"></a>00078               <span class="keyword">virtual</span> <span class="keywordtype">void</span> BeforeUpdate(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00079"></a>00079               <span class="keyword">virtual</span> <span class="keywordtype">void</span> AfterUpdate(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00060"></a>00060        <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#2d14573411e2c2f13683aeb0ab6b0313" title="Set the bridge to the currently selected parameter set.">SetupCurrentParamsSetBridge</a>();
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#fb132afb680e660db4e12567c955f43c" title="Get number of managed set.">GetOptionsCount</a>() <span class="keyword">const</span>;
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#ae6b92bf0b46593dc5e65ddd6c0f4a1a" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="keyword">private</span>:
+<a name="l00071"></a>00071        <span class="keyword">class </span>CurrentParamsSetObserver: <span class="keyword">public</span> imod::CSingleModelObserverBase
+<a name="l00072"></a>00072        {
+<a name="l00073"></a>00073        <span class="keyword">public</span>:
+<a name="l00074"></a>00074               CurrentParamsSetObserver(<a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html" title="Interface allowing to select single option from list of options.">CSelectableParamsSetComp</a>&amp; parent);
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00077"></a>00077               <span class="keyword">virtual</span> <span class="keywordtype">void</span> BeforeUpdate(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00078"></a>00078               <span class="keyword">virtual</span> <span class="keywordtype">void</span> AfterUpdate(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00079"></a>00079 
 <a name="l00080"></a>00080        <span class="keyword">private</span>:
 <a name="l00081"></a>00081               <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html" title="Interface allowing to select single option from list of options.">CSelectableParamsSetComp</a>&amp; m_parent;
 <a name="l00082"></a>00082        };
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084 <span class="keyword">private</span>:
-<a name="l00085"></a>00085        <span class="keywordtype">int</span> m_selectedIndex;
-<a name="l00086"></a>00086        CurrentParamsSetObserver m_currentParamsSetObserver;
-<a name="l00087"></a>00087        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* m_currentParamsModelPtr;
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_selectionIdAttrPtr);
-<a name="l00090"></a>00090        I_REF(<a class="code" href="classiprm_1_1_i_params_manager.html" title="Manager of parameters set.">IParamsManager</a>, m_paramsManagerCompPtr);
-<a name="l00091"></a>00091 };
+<a name="l00084"></a>00084        <span class="keywordtype">int</span> m_selectedIndex;
+<a name="l00085"></a>00085        CurrentParamsSetObserver m_currentParamsSetObserver;
+<a name="l00086"></a>00086        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* m_currentParamsModelPtr;
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_selectionIdAttrPtr);
+<a name="l00089"></a>00089        I_REF(<a class="code" href="classiprm_1_1_i_params_manager.html" title="Manager of parameters set.">IParamsManager</a>, m_paramsManagerCompPtr);
+<a name="l00090"></a>00090 };
+<a name="l00091"></a>00091 
 <a name="l00092"></a>00092 
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094 } <span class="comment">// namespace iprm</span>
+<a name="l00093"></a>00093 } <span class="comment">// namespace iprm</span>
+<a name="l00094"></a>00094 
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097 <span class="preprocessor">#endif // !iprm_CSelectableParamsSetComp_included</span>
-<a name="l00098"></a>00098 <span class="preprocessor"></span>
-<a name="l00099"></a>00099 
+<a name="l00096"></a>00096 <span class="preprocessor">#endif // !iprm_CSelectableParamsSetComp_included</span>
+<a name="l00097"></a>00097 <span class="preprocessor"></span>
+<a name="l00098"></a>00098 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

@@ -65,9 +65,18 @@ Inheritance diagram for iqt::CFileSystem:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_file_system.html#113a59bf006a704a0ba819f8e3cd4c03">IsPresent</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath) const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if some file is present.  <a href="#113a59bf006a704a0ba819f8e3cd4c03"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_file_system.html#7e22374494a40e8bd006b22dc9155ca9">CopyFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;inputFile, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;outputFile, bool overwriteExisting=false) const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_file_system.html#5b1debb91b7addd64721bc4fa75e5f83">CreateFileCopy</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;inputFile, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;outputFile, bool overwriteExisting=false) const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Copy any file to another.  <a href="#7e22374494a40e8bd006b22dc9155ca9"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Copy any file to another.  <a href="#5b1debb91b7addd64721bc4fa75e5f83"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_file_system.html#b4c4db1221c1225ed8e73c090fb947f2">RemoveFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remove the file <code>filePath</code> from the file system.  <a href="#b4c4db1221c1225ed8e73c090fb947f2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_file_system.html#163b42096e2877f343afc3fd4bcb9a8c">RemoveFolder</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;directoryPath, bool ignoreNonEmpty=false) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remove the directory <code>directoryPath</code> from the file system.  <a href="#163b42096e2877f343afc3fd4bcb9a8c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_file_system.html#b08e26aa6df454b43a4be873b8b31dcd">CreateFolder</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;directoryPath) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create an empty directory.  <a href="#b08e26aa6df454b43a4be873b8b31dcd"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_file_system.html#f80a8de786cac69bef9df9d8249d96b5">FindVariableValue</a> (const QString &amp;varName)</td></tr>
 
@@ -83,12 +92,12 @@ Implementation of file system information based on QT.
 This implementation is part of standard services if you use QT-based components. 
 <p>Definition at line <a class="el" href="_c_file_system_8h_source.html#l00018">18</a> of file <a class="el" href="_c_file_system_8h_source.html">CFileSystem.h</a>.</p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="7e22374494a40e8bd006b22dc9155ca9"></a><!-- doxytag: member="iqt::CFileSystem::CopyFile" ref="7e22374494a40e8bd006b22dc9155ca9" args="(const istd::CString &amp;inputFile, const istd::CString &amp;outputFile, bool overwriteExisting=false) const " -->
+<a class="anchor" name="5b1debb91b7addd64721bc4fa75e5f83"></a><!-- doxytag: member="iqt::CFileSystem::CreateFileCopy" ref="5b1debb91b7addd64721bc4fa75e5f83" args="(const istd::CString &amp;inputFile, const istd::CString &amp;outputFile, bool overwriteExisting=false) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool iqt::CFileSystem::CopyFile           </td>
+          <td class="memname">virtual bool iqt::CFileSystem::CreateFileCopy           </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&nbsp;</td>
           <td class="paramname"> <em>inputFile</em>, </td>
@@ -118,7 +127,31 @@ This implementation is part of standard services if you use QT-based components.
 Copy any file to another. 
 <p>
 If the <code>overwriteExisting</code> is set on, the existing file will be overwritten. 
-<p>Implements <a class="el" href="classisys_1_1_i_file_system.html#a16b7f2e226808e605a8e0fc0a39e69e">isys::IFileSystem</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_file_system.html#1c2894ea376870e520ccd2f88d58ad0f">isys::IFileSystem</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="b08e26aa6df454b43a4be873b8b31dcd"></a><!-- doxytag: member="iqt::CFileSystem::CreateFolder" ref="b08e26aa6df454b43a4be873b8b31dcd" args="(const istd::CString &amp;directoryPath) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iqt::CFileSystem::CreateFolder           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>directoryPath</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Create an empty directory. 
+<p>
+
+<p>Implements <a class="el" href="classisys_1_1_i_file_system.html#3fda9e2fdad8edcd35e1c93cb06c7b14">isys::IFileSystem</a>.</p>
 
 </div>
 </div><p>
@@ -331,6 +364,63 @@ Check if some file is present.
 <p>
 
 <p>Implements <a class="el" href="classisys_1_1_i_file_system.html#a2d5af72f8d7497d3ac2f1c5814faae6">isys::IFileSystem</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="b4c4db1221c1225ed8e73c090fb947f2"></a><!-- doxytag: member="iqt::CFileSystem::RemoveFile" ref="b4c4db1221c1225ed8e73c090fb947f2" args="(const istd::CString &amp;filePath) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iqt::CFileSystem::RemoveFile           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>filePath</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Remove the file <code>filePath</code> from the file system. 
+<p>
+
+<p>Implements <a class="el" href="classisys_1_1_i_file_system.html#a09e10c6f07b5e7ec8170c8f8fe7f78d">isys::IFileSystem</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="163b42096e2877f343afc3fd4bcb9a8c"></a><!-- doxytag: member="iqt::CFileSystem::RemoveFolder" ref="163b42096e2877f343afc3fd4bcb9a8c" args="(const istd::CString &amp;directoryPath, bool ignoreNonEmpty=false) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iqt::CFileSystem::RemoveFolder           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>directoryPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>ignoreNonEmpty</em> = <code>false</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Remove the directory <code>directoryPath</code> from the file system. 
+<p>
+If <code>ignoreNonEmpty</code> flag set, all files in the directory will be also deleted, otherwise operation will be canceled and the function returns <code>false</code>. 
+<p>Implements <a class="el" href="classisys_1_1_i_file_system.html#d0959eee52bead72b584e44eef2840e5">isys::IFileSystem</a>.</p>
 
 </div>
 </div><p>

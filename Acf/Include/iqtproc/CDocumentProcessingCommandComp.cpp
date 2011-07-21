@@ -35,7 +35,7 @@ namespace iqtproc
 
 // reimplemented (iqtproc::CDocumentProcessingManagerCompBase)
 
-void CDocumentProcessingCommandComp::DoDocumentProcessing(const istd::IChangeable& inputDocument, const std::string& /*documentTypeId*/)
+void CDocumentProcessingCommandComp::DoDocumentProcessing(const istd::IChangeable* inputDocumentPtr, const std::string& /*documentTypeId*/)
 {
 	if (!m_outputDataCompPtr.IsValid()){
 		SendErrorMessage(0, "Processing result data model not set");
@@ -47,7 +47,7 @@ void CDocumentProcessingCommandComp::DoDocumentProcessing(const istd::IChangeabl
 
 	int retVal = m_processorCompPtr->DoProcessing(
 				m_paramsSetCompPtr.GetPtr(),
-				&inputDocument,
+				inputDocumentPtr,
 				m_outputDataCompPtr.GetPtr(),
 				m_progressManagerCompPtr.GetPtr());
 	

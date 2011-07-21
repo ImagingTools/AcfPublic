@@ -154,6 +154,11 @@ protected:
 				int minimalAudioFrame = -1);
 
 	/**
+		Read next packet from stream.
+	*/
+	bool ReadNextPacket();
+
+	/**
 		Fininsh single task and return its ID.
 	*/
 	int FinishNextTask();

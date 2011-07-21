@@ -59,6 +59,9 @@ Inheritance diagram for iqtproc::CDocumentProcessingManagerCompBase:</div>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#035479d4fa5bb05e8f203b61c28b4950">CDocumentProcessingManagerCompBase</a> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#7daa3801021ab985bf29f88f79f98564">IsInputDocumentRequired</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return <code>true</code>, if the input document is required for processing.  <a href="#7daa3801021ab985bf29f88f79f98564"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#eb34491bf12adccd77c77a7089d3e3e6">SetProcessingCommandEnabled</a> (bool isProcessingCommandEnabled=true)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Enable or disable processing command.  <a href="#eb34491bf12adccd77c77a7089d3e3e6"></a><br></td></tr>
@@ -70,9 +73,9 @@ Inheritance diagram for iqtproc::CDocumentProcessingManagerCompBase:</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#51d09590da36a6e9ab9f0acda10a5608">OnComponentDestroyed</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#0cd91b25472f1c54992f0ef8de66cd56">DoDocumentProcessing</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;inputDocument, const std::string &amp;documentTypeId)=0</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#d153c1bfe80cd1c712353efe3f1271f8">DoDocumentProcessing</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *inputDocumentPtr, const std::string &amp;documentTypeId)=0</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Process the current document.  <a href="#0cd91b25472f1c54992f0ef8de66cd56"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Process the current document.  <a href="#d153c1bfe80cd1c712353efe3f1271f8"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#ac43a9bb9597e0f9b2deaa94b4f63deb">m_processingMenu</a></td></tr>
 
@@ -127,15 +130,15 @@ Inheritance diagram for iqtproc::CDocumentProcessingManagerCompBase:</div>
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="0cd91b25472f1c54992f0ef8de66cd56"></a><!-- doxytag: member="iqtproc::CDocumentProcessingManagerCompBase::DoDocumentProcessing" ref="0cd91b25472f1c54992f0ef8de66cd56" args="(const istd::IChangeable &amp;inputDocument, const std::string &amp;documentTypeId)=0" -->
+<a class="anchor" name="d153c1bfe80cd1c712353efe3f1271f8"></a><!-- doxytag: member="iqtproc::CDocumentProcessingManagerCompBase::DoDocumentProcessing" ref="d153c1bfe80cd1c712353efe3f1271f8" args="(const istd::IChangeable *inputDocumentPtr, const std::string &amp;documentTypeId)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iqtproc::CDocumentProcessingManagerCompBase::DoDocumentProcessing           </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>inputDocument</em>, </td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&nbsp;</td>
+          <td class="paramname"> <em>inputDocumentPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -156,7 +159,7 @@ Inheritance diagram for iqtproc::CDocumentProcessingManagerCompBase:</div>
 Process the current document. 
 <p>
 
-<p>Implemented in <a class="el" href="classiqtproc_1_1_c_document_processing_command_comp.html#174b91d7b92371112d79fe610f49697c">iqtproc::CDocumentProcessingCommandComp</a>, and <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp.html#e14722215579054097dc6b52e2515db3">iqtproc::CDocumentProcessingManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiqtproc_1_1_c_document_processing_command_comp.html#a3809e965912e40cb7be7fffb84444b3">iqtproc::CDocumentProcessingCommandComp</a>, and <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp.html#fb35da4c479edec2f299240fe86ccd94">iqtproc::CDocumentProcessingManagerComp</a>.</p>
 
 </div>
 </div><p>
@@ -180,6 +183,27 @@ Get list of menu commands.
 <p>
 This commands will be integrated in global menu system undependent of actual selected view. For support of normal pull down menu, depth of this tree structure should be at least 3. 
 <p>Implements <a class="el" href="classibase_1_1_i_commands_provider.html#18e74c6d8b6a6c4023fce0a7c3da4c7d">ibase::ICommandsProvider</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="7daa3801021ab985bf29f88f79f98564"></a><!-- doxytag: member="iqtproc::CDocumentProcessingManagerCompBase::IsInputDocumentRequired" ref="7daa3801021ab985bf29f88f79f98564" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool iqtproc::CDocumentProcessingManagerCompBase::IsInputDocumentRequired           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Return <code>true</code>, if the input document is required for processing. 
+<p>
 
 </div>
 </div><p>
@@ -259,7 +283,7 @@ Enable or disable processing command.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html#l00082">82</a> of file <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html">CDocumentProcessingManagerCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html#l00089">89</a> of file <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html">CDocumentProcessingManagerCompBase.h</a>.</p>
 
 </div>
 </div><p>
@@ -276,7 +300,7 @@ Enable or disable processing command.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html#l00080">80</a> of file <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html">CDocumentProcessingManagerCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html#l00087">87</a> of file <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html">CDocumentProcessingManagerCompBase.h</a>.</p>
 
 </div>
 </div><p>
@@ -293,7 +317,7 @@ Enable or disable processing command.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html#l00081">81</a> of file <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html">CDocumentProcessingManagerCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html#l00088">88</a> of file <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html">CDocumentProcessingManagerCompBase.h</a>.</p>
 
 </div>
 </div><p>

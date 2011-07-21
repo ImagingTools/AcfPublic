@@ -24,6 +24,15 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CAnnulusComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
+    <filename>_c_annulus_comp_8h</filename>
+    <includes id="_c_annulus_8h" name="CAnnulus.h" local="yes" imported="no">i2d/CAnnulus.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <class kind="class">i2d::CAnnulusComp</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAnnulusSegment.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
     <filename>_c_annulus_segment_8h</filename>
@@ -32,11 +41,29 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CAnnulusSegmentComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
+    <filename>_c_annulus_segment_comp_8h</filename>
+    <includes id="_c_annulus_segment_8h" name="CAnnulusSegment.h" local="yes" imported="no">i2d/CAnnulusSegment.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <class kind="class">i2d::CAnnulusSegmentComp</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCircle.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
     <filename>_c_circle_8h</filename>
     <includes id="_c_position2d_8h" name="CPosition2d.h" local="yes" imported="no">i2d/CPosition2d.h</includes>
     <class kind="class">i2d::CCircle</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CCircleComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
+    <filename>_c_circle_comp_8h</filename>
+    <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <class kind="class">i2d::CCircleComp</class>
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
@@ -49,12 +76,30 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CLine2dComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
+    <filename>_c_line2d_comp_8h</filename>
+    <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <class kind="class">i2d::CLine2dComp</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CPosition2d.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
     <filename>_c_position2d_8h</filename>
     <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <class kind="class">i2d::CPosition2d</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPosition2dComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
+    <filename>_c_position2d_comp_8h</filename>
+    <includes id="_c_position2d_8h" name="CPosition2d.h" local="yes" imported="no">i2d/CPosition2d.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <class kind="class">i2d::CPosition2dComp</class>
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
@@ -68,6 +113,15 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CQuadrangleComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
+    <filename>_c_quadrangle_comp_8h</filename>
+    <includes id="_c_quadrangle_8h" name="CQuadrangle.h" local="yes" imported="no">i2d/CQuadrangle.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <class kind="class">i2d::CQuadrangleComp</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CRectangle.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
     <filename>_c_rectangle_8h</filename>
@@ -77,6 +131,15 @@
     <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
     <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
     <class kind="class">i2d::CRectangle</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CRectangleComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
+    <filename>_c_rectangle_comp_8h</filename>
+    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <class kind="class">i2d::CRectangleComp</class>
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
@@ -293,15 +356,6 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
-    <name>CRectangleComp.h</name>
-    <path>E:/Work/Projects/Development/Acf/Include/ibase/</path>
-    <filename>_c_rectangle_comp_8h</filename>
-    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <class kind="class">ibase::CRectangleComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
     <name>CRegistryCodeSaverComp.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/ibase/</path>
     <filename>_c_registry_code_saver_comp_8h</filename>
@@ -364,6 +418,7 @@
     <name>CTextFileLogComp.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/ibase/</path>
     <filename>_c_text_file_log_comp_8h</filename>
+    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
     <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="yes" imported="no">ibase/CStreamLogCompBase.h</includes>
     <class kind="class">ibase::CTextFileLogComp</class>
@@ -914,6 +969,7 @@
     <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
     <includes id="_c_component_address_8h" name="CComponentAddress.h" local="yes" imported="no">icomp/CComponentAddress.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
     <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
     <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
@@ -2391,6 +2447,12 @@
     <namespace>imod</namespace>
   </compound>
   <compound kind="file">
+    <name>TModelDispatcher.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/imod/</path>
+    <filename>_t_model_dispatcher_8h</filename>
+    <includes id="_c_multi_model_observer_base_8h" name="CMultiModelObserverBase.h" local="yes" imported="no">imod/CMultiModelObserverBase.h</includes>
+  </compound>
+  <compound kind="file">
     <name>TModelWrap.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/imod/</path>
     <filename>_t_model_wrap_8h</filename>
@@ -2458,6 +2520,19 @@
     <includes id="_i_linear_adjust_params_8h" name="ILinearAdjustParams.h" local="yes" imported="no">iprm/ILinearAdjustParams.h</includes>
     <includes id="_i_linear_adjust_constraints_8h" name="ILinearAdjustConstraints.h" local="yes" imported="no">iprm/ILinearAdjustConstraints.h</includes>
     <class kind="class">iprm::CLinearAdjustParamsComp</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CManagerParamsSetShadowerComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iprm/</path>
+    <filename>_c_manager_params_set_shadower_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
+    <class kind="class">iprm::CManagerParamsSetShadowerComp</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -4760,6 +4835,15 @@
     <namespace>iser</namespace>
   </compound>
   <compound kind="file">
+    <name>TVersionInfoSerializer.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iser/</path>
+    <filename>_t_version_info_serializer_8h</filename>
+    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <class kind="class">iser::TVersionInfoSerializer</class>
+    <namespace>iser</namespace>
+  </compound>
+  <compound kind="file">
     <name>TXmlStreamReadArchiveBase.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/iser/</path>
     <filename>_t_xml_stream_read_archive_base_8h</filename>
@@ -4795,7 +4879,7 @@
     <name>CChangeDelegator.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/istd/</path>
     <filename>_c_change_delegator_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_i_change_delegator_8h" name="IChangeDelegator.h" local="yes" imported="no">istd/IChangeDelegator.h</includes>
     <class kind="class">istd::CChangeDelegator</class>
     <namespace>istd</namespace>
   </compound>
@@ -4917,6 +5001,14 @@
     <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <class kind="class">istd::IChangeable</class>
+    <namespace>istd</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IChangeDelegator.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/istd/</path>
+    <filename>_i_change_delegator_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <class kind="class">istd::IChangeDelegator</class>
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
@@ -5250,6 +5342,7 @@
     <name>TChangeBinder.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/istd/</path>
     <filename>_t_change_binder_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <class kind="class">istd::TChangeBinder</class>
     <namespace>istd</namespace>
   </compound>
@@ -5637,6 +5730,7 @@
     <class kind="class">iser::IObject</class>
     <class kind="class">iser::ISerializable</class>
     <class kind="class">iser::IVersionInfo</class>
+    <class kind="class">iser::TVersionInfoSerializer</class>
     <class kind="class">isys::IFileInfo</class>
     <namespace>iser</namespace>
   </compound>
@@ -5831,12 +5925,19 @@
     <name>i2d</name>
     <filename>namespacei2d.html</filename>
     <class kind="class">i2d::CAnnulus</class>
+    <class kind="class">i2d::CAnnulusComp</class>
     <class kind="class">i2d::CAnnulusSegment</class>
+    <class kind="class">i2d::CAnnulusSegmentComp</class>
     <class kind="class">i2d::CCircle</class>
+    <class kind="class">i2d::CCircleComp</class>
     <class kind="class">i2d::CLine2d</class>
+    <class kind="class">i2d::CLine2dComp</class>
     <class kind="class">i2d::CPosition2d</class>
+    <class kind="class">i2d::CPosition2dComp</class>
     <class kind="class">i2d::CQuadrangle</class>
+    <class kind="class">i2d::CQuadrangleComp</class>
     <class kind="class">i2d::CRectangle</class>
+    <class kind="class">i2d::CRectangleComp</class>
     <class kind="class">i2d::CTransform</class>
     <class kind="class">i2d::CVector2d</class>
     <class kind="class">i2d::IObject2d</class>
@@ -5939,6 +6040,26 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>i2d::CAnnulusComp</name>
+    <filename>classi2d_1_1_c_annulus_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::CAnnulus</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_annulus_comp.html</anchorfile>
+      <anchor>68591567776f3db7f7b9aeeb65daa9be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_annulus_comp.html</anchorfile>
+      <anchor>c1b0ecf4f05188e652047870e6756a0e</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>i2d::CAnnulusSegment</name>
     <filename>classi2d_1_1_c_annulus_segment.html</filename>
     <base>i2d::CAnnulus</base>
@@ -6007,6 +6128,26 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>i2d::CAnnulusSegmentComp</name>
+    <filename>classi2d_1_1_c_annulus_segment_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::CAnnulusSegment</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_annulus_segment_comp.html</anchorfile>
+      <anchor>b993e15461273426b19ace62931675cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_annulus_segment_comp.html</anchorfile>
+      <anchor>fc3743dcac9bc22779f957257261be4c</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>i2d::CCircle</name>
     <filename>classi2d_1_1_c_circle.html</filename>
     <base>i2d::CPosition2d</base>
@@ -6065,6 +6206,26 @@
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
       <anchor>62fefbfbe664cd46152b361336a9db23</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CCircleComp</name>
+    <filename>classi2d_1_1_c_circle_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::CCircle</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_circle_comp.html</anchorfile>
+      <anchor>9fb4c7babbac94a9a083679f6aa20e01</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_circle_comp.html</anchorfile>
+      <anchor>1bbacd11a54daecbfb247fdd890d88aa</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6297,6 +6458,26 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>i2d::CLine2dComp</name>
+    <filename>classi2d_1_1_c_line2d_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::CLine2d</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_line2d_comp.html</anchorfile>
+      <anchor>c6bc659134b96f96d57f08bea82c64d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_line2d_comp.html</anchorfile>
+      <anchor>f8fcaa15684c6b5ea942c3a205396291</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>i2d::CPosition2d</name>
     <filename>classi2d_1_1_c_position2d.html</filename>
     <base virtualness="virtual">i2d::IObject2d</base>
@@ -6355,6 +6536,26 @@
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
       <anchor>c52dc2bacd2db9e64c8f164987e29ba2</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CPosition2dComp</name>
+    <filename>classi2d_1_1_c_position2d_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::CPosition2d</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_position2d_comp.html</anchorfile>
+      <anchor>ef37de94a7b89e40b9e7bd72fb53693a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_position2d_comp.html</anchorfile>
+      <anchor>5fb51bb79ccb3cb2c585b3a70063f916</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6472,6 +6673,26 @@
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
       <anchor>b981eef410d88440f031d7cf28cc5283</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CQuadrangleComp</name>
+    <filename>classi2d_1_1_c_quadrangle_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::CQuadrangle</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_quadrangle_comp.html</anchorfile>
+      <anchor>90b1bba3ac677cee1db75c8ef33a7f48</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_quadrangle_comp.html</anchorfile>
+      <anchor>3833c589a6d174f24a7655791b8d9525</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6841,6 +7062,26 @@
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
       <anchor>aa9e66e407475792d749c755f0523a12</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CRectangleComp</name>
+    <filename>classi2d_1_1_c_rectangle_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::CRectangle</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_rectangle_comp.html</anchorfile>
+      <anchor>205f1151ac2f60c9e505dd4f2c52ec0c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_rectangle_comp.html</anchorfile>
+      <anchor>a5ee204d7fb2ef91d044832538feae5d</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7512,7 +7753,6 @@
     <class kind="class">ibase::CModelBinderComp</class>
     <class kind="class">ibase::CModelProxyComp</class>
     <class kind="class">ibase::CObjectQueueComp</class>
-    <class kind="class">ibase::CRectangleComp</class>
     <class kind="class">ibase::CRegistryCodeSaverComp</class>
     <class kind="class">ibase::CSelectableFileConverterComp</class>
     <class kind="class">ibase::CSize</class>
@@ -8271,26 +8511,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ibase::CRectangleComp</name>
-    <filename>classibase_1_1_c_rectangle_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>i2d::CRectangle</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_rectangle_comp.html</anchorfile>
-      <anchor>d44523913e8d19f75e08945a519cc0d1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_c_rectangle_comp.html</anchorfile>
-      <anchor>76ea0afdd30339833f8439f79c910626</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ibase::CRegistryCodeSaverComp</name>
     <filename>classibase_1_1_c_registry_code_saver_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -8806,6 +9026,20 @@
       <anchorfile>classibase_1_1_c_text_file_log_comp.html</anchorfile>
       <anchor>3eb24e2bc1392315b530ae9fc5ed6990</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classibase_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>2df70545cccf3ae255ae38403711009b</anchor>
+      <arglist>(m_fileNameModelCompPtr, m_fileNameCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CTextFileLogComp</name>
+      <anchorfile>classibase_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>cadef390a249af4ace1e1cd3fc3c1e69</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -12402,6 +12636,13 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>4b366692a2ed8f973b30ecc682a8dd14</anchor>
+      <arglist>(m_configFilePathModelCompPtr, m_configFilePathCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CPackageOverviewComp</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
       <anchor>6e7340b3f8c46f19c0d5fd2e2fa391ca</anchor>
@@ -12559,6 +12800,13 @@
       <name>OnGuiCreated</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
       <anchor>9fba419020f348e96b8997c35a65525f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>cf1d4838d86ed1ba6cbb209d0edd505f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -22890,6 +23138,7 @@
     <class kind="class">iprm::CEnableableParamComp</class>
     <class kind="class">iprm::CFileNameParamComp</class>
     <class kind="class">iprm::CLinearAdjustParamsComp</class>
+    <class kind="class">iprm::CManagerParamsSetShadowerComp</class>
     <class kind="class">iprm::CParamsManagerComp</class>
     <class kind="class">iprm::CParamsSet</class>
     <class kind="class">iprm::CSelectableParamsSetComp</class>
@@ -23152,6 +23401,68 @@
       <anchorfile>classiprm_1_1_c_linear_adjust_params_comp.html</anchorfile>
       <anchor>bde43f5a6e0cc0c7967b2391d68ea5a5</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::CManagerParamsSetShadowerComp</name>
+    <filename>classiprm_1_1_c_manager_params_set_shadower_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base protection="protected">imod::CSingleModelObserverBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprm_1_1_c_manager_params_set_shadower_comp.html</anchorfile>
+      <anchor>f103c5d1efdf47c1e725cf653dc005ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiprm_1_1_c_manager_params_set_shadower_comp.html</anchorfile>
+      <anchor>fe551f500f9e6c7edaeac092acf26169</anchor>
+      <arglist>(m_paramsManagerModelCompPtr, m_paramsManagerCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CManagerParamsSetShadowerComp</name>
+      <anchorfile>classiprm_1_1_c_manager_params_set_shadower_comp.html</anchorfile>
+      <anchor>8b392c9b0ee474884093c7e9befde0b4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CopyParamsSetToShadow</name>
+      <anchorfile>classiprm_1_1_c_manager_params_set_shadower_comp.html</anchorfile>
+      <anchor>19e83df2ec12b94ed04cbec1114d4114</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetupCurrentParamsSetBridge</name>
+      <anchorfile>classiprm_1_1_c_manager_params_set_shadower_comp.html</anchorfile>
+      <anchor>653582e6ede7cba5029bbad6ec0f8c28</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiprm_1_1_c_manager_params_set_shadower_comp.html</anchorfile>
+      <anchor>39c74bd202678dd9a22cfdc6850df3eb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiprm_1_1_c_manager_params_set_shadower_comp.html</anchorfile>
+      <anchor>e9e5559ae874368f19c6e172c75969de</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiprm_1_1_c_manager_params_set_shadower_comp.html</anchorfile>
+      <anchor>7ac151b126133ac1ed91d287924ebc0b</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23480,6 +23791,13 @@
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
       <anchor>368e08ba23a7cfb1631a01a59bad2894</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetupCurrentParamsSetBridge</name>
+      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
+      <anchor>2d14573411e2c2f13683aeb0ab6b0313</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
@@ -26139,10 +26457,31 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>CopyFile</name>
+      <name>CreateFileCopy</name>
       <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
-      <anchor>7e22374494a40e8bd006b22dc9155ca9</anchor>
+      <anchor>5b1debb91b7addd64721bc4fa75e5f83</anchor>
       <arglist>(const istd::CString &amp;inputFile, const istd::CString &amp;outputFile, bool overwriteExisting=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveFile</name>
+      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
+      <anchor>b4c4db1221c1225ed8e73c090fb947f2</anchor>
+      <arglist>(const istd::CString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveFolder</name>
+      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
+      <anchor>163b42096e2877f343afc3fd4bcb9a8c</anchor>
+      <arglist>(const istd::CString &amp;directoryPath, bool ignoreNonEmpty=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateFolder</name>
+      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
+      <anchor>b08e26aa6df454b43a4be873b8b31dcd</anchor>
+      <arglist>(const istd::CString &amp;directoryPath) const </arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QString</type>
@@ -34152,8 +34491,8 @@
       <type>void</type>
       <name>DoDocumentProcessing</name>
       <anchorfile>classiqtproc_1_1_c_document_processing_command_comp.html</anchorfile>
-      <anchor>174b91d7b92371112d79fe610f49697c</anchor>
-      <arglist>(const istd::IChangeable &amp;inputDocument, const std::string &amp;documentTypeId)</arglist>
+      <anchor>a3809e965912e40cb7be7fffb84444b3</anchor>
+      <arglist>(const istd::IChangeable *inputDocumentPtr, const std::string &amp;documentTypeId)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34171,8 +34510,8 @@
       <type>void</type>
       <name>DoDocumentProcessing</name>
       <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp.html</anchorfile>
-      <anchor>e14722215579054097dc6b52e2515db3</anchor>
-      <arglist>(const istd::IChangeable &amp;inputDocument, const std::string &amp;documentTypeId)</arglist>
+      <anchor>fb35da4c479edec2f299240fe86ccd94</anchor>
+      <arglist>(const istd::IChangeable *inputDocumentPtr, const std::string &amp;documentTypeId)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34194,6 +34533,13 @@
       <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
       <anchor>035479d4fa5bb05e8f203b61c28b4950</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsInputDocumentRequired</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>7daa3801021ab985bf29f88f79f98564</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -34227,8 +34573,8 @@
       <type>virtual void</type>
       <name>DoDocumentProcessing</name>
       <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
-      <anchor>0cd91b25472f1c54992f0ef8de66cd56</anchor>
-      <arglist>(const istd::IChangeable &amp;inputDocument, const std::string &amp;documentTypeId)=0</arglist>
+      <anchor>d153c1bfe80cd1c712353efe3f1271f8</anchor>
+      <arglist>(const istd::IChangeable *inputDocumentPtr, const std::string &amp;documentTypeId)=0</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>iqtgui::CHierarchicalCommand</type>
@@ -34667,6 +35013,7 @@
     <class kind="class">iser::ISerializable</class>
     <class kind="class">iser::IVersionInfo</class>
     <class kind="class">iser::TCopySerializedWrap</class>
+    <class kind="class">iser::TVersionInfoSerializer</class>
     <class kind="class">iser::TXmlStreamReadArchiveBase</class>
     <class kind="class">iser::TXmlStreamWriteArchiveBase</class>
   </compound>
@@ -34708,48 +35055,6 @@
       <name>s_acfRootTag</name>
       <anchorfile>classiser_1_1_c_archive_base.html</anchorfile>
       <anchor>f37185cf961a49405088cd05130cbfef</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static CArchiveTag</type>
-      <name>s_headerTag</name>
-      <anchorfile>classiser_1_1_c_archive_base.html</anchorfile>
-      <anchor>e7c816637af91def403e04b6edbee252</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static CArchiveTag</type>
-      <name>s_versionInfosTag</name>
-      <anchorfile>classiser_1_1_c_archive_base.html</anchorfile>
-      <anchor>a4b2d49acbc181f914982919992d8315</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static CArchiveTag</type>
-      <name>s_versionInfoTag</name>
-      <anchorfile>classiser_1_1_c_archive_base.html</anchorfile>
-      <anchor>b66e3937ebcfbe62a0f85e205c22a3ed</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static CArchiveTag</type>
-      <name>s_versionIdTag</name>
-      <anchorfile>classiser_1_1_c_archive_base.html</anchorfile>
-      <anchor>deb89cd34bafe8c0398cf4b82825d4f7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static CArchiveTag</type>
-      <name>s_versionNumberTag</name>
-      <anchorfile>classiser_1_1_c_archive_base.html</anchorfile>
-      <anchor>bf04546f901c6c49ac5176eaa1befcf9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static CArchiveTag</type>
-      <name>s_versionDescriptionTag</name>
-      <anchorfile>classiser_1_1_c_archive_base.html</anchorfile>
-      <anchor>e47b5d0af2c84e2946c96f3937720aaa</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -36900,6 +37205,67 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iser::TVersionInfoSerializer</name>
+    <filename>classiser_1_1_t_version_info_serializer.html</filename>
+    <templarg></templarg>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>ReadVersion</name>
+      <anchorfile>classiser_1_1_t_version_info_serializer.html</anchorfile>
+      <anchor>b3fa46fda6698f6059ba5bb57d1b8e3c</anchor>
+      <arglist>(VersionInfo *versionInfoPtr, iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>WriteVersion</name>
+      <anchorfile>classiser_1_1_t_version_info_serializer.html</anchorfile>
+      <anchor>bb99a3f7c9c3a187e75b305ceb713e3f</anchor>
+      <arglist>(const VersionInfo *versionInfoPtr, iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static CArchiveTag</type>
+      <name>s_headerTag</name>
+      <anchorfile>classiser_1_1_t_version_info_serializer.html</anchorfile>
+      <anchor>07c77619b0b0d0c0e004d0a5b76b7ab9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static CArchiveTag</type>
+      <name>s_versionInfosTag</name>
+      <anchorfile>classiser_1_1_t_version_info_serializer.html</anchorfile>
+      <anchor>7ac3681eaedc51adc2959b524737da48</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static CArchiveTag</type>
+      <name>s_versionInfoTag</name>
+      <anchorfile>classiser_1_1_t_version_info_serializer.html</anchorfile>
+      <anchor>3d90a05018e08786b9585cdbc5b7911b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static CArchiveTag</type>
+      <name>s_versionIdTag</name>
+      <anchorfile>classiser_1_1_t_version_info_serializer.html</anchorfile>
+      <anchor>bae35535d201617e2d0f871f4415726a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static CArchiveTag</type>
+      <name>s_versionNumberTag</name>
+      <anchorfile>classiser_1_1_t_version_info_serializer.html</anchorfile>
+      <anchor>c31b5189d9f06f7684d1ac83767029e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static CArchiveTag</type>
+      <name>s_versionDescriptionTag</name>
+      <anchorfile>classiser_1_1_t_version_info_serializer.html</anchorfile>
+      <anchor>400282dd53320e574e404086606f1c4a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iser::TXmlStreamReadArchiveBase</name>
     <filename>classiser_1_1_t_xml_stream_read_archive_base.html</filename>
     <templarg>StreamClass</templarg>
@@ -37026,6 +37392,7 @@
     <class kind="class">istd::CString</class>
     <class kind="class">istd::CVarIndex</class>
     <class kind="class">istd::IChangeable</class>
+    <class kind="class">istd::IChangeDelegator</class>
     <class kind="class">istd::IContainerInfo</class>
     <class kind="class">istd::IEnableable</class>
     <class kind="class">istd::IFactoryInfo</class>
@@ -37250,7 +37617,7 @@
   <compound kind="class">
     <name>istd::CChangeDelegator</name>
     <filename>classistd_1_1_c_change_delegator.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
+    <base virtualness="virtual">istd::IChangeDelegator</base>
     <member kind="typedef">
       <type>istd::IChangeable</type>
       <name>BaseClass</name>
@@ -38857,6 +39224,25 @@
       <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
       <anchor>2a2491de06d52ac09889c20ed72d2529</anchor>
       <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>istd::IChangeDelegator</name>
+    <filename>classistd_1_1_i_change_delegator.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::IChangeable *</type>
+      <name>GetSlavePtr</name>
+      <anchorfile>classistd_1_1_i_change_delegator.html</anchorfile>
+      <anchor>938539472b4add789d8470493b71bdfc</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetSlavePtr</name>
+      <anchorfile>classistd_1_1_i_change_delegator.html</anchorfile>
+      <anchor>7ad35dff0900cc0e2bc53a41cb51770e</anchor>
+      <arglist>(istd::IChangeable *slavePtr)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -41989,10 +42375,31 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>CopyFile</name>
+      <name>CreateFileCopy</name>
       <anchorfile>classisys_1_1_i_file_system.html</anchorfile>
-      <anchor>a16b7f2e226808e605a8e0fc0a39e69e</anchor>
+      <anchor>1c2894ea376870e520ccd2f88d58ad0f</anchor>
       <arglist>(const istd::CString &amp;inputFile, const istd::CString &amp;outputFile, bool overwriteExisting=false) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>RemoveFile</name>
+      <anchorfile>classisys_1_1_i_file_system.html</anchorfile>
+      <anchor>a09e10c6f07b5e7ec8170c8f8fe7f78d</anchor>
+      <arglist>(const istd::CString &amp;filePath) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>RemoveFolder</name>
+      <anchorfile>classisys_1_1_i_file_system.html</anchorfile>
+      <anchor>d0959eee52bead72b584e44eef2840e5</anchor>
+      <arglist>(const istd::CString &amp;directoryPath, bool ignoreNonEmpty=false) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>CreateFolder</name>
+      <anchorfile>classisys_1_1_i_file_system.html</anchorfile>
+      <anchor>3fda9e2fdad8edcd35e1c93cb06c7b14</anchor>
+      <arglist>(const istd::CString &amp;directoryPath) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">

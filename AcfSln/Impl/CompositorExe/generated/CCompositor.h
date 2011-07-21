@@ -199,6 +199,24 @@ protected:
 			CPackageOverviewDockRegistry();
 		};
 
+		/**
+			Compositor settings.
+		*/
+		class CSelectableConfigDataRegistry: public icomp::CRegistry
+		{
+		public:
+			CSelectableConfigDataRegistry();
+		};
+
+		/**
+			Dialog displaying and managing compositor settings.
+		*/
+		class CSelectableConfigDataEditorRegistry: public icomp::CRegistry
+		{
+		public:
+			CSelectableConfigDataEditorRegistry();
+		};
+
 		class CVisualRegistryViewRegistry: public icomp::CRegistry
 		{
 		public:

@@ -34,6 +34,7 @@
 	\li istd
 	\li iser
 	\li imath
+	\li icomp
 */
 namespace i2d
 {

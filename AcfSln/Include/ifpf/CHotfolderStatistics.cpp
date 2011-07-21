@@ -137,7 +137,7 @@ bool CHotfolderStatistics::OnAttached(imod::IModel* modelPtr)
 
 // reimplemented (iser::ISerializable)
 
-bool CHotfolderStatistics::Serialize(iser::IArchive& archive)
+bool CHotfolderStatistics::Serialize(iser::IArchive& /*archive*/)
 {
 	bool retVal = true;
 

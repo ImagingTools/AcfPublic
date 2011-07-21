@@ -74,17 +74,16 @@ public:
 	virtual bool Serialize(iser::IArchive& archive);
 
 protected:
-	// reimplemented (iprm::ISelectionConstraints)
-	virtual int GetOptionsCount() const;
-	virtual istd::CString GetOptionName(int index) const;
-
-private:
 	/**
 		Set the bridge to the currently selected parameter set.
 		Over this mechanism the changes in the slave parameter set will be reflected by this object.
 		\sa CurrentParamsSetObserver
 	*/
 	void SetupCurrentParamsSetBridge();
+
+	// reimplemented (iprm::ISelectionConstraints)
+	virtual int GetOptionsCount() const;
+	virtual istd::CString GetOptionName(int index) const;
 
 private:
 	/**
@@ -99,11 +98,11 @@ private:
 		// reimplemented (imod::CSingleModelObserverBase)
 		virtual void BeforeUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
 		virtual void AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
+
 	private:
 		CSelectableParamsSetComp& m_parent;
 	};
 
-private:
 	int m_selectedIndex;
 	CurrentParamsSetObserver m_currentParamsSetObserver;
 	imod::IModel* m_currentParamsModelPtr;

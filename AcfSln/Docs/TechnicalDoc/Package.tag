@@ -3062,6 +3062,13 @@
       <arglist>(iimg::IBitmap *bitmapPtr, imeas::IDataSequence *audioSequencePtr, int minimalImageFrame=-1, int minimalAudioFrame=-1)</arglist>
     </member>
     <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>ReadNextPacket</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>df9cb79a6663eef95c1eb5e04cf2c22b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
       <type>int</type>
       <name>FinishNextTask</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
@@ -5873,10 +5880,31 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>CopyFile</name>
+      <name>CreateFileCopy</name>
       <anchorfile>classiwin_1_1_c_file_system.html</anchorfile>
-      <anchor>8c9a5d14b3e150ce44786a8beda621c1</anchor>
+      <anchor>d9c3798ea83458bd6379dc7f4f359399</anchor>
       <arglist>(const istd::CString &amp;inputFile, const istd::CString &amp;outputFile, bool overwriteExisting=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveFile</name>
+      <anchorfile>classiwin_1_1_c_file_system.html</anchorfile>
+      <anchor>4885cf592bd9de31ff7a842e871a9713</anchor>
+      <arglist>(const istd::CString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveFolder</name>
+      <anchorfile>classiwin_1_1_c_file_system.html</anchorfile>
+      <anchor>2804491a1e9ee8d869c6cefc402112b3</anchor>
+      <arglist>(const istd::CString &amp;directoryPath, bool ignoreNonEmpty=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateFolder</name>
+      <anchorfile>classiwin_1_1_c_file_system.html</anchorfile>
+      <anchor>ea036ef11a67dbac5feb479e7dcce08d</anchor>
+      <arglist>(const istd::CString &amp;directoryPath) const </arglist>
     </member>
   </compound>
   <compound kind="class">

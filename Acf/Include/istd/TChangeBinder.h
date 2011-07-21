@@ -24,6 +24,9 @@
 #define istd_TChangeBinder_included
 
 
+#include "istd/IPolymorphic.h"
+
+
 namespace istd
 {
 
@@ -67,4 +70,5 @@ void TChangeBinder<Base, Base2>::EndChanges(int changeFlags, istd::IPolymorphic*
 
 
 #endif // !istd_TChangeBinder_included
+
 

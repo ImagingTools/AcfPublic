@@ -297,11 +297,11 @@
 <a name="l00286"></a>00286                             ++iter){
 <a name="l00287"></a>00287               <span class="keywordtype">int</span> <span class="keywordtype">id</span> = *iter;
 <a name="l00288"></a>00288 
-<a name="l00289"></a>00289               <a class="code" href="istd_8h.html#84c73ce218157caddb0304f786e7120d">I_DWORD</a> minimalVersionInfo = <span class="keywordtype">object</span>.GetMinimalVersion(<span class="keywordtype">id</span>);
+<a name="l00289"></a>00289               <a class="code" href="istd_8h.html#84c73ce218157caddb0304f786e7120d">I_DWORD</a> objectMinimalVersion = <span class="keywordtype">object</span>.GetMinimalVersion(<span class="keywordtype">id</span>);
 <a name="l00290"></a>00290 
 <a name="l00291"></a>00291               <a class="code" href="istd_8h.html#84c73ce218157caddb0304f786e7120d">I_DWORD</a> versionNumber;
 <a name="l00292"></a>00292               <span class="keywordflow">if</span> (versionInfo.<a class="code" href="classiser_1_1_i_version_info.html#9f44355a435b5ebfbfe0ea73ae399ec0" title="Get version of archived stream for specific versioning type.">GetVersionNumber</a>(<span class="keywordtype">id</span>, versionNumber)){
-<a name="l00293"></a>00293                      <span class="keywordflow">if</span> (versionNumber &lt; minimalVersionInfo){
+<a name="l00293"></a>00293                      <span class="keywordflow">if</span> (versionNumber &lt; objectMinimalVersion){
 <a name="l00294"></a>00294                             <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00295"></a>00295                      }
 <a name="l00296"></a>00296               }

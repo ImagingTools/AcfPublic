@@ -122,7 +122,7 @@ CVersionInfo::CMainRegistry::CMainRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(359);
+			attrVersionNumberPtr->SetValue(365);
 		}
 	}
 
@@ -238,6 +238,7 @@ CVersionInfo::CAcfSlnVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"0.4.2");
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"0.4.3");
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"0.4.4");
+			nattrInfoKnownVersionNamesPtr->InsertValue(L"0.5.0");
 		}
 
 		// create and set attribute value for 'KnownVersions'
@@ -259,6 +260,7 @@ CVersionInfo::CAcfSlnVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 			nattrInfoKnownVersionsPtr->InsertValue(307);
 			nattrInfoKnownVersionsPtr->InsertValue(313);
 			nattrInfoKnownVersionsPtr->InsertValue(341);
+			nattrInfoKnownVersionsPtr->InsertValue(356);
 		}
 
 		// create and set attribute value for 'SlaveVersionInfo'
@@ -297,7 +299,7 @@ CVersionInfo::CAcfSlnVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(349);
+			attrVersionNumberPtr->SetValue(357);
 		}
 	}
 
@@ -420,6 +422,7 @@ CVersionInfo::CAcfVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"1.2.0");
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"1.3.0");
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"1.4.0");
+			nattrInfoKnownVersionNamesPtr->InsertValue(L"1.4.1");
 		}
 
 		// create and set attribute value for 'KnownVersions'
@@ -448,6 +451,7 @@ CVersionInfo::CAcfVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 			nattrInfoKnownVersionsPtr->InsertValue(1688);
 			nattrInfoKnownVersionsPtr->InsertValue(1705);
 			nattrInfoKnownVersionsPtr->InsertValue(1779);
+			nattrInfoKnownVersionsPtr->InsertValue(1809);
 		}
 
 		// create and set attribute value for 'SlaveVersionInfo'
@@ -486,7 +490,7 @@ CVersionInfo::CAcfVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(1797);
+			attrVersionNumberPtr->SetValue(1810);
 		}
 	}
 

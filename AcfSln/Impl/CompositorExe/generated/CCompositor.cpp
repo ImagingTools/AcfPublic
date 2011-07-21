@@ -97,17 +97,6 @@ CCompositor::CMainRegistry::CMainRegistry()
 				icomp::CComponentAddress("CmpstrVoce", "CompositorTemplate"),
 				true);
 	if ((infoCompositorTemplatePtr != NULL) && infoCompositorTemplatePtr->elementPtr.IsValid()){
-		// create and set attribute value for 'ConfigFilePath'
-		icomp::IRegistryElement::AttributeInfo* attrInfoConfigFilePathPtr = infoCompositorTemplatePtr->elementPtr->InsertAttributeInfo("ConfigFilePath", "icomp::CReferenceAttribute");
-		if (attrInfoConfigFilePathPtr != NULL){
-			attrInfoConfigFilePathPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
-			I_ASSERT(attrInfoConfigFilePathPtr->attributePtr.IsValid());
-
-			icomp::TAttribute<std::string>* attrConfigFilePathPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoConfigFilePathPtr->attributePtr.GetPtr());
-			I_ASSERT(attrConfigFilePathPtr != NULL);
-			attrConfigFilePathPtr->SetValue("Application/ConfigFile");
-		}
-
 		// create and set attribute value for 'DocumentManager'
 		icomp::IRegistryElement::AttributeInfo* attrInfoDocumentManagerPtr = infoCompositorTemplatePtr->elementPtr->InsertAttributeInfo("DocumentManager", "icomp::CReferenceAttribute");
 		if (attrInfoDocumentManagerPtr != NULL){
@@ -195,6 +184,17 @@ CCompositor::CMainRegistry::CMainRegistry()
 				icomp::CComponentAddress("CmpstrVoce", "CompositorDockWidgets"),
 				true);
 	if ((infoMainWindowComponentsPtr != NULL) && infoMainWindowComponentsPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'ConfigFilePath'
+		icomp::IRegistryElement::AttributeInfo* attrInfoConfigFilePathPtr = infoMainWindowComponentsPtr->elementPtr->InsertAttributeInfo("ConfigFilePath", "icomp::CReferenceAttribute");
+		if (attrInfoConfigFilePathPtr != NULL){
+			attrInfoConfigFilePathPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoConfigFilePathPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrConfigFilePathPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoConfigFilePathPtr->attributePtr.GetPtr());
+			I_ASSERT(attrConfigFilePathPtr != NULL);
+			attrConfigFilePathPtr->SetValue("Application/ConfigFile");
+		}
+
 		// create and set attribute value for 'ConsistencyInfo'
 		icomp::IRegistryElement::AttributeInfo* attrInfoConsistencyInfoPtr = infoMainWindowComponentsPtr->elementPtr->InsertAttributeInfo("ConsistencyInfo", "icomp::CReferenceAttribute");
 		if (attrInfoConsistencyInfoPtr != NULL){
@@ -672,6 +672,12 @@ CCompositor::CAcfGuiVocePck::CMultiDocAppRegistry::CMultiDocAppRegistry()
 		if (attrInfoTranslationManagerPtr != NULL){
 			attrInfoTranslationManagerPtr->exportId = "TranslationManager";
 		}
+
+		// create and set attribute value for 'UiStartMode'
+		icomp::IRegistryElement::AttributeInfo* attrInfoUiStartModePtr = infoAppPtr->elementPtr->InsertAttributeInfo("UiStartMode", "icomp::TAttribute<int>");
+		if (attrInfoUiStartModePtr != NULL){
+			attrInfoUiStartModePtr->exportId = "UiStartMode";
+		}
 	}
 
 	// element 'ApplicationInfo' of type BasePck::ApplicationInfo
@@ -1139,6 +1145,7 @@ CCompositor::CAcfSlnVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"0.4.2");
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"0.4.3");
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"0.4.4");
+			nattrInfoKnownVersionNamesPtr->InsertValue(L"0.5.0");
 		}
 
 		// create and set attribute value for 'KnownVersions'
@@ -1160,6 +1167,7 @@ CCompositor::CAcfSlnVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 			nattrInfoKnownVersionsPtr->InsertValue(307);
 			nattrInfoKnownVersionsPtr->InsertValue(313);
 			nattrInfoKnownVersionsPtr->InsertValue(341);
+			nattrInfoKnownVersionsPtr->InsertValue(356);
 		}
 
 		// create and set attribute value for 'SlaveVersionInfo'
@@ -1198,7 +1206,7 @@ CCompositor::CAcfSlnVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(349);
+			attrVersionNumberPtr->SetValue(357);
 		}
 	}
 
@@ -1296,6 +1304,7 @@ CCompositor::CAcfVocePck::CAcfLocalizationRegistry::CAcfLocalizationRegistry()
 			I_ASSERT(nattrInfoLanguageIdsPtr != NULL);
 
 			nattrInfoLanguageIdsPtr->Reset();
+			nattrInfoLanguageIdsPtr->InsertValue(L"en_US");
 			nattrInfoLanguageIdsPtr->InsertValue(L"de_DE");
 			nattrInfoLanguageIdsPtr->InsertValue(L"ru_RU");
 			nattrInfoLanguageIdsPtr->InsertValue(L"pl_PL");
@@ -1458,6 +1467,7 @@ CCompositor::CAcfVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"1.2.0");
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"1.3.0");
 			nattrInfoKnownVersionNamesPtr->InsertValue(L"1.4.0");
+			nattrInfoKnownVersionNamesPtr->InsertValue(L"1.4.1");
 		}
 
 		// create and set attribute value for 'KnownVersions'
@@ -1486,6 +1496,7 @@ CCompositor::CAcfVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 			nattrInfoKnownVersionsPtr->InsertValue(1688);
 			nattrInfoKnownVersionsPtr->InsertValue(1705);
 			nattrInfoKnownVersionsPtr->InsertValue(1779);
+			nattrInfoKnownVersionsPtr->InsertValue(1809);
 		}
 
 		// create and set attribute value for 'SlaveVersionInfo'
@@ -1524,7 +1535,7 @@ CCompositor::CAcfVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(1797);
+			attrVersionNumberPtr->SetValue(1810);
 		}
 	}
 
@@ -1605,6 +1616,8 @@ CCompositor::CCmpstrVocePck::CCmpstrVocePck(const icomp::IComponentEnvironmentMa
 	RegisterEmbeddedComponent("CompositorTemplate");
 	RegisterEmbeddedComponent("CompositorTranslationManager");
 	RegisterEmbeddedComponent("PackageOverviewDock");
+	RegisterEmbeddedComponent("SelectableConfigData");
+	RegisterEmbeddedComponent("SelectableConfigDataEditor");
 	RegisterEmbeddedComponent("VisualRegistryView");
 }
 
@@ -2239,6 +2252,12 @@ CCompositor::CCmpstrVocePck::CCompositorDockWidgetsRegistry::CCompositorDockWidg
 				icomp::CComponentAddress("CmpstrVoce", "PackageOverviewDock"),
 				true);
 	if ((infoPackageOverviewDockPtr != NULL) && infoPackageOverviewDockPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'ConfigFilePath'
+		icomp::IRegistryElement::AttributeInfo* attrInfoConfigFilePathPtr = infoPackageOverviewDockPtr->elementPtr->InsertAttributeInfo("ConfigFilePath", "icomp::CReferenceAttribute");
+		if (attrInfoConfigFilePathPtr != NULL){
+			attrInfoConfigFilePathPtr->exportId = "ConfigFilePath";
+		}
+
 		// create and set attribute value for 'ConsistencyInfo'
 		icomp::IRegistryElement::AttributeInfo* attrInfoConsistencyInfoPtr = infoPackageOverviewDockPtr->elementPtr->InsertAttributeInfo("ConsistencyInfo", "icomp::CReferenceAttribute");
 		if (attrInfoConsistencyInfoPtr != NULL){
@@ -2315,14 +2334,14 @@ CCompositor::CCmpstrVocePck::CCompositorDockWidgetsRegistry::CCompositorDockWidg
 
 CCompositor::CCmpstrVocePck::CCompositorSettingsRegistry::CCompositorSettingsRegistry()
 {
-	// element 'ConfigFile' of type BasePck::FileNameParam
-	icomp::IRegistry::ElementInfo* infoConfigFilePtr = InsertElementInfo(
-				"ConfigFile",
-				icomp::CComponentAddress("BasePck", "FileNameParam"),
+	// element 'ConfigDataShadow' of type CmpstrVoce::SelectableConfigData
+	icomp::IRegistry::ElementInfo* infoConfigDataShadowPtr = InsertElementInfo(
+				"ConfigDataShadow",
+				icomp::CComponentAddress("CmpstrVoce", "SelectableConfigData"),
 				true);
-	if ((infoConfigFilePtr != NULL) && infoConfigFilePtr->elementPtr.IsValid()){
+	if ((infoConfigDataShadowPtr != NULL) && infoConfigDataShadowPtr->elementPtr.IsValid()){
 		// create and set attribute value for 'DefaultPath'
-		icomp::IRegistryElement::AttributeInfo* attrInfoDefaultPathPtr = infoConfigFilePtr->elementPtr->InsertAttributeInfo("DefaultPath", "icomp::TAttribute<istd::CString>");
+		icomp::IRegistryElement::AttributeInfo* attrInfoDefaultPathPtr = infoConfigDataShadowPtr->elementPtr->InsertAttributeInfo("DefaultPath", "icomp::TAttribute<istd::CString>");
 		if (attrInfoDefaultPathPtr != NULL){
 			attrInfoDefaultPathPtr->attributePtr.SetPtr(new icomp::TAttribute<istd::CString>);
 			I_ASSERT(attrInfoDefaultPathPtr->attributePtr.IsValid());
@@ -2331,16 +2350,65 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsRegistry::CCompositorSettingsReg
 			I_ASSERT(attrDefaultPathPtr != NULL);
 			attrDefaultPathPtr->SetValue(L"$(ACFSLNDIR)/Config/Full.xpc");
 		}
+	}
 
-		// create and set attribute value for 'PathType'
-		icomp::IRegistryElement::AttributeInfo* attrInfoPathTypePtr = infoConfigFilePtr->elementPtr->InsertAttributeInfo("PathType", "icomp::TAttribute<int>");
-		if (attrInfoPathTypePtr != NULL){
-			attrInfoPathTypePtr->attributePtr.SetPtr(new icomp::TAttribute<int>);
-			I_ASSERT(attrInfoPathTypePtr->attributePtr.IsValid());
+	// element 'ConfigFileShadower' of type BasePck::ManagerParamsSetShadower
+	icomp::IRegistry::ElementInfo* infoConfigFileShadowerPtr = InsertElementInfo(
+				"ConfigFileShadower",
+				icomp::CComponentAddress("BasePck", "ManagerParamsSetShadower"),
+				true);
+	if ((infoConfigFileShadowerPtr != NULL) && infoConfigFileShadowerPtr->elementPtr.IsValid()){
+		infoConfigFileShadowerPtr->elementPtr->SetElementFlags(1);
 
-			icomp::CIntAttribute* attrPathTypePtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoPathTypePtr->attributePtr.GetPtr());
-			I_ASSERT(attrPathTypePtr != NULL);
-			attrPathTypePtr->SetValue(1);
+		// create and set attribute value for 'ParamsManager'
+		icomp::IRegistryElement::AttributeInfo* attrInfoParamsManagerPtr = infoConfigFileShadowerPtr->elementPtr->InsertAttributeInfo("ParamsManager", "icomp::CReferenceAttribute");
+		if (attrInfoParamsManagerPtr != NULL){
+			attrInfoParamsManagerPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoParamsManagerPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrParamsManagerPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoParamsManagerPtr->attributePtr.GetPtr());
+			I_ASSERT(attrParamsManagerPtr != NULL);
+			attrParamsManagerPtr->SetValue("ConfigsManager");
+		}
+
+		// create and set attribute value for 'SelectionParam'
+		icomp::IRegistryElement::AttributeInfo* attrInfoSelectionParamPtr = infoConfigFileShadowerPtr->elementPtr->InsertAttributeInfo("SelectionParam", "icomp::CReferenceAttribute");
+		if (attrInfoSelectionParamPtr != NULL){
+			attrInfoSelectionParamPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoSelectionParamPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrSelectionParamPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoSelectionParamPtr->attributePtr.GetPtr());
+			I_ASSERT(attrSelectionParamPtr != NULL);
+			attrSelectionParamPtr->SetValue("ConfigsManager");
+		}
+
+		// create and set attribute value for 'ShadowParamsSet'
+		icomp::IRegistryElement::AttributeInfo* attrInfoShadowParamsSetPtr = infoConfigFileShadowerPtr->elementPtr->InsertAttributeInfo("ShadowParamsSet", "icomp::CReferenceAttribute");
+		if (attrInfoShadowParamsSetPtr != NULL){
+			attrInfoShadowParamsSetPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoShadowParamsSetPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrShadowParamsSetPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoShadowParamsSetPtr->attributePtr.GetPtr());
+			I_ASSERT(attrShadowParamsSetPtr != NULL);
+			attrShadowParamsSetPtr->SetValue("ConfigDataShadow");
+		}
+	}
+
+	// element 'ConfigsManager' of type BasePck::ParamsManager
+	icomp::IRegistry::ElementInfo* infoConfigsManagerPtr = InsertElementInfo(
+				"ConfigsManager",
+				icomp::CComponentAddress("BasePck", "ParamsManager"),
+				true);
+	if ((infoConfigsManagerPtr != NULL) && infoConfigsManagerPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'ParamsSetFactory'
+		icomp::IRegistryElement::AttributeInfo* attrInfoParamsSetFactoryPtr = infoConfigsManagerPtr->elementPtr->InsertAttributeInfo("ParamsSetFactory", "icomp::CFactoryAttribute");
+		if (attrInfoParamsSetFactoryPtr != NULL){
+			attrInfoParamsSetFactoryPtr->attributePtr.SetPtr(new icomp::CFactoryAttribute);
+			I_ASSERT(attrInfoParamsSetFactoryPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrParamsSetFactoryPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoParamsSetFactoryPtr->attributePtr.GetPtr());
+			I_ASSERT(attrParamsSetFactoryPtr != NULL);
+			attrParamsSetFactoryPtr->SetValue("SelectableConfigData");
 		}
 	}
 
@@ -2422,6 +2490,11 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsRegistry::CCompositorSettingsReg
 		}
 	}
 
+	// element 'SelectableConfigData' of type CmpstrVoce::SelectableConfigData
+	InsertElementInfo(
+				"SelectableConfigData",
+				icomp::CComponentAddress("CmpstrVoce", "SelectableConfigData"),
+				true);
 	// element 'Settings' of type BasePck::ComposedParamsSet
 	icomp::IRegistry::ElementInfo* infoSettingsPtr = InsertElementInfo(
 				"Settings",
@@ -2438,7 +2511,7 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsRegistry::CCompositorSettingsReg
 			I_ASSERT(nattrInfoParametersPtr != NULL);
 
 			nattrInfoParametersPtr->Reset();
-			nattrInfoParametersPtr->InsertValue("ConfigFile");
+			nattrInfoParametersPtr->InsertValue("ConfigsManager");
 			nattrInfoParametersPtr->InsertValue("PreviewCommandFile");
 			nattrInfoParametersPtr->InsertValue("HtmlBrowserFile");
 			nattrInfoParametersPtr->InsertValue("HtmlEditorFile");
@@ -2484,7 +2557,7 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsRegistry::CCompositorSettingsReg
 	// component export
 	SetElementExported(
 				"ConfigFile",
-				"ConfigFile");
+				"ConfigDataShadow/ConfigFile");
 	SetElementExported(
 				"HtmlBrowserFile",
 				"HtmlBrowserFile");
@@ -2504,57 +2577,11 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsRegistry::CCompositorSettingsReg
 
 CCompositor::CCmpstrVocePck::CCompositorSettingsDialogRegistry::CCompositorSettingsDialogRegistry()
 {
-	// element 'ConfigFileGui' of type QtGuiPck::FileNameParamGui
-	icomp::IRegistry::ElementInfo* infoConfigFileGuiPtr = InsertElementInfo(
-				"ConfigFileGui",
-				icomp::CComponentAddress("QtGuiPck", "FileNameParamGui"),
+	// element 'ConfigEditor' of type CmpstrVoce::SelectableConfigDataEditor
+	InsertElementInfo(
+				"ConfigEditor",
+				icomp::CComponentAddress("CmpstrVoce", "SelectableConfigDataEditor"),
 				true);
-	if ((infoConfigFileGuiPtr != NULL) && infoConfigFileGuiPtr->elementPtr.IsValid()){
-		// create and set attribute value for 'FileTypeInfo'
-		icomp::IRegistryElement::AttributeInfo* attrInfoFileTypeInfoPtr = infoConfigFileGuiPtr->elementPtr->InsertAttributeInfo("FileTypeInfo", "icomp::CReferenceAttribute");
-		if (attrInfoFileTypeInfoPtr != NULL){
-			attrInfoFileTypeInfoPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
-			I_ASSERT(attrInfoFileTypeInfoPtr->attributePtr.IsValid());
-
-			icomp::TAttribute<std::string>* attrFileTypeInfoPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoFileTypeInfoPtr->attributePtr.GetPtr());
-			I_ASSERT(attrFileTypeInfoPtr != NULL);
-			attrFileTypeInfoPtr->SetValue("ConfigFileInfo");
-		}
-	}
-
-	// element 'ConfigFileInfo' of type BasePck::FileTypeInfo
-	icomp::IRegistry::ElementInfo* infoConfigFileInfoPtr = InsertElementInfo(
-				"ConfigFileInfo",
-				icomp::CComponentAddress("BasePck", "FileTypeInfo"),
-				true);
-	if ((infoConfigFileInfoPtr != NULL) && infoConfigFileInfoPtr->elementPtr.IsValid()){
-		// create and set attribute value for 'FileExtensions'
-		icomp::IRegistryElement::AttributeInfo* attrInfoFileExtensionsPtr = infoConfigFileInfoPtr->elementPtr->InsertAttributeInfo("FileExtensions", "icomp::TMultiAttribute<istd::CString>");
-		if (attrInfoFileExtensionsPtr != NULL){
-			attrInfoFileExtensionsPtr->attributePtr.SetPtr(new icomp::TMultiAttribute<istd::CString>);
-			I_ASSERT(attrInfoFileExtensionsPtr->attributePtr.IsValid());
-
-			icomp::CMultiStringAttribute* nattrInfoFileExtensionsPtr = dynamic_cast<icomp::CMultiStringAttribute*>(attrInfoFileExtensionsPtr->attributePtr.GetPtr());
-			I_ASSERT(nattrInfoFileExtensionsPtr != NULL);
-
-			nattrInfoFileExtensionsPtr->Reset();
-			nattrInfoFileExtensionsPtr->InsertValue(L"xpc");
-		}
-
-		// create and set attribute value for 'TypeDescriptions'
-		icomp::IRegistryElement::AttributeInfo* attrInfoTypeDescriptionsPtr = infoConfigFileInfoPtr->elementPtr->InsertAttributeInfo("TypeDescriptions", "icomp::TMultiAttribute<istd::CString>");
-		if (attrInfoTypeDescriptionsPtr != NULL){
-			attrInfoTypeDescriptionsPtr->attributePtr.SetPtr(new icomp::TMultiAttribute<istd::CString>);
-			I_ASSERT(attrInfoTypeDescriptionsPtr->attributePtr.IsValid());
-
-			icomp::CMultiStringAttribute* nattrInfoTypeDescriptionsPtr = dynamic_cast<icomp::CMultiStringAttribute*>(attrInfoTypeDescriptionsPtr->attributePtr.GetPtr());
-			I_ASSERT(nattrInfoTypeDescriptionsPtr != NULL);
-
-			nattrInfoTypeDescriptionsPtr->Reset();
-			nattrInfoTypeDescriptionsPtr->InsertValue(L"ACF component configuration");
-		}
-	}
-
 	// element 'HtmlBrowserFileGui' of type QtGuiPck::FileNameParamGui
 	InsertElementInfo(
 				"HtmlBrowserFileGui",
@@ -2736,7 +2763,7 @@ CCompositor::CCmpstrVocePck::CCompositorSettingsDialogRegistry::CCompositorSetti
 			I_ASSERT(nattrInfoEditorsPtr != NULL);
 
 			nattrInfoEditorsPtr->Reset();
-			nattrInfoEditorsPtr->InsertValue("ConfigFileGui");
+			nattrInfoEditorsPtr->InsertValue("ConfigEditor");
 			nattrInfoEditorsPtr->InsertValue("PreviewCommandFileGui");
 			nattrInfoEditorsPtr->InsertValue("HtmlBrowserFileGui");
 			nattrInfoEditorsPtr->InsertValue("HtmlEditorFileGui");
@@ -3215,6 +3242,12 @@ CCompositor::CCmpstrVocePck::CPackageOverviewDockRegistry::CPackageOverviewDockR
 				icomp::CComponentAddress("CmpstrPck", "PackageOverview"),
 				true);
 	if ((infoPackageOverviewPtr != NULL) && infoPackageOverviewPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'ConfigFilePath'
+		icomp::IRegistryElement::AttributeInfo* attrInfoConfigFilePathPtr = infoPackageOverviewPtr->elementPtr->InsertAttributeInfo("ConfigFilePath", "icomp::CReferenceAttribute");
+		if (attrInfoConfigFilePathPtr != NULL){
+			attrInfoConfigFilePathPtr->exportId = "ConfigFilePath";
+		}
+
 		// create and set attribute value for 'ConsistencyInfo'
 		icomp::IRegistryElement::AttributeInfo* attrInfoConsistencyInfoPtr = infoPackageOverviewPtr->elementPtr->InsertAttributeInfo("ConsistencyInfo", "icomp::CReferenceAttribute");
 		if (attrInfoConsistencyInfoPtr != NULL){
@@ -3294,6 +3327,240 @@ CCompositor::CCmpstrVocePck::CPackageOverviewDockRegistry::CPackageOverviewDockR
 				"PackageOverviewDock",
 				"iqtgui::IMainWindowComponent",
 				true);
+}
+
+
+// Embedded class CSelectableConfigDataRegistry
+
+CCompositor::CCmpstrVocePck::CSelectableConfigDataRegistry::CSelectableConfigDataRegistry()
+{
+	// element 'ComposedParamsSet' of type BasePck::ComposedParamsSet
+	icomp::IRegistry::ElementInfo* infoComposedParamsSetPtr = InsertElementInfo(
+				"ComposedParamsSet",
+				icomp::CComponentAddress("BasePck", "ComposedParamsSet"),
+				true);
+	if ((infoComposedParamsSetPtr != NULL) && infoComposedParamsSetPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'Parameters'
+		icomp::IRegistryElement::AttributeInfo* attrInfoParametersPtr = infoComposedParamsSetPtr->elementPtr->InsertAttributeInfo("Parameters", "icomp::CMultiReferenceAttribute");
+		if (attrInfoParametersPtr != NULL){
+			attrInfoParametersPtr->attributePtr.SetPtr(new icomp::CMultiReferenceAttribute);
+			I_ASSERT(attrInfoParametersPtr->attributePtr.IsValid());
+
+			icomp::TMultiAttribute<std::string>* nattrInfoParametersPtr = dynamic_cast<icomp::TMultiAttribute<std::string>*>(attrInfoParametersPtr->attributePtr.GetPtr());
+			I_ASSERT(nattrInfoParametersPtr != NULL);
+
+			nattrInfoParametersPtr->Reset();
+			nattrInfoParametersPtr->InsertValue("ConfigFile");
+		}
+
+		// create and set attribute value for 'ParametersId'
+		icomp::IRegistryElement::AttributeInfo* attrInfoParametersIdPtr = infoComposedParamsSetPtr->elementPtr->InsertAttributeInfo("ParametersId", "icomp::TMultiAttribute<istd::CString>");
+		if (attrInfoParametersIdPtr != NULL){
+			attrInfoParametersIdPtr->attributePtr.SetPtr(new icomp::TMultiAttribute<istd::CString>);
+			I_ASSERT(attrInfoParametersIdPtr->attributePtr.IsValid());
+
+			icomp::CMultiStringAttribute* nattrInfoParametersIdPtr = dynamic_cast<icomp::CMultiStringAttribute*>(attrInfoParametersIdPtr->attributePtr.GetPtr());
+			I_ASSERT(nattrInfoParametersIdPtr != NULL);
+
+			nattrInfoParametersIdPtr->Reset();
+			nattrInfoParametersIdPtr->InsertValue(L"ConfigFile");
+		}
+
+		// create and set attribute value for 'SlaveSets'
+		icomp::IRegistryElement::AttributeInfo* attrInfoSlaveSetsPtr = infoComposedParamsSetPtr->elementPtr->InsertAttributeInfo("SlaveSets", "icomp::CMultiReferenceAttribute");
+		if (attrInfoSlaveSetsPtr != NULL){
+			attrInfoSlaveSetsPtr->exportId = "SlaveSets";
+		}
+	}
+
+	// element 'ConfigFile' of type BasePck::FileNameParam
+	icomp::IRegistry::ElementInfo* infoConfigFilePtr = InsertElementInfo(
+				"ConfigFile",
+				icomp::CComponentAddress("BasePck", "FileNameParam"),
+				true);
+	if ((infoConfigFilePtr != NULL) && infoConfigFilePtr->elementPtr.IsValid()){
+		// create and set attribute value for 'DefaultPath'
+		icomp::IRegistryElement::AttributeInfo* attrInfoDefaultPathPtr = infoConfigFilePtr->elementPtr->InsertAttributeInfo("DefaultPath", "icomp::TAttribute<istd::CString>");
+		if (attrInfoDefaultPathPtr != NULL){
+			attrInfoDefaultPathPtr->exportId = "DefaultPath";
+		}
+
+		// create and set attribute value for 'PathType'
+		icomp::IRegistryElement::AttributeInfo* attrInfoPathTypePtr = infoConfigFilePtr->elementPtr->InsertAttributeInfo("PathType", "icomp::TAttribute<int>");
+		if (attrInfoPathTypePtr != NULL){
+			attrInfoPathTypePtr->attributePtr.SetPtr(new icomp::TAttribute<int>);
+			I_ASSERT(attrInfoPathTypePtr->attributePtr.IsValid());
+
+			icomp::CIntAttribute* attrPathTypePtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoPathTypePtr->attributePtr.GetPtr());
+			I_ASSERT(attrPathTypePtr != NULL);
+			attrPathTypePtr->SetValue(1);
+		}
+	}
+
+	// interface export
+	SetElementInterfaceExported(
+				"ComposedParamsSet",
+				"imod::IModel",
+				true);
+	SetElementInterfaceExported(
+				"ComposedParamsSet",
+				"iprm::IParamsSet",
+				true);
+	SetElementInterfaceExported(
+				"ComposedParamsSet",
+				"iser::ISerializable",
+				true);
+	SetElementInterfaceExported(
+				"ComposedParamsSet",
+				"istd::IChangeable",
+				true);
+
+	// component export
+	SetElementExported(
+				"ConfigFile",
+				"ConfigFile");
+}
+
+
+// Embedded class CSelectableConfigDataEditorRegistry
+
+CCompositor::CCmpstrVocePck::CSelectableConfigDataEditorRegistry::CSelectableConfigDataEditorRegistry()
+{
+	// element 'ComposedParamsSetGui' of type QtGuiPck::ComposedParamsSetGui
+	icomp::IRegistry::ElementInfo* infoComposedParamsSetGuiPtr = InsertElementInfo(
+				"ComposedParamsSetGui",
+				icomp::CComponentAddress("QtGuiPck", "ComposedParamsSetGui"),
+				true);
+	if ((infoComposedParamsSetGuiPtr != NULL) && infoComposedParamsSetGuiPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'Editors'
+		icomp::IRegistryElement::AttributeInfo* attrInfoEditorsPtr = infoComposedParamsSetGuiPtr->elementPtr->InsertAttributeInfo("Editors", "icomp::CMultiReferenceAttribute");
+		if (attrInfoEditorsPtr != NULL){
+			attrInfoEditorsPtr->attributePtr.SetPtr(new icomp::CMultiReferenceAttribute);
+			I_ASSERT(attrInfoEditorsPtr->attributePtr.IsValid());
+
+			icomp::TMultiAttribute<std::string>* nattrInfoEditorsPtr = dynamic_cast<icomp::TMultiAttribute<std::string>*>(attrInfoEditorsPtr->attributePtr.GetPtr());
+			I_ASSERT(nattrInfoEditorsPtr != NULL);
+
+			nattrInfoEditorsPtr->Reset();
+			nattrInfoEditorsPtr->InsertValue("ConfigFileGui");
+		}
+
+		// create and set attribute value for 'Ids'
+		icomp::IRegistryElement::AttributeInfo* attrInfoIdsPtr = infoComposedParamsSetGuiPtr->elementPtr->InsertAttributeInfo("Ids", "icomp::TMultiAttribute<istd::CString>");
+		if (attrInfoIdsPtr != NULL){
+			attrInfoIdsPtr->attributePtr.SetPtr(new icomp::TMultiAttribute<istd::CString>);
+			I_ASSERT(attrInfoIdsPtr->attributePtr.IsValid());
+
+			icomp::CMultiStringAttribute* nattrInfoIdsPtr = dynamic_cast<icomp::CMultiStringAttribute*>(attrInfoIdsPtr->attributePtr.GetPtr());
+			I_ASSERT(nattrInfoIdsPtr != NULL);
+
+			nattrInfoIdsPtr->Reset();
+			nattrInfoIdsPtr->InsertValue(L"ConfigFile");
+		}
+	}
+
+	// element 'ConfigFileGui' of type QtGuiPck::FileNameParamGui
+	icomp::IRegistry::ElementInfo* infoConfigFileGuiPtr = InsertElementInfo(
+				"ConfigFileGui",
+				icomp::CComponentAddress("QtGuiPck", "FileNameParamGui"),
+				true);
+	if ((infoConfigFileGuiPtr != NULL) && infoConfigFileGuiPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'FileTypeInfo'
+		icomp::IRegistryElement::AttributeInfo* attrInfoFileTypeInfoPtr = infoConfigFileGuiPtr->elementPtr->InsertAttributeInfo("FileTypeInfo", "icomp::CReferenceAttribute");
+		if (attrInfoFileTypeInfoPtr != NULL){
+			attrInfoFileTypeInfoPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoFileTypeInfoPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrFileTypeInfoPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoFileTypeInfoPtr->attributePtr.GetPtr());
+			I_ASSERT(attrFileTypeInfoPtr != NULL);
+			attrFileTypeInfoPtr->SetValue("ConfigFileInfo");
+		}
+	}
+
+	// element 'ConfigFileInfo' of type BasePck::FileTypeInfo
+	icomp::IRegistry::ElementInfo* infoConfigFileInfoPtr = InsertElementInfo(
+				"ConfigFileInfo",
+				icomp::CComponentAddress("BasePck", "FileTypeInfo"),
+				true);
+	if ((infoConfigFileInfoPtr != NULL) && infoConfigFileInfoPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'FileExtensions'
+		icomp::IRegistryElement::AttributeInfo* attrInfoFileExtensionsPtr = infoConfigFileInfoPtr->elementPtr->InsertAttributeInfo("FileExtensions", "icomp::TMultiAttribute<istd::CString>");
+		if (attrInfoFileExtensionsPtr != NULL){
+			attrInfoFileExtensionsPtr->attributePtr.SetPtr(new icomp::TMultiAttribute<istd::CString>);
+			I_ASSERT(attrInfoFileExtensionsPtr->attributePtr.IsValid());
+
+			icomp::CMultiStringAttribute* nattrInfoFileExtensionsPtr = dynamic_cast<icomp::CMultiStringAttribute*>(attrInfoFileExtensionsPtr->attributePtr.GetPtr());
+			I_ASSERT(nattrInfoFileExtensionsPtr != NULL);
+
+			nattrInfoFileExtensionsPtr->Reset();
+			nattrInfoFileExtensionsPtr->InsertValue(L"xpc");
+		}
+
+		// create and set attribute value for 'TypeDescriptions'
+		icomp::IRegistryElement::AttributeInfo* attrInfoTypeDescriptionsPtr = infoConfigFileInfoPtr->elementPtr->InsertAttributeInfo("TypeDescriptions", "icomp::TMultiAttribute<istd::CString>");
+		if (attrInfoTypeDescriptionsPtr != NULL){
+			attrInfoTypeDescriptionsPtr->attributePtr.SetPtr(new icomp::TMultiAttribute<istd::CString>);
+			I_ASSERT(attrInfoTypeDescriptionsPtr->attributePtr.IsValid());
+
+			icomp::CMultiStringAttribute* nattrInfoTypeDescriptionsPtr = dynamic_cast<icomp::CMultiStringAttribute*>(attrInfoTypeDescriptionsPtr->attributePtr.GetPtr());
+			I_ASSERT(nattrInfoTypeDescriptionsPtr != NULL);
+
+			nattrInfoTypeDescriptionsPtr->Reset();
+			nattrInfoTypeDescriptionsPtr->InsertValue(L"ACF component configuration");
+		}
+	}
+
+	// element 'ParamsManagerGui' of type QtGuiPck::ParamsManagerGui
+	icomp::IRegistry::ElementInfo* infoParamsManagerGuiPtr = InsertElementInfo(
+				"ParamsManagerGui",
+				icomp::CComponentAddress("QtGuiPck", "ParamsManagerGui"),
+				true);
+	if ((infoParamsManagerGuiPtr != NULL) && infoParamsManagerGuiPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'ParamsGui'
+		icomp::IRegistryElement::AttributeInfo* attrInfoParamsGuiPtr = infoParamsManagerGuiPtr->elementPtr->InsertAttributeInfo("ParamsGui", "icomp::CReferenceAttribute");
+		if (attrInfoParamsGuiPtr != NULL){
+			attrInfoParamsGuiPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoParamsGuiPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrParamsGuiPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoParamsGuiPtr->attributePtr.GetPtr());
+			I_ASSERT(attrParamsGuiPtr != NULL);
+			attrParamsGuiPtr->SetValue("ComposedParamsSetGui");
+		}
+	}
+
+	// interface export
+	SetElementInterfaceExported(
+				"ParamsManagerGui",
+				"imod::IModelEditor",
+				true);
+	SetElementInterfaceExported(
+				"ParamsManagerGui",
+				"imod::IObserver",
+				true);
+	SetElementInterfaceExported(
+				"ParamsManagerGui",
+				"iqtgui::IGuiObject",
+				true);
+
+	// component export
+	SetElementExported(
+				"ConfigFile",
+				"Settings/ConfigFile");
+	SetElementExported(
+				"HtmlBrowserFile",
+				"Settings/HtmlBrowserFile");
+	SetElementExported(
+				"HtmlEditorFile",
+				"Settings/HtmlEditorFile");
+	SetElementExported(
+				"LanguageSelection",
+				"Settings/LanguageSelection");
+	SetElementExported(
+				"PreviewCommandFile",
+				"Settings/PreviewCommandFile");
+	SetElementExported(
+				"TranslationManager",
+				"Settings/TranslationManager");
 }
 
 
@@ -3552,6 +3819,10 @@ CCompositor::CBasePck::CBasePck()
 	RegisterEmbeddedComponentInfo("FileTypeInfo", &infoFileTypeInfo);
 	const icomp::IComponentStaticInfo& infoLog = BasePck::Log::InitStaticInfo(NULL);
 	RegisterEmbeddedComponentInfo("Log", &infoLog);
+	const icomp::IComponentStaticInfo& infoManagerParamsSetShadower = BasePck::ManagerParamsSetShadower::InitStaticInfo(NULL);
+	RegisterEmbeddedComponentInfo("ManagerParamsSetShadower", &infoManagerParamsSetShadower);
+	const icomp::IComponentStaticInfo& infoParamsManager = BasePck::ParamsManager::InitStaticInfo(NULL);
+	RegisterEmbeddedComponentInfo("ParamsManager", &infoParamsManager);
 	const icomp::IComponentStaticInfo& infoRegistryCodeSaver = BasePck::RegistryCodeSaver::InitStaticInfo(NULL);
 	RegisterEmbeddedComponentInfo("RegistryCodeSaver", &infoRegistryCodeSaver);
 	const icomp::IComponentStaticInfo& infoSelectedDocModelBinder = BasePck::SelectedDocModelBinder::InitStaticInfo(NULL);
@@ -3622,6 +3893,8 @@ CCompositor::CQtGuiPck::CQtGuiPck()
 	RegisterEmbeddedComponentInfo("ModelEditorGui", &infoModelEditorGui);
 	const icomp::IComponentStaticInfo& infoMultiDocWorkspaceGui = QtGuiPck::MultiDocWorkspaceGui::InitStaticInfo(NULL);
 	RegisterEmbeddedComponentInfo("MultiDocWorkspaceGui", &infoMultiDocWorkspaceGui);
+	const icomp::IComponentStaticInfo& infoParamsManagerGui = QtGuiPck::ParamsManagerGui::InitStaticInfo(NULL);
+	RegisterEmbeddedComponentInfo("ParamsManagerGui", &infoParamsManagerGui);
 	const icomp::IComponentStaticInfo& infoSelectionParamGui = QtGuiPck::SelectionParamGui::InitStaticInfo(NULL);
 	RegisterEmbeddedComponentInfo("SelectionParamGui", &infoSelectionParamGui);
 	const icomp::IComponentStaticInfo& infoSplashScreen = QtGuiPck::SplashScreen::InitStaticInfo(NULL);
@@ -3681,6 +3954,8 @@ CCompositor::CLocalEnvironmentManager::CLocalEnvironmentManager()
 	m_registriesMap[icomp::CComponentAddress("CmpstrVoce", "CompositorTemplate")].SetPtr(new CCmpstrVocePck::CCompositorTemplateRegistry());
 	m_registriesMap[icomp::CComponentAddress("CmpstrVoce", "CompositorTranslationManager")].SetPtr(new CCmpstrVocePck::CCompositorTranslationManagerRegistry());
 	m_registriesMap[icomp::CComponentAddress("CmpstrVoce", "PackageOverviewDock")].SetPtr(new CCmpstrVocePck::CPackageOverviewDockRegistry());
+	m_registriesMap[icomp::CComponentAddress("CmpstrVoce", "SelectableConfigData")].SetPtr(new CCmpstrVocePck::CSelectableConfigDataRegistry());
+	m_registriesMap[icomp::CComponentAddress("CmpstrVoce", "SelectableConfigDataEditor")].SetPtr(new CCmpstrVocePck::CSelectableConfigDataEditorRegistry());
 	m_registriesMap[icomp::CComponentAddress("CmpstrVoce", "VisualRegistryView")].SetPtr(new CCmpstrVocePck::CVisualRegistryViewRegistry());
 
 	// register composed packages

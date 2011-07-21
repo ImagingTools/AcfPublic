@@ -50,16 +50,22 @@
 <a name="l00052"></a>00052 
 <a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#a2d5af72f8d7497d3ac2f1c5814faae6" title="Check if some file is present.">IsPresent</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath) <span class="keyword">const</span> = 0;
 <a name="l00057"></a>00057 
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#a16b7f2e226808e605a8e0fc0a39e69e" title="Copy any file to another.">CopyFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; inputFile, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; outputFile, <span class="keywordtype">bool</span> overwriteExisting = <span class="keyword">false</span>) <span class="keyword">const</span> = 0;
-<a name="l00062"></a>00062 };
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 } <span class="comment">// namespace isys</span>
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="preprocessor">#endif // !isys_IFileSystem_included</span>
-<a name="l00069"></a>00069 <span class="preprocessor"></span>
-<a name="l00070"></a>00070 
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#1c2894ea376870e520ccd2f88d58ad0f" title="Copy any file to another.">CreateFileCopy</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; inputFile, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; outputFile, <span class="keywordtype">bool</span> overwriteExisting = <span class="keyword">false</span>) <span class="keyword">const</span> = 0;
+<a name="l00062"></a>00062 
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#a09e10c6f07b5e7ec8170c8f8fe7f78d" title="Remove the file filePath from the file system.">RemoveFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath) <span class="keyword">const</span> = 0;
+<a name="l00067"></a>00067        
+<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#d0959eee52bead72b584e44eef2840e5" title="Remove the directory directoryPath from the file system.">RemoveFolder</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; directoryPath, <span class="keywordtype">bool</span> ignoreNonEmpty = <span class="keyword">false</span>) <span class="keyword">const</span> = 0;
+<a name="l00074"></a>00074 
+<a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#3fda9e2fdad8edcd35e1c93cb06c7b14" title="Create an empty directory.">CreateFolder</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; directoryPath) <span class="keyword">const</span> = 0;
+<a name="l00079"></a>00079 };
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 } <span class="comment">// namespace isys</span>
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 <span class="preprocessor">#endif // !isys_IFileSystem_included</span>
+<a name="l00086"></a>00086 <span class="preprocessor"></span>
+<a name="l00087"></a>00087 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>
