@@ -47,6 +47,10 @@ Inheritance diagram for imod::TModelDispatcher&lt; NotifyReceiver &gt;:</div>
 <p>
 <a href="classimod_1_1_t_model_dispatcher-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Public Types</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <br class="typebreak">
+<a class="el" href="classimod_1_1_c_multi_model_observer_base.html">imod::CMultiModelObserverBase</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_t_model_dispatcher.html#b56052d15b9a648623b2743c83173346">BaseClass</a></td></tr>
+
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_t_model_dispatcher.html#94b13fd63c451d217edcca1b610f15e0">TModelDispatcher</a> (NotifyReceiver &amp;parent)</td></tr>
 
@@ -66,6 +70,9 @@ Inheritance diagram for imod::TModelDispatcher&lt; NotifyReceiver &gt;:</div>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get concrete object instance of the obsered model.  <a href="#bba7acebdb530e7c34dc392a0961eb59"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_t_model_dispatcher.html#08669f8a0e2e319285b384936d3a807b">OnDetached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be detached.  <a href="#08669f8a0e2e319285b384936d3a807b"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_t_model_dispatcher.html#9aa3cbfce2e349c04ed4067955a61c0c">OnUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 
 </table>
@@ -78,6 +85,26 @@ Generic implementation of a data model changes notifier.
 You can register several data models objects that you want to observe with RegisterModel method. You will get a notification event on each change in the observed data model via OnModelChanged method call of your notification consumer. <dl class="note" compact><dt><b>Note:</b></dt><dd>Notification consumer class must implement the method void OnModelChanged(int modelId, int changeFlags, istd::IPolymorphic* updateParamsPtr) to support the notification callback. </dd></dl>
 
 <p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00026">26</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
+<hr><h2>Member Typedef Documentation</h2>
+<a class="anchor" name="b56052d15b9a648623b2743c83173346"></a><!-- doxytag: member="imod::TModelDispatcher::BaseClass" ref="b56052d15b9a648623b2743c83173346" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class NotifyReceiver&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classimod_1_1_c_multi_model_observer_base.html">imod::CMultiModelObserverBase</a> <a class="el" href="classimod_1_1_t_model_dispatcher.html">imod::TModelDispatcher</a>&lt; NotifyReceiver &gt;::<a class="el" href="classimod_1_1_c_multi_model_observer_base.html">BaseClass</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00029">29</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
+
+</div>
+</div><p>
 <hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="94b13fd63c451d217edcca1b610f15e0"></a><!-- doxytag: member="imod::TModelDispatcher::TModelDispatcher" ref="94b13fd63c451d217edcca1b610f15e0" args="(NotifyReceiver &amp;parent)" -->
 <div class="memitem">
@@ -99,7 +126,7 @@ template&lt;class NotifyReceiver&gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00071">71</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00076">76</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
 
 </div>
 </div><p>
@@ -122,9 +149,9 @@ template&lt;class NotifyReceiver &gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00078">78</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00083">83</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
 
-<p>References <a class="el" href="_t_model_dispatcher_8h_source.html#l00113">imod::TModelDispatcher&lt; NotifyReceiver &gt;::UnregisterAllModels()</a>.</p>
+<p>References <a class="el" href="_t_model_dispatcher_8h_source.html#l00120">imod::TModelDispatcher&lt; NotifyReceiver &gt;::UnregisterAllModels()</a>.</p>
 
 </div>
 </div><p>
@@ -153,9 +180,39 @@ template&lt;class Object &gt; </div>
 Get concrete object instance of the obsered model. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00127">127</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00138">138</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="08669f8a0e2e319285b384936d3a807b"></a><!-- doxytag: member="imod::TModelDispatcher::OnDetached" ref="08669f8a0e2e319285b384936d3a807b" args="(imod::IModel *modelPtr)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class NotifyReceiver &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classimod_1_1_t_model_dispatcher.html">imod::TModelDispatcher</a>&lt; NotifyReceiver &gt;::OnDetached           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&nbsp;</td>
+          <td class="paramname"> <em>modelPtr</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+This call back function will be called, if an observable object is about to be detached. 
+<p>
+
+<p>Reimplemented from <a class="el" href="classimod_1_1_c_multi_model_observer_base.html#17e1d6e704105c66cf03baf0a27e4e29">imod::CMultiModelObserverBase</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00157">157</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
+
+<p>References <a class="el" href="classimod_1_1_c_multi_model_observer_base.html#17e1d6e704105c66cf03baf0a27e4e29">imod::CMultiModelObserverBase::OnDetached()</a>.</p>
 
 </div>
 </div><p>
@@ -196,7 +253,7 @@ template&lt;class NotifyReceiver &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classimod_1_1_c_multi_model_observer_base.html#ba8194a410e75792998ab6e22bd707b9">imod::CMultiModelObserverBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00146">146</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00178">178</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
 
 </div>
 </div><p>
@@ -237,7 +294,7 @@ If model registration was successfull, the function returns <code>true</code>. <
   </table>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00085">85</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00090">90</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
 
 <p>References <a class="el" href="classimod_1_1_i_model.html#c6c63f2699bce472fc0b7e556604c5cd">imod::IModel::AttachObserver()</a>.</p>
 
@@ -264,11 +321,11 @@ template&lt;class NotifyReceiver &gt; </div>
 Unregister all observed data objects. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00113">113</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00120">120</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
 
 <p>References <a class="el" href="classimod_1_1_i_model.html#7397e5498b4db60234160a97f570eb66">imod::IModel::DetachObserver()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_model_dispatcher_8h_source.html#l00078">imod::TModelDispatcher&lt; NotifyReceiver &gt;::~TModelDispatcher()</a>.</p>
+<p>Referenced by <a class="el" href="_t_model_dispatcher_8h_source.html#l00083">imod::TModelDispatcher&lt; NotifyReceiver &gt;::~TModelDispatcher()</a>.</p>
 
 </div>
 </div><p>
@@ -300,7 +357,7 @@ Unregister the data model object.
 </dl>
 <dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="classimod_1_1_t_model_dispatcher.html#09ea006d3bad8b7a8d7944aab56cc392" title="Register the data model to be observed.">RegisterModel</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00098">98</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_model_dispatcher_8h_source.html#l00103">103</a> of file <a class="el" href="_t_model_dispatcher_8h_source.html">TModelDispatcher.h</a>.</p>
 
 <p>References <a class="el" href="classimod_1_1_i_model.html#7397e5498b4db60234160a97f570eb66">imod::IModel::DetachObserver()</a>.</p>
 

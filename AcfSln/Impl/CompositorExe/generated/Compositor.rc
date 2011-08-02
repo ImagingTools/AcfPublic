@@ -43,7 +43,7 @@ BEGIN
     BEGIN
         BLOCK "040704b0"
         BEGIN
-            VALUE "Comments", "Internal build version (357), base on ACF version 1.4.1.4 (1813), build on Mo 25. Jul 15:54:57 2011 (VC9)"
+            VALUE "Comments", "Internal build version (357), base on ACF version 1.4.1.8 (1817), build on Mo 1. Aug 13:44:47 2011 (VC9)"
             VALUE "CompanyName", "Witold Gantzke and Kirill Lepskiy"
             VALUE "FileDescription", "ACF Compositor"
             VALUE "FileVersion", "0.5.0.1"

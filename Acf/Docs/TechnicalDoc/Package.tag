@@ -23015,6 +23015,13 @@
     <filename>classimod_1_1_t_model_dispatcher.html</filename>
     <templarg>NotifyReceiver</templarg>
     <base protection="protected">imod::CMultiModelObserverBase</base>
+    <member kind="typedef">
+      <type>imod::CMultiModelObserverBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classimod_1_1_t_model_dispatcher.html</anchorfile>
+      <anchor>b56052d15b9a648623b2743c83173346</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>TModelDispatcher</name>
@@ -23056,6 +23063,13 @@
       <anchorfile>classimod_1_1_t_model_dispatcher.html</anchorfile>
       <anchor>bba7acebdb530e7c34dc392a0961eb59</anchor>
       <arglist>(int modelId) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnDetached</name>
+      <anchorfile>classimod_1_1_t_model_dispatcher.html</anchorfile>
+      <anchor>08669f8a0e2e319285b384936d3a807b</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

@@ -23,8 +23,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'CSamplingParamsGuiComp.ui'
 **
-** Created: Fri 3. Jun 13:45:31 2011
-**      by: Qt User Interface Compiler version 4.7.1
+** Created: Wed 27. Jul 17:18:16 2011
+**      by: Qt User Interface Compiler version 4.7.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/

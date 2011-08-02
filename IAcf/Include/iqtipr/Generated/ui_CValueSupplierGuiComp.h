@@ -23,8 +23,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'CValueSupplierGuiComp.ui'
 **
-** Created: Fri 3. Jun 13:43:24 2011
-**      by: Qt User Interface Compiler version 4.7.1
+** Created: Wed 27. Jul 17:16:21 2011
+**      by: Qt User Interface Compiler version 4.7.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
