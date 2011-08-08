@@ -48,9 +48,10 @@ template <class BaseClass>
 class TNamedWrap: virtual public BaseClass
 {
 public:
-	// peudeo-reimplemented (istd::INamed)
+	// pseudo-reimplemented (istd::INamed)
 	virtual const istd::CString& GetName() const;
 	virtual void SetName(const istd::CString& name);
+	virtual bool IsNameFixed() const;
 
 protected:
 	virtual bool SerializeName(iser::IArchive& archive);
@@ -60,8 +61,7 @@ protected:
 };
 
 
-
-// peudeo-reimplemented (istd::INamed)
+// pseudo-reimplemented (istd::INamed)
 
 template <class BaseClass>
 const istd::CString& TNamedWrap<BaseClass>::GetName() const
@@ -78,6 +78,13 @@ void TNamedWrap<BaseClass>::SetName(const istd::CString& name)
 
 		m_name = name;
 	}
+}
+
+
+template <class BaseClass>
+bool TNamedWrap<BaseClass>::IsNameFixed() const
+{
+	return false;
 }
 
 
@@ -103,3 +110,5 @@ typedef ibase::TNamedWrap<istd::INamed> CNamed;
 
 
 #endif // ibase_TNamedWrap_included
+
+

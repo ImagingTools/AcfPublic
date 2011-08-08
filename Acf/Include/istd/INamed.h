@@ -47,6 +47,8 @@ public:
 		Set the object name.
 	*/
 	virtual void SetName(const istd::CString& name) = 0;
+
+	virtual bool IsNameFixed() const = 0;
 };
 
 
