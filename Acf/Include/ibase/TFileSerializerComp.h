@@ -1,4 +1,4 @@
-/********************************************************************************
+ /********************************************************************************
 **
 **	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
 **
@@ -169,6 +169,10 @@ protected:
 	*/
 	bool CheckMinimalVersion(const iser::ISerializable& object, const iser::IVersionInfo& versionInfo) const;
 
+	bool CheckInputFilePath(const istd::CString filePath) const;
+
+	bool CheckTargetDirectory(const istd::CString dirPath) const;
+
 private:
 	I_REF(iser::IVersionInfo, m_versionInfoCompPtr);
 };
@@ -232,6 +236,10 @@ bool TFileSerializerComp<ReadArchive, WriteArchive>::IsOperationSupported(
 template <class ReadArchive, class WriteArchive>
 int TFileSerializerComp<ReadArchive, WriteArchive>::LoadFromFile(istd::IChangeable& data, const istd::CString& filePath) const
 {
+	if (!CheckInputFilePath(filePath)){
+		return StateFailed;
+	}
+
 	if (IsOperationSupported(&data, &filePath, QF_NO_SAVING, false)){
 		ReadArchiveEx archive(filePath, this);
 
@@ -259,6 +267,10 @@ int TFileSerializerComp<ReadArchive, WriteArchive>::LoadFromFile(istd::IChangeab
 template <class ReadArchive, class WriteArchive>
 int TFileSerializerComp<ReadArchive, WriteArchive>::SaveToFile(const istd::IChangeable& data, const istd::CString& filePath) const
 {
+	if (!CheckTargetDirectory(filePath)){
+		return StateFailed;
+	}
+
 	if (IsOperationSupported(&data, &filePath, QF_NO_LOADING, false)){
 		WriteArchiveEx archive(filePath, GetVersionInfo(), this);
 		I_ASSERT(archive.IsStoring());
@@ -321,6 +333,45 @@ bool TFileSerializerComp<ReadArchive, WriteArchive>::CheckMinimalVersion(const i
 	return true;
 }
 
+
+template <class ReadArchive, class WriteArchive>
+bool TFileSerializerComp<ReadArchive, WriteArchive>::CheckInputFilePath(const istd::CString filePath) const
+{
+	isys::IFileSystem* fileSystemPtr = istd::GetService<isys::IFileSystem>();
+	if (fileSystemPtr == NULL){
+		SendWarningMessage(0, "File path could not be checked");
+
+		return true;
+	}
+	
+	if (!fileSystemPtr->IsPresent(filePath)){
+		SendWarningMessage(MI_CANNOT_LOAD, "File " + filePath.ToString() + " does not exist");
+
+		return false;
+	}
+	
+	return true;
+}
+
+
+template <class ReadArchive, class WriteArchive>
+bool TFileSerializerComp<ReadArchive, WriteArchive>::CheckTargetDirectory(const istd::CString dirPath) const
+{
+	isys::IFileSystem* fileSystemPtr = istd::GetService<isys::IFileSystem>();
+	if (fileSystemPtr == NULL){
+		SendWarningMessage(0, "Target directory path could not be checked");
+
+		return true;
+	}
+
+	if (!fileSystemPtr->IsPresent(fileSystemPtr->GetDirPath(dirPath))){
+		SendWarningMessage(MI_CANNOT_SAVE, "Save target directory " + fileSystemPtr->GetDirPath(dirPath).ToString() + " does not exist");
+
+		return false;
+	}
+
+	return true;
+}
 
 } // namespace ibase
 
