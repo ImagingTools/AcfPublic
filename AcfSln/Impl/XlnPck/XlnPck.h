@@ -10,6 +10,7 @@
 #include "ixln/CFileXmlReadArchive.h"
 #include "ixln/CFileXmlWriteArchive.h"
 #include "ixln/CFileTransfXmlSerializerComp.h"
+#include "ixln/CXsltFileLoaderComp.h"
 
 
 /**
@@ -21,6 +22,7 @@ namespace XlnPck
 
 typedef ibase::TFileSerializerComp<ixln::CFileXmlReadArchive, ixln::CFileXmlWriteArchive> XmlFileSerializer;
 typedef ixln::CFileTransfXmlSerializerComp FileTransfXmlSerializer;
+typedef ixln::CXsltFileLoaderComp XsltFileLoader;
 
 
 } // namespace XlnPck

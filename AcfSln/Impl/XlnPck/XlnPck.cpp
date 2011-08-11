@@ -46,6 +46,11 @@ I_EXPORT_COMPONENT(
 			"XALAN based file loader serializing objects using XML format and XSL transformation",
 			"XALAN XERCES Load Save Serializer Archive Format XSLT Transformation Template" IM_TAG("File Loader"));
 
+I_EXPORT_COMPONENT(
+		   XsltFileLoader,
+		   "Transform XTCV file to TVCX file via XSL Transformation and give it to another Serializer",
+		   "XALAN XERCES Load XSLT Transformation Template" IM_TAG("File Loader"));
+
 
 } // namespace XlnPck
 

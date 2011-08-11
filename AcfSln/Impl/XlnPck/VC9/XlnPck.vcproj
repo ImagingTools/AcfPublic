@@ -133,9 +133,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="AcfStd.lib xerces-c_2D.lib Xalan-C_1D.lib"
+				AdditionalDependencies="AcfStd.lib xerces-c_2D.lib Xalan-C_1D.lib XalanMessages_1_10D.lib"
 				OutputFile="$(OutDir)\$(ProjectName).arp"
-				AdditionalLibraryDirectories="&quot;$(ACFDIR)\Lib\$(ConfigurationName)VC9&quot;;&quot;$(XERCESDIR)/lib&quot;;&quot;$(XALANDIR)/lib&quot;"
+				AdditionalLibraryDirectories="&quot;$(ACFDIR)\Lib\$(ConfigurationName)VC9&quot;;&quot;$(XERCESDIR)/lib&quot;;&quot;$(XALANDIR)/Build/$(PlatformName)/VC9/$(ConfigurationName)&quot;"
 				GenerateDebugInformation="true"
 				SubSystem="1"
 			/>
