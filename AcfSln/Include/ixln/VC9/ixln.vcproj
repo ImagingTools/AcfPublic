@@ -199,6 +199,10 @@
 				RelativePath="..\CXmlWriteArchiveBase.cpp"
 				>
 			</File>
+			<File
+				RelativePath="..\CXsltFileLoaderComp.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -230,6 +234,10 @@
 			</File>
 			<File
 				RelativePath="..\CXmlWriteArchiveBase.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CXsltFileLoaderComp.h"
 				>
 			</File>
 			<File
