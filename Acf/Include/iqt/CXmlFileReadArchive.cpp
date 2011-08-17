@@ -70,7 +70,7 @@ bool CXmlFileReadArchive::OpenDocument(const istd::CString& filePath)
 	if (m_currentNode.nodeValue() != iqt::GetQString(m_rootTag.GetId())){
 		QDomElement mainElement = m_document.documentElement();
 
-		m_currentNode = mainElement.firstChild();
+		m_currentNode = mainElement;
 	}
 
 	bool retVal = !m_currentNode.isNull();
@@ -95,19 +95,11 @@ bool CXmlFileReadArchive::BeginTag(const iser::CArchiveTag& tag)
 {
 	QString tagId(tag.GetId().c_str());
 
-	QDomElement element = m_currentNode.toElement();
-	if (		element.isNull() ||
-				(element.nodeName() != tagId)){
-		element = m_currentNode.nextSiblingElement(tagId);
+	QDomElement element = m_currentNode.firstChildElement(tagId);
+	if (!element.isNull()){
+		m_currentNode = element;
 	}
-
-	if (element.isNull()){
-		return false;
-	}
-
-	m_currentNode = element.firstChild();
-
-	return !m_currentNode.isNull();
+	return !element.isNull();
 }
 
 
@@ -115,29 +107,33 @@ bool CXmlFileReadArchive::BeginMultiTag(const iser::CArchiveTag& tag, const iser
 {
 	QString tagId(tag.GetId().c_str());
 
-	QDomElement element = m_currentNode.toElement();
-	if (		element.isNull() ||
-				(element.nodeName() != tagId)){
-		element = m_currentNode.nextSiblingElement(tagId);
+	QDomElement element = m_currentNode.firstChildElement(tagId);
+	if (!element.isNull()){
+		m_currentNode = element;
 	}
-
-	if (element.isNull()){
+	else{
 		return false;
 	}
 
-	QDomNodeList elementsList = element.elementsByTagName(QString(subTag.GetId().c_str()));
+	int tempCount = 0;
+	QDomElement child = element.firstChildElement(QString(subTag.GetId().c_str()));
+	while (!child.isNull()){
+		tempCount++;
+		child = child.nextSiblingElement(QString(subTag.GetId().c_str()));
+	}
+	count = tempCount;
 
-	count = elementsList.size();
-
-	m_currentNode = element.firstChild();
-
-	return !m_currentNode.isNull();
+	return !element.isNull();
 }
 
 
 bool CXmlFileReadArchive::EndTag(const iser::CArchiveTag& /*tag*/)
 {
-	m_currentNode = m_currentNode.parentNode();
+	QDomNode parent = m_currentNode.parentNode();
+	
+	parent.removeChild(m_currentNode);
+
+	m_currentNode = parent;
 
 	return !m_currentNode.isNull();
 }
@@ -327,16 +323,20 @@ bool CXmlFileReadArchive::ProcessData(void* dataPtr, int size)
 
 QString CXmlFileReadArchive::PullTextNode()
 {
-	while (		!m_currentNode.isNull() &&
-				!m_currentNode.isText()){
-		m_currentNode = m_currentNode.nextSibling();
+	QString text;
+	QDomNode node = m_currentNode.firstChild();
+	//Kill separator tags (<br/>)
+	while (node.nodeName() == "br"){
+		QDomNode brNode = node;
+		node = node.nextSibling();
+		m_currentNode.removeChild(brNode);
 	}
+	
+	text = node.nodeValue();
 
-	QString retVal = m_currentNode.nodeValue();
+	m_currentNode.removeChild(node);
 
-	m_currentNode = m_currentNode.nextSibling();
-
-	return retVal;
+	return text;
 }
 
 
