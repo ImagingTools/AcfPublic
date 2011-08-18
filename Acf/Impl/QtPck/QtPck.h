@@ -22,6 +22,7 @@
 #include "iqt/CTranslationManagerComp.h"
 #include "iqt/CXmlFileReadArchive.h"
 #include "iqt/CXmlFileWriteArchive.h"
+#include "iqt/CXslSerializerComp.h"
 
 #include "iqtdoc/CExtendedDocumentTemplateComp.h"
 #include "iqtdoc/CDoxygenHelpFileProviderComp.h"
@@ -71,6 +72,7 @@ typedef iqtdoc::CDoxygenHelpFileProviderComp DoxygenHelpFileProvider;
 typedef icomp::TModelCompWrap<iqtprm::CRelativeFileNameParamComp> RelativeFileNameParam;
 
 typedef ibase::TFileSerializerComp<iqt::CXmlFileReadArchive, iqt::CXmlFileWriteArchive> QtXmlFileSerializer;
+typedef iqt::CXslSerializerComp XslFileSerializer;
 
 
 } // namespace QtPck
