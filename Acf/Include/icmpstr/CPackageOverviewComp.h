@@ -187,7 +187,7 @@ private:
 	{
 	public:
 		RegistryObserver(CPackageOverviewComp* parentPtr);
-		using imod::CSingleModelObserverBase::EnsureDetached;
+		using imod::CSingleModelObserverBase::EnsureModelDetached;
 
 	protected:
 		// reimplemented (imod::CSingleModelObserverBase)

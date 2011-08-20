@@ -14,6 +14,24 @@
     <filename>_a_c_f_8h</filename>
   </compound>
   <compound kind="file">
+    <name>CAffine2d.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
+    <filename>_c_affine2d_8h</filename>
+    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
+    <includes id="_c_matrix2d_8h" name="CMatrix2d.h" local="yes" imported="no">i2d/CMatrix2d.h</includes>
+    <class kind="class">i2d::CAffine2d</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CAffineTransformation2d.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
+    <filename>_c_affine_transformation2d_8h</filename>
+    <includes id="_i_transformation2d_8h" name="ITransformation2d.h" local="yes" imported="no">i2d/ITransformation2d.h</includes>
+    <includes id="_c_affine2d_8h" name="CAffine2d.h" local="yes" imported="no">i2d/CAffine2d.h</includes>
+    <class kind="class">i2d::CAffineTransformation2d</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAnnulus.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
     <filename>_c_annulus_8h</filename>
@@ -85,6 +103,15 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CMatrix2d.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
+    <filename>_c_matrix2d_8h</filename>
+    <includes id="_t_matrix_8h" name="TMatrix.h" local="yes" imported="no">imath/TMatrix.h</includes>
+    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
+    <class kind="class">i2d::CMatrix2d</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CPosition2d.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
     <filename>_c_position2d_8h</filename>
@@ -143,15 +170,6 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
-    <name>CTransform.h</name>
-    <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
-    <filename>_c_transform_8h</filename>
-    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
-    <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
-    <class kind="class">i2d::CTransform</class>
-    <namespace>i2d</namespace>
-  </compound>
-  <compound kind="file">
     <name>CVector2d.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
     <filename>_c_vector2d_8h</filename>
@@ -171,7 +189,7 @@
     <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
     <filename>_i_object2d_8h</filename>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <includes id="imath_8h" name="imath.h" local="yes" imported="no">imath/imath.h</includes>
+    <includes id="_i_transformation2d_8h" name="ITransformation2d.h" local="yes" imported="no">i2d/ITransformation2d.h</includes>
     <class kind="class">i2d::IObject2d</class>
     <namespace>i2d</namespace>
   </compound>
@@ -182,6 +200,17 @@
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="i2d_8h" name="i2d.h" local="yes" imported="no">i2d/i2d.h</includes>
     <class kind="class">i2d::ISceneController</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ITransformation2d.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/i2d/</path>
+    <filename>_i_transformation2d_8h</filename>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_t_i_surject_function_8h" name="TISurjectFunction.h" local="yes" imported="no">imath/TISurjectFunction.h</includes>
+    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
+    <includes id="_c_matrix2d_8h" name="CMatrix2d.h" local="yes" imported="no">i2d/CMatrix2d.h</includes>
+    <class kind="class">i2d::ITransformation2d</class>
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
@@ -1579,6 +1608,7 @@
     <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_t_copy_serialized_wrap_8h" name="TCopySerializedWrap.h" local="yes" imported="no">iser/TCopySerializedWrap.h</includes>
     <includes id="_i_attribute_static_info_8h" name="IAttributeStaticInfo.h" local="yes" imported="no">icomp/IAttributeStaticInfo.h</includes>
     <class kind="class">icomp::TAttribute</class>
     <namespace>icomp</namespace>
@@ -1714,6 +1744,7 @@
     <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_t_copy_serialized_wrap_8h" name="TCopySerializedWrap.h" local="yes" imported="no">iser/TCopySerializedWrap.h</includes>
     <includes id="_i_attribute_static_info_8h" name="IAttributeStaticInfo.h" local="yes" imported="no">icomp/IAttributeStaticInfo.h</includes>
     <class kind="class">icomp::TMultiAttribute</class>
     <class kind="struct">icomp::TMultiAttribute::Wrap</class>
@@ -2208,7 +2239,7 @@
       <type>TIMathFunction&lt; double, double &gt;</type>
       <name>IDoubleFunction</name>
       <anchorfile>namespaceimath.html</anchorfile>
-      <anchor>a4b283a9d83d1f4f13a7f697335b2a42</anchor>
+      <anchor>e511d2ed79aa9a89bc32e381244b0563</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -2245,6 +2276,13 @@
     <includes id="_t_i_math_function_8h" name="TIMathFunction.h" local="yes" imported="no">imath/TIMathFunction.h</includes>
     <class kind="class">imath::TISurjectFunction</class>
     <namespace>imath</namespace>
+    <member kind="typedef">
+      <type>TISurjectFunction&lt; double, double &gt;</type>
+      <name>ISurjectDoubleFunction</name>
+      <anchorfile>namespaceimath.html</anchorfile>
+      <anchor>e25a8ebd149d6086a532a99407a22a9d</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>TIValueManip.h</name>
@@ -2278,6 +2316,25 @@
     <includes id="imath_8h" name="imath.h" local="yes" imported="no">imath/imath.h</includes>
     <class kind="class">imath::TMathVectorWrap</class>
     <namespace>imath</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TMatrix.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/imath/</path>
+    <filename>_t_matrix_8h</filename>
+    <includes id="_t_array_8h" name="TArray.h" local="yes" imported="no">istd/TArray.h</includes>
+    <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_t_vector_8h" name="TVector.h" local="yes" imported="no">imath/TVector.h</includes>
+    <class kind="class">imath::TMatrix</class>
+    <namespace>iser</namespace>
+    <namespace>imath</namespace>
+    <member kind="function">
+      <type>TMatrix&lt; Width, Height, Element &gt;</type>
+      <name>operator*</name>
+      <anchorfile>namespaceimath.html</anchorfile>
+      <anchor>85d38d2fc58cd7322f0c01141cfbc83c</anchor>
+      <arglist>(double value, const imath::TMatrix&lt; Width, Height, Element &gt; &amp;matrix)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>TSplineGridFunctionBase.h</name>
@@ -2433,8 +2490,8 @@
     <name>IObserver.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/imod/</path>
     <filename>_i_observer_8h</filename>
-    <includes id="imod_8h" name="imod.h" local="yes" imported="no">imod/imod.h</includes>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="imod_8h" name="imod.h" local="yes" imported="no">imod/imod.h</includes>
     <class kind="class">imod::IObserver</class>
     <namespace>imod</namespace>
   </compound>
@@ -2469,8 +2526,8 @@
     <name>TMultiModelObserverBase.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/imod/</path>
     <filename>_t_multi_model_observer_base_8h</filename>
-    <includes id="imod_8h" name="imod.h" local="yes" imported="no">imod/imod.h</includes>
     <includes id="_c_multi_model_observer_base_8h" name="CMultiModelObserverBase.h" local="yes" imported="no">imod/CMultiModelObserverBase.h</includes>
+    <includes id="imod_8h" name="imod.h" local="yes" imported="no">imod/imod.h</includes>
     <class kind="class">imod::TMultiModelObserverBase</class>
     <namespace>imod</namespace>
   </compound>
@@ -3251,6 +3308,50 @@
     <namespace>iser</namespace>
   </compound>
   <compound kind="file">
+    <name>CXslSerializerComp.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqt/</path>
+    <filename>_c_xsl_serializer_comp_8h</filename>
+    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
+    <includes id="_c_static_services_provider_8h" name="CStaticServicesProvider.h" local="yes" imported="no">istd/CStaticServicesProvider.h</includes>
+    <includes id="itr_8h" name="itr.h" local="yes" imported="no">istd/itr.h</includes>
+    <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
+    <includes id="_i_file_system_8h" name="IFileSystem.h" local="yes" imported="no">isys/IFileSystem.h</includes>
+    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_c_file_type_info_comp_8h" name="CFileTypeInfoComp.h" local="yes" imported="no">ibase/CFileTypeInfoComp.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_c_xsl_transformation_read_archive_8h" name="CXslTransformationReadArchive.h" local="yes" imported="no">iqt/CXslTransformationReadArchive.h</includes>
+    <includes id="_c_xsl_transformation_write_archive_8h" name="CXslTransformationWriteArchive.h" local="yes" imported="no">iqt/CXslTransformationWriteArchive.h</includes>
+    <class kind="class">iqt::CXslSerializerComp</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CXslTransformationReadArchive.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqt/</path>
+    <filename>_c_xsl_transformation_read_archive_8h</filename>
+    <includes id="_i_logger_8h" name="ILogger.h" local="yes" imported="no">istd/ILogger.h</includes>
+    <includes id="_c_xml_document_info_base_8h" name="CXmlDocumentInfoBase.h" local="yes" imported="no">iser/CXmlDocumentInfoBase.h</includes>
+    <includes id="_c_read_archive_base_8h" name="CReadArchiveBase.h" local="yes" imported="no">iser/CReadArchiveBase.h</includes>
+    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
+    <includes id="itr_8h" name="itr.h" local="yes" imported="no">istd/itr.h</includes>
+    <class kind="class">iqt::CXslTransformationReadArchive</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CXslTransformationWriteArchive.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqt/</path>
+    <filename>_c_xsl_transformation_write_archive_8h</filename>
+    <includes id="itr_8h" name="itr.h" local="yes" imported="no">istd/itr.h</includes>
+    <includes id="_c_write_archive_base_8h" name="CWriteArchiveBase.h" local="yes" imported="no">iser/CWriteArchiveBase.h</includes>
+    <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">iser/CFileArchiveInfo.h</includes>
+    <includes id="_c_xml_document_info_base_8h" name="CXmlDocumentInfoBase.h" local="yes" imported="no">iser/CXmlDocumentInfoBase.h</includes>
+    <includes id="_c_log_comp_8h" name="CLogComp.h" local="yes" imported="no">ibase/CLogComp.h</includes>
+    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
+    <class kind="class">iqt::CXslTransformationWriteArchive</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
     <name>IQImageProvider.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/iqt/</path>
     <filename>_i_q_image_provider_8h</filename>
@@ -3803,6 +3904,7 @@
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_c_single_document_manager_base_8h" name="CSingleDocumentManagerBase.h" local="yes" imported="no">idoc/CSingleDocumentManagerBase.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <includes id="_t_restorable_gui_wrap_8h" name="TRestorableGuiWrap.h" local="yes" imported="no">iqtgui/TRestorableGuiWrap.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
     <includes id="_t_qt_document_manager_wrap_8h" name="TQtDocumentManagerWrap.h" local="yes" imported="no">iqtdoc/TQtDocumentManagerWrap.h</includes>
     <class kind="class">iqtdoc::CSingleDocumentWorkspaceGuiComp</class>
@@ -3830,6 +3932,7 @@
     <path>E:/Work/Projects/Development/Acf/Include/iqtdoc/</path>
     <filename>_t_qt_document_manager_wrap_8h</filename>
     <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
+    <includes id="_c_file_dialog_loader_comp_8h" name="CFileDialogLoaderComp.h" local="yes" imported="no">iqtgui/CFileDialogLoaderComp.h</includes>
     <includes id="_i_printable_8h" name="IPrintable.h" local="yes" imported="no">iqtdoc/IPrintable.h</includes>
     <class kind="class">iqtdoc::TQtDocumentManagerWrap</class>
     <namespace>iqtdoc</namespace>
@@ -3921,8 +4024,9 @@
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
     <includes id="_i_file_loader_info_8h" name="IFileLoaderInfo.h" local="yes" imported="no">iser/IFileLoaderInfo.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
     <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
     <class kind="class">iqtgui::CFileDialogLoaderComp</class>
     <namespace>iqtgui</namespace>
@@ -5711,6 +5815,8 @@
     <filename>group___persistence.html</filename>
     <class kind="class">iqt::CXmlFileReadArchive</class>
     <class kind="class">iqt::CXmlFileWriteArchive</class>
+    <class kind="class">iqt::CXslTransformationReadArchive</class>
+    <class kind="class">iqt::CXslTransformationWriteArchive</class>
     <class kind="class">iser::CArchiveTag</class>
     <class kind="class">iser::CBitMemoryReadArchive</class>
     <class kind="class">iser::CBitMemoryWriteArchive</class>
@@ -5926,6 +6032,8 @@
   <compound kind="namespace">
     <name>i2d</name>
     <filename>namespacei2d.html</filename>
+    <class kind="class">i2d::CAffine2d</class>
+    <class kind="class">i2d::CAffineTransformation2d</class>
     <class kind="class">i2d::CAnnulus</class>
     <class kind="class">i2d::CAnnulusComp</class>
     <class kind="class">i2d::CAnnulusSegment</class>
@@ -5934,16 +6042,356 @@
     <class kind="class">i2d::CCircleComp</class>
     <class kind="class">i2d::CLine2d</class>
     <class kind="class">i2d::CLine2dComp</class>
+    <class kind="class">i2d::CMatrix2d</class>
     <class kind="class">i2d::CPosition2d</class>
     <class kind="class">i2d::CPosition2dComp</class>
     <class kind="class">i2d::CQuadrangle</class>
     <class kind="class">i2d::CQuadrangleComp</class>
     <class kind="class">i2d::CRectangle</class>
     <class kind="class">i2d::CRectangleComp</class>
-    <class kind="class">i2d::CTransform</class>
     <class kind="class">i2d::CVector2d</class>
     <class kind="class">i2d::IObject2d</class>
     <class kind="class">i2d::ISceneController</class>
+    <class kind="class">i2d::ITransformation2d</class>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CAffine2d</name>
+    <filename>classi2d_1_1_c_affine2d.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CAffine2d</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>9cbd50b25782d2d96e6cb2ea3d83e534</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CAffine2d</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>7bd4d33141bca84caacd65e7e0239e1f</anchor>
+      <arglist>(const CAffine2d &amp;transform)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CAffine2d</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>b7e5007dd130d75d0d3dae9ac26cc9be</anchor>
+      <arglist>(const CMatrix2d &amp;deform, const CVector2d &amp;translation=CVector2d(0.0, 0.0))</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CAffine2d</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>fc220d44ee3f8a113575de52f72e69bc</anchor>
+      <arglist>(const CVector2d &amp;translation)</arglist>
+    </member>
+    <member kind="function">
+      <type>const CVector2d &amp;</type>
+      <name>GetTranslation</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>ad957b68a8b811d96dd875fd4190fdfe</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetTranslation</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>e6329811da4965b464f5410625fef7bc</anchor>
+      <arglist>(const CVector2d &amp;translation)</arglist>
+    </member>
+    <member kind="function">
+      <type>const CMatrix2d &amp;</type>
+      <name>GetDeformMatrix</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>73941ef231851205b3bbbaddc14b28b9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDeformMatrix</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>424ba978ff817d6c910c04843ea3864a</anchor>
+      <arglist>(const CMatrix2d &amp;deform)</arglist>
+    </member>
+    <member kind="function">
+      <type>CVector2d &amp;</type>
+      <name>GetTranslationRef</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>0bad9222bb122566cc74150770c88b4f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix2d &amp;</type>
+      <name>GetDeformMatrixRef</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>e96dd32c12eaa25e596da295e5cb8c76</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>172bcdc5a875f8344ff13efd5513f0c7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>978a125c72959d8afcb77e71ad28f32a</anchor>
+      <arglist>(const CVector2d &amp;translation)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>7d19fcce2942854e530c4b91f60a37de</anchor>
+      <arglist>(const CVector2d &amp;translation, double angle, double scale=1.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>96d12ded5d552dd7cb0775b31dc11199</anchor>
+      <arglist>(const CVector2d &amp;translation, double angle, const CVector2d &amp;scale)</arglist>
+    </member>
+    <member kind="function">
+      <type>CVector2d</type>
+      <name>GetApply</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>0ec1ca37f5246375310f8187fba6624e</anchor>
+      <arglist>(const CVector2d &amp;position) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetApply</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>28ec2a6d2ce584c6d6dd3868df348352</anchor>
+      <arglist>(const CVector2d &amp;position, CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CVector2d</type>
+      <name>GetApplyToDelta</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>32dce0dbbb4aa5ce9b28ae7de3caa552</anchor>
+      <arglist>(const CVector2d &amp;delta) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetApplyToDelta</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>c3465cdc534f1a6bc7e891885b542f20</anchor>
+      <arglist>(const CVector2d &amp;delta, CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CAffine2d</type>
+      <name>GetApply</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>8e81d1cfba8759b3ecffc3646f586c79</anchor>
+      <arglist>(const CAffine2d &amp;transform) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetApply</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>85191a36033739132b9b972a3d18e3d5</anchor>
+      <arglist>(const CAffine2d &amp;transform, CAffine2d &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Apply</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>9e4cd05b6b915d398db3f4527016875c</anchor>
+      <arglist>(const CAffine2d &amp;transform)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ApplyLeft</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>26ebb4aefa81fdf787ec1ccddfbc36ec</anchor>
+      <arglist>(const CAffine2d &amp;transform)</arglist>
+    </member>
+    <member kind="function">
+      <type>CVector2d</type>
+      <name>GetInvertedApply</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>434abeab9099ad5a7aa64103df4cfd08</anchor>
+      <arglist>(const CVector2d &amp;position) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetInvertedApply</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>fed013156b1437585c2b95e40da8ed1c</anchor>
+      <arglist>(const CVector2d &amp;position, CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CAffine2d</type>
+      <name>GetTranslated</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>aac4497907741de3dc6d9968b58402ea</anchor>
+      <arglist>(const CVector2d &amp;delta) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetTranslated</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>1d7e77679c0e8fab24ff11128ad06547</anchor>
+      <arglist>(const CVector2d &amp;delta, CAffine2d &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Translate</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>d0a4cfbe2fdef37be705ea7f542c7d4a</anchor>
+      <arglist>(const CVector2d &amp;delta)</arglist>
+    </member>
+    <member kind="function">
+      <type>CAffine2d</type>
+      <name>GetInverted</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>ab4eb8fce58674d469eab7d673eff80d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetInverted</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>713e2938cc47ca6b438b1c749516b049</anchor>
+      <arglist>(CAffine2d &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>c88396787be04049fed6a7ab14db5e94</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>bc801eee10e03ad319cfe5acc856da5c</anchor>
+      <arglist>(const CAffine2d &amp;transform) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>7e457b8ff35c5990e5d749f6b8405947</anchor>
+      <arglist>(const CAffine2d &amp;transform) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CAffine2d &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>14045010e7c528af8886aa819f3ffc09</anchor>
+      <arglist>(const CAffine2d &amp;transform)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const CAffine2d &amp;</type>
+      <name>GetIdentity</name>
+      <anchorfile>classi2d_1_1_c_affine2d.html</anchorfile>
+      <anchor>a6cb457c8dd2f9f3d91f70736683bd07</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CAffineTransformation2d</name>
+    <filename>classi2d_1_1_c_affine_transformation2d.html</filename>
+    <base virtualness="virtual">i2d::CAffine2d</base>
+    <base virtualness="virtual">i2d::ITransformation2d</base>
+    <member kind="typedef">
+      <type>CAffine2d</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>bcac23f30bb328b68b1a7c47e7fc2888</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTransformationFlags</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>daa094ede3fb8d976cf132a8ac7977fc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetDistance</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>8d8ac117c27f5366c3c476a6212812cc</anchor>
+      <arglist>(const CVector2d &amp;origPos1, const CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetPositionAt</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>bc4dc3326126b6b057f87fa14de29898</anchor>
+      <arglist>(const CVector2d &amp;origPosition, CVector2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvPositionAt</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>018f355b0d815f41d61aca32260a1475</anchor>
+      <arglist>(const CVector2d &amp;transfPosition, CVector2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetLocalTransform</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>eda5e9b9388b9e86110185d6464880c6</anchor>
+      <arglist>(const CVector2d &amp;origPosition, CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetLocalInvTransform</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>e10832bdf89c32e1a4688256887aa532</anchor>
+      <arglist>(const CVector2d &amp;transfPosition, CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ITransformation2d *</type>
+      <name>CreateCombinedTransformation</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>7a898b2fa281d504ab723cbcee61fdcd</anchor>
+      <arglist>(const ITransformation2d &amp;transform) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>9ed54e1a451a89dddbf6c61e2f2c2172</anchor>
+      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CVector2d</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>7a7a3584465cba93199bbec59039a65a</anchor>
+      <arglist>(const CVector2d &amp;argument) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>467f0c9f2120d8ab74a75700575a9c1c</anchor>
+      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CVector2d</type>
+      <name>GetValueAt</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>9ec8f0febcd856716fcb16492204c094</anchor>
+      <arglist>(const CVector2d &amp;argument) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>75b334351ed65d769049fb2451e3d06d</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>i2d::CAnnulus</name>
@@ -6194,6 +6642,34 @@
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
       <anchor>78aee945e2a7ae1dd717604b4657e309</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>8015a4528b42eb8a741d0edd56b98b46</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>f4ba43370e7e1756fbb925617939af69</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetTransformed</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>ddbba93c936513fddd40c2978d5055ee</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvTransformed</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>ae375505fc42f5eaaf1a7747883767dd</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -6453,6 +6929,34 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>b210c59ecb8699481c596fa217805c7a</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>ea187f4dcad6dc4bd3e242434b3d90f6</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetTransformed</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>effd472978740ba08cbf4db08fb78d08</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvTransformed</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>63707783c6d06f49c7736277d7c1fbf5</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
       <anchor>ae8e660611fa681843fc72590678f4b1</anchor>
@@ -6476,6 +6980,207 @@
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_line2d_comp.html</anchorfile>
       <anchor>f8fcaa15684c6b5ea942c3a205396291</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CMatrix2d</name>
+    <filename>classi2d_1_1_c_matrix2d.html</filename>
+    <base>TMatrix&lt; 2, 2 &gt;</base>
+    <member kind="typedef">
+      <type>imath::TMatrix&lt; 2, 2 &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>4cbb38dcf9dab58140d096e5ec25ecd1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMatrix2d</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>a3c6614af549fd015e8d3018a0967c59</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMatrix2d</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>8adf40efbd7125e8e379873a85308247</anchor>
+      <arglist>(const CMatrix2d &amp;transform)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMatrix2d</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>9d25950de8a95dc0ecf9b80e2ebd11b8</anchor>
+      <arglist>(const CVector2d &amp;axisX, const CVector2d &amp;axisY)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMatrix2d</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>728630b8032cacd272f7cda0a5e08fd0</anchor>
+      <arglist>(double m11, double m12, double m21, double m22)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>04a6c113e09c7b91f4e8db16ae3458fd</anchor>
+      <arglist>(double angle, double scale=1.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>a531600b8d955b7060e4b9fa6d008a0f</anchor>
+      <arglist>(double angle, const CVector2d &amp;scale)</arglist>
+    </member>
+    <member kind="function">
+      <type>CVector2d</type>
+      <name>GetMultiplied</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>904b374516561052f356ac0abaf8dcdf</anchor>
+      <arglist>(const CVector2d &amp;position) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix2d</type>
+      <name>GetMultiplied</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>6e48c945162267b661b52333ba79d5c6</anchor>
+      <arglist>(const CMatrix2d &amp;matrix) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Multiply</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>11c1ce6cff85c783f7598ef86924da63</anchor>
+      <arglist>(const CMatrix2d &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>MultiplyLeft</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>4158473d77425202d1887b21e6637d9d</anchor>
+      <arglist>(const CMatrix2d &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>CVector2d</type>
+      <name>GetAxisX</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>fa4316d8b035ba754ea684ed9b38173b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>CVector2d</type>
+      <name>GetAxisY</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>23033e65b458c7cc88590caa3e1274d5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>CVector2d</type>
+      <name>GetAxesLengths</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>65e25a74ff71b6dcc6d1aaa5c26e8715</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetAxesLengths</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>04f85556b6b705cec8b277a58842ce27</anchor>
+      <arglist>(CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetApproxAngle</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>128b442e17c97b2c711074b9d2b62e9c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetApproxScale</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>b08fcc556facef1300df80e5aed65209</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CVector2d</type>
+      <name>GetInvMultiplied</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>0c0c578ffcd6e4be7cf68014b1049987</anchor>
+      <arglist>(const i2d::CVector2d &amp;position) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetInvMultiplied</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>d7d1e1d2d752a7fe7b360da4de2abe82</anchor>
+      <arglist>(const i2d::CVector2d &amp;position, i2d::CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix2d</type>
+      <name>GetInverted</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>acfaafd9151995496ace7cdd4410e93a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetInverted</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>244850520a59b4176010fee2eee9dbb6</anchor>
+      <arglist>(CMatrix2d &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix2d</type>
+      <name>CMatrix2d::GetTransposed</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>4a86c036fd0ae3fa8dcfde7966398d1e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetDecompositionQDQ</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>0dd5c7ad94342c53fa02de8ce996abca</anchor>
+      <arglist>(i2d::CMatrix2d &amp;matrixQ, i2d::CVector2d &amp;diagonalD)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetDet</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>90697e65a6c715e6bbfee71bdcef8069</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix2d &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>d38a6a726b94789d128297d292bc7399</anchor>
+      <arglist>(const CMatrix2d &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix2d</type>
+      <name>operator*</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>ad730e1191cca2a9157f4c04e58aa4a8</anchor>
+      <arglist>(double scale) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix2d</type>
+      <name>operator/</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>bd951d7c493e9a14c951bbd168d54ba6</anchor>
+      <arglist>(double scale) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const CMatrix2d &amp;</type>
+      <name>GetIdentity</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>8b02a1a657ce42ec4034e16f3520893a</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -6524,6 +7229,34 @@
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
       <anchor>3b631be9d32febc81393130ca835cc9c</anchor>
       <arglist>(const CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
+      <anchor>c0b5c1d29d941f1b67653f7fffe47553</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
+      <anchor>9ad485da3d0ad4aaa4591c89c8218e6a</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetTransformed</name>
+      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
+      <anchor>06bf165ab4807970f8b2fc05ee9d8c9b</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvTransformed</name>
+      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
+      <anchor>9895f587143a792562037e83b3364288</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -6668,6 +7401,34 @@
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
       <anchor>36544533ffc1a3211dc7016ef9a491ec</anchor>
       <arglist>(const CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
+      <anchor>f9f161a5f264cdfb65d2f7b143a3e7ed</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
+      <anchor>f05ba6db56c5f9c35c52b4623df850c8</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetTransformed</name>
+      <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
+      <anchor>9abe5cb297f16c7990ff8215b20ba6fc</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvTransformed</name>
+      <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
+      <anchor>f714f0d925b79a6ee2b54c33dfc7f8c1</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -7060,6 +7821,34 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>c7255f6da8137970250ff79063c7809e</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>93a38c4b97932ac545551e25198e4b53</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetTransformed</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>8ef4881cb2895deb17cde019cd07da70</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvTransformed</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>6f1895bf87989c2d49038b429311e204</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
       <anchor>aa9e66e407475792d749c755f0523a12</anchor>
@@ -7084,108 +7873,6 @@
       <anchorfile>classi2d_1_1_c_rectangle_comp.html</anchorfile>
       <anchor>a5ee204d7fb2ef91d044832538feae5d</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>i2d::CTransform</name>
-    <filename>classi2d_1_1_c_transform.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>CTransform</name>
-      <anchorfile>classi2d_1_1_c_transform.html</anchorfile>
-      <anchor>338cb2bae9424bbeae58b4fed63799fc</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CTransform</name>
-      <anchorfile>classi2d_1_1_c_transform.html</anchorfile>
-      <anchor>db2ee5fecc7059440a66a3161d1a11af</anchor>
-      <arglist>(const CVector2d &amp;translation, const CVector2d &amp;scale, double angle)</arglist>
-    </member>
-    <member kind="function">
-      <type>CVector2d</type>
-      <name>ApplyTo</name>
-      <anchorfile>classi2d_1_1_c_transform.html</anchorfile>
-      <anchor>697c73cf9427f7d2dbdec70b5fa49242</anchor>
-      <arglist>(const CVector2d &amp;point) const </arglist>
-    </member>
-    <member kind="function">
-      <type>CLine2d</type>
-      <name>ApplyTo</name>
-      <anchorfile>classi2d_1_1_c_transform.html</anchorfile>
-      <anchor>3b6bb86ff04caeedeb8f67bd4f3251e5</anchor>
-      <arglist>(const CLine2d &amp;line) const </arglist>
-    </member>
-    <member kind="function">
-      <type>CTransform &amp;</type>
-      <name>Rotate</name>
-      <anchorfile>classi2d_1_1_c_transform.html</anchorfile>
-      <anchor>fd373b39c2221c5d7b176602320287a0</anchor>
-      <arglist>(double angle)</arglist>
-    </member>
-    <member kind="function">
-      <type>CTransform &amp;</type>
-      <name>Scale</name>
-      <anchorfile>classi2d_1_1_c_transform.html</anchorfile>
-      <anchor>76ee47d5f65ec66a8eee4b9d9c40b0df</anchor>
-      <arglist>(const CVector2d &amp;scale)</arglist>
-    </member>
-    <member kind="function">
-      <type>CTransform &amp;</type>
-      <name>Scale</name>
-      <anchorfile>classi2d_1_1_c_transform.html</anchorfile>
-      <anchor>f3b6ea33cb25722f1f35909fefa308ab</anchor>
-      <arglist>(double sx, double sy)</arglist>
-    </member>
-    <member kind="function">
-      <type>CTransform &amp;</type>
-      <name>Translate</name>
-      <anchorfile>classi2d_1_1_c_transform.html</anchorfile>
-      <anchor>f4e26ab152d599ffe5ccfafef40dd3db</anchor>
-      <arglist>(const CVector2d &amp;translation)</arglist>
-    </member>
-    <member kind="function">
-      <type>CTransform &amp;</type>
-      <name>Translate</name>
-      <anchorfile>classi2d_1_1_c_transform.html</anchorfile>
-      <anchor>f9a6e7869e3a912820cd4e69eba82066</anchor>
-      <arglist>(double dx, double dy)</arglist>
-    </member>
-    <member kind="function">
-      <type>CTransform</type>
-      <name>GetRotated</name>
-      <anchorfile>classi2d_1_1_c_transform.html</anchorfile>
-      <anchor>c09ce3254dcfca2a8dd96762fdafb21f</anchor>
-      <arglist>(double angle) const </arglist>
-    </member>
-    <member kind="function">
-      <type>CTransform</type>
-      <name>GetScaled</name>
-      <anchorfile>classi2d_1_1_c_transform.html</anchorfile>
-      <anchor>bda0ddbf5044b87e7aadd7a4d6ff85b7</anchor>
-      <arglist>(const CVector2d &amp;scale) const </arglist>
-    </member>
-    <member kind="function">
-      <type>CTransform</type>
-      <name>GetScaled</name>
-      <anchorfile>classi2d_1_1_c_transform.html</anchorfile>
-      <anchor>552185329420d5157fdf5987ecc7c2ae</anchor>
-      <arglist>(double sx, double sy) const </arglist>
-    </member>
-    <member kind="function">
-      <type>CTransform</type>
-      <name>GetTranslated</name>
-      <anchorfile>classi2d_1_1_c_transform.html</anchorfile>
-      <anchor>1d5f183789ab3cf1ac1e2e5707f7d47f</anchor>
-      <arglist>(const CVector2d &amp;translation) const </arglist>
-    </member>
-    <member kind="function">
-      <type>CTransform</type>
-      <name>GetTranslated</name>
-      <anchorfile>classi2d_1_1_c_transform.html</anchorfile>
-      <anchor>a473cd00defacf96a4fd9104207eb6e8</anchor>
-      <arglist>(double dx, double dy) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7398,6 +8085,34 @@
       <anchor>220864dd27c1973b54fa4788caee2630</anchor>
       <arglist>(const CVector2d &amp;position)=0</arglist>
     </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
+      <anchor>3c2325cbf5ccb7e1efb14104667822a6</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
+      <anchor>dcb2ccc83d1ab6b7104966b3ecf1a2e2</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetTransformed</name>
+      <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
+      <anchor>8013559af5f052dc7eda938f56cf9cf1</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetInvTransformed</name>
+      <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
+      <anchor>b77a3500838d3439a2cc8cfb679fc860</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const =0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>i2d::ISceneController</name>
@@ -7571,6 +8286,151 @@
       <anchorfile>classi2d_1_1_i_scene_controller.html</anchorfile>
       <anchor>e13250268567a50c334657f8eb06877a</anchor>
       <arglist>(int scaleMode=SM_SET, double value=1.0)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::ITransformation2d</name>
+    <filename>classi2d_1_1_i_transformation2d.html</filename>
+    <base virtualness="virtual">TISurjectFunction&lt; CVector2d, CVector2d &gt;</base>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="enumeration">
+      <name>ExactnessMode</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>69ca1bcb67644ff4eff15cb4046176f8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_NONE</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>69ca1bcb67644ff4eff15cb4046176f8b98a1769d15d3e77466124452b3cb91c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_EXACT</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>69ca1bcb67644ff4eff15cb4046176f86f82568fc6b21e661a313caad2733afb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_VISUAL</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>69ca1bcb67644ff4eff15cb4046176f8f5bbb8c128ec65bd6efefc287de11900</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_ANY</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>69ca1bcb67644ff4eff15cb4046176f87410048b2340b86c117fd4c82551b513</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>TransformationFlags</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>e3a33add8c4c627fa6f6db3ce55aac47</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TF_FORWARD</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>e3a33add8c4c627fa6f6db3ce55aac47425068ee6e5eb995db6dbbc5b7f1197f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TF_INVERTED</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>e3a33add8c4c627fa6f6db3ce55aac47d87cf67d985fb8e4ab538ba3b40eb888</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TF_INJECTIVE</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>e3a33add8c4c627fa6f6db3ce55aac479f33da27e86eba944d4f8edcd0da07fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TF_SURJECTIVE</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>e3a33add8c4c627fa6f6db3ce55aac4783551c6ae9fdef9a8f9287b1bee54ef5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TF_PRESERVE_NULL</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>e3a33add8c4c627fa6f6db3ce55aac4744e788a9bfaefae5f54d290db4e85d85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TF_PRESERVE_DISTANCE</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>e3a33add8c4c627fa6f6db3ce55aac47f3c59ff26f088dbd7a98636d71fb261b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TF_PRESERVE_ANGLE</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>e3a33add8c4c627fa6f6db3ce55aac475db76a3df25e2297e776d1b5b763a3fa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TF_AFFINE</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>e3a33add8c4c627fa6f6db3ce55aac4714a756e47282261d2546aa4218438d35</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TF_CONTINUES</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>e3a33add8c4c627fa6f6db3ce55aac47ea7e11b93953cb287b9511680692660b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetTransformationFlags</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>68f590d710df7df8eda66f06a8273915</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetDistance</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>b81b43d90130362a22d788ebd4710d00</anchor>
+      <arglist>(const CVector2d &amp;origPos1, const CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetPositionAt</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>66a97873ee8c42d3dac119032f8bb8d5</anchor>
+      <arglist>(const CVector2d &amp;origPosition, CVector2d &amp;result, ExactnessMode mode=EM_NONE) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetInvPositionAt</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>7821530bcc886a5920e632fe3c1a91ed</anchor>
+      <arglist>(const CVector2d &amp;transfPosition, CVector2d &amp;result, ExactnessMode mode=EM_NONE) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetLocalTransform</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>dbb8dfe9b050fd67c5ea18faa2296ad6</anchor>
+      <arglist>(const CVector2d &amp;origPosition, CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetLocalInvTransform</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>f7f159bd12d686543beee0c5f9210d99</anchor>
+      <arglist>(const CVector2d &amp;transfPosition, CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const ITransformation2d *</type>
+      <name>CreateCombinedTransformation</name>
+      <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
+      <anchor>8fc470864ca01db179322443f52ffcb8</anchor>
+      <arglist>(const ITransformation2d &amp;transform) const =0</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -10063,6 +10923,20 @@
       <anchor>e636105c20028b553871b7e0c8effced</anchor>
       <arglist>(const iser::ISerializable &amp;object, const iser::IVersionInfo &amp;versionInfo) const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckInputFilePath</name>
+      <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
+      <anchor>d9cf03fe70d4f36a3d60c73358b284be</anchor>
+      <arglist>(const istd::CString filePath) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckTargetDirectory</name>
+      <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
+      <anchor>f886d892bd2e75bc1cba8680e1360da0</anchor>
+      <arglist>(const istd::CString dirPath) const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ibase::TFileSerializerComp::ReadArchiveEx</name>
@@ -10477,6 +11351,13 @@
       <anchorfile>classibase_1_1_t_named_wrap.html</anchorfile>
       <anchor>dbf5d5ef6e9d870f2bb4924f48236edc</anchor>
       <arglist>(const istd::CString &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsNameFixed</name>
+      <anchorfile>classibase_1_1_t_named_wrap.html</anchorfile>
+      <anchor>69ccace830ccb056255967e692d086a7</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -13039,8 +13920,8 @@
       <type>virtual icomp::IRegistry::Ids</type>
       <name>GetCompatibleElements</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>71bdddd0327fc6fb96cc9b7168ba233e</anchor>
-      <arglist>(const icomp::IComponentStaticInfo::Ids &amp;interfaceNames, const icomp::IRegistry &amp;registry, bool includeUndefined) const </arglist>
+      <anchor>1f20cae86256027216f28672a2e77637</anchor>
+      <arglist>(const icomp::IComponentStaticInfo::Ids &amp;interfaceNames, const icomp::IRegistry &amp;registry, int queryFlags) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -13617,6 +14498,34 @@
       <anchor>4bced32048f834a04d0a2d40fc81548d</anchor>
       <arglist>(const i2d::CVector2d &amp;position)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
+      <anchor>6786b9a5ebbd0c89474d9b813de8cd14</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
+      <anchor>c444f10fc9d82abe56f5addca2f1f213</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetTransformed</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
+      <anchor>833baab4f49b1a72c0627928bed0ca45</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvTransformed</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
+      <anchor>8e60a45da2f52b86f58694b1bbd69be0</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icmpstr::CVisualRegistryScenographerComp</name>
@@ -14013,12 +14922,36 @@
     <name>icmpstr::IRegistryConsistInfo</name>
     <filename>classicmpstr_1_1_i_registry_consist_info.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="enumeration">
+      <name>QueryFlags</name>
+      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
+      <anchor>17277f70a9bf291a4806d392aa37d8b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QF_NONE</name>
+      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
+      <anchor>17277f70a9bf291a4806d392aa37d8b2f792ec43d28e8c197e6c2ffc97a6fc39</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QF_ANY_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
+      <anchor>17277f70a9bf291a4806d392aa37d8b22c72e2bab99955b0093b8b84dd8c3b49</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QF_INCLUDE_UNDEFINED</name>
+      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
+      <anchor>17277f70a9bf291a4806d392aa37d8b2f050992c4fda62f91eb3d6eada5fc7e8</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual icomp::IRegistry::Ids</type>
       <name>GetCompatibleElements</name>
       <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>1196501e42c0c10575895a422c364d57</anchor>
-      <arglist>(const icomp::IComponentStaticInfo::Ids &amp;interfaceNames, const icomp::IRegistry &amp;registry, bool includeUndefined) const =0</arglist>
+      <anchor>893d15564e76627474092ea40aa9ae1b</anchor>
+      <arglist>(const icomp::IComponentStaticInfo::Ids &amp;interfaceNames, const icomp::IRegistry &amp;registry, int queryFlags=QF_NONE) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -16513,7 +17446,7 @@
     <name>icomp::TAttribute</name>
     <filename>classicomp_1_1_t_attribute.html</filename>
     <templarg>Value</templarg>
-    <base virtualness="virtual">iser::IObject</base>
+    <base virtualness="virtual">TCopySerializedWrap&lt; iser::IObject &gt;</base>
     <member kind="enumeration">
       <name>DefaultAttributeFlags</name>
       <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
@@ -17005,7 +17938,7 @@
     <name>icomp::TMultiAttribute</name>
     <filename>classicomp_1_1_t_multi_attribute.html</filename>
     <templarg>Value</templarg>
-    <base virtualness="virtual">iser::IObject</base>
+    <base virtualness="virtual">TCopySerializedWrap&lt; iser::IObject &gt;</base>
     <class kind="struct">icomp::TMultiAttribute::Wrap</class>
     <member kind="enumeration">
       <name>DefaultAttributeFlags</name>
@@ -18965,20 +19898,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CreateBitmap</name>
-      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>f43f6d1c2e9a047a4831028170d1fe2c</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, int pixelBitsCount=8, int componentsCount=1, PixelFormat pixelFormat=PF_USER)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CreateBitmap</name>
-      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>2cd2e5174dd9f3decd1410b11e4d837e</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0, int pixelBitsCount=8, int componentsCount=1, PixelFormat pixelFormat=PF_USER)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual PixelFormat</type>
       <name>GetPixelFormat</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
@@ -19069,6 +19988,20 @@
       <anchor>de42ef6e55148285ebacd0535d192b36</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
+      <anchor>5238bfcf4852d271b9b2f0a2686d01e8</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, int pixelBitsCount, int componentsCount, PixelFormat pixelFormat)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
+      <anchor>ef14b2a80ebb64fb9bb19efbe42baeb9</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference, int pixelBitsCount, int componentsCount, PixelFormat pixelFormat)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iimg::IBitmap</name>
@@ -19114,6 +20047,12 @@
       <name>PF_RGBA</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
       <anchor>0c4e5f4e61840ce1e0330048cfa5f10e941311bdd09e1a76a60d1993929f3738</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PF_GRAY16</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>0c4e5f4e61840ce1e0330048cfa5f10ec36906405ccdf273418e45b6d9711e39</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -19363,13 +20302,14 @@
     <class kind="class">imath::TISurjectFunction</class>
     <class kind="class">imath::TIValueManip</class>
     <class kind="class">imath::TMathVectorWrap</class>
+    <class kind="class">imath::TMatrix</class>
     <class kind="class">imath::TSplineGridFunctionBase</class>
     <class kind="class">imath::TVector</class>
     <member kind="typedef">
       <type>TIMathFunction&lt; double, double &gt;</type>
       <name>IDoubleFunction</name>
       <anchorfile>namespaceimath.html</anchorfile>
-      <anchor>a4b283a9d83d1f4f13a7f697335b2a42</anchor>
+      <anchor>e511d2ed79aa9a89bc32e381244b0563</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -19384,6 +20324,13 @@
       <name>ISampledFunction2d</name>
       <anchorfile>namespaceimath.html</anchorfile>
       <anchor>541d89115a4ed133e53f12dbe68096c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TISurjectFunction&lt; double, double &gt;</type>
+      <name>ISurjectDoubleFunction</name>
+      <anchorfile>namespaceimath.html</anchorfile>
+      <anchor>e25a8ebd149d6086a532a99407a22a9d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -19420,6 +20367,13 @@
       <anchorfile>namespaceimath.html</anchorfile>
       <anchor>16971cffcd348e5587ee94a3c0b48ceb</anchor>
       <arglist>(double radian)</arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; Width, Height, Element &gt;</type>
+      <name>operator*</name>
+      <anchorfile>namespaceimath.html</anchorfile>
+      <anchor>85d38d2fc58cd7322f0c01141cfbc83c</anchor>
+      <arglist>(double value, const imath::TMatrix&lt; Width, Height, Element &gt; &amp;matrix)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20362,16 +21316,16 @@
     </member>
     <member kind="function">
       <type>double</type>
-      <name>GetEuclideanNorm2</name>
+      <name>GetFrobeniusNorm2</name>
       <anchorfile>classimath_1_1_c_var_matrix.html</anchorfile>
-      <anchor>c66c3e6828b2f0d8bd0ae63fa1b375f7</anchor>
+      <anchor>c8b5e783630d12a34e3c9bdfd865c1fc</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>double</type>
-      <name>GetEuclideanNorm</name>
+      <name>GetFrobeniusNorm</name>
       <anchorfile>classimath_1_1_c_var_matrix.html</anchorfile>
-      <anchor>998e43bf357f2ae10d326b7a84f79d9e</anchor>
+      <anchor>8c8e27fc1e2286739423ffa31b808249</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -21480,9 +22434,9 @@
   <compound kind="class">
     <name>imath::TISurjectFunction</name>
     <filename>classimath_1_1_t_i_surject_function.html</filename>
-    <templarg></templarg>
-    <templarg></templarg>
-    <base virtualness="virtual">imath::TIMathFunction</base>
+    <templarg>Argument</templarg>
+    <templarg>Result</templarg>
+    <base virtualness="virtual">TIMathFunction&lt; Argument, Result &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>GetInvValueAt</name>
@@ -21564,7 +22518,6 @@
     <name>imath::TMathVectorWrap</name>
     <filename>classimath_1_1_t_math_vector_wrap.html</filename>
     <templarg>Base</templarg>
-    <base>ibase::Base</base>
     <member kind="typedef">
       <type>Base</type>
       <name>BaseClass</name>
@@ -21798,6 +22751,399 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>imath::TMatrix</name>
+    <filename>classimath_1_1_t_matrix.html</filename>
+    <templarg>Width</templarg>
+    <templarg>Height</templarg>
+    <templarg>Element</templarg>
+    <member kind="enumeration">
+      <name>MatrixInitMode</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>5d81e1902fdd24b57f644ad2d2de9802</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MIM_ZERO</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>5d81e1902fdd24b57f644ad2d2de98022f3fa301d04afc1cf11cb04a915a16f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MIM_ONES</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>5d81e1902fdd24b57f644ad2d2de98025b68d7d36314e1eb5d05bca70b06cbaa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MIM_IDENTITY</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>5d81e1902fdd24b57f644ad2d2de9802a4eb4c891cb90e577ca945a15bf794b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MIM_UPPER_TRIANGLE</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>5d81e1902fdd24b57f644ad2d2de9802ff023d827e1bca0b5e16ba538e73cf52</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MIM_DOWNER_TRIANLE</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>5d81e1902fdd24b57f644ad2d2de98025883781021b67c7dd1a1cbaff9018e5e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::CIndex2d</type>
+      <name>IndexType</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>6d04ab1b8d84125e8a274a0d4b23686b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::CIndex2d</type>
+      <name>SizesType</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>5b546fecf77fab62b242592b558e98a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Element</type>
+      <name>ElementType</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>1f8b68173d99e94efaa68eed08f725a0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TMatrix</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>86102d91d282580125b4b8ede6bf29d1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TMatrix</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>391d58c1757654a5801641dba838e52c</anchor>
+      <arglist>(MatrixInitMode mode)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TMatrix</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>35e9e841b7cb63717f52bd4120a16034</anchor>
+      <arglist>(const TMatrix &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>bfd210c21e80ab30b3c2c840f4e55f2f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Clear</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>ecf2fecddf2c1d00c420613a81d8422e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsDimensionsCountFixed</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>44e01dae108d72905a237ec13440b7ed</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetDimensionsCount</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>2fd91d368ae52a12a53239c587daed37</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetDimensionsCount</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>cb1d2460cb72a2adf9b46694d4abe5b0</anchor>
+      <arglist>(int count)</arglist>
+    </member>
+    <member kind="function">
+      <type>const SizesType &amp;</type>
+      <name>GetSizes</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a3d0795c312c4bcfa1f84156801b58a1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetSizes</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>41af1675c926721aaa7a589ab4fcdb86</anchor>
+      <arglist>(const SizesType &amp;sizes)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetSize</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>02473a0c1cc5821db969a2c1426bc27e</anchor>
+      <arglist>(int dimension) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetSize</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>5d700d564c6cb66f33f12989b89c3c8c</anchor>
+      <arglist>(int dimension, int size)</arglist>
+    </member>
+    <member kind="function">
+      <type>const ElementType &amp;</type>
+      <name>GetAt</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>e52105d58c85c406a987afa8a5bcd165</anchor>
+      <arglist>(const IndexType &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const ElementType &amp;</type>
+      <name>GetAt</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>182a1af5f5f2671a038e87c0ef2d0b4a</anchor>
+      <arglist>(int x, int y) const </arglist>
+    </member>
+    <member kind="function">
+      <type>ElementType &amp;</type>
+      <name>GetAtRef</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a6ba290d85126943a913c67e0ad6c6d5</anchor>
+      <arglist>(const IndexType &amp;index)</arglist>
+    </member>
+    <member kind="function">
+      <type>ElementType &amp;</type>
+      <name>GetAtRef</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>8848a371ff28de669c628b8a4a9eeb8f</anchor>
+      <arglist>(int x, int y)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAt</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>ab6296d9751f47dd0a92643dc233e171</anchor>
+      <arglist>(const IndexType &amp;index, const ElementType &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAt</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>6708ea50c8ab1255757e7a5e21ebea6c</anchor>
+      <arglist>(int x, int y, const ElementType &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>InitToIdentity</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>6e811a53e8029078f33455c32c53eeda</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetMaxElement</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>2bbedd613cbcb5e4ed0da99880880f4b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetMinElement</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>4eeba77ef57ad073719c3c41fdb744b7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetNegated</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>41165bc50759ec9e62bc07601cd2fd37</anchor>
+      <arglist>(TMatrix&lt; Width, Height, Element &gt; &amp;result)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetAdded</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>6a3a6c8e6f89c13461ae5dcc6196d7c1</anchor>
+      <arglist>(const TMatrix&lt; Width, Height, Element &gt; &amp;matrix, TMatrix&lt; Width, Height, Element &gt; &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetSubstracted</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>215c512e5cc92fe7093477eb412afd40</anchor>
+      <arglist>(const TMatrix&lt; Width, Height, Element &gt; &amp;matrix, TMatrix&lt; Width, Height, Element &gt; &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetMultiplied</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>48eb897dd3e9ed868d62ed83c89f550b</anchor>
+      <arglist>(const TMatrix&lt; SecondWidth, Width, Element &gt; &amp;matrix, TMatrix&lt; SecondWidth, Height, Element &gt; &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; SecondWidth, Height, Element &gt;</type>
+      <name>GetMultiplied</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>875b53e5a58b37f9e39fb12d80eb5ac6</anchor>
+      <arglist>(const TMatrix&lt; SecondWidth, Width, Element &gt; &amp;matrix) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetMultiplied</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>20b4952d96074217623892efdd68504d</anchor>
+      <arglist>(const TVector&lt; Width, Element &gt; &amp;vector, TVector&lt; Height, Element &gt; &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TVector&lt; Height, Element &gt;</type>
+      <name>GetMultiplied</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>183c032c218ae4fbe001bbed336b7676</anchor>
+      <arglist>(const TVector&lt; Width, Element &gt; &amp;vector) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetScaled</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>ad0a32830fed50f4b440d58dd0ea6f59</anchor>
+      <arglist>(double value, TMatrix&lt; Width, Height, Element &gt; &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetTransposed</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>e8869aaf2d750b1a040a55c8727e3166</anchor>
+      <arglist>(TMatrix&lt; Height, Width, Element &gt; &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; Height, Width, Element &gt;</type>
+      <name>GetTransposed</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>8dfc35b4bb6e41d950c3abeed744ea72</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Transpose</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>64a00ccfe1d0606e27b24d1b8ba8c815</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetFrobeniusNorm2</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>1f7e776a06df8d1c5bc3bc9e460b93a1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetFrobeniusNorm</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>8c035ca6116ab81b242e0f2c1bfc1d21</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetTriangleDecomposed</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>85dd8c54824770a9492eb398d37ff5a9</anchor>
+      <arglist>(TMatrix&lt; Width, Height, Element &gt; &amp;result, TMatrix&lt; Height, Height, Element &gt; *matrixQPtr=NULL, int maxColumns=-1, double minHhNorm=I_BIG_EPSILON) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetColumnVector</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>cbe04611eddc9ab71e058d2843d41b1d</anchor>
+      <arglist>(int columnIndex, TVector&lt; Height, Element &gt; &amp;result)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetRowVector</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>69ad4ba83d0adf1b056b2b1b5b03d238</anchor>
+      <arglist>(int rowIndex, TVector&lt; Width, Element &gt; &amp;result)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>da002989c6f60d89047c89bdb0412bca</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; Width, Height, Element &gt;</type>
+      <name>operator+</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>8b0b676ddbeed43b27690b5501139919</anchor>
+      <arglist>(const TMatrix&lt; Width, Height, Element &gt; &amp;b) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; Width, Height, Element &gt;</type>
+      <name>operator-</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>81dd99491068e7e5655903d002bb2d0d</anchor>
+      <arglist>(const TMatrix&lt; Width, Height, Element &gt; &amp;b) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; Width, Height, Element &gt;</type>
+      <name>operator-</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>d0d553a1168ed6c9533555349d1e0d31</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; SecondWidth, Height, Element &gt;</type>
+      <name>operator*</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>90c413ee741a59560a2f94171ca66c56</anchor>
+      <arglist>(const TMatrix&lt; SecondWidth, Width, Element &gt; &amp;b) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; Width, Height, Element &gt;</type>
+      <name>operator*</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>2bb5b7ed96c113150e5644309a99bc04</anchor>
+      <arglist>(double value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>2c549382f105735a0b9c55706a9239ab</anchor>
+      <arglist>(const TMatrix&lt; Width, Height, Element &gt; &amp;matrix) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>53ce294f1419f261f51db31dbd07b110</anchor>
+      <arglist>(const TMatrix&lt; Width, Height, Element &gt; &amp;matrix) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const ElementType &amp;</type>
+      <name>operator[]</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>7c5f695cc0cbb60b10e8f30d52528740</anchor>
+      <arglist>(const IndexType &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>ElementType &amp;</type>
+      <name>operator[]</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>721047109bfa494e6afa618b01932ae8</anchor>
+      <arglist>(const IndexType &amp;index)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>imath::TSplineGridFunctionBase</name>
     <filename>classimath_1_1_t_spline_grid_function_base.html</filename>
     <templarg></templarg>
@@ -21922,6 +23268,13 @@
       <anchorfile>classimath_1_1_t_vector.html</anchorfile>
       <anchor>efb4e0720e2623b16b5be4aa5cb2a249</anchor>
       <arglist>(int i, const Element &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classimath_1_1_t_vector.html</anchorfile>
+      <anchor>f7c4d45b04c2f9196272cf0ccb0afab1</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -22596,9 +23949,9 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>EnsureDetached</name>
+      <name>EnsureModelsDetached</name>
       <anchorfile>classimod_1_1_c_multi_model_bridge_base.html</anchorfile>
-      <anchor>4c80348ed056403c61ffa4917d6425b3</anchor>
+      <anchor>ab36864c19a5855839ebc1d5a3f749cf</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -22614,10 +23967,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>imod::IModel *</type>
+      <type>IModel *</type>
       <name>GetModelPtr</name>
       <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>0f852e1dcdef8bd40e3dd4c1741b34ea</anchor>
+      <anchor>44e4ecc264d102606dd19b954b4b861e</anchor>
       <arglist>(int modelIndex) const </arglist>
     </member>
     <member kind="function">
@@ -22631,50 +23984,50 @@
       <type>virtual bool</type>
       <name>IsModelAttached</name>
       <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>1bd025bd31338d0a74c40cb6c1aeff13</anchor>
-      <arglist>(const imod::IModel *modelPtr) const </arglist>
+      <anchor>92391a2b6e1dcccfc3987e89ace6da32</anchor>
+      <arglist>(const IModel *modelPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnAttached</name>
       <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>13d5ee8c442d242c04714612f4f76cb2</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>f6718a19003715d45e9467aba8ea7e7b</anchor>
+      <arglist>(IModel *modelPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnDetached</name>
       <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>17e1d6e704105c66cf03baf0a27e4e29</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>217228f7a135b0f1813c2fa4f7629475</anchor>
+      <arglist>(IModel *modelPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeforeUpdate</name>
       <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>0afe3fac2a2863f7083d6b3afc1172dd</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>22234401b6906764d85a3a9b86f21686</anchor>
+      <arglist>(IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>aef3080f34292456c7d5feb99c9730ce</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>52d553e4c021cd3022ca5beac156df1f</anchor>
+      <arglist>(IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>EnsureDetached</name>
+      <name>EnsureModelsDetached</name>
       <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>94172f4eb52a2e1dbfc59588f558451c</anchor>
+      <anchor>6bfa8b39bc6680c04dbfc20966257289</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>ba8194a410e75792998ab6e22bd707b9</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>4fedb2ca9c97485f0688e99d072610df</anchor>
+      <arglist>(IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -22808,9 +24161,9 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>EnsureDetached</name>
+      <name>EnsureModelDetached</name>
       <anchorfile>classimod_1_1_c_single_model_observer_base.html</anchorfile>
-      <anchor>e0588b14d7c19ff3e4c7d328828ac63e</anchor>
+      <anchor>96b2bae380788b93b7d324b6e8947d97</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -23040,8 +24393,8 @@
       <type>bool</type>
       <name>RegisterModel</name>
       <anchorfile>classimod_1_1_t_model_dispatcher.html</anchorfile>
-      <anchor>09ea006d3bad8b7a8d7944aab56cc392</anchor>
-      <arglist>(imod::IModel *modelPtr, int modelId=0)</arglist>
+      <anchor>615e720a813d07b2e8760234fe247523</anchor>
+      <arglist>(imod::IModel *modelPtr, int modelId=0, int relevantFlags=0)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -25269,6 +26622,13 @@
       <anchor>494d8a4d654d8c65258849351da24f80</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>Product</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>c11c3c0f49899742302133659279298c</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
@@ -25537,6 +26897,9 @@
     <class kind="class">iqt::CTranslationManagerComp</class>
     <class kind="class">iqt::CXmlFileReadArchive</class>
     <class kind="class">iqt::CXmlFileWriteArchive</class>
+    <class kind="class">iqt::CXslSerializerComp</class>
+    <class kind="class">iqt::CXslTransformationReadArchive</class>
+    <class kind="class">iqt::CXslTransformationWriteArchive</class>
     <class kind="class">iqt::IQImageProvider</class>
     <class kind="class">iqt::ISettingsProvider</class>
     <class kind="class">iqt::ITranslationManager</class>
@@ -25741,6 +27104,13 @@
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
       <anchor>9fff39c89d34fb184743791fe7c4877b</anchor>
       <arglist>(const CBitmap &amp;bitmap)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CBitmap</name>
+      <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
+      <anchor>fb3de153b500d87eb0ba60172277d0f1</anchor>
+      <arglist>(const QImage &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>QImage &amp;</type>
@@ -28020,6 +29390,463 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqt::CXslSerializerComp</name>
+    <filename>classiqt_1_1_c_xsl_serializer_comp.html</filename>
+    <base>TLoggerCompWrap&lt; ibase::CFileTypeInfoComp &gt;</base>
+    <base virtualness="virtual">iser::IFileLoader</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classiqt_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>5ca73636c7c830de4028654632aff8ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_BAD_EXTENSION</name>
+      <anchorfile>classiqt_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>5ca73636c7c830de4028654632aff8efa0879ee54b8400910277d64d74f1c3bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNSUPPORTED_VERSION</name>
+      <anchorfile>classiqt_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>5ca73636c7c830de4028654632aff8efe5375fac32780d99e11fd308d382b394</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::TLoggerCompWrap&lt; ibase::CFileTypeInfoComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>76e1d47da79560f8b1cc6d2c05a8dac3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classiqt_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>52d74ae384cfbd7690aee1d706f81a37</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classiqt_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>f3819526c042401009f16bca9ad31964</anchor>
+      <arglist>(istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classiqt_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>e9f208ddcb378c7c383a348eaa764c2e</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const iser::IVersionInfo *</type>
+      <name>GetVersionInfo</name>
+      <anchorfile>classiqt_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>fd6ca8222c31d67a9406a76de11aa3be</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnReadError</name>
+      <anchorfile>classiqt_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>c8898e8adb61506b9f1191ea888b34ca</anchor>
+      <arglist>(const iser::IArchive &amp;archive, const istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckMinimalVersion</name>
+      <anchorfile>classiqt_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>0bbfef484b2490b5285352b876f8cc45</anchor>
+      <arglist>(const iser::ISerializable &amp;object, const iser::IVersionInfo &amp;versionInfo) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckInputFilePath</name>
+      <anchorfile>classiqt_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>aa2b5a68d7aaa9e0ac0e1663e3b82fac</anchor>
+      <arglist>(const istd::CString filePath) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckTargetDirectory</name>
+      <anchorfile>classiqt_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>6ecf51dcbb4b8a7eaa39185e06a6fbef</anchor>
+      <arglist>(const istd::CString dirPath) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt::CXslTransformationReadArchive</name>
+    <filename>classiqt_1_1_c_xsl_transformation_read_archive.html</filename>
+    <base>iser::CReadArchiveBase</base>
+    <base>iser::CXmlDocumentInfoBase</base>
+    <member kind="function">
+      <type></type>
+      <name>CXslTransformationReadArchive</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>763b9a18eb852729b2feaeb4af5f49cc</anchor>
+      <arglist>(const istd::CString &amp;filePath=&quot;&quot;, const istd::CString &amp;xslFilePath=&quot;&quot;, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>OpenDocument</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>ad88d2bccd51b5376c8c64c2afd71907</anchor>
+      <arglist>(const istd::CString &amp;filePath, const istd::CString &amp;xslFilePath)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsTagSkippingSupported</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>dcfdcd434556d8640f9f8d8184fc6eeb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>BeginTag</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>b0ee41fef48a7f9f674713300f07cdcd</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>BeginMultiTag</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>cd718dbf222dbe0d0d2d91d138e778f9</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag, const iser::CArchiveTag &amp;subTag, int &amp;count)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>EndTag</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>b581fe6af66d35b786c13e4d4f81638b</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>5fe4944d36bebc9f072a58755343efb4</anchor>
+      <arglist>(bool &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>21a922cfcbb9ed255f638c05d7650786</anchor>
+      <arglist>(char &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>7599b62d3c507c7469f2b4558ae810bf</anchor>
+      <arglist>(I_BYTE &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>bbbaa7e08694df3c774071f2e5b408b3</anchor>
+      <arglist>(I_SBYTE &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a7984bd6d7192cf1691f152600b5cdcc</anchor>
+      <arglist>(I_WORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>40ce0c29cc7beecfac6321ad61d48cbc</anchor>
+      <arglist>(I_SWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>98d1f9ff52779548952a58c01112bbbe</anchor>
+      <arglist>(I_DWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>1f80c89242d2a59af8b884ae0c60230e</anchor>
+      <arglist>(I_SDWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>536d180a3f7ca42cef24283e3be98d5b</anchor>
+      <arglist>(I_QWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>76f87fdc6df05ddaeaa65720d7dfbf15</anchor>
+      <arglist>(I_SQWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>348cd58ae968b251be2f7f675c84a5d0</anchor>
+      <arglist>(float &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>14fe54b9b75edccec6456171bf440fd9</anchor>
+      <arglist>(double &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>5d5f254e50adcf10608dd4610d4534a2</anchor>
+      <arglist>(std::string &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>06ecb7b44765e133854e29a95db45b26</anchor>
+      <arglist>(istd::CString &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessData</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>0cb7cea0b0bd0abffb79f35ddea6663d</anchor>
+      <arglist>(void *dataPtr, int size)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>PullTextNode</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>b132219954b805d7a5fb985f33ef5c7c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>MessageHandler</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>dd9f4167dc0c761574cbd82aa9ba392f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt::CXslTransformationWriteArchive</name>
+    <filename>classiqt_1_1_c_xsl_transformation_write_archive.html</filename>
+    <base>iser::CWriteArchiveBase</base>
+    <base>iser::CFileArchiveInfo</base>
+    <base>iser::CXmlDocumentInfoBase</base>
+    <member kind="typedef">
+      <type>iser::CWriteArchiveBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>ef310310c4184a8fc6685d645ec0aa7a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iser::CFileArchiveInfo</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>d6767fedf4663e0e0b635f7da5c40883</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CXslTransformationWriteArchive</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>479d3db5b720c1565d606eaea56a4715</anchor>
+      <arglist>(const istd::CString &amp;filePath=&quot;&quot;, const istd::CString &amp;xslFilePath=&quot;&quot;, const iser::IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~CXslTransformationWriteArchive</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>113807e5110cf419c46112719b6b13dd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Flush</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>94aca2d47823e6f97375724c4db05b88</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>OpenDocument</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>5f6e49246deaefa073d2355aa2417d9c</anchor>
+      <arglist>(const istd::CString &amp;filePath, const istd::CString &amp;xslFilePath)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsTagSkippingSupported</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>c610b21c70db3173a7ca64f25e03765b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>BeginTag</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>2eb366ccf3555491f9afc1f300b76d66</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>BeginMultiTag</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>efe2fff865c9ba920b10d7b3da0f3f68</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag, const iser::CArchiveTag &amp;subTag, int &amp;count)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>EndTag</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>5c3a97a854581774e10af25d630f5c72</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>f6a64c7dc6f2a1516702cf14739d7d39</anchor>
+      <arglist>(bool &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>1d7492ee3affaedfdb8a27ad360efcb7</anchor>
+      <arglist>(char &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>5f61bd685e8dfeee8e32bec7328b6742</anchor>
+      <arglist>(I_BYTE &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>8bd712a20a550d1278d2f1ecb9b2fae8</anchor>
+      <arglist>(I_SBYTE &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>56d4f17d6e0f62971b96aa01ae99dd24</anchor>
+      <arglist>(I_WORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>bbf74f5f31c38e1c902e5c151b195e9c</anchor>
+      <arglist>(I_SWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>c1c5b5b21e37210746fe80f315c8010a</anchor>
+      <arglist>(I_DWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>925e4e65f90fe033e7f419506c1da5b0</anchor>
+      <arglist>(I_SDWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>80e91910c93f895750fb122cc34720c0</anchor>
+      <arglist>(I_QWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>ea682b8814accc07ecbb1c1a76415d7a</anchor>
+      <arglist>(I_SQWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>23ad8d56310a96bf6067a7b3efce1bb9</anchor>
+      <arglist>(float &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>c7181aed1ddd5cdb86838c0e5b3827d6</anchor>
+      <arglist>(double &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>46ecd43616f63667fcedfd6fef16f325</anchor>
+      <arglist>(std::string &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>656bbaa1a458efc4725343556f1b5be0</anchor>
+      <arglist>(istd::CString &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessData</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>cc4fc06f9979d633efdde450596ec3ff</anchor>
+      <arglist>(void *dataPtr, int size)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>PushTextNode</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>1dc72f8829c0e45d0ab5255424e9f0e6</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SendLogMessage</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>94b16133c93749d75bdc7dc65a2dc65d</anchor>
+      <arglist>(MessageCategory category, int id, const istd::CString &amp;message, const istd::CString &amp;messageSource, int flags=0) const </arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>MessageHandler</name>
+      <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>dd9f4167dc0c761574cbd82aa9ba392f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqt::IQImageProvider</name>
     <filename>classiqt_1_1_i_q_image_provider.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -29335,46 +31162,32 @@
       <arglist>(int scaleMode=SM_SET, double value=1.0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>OnResize</name>
       <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>7bcb0ac0a33aafa27092d92ae69aa6dd</anchor>
+      <anchor>6f4a3e39bb4ab12dc65395c1320bd382</anchor>
       <arglist>(QResizeEvent *eventPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>OnWheelEvent</name>
       <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>2c3982dbd297d020254d5aea0863dbb1</anchor>
+      <anchor>76fb52e6f9e28c57ff7e744938e178d2</anchor>
       <arglist>(QGraphicsSceneWheelEvent *eventPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>OnKeyReleaseEvent</name>
       <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>640c6ea66935b75b1d4e7a71bcf1d980</anchor>
+      <anchor>643a7bdc1ff08d7b02821d95bb4c1a25</anchor>
       <arglist>(QKeyEvent *eventPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnContextMenuEvent</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>e5320fc48c5dccc8325431090ddcf31c</anchor>
-      <arglist>(QContextMenuEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>OnMouseDoubleClickEvent</name>
       <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ad02b7ea064dd1e02d7bb7c4ef25985d</anchor>
+      <anchor>b99a042f7c99bfa5cb21fd588788241a</anchor>
       <arglist>(QEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnMouseMoveEvent</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>9c2fd8fae0d5f9a9ea11952fbe65689e</anchor>
-      <arglist>(QMouseEvent *eventPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -30669,8 +32482,7 @@
   <compound kind="class">
     <name>iqtdoc::CMultiDocumentWorkspaceGuiComp</name>
     <filename>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</filename>
-    <base>TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMdiArea &gt; &gt;</base>
-    <base>TQtDocumentManagerWrap&lt; idoc::CMultiDocumentManagerBase &gt;</base>
+    <base>TQtDocumentManagerWrap&lt; idoc::CMultiDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMdiArea &gt; &gt; &gt;</base>
     <base>ibase::ICommandsProvider</base>
     <member kind="enumeration">
       <name>GroupId</name>
@@ -30697,17 +32509,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMdiArea &gt; &gt;</type>
+      <type>iqtdoc::TQtDocumentManagerWrap&lt; idoc::CMultiDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMdiArea &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>9b5d6fb5c8043e562f3c3c483a843229</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>idoc::CMultiDocumentManagerBase</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>6b105bf5171e650af19a358882eb5300</anchor>
+      <anchor>9af57cbcaedadde67a849e96b49d3a96</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -30795,13 +32600,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>QString</type>
-      <name>CreateFileDialogFilter</name>
-      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>90ffe7fc238cc37a023a7362aae3f288</anchor>
-      <arglist>(const std::string *documentTypeIdPtr=NULL, int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
       <type>void</type>
       <name>OnViewsCountChanged</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
@@ -30842,13 +32640,6 @@
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
       <anchor>4f20d30549df99f5973289407fa513a0</anchor>
       <arglist>(const std::string *documentTypeIdPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetSaveFilePath</name>
-      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>907cb634cfb5ace150d423d35831acc3</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -30917,8 +32708,7 @@
   <compound kind="class">
     <name>iqtdoc::CSingleDocumentWorkspaceGuiComp</name>
     <filename>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</filename>
-    <base>TGuiComponentBase&lt; QWidget &gt;</base>
-    <base>TQtDocumentManagerWrap&lt; idoc::CSingleDocumentManagerBase &gt;</base>
+    <base>TQtDocumentManagerWrap&lt; idoc::CSingleDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt; &gt; &gt;</base>
     <member kind="enumeration">
       <name>GroupId</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
@@ -30944,17 +32734,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iqtgui::TGuiComponentBase&lt; QWidget &gt;</type>
+      <type>iqtdoc::TQtDocumentManagerWrap&lt; idoc::CSingleDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>cc3bf11f5512522bfa90b55a6c869b4d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>idoc::CSingleDocumentManagerBase</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>7668680f6972cbe797896ffaa99b6bd2</anchor>
+      <anchor>de5d209b46897e846cb5d4d31dc1ccc7</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -30978,26 +32761,12 @@
       <anchor>6273f06588d0dbb08b1b34ada8628c4a</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>QString</type>
-      <name>CreateFileDialogFilter</name>
-      <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>3d20e3afaec7c0b24a01697af49086a5</anchor>
-      <arglist>(const std::string *documentTypeIdPtr=NULL, int flags=0) const </arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual istd::CString</type>
       <name>GetOpenFilePath</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
       <anchor>05434337d39094d095c8363569140a6d</anchor>
       <arglist>(const std::string *documentTypeIdPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetSaveFilePath</name>
-      <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>5a13532ffc94d5c914222bf5ab8294ea</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -31065,27 +32834,70 @@
     <name>iqtdoc::TQtDocumentManagerWrap</name>
     <filename>classiqtdoc_1_1_t_qt_document_manager_wrap.html</filename>
     <templarg>Base</templarg>
+    <templarg>Gui</templarg>
     <base>ibase::Base</base>
     <member kind="typedef">
       <type>Base</type>
       <name>BaseClass</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>7ed284f37b16733d3f906d31f8a1eb86</anchor>
+      <anchor>e85de65726cc00d124d1cdaa63c17a95</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnRestoreSettings</name>
+      <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
+      <anchor>943e07ce3fa46e4e722c1b064e72c6cb</anchor>
+      <arglist>(const QSettings &amp;settings)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSaveSettings</name>
+      <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
+      <anchor>f5a2a46082ba3bf9e24b7fc67f117f42</anchor>
+      <arglist>(QSettings &amp;settings) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetAllowedOperationFlags</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>8884749d80cf8ccb83b69f05f989d28e</anchor>
+      <anchor>9133e8a156bf7fe625a466cd06ed7ca1</anchor>
       <arglist>(const istd::IPolymorphic *viewPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>FilePrint</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>889b34651e11be71ea248fcd5a766132</anchor>
+      <anchor>4347d386cb4214b60ce5037d8748a357</anchor>
       <arglist>(int documentIndex=-1) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetSaveFilePath</name>
+      <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
+      <anchor>e493519f02270679f872613a2ebcfb93</anchor>
+      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>CreateFileDialogFilter</name>
+      <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
+      <anchor>97667173992d64a70098adfcabeb1c95</anchor>
+      <arglist>(const std::string *documentTypeIdPtr=NULL, int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateLastDirectory</name>
+      <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
+      <anchor>1c0fafc28f0fc600e622b10ada008a49</anchor>
+      <arglist>(const QString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetOpenFilePathesFromDialog</name>
+      <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
+      <anchor>41fdd5bf63f8f7ce2e6ac32607a96a5b</anchor>
+      <arglist>(const std::string *documentTypeIdPtr) const </arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -31566,6 +33378,13 @@
       <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
       <anchor>a7f52aeb2d19650c3ae0064ce682d19c</anchor>
       <arglist>(const QString &amp;filePath, int selectionIndex, int flags, bool beQuiet) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>cdeb4247ab86e7fe2626df198cd0b23e</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32521,6 +34340,13 @@
       <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
       <anchor>c3b9835a44bd0c9407403743590b8a78</anchor>
       <arglist>(m_objectGuiCompPtr, m_objectObserverCompPtr, true)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
+      <anchor>2e83443c9a15c086049cda276958e4da</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -34359,6 +36185,30 @@
     <name>iqtprm::CSelectionParamGuiComp</name>
     <filename>classiqtprm_1_1_c_selection_param_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CSelectionParamGuiComp, iprm::ISelectionParam &gt;</base>
+    <member kind="enumeration">
+      <name>UiMode</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>ccdd24a68fc1969b44c11c6fa07e5d4e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UM_COMBOBOX</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>ccdd24a68fc1969b44c11c6fa07e5d4e10d38c316c669a719850fbf4dabc085c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UM_RADIOBUTTON_HORIZONTAL</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>ccdd24a68fc1969b44c11c6fa07e5d4e53672de76085823db93b702ba11af41d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UM_RADIOBUTTON_VERTICAL</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>ccdd24a68fc1969b44c11c6fa07e5d4ec20dec0d300811b814855edb9ca2358b</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSelectionParamGuiComp, iprm::ISelectionParam &gt;</type>
       <name>BaseClass</name>
@@ -34379,6 +36229,13 @@
       <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
       <anchor>1b98819d273224667c32201f45e37fb2</anchor>
       <arglist>(int index)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnRadioButtonSelectionChanged</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>f0bc6b8f70e8c927ee23b41976b8a5f6</anchor>
+      <arglist>(bool isSelected)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -39505,6 +41362,13 @@
       <anchor>5c5cfa658f42d6042bc83bf491cb9ca4</anchor>
       <arglist>(const istd::CString &amp;name)=0</arglist>
     </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsNameFixed</name>
+      <anchorfile>classistd_1_1_i_named.html</anchorfile>
+      <anchor>bc0a491e09cf619543756af3a0f71e0a</anchor>
+      <arglist>() const =0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>istd::IPolymorphic</name>
@@ -39657,10 +41521,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>bool</type>
       <name>SetSizes</name>
       <anchorfile>classistd_1_1_t_array.html</anchorfile>
-      <anchor>0a5f135afd12a9e444617a34332a97c6</anchor>
+      <anchor>94454dc722d054006b45fde5f67991f2</anchor>
       <arglist>(const SizesType &amp;sizes)</arglist>
     </member>
     <member kind="function">
@@ -39671,10 +41535,10 @@
       <arglist>(int dimension) const </arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>bool</type>
       <name>SetSize</name>
       <anchorfile>classistd_1_1_t_array.html</anchorfile>
-      <anchor>4fbe679614999f3f5d547e2ee7d888d4</anchor>
+      <anchor>251eb5e76cb9d397dca5d044b3bafd0f</anchor>
       <arglist>(int dimension, int size)</arglist>
     </member>
     <member kind="function">
@@ -41662,10 +43526,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>bool</type>
       <name>SetSizes</name>
       <anchorfile>classistd_1_1_t_var_array.html</anchorfile>
-      <anchor>7e9fde3eab1645a566ddbcf20085b131</anchor>
+      <anchor>37785ab1a51b7a6e8166d36247e55614</anchor>
       <arglist>(const SizesType &amp;sizes)</arglist>
     </member>
     <member kind="function">
@@ -41676,10 +43540,10 @@
       <arglist>(int dimension) const </arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>bool</type>
       <name>SetSize</name>
       <anchorfile>classistd_1_1_t_var_array.html</anchorfile>
-      <anchor>3b9ee080c07b7afd9e1ac7303bfd1b45</anchor>
+      <anchor>a76d60db319d9c423e97a203fca25e97</anchor>
       <arglist>(int dimension, int size)</arglist>
     </member>
     <member kind="function">

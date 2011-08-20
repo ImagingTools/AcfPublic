@@ -151,6 +151,25 @@ void CAttributeEditorComp::on_AttributeTree_itemChanged(QTreeWidgetItem* item, i
 		return;
 	}
 
+	QString attributeId = item->text(NameColumn);
+			
+	const icomp::IAttributeStaticInfo* attributeStaticInfoPtr = NULL;
+	IElementSelectionInfo::Elements selectedElements = objectPtr->GetSelectedElements();
+	for (		IElementSelectionInfo::Elements::const_iterator iter = selectedElements.begin();
+				iter != selectedElements.end();
+				++iter){
+		const icomp::IRegistry::ElementInfo* selectedInfoPtr = iter->second;
+		I_ASSERT(selectedInfoPtr != NULL);
+
+		const icomp::IComponentStaticInfo* componentInfoPtr = m_metaInfoManagerCompPtr->GetComponentMetaInfo(selectedInfoPtr->address);
+		if (componentInfoPtr != NULL){
+			attributeStaticInfoPtr = componentInfoPtr->GetAttributeInfo(attributeId.toStdString());
+			if (attributeStaticInfoPtr != NULL){
+				break;
+			}
+		}
+	}
+
 	if (IsUpdateBlocked()){
 		return;
 	}
@@ -179,7 +198,20 @@ void CAttributeEditorComp::on_AttributeTree_itemChanged(QTreeWidgetItem* item, i
 			std::string attributeId = item->text(NameColumn).toStdString();
 			if (isEnabled){
 				std::string attributeType = item->data(ValueColumn, AttributeType).toString().toStdString();
-				elementPtr->InsertAttributeInfo(attributeId, attributeType);
+				icomp::IRegistryElement::AttributeInfo* attributeInfoPtr = elementPtr->InsertAttributeInfo(attributeId, attributeType);
+				I_ASSERT(!attributeInfoPtr->attributePtr.IsValid());
+
+				if (attributeInfoPtr != NULL && !attributeInfoPtr->attributePtr.IsValid()){
+					attributeInfoPtr->attributePtr.SetPtr(elementPtr->CreateAttribute(attributeType));
+
+					if (attributeStaticInfoPtr != NULL){
+						const iser::IObject* defaultAttributeValuePtr = attributeStaticInfoPtr->GetAttributeDefaultValue();
+
+						if (attributeStaticInfoPtr != NULL && defaultAttributeValuePtr != NULL){
+							attributeInfoPtr->attributePtr->CopyFrom(*attributeStaticInfoPtr->GetAttributeDefaultValue());
+						}
+					}
+				}
 			}
 			else{
 				const icomp::IRegistryElement::AttributeInfo* attributeInfoPtr = elementPtr->GetAttributeInfo(attributeId);
@@ -1202,17 +1234,19 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 
 			const icomp::IRegistry* registryPtr = m_parent.GetRegistry();
 			if ((registryPtr != NULL) && (staticInfoPtr != NULL) && m_parent.m_consistInfoCompPtr.IsValid()){
+				int queryFlags = IRegistryConsistInfo::QF_NONE;
 				icomp::IComponentStaticInfo::Ids obligatoryInterfaces = staticInfoPtr->GetRelatedMetaIds(
 							icomp::IComponentStaticInfo::MGI_INTERFACES,
 							0,
 							icomp::IAttributeStaticInfo::AF_NULLABLE);	// Names of the interfaces which must be set
 				if (obligatoryInterfaces.empty()){
 					obligatoryInterfaces = staticInfoPtr->GetRelatedMetaIds(icomp::IComponentStaticInfo::MGI_INTERFACES, 0, 0);	// All asked interface names
+					queryFlags = IRegistryConsistInfo::QF_ANY_INTERFACE;	// for optional interfaces only we are looking for any of them
 				}
 				icomp::IRegistry::Ids compatIds = m_parent.m_consistInfoCompPtr->GetCompatibleElements(
 							obligatoryInterfaces,
 							*registryPtr,
-							false);
+							queryFlags);
 
 				for (		icomp::IRegistry::Ids::const_iterator iter = compatIds.begin();
 							iter != compatIds.end();
@@ -1239,7 +1273,11 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 			if (multiReferenceAttributePtr != NULL){
 				QString valuesString;
 				for (int index = 0; index < multiReferenceAttributePtr->GetValuesCount(); index++){
-					valuesString += iqt::GetQString(multiReferenceAttributePtr->GetValueAt(index)) + ";";
+					if (!valuesString.isEmpty()){
+						valuesString += ";";
+					}
+
+					valuesString += iqt::GetQString(multiReferenceAttributePtr->GetValueAt(index));
 				}
 
 				comboEditor->lineEdit()->setText(valuesString);
@@ -1251,7 +1289,11 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 			if (multiFactoryAttributePtr != NULL){
 				QString valuesString;
 				for (int index = 0; index < multiFactoryAttributePtr->GetValuesCount(); index++){
-					valuesString += iqt::GetQString(multiFactoryAttributePtr->GetValueAt(index)) + ";";
+					if (!valuesString.isEmpty()){
+						valuesString += ";";
+					}
+
+					valuesString += iqt::GetQString(multiFactoryAttributePtr->GetValueAt(index));
 				}
 
 				comboEditor->lineEdit()->setText(valuesString);
@@ -1296,7 +1338,11 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 			if (stringListAttribute != NULL){
 				QString outputValue;
 				for (int index = 0; index < stringListAttribute->GetValuesCount(); index++){
-					outputValue += iqt::GetQString(stringListAttribute->GetValueAt(index)) + ";";
+					if (!outputValue.isEmpty()){
+						outputValue += ";";
+					}
+
+					outputValue += iqt::GetQString(stringListAttribute->GetValueAt(index));
 				}
 
 				editor.setProperty("text", QVariant(outputValue));
@@ -1308,7 +1354,11 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 			if (intListAttribute != NULL){
 				QString outputValue;
 				for (int index = 0; index < intListAttribute->GetValuesCount(); index++){
-					outputValue += QString("%1").arg(intListAttribute->GetValueAt(index)) + ";";
+					if (!outputValue.isEmpty()){
+						outputValue += ";";
+					}
+
+					outputValue += QString("%1").arg(intListAttribute->GetValueAt(index));
 				}
 
 				editor.setProperty("text", QVariant(outputValue));
@@ -1320,7 +1370,11 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 			if (doubleListAttribute != NULL){
 				QString outputValue;
 				for (int index = 0; index < doubleListAttribute->GetValuesCount(); index++){
-					outputValue += QString("%1").arg(doubleListAttribute->GetValueAt(index)) + ";";
+					if (!outputValue.isEmpty()){
+						outputValue += ";";
+					}
+
+					outputValue += QString("%1").arg(doubleListAttribute->GetValueAt(index));
 				}
 
 				editor.setProperty("text", QVariant(outputValue));

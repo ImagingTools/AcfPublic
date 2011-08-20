@@ -135,6 +135,18 @@ Inheritance diagram for i2d::CLine2d:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#dc52d2ade237a9765830c7a3d67b38c5">MoveCenterTo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;position)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Move object to position <code>position</code>.  <a href="#dc52d2ade237a9765830c7a3d67b38c5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#b210c59ecb8699481c596fa217805c7a">Transform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Transform this object using some transformation.  <a href="#b210c59ecb8699481c596fa217805c7a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#ea187f4dcad6dc4bd3e242434b3d90f6">InvTransform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do inverse transformation of this object.  <a href="#ea187f4dcad6dc4bd3e242434b3d90f6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#effd472978740ba08cbf4db08fb78d08">GetTransformed</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calulate transformation of the object into second one.  <a href="#effd472978740ba08cbf4db08fb78d08"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#63707783c6d06f49c7736277d7c1fbf5">GetInvTransformed</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calulate inverse transformation of the object into second one.  <a href="#63707783c6d06f49c7736277d7c1fbf5"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#ae8e660611fa681843fc72590678f4b1">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#ae8e660611fa681843fc72590678f4b1"></a><br></td></tr>
@@ -339,9 +351,9 @@ Get part of line intersecting specified rectangle.
 Get Y position of cutting this line by specified horizontal line. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00217">217</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00235">235</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_line2d_8h_source.html#l00187">GetDiffVector()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">i2d::CVector2d::GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">i2d::CVector2d::GetY()</a>.</p>
+<p>References <a class="el" href="_c_line2d_8h_source.html#l00205">GetDiffVector()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">i2d::CVector2d::GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">i2d::CVector2d::GetY()</a>.</p>
 
 </div>
 </div><p>
@@ -365,9 +377,9 @@ Get Y position of cutting this line by specified horizontal line.
 Get X position of cutting this line by specified vertical line. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00226">226</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00244">244</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_line2d_8h_source.html#l00187">GetDiffVector()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">i2d::CVector2d::GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">i2d::CVector2d::GetY()</a>.</p>
+<p>References <a class="el" href="_c_line2d_8h_source.html#l00205">GetDiffVector()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">i2d::CVector2d::GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">i2d::CVector2d::GetY()</a>.</p>
 
 </div>
 </div><p>
@@ -390,9 +402,9 @@ Get X position of cutting this line by specified vertical line.
 Get difference vector from point 1 to point 2. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00187">187</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00205">205</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_line2d_8h_source.html#l00217">GetCutXPos()</a>, and <a class="el" href="_c_line2d_8h_source.html#l00226">GetCutYPos()</a>.</p>
+<p>Referenced by <a class="el" href="_c_line2d_8h_source.html#l00235">GetCutXPos()</a>, and <a class="el" href="_c_line2d_8h_source.html#l00244">GetCutYPos()</a>.</p>
 
 </div>
 </div><p>
@@ -537,6 +549,59 @@ Get intersecition position of two lines.
 
 </div>
 </div><p>
+<a class="anchor" name="63707783c6d06f49c7736277d7c1fbf5"></a><!-- doxytag: member="i2d::CLine2d::GetInvTransformed" ref="63707783c6d06f49c7736277d7c1fbf5" args="(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CLine2d::GetInvTransformed           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>transformation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a>&nbsp;</td>
+          <td class="paramname"> <em>mode</em> = <code>ITransformation2d::EM_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>errorFactorPtr</em> = <code>NULL</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Calulate inverse transformation of the object into second one. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mode</em>&nbsp;</td><td>controls needed transformation exactness. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>errorFactorPtr</em>&nbsp;</td><td>optional output where approximated length of transformation error vector will be stored. Value 0 means that transformation is exactly done. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>result</em>&nbsp;</td><td>result object. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#b77a3500838d3439a2cc8cfb679fc860">i2d::IObject2d</a>.</p>
+
+</div>
+</div><p>
 <a class="anchor" name="408923bfb0255d8d0c120e2345f22920"></a><!-- doxytag: member="i2d::CLine2d::GetPoint1" ref="408923bfb0255d8d0c120e2345f22920" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -556,7 +621,7 @@ Get intersecition position of two lines.
 Get value of first line point. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00193">193</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00211">211</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
 </div>
 </div><p>
@@ -579,7 +644,7 @@ Get value of first line point.
 Get reference to first line point. 
 <p>
 Please avoid to use this function, becouse of eventuel update problems. 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00199">199</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00217">217</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
 </div>
 </div><p>
@@ -602,7 +667,7 @@ Please avoid to use this function, becouse of eventuel update problems.
 Get value of second line point. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00205">205</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00223">223</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
 </div>
 </div><p>
@@ -625,7 +690,7 @@ Get value of second line point.
 Get reference to second line point. 
 <p>
 Please avoid to use this function, becouse of eventuel update problems. 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00211">211</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00229">229</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
 </div>
 </div><p>
@@ -693,6 +758,105 @@ Get the line with replaced points (p1 = p2 and p2 = p1).
 
 </div>
 </div><p>
+<a class="anchor" name="effd472978740ba08cbf4db08fb78d08"></a><!-- doxytag: member="i2d::CLine2d::GetTransformed" ref="effd472978740ba08cbf4db08fb78d08" args="(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CLine2d::GetTransformed           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>transformation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a>&nbsp;</td>
+          <td class="paramname"> <em>mode</em> = <code>ITransformation2d::EM_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>errorFactorPtr</em> = <code>NULL</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Calulate transformation of the object into second one. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mode</em>&nbsp;</td><td>controls needed transformation exactness. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>errorFactorPtr</em>&nbsp;</td><td>optional output where approximated length of transformation error vector will be stored. Value 0 means that transformation is exactly done. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>result</em>&nbsp;</td><td>result object. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#8013559af5f052dc7eda938f56cf9cf1">i2d::IObject2d</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="ea187f4dcad6dc4bd3e242434b3d90f6"></a><!-- doxytag: member="i2d::CLine2d::InvTransform" ref="ea187f4dcad6dc4bd3e242434b3d90f6" args="(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CLine2d::InvTransform           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>transformation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a>&nbsp;</td>
+          <td class="paramname"> <em>mode</em> = <code>ITransformation2d::EM_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>errorFactorPtr</em> = <code>NULL</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Do inverse transformation of this object. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mode</em>&nbsp;</td><td>controls needed transformation exactness. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>errorFactorPtr</em>&nbsp;</td><td>optional output where approximated length of transformation error vector will be stored. Value 0 means that transformation is exactly done. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#dcb2ccc83d1ab6b7104966b3ecf1a2e2">i2d::IObject2d</a>.</p>
+
+</div>
+</div><p>
 <a class="anchor" name="62d18a5b544aa7d049c62eeafea9d91b"></a><!-- doxytag: member="i2d::CLine2d::IsIntersectedBy" ref="62d18a5b544aa7d049c62eeafea9d91b" args="(const CLine2d &amp;line) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -740,7 +904,7 @@ Check if two lines intersect.
 Returns <code>true</code>, if the line has a length equal 0. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00181">181</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00199">199</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
 </div>
 </div><p>
@@ -808,9 +972,9 @@ Move object to position <code>position</code>.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00175">175</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00193">193</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_line2d_8h_source.html#l00169">operator==()</a>.</p>
+<p>References <a class="el" href="_c_line2d_8h_source.html#l00187">operator==()</a>.</p>
 
 </div>
 </div><p>
@@ -852,9 +1016,9 @@ Move object to position <code>position</code>.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00169">169</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00187">187</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_line2d_8h_source.html#l00175">operator!=()</a>.</p>
+<p>Referenced by <a class="el" href="_c_line2d_8h_source.html#l00193">operator!=()</a>.</p>
 
 </div>
 </div><p>
@@ -924,6 +1088,52 @@ Set value of first line point.
 <p>
 Set value of second line point. 
 <p>
+
+</div>
+</div><p>
+<a class="anchor" name="b210c59ecb8699481c596fa217805c7a"></a><!-- doxytag: member="i2d::CLine2d::Transform" ref="b210c59ecb8699481c596fa217805c7a" args="(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CLine2d::Transform           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>transformation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a>&nbsp;</td>
+          <td class="paramname"> <em>mode</em> = <code>ITransformation2d::EM_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>errorFactorPtr</em> = <code>NULL</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Transform this object using some transformation. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mode</em>&nbsp;</td><td>controls needed transformation exactness. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>errorFactorPtr</em>&nbsp;</td><td>optional output where approximated length of transformation error vector will be stored. Value 0 means that transformation is exactly done. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#3c2325cbf5ccb7e1efb14104667822a6">i2d::IObject2d</a>.</p>
 
 </div>
 </div><p>

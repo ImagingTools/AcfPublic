@@ -1,4 +1,4 @@
- /********************************************************************************
+/********************************************************************************
 **
 **	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
 **
@@ -23,28 +23,31 @@
 #ifndef iqt_CXslSerializerComp_included
 #define iqt_CXslSerializerComp_included
 
+
+// Qt includes
 #include <QObject>
 
-#include "iqt/CXslTransformationReadArchive.h"
-#include "iqt/CXslTransformationWriteArchive.h"
 
+// ACF includes
 #include "istd/TChangeNotifier.h"
 #include "istd/CStaticServicesProvider.h"
 #include "istd/itr.h"
 #include "istd/CString.h"
 
+#include "isys/IFileSystem.h"
+
 #include "iser/IFileLoader.h"
 
 #include "icomp/CComponentBase.h"
-
-#include "isys/IFileSystem.h"
 
 #include "ibase/TLoggerCompWrap.h"
 #include "ibase/CFileTypeInfoComp.h"
 
 #include "iprm/IFileNameParam.h"
 
-#include "iqt/iqt.h"
+#include "iqt/CXslTransformationReadArchive.h"
+#include "iqt/CXslTransformationWriteArchive.h"
+
 
 namespace iqt
 {

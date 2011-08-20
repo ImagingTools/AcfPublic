@@ -51,10 +51,14 @@ Inheritance diagram for iipr::IBitmapSupplier:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_bitmap_supplier.html#b9a9ce2b3d9306db73ec531a36af6c74">GetBitmap</a> () const =0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get access to produced bitmap object.  <a href="#b9a9ce2b3d9306db73ec531a36af6c74"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <br class="typebreak">
+<a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_bitmap_supplier.html#beabe7425471134d2e2091965bc940a0">GetLogTransform</a> () const =0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get access to transformation from bitmap to logical positions.  <a href="#beabe7425471134d2e2091965bc940a0"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Bitmap supplier allowing to access of produced bitmap. 
-<p>Definition at line <a class="el" href="_i_bitmap_supplier_8h_source.html#l00019">19</a> of file <a class="el" href="_i_bitmap_supplier_8h_source.html">IBitmapSupplier.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_bitmap_supplier_8h_source.html#l00018">18</a> of file <a class="el" href="_i_bitmap_supplier_8h_source.html">IBitmapSupplier.h</a>.</p>
 <hr><h2>Member Function Documentation</h2>
 <a class="anchor" name="b9a9ce2b3d9306db73ec531a36af6c74"></a><!-- doxytag: member="iipr::IBitmapSupplier::GetBitmap" ref="b9a9ce2b3d9306db73ec531a36af6c74" args="() const =0" -->
 <div class="memitem">
@@ -75,6 +79,28 @@ Bitmap supplier allowing to access of produced bitmap.
 Get access to produced bitmap object. 
 <p>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>pointer to bitmap instance if this bitmap is accessible, or NULL. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="beabe7425471134d2e2091965bc940a0"></a><!-- doxytag: member="iipr::IBitmapSupplier::GetLogTransform" ref="beabe7425471134d2e2091965bc940a0" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* iipr::IBitmapSupplier::GetLogTransform           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get access to transformation from bitmap to logical positions. 
+<p>
+Please note, not all implementations must support this information. <dl class="return" compact><dt><b>Returns:</b></dt><dd>pointer to transformation if it is accessible, or NULL. </dd></dl>
 
 </div>
 </div><p>

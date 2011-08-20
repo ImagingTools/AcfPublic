@@ -24,12 +24,17 @@
 #define iqt_CXslTransformationWriteArchive_included
 
 
+// Qt includes
 #include <QDomDocument>
 #include <QDomNode>
 #include <QFile>
 #include <QXmlQuery>
 #include <QBuffer>
 #include <QAbstractMessageHandler>
+
+
+// ACF includes
+#include "istd/itr.h"
 
 #include "iser/CWriteArchiveBase.h"
 #include "iser/CFileArchiveInfo.h"
@@ -38,7 +43,6 @@
 #include "ibase/CLogComp.h"
 
 #include "iqt/iqt.h"
-#include "istd/itr.h"
 
 
 namespace iqt

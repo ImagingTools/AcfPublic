@@ -66,9 +66,9 @@ Inheritance diagram for icmpstr::CRegistryConsistInfoComp:</div>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#a2dc071addc8f3a2df5e780034a4880f">I_ASSIGN_TO</a> (m_externalMetaInfoManagerCompPtr, m_envManagerCompPtr, false)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry.html#ed80af95f532fac70d5299da4722ce57">icomp::IRegistry::Ids</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#71bdddd0327fc6fb96cc9b7168ba233e">GetCompatibleElements</a> (const <a class="el" href="classicomp_1_1_i_component_static_info.html#c3d7d82c828b7130ab73e1e04da2a523">icomp::IComponentStaticInfo::Ids</a> &amp;interfaceNames, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, bool includeUndefined) const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry.html#ed80af95f532fac70d5299da4722ce57">icomp::IRegistry::Ids</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#1f20cae86256027216f28672a2e77637">GetCompatibleElements</a> (const <a class="el" href="classicomp_1_1_i_component_static_info.html#c3d7d82c828b7130ab73e1e04da2a523">icomp::IComponentStaticInfo::Ids</a> &amp;interfaceNames, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, int queryFlags) const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get list of compatible element names.  <a href="#71bdddd0327fc6fb96cc9b7168ba233e"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get list of compatible element names.  <a href="#1f20cae86256027216f28672a2e77637"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#e33ef5db07f2bdddf09afc82a127dbd3">IsRegistryValid</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, bool ignoreUndef, bool allReasons, <a class="el" href="classibase_1_1_i_message_consumer.html">ibase::IMessageConsumer</a> *reasonConsumerPtr) const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if registry is valid.  <a href="#e33ef5db07f2bdddf09afc82a127dbd3"></a><br></td></tr>
@@ -358,7 +358,7 @@ Inheritance diagram for icmpstr::CRegistryConsistInfoComp:</div>
 
 </div>
 </div><p>
-<a class="anchor" name="71bdddd0327fc6fb96cc9b7168ba233e"></a><!-- doxytag: member="icmpstr::CRegistryConsistInfoComp::GetCompatibleElements" ref="71bdddd0327fc6fb96cc9b7168ba233e" args="(const icomp::IComponentStaticInfo::Ids &amp;interfaceNames, const icomp::IRegistry &amp;registry, bool includeUndefined) const " -->
+<a class="anchor" name="1f20cae86256027216f28672a2e77637"></a><!-- doxytag: member="icmpstr::CRegistryConsistInfoComp::GetCompatibleElements" ref="1f20cae86256027216f28672a2e77637" args="(const icomp::IComponentStaticInfo::Ids &amp;interfaceNames, const icomp::IRegistry &amp;registry, int queryFlags) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -377,8 +377,8 @@ Inheritance diagram for icmpstr::CRegistryConsistInfoComp:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>includeUndefined</em></td><td>&nbsp;</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>queryFlags</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -396,11 +396,10 @@ Get list of compatible element names.
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>interfaceNames</em>&nbsp;</td><td>list of interfaces must be implemented. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>registry</em>&nbsp;</td><td>registry will be looked in. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>includeUndefined</em>&nbsp;</td><td>if it is true, all undefined elements will be included. </td></tr>
   </table>
 </dl>
 
-<p>Implements <a class="el" href="classicmpstr_1_1_i_registry_consist_info.html#1196501e42c0c10575895a422c364d57">icmpstr::IRegistryConsistInfo</a>.</p>
+<p>Implements <a class="el" href="classicmpstr_1_1_i_registry_consist_info.html#893d15564e76627474092ea40aa9ae1b">icmpstr::IRegistryConsistInfo</a>.</p>
 
 </div>
 </div><p>

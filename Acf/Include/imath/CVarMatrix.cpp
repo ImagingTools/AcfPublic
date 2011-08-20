@@ -193,8 +193,6 @@ void CVarMatrix::GetMultiplied(const CVarMatrix& matrix, CVarMatrix& result) con
 	istd::CIndex2d size = GetSizes();
     I_ASSERT(size[0] == matrixSize[1]);	// width of first matrix must be equal of second one height
 
-    double sum = 0;
-
     result.SetSizes(istd::CIndex2d(matrixSize[0], size[1]));
 
 	istd::CIndex2d index;
@@ -207,6 +205,7 @@ void CVarMatrix::GetMultiplied(const CVarMatrix& matrix, CVarMatrix& result) con
 		for (resultIndex[0] = 0; resultIndex[0] < matrixSize[0]; ++resultIndex[0]){
 			matrixIndex[0] = resultIndex[0];
 
+		    double sum = 0;
 			for (index[0] = 0; index[0] < size[0]; ++index[0]){
 				matrixIndex[1] = index[0];
 
@@ -253,7 +252,7 @@ void CVarMatrix::GetTransposed(CVarMatrix& result) const
 }
 
 
-double CVarMatrix::GetEuclideanNorm2() const
+double CVarMatrix::GetFrobeniusNorm2() const
 {
 	istd::CIndex2d size = GetSizes();
 
@@ -270,9 +269,9 @@ double CVarMatrix::GetEuclideanNorm2() const
 }
 
 
-double CVarMatrix::GetEuclideanNorm() const
+double CVarMatrix::GetFrobeniusNorm() const
 {
-	return std::sqrt(GetEuclideanNorm2());
+	return std::sqrt(GetFrobeniusNorm2());
 }
 
 

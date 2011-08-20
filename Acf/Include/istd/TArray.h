@@ -107,7 +107,7 @@ public:
 		Set number of dimensions of this array.
 		This is only dummy method, to provide methods compatibility with template implementations.
 		\param	count	number of dimensions will be set.
-		\return			true, if number of set dimensions equals template parameter or false if isn't.
+		\return			true, if number of set dimensions equals template parameter, or false if isn't.
 	*/
 	bool SetDimensionsCount(int count);
 
@@ -118,8 +118,9 @@ public:
 
 	/**
 		Set list of all sizes.
+		\return			always true, it is provided for generic implementations.
 	*/
-	void SetSizes(const SizesType& sizes);
+	bool SetSizes(const SizesType& sizes);
 
 	/**
 		Get size of array for specified dimension.
@@ -129,8 +130,9 @@ public:
 	/**
 		Set size of array for specified dimension.
 		Please note, that it can make all elements invalid.
+		\return			always true, it is provided for generic implementations.
 	*/
-	void SetSize(int dimension, int size);
+	bool SetSize(int dimension, int size);
 
 	/**
 		Get element stored at specified index.
@@ -349,16 +351,18 @@ void TArray<Element, Dimensions>::Reset()
 
 
 template <class Element, int Dimensions>
-void TArray<Element, Dimensions>::SetSizes(const SizesType& sizes)
+bool TArray<Element, Dimensions>::SetSizes(const SizesType& sizes)
 {
 	m_sizes = sizes;
 
 	UpdateElementsSize();
+
+	return true;
 }
 
 
 template <class Element, int Dimensions>
-void TArray<Element, Dimensions>::SetSize(int dimension, int size)
+bool TArray<Element, Dimensions>::SetSize(int dimension, int size)
 {
 	I_ASSERT(dimension >= 0);
 	I_ASSERT(dimension < Dimensions);
@@ -366,6 +370,8 @@ void TArray<Element, Dimensions>::SetSize(int dimension, int size)
 	m_sizes[dimension] = size;
 
 	UpdateElementsSize();
+
+	return true;
 }
 
 

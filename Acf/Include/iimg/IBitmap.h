@@ -72,6 +72,10 @@ public:
 		*/
 		PF_RGBA,
 		/**
+			16-bit grayscale bitmap.
+		*/
+		PF_GRAY16,
+		/**
 			32-bit grayscale bitmap.
 		*/
 		PF_GRAY32

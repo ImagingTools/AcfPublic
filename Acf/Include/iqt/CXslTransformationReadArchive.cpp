@@ -365,15 +365,26 @@ QString CXslTransformationReadArchive::PullTextNode()
 	return text;
 }
 
+
 CXslTransformationReadArchive::MessageHandler::MessageHandler(CXslTransformationReadArchive* logger)
 {
 	m_loggerPtr = logger;
 }
 
-void CXslTransformationReadArchive::MessageHandler::handleMessage(QtMsgType type, const QString &description, const QUrl &identifier, const QSourceLocation &sourceLocation)
+
+void CXslTransformationReadArchive::MessageHandler::handleMessage(
+				QtMsgType /*type*/,
+				const QString& description,
+				const QUrl& /*identifier*/,
+				const QSourceLocation& /*sourceLocation*/)
 {
-	m_loggerPtr->SendLogMessage(istd::ILogger::MC_WARNING, 0, tr("Transformation message: ").append(iqt::GetCString(description)), "XslTransformationWriteArchive");
+	m_loggerPtr->SendLogMessage(
+					istd::ILogger::MC_WARNING,
+					0,
+					tr("Transformation message: ").append(iqt::GetCString(description)),
+					"XslTransformationWriteArchive");
 }
+
 
 } // namespace iqt
 

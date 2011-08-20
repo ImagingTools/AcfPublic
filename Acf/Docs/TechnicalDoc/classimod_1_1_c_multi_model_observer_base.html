@@ -51,36 +51,36 @@ Inheritance diagram for imod::CMultiModelObserverBase:</div>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#beb03f6db4c68b652dce9307e3d307a3">~CMultiModelObserverBase</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#0f852e1dcdef8bd40e3dd4c1741b34ea">GetModelPtr</a> (int modelIndex) const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classimod_1_1_i_model.html">IModel</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#44e4ecc264d102606dd19b954b4b861e">GetModelPtr</a> (int modelIndex) const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get access to connected model with the index <code>index</code>.  <a href="#0f852e1dcdef8bd40e3dd4c1741b34ea"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get access to connected model with the index <code>index</code>.  <a href="#44e4ecc264d102606dd19b954b4b861e"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#9b9d05f1e8eed6f32dd8458746860cce">GetModelCount</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Gets the number of connected models.  <a href="#9b9d05f1e8eed6f32dd8458746860cce"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#1bd025bd31338d0a74c40cb6c1aeff13">IsModelAttached</a> (const <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr) const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#92391a2b6e1dcccfc3987e89ace6da32">IsModelAttached</a> (const <a class="el" href="classimod_1_1_i_model.html">IModel</a> *modelPtr) const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if specified model is attached.  <a href="#1bd025bd31338d0a74c40cb6c1aeff13"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#13d5ee8c442d242c04714612f4f76cb2">OnAttached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if specified model is attached.  <a href="#92391a2b6e1dcccfc3987e89ace6da32"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#f6718a19003715d45e9467aba8ea7e7b">OnAttached</a> (<a class="el" href="classimod_1_1_i_model.html">IModel</a> *modelPtr)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#13d5ee8c442d242c04714612f4f76cb2"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#17e1d6e704105c66cf03baf0a27e4e29">OnDetached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#f6718a19003715d45e9467aba8ea7e7b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#217228f7a135b0f1813c2fa4f7629475">OnDetached</a> (<a class="el" href="classimod_1_1_i_model.html">IModel</a> *modelPtr)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be detached.  <a href="#17e1d6e704105c66cf03baf0a27e4e29"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#0afe3fac2a2863f7083d6b3afc1172dd">BeforeUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be detached.  <a href="#217228f7a135b0f1813c2fa4f7629475"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#22234401b6906764d85a3a9b86f21686">BeforeUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This function will be called before update of the observer contents occures.  <a href="#0afe3fac2a2863f7083d6b3afc1172dd"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#aef3080f34292456c7d5feb99c9730ce">AfterUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This function will be called before update of the observer contents occures.  <a href="#22234401b6906764d85a3a9b86f21686"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#52d553e4c021cd3022ca5beac156df1f">AfterUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This function will be called after update of the observer contents occures.  <a href="#aef3080f34292456c7d5feb99c9730ce"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This function will be called after update of the observer contents occures.  <a href="#52d553e4c021cd3022ca5beac156df1f"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#94172f4eb52a2e1dbfc59588f558451c">EnsureDetached</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#6bfa8b39bc6680c04dbfc20966257289">EnsureModelsDetached</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#ba8194a410e75792998ab6e22bd707b9">OnUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_observer_base.html#4fedb2ca9c97485f0688e99d072610df">OnUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Basic implementation of a multiple model observer. 
-<p>Definition at line <a class="el" href="_c_multi_model_observer_base_8h_source.html#l00019">19</a> of file <a class="el" href="_c_multi_model_observer_base_8h_source.html">CMultiModelObserverBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_model_observer_base_8h_source.html#l00020">20</a> of file <a class="el" href="_c_multi_model_observer_base_8h_source.html">CMultiModelObserverBase.h</a>.</p>
 <hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="beb03f6db4c68b652dce9307e3d307a3"></a><!-- doxytag: member="imod::CMultiModelObserverBase::~CMultiModelObserverBase" ref="beb03f6db4c68b652dce9307e3d307a3" args="()" -->
 <div class="memitem">
@@ -102,14 +102,14 @@ Basic implementation of a multiple model observer.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="aef3080f34292456c7d5feb99c9730ce"></a><!-- doxytag: member="imod::CMultiModelObserverBase::AfterUpdate" ref="aef3080f34292456c7d5feb99c9730ce" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<a class="anchor" name="52d553e4c021cd3022ca5beac156df1f"></a><!-- doxytag: member="imod::CMultiModelObserverBase::AfterUpdate" ref="52d553e4c021cd3022ca5beac156df1f" args="(IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void imod::CMultiModelObserverBase::AfterUpdate           </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&nbsp;</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">IModel</a> *&nbsp;</td>
           <td class="paramname"> <em>modelPtr</em>, </td>
         </tr>
         <tr>
@@ -141,14 +141,14 @@ This function will be called after update of the observer contents occures.
 
 </div>
 </div><p>
-<a class="anchor" name="0afe3fac2a2863f7083d6b3afc1172dd"></a><!-- doxytag: member="imod::CMultiModelObserverBase::BeforeUpdate" ref="0afe3fac2a2863f7083d6b3afc1172dd" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<a class="anchor" name="22234401b6906764d85a3a9b86f21686"></a><!-- doxytag: member="imod::CMultiModelObserverBase::BeforeUpdate" ref="22234401b6906764d85a3a9b86f21686" args="(IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void imod::CMultiModelObserverBase::BeforeUpdate           </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&nbsp;</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">IModel</a> *&nbsp;</td>
           <td class="paramname"> <em>modelPtr</em>, </td>
         </tr>
         <tr>
@@ -180,12 +180,12 @@ Please note, that in some cases no following AfterUpdate can be called.
 
 </div>
 </div><p>
-<a class="anchor" name="94172f4eb52a2e1dbfc59588f558451c"></a><!-- doxytag: member="imod::CMultiModelObserverBase::EnsureDetached" ref="94172f4eb52a2e1dbfc59588f558451c" args="()" -->
+<a class="anchor" name="6bfa8b39bc6680c04dbfc20966257289"></a><!-- doxytag: member="imod::CMultiModelObserverBase::EnsureModelsDetached" ref="6bfa8b39bc6680c04dbfc20966257289" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void imod::CMultiModelObserverBase::EnsureDetached           </td>
+          <td class="memname">void imod::CMultiModelObserverBase::EnsureModelsDetached           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -222,12 +222,12 @@ Gets the number of connected models.
 
 </div>
 </div><p>
-<a class="anchor" name="0f852e1dcdef8bd40e3dd4c1741b34ea"></a><!-- doxytag: member="imod::CMultiModelObserverBase::GetModelPtr" ref="0f852e1dcdef8bd40e3dd4c1741b34ea" args="(int modelIndex) const " -->
+<a class="anchor" name="44e4ecc264d102606dd19b954b4b861e"></a><!-- doxytag: member="imod::CMultiModelObserverBase::GetModelPtr" ref="44e4ecc264d102606dd19b954b4b861e" args="(int modelIndex) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a>* imod::CMultiModelObserverBase::GetModelPtr           </td>
+          <td class="memname"><a class="el" href="classimod_1_1_i_model.html">IModel</a>* imod::CMultiModelObserverBase::GetModelPtr           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>modelIndex</em>          </td>
@@ -246,14 +246,14 @@ Get access to connected model with the index <code>index</code>.
 
 </div>
 </div><p>
-<a class="anchor" name="1bd025bd31338d0a74c40cb6c1aeff13"></a><!-- doxytag: member="imod::CMultiModelObserverBase::IsModelAttached" ref="1bd025bd31338d0a74c40cb6c1aeff13" args="(const imod::IModel *modelPtr) const " -->
+<a class="anchor" name="92391a2b6e1dcccfc3987e89ace6da32"></a><!-- doxytag: member="imod::CMultiModelObserverBase::IsModelAttached" ref="92391a2b6e1dcccfc3987e89ace6da32" args="(const IModel *modelPtr) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool imod::CMultiModelObserverBase::IsModelAttached           </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&nbsp;</td>
+          <td class="paramtype">const <a class="el" href="classimod_1_1_i_model.html">IModel</a> *&nbsp;</td>
           <td class="paramname"> <em>modelPtr</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td> const<code> [virtual]</code></td>
@@ -271,14 +271,14 @@ pointer to model object. If this pointer is NULL, any model is meaned. <dl class
 
 </div>
 </div><p>
-<a class="anchor" name="13d5ee8c442d242c04714612f4f76cb2"></a><!-- doxytag: member="imod::CMultiModelObserverBase::OnAttached" ref="13d5ee8c442d242c04714612f4f76cb2" args="(imod::IModel *modelPtr)" -->
+<a class="anchor" name="f6718a19003715d45e9467aba8ea7e7b"></a><!-- doxytag: member="imod::CMultiModelObserverBase::OnAttached" ref="f6718a19003715d45e9467aba8ea7e7b" args="(IModel *modelPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool imod::CMultiModelObserverBase::OnAttached           </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&nbsp;</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">IModel</a> *&nbsp;</td>
           <td class="paramname"> <em>modelPtr</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [virtual]</code></td>
@@ -299,14 +299,14 @@ This function returns a <code>true</code>, if observable object is accepted by t
 
 </div>
 </div><p>
-<a class="anchor" name="17e1d6e704105c66cf03baf0a27e4e29"></a><!-- doxytag: member="imod::CMultiModelObserverBase::OnDetached" ref="17e1d6e704105c66cf03baf0a27e4e29" args="(imod::IModel *modelPtr)" -->
+<a class="anchor" name="217228f7a135b0f1813c2fa4f7629475"></a><!-- doxytag: member="imod::CMultiModelObserverBase::OnDetached" ref="217228f7a135b0f1813c2fa4f7629475" args="(IModel *modelPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool imod::CMultiModelObserverBase::OnDetached           </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&nbsp;</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">IModel</a> *&nbsp;</td>
           <td class="paramname"> <em>modelPtr</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [virtual]</code></td>
@@ -323,18 +323,18 @@ This call back function will be called, if an observable object is about to be d
 
 <p>Reimplemented in <a class="el" href="classimod_1_1_t_model_dispatcher.html#08669f8a0e2e319285b384936d3a807b">imod::TModelDispatcher&lt; NotifyReceiver &gt;</a>, and <a class="el" href="classimod_1_1_t_model_dispatcher.html#08669f8a0e2e319285b384936d3a807b">imod::TModelDispatcher&lt; CDocumentProcessingManagerCompBase &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_model_dispatcher_8h_source.html#l00157">imod::TModelDispatcher&lt; NotifyReceiver &gt;::OnDetached()</a>.</p>
+<p>Referenced by <a class="el" href="_t_model_dispatcher_8h_source.html#l00168">imod::TModelDispatcher&lt; NotifyReceiver &gt;::OnDetached()</a>.</p>
 
 </div>
 </div><p>
-<a class="anchor" name="ba8194a410e75792998ab6e22bd707b9"></a><!-- doxytag: member="imod::CMultiModelObserverBase::OnUpdate" ref="ba8194a410e75792998ab6e22bd707b9" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<a class="anchor" name="4fedb2ca9c97485f0688e99d072610df"></a><!-- doxytag: member="imod::CMultiModelObserverBase::OnUpdate" ref="4fedb2ca9c97485f0688e99d072610df" args="(IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void imod::CMultiModelObserverBase::OnUpdate           </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&nbsp;</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">IModel</a> *&nbsp;</td>
           <td class="paramname"> <em>modelPtr</em>, </td>
         </tr>
         <tr>

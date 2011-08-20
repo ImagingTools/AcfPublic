@@ -184,6 +184,17 @@ CCompositor::CMainRegistry::CMainRegistry()
 				icomp::CComponentAddress("CmpstrVoce", "CompositorDockWidgets"),
 				true);
 	if ((infoMainWindowComponentsPtr != NULL) && infoMainWindowComponentsPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'ApplicationInfo'
+		icomp::IRegistryElement::AttributeInfo* attrInfoApplicationInfoPtr = infoMainWindowComponentsPtr->elementPtr->InsertAttributeInfo("ApplicationInfo", "icomp::CReferenceAttribute");
+		if (attrInfoApplicationInfoPtr != NULL){
+			attrInfoApplicationInfoPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoApplicationInfoPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrApplicationInfoPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoApplicationInfoPtr->attributePtr.GetPtr());
+			I_ASSERT(attrApplicationInfoPtr != NULL);
+			attrApplicationInfoPtr->SetValue("Application");
+		}
+
 		// create and set attribute value for 'ConfigFilePath'
 		icomp::IRegistryElement::AttributeInfo* attrInfoConfigFilePathPtr = infoMainWindowComponentsPtr->elementPtr->InsertAttributeInfo("ConfigFilePath", "icomp::CReferenceAttribute");
 		if (attrInfoConfigFilePathPtr != NULL){
@@ -301,6 +312,7 @@ CCompositor::CAcfGuiVocePck::CAcfGuiVocePck(const icomp::IComponentEnvironmentMa
 	RegisterEmbeddedComponent("Log");
 	RegisterEmbeddedComponent("LogDock");
 	RegisterEmbeddedComponent("MultiDocApp");
+	RegisterEmbeddedComponent("PersistentFileDialogLoader");
 	RegisterEmbeddedComponent("SettingsPersistence");
 }
 
@@ -396,37 +408,6 @@ CCompositor::CAcfGuiVocePck::CLogRegistry::CLogRegistry()
 
 CCompositor::CAcfGuiVocePck::CLogDockRegistry::CLogDockRegistry()
 {
-	// element 'FileDialogLoader' of type QtGuiPck::FileDialogLoader
-	icomp::IRegistry::ElementInfo* infoFileDialogLoaderPtr = InsertElementInfo(
-				"FileDialogLoader",
-				icomp::CComponentAddress("QtGuiPck", "FileDialogLoader"),
-				true);
-	if ((infoFileDialogLoaderPtr != NULL) && infoFileDialogLoaderPtr->elementPtr.IsValid()){
-		// create and set attribute value for 'Loaders'
-		icomp::IRegistryElement::AttributeInfo* attrInfoLoadersPtr = infoFileDialogLoaderPtr->elementPtr->InsertAttributeInfo("Loaders", "icomp::CMultiReferenceAttribute");
-		if (attrInfoLoadersPtr != NULL){
-			attrInfoLoadersPtr->attributePtr.SetPtr(new icomp::CMultiReferenceAttribute);
-			I_ASSERT(attrInfoLoadersPtr->attributePtr.IsValid());
-
-			icomp::TMultiAttribute<std::string>* nattrInfoLoadersPtr = dynamic_cast<icomp::TMultiAttribute<std::string>*>(attrInfoLoadersPtr->attributePtr.GetPtr());
-			I_ASSERT(nattrInfoLoadersPtr != NULL);
-
-			nattrInfoLoadersPtr->Reset();
-			nattrInfoLoadersPtr->InsertValue("XmlFileSerializer");
-		}
-
-		// create and set attribute value for 'Log'
-		icomp::IRegistryElement::AttributeInfo* attrInfoLogPtr = infoFileDialogLoaderPtr->elementPtr->InsertAttributeInfo("Log", "icomp::CReferenceAttribute");
-		if (attrInfoLogPtr != NULL){
-			attrInfoLogPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
-			I_ASSERT(attrInfoLogPtr->attributePtr.IsValid());
-
-			icomp::TAttribute<std::string>* attrLogPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoLogPtr->attributePtr.GetPtr());
-			I_ASSERT(attrLogPtr != NULL);
-			attrLogPtr->SetValue("Log");
-		}
-	}
-
 	// element 'Log' of type AcfGuiVoce::Log
 	icomp::IRegistry::ElementInfo* infoLogPtr = InsertElementInfo(
 				"Log",
@@ -441,7 +422,7 @@ CCompositor::CAcfGuiVocePck::CLogDockRegistry::CLogDockRegistry()
 
 			icomp::TAttribute<std::string>* attrExporterPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoExporterPtr->attributePtr.GetPtr());
 			I_ASSERT(attrExporterPtr != NULL);
-			attrExporterPtr->SetValue("FileDialogLoader");
+			attrExporterPtr->SetValue("PersistentFileDialogLoader");
 		}
 	}
 
@@ -495,6 +476,54 @@ CCompositor::CAcfGuiVocePck::CLogDockRegistry::CLogDockRegistry()
 			icomp::TAttribute<std::string>* attrSlaveGuiPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoSlaveGuiPtr->attributePtr.GetPtr());
 			I_ASSERT(attrSlaveGuiPtr != NULL);
 			attrSlaveGuiPtr->SetValue("Log");
+		}
+	}
+
+	// element 'PersistentFileDialogLoader' of type AcfGuiVoce::PersistentFileDialogLoader
+	icomp::IRegistry::ElementInfo* infoPersistentFileDialogLoaderPtr = InsertElementInfo(
+				"PersistentFileDialogLoader",
+				icomp::CComponentAddress("AcfGuiVoce", "PersistentFileDialogLoader"),
+				true);
+	if ((infoPersistentFileDialogLoaderPtr != NULL) && infoPersistentFileDialogLoaderPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'ApplicationInfo'
+		icomp::IRegistryElement::AttributeInfo* attrInfoApplicationInfoPtr = infoPersistentFileDialogLoaderPtr->elementPtr->InsertAttributeInfo("ApplicationInfo", "icomp::CReferenceAttribute");
+		if (attrInfoApplicationInfoPtr != NULL){
+			attrInfoApplicationInfoPtr->exportId = "ApplicationInfo";
+		}
+
+		// create and set attribute value for 'LastPathSettingsKey'
+		icomp::IRegistryElement::AttributeInfo* attrInfoLastPathSettingsKeyPtr = infoPersistentFileDialogLoaderPtr->elementPtr->InsertAttributeInfo("LastPathSettingsKey", "icomp::TAttribute<istd::CString>");
+		if (attrInfoLastPathSettingsKeyPtr != NULL){
+			attrInfoLastPathSettingsKeyPtr->attributePtr.SetPtr(new icomp::TAttribute<istd::CString>);
+			I_ASSERT(attrInfoLastPathSettingsKeyPtr->attributePtr.IsValid());
+
+			icomp::CStringAttribute* attrLastPathSettingsKeyPtr = dynamic_cast<icomp::CStringAttribute*>(attrInfoLastPathSettingsKeyPtr->attributePtr.GetPtr());
+			I_ASSERT(attrLastPathSettingsKeyPtr != NULL);
+			attrLastPathSettingsKeyPtr->SetValue(L"Log");
+		}
+
+		// create and set attribute value for 'Loaders'
+		icomp::IRegistryElement::AttributeInfo* attrInfoLoadersPtr = infoPersistentFileDialogLoaderPtr->elementPtr->InsertAttributeInfo("Loaders", "icomp::CMultiReferenceAttribute");
+		if (attrInfoLoadersPtr != NULL){
+			attrInfoLoadersPtr->attributePtr.SetPtr(new icomp::CMultiReferenceAttribute);
+			I_ASSERT(attrInfoLoadersPtr->attributePtr.IsValid());
+
+			icomp::TMultiAttribute<std::string>* nattrInfoLoadersPtr = dynamic_cast<icomp::TMultiAttribute<std::string>*>(attrInfoLoadersPtr->attributePtr.GetPtr());
+			I_ASSERT(nattrInfoLoadersPtr != NULL);
+
+			nattrInfoLoadersPtr->Reset();
+			nattrInfoLoadersPtr->InsertValue("XmlFileSerializer");
+		}
+
+		// create and set attribute value for 'Log'
+		icomp::IRegistryElement::AttributeInfo* attrInfoLogPtr = infoPersistentFileDialogLoaderPtr->elementPtr->InsertAttributeInfo("Log", "icomp::CReferenceAttribute");
+		if (attrInfoLogPtr != NULL){
+			attrInfoLogPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoLogPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrLogPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoLogPtr->attributePtr.GetPtr());
+			I_ASSERT(attrLogPtr != NULL);
+			attrLogPtr->SetValue("Log");
 		}
 	}
 
@@ -1015,6 +1044,118 @@ CCompositor::CAcfGuiVocePck::CMultiDocAppRegistry::CMultiDocAppRegistry()
 }
 
 
+// Embedded class CPersistentFileDialogLoaderRegistry
+
+CCompositor::CAcfGuiVocePck::CPersistentFileDialogLoaderRegistry::CPersistentFileDialogLoaderRegistry()
+{
+	// element 'FileDialogLoader' of type QtGuiPck::FileDialogLoader
+	icomp::IRegistry::ElementInfo* infoFileDialogLoaderPtr = InsertElementInfo(
+				"FileDialogLoader",
+				icomp::CComponentAddress("QtGuiPck", "FileDialogLoader"),
+				true);
+	if ((infoFileDialogLoaderPtr != NULL) && infoFileDialogLoaderPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'Loaders'
+		icomp::IRegistryElement::AttributeInfo* attrInfoLoadersPtr = infoFileDialogLoaderPtr->elementPtr->InsertAttributeInfo("Loaders", "icomp::CMultiReferenceAttribute");
+		if (attrInfoLoadersPtr != NULL){
+			attrInfoLoadersPtr->exportId = "Loaders";
+		}
+
+		// create and set attribute value for 'Log'
+		icomp::IRegistryElement::AttributeInfo* attrInfoLogPtr = infoFileDialogLoaderPtr->elementPtr->InsertAttributeInfo("Log", "icomp::CReferenceAttribute");
+		if (attrInfoLogPtr != NULL){
+			attrInfoLogPtr->exportId = "Log";
+		}
+
+		// create and set attribute value for 'StartupDirectory'
+		icomp::IRegistryElement::AttributeInfo* attrInfoStartupDirectoryPtr = infoFileDialogLoaderPtr->elementPtr->InsertAttributeInfo("StartupDirectory", "icomp::CReferenceAttribute");
+		if (attrInfoStartupDirectoryPtr != NULL){
+			attrInfoStartupDirectoryPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoStartupDirectoryPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrStartupDirectoryPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoStartupDirectoryPtr->attributePtr.GetPtr());
+			I_ASSERT(attrStartupDirectoryPtr != NULL);
+			attrStartupDirectoryPtr->SetValue("StartupDirectory");
+		}
+	}
+
+	// element 'SettingsPersistence' of type AcfGuiVoce::SettingsPersistence
+	icomp::IRegistry::ElementInfo* infoSettingsPersistencePtr = InsertElementInfo(
+				"SettingsPersistence",
+				icomp::CComponentAddress("AcfGuiVoce", "SettingsPersistence"),
+				true);
+	if ((infoSettingsPersistencePtr != NULL) && infoSettingsPersistencePtr->elementPtr.IsValid()){
+		infoSettingsPersistencePtr->elementPtr->SetElementFlags(1);
+
+		// create and set attribute value for 'ApplicationInfo'
+		icomp::IRegistryElement::AttributeInfo* attrInfoApplicationInfoPtr = infoSettingsPersistencePtr->elementPtr->InsertAttributeInfo("ApplicationInfo", "icomp::CReferenceAttribute");
+		if (attrInfoApplicationInfoPtr != NULL){
+			attrInfoApplicationInfoPtr->exportId = "ApplicationInfo";
+		}
+
+		// create and set attribute value for 'Log'
+		icomp::IRegistryElement::AttributeInfo* attrInfoLogPtr = infoSettingsPersistencePtr->elementPtr->InsertAttributeInfo("Log", "icomp::CReferenceAttribute");
+		if (attrInfoLogPtr != NULL){
+			attrInfoLogPtr->exportId = "Log";
+		}
+
+		// create and set attribute value for 'Object'
+		icomp::IRegistryElement::AttributeInfo* attrInfoObjectPtr = infoSettingsPersistencePtr->elementPtr->InsertAttributeInfo("Object", "icomp::CReferenceAttribute");
+		if (attrInfoObjectPtr != NULL){
+			attrInfoObjectPtr->attributePtr.SetPtr(new icomp::CReferenceAttribute);
+			I_ASSERT(attrInfoObjectPtr->attributePtr.IsValid());
+
+			icomp::TAttribute<std::string>* attrObjectPtr = dynamic_cast<icomp::TAttribute<std::string>*>(attrInfoObjectPtr->attributePtr.GetPtr());
+			I_ASSERT(attrObjectPtr != NULL);
+			attrObjectPtr->SetValue("StartupDirectory");
+		}
+
+		// create and set attribute value for 'RootKey'
+		icomp::IRegistryElement::AttributeInfo* attrInfoRootKeyPtr = infoSettingsPersistencePtr->elementPtr->InsertAttributeInfo("RootKey", "icomp::TAttribute<istd::CString>");
+		if (attrInfoRootKeyPtr != NULL){
+			attrInfoRootKeyPtr->exportId = "LastPathSettingsKey";
+		}
+	}
+
+	// element 'StartupDirectory' of type BasePck::FileNameParam
+	icomp::IRegistry::ElementInfo* infoStartupDirectoryPtr = InsertElementInfo(
+				"StartupDirectory",
+				icomp::CComponentAddress("BasePck", "FileNameParam"),
+				true);
+	if ((infoStartupDirectoryPtr != NULL) && infoStartupDirectoryPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'DefaultPath'
+		icomp::IRegistryElement::AttributeInfo* attrInfoDefaultPathPtr = infoStartupDirectoryPtr->elementPtr->InsertAttributeInfo("DefaultPath", "icomp::TAttribute<istd::CString>");
+		if (attrInfoDefaultPathPtr != NULL){
+			attrInfoDefaultPathPtr->exportId = "StartupDirectory";
+		}
+
+		// create and set attribute value for 'PathType'
+		icomp::IRegistryElement::AttributeInfo* attrInfoPathTypePtr = infoStartupDirectoryPtr->elementPtr->InsertAttributeInfo("PathType", "icomp::TAttribute<int>");
+		if (attrInfoPathTypePtr != NULL){
+			attrInfoPathTypePtr->attributePtr.SetPtr(new icomp::TAttribute<int>);
+			I_ASSERT(attrInfoPathTypePtr->attributePtr.IsValid());
+
+			icomp::CIntAttribute* attrPathTypePtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoPathTypePtr->attributePtr.GetPtr());
+			I_ASSERT(attrPathTypePtr != NULL);
+			attrPathTypePtr->SetValue(2);
+		}
+	}
+
+	// interface export
+	SetElementInterfaceExported(
+				"FileDialogLoader",
+				"iser::IFileLoader",
+				true);
+	SetElementInterfaceExported(
+				"FileDialogLoader",
+				"iser::IFileLoaderInfo",
+				true);
+	SetElementInterfaceExported(
+				"FileDialogLoader",
+				"iser::IFileTypeInfo",
+				true);
+}
+
+
 // Embedded class CSettingsPersistenceRegistry
 
 CCompositor::CAcfGuiVocePck::CSettingsPersistenceRegistry::CSettingsPersistenceRegistry()
@@ -1206,7 +1347,7 @@ CCompositor::CAcfSlnVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(357);
+			attrVersionNumberPtr->SetValue(360);
 		}
 	}
 
@@ -1535,7 +1676,7 @@ CCompositor::CAcfVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(1817);
+			attrVersionNumberPtr->SetValue(1834);
 		}
 	}
 
@@ -2239,6 +2380,12 @@ CCompositor::CCmpstrVocePck::CCompositorDockWidgetsRegistry::CCompositorDockWidg
 				icomp::CComponentAddress("AcfGuiVoce", "LogDock"),
 				true);
 	if ((infoLogDockPtr != NULL) && infoLogDockPtr->elementPtr.IsValid()){
+		// create and set attribute value for 'ApplicationInfo'
+		icomp::IRegistryElement::AttributeInfo* attrInfoApplicationInfoPtr = infoLogDockPtr->elementPtr->InsertAttributeInfo("ApplicationInfo", "icomp::CReferenceAttribute");
+		if (attrInfoApplicationInfoPtr != NULL){
+			attrInfoApplicationInfoPtr->exportId = "ApplicationInfo";
+		}
+
 		// create and set attribute value for 'VersionInfo'
 		icomp::IRegistryElement::AttributeInfo* attrInfoVersionInfoPtr = infoLogDockPtr->elementPtr->InsertAttributeInfo("VersionInfo", "icomp::CReferenceAttribute");
 		if (attrInfoVersionInfoPtr != NULL){
@@ -3941,6 +4088,7 @@ CCompositor::CLocalEnvironmentManager::CLocalEnvironmentManager()
 	m_registriesMap[icomp::CComponentAddress("AcfGuiVoce", "Log")].SetPtr(new CAcfGuiVocePck::CLogRegistry());
 	m_registriesMap[icomp::CComponentAddress("AcfGuiVoce", "LogDock")].SetPtr(new CAcfGuiVocePck::CLogDockRegistry());
 	m_registriesMap[icomp::CComponentAddress("AcfGuiVoce", "MultiDocApp")].SetPtr(new CAcfGuiVocePck::CMultiDocAppRegistry());
+	m_registriesMap[icomp::CComponentAddress("AcfGuiVoce", "PersistentFileDialogLoader")].SetPtr(new CAcfGuiVocePck::CPersistentFileDialogLoaderRegistry());
 	m_registriesMap[icomp::CComponentAddress("AcfGuiVoce", "SettingsPersistence")].SetPtr(new CAcfGuiVocePck::CSettingsPersistenceRegistry());
 	m_registriesMap[icomp::CComponentAddress("AcfSlnVoce", "VersionInfo")].SetPtr(new CAcfSlnVocePck::CVersionInfoRegistry());
 	m_registriesMap[icomp::CComponentAddress("AcfVoce", "AcfLocalization")].SetPtr(new CAcfVocePck::CAcfLocalizationRegistry());

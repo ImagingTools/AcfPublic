@@ -1,4 +1,4 @@
- /********************************************************************************
+/********************************************************************************
 **
 **	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
 **
@@ -19,10 +19,13 @@
 **
 ********************************************************************************/
 
+
 #include "iqt/CXslSerializerComp.h"
+
 
 namespace iqt
 {
+
 
 bool CXslSerializerComp::IsOperationSupported(
 			const istd::IChangeable* dataObjectPtr,
@@ -74,7 +77,6 @@ bool CXslSerializerComp::IsOperationSupported(
 }
 
 
-
 int CXslSerializerComp::LoadFromFile(istd::IChangeable& data, const istd::CString& filePath) const
 {
 	if (!CheckInputFilePath(filePath)){
@@ -102,7 +104,6 @@ int CXslSerializerComp::LoadFromFile(istd::IChangeable& data, const istd::CStrin
 	}
 	return StateFailed;
 }
-
 
 
 int CXslSerializerComp::SaveToFile(const istd::IChangeable& data, const istd::CString& filePath) const
@@ -143,12 +144,10 @@ const iser::IVersionInfo* CXslSerializerComp::GetVersionInfo() const
 }
 
 
-
 void CXslSerializerComp::OnReadError(const iser::IArchive& /*archive*/, const istd::IChangeable& /*data*/, const istd::CString& filePath) const
 {
 	SendWarningMessage(MI_CANNOT_LOAD, istd::CString(tr("Cannot load object from file ")) + filePath);
 }
-
 
 
 bool CXslSerializerComp::CheckMinimalVersion(const iser::ISerializable& object, const iser::IVersionInfo& versionInfo) const
@@ -174,7 +173,6 @@ bool CXslSerializerComp::CheckMinimalVersion(const iser::ISerializable& object, 
 }
 
 
-
 bool CXslSerializerComp::CheckInputFilePath(const istd::CString filePath) const
 {
 	isys::IFileSystem* fileSystemPtr = istd::GetService<isys::IFileSystem>();
@@ -192,7 +190,6 @@ bool CXslSerializerComp::CheckInputFilePath(const istd::CString filePath) const
 	
 	return true;
 }
-
 
 
 bool CXslSerializerComp::CheckTargetDirectory(const istd::CString dirPath) const
@@ -213,7 +210,7 @@ bool CXslSerializerComp::CheckTargetDirectory(const istd::CString dirPath) const
 	return true;
 }
 
-} // namespace iqt
 
+} // namespace iqt
 
 

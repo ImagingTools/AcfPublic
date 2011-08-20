@@ -340,6 +340,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CDelegatedBitmapSupplierComp.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <filename>_c_delegated_bitmap_supplier_comp_8h</filename>
+    <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
+    <class kind="class">iipr::CDelegatedBitmapSupplierComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CExtremumCaliperProcessorComp.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_c_extremum_caliper_processor_comp_8h</filename>
@@ -461,6 +469,14 @@
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_c_processed_acquisition_comp_8h</filename>
     <class kind="class">iipr::CProcessedAcquisitionComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CProcessedBitmapSupplierComp.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <filename>_c_processed_bitmap_supplier_comp_8h</filename>
+    <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
+    <class kind="class">iipr::CProcessedBitmapSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -658,6 +674,13 @@
     <filename>_i_line_projection_supplier_8h</filename>
     <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
     <class kind="class">iipr::ILineProjectionSupplier</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IMultiBitmapSupplier.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <filename>_i_multi_bitmap_supplier_8h</filename>
+    <class kind="class">iipr::IMultiBitmapSupplier</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -1508,10 +1531,6 @@
     <title>MIL</title>
     <filename>group__mil.html</filename>
   </compound>
-  <compound kind="class">
-    <name>TCopySerializedWrap</name>
-    <filename>class_t_copy_serialized_wrap.html</filename>
-  </compound>
   <compound kind="namespace">
     <name>iavt</name>
     <filename>namespaceiavt.html</filename>
@@ -1877,12 +1896,12 @@
   <compound kind="class">
     <name>icam::CSnapBitmapSupplierComp</name>
     <filename>classicam_1_1_c_snap_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; iipr::IBitmapSupplier, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; iipr::IBitmapSupplier, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>25f05c5ceac6ebcb724aa55e8928e9d1</anchor>
+      <anchor>a2abe0ecef284d6c4c0eeba619c8e32f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -1892,12 +1911,19 @@
       <anchor>75c695192e6efec5d1cf378b5da900a6</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetLogTransform</name>
+      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
+      <anchor>60bdc80744617cef36960048f06e6b65</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>922600b13172b4d9e0eceb3b6083beeb</anchor>
-      <arglist>(istd::TDelPtr&lt; iimg::IBitmap &gt; &amp;result) const </arglist>
+      <anchor>a51d7c3220ef8671ea5db87d90c004d3</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3242,6 +3268,7 @@
     <class kind="class">iipr::CCircleFinderParamsComp</class>
     <class kind="class">iipr::CCircleFindProcessorComp</class>
     <class kind="class">iipr::CConvolutionKernel2d</class>
+    <class kind="class">iipr::CDelegatedBitmapSupplierComp</class>
     <class kind="class">iipr::CExtremumCaliperProcessorComp</class>
     <class kind="class">iipr::CFeatureBase</class>
     <class kind="class">iipr::CFeaturesContainer</class>
@@ -3257,6 +3284,7 @@
     <class kind="class">iipr::CMultidimensionalFilterParamsComp</class>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <class kind="class">iipr::CProcessedAcquisitionComp</class>
+    <class kind="class">iipr::CProcessedBitmapSupplierComp</class>
     <class kind="class">iipr::CRectDerivativeProcessor</class>
     <class kind="class">iipr::CRectDerivativeProcessorComp</class>
     <class kind="class">iipr::CRectImageSmoothProcessorComp</class>
@@ -3281,6 +3309,7 @@
     <class kind="class">iipr::IImageToFeatureProcessor</class>
     <class kind="class">iipr::ILineProjectionProcessor</class>
     <class kind="class">iipr::ILineProjectionSupplier</class>
+    <class kind="class">iipr::IMultiBitmapSupplier</class>
     <class kind="class">iipr::IMultidimensionalFilterConstraints</class>
     <class kind="class">iipr::IMultidimensionalFilterParams</class>
     <class kind="class">iipr::IProjectionConstraints</class>
@@ -3776,6 +3805,75 @@
       <anchorfile>structiipr_1_1_c_convolution_kernel2d_1_1_kernel_value.html</anchorfile>
       <anchor>4b360c1b2689b37cf53b9a99545db5cb</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CDelegatedBitmapSupplierComp</name>
+    <filename>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</base>
+    <base protection="protected">imod::CMultiModelObserverBase</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>892437e7f9a9dccfd4e25d9b904cfa1d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>7ccbd1a36502e4e2ff19434b9d98d4b9</anchor>
+      <arglist>(m_bitmapModelCompPtr, m_bitmapCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>4d3cdff494dea97e02b218106afbac04</anchor>
+      <arglist>(m_calibrationModelCompPtr, m_calibrationCompPtr, false)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>45c7c3568ba2c8cb44a1a35e1fb9a74e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetLogTransform</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>ef74ba8867f5f77e8160bf0cf9f50583</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>6054a1c2b5856e22d6529357d72f3c1f</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>02c62def2d9d7e2964b87c6d35370a29</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>3dc8acf51b529498be7280f6d042fa3b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>e5c5d3a1a89099b1009de0a3a3c5550b</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4336,6 +4434,60 @@
       <anchorfile>classiipr_1_1_c_processed_acquisition_comp.html</anchorfile>
       <anchor>8e4f41a6a298a4e03345ece94f3a53f5</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CProcessedBitmapSupplierComp</name>
+    <filename>classiipr_1_1_c_processed_bitmap_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; istd::TDelPtr&lt; i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; istd::TDelPtr&lt; i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>36a0f071668edfdd42d00ce778a5c27e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>EnsureBitmapCreated</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>e30a377d05d1f6711b35fe9fddbdf1d4</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>4688ddf6927eaf785b7297c8acadaf9e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetLogTransform</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>2a75ac1fbf2d1cc128882ce0f941c2ba</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>857ccf41fffe37d31452115c0a0b77fa</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>81741a268acf9a5682ee358f508b4746</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>188b70a9369e3ed26986e14d9a3f0907</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4977,6 +5129,13 @@
       <anchor>b9a9ce2b3d9306db73ec531a36af6c74</anchor>
       <arglist>() const =0</arglist>
     </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetLogTransform</name>
+      <anchorfile>classiipr_1_1_i_bitmap_supplier.html</anchorfile>
+      <anchor>beabe7425471134d2e2091965bc940a0</anchor>
+      <arglist>() const =0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::ICaliperParams</name>
@@ -5363,6 +5522,32 @@
       <anchorfile>classiipr_1_1_i_line_projection_supplier.html</anchorfile>
       <anchor>24fa5cf5e6a9feecf12b43b215d5e9c8</anchor>
       <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::IMultiBitmapSupplier</name>
+    <filename>classiipr_1_1_i_multi_bitmap_supplier.html</filename>
+    <base virtualness="virtual">iproc::ISupplier</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetBitmapsCount</name>
+      <anchorfile>classiipr_1_1_i_multi_bitmap_supplier.html</anchorfile>
+      <anchor>fc9f684d00d3e4ec573449fe6654c6be</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiipr_1_1_i_multi_bitmap_supplier.html</anchorfile>
+      <anchor>67a13ca13ebef16b57c844bc63a0a13d</anchor>
+      <arglist>(int bitmapIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetLogTransform</name>
+      <anchorfile>classiipr_1_1_i_multi_bitmap_supplier.html</anchorfile>
+      <anchor>990ac38bf2b354238a8e9233284360f8</anchor>
+      <arglist>(int bitmapIndex) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">

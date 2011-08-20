@@ -57,6 +57,9 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_vector.html#efb4e0720e2623b16b5be4aa5cb2a249">SetElement</a> (int i, const Element &amp;value)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set element at specified i.  <a href="#efb4e0720e2623b16b5be4aa5cb2a249"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_vector.html#f7c4d45b04c2f9196272cf0ccb0afab1">Reset</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set all coordinates to zero.  <a href="#f7c4d45b04c2f9196272cf0ccb0afab1"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_vector.html#beef1d7a1e4d1fbcd3afe0616f3c8660">Clear</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set all coordinates to zero.  <a href="#beef1d7a1e4d1fbcd3afe0616f3c8660"></a><br></td></tr>
@@ -230,7 +233,7 @@ template&lt;int Size, class Element &gt; </div>
 Create an uninitialized point. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00192">192</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00199">199</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
 </div>
 </div><p>
@@ -256,9 +259,9 @@ template&lt;int Size, class Element&gt; </div>
 Copy constructor. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00198">198</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00205">205</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -283,10 +286,10 @@ template&lt;int Size, class Element &gt; </div>
 <p>
 Set all coordinates to zero. 
 <p>
+It makes the same as <a class="el" href="classimath_1_1_t_vector.html#beef1d7a1e4d1fbcd3afe0616f3c8660" title="Set all coordinates to zero.">Clear()</a> and is used for compatibility with other vector implementations. 
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00246">246</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00230">230</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
-
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -312,9 +315,9 @@ template&lt;int Size, class Element&gt; </div>
 Return distance between two vectors. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00326">326</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00342">342</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00319">imath::TVector&lt; Size, Element &gt;::GetDistance2()</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00335">imath::TVector&lt; Size, Element &gt;::GetDistance2()</a>.</p>
 
 </div>
 </div><p>
@@ -340,9 +343,9 @@ template&lt;int Size, class Element&gt; </div>
 Return distance square between two vectors. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00319">319</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00335">335</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00326">imath::TVector&lt; Size, Element &gt;::GetDistance()</a>.</p>
+<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00342">imath::TVector&lt; Size, Element &gt;::GetDistance()</a>.</p>
 
 </div>
 </div><p>
@@ -368,11 +371,11 @@ template&lt;int Size, class Element&gt; </div>
 Return dot product of two vectors. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00292">292</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00308">308</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00305">imath::TVector&lt; Size, Element &gt;::GetLength2()</a>.</p>
+<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00321">imath::TVector&lt; Size, Element &gt;::GetLength2()</a>.</p>
 
 </div>
 </div><p>
@@ -398,11 +401,11 @@ template&lt;int Size, class Element &gt; </div>
 Get element at specified i. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00209">209</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00216">216</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00527">imath::TVector&lt; Size, Element &gt;::operator[]()</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00543">imath::TVector&lt; Size, Element &gt;::operator[]()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00627">imath::TVector&lt; Size, Element &gt;::GetMaximal()</a>, <a class="el" href="_t_vector_8h_source.html#l00618">imath::TVector&lt; Size, Element &gt;::GetMinimal()</a>, <a class="el" href="_c_double_8h_source.html#l00163">imath::CDouble::operator!=()</a>, <a class="el" href="_c_double_8h_source.html#l00205">imath::CDouble::operator*()</a>, <a class="el" href="_c_double_8h_source.html#l00241">imath::CDouble::operator*=()</a>, <a class="el" href="_c_double_8h_source.html#l00193">imath::CDouble::operator+()</a>, <a class="el" href="_c_double_8h_source.html#l00225">imath::CDouble::operator+=()</a>, <a class="el" href="_c_double_8h_source.html#l00199">imath::CDouble::operator-()</a>, <a class="el" href="_c_double_8h_source.html#l00233">imath::CDouble::operator-=()</a>, <a class="el" href="_c_double_8h_source.html#l00211">imath::CDouble::operator/()</a>, <a class="el" href="_c_double_8h_source.html#l00249">imath::CDouble::operator/=()</a>, <a class="el" href="_c_double_8h_source.html#l00169">imath::CDouble::operator&lt;()</a>, <a class="el" href="_c_double_8h_source.html#l00181">imath::CDouble::operator&lt;=()</a>, <a class="el" href="_c_double_8h_source.html#l00217">imath::CDouble::operator=()</a>, <a class="el" href="_c_double_8h_source.html#l00157">imath::CDouble::operator==()</a>, <a class="el" href="_c_double_8h_source.html#l00175">imath::CDouble::operator&gt;()</a>, and <a class="el" href="_c_double_8h_source.html#l00187">imath::CDouble::operator&gt;=()</a>.</p>
+<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00643">imath::TVector&lt; Size, Element &gt;::GetMaximal()</a>, <a class="el" href="_t_vector_8h_source.html#l00634">imath::TVector&lt; Size, Element &gt;::GetMinimal()</a>, <a class="el" href="_c_double_8h_source.html#l00163">imath::CDouble::operator!=()</a>, <a class="el" href="_c_double_8h_source.html#l00205">imath::CDouble::operator*()</a>, <a class="el" href="_c_double_8h_source.html#l00241">imath::CDouble::operator*=()</a>, <a class="el" href="_c_double_8h_source.html#l00193">imath::CDouble::operator+()</a>, <a class="el" href="_c_double_8h_source.html#l00225">imath::CDouble::operator+=()</a>, <a class="el" href="_c_double_8h_source.html#l00199">imath::CDouble::operator-()</a>, <a class="el" href="_c_double_8h_source.html#l00233">imath::CDouble::operator-=()</a>, <a class="el" href="_c_double_8h_source.html#l00211">imath::CDouble::operator/()</a>, <a class="el" href="_c_double_8h_source.html#l00249">imath::CDouble::operator/=()</a>, <a class="el" href="_c_double_8h_source.html#l00169">imath::CDouble::operator&lt;()</a>, <a class="el" href="_c_double_8h_source.html#l00181">imath::CDouble::operator&lt;=()</a>, <a class="el" href="_c_double_8h_source.html#l00217">imath::CDouble::operator=()</a>, <a class="el" href="_c_double_8h_source.html#l00157">imath::CDouble::operator==()</a>, <a class="el" href="_c_double_8h_source.html#l00175">imath::CDouble::operator&gt;()</a>, and <a class="el" href="_c_double_8h_source.html#l00187">imath::CDouble::operator&gt;=()</a>.</p>
 
 </div>
 </div><p>
@@ -428,9 +431,9 @@ template&lt;int Size, class Element &gt; </div>
 Get reference to element at specified i. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00216">216</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00223">223</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00527">imath::TVector&lt; Size, Element &gt;::operator[]()</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00543">imath::TVector&lt; Size, Element &gt;::operator[]()</a>.</p>
 
 </div>
 </div><p>
@@ -455,9 +458,9 @@ template&lt;int Size, class Element &gt; </div>
 Get read-only access to internal element container. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00239">239</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00255">255</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -482,7 +485,7 @@ template&lt;int Size, class Element &gt; </div>
 Get number of elements. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00549">549</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00565">565</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
 </div>
 </div><p>
@@ -507,9 +510,9 @@ template&lt;int Size, class Element &gt; </div>
 Get access to internal element container. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00246">246</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00262">262</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -534,9 +537,9 @@ template&lt;int Size, class Element &gt; </div>
 Get simple sum of all elements. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00565">565</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00581">581</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -561,11 +564,11 @@ template&lt;int Size, class Element &gt; </div>
 Return euclidian length. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00312">312</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00328">328</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00305">imath::TVector&lt; Size, Element &gt;::GetLength2()</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00321">imath::TVector&lt; Size, Element &gt;::GetLength2()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00598">imath::TVector&lt; Size, Element &gt;::GetNormalized()</a>, and <a class="el" href="_t_vector_8h_source.html#l00578">imath::TVector&lt; Size, Element &gt;::Normalize()</a>.</p>
+<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00614">imath::TVector&lt; Size, Element &gt;::GetNormalized()</a>, and <a class="el" href="_t_vector_8h_source.html#l00594">imath::TVector&lt; Size, Element &gt;::Normalize()</a>.</p>
 
 </div>
 </div><p>
@@ -590,11 +593,11 @@ template&lt;int Size, class Element &gt; </div>
 Return euclidian length square. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00305">305</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00321">321</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00292">imath::TVector&lt; Size, Element &gt;::GetDotProduct()</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00308">imath::TVector&lt; Size, Element &gt;::GetDotProduct()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00312">imath::TVector&lt; Size, Element &gt;::GetLength()</a>, and <a class="el" href="_t_vector_8h_source.html#l00285">imath::TVector&lt; Size, Element &gt;::IsNull()</a>.</p>
+<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00328">imath::TVector&lt; Size, Element &gt;::GetLength()</a>, and <a class="el" href="_t_vector_8h_source.html#l00301">imath::TVector&lt; Size, Element &gt;::IsNull()</a>.</p>
 
 </div>
 </div><p>
@@ -629,9 +632,9 @@ template&lt;int Size, class Element&gt; </div>
 Get vector with maximal elements values. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00627">627</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00643">643</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00209">imath::TVector&lt; Size, Element &gt;::GetElement()</a>, <a class="el" href="istd_8h_source.html#l00041">istd::Max()</a>, and <a class="el" href="_t_vector_8h_source.html#l00223">imath::TVector&lt; Size, Element &gt;::SetElement()</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00216">imath::TVector&lt; Size, Element &gt;::GetElement()</a>, <a class="el" href="istd_8h_source.html#l00041">istd::Max()</a>, and <a class="el" href="_t_vector_8h_source.html#l00230">imath::TVector&lt; Size, Element &gt;::SetElement()</a>.</p>
 
 </div>
 </div><p>
@@ -666,9 +669,9 @@ template&lt;int Size, class Element&gt; </div>
 Get vector with minimal elements values. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00618">618</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00634">634</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00209">imath::TVector&lt; Size, Element &gt;::GetElement()</a>, <a class="el" href="istd_8h_source.html#l00024">istd::Min()</a>, and <a class="el" href="_t_vector_8h_source.html#l00223">imath::TVector&lt; Size, Element &gt;::SetElement()</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00216">imath::TVector&lt; Size, Element &gt;::GetElement()</a>, <a class="el" href="istd_8h_source.html#l00024">istd::Min()</a>, and <a class="el" href="_t_vector_8h_source.html#l00230">imath::TVector&lt; Size, Element &gt;::SetElement()</a>.</p>
 
 </div>
 </div><p>
@@ -709,9 +712,9 @@ Return normalized vector with the same direction and specified length.
 </dl>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if normalization successed. </dd></dl>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00598">598</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00614">614</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00312">imath::TVector&lt; Size, Element &gt;::GetLength()</a>, <a class="el" href="istd_8h_source.html#l00113">I_BIG_EPSILON</a>, and <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00328">imath::TVector&lt; Size, Element &gt;::GetLength()</a>, <a class="el" href="istd_8h_source.html#l00113">I_BIG_EPSILON</a>, and <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -746,7 +749,7 @@ template&lt;int Size, class Element&gt; </div>
 /overloaded 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00269">269</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00285">285</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
 </div>
 </div><p>
@@ -772,7 +775,7 @@ template&lt;int Size, class Element&gt; </div>
 Get translated point. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00262">262</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00278">278</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
 </div>
 </div><p>
@@ -798,9 +801,9 @@ template&lt;int Size, class Element&gt; </div>
 Check if this vector is null. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00285">285</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00301">301</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00305">imath::TVector&lt; Size, Element &gt;::GetLength2()</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00321">imath::TVector&lt; Size, Element &gt;::GetLength2()</a>.</p>
 
 </div>
 </div><p>
@@ -832,9 +835,9 @@ Normalize vector to specified length.
 </dl>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if normalization successed. </dd></dl>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00578">578</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00594">594</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00312">imath::TVector&lt; Size, Element &gt;::GetLength()</a>, <a class="el" href="istd_8h_source.html#l00113">I_BIG_EPSILON</a>, and <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00328">imath::TVector&lt; Size, Element &gt;::GetLength()</a>, <a class="el" href="istd_8h_source.html#l00113">I_BIG_EPSILON</a>, and <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -858,9 +861,9 @@ template&lt;int Size, class Element&gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00347">347</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00363">363</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00335">imath::TVector&lt; Size, Element &gt;::operator==()</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00351">imath::TVector&lt; Size, Element &gt;::operator==()</a>.</p>
 
 </div>
 </div><p>
@@ -886,9 +889,9 @@ template&lt;int Size, class Element&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_vector2d.html#72b7adecf7ac569da81b9e5d9e55b883">i2d::CVector2d</a>, <a class="el" href="classi3d_1_1_c_vector3d.html#c57b735c59f54b2f6e717e44bf4bce20">i3d::CVector3d</a>, <a class="el" href="classicmm_1_1_c_cmy.html#66109149a8460e4516529b267a508e3a">icmm::CCmy</a>, <a class="el" href="classicmm_1_1_c_cmyk.html#614a7e8ae4990fb83557d1551f689dae">icmm::CCmyk</a>, <a class="el" href="classicmm_1_1_c_hsv.html#93580d73bbe9d9041573c1446fcdab6d">icmm::CHsv</a>, <a class="el" href="classicmm_1_1_c_lab.html#8eaf481eb0b3822c7ed8abc800cc8676">icmm::CLab</a>, <a class="el" href="classicmm_1_1_c_rgb.html#290d66cacf26da8f82d7f8cddeb166f9">icmm::CRgb</a>, <a class="el" href="classicmm_1_1_t_composed_color.html#a27366ed0afb6db633adfa21135d0a91">icmm::TComposedColor&lt; Size &gt;</a>, <a class="el" href="classicmm_1_1_t_composed_color.html#a27366ed0afb6db633adfa21135d0a91">icmm::TComposedColor&lt; 4 &gt;</a>, and <a class="el" href="classicmm_1_1_t_composed_color.html#a27366ed0afb6db633adfa21135d0a91">icmm::TComposedColor&lt; 3 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00501">501</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00517">517</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -914,9 +917,9 @@ template&lt;int Size, class Element&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_vector2d.html#49e29c84fef097f0c7571042eeb0d9e6">i2d::CVector2d</a>, <a class="el" href="classi3d_1_1_c_vector3d.html#85e861fb3ad5528f0bd471a14b7340f3">i3d::CVector3d</a>, <a class="el" href="classicmm_1_1_c_cmy.html#759ccf034d0fdf4a2e386dfb6af7e180">icmm::CCmy</a>, <a class="el" href="classicmm_1_1_c_cmyk.html#cc499d128be2a7bd5ecf8e8791e9a30e">icmm::CCmyk</a>, <a class="el" href="classicmm_1_1_c_hsv.html#5e095f3af0804c9b064639e51c374472">icmm::CHsv</a>, <a class="el" href="classicmm_1_1_c_lab.html#e4fbeaa21c2768fcb95481123b43de85">icmm::CLab</a>, <a class="el" href="classicmm_1_1_c_rgb.html#ebef69c7755fa7156e29257572572f69">icmm::CRgb</a>, <a class="el" href="classicmm_1_1_t_composed_color.html#6340215fd524d203720137f2563c42d9">icmm::TComposedColor&lt; Size &gt;</a>, <a class="el" href="classicmm_1_1_t_composed_color.html#6340215fd524d203720137f2563c42d9">icmm::TComposedColor&lt; 4 &gt;</a>, and <a class="el" href="classicmm_1_1_t_composed_color.html#6340215fd524d203720137f2563c42d9">icmm::TComposedColor&lt; 3 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00440">440</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00456">456</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -940,9 +943,9 @@ template&lt;int Size, class Element&gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00475">475</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00491">491</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -966,9 +969,9 @@ template&lt;int Size, class Element&gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00418">418</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00434">434</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -992,9 +995,9 @@ template&lt;int Size, class Element&gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00488">488</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00504">504</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -1019,9 +1022,9 @@ template&lt;int Size, class Element &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_vector2d.html#e3e6d2298b6018a0d3ff53cc7787cfb4">i2d::CVector2d</a>, and <a class="el" href="classi3d_1_1_c_vector3d.html#2825bbfe84488776809d5f1bcf51bc44">i3d::CVector3d</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00462">462</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00478">478</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -1045,9 +1048,9 @@ template&lt;int Size, class Element&gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00429">429</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00445">445</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -1073,9 +1076,9 @@ template&lt;int Size, class Element&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_vector2d.html#a5982cd716c303ca95d725b447cf5e26">i2d::CVector2d</a>, <a class="el" href="classi3d_1_1_c_vector3d.html#6a1097746fdffa87b6e7a529a57ea39f">i3d::CVector3d</a>, <a class="el" href="classicmm_1_1_c_cmy.html#9cebb633ecfe2ac0871d2241e726cdaa">icmm::CCmy</a>, <a class="el" href="classicmm_1_1_c_cmyk.html#0f59ab7d558fa2e5434b2550890112b6">icmm::CCmyk</a>, <a class="el" href="classicmm_1_1_c_hsv.html#66d3a2494b4884b6ac99cfdc94ec55f6">icmm::CHsv</a>, <a class="el" href="classicmm_1_1_c_lab.html#853ffd5be2e52a596430d31ce6e9adff">icmm::CLab</a>, <a class="el" href="classicmm_1_1_c_rgb.html#1ac21f43f82cdeb2c7a169515e7d8823">icmm::CRgb</a>, <a class="el" href="classicmm_1_1_t_composed_color.html#24d3e893508a37f1a79533f8855111cb">icmm::TComposedColor&lt; Size &gt;</a>, <a class="el" href="classicmm_1_1_t_composed_color.html#24d3e893508a37f1a79533f8855111cb">icmm::TComposedColor&lt; 4 &gt;</a>, and <a class="el" href="classicmm_1_1_t_composed_color.html#24d3e893508a37f1a79533f8855111cb">icmm::TComposedColor&lt; 3 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00514">514</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00530">530</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -1101,9 +1104,9 @@ template&lt;int Size, class Element&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_vector2d.html#69381d748681eec5afc13687e3fdf5b3">i2d::CVector2d</a>, <a class="el" href="classi3d_1_1_c_vector3d.html#52d044a947820a19b61f802cb389ab88">i3d::CVector3d</a>, <a class="el" href="classicmm_1_1_c_cmy.html#7f9a5b9620b76f972f0ac7a3f292e829">icmm::CCmy</a>, <a class="el" href="classicmm_1_1_c_cmyk.html#a32f330eb10c0336f58833a86ffd75e2">icmm::CCmyk</a>, <a class="el" href="classicmm_1_1_c_hsv.html#283b97e001363340e8e028dfc3fc3096">icmm::CHsv</a>, <a class="el" href="classicmm_1_1_c_lab.html#02049327e085906d2920d33f89c183f8">icmm::CLab</a>, <a class="el" href="classicmm_1_1_c_rgb.html#ed4abe6ec662f5e3fe26841e6e3fc1f1">icmm::CRgb</a>, <a class="el" href="classicmm_1_1_t_composed_color.html#79e116f11276706590cdbe1b03f75e11">icmm::TComposedColor&lt; Size &gt;</a>, <a class="el" href="classicmm_1_1_t_composed_color.html#79e116f11276706590cdbe1b03f75e11">icmm::TComposedColor&lt; 4 &gt;</a>, and <a class="el" href="classicmm_1_1_t_composed_color.html#79e116f11276706590cdbe1b03f75e11">icmm::TComposedColor&lt; 3 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00451">451</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00467">467</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -1127,9 +1130,9 @@ template&lt;int Size, class Element&gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00354">354</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00370">370</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -1153,9 +1156,9 @@ template&lt;int Size, class Element&gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00386">386</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00402">402</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -1179,11 +1182,11 @@ template&lt;int Size, class Element&gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00335">335</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00351">351</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00347">imath::TVector&lt; Size, Element &gt;::operator!=()</a>.</p>
+<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00363">imath::TVector&lt; Size, Element &gt;::operator!=()</a>.</p>
 
 </div>
 </div><p>
@@ -1207,9 +1210,9 @@ template&lt;int Size, class Element&gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00370">370</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00386">386</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -1233,9 +1236,9 @@ template&lt;int Size, class Element&gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00402">402</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00418">418</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -1259,9 +1262,9 @@ template&lt;int Size, class Element &gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00537">537</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00553">553</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -1285,11 +1288,38 @@ template&lt;int Size, class Element &gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00527">527</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00543">543</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00209">imath::TVector&lt; Size, Element &gt;::GetElement()</a>, <a class="el" href="_t_vector_8h_source.html#l00216">imath::TVector&lt; Size, Element &gt;::GetElementRef()</a>, and <a class="el" href="_t_vector_8h_source.html#l00223">imath::TVector&lt; Size, Element &gt;::SetElement()</a>.</p>
+<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00216">imath::TVector&lt; Size, Element &gt;::GetElement()</a>, <a class="el" href="_t_vector_8h_source.html#l00223">imath::TVector&lt; Size, Element &gt;::GetElementRef()</a>, and <a class="el" href="_t_vector_8h_source.html#l00230">imath::TVector&lt; Size, Element &gt;::SetElement()</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="f7c4d45b04c2f9196272cf0ccb0afab1"></a><!-- doxytag: member="imath::TVector::Reset" ref="f7c4d45b04c2f9196272cf0ccb0afab1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Size, class Element &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classimath_1_1_t_vector.html">imath::TVector</a>&lt; Size, Element &gt;::Reset           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Set all coordinates to zero. 
+<p>
+It makes the same as <a class="el" href="classimath_1_1_t_vector.html#beef1d7a1e4d1fbcd3afe0616f3c8660" title="Set all coordinates to zero.">Clear()</a> and is used for compatibility with other vector implementations. 
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00237">237</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -1324,9 +1354,9 @@ template&lt;int Size, class Element&gt; </div>
 Add second vector scaled by specified factor. 
 <p>
 It is equal of Translate(vector * scale) but can be faster implemented. 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00276">276</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00292">292</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -1354,9 +1384,9 @@ Serialize this vector to specified archive.
 
 <p>Reimplemented in <a class="el" href="classicmm_1_1_c_cmy.html#89feca8baf40e03a3756b8f7e33c59ab">icmm::CCmy</a>, <a class="el" href="classicmm_1_1_c_cmyk.html#c32a67c530ba7af7551e3874d5eed807">icmm::CCmyk</a>, <a class="el" href="classicmm_1_1_c_hsv.html#6a5a89b8ec5b38e9625008f90b967691">icmm::CHsv</a>, <a class="el" href="classicmm_1_1_c_lab.html#166e2ad58c35fd181c738a03f8d8ebc9">icmm::CLab</a>, <a class="el" href="classicmm_1_1_c_rgb.html#b5c0864b7f66d4327b6059faf38315a7">icmm::CRgb</a>, <a class="el" href="classicmm_1_1_t_composed_color.html#61e1e8aff788f717cb73c21f1354aa6e">icmm::TComposedColor&lt; Size &gt;</a>, <a class="el" href="classicmm_1_1_t_composed_color.html#61e1e8aff788f717cb73c21f1354aa6e">icmm::TComposedColor&lt; 4 &gt;</a>, and <a class="el" href="classicmm_1_1_t_composed_color.html#61e1e8aff788f717cb73c21f1354aa6e">icmm::TComposedColor&lt; 3 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00636">636</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00652">652</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>, and <a class="el" href="classiser_1_1_i_archive.html#1492a46ee89601614ca7999d1210d575">iser::IArchive::Process()</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>, and <a class="el" href="classiser_1_1_i_archive.html#1492a46ee89601614ca7999d1210d575">iser::IArchive::Process()</a>.</p>
 
 </div>
 </div><p>
@@ -1391,11 +1421,11 @@ template&lt;int Size, class Element&gt; </div>
 Set element at specified i. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00223">223</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00230">230</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00527">imath::TVector&lt; Size, Element &gt;::operator[]()</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00543">imath::TVector&lt; Size, Element &gt;::operator[]()</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00627">imath::TVector&lt; Size, Element &gt;::GetMaximal()</a>, and <a class="el" href="_t_vector_8h_source.html#l00618">imath::TVector&lt; Size, Element &gt;::GetMinimal()</a>.</p>
+<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00643">imath::TVector&lt; Size, Element &gt;::GetMaximal()</a>, and <a class="el" href="_t_vector_8h_source.html#l00634">imath::TVector&lt; Size, Element &gt;::GetMinimal()</a>.</p>
 
 </div>
 </div><p>
@@ -1427,7 +1457,7 @@ This method is provided for template implementations. <dl compact><dt><b>Paramet
 </dl>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if the number of set elements equals template parameter. </dd></dl>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00556">556</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00572">572</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
 </div>
 </div><p>
@@ -1453,9 +1483,9 @@ template&lt;int Size, class Element&gt; </div>
 Translate the point. 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00253">253</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00269">269</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>References <a class="el" href="_t_vector_8h_source.html#l00185">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
+<p>References <a class="el" href="_t_vector_8h_source.html#l00192">imath::TVector&lt; Size, Element &gt;::m_elements</a>.</p>
 
 </div>
 </div><p>
@@ -1475,9 +1505,9 @@ template&lt;int Size, class Element = double&gt; </div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00185">185</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_vector_8h_source.html#l00192">192</a> of file <a class="el" href="_t_vector_8h_source.html">TVector.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00230">imath::TVector&lt; Size, Element &gt;::Clear()</a>, <a class="el" href="_t_vector_8h_source.html#l00292">imath::TVector&lt; Size, Element &gt;::GetDotProduct()</a>, <a class="el" href="_t_vector_8h_source.html#l00239">imath::TVector&lt; Size, Element &gt;::GetElements()</a>, <a class="el" href="_t_vector_8h_source.html#l00246">imath::TVector&lt; Size, Element &gt;::GetElementsRef()</a>, <a class="el" href="_t_vector_8h_source.html#l00565">imath::TVector&lt; Size, Element &gt;::GetElementsSum()</a>, <a class="el" href="_t_vector_8h_source.html#l00598">imath::TVector&lt; Size, Element &gt;::GetNormalized()</a>, <a class="el" href="_t_vector_8h_source.html#l00578">imath::TVector&lt; Size, Element &gt;::Normalize()</a>, <a class="el" href="_t_vector_8h_source.html#l00501">imath::TVector&lt; Size, Element &gt;::operator*()</a>, <a class="el" href="_t_vector_8h_source.html#l00440">imath::TVector&lt; Size, Element &gt;::operator*=()</a>, <a class="el" href="_t_vector_8h_source.html#l00475">imath::TVector&lt; Size, Element &gt;::operator+()</a>, <a class="el" href="_t_vector_8h_source.html#l00418">imath::TVector&lt; Size, Element &gt;::operator+=()</a>, <a class="el" href="_t_vector_8h_source.html#l00462">imath::TVector&lt; Size, Element &gt;::operator-()</a>, <a class="el" href="_t_vector_8h_source.html#l00429">imath::TVector&lt; Size, Element &gt;::operator-=()</a>, <a class="el" href="_t_vector_8h_source.html#l00514">imath::TVector&lt; Size, Element &gt;::operator/()</a>, <a class="el" href="_t_vector_8h_source.html#l00451">imath::TVector&lt; Size, Element &gt;::operator/=()</a>, <a class="el" href="_t_vector_8h_source.html#l00354">imath::TVector&lt; Size, Element &gt;::operator&lt;()</a>, <a class="el" href="_t_vector_8h_source.html#l00386">imath::TVector&lt; Size, Element &gt;::operator&lt;=()</a>, <a class="el" href="_t_vector_8h_source.html#l00335">imath::TVector&lt; Size, Element &gt;::operator==()</a>, <a class="el" href="_t_vector_8h_source.html#l00370">imath::TVector&lt; Size, Element &gt;::operator&gt;()</a>, <a class="el" href="_t_vector_8h_source.html#l00402">imath::TVector&lt; Size, Element &gt;::operator&gt;=()</a>, <a class="el" href="_t_vector_8h_source.html#l00527">imath::TVector&lt; Size, Element &gt;::operator[]()</a>, <a class="el" href="_t_vector_8h_source.html#l00276">imath::TVector&lt; Size, Element &gt;::ScaledCumulate()</a>, <a class="el" href="_t_vector_8h_source.html#l00636">imath::TVector&lt; Size, Element &gt;::Serialize()</a>, <a class="el" href="_t_vector_8h_source.html#l00253">imath::TVector&lt; Size, Element &gt;::Translate()</a>, and <a class="el" href="_t_vector_8h_source.html#l00198">imath::TVector&lt; Size, Element &gt;::TVector()</a>.</p>
+<p>Referenced by <a class="el" href="_t_vector_8h_source.html#l00246">imath::TVector&lt; Size, Element &gt;::Clear()</a>, <a class="el" href="_t_vector_8h_source.html#l00308">imath::TVector&lt; Size, Element &gt;::GetDotProduct()</a>, <a class="el" href="_t_vector_8h_source.html#l00255">imath::TVector&lt; Size, Element &gt;::GetElements()</a>, <a class="el" href="_t_vector_8h_source.html#l00262">imath::TVector&lt; Size, Element &gt;::GetElementsRef()</a>, <a class="el" href="_t_vector_8h_source.html#l00581">imath::TVector&lt; Size, Element &gt;::GetElementsSum()</a>, <a class="el" href="_t_vector_8h_source.html#l00614">imath::TVector&lt; Size, Element &gt;::GetNormalized()</a>, <a class="el" href="_t_vector_8h_source.html#l00594">imath::TVector&lt; Size, Element &gt;::Normalize()</a>, <a class="el" href="_t_vector_8h_source.html#l00517">imath::TVector&lt; Size, Element &gt;::operator*()</a>, <a class="el" href="_t_vector_8h_source.html#l00456">imath::TVector&lt; Size, Element &gt;::operator*=()</a>, <a class="el" href="_t_vector_8h_source.html#l00491">imath::TVector&lt; Size, Element &gt;::operator+()</a>, <a class="el" href="_t_vector_8h_source.html#l00434">imath::TVector&lt; Size, Element &gt;::operator+=()</a>, <a class="el" href="_t_vector_8h_source.html#l00478">imath::TVector&lt; Size, Element &gt;::operator-()</a>, <a class="el" href="_t_vector_8h_source.html#l00445">imath::TVector&lt; Size, Element &gt;::operator-=()</a>, <a class="el" href="_t_vector_8h_source.html#l00530">imath::TVector&lt; Size, Element &gt;::operator/()</a>, <a class="el" href="_t_vector_8h_source.html#l00467">imath::TVector&lt; Size, Element &gt;::operator/=()</a>, <a class="el" href="_t_vector_8h_source.html#l00370">imath::TVector&lt; Size, Element &gt;::operator&lt;()</a>, <a class="el" href="_t_vector_8h_source.html#l00402">imath::TVector&lt; Size, Element &gt;::operator&lt;=()</a>, <a class="el" href="_t_vector_8h_source.html#l00351">imath::TVector&lt; Size, Element &gt;::operator==()</a>, <a class="el" href="_t_vector_8h_source.html#l00386">imath::TVector&lt; Size, Element &gt;::operator&gt;()</a>, <a class="el" href="_t_vector_8h_source.html#l00418">imath::TVector&lt; Size, Element &gt;::operator&gt;=()</a>, <a class="el" href="_t_vector_8h_source.html#l00543">imath::TVector&lt; Size, Element &gt;::operator[]()</a>, <a class="el" href="_t_vector_8h_source.html#l00237">imath::TVector&lt; Size, Element &gt;::Reset()</a>, <a class="el" href="_t_vector_8h_source.html#l00292">imath::TVector&lt; Size, Element &gt;::ScaledCumulate()</a>, <a class="el" href="_t_vector_8h_source.html#l00652">imath::TVector&lt; Size, Element &gt;::Serialize()</a>, <a class="el" href="_t_vector_8h_source.html#l00269">imath::TVector&lt; Size, Element &gt;::Translate()</a>, and <a class="el" href="_t_vector_8h_source.html#l00205">imath::TVector&lt; Size, Element &gt;::TVector()</a>.</p>
 
 </div>
 </div><p>

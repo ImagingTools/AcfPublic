@@ -27,7 +27,10 @@
   </div>
 </div>
 <div class="contents">
-<h1>iqtprm::CSelectionParamGuiComp Class Reference</h1><!-- doxytag: class="iqtprm::CSelectionParamGuiComp" --><!-- doxytag: inherits="TDesignerGuiObserverCompBase&lt; Ui::CSelectionParamGuiComp, iprm::ISelectionParam &gt;" --><code>#include &lt;<a class="el" href="_c_selection_param_gui_comp_8h_source.html">CSelectionParamGuiComp.h</a>&gt;</code>
+<h1>iqtprm::CSelectionParamGuiComp Class Reference</h1><!-- doxytag: class="iqtprm::CSelectionParamGuiComp" --><!-- doxytag: inherits="TDesignerGuiObserverCompBase&lt; Ui::CSelectionParamGuiComp, iprm::ISelectionParam &gt;" -->Simple editor for an exclusive option selection.  
+<a href="#_details">More...</a>
+<p>
+<code>#include &lt;<a class="el" href="_c_selection_param_gui_comp_8h_source.html">CSelectionParamGuiComp.h</a>&gt;</code>
 <p>
 <div class="dynheader">
 Inheritance diagram for iqtprm::CSelectionParamGuiComp:</div>
@@ -59,6 +62,12 @@ Inheritance diagram for iqtprm::CSelectionParamGuiComp:</div>
 <a href="classiqtprm_1_1_c_selection_param_gui_comp-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Types</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#ccdd24a68fc1969b44c11c6fa07e5d4e">UiMode</a> { <a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#ccdd24a68fc1969b44c11c6fa07e5d4e10d38c316c669a719850fbf4dabc085c">UM_COMBOBOX</a>, 
+<a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#ccdd24a68fc1969b44c11c6fa07e5d4e53672de76085823db93b702ba11af41d">UM_RADIOBUTTON_HORIZONTAL</a>, 
+<a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#ccdd24a68fc1969b44c11c6fa07e5d4ec20dec0d300811b814855edb9ca2358b">UM_RADIOBUTTON_VERTICAL</a>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GUI mode for selection representation.  <a href="classiqtprm_1_1_c_selection_param_gui_comp.html#ccdd24a68fc1969b44c11c6fa07e5d4e">More...</a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <br class="typebreak">
 <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a><br class="typebreak">
 &lt; Ui::CSelectionParamGuiComp, <br class="typebreak">
@@ -70,6 +79,8 @@ Inheritance diagram for iqtprm::CSelectionParamGuiComp:</div>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates model from editor.  <a href="#3328f8e6cd33cdb75e7528e3718f2391"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#1b98819d273224667c32201f45e37fb2">OnSelectionChanged</a> (int index)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#f0bc6b8f70e8c927ee23b41976b8a5f6">OnRadioButtonSelectionChanged</a> (bool isSelected)</td></tr>
 
 <tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#2f56abc8c29885436625c37772435a1d">UpdateGui</a> (int updateFlags=0)</td></tr>
@@ -83,8 +94,8 @@ Inheritance diagram for iqtprm::CSelectionParamGuiComp:</div>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called just before GUI is released.  <a href="#7bc1c19b4ddad3b775c6681e0f0bc808"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
-
-<p>Definition at line <a class="el" href="_c_selection_param_gui_comp_8h_source.html#l00023">23</a> of file <a class="el" href="_c_selection_param_gui_comp_8h_source.html">CSelectionParamGuiComp.h</a>.</p>
+Simple editor for an exclusive option selection. 
+<p>Definition at line <a class="el" href="_c_selection_param_gui_comp_8h_source.html#l00027">27</a> of file <a class="el" href="_c_selection_param_gui_comp_8h_source.html">CSelectionParamGuiComp.h</a>.</p>
 <hr><h2>Member Typedef Documentation</h2>
 <a class="anchor" name="f5ad10b570faa651f7ee4f4c7dd6b595"></a><!-- doxytag: member="iqtprm::CSelectionParamGuiComp::BaseClass" ref="f5ad10b570faa651f7ee4f4c7dd6b595" args="" -->
 <div class="memitem">
@@ -101,7 +112,37 @@ Inheritance diagram for iqtprm::CSelectionParamGuiComp:</div>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html#4db84ac5f380ecdc510e2866d34e4a99">iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSelectionParamGuiComp, iprm::ISelectionParam &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_selection_param_gui_comp_8h_source.html#l00032">32</a> of file <a class="el" href="_c_selection_param_gui_comp_8h_source.html">CSelectionParamGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_selection_param_gui_comp_8h_source.html#l00035">35</a> of file <a class="el" href="_c_selection_param_gui_comp_8h_source.html">CSelectionParamGuiComp.h</a>.</p>
+
+</div>
+</div><p>
+<hr><h2>Member Enumeration Documentation</h2>
+<a class="anchor" name="ccdd24a68fc1969b44c11c6fa07e5d4e"></a><!-- doxytag: member="iqtprm::CSelectionParamGuiComp::UiMode" ref="ccdd24a68fc1969b44c11c6fa07e5d4e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#ccdd24a68fc1969b44c11c6fa07e5d4e">iqtprm::CSelectionParamGuiComp::UiMode</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+GUI mode for selection representation. 
+<p>
+<dl compact><dt><b>Enumerator: </b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" name="ccdd24a68fc1969b44c11c6fa07e5d4e10d38c316c669a719850fbf4dabc085c"></a><!-- doxytag: member="UM_COMBOBOX" ref="ccdd24a68fc1969b44c11c6fa07e5d4e10d38c316c669a719850fbf4dabc085c" args="" -->UM_COMBOBOX</em>&nbsp;</td><td>
+Combo box selection. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="ccdd24a68fc1969b44c11c6fa07e5d4e53672de76085823db93b702ba11af41d"></a><!-- doxytag: member="UM_RADIOBUTTON_HORIZONTAL" ref="ccdd24a68fc1969b44c11c6fa07e5d4e53672de76085823db93b702ba11af41d" args="" -->UM_RADIOBUTTON_HORIZONTAL</em>&nbsp;</td><td>
+Horizontal radio buttons group. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="ccdd24a68fc1969b44c11c6fa07e5d4ec20dec0d300811b814855edb9ca2358b"></a><!-- doxytag: member="UM_RADIOBUTTON_VERTICAL" ref="ccdd24a68fc1969b44c11c6fa07e5d4ec20dec0d300811b814855edb9ca2358b" args="" -->UM_RADIOBUTTON_VERTICAL</em>&nbsp;</td><td>
+Vertical radio buttons group. </td></tr>
+</table>
+</dl>
+
+<p>Definition at line <a class="el" href="_c_selection_param_gui_comp_8h_source.html#l00040">40</a> of file <a class="el" href="_c_selection_param_gui_comp_8h_source.html">CSelectionParamGuiComp.h</a>.</p>
 
 </div>
 </div><p>
@@ -149,6 +190,26 @@ Called just before GUI is released.
 <p>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#e6d3a0820a47c572289ddd3d07a7da51">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui::CSelectionParamGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt; &gt;</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="f0bc6b8f70e8c927ee23b41976b8a5f6"></a><!-- doxytag: member="iqtprm::CSelectionParamGuiComp::OnRadioButtonSelectionChanged" ref="f0bc6b8f70e8c927ee23b41976b8a5f6" args="(bool isSelected)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqtprm::CSelectionParamGuiComp::OnRadioButtonSelectionChanged           </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>isSelected</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
 
 </div>
 </div><p>

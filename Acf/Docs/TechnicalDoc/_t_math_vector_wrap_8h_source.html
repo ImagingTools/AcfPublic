@@ -38,14 +38,14 @@
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
 <a name="l00020"></a>00020 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Base&gt;
-<a name="l00021"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html">00021</a> <span class="keyword">class </span><a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container...">TMathVectorWrap</a>: <span class="keyword">public</span> <a class="code" href="classibase_1_1_base.html">Base</a>
+<a name="l00021"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html">00021</a> <span class="keyword">class </span><a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container...">TMathVectorWrap</a>: <span class="keyword">public</span> Base
 <a name="l00022"></a>00022 {
 <a name="l00023"></a>00023 <span class="keyword">public</span>:
-<a name="l00024"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#061af4f7f7da1f359d96ee4a323a4192">00024</a>        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_base.html">Base</a> <a class="code" href="classibase_1_1_base.html">BaseClass</a>;
+<a name="l00024"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#061af4f7f7da1f359d96ee4a323a4192">00024</a>        <span class="keyword">typedef</span> Base <a class="code" href="classimath_1_1_t_math_vector_wrap.html#061af4f7f7da1f359d96ee4a323a4192">BaseClass</a>;
 <a name="l00025"></a>00025 
 <a name="l00029"></a>00029        <a class="code" href="classimath_1_1_t_math_vector_wrap.html#abf5259635531e16671f4ba758050bba" title="Create an uninitialized point.">TMathVectorWrap</a>();
 <a name="l00030"></a>00030 
-<a name="l00034"></a>00034        <a class="code" href="classimath_1_1_t_math_vector_wrap.html#abf5259635531e16671f4ba758050bba" title="Create an uninitialized point.">TMathVectorWrap</a>(<span class="keyword">const</span> <a class="code" href="classibase_1_1_base.html">Base</a>&amp; vector);
+<a name="l00034"></a>00034        <a class="code" href="classimath_1_1_t_math_vector_wrap.html#abf5259635531e16671f4ba758050bba" title="Create an uninitialized point.">TMathVectorWrap</a>(<span class="keyword">const</span> Base&amp; vector);
 <a name="l00035"></a>00035 
 <a name="l00039"></a>00039        <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html#8ea65f939d21fa11e40df215526a42c6" title="Set all coordinates to zero.">Clear</a>();
 <a name="l00040"></a>00040 
@@ -105,8 +105,8 @@
 <a name="l00134"></a>00134 
 <a name="l00135"></a>00135 
 <a name="l00136"></a>00136 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Base&gt;
-<a name="l00137"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#926c75dbca015eac7a774487e3c69cc3">00137</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html#abf5259635531e16671f4ba758050bba" title="Create an uninitialized point.">TMathVectorWrap&lt;Base&gt;::TMathVectorWrap</a>(<span class="keyword">const</span> <a class="code" href="classibase_1_1_base.html">Base</a>&amp; vector)
-<a name="l00138"></a>00138 :      <a class="code" href="classibase_1_1_base.html">BaseClass</a>(vector)
+<a name="l00137"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#926c75dbca015eac7a774487e3c69cc3">00137</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html#abf5259635531e16671f4ba758050bba" title="Create an uninitialized point.">TMathVectorWrap&lt;Base&gt;::TMathVectorWrap</a>(<span class="keyword">const</span> Base&amp; vector)
+<a name="l00138"></a>00138 :      BaseClass(vector)
 <a name="l00139"></a>00139 {
 <a name="l00140"></a>00140 }
 <a name="l00141"></a>00141 
@@ -514,7 +514,7 @@
 <a name="l00543"></a>00543 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Base&gt;
 <a name="l00544"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#eca84ba92e760c1d28e4404e2c72242f">00544</a> <a class="code" href="classimath_1_1_t_math_vector_wrap.html#eca84ba92e760c1d28e4404e2c72242f">TMathVectorWrap&lt;Base&gt;::operator Base</a>()<span class="keyword"> const</span>
 <a name="l00545"></a>00545 <span class="keyword"></span>{
-<a name="l00546"></a>00546        <span class="keywordflow">return</span> <a class="code" href="classibase_1_1_base.html">Base</a>(*<span class="keyword">this</span>);
+<a name="l00546"></a>00546        <span class="keywordflow">return</span> Base(*<span class="keyword">this</span>);
 <a name="l00547"></a>00547 }
 <a name="l00548"></a>00548 
 <a name="l00549"></a>00549 

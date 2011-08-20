@@ -82,7 +82,7 @@ bool TSingleModelObserverBase<ObjectClass>::OnAttached(imod::IModel* modelPtr)
 		return true;
 	}
 
-	BaseClass::EnsureDetached();
+	BaseClass::EnsureModelDetached();
 
 	return false;
 }

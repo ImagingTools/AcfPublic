@@ -278,15 +278,26 @@ bool CXslTransformationWriteArchive::PushTextNode(const QString& text)
 	return true;
 }
 
+
 CXslTransformationWriteArchive::MessageHandler::MessageHandler(CXslTransformationWriteArchive* logger)
 {
 	m_loggerPtr = logger;
 }
 
-void CXslTransformationWriteArchive::MessageHandler::handleMessage(QtMsgType type, const QString &description, const QUrl &identifier, const QSourceLocation &sourceLocation)
+
+void CXslTransformationWriteArchive::MessageHandler::handleMessage(
+			QtMsgType /*type*/,
+			const QString& description,
+			const QUrl& /*identifier*/,
+			const QSourceLocation& /*sourceLocation*/)
 {
-	m_loggerPtr->SendLogMessage(istd::ILogger::MC_WARNING, 0, tr("Transformation message: ").append(iqt::GetCString(description)), "XslTransformationWriteArchive");
+	m_loggerPtr->SendLogMessage(
+					istd::ILogger::MC_WARNING,
+					0,
+					tr("Transformation message: ").append(iqt::GetCString(description)),
+					"XslTransformationWriteArchive");
 }
+
 
 } // namespace iqt
 

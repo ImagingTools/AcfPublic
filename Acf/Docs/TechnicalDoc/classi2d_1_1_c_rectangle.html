@@ -160,6 +160,18 @@ Inheritance diagram for i2d::CRectangle:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#dc3c5a147d9454bff9c98d17322ac6c6">MoveCenterTo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;position)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Move object to position <code>position</code>.  <a href="#dc3c5a147d9454bff9c98d17322ac6c6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#c7255f6da8137970250ff79063c7809e">Transform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Transform this object using some transformation.  <a href="#c7255f6da8137970250ff79063c7809e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#93a38c4b97932ac545551e25198e4b53">InvTransform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do inverse transformation of this object.  <a href="#93a38c4b97932ac545551e25198e4b53"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#8ef4881cb2895deb17cde019cd07da70">GetTransformed</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calulate transformation of the object into second one.  <a href="#8ef4881cb2895deb17cde019cd07da70"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#6f1895bf87989c2d49038b429311e204">GetInvTransformed</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calulate inverse transformation of the object into second one.  <a href="#6f1895bf87989c2d49038b429311e204"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#aa9e66e407475792d749c755f0523a12">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#aa9e66e407475792d749c755f0523a12"></a><br></td></tr>
@@ -424,7 +436,7 @@ Definition of rectangle area orthogonal to axis of coordination system.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00141">141</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00159">159</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 <p>References <a class="el" href="_c_range_8h_source.html#l00232">istd::CRange::GetMaxValue()</a>.</p>
 
@@ -566,7 +578,7 @@ Returns center of this 2D-object.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00147">147</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00165">165</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div><p>
@@ -587,7 +599,7 @@ Returns center of this 2D-object.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00153">153</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00171">171</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div><p>
@@ -635,6 +647,59 @@ Get resulting rectangle of the intersection of this rectangle with <code>rect</c
 
 </div>
 </div><p>
+<a class="anchor" name="6f1895bf87989c2d49038b429311e204"></a><!-- doxytag: member="i2d::CRectangle::GetInvTransformed" ref="6f1895bf87989c2d49038b429311e204" args="(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CRectangle::GetInvTransformed           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>transformation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a>&nbsp;</td>
+          <td class="paramname"> <em>mode</em> = <code>ITransformation2d::EM_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>errorFactorPtr</em> = <code>NULL</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Calulate inverse transformation of the object into second one. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mode</em>&nbsp;</td><td>controls needed transformation exactness. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>errorFactorPtr</em>&nbsp;</td><td>optional output where approximated length of transformation error vector will be stored. Value 0 means that transformation is exactly done. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>result</em>&nbsp;</td><td>result object. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#b77a3500838d3439a2cc8cfb679fc860">i2d::IObject2d</a>.</p>
+
+</div>
+</div><p>
 <a class="anchor" name="9db7eb11cf23e3a95d450f773be932be"></a><!-- doxytag: member="i2d::CRectangle::GetLeft" ref="9db7eb11cf23e3a95d450f773be932be" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -652,7 +717,7 @@ Get resulting rectangle of the intersection of this rectangle with <code>rect</c
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00123">123</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00141">141</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 <p>References <a class="el" href="_c_range_8h_source.html#l00220">istd::CRange::GetMinValue()</a>.</p>
 
@@ -699,7 +764,7 @@ Get the nearest point in the rectangle for the some given point.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00135">135</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00153">153</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 <p>References <a class="el" href="_c_range_8h_source.html#l00232">istd::CRange::GetMaxValue()</a>.</p>
 
@@ -743,7 +808,7 @@ Get size of this rectangle.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00129">129</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00147">147</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 <p>References <a class="el" href="_c_range_8h_source.html#l00220">istd::CRange::GetMinValue()</a>.</p>
 
@@ -787,6 +852,59 @@ Get size of this rectangle.
 
 </div>
 </div><p>
+<a class="anchor" name="8ef4881cb2895deb17cde019cd07da70"></a><!-- doxytag: member="i2d::CRectangle::GetTransformed" ref="8ef4881cb2895deb17cde019cd07da70" args="(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CRectangle::GetTransformed           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>transformation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a>&nbsp;</td>
+          <td class="paramname"> <em>mode</em> = <code>ITransformation2d::EM_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>errorFactorPtr</em> = <code>NULL</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Calulate transformation of the object into second one. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mode</em>&nbsp;</td><td>controls needed transformation exactness. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>errorFactorPtr</em>&nbsp;</td><td>optional output where approximated length of transformation error vector will be stored. Value 0 means that transformation is exactly done. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>result</em>&nbsp;</td><td>result object. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#8013559af5f052dc7eda938f56cf9cf1">i2d::IObject2d</a>.</p>
+
+</div>
+</div><p>
 <a class="anchor" name="de1d6d5b026bf094731163a0cda88c6c"></a><!-- doxytag: member="i2d::CRectangle::GetUnion" ref="de1d6d5b026bf094731163a0cda88c6c" args="(const CRectangle &amp;rect) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -824,7 +942,7 @@ Get size of this rectangle.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00159">159</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00177">177</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div><p>
@@ -845,7 +963,7 @@ Get size of this rectangle.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00165">165</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00183">183</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div><p>
@@ -865,6 +983,52 @@ Get size of this rectangle.
 <div class="memdoc">
 
 <p>
+
+</div>
+</div><p>
+<a class="anchor" name="93a38c4b97932ac545551e25198e4b53"></a><!-- doxytag: member="i2d::CRectangle::InvTransform" ref="93a38c4b97932ac545551e25198e4b53" args="(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CRectangle::InvTransform           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>transformation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a>&nbsp;</td>
+          <td class="paramname"> <em>mode</em> = <code>ITransformation2d::EM_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>errorFactorPtr</em> = <code>NULL</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Do inverse transformation of this object. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mode</em>&nbsp;</td><td>controls needed transformation exactness. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>errorFactorPtr</em>&nbsp;</td><td>optional output where approximated length of transformation error vector will be stored. Value 0 means that transformation is exactly done. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#dcb2ccc83d1ab6b7104966b3ecf1a2e2">i2d::IObject2d</a>.</p>
 
 </div>
 </div><p>
@@ -1256,6 +1420,52 @@ Type of operation is depending on archive type. <dl class="see" compact><dt><b>S
 <div class="memdoc">
 
 <p>
+
+</div>
+</div><p>
+<a class="anchor" name="c7255f6da8137970250ff79063c7809e"></a><!-- doxytag: member="i2d::CRectangle::Transform" ref="c7255f6da8137970250ff79063c7809e" args="(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CRectangle::Transform           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>transformation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a>&nbsp;</td>
+          <td class="paramname"> <em>mode</em> = <code>ITransformation2d::EM_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>errorFactorPtr</em> = <code>NULL</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Transform this object using some transformation. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mode</em>&nbsp;</td><td>controls needed transformation exactness. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>errorFactorPtr</em>&nbsp;</td><td>optional output where approximated length of transformation error vector will be stored. Value 0 means that transformation is exactly done. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#3c2325cbf5ccb7e1efb14104667822a6">i2d::IObject2d</a>.</p>
 
 </div>
 </div><p>

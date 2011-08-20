@@ -72,6 +72,18 @@ Inheritance diagram for icmpstr::CVisualRegistryElement:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#4bced32048f834a04d0a2d40fc81548d">MoveCenterTo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Move object to position <code>position</code>.  <a href="#4bced32048f834a04d0a2d40fc81548d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#6786b9a5ebbd0c89474d9b813de8cd14">Transform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a> mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Transform this object using some transformation.  <a href="#6786b9a5ebbd0c89474d9b813de8cd14"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#c444f10fc9d82abe56f5addca2f1f213">InvTransform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a> mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Do inverse transformation of this object.  <a href="#c444f10fc9d82abe56f5addca2f1f213"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#833baab4f49b1a72c0627928bed0ca45">GetTransformed</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_object2d.html">i2d::IObject2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a> mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calulate transformation of the object into second one.  <a href="#833baab4f49b1a72c0627928bed0ca45"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#8e60a45da2f52b86f58694b1bbd69be0">GetInvTransformed</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_object2d.html">i2d::IObject2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a> mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calulate inverse transformation of the object into second one.  <a href="#8e60a45da2f52b86f58694b1bbd69be0"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 
@@ -132,7 +144,7 @@ Inheritance diagram for icmpstr::CVisualRegistryElement:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_visual_registry_element_8h_source.html#l00060">60</a> of file <a class="el" href="_c_visual_registry_element_8h_source.html">CVisualRegistryElement.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_element_8h_source.html#l00078">78</a> of file <a class="el" href="_c_visual_registry_element_8h_source.html">CVisualRegistryElement.h</a>.</p>
 
 </div>
 </div><p>
@@ -159,6 +171,59 @@ Returns center of this 2D-object.
 
 </div>
 </div><p>
+<a class="anchor" name="8e60a45da2f52b86f58694b1bbd69be0"></a><!-- doxytag: member="icmpstr::CVisualRegistryElement::GetInvTransformed" ref="8e60a45da2f52b86f58694b1bbd69be0" args="(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool icmpstr::CVisualRegistryElement::GetInvTransformed           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>transformation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_object2d.html">i2d::IObject2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a>&nbsp;</td>
+          <td class="paramname"> <em>mode</em> = <code>i2d::ITransformation2d::EM_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>errorFactorPtr</em> = <code>NULL</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Calulate inverse transformation of the object into second one. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mode</em>&nbsp;</td><td>controls needed transformation exactness. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>errorFactorPtr</em>&nbsp;</td><td>optional output where approximated length of transformation error vector will be stored. Value 0 means that transformation is exactly done. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>result</em>&nbsp;</td><td>result object. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#b77a3500838d3439a2cc8cfb679fc860">i2d::IObject2d</a>.</p>
+
+</div>
+</div><p>
 <a class="anchor" name="62679b10fe4d4b6b1b197df17f20f734"></a><!-- doxytag: member="icmpstr::CVisualRegistryElement::GetName" ref="62679b10fe4d4b6b1b197df17f20f734" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -176,7 +241,7 @@ Returns center of this 2D-object.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_visual_registry_element_8h_source.html#l00066">66</a> of file <a class="el" href="_c_visual_registry_element_8h_source.html">CVisualRegistryElement.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_element_8h_source.html#l00084">84</a> of file <a class="el" href="_c_visual_registry_element_8h_source.html">CVisualRegistryElement.h</a>.</p>
 
 </div>
 </div><p>
@@ -197,7 +262,60 @@ Returns center of this 2D-object.
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_visual_registry_element_8h_source.html#l00054">54</a> of file <a class="el" href="_c_visual_registry_element_8h_source.html">CVisualRegistryElement.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_element_8h_source.html#l00072">72</a> of file <a class="el" href="_c_visual_registry_element_8h_source.html">CVisualRegistryElement.h</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="833baab4f49b1a72c0627928bed0ca45"></a><!-- doxytag: member="icmpstr::CVisualRegistryElement::GetTransformed" ref="833baab4f49b1a72c0627928bed0ca45" args="(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool icmpstr::CVisualRegistryElement::GetTransformed           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>transformation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_object2d.html">i2d::IObject2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a>&nbsp;</td>
+          <td class="paramname"> <em>mode</em> = <code>i2d::ITransformation2d::EM_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>errorFactorPtr</em> = <code>NULL</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Calulate transformation of the object into second one. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mode</em>&nbsp;</td><td>controls needed transformation exactness. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>errorFactorPtr</em>&nbsp;</td><td>optional output where approximated length of transformation error vector will be stored. Value 0 means that transformation is exactly done. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>result</em>&nbsp;</td><td>result object. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#8013559af5f052dc7eda938f56cf9cf1">i2d::IObject2d</a>.</p>
 
 </div>
 </div><p>
@@ -227,6 +345,52 @@ Returns center of this 2D-object.
 <div class="memdoc">
 
 <p>
+
+</div>
+</div><p>
+<a class="anchor" name="c444f10fc9d82abe56f5addca2f1f213"></a><!-- doxytag: member="icmpstr::CVisualRegistryElement::InvTransform" ref="c444f10fc9d82abe56f5addca2f1f213" args="(const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool icmpstr::CVisualRegistryElement::InvTransform           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>transformation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a>&nbsp;</td>
+          <td class="paramname"> <em>mode</em> = <code>i2d::ITransformation2d::EM_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>errorFactorPtr</em> = <code>NULL</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Do inverse transformation of this object. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mode</em>&nbsp;</td><td>controls needed transformation exactness. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>errorFactorPtr</em>&nbsp;</td><td>optional output where approximated length of transformation error vector will be stored. Value 0 means that transformation is exactly done. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#dcb2ccc83d1ab6b7104966b3ecf1a2e2">i2d::IObject2d</a>.</p>
 
 </div>
 </div><p>
@@ -271,6 +435,52 @@ Move object to position <code>position</code>.
 <div class="memdoc">
 
 <p>
+
+</div>
+</div><p>
+<a class="anchor" name="6786b9a5ebbd0c89474d9b813de8cd14"></a><!-- doxytag: member="icmpstr::CVisualRegistryElement::Transform" ref="6786b9a5ebbd0c89474d9b813de8cd14" args="(const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool icmpstr::CVisualRegistryElement::Transform           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>transformation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a>&nbsp;</td>
+          <td class="paramname"> <em>mode</em> = <code>i2d::ITransformation2d::EM_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>errorFactorPtr</em> = <code>NULL</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Transform this object using some transformation. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mode</em>&nbsp;</td><td>controls needed transformation exactness. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>errorFactorPtr</em>&nbsp;</td><td>optional output where approximated length of transformation error vector will be stored. Value 0 means that transformation is exactly done. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#3c2325cbf5ccb7e1efb14104667822a6">i2d::IObject2d</a>.</p>
 
 </div>
 </div><p>

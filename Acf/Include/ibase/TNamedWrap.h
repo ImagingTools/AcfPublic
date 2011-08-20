@@ -109,6 +109,6 @@ typedef ibase::TNamedWrap<istd::INamed> CNamed;
 } // namespace ibase
 
 
-#endif // ibase_TNamedWrap_included
+#endif // !ibase_TNamedWrap_included
 
 

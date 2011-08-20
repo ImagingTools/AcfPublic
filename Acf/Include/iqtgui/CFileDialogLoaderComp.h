@@ -34,9 +34,11 @@
 #include "iser/IFileLoader.h"
 #include "iser/IFileLoaderInfo.h"
 
+#include "icomp/CComponentBase.h"
+
 #include "ibase/TLoggerCompWrap.h"
 
-#include "icomp/CComponentBase.h"
+#include "iprm/IFileNameParam.h"
 
 #include "iqtgui/iqtgui.h"
 
@@ -65,9 +67,10 @@ public:
 
 	I_BEGIN_COMPONENT(CFileDialogLoaderComp)
 		I_REGISTER_INTERFACE(iser::IFileTypeInfo);
-		I_REGISTER_INTERFACE(iser::IFileLoader)
-		I_REGISTER_INTERFACE(iser::IFileLoaderInfo)
-		I_ASSIGN_MULTI_0(m_loadersCompPtr, "Loaders", "List of file serializers will be used as slaves", true)
+		I_REGISTER_INTERFACE(iser::IFileLoader);
+		I_REGISTER_INTERFACE(iser::IFileLoaderInfo);
+		I_ASSIGN_MULTI_0(m_loadersCompPtr, "Loaders", "List of file serializers will be used as slaves", true);
+		I_ASSIGN(m_statupDirectoryCompPtr, "StartupDirectory", "Initial directory path for the file loader dialog", false, "StartupDirectory");
 	I_END_COMPONENT
 
 	// reimplemented (iser::IFileLoader)
@@ -102,8 +105,12 @@ protected:
 
 	iser::IFileLoader* GetLoaderFor(const QString& filePath, int selectionIndex, int flags, bool beQuiet) const;
 
+	// reimplemented (icomp::CComponentBase)
+	virtual void OnComponentCreated();
+
 private:
 	I_MULTIREF(iser::IFileLoader, m_loadersCompPtr);
+	I_REF(iprm::IFileNameParam, m_statupDirectoryCompPtr);
 
 	mutable QFileInfo m_lastOpenInfo;
 	mutable QFileInfo m_lastSaveInfo;

@@ -26,47 +26,31 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include "<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/_i_changeable_8h.html">istd/IChangeable.h</a>"</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include "<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/_i_polymorphic_8h.html">istd/IPolymorphic.h</a>"</span>
 <a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/_c_string_8h.html">istd/CString.h</a>"</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/_i_params_set_8h.html">iprm/IParamsSet.h</a>"</span>
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="preprocessor">#include "<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/_i_file_list_provider_8h.html">ibase/IFileListProvider.h</a>"</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/_i_params_set_8h.html">iprm/IParamsSet.h</a>"</span>
+<a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="keyword">namespace </span>ifpf
-<a name="l00014"></a>00014 {
+<a name="l00012"></a>00012 <span class="keyword">namespace </span>ifpf
+<a name="l00013"></a>00013 {
+<a name="l00014"></a>00014 
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016 
-<a name="l00022"></a><a class="code" href="classifpf_1_1_i_directory_monitor.html">00022</a> <span class="keyword">class </span><a class="code" href="classifpf_1_1_i_directory_monitor.html" title="Interface for a folder monitor.">IDirectoryMonitor</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::IFileListProvider
-<a name="l00023"></a>00023 {
-<a name="l00024"></a>00024 <span class="keyword">public</span>:
-<a name="l00028"></a><a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5">00028</a>        <span class="keyword">enum</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#cd46630510ac7a16b6c6e73a7db43fb9">ChangeFlags</a>
-<a name="l00029"></a>00029        {
-<a name="l00033"></a><a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e50f285ac75539d0dd90626b0a01a60dca">00033</a>               <a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e50f285ac75539d0dd90626b0a01a60dca" title="File(s) were added.">CF_FILES_ADDED</a> = 0x1000000,
-<a name="l00034"></a>00034 
-<a name="l00038"></a><a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e528c19e4f783e4b385fa960108ae53f2e">00038</a>               <a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e528c19e4f783e4b385fa960108ae53f2e" title="File(s) were removed.">CF_FILES_REMOVED</a> = 0x2000000,
+<a name="l00021"></a><a class="code" href="classifpf_1_1_i_directory_monitor.html">00021</a> <span class="keyword">class </span><a class="code" href="classifpf_1_1_i_directory_monitor.html" title="Interface for a folder monitor.">IDirectoryMonitor</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
+<a name="l00022"></a>00022 {
+<a name="l00023"></a>00023 <span class="keyword">public</span>:
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifpf_1_1_i_directory_monitor.html#5e635e02ae03431b5b7cc3803efeadc8" title="Start observing process.">StartObserving</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsSetPtr = <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/istd_8h.html#070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
+<a name="l00030"></a>00030 
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_i_directory_monitor.html#ca2d03e7734aa3d4b30548b2d316293c" title="Stop observing process.">StopObserving</a>() = 0;
+<a name="l00035"></a>00035 };
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 } <span class="comment">// namespace ifpf</span>
 <a name="l00039"></a>00039 
-<a name="l00043"></a><a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5e94e9cb9abe526b5660410393123d3e7">00043</a>               <a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5e94e9cb9abe526b5660410393123d3e7" title="File(s) were modified.">CF_FILES_MODIFIED</a> = 0x4000000,
-<a name="l00044"></a>00044 
-<a name="l00048"></a><a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5351a7ff009485af7d8ef3306507d26cb">00048</a>               <a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5351a7ff009485af7d8ef3306507d26cb" title="File&amp;#39;s attributes were changed.">CF_FILES_ATTRIBUTE_CHANGED</a> = 0x8000000,
-<a name="l00049"></a>00049 
-<a name="l00053"></a><a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5475b565cdd05931cc4e76ad091f0ecb9">00053</a>               <a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5475b565cdd05931cc4e76ad091f0ecb9" title="All possible changes.">CF_SOME_CHANGES</a> = <a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e50f285ac75539d0dd90626b0a01a60dca" title="File(s) were added.">CF_FILES_ADDED</a> | <a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e528c19e4f783e4b385fa960108ae53f2e" title="File(s) were removed.">CF_FILES_REMOVED</a> | <a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5e94e9cb9abe526b5660410393123d3e7" title="File(s) were modified.">CF_FILES_MODIFIED</a> | <a class="code" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5351a7ff009485af7d8ef3306507d26cb" title="File&amp;#39;s attributes were changed.">CF_FILES_ATTRIBUTE_CHANGED</a>
-<a name="l00054"></a>00054        };
-<a name="l00055"></a>00055 
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/namespaceistd.html#816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> <a class="code" href="classifpf_1_1_i_directory_monitor.html#d4373f09bda7b80f1dcb47f8aa74019a" title="Get the list of changed files according to the given flags.">GetChangedFileItems</a>(<span class="keywordtype">int</span> changeFlags) <span class="keyword">const</span> = 0;
-<a name="l00061"></a>00061 
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifpf_1_1_i_directory_monitor.html#5e635e02ae03431b5b7cc3803efeadc8" title="Start observing process.">StartObserving</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsSetPtr = NULL) = 0;
-<a name="l00068"></a>00068 
-<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_i_directory_monitor.html#ca2d03e7734aa3d4b30548b2d316293c" title="Stop observing process.">StopObserving</a>() = 0;
-<a name="l00073"></a>00073 };
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 } <span class="comment">// namespace ifpf</span>
-<a name="l00077"></a>00077 
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 <span class="preprocessor">#endif // !ifpf_IDirectoryMonitor_included</span>
-<a name="l00080"></a>00080 <span class="preprocessor"></span>
-<a name="l00081"></a>00081 
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 <span class="preprocessor">#endif // !ifpf_IDirectoryMonitor_included</span>
+<a name="l00042"></a>00042 <span class="preprocessor"></span>
+<a name="l00043"></a>00043 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

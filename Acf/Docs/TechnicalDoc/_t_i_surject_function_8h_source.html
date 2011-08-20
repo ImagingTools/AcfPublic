@@ -33,7 +33,7 @@
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
 <a name="l00017"></a>00017 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Argument, <span class="keyword">typename</span> Result&gt;
-<a name="l00018"></a><a class="code" href="classimath_1_1_t_i_surject_function.html">00018</a> <span class="keyword">class </span><a class="code" href="classimath_1_1_t_i_surject_function.html" title="Template interface for any surjective mathematical function.">TISurjectFunction</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classimath_1_1_t_i_math_function.html" title="Template interface for any mathematical function.">TIMathFunction</a>
+<a name="l00018"></a><a class="code" href="classimath_1_1_t_i_surject_function.html">00018</a> <span class="keyword">class </span><a class="code" href="classimath_1_1_t_i_surject_function.html" title="Template interface for any surjective mathematical function.">TISurjectFunction</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classimath_1_1_t_i_math_function.html" title="Template interface for any mathematical function.">TIMathFunction</a>&lt;Argument, Result&gt;
 <a name="l00019"></a>00019 {
 <a name="l00020"></a>00020 <span class="keyword">public</span>:
 <a name="l00027"></a>00027        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_t_i_surject_function.html#06827b191e53bb70ce89119fd890b64d" title="Get inverted function value.">GetInvValueAt</a>(<span class="keyword">const</span> Result&amp; argument, Argument&amp; result) <span class="keyword">const</span> = 0;
@@ -43,7 +43,7 @@
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038 <span class="comment">// standard templatization</span>
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="keyword">typedef</span> <a class="code" href="classimath_1_1_t_i_surject_function.html" title="Template interface for any surjective mathematical function.">TISurjectFunction&lt;double, double&gt;</a> <a class="code" href="classimath_1_1_t_i_math_function.html" title="Template interface for any mathematical function.">IDoubleFunction</a>;
+<a name="l00040"></a><a class="code" href="namespaceimath.html#e25a8ebd149d6086a532a99407a22a9d">00040</a> <span class="keyword">typedef</span> <a class="code" href="classimath_1_1_t_i_surject_function.html" title="Template interface for any surjective mathematical function.">TISurjectFunction&lt;double, double&gt;</a> <a class="code" href="classimath_1_1_t_i_surject_function.html" title="Template interface for any surjective mathematical function.">ISurjectDoubleFunction</a>;
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043 } <span class="comment">// namespace imath</span>

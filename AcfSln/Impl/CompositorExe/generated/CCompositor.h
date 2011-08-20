@@ -71,6 +71,15 @@ protected:
 		};
 
 		/**
+			File dialog with memory of the last open directory path.
+		*/
+		class CPersistentFileDialogLoaderRegistry: public icomp::CRegistry
+		{
+		public:
+			CPersistentFileDialogLoaderRegistry();
+		};
+
+		/**
 			Realization of the object persistence over Qt registry mechanism.
 		*/
 		class CSettingsPersistenceRegistry: public icomp::CRegistry

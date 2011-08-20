@@ -47,6 +47,7 @@ public:
 
 	CBitmap();
 	CBitmap(const CBitmap& bitmap);
+	CBitmap(const QImage& image);
 
 	QImage& GetQImageRef();
 

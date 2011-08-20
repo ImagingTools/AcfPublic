@@ -27,7 +27,7 @@
   </div>
 </div>
 <div class="contents">
-<h1>ifpf::IDirectoryMonitor Class Reference</h1><!-- doxytag: class="ifpf::IDirectoryMonitor" --><!-- doxytag: inherits="ibase::IFileListProvider" -->Interface for a folder monitor.  
+<h1>ifpf::IDirectoryMonitor Class Reference</h1><!-- doxytag: class="ifpf::IDirectoryMonitor" --><!-- doxytag: inherits="istd::IPolymorphic" -->Interface for a folder monitor.  
 <a href="#_details">More...</a>
 <p>
 <code>#include &lt;<a class="el" href="_i_directory_monitor_8h_source.html">IDirectoryMonitor.h</a>&gt;</code>
@@ -38,32 +38,15 @@ Inheritance diagram for ifpf::IDirectoryMonitor:</div>
 
 <p><center><img src="classifpf_1_1_i_directory_monitor.png" usemap="#ifpf::IDirectoryMonitor_map" border="0" alt=""></center>
 <map name="ifpf::IDirectoryMonitor_map">
-<area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classibase_1_1_i_file_list_provider.html" alt="ibase::IFileListProvider" shape="rect" coords="0,112,182,136">
-<area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,182,80">
 <area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,182,24">
-<area href="classiqtfpf_1_1_c_directory_monitor_comp.html" alt="iqtfpf::CDirectoryMonitorComp" shape="rect" coords="0,224,182,248">
+<area href="classiqtfpf_1_1_c_directory_monitor_comp.html" alt="iqtfpf::CDirectoryMonitorComp" shape="rect" coords="0,112,182,136">
 </map>
 </div>
 
 <p>
 <a href="classifpf_1_1_i_directory_monitor-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
-<tr><td colspan="2"><br><h2>Public Types</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5">ChangeFlags</a> { <br>
-&nbsp;&nbsp;<a class="el" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e50f285ac75539d0dd90626b0a01a60dca">CF_FILES_ADDED</a> =  0x1000000, 
-<a class="el" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e528c19e4f783e4b385fa960108ae53f2e">CF_FILES_REMOVED</a> =  0x2000000, 
-<a class="el" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5e94e9cb9abe526b5660410393123d3e7">CF_FILES_MODIFIED</a> =  0x4000000, 
-<a class="el" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5351a7ff009485af7d8ef3306507d26cb">CF_FILES_ATTRIBUTE_CHANGED</a> =  0x8000000, 
-<br>
-&nbsp;&nbsp;<a class="el" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5475b565cdd05931cc4e76ad091f0ecb9">CF_SOME_CHANGES</a> =  CF_FILES_ADDED | CF_FILES_REMOVED | CF_FILES_MODIFIED | CF_FILES_ATTRIBUTE_CHANGED
-<br>
- }</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">File system change flags.  <a href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5">More...</a><br></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/namespaceistd.html#816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_directory_monitor.html#d4373f09bda7b80f1dcb47f8aa74019a">GetChangedFileItems</a> (int changeFlags) const =0</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the list of changed files according to the given flags.  <a href="#d4373f09bda7b80f1dcb47f8aa74019a"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_directory_monitor.html#5e635e02ae03431b5b7cc3803efeadc8">StartObserving</a> (const <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsSetPtr=NULL)=0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Start observing process.  <a href="#5e635e02ae03431b5b7cc3803efeadc8"></a><br></td></tr>
@@ -75,69 +58,8 @@ Inheritance diagram for ifpf::IDirectoryMonitor:</div>
 Interface for a folder monitor. 
 <p>
 Observers of this interface are notified about all changes made in the monitored directory, such as removing or adding files, changes in file contents or file attributes. 
-<p>Definition at line <a class="el" href="_i_directory_monitor_8h_source.html#l00022">22</a> of file <a class="el" href="_i_directory_monitor_8h_source.html">IDirectoryMonitor.h</a>.</p>
-<hr><h2>Member Enumeration Documentation</h2>
-<a class="anchor" name="b9ccd9755591d4e9b08e844edfdeb5e5"></a><!-- doxytag: member="ifpf::IDirectoryMonitor::ChangeFlags" ref="b9ccd9755591d4e9b08e844edfdeb5e5" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5">ifpf::IDirectoryMonitor::ChangeFlags</a>          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-File system change flags. 
-<p>
-<dl compact><dt><b>Enumerator: </b></dt><dd>
-<table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" name="b9ccd9755591d4e9b08e844edfdeb5e50f285ac75539d0dd90626b0a01a60dca"></a><!-- doxytag: member="CF_FILES_ADDED" ref="b9ccd9755591d4e9b08e844edfdeb5e50f285ac75539d0dd90626b0a01a60dca" args="" -->CF_FILES_ADDED</em>&nbsp;</td><td>
-File(s) were added. </td></tr>
-<tr><td valign="top"><em><a class="anchor" name="b9ccd9755591d4e9b08e844edfdeb5e528c19e4f783e4b385fa960108ae53f2e"></a><!-- doxytag: member="CF_FILES_REMOVED" ref="b9ccd9755591d4e9b08e844edfdeb5e528c19e4f783e4b385fa960108ae53f2e" args="" -->CF_FILES_REMOVED</em>&nbsp;</td><td>
-File(s) were removed. </td></tr>
-<tr><td valign="top"><em><a class="anchor" name="b9ccd9755591d4e9b08e844edfdeb5e5e94e9cb9abe526b5660410393123d3e7"></a><!-- doxytag: member="CF_FILES_MODIFIED" ref="b9ccd9755591d4e9b08e844edfdeb5e5e94e9cb9abe526b5660410393123d3e7" args="" -->CF_FILES_MODIFIED</em>&nbsp;</td><td>
-File(s) were modified. </td></tr>
-<tr><td valign="top"><em><a class="anchor" name="b9ccd9755591d4e9b08e844edfdeb5e5351a7ff009485af7d8ef3306507d26cb"></a><!-- doxytag: member="CF_FILES_ATTRIBUTE_CHANGED" ref="b9ccd9755591d4e9b08e844edfdeb5e5351a7ff009485af7d8ef3306507d26cb" args="" -->CF_FILES_ATTRIBUTE_CHANGED</em>&nbsp;</td><td>
-File's attributes were changed. </td></tr>
-<tr><td valign="top"><em><a class="anchor" name="b9ccd9755591d4e9b08e844edfdeb5e5475b565cdd05931cc4e76ad091f0ecb9"></a><!-- doxytag: member="CF_SOME_CHANGES" ref="b9ccd9755591d4e9b08e844edfdeb5e5475b565cdd05931cc4e76ad091f0ecb9" args="" -->CF_SOME_CHANGES</em>&nbsp;</td><td>
-All possible changes. </td></tr>
-</table>
-</dl>
-
-<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#cd46630510ac7a16b6c6e73a7db43fb9">istd::IChangeable</a>.</p>
-
-<p>Definition at line <a class="el" href="_i_directory_monitor_8h_source.html#l00028">28</a> of file <a class="el" href="_i_directory_monitor_8h_source.html">IDirectoryMonitor.h</a>.</p>
-
-</div>
-</div><p>
+<p>Definition at line <a class="el" href="_i_directory_monitor_8h_source.html#l00021">21</a> of file <a class="el" href="_i_directory_monitor_8h_source.html">IDirectoryMonitor.h</a>.</p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="d4373f09bda7b80f1dcb47f8aa74019a"></a><!-- doxytag: member="ifpf::IDirectoryMonitor::GetChangedFileItems" ref="d4373f09bda7b80f1dcb47f8aa74019a" args="(int changeFlags) const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/namespaceistd.html#816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> ifpf::IDirectoryMonitor::GetChangedFileItems           </td>
-          <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>changeFlags</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get the list of changed files according to the given flags. 
-<p>
-<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="classifpf_1_1_i_directory_monitor.html#b9ccd9755591d4e9b08e844edfdeb5e5" title="File system change flags.">ChangeFlags</a> </dd></dl>
-
-<p>Implemented in <a class="el" href="classiqtfpf_1_1_c_directory_monitor_comp.html#5704c7ebdcd66b972670e2a270e8a8ce">iqtfpf::CDirectoryMonitorComp</a>.</p>
-
-</div>
-</div><p>
 <a class="anchor" name="5e635e02ae03431b5b7cc3803efeadc8"></a><!-- doxytag: member="ifpf::IDirectoryMonitor::StartObserving" ref="5e635e02ae03431b5b7cc3803efeadc8" args="(const iprm::IParamsSet *paramsSetPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">

@@ -151,87 +151,85 @@
 <a name="l00149"></a>00149               <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html">CSceneProviderGuiComp</a>&amp; m_parent;
 <a name="l00150"></a>00150        };
 <a name="l00151"></a>00151 
-<a name="l00152"></a>00152        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#7bcb0ac0a33aafa27092d92ae69aa6dd">OnResize</a>(QResizeEvent* eventPtr);
-<a name="l00153"></a>00153        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#2c3982dbd297d020254d5aea0863dbb1">OnWheelEvent</a>(QGraphicsSceneWheelEvent* eventPtr);
-<a name="l00154"></a>00154        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#640c6ea66935b75b1d4e7a71bcf1d980">OnKeyReleaseEvent</a>(QKeyEvent* eventPtr);
-<a name="l00155"></a>00155        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#e5320fc48c5dccc8325431090ddcf31c">OnContextMenuEvent</a>(QContextMenuEvent* eventPtr);
-<a name="l00156"></a>00156        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ad02b7ea064dd1e02d7bb7c4ef25985d">OnMouseDoubleClickEvent</a>(QEvent* eventPtr);
-<a name="l00157"></a>00157        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#9c2fd8fae0d5f9a9ea11952fbe65689e">OnMouseMoveEvent</a>(QMouseEvent* eventPtr);
-<a name="l00158"></a>00158 
-<a name="l00159"></a>00159        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#10600c58cb364821070365cd305ce279">ScaleView</a>(<span class="keywordtype">double</span> scaleFactor);
-<a name="l00160"></a>00160        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ca0033d8c49c02a82e7441420ac489a1">SetFittedScale</a>(<a class="code" href="classi2d_1_1_i_scene_controller.html#702c6c5d1be8e066e7e9ba64e3a43ba1" title="Vieport scale fitting mode.">FitMode</a> mode);
+<a name="l00152"></a>00152        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#6f4a3e39bb4ab12dc65395c1320bd382">OnResize</a>(QResizeEvent* eventPtr);
+<a name="l00153"></a>00153        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#76fb52e6f9e28c57ff7e744938e178d2">OnWheelEvent</a>(QGraphicsSceneWheelEvent* eventPtr);
+<a name="l00154"></a>00154        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#643a7bdc1ff08d7b02821d95bb4c1a25">OnKeyReleaseEvent</a>(QKeyEvent* eventPtr);
+<a name="l00155"></a>00155        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#b99a042f7c99bfa5cb21fd588788241a">OnMouseDoubleClickEvent</a>(QEvent* eventPtr);
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#10600c58cb364821070365cd305ce279">ScaleView</a>(<span class="keywordtype">double</span> scaleFactor);
+<a name="l00158"></a>00158        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ca0033d8c49c02a82e7441420ac489a1">SetFittedScale</a>(<a class="code" href="classi2d_1_1_i_scene_controller.html#702c6c5d1be8e066e7e9ba64e3a43ba1" title="Vieport scale fitting mode.">FitMode</a> mode);
+<a name="l00159"></a>00159 
+<a name="l00160"></a>00160        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a>&amp; <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#0d2dcc8dbd5b6204877312123c4dda86">GetCommandsRootRef</a>();
 <a name="l00161"></a>00161 
-<a name="l00162"></a>00162        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a>&amp; <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#0d2dcc8dbd5b6204877312123c4dda86">GetCommandsRootRef</a>();
-<a name="l00163"></a>00163 
-<a name="l00164"></a>00164        <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#e4f024dfb5df0dc80af9995be423cd9c">HasDropConsumerForFormat</a>(<span class="keyword">const</span> QStringList&amp; formats) <span class="keyword">const</span>;
-<a name="l00165"></a>00165        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#eeb28c2561c4076b7820f89a0565085e">DelegateDropEvent</a>(<span class="keyword">const</span> QMimeData&amp; data, QGraphicsSceneDragDropEvent* eventPtr);
-<a name="l00166"></a>00166        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#de9c4d2175875e0c31b84a4c924ef1b1">ResetScene</a>();
-<a name="l00167"></a>00167 
-<a name="l00168"></a>00168        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00169"></a>00169        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#b5edf6564e5e6dd9ebc04c6d5468ff0b" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00170"></a>00170        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#f3703a56eda005886cfb4d8d7d27ed5b" title="Called just before GUI is released.">OnGuiDestroyed</a>();
-<a name="l00171"></a>00171        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#5e7878399772755a858075f359354d6a" title="Called when non-GUI elements (like commands) should be retranslated.">OnRetranslate</a>();
-<a name="l00172"></a>00172 
-<a name="l00173"></a>00173        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00174"></a>00174        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#815aecdc87ccb3ed86d7e94d702a8a65">OnComponentCreated</a>();
-<a name="l00175"></a>00175        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#19cdb05f622fc187c67faa269851dc51">OnComponentDestroyed</a>();
-<a name="l00176"></a>00176 
-<a name="l00177"></a>00177        <span class="comment">// reimplemented (QObject)</span>
-<a name="l00178"></a>00178        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#87eb5111faed7b344dc11ea0860d1918">eventFilter</a>(<a class="code" href="class_q_object.html">QObject</a>* sourcePtr, QEvent* eventPtr);
-<a name="l00179"></a>00179 
-<a name="l00180"></a>00180 signals:
-<a name="l00181"></a>00181        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#dd6a64efd2299ac542c266bf42e7f6ae">zoomChanged</a>(<span class="keywordtype">double</span>);
-<a name="l00182"></a>00182 
-<a name="l00183"></a>00183 <span class="keyword">private</span>:
-<a name="l00184"></a>00184        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QGraphicsScene&gt;</a> m_scenePtr;
-<a name="l00185"></a>00185        
-<a name="l00186"></a>00186        <a class="code" href="classi2d_1_1_i_scene_controller.html#702c6c5d1be8e066e7e9ba64e3a43ba1" title="Vieport scale fitting mode.">FitMode</a> m_fitMode;
-<a name="l00187"></a>00187 
-<a name="l00188"></a>00188        <span class="keywordtype">bool</span> m_isFullScreenMode;
-<a name="l00189"></a>00189        <span class="keywordtype">bool</span> m_isZoomIgnored;
-<a name="l00190"></a>00190 
-<a name="l00191"></a>00191        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_commands;
-<a name="l00192"></a>00192        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_viewCommand;
-<a name="l00193"></a>00193        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_autoFitToViewCommand;
-<a name="l00194"></a>00194        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_fitToViewCommand;
-<a name="l00195"></a>00195        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_fitToImageCommand;
-<a name="l00196"></a>00196        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_resetZoomCommand;
-<a name="l00197"></a>00197 
-<a name="l00198"></a>00198        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_sceneControllerGuiCompPtr);
-<a name="l00199"></a>00199        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_drop_consumer.html" title="Interface for objects which can receive dragged objects.">iqtgui::IDropConsumer</a>, m_dropConsumersCompPtr);
-<a name="l00200"></a>00200 
-<a name="l00201"></a>00201        I_ATTR(<span class="keywordtype">bool</span>, m_allowWidgetResizeAttrPtr);
-<a name="l00202"></a>00202        I_ATTR(<span class="keywordtype">int</span>, m_sceneIdAttrPtr);
-<a name="l00203"></a>00203        I_ATTR(<span class="keywordtype">bool</span>, m_useAntialiasingAttrPtr);
-<a name="l00204"></a>00204        I_ATTR(<span class="keywordtype">int</span>, m_fitModeAttrPtr);
-<a name="l00205"></a>00205        I_ATTR(<span class="keywordtype">double</span>, m_isotropyFactorAttrPtr);
-<a name="l00206"></a>00206        I_ATTR(<span class="keywordtype">int</span>, m_backgroundModeAttrPtr);
-<a name="l00207"></a>00207        I_ATTR(<span class="keywordtype">double</span>, m_gridSizeAttrPtr);
-<a name="l00208"></a>00208        I_ATTR(<span class="keywordtype">bool</span>, m_isAlignmentEnabledAttrPtr);
-<a name="l00209"></a>00209        I_ATTR(<span class="keywordtype">double</span>, m_sceneWidthAttrPtr);
-<a name="l00210"></a>00210        I_ATTR(<span class="keywordtype">double</span>, m_sceneHeightAttrPtr);
-<a name="l00211"></a>00211 
-<a name="l00212"></a>00212        QWidget* m_savedParentWidgetPtr;
-<a name="l00213"></a>00213        QMatrix m_savedViewTransform;
-<a name="l00214"></a>00214 
-<a name="l00215"></a>00215        <span class="keywordtype">double</span> m_isotropyFactor;
-<a name="l00216"></a>00216 };
-<a name="l00217"></a>00217 
+<a name="l00162"></a>00162        <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#e4f024dfb5df0dc80af9995be423cd9c">HasDropConsumerForFormat</a>(<span class="keyword">const</span> QStringList&amp; formats) <span class="keyword">const</span>;
+<a name="l00163"></a>00163        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#eeb28c2561c4076b7820f89a0565085e">DelegateDropEvent</a>(<span class="keyword">const</span> QMimeData&amp; data, QGraphicsSceneDragDropEvent* eventPtr);
+<a name="l00164"></a>00164        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#de9c4d2175875e0c31b84a4c924ef1b1">ResetScene</a>();
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00167"></a>00167        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#b5edf6564e5e6dd9ebc04c6d5468ff0b" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00168"></a>00168        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#f3703a56eda005886cfb4d8d7d27ed5b" title="Called just before GUI is released.">OnGuiDestroyed</a>();
+<a name="l00169"></a>00169        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#5e7878399772755a858075f359354d6a" title="Called when non-GUI elements (like commands) should be retranslated.">OnRetranslate</a>();
+<a name="l00170"></a>00170 
+<a name="l00171"></a>00171        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00172"></a>00172        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#815aecdc87ccb3ed86d7e94d702a8a65">OnComponentCreated</a>();
+<a name="l00173"></a>00173        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#19cdb05f622fc187c67faa269851dc51">OnComponentDestroyed</a>();
+<a name="l00174"></a>00174 
+<a name="l00175"></a>00175        <span class="comment">// reimplemented (QObject)</span>
+<a name="l00176"></a>00176        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#87eb5111faed7b344dc11ea0860d1918">eventFilter</a>(<a class="code" href="class_q_object.html">QObject</a>* sourcePtr, QEvent* eventPtr);
+<a name="l00177"></a>00177 
+<a name="l00178"></a>00178 signals:
+<a name="l00179"></a>00179        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#dd6a64efd2299ac542c266bf42e7f6ae">zoomChanged</a>(<span class="keywordtype">double</span>);
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181 <span class="keyword">private</span>:
+<a name="l00182"></a>00182        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QGraphicsScene&gt;</a> m_scenePtr;
+<a name="l00183"></a>00183        
+<a name="l00184"></a>00184        <a class="code" href="classi2d_1_1_i_scene_controller.html#702c6c5d1be8e066e7e9ba64e3a43ba1" title="Vieport scale fitting mode.">FitMode</a> m_fitMode;
+<a name="l00185"></a>00185 
+<a name="l00186"></a>00186        <span class="keywordtype">bool</span> m_isFullScreenMode;
+<a name="l00187"></a>00187        <span class="keywordtype">bool</span> m_isZoomIgnored;
+<a name="l00188"></a>00188 
+<a name="l00189"></a>00189        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_commands;
+<a name="l00190"></a>00190        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_viewCommand;
+<a name="l00191"></a>00191        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_autoFitToViewCommand;
+<a name="l00192"></a>00192        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_fitToViewCommand;
+<a name="l00193"></a>00193        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_fitToImageCommand;
+<a name="l00194"></a>00194        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_resetZoomCommand;
+<a name="l00195"></a>00195 
+<a name="l00196"></a>00196        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_sceneControllerGuiCompPtr);
+<a name="l00197"></a>00197        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_drop_consumer.html" title="Interface for objects which can receive dragged objects.">iqtgui::IDropConsumer</a>, m_dropConsumersCompPtr);
+<a name="l00198"></a>00198 
+<a name="l00199"></a>00199        I_ATTR(<span class="keywordtype">bool</span>, m_allowWidgetResizeAttrPtr);
+<a name="l00200"></a>00200        I_ATTR(<span class="keywordtype">int</span>, m_sceneIdAttrPtr);
+<a name="l00201"></a>00201        I_ATTR(<span class="keywordtype">bool</span>, m_useAntialiasingAttrPtr);
+<a name="l00202"></a>00202        I_ATTR(<span class="keywordtype">int</span>, m_fitModeAttrPtr);
+<a name="l00203"></a>00203        I_ATTR(<span class="keywordtype">double</span>, m_isotropyFactorAttrPtr);
+<a name="l00204"></a>00204        I_ATTR(<span class="keywordtype">int</span>, m_backgroundModeAttrPtr);
+<a name="l00205"></a>00205        I_ATTR(<span class="keywordtype">double</span>, m_gridSizeAttrPtr);
+<a name="l00206"></a>00206        I_ATTR(<span class="keywordtype">bool</span>, m_isAlignmentEnabledAttrPtr);
+<a name="l00207"></a>00207        I_ATTR(<span class="keywordtype">double</span>, m_sceneWidthAttrPtr);
+<a name="l00208"></a>00208        I_ATTR(<span class="keywordtype">double</span>, m_sceneHeightAttrPtr);
+<a name="l00209"></a>00209 
+<a name="l00210"></a>00210        QWidget* m_savedParentWidgetPtr;
+<a name="l00211"></a>00211        QMatrix m_savedViewTransform;
+<a name="l00212"></a>00212 
+<a name="l00213"></a>00213        <span class="keywordtype">double</span> m_isotropyFactor;
+<a name="l00214"></a>00214 };
+<a name="l00215"></a>00215 
+<a name="l00216"></a>00216 
+<a name="l00217"></a>00217 <span class="comment">// inline protected methods</span>
 <a name="l00218"></a>00218 
-<a name="l00219"></a>00219 <span class="comment">// inline protected methods</span>
-<a name="l00220"></a>00220 
-<a name="l00221"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#0d2dcc8dbd5b6204877312123c4dda86">00221</a> <span class="keyword">inline</span> <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a>&amp; <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#0d2dcc8dbd5b6204877312123c4dda86">CSceneProviderGuiComp::GetCommandsRootRef</a>()
-<a name="l00222"></a>00222 {
-<a name="l00223"></a>00223        <span class="keywordflow">return</span> m_commands;
-<a name="l00224"></a>00224 }
-<a name="l00225"></a>00225 
+<a name="l00219"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#0d2dcc8dbd5b6204877312123c4dda86">00219</a> <span class="keyword">inline</span> <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a>&amp; <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#0d2dcc8dbd5b6204877312123c4dda86">CSceneProviderGuiComp::GetCommandsRootRef</a>()
+<a name="l00220"></a>00220 {
+<a name="l00221"></a>00221        <span class="keywordflow">return</span> m_commands;
+<a name="l00222"></a>00222 }
+<a name="l00223"></a>00223 
+<a name="l00224"></a>00224 
+<a name="l00225"></a>00225 } <span class="comment">// namespace iqt2d</span>
 <a name="l00226"></a>00226 
-<a name="l00227"></a>00227 } <span class="comment">// namespace iqt2d</span>
-<a name="l00228"></a>00228 
-<a name="l00229"></a>00229 
-<a name="l00230"></a>00230 <span class="preprocessor">#endif // !iqt2d_CSceneProviderGuiComp_included</span>
-<a name="l00231"></a>00231 <span class="preprocessor"></span>
-<a name="l00232"></a>00232 
+<a name="l00227"></a>00227 
+<a name="l00228"></a>00228 <span class="preprocessor">#endif // !iqt2d_CSceneProviderGuiComp_included</span>
+<a name="l00229"></a>00229 <span class="preprocessor"></span>
+<a name="l00230"></a>00230 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

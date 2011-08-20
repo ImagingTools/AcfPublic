@@ -94,12 +94,14 @@ Inheritance diagram for iqtgui::CFileDialogLoaderComp:</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classiser_1_1_i_file_loader.html">iser::IFileLoader</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a7f52aeb2d19650c3ae0064ce682d19c">GetLoaderFor</a> (const QString &amp;filePath, int selectionIndex, int flags, bool beQuiet) const </td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#cdeb4247ab86e7fe2626df198cd0b23e">OnComponentCreated</a> ()</td></tr>
+
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 File dialog component. 
 <p>
 File dialog will be created according to set of the slave file loaders. 
-<p>Definition at line <a class="el" href="_c_file_dialog_loader_comp_8h_source.html#l00030">30</a> of file <a class="el" href="_c_file_dialog_loader_comp_8h_source.html">CFileDialogLoaderComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_file_dialog_loader_comp_8h_source.html#l00032">32</a> of file <a class="el" href="_c_file_dialog_loader_comp_8h_source.html">CFileDialogLoaderComp.h</a>.</p>
 <hr><h2>Member Typedef Documentation</h2>
 <a class="anchor" name="5491a127e57ab7b5c15946deaf7c334a"></a><!-- doxytag: member="iqtgui::CFileDialogLoaderComp::BaseClass" ref="5491a127e57ab7b5c15946deaf7c334a" args="" -->
 <div class="memitem">
@@ -116,7 +118,7 @@ File dialog will be created according to set of the slave file loaders.
 
 <p>Reimplemented from <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_file_dialog_loader_comp_8h_source.html#l00037">37</a> of file <a class="el" href="_c_file_dialog_loader_comp_8h_source.html">CFileDialogLoaderComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_file_dialog_loader_comp_8h_source.html#l00039">39</a> of file <a class="el" href="_c_file_dialog_loader_comp_8h_source.html">CFileDialogLoaderComp.h</a>.</p>
 
 </div>
 </div><p>
@@ -144,7 +146,7 @@ List of possible message ids used in context of this interface.
 
 <p>Reimplemented from <a class="el" href="classiser_1_1_i_file_loader.html#885bc2cad957c89052cf890e68436bf4">iser::IFileLoader</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_file_dialog_loader_comp_8h_source.html#l00039">39</a> of file <a class="el" href="_c_file_dialog_loader_comp_8h_source.html">CFileDialogLoaderComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_file_dialog_loader_comp_8h_source.html#l00041">41</a> of file <a class="el" href="_c_file_dialog_loader_comp_8h_source.html">CFileDialogLoaderComp.h</a>.</p>
 
 </div>
 </div><p>
@@ -197,6 +199,8 @@ Append filters extracted from file loader to Qt filter list accepted by <code>QF
   </table>
 </dl>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>number of filters. </dd></dl>
+
+<p>Referenced by <a class="el" href="_t_qt_document_manager_wrap_8h_source.html#l00148">iqtdoc::TQtDocumentManagerWrap&lt; Base, Gui &gt;::CreateFileDialogFilter()</a>.</p>
 
 </div>
 </div><p>
@@ -498,6 +502,27 @@ This function loads data <code>data</code> from file <code>filePath</code>.
 <dl class="see" compact><dt><b>See also:</b></dt><dd>SerializationState </dd></dl>
 
 <p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#692b19c2e18506de95d02aed942890e6">iser::IFileLoader</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="cdeb4247ab86e7fe2626df198cd0b23e"></a><!-- doxytag: member="iqtgui::CFileDialogLoaderComp::OnComponentCreated" ref="cdeb4247ab86e7fe2626df198cd0b23e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CFileDialogLoaderComp::OnComponentCreated           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#58f942fa48f8f32af7886a036306b04e">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
 </div>
 </div><p>

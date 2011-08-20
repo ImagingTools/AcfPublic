@@ -66,6 +66,14 @@
     <namespace>ifpf</namespace>
   </compound>
   <compound kind="file">
+    <name>CFileSystemChangeStorage.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/ifpf/</path>
+    <filename>_c_file_system_change_storage_8h</filename>
+    <includes id="_i_file_system_change_storage_8h" name="IFileSystemChangeStorage.h" local="yes" imported="no">ifpf/IFileSystemChangeStorage.h</includes>
+    <class kind="class">ifpf::CFileSystemChangeStorage</class>
+    <namespace>ifpf</namespace>
+  </compound>
+  <compound kind="file">
     <name>CHotfolderLoaderComp.h</name>
     <path>E:/Work/Projects/Development/AcfSln/Include/ifpf/</path>
     <filename>_c_hotfolder_loader_comp_8h</filename>
@@ -188,6 +196,13 @@
     <path>E:/Work/Projects/Development/AcfSln/Include/ifpf/</path>
     <filename>_i_file_naming_params_8h</filename>
     <class kind="class">ifpf::IFileNamingParams</class>
+    <namespace>ifpf</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IFileSystemChangeStorage.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/ifpf/</path>
+    <filename>_i_file_system_change_storage_8h</filename>
+    <class kind="class">ifpf::IFileSystemChangeStorage</class>
     <namespace>ifpf</namespace>
   </compound>
   <compound kind="file">
@@ -562,6 +577,7 @@
     <name>CDirectoryMonitorComp.h</name>
     <path>E:/Work/Projects/Development/AcfSln/Include/iqtfpf/</path>
     <filename>_c_directory_monitor_comp_8h</filename>
+    <includes id="_i_file_system_change_storage_8h" name="IFileSystemChangeStorage.h" local="yes" imported="no">ifpf/IFileSystemChangeStorage.h</includes>
     <includes id="_i_directory_monitor_8h" name="IDirectoryMonitor.h" local="yes" imported="no">ifpf/IDirectoryMonitor.h</includes>
     <includes id="_i_directory_monitor_params_8h" name="IDirectoryMonitorParams.h" local="yes" imported="no">ifpf/IDirectoryMonitorParams.h</includes>
     <includes id="_i_monitoring_session_manager_8h" name="IMonitoringSessionManager.h" local="yes" imported="no">ifpf/IMonitoringSessionManager.h</includes>
@@ -625,6 +641,7 @@
     <path>E:/Work/Projects/Development/AcfSln/Include/iqtfpf/</path>
     <filename>_c_hotfolder_task_manager_comp_8h</filename>
     <includes id="_i_file_naming_8h" name="IFileNaming.h" local="yes" imported="no">ifpf/IFileNaming.h</includes>
+    <includes id="_i_file_system_change_storage_8h" name="IFileSystemChangeStorage.h" local="yes" imported="no">ifpf/IFileSystemChangeStorage.h</includes>
     <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ifpf/IHotfolderProcessingInfo.h</includes>
     <includes id="_i_directory_monitor_8h" name="IDirectoryMonitor.h" local="yes" imported="no">ifpf/IDirectoryMonitor.h</includes>
     <includes id="_i_hotfolder_task_manager_8h" name="IHotfolderTaskManager.h" local="yes" imported="no">ifpf/IHotfolderTaskManager.h</includes>
@@ -869,6 +886,10 @@
   <compound kind="class">
     <name>TChangeDelegator</name>
     <filename>class_t_change_delegator.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>TCopySerializedWrap</name>
+    <filename>class_t_copy_serialized_wrap.html</filename>
   </compound>
   <compound kind="class">
     <name>TSingleModelObserverBase</name>
@@ -1127,6 +1148,7 @@
     <class kind="class">ifpf::CDirectoryMonitorParams</class>
     <class kind="class">ifpf::CDirectoryMonitorParamsComp</class>
     <class kind="class">ifpf::CFileNamingParamsComp</class>
+    <class kind="class">ifpf::CFileSystemChangeStorage</class>
     <class kind="class">ifpf::CHotfolderLoaderComp</class>
     <class kind="class">ifpf::CHotfolderProcessingInfo</class>
     <class kind="class">ifpf::CHotfolderProcessingItem</class>
@@ -1141,6 +1163,7 @@
     <class kind="class">ifpf::IDirectoryMonitorParams</class>
     <class kind="class">ifpf::IFileNaming</class>
     <class kind="class">ifpf::IFileNamingParams</class>
+    <class kind="class">ifpf::IFileSystemChangeStorage</class>
     <class kind="class">ifpf::IHotfolderInfoManager</class>
     <class kind="class">ifpf::IHotfolderProcessingInfo</class>
     <class kind="class">ifpf::IHotfolderProcessingItem</class>
@@ -1337,6 +1360,53 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>ifpf::CFileSystemChangeStorage</name>
+    <filename>classifpf_1_1_c_file_system_change_storage.html</filename>
+    <base virtualness="virtual">ifpf::IFileSystemChangeStorage</base>
+    <member kind="function">
+      <type></type>
+      <name>CFileSystemChangeStorage</name>
+      <anchorfile>classifpf_1_1_c_file_system_change_storage.html</anchorfile>
+      <anchor>0b109d6eec3d93df1cf1bd08cb4c993a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetStorageItemsCount</name>
+      <anchorfile>classifpf_1_1_c_file_system_change_storage.html</anchorfile>
+      <anchor>cf23937654cae9feebd4357b6cb3bdd9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetItemPath</name>
+      <anchorfile>classifpf_1_1_c_file_system_change_storage.html</anchorfile>
+      <anchor>2392df5580ea340c67b595d22424c57d</anchor>
+      <arglist>(int fileIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetItemState</name>
+      <anchorfile>classifpf_1_1_c_file_system_change_storage.html</anchorfile>
+      <anchor>17b79aeeb30f8cad8e300c4175e3db72</anchor>
+      <arglist>(int fileIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateStorageItem</name>
+      <anchorfile>classifpf_1_1_c_file_system_change_storage.html</anchorfile>
+      <anchor>05bcf04c53d8a1c692940337923b8a07</anchor>
+      <arglist>(const istd::CString &amp;path, int itemFlags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetStorage</name>
+      <anchorfile>classifpf_1_1_c_file_system_change_storage.html</anchorfile>
+      <anchor>ca8050eb866a5699ed7f73c33a49d137</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>ifpf::CHotfolderLoaderComp</name>
     <filename>classifpf_1_1_c_hotfolder_loader_comp.html</filename>
     <base>TFileSerializerComp&lt; iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive &gt;</base>
@@ -1443,8 +1513,8 @@
       <type>virtual const ifpf::IHotfolderProcessingItem *</type>
       <name>AddProcessingItem</name>
       <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>2b7a6085a2a02127fa6706e6312834f0</anchor>
-      <arglist>(const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath)</arglist>
+      <anchor>206d5408c2ac64286cd25f5d0e39fbe0</anchor>
+      <arglist>(const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath=istd::CString())</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -2100,50 +2170,7 @@
   <compound kind="class">
     <name>ifpf::IDirectoryMonitor</name>
     <filename>classifpf_1_1_i_directory_monitor.html</filename>
-    <base virtualness="virtual">ibase::IFileListProvider</base>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor.html</anchorfile>
-      <anchor>b9ccd9755591d4e9b08e844edfdeb5e5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_FILES_ADDED</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor.html</anchorfile>
-      <anchor>b9ccd9755591d4e9b08e844edfdeb5e50f285ac75539d0dd90626b0a01a60dca</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_FILES_REMOVED</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor.html</anchorfile>
-      <anchor>b9ccd9755591d4e9b08e844edfdeb5e528c19e4f783e4b385fa960108ae53f2e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_FILES_MODIFIED</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor.html</anchorfile>
-      <anchor>b9ccd9755591d4e9b08e844edfdeb5e5e94e9cb9abe526b5660410393123d3e7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_FILES_ATTRIBUTE_CHANGED</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor.html</anchorfile>
-      <anchor>b9ccd9755591d4e9b08e844edfdeb5e5351a7ff009485af7d8ef3306507d26cb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_SOME_CHANGES</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor.html</anchorfile>
-      <anchor>b9ccd9755591d4e9b08e844edfdeb5e5475b565cdd05931cc4e76ad091f0ecb9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual istd::CStringList</type>
-      <name>GetChangedFileItems</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor.html</anchorfile>
-      <anchor>d4373f09bda7b80f1dcb47f8aa74019a</anchor>
-      <arglist>(int changeFlags) const =0</arglist>
-    </member>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>StartObserving</name>
@@ -2378,6 +2405,82 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>ifpf::IFileSystemChangeStorage</name>
+    <filename>classifpf_1_1_i_file_system_change_storage.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>4ca1a8f6fefd71cdc825a37d770776ff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_NEW</name>
+      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>4ca1a8f6fefd71cdc825a37d770776ffbabd7968253c7df987d382526f46a9d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_REMOVED</name>
+      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>4ca1a8f6fefd71cdc825a37d770776ffb6b1a886e08ad3cedf7beaa8fd7d3b0b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_MODIFIED</name>
+      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>4ca1a8f6fefd71cdc825a37d770776ffc39be054aa6f3b77375a22a61bace65d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_ATTRIBUTE_CHANGED</name>
+      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>4ca1a8f6fefd71cdc825a37d770776ffc2a054a3d8ea8fb00301e1a3552c7332</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_SOME_CHANGES</name>
+      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>4ca1a8f6fefd71cdc825a37d770776ff6a833c0d448eb5e506f9dd3aadee75e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetStorageItemsCount</name>
+      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>0bcc6ee2801fafaa62b98a7d298f38d9</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CString</type>
+      <name>GetItemPath</name>
+      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>540868c900b5912c14d6c4dc5a207b96</anchor>
+      <arglist>(int fileIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetItemState</name>
+      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a19fead0c9a02a12063008930fe1f33a</anchor>
+      <arglist>(int fileIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>UpdateStorageItem</name>
+      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a7fb4f47116fabbb6bc443031fe03d8d</anchor>
+      <arglist>(const istd::CString &amp;path, int itemFlags)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ResetStorage</name>
+      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>d62885c3bc82b1c3f6e2db19184c6f17</anchor>
+      <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>ifpf::IHotfolderInfoManager</name>
     <filename>classifpf_1_1_i_hotfolder_info_manager.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -2427,8 +2530,8 @@
       <type>virtual const ifpf::IHotfolderProcessingItem *</type>
       <name>AddProcessingItem</name>
       <anchorfile>classifpf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>48db5a94944f696cdc1fe5e84ea49562</anchor>
-      <arglist>(const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath)=0</arglist>
+      <anchor>692bf3716c291f8e02d9601c6f6666d5</anchor>
+      <arglist>(const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath=istd::CString())=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -4668,13 +4771,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CStringList</type>
-      <name>GetChangedFileItems</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>5704c7ebdcd66b972670e2a270e8a8ce</anchor>
-      <arglist>(int changeFlags) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>StartObserving</name>
       <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
@@ -4687,13 +4783,6 @@
       <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
       <anchor>a1a057eb546259e338ac955b9e150245</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CStringList</type>
-      <name>GetFileList</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>a4984ba9fa60187d24102ce10f14682e</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -5233,6 +5322,13 @@
       <anchorfile>classiqtfpf_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
       <anchor>57fd9873ba82c7cdac195f10bf314167</anchor>
       <arglist>(m_hotfolderProcessingModelCompPtr, m_hotfolderProcessingInfoCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtfpf_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
+      <anchor>6b1d54ec0df46ba499ea355abb20d76d</anchor>
+      <arglist>(m_fileSystemChangeStorageModelCompPtr, m_fileSystemChangeStorageCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>

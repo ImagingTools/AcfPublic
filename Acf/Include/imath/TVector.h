@@ -72,6 +72,13 @@ public:
 
 	/**
 		Set all coordinates to zero.
+		It makes the same as Clear() and is used for compatibility with other vector implementations.
+	*/
+	void Reset();
+
+	/**
+		Set all coordinates to zero.
+		It makes the same as Clear() and is used for compatibility with other vector implementations.
 	*/
 	void Clear();
 
@@ -245,6 +252,15 @@ template <int Size, class Element>
 inline void TVector<Size, Element>::SetElement(int i, const Element& value)
 {
 	operator[](i) = value;
+}
+
+
+template <int Size, class Element>
+inline void TVector<Size, Element>::Reset()
+{
+	for (int i = 0; i < Size; ++i){
+		m_elements[i] = 0;
+	}
 }
 
 

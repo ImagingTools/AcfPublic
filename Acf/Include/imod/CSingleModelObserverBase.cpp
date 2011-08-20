@@ -40,7 +40,7 @@ CSingleModelObserverBase::CSingleModelObserverBase()
 
 CSingleModelObserverBase::~CSingleModelObserverBase()
 {
-	EnsureDetached();
+	EnsureModelDetached();
 }
 
 
@@ -98,7 +98,7 @@ void CSingleModelObserverBase::AfterUpdate(
 
 // protected methods
 
-void CSingleModelObserverBase::EnsureDetached()
+void CSingleModelObserverBase::EnsureModelDetached()
 {
 	if (m_modelPtr != NULL){
 		m_modelPtr->DetachObserver(this);
