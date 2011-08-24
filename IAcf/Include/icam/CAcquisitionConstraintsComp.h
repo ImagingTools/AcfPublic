@@ -24,10 +24,13 @@
 #define icam_CAcquisitionConstraintsComp_included
 
 
+// ACF includes
 #include "icomp/CComponentBase.h"
 
-#include "icam/ITriggerConstraints.h"
+// IACF includes
 #include "icam/IExposureConstraints.h"
+
+#include "isig/ITriggerConstraints.h"
 
 
 namespace icam
@@ -39,14 +42,14 @@ namespace icam
 */
 class CAcquisitionConstraintsComp:
 			public icomp::CComponentBase,
-			virtual public ITriggerConstraints,
+			virtual public isig::ITriggerConstraints,
 			virtual public IExposureConstraints		
 {
 public:
 	typedef icomp::CComponentBase BaseClass;
 
 	I_BEGIN_COMPONENT(CAcquisitionConstraintsComp);
-		I_REGISTER_INTERFACE(ITriggerConstraints);
+		I_REGISTER_INTERFACE(isig::ITriggerConstraints);
 		I_REGISTER_INTERFACE(IExposureConstraints);
 		I_ASSIGN(m_isTriggerSupportedAttrPtr, "TriggerSupported", "Trigger mode is supported by the device", true, false);
 		I_ASSIGN(m_isRisingEdgeTriggerSupportedAttrPtr, "RisingEdgeTriggerSupported", "Rising edge trigger is supported by the device", true, false);

@@ -2128,15 +2128,6 @@
     <namespace>imath</namespace>
   </compound>
   <compound kind="file">
-    <name>CNormalHistogram.h</name>
-    <path>E:/Work/Projects/Development/Acf/Include/imath/</path>
-    <filename>_c_normal_histogram_8h</filename>
-    <includes id="_c_range_8h" name="CRange.h" local="yes" imported="no">istd/CRange.h</includes>
-    <includes id="_t_i_sampled_function_8h" name="TISampledFunction.h" local="yes" imported="no">imath/TISampledFunction.h</includes>
-    <class kind="class">imath::CNormalHistogram</class>
-    <namespace>imath</namespace>
-  </compound>
-  <compound kind="file">
     <name>CSampledFunction2d.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/imath/</path>
     <filename>_c_sampled_function2d_8h</filename>
@@ -20291,7 +20282,6 @@
     <class kind="class">imath::CDouble</class>
     <class kind="class">imath::CDoubleManip</class>
     <class kind="class">imath::CFixedPointManip</class>
-    <class kind="class">imath::CNormalHistogram</class>
     <class kind="class">imath::CSampledFunction2d</class>
     <class kind="class">imath::CVarMatrix</class>
     <class kind="class">imath::CVarVector</class>
@@ -20955,158 +20945,6 @@
       <anchorfile>classimath_1_1_c_fixed_point_manip.html</anchorfile>
       <anchor>8f4b537ed998948edf0ff5eae4fb0bd8</anchor>
       <arglist>(double value)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>imath::CNormalHistogram</name>
-    <filename>classimath_1_1_c_normal_histogram.html</filename>
-    <base>TISampledFunction&lt; 1, 1 &gt;</base>
-    <member kind="function">
-      <type></type>
-      <name>CNormalHistogram</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>291f6047a35ab8cb840d2e37cdf884d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const istd::CRange &amp;</type>
-      <name>GetValueRange</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>c43ea796bcab708e9d13e1222e3cdce9</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetValueRange</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>c215883908d3737b1550195b9a0126c8</anchor>
-      <arglist>(const istd::CRange &amp;range)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Reset</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>8d981bdae7140a121115ad9e3dca432a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetElementsCount</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>440447883681886b936a748cb343f47a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetElementsCount</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>eba843f7ae23cfe59fb180afa7f67334</anchor>
-      <arglist>(int count)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>ClearAllElements</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>a434171c2a35d6ff5aa603b5fda8931d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetElement</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>5ac51b357822cb28064276d089c902c5</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetElement</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>b4652987776422a6384d5c73e4dd2cd8</anchor>
-      <arglist>(int index, int value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>IncreaseElement</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>5daaab33cf7786f88aac2cfb26a06582</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AddValue</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>a43dca7b6d531ddd8c9fa8b3b9affc3e</anchor>
-      <arglist>(double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetQuantileIndex</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>24927491f0a613c77544057687982f65</anchor>
-      <arglist>(double quantile) const </arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetAproxQuantileValue</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>f5abe76232df748e458ab864cf338c1f</anchor>
-      <arglist>(double quantile) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CreateFunction</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>1a4f93a2a829ffc3c41717be2e87b98c</anchor>
-      <arglist>(double *dataPtr, const ArgumentType &amp;sizes)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetTotalSamplesCount</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>1b8eaa2175c065f00010582f37c34cfc</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetGridSize</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>18b8ef0a00fc9b54467301788a449e52</anchor>
-      <arglist>(int dimensionIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CRange</type>
-      <name>GetLogicalRange</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>f77a2e8311be1984355480c3664730ed</anchor>
-      <arglist>(int dimensionIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CRange</type>
-      <name>GetResultValueRange</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>f57e2c5e932e76b242c7bf12587d5099</anchor>
-      <arglist>(int dimensionIndex, int resultDimension=-1) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetValueAt</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>5c1fb3b820774553d97623f6d76534dc</anchor>
-      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ResultType</type>
-      <name>GetValueAt</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>c99c89dc086b01b9ce58d31ec0b05836</anchor>
-      <arglist>(const ArgumentType &amp;argument) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CalcElementsSum</name>
-      <anchorfile>classimath_1_1_c_normal_histogram.html</anchorfile>
-      <anchor>301767d47b744d946eafaa46a62ece95</anchor>
-      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40310,6 +40148,27 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>CRange</type>
+      <name>GetValidated</name>
+      <anchorfile>classistd_1_1_c_range.html</anchorfile>
+      <anchor>2239f7d382a9b14ead345b583e705233</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetValidated</name>
+      <anchorfile>classistd_1_1_c_range.html</anchorfile>
+      <anchor>b821da1aa4d6265d81912cc84b14bebb</anchor>
+      <arglist>(CRange &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Validate</name>
+      <anchorfile>classistd_1_1_c_range.html</anchorfile>
+      <anchor>c34b950752bb366d81defa66321bcb0d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>Contains</name>
       <anchorfile>classistd_1_1_c_range.html</anchorfile>
@@ -40462,6 +40321,13 @@
       <anchorfile>classistd_1_1_c_range.html</anchorfile>
       <anchor>bff8ecae727e6bc940f7e029c9a2bf65</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static CRange</type>
+      <name>GetValid</name>
+      <anchorfile>classistd_1_1_c_range.html</anchorfile>
+      <anchor>7c6bbaec8c78bbe0266f624d9e0651f2</anchor>
+      <arglist>(double value1, double value2)</arglist>
     </member>
   </compound>
   <compound kind="class">

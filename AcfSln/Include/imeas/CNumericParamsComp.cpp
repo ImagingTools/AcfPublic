@@ -1,0 +1,166 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
+#include "imeas/CNumericParamsComp.h"
+
+
+#include "istd/TChangeNotifier.h"
+
+#include "iser/IArchive.h"
+#include "iser/CArchiveTag.h"
+
+#include "imath/CDoubleManip.h"
+
+
+namespace imeas
+{
+
+
+// reimplemented (imeas::INumericParams)
+
+const INumericConstraints* CNumericParamsComp::GetConstraints() const
+{
+	if (m_constraintsCompPtr.IsValid()){
+		return m_constraintsCompPtr.GetPtr();
+	}
+
+	return this;
+}
+
+
+imath::CVarVector CNumericParamsComp::GetValues() const
+{
+	return m_filterLengts;
+}
+
+
+bool CNumericParamsComp::SetValues(const imath::CVarVector& lengths)
+{
+	if (m_filterLengts != lengths){
+		const INumericConstraints* constraintsPtr = GetConstraints();
+		I_ASSERT(constraintsPtr != NULL);
+		if (lengths.GetElementsCount() != constraintsPtr->GetFilterDimensionsCount()){
+			return false;
+		}
+
+		istd::CChangeNotifier notifier(this);
+
+		m_filterLengts = lengths;
+	}
+
+	return true;
+}
+
+
+// reimplemented (imeas::INumericConstraints)
+
+int CNumericParamsComp::GetFilterDimensionsCount() const
+{
+	return *m_dimensionsCountAttrPtr;
+}
+
+
+istd::CString CNumericParamsComp::GetFilterDescription(int dimension) const
+{
+	return istd::CString("Value ") + istd::CString::FromNumber(dimension + 1);
+}
+
+
+const imeas::IUnitInfo& CNumericParamsComp::GetFilterUnitInfo(int /*dimension*/) const
+{
+	return *this;
+}
+
+
+// reimplemented (imeas::IUnitInfo)
+
+int CNumericParamsComp::GetUnitType() const
+{
+	return UT_UNKNOWN;
+}
+
+
+istd::CString CNumericParamsComp::GetUnitName() const
+{
+	return "";
+}
+
+
+double CNumericParamsComp::GetDisplayMultiplicationFactor() const
+{
+	return 1;
+}
+
+
+istd::CRange CNumericParamsComp::GetValueRange() const
+{
+	return istd::CRange(*m_minFilterLengthAttrPtr, *m_maxFilterLengthAttrPtr);
+}
+
+
+const imath::IDoubleManip& CNumericParamsComp::GetValueManip() const
+{
+	static imath::CDoubleManip manip;
+
+	return manip;
+}
+
+
+// reimplemented (iser::ISerializable)
+
+bool CNumericParamsComp::Serialize(iser::IArchive& archive)
+{
+	static iser::CArchiveTag filterLengthsTag("FilterLengts", "List of filter lengths for each dimension");
+
+	bool retVal = archive.BeginTag(filterLengthsTag);
+	retVal = retVal && m_filterLengts.Serialize(archive);
+	retVal = retVal && archive.EndTag(filterLengthsTag);
+
+	return retVal;
+}
+
+
+// protected methods
+
+// reimplemented (icomp::CComponentBase)
+
+void CNumericParamsComp::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+
+	const INumericConstraints* constraintsPtr = GetConstraints();
+	I_ASSERT(constraintsPtr != NULL);
+
+	int count = constraintsPtr->GetFilterDimensionsCount();
+	m_filterLengts.SetElementsCount(count, 1);
+
+	if (m_filterLengthsAttrPtr.IsValid()){
+		int commonCount = istd::Min(count, m_filterLengthsAttrPtr.GetCount());
+		for (int i = 0; i < commonCount; ++i){
+			m_filterLengts[i] = m_filterLengthsAttrPtr[i];
+		}
+	}
+}
+
+
+} // namespace imeas
+

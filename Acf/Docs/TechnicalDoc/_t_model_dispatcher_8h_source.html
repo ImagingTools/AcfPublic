@@ -112,7 +112,7 @@
 <a name="l00114"></a><a class="code" href="classimod_1_1_t_model_dispatcher.html#b580df5b24fe0ddc677ddff5cfa93468">00114</a> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_t_model_dispatcher.html#b580df5b24fe0ddc677ddff5cfa93468" title="Unregister the data model object.">TModelDispatcher&lt;NotifyReceiver&gt;::UnregisterModel</a>(<span class="keywordtype">int</span> modelId)
 <a name="l00115"></a>00115 {
 <a name="l00116"></a>00116        <span class="keywordflow">for</span> (ModelMap::iterator index = m_modelMap.begin(); index != m_modelMap.end(); index++){
-<a name="l00117"></a>00117               <span class="keywordflow">if</span> (modelId == index-&gt;second){
+<a name="l00117"></a>00117               <span class="keywordflow">if</span> (modelId == index-&gt;second.modelId){
 <a name="l00118"></a>00118                      <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr = index-&gt;first;
 <a name="l00119"></a>00119 
 <a name="l00120"></a>00120                      m_modelMap.erase(index);

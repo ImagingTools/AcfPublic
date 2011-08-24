@@ -30,7 +30,6 @@
 #include "icomp/TMakeComponentWrap.h"
 
 #include "iipr/CRectImageSmoothProcessorComp.h"
-#include "iipr/CMultidimensionalFilterParamsComp.h"
 #include "iipr/CProcessedAcquisitionComp.h"
 #include "iipr/TUnaryTransformProcessorComp.h"
 #include "iipr/CCaliperParamsComp.h"
@@ -64,7 +63,6 @@ namespace IprPck
 
 typedef iipr::CProcessedAcquisitionComp ProcessedCamera;
 typedef iipr::CRectImageSmoothProcessorComp RectImageSmoothProcessor;
-typedef icomp::TModelCompWrap<iipr::CMultidimensionalFilterParamsComp> MultidimensionalFilterParams;
 typedef iipr::CInvertOperatorComp InvertOperator;
 typedef icomp::TModelCompWrap<iipr::CCaliperParamsComp> CaliperParams;
 typedef icomp::TModelCompWrap<iipr::CCircleFinderParamsComp> CircleFinderParams;

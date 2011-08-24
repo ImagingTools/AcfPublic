@@ -1,0 +1,65 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
+#ifndef imeas_INumericConstraints_included
+#define imeas_INumericConstraints_included
+
+
+// ACF includes
+#include "istd/IPolymorphic.h"
+
+// ACF-Solutions includes
+#include "imeas/IUnitInfo.h"
+
+#include "imeas/imeas.h"
+
+
+namespace imeas
+{
+
+
+class INumericConstraints: virtual public istd::IPolymorphic
+{
+public:
+	/**
+		Get number of dimensions will be filtered.
+	*/
+	virtual int GetFilterDimensionsCount() const = 0;
+
+	/**
+		Get description of some filter element.
+	*/
+	virtual istd::CString GetFilterDescription(int dimension) const = 0;
+
+	/**
+		Get range of possible filter value for specified dimension.
+	*/
+	virtual const imeas::IUnitInfo& GetFilterUnitInfo(int dimension) const = 0;
+};
+
+
+} // namespace imeas
+
+
+#endif // !imeas_INumericConstraints_included
+
+

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>IACF: E:/Work/Projects/Development/Iacf/Include/icam/ITriggerParams.h Source File</title>
+<title>IACF: E:/Work/Projects/Development/Iacf/Include/isig/ITriggerParams.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -20,49 +20,49 @@
       <li><a href="files.html"><span>File&nbsp;List</span></a></li>
     </ul>
   </div>
-<h1>E:/Work/Projects/Development/Iacf/Include/icam/ITriggerParams.h</h1><a href="_i_trigger_params_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef icam_ITriggerParams_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define icam_ITriggerParams_included</span>
+<h1>E:/Work/Projects/Development/Iacf/Include/isig/ITriggerParams.h</h1><a href="_i_trigger_params_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef isig_ITriggerParams_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define isig_ITriggerParams_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="preprocessor">#include "<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/_i_serializable_8h.html">iser/ISerializable.h</a>"</span>
 <a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="icam_8h.html">icam/icam.h</a>"</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="isig_8h.html">isig/isig.h</a>"</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="keyword">namespace </span>icam
+<a name="l00010"></a>00010 <span class="keyword">namespace </span>isig
 <a name="l00011"></a>00011 {
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="keyword">class </span>ITriggerConstraints;
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
-<a name="l00020"></a><a class="code" href="classicam_1_1_i_trigger_params.html">00020</a> <span class="keyword">class </span><a class="code" href="classicam_1_1_i_trigger_params.html" title="Interface for AVT camera parameters.">ITriggerParams</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
+<a name="l00020"></a><a class="code" href="classisig_1_1_i_trigger_params.html">00020</a> <span class="keyword">class </span><a class="code" href="classisig_1_1_i_trigger_params.html" title="Interface for AVT camera parameters.">ITriggerParams</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00026"></a><a class="code" href="classicam_1_1_i_trigger_params.html#2050ec7ed58ea37472246038ea65246c">00026</a>        <span class="keyword">enum</span> <a class="code" href="classicam_1_1_i_trigger_params.html#2050ec7ed58ea37472246038ea65246c" title="Describe working mode of trigger signal.">TriggerMode</a>
+<a name="l00026"></a><a class="code" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124">00026</a>        <span class="keyword">enum</span> <a class="code" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124" title="Describe working mode of trigger signal.">TriggerMode</a>
 <a name="l00027"></a>00027        {
-<a name="l00028"></a><a class="code" href="classicam_1_1_i_trigger_params.html#2050ec7ed58ea37472246038ea65246cb99ebc19ec8f5b071f4bd5fce7c1b940">00028</a>               <a class="code" href="classicam_1_1_i_trigger_params.html#2050ec7ed58ea37472246038ea65246cb99ebc19ec8f5b071f4bd5fce7c1b940">TM_DEFAULT</a>,
-<a name="l00029"></a><a class="code" href="classicam_1_1_i_trigger_params.html#2050ec7ed58ea37472246038ea65246c963251bae83851a3f8f54b73b2988bec">00029</a>               <a class="code" href="classicam_1_1_i_trigger_params.html#2050ec7ed58ea37472246038ea65246c963251bae83851a3f8f54b73b2988bec">TM_RISING_EDGE</a>,
-<a name="l00030"></a><a class="code" href="classicam_1_1_i_trigger_params.html#2050ec7ed58ea37472246038ea65246cd0e920d4d975cc71a83151f94d7f1cfd">00030</a>               <a class="code" href="classicam_1_1_i_trigger_params.html#2050ec7ed58ea37472246038ea65246cd0e920d4d975cc71a83151f94d7f1cfd">TM_FALLING_EDGE</a>,
-<a name="l00031"></a><a class="code" href="classicam_1_1_i_trigger_params.html#2050ec7ed58ea37472246038ea65246c84ecf4c29052643805753246c27d5ed2">00031</a>               <a class="code" href="classicam_1_1_i_trigger_params.html#2050ec7ed58ea37472246038ea65246c84ecf4c29052643805753246c27d5ed2">TM_POSITIVE_LEVEL</a>,
-<a name="l00032"></a><a class="code" href="classicam_1_1_i_trigger_params.html#2050ec7ed58ea37472246038ea65246c9378cbee5e8bb99421c035acf6172a34">00032</a>               <a class="code" href="classicam_1_1_i_trigger_params.html#2050ec7ed58ea37472246038ea65246c9378cbee5e8bb99421c035acf6172a34">TM_NEGATIVE_LEVEL</a>
+<a name="l00028"></a><a class="code" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124d8110b6ee0e4686e9f9210d9bdfc2494">00028</a>               <a class="code" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124d8110b6ee0e4686e9f9210d9bdfc2494">TM_DEFAULT</a>,
+<a name="l00029"></a><a class="code" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb1242f3d73f8b6544a6294b5a2536e89de0f">00029</a>               <a class="code" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb1242f3d73f8b6544a6294b5a2536e89de0f">TM_RISING_EDGE</a>,
+<a name="l00030"></a><a class="code" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124058e033dc8b13ea678ec231784dae8d4">00030</a>               <a class="code" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124058e033dc8b13ea678ec231784dae8d4">TM_FALLING_EDGE</a>,
+<a name="l00031"></a><a class="code" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb12456371f2edfe1d8d0ea2d968fac8c6ad5">00031</a>               <a class="code" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb12456371f2edfe1d8d0ea2d968fac8c6ad5">TM_POSITIVE_LEVEL</a>,
+<a name="l00032"></a><a class="code" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb1249588d9376705b9578c1a434ac19baff1">00032</a>               <a class="code" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb1249588d9376705b9578c1a434ac19baff1">TM_NEGATIVE_LEVEL</a>
 <a name="l00033"></a>00033        };
 <a name="l00034"></a>00034 
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicam_1_1_i_trigger_constraints.html" title="Interface for AVT camera parameters.">ITriggerConstraints</a>* <a class="code" href="classicam_1_1_i_trigger_params.html#623bfc466e1906df527f7c7e850488f7" title="Get constrints describing supported parameter states.">GetConstraints</a>() <span class="keyword">const</span> = 0;
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classisig_1_1_i_trigger_constraints.html" title="Interface for AVT camera parameters.">ITriggerConstraints</a>* <a class="code" href="classisig_1_1_i_trigger_params.html#bf606e04a25c63c49aed85ffd387cd9f" title="Get constrints describing supported parameter states.">GetConstraints</a>() <span class="keyword">const</span> = 0;
 <a name="l00039"></a>00039 
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicam_1_1_i_trigger_params.html#1f56279f635b4636b1682e0457d89097" title="Check if trigger is enabled.">IsTriggerEnabled</a>() <span class="keyword">const</span> = 0;
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicam_1_1_i_trigger_params.html#63efa04de5de128e673bf69aad56e6b9" title="Set trigger enabling state.">SetTriggerEnabled</a>(<span class="keywordtype">bool</span> isEnabled) = 0;
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisig_1_1_i_trigger_params.html#13abf0c3b66bdc053dde59e237cb467b" title="Check if trigger is enabled.">IsTriggerEnabled</a>() <span class="keyword">const</span> = 0;
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisig_1_1_i_trigger_params.html#7a0fde6ede380cd287f178dbd7dc1715" title="Set trigger enabling state.">SetTriggerEnabled</a>(<span class="keywordtype">bool</span> isEnabled) = 0;
 <a name="l00048"></a>00048 
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classicam_1_1_i_trigger_params.html#9ba97ee886374d7a7318701a673b63ab" title="Get trigger mode.">GetTriggerMode</a>() <span class="keyword">const</span> = 0;
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classisig_1_1_i_trigger_params.html#dda9d7ea9c4d729be3b6581eee07fc54" title="Get trigger mode.">GetTriggerMode</a>() <span class="keyword">const</span> = 0;
 <a name="l00054"></a>00054 
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicam_1_1_i_trigger_params.html#4c6f93e46181b2d53dc0bac6ecd1bbc8" title="Set trigger mode.">SetTriggerMode</a>(<span class="keywordtype">int</span> triggerMode) = 0;
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisig_1_1_i_trigger_params.html#66ebe1c5c3511d7fbe95d5e8124d3887" title="Set trigger mode.">SetTriggerMode</a>(<span class="keywordtype">int</span> triggerMode) = 0;
 <a name="l00060"></a>00060 };
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062 
-<a name="l00063"></a>00063 } <span class="comment">// namespace icam</span>
+<a name="l00063"></a>00063 } <span class="comment">// namespace isig</span>
 <a name="l00064"></a>00064 
 <a name="l00065"></a>00065 
-<a name="l00066"></a>00066 <span class="preprocessor">#endif // !icam_ITriggerParams_included</span>
+<a name="l00066"></a>00066 <span class="preprocessor">#endif // !isig_ITriggerParams_included</span>
 <a name="l00067"></a>00067 <span class="preprocessor"></span>
 <a name="l00068"></a>00068 
 </pre></div></div>

@@ -27,7 +27,7 @@
   </div>
 </div>
 <div class="contents">
-<h1>iavt::CFireGrabAcquisitionComp Class Reference</h1><!-- doxytag: class="iavt::CFireGrabAcquisitionComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,icam::IExposureConstraints,icam::ITriggerConstraints,TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;" -->AVT based camera component implementing interfaces <code><a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiproc_1_1_i_bitmap_acquisition.html">iproc::IBitmapAcquisition</a></code> and <code><a class="el" href="classicam_1_1_i_exposure_constraints.html">icam::IExposureConstraints</a></code> for exposure control support.  
+<h1>iavt::CFireGrabAcquisitionComp Class Reference</h1><!-- doxytag: class="iavt::CFireGrabAcquisitionComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,icam::IExposureConstraints,isig::ITriggerConstraints,TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;" -->AVT based camera component implementing interfaces <code><a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiproc_1_1_i_bitmap_acquisition.html">iproc::IBitmapAcquisition</a></code> and <code><a class="el" href="classicam_1_1_i_exposure_constraints.html">icam::IExposureConstraints</a></code> for exposure control support.  
 <a href="#_details">More...</a>
 <p>
 <code>#include &lt;<a class="el" href="_c_fire_grab_acquisition_comp_8h_source.html">CFireGrabAcquisitionComp.h</a>&gt;</code>
@@ -40,7 +40,7 @@ Inheritance diagram for iavt::CFireGrabAcquisitionComp:</div>
 <map name="iavt::CFireGrabAcquisitionComp_map">
 <area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html" alt="ibase::TLoggerCompWrap< Base >" shape="rect" coords="170,168,501,192">
 <area href="classicam_1_1_i_exposure_constraints.html" alt="icam::IExposureConstraints" shape="rect" coords="511,168,842,192">
-<area href="classicam_1_1_i_trigger_constraints.html" alt="icam::ITriggerConstraints" shape="rect" coords="852,168,1183,192">
+<area href="classisig_1_1_i_trigger_constraints.html" alt="isig::ITriggerConstraints" shape="rect" coords="852,168,1183,192">
 <area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiproc_1_1_t_sync_processor_wrap.html" alt="iproc::TSyncProcessorWrap< iproc::IBitmapAcquisition >" shape="rect" coords="1193,168,1524,192">
 <area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_wrap.html" alt="ibase::TLoggerWrap< Base >" shape="rect" coords="170,112,501,136">
 <area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="511,112,842,136">
@@ -101,9 +101,9 @@ Inheritance diagram for iavt::CFireGrabAcquisitionComp:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiavt_1_1_c_fire_grab_acquisition_comp.html#ece1e62391424b733443443f84145f3b">CheckParameter</a> (UINT16 parameterId, UINT32 setValue)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check whether parameter was set correctly.  <a href="#ece1e62391424b733443443f84145f3b"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiavt_1_1_c_fire_grab_acquisition_comp.html#8e6f200b4a92ff8e34c83010a2f0fc45">InitializeTriggerParams</a> (const <a class="el" href="classicam_1_1_i_trigger_params.html">icam::ITriggerParams</a> &amp;triggerParams)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiavt_1_1_c_fire_grab_acquisition_comp.html#aa95f12e4219551d1b4a9da3f78d882a">InitializeTriggerParams</a> (const <a class="el" href="classisig_1_1_i_trigger_params.html">isig::ITriggerParams</a> &amp;triggerParams)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize device with the trigger params.  <a href="#8e6f200b4a92ff8e34c83010a2f0fc45"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize device with the trigger params.  <a href="#aa95f12e4219551d1b4a9da3f78d882a"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiavt_1_1_c_fire_grab_acquisition_comp.html#d049e5d41b1b8d32a5aec263c96879ca">InitializeImageRegion</a> (const <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;imageRegion)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize image region.  <a href="#d049e5d41b1b8d32a5aec263c96879ca"></a><br></td></tr>
@@ -114,7 +114,7 @@ Inheritance diagram for iavt::CFireGrabAcquisitionComp:</div>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 AVT based camera component implementing interfaces <code><a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiproc_1_1_i_bitmap_acquisition.html">iproc::IBitmapAcquisition</a></code> and <code><a class="el" href="classicam_1_1_i_exposure_constraints.html">icam::IExposureConstraints</a></code> for exposure control support. 
-<p>Definition at line <a class="el" href="_c_fire_grab_acquisition_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_fire_grab_acquisition_comp_8h_source.html">CFireGrabAcquisitionComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_fire_grab_acquisition_comp_8h_source.html#l00032">32</a> of file <a class="el" href="_c_fire_grab_acquisition_comp_8h_source.html">CFireGrabAcquisitionComp.h</a>.</p>
 <hr><h2>Member Typedef Documentation</h2>
 <a class="anchor" name="bb8c7c139e526a6ce74267834608ce91"></a><!-- doxytag: member="iavt::CFireGrabAcquisitionComp::BaseClass" ref="bb8c7c139e526a6ce74267834608ce91" args="" -->
 <div class="memitem">
@@ -131,7 +131,7 @@ AVT based camera component implementing interfaces <code><a class="elRef" doxyge
 
 <p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html#5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_fire_grab_acquisition_comp_8h_source.html#l00038">38</a> of file <a class="el" href="_c_fire_grab_acquisition_comp_8h_source.html">CFireGrabAcquisitionComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_fire_grab_acquisition_comp_8h_source.html#l00039">39</a> of file <a class="el" href="_c_fire_grab_acquisition_comp_8h_source.html">CFireGrabAcquisitionComp.h</a>.</p>
 
 </div>
 </div><p>
@@ -171,7 +171,7 @@ AVT based camera component implementing interfaces <code><a class="elRef" doxyge
 </table>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_fire_grab_acquisition_comp_8h_source.html#l00052">52</a> of file <a class="el" href="_c_fire_grab_acquisition_comp_8h_source.html">CFireGrabAcquisitionComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_fire_grab_acquisition_comp_8h_source.html#l00053">53</a> of file <a class="el" href="_c_fire_grab_acquisition_comp_8h_source.html">CFireGrabAcquisitionComp.h</a>.</p>
 
 </div>
 </div><p>
@@ -382,14 +382,14 @@ Initialize image region.
 
 </div>
 </div><p>
-<a class="anchor" name="8e6f200b4a92ff8e34c83010a2f0fc45"></a><!-- doxytag: member="iavt::CFireGrabAcquisitionComp::InitializeTriggerParams" ref="8e6f200b4a92ff8e34c83010a2f0fc45" args="(const icam::ITriggerParams &amp;triggerParams)" -->
+<a class="anchor" name="aa95f12e4219551d1b4a9da3f78d882a"></a><!-- doxytag: member="iavt::CFireGrabAcquisitionComp::InitializeTriggerParams" ref="aa95f12e4219551d1b4a9da3f78d882a" args="(const isig::ITriggerParams &amp;triggerParams)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void iavt::CFireGrabAcquisitionComp::InitializeTriggerParams           </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classicam_1_1_i_trigger_params.html">icam::ITriggerParams</a> &amp;&nbsp;</td>
+          <td class="paramtype">const <a class="el" href="classisig_1_1_i_trigger_params.html">isig::ITriggerParams</a> &amp;&nbsp;</td>
           <td class="paramname"> <em>triggerParams</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [protected]</code></td>
@@ -442,8 +442,8 @@ Initialize device with the trigger params.
 <p>
 Check if specified trigger mode is supported. 
 <p>
-Default mode should be always supported. Normal trigger modes are defined in <code><a class="el" href="classicam_1_1_i_trigger_params.html#2050ec7ed58ea37472246038ea65246c" title="Describe working mode of trigger signal.">icam::ITriggerParams::TriggerMode</a></code>. 
-<p>Implements <a class="el" href="classicam_1_1_i_trigger_constraints.html#49e9eeda7511f9fb71ab4cd27bb6e3e2">icam::ITriggerConstraints</a>.</p>
+Default mode should be always supported. Normal trigger modes are defined in <code><a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124" title="Describe working mode of trigger signal.">isig::ITriggerParams::TriggerMode</a></code>. 
+<p>Implements <a class="el" href="classisig_1_1_i_trigger_constraints.html#c3e65147f53a4110240add5d288bb668">isig::ITriggerConstraints</a>.</p>
 
 </div>
 </div><p>
@@ -466,7 +466,7 @@ Default mode should be always supported. Normal trigger modes are defined in <co
 Check if trigger enabling/disabling is supported. 
 <p>
 Please note, that for implementations using only triggered acuisition it should return also false. 
-<p>Implements <a class="el" href="classicam_1_1_i_trigger_constraints.html#19b639554259b9fa2e2b38d23b1e01dd">icam::ITriggerConstraints</a>.</p>
+<p>Implements <a class="el" href="classisig_1_1_i_trigger_constraints.html#ce80f33a9ef6acf2ecb5879a33684455">isig::ITriggerConstraints</a>.</p>
 
 </div>
 </div><p>

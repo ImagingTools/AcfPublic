@@ -27,7 +27,7 @@
   </div>
 </div>
 <div class="contents">
-<h1>icam::CAcquisitionConstraintsComp Class Reference</h1><!-- doxytag: class="icam::CAcquisitionConstraintsComp" --><!-- doxytag: inherits="icomp::CComponentBase,icam::ITriggerConstraints,icam::IExposureConstraints" -->Component for the static configuration of the acquisition constraints for a given camera device.  
+<h1>icam::CAcquisitionConstraintsComp Class Reference</h1><!-- doxytag: class="icam::CAcquisitionConstraintsComp" --><!-- doxytag: inherits="icomp::CComponentBase,isig::ITriggerConstraints,icam::IExposureConstraints" -->Component for the static configuration of the acquisition constraints for a given camera device.  
 <a href="#_details">More...</a>
 <p>
 <code>#include &lt;<a class="el" href="_c_acquisition_constraints_comp_8h_source.html">CAcquisitionConstraintsComp.h</a>&gt;</code>
@@ -39,7 +39,7 @@ Inheritance diagram for icam::CAcquisitionConstraintsComp:</div>
 <p><center><img src="classicam_1_1_c_acquisition_constraints_comp.png" usemap="#icam::CAcquisitionConstraintsComp_map" border="0" alt=""></center>
 <map name="icam::CAcquisitionConstraintsComp_map">
 <area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,112,209,136">
-<area href="classicam_1_1_i_trigger_constraints.html" alt="icam::ITriggerConstraints" shape="rect" coords="219,112,428,136">
+<area href="classisig_1_1_i_trigger_constraints.html" alt="isig::ITriggerConstraints" shape="rect" coords="219,112,428,136">
 <area href="classicam_1_1_i_exposure_constraints.html" alt="icam::IExposureConstraints" shape="rect" coords="438,112,647,136">
 <area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,56,209,80">
 <area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="219,56,428,80">
@@ -73,7 +73,7 @@ Inheritance diagram for icam::CAcquisitionConstraintsComp:</div>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Component for the static configuration of the acquisition constraints for a given camera device. 
-<p>Definition at line <a class="el" href="_c_acquisition_constraints_comp_8h_source.html#l00018">18</a> of file <a class="el" href="_c_acquisition_constraints_comp_8h_source.html">CAcquisitionConstraintsComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_acquisition_constraints_comp_8h_source.html#l00021">21</a> of file <a class="el" href="_c_acquisition_constraints_comp_8h_source.html">CAcquisitionConstraintsComp.h</a>.</p>
 <hr><h2>Member Typedef Documentation</h2>
 <a class="anchor" name="c645ca77336060e8319936bccf8faa42"></a><!-- doxytag: member="icam::CAcquisitionConstraintsComp::BaseClass" ref="c645ca77336060e8319936bccf8faa42" args="" -->
 <div class="memitem">
@@ -88,7 +88,7 @@ Component for the static configuration of the acquisition constraints for a give
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_acquisition_constraints_comp_8h_source.html#l00024">24</a> of file <a class="el" href="_c_acquisition_constraints_comp_8h_source.html">CAcquisitionConstraintsComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_acquisition_constraints_comp_8h_source.html#l00027">27</a> of file <a class="el" href="_c_acquisition_constraints_comp_8h_source.html">CAcquisitionConstraintsComp.h</a>.</p>
 
 </div>
 </div><p>
@@ -184,8 +184,8 @@ Get range of posible shutter time (exposure time) values.
 <p>
 Check if specified trigger mode is supported. 
 <p>
-Default mode should be always supported. Normal trigger modes are defined in <code><a class="el" href="classicam_1_1_i_trigger_params.html#2050ec7ed58ea37472246038ea65246c" title="Describe working mode of trigger signal.">icam::ITriggerParams::TriggerMode</a></code>. 
-<p>Implements <a class="el" href="classicam_1_1_i_trigger_constraints.html#49e9eeda7511f9fb71ab4cd27bb6e3e2">icam::ITriggerConstraints</a>.</p>
+Default mode should be always supported. Normal trigger modes are defined in <code><a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124" title="Describe working mode of trigger signal.">isig::ITriggerParams::TriggerMode</a></code>. 
+<p>Implements <a class="el" href="classisig_1_1_i_trigger_constraints.html#c3e65147f53a4110240add5d288bb668">isig::ITriggerConstraints</a>.</p>
 
 </div>
 </div><p>
@@ -208,7 +208,7 @@ Default mode should be always supported. Normal trigger modes are defined in <co
 Check if trigger enabling/disabling is supported. 
 <p>
 Please note, that for implementations using only triggered acuisition it should return also false. 
-<p>Implements <a class="el" href="classicam_1_1_i_trigger_constraints.html#19b639554259b9fa2e2b38d23b1e01dd">icam::ITriggerConstraints</a>.</p>
+<p>Implements <a class="el" href="classisig_1_1_i_trigger_constraints.html#ce80f33a9ef6acf2ecb5879a33684455">isig::ITriggerConstraints</a>.</p>
 
 </div>
 </div><p>

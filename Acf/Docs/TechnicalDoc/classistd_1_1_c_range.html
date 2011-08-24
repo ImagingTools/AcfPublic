@@ -79,6 +79,15 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#80d4452947e2001acbd1938e32271fed">GetLength</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get length of this range.  <a href="#80d4452947e2001acbd1938e32271fed"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classistd_1_1_c_range.html">CRange</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#2239f7d382a9b14ead345b583e705233">GetValidated</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get validated range, if it was invalid.  <a href="#2239f7d382a9b14ead345b583e705233"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#b821da1aa4d6265d81912cc84b14bebb">GetValidated</a> (<a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;result) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get validated range, if it was invalid.  <a href="#b821da1aa4d6265d81912cc84b14bebb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#c34b950752bb366d81defa66321bcb0d">Validate</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Force this range to be valid.  <a href="#c34b950752bb366d81defa66321bcb0d"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#bd0073d829d61b694dcd88e7101d28d9">Contains</a> (double value) const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code>, if value is in range between <code>top</code> and <code>bottom</code>.  <a href="#bd0073d829d61b694dcd88e7101d28d9"></a><br></td></tr>
@@ -143,6 +152,9 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static const <a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#bff8ecae727e6bc940f7e029c9a2bf65">GetInvalid</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return invalid range.  <a href="#bff8ecae727e6bc940f7e029c9a2bf65"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="classistd_1_1_c_range.html">CRange</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#7c6bbaec8c78bbe0266f624d9e0651f2">GetValid</a> (double value1, double value2)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return always valid range.  <a href="#7c6bbaec8c78bbe0266f624d9e0651f2"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Implementation of a abstract range defined by two values - minimum and maximum. 
@@ -243,9 +255,9 @@ Constructs a range object from two numbers.
 Returns <code>true</code>, if this range is inside of the <code>range</code>. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00258">258</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00283">283</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_c_range_8h_source.html#l00208">IsValid()</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_c_range_8h_source.html#l00233">IsValid()</a>.</p>
 
 </div>
 </div><p>
@@ -269,9 +281,9 @@ Returns <code>true</code>, if this range is inside of the <code>range</code>.
 Returns <code>true</code>, if value is in range between <code>top</code> and <code>bottom</code>. 
 <p>
 This range must be valid. 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00250">250</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00275">275</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_c_range_8h_source.html#l00208">IsValid()</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_c_range_8h_source.html#l00233">IsValid()</a>.</p>
 
 </div>
 </div><p>
@@ -322,9 +334,9 @@ Get value based on 'alpha' factor.
   </table>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00273">273</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00298">298</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
-<p>References <a class="el" href="_c_range_8h_source.html#l00244">GetLength()</a>, and <a class="el" href="_c_range_8h_source.html#l00220">GetMinValue()</a>.</p>
+<p>References <a class="el" href="_c_range_8h_source.html#l00269">GetLength()</a>, and <a class="el" href="_c_range_8h_source.html#l00245">GetMinValue()</a>.</p>
 
 </div>
 </div><p>
@@ -435,7 +447,7 @@ Get intersection with the second <code>range</code>.
 Return invalid range. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00299">299</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00324">324</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
 </div>
 </div><p>
@@ -458,11 +470,11 @@ Return invalid range.
 Get length of this range. 
 <p>
 Length is difference between top and bottom values. 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00244">244</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00269">269</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
-<p>References <a class="el" href="_c_range_8h_source.html#l00208">IsValid()</a>.</p>
+<p>References <a class="el" href="_c_range_8h_source.html#l00233">IsValid()</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_range_8h_source.html#l00273">GetAlphaFromValue()</a>, and <a class="el" href="_c_range_8h_source.html#l00267">GetValueFromAlpha()</a>.</p>
+<p>Referenced by <a class="el" href="_c_range_8h_source.html#l00298">GetAlphaFromValue()</a>, and <a class="el" href="_c_range_8h_source.html#l00292">GetValueFromAlpha()</a>.</p>
 
 </div>
 </div><p>
@@ -522,7 +534,7 @@ It is the same as <code>range.GetValueFromAlpha</code>(GetAlphaFromValue(value))
 Get the top value. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00232">232</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00257">257</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_rectangle_8h_source.html#l00159">i2d::CRectangle::GetBottom()</a>, and <a class="el" href="_c_rectangle_8h_source.html#l00153">i2d::CRectangle::GetRight()</a>.</p>
 
@@ -547,7 +559,7 @@ Get the top value.
 Get reference to the top value. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00238">238</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00263">263</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
 </div>
 </div><p>
@@ -570,9 +582,9 @@ Get reference to the top value.
 Get the bottom value. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00220">220</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00245">245</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_range_8h_source.html#l00273">GetAlphaFromValue()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00141">i2d::CRectangle::GetLeft()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00147">i2d::CRectangle::GetTop()</a>, and <a class="el" href="_c_range_8h_source.html#l00267">GetValueFromAlpha()</a>.</p>
+<p>Referenced by <a class="el" href="_c_range_8h_source.html#l00298">GetAlphaFromValue()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00141">i2d::CRectangle::GetLeft()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00147">i2d::CRectangle::GetTop()</a>, and <a class="el" href="_c_range_8h_source.html#l00292">GetValueFromAlpha()</a>.</p>
 
 </div>
 </div><p>
@@ -595,7 +607,7 @@ Get the bottom value.
 Get reference to the bottom value. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00226">226</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00251">251</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
 </div>
 </div><p>
@@ -640,7 +652,7 @@ Get nearest value belonging to range.
 Return null range. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00293">293</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00318">318</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
 </div>
 </div><p>
@@ -688,6 +700,80 @@ Get union with the second <code>range</code>.
 
 </div>
 </div><p>
+<a class="anchor" name="7c6bbaec8c78bbe0266f624d9e0651f2"></a><!-- doxytag: member="istd::CRange::GetValid" ref="7c6bbaec8c78bbe0266f624d9e0651f2" args="(double value1, double value2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classistd_1_1_c_range.html">CRange</a> istd::CRange::GetValid           </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>value1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>value2</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Return always valid range. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="b821da1aa4d6265d81912cc84b14bebb"></a><!-- doxytag: member="istd::CRange::GetValidated" ref="b821da1aa4d6265d81912cc84b14bebb" args="(CRange &amp;result) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void istd::CRange::GetValidated           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>result</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get validated range, if it was invalid. 
+<p>
+Range is invalid if set min value is bigger than set max value. It returns range with smaller range value as minimum and bigger one as maximum. 
+</div>
+</div><p>
+<a class="anchor" name="2239f7d382a9b14ead345b583e705233"></a><!-- doxytag: member="istd::CRange::GetValidated" ref="2239f7d382a9b14ead345b583e705233" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_c_range.html">CRange</a> istd::CRange::GetValidated           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get validated range, if it was invalid. 
+<p>
+Range is invalid if set min value is bigger than set max value. It returns range with smaller range value as minimum and bigger one as maximum. 
+</div>
+</div><p>
 <a class="anchor" name="76bac6b8d842122dba0c13870fb715cc"></a><!-- doxytag: member="istd::CRange::GetValueFromAlpha" ref="76bac6b8d842122dba0c13870fb715cc" args="(double alpha) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -713,9 +799,9 @@ Get value based on 'alpha' factor.
   </table>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00267">267</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00292">292</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
-<p>References <a class="el" href="_c_range_8h_source.html#l00244">GetLength()</a>, and <a class="el" href="_c_range_8h_source.html#l00220">GetMinValue()</a>.</p>
+<p>References <a class="el" href="_c_range_8h_source.html#l00269">GetLength()</a>, and <a class="el" href="_c_range_8h_source.html#l00245">GetMinValue()</a>.</p>
 
 </div>
 </div><p>
@@ -760,7 +846,7 @@ Set this range to be intersection of two ranges.
 Return <code>true</code> if the bottom value is equal to the top value. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00214">214</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00239">239</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
 </div>
 </div><p>
@@ -805,9 +891,9 @@ Some range is intersected by another, if intercestion of this two ranges is not 
 Return <code>true</code> if the bottom value is smaller or equal then the top value. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00208">208</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00233">233</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_range_8h_source.html#l00250">Contains()</a>, and <a class="el" href="_c_range_8h_source.html#l00244">GetLength()</a>.</p>
+<p>Referenced by <a class="el" href="_c_range_8h_source.html#l00275">Contains()</a>, and <a class="el" href="_c_range_8h_source.html#l00269">GetLength()</a>.</p>
 
 </div>
 </div><p>
@@ -829,7 +915,7 @@ Return <code>true</code> if the bottom value is smaller or equal then the top va
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00285">285</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00310">310</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
 </div>
 </div><p>
@@ -871,7 +957,7 @@ Return <code>true</code> if the bottom value is smaller or equal then the top va
 
 <p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00279">279</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00304">304</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
 </div>
 </div><p>
@@ -982,6 +1068,27 @@ Set this range to be union of two ranges.
 Set this range to be union of two ranges. 
 <p>
 
+</div>
+</div><p>
+<a class="anchor" name="c34b950752bb366d81defa66321bcb0d"></a><!-- doxytag: member="istd::CRange::Validate" ref="c34b950752bb366d81defa66321bcb0d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void istd::CRange::Validate           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Force this range to be valid. 
+<p>
+Range is invalid if set min value is bigger than set max value. It set smaller range value as minimum and bigger one as maximum. 
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following file:<ul>

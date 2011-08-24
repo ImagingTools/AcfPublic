@@ -5,9 +5,9 @@
     <path>E:/Work/Projects/Development/Iacf/Include/iavt/</path>
     <filename>_c_fire_grab_acquisition_comp_8h</filename>
     <includes id="_i_exposure_constraints_8h" name="IExposureConstraints.h" local="yes" imported="no">icam/IExposureConstraints.h</includes>
-    <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">icam/ITriggerConstraints.h</includes>
     <includes id="_i_exposure_params_8h" name="IExposureParams.h" local="yes" imported="no">icam/IExposureParams.h</includes>
-    <includes id="_i_trigger_params_8h" name="ITriggerParams.h" local="yes" imported="no">icam/ITriggerParams.h</includes>
+    <includes id="_i_trigger_params_8h" name="ITriggerParams.h" local="yes" imported="no">isig/ITriggerParams.h</includes>
+    <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">isig/ITriggerConstraints.h</includes>
     <class kind="class">iavt::CFireGrabAcquisitionComp</class>
     <namespace>iavt</namespace>
   </compound>
@@ -22,8 +22,8 @@
     <name>CAcquisitionConstraintsComp.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/icam/</path>
     <filename>_c_acquisition_constraints_comp_8h</filename>
-    <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">icam/ITriggerConstraints.h</includes>
     <includes id="_i_exposure_constraints_8h" name="IExposureConstraints.h" local="yes" imported="no">icam/IExposureConstraints.h</includes>
+    <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">isig/ITriggerConstraints.h</includes>
     <class kind="class">icam::CAcquisitionConstraintsComp</class>
     <namespace>icam</namespace>
   </compound>
@@ -53,15 +53,6 @@
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
-    <name>CTriggerParamsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icam/</path>
-    <filename>_c_trigger_params_comp_8h</filename>
-    <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">icam/ITriggerConstraints.h</includes>
-    <includes id="_i_trigger_params_8h" name="ITriggerParams.h" local="yes" imported="no">icam/ITriggerParams.h</includes>
-    <class kind="class">icam::CTriggerParamsComp</class>
-    <namespace>icam</namespace>
-  </compound>
-  <compound kind="file">
     <name>icam.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/icam/</path>
     <filename>icam_8h</filename>
@@ -81,21 +72,6 @@
     <filename>_i_exposure_params_8h</filename>
     <includes id="icam_8h" name="icam.h" local="yes" imported="no">icam/icam.h</includes>
     <class kind="class">icam::IExposureParams</class>
-    <namespace>icam</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ITriggerConstraints.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icam/</path>
-    <filename>_i_trigger_constraints_8h</filename>
-    <class kind="class">icam::ITriggerConstraints</class>
-    <namespace>icam</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ITriggerParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icam/</path>
-    <filename>_i_trigger_params_8h</filename>
-    <includes id="icam_8h" name="icam.h" local="yes" imported="no">icam/icam.h</includes>
-    <class kind="class">icam::ITriggerParams</class>
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
@@ -448,15 +424,6 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
-    <name>CMultidimensionalFilterParamsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
-    <filename>_c_multidimensional_filter_params_comp_8h</filename>
-    <includes id="_i_multidimensional_filter_params_8h" name="IMultidimensionalFilterParams.h" local="yes" imported="no">iipr/IMultidimensionalFilterParams.h</includes>
-    <includes id="_i_multidimensional_filter_constraints_8h" name="IMultidimensionalFilterConstraints.h" local="yes" imported="no">iipr/IMultidimensionalFilterConstraints.h</includes>
-    <class kind="class">iipr::CMultidimensionalFilterParamsComp</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
     <name>CPositionFromImageSupplierComp.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_c_position_from_image_supplier_comp_8h</filename>
@@ -483,7 +450,6 @@
     <name>CRectDerivativeProcessor.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_c_rect_derivative_processor_8h</filename>
-    <includes id="_i_multidimensional_filter_constraints_8h" name="IMultidimensionalFilterConstraints.h" local="yes" imported="no">iipr/IMultidimensionalFilterConstraints.h</includes>
     <class kind="class">iipr::CRectDerivativeProcessor</class>
     <namespace>iipr</namespace>
   </compound>
@@ -499,8 +465,6 @@
     <name>CRectImageSmoothProcessorComp.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_c_rect_image_smooth_processor_comp_8h</filename>
-    <includes id="_i_multidimensional_filter_params_8h" name="IMultidimensionalFilterParams.h" local="yes" imported="no">iipr/IMultidimensionalFilterParams.h</includes>
-    <includes id="_i_multidimensional_filter_constraints_8h" name="IMultidimensionalFilterConstraints.h" local="yes" imported="no">iipr/IMultidimensionalFilterConstraints.h</includes>
     <includes id="_t_image_param_processor_comp_base_8h" name="TImageParamProcessorCompBase.h" local="yes" imported="no">iipr/TImageParamProcessorCompBase.h</includes>
     <class kind="class">iipr::CRectImageSmoothProcessorComp</class>
     <namespace>iipr</namespace>
@@ -681,21 +645,6 @@
     <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
     <filename>_i_multi_bitmap_supplier_8h</filename>
     <class kind="class">iipr::IMultiBitmapSupplier</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IMultidimensionalFilterConstraints.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
-    <filename>_i_multidimensional_filter_constraints_8h</filename>
-    <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
-    <class kind="class">iipr::IMultidimensionalFilterConstraints</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IMultidimensionalFilterParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
-    <filename>_i_multidimensional_filter_params_8h</filename>
-    <class kind="class">iipr::IMultidimensionalFilterParams</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -1046,9 +995,9 @@
     <path>E:/Work/Projects/Development/Iacf/Include/iocv/</path>
     <filename>_c_ocv_acquisition_comp_8h</filename>
     <includes id="_i_exposure_constraints_8h" name="IExposureConstraints.h" local="yes" imported="no">icam/IExposureConstraints.h</includes>
-    <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">icam/ITriggerConstraints.h</includes>
     <includes id="_i_exposure_params_8h" name="IExposureParams.h" local="yes" imported="no">icam/IExposureParams.h</includes>
-    <includes id="_i_trigger_params_8h" name="ITriggerParams.h" local="yes" imported="no">icam/ITriggerParams.h</includes>
+    <includes id="_i_trigger_params_8h" name="ITriggerParams.h" local="yes" imported="no">isig/ITriggerParams.h</includes>
+    <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">isig/ITriggerConstraints.h</includes>
     <class kind="class">iocv::COcvAcquisitionComp</class>
     <namespace>iocv</namespace>
   </compound>
@@ -1276,14 +1225,6 @@
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
-    <name>CMultidimensionalFilterParamsGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtipr/</path>
-    <filename>_c_multidimensional_filter_params_gui_comp_8h</filename>
-    <includes id="_i_multidimensional_filter_params_8h" name="IMultidimensionalFilterParams.h" local="yes" imported="no">iipr/IMultidimensionalFilterParams.h</includes>
-    <class kind="class">iqtipr::CMultidimensionalFilterParamsGuiComp</class>
-    <namespace>iqtipr</namespace>
-  </compound>
-  <compound kind="file">
     <name>CProjectionShape.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/iqtipr/</path>
     <filename>_c_projection_shape_8h</filename>
@@ -1400,9 +1341,9 @@
     <path>E:/Work/Projects/Development/Iacf/Include/isgige/</path>
     <filename>_c_genicam_camera_comp_8h</filename>
     <includes id="_i_exposure_constraints_8h" name="IExposureConstraints.h" local="yes" imported="no">icam/IExposureConstraints.h</includes>
-    <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">icam/ITriggerConstraints.h</includes>
     <includes id="_i_exposure_params_8h" name="IExposureParams.h" local="yes" imported="no">icam/IExposureParams.h</includes>
-    <includes id="_i_trigger_params_8h" name="ITriggerParams.h" local="yes" imported="no">icam/ITriggerParams.h</includes>
+    <includes id="_i_trigger_params_8h" name="ITriggerParams.h" local="yes" imported="no">isig/ITriggerParams.h</includes>
+    <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">isig/ITriggerConstraints.h</includes>
     <includes id="_c_genicam_camera_singleton_8h" name="CGenicamCameraSingleton.h" local="yes" imported="no">isgige/CGenicamCameraSingleton.h</includes>
     <class kind="class">isgige::CGenicamCameraComp</class>
     <class kind="struct">isgige::CGenicamCameraComp::DeviceInfo</class>
@@ -1432,6 +1373,15 @@
     <namespace>isig</namespace>
   </compound>
   <compound kind="file">
+    <name>CTriggerParamsComp.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <filename>_c_trigger_params_comp_8h</filename>
+    <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">isig/ITriggerConstraints.h</includes>
+    <includes id="_i_trigger_params_8h" name="ITriggerParams.h" local="yes" imported="no">isig/ITriggerParams.h</includes>
+    <class kind="class">isig::CTriggerParamsComp</class>
+    <namespace>isig</namespace>
+  </compound>
+  <compound kind="file">
     <name>ISamplingConstraints.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
     <filename>_i_sampling_constraints_8h</filename>
@@ -1451,6 +1401,21 @@
     <name>isig.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
     <filename>isig_8h</filename>
+    <namespace>isig</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ITriggerConstraints.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <filename>_i_trigger_constraints_8h</filename>
+    <class kind="class">isig::ITriggerConstraints</class>
+    <namespace>isig</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ITriggerParams.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <filename>_i_trigger_params_8h</filename>
+    <includes id="isig_8h" name="isig.h" local="yes" imported="no">isig/isig.h</includes>
+    <class kind="class">isig::ITriggerParams</class>
     <namespace>isig</namespace>
   </compound>
   <compound kind="file">
@@ -1541,7 +1506,7 @@
     <filename>classiavt_1_1_c_fire_grab_acquisition_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">icam::IExposureConstraints</base>
-    <base virtualness="virtual">icam::ITriggerConstraints</base>
+    <base virtualness="virtual">isig::ITriggerConstraints</base>
     <base virtualness="virtual">TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -1684,8 +1649,8 @@
       <type>void</type>
       <name>InitializeTriggerParams</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>8e6f200b4a92ff8e34c83010a2f0fc45</anchor>
-      <arglist>(const icam::ITriggerParams &amp;triggerParams)</arglist>
+      <anchor>aa95f12e4219551d1b4a9da3f78d882a</anchor>
+      <arglist>(const isig::ITriggerParams &amp;triggerParams)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -1720,17 +1685,14 @@
     <class kind="class">icam::CExposureParamsComp</class>
     <class kind="class">icam::CMemoryAcquisitionComp</class>
     <class kind="class">icam::CSnapBitmapSupplierComp</class>
-    <class kind="class">icam::CTriggerParamsComp</class>
     <class kind="class">icam::IExposureConstraints</class>
     <class kind="class">icam::IExposureParams</class>
-    <class kind="class">icam::ITriggerConstraints</class>
-    <class kind="class">icam::ITriggerParams</class>
   </compound>
   <compound kind="class">
     <name>icam::CAcquisitionConstraintsComp</name>
     <filename>classicam_1_1_c_acquisition_constraints_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">icam::ITriggerConstraints</base>
+    <base virtualness="virtual">isig::ITriggerConstraints</base>
     <base virtualness="virtual">icam::IExposureConstraints</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -1927,75 +1889,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>icam::CTriggerParamsComp</name>
-    <filename>classicam_1_1_c_trigger_params_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">icam::ITriggerParams</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classicam_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>b1459ddaa6f428cb6bbe57e24a2b5868</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CTriggerParamsComp</name>
-      <anchorfile>classicam_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>390754bece2e1d97ef6f6e2f03655158</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ITriggerConstraints *</type>
-      <name>GetConstraints</name>
-      <anchorfile>classicam_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>dadabb7ee3d74a218a2bae0ce154fef3</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsTriggerEnabled</name>
-      <anchorfile>classicam_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>77931b1f986b0672932f402572530897</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetTriggerEnabled</name>
-      <anchorfile>classicam_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>5ce25b92819489e3b8328f30741c22d9</anchor>
-      <arglist>(bool isEnabled)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetTriggerMode</name>
-      <anchorfile>classicam_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>53145a49a7508d1f67e0d71b6c97cd5e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetTriggerMode</name>
-      <anchorfile>classicam_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>6b07f2b02ed17166a1525abeb25fed60</anchor>
-      <arglist>(int triggerMode)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classicam_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>46a116816d457b5efb1631b67add3e71</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classicam_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>52a962a74c4baa125004ed526c542edb</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>icam::IExposureConstraints</name>
     <filename>classicam_1_1_i_exposure_constraints.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -2073,101 +1966,6 @@
       <anchorfile>classicam_1_1_i_exposure_params.html</anchorfile>
       <anchor>5b4f1e2f64bb83c43e5db5f4fbc5766a</anchor>
       <arglist>(double time)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icam::ITriggerConstraints</name>
-    <filename>classicam_1_1_i_trigger_constraints.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsTriggerSupported</name>
-      <anchorfile>classicam_1_1_i_trigger_constraints.html</anchorfile>
-      <anchor>19b639554259b9fa2e2b38d23b1e01dd</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsTriggerModeSupported</name>
-      <anchorfile>classicam_1_1_i_trigger_constraints.html</anchorfile>
-      <anchor>49e9eeda7511f9fb71ab4cd27bb6e3e2</anchor>
-      <arglist>(int triggerMode) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icam::ITriggerParams</name>
-    <filename>classicam_1_1_i_trigger_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>TriggerMode</name>
-      <anchorfile>classicam_1_1_i_trigger_params.html</anchorfile>
-      <anchor>2050ec7ed58ea37472246038ea65246c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TM_DEFAULT</name>
-      <anchorfile>classicam_1_1_i_trigger_params.html</anchorfile>
-      <anchor>2050ec7ed58ea37472246038ea65246cb99ebc19ec8f5b071f4bd5fce7c1b940</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TM_RISING_EDGE</name>
-      <anchorfile>classicam_1_1_i_trigger_params.html</anchorfile>
-      <anchor>2050ec7ed58ea37472246038ea65246c963251bae83851a3f8f54b73b2988bec</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TM_FALLING_EDGE</name>
-      <anchorfile>classicam_1_1_i_trigger_params.html</anchorfile>
-      <anchor>2050ec7ed58ea37472246038ea65246cd0e920d4d975cc71a83151f94d7f1cfd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TM_POSITIVE_LEVEL</name>
-      <anchorfile>classicam_1_1_i_trigger_params.html</anchorfile>
-      <anchor>2050ec7ed58ea37472246038ea65246c84ecf4c29052643805753246c27d5ed2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TM_NEGATIVE_LEVEL</name>
-      <anchorfile>classicam_1_1_i_trigger_params.html</anchorfile>
-      <anchor>2050ec7ed58ea37472246038ea65246c9378cbee5e8bb99421c035acf6172a34</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const ITriggerConstraints *</type>
-      <name>GetConstraints</name>
-      <anchorfile>classicam_1_1_i_trigger_params.html</anchorfile>
-      <anchor>623bfc466e1906df527f7c7e850488f7</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsTriggerEnabled</name>
-      <anchorfile>classicam_1_1_i_trigger_params.html</anchorfile>
-      <anchor>1f56279f635b4636b1682e0457d89097</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetTriggerEnabled</name>
-      <anchorfile>classicam_1_1_i_trigger_params.html</anchorfile>
-      <anchor>63efa04de5de128e673bf69aad56e6b9</anchor>
-      <arglist>(bool isEnabled)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetTriggerMode</name>
-      <anchorfile>classicam_1_1_i_trigger_params.html</anchorfile>
-      <anchor>9ba97ee886374d7a7318701a673b63ab</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetTriggerMode</name>
-      <anchorfile>classicam_1_1_i_trigger_params.html</anchorfile>
-      <anchor>4c6f93e46181b2d53dc0bac6ecd1bbc8</anchor>
-      <arglist>(int triggerMode)=0</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -3281,7 +3079,6 @@
     <class kind="class">iipr::CImageProcessorCompBase</class>
     <class kind="class">iipr::CLineProjectionProcessorComp</class>
     <class kind="class">iipr::CLineProjectionSupplierComp</class>
-    <class kind="class">iipr::CMultidimensionalFilterParamsComp</class>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <class kind="class">iipr::CProcessedAcquisitionComp</class>
     <class kind="class">iipr::CProcessedBitmapSupplierComp</class>
@@ -3310,8 +3107,6 @@
     <class kind="class">iipr::ILineProjectionProcessor</class>
     <class kind="class">iipr::ILineProjectionSupplier</class>
     <class kind="class">iipr::IMultiBitmapSupplier</class>
-    <class kind="class">iipr::IMultidimensionalFilterConstraints</class>
-    <class kind="class">iipr::IMultidimensionalFilterParams</class>
     <class kind="class">iipr::IProjectionConstraints</class>
     <class kind="class">iipr::IProjectionParams</class>
     <class kind="class">iipr::IRingPatternGeneratorParams</class>
@@ -4265,119 +4060,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iipr::CMultidimensionalFilterParamsComp</name>
-    <filename>classiipr_1_1_c_multidimensional_filter_params_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iipr::IMultidimensionalFilterParams</base>
-    <base protection="protected" virtualness="virtual">iipr::IMultidimensionalFilterConstraints</base>
-    <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>913e5f8410608752ce6d8077e7062446</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CMultidimensionalFilterParamsComp</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>ee4afa7bd1d832370c0d5f5d46b04d70</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const IMultidimensionalFilterConstraints *</type>
-      <name>GetConstraints</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>1a4f1510b4ea25459f172cce78db0242</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual imath::CVarVector</type>
-      <name>GetFilterLengths</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>ce6bf4408c42631edd8dfb68e13ffee2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetFilterLengths</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>b124cb8b5819670ed67c0440b17450bd</anchor>
-      <arglist>(const imath::CVarVector &amp;lengths)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetFilterDimensionsCount</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>442adb0607843aca848090ca530c65e3</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetFilterDescription</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>dc0fed85b1552b2900e0aed95c7de3b4</anchor>
-      <arglist>(int dimension) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const imeas::IUnitInfo &amp;</type>
-      <name>GetFilterUnitInfo</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>d786e87c03e0d2964dfa6e8acb42a011</anchor>
-      <arglist>(int dimension) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetUnitType</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>f3403b23d375d2364496546e4460fc9c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetUnitName</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>a429ced0a0fad27f1dc0dec0c8700e02</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetDisplayMultiplicationFactor</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>fb09272437dd5ca80dcc5c5b57903cf4</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CRange</type>
-      <name>GetValueRange</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>e1c371bda6703ae58f66cd6eb596d9df</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IDoubleManip &amp;</type>
-      <name>GetValueManip</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>bbd69e3dda806f3ca60571ec68077aea</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>54d61f750d10da193636d60ce02d39eb</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiipr_1_1_c_multidimensional_filter_params_comp.html</anchorfile>
-      <anchor>0f24b6fa0a62c459671365822f547d82</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iipr::CPositionFromImageSupplierComp</name>
     <filename>classiipr_1_1_c_position_from_image_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; iproc::IValueSupplier, imath::CVarVector &gt;</base>
@@ -4494,7 +4176,7 @@
     <name>iipr::CRectDerivativeProcessor</name>
     <filename>classiipr_1_1_c_rect_derivative_processor.html</filename>
     <base>TSyncProcessorWrap&lt; IProcessor &gt;</base>
-    <base virtualness="virtual">iipr::IMultidimensionalFilterConstraints</base>
+    <base virtualness="virtual">imeas::INumericConstraints</base>
     <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -4611,8 +4293,8 @@
   <compound kind="class">
     <name>iipr::CRectImageSmoothProcessorComp</name>
     <filename>classiipr_1_1_c_rect_image_smooth_processor_comp.html</filename>
-    <base>TImageParamProcessorCompBase&lt; IMultidimensionalFilterParams &gt;</base>
-    <base virtualness="virtual">iipr::IMultidimensionalFilterConstraints</base>
+    <base>TImageParamProcessorCompBase&lt; imeas::INumericParams &gt;</base>
+    <base virtualness="virtual">imeas::INumericConstraints</base>
     <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
     <member kind="enumeration">
       <name>UnitMode</name>
@@ -4657,10 +4339,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iipr::TImageParamProcessorCompBase&lt; IMultidimensionalFilterParams &gt;</type>
+      <type>iipr::TImageParamProcessorCompBase&lt; imeas::INumericParams &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>ce8584dae970b8824e4dd1fc9861d980</anchor>
+      <anchor>0b9ebbb88dc6293fe9140ad741c751ae</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4688,8 +4370,8 @@
       <type>virtual bool</type>
       <name>ParamProcessImage</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>28ee709fcc512f2899b7240f42f1266d</anchor>
-      <arglist>(const IMultidimensionalFilterParams *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+      <anchor>0bfb14f5413c121c1371e5c12e77d74a</anchor>
+      <arglist>(const imeas::INumericParams *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
@@ -5548,58 +5230,6 @@
       <anchorfile>classiipr_1_1_i_multi_bitmap_supplier.html</anchorfile>
       <anchor>990ac38bf2b354238a8e9233284360f8</anchor>
       <arglist>(int bitmapIndex) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::IMultidimensionalFilterConstraints</name>
-    <filename>classiipr_1_1_i_multidimensional_filter_constraints.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetFilterDimensionsCount</name>
-      <anchorfile>classiipr_1_1_i_multidimensional_filter_constraints.html</anchorfile>
-      <anchor>4302a6c9f61a4241e0eb8ae7f2134190</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
-      <name>GetFilterDescription</name>
-      <anchorfile>classiipr_1_1_i_multidimensional_filter_constraints.html</anchorfile>
-      <anchor>c3d30c94a1053eec7bc30e11793a94ea</anchor>
-      <arglist>(int dimension) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const imeas::IUnitInfo &amp;</type>
-      <name>GetFilterUnitInfo</name>
-      <anchorfile>classiipr_1_1_i_multidimensional_filter_constraints.html</anchorfile>
-      <anchor>59fe88a4a475fdfa63748fdc134441f8</anchor>
-      <arglist>(int dimension) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::IMultidimensionalFilterParams</name>
-    <filename>classiipr_1_1_i_multidimensional_filter_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual const IMultidimensionalFilterConstraints *</type>
-      <name>GetConstraints</name>
-      <anchorfile>classiipr_1_1_i_multidimensional_filter_params.html</anchorfile>
-      <anchor>3de74c778ebc91fd31c190818378867c</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual imath::CVarVector</type>
-      <name>GetFilterLengths</name>
-      <anchorfile>classiipr_1_1_i_multidimensional_filter_params.html</anchorfile>
-      <anchor>a5649d847f3461f09b88bf369665b4aa</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>SetFilterLengths</name>
-      <anchorfile>classiipr_1_1_i_multidimensional_filter_params.html</anchorfile>
-      <anchor>7688df7bfcb5bac965ce9ba05a434ad4</anchor>
-      <arglist>(const imath::CVarVector &amp;lengths)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9163,7 +8793,7 @@
     <name>iocv::COcvAcquisitionComp</name>
     <filename>classiocv_1_1_c_ocv_acquisition_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">icam::ITriggerConstraints</base>
+    <base virtualness="virtual">isig::ITriggerConstraints</base>
     <base virtualness="virtual">TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -11013,7 +10643,6 @@
     <class kind="class">iqtipr::CCaliperParamsGuiComp</class>
     <class kind="class">iqtipr::CCircleFinderParamsGuiComp</class>
     <class kind="class">iqtipr::CLineProjectionSupplierGuiComp</class>
-    <class kind="class">iqtipr::CMultidimensionalFilterParamsGuiComp</class>
     <class kind="class">iqtipr::CProjectionShape</class>
     <class kind="class">iqtipr::CSearchGuiComp</class>
     <class kind="class">iqtipr::CSearchParamsGuiComp</class>
@@ -11201,67 +10830,6 @@
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
       <anchor>81b79cf0034b245d650cf65ec0a1342b</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtipr::CMultidimensionalFilterParamsGuiComp</name>
-    <filename>classiqtipr_1_1_c_multidimensional_filter_params_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CMultidimensionalFilterParamsGuiComp, iipr::IMultidimensionalFilterParams &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CMultidimensionalFilterParamsGuiComp, iipr::IMultidimensionalFilterParams &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtipr_1_1_c_multidimensional_filter_params_gui_comp.html</anchorfile>
-      <anchor>1e80d7661fc9ae16f73995a46b42c9d1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>I_END_COMPONENT</type>
-      <name>CMultidimensionalFilterParamsGuiComp</name>
-      <anchorfile>classiqtipr_1_1_c_multidimensional_filter_params_gui_comp.html</anchorfile>
-      <anchor>40da44cb2b307cca6eb8ff3a367ffd9f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtipr_1_1_c_multidimensional_filter_params_gui_comp.html</anchorfile>
-      <anchor>cfd5c1cb55eae75331c12cfc293c6099</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_FilterWidthSlider_valueChanged</name>
-      <anchorfile>classiqtipr_1_1_c_multidimensional_filter_params_gui_comp.html</anchorfile>
-      <anchor>1b6347fc362ce60a9659256c6b5bc67c</anchor>
-      <arglist>(int value)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_FilterHeightSlider_valueChanged</name>
-      <anchorfile>classiqtipr_1_1_c_multidimensional_filter_params_gui_comp.html</anchorfile>
-      <anchor>14cd694a9db0f6b977e24de96d6c96d7</anchor>
-      <arglist>(int value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateLabel</name>
-      <anchorfile>classiqtipr_1_1_c_multidimensional_filter_params_gui_comp.html</anchorfile>
-      <anchor>8e2b915edc4f70bc6b427432f2761294</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtipr_1_1_c_multidimensional_filter_params_gui_comp.html</anchorfile>
-      <anchor>d3366cad3a5a1206c2b3e5949587c6f1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtipr_1_1_c_multidimensional_filter_params_gui_comp.html</anchorfile>
-      <anchor>4379a9e6b2d4cef72a59d544d381015c</anchor>
-      <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11927,7 +11495,7 @@
     <base>QObject</base>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">icam::IExposureConstraints</base>
-    <base virtualness="virtual">icam::ITriggerConstraints</base>
+    <base virtualness="virtual">isig::ITriggerConstraints</base>
     <base virtualness="virtual">iprm::ISelectionConstraints</base>
     <base virtualness="virtual">TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</base>
     <class kind="struct">isgige::CGenicamCameraComp::DeviceInfo</class>
@@ -12253,8 +11821,11 @@
     <name>isig</name>
     <filename>namespaceisig.html</filename>
     <class kind="class">isig::CSamplingParamsComp</class>
+    <class kind="class">isig::CTriggerParamsComp</class>
     <class kind="class">isig::ISamplingConstraints</class>
     <class kind="class">isig::ISamplingParams</class>
+    <class kind="class">isig::ITriggerConstraints</class>
+    <class kind="class">isig::ITriggerParams</class>
   </compound>
   <compound kind="class">
     <name>isig::CSamplingParamsComp</name>
@@ -12322,6 +11893,75 @@
       <name>OnComponentCreated</name>
       <anchorfile>classisig_1_1_c_sampling_params_comp.html</anchorfile>
       <anchor>7b69fd98c04f4a29edd36dbabbcce649</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>isig::CTriggerParamsComp</name>
+    <filename>classisig_1_1_c_trigger_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">isig::ITriggerParams</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>d16135821778b4f3a13bad5309635a42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CTriggerParamsComp</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>59a3773c1df8b113b1aadeb86c8ea1e5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ITriggerConstraints *</type>
+      <name>GetConstraints</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>070b9182887551cfaa80fe62f5002092</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsTriggerEnabled</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>860ad542d4c107fd0f6b76ad0c6f9475</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetTriggerEnabled</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>a5d876823c7a70e3084832988e05e632</anchor>
+      <arglist>(bool isEnabled)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTriggerMode</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>1ff71af657ff8b284c5d76979f14deee</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetTriggerMode</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>670d41fc9ce3033bba4475114b27bb30</anchor>
+      <arglist>(int triggerMode)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>c2ac5146f3ccba17864e9a53d4e00852</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>0d20fcd9935ffc329ddf54541baa8c6b</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -12426,6 +12066,101 @@
       <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
       <anchor>7986473439f5e287204fab691b90901a</anchor>
       <arglist>(int mode)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>isig::ITriggerConstraints</name>
+    <filename>classisig_1_1_i_trigger_constraints.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsTriggerSupported</name>
+      <anchorfile>classisig_1_1_i_trigger_constraints.html</anchorfile>
+      <anchor>ce80f33a9ef6acf2ecb5879a33684455</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsTriggerModeSupported</name>
+      <anchorfile>classisig_1_1_i_trigger_constraints.html</anchorfile>
+      <anchor>c3e65147f53a4110240add5d288bb668</anchor>
+      <arglist>(int triggerMode) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>isig::ITriggerParams</name>
+    <filename>classisig_1_1_i_trigger_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="enumeration">
+      <name>TriggerMode</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>283940d30e3c2ac921ff3d7976ddb124</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TM_DEFAULT</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>283940d30e3c2ac921ff3d7976ddb124d8110b6ee0e4686e9f9210d9bdfc2494</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TM_RISING_EDGE</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>283940d30e3c2ac921ff3d7976ddb1242f3d73f8b6544a6294b5a2536e89de0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TM_FALLING_EDGE</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>283940d30e3c2ac921ff3d7976ddb124058e033dc8b13ea678ec231784dae8d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TM_POSITIVE_LEVEL</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>283940d30e3c2ac921ff3d7976ddb12456371f2edfe1d8d0ea2d968fac8c6ad5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TM_NEGATIVE_LEVEL</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>283940d30e3c2ac921ff3d7976ddb1249588d9376705b9578c1a434ac19baff1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const ITriggerConstraints *</type>
+      <name>GetConstraints</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>bf606e04a25c63c49aed85ffd387cd9f</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsTriggerEnabled</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>13abf0c3b66bdc053dde59e237cb467b</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetTriggerEnabled</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>7a0fde6ede380cd287f178dbd7dc1715</anchor>
+      <arglist>(bool isEnabled)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetTriggerMode</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>dda9d7ea9c4d729be3b6581eee07fc54</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetTriggerMode</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>66ebe1c5c3511d7fbe95d5e8124d3887</anchor>
+      <arglist>(int triggerMode)=0</arglist>
     </member>
   </compound>
   <compound kind="namespace">

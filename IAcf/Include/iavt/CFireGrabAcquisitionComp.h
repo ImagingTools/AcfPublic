@@ -28,19 +28,20 @@
 #include <basetype.h>
 #include <fgcamera.h>
 
-#include "ibase/TLoggerCompWrap.h"
-
+// ACF includes
 #include "i2d/CRectangle.h"
-
-#include "iproc/TSyncProcessorWrap.h"
-
-#include "iproc/IBitmapAcquisition.h"
-#include "icam/IExposureConstraints.h"
-#include "icam/ITriggerConstraints.h"
-#include "icam/IExposureParams.h"
-#include "icam/ITriggerParams.h"
-
 #include "icomp/CComponentBase.h"
+#include "ibase/TLoggerCompWrap.h"
+#include "iproc/TSyncProcessorWrap.h"
+#include "iproc/IBitmapAcquisition.h"
+
+
+// IACF includes
+#include "icam/IExposureConstraints.h"
+#include "icam/IExposureParams.h"
+
+#include "isig/ITriggerParams.h"
+#include "isig/ITriggerConstraints.h"
 
 
 namespace iavt
@@ -53,7 +54,7 @@ namespace iavt
 class CFireGrabAcquisitionComp:
 			public ibase::CLoggerComponentBase,
 			virtual public icam::IExposureConstraints,
-			virtual public icam::ITriggerConstraints,
+			virtual public isig::ITriggerConstraints,
 			virtual public iproc::TSyncProcessorWrap<iproc::IBitmapAcquisition>
 {
 public:
@@ -62,7 +63,7 @@ public:
 	I_BEGIN_COMPONENT(CFireGrabAcquisitionComp);
 		I_REGISTER_INTERFACE(iproc::IBitmapAcquisition);
 		I_REGISTER_INTERFACE(icam::IExposureConstraints);
-		I_REGISTER_INTERFACE(icam::ITriggerConstraints);
+		I_REGISTER_INTERFACE(isig::ITriggerConstraints);
 		I_ASSIGN(m_defaultExposureParamsCompPtr, "DefaultExposureParams", "Default exposure parameters will be used if no parameters are found", false, "DefaultExposureParams");
 		I_ASSIGN(m_exposureParamsIdAttrPtr, "ExposureParamsId", "Id used to get exposure parameters from the parameter set", false, "ExposureParams");
 		I_ASSIGN(m_triggerParamsCompPtr, "TriggerParams", "Trigger parameters that will be used", false, "TriggerParams");
@@ -103,7 +104,7 @@ public:
 	virtual istd::CRange GetDelayTimeRange() const;
 	virtual istd::CRange GetEenDelayRange() const;
 
-	// reimplemented (icam::ITriggerConstraints)
+	// reimplemented (isig::ITriggerConstraints)
 	virtual bool IsTriggerSupported() const;
 	virtual bool IsTriggerModeSupported(int triggerMode) const;
 
@@ -116,7 +117,7 @@ protected:
 	/**
 		Initialize device with the trigger params.
 	*/
-	void InitializeTriggerParams(const icam::ITriggerParams& triggerParams);
+	void InitializeTriggerParams(const isig::ITriggerParams& triggerParams);
 
 	/**
 		Initialize image region.
@@ -129,7 +130,7 @@ protected:
 
 private:
 	I_REF(icam::IExposureParams, m_defaultExposureParamsCompPtr);
-	I_REF(icam::ITriggerParams, m_triggerParamsCompPtr);
+	I_REF(isig::ITriggerParams, m_triggerParamsCompPtr);
 	I_REF(i2d::CRectangle, m_imageRegionParamsCompPtr);
 	I_ATTR(istd::CString, m_exposureParamsIdAttrPtr);
 

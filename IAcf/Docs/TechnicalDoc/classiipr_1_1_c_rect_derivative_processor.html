@@ -27,7 +27,7 @@
   </div>
 </div>
 <div class="contents">
-<h1>iipr::CRectDerivativeProcessor Class Reference</h1><!-- doxytag: class="iipr::CRectDerivativeProcessor" --><!-- doxytag: inherits="TSyncProcessorWrap&lt; IProcessor &gt;,iipr::IMultidimensionalFilterConstraints,imeas::IUnitInfo" -->Calculate derivative of projection using rectangular filter kernel.  
+<h1>iipr::CRectDerivativeProcessor Class Reference</h1><!-- doxytag: class="iipr::CRectDerivativeProcessor" --><!-- doxytag: inherits="TSyncProcessorWrap&lt; IProcessor &gt;,imeas::INumericConstraints,imeas::IUnitInfo" -->Calculate derivative of projection using rectangular filter kernel.  
 <a href="#_details">More...</a>
 <p>
 <code>#include &lt;<a class="el" href="_c_rect_derivative_processor_8h_source.html">CRectDerivativeProcessor.h</a>&gt;</code>
@@ -39,7 +39,7 @@ Inheritance diagram for iipr::CRectDerivativeProcessor:</div>
 <p><center><img src="classiipr_1_1_c_rect_derivative_processor.png" usemap="#iipr::CRectDerivativeProcessor_map" border="0" alt=""></center>
 <map name="iipr::CRectDerivativeProcessor_map">
 <area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiproc_1_1_t_sync_processor_wrap.html" alt="iproc::TSyncProcessorWrap< IProcessor >" shape="rect" coords="0,56,256,80">
-<area href="classiipr_1_1_i_multidimensional_filter_constraints.html" alt="iipr::IMultidimensionalFilterConstraints" shape="rect" coords="266,56,522,80">
+<area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_numeric_constraints.html" alt="imeas::INumericConstraints" shape="rect" coords="266,56,522,80">
 <area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_unit_info.html" alt="imeas::IUnitInfo" shape="rect" coords="532,56,788,80">
 <area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="266,0,522,24">
 <area doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="532,0,788,24">
@@ -64,13 +64,10 @@ Inheritance diagram for iipr::CRectDerivativeProcessor:</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#57426ae5c054f31580cad6418c188e8a">GetFilterDimensionsCount</a> () const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get number of dimensions will be filtered.  <a href="#57426ae5c054f31580cad6418c188e8a"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#18b7ecd0eddb29937d998282b3037d1a">GetFilterDescription</a> (int dimension) const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get description of some filter element.  <a href="#18b7ecd0eddb29937d998282b3037d1a"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#d0d6982f2ab4d931597bc4b13f921b97">GetFilterUnitInfo</a> (int dimension) const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get range of possible filter value for specified dimension.  <a href="#d0d6982f2ab4d931597bc4b13f921b97"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#1f7091b5f0e9e4df0a59d151bac45219">GetUnitType</a> () const </td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#e5954d49eb1c02a0b7403c9fb0ce952e">GetUnitName</a> () const </td></tr>
@@ -84,7 +81,7 @@ Inheritance diagram for iipr::CRectDerivativeProcessor:</div>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Calculate derivative of projection using rectangular filter kernel. 
-<p>Definition at line <a class="el" href="_c_rect_derivative_processor_8h_source.html#l00023">23</a> of file <a class="el" href="_c_rect_derivative_processor_8h_source.html">CRectDerivativeProcessor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rect_derivative_processor_8h_source.html#l00021">21</a> of file <a class="el" href="_c_rect_derivative_processor_8h_source.html">CRectDerivativeProcessor.h</a>.</p>
 <hr><h2>Member Function Documentation</h2>
 <a class="anchor" name="c9bbc82c23c938299e0ac69cd8d69c89"></a><!-- doxytag: member="iipr::CRectDerivativeProcessor::DoDerivativeProcessing" ref="c9bbc82c23c938299e0ac69cd8d69c89" args="(const imeas::IDataSequence &amp;source, double filterLength, imeas::IDataSequence &amp;results)" -->
 <div class="memitem">
@@ -202,10 +199,8 @@ Do extremum features analyze.
 <div class="memdoc">
 
 <p>
-Get description of some filter element. 
-<p>
 
-<p>Implements <a class="el" href="classiipr_1_1_i_multidimensional_filter_constraints.html#c3d30c94a1053eec7bc30e11793a94ea">iipr::IMultidimensionalFilterConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_numeric_constraints.html#12813175a1bb854453dda9c93e099a37">imeas::INumericConstraints</a>.</p>
 
 </div>
 </div><p>
@@ -225,10 +220,8 @@ Get description of some filter element.
 <div class="memdoc">
 
 <p>
-Get number of dimensions will be filtered. 
-<p>
 
-<p>Implements <a class="el" href="classiipr_1_1_i_multidimensional_filter_constraints.html#4302a6c9f61a4241e0eb8ae7f2134190">iipr::IMultidimensionalFilterConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_numeric_constraints.html#6babbbc26a6b7d6f997815377b3b5061">imeas::INumericConstraints</a>.</p>
 
 </div>
 </div><p>
@@ -251,7 +244,7 @@ Get number of dimensions will be filtered.
 Get parameter ID used to extract caliper parameter object from parameter set. 
 <p>
 
-<p>Definition at line <a class="el" href="_c_rect_derivative_processor_8h_source.html#l00071">71</a> of file <a class="el" href="_c_rect_derivative_processor_8h_source.html">CRectDerivativeProcessor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rect_derivative_processor_8h_source.html#l00069">69</a> of file <a class="el" href="_c_rect_derivative_processor_8h_source.html">CRectDerivativeProcessor.h</a>.</p>
 
 </div>
 </div><p>
@@ -272,10 +265,8 @@ Get parameter ID used to extract caliper parameter object from parameter set.
 <div class="memdoc">
 
 <p>
-Get range of possible filter value for specified dimension. 
-<p>
 
-<p>Implements <a class="el" href="classiipr_1_1_i_multidimensional_filter_constraints.html#59fe88a4a475fdfa63748fdc134441f8">iipr::IMultidimensionalFilterConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_numeric_constraints.html#663835e20dd27bcf5cdba34df33129d0">imeas::INumericConstraints</a>.</p>
 
 </div>
 </div><p>
@@ -383,7 +374,7 @@ Get range of possible filter value for specified dimension.
 Set parameter ID used to extract caliper parameter object from parameter set. 
 <p>
 It is only needed while using general processing interface <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiproc_1_1_i_processor.html">iproc::IProcessor</a>. 
-<p>Definition at line <a class="el" href="_c_rect_derivative_processor_8h_source.html#l00077">77</a> of file <a class="el" href="_c_rect_derivative_processor_8h_source.html">CRectDerivativeProcessor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rect_derivative_processor_8h_source.html#l00075">75</a> of file <a class="el" href="_c_rect_derivative_processor_8h_source.html">CRectDerivativeProcessor.h</a>.</p>
 
 </div>
 </div><p>

@@ -30,9 +30,7 @@
 // ACF-Solutions includes
 #include "imeas/IDataSequence.h"
 #include "imeas/IUnitInfo.h"
-
-
-#include "iipr/IMultidimensionalFilterConstraints.h"
+#include "imeas/INumericConstraints.h"
 
 
 namespace iipr
@@ -44,7 +42,7 @@ namespace iipr
 */
 class CRectDerivativeProcessor:
 			public iproc::CSyncProcessorBase,
-			virtual public IMultidimensionalFilterConstraints,
+			virtual public imeas::INumericConstraints,
 			virtual protected imeas::IUnitInfo
 {
 public:
@@ -71,7 +69,7 @@ public:
 				istd::IChangeable* outputPtr,
 				iproc::IProgressManager* progressManagerPtr = NULL);
 
-	// reimplemented (iipr::IMultidimensionalFilterConstraints)
+	// reimplemented (imeas::INumericConstraints)
 	virtual int GetFilterDimensionsCount() const;
 	virtual istd::CString GetFilterDescription(int dimension) const;
 	virtual const imeas::IUnitInfo& GetFilterUnitInfo(int dimension) const;

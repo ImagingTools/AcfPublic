@@ -342,6 +342,14 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
+    <name>CGeneralUnitInfo.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/imeas/</path>
+    <filename>_c_general_unit_info_8h</filename>
+    <includes id="_i_unit_info_8h" name="IUnitInfo.h" local="yes" imported="no">imeas/IUnitInfo.h</includes>
+    <class kind="class">imeas::CGeneralUnitInfo</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>CHistogramStatisticsProcessorComp.h</name>
     <path>E:/Work/Projects/Development/AcfSln/Include/imeas/</path>
     <filename>_c_histogram_statistics_processor_comp_8h</filename>
@@ -354,6 +362,16 @@
     <filename>_c_measurement_range_8h</filename>
     <includes id="imeas_8h" name="imeas.h" local="yes" imported="no">imeas/imeas.h</includes>
     <class kind="class">imeas::CMeasurementRange</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CNumericParamsComp.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/imeas/</path>
+    <filename>_c_numeric_params_comp_8h</filename>
+    <includes id="_i_unit_info_8h" name="IUnitInfo.h" local="yes" imported="no">imeas/IUnitInfo.h</includes>
+    <includes id="_i_numeric_params_8h" name="INumericParams.h" local="yes" imported="no">imeas/INumericParams.h</includes>
+    <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
+    <class kind="class">imeas::CNumericParamsComp</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -413,6 +431,22 @@
     <name>imeas.h</name>
     <path>E:/Work/Projects/Development/AcfSln/Include/imeas/</path>
     <filename>imeas_8h</filename>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>INumericConstraints.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/imeas/</path>
+    <filename>_i_numeric_constraints_8h</filename>
+    <includes id="_i_unit_info_8h" name="IUnitInfo.h" local="yes" imported="no">imeas/IUnitInfo.h</includes>
+    <includes id="imeas_8h" name="imeas.h" local="yes" imported="no">imeas/imeas.h</includes>
+    <class kind="class">imeas::INumericConstraints</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>INumericParams.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/imeas/</path>
+    <filename>_i_numeric_params_8h</filename>
+    <class kind="class">imeas::INumericParams</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -685,6 +719,14 @@
     <filename>_c_data_statistics_gui_comp_8h</filename>
     <includes id="_i_data_statistics_8h" name="IDataStatistics.h" local="yes" imported="no">imeas/IDataStatistics.h</includes>
     <class kind="class">iqtmeas::CDataStatisticsGuiComp</class>
+    <namespace>iqtmeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CNumericParamsGuiComp.h</name>
+    <path>E:/Work/Projects/Development/AcfSln/Include/iqtmeas/</path>
+    <filename>_c_numeric_params_gui_comp_8h</filename>
+    <includes id="_i_numeric_params_8h" name="INumericParams.h" local="yes" imported="no">imeas/INumericParams.h</includes>
+    <class kind="class">iqtmeas::CNumericParamsGuiComp</class>
     <namespace>iqtmeas</namespace>
   </compound>
   <compound kind="file">
@@ -3206,8 +3248,10 @@
     <class kind="class">imeas::CDataSequenceStatistics</class>
     <class kind="class">imeas::CDataStatistics</class>
     <class kind="class">imeas::CGeneralDataSequence</class>
+    <class kind="class">imeas::CGeneralUnitInfo</class>
     <class kind="class">imeas::CHistogramStatisticsProcessorComp</class>
     <class kind="class">imeas::CMeasurementRange</class>
+    <class kind="class">imeas::CNumericParamsComp</class>
     <class kind="class">imeas::CSamplesInfo</class>
     <class kind="class">imeas::CWavSamplesLoaderComp</class>
     <class kind="class">imeas::IDataSequence</class>
@@ -3215,6 +3259,8 @@
     <class kind="class">imeas::IDataSequenceStatistics</class>
     <class kind="class">imeas::IDataStatistics</class>
     <class kind="class">imeas::IDiscrDataSequence</class>
+    <class kind="class">imeas::INumericConstraints</class>
+    <class kind="class">imeas::INumericParams</class>
     <class kind="class">imeas::ISampleAcquisition</class>
     <class kind="class">imeas::IUnitInfo</class>
     <class kind="class">imeas::TDiscrDataSequence</class>
@@ -3509,6 +3555,81 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>imeas::CGeneralUnitInfo</name>
+    <filename>classimeas_1_1_c_general_unit_info.html</filename>
+    <base virtualness="virtual">imeas::IUnitInfo</base>
+    <member kind="function">
+      <type></type>
+      <name>CGeneralUnitInfo</name>
+      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
+      <anchor>4fbc16011154df2e119483433770dff3</anchor>
+      <arglist>(int type=UT_UNKNOWN, const istd::CString &amp;name=&quot;&quot;, double displayMultFactor=1.0, const istd::CRange &amp;range=istd::CRange::GetInvalid())</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetUnitType</name>
+      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
+      <anchor>10275b918a7129bbef633a0990fded52</anchor>
+      <arglist>(int type)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetUnitName</name>
+      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
+      <anchor>99c4f5a5f4c1866d7b31a63bf826dc55</anchor>
+      <arglist>(const istd::CString &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDisplayMultiplicationFactor</name>
+      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
+      <anchor>31b73304ee4ad9ef5514743d4c4b4a9d</anchor>
+      <arglist>(double factor)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetValueRange</name>
+      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
+      <anchor>33f22a4fdcff85245593da1126291909</anchor>
+      <arglist>(const istd::CRange &amp;range)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetUnitType</name>
+      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
+      <anchor>088ece85e4daa4e5998ffe87a1e9115a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetUnitName</name>
+      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
+      <anchor>ead4cdc92697e4085e02abbad7eea5ea</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetDisplayMultiplicationFactor</name>
+      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
+      <anchor>a6327fb477b4e39ed8be0b74f6d305c1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CRange</type>
+      <name>GetValueRange</name>
+      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
+      <anchor>c498f548f15b02e15300cd1ba7a4db97</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IDoubleManip &amp;</type>
+      <name>GetValueManip</name>
+      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
+      <anchor>071e0bff964d461a1d1b1c443e6d57db</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>imeas::CHistogramStatisticsProcessorComp</name>
     <filename>classimeas_1_1_c_histogram_statistics_processor_comp.html</filename>
     <base>iproc::TSyncProcessorCompBase</base>
@@ -3634,6 +3755,112 @@
       <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
       <anchor>28dd528df2e82fda194c8a9a0d54d67f</anchor>
       <arglist>(const CMeasurementRange &amp;otherRange) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::CNumericParamsComp</name>
+    <filename>classimeas_1_1_c_numeric_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">imeas::INumericParams</base>
+    <base protection="protected" virtualness="virtual">imeas::INumericConstraints</base>
+    <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>e003eb90b23de0b2913955e449983141</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const INumericConstraints *</type>
+      <name>GetConstraints</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>36afe6af4c8ecba76aae3be3b86a31d6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetValues</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>6408fdd043081e24ee799851ecda6c1a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetValues</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>a747c9c6926364864f666ed36efde643</anchor>
+      <arglist>(const imath::CVarVector &amp;lengths)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetFilterDimensionsCount</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>b0affc619d5e864955b835e2c3cd2f68</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetFilterDescription</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>1a9c5f493f69296392088da5260431aa</anchor>
+      <arglist>(int dimension) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <name>GetFilterUnitInfo</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>2f1a87eaa6b9de8cbe3a4463e39b4066</anchor>
+      <arglist>(int dimension) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetUnitType</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>fc86be53b80f6d8d2d67790f37f65b94</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetUnitName</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>0242431b0ab662e64ad7de1661432e9c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetDisplayMultiplicationFactor</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>c45c462ca6aa584848e8a72b8467e30d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CRange</type>
+      <name>GetValueRange</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>ca365623bf951247a03fb39e4fa2bfd7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IDoubleManip &amp;</type>
+      <name>GetValueManip</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>67272c6b08219c5211075a7475954365</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>682c632074696e4c64885cd440af03b8</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>66df79f5747b3d2bbb39be65805502e9</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4016,6 +4243,58 @@
       <anchorfile>classimeas_1_1_i_discr_data_sequence.html</anchorfile>
       <anchor>f6bea4c94f21ae5ff5be84b55576ba13</anchor>
       <arglist>(int position, int channel, I_DWORD sample)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::INumericConstraints</name>
+    <filename>classimeas_1_1_i_numeric_constraints.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetFilterDimensionsCount</name>
+      <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
+      <anchor>6babbbc26a6b7d6f997815377b3b5061</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CString</type>
+      <name>GetFilterDescription</name>
+      <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
+      <anchor>12813175a1bb854453dda9c93e099a37</anchor>
+      <arglist>(int dimension) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <name>GetFilterUnitInfo</name>
+      <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
+      <anchor>663835e20dd27bcf5cdba34df33129d0</anchor>
+      <arglist>(int dimension) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::INumericParams</name>
+    <filename>classimeas_1_1_i_numeric_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const INumericConstraints *</type>
+      <name>GetConstraints</name>
+      <anchorfile>classimeas_1_1_i_numeric_params.html</anchorfile>
+      <anchor>d43ed05f3fe8e875d4ac76268f791544</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual imath::CVarVector</type>
+      <name>GetValues</name>
+      <anchorfile>classimeas_1_1_i_numeric_params.html</anchorfile>
+      <anchor>fd7f4c73268082073507c567b99c942e</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetValues</name>
+      <anchorfile>classimeas_1_1_i_numeric_params.html</anchorfile>
+      <anchor>27d4d5aa0dcab0c3d16a06291292edc3</anchor>
+      <arglist>(const imath::CVarVector &amp;lengths)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5487,6 +5766,7 @@
     <filename>namespaceiqtmeas.html</filename>
     <class kind="class">iqtmeas::CDataSequenceViewComp</class>
     <class kind="class">iqtmeas::CDataStatisticsGuiComp</class>
+    <class kind="class">iqtmeas::CNumericParamsGuiComp</class>
   </compound>
   <compound kind="class">
     <name>iqtmeas::CDataSequenceViewComp</name>
@@ -5633,6 +5913,67 @@
       <name>UpdateGui</name>
       <anchorfile>classiqtmeas_1_1_c_data_statistics_gui_comp.html</anchorfile>
       <anchor>95585af16a644d1ae1888a4c5cc4d5c9</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtmeas::CNumericParamsGuiComp</name>
+    <filename>classiqtmeas_1_1_c_numeric_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CNumericParamsGuiComp, imeas::INumericParams &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CNumericParamsGuiComp, imeas::INumericParams &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>418987080191c4aa536a1b61716ec89c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>I_END_COMPONENT</type>
+      <name>CNumericParamsGuiComp</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>7cbc6dcbd694de0a03a0834f83ac0642</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>940f409ec2d5182ebc44d18d676ad8f7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_FilterWidthSlider_valueChanged</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>21fd97c918436177805c1d8338f3cd0a</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_FilterHeightSlider_valueChanged</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>d167b1def302e4b66b552720952d2ffb</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateLabel</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>4c4cb9d7d0e467420407eb34a67bc1b0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>47b1bfaea54e4c6c902bebb624c75d03</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>de46846b596bf5f4495c788e1248e3d3</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
