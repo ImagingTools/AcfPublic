@@ -27,6 +27,7 @@
 // ACF includes
 #include "iimg/IBitmap.h"
 #include "iproc/ISupplier.h"
+#include "i2d/ITransformation2d.h"
 
 
 namespace iipr
