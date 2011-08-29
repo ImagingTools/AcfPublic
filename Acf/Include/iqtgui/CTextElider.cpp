@@ -1,3 +1,25 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**  by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
 #include "iqtgui/CTextElider.h"
 
 
@@ -9,7 +31,7 @@
 
 
 // ACF includes
-#include "istd/istd.h"
+#include "iqt/iqt.h"
 
 
 namespace iqtgui
@@ -21,7 +43,7 @@ namespace iqtgui
 CTextElider::CTextElider(QObject* parentPtr)
 		:	QObject(parentPtr),
 			m_updateInterval(300),
-			m_addition("...")
+			m_elideSuffix("...")
 {
 	m_textObservingTimer.installEventFilter(this);
 }
@@ -30,9 +52,87 @@ CTextElider::CTextElider(QObject* parentPtr)
 CTextElider::~CTextElider()
 {
 	m_textObservingTimer.removeEventFilter(this);
-	RemoveAllElideObjects();
+
+	UnregisterAllElideObjects();
 }
 
+
+bool CTextElider::RegisterElideObject(QObject* elideObject)
+{
+	bool insertPossible = !m_objectPtrMap.contains(elideObject);
+	insertPossible = insertPossible && elideObject != NULL;
+	I_ASSERT(insertPossible);
+
+	if (insertPossible){
+		ElideObjectInfo info;
+		info.baseString = info.elideString = elideObject->property("text").value<QString>();
+		elideObject->installEventFilter(this);
+		m_objectPtrMap.insert(elideObject, info);
+
+		UpdateElidedText(*elideObject);
+
+		if (!m_textObservingTimer.isActive()){
+			m_textObservingTimer.start(m_updateInterval);
+		}
+	}
+
+	return insertPossible;
+}
+
+
+void CTextElider::UnregisterElideObject(QObject* elideObject)
+{
+	if (elideObject == NULL){
+		I_CRITICAL();
+
+		return;
+	}
+
+	I_ASSERT(m_objectPtrMap.contains(elideObject));
+	if (m_objectPtrMap.contains(elideObject)){
+		elideObject->removeEventFilter(this);
+	}
+
+	m_objectPtrMap.remove(elideObject);
+	if (m_textObservingTimer.isActive() && m_objectPtrMap.isEmpty()){
+		m_textObservingTimer.stop();
+	}
+}
+
+
+void CTextElider::UnregisterAllElideObjects()
+{
+	while(!m_objectPtrMap.isEmpty()){
+		QObject* objectPtr = m_objectPtrMap.begin().key();
+
+		UnregisterElideObject(objectPtr);
+	}
+}
+
+
+void CTextElider::SetUpdateInterval(int updateInterval)
+{
+	if (m_updateInterval != updateInterval){
+		m_updateInterval = updateInterval;
+		
+		m_textObservingTimer.setInterval(m_updateInterval);
+	}
+}
+
+
+void CTextElider::SetElideSuffix(QString elideSuffix)
+{
+	m_elideSuffix = elideSuffix;
+}
+
+
+QString CTextElider::GetElideSuffix() const
+{
+	return m_elideSuffix;
+}
+
+
+// protected methods
 
 // reimplemented (QObject)
 
@@ -59,81 +159,6 @@ bool CTextElider::eventFilter(QObject* objectPtr, QEvent* eventPtr)
 }
 
 
-bool CTextElider::InsertElideObject(QObject* elideObject)
-{
-	bool insertPossible = !m_objectPtrMap.contains(elideObject);
-	insertPossible = insertPossible && elideObject != NULL;
-	I_ASSERT(insertPossible);
-
-	if (insertPossible){
-		ElideObjectInfo info;
-		info.baseString = info.elideString = elideObject->property("text").value<QString>();
-		elideObject->installEventFilter(this);
-		m_objectPtrMap.insert(elideObject, info);
-
-		UpdateElidedText(*elideObject);
-
-		if (!m_textObservingTimer.isActive()){
-			m_textObservingTimer.start(m_updateInterval);
-		}
-	}
-
-	return insertPossible;
-}
-
-
-void CTextElider::RemoveElideObject(QObject* elideObject)
-{
-	if (elideObject == NULL){
-		I_CRITICAL();
-
-		return;
-	}
-
-	I_ASSERT(m_objectPtrMap.contains(elideObject));
-	if (m_objectPtrMap.contains(elideObject)){
-		elideObject->removeEventFilter(this);
-	}
-
-	m_objectPtrMap.remove(elideObject);
-	if (m_textObservingTimer.isActive() && m_objectPtrMap.isEmpty()){
-		m_textObservingTimer.stop();
-	}
-}
-
-
-void CTextElider::RemoveAllElideObjects()
-{
-	while(!m_objectPtrMap.isEmpty()){
-		QObject* objectPtr = m_objectPtrMap.begin().key();
-
-		RemoveElideObject(objectPtr);
-	}
-}
-
-
-void CTextElider::SetUpdateInterval(int miliseconds)
-{
-	if (m_updateInterval != miliseconds){
-		m_updateInterval = miliseconds;
-		
-		m_textObservingTimer.setInterval(m_updateInterval);
-	}
-}
-
-
-void CTextElider::SetAddition(QString addition)
-{
-	m_addition = addition;
-}
-
-
-QString CTextElider::GetAddition() const
-{
-	return m_addition;
-}
-
-
 // private methods
 
 void CTextElider::UpdateElidedText(QObject& elideObject)
@@ -142,13 +167,13 @@ void CTextElider::UpdateElidedText(QObject& elideObject)
 	ElideObjectInfo& info = const_cast<ElideObjectInfo&>(m_objectPtrMap.find(&elideObject).value());
 
 	QString newName = elideText;
-	int newSize = newName.size() - m_addition.size();
+	int newSize = newName.size() - m_elideSuffix.size();
 	if (newSize < 0){
 		newSize = 0;
 	}
 	newName.resize(newSize);
 
-	if((!info.baseString.contains(elideText) && !info.baseString.contains(newName)) || !elideText.contains(m_addition)){
+	if((!info.baseString.contains(elideText) && !info.baseString.contains(newName)) || !elideText.contains(m_elideSuffix)){
 		info.baseString = elideText;
 	}
 
@@ -160,10 +185,10 @@ void CTextElider::UpdateElidedText(QObject& elideObject)
 				elideObject.property("size").toSize().width());
 	newName = info.baseString;
 
-	if(info.baseString != formattedName && m_addition.size() < formattedName.size()){
+	if(info.baseString != formattedName && m_elideSuffix.size() < formattedName.size()){
 		// formattedName is only used to get max displayable text length
-		newName.resize(formattedName.size() - m_addition.size());
-		newName += m_addition;
+		newName.resize(formattedName.size() - m_elideSuffix.size());
+		newName += m_elideSuffix;
 	}
 	info.elideString = newName;
 
@@ -187,7 +212,7 @@ void CTextElider::OnTimeout()
 				}
 				else{
 					QString containedString = currentText;
-					int newSize = containedString.size() - m_addition.size();
+					int newSize = containedString.size() - m_elideSuffix.size();
 					containedString.resize(newSize);
 					if (info.baseString < currentText || 
 						!info.baseString.contains(containedString)){

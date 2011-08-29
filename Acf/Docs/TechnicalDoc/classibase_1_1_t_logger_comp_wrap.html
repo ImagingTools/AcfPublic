@@ -77,6 +77,9 @@ Inheritance diagram for ibase::TLoggerCompWrap&lt; Base &gt;:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="el" href="classibase_1_1_t_logger_wrap.html">ibase::TLoggerWrap</a>&lt; Base &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_comp_wrap.html#5ca6564c805194cba50c4aeab30abfec">BaseClass</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_comp_wrap.html#39587000b2300dfaf8101e3dde41deed">SendVerboseMessage</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;message, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;messageSource=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Send verbose message.  <a href="#39587000b2300dfaf8101e3dde41deed"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_comp_wrap.html#9ec30e06390bb58f95e4acbc3c5954f9">DecorateMessage</a> (<a class="el" href="classistd_1_1_i_logger.html#59b8f966e065927a722418a20bc42343">istd::ILogger::MessageCategory</a> category, int id, int flags, <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;message, <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;messageSource) const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Decorate message parts before outputting.  <a href="#9ec30e06390bb58f95e4acbc3c5954f9"></a><br></td></tr>
@@ -163,7 +166,7 @@ Decorate message parts before outputting.
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_i_logger.html#7b50e678da2f925150deb58b94d16e7d">istd::ILogger</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_logger_comp_wrap_8h_source.html#l00054">54</a> of file <a class="el" href="_t_logger_comp_wrap_8h_source.html">TLoggerCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_comp_wrap_8h_source.html#l00070">70</a> of file <a class="el" href="_t_logger_comp_wrap_8h_source.html">TLoggerCompWrap.h</a>.</p>
 
 <p>References <a class="el" href="_i_logger_8h_source.html#l00094">istd::ILogger::DecorateMessage()</a>, <a class="el" href="_c_component_context_8h_source.html#l00057">icomp::CComponentContext::GetContextId()</a>, and <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
 
@@ -190,11 +193,48 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#38ea594db0ebdfa99da890128d4a22c7">iproc::CIterativeProcessorComp</a>, <a class="el" href="classiproc_1_1_c_model_based_processing_trigger_comp.html#1ddfbca8893ef60ac3b1431a8ffd2130">iproc::CModelBasedProcessingTriggerComp</a>, <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#e9744a2ce6ca29690fa8f8ee1a38afe0">iproc::TSupplierCompWrap&lt; SupplierInterface, Product &gt;</a>, <a class="el" href="classiqt_1_1_c_copy_processor_comp.html#3f4e89be171b82c512a22d73e2619120">iqt::CCopyProcessorComp</a>, <a class="el" href="classiqt_1_1_c_packages_loader_comp.html#0b5bcb075bb0966d0be1de557ee201b4">iqt::CPackagesLoaderComp</a>, <a class="el" href="classiqt_1_1_c_registries_manager_comp.html#c189f878c77be3a6e7db62f8d905f800">iqt::CRegistriesManagerComp</a>, <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#cdeb4247ab86e7fe2626df198cd0b23e">iqtgui::CFileDialogLoaderComp</a>, and <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#f2a80304d31b65cdcc6bf2de0a4db20f">iqtproc::CDocumentProcessingManagerCompBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_logger_comp_wrap_8h_source.html#l00078">78</a> of file <a class="el" href="_t_logger_comp_wrap_8h_source.html">TLoggerCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_comp_wrap_8h_source.html#l00094">94</a> of file <a class="el" href="_t_logger_comp_wrap_8h_source.html">TLoggerCompWrap.h</a>.</p>
 
 <p>References <a class="el" href="classibase_1_1_t_logger_wrap.html#6f5c8250b60c1899ebdbbc5d43334ae0">ibase::TLoggerWrap&lt; Base &gt;::SetLogPtr()</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00311">iproc::TSupplierCompWrap&lt; SupplierInterface, Product &gt;::OnComponentCreated()</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="39587000b2300dfaf8101e3dde41deed"></a><!-- doxytag: member="ibase::TLoggerCompWrap::SendVerboseMessage" ref="39587000b2300dfaf8101e3dde41deed" args="(const istd::CString &amp;message, const istd::CString &amp;messageSource=istd::CString()) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classibase_1_1_t_logger_comp_wrap.html">ibase::TLoggerCompWrap</a>&lt; Base &gt;::SendVerboseMessage           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>messageSource</em> = <code><a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [inline, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Send verbose message. 
+<p>
+If <code>m_verboseEnabledAttrPtr</code> is not enabled, the function does nothiing. 
+<p>Definition at line <a class="el" href="_t_logger_comp_wrap_8h_source.html#l00059">59</a> of file <a class="el" href="_t_logger_comp_wrap_8h_source.html">TLoggerCompWrap.h</a>.</p>
+
+<p>References <a class="el" href="classibase_1_1_t_logger_wrap.html#6455b10871fb8b5d89fc39f7c099dee3">ibase::TLoggerWrap&lt; Base &gt;::SendInfoMessage()</a>.</p>
 
 </div>
 </div><p>

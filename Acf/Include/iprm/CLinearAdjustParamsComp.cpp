@@ -42,7 +42,7 @@ CLinearAdjustParamsComp::CLinearAdjustParamsComp()
 
 // reimplemented (iprm::ILinearAdjustParams)
 
-const ILinearAdjustConstraints* CLinearAdjustParamsComp::GetConstraints() const
+const ILinearAdjustConstraints* CLinearAdjustParamsComp::GetAdjustConstraints() const
 {
 	return m_constraintsCompPtr.GetPtr();
 }

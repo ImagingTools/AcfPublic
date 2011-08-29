@@ -43,9 +43,13 @@ bool CRegistriesManagerComp::ConfigureEnvironment(const istd::CString& configFil
 	bool retVal = true;
 
 	if (!configFilePath.IsEmpty()){
+		SendVerboseMessage(istd::CString("Configure component environment using ") + configFilePath);
+	
 		retVal = retVal && LoadConfigFile(configFilePath);
 	}
 	else{
+		SendVerboseMessage("Configure component environment using default configuration");
+
 		if (!LoadConfigFile(iqt::GetCString("Default.xpc"))){
 			QDir applicationDir = QCoreApplication::applicationDirPath();
 			if (!LoadConfigFile(iqt::GetCString(applicationDir.absoluteFilePath("Default.xpc")))){
@@ -141,6 +145,8 @@ void CRegistriesManagerComp::RegisterPackageFile(const istd::CString& file)
 {
 	QFileInfo fileInfo(iqt::GetQString(file));
 
+	SendVerboseMessage(istd::CString("Register package file: ") + file);
+
 	if (fileInfo.isDir()){
 		std::string packageId = fileInfo.baseName().toStdString();
 		PackagesMap::const_iterator foundIter = m_compositePackagesMap.find(packageId);
@@ -155,6 +161,7 @@ void CRegistriesManagerComp::RegisterPackageFile(const istd::CString& file)
 						iter != componentFiles.end();
 						++iter){
 				QFileInfo componentFileInfo(*iter);
+
 				componentIds.insert(componentFileInfo.baseName().toStdString());
 			}
 
@@ -167,6 +174,8 @@ void CRegistriesManagerComp::RegisterPackageFile(const istd::CString& file)
 void CRegistriesManagerComp::RegisterPackagesDir(const istd::CString& path)
 {
 	QDir packagesDir(GetQString(path));
+
+	SendVerboseMessage(istd::CString("Register package directory: ") + path);
 
 	QStringList filters;
 	filters.append("*.arp");
@@ -188,6 +197,8 @@ bool CRegistriesManagerComp::LoadConfigFile(const istd::CString& configFile)
 	QDir baseDir = fileInfo.absoluteDir();
 
 	istd::CString configFilePath = GetCString(fileInfo.absoluteFilePath());
+
+	SendVerboseMessage(istd::CString("Load configuration file: ") + configFilePath);
 
 	iser::CXmlFileReadArchive archive(configFilePath);
 

@@ -58,9 +58,9 @@ Inheritance diagram for iprm::ISelectionParam:</div>
 
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <br class="typebreak">
-<a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_selection_param.html#352a2f8a8c8629f71a9e52ff22a4f9e1">GetConstraints</a> () const =0</td></tr>
+<a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_selection_param.html#663506bb922ab4ac3ebc0bd52d741ff7">GetSelectionConstraints</a> () const =0</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get constraints of this parameter.  <a href="#352a2f8a8c8629f71a9e52ff22a4f9e1"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get constraints of this parameter.  <a href="#663506bb922ab4ac3ebc0bd52d741ff7"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_selection_param.html#0a417884429ac3874a717cfbb5a738f6">GetSelectedOptionIndex</a> () const =0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get selected index.  <a href="#0a417884429ac3874a717cfbb5a738f6"></a><br></td></tr>
@@ -126,29 +126,6 @@ Please note, that returned options tree belongs to selection data model.
 
 </div>
 </div><p>
-<a class="anchor" name="352a2f8a8c8629f71a9e52ff22a4f9e1"></a><!-- doxytag: member="iprm::ISelectionParam::GetConstraints" ref="352a2f8a8c8629f71a9e52ff22a4f9e1" args="() const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a>* iprm::ISelectionParam::GetConstraints           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get constraints of this parameter. 
-<p>
-Constraints describes some additional information about allowed parameter ranges and related informations. 
-<p>Implemented in <a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html#ca9e01739707a6f258ad6121d4ecfa89">ibase::CSelectableFileConverterComp</a>, <a class="el" href="classiprm_1_1_c_params_manager_comp.html#d72e5136de00b35a9c1e5ee8996dc655">iprm::CParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#93aab94cd1be68889b46e10c63b40e31">iprm::CSelectableParamsSetComp</a>, and <a class="el" href="classiprm_1_1_c_selection_param_comp.html#7e1095dea8ad36010b42ec06b162c771">iprm::CSelectionParamComp</a>.</p>
-
-</div>
-</div><p>
 <a class="anchor" name="0a417884429ac3874a717cfbb5a738f6"></a><!-- doxytag: member="iprm::ISelectionParam::GetSelectedOptionIndex" ref="0a417884429ac3874a717cfbb5a738f6" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -169,6 +146,29 @@ Get selected index.
 <p>
 
 <p>Implemented in <a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html#8d6782e8f4add1698ba6848144aca498">ibase::CSelectableFileConverterComp</a>, <a class="el" href="classiprm_1_1_c_params_manager_comp.html#4fd8b1b6be7963c766940994f118c77e">iprm::CParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#749b6beac464544bd61aec916b1ce731">iprm::CSelectableParamsSetComp</a>, and <a class="el" href="classiprm_1_1_c_selection_param_comp.html#d1691b45d9b7078ffe8f034c86b4cbeb">iprm::CSelectionParamComp</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="663506bb922ab4ac3ebc0bd52d741ff7"></a><!-- doxytag: member="iprm::ISelectionParam::GetSelectionConstraints" ref="663506bb922ab4ac3ebc0bd52d741ff7" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a>* iprm::ISelectionParam::GetSelectionConstraints           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get constraints of this parameter. 
+<p>
+Constraints describes some additional information about allowed parameter ranges and related informations. 
+<p>Implemented in <a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html#92bc1e17832cc1107163e20d6bfc4173">ibase::CSelectableFileConverterComp</a>, <a class="el" href="classiprm_1_1_c_params_manager_comp.html#016bc3ca5660823acc36f19f48a266c7">iprm::CParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#9102de3ef0cb0802961861b61f9372e1">iprm::CSelectableParamsSetComp</a>, and <a class="el" href="classiprm_1_1_c_selection_param_comp.html#9f73cd628e20bd8bfb4da5d115da7b06">iprm::CSelectionParamComp</a>.</p>
 
 </div>
 </div><p>

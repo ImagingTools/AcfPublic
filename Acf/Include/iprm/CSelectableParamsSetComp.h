@@ -65,7 +65,7 @@ public:
 	virtual iser::ISerializable* GetEditableParameter(const std::string& id);
 
 	// reimplemented (iprm::ISelectionParam)
-	virtual const ISelectionConstraints* GetConstraints() const;
+	virtual const ISelectionConstraints* GetSelectionConstraints() const;
 	virtual int GetSelectedOptionIndex() const;
 	virtual bool SetSelectedOptionIndex(int index);
 	virtual ISelectionParam* GetActiveSubselection() const;

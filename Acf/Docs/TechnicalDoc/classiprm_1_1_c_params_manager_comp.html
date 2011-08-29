@@ -90,9 +90,9 @@ Inheritance diagram for iprm::CParamsManagerComp:</div>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set name of specified parameter set.  <a href="#c0ca6395ab8078f848e813a958882bac"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <br class="typebreak">
-<a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#d72e5136de00b35a9c1e5ee8996dc655">GetConstraints</a> () const </td></tr>
+<a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#016bc3ca5660823acc36f19f48a266c7">GetSelectionConstraints</a> () const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get constraints of this parameter.  <a href="#d72e5136de00b35a9c1e5ee8996dc655"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get constraints of this parameter.  <a href="#016bc3ca5660823acc36f19f48a266c7"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#4fd8b1b6be7963c766940994f118c77e">GetSelectedOptionIndex</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get selected index.  <a href="#4fd8b1b6be7963c766940994f118c77e"></a><br></td></tr>
@@ -179,29 +179,6 @@ Get subselection for specified option.
 <p>
 Please note, that returned options tree belongs to selection data model. 
 <p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#5050ae7fc751c58748ebf67f7562fde1">iprm::ISelectionParam</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="d72e5136de00b35a9c1e5ee8996dc655"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetConstraints" ref="d72e5136de00b35a9c1e5ee8996dc655" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a>* iprm::CParamsManagerComp::GetConstraints           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get constraints of this parameter. 
-<p>
-Constraints describes some additional information about allowed parameter ranges and related informations. 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#352a2f8a8c8629f71a9e52ff22a4f9e1">iprm::ISelectionParam</a>.</p>
 
 </div>
 </div><p>
@@ -367,6 +344,29 @@ Get selected index.
 <p>
 
 <p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#0a417884429ac3874a717cfbb5a738f6">iprm::ISelectionParam</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="016bc3ca5660823acc36f19f48a266c7"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetSelectionConstraints" ref="016bc3ca5660823acc36f19f48a266c7" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a>* iprm::CParamsManagerComp::GetSelectionConstraints           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get constraints of this parameter. 
+<p>
+Constraints describes some additional information about allowed parameter ranges and related informations. 
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#663506bb922ab4ac3ebc0bd52d741ff7">iprm::ISelectionParam</a>.</p>
 
 </div>
 </div><p>

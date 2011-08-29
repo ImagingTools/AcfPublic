@@ -92,7 +92,7 @@ void CParamsManagerGuiComp::on_ParamsTree_itemSelectionChanged()
 		return;
 	}
 
-	const iprm::ISelectionConstraints* constraintsPtr = selectionPtr->GetConstraints();
+	const iprm::ISelectionConstraints* constraintsPtr = selectionPtr->GetSelectionConstraints();
 
 	if (		(constraintsPtr != NULL) &&
 				(selectedIndex < constraintsPtr->GetOptionsCount()) &&

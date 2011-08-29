@@ -38,11 +38,11 @@
 <a name="l00018"></a><a class="code" href="classistd_1_1_i_trace.html">00018</a> <span class="keyword">class </span><a class="code" href="classistd_1_1_i_trace.html" title="Provide system logging.">ITrace</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">IPolymorphic</a>
 <a name="l00019"></a>00019 {
 <a name="l00020"></a>00020 <span class="keyword">public</span>:
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_i_trace.html#d3e87885c746f9480ff956acc564066c" title="Send message to log system.">LogMessage</a>(
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_i_trace.html#73c6742b8fdd378830702d30da3e6099" title="Send message to log system.">LogMessage</a>(
 <a name="l00030"></a>00030                             <a class="code" href="namespaceistd.html#69b9ebbd3e17f150aaed949a61bc4a24">TraceLevel</a> level,
 <a name="l00031"></a>00031                             <span class="keyword">const</span> std::string&amp; groupId,
 <a name="l00032"></a>00032                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">CString</a>&amp; message,
-<a name="l00033"></a>00033                             <span class="keyword">const</span> std::string&amp; fileName = <span class="stringliteral">""</span>,
+<a name="l00033"></a>00033                             <span class="keyword">const</span> std::string&amp; fileName = std::string(),
 <a name="l00034"></a>00034                             <span class="keywordtype">int</span> line = -1) <span class="keyword">const</span> = 0;
 <a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_i_trace.html#78ad64cd8d285b1dd3ee3c837c5e0071" title="Check if traceing of this element is enabled.">IsTraceEnabled</a>(<a class="code" href="namespaceistd.html#69b9ebbd3e17f150aaed949a61bc4a24">TraceLevel</a> level, <span class="keyword">const</span> std::string&amp; groupId) <span class="keyword">const</span> = 0;
 <a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_i_trace.html#022feb1d006c1cdbe5671f2345a7414d" title="Register ID of group.">RegisterGroupId</a>(<span class="keyword">const</span> std::string&amp; groupId) = 0;

@@ -3247,6 +3247,15 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
+    <name>CTrace.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqt/</path>
+    <filename>_c_trace_8h</filename>
+    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
+    <includes id="_i_trace_8h" name="ITrace.h" local="yes" imported="no">istd/ITrace.h</includes>
+    <class kind="class">iqt::CTrace</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
     <name>CTranslationManagerComp.h</name>
     <path>E:/Work/Projects/Development/Acf/Include/iqt/</path>
     <filename>_c_translation_manager_comp_8h</filename>
@@ -3322,10 +3331,10 @@
     <path>E:/Work/Projects/Development/Acf/Include/iqt/</path>
     <filename>_c_xsl_transformation_read_archive_8h</filename>
     <includes id="_i_logger_8h" name="ILogger.h" local="yes" imported="no">istd/ILogger.h</includes>
+    <includes id="itr_8h" name="itr.h" local="yes" imported="no">istd/itr.h</includes>
     <includes id="_c_xml_document_info_base_8h" name="CXmlDocumentInfoBase.h" local="yes" imported="no">iser/CXmlDocumentInfoBase.h</includes>
     <includes id="_c_read_archive_base_8h" name="CReadArchiveBase.h" local="yes" imported="no">iser/CReadArchiveBase.h</includes>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <includes id="itr_8h" name="itr.h" local="yes" imported="no">istd/itr.h</includes>
     <class kind="class">iqt::CXslTransformationReadArchive</class>
     <namespace>iqt</namespace>
   </compound>
@@ -4223,6 +4232,13 @@
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="yes" imported="no">iqtgui/IIconProvider.h</includes>
     <class kind="class">iqtgui::CTabContainerGuiComp</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTextElider.h</name>
+    <path>E:/Work/Projects/Development/Acf/Include/iqtgui/</path>
+    <filename>_c_text_elider_8h</filename>
+    <class kind="class">iqtgui::CTextElider</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -9588,9 +9604,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ISelectionConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetSelectionConstraints</name>
       <anchorfile>classibase_1_1_c_selectable_file_converter_comp.html</anchorfile>
-      <anchor>ca9e01739707a6f258ad6121d4ecfa89</anchor>
+      <anchor>92bc1e17832cc1107163e20d6bfc4173</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11067,6 +11083,13 @@
       <anchorfile>classibase_1_1_t_logger_comp_wrap.html</anchorfile>
       <anchor>5ca6564c805194cba50c4aeab30abfec</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SendVerboseMessage</name>
+      <anchorfile>classibase_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>39587000b2300dfaf8101e3dde41deed</anchor>
+      <arglist>(const istd::CString &amp;message, const istd::CString &amp;messageSource=istd::CString()) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -24625,9 +24648,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ILinearAdjustConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetAdjustConstraints</name>
       <anchorfile>classiprm_1_1_c_linear_adjust_params_comp.html</anchorfile>
-      <anchor>9f4e517804d16cf864c5591b7a489903</anchor>
+      <anchor>2db753c8f13423204a75d8906de1be1e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -24807,9 +24830,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ISelectionConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetSelectionConstraints</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>d72e5136de00b35a9c1e5ee8996dc655</anchor>
+      <anchor>016bc3ca5660823acc36f19f48a266c7</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -25022,9 +25045,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ISelectionConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetSelectionConstraints</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>93aab94cd1be68889b46e10c63b40e31</anchor>
+      <anchor>9102de3ef0cb0802961861b61f9372e1</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -25098,9 +25121,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ISelectionConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetSelectionConstraints</name>
       <anchorfile>classiprm_1_1_c_selection_param_comp.html</anchorfile>
-      <anchor>7e1095dea8ad36010b42ec06b162c771</anchor>
+      <anchor>9f73cd628e20bd8bfb4da5d115da7b06</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -25275,9 +25298,9 @@
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const ILinearAdjustConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetAdjustConstraints</name>
       <anchorfile>classiprm_1_1_i_linear_adjust_params.html</anchorfile>
-      <anchor>fdead295fc9af1d9236358fa8917ccdc</anchor>
+      <anchor>8ca84b8ac0e8f666bf60d2505bcc235f</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -25491,9 +25514,9 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const ISelectionConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetSelectionConstraints</name>
       <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
-      <anchor>352a2f8a8c8629f71a9e52ff22a4f9e1</anchor>
+      <anchor>663506bb922ab4ac3ebc0bd52d741ff7</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -26732,6 +26755,7 @@
     <class kind="class">iqt::CSignalBlocker</class>
     <class kind="class">iqt::CSystemEnvironment</class>
     <class kind="class">iqt::CTimer</class>
+    <class kind="class">iqt::CTrace</class>
     <class kind="class">iqt::CTranslationManagerComp</class>
     <class kind="class">iqt::CXmlFileReadArchive</class>
     <class kind="class">iqt::CXmlFileWriteArchive</class>
@@ -28778,6 +28802,39 @@
       <anchorfile>classiqt_1_1_c_timer.html</anchorfile>
       <anchor>3f55a91a89ab5402697764146cf2469e</anchor>
       <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt::CTrace</name>
+    <filename>classiqt_1_1_c_trace.html</filename>
+    <base virtualness="virtual">istd::ITrace</base>
+    <member kind="function">
+      <type></type>
+      <name>CTrace</name>
+      <anchorfile>classiqt_1_1_c_trace.html</anchorfile>
+      <anchor>a921f7e6a674a9140e21d21f0bc2d768</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>LogMessage</name>
+      <anchorfile>classiqt_1_1_c_trace.html</anchorfile>
+      <anchor>30bbf4870e6e278656fd099ad6cd853c</anchor>
+      <arglist>(istd::TraceLevel level, const std::string &amp;groupId, const istd::CString &amp;message, const std::string &amp;fileName=std::string(), int line=-1) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsTraceEnabled</name>
+      <anchorfile>classiqt_1_1_c_trace.html</anchorfile>
+      <anchor>05c501e83795a8eb68bcd86ba425cc93</anchor>
+      <arglist>(istd::TraceLevel level, const std::string &amp;groupId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RegisterGroupId</name>
+      <anchorfile>classiqt_1_1_c_trace.html</anchorfile>
+      <anchor>2c26ea2fec8cea9dcb5d43891eb9ff69</anchor>
+      <arglist>(const std::string &amp;groupId)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32770,6 +32827,7 @@
     <class kind="class">iqtgui::CStatusBarWidgetComp</class>
     <class kind="class">iqtgui::CTabbedMultiViewGuiComp</class>
     <class kind="class">iqtgui::CTabContainerGuiComp</class>
+    <class kind="class">iqtgui::CTextElider</class>
     <class kind="class">iqtgui::CToolBarWidgetGuiComp</class>
     <class kind="class">iqtgui::CTreeWidgetFilter</class>
     <class kind="class">iqtgui::IDialog</class>
@@ -34539,6 +34597,74 @@
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
       <anchor>339d7874c2db7d67e5fd6dad1bfdfaa5</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CTextElider</name>
+    <filename>classiqtgui_1_1_c_text_elider.html</filename>
+    <base>QObject</base>
+    <member kind="function">
+      <type></type>
+      <name>CTextElider</name>
+      <anchorfile>classiqtgui_1_1_c_text_elider.html</anchorfile>
+      <anchor>2ea8de30f65cc4b8ef431885e2f44b38</anchor>
+      <arglist>(QObject *parentPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CTextElider</name>
+      <anchorfile>classiqtgui_1_1_c_text_elider.html</anchorfile>
+      <anchor>b5a9950a4fa19a8ecdfb7abb3729124f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>RegisterElideObject</name>
+      <anchorfile>classiqtgui_1_1_c_text_elider.html</anchorfile>
+      <anchor>94d7c61f78a8b0f86d6679b4f0f879c2</anchor>
+      <arglist>(QObject *elideObject)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UnregisterElideObject</name>
+      <anchorfile>classiqtgui_1_1_c_text_elider.html</anchorfile>
+      <anchor>879e24edbcd23a3932acaa60ba40de0d</anchor>
+      <arglist>(QObject *elideObject)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UnregisterAllElideObjects</name>
+      <anchorfile>classiqtgui_1_1_c_text_elider.html</anchorfile>
+      <anchor>a8d0adcf4570787802f5a78dcdf3d4e6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetUpdateInterval</name>
+      <anchorfile>classiqtgui_1_1_c_text_elider.html</anchorfile>
+      <anchor>d7af7b86829b3e8e102c574d911b0312</anchor>
+      <arglist>(int updateInterval=300)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetElideSuffix</name>
+      <anchorfile>classiqtgui_1_1_c_text_elider.html</anchorfile>
+      <anchor>d3e64f53898c89f0f8e06ba8e6fa9b9d</anchor>
+      <arglist>(QString elideSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>GetElideSuffix</name>
+      <anchorfile>classiqtgui_1_1_c_text_elider.html</anchorfile>
+      <anchor>49e0ed1d2f80a4c193e91905e22260d0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>eventFilter</name>
+      <anchorfile>classiqtgui_1_1_c_text_elider.html</anchorfile>
+      <anchor>5c34448706235bc7415fea5894b52127</anchor>
+      <arglist>(QObject *objectPtr, QEvent *eventPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -41285,8 +41411,8 @@
       <type>virtual void</type>
       <name>LogMessage</name>
       <anchorfile>classistd_1_1_i_trace.html</anchorfile>
-      <anchor>d3e87885c746f9480ff956acc564066c</anchor>
-      <arglist>(TraceLevel level, const std::string &amp;groupId, const CString &amp;message, const std::string &amp;fileName=&quot;&quot;, int line=-1) const =0</arglist>
+      <anchor>73c6742b8fdd378830702d30da3e6099</anchor>
+      <arglist>(TraceLevel level, const std::string &amp;groupId, const CString &amp;message, const std::string &amp;fileName=std::string(), int line=-1) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
