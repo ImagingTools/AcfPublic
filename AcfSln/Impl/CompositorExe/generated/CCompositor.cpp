@@ -1347,7 +1347,7 @@ CCompositor::CAcfSlnVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(361);
+			attrVersionNumberPtr->SetValue(366);
 		}
 	}
 
@@ -1676,7 +1676,7 @@ CCompositor::CAcfVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(1836);
+			attrVersionNumberPtr->SetValue(1846);
 		}
 	}
 

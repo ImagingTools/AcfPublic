@@ -59,24 +59,24 @@ Inheritance diagram for imeas::CNumericParamsComp:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#e003eb90b23de0b2913955e449983141">BaseClass</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_numeric_constraints.html">INumericConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#36afe6af4c8ecba76aae3be3b86a31d6">GetConstraints</a> () const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_numeric_constraints.html">INumericConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#3273fd702b83cce7a8c1726c32e53979">GetNumericConstraints</a> () const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get parameter constraints describing possible parameter values.  <a href="#36afe6af4c8ecba76aae3be3b86a31d6"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get parameter constraints describing possible parameter values.  <a href="#3273fd702b83cce7a8c1726c32e53979"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#6408fdd043081e24ee799851ecda6c1a">GetValues</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get filter length for each dimension.  <a href="#6408fdd043081e24ee799851ecda6c1a"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a747c9c6926364864f666ed36efde643">SetValues</a> (const <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> &amp;lengths)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set filter length for each dimension.  <a href="#a747c9c6926364864f666ed36efde643"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#b0affc619d5e864955b835e2c3cd2f68">GetFilterDimensionsCount</a> () const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#c8da5149c791906ce64c7d58a86a73fb">GetNumericValuesCount</a> () const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get number of dimensions will be filtered.  <a href="#b0affc619d5e864955b835e2c3cd2f68"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#1a9c5f493f69296392088da5260431aa">GetFilterDescription</a> (int dimension) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get number of expected numeric values.  <a href="#c8da5149c791906ce64c7d58a86a73fb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#f6fca8bbee853935770080ce674f086e">GetNumericValueDescription</a> (int index) const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get description of some filter element.  <a href="#1a9c5f493f69296392088da5260431aa"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#2f1a87eaa6b9de8cbe3a4463e39b4066">GetFilterUnitInfo</a> (int dimension) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get description of some filter element.  <a href="#f6fca8bbee853935770080ce674f086e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#b68e7942771ae4172f14b7fc66778549">GetNumericValueUnitInfo</a> (int index) const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get range of possible filter value for specified dimension.  <a href="#2f1a87eaa6b9de8cbe3a4463e39b4066"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get range of possible filter value for specified dimension.  <a href="#b68e7942771ae4172f14b7fc66778549"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#fc86be53b80f6d8d2d67790f37f65b94">GetUnitType</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get type of unit.  <a href="#fc86be53b80f6d8d2d67790f37f65b94"></a><br></td></tr>
@@ -122,29 +122,6 @@ All parameter constraints can be defined directly or can use external implementa
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="36afe6af4c8ecba76aae3be3b86a31d6"></a><!-- doxytag: member="imeas::CNumericParamsComp::GetConstraints" ref="36afe6af4c8ecba76aae3be3b86a31d6" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classimeas_1_1_i_numeric_constraints.html">INumericConstraints</a>* imeas::CNumericParamsComp::GetConstraints           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get parameter constraints describing possible parameter values. 
-<p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_numeric_params.html#d43ed05f3fe8e875d4ac76268f791544">imeas::INumericParams</a>.</p>
-
-</div>
-</div><p>
 <a class="anchor" name="c45c462ca6aa584848e8a72b8467e30d"></a><!-- doxytag: member="imeas::CNumericParamsComp::GetDisplayMultiplicationFactor" ref="c45c462ca6aa584848e8a72b8467e30d" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -168,15 +145,38 @@ Get multiplication factor used to calculate user input values.
 
 </div>
 </div><p>
-<a class="anchor" name="1a9c5f493f69296392088da5260431aa"></a><!-- doxytag: member="imeas::CNumericParamsComp::GetFilterDescription" ref="1a9c5f493f69296392088da5260431aa" args="(int dimension) const " -->
+<a class="anchor" name="3273fd702b83cce7a8c1726c32e53979"></a><!-- doxytag: member="imeas::CNumericParamsComp::GetNumericConstraints" ref="3273fd702b83cce7a8c1726c32e53979" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> imeas::CNumericParamsComp::GetFilterDescription           </td>
+          <td class="memname">virtual const <a class="el" href="classimeas_1_1_i_numeric_constraints.html">INumericConstraints</a>* imeas::CNumericParamsComp::GetNumericConstraints           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get parameter constraints describing possible parameter values. 
+<p>
+
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_params.html#fa55b2b65c2f6a8ec416946e0bd66098">imeas::INumericParams</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="f6fca8bbee853935770080ce674f086e"></a><!-- doxytag: member="imeas::CNumericParamsComp::GetNumericValueDescription" ref="f6fca8bbee853935770080ce674f086e" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> imeas::CNumericParamsComp::GetNumericValueDescription           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>dimension</em>          </td>
+          <td class="paramname"> <em>index</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -188,16 +188,16 @@ Get multiplication factor used to calculate user input values.
 Get description of some filter element. 
 <p>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#12813175a1bb854453dda9c93e099a37">imeas::INumericConstraints</a>.</p>
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#91f3df26e705d9869a6e16be451e22c7">imeas::INumericConstraints</a>.</p>
 
 </div>
 </div><p>
-<a class="anchor" name="b0affc619d5e864955b835e2c3cd2f68"></a><!-- doxytag: member="imeas::CNumericParamsComp::GetFilterDimensionsCount" ref="b0affc619d5e864955b835e2c3cd2f68" args="() const " -->
+<a class="anchor" name="c8da5149c791906ce64c7d58a86a73fb"></a><!-- doxytag: member="imeas::CNumericParamsComp::GetNumericValuesCount" ref="c8da5149c791906ce64c7d58a86a73fb" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int imeas::CNumericParamsComp::GetFilterDimensionsCount           </td>
+          <td class="memname">virtual int imeas::CNumericParamsComp::GetNumericValuesCount           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -208,22 +208,22 @@ Get description of some filter element.
 <div class="memdoc">
 
 <p>
-Get number of dimensions will be filtered. 
+Get number of expected numeric values. 
 <p>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#6babbbc26a6b7d6f997815377b3b5061">imeas::INumericConstraints</a>.</p>
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#fb5236f4459c18f02f9e62df438e5eee">imeas::INumericConstraints</a>.</p>
 
 </div>
 </div><p>
-<a class="anchor" name="2f1a87eaa6b9de8cbe3a4463e39b4066"></a><!-- doxytag: member="imeas::CNumericParamsComp::GetFilterUnitInfo" ref="2f1a87eaa6b9de8cbe3a4463e39b4066" args="(int dimension) const " -->
+<a class="anchor" name="b68e7942771ae4172f14b7fc66778549"></a><!-- doxytag: member="imeas::CNumericParamsComp::GetNumericValueUnitInfo" ref="b68e7942771ae4172f14b7fc66778549" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a>&amp; imeas::CNumericParamsComp::GetFilterUnitInfo           </td>
+          <td class="memname">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a>&amp; imeas::CNumericParamsComp::GetNumericValueUnitInfo           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>dimension</em>          </td>
+          <td class="paramname"> <em>index</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -235,7 +235,7 @@ Get number of dimensions will be filtered.
 Get range of possible filter value for specified dimension. 
 <p>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#663835e20dd27bcf5cdba34df33129d0">imeas::INumericConstraints</a>.</p>
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#5fe12b84ab6af1e5c7220a7925583950">imeas::INumericConstraints</a>.</p>
 
 </div>
 </div><p>

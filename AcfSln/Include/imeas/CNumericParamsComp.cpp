@@ -37,7 +37,7 @@ namespace imeas
 
 // reimplemented (imeas::INumericParams)
 
-const INumericConstraints* CNumericParamsComp::GetConstraints() const
+const INumericConstraints* CNumericParamsComp::GetNumericConstraints() const
 {
 	if (m_constraintsCompPtr.IsValid()){
 		return m_constraintsCompPtr.GetPtr();
@@ -56,9 +56,9 @@ imath::CVarVector CNumericParamsComp::GetValues() const
 bool CNumericParamsComp::SetValues(const imath::CVarVector& lengths)
 {
 	if (m_filterLengts != lengths){
-		const INumericConstraints* constraintsPtr = GetConstraints();
+		const INumericConstraints* constraintsPtr = GetNumericConstraints();
 		I_ASSERT(constraintsPtr != NULL);
-		if (lengths.GetElementsCount() != constraintsPtr->GetFilterDimensionsCount()){
+		if (lengths.GetElementsCount() != constraintsPtr->GetNumericValuesCount()){
 			return false;
 		}
 
@@ -73,19 +73,19 @@ bool CNumericParamsComp::SetValues(const imath::CVarVector& lengths)
 
 // reimplemented (imeas::INumericConstraints)
 
-int CNumericParamsComp::GetFilterDimensionsCount() const
+int CNumericParamsComp::GetNumericValuesCount() const
 {
 	return *m_dimensionsCountAttrPtr;
 }
 
 
-istd::CString CNumericParamsComp::GetFilterDescription(int dimension) const
+istd::CString CNumericParamsComp::GetNumericValueDescription(int index) const
 {
-	return istd::CString("Value ") + istd::CString::FromNumber(dimension + 1);
+	return istd::CString("Value ") + istd::CString::FromNumber(index + 1);
 }
 
 
-const imeas::IUnitInfo& CNumericParamsComp::GetFilterUnitInfo(int /*dimension*/) const
+const imeas::IUnitInfo& CNumericParamsComp::GetNumericValueUnitInfo(int /*index*/) const
 {
 	return *this;
 }
@@ -147,10 +147,10 @@ void CNumericParamsComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	const INumericConstraints* constraintsPtr = GetConstraints();
+	const INumericConstraints* constraintsPtr = GetNumericConstraints();
 	I_ASSERT(constraintsPtr != NULL);
 
-	int count = constraintsPtr->GetFilterDimensionsCount();
+	int count = constraintsPtr->GetNumericValuesCount();
 	m_filterLengts.SetElementsCount(count, 1);
 
 	if (m_filterLengthsAttrPtr.IsValid()){

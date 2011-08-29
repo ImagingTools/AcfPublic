@@ -3773,9 +3773,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const INumericConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetNumericConstraints</name>
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>36afe6af4c8ecba76aae3be3b86a31d6</anchor>
+      <anchor>3273fd702b83cce7a8c1726c32e53979</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -3794,24 +3794,24 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetFilterDimensionsCount</name>
+      <name>GetNumericValuesCount</name>
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>b0affc619d5e864955b835e2c3cd2f68</anchor>
+      <anchor>c8da5149c791906ce64c7d58a86a73fb</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
-      <name>GetFilterDescription</name>
+      <name>GetNumericValueDescription</name>
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>1a9c5f493f69296392088da5260431aa</anchor>
-      <arglist>(int dimension) const </arglist>
+      <anchor>f6fca8bbee853935770080ce674f086e</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::IUnitInfo &amp;</type>
-      <name>GetFilterUnitInfo</name>
+      <name>GetNumericValueUnitInfo</name>
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>2f1a87eaa6b9de8cbe3a4463e39b4066</anchor>
-      <arglist>(int dimension) const </arglist>
+      <anchor>b68e7942771ae4172f14b7fc66778549</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -4251,24 +4251,24 @@
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
-      <name>GetFilterDimensionsCount</name>
+      <name>GetNumericValuesCount</name>
       <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
-      <anchor>6babbbc26a6b7d6f997815377b3b5061</anchor>
+      <anchor>fb5236f4459c18f02f9e62df438e5eee</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CString</type>
-      <name>GetFilterDescription</name>
+      <name>GetNumericValueDescription</name>
       <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
-      <anchor>12813175a1bb854453dda9c93e099a37</anchor>
-      <arglist>(int dimension) const =0</arglist>
+      <anchor>91f3df26e705d9869a6e16be451e22c7</anchor>
+      <arglist>(int index) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const imeas::IUnitInfo &amp;</type>
-      <name>GetFilterUnitInfo</name>
+      <name>GetNumericValueUnitInfo</name>
       <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
-      <anchor>663835e20dd27bcf5cdba34df33129d0</anchor>
-      <arglist>(int dimension) const =0</arglist>
+      <anchor>5fe12b84ab6af1e5c7220a7925583950</anchor>
+      <arglist>(int index) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4277,9 +4277,9 @@
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const INumericConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetNumericConstraints</name>
       <anchorfile>classimeas_1_1_i_numeric_params.html</anchorfile>
-      <anchor>d43ed05f3fe8e875d4ac76268f791544</anchor>
+      <anchor>fa55b2b65c2f6a8ec416946e0bd66098</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -4968,9 +4968,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iprm::ISelectionConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetSelectionConstraints</name>
       <anchorfile>classiqtfpf_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>2ae9033758bf8f277881dde942f6fcf7</anchor>
+      <anchor>7c9958caaaca1538596a753eefd36a9b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
