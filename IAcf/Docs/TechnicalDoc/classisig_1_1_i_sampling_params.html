@@ -57,9 +57,9 @@ Inheritance diagram for isig::ISamplingParams:</div>
 
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <br class="typebreak">
-<a class="el" href="classisig_1_1_i_sampling_constraints.html">ISamplingConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_sampling_params.html#6d52c59afca222cfe9e22064a23e7756">GetConstraints</a> () const =0</td></tr>
+<a class="el" href="classisig_1_1_i_sampling_constraints.html">ISamplingConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_sampling_params.html#65f8157f24680d1be3124cd374b90a6c">GetSamplingConstraints</a> () const =0</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get access to constraints information about possible value ranges.  <a href="#6d52c59afca222cfe9e22064a23e7756"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get access to constraints information about possible value ranges.  <a href="#65f8157f24680d1be3124cd374b90a6c"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_sampling_params.html#df59fc6368524d6bde03130332c0a56f">GetInterval</a> () const =0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get sampling interval in seconds.  <a href="#df59fc6368524d6bde03130332c0a56f"></a><br></td></tr>
@@ -107,29 +107,6 @@ Sampler parameters.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="6d52c59afca222cfe9e22064a23e7756"></a><!-- doxytag: member="isig::ISamplingParams::GetConstraints" ref="6d52c59afca222cfe9e22064a23e7756" args="() const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classisig_1_1_i_sampling_constraints.html">ISamplingConstraints</a>* isig::ISamplingParams::GetConstraints           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get access to constraints information about possible value ranges. 
-<p>
-
-<p>Implemented in <a class="el" href="classisig_1_1_c_sampling_params_comp.html#3c41e5c5c72904beb9f2d785d1aaccac">isig::CSamplingParamsComp</a>.</p>
-
-</div>
-</div><p>
 <a class="anchor" name="df59fc6368524d6bde03130332c0a56f"></a><!-- doxytag: member="isig::ISamplingParams::GetInterval" ref="df59fc6368524d6bde03130332c0a56f" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -150,6 +127,29 @@ Get sampling interval in seconds.
 <p>
 
 <p>Implemented in <a class="el" href="classisig_1_1_c_sampling_params_comp.html#17c14dbd1bea96d6d19e4c0cbe5696f5">isig::CSamplingParamsComp</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="65f8157f24680d1be3124cd374b90a6c"></a><!-- doxytag: member="isig::ISamplingParams::GetSamplingConstraints" ref="65f8157f24680d1be3124cd374b90a6c" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classisig_1_1_i_sampling_constraints.html">ISamplingConstraints</a>* isig::ISamplingParams::GetSamplingConstraints           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get access to constraints information about possible value ranges. 
+<p>
+
+<p>Implemented in <a class="el" href="classisig_1_1_c_sampling_params_comp.html#6983d01a7b1128af97e1f581bdb442f7">isig::CSamplingParamsComp</a>.</p>
 
 </div>
 </div><p>

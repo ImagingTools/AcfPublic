@@ -122,7 +122,7 @@ CVersionInfo::CMainRegistry::CMainRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(369);
+			attrVersionNumberPtr->SetValue(373);
 		}
 	}
 
@@ -299,7 +299,7 @@ CVersionInfo::CAcfSlnVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(361);
+			attrVersionNumberPtr->SetValue(366);
 		}
 	}
 
@@ -490,7 +490,7 @@ CVersionInfo::CAcfVocePck::CVersionInfoRegistry::CVersionInfoRegistry()
 
 			icomp::CIntAttribute* attrVersionNumberPtr = dynamic_cast<icomp::CIntAttribute*>(attrInfoVersionNumberPtr->attributePtr.GetPtr());
 			I_ASSERT(attrVersionNumberPtr != NULL);
-			attrVersionNumberPtr->SetValue(1836);
+			attrVersionNumberPtr->SetValue(1846);
 		}
 	}
 

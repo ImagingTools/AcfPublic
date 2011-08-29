@@ -50,26 +50,22 @@ Inheritance diagram for isig::ITriggerParams:</div>
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Types</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124">TriggerMode</a> { <br>
-&nbsp;&nbsp;<a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124d8110b6ee0e4686e9f9210d9bdfc2494">TM_DEFAULT</a>, 
+&nbsp;&nbsp;<a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124eec4255e489c1752afee8ba975583c71">TM_NONE</a>, 
+<a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124912d4ed4ec34a814156359bb766f2a6a">TM_CONTINUOUS</a>, 
 <a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb1242f3d73f8b6544a6294b5a2536e89de0f">TM_RISING_EDGE</a>, 
 <a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124058e033dc8b13ea678ec231784dae8d4">TM_FALLING_EDGE</a>, 
-<a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb12456371f2edfe1d8d0ea2d968fac8c6ad5">TM_POSITIVE_LEVEL</a>, 
 <br>
-&nbsp;&nbsp;<a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb1249588d9376705b9578c1a434ac19baff1">TM_NEGATIVE_LEVEL</a>
+&nbsp;&nbsp;<a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb12456371f2edfe1d8d0ea2d968fac8c6ad5">TM_POSITIVE_LEVEL</a>, 
+<a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb1249588d9376705b9578c1a434ac19baff1">TM_NEGATIVE_LEVEL</a>, 
+<a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124948567cdf845741a89ba68394a29128c">TM_SOFTWARE</a>
 <br>
  }</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Describe working mode of trigger signal.  <a href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124">More...</a><br></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <a class="el" href="classisig_1_1_i_trigger_constraints.html">ITriggerConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_params.html#bf606e04a25c63c49aed85ffd387cd9f">GetConstraints</a> () const =0</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <a class="el" href="classisig_1_1_i_trigger_constraints.html">ITriggerConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_params.html#93ea697ceb89129a7a41943a70544e60">GetTriggerConstraints</a> () const =0</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get constrints describing supported parameter states.  <a href="#bf606e04a25c63c49aed85ffd387cd9f"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_params.html#13abf0c3b66bdc053dde59e237cb467b">IsTriggerEnabled</a> () const =0</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if trigger is enabled.  <a href="#13abf0c3b66bdc053dde59e237cb467b"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_params.html#7a0fde6ede380cd287f178dbd7dc1715">SetTriggerEnabled</a> (bool isEnabled)=0</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set trigger enabling state.  <a href="#7a0fde6ede380cd287f178dbd7dc1715"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get constrints describing supported parameter states.  <a href="#93ea697ceb89129a7a41943a70544e60"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_params.html#dda9d7ea9c4d729be3b6581eee07fc54">GetTriggerMode</a> () const =0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get trigger mode.  <a href="#dda9d7ea9c4d729be3b6581eee07fc54"></a><br></td></tr>
@@ -97,15 +93,19 @@ Describe working mode of trigger signal.
 <p>
 <dl compact><dt><b>Enumerator: </b></dt><dd>
 <table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" name="283940d30e3c2ac921ff3d7976ddb124d8110b6ee0e4686e9f9210d9bdfc2494"></a><!-- doxytag: member="TM_DEFAULT" ref="283940d30e3c2ac921ff3d7976ddb124d8110b6ee0e4686e9f9210d9bdfc2494" args="" -->TM_DEFAULT</em>&nbsp;</td><td>
-</td></tr>
+<tr><td valign="top"><em><a class="anchor" name="283940d30e3c2ac921ff3d7976ddb124eec4255e489c1752afee8ba975583c71"></a><!-- doxytag: member="TM_NONE" ref="283940d30e3c2ac921ff3d7976ddb124eec4255e489c1752afee8ba975583c71" args="" -->TM_NONE</em>&nbsp;</td><td>
+There is no trigger, no signal acquisition will be done. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="283940d30e3c2ac921ff3d7976ddb124912d4ed4ec34a814156359bb766f2a6a"></a><!-- doxytag: member="TM_CONTINUOUS" ref="283940d30e3c2ac921ff3d7976ddb124912d4ed4ec34a814156359bb766f2a6a" args="" -->TM_CONTINUOUS</em>&nbsp;</td><td>
+There is no external trigger, permanently signal acquisition will be done. </td></tr>
 <tr><td valign="top"><em><a class="anchor" name="283940d30e3c2ac921ff3d7976ddb1242f3d73f8b6544a6294b5a2536e89de0f"></a><!-- doxytag: member="TM_RISING_EDGE" ref="283940d30e3c2ac921ff3d7976ddb1242f3d73f8b6544a6294b5a2536e89de0f" args="" -->TM_RISING_EDGE</em>&nbsp;</td><td>
-</td></tr>
+There external trigger with rising edge. </td></tr>
 <tr><td valign="top"><em><a class="anchor" name="283940d30e3c2ac921ff3d7976ddb124058e033dc8b13ea678ec231784dae8d4"></a><!-- doxytag: member="TM_FALLING_EDGE" ref="283940d30e3c2ac921ff3d7976ddb124058e033dc8b13ea678ec231784dae8d4" args="" -->TM_FALLING_EDGE</em>&nbsp;</td><td>
-</td></tr>
+There external trigger with falling edge. </td></tr>
 <tr><td valign="top"><em><a class="anchor" name="283940d30e3c2ac921ff3d7976ddb12456371f2edfe1d8d0ea2d968fac8c6ad5"></a><!-- doxytag: member="TM_POSITIVE_LEVEL" ref="283940d30e3c2ac921ff3d7976ddb12456371f2edfe1d8d0ea2d968fac8c6ad5" args="" -->TM_POSITIVE_LEVEL</em>&nbsp;</td><td>
-</td></tr>
+There external trigger with positive edge control. </td></tr>
 <tr><td valign="top"><em><a class="anchor" name="283940d30e3c2ac921ff3d7976ddb1249588d9376705b9578c1a434ac19baff1"></a><!-- doxytag: member="TM_NEGATIVE_LEVEL" ref="283940d30e3c2ac921ff3d7976ddb1249588d9376705b9578c1a434ac19baff1" args="" -->TM_NEGATIVE_LEVEL</em>&nbsp;</td><td>
+There external trigger with negative edge control. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="283940d30e3c2ac921ff3d7976ddb124948567cdf845741a89ba68394a29128c"></a><!-- doxytag: member="TM_SOFTWARE" ref="283940d30e3c2ac921ff3d7976ddb124948567cdf845741a89ba68394a29128c" args="" -->TM_SOFTWARE</em>&nbsp;</td><td>
 </td></tr>
 </table>
 </dl>
@@ -115,12 +115,12 @@ Describe working mode of trigger signal.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="bf606e04a25c63c49aed85ffd387cd9f"></a><!-- doxytag: member="isig::ITriggerParams::GetConstraints" ref="bf606e04a25c63c49aed85ffd387cd9f" args="() const =0" -->
+<a class="anchor" name="93ea697ceb89129a7a41943a70544e60"></a><!-- doxytag: member="isig::ITriggerParams::GetTriggerConstraints" ref="93ea697ceb89129a7a41943a70544e60" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classisig_1_1_i_trigger_constraints.html">ITriggerConstraints</a>* isig::ITriggerParams::GetConstraints           </td>
+          <td class="memname">virtual const <a class="el" href="classisig_1_1_i_trigger_constraints.html">ITriggerConstraints</a>* isig::ITriggerParams::GetTriggerConstraints           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -134,7 +134,7 @@ Describe working mode of trigger signal.
 Get constrints describing supported parameter states. 
 <p>
 
-<p>Implemented in <a class="el" href="classisig_1_1_c_trigger_params_comp.html#070b9182887551cfaa80fe62f5002092">isig::CTriggerParamsComp</a>.</p>
+<p>Implemented in <a class="el" href="classisig_1_1_c_trigger_params_comp.html#2cbfc6732018cbd0379758fc62b4597a">isig::CTriggerParamsComp</a>.</p>
 
 </div>
 </div><p>
@@ -158,53 +158,6 @@ Get trigger mode.
 <p>
 Normal trigger modes are defined in <code><a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124" title="Describe working mode of trigger signal.">isig::ITriggerParams::TriggerMode</a></code>. 
 <p>Implemented in <a class="el" href="classisig_1_1_c_trigger_params_comp.html#1ff71af657ff8b284c5d76979f14deee">isig::CTriggerParamsComp</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="13abf0c3b66bdc053dde59e237cb467b"></a><!-- doxytag: member="isig::ITriggerParams::IsTriggerEnabled" ref="13abf0c3b66bdc053dde59e237cb467b" args="() const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool isig::ITriggerParams::IsTriggerEnabled           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Check if trigger is enabled. 
-<p>
-
-<p>Implemented in <a class="el" href="classisig_1_1_c_trigger_params_comp.html#860ad542d4c107fd0f6b76ad0c6f9475">isig::CTriggerParamsComp</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="7a0fde6ede380cd287f178dbd7dc1715"></a><!-- doxytag: member="isig::ITriggerParams::SetTriggerEnabled" ref="7a0fde6ede380cd287f178dbd7dc1715" args="(bool isEnabled)=0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void isig::ITriggerParams::SetTriggerEnabled           </td>
-          <td>(</td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>isEnabled</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Set trigger enabling state. 
-<p>
-
-<p>Implemented in <a class="el" href="classisig_1_1_c_trigger_params_comp.html#a5d876823c7a70e3084832988e05e632">isig::CTriggerParamsComp</a>.</p>
 
 </div>
 </div><p>

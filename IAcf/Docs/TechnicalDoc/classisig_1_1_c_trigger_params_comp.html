@@ -57,15 +57,9 @@ Inheritance diagram for isig::CTriggerParamsComp:</div>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#59a3773c1df8b113b1aadeb86c8ea1e5">CTriggerParamsComp</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <a class="el" href="classisig_1_1_i_trigger_constraints.html">ITriggerConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#070b9182887551cfaa80fe62f5002092">GetConstraints</a> () const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <a class="el" href="classisig_1_1_i_trigger_constraints.html">ITriggerConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#2cbfc6732018cbd0379758fc62b4597a">GetTriggerConstraints</a> () const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get constrints describing supported parameter states.  <a href="#070b9182887551cfaa80fe62f5002092"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#860ad542d4c107fd0f6b76ad0c6f9475">IsTriggerEnabled</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if trigger is enabled.  <a href="#860ad542d4c107fd0f6b76ad0c6f9475"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#a5d876823c7a70e3084832988e05e632">SetTriggerEnabled</a> (bool isEnabled)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set trigger enabling state.  <a href="#a5d876823c7a70e3084832988e05e632"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get constrints describing supported parameter states.  <a href="#2cbfc6732018cbd0379758fc62b4597a"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#1ff71af657ff8b284c5d76979f14deee">GetTriggerMode</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get trigger mode.  <a href="#1ff71af657ff8b284c5d76979f14deee"></a><br></td></tr>
@@ -120,12 +114,12 @@ Implementatation of standard trigger parameters set.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="070b9182887551cfaa80fe62f5002092"></a><!-- doxytag: member="isig::CTriggerParamsComp::GetConstraints" ref="070b9182887551cfaa80fe62f5002092" args="() const " -->
+<a class="anchor" name="2cbfc6732018cbd0379758fc62b4597a"></a><!-- doxytag: member="isig::CTriggerParamsComp::GetTriggerConstraints" ref="2cbfc6732018cbd0379758fc62b4597a" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classisig_1_1_i_trigger_constraints.html">ITriggerConstraints</a>* isig::CTriggerParamsComp::GetConstraints           </td>
+          <td class="memname">virtual const <a class="el" href="classisig_1_1_i_trigger_constraints.html">ITriggerConstraints</a>* isig::CTriggerParamsComp::GetTriggerConstraints           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -139,7 +133,7 @@ Implementatation of standard trigger parameters set.
 Get constrints describing supported parameter states. 
 <p>
 
-<p>Implements <a class="el" href="classisig_1_1_i_trigger_params.html#bf606e04a25c63c49aed85ffd387cd9f">isig::ITriggerParams</a>.</p>
+<p>Implements <a class="el" href="classisig_1_1_i_trigger_params.html#93ea697ceb89129a7a41943a70544e60">isig::ITriggerParams</a>.</p>
 
 </div>
 </div><p>
@@ -163,29 +157,6 @@ Get trigger mode.
 <p>
 Normal trigger modes are defined in <code><a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124" title="Describe working mode of trigger signal.">isig::ITriggerParams::TriggerMode</a></code>. 
 <p>Implements <a class="el" href="classisig_1_1_i_trigger_params.html#dda9d7ea9c4d729be3b6581eee07fc54">isig::ITriggerParams</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="860ad542d4c107fd0f6b76ad0c6f9475"></a><!-- doxytag: member="isig::CTriggerParamsComp::IsTriggerEnabled" ref="860ad542d4c107fd0f6b76ad0c6f9475" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool isig::CTriggerParamsComp::IsTriggerEnabled           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Check if trigger is enabled. 
-<p>
-
-<p>Implements <a class="el" href="classisig_1_1_i_trigger_params.html#13abf0c3b66bdc053dde59e237cb467b">isig::ITriggerParams</a>.</p>
 
 </div>
 </div><p>
@@ -229,30 +200,6 @@ Check if trigger is enabled.
 <p>
 
 <p>Implements <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html#7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="a5d876823c7a70e3084832988e05e632"></a><!-- doxytag: member="isig::CTriggerParamsComp::SetTriggerEnabled" ref="a5d876823c7a70e3084832988e05e632" args="(bool isEnabled)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void isig::CTriggerParamsComp::SetTriggerEnabled           </td>
-          <td>(</td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>isEnabled</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Set trigger enabling state. 
-<p>
-
-<p>Implements <a class="el" href="classisig_1_1_i_trigger_params.html#7a0fde6ede380cd287f178dbd7dc1715">isig::ITriggerParams</a>.</p>
 
 </div>
 </div><p>

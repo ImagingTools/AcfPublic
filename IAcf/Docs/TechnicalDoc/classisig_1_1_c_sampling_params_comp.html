@@ -58,9 +58,9 @@ Inheritance diagram for isig::CSamplingParamsComp:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">I_END_COMPONENT&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_sampling_params_comp.html#ff653a68dc92de910ea63a63fa99d055">CSamplingParamsComp</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <br class="typebreak">
-<a class="el" href="classisig_1_1_i_sampling_constraints.html">ISamplingConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_sampling_params_comp.html#3c41e5c5c72904beb9f2d785d1aaccac">GetConstraints</a> () const </td></tr>
+<a class="el" href="classisig_1_1_i_sampling_constraints.html">ISamplingConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_sampling_params_comp.html#6983d01a7b1128af97e1f581bdb442f7">GetSamplingConstraints</a> () const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get access to constraints information about possible value ranges.  <a href="#3c41e5c5c72904beb9f2d785d1aaccac"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get access to constraints information about possible value ranges.  <a href="#6983d01a7b1128af97e1f581bdb442f7"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_sampling_params_comp.html#17c14dbd1bea96d6d19e4c0cbe5696f5">GetInterval</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get sampling interval in seconds.  <a href="#17c14dbd1bea96d6d19e4c0cbe5696f5"></a><br></td></tr>
@@ -123,29 +123,6 @@ In this implementation the boundaries are fix defined using component attributes
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="3c41e5c5c72904beb9f2d785d1aaccac"></a><!-- doxytag: member="isig::CSamplingParamsComp::GetConstraints" ref="3c41e5c5c72904beb9f2d785d1aaccac" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classisig_1_1_i_sampling_constraints.html">ISamplingConstraints</a>* isig::CSamplingParamsComp::GetConstraints           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get access to constraints information about possible value ranges. 
-<p>
-
-<p>Implements <a class="el" href="classisig_1_1_i_sampling_params.html#6d52c59afca222cfe9e22064a23e7756">isig::ISamplingParams</a>.</p>
-
-</div>
-</div><p>
 <a class="anchor" name="17c14dbd1bea96d6d19e4c0cbe5696f5"></a><!-- doxytag: member="isig::CSamplingParamsComp::GetInterval" ref="17c14dbd1bea96d6d19e4c0cbe5696f5" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -166,6 +143,29 @@ Get sampling interval in seconds.
 <p>
 
 <p>Implements <a class="el" href="classisig_1_1_i_sampling_params.html#df59fc6368524d6bde03130332c0a56f">isig::ISamplingParams</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="6983d01a7b1128af97e1f581bdb442f7"></a><!-- doxytag: member="isig::CSamplingParamsComp::GetSamplingConstraints" ref="6983d01a7b1128af97e1f581bdb442f7" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classisig_1_1_i_sampling_constraints.html">ISamplingConstraints</a>* isig::CSamplingParamsComp::GetSamplingConstraints           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get access to constraints information about possible value ranges. 
+<p>
+
+<p>Implements <a class="el" href="classisig_1_1_i_sampling_params.html#65f8157f24680d1be3124cd374b90a6c">isig::ISamplingParams</a>.</p>
 
 </div>
 </div><p>

@@ -49,7 +49,7 @@ Inheritance diagram for iorn::CHypothesesSet:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiorn_1_1_c_hypotheses_set.html#0b14207a314d54d38a9bfaeb7cb1452e">CHypothesesSet</a> (const <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; <a class="el" href="classiorn_1_1_c_hypothesis_info.html">CHypothesisInfo</a> &gt; &amp;infoPtr)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct empty hypothesis set.  <a href="#0b14207a314d54d38a9bfaeb7cb1452e"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiorn_1_1_c_hypotheses_set.html#8a6ff6ac5939d5ed4e08e56f9e65ddc8">CHypothesesSet</a> (const <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_data_sequence.html">imeas::IDataSequence</a> *hypothesisPtr, double weight, bool isOwned)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiorn_1_1_c_hypotheses_set.html#8a6ff6ac5939d5ed4e08e56f9e65ddc8">CHypothesesSet</a> (const imeas::IDataSequence *hypothesisPtr, double weight, bool isOwned)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct hypothesis set containing one hypothesis.  <a href="#8a6ff6ac5939d5ed4e08e56f9e65ddc8"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a><br class="typebreak">
@@ -63,14 +63,14 @@ Inheritance diagram for iorn::CHypothesesSet:</div>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set number of possible hypotheses.  <a href="#75a2054b8c320c7e2dc1258a1749d830"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <br class="typebreak">
-<a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_data_sequence.html">imeas::IDataSequence</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiorn_1_1_c_hypotheses_set.html#1ab0a193470db917e3d97d51bacdbeda">GetHypothesis</a> (int index, double &amp;weight) const </td></tr>
+imeas::IDataSequence *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiorn_1_1_c_hypotheses_set.html#1ab0a193470db917e3d97d51bacdbeda">GetHypothesis</a> (int index, double &amp;weight) const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get access to single hypothesis.  <a href="#1ab0a193470db917e3d97d51bacdbeda"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiorn_1_1_c_hypotheses_set.html#022e44d62a5f14da935b78a4a823fb7f">SetHypothesis</a> (int index, const <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_data_sequence.html">imeas::IDataSequence</a> *hypothesisPtr, double weight, bool isOwned=false)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiorn_1_1_c_hypotheses_set.html#022e44d62a5f14da935b78a4a823fb7f">SetHypothesis</a> (int index, const imeas::IDataSequence *hypothesisPtr, double weight, bool isOwned=false)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set single hypothesis.  <a href="#022e44d62a5f14da935b78a4a823fb7f"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <br class="typebreak">
-<a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_data_sequence.html">imeas::IDataSequence</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiorn_1_1_c_hypotheses_set.html#e202e6c6f95cc331eae3b3b80ce6e308">PopHypothesis</a> (int index, double &amp;weight, bool &amp;isOwned)</td></tr>
+imeas::IDataSequence *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiorn_1_1_c_hypotheses_set.html#e202e6c6f95cc331eae3b3b80ce6e308">PopHypothesis</a> (int index, double &amp;weight, bool &amp;isOwned)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get ownership of some hipothesis and reset it in container.  <a href="#e202e6c6f95cc331eae3b3b80ce6e308"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiorn_1_1_c_hypotheses_set.html#e874f02fe3c6a6302f08069c162dc4fb">GetBestHypothesisIndex</a> () const </td></tr>
@@ -112,7 +112,7 @@ Construct empty hypothesis set.
         <tr>
           <td class="memname">iorn::CHypothesesSet::CHypothesesSet           </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_data_sequence.html">imeas::IDataSequence</a> *&nbsp;</td>
+          <td class="paramtype">const imeas::IDataSequence *&nbsp;</td>
           <td class="paramname"> <em>hypothesisPtr</em>, </td>
         </tr>
         <tr>
@@ -191,7 +191,7 @@ Get number of possible hypotheses.
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_data_sequence.html">imeas::IDataSequence</a>* iorn::CHypothesesSet::GetHypothesis           </td>
+          <td class="memname">virtual const imeas::IDataSequence* iorn::CHypothesesSet::GetHypothesis           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>index</em>, </td>
@@ -250,7 +250,7 @@ All depend hypothesis must use the same info.
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_data_sequence.html">imeas::IDataSequence</a>* iorn::CHypothesesSet::PopHypothesis           </td>
+          <td class="memname">virtual const imeas::IDataSequence* iorn::CHypothesesSet::PopHypothesis           </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>index</em>, </td>
@@ -325,7 +325,7 @@ Please note, that new hypothesis will be initialized as NULL pointer.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classimeas_1_1_i_data_sequence.html">imeas::IDataSequence</a> *&nbsp;</td>
+          <td class="paramtype">const imeas::IDataSequence *&nbsp;</td>
           <td class="paramname"> <em>hypothesisPtr</em>, </td>
         </tr>
         <tr>

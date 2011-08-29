@@ -49,9 +49,9 @@ Inheritance diagram for iipr::IProjectionParams:</div>
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <br class="typebreak">
-<a class="el" href="classiipr_1_1_i_projection_constraints.html">IProjectionConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_projection_params.html#768b2bfcc4569b07ae17109e12fdab22">GetConstraints</a> () const =0</td></tr>
+<a class="el" href="classiipr_1_1_i_projection_constraints.html">IProjectionConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_projection_params.html#864307a61aaa0ccca6a9c312d85dccaa">GetProjectionConstraints</a> () const =0</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get access to constraints information about possible value ranges.  <a href="#768b2bfcc4569b07ae17109e12fdab22"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get access to constraints information about possible value ranges.  <a href="#864307a61aaa0ccca6a9c312d85dccaa"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_projection_params.html#7ca2528621727e72cc02c309310572df">GetLineWidth</a> () const =0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get width of projection line.  <a href="#7ca2528621727e72cc02c309310572df"></a><br></td></tr>
@@ -69,27 +69,6 @@ Inheritance diagram for iipr::IProjectionParams:</div>
 Describe parameter for projection 2D image to 1D structure. 
 <p>Definition at line <a class="el" href="_i_projection_params_8h_source.html#l00018">18</a> of file <a class="el" href="_i_projection_params_8h_source.html">IProjectionParams.h</a>.</p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="768b2bfcc4569b07ae17109e12fdab22"></a><!-- doxytag: member="iipr::IProjectionParams::GetConstraints" ref="768b2bfcc4569b07ae17109e12fdab22" args="() const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classiipr_1_1_i_projection_constraints.html">IProjectionConstraints</a>* iipr::IProjectionParams::GetConstraints           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get access to constraints information about possible value ranges. 
-<p>
-
-</div>
-</div><p>
 <a class="anchor" name="7ca2528621727e72cc02c309310572df"></a><!-- doxytag: member="iipr::IProjectionParams::GetLineWidth" ref="7ca2528621727e72cc02c309310572df" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -109,6 +88,27 @@ Get access to constraints information about possible value ranges.
 Get width of projection line. 
 <p>
 Depending on interpretation this value can be in pixel or logical units. If this value is negative, smallest width is mean. 
+</div>
+</div><p>
+<a class="anchor" name="864307a61aaa0ccca6a9c312d85dccaa"></a><!-- doxytag: member="iipr::IProjectionParams::GetProjectionConstraints" ref="864307a61aaa0ccca6a9c312d85dccaa" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classiipr_1_1_i_projection_constraints.html">IProjectionConstraints</a>* iipr::IProjectionParams::GetProjectionConstraints           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get access to constraints information about possible value ranges. 
+<p>
+
 </div>
 </div><p>
 <a class="anchor" name="0eef58d2348409cf6aa8a22691d39bfd"></a><!-- doxytag: member="iipr::IProjectionParams::GetProjectionSize" ref="0eef58d2348409cf6aa8a22691d39bfd" args="() const =0" -->

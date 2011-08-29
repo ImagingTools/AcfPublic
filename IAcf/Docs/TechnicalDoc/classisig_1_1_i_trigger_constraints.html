@@ -50,9 +50,6 @@ Inheritance diagram for isig::ITriggerConstraints:</div>
 <a href="classisig_1_1_i_trigger_constraints-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_constraints.html#ce80f33a9ef6acf2ecb5879a33684455">IsTriggerSupported</a> () const =0</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if trigger enabling/disabling is supported.  <a href="#ce80f33a9ef6acf2ecb5879a33684455"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_constraints.html#c3e65147f53a4110240add5d288bb668">IsTriggerModeSupported</a> (int triggerMode) const =0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if specified trigger mode is supported.  <a href="#c3e65147f53a4110240add5d288bb668"></a><br></td></tr>
@@ -82,29 +79,6 @@ Check if specified trigger mode is supported.
 <p>
 Default mode should be always supported. Normal trigger modes are defined in <code><a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124" title="Describe working mode of trigger signal.">isig::ITriggerParams::TriggerMode</a></code>. 
 <p>Implemented in <a class="el" href="classiavt_1_1_c_fire_grab_acquisition_comp.html#112e160f539d84696e38dbdfcfbb3bc6">iavt::CFireGrabAcquisitionComp</a>, <a class="el" href="classicam_1_1_c_acquisition_constraints_comp.html#ad97c7d90deb96f4591c0b4f32f23362">icam::CAcquisitionConstraintsComp</a>, <a class="el" href="classiocv_1_1_c_ocv_acquisition_comp.html#ac566bdb5c9b922cec4d4610bedde958">iocv::COcvAcquisitionComp</a>, and <a class="el" href="classisgige_1_1_c_genicam_camera_comp.html#52e67d03b5c625aef4e7b47070ad8451">isgige::CGenicamCameraComp</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="ce80f33a9ef6acf2ecb5879a33684455"></a><!-- doxytag: member="isig::ITriggerConstraints::IsTriggerSupported" ref="ce80f33a9ef6acf2ecb5879a33684455" args="() const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool isig::ITriggerConstraints::IsTriggerSupported           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Check if trigger enabling/disabling is supported. 
-<p>
-Please note, that for implementations using only triggered acuisition it should return also false. 
-<p>Implemented in <a class="el" href="classiavt_1_1_c_fire_grab_acquisition_comp.html#a1b0690e30299d8fda9f748577ffe4ea">iavt::CFireGrabAcquisitionComp</a>, <a class="el" href="classicam_1_1_c_acquisition_constraints_comp.html#3782767021a12e24d4ce22f64dc8c4db">icam::CAcquisitionConstraintsComp</a>, <a class="el" href="classiocv_1_1_c_ocv_acquisition_comp.html#902d34352f654ef90f3c8a0c3666a8ea">iocv::COcvAcquisitionComp</a>, and <a class="el" href="classisgige_1_1_c_genicam_camera_comp.html#5e9716dce90f7de23e1b6e43889de0d6">isgige::CGenicamCameraComp</a>.</p>
 
 </div>
 </div><p>

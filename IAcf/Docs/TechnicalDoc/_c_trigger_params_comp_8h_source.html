@@ -45,40 +45,35 @@
 <a name="l00026"></a>00026               I_REGISTER_INTERFACE(<a class="code" href="classisig_1_1_i_trigger_params.html" title="Interface for AVT camera parameters.">isig::ITriggerParams</a>);
 <a name="l00027"></a>00027               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>);
 <a name="l00028"></a>00028               I_ASSIGN(m_triggerConstraintsCompPtr, <span class="stringliteral">"TriggerConstraints"</span>, <span class="stringliteral">"Describing allowed parameter state, typically implemented in camera component"</span>, <span class="keyword">false</span>, <span class="stringliteral">"TriggerConstraints"</span>);
-<a name="l00029"></a>00029               I_ASSIGN(m_isTriggerEnabledAttrPtr, <span class="stringliteral">"ExternalTriggerEnabled"</span>, <span class="stringliteral">"Enables external trigger"</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);
-<a name="l00030"></a>00030               I_ASSIGN(m_triggerModeAttrPtr, <span class="stringliteral">"TriggerMode"</span>, <span class="stringliteral">"Set trigger mode: 0 - Default, 1 - Rising edge, 2 - Falling edge, 3 - Positive level, 4 - Negative level"</span>, <span class="keyword">false</span>, 0);
-<a name="l00031"></a>00031        I_END_COMPONENT;
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033        <span class="comment">// reimplmented (isig::ITriggerParams)</span>
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classisig_1_1_i_trigger_constraints.html" title="Interface for AVT camera parameters.">ITriggerConstraints</a>* <a class="code" href="classisig_1_1_c_trigger_params_comp.html#070b9182887551cfaa80fe62f5002092" title="Get constrints describing supported parameter states.">GetConstraints</a>() <span class="keyword">const</span>;
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#860ad542d4c107fd0f6b76ad0c6f9475" title="Check if trigger is enabled.">IsTriggerEnabled</a>() <span class="keyword">const</span>;
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a5d876823c7a70e3084832988e05e632" title="Set trigger enabling state.">SetTriggerEnabled</a>(<span class="keywordtype">bool</span> isEnabled);
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#1ff71af657ff8b284c5d76979f14deee" title="Get trigger mode.">GetTriggerMode</a>() <span class="keyword">const</span>;
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#670d41fc9ce3033bba4475114b27bb30" title="Set trigger mode.">SetTriggerMode</a>(<span class="keywordtype">int</span> triggerMode);
+<a name="l00029"></a>00029               I_ASSIGN(m_triggerModeAttrPtr, <span class="stringliteral">"TriggerMode"</span>, <span class="stringliteral">"Set trigger mode:\n\t0 - None\n\t1 - Continuous\n\t2 - Rising edge\n\t3 - Falling edge\n\t4 - Positive level\n\t5 - Negative level\n\t6 - Software"</span>, <span class="keyword">true</span>, 0);
+<a name="l00030"></a>00030        I_END_COMPONENT;
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032        <span class="comment">// reimplmented (isig::ITriggerParams)</span>
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classisig_1_1_i_trigger_constraints.html" title="Interface for AVT camera parameters.">ITriggerConstraints</a>* <a class="code" href="classisig_1_1_c_trigger_params_comp.html#2cbfc6732018cbd0379758fc62b4597a" title="Get constrints describing supported parameter states.">GetTriggerConstraints</a>() <span class="keyword">const</span>;
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#1ff71af657ff8b284c5d76979f14deee" title="Get trigger mode.">GetTriggerMode</a>() <span class="keyword">const</span>;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#670d41fc9ce3033bba4475114b27bb30" title="Set trigger mode.">SetTriggerMode</a>(<span class="keywordtype">int</span> triggerMode);
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#c2ac5146f3ccba17864e9a53d4e00852">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#c2ac5146f3ccba17864e9a53d4e00852">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="keyword">protected</span>:
-<a name="l00044"></a>00044        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#0d20fcd9935ffc329ddf54541baa8c6b">OnComponentCreated</a>();
+<a name="l00040"></a>00040 <span class="keyword">protected</span>:
+<a name="l00041"></a>00041        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#0d20fcd9935ffc329ddf54541baa8c6b">OnComponentCreated</a>();
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 <span class="keyword">private</span>:
+<a name="l00045"></a>00045        <span class="keywordtype">int</span> m_triggerMode;
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="keyword">private</span>:
-<a name="l00048"></a>00048        <span class="keywordtype">bool</span> m_isTriggerEnabled;
-<a name="l00049"></a>00049        <span class="keywordtype">int</span> m_triggerMode;
+<a name="l00047"></a>00047        I_REF(<a class="code" href="classisig_1_1_i_trigger_constraints.html" title="Interface for AVT camera parameters.">isig::ITriggerConstraints</a>, m_triggerConstraintsCompPtr);
+<a name="l00048"></a>00048        I_ATTR(<span class="keywordtype">int</span>, m_triggerModeAttrPtr);
+<a name="l00049"></a>00049 };
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051        I_REF(<a class="code" href="classisig_1_1_i_trigger_constraints.html" title="Interface for AVT camera parameters.">isig::ITriggerConstraints</a>, m_triggerConstraintsCompPtr);
-<a name="l00052"></a>00052        I_ATTR(<span class="keywordtype">bool</span>, m_isTriggerEnabledAttrPtr);
-<a name="l00053"></a>00053        I_ATTR(<span class="keywordtype">int</span>, m_triggerModeAttrPtr);
-<a name="l00054"></a>00054 };
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057 } <span class="comment">// namespace isig</span>
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 <span class="preprocessor">#endif // !isig_CTriggerParamsComp_included</span>
-<a name="l00061"></a>00061 <span class="preprocessor"></span>
-<a name="l00062"></a>00062 
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 } <span class="comment">// namespace isig</span>
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="preprocessor">#endif // !isig_CTriggerParamsComp_included</span>
+<a name="l00056"></a>00056 <span class="preprocessor"></span>
+<a name="l00057"></a>00057 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

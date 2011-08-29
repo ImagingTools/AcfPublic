@@ -47,9 +47,9 @@ Inheritance diagram for icam::IExposureParams:</div>
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual const <br class="typebreak">
-<a class="el" href="classicam_1_1_i_exposure_constraints.html">IExposureConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicam_1_1_i_exposure_params.html#f62fdcd9e08cc28c6f47b3c9bd57c88c">GetConstraints</a> () const =0</td></tr>
+<a class="el" href="classicam_1_1_i_exposure_constraints.html">IExposureConstraints</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicam_1_1_i_exposure_params.html#437a45b02173cf1f1e5140db59e54f8a">GetExposureConstraints</a> () const =0</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get constrints describing allowed value ranges.  <a href="#f62fdcd9e08cc28c6f47b3c9bd57c88c"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get constrints describing allowed value ranges.  <a href="#437a45b02173cf1f1e5140db59e54f8a"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicam_1_1_i_exposure_params.html#54c7a7ab367912ddb1cf0e53989d1987">GetShutterTime</a> () const =0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get shutter time (exposure time).  <a href="#54c7a7ab367912ddb1cf0e53989d1987"></a><br></td></tr>
@@ -73,29 +73,6 @@ Inheritance diagram for icam::IExposureParams:</div>
 
 <p>Definition at line <a class="el" href="_i_exposure_params_8h_source.html#l00017">17</a> of file <a class="el" href="_i_exposure_params_8h_source.html">IExposureParams.h</a>.</p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="f62fdcd9e08cc28c6f47b3c9bd57c88c"></a><!-- doxytag: member="icam::IExposureParams::GetConstraints" ref="f62fdcd9e08cc28c6f47b3c9bd57c88c" args="() const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classicam_1_1_i_exposure_constraints.html">IExposureConstraints</a>* icam::IExposureParams::GetConstraints           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get constrints describing allowed value ranges. 
-<p>
-
-<p>Implemented in <a class="el" href="classicam_1_1_c_exposure_params_comp.html#3cac92c1e3814574e79cfbf7b318552a">icam::CExposureParamsComp</a>.</p>
-
-</div>
-</div><p>
 <a class="anchor" name="3b5ae95a1eef9512ce1ec6dd01e9bd6a"></a><!-- doxytag: member="icam::IExposureParams::GetDelayTime" ref="3b5ae95a1eef9512ce1ec6dd01e9bd6a" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -141,6 +118,29 @@ Get exposure enabled (EEN) signal delay time.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>delay time in seconds or negative value if this value isn't active. </dd></dl>
 
 <p>Implemented in <a class="el" href="classicam_1_1_c_exposure_params_comp.html#a73ecdf86353ac6df08ce621b6514dcd">icam::CExposureParamsComp</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="437a45b02173cf1f1e5140db59e54f8a"></a><!-- doxytag: member="icam::IExposureParams::GetExposureConstraints" ref="437a45b02173cf1f1e5140db59e54f8a" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classicam_1_1_i_exposure_constraints.html">IExposureConstraints</a>* icam::IExposureParams::GetExposureConstraints           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get constrints describing allowed value ranges. 
+<p>
+
+<p>Implemented in <a class="el" href="classicam_1_1_c_exposure_params_comp.html#6aeb8a21ec9f1f6bd4844817e195f94e">icam::CExposureParamsComp</a>.</p>
 
 </div>
 </div><p>

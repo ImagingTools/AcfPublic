@@ -91,9 +91,6 @@ Inheritance diagram for iavt::CFireGrabAcquisitionComp:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiavt_1_1_c_fire_grab_acquisition_comp.html#029574b208ec471df0c1fc55efdf7000">GetEenDelayRange</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get range of posible exposure enabled (EEN) signal delay time values.  <a href="#029574b208ec471df0c1fc55efdf7000"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiavt_1_1_c_fire_grab_acquisition_comp.html#a1b0690e30299d8fda9f748577ffe4ea">IsTriggerSupported</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if trigger enabling/disabling is supported.  <a href="#a1b0690e30299d8fda9f748577ffe4ea"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiavt_1_1_c_fire_grab_acquisition_comp.html#112e160f539d84696e38dbdfcfbb3bc6">IsTriggerModeSupported</a> (int triggerMode) const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if specified trigger mode is supported.  <a href="#112e160f539d84696e38dbdfcfbb3bc6"></a><br></td></tr>
@@ -444,29 +441,6 @@ Check if specified trigger mode is supported.
 <p>
 Default mode should be always supported. Normal trigger modes are defined in <code><a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124" title="Describe working mode of trigger signal.">isig::ITriggerParams::TriggerMode</a></code>. 
 <p>Implements <a class="el" href="classisig_1_1_i_trigger_constraints.html#c3e65147f53a4110240add5d288bb668">isig::ITriggerConstraints</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="a1b0690e30299d8fda9f748577ffe4ea"></a><!-- doxytag: member="iavt::CFireGrabAcquisitionComp::IsTriggerSupported" ref="a1b0690e30299d8fda9f748577ffe4ea" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iavt::CFireGrabAcquisitionComp::IsTriggerSupported           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Check if trigger enabling/disabling is supported. 
-<p>
-Please note, that for implementations using only triggered acuisition it should return also false. 
-<p>Implements <a class="el" href="classisig_1_1_i_trigger_constraints.html#ce80f33a9ef6acf2ecb5879a33684455">isig::ITriggerConstraints</a>.</p>
 
 </div>
 </div><p>

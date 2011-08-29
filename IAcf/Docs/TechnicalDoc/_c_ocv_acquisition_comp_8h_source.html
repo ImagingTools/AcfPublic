@@ -81,33 +81,32 @@
 <a name="l00062"></a>00062        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#2f421ded15797848b6f474a587ebf5e2">GetBitmapSize</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064        <span class="comment">// reimplemented (isig::ITriggerConstraints)</span>
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#902d34352f654ef90f3c8a0c3666a8ea" title="Check if trigger enabling/disabling is supported.">IsTriggerSupported</a>() <span class="keyword">const</span>;
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#ac566bdb5c9b922cec4d4610bedde958" title="Check if specified trigger mode is supported.">IsTriggerModeSupported</a>(<span class="keywordtype">int</span> triggerMode) <span class="keyword">const</span>;
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="keyword">protected</span>:
-<a name="l00069"></a>00069        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#a3b92bb978a2d9c290707c0c9eb8bed8">OnComponentCreated</a>();
-<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#34db5ccc34e5b6ce35c9ebfc2e5f53ee">OnComponentDestroyed</a>();
-<a name="l00072"></a>00072        
-<a name="l00073"></a>00073 <span class="keyword">private</span>:
-<a name="l00074"></a>00074        I_REF(<a class="code" href="classicam_1_1_i_exposure_params.html">icam::IExposureParams</a>, m_defaultExposureParamsCompPtr);
-<a name="l00075"></a>00075        I_REF(<a class="code" href="classisig_1_1_i_trigger_params.html" title="Interface for AVT camera parameters.">isig::ITriggerParams</a>, m_triggerParamsCompPtr);
-<a name="l00076"></a>00076        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rectangle.html">i2d::CRectangle</a>, m_imageRegionParamsCompPtr);
-<a name="l00077"></a>00077        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_exposureParamsIdAttrPtr);
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079        I_ATTR(<span class="keywordtype">bool</span>, m_singleShootAttrPtr);
-<a name="l00080"></a>00080        I_ATTR(<span class="keywordtype">double</span>, m_timeoutAttrPtr);
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082        CvCapture* m_cameraPtr;
-<a name="l00083"></a>00083 };
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#ac566bdb5c9b922cec4d4610bedde958" title="Check if specified trigger mode is supported.">IsTriggerModeSupported</a>(<span class="keywordtype">int</span> triggerMode) <span class="keyword">const</span>;
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="keyword">protected</span>:
+<a name="l00068"></a>00068        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#a3b92bb978a2d9c290707c0c9eb8bed8">OnComponentCreated</a>();
+<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#34db5ccc34e5b6ce35c9ebfc2e5f53ee">OnComponentDestroyed</a>();
+<a name="l00071"></a>00071        
+<a name="l00072"></a>00072 <span class="keyword">private</span>:
+<a name="l00073"></a>00073        I_REF(<a class="code" href="classicam_1_1_i_exposure_params.html">icam::IExposureParams</a>, m_defaultExposureParamsCompPtr);
+<a name="l00074"></a>00074        I_REF(<a class="code" href="classisig_1_1_i_trigger_params.html" title="Interface for AVT camera parameters.">isig::ITriggerParams</a>, m_triggerParamsCompPtr);
+<a name="l00075"></a>00075        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rectangle.html">i2d::CRectangle</a>, m_imageRegionParamsCompPtr);
+<a name="l00076"></a>00076        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_exposureParamsIdAttrPtr);
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078        I_ATTR(<span class="keywordtype">bool</span>, m_singleShootAttrPtr);
+<a name="l00079"></a>00079        I_ATTR(<span class="keywordtype">double</span>, m_timeoutAttrPtr);
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081        CvCapture* m_cameraPtr;
+<a name="l00082"></a>00082 };
+<a name="l00083"></a>00083 
 <a name="l00084"></a>00084 
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086 } <span class="comment">// namespace iocv</span>
+<a name="l00085"></a>00085 } <span class="comment">// namespace iocv</span>
+<a name="l00086"></a>00086 
 <a name="l00087"></a>00087 
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089 <span class="preprocessor">#endif // !iocv_COcvAcquisitionComp_included</span>
-<a name="l00090"></a>00090 <span class="preprocessor"></span>
-<a name="l00091"></a>00091 
+<a name="l00088"></a>00088 <span class="preprocessor">#endif // !iocv_COcvAcquisitionComp_included</span>
+<a name="l00089"></a>00089 <span class="preprocessor"></span>
+<a name="l00090"></a>00090 
 </pre></div></div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

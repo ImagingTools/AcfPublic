@@ -1364,6 +1364,15 @@
     <namespace>isgige</namespace>
   </compound>
   <compound kind="file">
+    <name>CPulseParamsComp.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <filename>_c_pulse_params_comp_8h</filename>
+    <includes id="_i_pulse_params_8h" name="IPulseParams.h" local="yes" imported="no">isig/IPulseParams.h</includes>
+    <includes id="_i_pulse_constraints_8h" name="IPulseConstraints.h" local="yes" imported="no">isig/IPulseConstraints.h</includes>
+    <class kind="class">isig::CPulseParamsComp</class>
+    <namespace>isig</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSamplingParamsComp.h</name>
     <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
     <filename>_c_sampling_params_comp_8h</filename>
@@ -1379,6 +1388,20 @@
     <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">isig/ITriggerConstraints.h</includes>
     <includes id="_i_trigger_params_8h" name="ITriggerParams.h" local="yes" imported="no">isig/ITriggerParams.h</includes>
     <class kind="class">isig::CTriggerParamsComp</class>
+    <namespace>isig</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IPulseConstraints.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <filename>_i_pulse_constraints_8h</filename>
+    <class kind="class">isig::IPulseConstraints</class>
+    <namespace>isig</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IPulseParams.h</name>
+    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <filename>_i_pulse_params_8h</filename>
+    <class kind="class">isig::IPulseParams</class>
     <namespace>isig</namespace>
   </compound>
   <compound kind="file">
@@ -1495,6 +1518,42 @@
     <name>mil</name>
     <title>MIL</title>
     <filename>group__mil.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>ibase::idoc::CMultiDocumentManagerBase</name>
+    <filename>classibase_1_1idoc_1_1_c_multi_document_manager_base.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>ibase::idoc::CSingleDocumentManagerBase</name>
+    <filename>classibase_1_1idoc_1_1_c_single_document_manager_base.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::QGraphicsEllipseItem</name>
+    <filename>classiqt2d_1_1_q_graphics_ellipse_item.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::QGraphicsLineItem</name>
+    <filename>classiqt2d_1_1_q_graphics_line_item.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::QGraphicsPathItem</name>
+    <filename>classiqt2d_1_1_q_graphics_path_item.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>TChangeDelegator</name>
+    <filename>class_t_change_delegator.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>TCopySerializedWrap</name>
+    <filename>class_t_copy_serialized_wrap.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>TSingleModelObserverBase</name>
+    <filename>class_t_single_model_observer_base.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>TVector</name>
+    <filename>class_t_vector.html</filename>
   </compound>
   <compound kind="namespace">
     <name>iavt</name>
@@ -1626,13 +1685,6 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>IsTriggerSupported</name>
-      <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>a1b0690e30299d8fda9f748577ffe4ea</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
       <name>IsTriggerModeSupported</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
       <anchor>112e160f539d84696e38dbdfcfbb3bc6</anchor>
@@ -1675,10 +1727,6 @@
     </member>
   </compound>
   <compound kind="namespace">
-    <name>ibase::idoc</name>
-    <filename>namespaceibase_1_1idoc.html</filename>
-  </compound>
-  <compound kind="namespace">
     <name>icam</name>
     <filename>namespaceicam.html</filename>
     <class kind="class">icam::CAcquisitionConstraintsComp</class>
@@ -1700,13 +1748,6 @@
       <anchorfile>classicam_1_1_c_acquisition_constraints_comp.html</anchorfile>
       <anchor>c645ca77336060e8319936bccf8faa42</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsTriggerSupported</name>
-      <anchorfile>classicam_1_1_c_acquisition_constraints_comp.html</anchorfile>
-      <anchor>3782767021a12e24d4ce22f64dc8c4db</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -1758,9 +1799,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IExposureConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetExposureConstraints</name>
       <anchorfile>classicam_1_1_c_exposure_params_comp.html</anchorfile>
-      <anchor>3cac92c1e3814574e79cfbf7b318552a</anchor>
+      <anchor>6aeb8a21ec9f1f6bd4844817e195f94e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -1920,9 +1961,9 @@
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const IExposureConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetExposureConstraints</name>
       <anchorfile>classicam_1_1_i_exposure_params.html</anchorfile>
-      <anchor>f62fdcd9e08cc28c6f47b3c9bd57c88c</anchor>
+      <anchor>437a45b02173cf1f1e5140db59e54f8a</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -4176,8 +4217,6 @@
     <name>iipr::CRectDerivativeProcessor</name>
     <filename>classiipr_1_1_c_rect_derivative_processor.html</filename>
     <base>TSyncProcessorWrap&lt; IProcessor &gt;</base>
-    <base virtualness="virtual">imeas::INumericConstraints</base>
-    <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>DoDerivativeProcessing</name>
@@ -4208,24 +4247,24 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetFilterDimensionsCount</name>
+      <name>GetNumericValuesCount</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>57426ae5c054f31580cad6418c188e8a</anchor>
+      <anchor>8aaa5845f57f38aea453a90cdefe07ab</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
-      <name>GetFilterDescription</name>
+      <name>GetNumericValueDescription</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>18b7ecd0eddb29937d998282b3037d1a</anchor>
-      <arglist>(int dimension) const </arglist>
+      <anchor>afeb6e94807b07f3d4fa4cf15e4e6b6e</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::IUnitInfo &amp;</type>
-      <name>GetFilterUnitInfo</name>
+      <name>GetNumericValueUnitInfo</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>d0d6982f2ab4d931597bc4b13f921b97</anchor>
-      <arglist>(int dimension) const </arglist>
+      <anchor>87bd4a695300f85c2526d6bb04279642</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -4294,8 +4333,6 @@
     <name>iipr::CRectImageSmoothProcessorComp</name>
     <filename>classiipr_1_1_c_rect_image_smooth_processor_comp.html</filename>
     <base>TImageParamProcessorCompBase&lt; imeas::INumericParams &gt;</base>
-    <base virtualness="virtual">imeas::INumericConstraints</base>
-    <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
     <member kind="enumeration">
       <name>UnitMode</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
@@ -4347,24 +4384,24 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetFilterDimensionsCount</name>
+      <name>GetNumericValuesCount</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>51a04afd6628694c0523c5e73d1b7427</anchor>
+      <anchor>a5078c209ea812abb27b263737ce919f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
-      <name>GetFilterDescription</name>
+      <name>GetNumericValueDescription</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>414ee86579a74921594fe193f77e9fd2</anchor>
-      <arglist>(int dimension) const </arglist>
+      <anchor>7d8a40213e26036bf1cc176ec8c2e219</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::IUnitInfo &amp;</type>
-      <name>GetFilterUnitInfo</name>
+      <name>GetNumericValueUnitInfo</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>a7ac3cb105ffa6a7292924ce94a66e27</anchor>
-      <arglist>(int dimension) const </arglist>
+      <anchor>e33a423a10270dcd8a27479cba698ae3</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -5271,9 +5308,9 @@
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const IProjectionConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetProjectionConstraints</name>
       <anchorfile>classiipr_1_1_i_projection_params.html</anchorfile>
-      <anchor>768b2bfcc4569b07ae17109e12fdab22</anchor>
+      <anchor>864307a61aaa0ccca6a9c312d85dccaa</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -8838,13 +8875,6 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>IsTriggerSupported</name>
-      <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>902d34352f654ef90f3c8a0c3666a8ea</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
       <name>IsTriggerModeSupported</name>
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
       <anchor>ac566bdb5c9b922cec4d4610bedde958</anchor>
@@ -11606,13 +11636,6 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>IsTriggerSupported</name>
-      <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>5e9716dce90f7de23e1b6e43889de0d6</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
       <name>IsTriggerModeSupported</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
       <anchor>52e67d03b5c625aef4e7b47070ad8451</anchor>
@@ -11820,12 +11843,98 @@
   <compound kind="namespace">
     <name>isig</name>
     <filename>namespaceisig.html</filename>
+    <class kind="class">isig::CPulseParamsComp</class>
     <class kind="class">isig::CSamplingParamsComp</class>
     <class kind="class">isig::CTriggerParamsComp</class>
+    <class kind="class">isig::IPulseConstraints</class>
+    <class kind="class">isig::IPulseParams</class>
     <class kind="class">isig::ISamplingConstraints</class>
     <class kind="class">isig::ISamplingParams</class>
     <class kind="class">isig::ITriggerConstraints</class>
     <class kind="class">isig::ITriggerParams</class>
+  </compound>
+  <compound kind="class">
+    <name>isig::CPulseParamsComp</name>
+    <filename>classisig_1_1_c_pulse_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">isig::IPulseParams</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
+      <anchor>b093943e915a003b71de65254e197368</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CPulseParamsComp</name>
+      <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
+      <anchor>472e2ea45d4491d1142451e4f94588ee</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IPulseConstraints *</type>
+      <name>GetPulseConstraints</name>
+      <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
+      <anchor>544e3f5bd3f184bd66021b04fa42dd7f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetDelayTime</name>
+      <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
+      <anchor>a2abc8ece98501079bcfc7edd334f980</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetDelayTime</name>
+      <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
+      <anchor>72a810f1526c9038621c05983c883ea5</anchor>
+      <arglist>(double time)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetPulseDuration</name>
+      <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
+      <anchor>dae6a971bb3f3e85b660a770dc840acf</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPulseDuration</name>
+      <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
+      <anchor>1cad8ea224b17b2941e7ec7b9aaa8962</anchor>
+      <arglist>(double time)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetRelaxingTime</name>
+      <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
+      <anchor>4a8422857c07323d72c4df7f295fbf6f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetRelaxingTime</name>
+      <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
+      <anchor>f881376d2ab1c27be36051097ed60d95</anchor>
+      <arglist>(double time)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
+      <anchor>554833d46374d72b56657a54746a558b</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
+      <anchor>778420fd49cce87b37364e4b30372f5a</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>isig::CSamplingParamsComp</name>
@@ -11848,9 +11957,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ISamplingConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetSamplingConstraints</name>
       <anchorfile>classisig_1_1_c_sampling_params_comp.html</anchorfile>
-      <anchor>3c41e5c5c72904beb9f2d785d1aaccac</anchor>
+      <anchor>6983d01a7b1128af97e1f581bdb442f7</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11917,24 +12026,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ITriggerConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetTriggerConstraints</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>070b9182887551cfaa80fe62f5002092</anchor>
+      <anchor>2cbfc6732018cbd0379758fc62b4597a</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsTriggerEnabled</name>
-      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>860ad542d4c107fd0f6b76ad0c6f9475</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetTriggerEnabled</name>
-      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>a5d876823c7a70e3084832988e05e632</anchor>
-      <arglist>(bool isEnabled)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -11963,6 +12058,123 @@
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
       <anchor>0d20fcd9935ffc329ddf54541baa8c6b</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>isig::IPulseConstraints</name>
+    <filename>classisig_1_1_i_pulse_constraints.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>PulseSupportedFlags</name>
+      <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
+      <anchor>125134ee442e4c6cf8ad963ddf7f7bd6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PSF_NONE</name>
+      <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
+      <anchor>125134ee442e4c6cf8ad963ddf7f7bd67c012755c7c71fc55601ed51aab5e699</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PSF_DELAY_TIME</name>
+      <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
+      <anchor>125134ee442e4c6cf8ad963ddf7f7bd6c22eaf1311809da5d444fb80a6fcf597</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PSF_PULSE_DURATION</name>
+      <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
+      <anchor>125134ee442e4c6cf8ad963ddf7f7bd6e0d2b922870fd21bacf900986462cbe7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PSF_RELAXING_TIME</name>
+      <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
+      <anchor>125134ee442e4c6cf8ad963ddf7f7bd60cadd24a4b30e81e0d427a40ca378fab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetPulseSupportedFlags</name>
+      <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
+      <anchor>48b3217a46c7d808434efff2fe7aa7e5</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CRange</type>
+      <name>GetDelayTimeRange</name>
+      <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
+      <anchor>9e8b99a9496753c7a8e8868aae409c2a</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CRange</type>
+      <name>GetPulseDurationRange</name>
+      <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
+      <anchor>21f82390cff03780d3c0a666f5afc7e0</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CRange</type>
+      <name>GetRelaxingTimeRange</name>
+      <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
+      <anchor>848595a734501488e7cf54c9082a2363</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>isig::IPulseParams</name>
+    <filename>classisig_1_1_i_pulse_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const IPulseConstraints *</type>
+      <name>GetPulseConstraints</name>
+      <anchorfile>classisig_1_1_i_pulse_params.html</anchorfile>
+      <anchor>df1a6200b4109b0f6888552d9c5a40e6</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetDelayTime</name>
+      <anchorfile>classisig_1_1_i_pulse_params.html</anchorfile>
+      <anchor>37501fdf68c8ea680062d5de25519781</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetDelayTime</name>
+      <anchorfile>classisig_1_1_i_pulse_params.html</anchorfile>
+      <anchor>6ada4c5021ec1f693aa08ac70f73019b</anchor>
+      <arglist>(double time)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetPulseDuration</name>
+      <anchorfile>classisig_1_1_i_pulse_params.html</anchorfile>
+      <anchor>0e5236bb3e8667987fd05d33c0b216c1</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetPulseDuration</name>
+      <anchorfile>classisig_1_1_i_pulse_params.html</anchorfile>
+      <anchor>52b952298dbecdccaae1bb6ba143ddad</anchor>
+      <arglist>(double time)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetRelaxingTime</name>
+      <anchorfile>classisig_1_1_i_pulse_params.html</anchorfile>
+      <anchor>f496a3dcc5f35ecb84d56cae19c988b6</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetRelaxingTime</name>
+      <anchorfile>classisig_1_1_i_pulse_params.html</anchorfile>
+      <anchor>acd96123409ab4b2341ce6a075d3a42f</anchor>
+      <arglist>(double time)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12034,9 +12246,9 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const ISamplingConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetSamplingConstraints</name>
       <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>6d52c59afca222cfe9e22064a23e7756</anchor>
+      <anchor>65f8157f24680d1be3124cd374b90a6c</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -12074,13 +12286,6 @@
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>IsTriggerSupported</name>
-      <anchorfile>classisig_1_1_i_trigger_constraints.html</anchorfile>
-      <anchor>ce80f33a9ef6acf2ecb5879a33684455</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
       <name>IsTriggerModeSupported</name>
       <anchorfile>classisig_1_1_i_trigger_constraints.html</anchorfile>
       <anchor>c3e65147f53a4110240add5d288bb668</anchor>
@@ -12098,9 +12303,15 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>TM_DEFAULT</name>
+      <name>TM_NONE</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>283940d30e3c2ac921ff3d7976ddb124d8110b6ee0e4686e9f9210d9bdfc2494</anchor>
+      <anchor>283940d30e3c2ac921ff3d7976ddb124eec4255e489c1752afee8ba975583c71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TM_CONTINUOUS</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>283940d30e3c2ac921ff3d7976ddb124912d4ed4ec34a814156359bb766f2a6a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -12127,26 +12338,18 @@
       <anchor>283940d30e3c2ac921ff3d7976ddb1249588d9376705b9578c1a434ac19baff1</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>TM_SOFTWARE</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>283940d30e3c2ac921ff3d7976ddb124948567cdf845741a89ba68394a29128c</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual const ITriggerConstraints *</type>
-      <name>GetConstraints</name>
+      <name>GetTriggerConstraints</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>bf606e04a25c63c49aed85ffd387cd9f</anchor>
+      <anchor>93ea697ceb89129a7a41943a70544e60</anchor>
       <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsTriggerEnabled</name>
-      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>13abf0c3b66bdc053dde59e237cb467b</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetTriggerEnabled</name>
-      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>7a0fde6ede380cd287f178dbd7dc1715</anchor>
-      <arglist>(bool isEnabled)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>

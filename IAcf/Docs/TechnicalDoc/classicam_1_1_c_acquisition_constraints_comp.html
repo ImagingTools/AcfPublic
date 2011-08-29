@@ -55,9 +55,6 @@ Inheritance diagram for icam::CAcquisitionConstraintsComp:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/" href="file:\\E:\Work\Projects\Development\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicam_1_1_c_acquisition_constraints_comp.html#c645ca77336060e8319936bccf8faa42">BaseClass</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicam_1_1_c_acquisition_constraints_comp.html#3782767021a12e24d4ce22f64dc8c4db">IsTriggerSupported</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if trigger enabling/disabling is supported.  <a href="#3782767021a12e24d4ce22f64dc8c4db"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicam_1_1_c_acquisition_constraints_comp.html#ad97c7d90deb96f4591c0b4f32f23362">IsTriggerModeSupported</a> (int triggerMode) const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if specified trigger mode is supported.  <a href="#ad97c7d90deb96f4591c0b4f32f23362"></a><br></td></tr>
@@ -186,29 +183,6 @@ Check if specified trigger mode is supported.
 <p>
 Default mode should be always supported. Normal trigger modes are defined in <code><a class="el" href="classisig_1_1_i_trigger_params.html#283940d30e3c2ac921ff3d7976ddb124" title="Describe working mode of trigger signal.">isig::ITriggerParams::TriggerMode</a></code>. 
 <p>Implements <a class="el" href="classisig_1_1_i_trigger_constraints.html#c3e65147f53a4110240add5d288bb668">isig::ITriggerConstraints</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="3782767021a12e24d4ce22f64dc8c4db"></a><!-- doxytag: member="icam::CAcquisitionConstraintsComp::IsTriggerSupported" ref="3782767021a12e24d4ce22f64dc8c4db" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool icam::CAcquisitionConstraintsComp::IsTriggerSupported           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Check if trigger enabling/disabling is supported. 
-<p>
-Please note, that for implementations using only triggered acuisition it should return also false. 
-<p>Implements <a class="el" href="classisig_1_1_i_trigger_constraints.html#ce80f33a9ef6acf2ecb5879a33684455">isig::ITriggerConstraints</a>.</p>
 
 </div>
 </div><p>

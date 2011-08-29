@@ -42,7 +42,7 @@ public:
 	/**
 		Get constrints describing allowed value ranges.
 	*/
-	virtual const IExposureConstraints* GetConstraints() const = 0;
+	virtual const IExposureConstraints* GetExposureConstraints() const = 0;
 
 	/**
 		Get shutter time (exposure time).
