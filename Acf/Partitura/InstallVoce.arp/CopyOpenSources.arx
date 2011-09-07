@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          1860
+          1881
         </Number>
         <Description>
           ACF
@@ -44,7 +44,7 @@
         <Flags>
           0
         </Flags>
-        <AttributeInfoMap count="7">
+        <AttributeInfoMap count="8">
           <AttributeInfo>
             <Id>
               ApplicationInfo
@@ -134,6 +134,22 @@
             </Type>
             <ExportId>
               Log
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                false
+              </IsEnabled>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              OtherExcludeFilters
+            </Id>
+            <Type>
+              icomp::TMultiAttribute&lt;istd::CString&gt;
+            </Type>
+            <ExportId>
+              OtherExcludeFilters
             </ExportId>
             <Data>
               <IsEnabled>
@@ -395,7 +411,7 @@
               <IsEnabled>
                 true
               </IsEnabled>
-              <Values count="9">
+              <Values count="8">
                 <Value>
                   *.png
                 </Value>
@@ -413,9 +429,6 @@
                 </Value>
                 <Value>
                   *.aps
-                </Value>
-                <Value>
-                  *.h
                 </Value>
                 <Value>
                   *.svg
@@ -900,7 +913,7 @@
               <IsEnabled>
                 true
               </IsEnabled>
-              <Values count="9">
+              <Values count="8">
                 <Value>
                   *.png
                 </Value>
@@ -918,9 +931,6 @@
                 </Value>
                 <Value>
                   *.aps
-                </Value>
-                <Value>
-                  *.h
                 </Value>
                 <Value>
                   *.svg

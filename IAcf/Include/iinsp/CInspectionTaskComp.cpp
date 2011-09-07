@@ -1,0 +1,142 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the IACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the IACF.
+**
+********************************************************************************/
+
+
+#include "iinsp/CInspectionTaskComp.h"
+
+
+// ACF includes
+#include "iser/IArchive.h"
+#include "iser/CArchiveTag.h"
+
+
+namespace iinsp
+{
+
+
+// reimplemented (iinsp::IInspectionTask)
+
+int CInspectionTaskComp::GetSubtasksCount() const
+{
+	return m_subtasksCompPtr.GetCount();
+}
+
+
+iproc::ISupplier* CInspectionTaskComp::GetSubtask(int subtaskIndex) const
+{
+	return m_subtasksCompPtr[subtaskIndex];
+}
+
+
+iprm::IParamsSet* CInspectionTaskComp::GetTaskParams() const
+{
+	return m_generalParamsCompPtr.GetPtr();
+}
+
+
+// reimplemented (iser::ISerializable)
+
+bool CInspectionTaskComp::Serialize(iser::IArchive& archive)
+{
+	bool retVal = true;
+
+	if (*m_serialzeSuppliersAttrPtr){
+		static iser::CArchiveTag taskListTag("SubtaskList", "List of inspection subtasks");
+		static iser::CArchiveTag taskTag("Subtask", "Single subtask");
+
+		int subtasksCount = m_subtasksCompPtr.GetCount();
+
+		retVal = retVal && archive.BeginMultiTag(taskListTag, taskTag, subtasksCount);
+
+		if (!retVal || (!archive.IsStoring() && subtasksCount != m_subtasksCompPtr.GetCount())){
+			SendWarningMessage(MI_BAD_PARAMS_COUNT, "Bad number of parameter to serialize");
+			return false;
+		}
+
+		for (int i = 0; i < subtasksCount; ++i){
+			retVal = retVal && archive.BeginTag(taskTag);
+
+			iproc::ISupplier* taskPtr = m_subtasksCompPtr[i];
+			if (taskPtr == NULL){
+				SendCriticalMessage(MI_NO_SUBTASK, "No subtask connected");
+				return false;
+			}
+
+			iprm::IParamsSet* paramsSetPtr = taskPtr->GetModelParametersSet();
+			if (paramsSetPtr != NULL){
+				retVal = retVal && paramsSetPtr->Serialize(archive);
+			}
+
+			retVal = retVal && archive.EndTag(taskTag);
+		}
+
+		retVal = retVal && archive.EndTag(taskListTag);
+	}
+
+	if (m_generalParamsCompPtr.IsValid()){
+		static iser::CArchiveTag generalParamsTag("GeneralParams", "General inspection parameters");
+
+		retVal = retVal && archive.BeginTag(generalParamsTag);
+		retVal = retVal && m_generalParamsCompPtr->Serialize(archive);
+		retVal = retVal && archive.EndTag(generalParamsTag);
+	}
+
+	return retVal;
+}
+
+
+// protected methods
+
+// reimplemented (icomp::CComponentBase)
+
+void CInspectionTaskComp::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+
+	int modelsCount = m_subtaskModelsCompPtr.GetCount();
+
+	for (int i = 0; i < modelsCount; ++i){
+		imod::IModel* modelPtr = m_subtaskModelsCompPtr[i];
+		if (modelPtr != NULL){
+			modelPtr->AttachObserver(this);
+		}
+	}
+}
+
+
+void CInspectionTaskComp::OnComponentDestroyed()
+{
+	int modelsCount = m_subtaskModelsCompPtr.GetCount();
+
+	for (int i = 0; i < modelsCount; ++i){
+		imod::IModel* modelPtr = m_subtaskModelsCompPtr[i];
+		if ((modelPtr != NULL) && modelPtr->IsAttached(this)){
+			modelPtr->DetachObserver(this);
+		}
+	}
+
+	BaseClass::OnComponentDestroyed();
+}
+
+
+} // namespace iinsp
+
+
