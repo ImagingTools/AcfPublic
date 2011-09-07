@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -104,7 +104,7 @@ CProcessEnvironment::EnvironmentVariables CProcessEnvironment::GetEnvironmentVar
 			istd::CString variableName = iqt::GetCString(splitted[0]);
 			istd::CString variableValue = iqt::GetCString(splitted[1]);
 
-			environmentVariables[variableName] = variableValue;
+			environmentVariables[variableName.ToUpper()] = variableValue;
 		}
 	}
 

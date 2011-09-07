@@ -2,7 +2,7 @@
 <tagfile>
   <compound kind="file">
     <name>CFireGrabAcquisitionComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iavt/</path>
+    <path>C:/Temp/Iacf/Include/iavt/</path>
     <filename>_c_fire_grab_acquisition_comp_8h</filename>
     <includes id="_i_exposure_constraints_8h" name="IExposureConstraints.h" local="yes" imported="no">icam/IExposureConstraints.h</includes>
     <includes id="_i_exposure_params_8h" name="IExposureParams.h" local="yes" imported="no">icam/IExposureParams.h</includes>
@@ -13,14 +13,14 @@
   </compound>
   <compound kind="file">
     <name>iavt.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iavt/</path>
+    <path>C:/Temp/Iacf/Include/iavt/</path>
     <filename>iavt_8h</filename>
     <includes id="icam_8h" name="icam.h" local="yes" imported="no">icam/icam.h</includes>
     <namespace>iavt</namespace>
   </compound>
   <compound kind="file">
     <name>CAcquisitionConstraintsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icam/</path>
+    <path>C:/Temp/Iacf/Include/icam/</path>
     <filename>_c_acquisition_constraints_comp_8h</filename>
     <includes id="_i_exposure_constraints_8h" name="IExposureConstraints.h" local="yes" imported="no">icam/IExposureConstraints.h</includes>
     <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">isig/ITriggerConstraints.h</includes>
@@ -29,7 +29,7 @@
   </compound>
   <compound kind="file">
     <name>CExposureParamsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icam/</path>
+    <path>C:/Temp/Iacf/Include/icam/</path>
     <filename>_c_exposure_params_comp_8h</filename>
     <includes id="_i_exposure_params_8h" name="IExposureParams.h" local="yes" imported="no">icam/IExposureParams.h</includes>
     <includes id="_i_exposure_constraints_8h" name="IExposureConstraints.h" local="yes" imported="no">icam/IExposureConstraints.h</includes>
@@ -38,7 +38,7 @@
   </compound>
   <compound kind="file">
     <name>CMemoryAcquisitionComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icam/</path>
+    <path>C:/Temp/Iacf/Include/icam/</path>
     <filename>_c_memory_acquisition_comp_8h</filename>
     <includes id="icam_8h" name="icam.h" local="yes" imported="no">icam/icam.h</includes>
     <class kind="class">icam::CMemoryAcquisitionComp</class>
@@ -46,7 +46,7 @@
   </compound>
   <compound kind="file">
     <name>CSnapBitmapSupplierComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icam/</path>
+    <path>C:/Temp/Iacf/Include/icam/</path>
     <filename>_c_snap_bitmap_supplier_comp_8h</filename>
     <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
     <class kind="class">icam::CSnapBitmapSupplierComp</class>
@@ -54,13 +54,13 @@
   </compound>
   <compound kind="file">
     <name>icam.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icam/</path>
+    <path>C:/Temp/Iacf/Include/icam/</path>
     <filename>icam_8h</filename>
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
     <name>IExposureConstraints.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icam/</path>
+    <path>C:/Temp/Iacf/Include/icam/</path>
     <filename>_i_exposure_constraints_8h</filename>
     <includes id="icam_8h" name="icam.h" local="yes" imported="no">icam/icam.h</includes>
     <class kind="class">icam::IExposureConstraints</class>
@@ -68,7 +68,7 @@
   </compound>
   <compound kind="file">
     <name>IExposureParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icam/</path>
+    <path>C:/Temp/Iacf/Include/icam/</path>
     <filename>_i_exposure_params_8h</filename>
     <includes id="icam_8h" name="icam.h" local="yes" imported="no">icam/icam.h</includes>
     <class kind="class">icam::IExposureParams</class>
@@ -76,7 +76,7 @@
   </compound>
   <compound kind="file">
     <name>CEjectorParamsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>_c_ejector_params_comp_8h</filename>
     <includes id="_i_ejector_params_8h" name="IEjectorParams.h" local="yes" imported="no">icntl/IEjectorParams.h</includes>
     <class kind="class">icntl::CEjectorParamsComp</class>
@@ -84,7 +84,7 @@
   </compound>
   <compound kind="file">
     <name>CInspectionUnitParamsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>_c_inspection_unit_params_comp_8h</filename>
     <includes id="_i_inspection_unit_params_8h" name="IInspectionUnitParams.h" local="yes" imported="no">icntl/IInspectionUnitParams.h</includes>
     <class kind="class">icntl::CInspectionUnitParamsComp</class>
@@ -92,7 +92,7 @@
   </compound>
   <compound kind="file">
     <name>CLineParamsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>_c_line_params_comp_8h</filename>
     <includes id="_i_line_params_8h" name="ILineParams.h" local="yes" imported="no">icntl/ILineParams.h</includes>
     <includes id="_i_inspection_unit_params_8h" name="IInspectionUnitParams.h" local="yes" imported="no">icntl/IInspectionUnitParams.h</includes>
@@ -102,7 +102,7 @@
   </compound>
   <compound kind="file">
     <name>CMultiLineParamsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>_c_multi_line_params_comp_8h</filename>
     <includes id="_i_line_params_8h" name="ILineParams.h" local="yes" imported="no">icntl/ILineParams.h</includes>
     <includes id="_i_multi_line_params_8h" name="IMultiLineParams.h" local="yes" imported="no">icntl/IMultiLineParams.h</includes>
@@ -111,20 +111,20 @@
   </compound>
   <compound kind="file">
     <name>IAutomaticController.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>_i_automatic_controller_8h</filename>
     <class kind="class">icntl::IAutomaticController</class>
     <namespace>icntl</namespace>
   </compound>
   <compound kind="file">
     <name>icntl.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>icntl_8h</filename>
     <namespace>icntl</namespace>
   </compound>
   <compound kind="file">
     <name>IEjectorController.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>_i_ejector_controller_8h</filename>
     <includes id="icntl_8h" name="icntl.h" local="yes" imported="no">icntl/icntl.h</includes>
     <class kind="class">icntl::IEjectorController</class>
@@ -132,7 +132,7 @@
   </compound>
   <compound kind="file">
     <name>IEjectorParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>_i_ejector_params_8h</filename>
     <includes id="icntl_8h" name="icntl.h" local="yes" imported="no">icntl/icntl.h</includes>
     <class kind="class">icntl::IEjectorParams</class>
@@ -140,7 +140,7 @@
   </compound>
   <compound kind="file">
     <name>IInspectionUnitController.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>_i_inspection_unit_controller_8h</filename>
     <includes id="icntl_8h" name="icntl.h" local="yes" imported="no">icntl/icntl.h</includes>
     <class kind="class">icntl::IInspectionUnitController</class>
@@ -148,7 +148,7 @@
   </compound>
   <compound kind="file">
     <name>IInspectionUnitParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>_i_inspection_unit_params_8h</filename>
     <includes id="icntl_8h" name="icntl.h" local="yes" imported="no">icntl/icntl.h</includes>
     <class kind="class">icntl::IInspectionUnitParams</class>
@@ -156,7 +156,7 @@
   </compound>
   <compound kind="file">
     <name>ILineController.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>_i_line_controller_8h</filename>
     <includes id="icntl_8h" name="icntl.h" local="yes" imported="no">icntl/icntl.h</includes>
     <class kind="class">icntl::ILineController</class>
@@ -164,7 +164,7 @@
   </compound>
   <compound kind="file">
     <name>ILineParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>_i_line_params_8h</filename>
     <includes id="icntl_8h" name="icntl.h" local="yes" imported="no">icntl/icntl.h</includes>
     <class kind="class">icntl::ILineParams</class>
@@ -172,7 +172,7 @@
   </compound>
   <compound kind="file">
     <name>IMultiLineController.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>_i_multi_line_controller_8h</filename>
     <includes id="icntl_8h" name="icntl.h" local="yes" imported="no">icntl/icntl.h</includes>
     <class kind="class">icntl::IMultiLineController</class>
@@ -180,7 +180,7 @@
   </compound>
   <compound kind="file">
     <name>IMultiLineParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>_i_multi_line_params_8h</filename>
     <includes id="icntl_8h" name="icntl.h" local="yes" imported="no">icntl/icntl.h</includes>
     <class kind="class">icntl::IMultiLineParams</class>
@@ -188,14 +188,14 @@
   </compound>
   <compound kind="file">
     <name>IObjectInspection.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/icntl/</path>
+    <path>C:/Temp/Iacf/Include/icntl/</path>
     <filename>_i_object_inspection_8h</filename>
     <class kind="class">icntl::IObjectInspection</class>
     <namespace>icntl</namespace>
   </compound>
   <compound kind="file">
     <name>CDeviceInfo.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/idev/</path>
+    <path>C:/Temp/Iacf/Include/idev/</path>
     <filename>_c_device_info_8h</filename>
     <includes id="_i_device_info_8h" name="IDeviceInfo.h" local="yes" imported="no">idev/IDeviceInfo.h</includes>
     <class kind="class">idev::CDeviceInfo</class>
@@ -203,21 +203,21 @@
   </compound>
   <compound kind="file">
     <name>IDeviceDescription.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/idev/</path>
+    <path>C:/Temp/Iacf/Include/idev/</path>
     <filename>_i_device_description_8h</filename>
     <class kind="class">idev::IDeviceDescription</class>
     <namespace>idev</namespace>
   </compound>
   <compound kind="file">
     <name>IDeviceInfo.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/idev/</path>
+    <path>C:/Temp/Iacf/Include/idev/</path>
     <filename>_i_device_info_8h</filename>
     <class kind="class">idev::IDeviceInfo</class>
     <namespace>idev</namespace>
   </compound>
   <compound kind="file">
     <name>CInspectionComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iinsp/</path>
+    <path>C:/Temp/Iacf/Include/iinsp/</path>
     <filename>_c_inspection_comp_8h</filename>
     <includes id="_i_inspection_task_8h" name="IInspectionTask.h" local="yes" imported="no">iinsp/IInspectionTask.h</includes>
     <includes id="_i_inspection_8h" name="IInspection.h" local="yes" imported="no">iinsp/IInspection.h</includes>
@@ -226,7 +226,7 @@
   </compound>
   <compound kind="file">
     <name>CInspectionTaskComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iinsp/</path>
+    <path>C:/Temp/Iacf/Include/iinsp/</path>
     <filename>_c_inspection_task_comp_8h</filename>
     <includes id="_i_inspection_task_8h" name="IInspectionTask.h" local="yes" imported="no">iinsp/IInspectionTask.h</includes>
     <class kind="class">iinsp::CInspectionTaskComp</class>
@@ -234,27 +234,27 @@
   </compound>
   <compound kind="file">
     <name>iinsp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iinsp/</path>
+    <path>C:/Temp/Iacf/Include/iinsp/</path>
     <filename>iinsp_8h</filename>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
     <name>IInspection.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iinsp/</path>
+    <path>C:/Temp/Iacf/Include/iinsp/</path>
     <filename>_i_inspection_8h</filename>
     <class kind="class">iinsp::IInspection</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
     <name>IInspectionTask.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iinsp/</path>
+    <path>C:/Temp/Iacf/Include/iinsp/</path>
     <filename>_i_inspection_task_8h</filename>
     <class kind="class">iinsp::IInspectionTask</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
     <name>CCaliperFeature.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_caliper_feature_8h</filename>
     <includes id="_c_feature_base_8h" name="CFeatureBase.h" local="yes" imported="no">iipr/CFeatureBase.h</includes>
     <class kind="class">iipr::CCaliperFeature</class>
@@ -262,7 +262,7 @@
   </compound>
   <compound kind="file">
     <name>CCaliperParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_caliper_params_8h</filename>
     <includes id="_i_caliper_params_8h" name="ICaliperParams.h" local="yes" imported="no">iipr/ICaliperParams.h</includes>
     <class kind="class">iipr::CCaliperParams</class>
@@ -270,7 +270,7 @@
   </compound>
   <compound kind="file">
     <name>CCaliperParamsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_caliper_params_comp_8h</filename>
     <includes id="_c_caliper_params_8h" name="CCaliperParams.h" local="yes" imported="no">iipr/CCaliperParams.h</includes>
     <class kind="class">iipr::CCaliperParamsComp</class>
@@ -278,7 +278,7 @@
   </compound>
   <compound kind="file">
     <name>CCircleFinderParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_circle_finder_params_8h</filename>
     <includes id="_i_circle_finder_params_8h" name="ICircleFinderParams.h" local="yes" imported="no">iipr/ICircleFinderParams.h</includes>
     <class kind="class">iipr::CCircleFinderParams</class>
@@ -286,7 +286,7 @@
   </compound>
   <compound kind="file">
     <name>CCircleFinderParamsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_circle_finder_params_comp_8h</filename>
     <includes id="_c_circle_finder_params_8h" name="CCircleFinderParams.h" local="yes" imported="no">iipr/CCircleFinderParams.h</includes>
     <class kind="class">iipr::CCircleFinderParamsComp</class>
@@ -294,7 +294,7 @@
   </compound>
   <compound kind="file">
     <name>CCircleFindProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_circle_find_processor_comp_8h</filename>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
     <includes id="_i_features_container_8h" name="IFeaturesContainer.h" local="yes" imported="no">iipr/IFeaturesContainer.h</includes>
@@ -308,7 +308,7 @@
   </compound>
   <compound kind="file">
     <name>CConvolutionKernel2d.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_convolution_kernel2d_8h</filename>
     <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
     <class kind="class">iipr::CConvolutionKernel2d</class>
@@ -317,7 +317,7 @@
   </compound>
   <compound kind="file">
     <name>CDelegatedBitmapSupplierComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_delegated_bitmap_supplier_comp_8h</filename>
     <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
     <class kind="class">iipr::CDelegatedBitmapSupplierComp</class>
@@ -325,7 +325,7 @@
   </compound>
   <compound kind="file">
     <name>CExtremumCaliperProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_extremum_caliper_processor_comp_8h</filename>
     <includes id="_i_caliper_processor_8h" name="ICaliperProcessor.h" local="yes" imported="no">iipr/ICaliperProcessor.h</includes>
     <includes id="_i_feature_to_projection_mapper_8h" name="IFeatureToProjectionMapper.h" local="yes" imported="no">iipr/IFeatureToProjectionMapper.h</includes>
@@ -334,7 +334,7 @@
   </compound>
   <compound kind="file">
     <name>CFeatureBase.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_feature_base_8h</filename>
     <includes id="_i_feature_8h" name="IFeature.h" local="yes" imported="no">iipr/IFeature.h</includes>
     <class kind="class">iipr::CFeatureBase</class>
@@ -342,7 +342,7 @@
   </compound>
   <compound kind="file">
     <name>CFeaturesContainer.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_features_container_8h</filename>
     <includes id="_i_features_container_8h" name="IFeaturesContainer.h" local="yes" imported="no">iipr/IFeaturesContainer.h</includes>
     <class kind="class">iipr::CFeaturesContainer</class>
@@ -350,7 +350,7 @@
   </compound>
   <compound kind="file">
     <name>CFeatureToImageMapperProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_feature_to_image_mapper_processor_comp_8h</filename>
     <includes id="_i_feature_to_feature_processor_8h" name="IFeatureToFeatureProcessor.h" local="yes" imported="no">iipr/IFeatureToFeatureProcessor.h</includes>
     <includes id="_i_feature_to_image_mapper_8h" name="IFeatureToImageMapper.h" local="yes" imported="no">iipr/IFeatureToImageMapper.h</includes>
@@ -360,21 +360,21 @@
   </compound>
   <compound kind="file">
     <name>CImageCropProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_image_crop_processor_comp_8h</filename>
     <class kind="class">iipr::CImageCropProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>CImageHistogramProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_image_histogram_processor_comp_8h</filename>
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>CImageInterpolationParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_image_interpolation_params_8h</filename>
     <includes id="_i_image_interpolation_params_8h" name="IImageInterpolationParams.h" local="yes" imported="no">iipr/IImageInterpolationParams.h</includes>
     <class kind="class">iipr::CImageInterpolationParams</class>
@@ -382,7 +382,7 @@
   </compound>
   <compound kind="file">
     <name>CImageNormalizeProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_image_normalize_processor_comp_8h</filename>
     <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
     <class kind="class">iipr::CImageNormalizeProcessorComp</class>
@@ -390,21 +390,21 @@
   </compound>
   <compound kind="file">
     <name>CImagePolarTransformProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_image_polar_transform_processor_comp_8h</filename>
     <class kind="class">iipr::CImagePolarTransformProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>CImageProcessorCompBase.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_image_processor_comp_base_8h</filename>
     <class kind="class">iipr::CImageProcessorCompBase</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>CLineProjectionProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_line_projection_processor_comp_8h</filename>
     <includes id="_i_line_projection_processor_8h" name="ILineProjectionProcessor.h" local="yes" imported="no">iipr/ILineProjectionProcessor.h</includes>
     <includes id="_i_projection_constraints_8h" name="IProjectionConstraints.h" local="yes" imported="no">iipr/IProjectionConstraints.h</includes>
@@ -415,7 +415,7 @@
   </compound>
   <compound kind="file">
     <name>CLineProjectionSupplierComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_line_projection_supplier_comp_8h</filename>
     <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
     <includes id="_i_line_projection_supplier_8h" name="ILineProjectionSupplier.h" local="yes" imported="no">iipr/ILineProjectionSupplier.h</includes>
@@ -425,7 +425,7 @@
   </compound>
   <compound kind="file">
     <name>CPositionFromImageSupplierComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_position_from_image_supplier_comp_8h</filename>
     <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
@@ -433,14 +433,14 @@
   </compound>
   <compound kind="file">
     <name>CProcessedAcquisitionComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_processed_acquisition_comp_8h</filename>
     <class kind="class">iipr::CProcessedAcquisitionComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>CProcessedBitmapSupplierComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_processed_bitmap_supplier_comp_8h</filename>
     <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
     <class kind="class">iipr::CProcessedBitmapSupplierComp</class>
@@ -448,14 +448,14 @@
   </compound>
   <compound kind="file">
     <name>CRectDerivativeProcessor.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_rect_derivative_processor_8h</filename>
     <class kind="class">iipr::CRectDerivativeProcessor</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>CRectDerivativeProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_rect_derivative_processor_comp_8h</filename>
     <includes id="_c_rect_derivative_processor_8h" name="CRectDerivativeProcessor.h" local="yes" imported="no">iipr/CRectDerivativeProcessor.h</includes>
     <class kind="class">iipr::CRectDerivativeProcessorComp</class>
@@ -463,7 +463,7 @@
   </compound>
   <compound kind="file">
     <name>CRectImageSmoothProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_rect_image_smooth_processor_comp_8h</filename>
     <includes id="_t_image_param_processor_comp_base_8h" name="TImageParamProcessorCompBase.h" local="yes" imported="no">iipr/TImageParamProcessorCompBase.h</includes>
     <class kind="class">iipr::CRectImageSmoothProcessorComp</class>
@@ -471,14 +471,14 @@
   </compound>
   <compound kind="file">
     <name>CRingPatternGeneratorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_ring_pattern_generator_comp_8h</filename>
     <class kind="class">iipr::CRingPatternGeneratorComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>CRingPatternGeneratorParamsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_ring_pattern_generator_params_comp_8h</filename>
     <includes id="_i_ring_pattern_generator_params_8h" name="IRingPatternGeneratorParams.h" local="yes" imported="no">iipr/IRingPatternGeneratorParams.h</includes>
     <class kind="class">iipr::CRingPatternGeneratorParamsComp</class>
@@ -486,7 +486,7 @@
   </compound>
   <compound kind="file">
     <name>CSearchBasedFeaturesSupplierComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_search_based_features_supplier_comp_8h</filename>
     <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
     <includes id="_i_features_supplier_8h" name="IFeaturesSupplier.h" local="yes" imported="no">iipr/IFeaturesSupplier.h</includes>
@@ -496,7 +496,7 @@
   </compound>
   <compound kind="file">
     <name>CSearchFeature.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_search_feature_8h</filename>
     <includes id="_t_feature_wrap_8h" name="TFeatureWrap.h" local="yes" imported="no">iipr/TFeatureWrap.h</includes>
     <class kind="class">iipr::CSearchFeature</class>
@@ -504,7 +504,7 @@
   </compound>
   <compound kind="file">
     <name>CSearchParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_search_params_8h</filename>
     <includes id="_i_search_params_8h" name="ISearchParams.h" local="yes" imported="no">iipr/ISearchParams.h</includes>
     <class kind="class">iipr::CSearchParams</class>
@@ -512,7 +512,7 @@
   </compound>
   <compound kind="file">
     <name>CSingleFeatureConsumer.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_single_feature_consumer_8h</filename>
     <includes id="_i_features_container_8h" name="IFeaturesContainer.h" local="yes" imported="no">iipr/IFeaturesContainer.h</includes>
     <class kind="class">iipr::CSingleFeatureConsumer</class>
@@ -520,14 +520,14 @@
   </compound>
   <compound kind="file">
     <name>IBitmapSupplier.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_bitmap_supplier_8h</filename>
     <class kind="class">iipr::IBitmapSupplier</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>ICaliperParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_caliper_params_8h</filename>
     <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
     <class kind="class">iipr::ICaliperParams</class>
@@ -535,7 +535,7 @@
   </compound>
   <compound kind="file">
     <name>ICaliperProcessor.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_caliper_processor_8h</filename>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
     <class kind="class">iipr::ICaliperProcessor</class>
@@ -543,7 +543,7 @@
   </compound>
   <compound kind="file">
     <name>ICircleFinderParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_circle_finder_params_8h</filename>
     <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
     <class kind="class">iipr::ICircleFinderParams</class>
@@ -551,7 +551,7 @@
   </compound>
   <compound kind="file">
     <name>IFeature.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_feature_8h</filename>
     <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
     <class kind="class">iipr::IFeature</class>
@@ -559,7 +559,7 @@
   </compound>
   <compound kind="file">
     <name>IFeaturesConsumer.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_features_consumer_8h</filename>
     <includes id="_i_feature_8h" name="IFeature.h" local="yes" imported="no">iipr/IFeature.h</includes>
     <class kind="class">iipr::IFeaturesConsumer</class>
@@ -567,7 +567,7 @@
   </compound>
   <compound kind="file">
     <name>IFeaturesContainer.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_features_container_8h</filename>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
     <class kind="class">iipr::IFeaturesContainer</class>
@@ -575,7 +575,7 @@
   </compound>
   <compound kind="file">
     <name>IFeaturesSupplier.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_features_supplier_8h</filename>
     <includes id="_i_features_container_8h" name="IFeaturesContainer.h" local="yes" imported="no">iipr/IFeaturesContainer.h</includes>
     <class kind="class">iipr::IFeaturesSupplier</class>
@@ -583,7 +583,7 @@
   </compound>
   <compound kind="file">
     <name>IFeatureToFeatureProcessor.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_feature_to_feature_processor_8h</filename>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
     <includes id="_i_features_container_8h" name="IFeaturesContainer.h" local="yes" imported="no">iipr/IFeaturesContainer.h</includes>
@@ -592,28 +592,28 @@
   </compound>
   <compound kind="file">
     <name>IFeatureToImageMapper.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_feature_to_image_mapper_8h</filename>
     <class kind="class">iipr::IFeatureToImageMapper</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>IFeatureToProjectionMapper.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_feature_to_projection_mapper_8h</filename>
     <class kind="class">iipr::IFeatureToProjectionMapper</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>IImageInterpolationParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_image_interpolation_params_8h</filename>
     <class kind="class">iipr::IImageInterpolationParams</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>IImageToFeatureProcessor.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_image_to_feature_processor_8h</filename>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
     <class kind="class">iipr::IImageToFeatureProcessor</class>
@@ -621,20 +621,20 @@
   </compound>
   <compound kind="file">
     <name>iipr.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>iipr_8h</filename>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>ILineProjectionProcessor.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_line_projection_processor_8h</filename>
     <class kind="class">iipr::ILineProjectionProcessor</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>ILineProjectionSupplier.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_line_projection_supplier_8h</filename>
     <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
     <class kind="class">iipr::ILineProjectionSupplier</class>
@@ -642,35 +642,35 @@
   </compound>
   <compound kind="file">
     <name>IMultiBitmapSupplier.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_multi_bitmap_supplier_8h</filename>
     <class kind="class">iipr::IMultiBitmapSupplier</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>IProjectionConstraints.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_projection_constraints_8h</filename>
     <class kind="class">iipr::IProjectionConstraints</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>IProjectionParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_projection_params_8h</filename>
     <class kind="class">iipr::IProjectionParams</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>IRingPatternGeneratorParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_ring_pattern_generator_params_8h</filename>
     <class kind="class">iipr::IRingPatternGeneratorParams</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>ISearchModel.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_search_model_8h</filename>
     <includes id="_i_search_params_8h" name="ISearchParams.h" local="yes" imported="no">iipr/ISearchParams.h</includes>
     <class kind="class">iipr::ISearchModel</class>
@@ -678,19 +678,19 @@
   </compound>
   <compound kind="file">
     <name>ISearchParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_search_params_8h</filename>
     <class kind="class">iipr::ISearchParams</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>IValueSupplier.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_value_supplier_8h</filename>
   </compound>
   <compound kind="file">
     <name>TConvolutionProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_t_convolution_processor_comp_8h</filename>
     <includes id="_t_image_param_processor_comp_base_8h" name="TImageParamProcessorCompBase.h" local="yes" imported="no">iipr/TImageParamProcessorCompBase.h</includes>
     <includes id="_c_convolution_kernel2d_8h" name="CConvolutionKernel2d.h" local="yes" imported="no">iipr/CConvolutionKernel2d.h</includes>
@@ -699,7 +699,7 @@
   </compound>
   <compound kind="file">
     <name>TFeatureWrap.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_t_feature_wrap_8h</filename>
     <includes id="_c_feature_base_8h" name="CFeatureBase.h" local="yes" imported="no">iipr/CFeatureBase.h</includes>
     <class kind="class">iipr::TFeatureWrap</class>
@@ -707,7 +707,7 @@
   </compound>
   <compound kind="file">
     <name>TImageParamProcessorCompBase.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_t_image_param_processor_comp_base_8h</filename>
     <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
     <class kind="class">iipr::TImageParamProcessorCompBase</class>
@@ -715,7 +715,7 @@
   </compound>
   <compound kind="file">
     <name>TImagePixelInterpolator.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_t_image_pixel_interpolator_8h</filename>
     <includes id="_i_image_interpolation_params_8h" name="IImageInterpolationParams.h" local="yes" imported="no">iipr/IImageInterpolationParams.h</includes>
     <class kind="class">iipr::TImagePixelInterpolator</class>
@@ -723,7 +723,7 @@
   </compound>
   <compound kind="file">
     <name>TUnaryTransformProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iipr/</path>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_t_unary_transform_processor_comp_8h</filename>
     <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
     <class kind="class">iipr::InvertFunction</class>
@@ -733,13 +733,13 @@
       <type>TUnaryTransformProcessorComp&lt; I_BYTE, InvertFunction&lt; I_BYTE &gt; &gt;</type>
       <name>CInvertOperatorComp</name>
       <anchorfile>namespaceiipr.html</anchorfile>
-      <anchor>1338874f6c5f00966ec64e0b06992393</anchor>
+      <anchor>a1338874f6c5f00966ec64e0b06992393</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="file">
     <name>CGeneralInfoCommands.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_c_general_info_commands_8h</filename>
     <includes id="ilolv_8h" name="ilolv.h" local="yes" imported="no">ilolv/ilolv.h</includes>
     <class kind="class">ilolv::CGeneralInfoCommands</class>
@@ -752,7 +752,7 @@
   </compound>
   <compound kind="file">
     <name>CGeneralInfoDriverBase.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_c_general_info_driver_base_8h</filename>
     <includes id="_i_driver_8h" name="IDriver.h" local="yes" imported="no">ilolv/IDriver.h</includes>
     <includes id="_c_general_info_commands_8h" name="CGeneralInfoCommands.h" local="yes" imported="no">ilolv/CGeneralInfoCommands.h</includes>
@@ -761,7 +761,7 @@
   </compound>
   <compound kind="file">
     <name>CInspectionUnitCommands.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_c_inspection_unit_commands_8h</filename>
     <includes id="_i_driver_8h" name="IDriver.h" local="yes" imported="no">ilolv/IDriver.h</includes>
     <class kind="class">ilolv::CInspectionUnitCommands</class>
@@ -779,7 +779,7 @@
   </compound>
   <compound kind="file">
     <name>CIoCardTracerCommands.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_c_io_card_tracer_commands_8h</filename>
     <includes id="_c_tracer_commands_8h" name="CTracerCommands.h" local="yes" imported="no">ilolv/CTracerCommands.h</includes>
     <class kind="class">ilolv::CIoCardTracerCommands</class>
@@ -791,7 +791,7 @@
   </compound>
   <compound kind="file">
     <name>CIoCardTracerDriverBase.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_c_io_card_tracer_driver_base_8h</filename>
     <includes id="_i_digital_io_8h" name="IDigitalIo.h" local="yes" imported="no">ilolv/IDigitalIo.h</includes>
     <includes id="_c_io_card_tracer_commands_8h" name="CIoCardTracerCommands.h" local="yes" imported="no">ilolv/CIoCardTracerCommands.h</includes>
@@ -801,7 +801,7 @@
   </compound>
   <compound kind="file">
     <name>CMultiTracerCommands.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_c_multi_tracer_commands_8h</filename>
     <includes id="_c_tracer_commands_8h" name="CTracerCommands.h" local="yes" imported="no">ilolv/CTracerCommands.h</includes>
     <includes id="_c_io_card_tracer_commands_8h" name="CIoCardTracerCommands.h" local="yes" imported="no">ilolv/CIoCardTracerCommands.h</includes>
@@ -823,7 +823,7 @@
   </compound>
   <compound kind="file">
     <name>CMultiTracerDriverBase.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_c_multi_tracer_driver_base_8h</filename>
     <includes id="_i_driver_8h" name="IDriver.h" local="yes" imported="no">ilolv/IDriver.h</includes>
     <includes id="_i_digital_io_8h" name="IDigitalIo.h" local="yes" imported="no">ilolv/IDigitalIo.h</includes>
@@ -835,7 +835,7 @@
   </compound>
   <compound kind="file">
     <name>CSignalBitsCommands.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_c_signal_bits_commands_8h</filename>
     <includes id="ilolv_8h" name="ilolv.h" local="yes" imported="no">ilolv/ilolv.h</includes>
     <class kind="class">ilolv::CSignalBitsCommands</class>
@@ -847,7 +847,7 @@
   </compound>
   <compound kind="file">
     <name>CSignalBitsDriverBase.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_c_signal_bits_driver_base_8h</filename>
     <includes id="_i_driver_8h" name="IDriver.h" local="yes" imported="no">ilolv/IDriver.h</includes>
     <includes id="_i_digital_io_8h" name="IDigitalIo.h" local="yes" imported="no">ilolv/IDigitalIo.h</includes>
@@ -857,7 +857,7 @@
   </compound>
   <compound kind="file">
     <name>CSingleCountTracerDriverBase.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_c_single_count_tracer_driver_base_8h</filename>
     <includes id="_c_tracer_driver_base_8h" name="CTracerDriverBase.h" local="yes" imported="no">ilolv/CTracerDriverBase.h</includes>
     <includes id="_t_ordered_positions_queue_8h" name="TOrderedPositionsQueue.h" local="yes" imported="no">ilolv/TOrderedPositionsQueue.h</includes>
@@ -866,7 +866,7 @@
   </compound>
   <compound kind="file">
     <name>CTracerCommands.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_c_tracer_commands_8h</filename>
     <includes id="_c_inspection_unit_commands_8h" name="CInspectionUnitCommands.h" local="yes" imported="no">ilolv/CInspectionUnitCommands.h</includes>
     <class kind="class">ilolv::CTracerCommands</class>
@@ -887,7 +887,7 @@
   </compound>
   <compound kind="file">
     <name>CTracerDriverBase.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_c_tracer_driver_base_8h</filename>
     <includes id="_i_driver_8h" name="IDriver.h" local="yes" imported="no">ilolv/IDriver.h</includes>
     <includes id="_t_ordered_positions_queue_8h" name="TOrderedPositionsQueue.h" local="yes" imported="no">ilolv/TOrderedPositionsQueue.h</includes>
@@ -901,14 +901,14 @@
   </compound>
   <compound kind="file">
     <name>ICommandCaller.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_i_command_caller_8h</filename>
     <class kind="class">ilolv::ICommandCaller</class>
     <namespace>ilolv</namespace>
   </compound>
   <compound kind="file">
     <name>IDigitalIo.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_i_digital_io_8h</filename>
     <includes id="ilolv_8h" name="ilolv.h" local="yes" imported="no">ilolv/ilolv.h</includes>
     <class kind="class">ilolv::IDigitalIo</class>
@@ -916,7 +916,7 @@
   </compound>
   <compound kind="file">
     <name>IDriver.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_i_driver_8h</filename>
     <includes id="ilolv_8h" name="ilolv.h" local="yes" imported="no">ilolv/ilolv.h</includes>
     <class kind="class">ilolv::IDriver</class>
@@ -924,13 +924,13 @@
   </compound>
   <compound kind="file">
     <name>ilolv.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>ilolv_8h</filename>
     <namespace>ilolv</namespace>
   </compound>
   <compound kind="file">
     <name>TOrderedPositionsQueue.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/ilolv/</path>
+    <path>C:/Temp/Iacf/Include/ilolv/</path>
     <filename>_t_ordered_positions_queue_8h</filename>
     <includes id="ilolv_8h" name="ilolv.h" local="yes" imported="no">ilolv/ilolv.h</includes>
     <class kind="struct">ilolv::TOrderedPositionsQueue</class>
@@ -939,7 +939,7 @@
   </compound>
   <compound kind="file">
     <name>CMilEngine.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/imil/</path>
+    <path>C:/Temp/Iacf/Include/imil/</path>
     <filename>_c_mil_engine_8h</filename>
     <includes id="imil_8h" name="imil.h" local="yes" imported="no">imil/imil.h</includes>
     <class kind="class">imil::CMilEngine</class>
@@ -947,7 +947,7 @@
   </compound>
   <compound kind="file">
     <name>CMilSearchModel.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/imil/</path>
+    <path>C:/Temp/Iacf/Include/imil/</path>
     <filename>_c_mil_search_model_8h</filename>
     <includes id="_i_search_model_8h" name="ISearchModel.h" local="yes" imported="no">iipr/ISearchModel.h</includes>
     <includes id="_i_search_params_8h" name="ISearchParams.h" local="yes" imported="no">iipr/ISearchParams.h</includes>
@@ -957,7 +957,7 @@
   </compound>
   <compound kind="file">
     <name>CMilSearchParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/imil/</path>
+    <path>C:/Temp/Iacf/Include/imil/</path>
     <filename>_c_mil_search_params_8h</filename>
     <includes id="_c_search_params_8h" name="CSearchParams.h" local="yes" imported="no">iipr/CSearchParams.h</includes>
     <includes id="_c_mil_search_model_8h" name="CMilSearchModel.h" local="yes" imported="no">imil/CMilSearchModel.h</includes>
@@ -966,7 +966,7 @@
   </compound>
   <compound kind="file">
     <name>CMilSearchParamsGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/imil/</path>
+    <path>C:/Temp/Iacf/Include/imil/</path>
     <filename>_c_mil_search_params_gui_comp_8h</filename>
     <includes id="_c_mil_search_params_8h" name="CMilSearchParams.h" local="yes" imported="no">imil/CMilSearchParams.h</includes>
     <class kind="class">imil::CMilSearchParamsGuiComp</class>
@@ -974,7 +974,7 @@
   </compound>
   <compound kind="file">
     <name>CMilSearchProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/imil/</path>
+    <path>C:/Temp/Iacf/Include/imil/</path>
     <filename>_c_mil_search_processor_comp_8h</filename>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
@@ -986,13 +986,13 @@
   </compound>
   <compound kind="file">
     <name>imil.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/imil/</path>
+    <path>C:/Temp/Iacf/Include/imil/</path>
     <filename>imil_8h</filename>
     <namespace>imil</namespace>
   </compound>
   <compound kind="file">
     <name>COcvAcquisitionComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iocv/</path>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>_c_ocv_acquisition_comp_8h</filename>
     <includes id="_i_exposure_constraints_8h" name="IExposureConstraints.h" local="yes" imported="no">icam/IExposureConstraints.h</includes>
     <includes id="_i_exposure_params_8h" name="IExposureParams.h" local="yes" imported="no">icam/IExposureParams.h</includes>
@@ -1003,28 +1003,28 @@
   </compound>
   <compound kind="file">
     <name>COcvImage.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iocv/</path>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>_c_ocv_image_8h</filename>
     <class kind="class">iocv::COcvImage</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvVideoControllerComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iocv/</path>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>_c_ocv_video_controller_comp_8h</filename>
     <class kind="class">iocv::COcvVideoControllerComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>iocv.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iocv/</path>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>iocv_8h</filename>
     <includes id="icam_8h" name="icam.h" local="yes" imported="no">icam/icam.h</includes>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>CHypothesesSet.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iorn/</path>
+    <path>C:/Temp/Iacf/Include/iorn/</path>
     <filename>_c_hypotheses_set_8h</filename>
     <includes id="_c_hypothesis_info_8h" name="CHypothesisInfo.h" local="yes" imported="no">iorn/CHypothesisInfo.h</includes>
     <class kind="class">iorn::CHypothesesSet</class>
@@ -1032,14 +1032,14 @@
   </compound>
   <compound kind="file">
     <name>CHypothesisInfo.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iorn/</path>
+    <path>C:/Temp/Iacf/Include/iorn/</path>
     <filename>_c_hypothesis_info_8h</filename>
     <class kind="class">iorn::CHypothesisInfo</class>
     <namespace>iorn</namespace>
   </compound>
   <compound kind="file">
     <name>CSigmoidalObjectronComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iorn/</path>
+    <path>C:/Temp/Iacf/Include/iorn/</path>
     <filename>_c_sigmoidal_objectron_comp_8h</filename>
     <includes id="_i_objectron_8h" name="IObjectron.h" local="yes" imported="no">iorn/IObjectron.h</includes>
     <class kind="class">iorn::CSigmoidalObjectronComp</class>
@@ -1047,14 +1047,14 @@
   </compound>
   <compound kind="file">
     <name>ILearnFeedback.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iorn/</path>
+    <path>C:/Temp/Iacf/Include/iorn/</path>
     <filename>_i_learn_feedback_8h</filename>
     <class kind="class">iorn::ILearnFeedback</class>
     <namespace>iorn</namespace>
   </compound>
   <compound kind="file">
     <name>ILearningSet.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iorn/</path>
+    <path>C:/Temp/Iacf/Include/iorn/</path>
     <filename>_i_learning_set_8h</filename>
     <includes id="iorn_8h" name="iorn.h" local="yes" imported="no">iorn/iorn.h</includes>
     <class kind="class">iorn::ILearningSet</class>
@@ -1062,7 +1062,7 @@
   </compound>
   <compound kind="file">
     <name>IObjectron.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iorn/</path>
+    <path>C:/Temp/Iacf/Include/iorn/</path>
     <filename>_i_objectron_8h</filename>
     <includes id="iorn_8h" name="iorn.h" local="yes" imported="no">iorn/iorn.h</includes>
     <class kind="class">iorn::IObjectron</class>
@@ -1070,13 +1070,13 @@
   </compound>
   <compound kind="file">
     <name>iorn.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iorn/</path>
+    <path>C:/Temp/Iacf/Include/iorn/</path>
     <filename>iorn_8h</filename>
     <namespace>iorn</namespace>
   </compound>
   <compound kind="file">
     <name>CBitmapSupplierGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtcam/</path>
+    <path>C:/Temp/Iacf/Include/iqtcam/</path>
     <filename>_c_bitmap_supplier_gui_comp_8h</filename>
     <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
@@ -1086,7 +1086,7 @@
   </compound>
   <compound kind="file">
     <name>CExposureParamsGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtcam/</path>
+    <path>C:/Temp/Iacf/Include/iqtcam/</path>
     <filename>_c_exposure_params_gui_comp_8h</filename>
     <includes id="_i_exposure_params_8h" name="IExposureParams.h" local="yes" imported="no">icam/IExposureParams.h</includes>
     <class kind="class">iqtcam::CExposureParamsGuiComp</class>
@@ -1094,7 +1094,7 @@
   </compound>
   <compound kind="file">
     <name>CFileAcquisitionComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtcam/</path>
+    <path>C:/Temp/Iacf/Include/iqtcam/</path>
     <filename>_c_file_acquisition_comp_8h</filename>
     <includes id="iqtcam_8h" name="iqtcam.h" local="yes" imported="no">iqtcam/iqtcam.h</includes>
     <class kind="class">iqtcam::CFileAcquisitionComp</class>
@@ -1103,7 +1103,7 @@
   </compound>
   <compound kind="file">
     <name>CSnapImageGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtcam/</path>
+    <path>C:/Temp/Iacf/Include/iqtcam/</path>
     <filename>_c_snap_image_gui_comp_8h</filename>
     <includes id="iqtcam_8h" name="iqtcam.h" local="yes" imported="no">iqtcam/iqtcam.h</includes>
     <class kind="class">iqtcam::CSnapImageGuiComp</class>
@@ -1111,13 +1111,13 @@
   </compound>
   <compound kind="file">
     <name>iqtcam.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtcam/</path>
+    <path>C:/Temp/Iacf/Include/iqtcam/</path>
     <filename>iqtcam_8h</filename>
     <namespace>iqtcam</namespace>
   </compound>
   <compound kind="file">
     <name>CAutomaticControllerGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtcntl/</path>
+    <path>C:/Temp/Iacf/Include/iqtcntl/</path>
     <filename>_c_automatic_controller_gui_comp_8h</filename>
     <includes id="_i_automatic_controller_8h" name="IAutomaticController.h" local="yes" imported="no">icntl/IAutomaticController.h</includes>
     <includes id="iqtcntl_8h" name="iqtcntl.h" local="yes" imported="no">iqtcntl/iqtcntl.h</includes>
@@ -1126,7 +1126,7 @@
   </compound>
   <compound kind="file">
     <name>CDriverControllerComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtcntl/</path>
+    <path>C:/Temp/Iacf/Include/iqtcntl/</path>
     <filename>_c_driver_controller_comp_8h</filename>
     <includes id="_i_command_caller_8h" name="ICommandCaller.h" local="yes" imported="no">ilolv/ICommandCaller.h</includes>
     <includes id="_c_multi_tracer_commands_8h" name="CMultiTracerCommands.h" local="yes" imported="no">ilolv/CMultiTracerCommands.h</includes>
@@ -1150,7 +1150,7 @@
   </compound>
   <compound kind="file">
     <name>CSimulatedMultiTracerGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtcntl/</path>
+    <path>C:/Temp/Iacf/Include/iqtcntl/</path>
     <filename>_c_simulated_multi_tracer_gui_comp_8h</filename>
     <includes id="_i_command_caller_8h" name="ICommandCaller.h" local="yes" imported="no">ilolv/ICommandCaller.h</includes>
     <includes id="_c_general_info_driver_base_8h" name="CGeneralInfoDriverBase.h" local="yes" imported="no">ilolv/CGeneralInfoDriverBase.h</includes>
@@ -1162,14 +1162,14 @@
   </compound>
   <compound kind="file">
     <name>iqtcntl.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtcntl/</path>
+    <path>C:/Temp/Iacf/Include/iqtcntl/</path>
     <filename>iqtcntl_8h</filename>
     <includes id="icntl_8h" name="icntl.h" local="yes" imported="no">icntl/icntl.h</includes>
     <namespace>iqtcntl</namespace>
   </compound>
   <compound kind="file">
     <name>CGeneralSupplierGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtinsp/</path>
+    <path>C:/Temp/Iacf/Include/iqtinsp/</path>
     <filename>_c_general_supplier_gui_comp_8h</filename>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <class kind="class">iqtinsp::CGeneralSupplierGuiComp</class>
@@ -1177,7 +1177,7 @@
   </compound>
   <compound kind="file">
     <name>CInspectionTaskGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtinsp/</path>
+    <path>C:/Temp/Iacf/Include/iqtinsp/</path>
     <filename>_c_inspection_task_gui_comp_8h</filename>
     <includes id="_i_inspection_task_8h" name="IInspectionTask.h" local="yes" imported="no">iinsp/IInspectionTask.h</includes>
     <includes id="iqtinsp_8h" name="iqtinsp.h" local="yes" imported="no">iqtinsp/iqtinsp.h</includes>
@@ -1186,13 +1186,13 @@
   </compound>
   <compound kind="file">
     <name>iqtinsp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtinsp/</path>
+    <path>C:/Temp/Iacf/Include/iqtinsp/</path>
     <filename>iqtinsp_8h</filename>
     <namespace>iqtinsp</namespace>
   </compound>
   <compound kind="file">
     <name>TSupplierGuiCompBase.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtinsp/</path>
+    <path>C:/Temp/Iacf/Include/iqtinsp/</path>
     <filename>_t_supplier_gui_comp_base_8h</filename>
     <includes id="iqtinsp_8h" name="iqtinsp.h" local="yes" imported="no">iqtinsp/iqtinsp.h</includes>
     <class kind="class">iqtinsp::TSupplierGuiCompBase</class>
@@ -1200,7 +1200,7 @@
   </compound>
   <compound kind="file">
     <name>CCaliperParamsGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtipr/</path>
+    <path>C:/Temp/Iacf/Include/iqtipr/</path>
     <filename>_c_caliper_params_gui_comp_8h</filename>
     <includes id="_i_caliper_params_8h" name="ICaliperParams.h" local="yes" imported="no">iipr/ICaliperParams.h</includes>
     <class kind="class">iqtipr::CCaliperParamsGuiComp</class>
@@ -1208,7 +1208,7 @@
   </compound>
   <compound kind="file">
     <name>CCircleFinderParamsGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtipr/</path>
+    <path>C:/Temp/Iacf/Include/iqtipr/</path>
     <filename>_c_circle_finder_params_gui_comp_8h</filename>
     <includes id="_i_circle_finder_params_8h" name="ICircleFinderParams.h" local="yes" imported="no">iipr/ICircleFinderParams.h</includes>
     <class kind="class">iqtipr::CCircleFinderParamsGuiComp</class>
@@ -1216,7 +1216,7 @@
   </compound>
   <compound kind="file">
     <name>CLineProjectionSupplierGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtipr/</path>
+    <path>C:/Temp/Iacf/Include/iqtipr/</path>
     <filename>_c_line_projection_supplier_gui_comp_8h</filename>
     <includes id="_i_line_projection_supplier_8h" name="ILineProjectionSupplier.h" local="yes" imported="no">iipr/ILineProjectionSupplier.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
@@ -1226,7 +1226,7 @@
   </compound>
   <compound kind="file">
     <name>CProjectionShape.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtipr/</path>
+    <path>C:/Temp/Iacf/Include/iqtipr/</path>
     <filename>_c_projection_shape_8h</filename>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
     <class kind="class">iqtipr::CProjectionShape</class>
@@ -1234,7 +1234,7 @@
   </compound>
   <compound kind="file">
     <name>CSearchGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtipr/</path>
+    <path>C:/Temp/Iacf/Include/iqtipr/</path>
     <filename>_c_search_gui_comp_8h</filename>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
@@ -1243,7 +1243,7 @@
   </compound>
   <compound kind="file">
     <name>CSearchParamsGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtipr/</path>
+    <path>C:/Temp/Iacf/Include/iqtipr/</path>
     <filename>_c_search_params_gui_comp_8h</filename>
     <includes id="_c_search_params_8h" name="CSearchParams.h" local="yes" imported="no">iipr/CSearchParams.h</includes>
     <class kind="class">iqtipr::CSearchParamsGuiComp</class>
@@ -1251,7 +1251,7 @@
   </compound>
   <compound kind="file">
     <name>CSearchResultShape.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtipr/</path>
+    <path>C:/Temp/Iacf/Include/iqtipr/</path>
     <filename>_c_search_result_shape_8h</filename>
     <includes id="_i_features_container_8h" name="IFeaturesContainer.h" local="yes" imported="no">iipr/IFeaturesContainer.h</includes>
     <class kind="class">iqtipr::CSearchResultShape</class>
@@ -1259,7 +1259,7 @@
   </compound>
   <compound kind="file">
     <name>CValueSupplierGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtipr/</path>
+    <path>C:/Temp/Iacf/Include/iqtipr/</path>
     <filename>_c_value_supplier_gui_comp_8h</filename>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
@@ -1269,13 +1269,13 @@
   </compound>
   <compound kind="file">
     <name>iqtipr.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtipr/</path>
+    <path>C:/Temp/Iacf/Include/iqtipr/</path>
     <filename>iqtipr_8h</filename>
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
     <name>CSampleAcquisitionGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtsig/</path>
+    <path>C:/Temp/Iacf/Include/iqtsig/</path>
     <filename>_c_sample_acquisition_gui_comp_8h</filename>
     <includes id="_c_sample_container_view_8h" name="CSampleContainerView.h" local="yes" imported="no">iqtsig/CSampleContainerView.h</includes>
     <class kind="class">iqtsig::CSampleAcquisitionGuiComp</class>
@@ -1283,14 +1283,14 @@
   </compound>
   <compound kind="file">
     <name>CSampleContainerView.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtsig/</path>
+    <path>C:/Temp/Iacf/Include/iqtsig/</path>
     <filename>_c_sample_container_view_8h</filename>
     <class kind="class">iqtsig::CSampleContainerView</class>
     <namespace>iqtsig</namespace>
   </compound>
   <compound kind="file">
     <name>CSamplingParamsGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtsig/</path>
+    <path>C:/Temp/Iacf/Include/iqtsig/</path>
     <filename>_c_sampling_params_gui_comp_8h</filename>
     <includes id="_i_sampling_params_8h" name="ISamplingParams.h" local="yes" imported="no">isig/ISamplingParams.h</includes>
     <includes id="iqtsig_8h" name="iqtsig.h" local="yes" imported="no">iqtsig/iqtsig.h</includes>
@@ -1299,7 +1299,7 @@
   </compound>
   <compound kind="file">
     <name>CScriptDataProcessorComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtsig/</path>
+    <path>C:/Temp/Iacf/Include/iqtsig/</path>
     <filename>_c_script_data_processor_comp_8h</filename>
     <includes id="iqtsig_8h" name="iqtsig.h" local="yes" imported="no">iqtsig/iqtsig.h</includes>
     <class kind="class">iqtsig::CScriptDataProcessorComp</class>
@@ -1307,13 +1307,13 @@
   </compound>
   <compound kind="file">
     <name>iqtsig.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtsig/</path>
+    <path>C:/Temp/Iacf/Include/iqtsig/</path>
     <filename>iqtsig_8h</filename>
     <namespace>iqtsig</namespace>
   </compound>
   <compound kind="file">
     <name>CSwissRangerAcquisitionDataViewComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtswr/</path>
+    <path>C:/Temp/Iacf/Include/iqtswr/</path>
     <filename>_c_swiss_ranger_acquisition_data_view_comp_8h</filename>
     <includes id="_i_swiss_ranger_acquisition_data_8h" name="ISwissRangerAcquisitionData.h" local="yes" imported="no">iswr/ISwissRangerAcquisitionData.h</includes>
     <class kind="class">iqtswr::CSwissRangerAcquisitionDataViewComp</class>
@@ -1321,7 +1321,7 @@
   </compound>
   <compound kind="file">
     <name>CSwissRangerParamsGuiComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtswr/</path>
+    <path>C:/Temp/Iacf/Include/iqtswr/</path>
     <filename>_c_swiss_ranger_params_gui_comp_8h</filename>
     <includes id="_i_swiss_ranger_params_8h" name="ISwissRangerParams.h" local="yes" imported="no">iswr/ISwissRangerParams.h</includes>
     <includes id="_i_swiss_ranger_constrains_8h" name="ISwissRangerConstrains.h" local="yes" imported="no">iswr/ISwissRangerConstrains.h</includes>
@@ -1330,7 +1330,7 @@
   </compound>
   <compound kind="file">
     <name>iqtswr.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iqtswr/</path>
+    <path>C:/Temp/Iacf/Include/iqtswr/</path>
     <filename>iqtswr_8h</filename>
     <includes id="icam_8h" name="icam.h" local="yes" imported="no">icam/icam.h</includes>
     <includes id="iswr_8h" name="iswr.h" local="yes" imported="no">iswr/iswr.h</includes>
@@ -1338,7 +1338,7 @@
   </compound>
   <compound kind="file">
     <name>CGenicamCameraComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/isgige/</path>
+    <path>C:/Temp/Iacf/Include/isgige/</path>
     <filename>_c_genicam_camera_comp_8h</filename>
     <includes id="_i_exposure_constraints_8h" name="IExposureConstraints.h" local="yes" imported="no">icam/IExposureConstraints.h</includes>
     <includes id="_i_exposure_params_8h" name="IExposureParams.h" local="yes" imported="no">icam/IExposureParams.h</includes>
@@ -1351,21 +1351,21 @@
   </compound>
   <compound kind="file">
     <name>CGenicamCameraSingleton.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/isgige/</path>
+    <path>C:/Temp/Iacf/Include/isgige/</path>
     <filename>_c_genicam_camera_singleton_8h</filename>
     <class kind="class">isgige::CGenicamCameraSingleton</class>
     <namespace>isgige</namespace>
   </compound>
   <compound kind="file">
     <name>isgige.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/isgige/</path>
+    <path>C:/Temp/Iacf/Include/isgige/</path>
     <filename>isgige_8h</filename>
     <includes id="icam_8h" name="icam.h" local="yes" imported="no">icam/icam.h</includes>
     <namespace>isgige</namespace>
   </compound>
   <compound kind="file">
     <name>CPulseParamsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <path>C:/Temp/Iacf/Include/isig/</path>
     <filename>_c_pulse_params_comp_8h</filename>
     <includes id="_i_pulse_params_8h" name="IPulseParams.h" local="yes" imported="no">isig/IPulseParams.h</includes>
     <includes id="_i_pulse_constraints_8h" name="IPulseConstraints.h" local="yes" imported="no">isig/IPulseConstraints.h</includes>
@@ -1374,7 +1374,7 @@
   </compound>
   <compound kind="file">
     <name>CSamplingParamsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <path>C:/Temp/Iacf/Include/isig/</path>
     <filename>_c_sampling_params_comp_8h</filename>
     <includes id="_i_sampling_constraints_8h" name="ISamplingConstraints.h" local="yes" imported="no">isig/ISamplingConstraints.h</includes>
     <includes id="_i_sampling_params_8h" name="ISamplingParams.h" local="yes" imported="no">isig/ISamplingParams.h</includes>
@@ -1383,7 +1383,7 @@
   </compound>
   <compound kind="file">
     <name>CTriggerParamsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <path>C:/Temp/Iacf/Include/isig/</path>
     <filename>_c_trigger_params_comp_8h</filename>
     <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">isig/ITriggerConstraints.h</includes>
     <includes id="_i_trigger_params_8h" name="ITriggerParams.h" local="yes" imported="no">isig/ITriggerParams.h</includes>
@@ -1392,21 +1392,21 @@
   </compound>
   <compound kind="file">
     <name>IPulseConstraints.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <path>C:/Temp/Iacf/Include/isig/</path>
     <filename>_i_pulse_constraints_8h</filename>
     <class kind="class">isig::IPulseConstraints</class>
     <namespace>isig</namespace>
   </compound>
   <compound kind="file">
     <name>IPulseParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <path>C:/Temp/Iacf/Include/isig/</path>
     <filename>_i_pulse_params_8h</filename>
     <class kind="class">isig::IPulseParams</class>
     <namespace>isig</namespace>
   </compound>
   <compound kind="file">
     <name>ISamplingConstraints.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <path>C:/Temp/Iacf/Include/isig/</path>
     <filename>_i_sampling_constraints_8h</filename>
     <includes id="isig_8h" name="isig.h" local="yes" imported="no">isig/isig.h</includes>
     <class kind="class">isig::ISamplingConstraints</class>
@@ -1414,7 +1414,7 @@
   </compound>
   <compound kind="file">
     <name>ISamplingParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <path>C:/Temp/Iacf/Include/isig/</path>
     <filename>_i_sampling_params_8h</filename>
     <includes id="isig_8h" name="isig.h" local="yes" imported="no">isig/isig.h</includes>
     <class kind="class">isig::ISamplingParams</class>
@@ -1422,20 +1422,20 @@
   </compound>
   <compound kind="file">
     <name>isig.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <path>C:/Temp/Iacf/Include/isig/</path>
     <filename>isig_8h</filename>
     <namespace>isig</namespace>
   </compound>
   <compound kind="file">
     <name>ITriggerConstraints.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <path>C:/Temp/Iacf/Include/isig/</path>
     <filename>_i_trigger_constraints_8h</filename>
     <class kind="class">isig::ITriggerConstraints</class>
     <namespace>isig</namespace>
   </compound>
   <compound kind="file">
     <name>ITriggerParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/isig/</path>
+    <path>C:/Temp/Iacf/Include/isig/</path>
     <filename>_i_trigger_params_8h</filename>
     <includes id="isig_8h" name="isig.h" local="yes" imported="no">isig/isig.h</includes>
     <class kind="class">isig::ITriggerParams</class>
@@ -1443,7 +1443,7 @@
   </compound>
   <compound kind="file">
     <name>CSwissRangerAcquisitionComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iswr/</path>
+    <path>C:/Temp/Iacf/Include/iswr/</path>
     <filename>_c_swiss_ranger_acquisition_comp_8h</filename>
     <includes id="_i_exposure_constraints_8h" name="IExposureConstraints.h" local="yes" imported="no">icam/IExposureConstraints.h</includes>
     <includes id="_i_exposure_params_8h" name="IExposureParams.h" local="yes" imported="no">icam/IExposureParams.h</includes>
@@ -1455,7 +1455,7 @@
   </compound>
   <compound kind="file">
     <name>CSwissRangerAcquisitionData.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iswr/</path>
+    <path>C:/Temp/Iacf/Include/iswr/</path>
     <filename>_c_swiss_ranger_acquisition_data_8h</filename>
     <includes id="_i_swiss_ranger_acquisition_data_8h" name="ISwissRangerAcquisitionData.h" local="yes" imported="no">iswr/ISwissRangerAcquisitionData.h</includes>
     <class kind="class">iswr::CSwissRangerAcquisitionData</class>
@@ -1463,14 +1463,14 @@
   </compound>
   <compound kind="file">
     <name>CSwissRangerImageLoader.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iswr/</path>
+    <path>C:/Temp/Iacf/Include/iswr/</path>
     <filename>_c_swiss_ranger_image_loader_8h</filename>
     <class kind="class">iswr::CSwissRangerLoader</class>
     <namespace>iswr</namespace>
   </compound>
   <compound kind="file">
     <name>CSwissRangerParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iswr/</path>
+    <path>C:/Temp/Iacf/Include/iswr/</path>
     <filename>_c_swiss_ranger_params_8h</filename>
     <includes id="_i_swiss_ranger_params_8h" name="ISwissRangerParams.h" local="yes" imported="no">iswr/ISwissRangerParams.h</includes>
     <class kind="class">iswr::CSwissRangerParams</class>
@@ -1478,7 +1478,7 @@
   </compound>
   <compound kind="file">
     <name>CSwissRangerParamsComp.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iswr/</path>
+    <path>C:/Temp/Iacf/Include/iswr/</path>
     <filename>_c_swiss_ranger_params_comp_8h</filename>
     <includes id="_c_swiss_ranger_params_8h" name="CSwissRangerParams.h" local="yes" imported="no">iswr/CSwissRangerParams.h</includes>
     <class kind="class">iswr::CSwissRangerParamsComp</class>
@@ -1486,14 +1486,14 @@
   </compound>
   <compound kind="file">
     <name>ISwissRangerAcquisitionData.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iswr/</path>
+    <path>C:/Temp/Iacf/Include/iswr/</path>
     <filename>_i_swiss_ranger_acquisition_data_8h</filename>
     <class kind="class">iswr::ISwissRangerAcquisitionData</class>
     <namespace>iswr</namespace>
   </compound>
   <compound kind="file">
     <name>ISwissRangerConstrains.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iswr/</path>
+    <path>C:/Temp/Iacf/Include/iswr/</path>
     <filename>_i_swiss_ranger_constrains_8h</filename>
     <includes id="iswr_8h" name="iswr.h" local="yes" imported="no">iswr/iswr.h</includes>
     <class kind="class">iswr::ISwissRangerConstrains</class>
@@ -1501,7 +1501,7 @@
   </compound>
   <compound kind="file">
     <name>ISwissRangerParams.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iswr/</path>
+    <path>C:/Temp/Iacf/Include/iswr/</path>
     <filename>_i_swiss_ranger_params_8h</filename>
     <includes id="iswr_8h" name="iswr.h" local="yes" imported="no">iswr/iswr.h</includes>
     <class kind="class">iswr::ISwissRangerParams</class>
@@ -1509,7 +1509,7 @@
   </compound>
   <compound kind="file">
     <name>iswr.h</name>
-    <path>E:/Work/Projects/Development/Iacf/Include/iswr/</path>
+    <path>C:/Temp/Iacf/Include/iswr/</path>
     <filename>iswr_8h</filename>
     <includes id="icam_8h" name="icam.h" local="yes" imported="no">icam/icam.h</includes>
     <namespace>iswr</namespace>
@@ -1520,40 +1520,20 @@
     <filename>group__mil.html</filename>
   </compound>
   <compound kind="class">
-    <name>ibase::idoc::CMultiDocumentManagerBase</name>
-    <filename>classibase_1_1idoc_1_1_c_multi_document_manager_base.html</filename>
+    <name>ICaliperProcessor</name>
+    <filename>class_i_caliper_processor.html</filename>
   </compound>
   <compound kind="class">
-    <name>ibase::idoc::CSingleDocumentManagerBase</name>
-    <filename>classibase_1_1idoc_1_1_c_single_document_manager_base.html</filename>
+    <name>IFeatureToFeatureProcessor</name>
+    <filename>class_i_feature_to_feature_processor.html</filename>
   </compound>
   <compound kind="class">
-    <name>iqt2d::QGraphicsEllipseItem</name>
-    <filename>classiqt2d_1_1_q_graphics_ellipse_item.html</filename>
+    <name>IImageToFeatureProcessor</name>
+    <filename>class_i_image_to_feature_processor.html</filename>
   </compound>
   <compound kind="class">
-    <name>iqt2d::QGraphicsLineItem</name>
-    <filename>classiqt2d_1_1_q_graphics_line_item.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>iqt2d::QGraphicsPathItem</name>
-    <filename>classiqt2d_1_1_q_graphics_path_item.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>TChangeDelegator</name>
-    <filename>class_t_change_delegator.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>TCopySerializedWrap</name>
-    <filename>class_t_copy_serialized_wrap.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>TSingleModelObserverBase</name>
-    <filename>class_t_single_model_observer_base.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>TVector</name>
-    <filename>class_t_vector.html</filename>
+    <name>ILineProjectionProcessor</name>
+    <filename>class_i_line_projection_processor.html</filename>
   </compound>
   <compound kind="namespace">
     <name>iavt</name>
@@ -1570,159 +1550,159 @@
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>9f8e236d8cdb5f5278a8f0eb890deb79</anchor>
+      <anchor>a9f8e236d8cdb5f5278a8f0eb890deb79</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_INIT</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>9f8e236d8cdb5f5278a8f0eb890deb79ebdada5a0df7c2b9198ecfe8553ba1b7</anchor>
+      <anchor>a9f8e236d8cdb5f5278a8f0eb890deb79aebdada5a0df7c2b9198ecfe8553ba1b7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_NO_NODES</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>9f8e236d8cdb5f5278a8f0eb890deb7927f0796272d4825ca7f51b1455fca359</anchor>
+      <anchor>a9f8e236d8cdb5f5278a8f0eb890deb79a27f0796272d4825ca7f51b1455fca359</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_CONNECT</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>9f8e236d8cdb5f5278a8f0eb890deb79f7273aa2ec56d27c1550c39c27ad2d2e</anchor>
+      <anchor>a9f8e236d8cdb5f5278a8f0eb890deb79af7273aa2ec56d27c1550c39c27ad2d2e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_OPEN</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>9f8e236d8cdb5f5278a8f0eb890deb797a6609465491df8dcbd245033221d68c</anchor>
+      <anchor>a9f8e236d8cdb5f5278a8f0eb890deb79a7a6609465491df8dcbd245033221d68c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_START</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>9f8e236d8cdb5f5278a8f0eb890deb79d3a8c368d45592ba9338e0518710919c</anchor>
+      <anchor>a9f8e236d8cdb5f5278a8f0eb890deb79ad3a8c368d45592ba9338e0518710919c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_SET_SINGLE_SHOT</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>9f8e236d8cdb5f5278a8f0eb890deb79b9743c81ba586726b22ec66896346429</anchor>
+      <anchor>a9f8e236d8cdb5f5278a8f0eb890deb79ab9743c81ba586726b22ec66896346429</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_SET_CONTINUOUS</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>9f8e236d8cdb5f5278a8f0eb890deb790ad4592e0ef72e6da2bbf8ffa884d5a5</anchor>
+      <anchor>a9f8e236d8cdb5f5278a8f0eb890deb79a0ad4592e0ef72e6da2bbf8ffa884d5a5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_SET_TRIGGER</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>9f8e236d8cdb5f5278a8f0eb890deb794a987842d7521a5a8b0d4fcee3ce338e</anchor>
+      <anchor>a9f8e236d8cdb5f5278a8f0eb890deb79a4a987842d7521a5a8b0d4fcee3ce338e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_SET_IMAGE_AOI</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>9f8e236d8cdb5f5278a8f0eb890deb790e63677a2a21f47921ebed6ae239e66b</anchor>
+      <anchor>a9f8e236d8cdb5f5278a8f0eb890deb79a0e63677a2a21f47921ebed6ae239e66b</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>bb8c7c139e526a6ce74267834608ce91</anchor>
+      <anchor>abb8c7c139e526a6ce74267834608ce91</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CFireGrabAcquisitionComp</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>21fbdd9dc7406e50c0ca7afc7938ccbc</anchor>
+      <anchor>a21fbdd9dc7406e50c0ca7afc7938ccbc</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>IsCameraValid</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>9bf16e1d76f605e95a44a3f97b5823d5</anchor>
+      <anchor>a9bf16e1d76f605e95a44a3f97b5823d5</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>875d681566f45a22d2839d64aa1a0387</anchor>
+      <anchor>a875d681566f45a22d2839d64aa1a0387</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>0abdfcc04393d1c479fa61f8b7ef8304</anchor>
+      <anchor>a0abdfcc04393d1c479fa61f8b7ef8304</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetShutterTimeRange</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>72fd666991af1c6341a9523c1cecb61d</anchor>
+      <anchor>a72fd666991af1c6341a9523c1cecb61d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetDelayTimeRange</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>85864dcc88dd9d19bdc2f673a36ac918</anchor>
+      <anchor>a85864dcc88dd9d19bdc2f673a36ac918</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetEenDelayRange</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>029574b208ec471df0c1fc55efdf7000</anchor>
+      <anchor>a029574b208ec471df0c1fc55efdf7000</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsTriggerModeSupported</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>112e160f539d84696e38dbdfcfbb3bc6</anchor>
+      <anchor>a112e160f539d84696e38dbdfcfbb3bc6</anchor>
       <arglist>(int triggerMode) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CheckParameter</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>ece1e62391424b733443443f84145f3b</anchor>
+      <anchor>aece1e62391424b733443443f84145f3b</anchor>
       <arglist>(UINT16 parameterId, UINT32 setValue)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>InitializeTriggerParams</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>aa95f12e4219551d1b4a9da3f78d882a</anchor>
+      <anchor>aaa95f12e4219551d1b4a9da3f78d882a</anchor>
       <arglist>(const isig::ITriggerParams &amp;triggerParams)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>InitializeImageRegion</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>d049e5d41b1b8d32a5aec263c96879ca</anchor>
+      <anchor>ad049e5d41b1b8d32a5aec263c96879ca</anchor>
       <arglist>(const i2d::CRectangle &amp;imageRegion)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>6e182495b117cdd706b481b15109a2b1</anchor>
+      <anchor>a6e182495b117cdd706b481b15109a2b1</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
-      <anchor>a7e690020b814d109ec63a575f886dfe</anchor>
+      <anchor>aa7e690020b814d109ec63a575f886dfe</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -1746,35 +1726,35 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_acquisition_constraints_comp.html</anchorfile>
-      <anchor>c645ca77336060e8319936bccf8faa42</anchor>
+      <anchor>ac645ca77336060e8319936bccf8faa42</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsTriggerModeSupported</name>
       <anchorfile>classicam_1_1_c_acquisition_constraints_comp.html</anchorfile>
-      <anchor>ad97c7d90deb96f4591c0b4f32f23362</anchor>
+      <anchor>aad97c7d90deb96f4591c0b4f32f23362</anchor>
       <arglist>(int triggerMode) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetShutterTimeRange</name>
       <anchorfile>classicam_1_1_c_acquisition_constraints_comp.html</anchorfile>
-      <anchor>4c2d67d725d927e0a68bb086d27bdfb7</anchor>
+      <anchor>a4c2d67d725d927e0a68bb086d27bdfb7</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetDelayTimeRange</name>
       <anchorfile>classicam_1_1_c_acquisition_constraints_comp.html</anchorfile>
-      <anchor>c1d48e4d44e7820d397e12563e63afe8</anchor>
+      <anchor>ac1d48e4d44e7820d397e12563e63afe8</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetEenDelayRange</name>
       <anchorfile>classicam_1_1_c_acquisition_constraints_comp.html</anchorfile>
-      <anchor>ebf55b5b888b444663e6cf0e25edf9e1</anchor>
+      <anchor>aebf55b5b888b444663e6cf0e25edf9e1</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -1787,77 +1767,77 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_exposure_params_comp.html</anchorfile>
-      <anchor>2e6224a62e650a96fa5e032b39b228d0</anchor>
+      <anchor>a2e6224a62e650a96fa5e032b39b228d0</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CExposureParamsComp</name>
       <anchorfile>classicam_1_1_c_exposure_params_comp.html</anchorfile>
-      <anchor>91a3936942e45ac2c35eccb71dc608a6</anchor>
+      <anchor>a91a3936942e45ac2c35eccb71dc608a6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IExposureConstraints *</type>
       <name>GetExposureConstraints</name>
       <anchorfile>classicam_1_1_c_exposure_params_comp.html</anchorfile>
-      <anchor>6aeb8a21ec9f1f6bd4844817e195f94e</anchor>
+      <anchor>a6aeb8a21ec9f1f6bd4844817e195f94e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetShutterTime</name>
       <anchorfile>classicam_1_1_c_exposure_params_comp.html</anchorfile>
-      <anchor>6919f8d0f8ed350af9d8c2fea3254313</anchor>
+      <anchor>a6919f8d0f8ed350af9d8c2fea3254313</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetShutterTime</name>
       <anchorfile>classicam_1_1_c_exposure_params_comp.html</anchorfile>
-      <anchor>942d3786f10ff0d9cee301f6b10e0242</anchor>
+      <anchor>a942d3786f10ff0d9cee301f6b10e0242</anchor>
       <arglist>(double time)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetDelayTime</name>
       <anchorfile>classicam_1_1_c_exposure_params_comp.html</anchorfile>
-      <anchor>cfaef5557b88c2287cdb565c2bbf0e68</anchor>
+      <anchor>acfaef5557b88c2287cdb565c2bbf0e68</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetDelayTime</name>
       <anchorfile>classicam_1_1_c_exposure_params_comp.html</anchorfile>
-      <anchor>3933bd1ede8cfb6d60176a800dcc4acd</anchor>
+      <anchor>a3933bd1ede8cfb6d60176a800dcc4acd</anchor>
       <arglist>(double time)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetEenDelay</name>
       <anchorfile>classicam_1_1_c_exposure_params_comp.html</anchorfile>
-      <anchor>a73ecdf86353ac6df08ce621b6514dcd</anchor>
+      <anchor>aa73ecdf86353ac6df08ce621b6514dcd</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetEenDelay</name>
       <anchorfile>classicam_1_1_c_exposure_params_comp.html</anchorfile>
-      <anchor>23d7c95c474b3777387b2655802206ca</anchor>
+      <anchor>a23d7c95c474b3777387b2655802206ca</anchor>
       <arglist>(double time)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicam_1_1_c_exposure_params_comp.html</anchorfile>
-      <anchor>0c4c94ca3fd12826f91e8b62b1da12aa</anchor>
+      <anchor>a0c4c94ca3fd12826f91e8b62b1da12aa</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classicam_1_1_c_exposure_params_comp.html</anchorfile>
-      <anchor>b08cce0b7d6c8d8430628b521047da93</anchor>
+      <anchor>ab08cce0b7d6c8d8430628b521047da93</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -1871,28 +1851,28 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_memory_acquisition_comp.html</anchorfile>
-      <anchor>6835d1e8692976f84db1435eea56f9ac</anchor>
+      <anchor>a6835d1e8692976f84db1435eea56f9ac</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>iimg::CGeneralBitmap</type>
       <name>BaseClass2</name>
       <anchorfile>classicam_1_1_c_memory_acquisition_comp.html</anchorfile>
-      <anchor>8e2b85db8d1a00078de79ba9d66c89ca</anchor>
+      <anchor>a8e2b85db8d1a00078de79ba9d66c89ca</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classicam_1_1_c_memory_acquisition_comp.html</anchorfile>
-      <anchor>1c3f9d548556feab49625f8942ab2a9a</anchor>
+      <anchor>a1c3f9d548556feab49625f8942ab2a9a</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
       <anchorfile>classicam_1_1_c_memory_acquisition_comp.html</anchorfile>
-      <anchor>394e0c7c42c4be073bb754043d0ade71</anchor>
+      <anchor>a394e0c7c42c4be073bb754043d0ade71</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
   </compound>
@@ -1904,28 +1884,28 @@
       <type>iproc::TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a2abe0ecef284d6c4c0eeba619c8e32f</anchor>
+      <anchor>aa2abe0ecef284d6c4c0eeba619c8e32f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap *</type>
       <name>GetBitmap</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>75c695192e6efec5d1cf378b5da900a6</anchor>
+      <anchor>a75c695192e6efec5d1cf378b5da900a6</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::ITransformation2d *</type>
       <name>GetLogTransform</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>60bdc80744617cef36960048f06e6b65</anchor>
+      <anchor>a60bdc80744617cef36960048f06e6b65</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a51d7c3220ef8671ea5db87d90c004d3</anchor>
+      <anchor>aa51d7c3220ef8671ea5db87d90c004d3</anchor>
       <arglist>(ProductType &amp;result) const </arglist>
     </member>
   </compound>
@@ -1937,21 +1917,21 @@
       <type>virtual istd::CRange</type>
       <name>GetShutterTimeRange</name>
       <anchorfile>classicam_1_1_i_exposure_constraints.html</anchorfile>
-      <anchor>bad2007abc481f1d09f1d7d8894ff982</anchor>
+      <anchor>abad2007abc481f1d09f1d7d8894ff982</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
       <name>GetDelayTimeRange</name>
       <anchorfile>classicam_1_1_i_exposure_constraints.html</anchorfile>
-      <anchor>824fb71daf0fdc9885552f1c8b8e640b</anchor>
+      <anchor>a824fb71daf0fdc9885552f1c8b8e640b</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
       <name>GetEenDelayRange</name>
       <anchorfile>classicam_1_1_i_exposure_constraints.html</anchorfile>
-      <anchor>984abb199f8831642d168bd6a42687fc</anchor>
+      <anchor>a984abb199f8831642d168bd6a42687fc</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -1963,49 +1943,49 @@
       <type>virtual const IExposureConstraints *</type>
       <name>GetExposureConstraints</name>
       <anchorfile>classicam_1_1_i_exposure_params.html</anchorfile>
-      <anchor>437a45b02173cf1f1e5140db59e54f8a</anchor>
+      <anchor>a437a45b02173cf1f1e5140db59e54f8a</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetShutterTime</name>
       <anchorfile>classicam_1_1_i_exposure_params.html</anchorfile>
-      <anchor>54c7a7ab367912ddb1cf0e53989d1987</anchor>
+      <anchor>a54c7a7ab367912ddb1cf0e53989d1987</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>SetShutterTime</name>
       <anchorfile>classicam_1_1_i_exposure_params.html</anchorfile>
-      <anchor>601430505f05be31282707e4a6d87247</anchor>
+      <anchor>a601430505f05be31282707e4a6d87247</anchor>
       <arglist>(double time)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetDelayTime</name>
       <anchorfile>classicam_1_1_i_exposure_params.html</anchorfile>
-      <anchor>3b5ae95a1eef9512ce1ec6dd01e9bd6a</anchor>
+      <anchor>a3b5ae95a1eef9512ce1ec6dd01e9bd6a</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>SetDelayTime</name>
       <anchorfile>classicam_1_1_i_exposure_params.html</anchorfile>
-      <anchor>a06e4cf5f80164fd71f20ce6f7785534</anchor>
+      <anchor>aa06e4cf5f80164fd71f20ce6f7785534</anchor>
       <arglist>(double time)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetEenDelay</name>
       <anchorfile>classicam_1_1_i_exposure_params.html</anchorfile>
-      <anchor>fe48a988bda7d4cb1b0a3dead7586d89</anchor>
+      <anchor>afe48a988bda7d4cb1b0a3dead7586d89</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>SetEenDelay</name>
       <anchorfile>classicam_1_1_i_exposure_params.html</anchorfile>
-      <anchor>5b4f1e2f64bb83c43e5db5f4fbc5766a</anchor>
+      <anchor>a5b4f1e2f64bb83c43e5db5f4fbc5766a</anchor>
       <arglist>(double time)=0</arglist>
     </member>
   </compound>
@@ -2036,56 +2016,56 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classicntl_1_1_c_ejector_params_comp.html</anchorfile>
-      <anchor>185c8cb8786515144f40115b5ef2135a</anchor>
+      <anchor>a185c8cb8786515144f40115b5ef2135a</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CEjectorParamsComp</name>
       <anchorfile>classicntl_1_1_c_ejector_params_comp.html</anchorfile>
-      <anchor>3ae8b3e12526b5adc8c931d09b6728cb</anchor>
+      <anchor>a3ae8b3e12526b5adc8c931d09b6728cb</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetEjectorPosition</name>
       <anchorfile>classicntl_1_1_c_ejector_params_comp.html</anchorfile>
-      <anchor>f417827c5c9282754fba004a79069014</anchor>
+      <anchor>af417827c5c9282754fba004a79069014</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetEjectorPosition</name>
       <anchorfile>classicntl_1_1_c_ejector_params_comp.html</anchorfile>
-      <anchor>da10ab3cbe86e2e93813daa11d0e00f9</anchor>
+      <anchor>ada10ab3cbe86e2e93813daa11d0e00f9</anchor>
       <arglist>(double position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetEjectionDistance</name>
       <anchorfile>classicntl_1_1_c_ejector_params_comp.html</anchorfile>
-      <anchor>8d685f79fe0124bb89ea1fa619f1a4b6</anchor>
+      <anchor>a8d685f79fe0124bb89ea1fa619f1a4b6</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetEjectionDistance</name>
       <anchorfile>classicntl_1_1_c_ejector_params_comp.html</anchorfile>
-      <anchor>02b196cda0a84fd203bb0b3e14ff858d</anchor>
+      <anchor>a02b196cda0a84fd203bb0b3e14ff858d</anchor>
       <arglist>(double distance)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicntl_1_1_c_ejector_params_comp.html</anchorfile>
-      <anchor>049f6f8ebb219f18f3fbeca954abf6f1</anchor>
+      <anchor>a049f6f8ebb219f18f3fbeca954abf6f1</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classicntl_1_1_c_ejector_params_comp.html</anchorfile>
-      <anchor>e92edf9eae546a6898be81d135921b54</anchor>
+      <anchor>ae92edf9eae546a6898be81d135921b54</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -2098,56 +2078,56 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classicntl_1_1_c_inspection_unit_params_comp.html</anchorfile>
-      <anchor>a89907794f3d875ad50dce70f20591f1</anchor>
+      <anchor>aa89907794f3d875ad50dce70f20591f1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CInspectionUnitParamsComp</name>
       <anchorfile>classicntl_1_1_c_inspection_unit_params_comp.html</anchorfile>
-      <anchor>9ed516fba4457991ccf7e68725c75087</anchor>
+      <anchor>a9ed516fba4457991ccf7e68725c75087</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetTriggerOffset</name>
       <anchorfile>classicntl_1_1_c_inspection_unit_params_comp.html</anchorfile>
-      <anchor>3edf34dd30e5501cc682a6450f1b36bc</anchor>
+      <anchor>a3edf34dd30e5501cc682a6450f1b36bc</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetTriggerOffset</name>
       <anchorfile>classicntl_1_1_c_inspection_unit_params_comp.html</anchorfile>
-      <anchor>c64ac8d24612e81b1eb72471a968100f</anchor>
+      <anchor>ac64ac8d24612e81b1eb72471a968100f</anchor>
       <arglist>(double offset)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetTriggerAlpha</name>
       <anchorfile>classicntl_1_1_c_inspection_unit_params_comp.html</anchorfile>
-      <anchor>7dfd02275a78689779d8b09b37a61890</anchor>
+      <anchor>a7dfd02275a78689779d8b09b37a61890</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetTriggerAlpha</name>
       <anchorfile>classicntl_1_1_c_inspection_unit_params_comp.html</anchorfile>
-      <anchor>5b42c1153074eec61ae978ed186431dd</anchor>
+      <anchor>a5b42c1153074eec61ae978ed186431dd</anchor>
       <arglist>(double value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicntl_1_1_c_inspection_unit_params_comp.html</anchorfile>
-      <anchor>a8ec9084ee635966b765186381aec9a1</anchor>
+      <anchor>aa8ec9084ee635966b765186381aec9a1</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classicntl_1_1_c_inspection_unit_params_comp.html</anchorfile>
-      <anchor>878516c0b01999de1d26f13341ba9f9c</anchor>
+      <anchor>a878516c0b01999de1d26f13341ba9f9c</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -2160,119 +2140,119 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>bc7721df74e3e14b96d46cd0f6feb6c1</anchor>
+      <anchor>abc7721df74e3e14b96d46cd0f6feb6c1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CLineParamsComp</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>547d13d850347dcf0913012ed0cda696</anchor>
+      <anchor>a547d13d850347dcf0913012ed0cda696</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetInspectionUnitsCount</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>8616808eb699a83e67721a7ebe74a2f7</anchor>
+      <anchor>a8616808eb699a83e67721a7ebe74a2f7</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IInspectionUnitParams &amp;</type>
       <name>GetInspectionUnitParams</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>afecc74b129ef795871118f9d5ec0e94</anchor>
+      <anchor>aafecc74b129ef795871118f9d5ec0e94</anchor>
       <arglist>(int unitIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetEjectorsCount</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>9f1382ed6ebc4bcf6f3ecd6b853934b7</anchor>
+      <anchor>a9f1382ed6ebc4bcf6f3ecd6b853934b7</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IEjectorParams &amp;</type>
       <name>GetEjectorParams</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>1973dc4fda736b798d959ac520fb0fdb</anchor>
+      <anchor>a1973dc4fda736b798d959ac520fb0fdb</anchor>
       <arglist>(int ejectorIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetTicksPerDistanceUnit</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>7a7cb2bf6a1b8ef52fed4df8cf54be71</anchor>
+      <anchor>a7a7cb2bf6a1b8ef52fed4df8cf54be71</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetTicksPerDistanceUnit</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>885fee3a178eff4ad8fe051f228ddd5a</anchor>
+      <anchor>a885fee3a178eff4ad8fe051f228ddd5a</anchor>
       <arglist>(double value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetMinObjectSize</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>ae537daeaf4d894d2848906c134d99a5</anchor>
+      <anchor>aae537daeaf4d894d2848906c134d99a5</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetMinObjectSize</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>a20b8230ca0fb033efa9a33684bd04b9</anchor>
+      <anchor>aa20b8230ca0fb033efa9a33684bd04b9</anchor>
       <arglist>(double value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetPositionTolerance</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>97057a174adea9a04be43a02ba59957a</anchor>
+      <anchor>a97057a174adea9a04be43a02ba59957a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetPositionTolerance</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>cd48a4201a317fe68a1b455207e2a8c2</anchor>
+      <anchor>acd48a4201a317fe68a1b455207e2a8c2</anchor>
       <arglist>(double value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetLightBarriersCount</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>7797e978a7440fba3e5ca90a0fd3460f</anchor>
+      <anchor>a7797e978a7440fba3e5ca90a0fd3460f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetLightBarrierPosition</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>892cce0b90a3f2a6db13571a27da6052</anchor>
+      <anchor>a892cce0b90a3f2a6db13571a27da6052</anchor>
       <arglist>(int barrierIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetLightBarrierPosition</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>13ed05ac4fccc919590231921ada6224</anchor>
+      <anchor>a13ed05ac4fccc919590231921ada6224</anchor>
       <arglist>(int barrierIndex, double position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>ba249639525d2230bb5bd40be2d5d9cd</anchor>
+      <anchor>aba249639525d2230bb5bd40be2d5d9cd</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classicntl_1_1_c_line_params_comp.html</anchorfile>
-      <anchor>01d116380229de5abd49052cb61604d5</anchor>
+      <anchor>a01d116380229de5abd49052cb61604d5</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -2285,35 +2265,35 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classicntl_1_1_c_multi_line_params_comp.html</anchorfile>
-      <anchor>528c112028da568191fbdf7ceb6997e6</anchor>
+      <anchor>a528c112028da568191fbdf7ceb6997e6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetLinesCount</name>
       <anchorfile>classicntl_1_1_c_multi_line_params_comp.html</anchorfile>
-      <anchor>498147d445285e27515bc780f6f62b59</anchor>
+      <anchor>a498147d445285e27515bc780f6f62b59</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ILineParams &amp;</type>
       <name>GetLineParams</name>
       <anchorfile>classicntl_1_1_c_multi_line_params_comp.html</anchorfile>
-      <anchor>188c53dfc67ed5d4198d7f0cc14313d3</anchor>
+      <anchor>a188c53dfc67ed5d4198d7f0cc14313d3</anchor>
       <arglist>(int lineIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicntl_1_1_c_multi_line_params_comp.html</anchorfile>
-      <anchor>de78b86b79c1bd1776878088517fd9bf</anchor>
+      <anchor>ade78b86b79c1bd1776878088517fd9bf</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classicntl_1_1_c_multi_line_params_comp.html</anchorfile>
-      <anchor>3bd7bd196e773d247252eb47597ed0a6</anchor>
+      <anchor>a3bd7bd196e773d247252eb47597ed0a6</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -2324,46 +2304,46 @@
     <member kind="enumeration">
       <name>WorkMode</name>
       <anchorfile>classicntl_1_1_i_automatic_controller.html</anchorfile>
-      <anchor>f92ec41ee5b4974baac4c2082b23d012</anchor>
+      <anchor>af92ec41ee5b4974baac4c2082b23d012</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>WM_NONE</name>
       <anchorfile>classicntl_1_1_i_automatic_controller.html</anchorfile>
-      <anchor>f92ec41ee5b4974baac4c2082b23d0128488b0039ba2ffa39e07e0f60930f799</anchor>
+      <anchor>af92ec41ee5b4974baac4c2082b23d012a8488b0039ba2ffa39e07e0f60930f799</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>WM_MANUAL</name>
       <anchorfile>classicntl_1_1_i_automatic_controller.html</anchorfile>
-      <anchor>f92ec41ee5b4974baac4c2082b23d012887df28be25ce58080b1e32afe49779b</anchor>
+      <anchor>af92ec41ee5b4974baac4c2082b23d012a887df28be25ce58080b1e32afe49779b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>WM_AUTOMATIC</name>
       <anchorfile>classicntl_1_1_i_automatic_controller.html</anchorfile>
-      <anchor>f92ec41ee5b4974baac4c2082b23d01241843e7ccb5190edf2368cb5636d4d3b</anchor>
+      <anchor>af92ec41ee5b4974baac4c2082b23d012a41843e7ccb5190edf2368cb5636d4d3b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetWorkMode</name>
       <anchorfile>classicntl_1_1_i_automatic_controller.html</anchorfile>
-      <anchor>257970168c36e6a309f1ea33c249b063</anchor>
+      <anchor>a257970168c36e6a309f1ea33c249b063</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>SetWorkMode</name>
       <anchorfile>classicntl_1_1_i_automatic_controller.html</anchorfile>
-      <anchor>ae0879316a88774489ef2f8538d3c614</anchor>
+      <anchor>aae0879316a88774489ef2f8538d3c614</anchor>
       <arglist>(int mode)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsModeSupported</name>
       <anchorfile>classicntl_1_1_i_automatic_controller.html</anchorfile>
-      <anchor>03f451dba934cdda2dd390c9b7a8e994</anchor>
+      <anchor>a03f451dba934cdda2dd390c9b7a8e994</anchor>
       <arglist>(int mode) const =0</arglist>
     </member>
   </compound>
@@ -2375,14 +2355,14 @@
       <type>virtual int</type>
       <name>GetEjectedCounter</name>
       <anchorfile>classicntl_1_1_i_ejector_controller.html</anchorfile>
-      <anchor>5ab4981841dff59c2e021d09cc7fc71e</anchor>
+      <anchor>a5ab4981841dff59c2e021d09cc7fc71e</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>DoTestEjection</name>
       <anchorfile>classicntl_1_1_i_ejector_controller.html</anchorfile>
-      <anchor>6f2fb6b496ee49300b722f7ac9dd0094</anchor>
+      <anchor>a6f2fb6b496ee49300b722f7ac9dd0094</anchor>
       <arglist>()=0</arglist>
     </member>
   </compound>
@@ -2396,28 +2376,28 @@
       <type>virtual double</type>
       <name>GetEjectorPosition</name>
       <anchorfile>classicntl_1_1_i_ejector_params.html</anchorfile>
-      <anchor>80ffc5d9abcf102e6f587276dcdb4e63</anchor>
+      <anchor>a80ffc5d9abcf102e6f587276dcdb4e63</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetEjectorPosition</name>
       <anchorfile>classicntl_1_1_i_ejector_params.html</anchorfile>
-      <anchor>851731483ea8528200b1d6e24a201313</anchor>
+      <anchor>a851731483ea8528200b1d6e24a201313</anchor>
       <arglist>(double position)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetEjectionDistance</name>
       <anchorfile>classicntl_1_1_i_ejector_params.html</anchorfile>
-      <anchor>8e49dbb9be664fc1015f9225c1e97ce2</anchor>
+      <anchor>a8e49dbb9be664fc1015f9225c1e97ce2</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetEjectionDistance</name>
       <anchorfile>classicntl_1_1_i_ejector_params.html</anchorfile>
-      <anchor>14dc45fa07af073f6768936a5cf9a774</anchor>
+      <anchor>a14dc45fa07af073f6768936a5cf9a774</anchor>
       <arglist>(double position)=0</arglist>
     </member>
   </compound>
@@ -2429,14 +2409,14 @@
       <type>virtual IObjectInspection *</type>
       <name>PopObjectInspection</name>
       <anchorfile>classicntl_1_1_i_inspection_unit_controller.html</anchorfile>
-      <anchor>3078c7f99d982b7de1dd9ce245e03a97</anchor>
+      <anchor>a3078c7f99d982b7de1dd9ce245e03a97</anchor>
       <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual isys::ITimer *</type>
       <name>DoCameraTrigger</name>
       <anchorfile>classicntl_1_1_i_inspection_unit_controller.html</anchorfile>
-      <anchor>be5f8de9788e9207f8bfbf1209337830</anchor>
+      <anchor>abe5f8de9788e9207f8bfbf1209337830</anchor>
       <arglist>()=0</arglist>
     </member>
   </compound>
@@ -2450,28 +2430,28 @@
       <type>virtual double</type>
       <name>GetTriggerOffset</name>
       <anchorfile>classicntl_1_1_i_inspection_unit_params.html</anchorfile>
-      <anchor>80fac265a150b6e1adefe08f075f71f2</anchor>
+      <anchor>a80fac265a150b6e1adefe08f075f71f2</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetTriggerOffset</name>
       <anchorfile>classicntl_1_1_i_inspection_unit_params.html</anchorfile>
-      <anchor>c2d563c8eb2dbea60239299eaa822177</anchor>
+      <anchor>ac2d563c8eb2dbea60239299eaa822177</anchor>
       <arglist>(double position)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetTriggerAlpha</name>
       <anchorfile>classicntl_1_1_i_inspection_unit_params.html</anchorfile>
-      <anchor>3ec3d2f6961eeab051e906284c3ce2d0</anchor>
+      <anchor>a3ec3d2f6961eeab051e906284c3ce2d0</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetTriggerAlpha</name>
       <anchorfile>classicntl_1_1_i_inspection_unit_params.html</anchorfile>
-      <anchor>af509c0a3f61f370b5fd66059453c316</anchor>
+      <anchor>aaf509c0a3f61f370b5fd66059453c316</anchor>
       <arglist>(double value)=0</arglist>
     </member>
   </compound>
@@ -2483,49 +2463,49 @@
       <type>virtual int</type>
       <name>GetInspectionUnitsCount</name>
       <anchorfile>classicntl_1_1_i_line_controller.html</anchorfile>
-      <anchor>e64398f3eb9ac949921acd07f072539a</anchor>
+      <anchor>ae64398f3eb9ac949921acd07f072539a</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual IInspectionUnitController &amp;</type>
       <name>GetInspectionUnitController</name>
       <anchorfile>classicntl_1_1_i_line_controller.html</anchorfile>
-      <anchor>b3986ff480f0ead055c798dd37fcc9a2</anchor>
+      <anchor>ab3986ff480f0ead055c798dd37fcc9a2</anchor>
       <arglist>(int unitIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetEjectorsCount</name>
       <anchorfile>classicntl_1_1_i_line_controller.html</anchorfile>
-      <anchor>3094263ecfba696e0c84e6202c6f576c</anchor>
+      <anchor>a3094263ecfba696e0c84e6202c6f576c</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual IEjectorController &amp;</type>
       <name>GetEjectorController</name>
       <anchorfile>classicntl_1_1_i_line_controller.html</anchorfile>
-      <anchor>0cb611e5cb8b64c19e653c136adfa42c</anchor>
+      <anchor>a0cb611e5cb8b64c19e653c136adfa42c</anchor>
       <arglist>(int ejectorIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>GetTransmissionPosition</name>
       <anchorfile>classicntl_1_1_i_line_controller.html</anchorfile>
-      <anchor>c1c4b7d7efd03c0ec789bbe4ee48e53c</anchor>
+      <anchor>ac1c4b7d7efd03c0ec789bbe4ee48e53c</anchor>
       <arglist>(double &amp;result) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>GetObjectPosition</name>
       <anchorfile>classicntl_1_1_i_line_controller.html</anchorfile>
-      <anchor>e96695c192f0cad0bd23f6f7e480ec99</anchor>
+      <anchor>ae96695c192f0cad0bd23f6f7e480ec99</anchor>
       <arglist>(I_DWORD objectId, double &amp;result) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>GetLastObjectId</name>
       <anchorfile>classicntl_1_1_i_line_controller.html</anchorfile>
-      <anchor>7acd8610656147e19c8f4ac830cc4950</anchor>
+      <anchor>a7acd8610656147e19c8f4ac830cc4950</anchor>
       <arglist>(I_DWORD &amp;result) const =0</arglist>
     </member>
   </compound>
@@ -2538,91 +2518,91 @@
       <type>virtual int</type>
       <name>GetInspectionUnitsCount</name>
       <anchorfile>classicntl_1_1_i_line_params.html</anchorfile>
-      <anchor>9d34d9bcd498f651f77d9f5f119ea3a3</anchor>
+      <anchor>a9d34d9bcd498f651f77d9f5f119ea3a3</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual IInspectionUnitParams &amp;</type>
       <name>GetInspectionUnitParams</name>
       <anchorfile>classicntl_1_1_i_line_params.html</anchorfile>
-      <anchor>9bf07ca441068224a1c3d6e51c507da8</anchor>
+      <anchor>a9bf07ca441068224a1c3d6e51c507da8</anchor>
       <arglist>(int unitIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetEjectorsCount</name>
       <anchorfile>classicntl_1_1_i_line_params.html</anchorfile>
-      <anchor>4050415cd1a3dec210b8bc2015bf7583</anchor>
+      <anchor>a4050415cd1a3dec210b8bc2015bf7583</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual IEjectorParams &amp;</type>
       <name>GetEjectorParams</name>
       <anchorfile>classicntl_1_1_i_line_params.html</anchorfile>
-      <anchor>8ee00af7c3554e7076d5ac9f40b9b8da</anchor>
+      <anchor>a8ee00af7c3554e7076d5ac9f40b9b8da</anchor>
       <arglist>(int ejectorIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetTicksPerDistanceUnit</name>
       <anchorfile>classicntl_1_1_i_line_params.html</anchorfile>
-      <anchor>0cc296f552e13bf7d57411b06a3d4c11</anchor>
+      <anchor>a0cc296f552e13bf7d57411b06a3d4c11</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetTicksPerDistanceUnit</name>
       <anchorfile>classicntl_1_1_i_line_params.html</anchorfile>
-      <anchor>cee9d0ad125adaf4fd15ec852715c672</anchor>
+      <anchor>acee9d0ad125adaf4fd15ec852715c672</anchor>
       <arglist>(double value)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetMinObjectSize</name>
       <anchorfile>classicntl_1_1_i_line_params.html</anchorfile>
-      <anchor>d5694dd5695aac592f89d05db9e5adbb</anchor>
+      <anchor>ad5694dd5695aac592f89d05db9e5adbb</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetMinObjectSize</name>
       <anchorfile>classicntl_1_1_i_line_params.html</anchorfile>
-      <anchor>3b1fc6066ca9857f3692dc40d47b8620</anchor>
+      <anchor>a3b1fc6066ca9857f3692dc40d47b8620</anchor>
       <arglist>(double value)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetPositionTolerance</name>
       <anchorfile>classicntl_1_1_i_line_params.html</anchorfile>
-      <anchor>2c8ccf04c6119600e066eab5e4f8730c</anchor>
+      <anchor>a2c8ccf04c6119600e066eab5e4f8730c</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetPositionTolerance</name>
       <anchorfile>classicntl_1_1_i_line_params.html</anchorfile>
-      <anchor>b30d9e7c6bda4ce694e599280e1f733a</anchor>
+      <anchor>ab30d9e7c6bda4ce694e599280e1f733a</anchor>
       <arglist>(double value)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetLightBarriersCount</name>
       <anchorfile>classicntl_1_1_i_line_params.html</anchorfile>
-      <anchor>759c119879b577b6434c0c9e44041bde</anchor>
+      <anchor>a759c119879b577b6434c0c9e44041bde</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetLightBarrierPosition</name>
       <anchorfile>classicntl_1_1_i_line_params.html</anchorfile>
-      <anchor>cb37cc85ed1ca6b44b85791b7df12d5e</anchor>
+      <anchor>acb37cc85ed1ca6b44b85791b7df12d5e</anchor>
       <arglist>(int barrierIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetLightBarrierPosition</name>
       <anchorfile>classicntl_1_1_i_line_params.html</anchorfile>
-      <anchor>3761ddb8797ac3c8f809f730e1c0ba95</anchor>
+      <anchor>a3761ddb8797ac3c8f809f730e1c0ba95</anchor>
       <arglist>(int barrierIndex, double position)=0</arglist>
     </member>
   </compound>
@@ -2634,14 +2614,14 @@
       <type>virtual int</type>
       <name>GetLinesCount</name>
       <anchorfile>classicntl_1_1_i_multi_line_controller.html</anchorfile>
-      <anchor>d0bc6b259e305aa7a5e7b12090556f11</anchor>
+      <anchor>ad0bc6b259e305aa7a5e7b12090556f11</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual ILineController &amp;</type>
       <name>GetLineController</name>
       <anchorfile>classicntl_1_1_i_multi_line_controller.html</anchorfile>
-      <anchor>abc83f9ed264499cdadb8b2b2f9de496</anchor>
+      <anchor>aabc83f9ed264499cdadb8b2b2f9de496</anchor>
       <arglist>(int lineIndex) const =0</arglist>
     </member>
   </compound>
@@ -2654,14 +2634,14 @@
       <type>virtual int</type>
       <name>GetLinesCount</name>
       <anchorfile>classicntl_1_1_i_multi_line_params.html</anchorfile>
-      <anchor>317519f38b4dff0e26be5b5c26827d01</anchor>
+      <anchor>a317519f38b4dff0e26be5b5c26827d01</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual ILineParams &amp;</type>
       <name>GetLineParams</name>
       <anchorfile>classicntl_1_1_i_multi_line_params.html</anchorfile>
-      <anchor>d86002d3e793f49a20428acff28f9b0c</anchor>
+      <anchor>ad86002d3e793f49a20428acff28f9b0c</anchor>
       <arglist>(int lineIndex) const =0</arglist>
     </member>
   </compound>
@@ -2673,21 +2653,21 @@
       <type>virtual I_DWORD</type>
       <name>GetObjectId</name>
       <anchorfile>classicntl_1_1_i_object_inspection.html</anchorfile>
-      <anchor>632b80fd6f86e3f9ff0c56dac427bf3d</anchor>
+      <anchor>a632b80fd6f86e3f9ff0c56dac427bf3d</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const isys::ITimer &amp;</type>
       <name>GetTimestamp</name>
       <anchorfile>classicntl_1_1_i_object_inspection.html</anchorfile>
-      <anchor>af5ac31152379536de148d822687bf61</anchor>
+      <anchor>aaf5ac31152379536de148d822687bf61</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>SetEjector</name>
       <anchorfile>classicntl_1_1_i_object_inspection.html</anchorfile>
-      <anchor>fe1619a4fde105a26f9fd2e09466742f</anchor>
+      <anchor>afe1619a4fde105a26f9fd2e09466742f</anchor>
       <arglist>(int ejectorIndex)=0</arglist>
     </member>
   </compound>
@@ -2706,77 +2686,77 @@
       <type></type>
       <name>CDeviceInfo</name>
       <anchorfile>classidev_1_1_c_device_info.html</anchorfile>
-      <anchor>519a8bd548ae477784e794d0f120f0e4</anchor>
+      <anchor>a519a8bd548ae477784e794d0f120f0e4</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
       <name>GetDeviceId</name>
       <anchorfile>classidev_1_1_c_device_info.html</anchorfile>
-      <anchor>83ce0a1f286fa0d64584fbfad4270771</anchor>
+      <anchor>a83ce0a1f286fa0d64584fbfad4270771</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetDeviceId</name>
       <anchorfile>classidev_1_1_c_device_info.html</anchorfile>
-      <anchor>d8ebac2b47e2212666c3235b88d818a5</anchor>
+      <anchor>ad8ebac2b47e2212666c3235b88d818a5</anchor>
       <arglist>(const istd::CString &amp;deviceId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_DWORD</type>
       <name>GetDeviceDriverVersion</name>
       <anchorfile>classidev_1_1_c_device_info.html</anchorfile>
-      <anchor>86b1060004f5ca412a6c33430837763e</anchor>
+      <anchor>a86b1060004f5ca412a6c33430837763e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetDeviceDriverVersion</name>
       <anchorfile>classidev_1_1_c_device_info.html</anchorfile>
-      <anchor>1f23ecab788e8e58736145b21e1d4deb</anchor>
+      <anchor>a1f23ecab788e8e58736145b21e1d4deb</anchor>
       <arglist>(I_DWORD deviceVersion)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_DWORD</type>
       <name>GetDeviceLibraryVersion</name>
       <anchorfile>classidev_1_1_c_device_info.html</anchorfile>
-      <anchor>58a8ad9c5256e866e99c068b4ceddc5d</anchor>
+      <anchor>a58a8ad9c5256e866e99c068b4ceddc5d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetDeviceLibraryVersion</name>
       <anchorfile>classidev_1_1_c_device_info.html</anchorfile>
-      <anchor>8b92c5a046ce5fbbaf0b3f08d492ae36</anchor>
+      <anchor>a8b92c5a046ce5fbbaf0b3f08d492ae36</anchor>
       <arglist>(I_DWORD libararyVersion)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classidev_1_1_c_device_info.html</anchorfile>
-      <anchor>4f89158633381a9676da4123f3fcf90c</anchor>
+      <anchor>a4f89158633381a9676da4123f3fcf90c</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::CString</type>
       <name>m_deviceId</name>
       <anchorfile>classidev_1_1_c_device_info.html</anchorfile>
-      <anchor>c9db8926278d28b2bace7b57814f6912</anchor>
+      <anchor>ac9db8926278d28b2bace7b57814f6912</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>I_DWORD</type>
       <name>m_deviceDriverVersion</name>
       <anchorfile>classidev_1_1_c_device_info.html</anchorfile>
-      <anchor>dc67567da8213ae6a913b68ab400298d</anchor>
+      <anchor>adc67567da8213ae6a913b68ab400298d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>I_DWORD</type>
       <name>m_deviceLibraryVersion</name>
       <anchorfile>classidev_1_1_c_device_info.html</anchorfile>
-      <anchor>dc5960c11d85457cfd7324a5c0bf5083</anchor>
+      <anchor>adc5960c11d85457cfd7324a5c0bf5083</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -2788,28 +2768,28 @@
       <type>virtual istd::CString</type>
       <name>GetDeviceDescription</name>
       <anchorfile>classidev_1_1_i_device_description.html</anchorfile>
-      <anchor>53e8693fb8ac8d0e1f936a0a426fbc68</anchor>
+      <anchor>a53e8693fb8ac8d0e1f936a0a426fbc68</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetDeviceDescription</name>
       <anchorfile>classidev_1_1_i_device_description.html</anchorfile>
-      <anchor>f1359d4616322521294c558102e9d65b</anchor>
+      <anchor>af1359d4616322521294c558102e9d65b</anchor>
       <arglist>(const istd::CString &amp;deviceDescription)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CString</type>
       <name>GetDeviceName</name>
       <anchorfile>classidev_1_1_i_device_description.html</anchorfile>
-      <anchor>70ce7625c3ca14938da6ab7455ff4fd9</anchor>
+      <anchor>a70ce7625c3ca14938da6ab7455ff4fd9</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetDeviceName</name>
       <anchorfile>classidev_1_1_i_device_description.html</anchorfile>
-      <anchor>2bc690ee1f8466fbb04b67a7a905abaa</anchor>
+      <anchor>a2bc690ee1f8466fbb04b67a7a905abaa</anchor>
       <arglist>(const istd::CString &amp;deviceName)=0</arglist>
     </member>
   </compound>
@@ -2821,42 +2801,42 @@
       <type>virtual istd::CString</type>
       <name>GetDeviceId</name>
       <anchorfile>classidev_1_1_i_device_info.html</anchorfile>
-      <anchor>da51d60632c3c518e72433dc63ca267e</anchor>
+      <anchor>ada51d60632c3c518e72433dc63ca267e</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetDeviceId</name>
       <anchorfile>classidev_1_1_i_device_info.html</anchorfile>
-      <anchor>2eed0fbe0c3a52821bc54a8fd75dcdb8</anchor>
+      <anchor>a2eed0fbe0c3a52821bc54a8fd75dcdb8</anchor>
       <arglist>(const istd::CString &amp;deviceId)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual I_DWORD</type>
       <name>GetDeviceDriverVersion</name>
       <anchorfile>classidev_1_1_i_device_info.html</anchorfile>
-      <anchor>ab704167987977b22cd1b5a90e56eebb</anchor>
+      <anchor>aab704167987977b22cd1b5a90e56eebb</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetDeviceDriverVersion</name>
       <anchorfile>classidev_1_1_i_device_info.html</anchorfile>
-      <anchor>941910d514e531eb314288eaff7b6715</anchor>
+      <anchor>a941910d514e531eb314288eaff7b6715</anchor>
       <arglist>(I_DWORD deviceVersion)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual I_DWORD</type>
       <name>GetDeviceLibraryVersion</name>
       <anchorfile>classidev_1_1_i_device_info.html</anchorfile>
-      <anchor>d24d2a797d1b3c4c244e1f77dd6d583c</anchor>
+      <anchor>ad24d2a797d1b3c4c244e1f77dd6d583c</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetDeviceLibraryVersion</name>
       <anchorfile>classidev_1_1_i_device_info.html</anchorfile>
-      <anchor>92310e77a892058ce583e56c1ab9b5c8</anchor>
+      <anchor>a92310e77a892058ce583e56c1ab9b5c8</anchor>
       <arglist>(I_DWORD libararyVersion)=0</arglist>
     </member>
   </compound>
@@ -2878,96 +2858,96 @@
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>4a1c94b1d35b638d310e8bd44cc166f9</anchor>
+      <anchor>a4a1c94b1d35b638d310e8bd44cc166f9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_BAD_TASKS_COUNT</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>4a1c94b1d35b638d310e8bd44cc166f9d182eb4409aa36bdcb91fe04e0d9b8a8</anchor>
+      <anchor>a4a1c94b1d35b638d310e8bd44cc166f9ad182eb4409aa36bdcb91fe04e0d9b8a8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_NO_TASK</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>4a1c94b1d35b638d310e8bd44cc166f90b9423a355ac02e0ff611e303ec59931</anchor>
+      <anchor>a4a1c94b1d35b638d310e8bd44cc166f9a0b9423a355ac02e0ff611e303ec59931</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>4a57a584f3964fbc1aa4d8c5241c78fc</anchor>
+      <anchor>a4a57a584f3964fbc1aa4d8c5241c78fc</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>76dd4ca9d54afe82b9bdceb38cf54819</anchor>
+      <anchor>a76dd4ca9d54afe82b9bdceb38cf54819</anchor>
       <arglist>(m_inspectionModelsCompPtr, m_inspectionsCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetTasksCount</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>0d641f45e3847a88d471c71c58207bd9</anchor>
+      <anchor>a0d641f45e3847a88d471c71c58207bd9</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IInspectionTask *</type>
       <name>GetTask</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>0ec61c94ebfd828b323a94d50ef93d0f</anchor>
+      <anchor>a0ec61c94ebfd828b323a94d50ef93d0f</anchor>
       <arglist>(int subtaskIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iprm::IParamsSet *</type>
       <name>GetInspectionParams</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>3588fcc850329586b8b35dfa6194711c</anchor>
+      <anchor>a3588fcc850329586b8b35dfa6194711c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSubtasksCount</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>d87c3df884b9f0a34a105f11ad42cdfe</anchor>
+      <anchor>ad87c3df884b9f0a34a105f11ad42cdfe</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iproc::ISupplier *</type>
       <name>GetSubtask</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>7c90a4773e6bc217351937872aa6d082</anchor>
+      <anchor>a7c90a4773e6bc217351937872aa6d082</anchor>
       <arglist>(int subtaskIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iprm::IParamsSet *</type>
       <name>GetTaskParams</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>2492ac673a484d3f34d81a5bd76d22d3</anchor>
+      <anchor>a2492ac673a484d3f34d81a5bd76d22d3</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>42599eb689937260f2bd34401680283b</anchor>
+      <anchor>a42599eb689937260f2bd34401680283b</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>fd88ee04558e36d9beb4361225cd11ab</anchor>
+      <anchor>afd88ee04558e36d9beb4361225cd11ab</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>6b8ba575bbd4096fef8a95d4c82d9bf9</anchor>
+      <anchor>a6b8ba575bbd4096fef8a95d4c82d9bf9</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -2980,68 +2960,68 @@
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>3e985c30cb550692ee98a936a2db3b15</anchor>
+      <anchor>a3e985c30cb550692ee98a936a2db3b15</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_BAD_PARAMS_COUNT</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>3e985c30cb550692ee98a936a2db3b15d0dcd41e7c7bbf97f38c68031c4eb165</anchor>
+      <anchor>a3e985c30cb550692ee98a936a2db3b15ad0dcd41e7c7bbf97f38c68031c4eb165</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_NO_SUBTASK</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>3e985c30cb550692ee98a936a2db3b159c33ede4146cbac207d291410f040d94</anchor>
+      <anchor>a3e985c30cb550692ee98a936a2db3b15a9c33ede4146cbac207d291410f040d94</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>2ef04c15176b03787f0f6c3bc66f7825</anchor>
+      <anchor>a2ef04c15176b03787f0f6c3bc66f7825</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSubtasksCount</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>1ff42f2b1fadea9d9b2256bd739b6a0a</anchor>
+      <anchor>a1ff42f2b1fadea9d9b2256bd739b6a0a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iproc::ISupplier *</type>
       <name>GetSubtask</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>6939fea0173b71740845be7683c9eb40</anchor>
+      <anchor>a6939fea0173b71740845be7683c9eb40</anchor>
       <arglist>(int subtaskIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iprm::IParamsSet *</type>
       <name>GetTaskParams</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>928a165af72421e37482c604d5b61cc2</anchor>
+      <anchor>a928a165af72421e37482c604d5b61cc2</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>c80722d2ef85459f84449030e20512a8</anchor>
+      <anchor>ac80722d2ef85459f84449030e20512a8</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>9225f0e89533a6b25e7666a7cce12e67</anchor>
+      <anchor>a9225f0e89533a6b25e7666a7cce12e67</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>278e42c65aded923511687058ca5de3c</anchor>
+      <anchor>a278e42c65aded923511687058ca5de3c</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -3053,21 +3033,21 @@
       <type>virtual int</type>
       <name>GetTasksCount</name>
       <anchorfile>classiinsp_1_1_i_inspection.html</anchorfile>
-      <anchor>d20282887ed690d17755c1f877501157</anchor>
+      <anchor>ad20282887ed690d17755c1f877501157</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual IInspectionTask *</type>
       <name>GetTask</name>
       <anchorfile>classiinsp_1_1_i_inspection.html</anchorfile>
-      <anchor>7220c271f00a97512810646a3f249a27</anchor>
+      <anchor>a7220c271f00a97512810646a3f249a27</anchor>
       <arglist>(int subtaskIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual iprm::IParamsSet *</type>
       <name>GetInspectionParams</name>
       <anchorfile>classiinsp_1_1_i_inspection.html</anchorfile>
-      <anchor>e9f4b45c65c9e4baa605ceb8ab7b95d0</anchor>
+      <anchor>ae9f4b45c65c9e4baa605ceb8ab7b95d0</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -3079,21 +3059,21 @@
       <type>virtual int</type>
       <name>GetSubtasksCount</name>
       <anchorfile>classiinsp_1_1_i_inspection_task.html</anchorfile>
-      <anchor>f7b819ac5739ea2333e9193c78214b6e</anchor>
+      <anchor>af7b819ac5739ea2333e9193c78214b6e</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual iproc::ISupplier *</type>
       <name>GetSubtask</name>
       <anchorfile>classiinsp_1_1_i_inspection_task.html</anchorfile>
-      <anchor>b712f2316f4406c10d17b0e505a3dc25</anchor>
+      <anchor>ab712f2316f4406c10d17b0e505a3dc25</anchor>
       <arglist>(int subtaskIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual iprm::IParamsSet *</type>
       <name>GetTaskParams</name>
       <anchorfile>classiinsp_1_1_i_inspection_task.html</anchorfile>
-      <anchor>e0697133fd449c46b1bc4c745f056cec</anchor>
+      <anchor>ae0697133fd449c46b1bc4c745f056cec</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -3163,7 +3143,7 @@
       <type>TUnaryTransformProcessorComp&lt; I_BYTE, InvertFunction&lt; I_BYTE &gt; &gt;</type>
       <name>CInvertOperatorComp</name>
       <anchorfile>namespaceiipr.html</anchorfile>
-      <anchor>1338874f6c5f00966ec64e0b06992393</anchor>
+      <anchor>a1338874f6c5f00966ec64e0b06992393</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -3174,54 +3154,54 @@
     <member kind="enumeration">
       <name>EdgeMode</name>
       <anchorfile>classiipr_1_1_c_caliper_feature.html</anchorfile>
-      <anchor>1ef6f7b6f8f7def20efeb84820baf696</anchor>
+      <anchor>a1ef6f7b6f8f7def20efeb84820baf696</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>EM_FALLING</name>
       <anchorfile>classiipr_1_1_c_caliper_feature.html</anchorfile>
-      <anchor>1ef6f7b6f8f7def20efeb84820baf6969e8832f69d2207498492f17347f370cb</anchor>
+      <anchor>a1ef6f7b6f8f7def20efeb84820baf696a9e8832f69d2207498492f17347f370cb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>EM_RISING</name>
       <anchorfile>classiipr_1_1_c_caliper_feature.html</anchorfile>
-      <anchor>1ef6f7b6f8f7def20efeb84820baf6968f575a8fe5a3b6aa4781539dae560ca7</anchor>
+      <anchor>a1ef6f7b6f8f7def20efeb84820baf696a8f575a8fe5a3b6aa4781539dae560ca7</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CFeatureBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_caliper_feature.html</anchorfile>
-      <anchor>44258656fe3123f5b93b84c8fe1e8219</anchor>
+      <anchor>a44258656fe3123f5b93b84c8fe1e8219</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CCaliperFeature</name>
       <anchorfile>classiipr_1_1_c_caliper_feature.html</anchorfile>
-      <anchor>f7319aa2a1874e8db29ad8bf6db44f37</anchor>
+      <anchor>af7319aa2a1874e8db29ad8bf6db44f37</anchor>
       <arglist>(double weight, double position, int edgeMode)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
       <name>GetPosition</name>
       <anchorfile>classiipr_1_1_c_caliper_feature.html</anchorfile>
-      <anchor>914b0dd0230119e56cf4b47452a23f6b</anchor>
+      <anchor>a914b0dd0230119e56cf4b47452a23f6b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>GetEdgeMode</name>
       <anchorfile>classiipr_1_1_c_caliper_feature.html</anchorfile>
-      <anchor>0c7222c02542325465c1be54084a1f9b</anchor>
+      <anchor>a0c7222c02542325465c1be54084a1f9b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiipr_1_1_c_caliper_feature.html</anchorfile>
-      <anchor>7034ea0be5223bcb799fe8e6b3a2dd26</anchor>
+      <anchor>a7034ea0be5223bcb799fe8e6b3a2dd26</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -3233,56 +3213,56 @@
       <type></type>
       <name>CCaliperParams</name>
       <anchorfile>classiipr_1_1_c_caliper_params.html</anchorfile>
-      <anchor>3324cfb1e5f0671146ed9b7750afead4</anchor>
+      <anchor>a3324cfb1e5f0671146ed9b7750afead4</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetWeightThreshold</name>
       <anchorfile>classiipr_1_1_c_caliper_params.html</anchorfile>
-      <anchor>e9fe33d924883683f35e657cb9edbe82</anchor>
+      <anchor>ae9fe33d924883683f35e657cb9edbe82</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetWeightThreshold</name>
       <anchorfile>classiipr_1_1_c_caliper_params.html</anchorfile>
-      <anchor>6df886e207e7be51cfa4e7f14f650127</anchor>
+      <anchor>a6df886e207e7be51cfa4e7f14f650127</anchor>
       <arglist>(double threshold)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetPolarityMode</name>
       <anchorfile>classiipr_1_1_c_caliper_params.html</anchorfile>
-      <anchor>a3c25670e8a6cf7ef3825c5b4a60864c</anchor>
+      <anchor>aa3c25670e8a6cf7ef3825c5b4a60864c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetPolarityMode</name>
       <anchorfile>classiipr_1_1_c_caliper_params.html</anchorfile>
-      <anchor>9eaf7c041fbea501e60d647e02453f93</anchor>
+      <anchor>a9eaf7c041fbea501e60d647e02453f93</anchor>
       <arglist>(int mode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetDirectionMode</name>
       <anchorfile>classiipr_1_1_c_caliper_params.html</anchorfile>
-      <anchor>ad861e04922cc66e9677b1f584c23266</anchor>
+      <anchor>aad861e04922cc66e9677b1f584c23266</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetDirectionMode</name>
       <anchorfile>classiipr_1_1_c_caliper_params.html</anchorfile>
-      <anchor>fe7a042d5d3e9e2ecd7400b1694dc925</anchor>
+      <anchor>afe7a042d5d3e9e2ecd7400b1694dc925</anchor>
       <arglist>(int mode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiipr_1_1_c_caliper_params.html</anchorfile>
-      <anchor>70d74c0f5c104b0be376ed111ff019a6</anchor>
+      <anchor>a70d74c0f5c104b0be376ed111ff019a6</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -3295,14 +3275,14 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_caliper_params_comp.html</anchorfile>
-      <anchor>2d2948ce8f36358611a39f2c5ab48503</anchor>
+      <anchor>a2d2948ce8f36358611a39f2c5ab48503</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_caliper_params_comp.html</anchorfile>
-      <anchor>6adce4a883a9827de58eeb10e7860827</anchor>
+      <anchor>a6adce4a883a9827de58eeb10e7860827</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -3314,70 +3294,70 @@
       <type></type>
       <name>CCircleFinderParams</name>
       <anchorfile>classiipr_1_1_c_circle_finder_params.html</anchorfile>
-      <anchor>660ce5c4eaf33869f3b344f811c79780</anchor>
+      <anchor>a660ce5c4eaf33869f3b344f811c79780</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetCaliperMode</name>
       <anchorfile>classiipr_1_1_c_circle_finder_params.html</anchorfile>
-      <anchor>efaa737b44e21e8002e66aafadc68e33</anchor>
+      <anchor>aefaa737b44e21e8002e66aafadc68e33</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetCaliperMode</name>
       <anchorfile>classiipr_1_1_c_circle_finder_params.html</anchorfile>
-      <anchor>6a58df8ca3ec0fc681f40849a34ac34f</anchor>
+      <anchor>a6a58df8ca3ec0fc681f40849a34ac34f</anchor>
       <arglist>(int caliperMode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsOutlierEliminationEnabled</name>
       <anchorfile>classiipr_1_1_c_circle_finder_params.html</anchorfile>
-      <anchor>4715e6db3792d27e4b4e2e938cd1138a</anchor>
+      <anchor>a4715e6db3792d27e4b4e2e938cd1138a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetOutlierEliminationEnabled</name>
       <anchorfile>classiipr_1_1_c_circle_finder_params.html</anchorfile>
-      <anchor>08c6945111d4316f981f85f351303fcf</anchor>
+      <anchor>a08c6945111d4316f981f85f351303fcf</anchor>
       <arglist>(bool isOutlierEliminationEnabled=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetMinOutlierDistance</name>
       <anchorfile>classiipr_1_1_c_circle_finder_params.html</anchorfile>
-      <anchor>990646b8860ffdb9a0c38fdd6ea6565a</anchor>
+      <anchor>a990646b8860ffdb9a0c38fdd6ea6565a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetMinOutlierDistance</name>
       <anchorfile>classiipr_1_1_c_circle_finder_params.html</anchorfile>
-      <anchor>032fab6cc19b1a146c51c9021cefeefe</anchor>
+      <anchor>a032fab6cc19b1a146c51c9021cefeefe</anchor>
       <arglist>(double minOutlierDistance)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetRaysCount</name>
       <anchorfile>classiipr_1_1_c_circle_finder_params.html</anchorfile>
-      <anchor>ad49082fceb4deb486eb9b0f8acd6d8f</anchor>
+      <anchor>aad49082fceb4deb486eb9b0f8acd6d8f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetRaysCount</name>
       <anchorfile>classiipr_1_1_c_circle_finder_params.html</anchorfile>
-      <anchor>f8124ea890b6df9b98ad9d360175162f</anchor>
+      <anchor>af8124ea890b6df9b98ad9d360175162f</anchor>
       <arglist>(int raysCount)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiipr_1_1_c_circle_finder_params.html</anchorfile>
-      <anchor>8bd5fd71e31982cd7ac3b4dee6050a54</anchor>
+      <anchor>a8bd5fd71e31982cd7ac3b4dee6050a54</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -3390,14 +3370,14 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_circle_finder_params_comp.html</anchorfile>
-      <anchor>da88e590e126e771bba1b6274a709afa</anchor>
+      <anchor>ada88e590e126e771bba1b6274a709afa</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_circle_finder_params_comp.html</anchorfile>
-      <anchor>541b3adb31092332dc18806268ee0c24</anchor>
+      <anchor>a541b3adb31092332dc18806268ee0c24</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -3412,77 +3392,77 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>5d7a01981508c9b0c6b2609ad8286e1d</anchor>
+      <anchor>a5d7a01981508c9b0c6b2609ad8286e1d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoExtractFeatures</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>79a9b3c50aaeccc7cc6e50d988ad67a6</anchor>
+      <anchor>a79a9b3c50aaeccc7cc6e50d988ad67a6</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, IFeaturesConsumer &amp;results)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>fe54ccf8cf71fd7a064dfbe6a50e466a</anchor>
+      <anchor>afe54ccf8cf71fd7a064dfbe6a50e466a</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>TFeatureWrap&lt; i2d::CCircle &gt;</type>
       <name>CircleFeature</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>e2e72ea5af400c67049aa85152c975aa</anchor>
+      <anchor>ae2e72ea5af400c67049aa85152c975aa</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>TFeatureWrap&lt; i2d::CAnnulus &gt;</type>
       <name>AnnulusFeature</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>81f24524e9840fc5478e13aa82f56515</anchor>
+      <anchor>a81f24524e9840fc5478e13aa82f56515</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>std::vector&lt; Point &gt;</type>
       <name>Points</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>24559d656470188cd7b8544a50146d2f</anchor>
+      <anchor>a24559d656470188cd7b8544a50146d2f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>std::vector&lt; Ray &gt;</type>
       <name>Rays</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>e4913fda706279f64eb20b0889fcb3bb</anchor>
+      <anchor>ae4913fda706279f64eb20b0889fcb3bb</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>AddAoiToRays</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>00d7f8ade0f9ff1b5bf4e6160301b6ff</anchor>
+      <anchor>a00d7f8ade0f9ff1b5bf4e6160301b6ff</anchor>
       <arglist>(const istd::IChangeable &amp;aoiObject, const iprm::IParamsSet &amp;params, const iimg::IBitmap &amp;image, const iipr::ICircleFinderParams &amp;circleFinderParams, Rays &amp;inRays, Rays &amp;outRays, i2d::CLine2d &amp;projectionLine, i2d::CVector2d &amp;center)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CalculateCircle</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>415967994d0019f6444814dd0bedca97</anchor>
+      <anchor>a415967994d0019f6444814dd0bedca97</anchor>
       <arglist>(const i2d::CVector2d &amp;center, bool removeOutliers, double minOutliersDistance, Rays &amp;rays, CircleFeature &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CalculateAnnulus</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>6abdcec24fc49dce8060ad06b03c0f49</anchor>
+      <anchor>a6abdcec24fc49dce8060ad06b03c0f49</anchor>
       <arglist>(const i2d::CVector2d &amp;center, Rays &amp;inRays, Rays &amp;outRays, AnnulusFeature &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>AddProjectionResultsToRays</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>9acfdeea5060c979398f44a3f7755132</anchor>
+      <anchor>a9acfdeea5060c979398f44a3f7755132</anchor>
       <arglist>(const iprm::IParamsSet &amp;params, const IFeaturesContainer &amp;container, Rays &amp;inRays, Rays &amp;outRays)</arglist>
     </member>
   </compound>
@@ -3493,14 +3473,14 @@
       <type>double</type>
       <name>weight</name>
       <anchorfile>structiipr_1_1_c_circle_find_processor_comp_1_1_point.html</anchorfile>
-      <anchor>6bc427f198883979dc1f56a73e546802</anchor>
+      <anchor>a6bc427f198883979dc1f56a73e546802</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>i2d::CVector2d</type>
       <name>position</name>
       <anchorfile>structiipr_1_1_c_circle_find_processor_comp_1_1_point.html</anchorfile>
-      <anchor>767388a30a4f6875ab9be101295b9a6a</anchor>
+      <anchor>a767388a30a4f6875ab9be101295b9a6a</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -3511,21 +3491,21 @@
       <type></type>
       <name>Ray</name>
       <anchorfile>structiipr_1_1_c_circle_find_processor_comp_1_1_ray.html</anchorfile>
-      <anchor>b632c4479f5bd544f9b88abc8629e340</anchor>
+      <anchor>ab632c4479f5bd544f9b88abc8629e340</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable">
       <type>Points</type>
       <name>points</name>
       <anchorfile>structiipr_1_1_c_circle_find_processor_comp_1_1_ray.html</anchorfile>
-      <anchor>f6c9d49cfa6af518c73bff862b77be9e</anchor>
+      <anchor>af6c9d49cfa6af518c73bff862b77be9e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>usedIndex</name>
       <anchorfile>structiipr_1_1_c_circle_find_processor_comp_1_1_ray.html</anchorfile>
-      <anchor>157e595d699602049b7004b02d4313fd</anchor>
+      <anchor>a157e595d699602049b7004b02d4313fd</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -3537,91 +3517,91 @@
       <type>std::vector&lt; KernelValue &gt;</type>
       <name>KernelValues</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>1d6235ce90303b71bcab0bdb582cd104</anchor>
+      <anchor>a1d6235ce90303b71bcab0bdb582cd104</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>KernelValues::const_iterator</type>
       <name>Iterator</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>79ea4830d3973f2697fbc720f16f2b79</anchor>
+      <anchor>a79ea4830d3973f2697fbc720f16f2b79</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CConvolutionKernel2d</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>f8decf5c6b96fdc39e8cffa917235cec</anchor>
+      <anchor>af8decf5c6b96fdc39e8cffa917235cec</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CConvolutionKernel2d</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>ba74dfeb63f62964cdead2dc974811ca</anchor>
+      <anchor>aba74dfeb63f62964cdead2dc974811ca</anchor>
       <arglist>(const imath::ISampledFunction2d &amp;function)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>IsValid</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>4b2ba4600ca1240a1a0ae5a544275d10</anchor>
+      <anchor>a4b2ba4600ca1240a1a0ae5a544275d10</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>InitForBitmap</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>761f3af2b30709fa0b835a9995922eec</anchor>
+      <anchor>a761f3af2b30709fa0b835a9995922eec</anchor>
       <arglist>(const iimg::IBitmap &amp;bitmap) const </arglist>
     </member>
     <member kind="function">
       <type>Iterator</type>
       <name>Begin</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>4bf75f9cb92e1c62b99240be0dcfe8d0</anchor>
+      <anchor>a4bf75f9cb92e1c62b99240be0dcfe8d0</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>Iterator</type>
       <name>End</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>6d2593176e5c3b32eb823bf46981693d</anchor>
+      <anchor>a6d2593176e5c3b32eb823bf46981693d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>double</type>
       <name>GetWeightsSum</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>a00450c5710872d9824673b2dae80b6e</anchor>
+      <anchor>aa00450c5710872d9824673b2dae80b6e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>i2d::CRectangle</type>
       <name>GetBoundingBox</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>e694387374a1fe3c33617bdf906cb985</anchor>
+      <anchor>ae694387374a1fe3c33617bdf906cb985</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>KernelValues</type>
       <name>m_values</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>f4e84d932da8cfb64bb06bb7f6cb5282</anchor>
+      <anchor>af4e84d932da8cfb64bb06bb7f6cb5282</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>ibase::CSize</type>
       <name>m_kernelSize</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>627d4cd92399fccc3f6f0022ca8a756b</anchor>
+      <anchor>a627d4cd92399fccc3f6f0022ca8a756b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>double</type>
       <name>m_sumWeights</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>297acf81355464d3a3a944b1274b705b</anchor>
+      <anchor>a297acf81355464d3a3a944b1274b705b</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -3632,14 +3612,14 @@
       <type>int</type>
       <name>pixelOffset</name>
       <anchorfile>structiipr_1_1_c_convolution_kernel2d_1_1_kernel_value.html</anchorfile>
-      <anchor>2d744e9ba119b3b1f6eb2c905b4cfc1b</anchor>
+      <anchor>a2d744e9ba119b3b1f6eb2c905b4cfc1b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>kernelWeight</name>
       <anchorfile>structiipr_1_1_c_convolution_kernel2d_1_1_kernel_value.html</anchorfile>
-      <anchor>4b360c1b2689b37cf53b9a99545db5cb</anchor>
+      <anchor>a4b360c1b2689b37cf53b9a99545db5cb</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -3652,63 +3632,63 @@
       <type>iproc::TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>892437e7f9a9dccfd4e25d9b904cfa1d</anchor>
+      <anchor>a892437e7f9a9dccfd4e25d9b904cfa1d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>7ccbd1a36502e4e2ff19434b9d98d4b9</anchor>
+      <anchor>a7ccbd1a36502e4e2ff19434b9d98d4b9</anchor>
       <arglist>(m_bitmapModelCompPtr, m_bitmapCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>4d3cdff494dea97e02b218106afbac04</anchor>
+      <anchor>a4d3cdff494dea97e02b218106afbac04</anchor>
       <arglist>(m_calibrationModelCompPtr, m_calibrationCompPtr, false)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const iimg::IBitmap *</type>
       <name>GetBitmap</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>45c7c3568ba2c8cb44a1a35e1fb9a74e</anchor>
+      <anchor>a45c7c3568ba2c8cb44a1a35e1fb9a74e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const i2d::ITransformation2d *</type>
       <name>GetLogTransform</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>ef74ba8867f5f77e8160bf0cf9f50583</anchor>
+      <anchor>aef74ba8867f5f77e8160bf0cf9f50583</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>6054a1c2b5856e22d6529357d72f3c1f</anchor>
+      <anchor>a6054a1c2b5856e22d6529357d72f3c1f</anchor>
       <arglist>(ProductType &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>02c62def2d9d7e2964b87c6d35370a29</anchor>
+      <anchor>a02c62def2d9d7e2964b87c6d35370a29</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>3dc8acf51b529498be7280f6d042fa3b</anchor>
+      <anchor>a3dc8acf51b529498be7280f6d042fa3b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>e5c5d3a1a89099b1009de0a3a3c5550b</anchor>
+      <anchor>ae5c5d3a1a89099b1009de0a3a3c5550b</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
@@ -3722,35 +3702,35 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_extremum_caliper_processor_comp.html</anchorfile>
-      <anchor>cf6c60dd1f5147c0fd6eef751c126317</anchor>
+      <anchor>acf6c60dd1f5147c0fd6eef751c126317</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>iproc::TSyncProcessorWrap&lt; ICaliperProcessor &gt;</type>
       <name>BaseClass2</name>
       <anchorfile>classiipr_1_1_c_extremum_caliper_processor_comp.html</anchorfile>
-      <anchor>9207ff246d6ee7eeadb6b1e27ff48a28</anchor>
+      <anchor>a9207ff246d6ee7eeadb6b1e27ff48a28</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>DoCaliper</name>
       <anchorfile>classiipr_1_1_c_extremum_caliper_processor_comp.html</anchorfile>
-      <anchor>ff7f6e3a4ee26749bfccf26d595673cd</anchor>
+      <anchor>aff7f6e3a4ee26749bfccf26d595673cd</anchor>
       <arglist>(const imeas::IDataSequence &amp;derivative, const ICaliperParams *paramsPtr, IFeaturesConsumer &amp;results)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_extremum_caliper_processor_comp.html</anchorfile>
-      <anchor>52c2f661660b377539d4136dc1a88de3</anchor>
+      <anchor>a52c2f661660b377539d4136dc1a88de3</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetProjectionPosition</name>
       <anchorfile>classiipr_1_1_c_extremum_caliper_processor_comp.html</anchorfile>
-      <anchor>ce8bd10e744c8fc6ba6ed8c2683d4c5a</anchor>
+      <anchor>ace8bd10e744c8fc6ba6ed8c2683d4c5a</anchor>
       <arglist>(const IFeature &amp;feature, const iprm::IParamsSet *paramsPtr, double &amp;result) const </arglist>
     </member>
   </compound>
@@ -3762,28 +3742,28 @@
       <type></type>
       <name>CFeatureBase</name>
       <anchorfile>classiipr_1_1_c_feature_base.html</anchorfile>
-      <anchor>c7e76b15789575cee9678e294c78a8ac</anchor>
+      <anchor>ac7e76b15789575cee9678e294c78a8ac</anchor>
       <arglist>(double weight=1.0)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>SetWeight</name>
       <anchorfile>classiipr_1_1_c_feature_base.html</anchorfile>
-      <anchor>0e5c9e5e476a0658ab85acaaa9c37853</anchor>
+      <anchor>a0e5c9e5e476a0658ab85acaaa9c37853</anchor>
       <arglist>(double weight)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetWeight</name>
       <anchorfile>classiipr_1_1_c_feature_base.html</anchorfile>
-      <anchor>a707334eed323991b30c6f92c9e20072</anchor>
+      <anchor>aa707334eed323991b30c6f92c9e20072</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiipr_1_1_c_feature_base.html</anchorfile>
-      <anchor>42254e5c91c73210456c7c46595726ad</anchor>
+      <anchor>a42254e5c91c73210456c7c46595726ad</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -3795,21 +3775,21 @@
       <type>virtual void</type>
       <name>ResetFeatures</name>
       <anchorfile>classiipr_1_1_c_features_container.html</anchorfile>
-      <anchor>614767b01248f27acb51b5966c3deb95</anchor>
+      <anchor>a614767b01248f27acb51b5966c3deb95</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>AddFeature</name>
       <anchorfile>classiipr_1_1_c_features_container.html</anchorfile>
-      <anchor>bdfb15989e141429c2d57610d468cbe3</anchor>
+      <anchor>abdfb15989e141429c2d57610d468cbe3</anchor>
       <arglist>(const iipr::IFeature *featurePtr, bool *isFullPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Features</type>
       <name>GetFeatures</name>
       <anchorfile>classiipr_1_1_c_features_container.html</anchorfile>
-      <anchor>a0b5325cde9aa7d32bfd141f62061c0a</anchor>
+      <anchor>aa0b5325cde9aa7d32bfd141f62061c0a</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -3822,28 +3802,28 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_feature_to_image_mapper_processor_comp.html</anchorfile>
-      <anchor>aa8c46d044be33f0c3b1631656bf34b8</anchor>
+      <anchor>aaa8c46d044be33f0c3b1631656bf34b8</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoConvertFeatures</name>
       <anchorfile>classiipr_1_1_c_feature_to_image_mapper_processor_comp.html</anchorfile>
-      <anchor>01ffa76e8296a7624fe4cd817fdfa269</anchor>
+      <anchor>a01ffa76e8296a7624fe4cd817fdfa269</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const IFeaturesContainer &amp;container, IFeaturesConsumer &amp;results)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_feature_to_image_mapper_processor_comp.html</anchorfile>
-      <anchor>f41f85a9d78ea5302cbdffce5f6a4fb6</anchor>
+      <anchor>af41f85a9d78ea5302cbdffce5f6a4fb6</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>TFeatureWrap&lt; i2d::CPosition2d &gt;</type>
       <name>PositionFeature</name>
       <anchorfile>classiipr_1_1_c_feature_to_image_mapper_processor_comp.html</anchorfile>
-      <anchor>b391e3374f5f8242b199d7351103e89d</anchor>
+      <anchor>ab391e3374f5f8242b199d7351103e89d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -3855,14 +3835,14 @@
       <type>iproc::CSyncProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_image_crop_processor_comp.html</anchorfile>
-      <anchor>584cdfe173a47336e27482953b2f9489</anchor>
+      <anchor>a584cdfe173a47336e27482953b2f9489</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_image_crop_processor_comp.html</anchorfile>
-      <anchor>11f0082918027d17f1def230e5f37e23</anchor>
+      <anchor>a11f0082918027d17f1def230e5f37e23</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
@@ -3874,14 +3854,14 @@
       <type>iproc::CSyncProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_image_histogram_processor_comp.html</anchorfile>
-      <anchor>7e9e8bdbd3ba7feb0ca85e824b3cc9d3</anchor>
+      <anchor>a7e9e8bdbd3ba7feb0ca85e824b3cc9d3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_image_histogram_processor_comp.html</anchorfile>
-      <anchor>313683b45b508e5f331addde67df67d7</anchor>
+      <anchor>a313683b45b508e5f331addde67df67d7</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
@@ -3893,28 +3873,28 @@
       <type></type>
       <name>CImageInterpolationParams</name>
       <anchorfile>classiipr_1_1_c_image_interpolation_params.html</anchorfile>
-      <anchor>e503800b301424c7f81ce18387e64858</anchor>
+      <anchor>ae503800b301424c7f81ce18387e64858</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetInterpolationMode</name>
       <anchorfile>classiipr_1_1_c_image_interpolation_params.html</anchorfile>
-      <anchor>5c5f229090dc6163e0c2b4dc9ad1ca1f</anchor>
+      <anchor>a5c5f229090dc6163e0c2b4dc9ad1ca1f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetInterpolationMode</name>
       <anchorfile>classiipr_1_1_c_image_interpolation_params.html</anchorfile>
-      <anchor>5c96adc3e956068401f29150c00491ac</anchor>
+      <anchor>a5c96adc3e956068401f29150c00491ac</anchor>
       <arglist>(int interpolationMode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiipr_1_1_c_image_interpolation_params.html</anchorfile>
-      <anchor>89fea018e32246d01c6eaa7422c6c850</anchor>
+      <anchor>a89fea018e32246d01c6eaa7422c6c850</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -3926,14 +3906,14 @@
       <type>iipr::CImageProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_image_normalize_processor_comp.html</anchorfile>
-      <anchor>0eefba5c88adf9dbf0603ae3b583db94</anchor>
+      <anchor>a0eefba5c88adf9dbf0603ae3b583db94</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessImage</name>
       <anchorfile>classiipr_1_1_c_image_normalize_processor_comp.html</anchorfile>
-      <anchor>7ca838eb449c5d4a8a1d86c894d0f5c7</anchor>
+      <anchor>a7ca838eb449c5d4a8a1d86c894d0f5c7</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
   </compound>
@@ -3945,14 +3925,14 @@
       <type>iproc::CSyncProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_image_polar_transform_processor_comp.html</anchorfile>
-      <anchor>a578ff557e1f7fca78b1b9a5c164a8eb</anchor>
+      <anchor>aa578ff557e1f7fca78b1b9a5c164a8eb</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_image_polar_transform_processor_comp.html</anchorfile>
-      <anchor>ce93c67ff5bca73aac845308b9281382</anchor>
+      <anchor>ace93c67ff5bca73aac845308b9281382</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
@@ -3964,28 +3944,28 @@
       <type>iproc::CSyncProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>4f0faf686d5922e785d6c1bbb79ced8b</anchor>
+      <anchor>a4f0faf686d5922e785d6c1bbb79ced8b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CImageProcessorCompBase</name>
       <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>ddfe1f9df169bab88cf503a7e414883b</anchor>
+      <anchor>addfe1f9df169bab88cf503a7e414883b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>c2992792559f45fc305bce7ec70da134</anchor>
+      <anchor>ac2992792559f45fc305bce7ec70da134</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
       <name>ProcessImage</name>
       <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>1c34b3884ba43425bffa882b73f1d789</anchor>
+      <anchor>a1c34b3884ba43425bffa882b73f1d789</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)=0</arglist>
     </member>
   </compound>
@@ -4000,70 +3980,70 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
-      <anchor>e5ab7befa020f77a6d1a0f81ab5c6fce</anchor>
+      <anchor>ae5ab7befa020f77a6d1a0f81ab5c6fce</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>iproc::TSyncProcessorWrap&lt; ILineProjectionProcessor &gt;</type>
       <name>BaseClass2</name>
       <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
-      <anchor>d9fac4a1c20d04d75899dfce2858e020</anchor>
+      <anchor>ad9fac4a1c20d04d75899dfce2858e020</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type>I_END_COMPONENT bool</type>
       <name>DoAutosizeProjection</name>
       <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
-      <anchor>3b354656e206956f585a019b460e948d</anchor>
+      <anchor>a3b354656e206956f585a019b460e948d</anchor>
       <arglist>(const iimg::IBitmap &amp;bitmap, const i2d::CLine2d &amp;projectionLine, imeas::IDataSequence &amp;results) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetImagePosition</name>
       <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
-      <anchor>563683776d51da2c500eaf13d453637f</anchor>
+      <anchor>a563683776d51da2c500eaf13d453637f</anchor>
       <arglist>(const IFeature &amp;feature, const iprm::IParamsSet *paramsPtr, i2d::CVector2d &amp;result) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>DoProjection</name>
       <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
-      <anchor>2462a433962361fabc4d7e71bc5cd928</anchor>
+      <anchor>a2462a433962361fabc4d7e71bc5cd928</anchor>
       <arglist>(const iimg::IBitmap &amp;bitmap, const i2d::CLine2d &amp;projectionLine, const IProjectionParams *paramsPtr, imeas::IDataSequence &amp;results)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
-      <anchor>46a8b9a1fb30af7c1e080f8c9f841fe6</anchor>
+      <anchor>a46a8b9a1fb30af7c1e080f8c9f841fe6</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetLineWidthRange</name>
       <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
-      <anchor>597a80eb5e49e63456d8d59ac8c8789a</anchor>
+      <anchor>a597a80eb5e49e63456d8d59ac8c8789a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetMinProjectionSize</name>
       <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
-      <anchor>ab4283440f7d1a3d03156d3889968051</anchor>
+      <anchor>aab4283440f7d1a3d03156d3889968051</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetMaxProjectionSize</name>
       <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
-      <anchor>eaefc77477f9904f081fa04def4842e4</anchor>
+      <anchor>aeaefc77477f9904f081fa04def4842e4</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsAutoProjectionSizeSupported</name>
       <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
-      <anchor>e4689c1dbe38814e18759c3669a2724e</anchor>
+      <anchor>ae4689c1dbe38814e18759c3669a2724e</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -4075,28 +4055,28 @@
       <type>iproc::TSupplierCompWrap&lt; iipr::ILineProjectionSupplier, imeas::CGeneralDataSequence &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_line_projection_supplier_comp.html</anchorfile>
-      <anchor>3b0ee8b9399590e0e644acfaf33eb61e</anchor>
+      <anchor>a3b0ee8b9399590e0e644acfaf33eb61e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::IDataSequence *</type>
       <name>GetLineProjection</name>
       <anchorfile>classiipr_1_1_c_line_projection_supplier_comp.html</anchorfile>
-      <anchor>9a367586e0ef20f4188e9b810274c97a</anchor>
+      <anchor>a9a367586e0ef20f4188e9b810274c97a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
       <anchorfile>classiipr_1_1_c_line_projection_supplier_comp.html</anchorfile>
-      <anchor>fc32afdc5682ae65f7f28d14b37c90d9</anchor>
+      <anchor>afc32afdc5682ae65f7f28d14b37c90d9</anchor>
       <arglist>(imeas::CGeneralDataSequence &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_line_projection_supplier_comp.html</anchorfile>
-      <anchor>949009c368a09afc4275e4257471251f</anchor>
+      <anchor>a949009c368a09afc4275e4257471251f</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -4108,28 +4088,28 @@
       <type>iproc::TSupplierCompWrap&lt; iproc::IValueSupplier, imath::CVarVector &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>98c3c029d0a43e2a766150555e1168e0</anchor>
+      <anchor>a98c3c029d0a43e2a766150555e1168e0</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual imath::CVarVector</type>
       <name>GetValue</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>0ae2af2855c42ea137cd4a9a37f21ed5</anchor>
+      <anchor>a0ae2af2855c42ea137cd4a9a37f21ed5</anchor>
       <arglist>(int index=-1, int valueTypeId=VTI_AUTO) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>89dd14a9a7d2172a71d58101aec62f18</anchor>
+      <anchor>a89dd14a9a7d2172a71d58101aec62f18</anchor>
       <arglist>(imath::CVarVector &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>59c8e8cd4b452ab79c986998f3dd0542</anchor>
+      <anchor>a59c8e8cd4b452ab79c986998f3dd0542</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -4141,21 +4121,21 @@
       <type>iproc::TSyncProcessorCompBase&lt; iproc::IBitmapAcquisition &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_processed_acquisition_comp.html</anchorfile>
-      <anchor>618918f14d99dcad401b2f89da5e7db6</anchor>
+      <anchor>a618918f14d99dcad401b2f89da5e7db6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT istd::CIndex2d</type>
       <name>GetBitmapSize</name>
       <anchorfile>classiipr_1_1_c_processed_acquisition_comp.html</anchorfile>
-      <anchor>bb730f5aa7398a372c779133816a15e6</anchor>
+      <anchor>abb730f5aa7398a372c779133816a15e6</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_processed_acquisition_comp.html</anchorfile>
-      <anchor>8e4f41a6a298a4e03345ece94f3a53f5</anchor>
+      <anchor>a8e4f41a6a298a4e03345ece94f3a53f5</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
@@ -4167,138 +4147,140 @@
       <type>iproc::TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; istd::TDelPtr&lt; i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>36a0f071668edfdd42d00ce778a5c27e</anchor>
+      <anchor>a36a0f071668edfdd42d00ce778a5c27e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>EnsureBitmapCreated</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>e30a377d05d1f6711b35fe9fddbdf1d4</anchor>
+      <anchor>ae30a377d05d1f6711b35fe9fddbdf1d4</anchor>
       <arglist>(ProductType &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const iimg::IBitmap *</type>
       <name>GetBitmap</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>4688ddf6927eaf785b7297c8acadaf9e</anchor>
+      <anchor>a4688ddf6927eaf785b7297c8acadaf9e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const i2d::ITransformation2d *</type>
       <name>GetLogTransform</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>2a75ac1fbf2d1cc128882ce0f941c2ba</anchor>
+      <anchor>a2a75ac1fbf2d1cc128882ce0f941c2ba</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>857ccf41fffe37d31452115c0a0b77fa</anchor>
+      <anchor>a857ccf41fffe37d31452115c0a0b77fa</anchor>
       <arglist>(ProductType &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>81741a268acf9a5682ee358f508b4746</anchor>
+      <anchor>a81741a268acf9a5682ee358f508b4746</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>188b70a9369e3ed26986e14d9a3f0907</anchor>
+      <anchor>a188b70a9369e3ed26986e14d9a3f0907</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>iipr::CRectDerivativeProcessor</name>
     <filename>classiipr_1_1_c_rect_derivative_processor.html</filename>
-    <base>TSyncProcessorWrap&lt; IProcessor &gt;</base>
+    <base>iproc::TSyncProcessorWrap</base>
+    <base virtualness="virtual">imeas::INumericConstraints</base>
+    <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>DoDerivativeProcessing</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>c9bbc82c23c938299e0ac69cd8d69c89</anchor>
+      <anchor>ac9bbc82c23c938299e0ac69cd8d69c89</anchor>
       <arglist>(const imeas::IDataSequence &amp;source, double filterLength, imeas::IDataSequence &amp;results)</arglist>
     </member>
     <member kind="function">
       <type>const std::string &amp;</type>
       <name>GetFilterParamsId</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>446d473424596e7185e3baedfca44035</anchor>
+      <anchor>a446d473424596e7185e3baedfca44035</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>SetFilterParamsId</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>e5b6dc2b60a25a67419aeefa039bc91b</anchor>
+      <anchor>ae5b6dc2b60a25a67419aeefa039bc91b</anchor>
       <arglist>(const std::string &amp;id)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>ab9377a4639fbe9b9d9649beb06392c4</anchor>
+      <anchor>aab9377a4639fbe9b9d9649beb06392c4</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetNumericValuesCount</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>8aaa5845f57f38aea453a90cdefe07ab</anchor>
+      <anchor>a8aaa5845f57f38aea453a90cdefe07ab</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
       <name>GetNumericValueDescription</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>afeb6e94807b07f3d4fa4cf15e4e6b6e</anchor>
+      <anchor>aafeb6e94807b07f3d4fa4cf15e4e6b6e</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::IUnitInfo &amp;</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>87bd4a695300f85c2526d6bb04279642</anchor>
+      <anchor>a87bd4a695300f85c2526d6bb04279642</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetUnitType</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>1f7091b5f0e9e4df0a59d151bac45219</anchor>
+      <anchor>a1f7091b5f0e9e4df0a59d151bac45219</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
       <name>GetUnitName</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>e5954d49eb1c02a0b7403c9fb0ce952e</anchor>
+      <anchor>ae5954d49eb1c02a0b7403c9fb0ce952e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetDisplayMultiplicationFactor</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>71683c5497afb431d988bfe3733a197f</anchor>
+      <anchor>a71683c5497afb431d988bfe3733a197f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetValueRange</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>f146bc0a65e5e5583ea415a5174e8835</anchor>
+      <anchor>af146bc0a65e5e5583ea415a5174e8835</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IDoubleManip &amp;</type>
       <name>GetValueManip</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>caa2fddf52ca73f302a3b00ee6436947</anchor>
+      <anchor>acaa2fddf52ca73f302a3b00ee6436947</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -4311,21 +4293,21 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor_comp.html</anchorfile>
-      <anchor>33a9298a949a91f7047641a50b7552d1</anchor>
+      <anchor>a33a9298a949a91f7047641a50b7552d1</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CRectDerivativeProcessor</type>
       <name>BaseClass2</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor_comp.html</anchorfile>
-      <anchor>4e651486286b2928c34d1fac8f01ff8b</anchor>
+      <anchor>a4e651486286b2928c34d1fac8f01ff8b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor_comp.html</anchorfile>
-      <anchor>167b22285116246e7a15d7ce901d437c</anchor>
+      <anchor>a167b22285116246e7a15d7ce901d437c</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -4333,116 +4315,118 @@
     <name>iipr::CRectImageSmoothProcessorComp</name>
     <filename>classiipr_1_1_c_rect_image_smooth_processor_comp.html</filename>
     <base>TImageParamProcessorCompBase&lt; imeas::INumericParams &gt;</base>
+    <base virtualness="virtual">imeas::INumericConstraints</base>
+    <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
     <member kind="enumeration">
       <name>UnitMode</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>6a302fd9b6fc9ac67432739fafe1bb07</anchor>
+      <anchor>a6a302fd9b6fc9ac67432739fafe1bb07</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>UM_PIXEL</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>6a302fd9b6fc9ac67432739fafe1bb07b28553b7c306ff1825b1ff21b6d750a1</anchor>
+      <anchor>a6a302fd9b6fc9ac67432739fafe1bb07ab28553b7c306ff1825b1ff21b6d750a1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>UM_PERCENT</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>6a302fd9b6fc9ac67432739fafe1bb071063df1d933edf7499c9043279e63d75</anchor>
+      <anchor>a6a302fd9b6fc9ac67432739fafe1bb07a1063df1d933edf7499c9043279e63d75</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>UM_PERCENT_DIAG</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>6a302fd9b6fc9ac67432739fafe1bb073cc9ffa6d7e917ee1ba0812ce808df67</anchor>
+      <anchor>a6a302fd9b6fc9ac67432739fafe1bb07a3cc9ffa6d7e917ee1ba0812ce808df67</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>BorderMode</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>422831e53fd05b466cf556e2dd4496fd</anchor>
+      <anchor>a422831e53fd05b466cf556e2dd4496fd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>BM_STRETCH_KERNEL</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>422831e53fd05b466cf556e2dd4496fd0414b55b177555e38d1317c23c5e5b8c</anchor>
+      <anchor>a422831e53fd05b466cf556e2dd4496fda0414b55b177555e38d1317c23c5e5b8c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>BM_REDUCE_OUTPUT</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>422831e53fd05b466cf556e2dd4496fd2608d03700f7c34decee025890bb3b3a</anchor>
+      <anchor>a422831e53fd05b466cf556e2dd4496fda2608d03700f7c34decee025890bb3b3a</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>iipr::TImageParamProcessorCompBase&lt; imeas::INumericParams &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>0b9ebbb88dc6293fe9140ad741c751ae</anchor>
+      <anchor>a0b9ebbb88dc6293fe9140ad741c751ae</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetNumericValuesCount</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>a5078c209ea812abb27b263737ce919f</anchor>
+      <anchor>aa5078c209ea812abb27b263737ce919f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
       <name>GetNumericValueDescription</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>7d8a40213e26036bf1cc176ec8c2e219</anchor>
+      <anchor>a7d8a40213e26036bf1cc176ec8c2e219</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::IUnitInfo &amp;</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>e33a423a10270dcd8a27479cba698ae3</anchor>
+      <anchor>ae33a423a10270dcd8a27479cba698ae3</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ParamProcessImage</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>0bfb14f5413c121c1371e5c12e77d74a</anchor>
+      <anchor>a0bfb14f5413c121c1371e5c12e77d74a</anchor>
       <arglist>(const imeas::INumericParams *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>GetUnitType</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>d29e44d4dea5acd9b900e8d8e8c5cbba</anchor>
+      <anchor>ad29e44d4dea5acd9b900e8d8e8c5cbba</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual istd::CString</type>
       <name>GetUnitName</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>e500ccd0c70eef269dccaf32bd768c4f</anchor>
+      <anchor>ae500ccd0c70eef269dccaf32bd768c4f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual double</type>
       <name>GetDisplayMultiplicationFactor</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>bb296d8ab35fa5e44e1612e701238b62</anchor>
+      <anchor>abb296d8ab35fa5e44e1612e701238b62</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetValueRange</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>d863e90199ab1a3ed1284b0d72ee138c</anchor>
+      <anchor>ad863e90199ab1a3ed1284b0d72ee138c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const imath::IDoubleManip &amp;</type>
       <name>GetValueManip</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>dbf9f15b2cf3d9c99818945965c1aabd</anchor>
+      <anchor>adbf9f15b2cf3d9c99818945965c1aabd</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -4454,14 +4438,14 @@
       <type>iproc::CSyncProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_ring_pattern_generator_comp.html</anchorfile>
-      <anchor>20c906ad62725ae792e35b8fd94309e4</anchor>
+      <anchor>a20c906ad62725ae792e35b8fd94309e4</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_ring_pattern_generator_comp.html</anchorfile>
-      <anchor>04f7e83bb8b8f0a61c49ee8793166581</anchor>
+      <anchor>a04f7e83bb8b8f0a61c49ee8793166581</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
@@ -4474,56 +4458,56 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
-      <anchor>c9f1bcac1b6bc7801ad3c798b238d5d7</anchor>
+      <anchor>ac9f1bcac1b6bc7801ad3c798b238d5d7</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CRingPatternGeneratorParamsComp</name>
       <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
-      <anchor>e759945e8058cdc90dd511e50d190c44</anchor>
+      <anchor>ae759945e8058cdc90dd511e50d190c44</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetPatternMode</name>
       <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
-      <anchor>cd49efed181f08653f8d1e3cab659612</anchor>
+      <anchor>acd49efed181f08653f8d1e3cab659612</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetPatternMode</name>
       <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
-      <anchor>1e21bd1c6027447e7937558adbfce7fc</anchor>
+      <anchor>a1e21bd1c6027447e7937558adbfce7fc</anchor>
       <arglist>(int patternMode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetWaveLength</name>
       <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
-      <anchor>4060542ab1a155391083afd43bd26414</anchor>
+      <anchor>a4060542ab1a155391083afd43bd26414</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetWaveLength</name>
       <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
-      <anchor>3acdb72f9b382c1fb0d8508f8c1d5663</anchor>
+      <anchor>a3acdb72f9b382c1fb0d8508f8c1d5663</anchor>
       <arglist>(double waveLength)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
-      <anchor>0c93120390844315c80eecb14f6e9146</anchor>
+      <anchor>a0c93120390844315c80eecb14f6e9146</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
-      <anchor>4271db5ded816feb2fdcdf288631d8e5</anchor>
+      <anchor>a4271db5ded816feb2fdcdf288631d8e5</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -4535,28 +4519,28 @@
       <type>iproc::TSupplierCompWrap&lt; iipr::IFeaturesSupplier, CFeaturesContainer &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>6b0399199eda3d7accc8af94d5d48de8</anchor>
+      <anchor>a6b0399199eda3d7accc8af94d5d48de8</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iipr::IFeaturesContainer *</type>
       <name>GetFeatures</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>8a293092ca82d2d5a40a1b2a031738fe</anchor>
+      <anchor>a8a293092ca82d2d5a40a1b2a031738fe</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>1bf97d94023638cbc9f83a50cd02bbb4</anchor>
+      <anchor>a1bf97d94023638cbc9f83a50cd02bbb4</anchor>
       <arglist>(CFeaturesContainer &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>45294bc7b659e636838c73d4651fff5c</anchor>
+      <anchor>a45294bc7b659e636838c73d4651fff5c</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -4568,35 +4552,35 @@
       <type>TFeatureWrap&lt; i2d::CPosition2d &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>100fbd5f25ec9a83cce865b0010fe202</anchor>
+      <anchor>a100fbd5f25ec9a83cce865b0010fe202</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CSearchFeature</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>0d4a130c29974b20675d22f256485394</anchor>
+      <anchor>a0d4a130c29974b20675d22f256485394</anchor>
       <arglist>(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
       <name>GetAngle</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>1f8e680c24cd7adcc7ffa5555904d623</anchor>
+      <anchor>a1f8e680c24cd7adcc7ffa5555904d623</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>const i2d::CVector2d &amp;</type>
       <name>GetScale</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>ac77c713ab574967a412a0c7884361ab</anchor>
+      <anchor>aac77c713ab574967a412a0c7884361ab</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>3736d0349b7ce9cebda91144f73b2e96</anchor>
+      <anchor>a3736d0349b7ce9cebda91144f73b2e96</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -4608,154 +4592,154 @@
       <type></type>
       <name>CSearchParams</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>dd422098279cdfacf18d94921f74d0a5</anchor>
+      <anchor>add422098279cdfacf18d94921f74d0a5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CRectangle</type>
       <name>GetSearchRegion</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>22f511e31fc983d4767216ff560ba332</anchor>
+      <anchor>a22f511e31fc983d4767216ff560ba332</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetMinScore</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>2fcd10b1be3272504a86e4d841eca343</anchor>
+      <anchor>a2fcd10b1be3272504a86e4d841eca343</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetMinScore</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>c6199c9b3567db71fdd61e1c3671707b</anchor>
+      <anchor>ac6199c9b3567db71fdd61e1c3671707b</anchor>
       <arglist>(double minScore)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::CRange &amp;</type>
       <name>GetRotationRange</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>e781c61124782820a4d3ef1d29e9ceb8</anchor>
+      <anchor>ae781c61124782820a4d3ef1d29e9ceb8</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetRotationRange</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>84205c2bf81c43336de057d394cd7f71</anchor>
+      <anchor>a84205c2bf81c43336de057d394cd7f71</anchor>
       <arglist>(const istd::CRange &amp;angleRange)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::CRange &amp;</type>
       <name>GetScaleRange</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>6f46b67e8b19f67657357bd5a3d417da</anchor>
+      <anchor>a6f46b67e8b19f67657357bd5a3d417da</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetScaleRange</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>b66b54ff6069eab89d8cdbac3b7b9a1b</anchor>
+      <anchor>ab66b54ff6069eab89d8cdbac3b7b9a1b</anchor>
       <arglist>(const istd::CRange &amp;scaleRange)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetNominalModelsCount</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>d0de36faec18c19215d2f95afd381959</anchor>
+      <anchor>ad0de36faec18c19215d2f95afd381959</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetNominalModelsCount</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>00970b5ff197d26f84a2f7eb020a9e50</anchor>
+      <anchor>a00970b5ff197d26f84a2f7eb020a9e50</anchor>
       <arglist>(int nominalModelsCount)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsRotationEnabled</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>33134a6c224f9764a26e1c8afb2b7339</anchor>
+      <anchor>a33134a6c224f9764a26e1c8afb2b7339</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetRotationEnabled</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>886d7fe683183de0af923c6518ca9dd9</anchor>
+      <anchor>a886d7fe683183de0af923c6518ca9dd9</anchor>
       <arglist>(bool isRotationEnabled)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsScaleEnabled</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>2e2672d55c106790d6df938e1aff7410</anchor>
+      <anchor>a2e2672d55c106790d6df938e1aff7410</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetScaleEnabled</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>402109f50afb7f830245c32df54c6dce</anchor>
+      <anchor>a402109f50afb7f830245c32df54c6dce</anchor>
       <arglist>(bool isScaleEnabled)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>e62942e5b2830a9c4e12294d3eca0050</anchor>
+      <anchor>ae62942e5b2830a9c4e12294d3eca0050</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>i2d::CRectangle</type>
       <name>m_searchRegion</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>60c53896a4df3b1aca74bb005dfb518a</anchor>
+      <anchor>a60c53896a4df3b1aca74bb005dfb518a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::CRange</type>
       <name>m_angleRange</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>38dee13af4c45bbc49972c1abab175b3</anchor>
+      <anchor>a38dee13af4c45bbc49972c1abab175b3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::CRange</type>
       <name>m_scaleRange</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>1c280a82bc043003fd7c8516cf1176d4</anchor>
+      <anchor>a1c280a82bc043003fd7c8516cf1176d4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>int</type>
       <name>m_nominalModelsCount</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>080efde6ab258b3c5f641ef8166d499a</anchor>
+      <anchor>a080efde6ab258b3c5f641ef8166d499a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>double</type>
       <name>m_minScore</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>7482c094c903d46c107c63f3a267a48e</anchor>
+      <anchor>a7482c094c903d46c107c63f3a267a48e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>bool</type>
       <name>m_isRotationEnabled</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>0fb4d62fe2f4044f214a9af6e84b9095</anchor>
+      <anchor>a0fb4d62fe2f4044f214a9af6e84b9095</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>bool</type>
       <name>m_isScaleEnabled</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>0584125b6650dcc7e207d1ae4a0c824b</anchor>
+      <anchor>a0584125b6650dcc7e207d1ae4a0c824b</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -4766,74 +4750,74 @@
     <member kind="enumeration">
       <name>FeaturePolicy</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
-      <anchor>2d23349d96dd0fa958edac3f6ffbaa26</anchor>
+      <anchor>a2d23349d96dd0fa958edac3f6ffbaa26</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>FP_FIRST</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
-      <anchor>2d23349d96dd0fa958edac3f6ffbaa266f8d96b66180c395af47ddd7584a6693</anchor>
+      <anchor>a2d23349d96dd0fa958edac3f6ffbaa26a6f8d96b66180c395af47ddd7584a6693</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>FP_LAST</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
-      <anchor>2d23349d96dd0fa958edac3f6ffbaa269f68d24547d86e96993a8bf6212e328c</anchor>
+      <anchor>a2d23349d96dd0fa958edac3f6ffbaa26a9f68d24547d86e96993a8bf6212e328c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>FP_HEAVIEST</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
-      <anchor>2d23349d96dd0fa958edac3f6ffbaa269c9f26fe7d71cb585ea66646c1d85308</anchor>
+      <anchor>a2d23349d96dd0fa958edac3f6ffbaa26a9c9f26fe7d71cb585ea66646c1d85308</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CSingleFeatureConsumer</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
-      <anchor>1b8c52a4c956d6453d8c5bc477d973b4</anchor>
+      <anchor>a1b8c52a4c956d6453d8c5bc477d973b4</anchor>
       <arglist>(int featurePolicy=FP_FIRST)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>GetFeaturePolicy</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
-      <anchor>826f14a9c6fe6b5039124c88c63d4a90</anchor>
+      <anchor>a826f14a9c6fe6b5039124c88c63d4a90</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>SetFeaturePolicy</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
-      <anchor>8f351f75c216f997d9d0ace481ef8bf4</anchor>
+      <anchor>a8f351f75c216f997d9d0ace481ef8bf4</anchor>
       <arglist>(int featurePolicy)</arglist>
     </member>
     <member kind="function">
       <type>const IFeature *</type>
       <name>GetFeature</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
-      <anchor>b0d04df176cc01887d122ba41ac07b98</anchor>
+      <anchor>ab0d04df176cc01887d122ba41ac07b98</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetFeatures</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
-      <anchor>cdb775a6dfd92ef69a17f03a24a27c04</anchor>
+      <anchor>acdb775a6dfd92ef69a17f03a24a27c04</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>AddFeature</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
-      <anchor>3bec6ac1367b659ba6980108e6278005</anchor>
+      <anchor>a3bec6ac1367b659ba6980108e6278005</anchor>
       <arglist>(const IFeature *featurePtr, bool *isFullPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Features</type>
       <name>GetFeatures</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
-      <anchor>1c6931be6a8162f5a1b0440325792192</anchor>
+      <anchor>a1c6931be6a8162f5a1b0440325792192</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -4845,14 +4829,14 @@
       <type>virtual const iimg::IBitmap *</type>
       <name>GetBitmap</name>
       <anchorfile>classiipr_1_1_i_bitmap_supplier.html</anchorfile>
-      <anchor>b9a9ce2b3d9306db73ec531a36af6c74</anchor>
+      <anchor>ab9a9ce2b3d9306db73ec531a36af6c74</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const i2d::ITransformation2d *</type>
       <name>GetLogTransform</name>
       <anchorfile>classiipr_1_1_i_bitmap_supplier.html</anchorfile>
-      <anchor>beabe7425471134d2e2091965bc940a0</anchor>
+      <anchor>abeabe7425471134d2e2091965bc940a0</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -4863,103 +4847,103 @@
     <member kind="enumeration">
       <name>PolarityMode</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>e471a4b8c280d7adba77f143171bcbab</anchor>
+      <anchor>ae471a4b8c280d7adba77f143171bcbab</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>PM_RISED</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>e471a4b8c280d7adba77f143171bcbab1a5d75a46d36784357ca274b4d12ebd5</anchor>
+      <anchor>ae471a4b8c280d7adba77f143171bcbaba1a5d75a46d36784357ca274b4d12ebd5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>PM_DROPPED</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>e471a4b8c280d7adba77f143171bcbab83236bea164dd05e104cb117d1a0d7c0</anchor>
+      <anchor>ae471a4b8c280d7adba77f143171bcbaba83236bea164dd05e104cb117d1a0d7c0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>PM_ALL</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>e471a4b8c280d7adba77f143171bcbab65b61dbd64a101a9f920bd04cf291e48</anchor>
+      <anchor>ae471a4b8c280d7adba77f143171bcbaba65b61dbd64a101a9f920bd04cf291e48</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>DirectionMode</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>cfc2af162ba0eabf68119a357bfe976b</anchor>
+      <anchor>acfc2af162ba0eabf68119a357bfe976b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>DM_FORWARD</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>cfc2af162ba0eabf68119a357bfe976bb07ebaa67cae21dad74ff40d3fb5d31f</anchor>
+      <anchor>acfc2af162ba0eabf68119a357bfe976bab07ebaa67cae21dad74ff40d3fb5d31f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>DM_BACKWARD</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>cfc2af162ba0eabf68119a357bfe976b274b95f7bb8230adb71d9b12292b8835</anchor>
+      <anchor>acfc2af162ba0eabf68119a357bfe976ba274b95f7bb8230adb71d9b12292b8835</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>DM_OUTSIDE</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>cfc2af162ba0eabf68119a357bfe976b94167bf296fc6c9b374f82f878d1982a</anchor>
+      <anchor>acfc2af162ba0eabf68119a357bfe976ba94167bf296fc6c9b374f82f878d1982a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>DM_INSIDE</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>cfc2af162ba0eabf68119a357bfe976b5cef37ae2e4a39e46052c04274c4bb9b</anchor>
+      <anchor>acfc2af162ba0eabf68119a357bfe976ba5cef37ae2e4a39e46052c04274c4bb9b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>DM_DONT_CARE</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>cfc2af162ba0eabf68119a357bfe976bfd71f277d0e54b252f1363cb1f7f50c1</anchor>
+      <anchor>acfc2af162ba0eabf68119a357bfe976bafd71f277d0e54b252f1363cb1f7f50c1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetWeightThreshold</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>7ede422694c308e5b6871295ad9bd28d</anchor>
+      <anchor>a7ede422694c308e5b6871295ad9bd28d</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetWeightThreshold</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>b47ba983f8a78c1478b9a80eb2c3ed28</anchor>
+      <anchor>ab47ba983f8a78c1478b9a80eb2c3ed28</anchor>
       <arglist>(double threshold)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetPolarityMode</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>6a792111ee10db8955f35c1b0b6f451f</anchor>
+      <anchor>a6a792111ee10db8955f35c1b0b6f451f</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetPolarityMode</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>468fdda16638094f3080888bd14e9dab</anchor>
+      <anchor>a468fdda16638094f3080888bd14e9dab</anchor>
       <arglist>(int mode)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetDirectionMode</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>74352b45bc7bb7d1098fa87ef72494f1</anchor>
+      <anchor>a74352b45bc7bb7d1098fa87ef72494f1</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetDirectionMode</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>4708de238f59b0d30608e476edaaa13f</anchor>
+      <anchor>a4708de238f59b0d30608e476edaaa13f</anchor>
       <arglist>(int mode)=0</arglist>
     </member>
   </compound>
@@ -4970,20 +4954,20 @@
     <member kind="enumeration">
       <name>FeatureTypeId</name>
       <anchorfile>classiipr_1_1_i_caliper_processor.html</anchorfile>
-      <anchor>cea6148351b3caf403322067cab8e7f6</anchor>
+      <anchor>acea6148351b3caf403322067cab8e7f6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>FTI_CALIPER_FEATURE</name>
       <anchorfile>classiipr_1_1_i_caliper_processor.html</anchorfile>
-      <anchor>cea6148351b3caf403322067cab8e7f633cb9204f988cd6fac6c895a0b0f4e1a</anchor>
+      <anchor>acea6148351b3caf403322067cab8e7f6a33cb9204f988cd6fac6c895a0b0f4e1a</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>DoCaliper</name>
       <anchorfile>classiipr_1_1_i_caliper_processor.html</anchorfile>
-      <anchor>8acc42542ac80ffbdb4e21eae47c007f</anchor>
+      <anchor>a8acc42542ac80ffbdb4e21eae47c007f</anchor>
       <arglist>(const imeas::IDataSequence &amp;derivative, const ICaliperParams *paramsPtr, IFeaturesConsumer &amp;results)=0</arglist>
     </member>
   </compound>
@@ -4994,75 +4978,75 @@
     <member kind="enumeration">
       <name>CaliperMode</name>
       <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
-      <anchor>b2aeddd171659f7ce82e652ea4ab21b6</anchor>
+      <anchor>ab2aeddd171659f7ce82e652ea4ab21b6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CCM_FIRST</name>
       <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
-      <anchor>b2aeddd171659f7ce82e652ea4ab21b688bcb86572818a775a668b63edc5b44c</anchor>
+      <anchor>ab2aeddd171659f7ce82e652ea4ab21b6a88bcb86572818a775a668b63edc5b44c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CCM_BEST</name>
       <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
-      <anchor>b2aeddd171659f7ce82e652ea4ab21b629414c918eed02023599262335abe095</anchor>
+      <anchor>ab2aeddd171659f7ce82e652ea4ab21b6a29414c918eed02023599262335abe095</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetCaliperMode</name>
       <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
-      <anchor>c9173c72b4ac1b7e0dc609f231acc36a</anchor>
+      <anchor>ac9173c72b4ac1b7e0dc609f231acc36a</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetCaliperMode</name>
       <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
-      <anchor>359f280ca2b0fb818e25bfcc82a58d5b</anchor>
+      <anchor>a359f280ca2b0fb818e25bfcc82a58d5b</anchor>
       <arglist>(int caliperMode)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsOutlierEliminationEnabled</name>
       <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
-      <anchor>1dde046f1d0850576e82e0621a2b3154</anchor>
+      <anchor>a1dde046f1d0850576e82e0621a2b3154</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetOutlierEliminationEnabled</name>
       <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
-      <anchor>bc5e155ebc5445ec2cb960c4ccd93514</anchor>
+      <anchor>abc5e155ebc5445ec2cb960c4ccd93514</anchor>
       <arglist>(bool isOutlierEliminationEnabled=true)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetMinOutlierDistance</name>
       <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
-      <anchor>cb79a0d4f6966442a033a9c58c2afca5</anchor>
+      <anchor>acb79a0d4f6966442a033a9c58c2afca5</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetMinOutlierDistance</name>
       <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
-      <anchor>5df59d9f737cda1858fe2c2fbcc32c79</anchor>
+      <anchor>a5df59d9f737cda1858fe2c2fbcc32c79</anchor>
       <arglist>(double minOutlierDistance)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetRaysCount</name>
       <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
-      <anchor>414d26cf530c91d100086190dfac86fa</anchor>
+      <anchor>a414d26cf530c91d100086190dfac86fa</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetRaysCount</name>
       <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
-      <anchor>d5f834b20bf3949915b36cbd0ef31269</anchor>
+      <anchor>ad5f834b20bf3949915b36cbd0ef31269</anchor>
       <arglist>(int raysCount)=0</arglist>
     </member>
   </compound>
@@ -5074,7 +5058,7 @@
       <type>virtual double</type>
       <name>GetWeight</name>
       <anchorfile>classiipr_1_1_i_feature.html</anchorfile>
-      <anchor>2ddeb1bb485bfe4049f95362add2f1eb</anchor>
+      <anchor>a2ddeb1bb485bfe4049f95362add2f1eb</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -5086,14 +5070,14 @@
       <type>virtual void</type>
       <name>ResetFeatures</name>
       <anchorfile>classiipr_1_1_i_features_consumer.html</anchorfile>
-      <anchor>62b1a91c8f7b255688b11d19232a62e4</anchor>
+      <anchor>a62b1a91c8f7b255688b11d19232a62e4</anchor>
       <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>AddFeature</name>
       <anchorfile>classiipr_1_1_i_features_consumer.html</anchorfile>
-      <anchor>5712576387f97a9f5682865be9d28a79</anchor>
+      <anchor>a5712576387f97a9f5682865be9d28a79</anchor>
       <arglist>(const IFeature *featurePtr, bool *isFullPtr=NULL)=0</arglist>
     </member>
   </compound>
@@ -5105,14 +5089,14 @@
       <type>std::vector&lt; const iipr::IFeature * &gt;</type>
       <name>Features</name>
       <anchorfile>classiipr_1_1_i_features_container.html</anchorfile>
-      <anchor>bbb77272c032c92f07228ccb82b62b95</anchor>
+      <anchor>abbb77272c032c92f07228ccb82b62b95</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual Features</type>
       <name>GetFeatures</name>
       <anchorfile>classiipr_1_1_i_features_container.html</anchorfile>
-      <anchor>b8c3b4d19dc88d1ebe9c918c5c33d468</anchor>
+      <anchor>ab8c3b4d19dc88d1ebe9c918c5c33d468</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -5124,7 +5108,7 @@
       <type>virtual const iipr::IFeaturesContainer *</type>
       <name>GetFeatures</name>
       <anchorfile>classiipr_1_1_i_features_supplier.html</anchorfile>
-      <anchor>9f0a58d67f648ba29c72a27e88a7e8e0</anchor>
+      <anchor>a9f0a58d67f648ba29c72a27e88a7e8e0</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -5136,7 +5120,7 @@
       <type>virtual int</type>
       <name>DoConvertFeatures</name>
       <anchorfile>classiipr_1_1_i_feature_to_feature_processor.html</anchorfile>
-      <anchor>5c172520881f416f66394b89c706034f</anchor>
+      <anchor>a5c172520881f416f66394b89c706034f</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const IFeaturesContainer &amp;container, IFeaturesConsumer &amp;results)=0</arglist>
     </member>
   </compound>
@@ -5148,7 +5132,7 @@
       <type>virtual bool</type>
       <name>GetImagePosition</name>
       <anchorfile>classiipr_1_1_i_feature_to_image_mapper.html</anchorfile>
-      <anchor>57adb4c0373ffcf2c4baf4f1410e6546</anchor>
+      <anchor>a57adb4c0373ffcf2c4baf4f1410e6546</anchor>
       <arglist>(const IFeature &amp;feature, const iprm::IParamsSet *paramsPtr, i2d::CVector2d &amp;result) const =0</arglist>
     </member>
   </compound>
@@ -5160,7 +5144,7 @@
       <type>virtual bool</type>
       <name>GetProjectionPosition</name>
       <anchorfile>classiipr_1_1_i_feature_to_projection_mapper.html</anchorfile>
-      <anchor>e9a203963a515879781de825146a9731</anchor>
+      <anchor>ae9a203963a515879781de825146a9731</anchor>
       <arglist>(const IFeature &amp;feature, const iprm::IParamsSet *paramsPtr, double &amp;result) const =0</arglist>
     </member>
   </compound>
@@ -5171,39 +5155,39 @@
     <member kind="enumeration">
       <name>InterpolationMode</name>
       <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
-      <anchor>3f5eaf6d182d9706c9751576996898b9</anchor>
+      <anchor>a3f5eaf6d182d9706c9751576996898b9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>IM_NO_INTERPOLATION</name>
       <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
-      <anchor>3f5eaf6d182d9706c9751576996898b97c6a2bf96b3cfef55d066705272cc756</anchor>
+      <anchor>a3f5eaf6d182d9706c9751576996898b9a7c6a2bf96b3cfef55d066705272cc756</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>IM_BILINEAR</name>
       <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
-      <anchor>3f5eaf6d182d9706c9751576996898b93c12d59a96fcaf8dbff8a0b7cf54e43d</anchor>
+      <anchor>a3f5eaf6d182d9706c9751576996898b9a3c12d59a96fcaf8dbff8a0b7cf54e43d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>IM_BICUBIC</name>
       <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
-      <anchor>3f5eaf6d182d9706c9751576996898b90852c8e1474636b67406bb440f8383bc</anchor>
+      <anchor>a3f5eaf6d182d9706c9751576996898b9a0852c8e1474636b67406bb440f8383bc</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetInterpolationMode</name>
       <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
-      <anchor>167081918bf0f926cd1675cbe24c9558</anchor>
+      <anchor>a167081918bf0f926cd1675cbe24c9558</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetInterpolationMode</name>
       <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
-      <anchor>79119c4cbe02fb2579e7d633730ccd03</anchor>
+      <anchor>a79119c4cbe02fb2579e7d633730ccd03</anchor>
       <arglist>(int interpolationMode)=0</arglist>
     </member>
   </compound>
@@ -5215,7 +5199,7 @@
       <type>virtual int</type>
       <name>DoExtractFeatures</name>
       <anchorfile>classiipr_1_1_i_image_to_feature_processor.html</anchorfile>
-      <anchor>7c3927d15883517c2f2f9a11906751c4</anchor>
+      <anchor>a7c3927d15883517c2f2f9a11906751c4</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, IFeaturesConsumer &amp;results)=0</arglist>
     </member>
   </compound>
@@ -5227,7 +5211,7 @@
       <type>virtual bool</type>
       <name>DoProjection</name>
       <anchorfile>classiipr_1_1_i_line_projection_processor.html</anchorfile>
-      <anchor>f120497a2463d4fe7b2c353269dff8f1</anchor>
+      <anchor>af120497a2463d4fe7b2c353269dff8f1</anchor>
       <arglist>(const iimg::IBitmap &amp;bitmap, const i2d::CLine2d &amp;projectionLine, const IProjectionParams *paramsPtr, imeas::IDataSequence &amp;results)=0</arglist>
     </member>
   </compound>
@@ -5239,7 +5223,7 @@
       <type>virtual const imeas::IDataSequence *</type>
       <name>GetLineProjection</name>
       <anchorfile>classiipr_1_1_i_line_projection_supplier.html</anchorfile>
-      <anchor>24fa5cf5e6a9feecf12b43b215d5e9c8</anchor>
+      <anchor>a24fa5cf5e6a9feecf12b43b215d5e9c8</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -5251,21 +5235,21 @@
       <type>virtual int</type>
       <name>GetBitmapsCount</name>
       <anchorfile>classiipr_1_1_i_multi_bitmap_supplier.html</anchorfile>
-      <anchor>fc9f684d00d3e4ec573449fe6654c6be</anchor>
+      <anchor>afc9f684d00d3e4ec573449fe6654c6be</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iimg::IBitmap *</type>
       <name>GetBitmap</name>
       <anchorfile>classiipr_1_1_i_multi_bitmap_supplier.html</anchorfile>
-      <anchor>67a13ca13ebef16b57c844bc63a0a13d</anchor>
+      <anchor>a67a13ca13ebef16b57c844bc63a0a13d</anchor>
       <arglist>(int bitmapIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const i2d::ITransformation2d *</type>
       <name>GetLogTransform</name>
       <anchorfile>classiipr_1_1_i_multi_bitmap_supplier.html</anchorfile>
-      <anchor>990ac38bf2b354238a8e9233284360f8</anchor>
+      <anchor>a990ac38bf2b354238a8e9233284360f8</anchor>
       <arglist>(int bitmapIndex) const =0</arglist>
     </member>
   </compound>
@@ -5277,28 +5261,28 @@
       <type>virtual istd::CRange</type>
       <name>GetLineWidthRange</name>
       <anchorfile>classiipr_1_1_i_projection_constraints.html</anchorfile>
-      <anchor>d1bd541bbe03eedd153ec0d34564a4b1</anchor>
+      <anchor>ad1bd541bbe03eedd153ec0d34564a4b1</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetMinProjectionSize</name>
       <anchorfile>classiipr_1_1_i_projection_constraints.html</anchorfile>
-      <anchor>54a9ba220af9ff9c7e98c36c49e79116</anchor>
+      <anchor>a54a9ba220af9ff9c7e98c36c49e79116</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetMaxProjectionSize</name>
       <anchorfile>classiipr_1_1_i_projection_constraints.html</anchorfile>
-      <anchor>3debaa935f8bb29cbf73c1f4cce91ed3</anchor>
+      <anchor>a3debaa935f8bb29cbf73c1f4cce91ed3</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsAutoProjectionSizeSupported</name>
       <anchorfile>classiipr_1_1_i_projection_constraints.html</anchorfile>
-      <anchor>452af880d51009dbff4936788b999973</anchor>
+      <anchor>a452af880d51009dbff4936788b999973</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -5310,35 +5294,35 @@
       <type>virtual const IProjectionConstraints *</type>
       <name>GetProjectionConstraints</name>
       <anchorfile>classiipr_1_1_i_projection_params.html</anchorfile>
-      <anchor>864307a61aaa0ccca6a9c312d85dccaa</anchor>
+      <anchor>a864307a61aaa0ccca6a9c312d85dccaa</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetLineWidth</name>
       <anchorfile>classiipr_1_1_i_projection_params.html</anchorfile>
-      <anchor>7ca2528621727e72cc02c309310572df</anchor>
+      <anchor>a7ca2528621727e72cc02c309310572df</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetLineWidth</name>
       <anchorfile>classiipr_1_1_i_projection_params.html</anchorfile>
-      <anchor>320a032291f29e97219f9b1150fd7870</anchor>
+      <anchor>a320a032291f29e97219f9b1150fd7870</anchor>
       <arglist>(double width)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetProjectionSize</name>
       <anchorfile>classiipr_1_1_i_projection_params.html</anchorfile>
-      <anchor>0eef58d2348409cf6aa8a22691d39bfd</anchor>
+      <anchor>a0eef58d2348409cf6aa8a22691d39bfd</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetProjectionSize</name>
       <anchorfile>classiipr_1_1_i_projection_params.html</anchorfile>
-      <anchor>fe1a793dbd40b162aca47cfdaa3a090c</anchor>
+      <anchor>afe1a793dbd40b162aca47cfdaa3a090c</anchor>
       <arglist>(int size)=0</arglist>
     </member>
   </compound>
@@ -5349,47 +5333,47 @@
     <member kind="enumeration">
       <name>PatternType</name>
       <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
-      <anchor>b0eb05ccf4f5043115303d2e02d54fd6</anchor>
+      <anchor>ab0eb05ccf4f5043115303d2e02d54fd6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>PT_FIXED_WAVELENGTH</name>
       <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
-      <anchor>b0eb05ccf4f5043115303d2e02d54fd6f0a7bff0f5f63c5e5c4521091fa4bf85</anchor>
+      <anchor>ab0eb05ccf4f5043115303d2e02d54fd6af0a7bff0f5f63c5e5c4521091fa4bf85</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>PT_DYNAMIC_WAVELENGTH</name>
       <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
-      <anchor>b0eb05ccf4f5043115303d2e02d54fd63682f898ddb8894121d74d20ed611a0c</anchor>
+      <anchor>ab0eb05ccf4f5043115303d2e02d54fd6a3682f898ddb8894121d74d20ed611a0c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetPatternMode</name>
       <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
-      <anchor>9b5258fc6be18f20ee5baf38bce0674c</anchor>
+      <anchor>a9b5258fc6be18f20ee5baf38bce0674c</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetPatternMode</name>
       <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
-      <anchor>0c6ffe43881dba5fc25b9bb83cf01874</anchor>
+      <anchor>a0c6ffe43881dba5fc25b9bb83cf01874</anchor>
       <arglist>(int patternMode)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetWaveLength</name>
       <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
-      <anchor>3bca07b7d191f19337247602c99b99aa</anchor>
+      <anchor>a3bca07b7d191f19337247602c99b99aa</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetWaveLength</name>
       <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
-      <anchor>263fab37810a8242efae6416f34a064c</anchor>
+      <anchor>a263fab37810a8242efae6416f34a064c</anchor>
       <arglist>(double waveLength)=0</arglist>
     </member>
   </compound>
@@ -5401,28 +5385,28 @@
       <type>virtual bool</type>
       <name>CreateFromImage</name>
       <anchorfile>classiipr_1_1_i_search_model.html</anchorfile>
-      <anchor>7ffededff9e23a87b32e6b1eba93ba52</anchor>
+      <anchor>a7ffededff9e23a87b32e6b1eba93ba52</anchor>
       <arglist>(const iimg::IBitmap &amp;modelImage, const iipr::ISearchParams *params)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsModelValid</name>
       <anchorfile>classiipr_1_1_i_search_model.html</anchorfile>
-      <anchor>bb90773395777017e5e42f267578eb9d</anchor>
+      <anchor>abb90773395777017e5e42f267578eb9d</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>ResetModel</name>
       <anchorfile>classiipr_1_1_i_search_model.html</anchorfile>
-      <anchor>fad8eaa7c4f7446b979c3d7705e9992f</anchor>
+      <anchor>afad8eaa7c4f7446b979c3d7705e9992f</anchor>
       <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetImage</name>
       <anchorfile>classiipr_1_1_i_search_model.html</anchorfile>
-      <anchor>8dd5a2bc7d7038906342641cdf340293</anchor>
+      <anchor>a8dd5a2bc7d7038906342641cdf340293</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -5434,98 +5418,98 @@
       <type>virtual i2d::CRectangle</type>
       <name>GetSearchRegion</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>5f5fe7e199737afc1ea8150d28574dd3</anchor>
+      <anchor>a5f5fe7e199737afc1ea8150d28574dd3</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetModelImage</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>776d053539fa475ae7893ce7a827c547</anchor>
+      <anchor>a776d053539fa475ae7893ce7a827c547</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetMinScore</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>1db7e9dae7d78569ac67a0f70f43ea01</anchor>
+      <anchor>a1db7e9dae7d78569ac67a0f70f43ea01</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetMinScore</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>8bbb7f79fb3e93ffbff78990c47c8538</anchor>
+      <anchor>a8bbb7f79fb3e93ffbff78990c47c8538</anchor>
       <arglist>(double minScore)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const istd::CRange &amp;</type>
       <name>GetRotationRange</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>388a2b254d790f8ba3db86befb178ed6</anchor>
+      <anchor>a388a2b254d790f8ba3db86befb178ed6</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetRotationRange</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>2345bbd541b1753e28e7a024ad994b4e</anchor>
+      <anchor>a2345bbd541b1753e28e7a024ad994b4e</anchor>
       <arglist>(const istd::CRange &amp;angleRange)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const istd::CRange &amp;</type>
       <name>GetScaleRange</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>ca78512a786767871db8575871fd6f6c</anchor>
+      <anchor>aca78512a786767871db8575871fd6f6c</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetScaleRange</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>9251dec5c19467110f464b13dd5445e1</anchor>
+      <anchor>a9251dec5c19467110f464b13dd5445e1</anchor>
       <arglist>(const istd::CRange &amp;scaleRange)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetNominalModelsCount</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>e551a172057a394d39d5274ea00f0561</anchor>
+      <anchor>ae551a172057a394d39d5274ea00f0561</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetNominalModelsCount</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>a8ed7557cfd27fcf7d282a5729c0043c</anchor>
+      <anchor>aa8ed7557cfd27fcf7d282a5729c0043c</anchor>
       <arglist>(int nominalModelsCount)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsRotationEnabled</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>fa42937c461f19e3feba4c18723c02ce</anchor>
+      <anchor>afa42937c461f19e3feba4c18723c02ce</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetRotationEnabled</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>b9abc678eb004570141dec6bf03979a2</anchor>
+      <anchor>ab9abc678eb004570141dec6bf03979a2</anchor>
       <arglist>(bool isRotationEnabled)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsScaleEnabled</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>4f4576ab8e434068cd1ca726382d7838</anchor>
+      <anchor>a4f4576ab8e434068cd1ca726382d7838</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetScaleEnabled</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>13348f23926f948935266780709018dc</anchor>
+      <anchor>a13348f23926f948935266780709018dc</anchor>
       <arglist>(bool isScaleEnabled)=0</arglist>
     </member>
   </compound>
@@ -5534,26 +5518,26 @@
     <filename>classiipr_1_1_t_convolution_processor_comp.html</filename>
     <templarg></templarg>
     <templarg></templarg>
-    <base>TImageParamProcessorCompBase&lt; ParameterType &gt;</base>
+    <base>iipr::TImageParamProcessorCompBase</base>
     <member kind="typedef">
       <type>iipr::TImageParamProcessorCompBase&lt; ParameterType &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_t_convolution_processor_comp.html</anchorfile>
-      <anchor>3cbb69973b5e3ebc6bc37e552936f58e</anchor>
+      <anchor>a3cbb69973b5e3ebc6bc37e552936f58e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual CConvolutionKernel2d *</type>
       <name>CreateKernel</name>
       <anchorfile>classiipr_1_1_t_convolution_processor_comp.html</anchorfile>
-      <anchor>ba7adcd591c86280738a0e88a34a9cd8</anchor>
+      <anchor>aba7adcd591c86280738a0e88a34a9cd8</anchor>
       <arglist>(const ParameterType *paramsPtr)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ParamProcessImage</name>
       <anchorfile>classiipr_1_1_t_convolution_processor_comp.html</anchorfile>
-      <anchor>fc2f1d21205ea7870647666ed5c5c90c</anchor>
+      <anchor>afc2f1d21205ea7870647666ed5c5c90c</anchor>
       <arglist>(const ParameterType *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
   </compound>
@@ -5566,28 +5550,28 @@
       <type>CFeatureBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_t_feature_wrap.html</anchorfile>
-      <anchor>a081947fc097182ae70c0ea804c402b1</anchor>
+      <anchor>aa081947fc097182ae70c0ea804c402b1</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>BaseObject</type>
       <name>BaseClass2</name>
       <anchorfile>classiipr_1_1_t_feature_wrap.html</anchorfile>
-      <anchor>8de088e573ef754edaf8ec64c7267105</anchor>
+      <anchor>a8de088e573ef754edaf8ec64c7267105</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TFeatureWrap</name>
       <anchorfile>classiipr_1_1_t_feature_wrap.html</anchorfile>
-      <anchor>54f7f7be4f5ac3c9130ac44ecc600323</anchor>
+      <anchor>a54f7f7be4f5ac3c9130ac44ecc600323</anchor>
       <arglist>(double weight=1.0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiipr_1_1_t_feature_wrap.html</anchorfile>
-      <anchor>ad64272f5cc06112f3b4d74c2029d0cb</anchor>
+      <anchor>aad64272f5cc06112f3b4d74c2029d0cb</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -5600,21 +5584,21 @@
       <type>CImageProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
-      <anchor>38b457b2c6b6ceed4de13dea3d592617</anchor>
+      <anchor>a38b457b2c6b6ceed4de13dea3d592617</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessImage</name>
       <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
-      <anchor>4cc06678e44cdfcc49f2e343b695182f</anchor>
+      <anchor>a4cc06678e44cdfcc49f2e343b695182f</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
       <name>ParamProcessImage</name>
       <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
-      <anchor>9d48a40b0bcb1644d116ca345c789f11</anchor>
+      <anchor>a9d48a40b0bcb1644d116ca345c789f11</anchor>
       <arglist>(const ParameterType *parameterPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)=0</arglist>
     </member>
   </compound>
@@ -5626,21 +5610,21 @@
       <type>PixelComponentType</type>
       <name>PixelComponent</name>
       <anchorfile>classiipr_1_1_t_image_pixel_interpolator.html</anchorfile>
-      <anchor>092e365c0b415ddef7c5c5ad2babac30</anchor>
+      <anchor>a092e365c0b415ddef7c5c5ad2babac30</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TImagePixelInterpolator</name>
       <anchorfile>classiipr_1_1_t_image_pixel_interpolator.html</anchorfile>
-      <anchor>a205c5f67dcc4fe98c9c29a049c0550d</anchor>
+      <anchor>aa205c5f67dcc4fe98c9c29a049c0550d</anchor>
       <arglist>(const iimg::IBitmap &amp;image, int interpolationMode)</arglist>
     </member>
     <member kind="function">
       <type>PixelComponentType</type>
       <name>GetInterpolatedValue</name>
       <anchorfile>classiipr_1_1_t_image_pixel_interpolator.html</anchorfile>
-      <anchor>f982690722c84baed74f922aa1efd37f</anchor>
+      <anchor>af982690722c84baed74f922aa1efd37f</anchor>
       <arglist>(double x, double y, int componentIndex) const </arglist>
     </member>
   </compound>
@@ -5652,14 +5636,14 @@
       <type></type>
       <name>InvertFunction</name>
       <anchorfile>classiipr_1_1_invert_function.html</anchorfile>
-      <anchor>8de7151e1bc6931d62015f335a3e1deb</anchor>
+      <anchor>a8de7151e1bc6931d62015f335a3e1deb</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>ArgumentType</type>
       <name>operator()</name>
       <anchorfile>classiipr_1_1_invert_function.html</anchorfile>
-      <anchor>d7307eb5d5da732e236b67bc61f8bd87</anchor>
+      <anchor>ad7307eb5d5da732e236b67bc61f8bd87</anchor>
       <arglist>(const ArgumentType &amp;value)</arglist>
     </member>
   </compound>
@@ -5673,14 +5657,14 @@
       <type>iipr::CImageProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_t_unary_transform_processor_comp.html</anchorfile>
-      <anchor>17709761e774231646e4486bb134e0dd</anchor>
+      <anchor>a17709761e774231646e4486bb134e0dd</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessImage</name>
       <anchorfile>classiipr_1_1_t_unary_transform_processor_comp.html</anchorfile>
-      <anchor>fcd51796755229db92d633938e44b4a0</anchor>
+      <anchor>afcd51796755229db92d633938e44b4a0</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
   </compound>
@@ -5714,55 +5698,55 @@
     <member kind="enumeration">
       <name>MessageCategory</name>
       <anchorfile>classilolv_1_1_c_general_info_commands.html</anchorfile>
-      <anchor>07cfe17f709b14eaf7b6460b754a4035</anchor>
+      <anchor>a07cfe17f709b14eaf7b6460b754a4035</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MC_INFO</name>
       <anchorfile>classilolv_1_1_c_general_info_commands.html</anchorfile>
-      <anchor>07cfe17f709b14eaf7b6460b754a4035c294f962ff698ac1a63f6230b5e119d0</anchor>
+      <anchor>a07cfe17f709b14eaf7b6460b754a4035ac294f962ff698ac1a63f6230b5e119d0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MC_WARNING</name>
       <anchorfile>classilolv_1_1_c_general_info_commands.html</anchorfile>
-      <anchor>07cfe17f709b14eaf7b6460b754a40350886c2d860f854d5bf4c17b4498f0893</anchor>
+      <anchor>a07cfe17f709b14eaf7b6460b754a4035a0886c2d860f854d5bf4c17b4498f0893</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MC_ERROR</name>
       <anchorfile>classilolv_1_1_c_general_info_commands.html</anchorfile>
-      <anchor>07cfe17f709b14eaf7b6460b754a4035b6c7523d91d76e18a18401582d4dbd5b</anchor>
+      <anchor>a07cfe17f709b14eaf7b6460b754a4035ab6c7523d91d76e18a18401582d4dbd5b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MC_CRITICAL</name>
       <anchorfile>classilolv_1_1_c_general_info_commands.html</anchorfile>
-      <anchor>07cfe17f709b14eaf7b6460b754a40351aa19d8044c2ed8cc79ab7ffd8622b0e</anchor>
+      <anchor>a07cfe17f709b14eaf7b6460b754a4035a1aa19d8044c2ed8cc79ab7ffd8622b0e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classilolv_1_1_c_general_info_commands.html</anchorfile>
-      <anchor>8a18523db08e9ef285d9460901526b67</anchor>
+      <anchor>a8a18523db08e9ef285d9460901526b67</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_NO_RESPONSE</name>
       <anchorfile>classilolv_1_1_c_general_info_commands.html</anchorfile>
-      <anchor>8a18523db08e9ef285d9460901526b6733968f9fa24328a567473ffa7e54cc8c</anchor>
+      <anchor>a8a18523db08e9ef285d9460901526b67a33968f9fa24328a567473ffa7e54cc8c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_INTERNAL_ERROR</name>
       <anchorfile>classilolv_1_1_c_general_info_commands.html</anchorfile>
-      <anchor>8a18523db08e9ef285d9460901526b6753d377ecc11562a863a37e90a0d03f16</anchor>
+      <anchor>a8a18523db08e9ef285d9460901526b67a53d377ecc11562a863a37e90a0d03f16</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MAX_ERROR_MESSAGE_SIZE</name>
       <anchorfile>classilolv_1_1_c_general_info_commands.html</anchorfile>
-      <anchor>bc7ef0575cf8e3ea4166ad5dfb101290344027f219525a168d7dcb3377fc2387</anchor>
+      <anchor>abc7ef0575cf8e3ea4166ad5dfb101290a344027f219525a168d7dcb3377fc2387</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5773,7 +5757,7 @@
       <type>int</type>
       <name>maxKeepAliveTime</name>
       <anchorfile>structilolv_1_1_c_general_info_commands_1_1_general_info_params.html</anchorfile>
-      <anchor>feec29c65690d90bf074e8032a98afbe</anchor>
+      <anchor>afeec29c65690d90bf074e8032a98afbe</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5783,14 +5767,14 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_general_info_commands_1_1_keep_alive.html</anchorfile>
-      <anchor>10a3fbd1a2e40bf9cb00e9772fca2097d6bd6d176f6dd68fe829c2265dd7d799</anchor>
+      <anchor>a10a3fbd1a2e40bf9cb00e9772fca2097ad6bd6d176f6dd68fe829c2265dd7d799</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_general_info_commands_1_1_keep_alive.html</anchorfile>
-      <anchor>88b38caa8900a3284aa5c65d8d1c6409</anchor>
+      <anchor>a88b38caa8900a3284aa5c65d8d1c6409</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5801,7 +5785,7 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_general_info_commands_1_1_pop_message.html</anchorfile>
-      <anchor>5a96ae4988b3ac0bf3d436e07d3068cb2d2b0699d420c2af68198a319c9fce3d</anchor>
+      <anchor>a5a96ae4988b3ac0bf3d436e07d3068cba2d2b0699d420c2af68198a319c9fce3d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5812,35 +5796,35 @@
       <type>int</type>
       <name>category</name>
       <anchorfile>structilolv_1_1_c_general_info_commands_1_1_pop_message_1_1_result.html</anchorfile>
-      <anchor>74d90d080c3011275099639ea0f87ccf</anchor>
+      <anchor>a74d90d080c3011275099639ea0f87ccf</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>id</name>
       <anchorfile>structilolv_1_1_c_general_info_commands_1_1_pop_message_1_1_result.html</anchorfile>
-      <anchor>282aaf391b9d1807bfc9867629af80d8</anchor>
+      <anchor>a282aaf391b9d1807bfc9867629af80d8</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>flags</name>
       <anchorfile>structilolv_1_1_c_general_info_commands_1_1_pop_message_1_1_result.html</anchorfile>
-      <anchor>5c781049f960ac05a2be957aac7e52c4</anchor>
+      <anchor>a5c781049f960ac05a2be957aac7e52c4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>paramsCount</name>
       <anchorfile>structilolv_1_1_c_general_info_commands_1_1_pop_message_1_1_result.html</anchorfile>
-      <anchor>8d8fd8ce96c6a0e29577a4f6c2e2a9b8</anchor>
+      <anchor>a8d8fd8ce96c6a0e29577a4f6c2e2a9b8</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>char</type>
       <name>text</name>
       <anchorfile>structilolv_1_1_c_general_info_commands_1_1_pop_message_1_1_result.html</anchorfile>
-      <anchor>be1fb94d39b0afcaee6ff02812e89ff7</anchor>
+      <anchor>abe1fb94d39b0afcaee6ff02812e89ff7</anchor>
       <arglist>[MAX_ERROR_MESSAGE_SIZE]</arglist>
     </member>
   </compound>
@@ -5851,14 +5835,14 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_general_info_commands_1_1_set_params.html</anchorfile>
-      <anchor>a9f27302a3d839ae1bf273e0e21487469f0704b714497539ee9f3606a387b565</anchor>
+      <anchor>aa9f27302a3d839ae1bf273e0e2148746a9f0704b714497539ee9f3606a387b565</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_general_info_commands_1_1_set_params.html</anchorfile>
-      <anchor>7c37364eb5b732bb8e981ac537ce973e</anchor>
+      <anchor>a7c37364eb5b732bb8e981ac537ce973e</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5870,35 +5854,35 @@
       <type></type>
       <name>CGeneralInfoDriverBase</name>
       <anchorfile>classilolv_1_1_c_general_info_driver_base.html</anchorfile>
-      <anchor>733619abd12d6974f38edae12115d776</anchor>
+      <anchor>a733619abd12d6974f38edae12115d776</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>const CGeneralInfoCommands::GeneralInfoParams &amp;</type>
       <name>GetGeneralInfoParams</name>
       <anchorfile>classilolv_1_1_c_general_info_driver_base.html</anchorfile>
-      <anchor>22461a8e2cbf34f408c0fda5dcac30ba</anchor>
+      <anchor>a22461a8e2cbf34f408c0fda5dcac30ba</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnCommand</name>
       <anchorfile>classilolv_1_1_c_general_info_driver_base.html</anchorfile>
-      <anchor>47b05ee22c8b4b85bb277feb864f38dd</anchor>
+      <anchor>a47b05ee22c8b4b85bb277feb864f38dd</anchor>
       <arglist>(int commandCode, const void *commandBuffer, int commandBufferSize, void *responseBuffer, int responseBufferSize, int &amp;responseSize)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnHardwareInterrupt</name>
       <anchorfile>classilolv_1_1_c_general_info_driver_base.html</anchorfile>
-      <anchor>1f5e24243c13ffd782ca266935bfa6c9</anchor>
+      <anchor>a1f5e24243c13ffd782ca266935bfa6c9</anchor>
       <arglist>(I_DWORD interruptFlags)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AppendMessage</name>
       <anchorfile>classilolv_1_1_c_general_info_driver_base.html</anchorfile>
-      <anchor>8b64e544c382468ebfb5e5d7ba0cc7cf</anchor>
+      <anchor>a8b64e544c382468ebfb5e5d7ba0cc7cf</anchor>
       <arglist>(int category, int id, const char *text, bool doSend=true)</arglist>
     </member>
   </compound>
@@ -5915,13 +5899,13 @@
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classilolv_1_1_c_inspection_unit_commands.html</anchorfile>
-      <anchor>26cea24b61c1dad69fcf9b7ac27335fa</anchor>
+      <anchor>a26cea24b61c1dad69fcf9b7ac27335fa</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_UNIDENTIFIED_OBJECT_FOUND</name>
       <anchorfile>classilolv_1_1_c_inspection_unit_commands.html</anchorfile>
-      <anchor>26cea24b61c1dad69fcf9b7ac27335fa7c7a6cc248844165f7e4f46cff8e0adc</anchor>
+      <anchor>a26cea24b61c1dad69fcf9b7ac27335faa7c7a6cc248844165f7e4f46cff8e0adc</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5932,14 +5916,14 @@
       <type>int</type>
       <name>index</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_light_barrier_params.html</anchorfile>
-      <anchor>2243ae746b1a63531e3f44646c5f5551</anchor>
+      <anchor>a2243ae746b1a63531e3f44646c5f5551</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>offset</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_light_barrier_params.html</anchorfile>
-      <anchor>17ccd9f0eaab7710b11cefb7e0f944a4</anchor>
+      <anchor>a17ccd9f0eaab7710b11cefb7e0f944a4</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5950,7 +5934,7 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_pop_id.html</anchorfile>
-      <anchor>b83ed7ff20c79669dfaf49120e9f52d031b3930cbfcc8ae7d2e2a0edb0c02dfa</anchor>
+      <anchor>ab83ed7ff20c79669dfaf49120e9f52d0a31b3930cbfcc8ae7d2e2a0edb0c02dfa</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5961,28 +5945,28 @@
       <type>int</type>
       <name>inspectionId</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_pop_id_1_1_result.html</anchorfile>
-      <anchor>20d3f1eb24312c510901ef2a7a176d8b</anchor>
+      <anchor>a20d3f1eb24312c510901ef2a7a176d8b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>IDriver::NativeTimer</type>
       <name>nativeTimestamp</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_pop_id_1_1_result.html</anchorfile>
-      <anchor>26eb097f06332e80b1badb799a1c1d5d</anchor>
+      <anchor>a26eb097f06332e80b1badb799a1c1d5d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>objectIndex</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_pop_id_1_1_result.html</anchorfile>
-      <anchor>9d7c7863702bac12fe9b09e7d5ce903b</anchor>
+      <anchor>a9d7c7863702bac12fe9b09e7d5ce903b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>objectPosition</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_pop_id_1_1_result.html</anchorfile>
-      <anchor>b065982ed19b93238df1df678993d4ea</anchor>
+      <anchor>ab065982ed19b93238df1df678993d4ea</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5992,21 +5976,21 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_set_mode.html</anchorfile>
-      <anchor>781998c27bece657d76b1e005a0877c2bb4ac91b72b38880f7feb8e5c8fe8c95</anchor>
+      <anchor>a781998c27bece657d76b1e005a0877c2abb4ac91b72b38880f7feb8e5c8fe8c95</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_set_mode.html</anchorfile>
-      <anchor>7d4c76f6e019835e60f9838c5f9ebf6c</anchor>
+      <anchor>a7d4c76f6e019835e60f9838c5f9ebf6c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>mode</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_set_mode.html</anchorfile>
-      <anchor>3d12186088dd07ac68e4d7ecb6269e98</anchor>
+      <anchor>a3d12186088dd07ac68e4d7ecb6269e98</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6017,14 +6001,14 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_set_params.html</anchorfile>
-      <anchor>8d4d740a56147b57ca6832bb33d7cf41317f895eb7836e0d5ace630f48506684</anchor>
+      <anchor>a8d4d740a56147b57ca6832bb33d7cf41a317f895eb7836e0d5ace630f48506684</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_set_params.html</anchorfile>
-      <anchor>4cec9bc54fd62f9249cbde410ff64925</anchor>
+      <anchor>a4cec9bc54fd62f9249cbde410ff64925</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6035,21 +6019,21 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_set_result.html</anchorfile>
-      <anchor>5c08425ed5f14cbc3363539c2cdb892b60f7ec4014f57b4629c81b713c4729a6</anchor>
+      <anchor>a5c08425ed5f14cbc3363539c2cdb892ba60f7ec4014f57b4629c81b713c4729a6</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>inspectionId</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_set_result.html</anchorfile>
-      <anchor>4216799c0aba6c3ddf724a899a82e2a8</anchor>
+      <anchor>a4216799c0aba6c3ddf724a899a82e2a8</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>ejectorIndex</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_set_result.html</anchorfile>
-      <anchor>7ab53444d1b5cddfc7c3c878caa8ac37</anchor>
+      <anchor>a7ab53444d1b5cddfc7c3c878caa8ac37</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6060,7 +6044,7 @@
       <type>bool</type>
       <name>wasSet</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_set_result_1_1_result.html</anchorfile>
-      <anchor>a698116f34cf236ed9c458d713b0ef52</anchor>
+      <anchor>aa698116f34cf236ed9c458d713b0ef52</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6071,7 +6055,7 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_single_trigger.html</anchorfile>
-      <anchor>59a7c136f5dc5ae7660262ee8e30e192812e8dae4176a6b50fa9753be3ca10fe</anchor>
+      <anchor>a59a7c136f5dc5ae7660262ee8e30e192a812e8dae4176a6b50fa9753be3ca10fe</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6082,7 +6066,7 @@
       <type>IDriver::NativeTimer</type>
       <name>nativeTimestamp</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_single_trigger_1_1_result.html</anchorfile>
-      <anchor>60b9f4a6f5b91daabf8a6d246746b344</anchor>
+      <anchor>a60b9f4a6f5b91daabf8a6d246746b344</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6092,42 +6076,42 @@
     <member kind="enumvalue">
       <name>FALLING_EDGE</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_unit_params.html</anchorfile>
-      <anchor>104c74a5400d12800b81ff94afb552e6e423080548cfc8472370f7649eb7fa5d</anchor>
+      <anchor>a104c74a5400d12800b81ff94afb552e6ae423080548cfc8472370f7649eb7fa5d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>lightBarrierIndex</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_unit_params.html</anchorfile>
-      <anchor>35d66c5fa9662282a80a24885ae6f454</anchor>
+      <anchor>a35d66c5fa9662282a80a24885ae6f454</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>edgePosition</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_unit_params.html</anchorfile>
-      <anchor>d836641594a3c342579bdde57ffdd217</anchor>
+      <anchor>ad836641594a3c342579bdde57ffdd217</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>triggerDuration</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_unit_params.html</anchorfile>
-      <anchor>75a13ae85fe954c94725c3d23b37727b</anchor>
+      <anchor>a75a13ae85fe954c94725c3d23b37727b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>triggerRelaxationTime</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_unit_params.html</anchorfile>
-      <anchor>7295fdde93992c066940e7ccb8a48b40</anchor>
+      <anchor>a7295fdde93992c066940e7ccb8a48b40</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>triggerOffset</name>
       <anchorfile>structilolv_1_1_c_inspection_unit_commands_1_1_unit_params.html</anchorfile>
-      <anchor>969226e35039c1048912c1bbf9e1b342</anchor>
+      <anchor>a969226e35039c1048912c1bbf9e1b342</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6145,14 +6129,14 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_io_card_tracer_commands_1_1_get_light_barrier_info.html</anchorfile>
-      <anchor>47146cb4cce73595cee712800588d369a5ffec07b1d928e8f037d1bc9cb0693a</anchor>
+      <anchor>a47146cb4cce73595cee712800588d369aa5ffec07b1d928e8f037d1bc9cb0693a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>lightBarrierIndex</name>
       <anchorfile>structilolv_1_1_c_io_card_tracer_commands_1_1_get_light_barrier_info.html</anchorfile>
-      <anchor>d365031c4d15c37bc80d75ffdb5ed0ba</anchor>
+      <anchor>ad365031c4d15c37bc80d75ffdb5ed0ba</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6163,7 +6147,7 @@
       <type>bool</type>
       <name>state</name>
       <anchorfile>structilolv_1_1_c_io_card_tracer_commands_1_1_get_light_barrier_info_1_1_result.html</anchorfile>
-      <anchor>75a3950966ec6e11e8ade94b282c682b</anchor>
+      <anchor>a75a3950966ec6e11e8ade94b282c682b</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6174,21 +6158,21 @@
       <type>int</type>
       <name>lightBarriersBitIndex</name>
       <anchorfile>structilolv_1_1_c_io_card_tracer_commands_1_1_io_params.html</anchorfile>
-      <anchor>152095072230ff7a4598fb5e64796b33</anchor>
+      <anchor>a152095072230ff7a4598fb5e64796b33</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>ejectorsBitIndex</name>
       <anchorfile>structilolv_1_1_c_io_card_tracer_commands_1_1_io_params.html</anchorfile>
-      <anchor>8a5ff3ba9ef6066bf30a76f6d7cea6c6</anchor>
+      <anchor>a8a5ff3ba9ef6066bf30a76f6d7cea6c6</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>triggersBitIndex</name>
       <anchorfile>structilolv_1_1_c_io_card_tracer_commands_1_1_io_params.html</anchorfile>
-      <anchor>c9d362bde423d8b9699bb608fbf99554</anchor>
+      <anchor>ac9d362bde423d8b9699bb608fbf99554</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6199,14 +6183,14 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_io_card_tracer_commands_1_1_set_io_params.html</anchorfile>
-      <anchor>eca4c714292c07054213d4242c443618af5965bca59a6491374159f0499a015e</anchor>
+      <anchor>aeca4c714292c07054213d4242c443618aaf5965bca59a6491374159f0499a015e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CTracerCommands::SetParams::Result</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_io_card_tracer_commands_1_1_set_io_params.html</anchorfile>
-      <anchor>eb87825a2fb1eb60a07872bdf6da5495</anchor>
+      <anchor>aeb87825a2fb1eb60a07872bdf6da5495</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6219,112 +6203,112 @@
       <type>CSingleCountTracerDriverBase</type>
       <name>BaseClass</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>0db1b4a0a085f276a639690b0b69f560</anchor>
+      <anchor>a0db1b4a0a085f276a639690b0b69f560</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CIoCardTracerDriverBase</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>66184b81cdc41ba8f6de31dbc98d976c</anchor>
+      <anchor>a66184b81cdc41ba8f6de31dbc98d976c</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>I_DWORD</type>
       <name>GetInterruptsMask</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>6a33faf0800e1ab76ed47dfb9f4b177c</anchor>
+      <anchor>a6a33faf0800e1ab76ed47dfb9f4b177c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_DWORD</type>
       <name>GetLinePosition</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>082950604118160933632da3846b5784</anchor>
+      <anchor>a082950604118160933632da3846b5784</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetLightBarrierBit</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>0e37919ec8a1ca7514e642e40c2e115b</anchor>
+      <anchor>a0e37919ec8a1ca7514e642e40c2e115b</anchor>
       <arglist>(int lightBarrierIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetTriggerBit</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>26dd5833cf3158e157b289bc96bf05c6</anchor>
+      <anchor>a26dd5833cf3158e157b289bc96bf05c6</anchor>
       <arglist>(int bit, bool state)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetEjectorBit</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>6ffa3edf30db994759617e502d7548a0</anchor>
+      <anchor>a6ffa3edf30db994759617e502d7548a0</anchor>
       <arglist>(int ejectorIndex, bool state)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_SQWORD</type>
       <name>GetCurrentTimer</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>447cb1f49e2302931ffd22c8e1012117</anchor>
+      <anchor>a447cb1f49e2302931ffd22c8e1012117</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual NativeTimer</type>
       <name>GetCurrentNativeTimer</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>7346e3d5e39860902826acb9d28f0c7a</anchor>
+      <anchor>a7346e3d5e39860902826acb9d28f0c7a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnCommand</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>d43e1913067fb07fd735977cc432a7e3</anchor>
+      <anchor>ad43e1913067fb07fd735977cc432a7e3</anchor>
       <arglist>(int commandCode, const void *commandBuffer, int commandBufferSize, void *responseBuffer, int responseBufferSize, int &amp;responseSize)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnHardwareInterrupt</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>40c89799b0e2ea2dcdafd40e5efd3fe1</anchor>
+      <anchor>a40c89799b0e2ea2dcdafd40e5efd3fe1</anchor>
       <arglist>(I_DWORD interruptFlags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_DWORD</type>
       <name>GetInputBits</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>512795ff859b5f57f730b7272fa896ac</anchor>
+      <anchor>a512795ff859b5f57f730b7272fa896ac</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateHardwareValues</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>92d9eddc941ff47bb706bbdfed769207</anchor>
+      <anchor>a92d9eddc941ff47bb706bbdfed769207</anchor>
       <arglist>(I_DWORD inputBits, I_WORD counterValue, I_SQWORD microsecsTimer, IDriver::NativeTimer nativeTimer)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>OnCounterReady</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>477a3b84bb5e6a6c7f3084d69b95e4da</anchor>
+      <anchor>a477a3b84bb5e6a6c7f3084d69b95e4da</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetNextSinglePositionEvent</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>c26f9ace2aae8d83ad6189818f8d015f</anchor>
+      <anchor>ac26f9ace2aae8d83ad6189818f8d015f</anchor>
       <arglist>(const I_DWORD *eventPositionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
       <name>SetEncoderCounter</name>
       <anchorfile>classilolv_1_1_c_io_card_tracer_driver_base.html</anchorfile>
-      <anchor>9fa61df0fed9c34a8612f6b86310c0e9</anchor>
+      <anchor>a9fa61df0fed9c34a8612f6b86310c0e9</anchor>
       <arglist>(I_WORD value)=0</arglist>
     </member>
   </compound>
@@ -6351,28 +6335,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_get_line_info.html</anchorfile>
-      <anchor>8f1d9fa09d13acf99ddd616e145133ae7b5e1cd31a1398514d73978827dd2cff</anchor>
+      <anchor>a8f1d9fa09d13acf99ddd616e145133aea7b5e1cd31a1398514d73978827dd2cff</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CTracerCommands::GetLineInfo::Result</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_get_line_info.html</anchorfile>
-      <anchor>017dc7013568f60dabfab618c3ec1c36</anchor>
+      <anchor>a017dc7013568f60dabfab618c3ec1c36</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>lineIndex</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_get_line_info.html</anchorfile>
-      <anchor>91caa8d823ded9f46a33233a520c6c10</anchor>
+      <anchor>a91caa8d823ded9f46a33233a520c6c10</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CTracerCommands::GetLineInfo</type>
       <name>line</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_get_line_info.html</anchorfile>
-      <anchor>1322eabc7f375ea8092be85e241f58d0</anchor>
+      <anchor>a1322eabc7f375ea8092be85e241f58d0</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6382,28 +6366,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_get_line_light_barrier_info.html</anchorfile>
-      <anchor>8e9572ff6a407f47637cf1473460d739c549176150a38201f73fea3a9b9e525d</anchor>
+      <anchor>a8e9572ff6a407f47637cf1473460d739ac549176150a38201f73fea3a9b9e525d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CIoCardTracerCommands::GetLightBarrierInfo::Result</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_get_line_light_barrier_info.html</anchorfile>
-      <anchor>bba14da22accc1e865e5502dc372dd17</anchor>
+      <anchor>abba14da22accc1e865e5502dc372dd17</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>lineIndex</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_get_line_light_barrier_info.html</anchorfile>
-      <anchor>6564b291029edb428bd48547791ada09</anchor>
+      <anchor>a6564b291029edb428bd48547791ada09</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CIoCardTracerCommands::GetLightBarrierInfo</type>
       <name>line</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_get_line_light_barrier_info.html</anchorfile>
-      <anchor>22cacfff76592965df64983454667a84</anchor>
+      <anchor>a22cacfff76592965df64983454667a84</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6414,7 +6398,7 @@
       <type>int</type>
       <name>linesCount</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_multi_tracer_params.html</anchorfile>
-      <anchor>aa6f88ba141f595490c0f0fabb1acdaf</anchor>
+      <anchor>aaa6f88ba141f595490c0f0fabb1acdaf</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6424,28 +6408,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_pop_id.html</anchorfile>
-      <anchor>4294bc755b0526ec274b0b9ec2e2fcd9cc4262a8350be8ac456440bd4ff11a7b</anchor>
+      <anchor>a4294bc755b0526ec274b0b9ec2e2fcd9acc4262a8350be8ac456440bd4ff11a7b</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CTracerCommands::PopId::Result</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_pop_id.html</anchorfile>
-      <anchor>af1e20c961d51ed8f98375775b74dabe</anchor>
+      <anchor>aaf1e20c961d51ed8f98375775b74dabe</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>lineIndex</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_pop_id.html</anchorfile>
-      <anchor>e5ed2d1a33428792f48908a925845f56</anchor>
+      <anchor>ae5ed2d1a33428792f48908a925845f56</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CTracerCommands::PopId</type>
       <name>line</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_pop_id.html</anchorfile>
-      <anchor>5fcef5424c85b91bc1b30c3c7dca0ea4</anchor>
+      <anchor>a5fcef5424c85b91bc1b30c3c7dca0ea4</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6455,28 +6439,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_ejector_params.html</anchorfile>
-      <anchor>8fceea766168860786c956b54ab1043c87823e89a9b0cc7e24ec107d22c343d3</anchor>
+      <anchor>a8fceea766168860786c956b54ab1043ca87823e89a9b0cc7e24ec107d22c343d3</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CTracerCommands::SetEjectorParams::Result</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_ejector_params.html</anchorfile>
-      <anchor>30528e7abb26a5afd2354d5062613069</anchor>
+      <anchor>a30528e7abb26a5afd2354d5062613069</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>lineIndex</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_ejector_params.html</anchorfile>
-      <anchor>3d9f8d92665f6a3dbda5b68a2f6f4d69</anchor>
+      <anchor>a3d9f8d92665f6a3dbda5b68a2f6f4d69</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CTracerCommands::SetEjectorParams</type>
       <name>line</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_ejector_params.html</anchorfile>
-      <anchor>a787967af834c55c40b6fa4c65c87f9f</anchor>
+      <anchor>aa787967af834c55c40b6fa4c65c87f9f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6486,28 +6470,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_light_barrier_params.html</anchorfile>
-      <anchor>7b14d0dd32e03a33a86eee51192771a9952bfe527d5a1d9797c15f111ce43792</anchor>
+      <anchor>a7b14d0dd32e03a33a86eee51192771a9a952bfe527d5a1d9797c15f111ce43792</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CTracerCommands::SetLightBarrierParams::Result</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_light_barrier_params.html</anchorfile>
-      <anchor>a63f70c2f762c1a4c22c7c19b39322f5</anchor>
+      <anchor>aa63f70c2f762c1a4c22c7c19b39322f5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>lineIndex</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_light_barrier_params.html</anchorfile>
-      <anchor>e66cc94c27a9ef9666ed26d8bd7f3bf4</anchor>
+      <anchor>ae66cc94c27a9ef9666ed26d8bd7f3bf4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CTracerCommands::SetLightBarrierParams</type>
       <name>line</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_light_barrier_params.html</anchorfile>
-      <anchor>66f9c70cbbbc5d6aec03f254f7582251</anchor>
+      <anchor>a66f9c70cbbbc5d6aec03f254f7582251</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6517,28 +6501,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_line_io_params.html</anchorfile>
-      <anchor>519780a078fec0298f7d8367de74e62311f37bc44d777ed7eaa68b821ef45e59</anchor>
+      <anchor>a519780a078fec0298f7d8367de74e623a11f37bc44d777ed7eaa68b821ef45e59</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CTracerCommands::SetParams::Result</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_line_io_params.html</anchorfile>
-      <anchor>26611a7de8e14829a1f47c65d187d1f3</anchor>
+      <anchor>a26611a7de8e14829a1f47c65d187d1f3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>lineIndex</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_line_io_params.html</anchorfile>
-      <anchor>e9e123c9251cf96181a9c0b5272fe650</anchor>
+      <anchor>ae9e123c9251cf96181a9c0b5272fe650</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CIoCardTracerCommands::SetIoParams</type>
       <name>line</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_line_io_params.html</anchorfile>
-      <anchor>0c778ac5c8ab12f1916bd0ae62efeadf</anchor>
+      <anchor>a0c778ac5c8ab12f1916bd0ae62efeadf</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6548,28 +6532,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_line_params.html</anchorfile>
-      <anchor>6d2ebd0669c299b2b0a945f860b799280277d36b72f8d13d0cd3c3e80fe76f41</anchor>
+      <anchor>a6d2ebd0669c299b2b0a945f860b79928a0277d36b72f8d13d0cd3c3e80fe76f41</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CTracerCommands::SetParams::Result</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_line_params.html</anchorfile>
-      <anchor>bd5463eb3e0cae26f3e4fe1e39bdc141</anchor>
+      <anchor>abd5463eb3e0cae26f3e4fe1e39bdc141</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>lineIndex</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_line_params.html</anchorfile>
-      <anchor>da5b2a762e485b59109e7b6d27308748</anchor>
+      <anchor>ada5b2a762e485b59109e7b6d27308748</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CTracerCommands::SetParams</type>
       <name>line</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_line_params.html</anchorfile>
-      <anchor>e32f23554f2a9e78e23f0574b598d719</anchor>
+      <anchor>ae32f23554f2a9e78e23f0574b598d719</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6580,7 +6564,7 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_mode.html</anchorfile>
-      <anchor>733305c0a9490475dc64951db04d115be1a33908ecf788168a3fb4219e78ced4</anchor>
+      <anchor>a733305c0a9490475dc64951db04d115bae1a33908ecf788168a3fb4219e78ced4</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6591,14 +6575,14 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_params.html</anchorfile>
-      <anchor>0ded447b65fe70cef855af73e0323d5470b3fa74a0708b58945e2f433990455f</anchor>
+      <anchor>a0ded447b65fe70cef855af73e0323d54a70b3fa74a0708b58945e2f433990455f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_params.html</anchorfile>
-      <anchor>eb2ec5c535da1b3bd63e9bd5c4e8cdee</anchor>
+      <anchor>aeb2ec5c535da1b3bd63e9bd5c4e8cdee</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6608,28 +6592,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_result.html</anchorfile>
-      <anchor>55e3b3b52b3637903d2fd84540fa90180278cdef2adc12f73f0df3d8598f138f</anchor>
+      <anchor>a55e3b3b52b3637903d2fd84540fa9018a0278cdef2adc12f73f0df3d8598f138f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CTracerCommands::SetResult::Result</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_result.html</anchorfile>
-      <anchor>7665bd75afbe350b14ca63e7a5296c1b</anchor>
+      <anchor>a7665bd75afbe350b14ca63e7a5296c1b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>lineIndex</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_result.html</anchorfile>
-      <anchor>6082d86fdde21dbc2142264f30c82024</anchor>
+      <anchor>a6082d86fdde21dbc2142264f30c82024</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CTracerCommands::SetResult</type>
       <name>line</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_result.html</anchorfile>
-      <anchor>0b5dc27cf653690fc37cdb4c546328ac</anchor>
+      <anchor>a0b5dc27cf653690fc37cdb4c546328ac</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6639,28 +6623,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_unit_params.html</anchorfile>
-      <anchor>29260dc8f116b3506729ec55967fe24505c0fbd785c1a42a8d300248b6cb06b7</anchor>
+      <anchor>a29260dc8f116b3506729ec55967fe245a05c0fbd785c1a42a8d300248b6cb06b7</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CTracerCommands::SetUnitParams::Result</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_unit_params.html</anchorfile>
-      <anchor>c49816919192fdb2a09f8ba7958d6b1f</anchor>
+      <anchor>ac49816919192fdb2a09f8ba7958d6b1f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>lineIndex</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_unit_params.html</anchorfile>
-      <anchor>2ae8e53b39f96aa392836c351bd2735f</anchor>
+      <anchor>a2ae8e53b39f96aa392836c351bd2735f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CTracerCommands::SetUnitParams</type>
       <name>line</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_set_unit_params.html</anchorfile>
-      <anchor>a6c4a56e2fe902e653971808ffeff46f</anchor>
+      <anchor>aa6c4a56e2fe902e653971808ffeff46f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6670,28 +6654,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_single_trigger.html</anchorfile>
-      <anchor>89ae62a71d87f42a4709a6a3fb9d0934866b9b236aa050772ef103953337db09</anchor>
+      <anchor>a89ae62a71d87f42a4709a6a3fb9d0934a866b9b236aa050772ef103953337db09</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CTracerCommands::SingleTrigger::Result</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_single_trigger.html</anchorfile>
-      <anchor>7d43f199168577bb23f08713de156f54</anchor>
+      <anchor>a7d43f199168577bb23f08713de156f54</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>lineIndex</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_single_trigger.html</anchorfile>
-      <anchor>f6122d4fa3e498426f5c2f03cac215a4</anchor>
+      <anchor>af6122d4fa3e498426f5c2f03cac215a4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CTracerCommands::SingleTrigger</type>
       <name>line</name>
       <anchorfile>structilolv_1_1_c_multi_tracer_commands_1_1_single_trigger.html</anchorfile>
-      <anchor>fd0544b83d78a24fd62d283c45fcd242</anchor>
+      <anchor>afd0544b83d78a24fd62d283c45fcd242</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6705,75 +6689,75 @@
       <type></type>
       <name>CMultiTracerDriverBase</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base.html</anchorfile>
-      <anchor>2c550b9f0d790f8c508287864a983b38</anchor>
+      <anchor>a2c550b9f0d790f8c508287864a983b38</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>const CMultiTracerCommands::MultiTracerParams &amp;</type>
       <name>GetMultiTracerParams</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base.html</anchorfile>
-      <anchor>7bb19b651957d4c774506cacab553f79</anchor>
+      <anchor>a7bb19b651957d4c774506cacab553f79</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnCommand</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base.html</anchorfile>
-      <anchor>bfe1d972dc37ca546cbcd6fa9fec22be</anchor>
+      <anchor>abfe1d972dc37ca546cbcd6fa9fec22be</anchor>
       <arglist>(int commandCode, const void *commandBuffer, int commandBufferSize, void *responseBuffer, int responseBufferSize, int &amp;responseSize)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnHardwareInterrupt</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base.html</anchorfile>
-      <anchor>49599844f79ff7f41c9f9edf4ecc067b</anchor>
+      <anchor>a49599844f79ff7f41c9f9edf4ecc067b</anchor>
       <arglist>(I_DWORD interruptFlags)</arglist>
     </member>
     <member kind="enumvalue">
       <name>MAX_LINES</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base.html</anchorfile>
-      <anchor>ea44735d449650d7193ec5c89dcb601fa427a81cf05ab66f6f8b8ef9ea586559</anchor>
+      <anchor>aea44735d449650d7193ec5c89dcb601faa427a81cf05ab66f6f8b8ef9ea586559</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MAX_COUNTER_VALUE</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base.html</anchorfile>
-      <anchor>ea44735d449650d7193ec5c89dcb601fac7f624e641c099ede75711fc1438b05</anchor>
+      <anchor>aea44735d449650d7193ec5c89dcb601faac7f624e641c099ede75711fc1438b05</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>CopyFromHardware</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base.html</anchorfile>
-      <anchor>57cbc79a1b7c8fe7d61e9a64691d2772</anchor>
+      <anchor>a57cbc79a1b7c8fe7d61e9a64691d2772</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>CalcInterruptsMask</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base.html</anchorfile>
-      <anchor>8d6ffc9b8f732000bc38104fab872c74</anchor>
+      <anchor>a8d6ffc9b8f732000bc38104fab872c74</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual I_WORD</type>
       <name>ReadCounter</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base.html</anchorfile>
-      <anchor>ec2e4fddd979b60108288f83e1528e01</anchor>
+      <anchor>aec2e4fddd979b60108288f83e1528e01</anchor>
       <arglist>(int counterIndex)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
       <name>WriteCounter</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base.html</anchorfile>
-      <anchor>57e9777fafac163ec52c36918c26f6da</anchor>
+      <anchor>a57e9777fafac163ec52c36918c26f6da</anchor>
       <arglist>(int counterIndex, I_WORD value)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
       <name>WriteInterruptsMask</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base.html</anchorfile>
-      <anchor>67a265c79bf2cb31fb70f7c05c25a110</anchor>
+      <anchor>a67a265c79bf2cb31fb70f7c05c25a110</anchor>
       <arglist>(I_DWORD value)=0</arglist>
     </member>
   </compound>
@@ -6785,70 +6769,70 @@
       <type>ilolv::CIoCardTracerDriverBase</type>
       <name>BaseClass</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base_1_1_single_line.html</anchorfile>
-      <anchor>ec725484293d31b50ee078f5e3dd5cae</anchor>
+      <anchor>aec725484293d31b50ee078f5e3dd5cae</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>SingleLine</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base_1_1_single_line.html</anchorfile>
-      <anchor>56ce3aa94657ed3cb44df62de0d69529</anchor>
+      <anchor>a56ce3aa94657ed3cb44df62de0d69529</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>Init</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base_1_1_single_line.html</anchorfile>
-      <anchor>1486c8fe5aba970c114630e6b185daad</anchor>
+      <anchor>a1486c8fe5aba970c114630e6b185daad</anchor>
       <arglist>(int lineNumber, CMultiTracerDriverBase *parentPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetOutputBits</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base_1_1_single_line.html</anchorfile>
-      <anchor>0e9e320550c9c60ca85f5e49dd4f96c6</anchor>
+      <anchor>a0e9e320550c9c60ca85f5e49dd4f96c6</anchor>
       <arglist>(I_DWORD value, I_DWORD mask)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetEncoderCounter</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base_1_1_single_line.html</anchorfile>
-      <anchor>29cb7063bb6a7b5492538045067c73b7</anchor>
+      <anchor>a29cb7063bb6a7b5492538045067c73b7</anchor>
       <arglist>(I_WORD value)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetQueue</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base_1_1_single_line.html</anchorfile>
-      <anchor>05c954056f404208f0fc676125568a8e</anchor>
+      <anchor>a05c954056f404208f0fc676125568a8e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AppendMessage</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base_1_1_single_line.html</anchorfile>
-      <anchor>943a6611cafeab01f871f256702b7474</anchor>
+      <anchor>a943a6611cafeab01f871f256702b7474</anchor>
       <arglist>(int category, int id, const char *text, bool doSend=true)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>CreateSignalId</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base_1_1_single_line.html</anchorfile>
-      <anchor>65613fd7e3c05aba21115f6ec7d7cac3</anchor>
+      <anchor>a65613fd7e3c05aba21115f6ec7d7cac3</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetSignalState</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base_1_1_single_line.html</anchorfile>
-      <anchor>57703ecec94efd02d6a741dd80da75ac</anchor>
+      <anchor>a57703ecec94efd02d6a741dd80da75ac</anchor>
       <arglist>(int signalId, int state)</arglist>
     </member>
     <member kind="friend" protection="private">
       <type>friend class</type>
       <name>CMultiTracerDriverBase</name>
       <anchorfile>classilolv_1_1_c_multi_tracer_driver_base_1_1_single_line.html</anchorfile>
-      <anchor>d03dbfa9a1775d30e5876a1e01d87322</anchor>
+      <anchor>ad03dbfa9a1775d30e5876a1e01d87322</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6862,25 +6846,25 @@
     <member kind="enumeration">
       <name>SignalBit</name>
       <anchorfile>classilolv_1_1_c_signal_bits_commands.html</anchorfile>
-      <anchor>b4acb1a5b630accabcb61a98bab0a96b</anchor>
+      <anchor>ab4acb1a5b630accabcb61a98bab0a96b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SB_HEARTBEAT</name>
       <anchorfile>classilolv_1_1_c_signal_bits_commands.html</anchorfile>
-      <anchor>b4acb1a5b630accabcb61a98bab0a96b119c9011900c6f1765e9a2f209fcfacd</anchor>
+      <anchor>ab4acb1a5b630accabcb61a98bab0a96ba119c9011900c6f1765e9a2f209fcfacd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SB_ERROR</name>
       <anchorfile>classilolv_1_1_c_signal_bits_commands.html</anchorfile>
-      <anchor>b4acb1a5b630accabcb61a98bab0a96b9c16dad2958690f9d40502811bce58cf</anchor>
+      <anchor>ab4acb1a5b630accabcb61a98bab0a96ba9c16dad2958690f9d40502811bce58cf</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SB_WARNING</name>
       <anchorfile>classilolv_1_1_c_signal_bits_commands.html</anchorfile>
-      <anchor>b4acb1a5b630accabcb61a98bab0a96b68bf978f45d22c55f3e9e399f768924e</anchor>
+      <anchor>ab4acb1a5b630accabcb61a98bab0a96ba68bf978f45d22c55f3e9e399f768924e</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6890,21 +6874,21 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_signal_bits_commands_1_1_set_application_status.html</anchorfile>
-      <anchor>7f8cff55ad7a1485e583977251cf3ff98d158e00391031c2ee42c7377ed5b683</anchor>
+      <anchor>a7f8cff55ad7a1485e583977251cf3ff9a8d158e00391031c2ee42c7377ed5b683</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_signal_bits_commands_1_1_set_application_status.html</anchorfile>
-      <anchor>f409f53408fbf6b3078613b9e885d338</anchor>
+      <anchor>af409f53408fbf6b3078613b9e885d338</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>status</name>
       <anchorfile>structilolv_1_1_c_signal_bits_commands_1_1_set_application_status.html</anchorfile>
-      <anchor>0081dd04150c1dfd716b01d19c68817f</anchor>
+      <anchor>a0081dd04150c1dfd716b01d19c68817f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6915,14 +6899,14 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_signal_bits_commands_1_1_set_params.html</anchorfile>
-      <anchor>1de97bb15322e15f1779cba0463e331d1180455863d60017c794c7bb8882f463</anchor>
+      <anchor>a1de97bb15322e15f1779cba0463e331da1180455863d60017c794c7bb8882f463</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_signal_bits_commands_1_1_set_params.html</anchorfile>
-      <anchor>aec02d7adea0c2ce5f14dd704db6789b</anchor>
+      <anchor>aaec02d7adea0c2ce5f14dd704db6789b</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6932,28 +6916,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_signal_bits_commands_1_1_set_signal_bit_index.html</anchorfile>
-      <anchor>d6081e42722a48d213cd868a2578571121b304c0de926159109759a6ea10690b</anchor>
+      <anchor>ad6081e42722a48d213cd868a25785711a21b304c0de926159109759a6ea10690b</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_signal_bits_commands_1_1_set_signal_bit_index.html</anchorfile>
-      <anchor>9aa859ca9c3116df4f1264da3f160eee</anchor>
+      <anchor>a9aa859ca9c3116df4f1264da3f160eee</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>signalIndex</name>
       <anchorfile>structilolv_1_1_c_signal_bits_commands_1_1_set_signal_bit_index.html</anchorfile>
-      <anchor>5ac53a70df60d715444e546adf9d3e44</anchor>
+      <anchor>a5ac53a70df60d715444e546adf9d3e44</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>bitIndex</name>
       <anchorfile>structilolv_1_1_c_signal_bits_commands_1_1_set_signal_bit_index.html</anchorfile>
-      <anchor>71605bfc6291bcb4acfe5d14ab0962cc</anchor>
+      <anchor>a71605bfc6291bcb4acfe5d14ab0962cc</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6964,14 +6948,14 @@
       <type>int</type>
       <name>heartbeatPeriod</name>
       <anchorfile>structilolv_1_1_c_signal_bits_commands_1_1_signal_params.html</anchorfile>
-      <anchor>9c1a9e151acc75b8397cabfcaaf5a7f1</anchor>
+      <anchor>a9c1a9e151acc75b8397cabfcaaf5a7f1</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>signalBitsCount</name>
       <anchorfile>structilolv_1_1_c_signal_bits_commands_1_1_signal_params.html</anchorfile>
-      <anchor>37a905cb1f6db7b0bf449e32dc543a54</anchor>
+      <anchor>a37a905cb1f6db7b0bf449e32dc543a54</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6984,61 +6968,61 @@
       <type></type>
       <name>CSignalBitsDriverBase</name>
       <anchorfile>classilolv_1_1_c_signal_bits_driver_base.html</anchorfile>
-      <anchor>4fe434a5d8d18403fa0cdfbffaef3900</anchor>
+      <anchor>a4fe434a5d8d18403fa0cdfbffaef3900</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>const CSignalBitsCommands::SignalParams &amp;</type>
       <name>GetSignalParams</name>
       <anchorfile>classilolv_1_1_c_signal_bits_driver_base.html</anchorfile>
-      <anchor>ebab1dd7a2b712e98766938b7badfc5c</anchor>
+      <anchor>aebab1dd7a2b712e98766938b7badfc5c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnCommand</name>
       <anchorfile>classilolv_1_1_c_signal_bits_driver_base.html</anchorfile>
-      <anchor>274314d8e391eee06c5089903c5fc08c</anchor>
+      <anchor>a274314d8e391eee06c5089903c5fc08c</anchor>
       <arglist>(int commandCode, const void *commandBuffer, int commandBufferSize, void *responseBuffer, int responseBufferSize, int &amp;responseSize)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnHardwareInterrupt</name>
       <anchorfile>classilolv_1_1_c_signal_bits_driver_base.html</anchorfile>
-      <anchor>c13c98e99c682491815775afe2bd6613</anchor>
+      <anchor>ac13c98e99c682491815775afe2bd6613</anchor>
       <arglist>(I_DWORD interruptFlags)</arglist>
     </member>
     <member kind="enumvalue">
       <name>MAX_SIGNALS</name>
       <anchorfile>classilolv_1_1_c_signal_bits_driver_base.html</anchorfile>
-      <anchor>dbabcf381c4ae528a70e3d6145918a5d84e29ce12db8f525a00ad8d3da51bdd4</anchor>
+      <anchor>adbabcf381c4ae528a70e3d6145918a5da84e29ce12db8f525a00ad8d3da51bdd4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MAX_SIGNAL_BITS</name>
       <anchorfile>classilolv_1_1_c_signal_bits_driver_base.html</anchorfile>
-      <anchor>dbabcf381c4ae528a70e3d6145918a5d57a6ed9c4c7973c41d5ddd538563d6e7</anchor>
+      <anchor>adbabcf381c4ae528a70e3d6145918a5da57a6ed9c4c7973c41d5ddd538563d6e7</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>SetSignalBit</name>
       <anchorfile>classilolv_1_1_c_signal_bits_driver_base.html</anchorfile>
-      <anchor>8d6e4edf1a0a33af86e8a4bd6a7d1e14</anchor>
+      <anchor>a8d6e4edf1a0a33af86e8a4bd6a7d1e14</anchor>
       <arglist>(int signal, bool state)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>CreateSignalId</name>
       <anchorfile>classilolv_1_1_c_signal_bits_driver_base.html</anchorfile>
-      <anchor>b1bc18307229268c4fa988c1ed2fd584</anchor>
+      <anchor>ab1bc18307229268c4fa988c1ed2fd584</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetSignalState</name>
       <anchorfile>classilolv_1_1_c_signal_bits_driver_base.html</anchorfile>
-      <anchor>ed4939b01593d30aa031f592e3728e11</anchor>
+      <anchor>aed4939b01593d30aa031f592e3728e11</anchor>
       <arglist>(int signalId, int state)</arglist>
     </member>
   </compound>
@@ -7050,56 +7034,56 @@
       <type>CTracerDriverBase</type>
       <name>BaseClass</name>
       <anchorfile>classilolv_1_1_c_single_count_tracer_driver_base.html</anchorfile>
-      <anchor>936b5270021ffac84a6261930d781d73</anchor>
+      <anchor>a936b5270021ffac84a6261930d781d73</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CSingleCountTracerDriverBase</name>
       <anchorfile>classilolv_1_1_c_single_count_tracer_driver_base.html</anchorfile>
-      <anchor>c48f5d8ef802dfd50963fc151e9c2c81</anchor>
+      <anchor>ac48f5d8ef802dfd50963fc151e9c2c81</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetQueue</name>
       <anchorfile>classilolv_1_1_c_single_count_tracer_driver_base.html</anchorfile>
-      <anchor>601c42a93053550701a801cfe7c98e81</anchor>
+      <anchor>a601c42a93053550701a801cfe7c98e81</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetCounterQueuesCount</name>
       <anchorfile>classilolv_1_1_c_single_count_tracer_driver_base.html</anchorfile>
-      <anchor>f539190afd8821198c4e8c4c1e07dd77</anchor>
+      <anchor>af539190afd8821198c4e8c4c1e07dd77</anchor>
       <arglist>(int count)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InsertPositionToQueue</name>
       <anchorfile>classilolv_1_1_c_single_count_tracer_driver_base.html</anchorfile>
-      <anchor>720add00fb07efb9da2e5aa85dcc3fc9</anchor>
+      <anchor>a720add00fb07efb9da2e5aa85dcc3fc9</anchor>
       <arglist>(int queueIndex, I_DWORD counterPosition, void *userContext)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CalculateNextSinglePositionEvent</name>
       <anchorfile>classilolv_1_1_c_single_count_tracer_driver_base.html</anchorfile>
-      <anchor>54795eccf55538772189868417d8283c</anchor>
+      <anchor>a54795eccf55538772189868417d8283c</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>OnSinglePositionEvent</name>
       <anchorfile>classilolv_1_1_c_single_count_tracer_driver_base.html</anchorfile>
-      <anchor>c714d06efbebcd0d86a3d7f83809dc21</anchor>
+      <anchor>ac714d06efbebcd0d86a3d7f83809dc21</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
       <name>SetNextSinglePositionEvent</name>
       <anchorfile>classilolv_1_1_c_single_count_tracer_driver_base.html</anchorfile>
-      <anchor>41143c7a9178a9c13c5a890b8530b10a</anchor>
+      <anchor>a41143c7a9178a9c13c5a890b8530b10a</anchor>
       <arglist>(const I_DWORD *eventPositionPtr)=0</arglist>
     </member>
   </compound>
@@ -7120,55 +7104,55 @@
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classilolv_1_1_c_tracer_commands.html</anchorfile>
-      <anchor>11d7d957b197bdd2a081e2ec02e12924</anchor>
+      <anchor>a11d7d957b197bdd2a081e2ec02e12924</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_QUEUE_ERROR</name>
       <anchorfile>classilolv_1_1_c_tracer_commands.html</anchorfile>
-      <anchor>11d7d957b197bdd2a081e2ec02e12924b6ca30ddfe8c6fd74bd0f567d460a9e1</anchor>
+      <anchor>a11d7d957b197bdd2a081e2ec02e12924ab6ca30ddfe8c6fd74bd0f567d460a9e1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_OBJECT_UNEJECTED</name>
       <anchorfile>classilolv_1_1_c_tracer_commands.html</anchorfile>
-      <anchor>11d7d957b197bdd2a081e2ec02e12924a5afc7b592d3d94ac9aaeb5a7bd3e9b0</anchor>
+      <anchor>a11d7d957b197bdd2a081e2ec02e12924aa5afc7b592d3d94ac9aaeb5a7bd3e9b0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_OBJECT_EJECTED</name>
       <anchorfile>classilolv_1_1_c_tracer_commands.html</anchorfile>
-      <anchor>11d7d957b197bdd2a081e2ec02e1292408dfc59fd3f17418279baefe0f5cebda</anchor>
+      <anchor>a11d7d957b197bdd2a081e2ec02e12924a08dfc59fd3f17418279baefe0f5cebda</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>TracerMode</name>
       <anchorfile>classilolv_1_1_c_tracer_commands.html</anchorfile>
-      <anchor>8708fe4bcf1926b1434fa2fcf8e25f0a</anchor>
+      <anchor>a8708fe4bcf1926b1434fa2fcf8e25f0a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TM_DISABLED</name>
       <anchorfile>classilolv_1_1_c_tracer_commands.html</anchorfile>
-      <anchor>8708fe4bcf1926b1434fa2fcf8e25f0adc9178d074c9a34718d373c502319ae5</anchor>
+      <anchor>a8708fe4bcf1926b1434fa2fcf8e25f0aadc9178d074c9a34718d373c502319ae5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TM_MANUAL</name>
       <anchorfile>classilolv_1_1_c_tracer_commands.html</anchorfile>
-      <anchor>8708fe4bcf1926b1434fa2fcf8e25f0a2f14f979d2b732d2b09e9805199c842c</anchor>
+      <anchor>a8708fe4bcf1926b1434fa2fcf8e25f0aa2f14f979d2b732d2b09e9805199c842c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TM_AUTOMATIC</name>
       <anchorfile>classilolv_1_1_c_tracer_commands.html</anchorfile>
-      <anchor>8708fe4bcf1926b1434fa2fcf8e25f0a0fe6d1a7114cfe6f3a66a4ad3ecb182a</anchor>
+      <anchor>a8708fe4bcf1926b1434fa2fcf8e25f0aa0fe6d1a7114cfe6f3a66a4ad3ecb182a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TM_DIAGNOSTIC</name>
       <anchorfile>classilolv_1_1_c_tracer_commands.html</anchorfile>
-      <anchor>8708fe4bcf1926b1434fa2fcf8e25f0ac0e19e89a76ca7b5b6b3436d981cb1cc</anchor>
+      <anchor>a8708fe4bcf1926b1434fa2fcf8e25f0aac0e19e89a76ca7b5b6b3436d981cb1cc</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7179,35 +7163,35 @@
       <type>bool</type>
       <name>isEnabled</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_ejector_params.html</anchorfile>
-      <anchor>a39321d640423368e92e1da3f8d1fc0c</anchor>
+      <anchor>aa39321d640423368e92e1da3f8d1fc0c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>maxEjectorOnTime</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_ejector_params.html</anchorfile>
-      <anchor>6df752c090daed93cc211883849c726d</anchor>
+      <anchor>a6df752c090daed93cc211883849c726d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>position</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_ejector_params.html</anchorfile>
-      <anchor>2fec378703e6aa6d28fd81a17c4394e8</anchor>
+      <anchor>a2fec378703e6aa6d28fd81a17c4394e8</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>onDistance</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_ejector_params.html</anchorfile>
-      <anchor>690972e0f76cb641990ec22f6113444a</anchor>
+      <anchor>a690972e0f76cb641990ec22f6113444a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>reactionDelay</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_ejector_params.html</anchorfile>
-      <anchor>5cdcd62405629622b48e7282d4bbc1f1</anchor>
+      <anchor>a5cdcd62405629622b48e7282d4bbc1f1</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7218,7 +7202,7 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_get_line_info.html</anchorfile>
-      <anchor>f2cbd54397e1a0bffe502285c00372c45396ff2642b7ed4265c8e667c430132f</anchor>
+      <anchor>af2cbd54397e1a0bffe502285c00372c4a5396ff2642b7ed4265c8e667c430132f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7229,14 +7213,14 @@
       <type>I_DWORD</type>
       <name>linePos</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_get_line_info_1_1_result.html</anchorfile>
-      <anchor>a0865c3afa6bd5dd98174103acff3c92</anchor>
+      <anchor>aa0865c3afa6bd5dd98174103acff3c92</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>lastDetectedObjectIndex</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_get_line_info_1_1_result.html</anchorfile>
-      <anchor>a43c181f1201c28d7406b1d964a60bab</anchor>
+      <anchor>aa43c181f1201c28d7406b1d964a60bab</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7246,21 +7230,21 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_pop_id.html</anchorfile>
-      <anchor>e2ac375e60dc820228a0730aa08ee48f6c24d3d999b1d595bce29a66313f55f1</anchor>
+      <anchor>ae2ac375e60dc820228a0730aa08ee48fa6c24d3d999b1d595bce29a66313f55f1</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CInspectionUnitCommands::PopId::Result</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_pop_id.html</anchorfile>
-      <anchor>5ace84e7b4e1d7c82b5101c18f944daa</anchor>
+      <anchor>a5ace84e7b4e1d7c82b5101c18f944daa</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>unitIndex</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_pop_id.html</anchorfile>
-      <anchor>a9127022b2f5bf5ea19e9354f31e9a92</anchor>
+      <anchor>aa9127022b2f5bf5ea19e9354f31e9a92</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7270,28 +7254,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_ejector_params.html</anchorfile>
-      <anchor>cde1a5aa0af2ee5c081a0fa5471e528e1648eb92e139b7582d690a19dc24b504</anchor>
+      <anchor>acde1a5aa0af2ee5c081a0fa5471e528ea1648eb92e139b7582d690a19dc24b504</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_ejector_params.html</anchorfile>
-      <anchor>31642ca9f31c87dc3a4d357a4737da21</anchor>
+      <anchor>a31642ca9f31c87dc3a4d357a4737da21</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>ejectorIndex</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_ejector_params.html</anchorfile>
-      <anchor>17626c64a4f1fb4bca6b02b8fc58de5f</anchor>
+      <anchor>a17626c64a4f1fb4bca6b02b8fc58de5f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>EjectorParams</type>
       <name>ejector</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_ejector_params.html</anchorfile>
-      <anchor>63fb8b84b4e6a7a36db6240fb33d066f</anchor>
+      <anchor>a63fb8b84b4e6a7a36db6240fb33d066f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7301,28 +7285,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_light_barrier_params.html</anchorfile>
-      <anchor>4042071af8a07ef07fc474eeab948d370fa6e8f743430e170cede9dca659ceae</anchor>
+      <anchor>a4042071af8a07ef07fc474eeab948d37a0fa6e8f743430e170cede9dca659ceae</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_light_barrier_params.html</anchorfile>
-      <anchor>2c071100a0a80a9b2894bc0c651e9273</anchor>
+      <anchor>a2c071100a0a80a9b2894bc0c651e9273</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>barrierIndex</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_light_barrier_params.html</anchorfile>
-      <anchor>83dd8165446467978280a4c0e1efb2ca</anchor>
+      <anchor>a83dd8165446467978280a4c0e1efb2ca</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>offset</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_light_barrier_params.html</anchorfile>
-      <anchor>da34cd7a5b3a1c343b308e5706159651</anchor>
+      <anchor>ada34cd7a5b3a1c343b308e5706159651</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7333,7 +7317,7 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_mode.html</anchorfile>
-      <anchor>b4a382204f773762caba6d169cb4e689dcf0e27805fdb1660f52f82c000f1b6d</anchor>
+      <anchor>ab4a382204f773762caba6d169cb4e689adcf0e27805fdb1660f52f82c000f1b6d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7344,14 +7328,14 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_params.html</anchorfile>
-      <anchor>0b67cd04606e083be71ce51cd2303ecf175c9008e44106fc1ef87140f5619f97</anchor>
+      <anchor>a0b67cd04606e083be71ce51cd2303ecfa175c9008e44106fc1ef87140f5619f97</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_params.html</anchorfile>
-      <anchor>6f8e0b0db3d71b50b6c8ccfffa6e287d</anchor>
+      <anchor>a6f8e0b0db3d71b50b6c8ccfffa6e287d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7361,28 +7345,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_result.html</anchorfile>
-      <anchor>e55f0054c6ddfd70dd04039f7d53f91e010e0d3485694fdedd806497ee2fc8df</anchor>
+      <anchor>ae55f0054c6ddfd70dd04039f7d53f91ea010e0d3485694fdedd806497ee2fc8df</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CInspectionUnitCommands::SetResult::Result</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_result.html</anchorfile>
-      <anchor>3057f6feb57b57573110a26c86a8e495</anchor>
+      <anchor>a3057f6feb57b57573110a26c86a8e495</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>unitIndex</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_result.html</anchorfile>
-      <anchor>568d7e07482e1aeb6b94b787886ccf63</anchor>
+      <anchor>a568d7e07482e1aeb6b94b787886ccf63</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CInspectionUnitCommands::SetResult</type>
       <name>unit</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_result.html</anchorfile>
-      <anchor>dcf3f62228758fd031afba6fc9aebc89</anchor>
+      <anchor>adcf3f62228758fd031afba6fc9aebc89</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7392,28 +7376,28 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_unit_params.html</anchorfile>
-      <anchor>a8f87701188adcc18509bc1dd16e7e1fe614d4b4667882059723e184d0d0e434</anchor>
+      <anchor>aa8f87701188adcc18509bc1dd16e7e1fae614d4b4667882059723e184d0d0e434</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_unit_params.html</anchorfile>
-      <anchor>c233466483c5805be0f2246dc02db202</anchor>
+      <anchor>ac233466483c5805be0f2246dc02db202</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>unitIndex</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_unit_params.html</anchorfile>
-      <anchor>a88a54ade6e4dff074a2d11e4c3f5ad3</anchor>
+      <anchor>aa88a54ade6e4dff074a2d11e4c3f5ad3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CInspectionUnitCommands::SetParams</type>
       <name>unit</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_set_unit_params.html</anchorfile>
-      <anchor>f41d801cf3dba566d6ad580e33473ea3</anchor>
+      <anchor>af41d801cf3dba566d6ad580e33473ea3</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7424,21 +7408,21 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_single_trigger.html</anchorfile>
-      <anchor>dd458c2be8dc8c89e6840ffa80681b71c91172e53192cee52f9a9274963c6685</anchor>
+      <anchor>add458c2be8dc8c89e6840ffa80681b71ac91172e53192cee52f9a9274963c6685</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>unitIndex</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_single_trigger.html</anchorfile>
-      <anchor>ccaa5d686b07323a8bcf48e83e0f800a</anchor>
+      <anchor>accaa5d686b07323a8bcf48e83e0f800a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CInspectionUnitCommands::SingleTrigger</type>
       <name>unit</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_single_trigger.html</anchorfile>
-      <anchor>a1d6bd9ff71495b27d029a56f205187d</anchor>
+      <anchor>aa1d6bd9ff71495b27d029a56f205187d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7449,14 +7433,14 @@
       <type>bool</type>
       <name>isDone</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_single_trigger_1_1_result.html</anchorfile>
-      <anchor>e9f732a5b7f9eab0c221f7947ded24ee</anchor>
+      <anchor>ae9f732a5b7f9eab0c221f7947ded24ee</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>IDriver::NativeTimer</type>
       <name>nativeTimestamp</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_single_trigger_1_1_result.html</anchorfile>
-      <anchor>5ce76013659f5bd383c4ad2e74195645</anchor>
+      <anchor>a5ce76013659f5bd383c4ad2e74195645</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7466,63 +7450,63 @@
     <member kind="enumvalue">
       <name>Id</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_tracer_params.html</anchorfile>
-      <anchor>e3f5d1a97472836f7cc4c035c7683789a73b0f894c92e9aed91493ae914b8359</anchor>
+      <anchor>ae3f5d1a97472836f7cc4c035c7683789aa73b0f894c92e9aed91493ae914b8359</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>Result</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_tracer_params.html</anchorfile>
-      <anchor>01100e14f00321a952e3d7706e5176da</anchor>
+      <anchor>a01100e14f00321a952e3d7706e5176da</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>unitsCount</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_tracer_params.html</anchorfile>
-      <anchor>2395df3a8171f840d6a11887320ea2e1</anchor>
+      <anchor>a2395df3a8171f840d6a11887320ea2e1</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>ejectorsCount</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_tracer_params.html</anchorfile>
-      <anchor>16b0d73c4cfd945821e2c2d69015e974</anchor>
+      <anchor>a16b0d73c4cfd945821e2c2d69015e974</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>lightBarriersCount</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_tracer_params.html</anchorfile>
-      <anchor>17d411086d1edadba63c0437e0281439</anchor>
+      <anchor>a17d411086d1edadba63c0437e0281439</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>autonomeEjectorIndex</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_tracer_params.html</anchorfile>
-      <anchor>48f97c16f2e8d9ee6db41423febc5575</anchor>
+      <anchor>a48f97c16f2e8d9ee6db41423febc5575</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>minObjectSize</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_tracer_params.html</anchorfile>
-      <anchor>7bc7e6c1d2180c7bc42980ea130f06b3</anchor>
+      <anchor>a7bc7e6c1d2180c7bc42980ea130f06b3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>positionTolerance</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_tracer_params.html</anchorfile>
-      <anchor>c4035bcc800627a92e78ea5b4c6dbca3</anchor>
+      <anchor>ac4035bcc800627a92e78ea5b4c6dbca3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>ecLightBarrierIndex</name>
       <anchorfile>structilolv_1_1_c_tracer_commands_1_1_tracer_params.html</anchorfile>
-      <anchor>3471d8deeddf073daf5b980e1f73bc53</anchor>
+      <anchor>a3471d8deeddf073daf5b980e1f73bc53</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7537,268 +7521,268 @@
     <member kind="enumvalue">
       <name>MAX_UNITS_COUNT</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>f6ae7517560b95ed48544e28a0ecfc9f8dff50443ef5ac9fad0781031e8ccb9f</anchor>
+      <anchor>af6ae7517560b95ed48544e28a0ecfc9fa8dff50443ef5ac9fad0781031e8ccb9f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MAX_EJECTORS</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>f6ae7517560b95ed48544e28a0ecfc9f9a80daaa4fe99359d5ee4659523c364c</anchor>
+      <anchor>af6ae7517560b95ed48544e28a0ecfc9fa9a80daaa4fe99359d5ee4659523c364c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MAX_LIGHT_BARRIERS</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>f6ae7517560b95ed48544e28a0ecfc9f730dea26985ecf3609afb1e8b6ab3c89</anchor>
+      <anchor>af6ae7517560b95ed48544e28a0ecfc9fa730dea26985ecf3609afb1e8b6ab3c89</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CTracerDriverBase</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>2b92796269b79e6a7b8d9a144a8a07fe</anchor>
+      <anchor>a2b92796269b79e6a7b8d9a144a8a07fe</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>const CTracerCommands::TracerParams &amp;</type>
       <name>GetTracerParams</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>06c64b43107fefd19b5ef2ec8dbfe43f</anchor>
+      <anchor>a06c64b43107fefd19b5ef2ec8dbfe43f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetQueue</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>508a2ec52e4efca2de408542c0664cd8</anchor>
+      <anchor>a508a2ec52e4efca2de408542c0664cd8</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const CInspectionUnitCommands::UnitParams &amp;</type>
       <name>GetUnitParams</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>602add57773a407b10f553a01a377e66</anchor>
+      <anchor>a602add57773a407b10f553a01a377e66</anchor>
       <arglist>(int unitIndex) const </arglist>
     </member>
     <member kind="function">
       <type>const CTracerCommands::EjectorParams &amp;</type>
       <name>GetEjectorParams</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>fe61d62ea363808444886a7e695736a2</anchor>
+      <anchor>afe61d62ea363808444886a7e695736a2</anchor>
       <arglist>(int unitIndex) const </arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>OnPopInspectionCommand</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>0f591da5fa7eda5e109ba5a30202944d</anchor>
+      <anchor>a0f591da5fa7eda5e109ba5a30202944d</anchor>
       <arglist>(int unitIndex)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>OnSetResultCommand</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>0745618c106cb5283bec428d2a321f79</anchor>
+      <anchor>a0745618c106cb5283bec428d2a321f79</anchor>
       <arglist>(int unitIndex, int inspectionId, int ejectorIndex)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>ProcessPositionEvent</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>2dc2a069f2037760331113c5a8ec1338</anchor>
+      <anchor>a2dc2a069f2037760331113c5a8ec1338</anchor>
       <arglist>(int eventIndex, void *userContext)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnCommand</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>fe292b9f291386756c07e6113f8062a5</anchor>
+      <anchor>afe292b9f291386756c07e6113f8062a5</anchor>
       <arglist>(int commandCode, const void *commandBuffer, int commandBufferSize, void *responseBuffer, int responseBufferSize, int &amp;responseSize)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnHardwareInterrupt</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>15c2ee7efbcb3620154ee5ca6fddb5a8</anchor>
+      <anchor>a15c2ee7efbcb3620154ee5ca6fddb5a8</anchor>
       <arglist>(I_DWORD interruptFlags)</arglist>
     </member>
     <member kind="enumeration">
       <name>InspectionState</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>9b7a006b377e175a8c9cab232ec49861</anchor>
+      <anchor>a9b7a006b377e175a8c9cab232ec49861</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>IS_INIT</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>9b7a006b377e175a8c9cab232ec498615712aea7a0fb717f7ea3126feddeb582</anchor>
+      <anchor>a9b7a006b377e175a8c9cab232ec49861a5712aea7a0fb717f7ea3126feddeb582</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>IS_UNTRIGGERED</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>9b7a006b377e175a8c9cab232ec498611e400d5f232022a3bedd2baca2e0d1e7</anchor>
+      <anchor>a9b7a006b377e175a8c9cab232ec49861a1e400d5f232022a3bedd2baca2e0d1e7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>IS_TRIGGERED</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>9b7a006b377e175a8c9cab232ec49861412175e1cd7e9e158f9d75502764a1e1</anchor>
+      <anchor>a9b7a006b377e175a8c9cab232ec49861a412175e1cd7e9e158f9d75502764a1e1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>IS_INSPECTION</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>9b7a006b377e175a8c9cab232ec4986141351436db66e74b004bc35c37d7526b</anchor>
+      <anchor>a9b7a006b377e175a8c9cab232ec49861a41351436db66e74b004bc35c37d7526b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>IS_RESULT</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>9b7a006b377e175a8c9cab232ec498611a0b4f36c16e30cc95bbf908487cdc88</anchor>
+      <anchor>a9b7a006b377e175a8c9cab232ec49861a1a0b4f36c16e30cc95bbf908487cdc88</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>ObjectState</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>3cf7c6408529b1f0d1a4fcd732c7a455</anchor>
+      <anchor>a3cf7c6408529b1f0d1a4fcd732c7a455</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>OS_INIT</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>3cf7c6408529b1f0d1a4fcd732c7a455752d6d90b61527df1a25bc691015dcfc</anchor>
+      <anchor>a3cf7c6408529b1f0d1a4fcd732c7a455a752d6d90b61527df1a25bc691015dcfc</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>OS_EJECTION_DECIDED</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>3cf7c6408529b1f0d1a4fcd732c7a455d2fcc2ba48d750d89a8ede8d2f5dcd1c</anchor>
+      <anchor>a3cf7c6408529b1f0d1a4fcd732c7a455ad2fcc2ba48d750d89a8ede8d2f5dcd1c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>OS_CONTROLLED</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>3cf7c6408529b1f0d1a4fcd732c7a455fbebaa05063e61fce89c96f69aeb3540</anchor>
+      <anchor>a3cf7c6408529b1f0d1a4fcd732c7a455afbebaa05063e61fce89c96f69aeb3540</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>int</type>
       <name>PushNewObject</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>1517252d913763c27c69dad0b4258ba9</anchor>
+      <anchor>a1517252d913763c27c69dad0b4258ba9</anchor>
       <arglist>(I_DWORD basePosition)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>OnLightBarrierEdge</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>76ebf1e7dc3cd3f066462ecbdfddc4ed</anchor>
+      <anchor>a76ebf1e7dc3cd3f066462ecbdfddc4ed</anchor>
       <arglist>(I_DWORD basePosition, int unitIndex)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>OnDecisionEvent</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>b7b5ff7ce6a93915bb522ffbb850cf02</anchor>
+      <anchor>ab7b5ff7ce6a93915bb522ffbb850cf02</anchor>
       <arglist>(int inspectionIndex)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>OnEjectionControlEvent</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>f7c2f61e731cd3b3259fd177887d13d3</anchor>
+      <anchor>af7c2f61e731cd3b3259fd177887d13d3</anchor>
       <arglist>(int inspectionIndex)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>OnPopFifoEvent</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>11c1bceb7a9c3c76163531efb744c73b</anchor>
+      <anchor>a11c1bceb7a9c3c76163531efb744c73b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>OnTriggerEvent</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>2943191fa866977d75d230bde7270230</anchor>
+      <anchor>a2943191fa866977d75d230bde7270230</anchor>
       <arglist>(int unitIndex, int inspectionIndex)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>OnEjectorOnEvent</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>323d4dae1139e3b340fe50053e3cf549</anchor>
+      <anchor>a323d4dae1139e3b340fe50053e3cf549</anchor>
       <arglist>(int ejectorIndex)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>OnEjectorOffEvent</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>f996a442c866667bec96678b961598cd</anchor>
+      <anchor>af996a442c866667bec96678b961598cd</anchor>
       <arglist>(int ejectorIndex)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>OnSingleTriggerCommand</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>0a72d976c8cde1a736c167f049a0f036</anchor>
+      <anchor>a0a72d976c8cde1a736c167f049a0f036</anchor>
       <arglist>(const CTracerCommands::SingleTrigger &amp;command, CTracerCommands::SingleTrigger::Result &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual I_DWORD</type>
       <name>GetLinePosition</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>8ffc616aebc854f47c4df05b024d37b4</anchor>
+      <anchor>a8ffc616aebc854f47c4df05b024d37b4</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
       <name>SetCounterQueuesCount</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>c0815127810a726df0fb9cedfcfc3c84</anchor>
+      <anchor>ac0815127810a726df0fb9cedfcfc3c84</anchor>
       <arglist>(int count)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
       <name>InsertPositionToQueue</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>e9a5bba5deceec79bdf69b7ee4d21e41</anchor>
+      <anchor>ae9a5bba5deceec79bdf69b7ee4d21e41</anchor>
       <arglist>(int queueIndex, I_DWORD counterPosition, void *userContext)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
       <name>GetLightBarrierBit</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>9214a929ff848d0fde3d1aa2f242fbce</anchor>
+      <anchor>a9214a929ff848d0fde3d1aa2f242fbce</anchor>
       <arglist>(int lightBarrierIndex) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
       <name>SetTriggerBit</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>d9b422ec73a64ec597cf7aea39df972b</anchor>
+      <anchor>ad9b422ec73a64ec597cf7aea39df972b</anchor>
       <arglist>(int triggerIndex, bool state)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
       <name>SetEjectorBit</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>cebb389e6d5664d6c9cee5d7662adf44</anchor>
+      <anchor>acebb389e6d5664d6c9cee5d7662adf44</anchor>
       <arglist>(int ejectorIndex, bool state)=0</arglist>
     </member>
     <member kind="function" protection="protected" static="yes">
       <type>static int</type>
       <name>CalcNextFifoIndex</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>f6877300fa4e5d5d875a69fd354a87e8</anchor>
+      <anchor>af6877300fa4e5d5d875a69fd354a87e8</anchor>
       <arglist>(int prevIndex)</arglist>
     </member>
     <member kind="function" protection="protected" static="yes">
       <type>static int</type>
       <name>CalcPrevFifoIndex</name>
       <anchorfile>classilolv_1_1_c_tracer_driver_base.html</anchorfile>
-      <anchor>c691b4e8408c414349a294dc204ac123</anchor>
+      <anchor>ac691b4e8408c414349a294dc204ac123</anchor>
       <arglist>(int nextIndex)</arglist>
     </member>
   </compound>
@@ -7810,14 +7794,14 @@
       <type>I_SQWORD</type>
       <name>ejectionOnTime</name>
       <anchorfile>structilolv_1_1_c_tracer_driver_base_1_1_ejector_info.html</anchorfile>
-      <anchor>108af60c1b024d5ac2ac82da30523b17</anchor>
+      <anchor>a108af60c1b024d5ac2ac82da30523b17</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>overloadCounter</name>
       <anchorfile>structilolv_1_1_c_tracer_driver_base_1_1_ejector_info.html</anchorfile>
-      <anchor>7e3fd1c3a2735089fc94d1c27b7b070a</anchor>
+      <anchor>a7e3fd1c3a2735089fc94d1c27b7b070a</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7828,21 +7812,21 @@
       <type>InspectionState</type>
       <name>inspectionState</name>
       <anchorfile>structilolv_1_1_c_tracer_driver_base_1_1_inspection_info.html</anchorfile>
-      <anchor>b6f18aff7b3f7ce80cad4a048fa0398e</anchor>
+      <anchor>ab6f18aff7b3f7ce80cad4a048fa0398e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>ejectorIndex</name>
       <anchorfile>structilolv_1_1_c_tracer_driver_base_1_1_inspection_info.html</anchorfile>
-      <anchor>a150568feea355b055ecd1fddf8e94de</anchor>
+      <anchor>aa150568feea355b055ecd1fddf8e94de</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>NativeTimer</type>
       <name>nativeTimeStamp</name>
       <anchorfile>structilolv_1_1_c_tracer_driver_base_1_1_inspection_info.html</anchorfile>
-      <anchor>89eabfc8d5970e255aa28eae155b03df</anchor>
+      <anchor>a89eabfc8d5970e255aa28eae155b03df</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7854,28 +7838,28 @@
       <type>I_SQWORD</type>
       <name>triggerOnTime</name>
       <anchorfile>structilolv_1_1_c_tracer_driver_base_1_1_inspection_unit_element.html</anchorfile>
-      <anchor>379128a7df13ef3fd383809f0bbd6818</anchor>
+      <anchor>a379128a7df13ef3fd383809f0bbd6818</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>bool</type>
       <name>isTriggerBitSet</name>
       <anchorfile>structilolv_1_1_c_tracer_driver_base_1_1_inspection_unit_element.html</anchorfile>
-      <anchor>682caf8b39f405d421c5c966007c9442</anchor>
+      <anchor>a682caf8b39f405d421c5c966007c9442</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>edgeOnPosition</name>
       <anchorfile>structilolv_1_1_c_tracer_driver_base_1_1_inspection_unit_element.html</anchorfile>
-      <anchor>f41aa1c961bbe81098b04cb8c2bb2edc</anchor>
+      <anchor>af41aa1c961bbe81098b04cb8c2bb2edc</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>bool</type>
       <name>lastBarrierState</name>
       <anchorfile>structilolv_1_1_c_tracer_driver_base_1_1_inspection_unit_element.html</anchorfile>
-      <anchor>058e8c14e93866edbaaf97e0fc7fb294</anchor>
+      <anchor>a058e8c14e93866edbaaf97e0fc7fb294</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7886,28 +7870,28 @@
       <type>ObjectState</type>
       <name>objectState</name>
       <anchorfile>structilolv_1_1_c_tracer_driver_base_1_1_object_info.html</anchorfile>
-      <anchor>2c88c06211cfd80d75ff69bda53c7ae7</anchor>
+      <anchor>a2c88c06211cfd80d75ff69bda53c7ae7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>InspectionInfo</type>
       <name>units</name>
       <anchorfile>structilolv_1_1_c_tracer_driver_base_1_1_object_info.html</anchorfile>
-      <anchor>94e3509ab0e72f646780ec6b9bb75456</anchor>
+      <anchor>a94e3509ab0e72f646780ec6b9bb75456</anchor>
       <arglist>[MAX_UNITS_COUNT]</arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>objectIndex</name>
       <anchorfile>structilolv_1_1_c_tracer_driver_base_1_1_object_info.html</anchorfile>
-      <anchor>836842381224ba8ea416b188cfb3dcfa</anchor>
+      <anchor>a836842381224ba8ea416b188cfb3dcfa</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>decidedEjectorIndex</name>
       <anchorfile>structilolv_1_1_c_tracer_driver_base_1_1_object_info.html</anchorfile>
-      <anchor>37ec72e268097fcbb39ab6f2d4c6b34f</anchor>
+      <anchor>a37ec72e268097fcbb39ab6f2d4c6b34f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7919,7 +7903,7 @@
       <type>virtual bool</type>
       <name>CallCommand</name>
       <anchorfile>classilolv_1_1_i_command_caller.html</anchorfile>
-      <anchor>344a81cc412797c3caaf8ba6e9833aec</anchor>
+      <anchor>a344a81cc412797c3caaf8ba6e9833aec</anchor>
       <arglist>(int commandCode, const void *commandBuffer, int commandBufferSize, void *responseBuffer, int responseBufferSize, int &amp;responseSize)=0</arglist>
     </member>
   </compound>
@@ -7931,14 +7915,14 @@
       <type>virtual I_DWORD</type>
       <name>GetInputBits</name>
       <anchorfile>classilolv_1_1_i_digital_io.html</anchorfile>
-      <anchor>f608eea304b08b49b3532bbcd6fe5257</anchor>
+      <anchor>af608eea304b08b49b3532bbcd6fe5257</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetOutputBits</name>
       <anchorfile>classilolv_1_1_i_digital_io.html</anchorfile>
-      <anchor>b756219ac1b50927452344dd8959b28d</anchor>
+      <anchor>ab756219ac1b50927452344dd8959b28d</anchor>
       <arglist>(I_DWORD value, I_DWORD mask)=0</arglist>
     </member>
   </compound>
@@ -7949,118 +7933,118 @@
     <member kind="enumeration">
       <name>SignalState</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>9e05044873a1b48be0ee31d96624e1b4</anchor>
+      <anchor>a9e05044873a1b48be0ee31d96624e1b4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SS_OK</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>9e05044873a1b48be0ee31d96624e1b4c7f500853d16a2d314be02f7a30359f3</anchor>
+      <anchor>a9e05044873a1b48be0ee31d96624e1b4ac7f500853d16a2d314be02f7a30359f3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SS_WARNING</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>9e05044873a1b48be0ee31d96624e1b465b76fd47b3771a4cbe1d0ebe305351b</anchor>
+      <anchor>a9e05044873a1b48be0ee31d96624e1b4a65b76fd47b3771a4cbe1d0ebe305351b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SS_ERROR</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>9e05044873a1b48be0ee31d96624e1b4be6b7504fa2f3bf03c8d8994c5efbd23</anchor>
+      <anchor>a9e05044873a1b48be0ee31d96624e1b4abe6b7504fa2f3bf03c8d8994c5efbd23</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SS_CRITICAL</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>9e05044873a1b48be0ee31d96624e1b468aac0370a2b9d5610fa35acd6475fa5</anchor>
+      <anchor>a9e05044873a1b48be0ee31d96624e1b4a68aac0370a2b9d5610fa35acd6475fa5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>InterruptFlags</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>a2a1e8baf91043a106e21d116f7c0d2b</anchor>
+      <anchor>aa2a1e8baf91043a106e21d116f7c0d2b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>IF_DIGITAL_INPUT</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>a2a1e8baf91043a106e21d116f7c0d2bd785bd3cc707e0699064e7aa3e3bb0c5</anchor>
+      <anchor>aa2a1e8baf91043a106e21d116f7c0d2bad785bd3cc707e0699064e7aa3e3bb0c5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>IF_ENCODER_INTERRUPT</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>a2a1e8baf91043a106e21d116f7c0d2b6d97f1f527e4512312e5ea4cd27a502c</anchor>
+      <anchor>aa2a1e8baf91043a106e21d116f7c0d2ba6d97f1f527e4512312e5ea4cd27a502c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>IF_PULSE_TIMER</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>a2a1e8baf91043a106e21d116f7c0d2be6d203ec6131f1c34de09eb266b8d4d9</anchor>
+      <anchor>aa2a1e8baf91043a106e21d116f7c0d2bae6d203ec6131f1c34de09eb266b8d4d9</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>I_SQWORD</type>
       <name>NativeTimer</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>0f3ce4e9cfe1779704dd605cb6d34a24</anchor>
+      <anchor>a0f3ce4e9cfe1779704dd605cb6d34a24</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
       <name>~IDriver</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>ad274323bfe3d8d410f58e6cda3923b5</anchor>
+      <anchor>aad274323bfe3d8d410f58e6cda3923b5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>OnCommand</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>b54c3793666dda930056799ebf9465d9</anchor>
+      <anchor>ab54c3793666dda930056799ebf9465d9</anchor>
       <arglist>(int commandCode, const void *commandBuffer, int commandBufferSize, void *responseBuffer, int responseBufferSize, int &amp;responseSize)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>OnHardwareInterrupt</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>e631cbecc26c01f38e221386f5dbf29d</anchor>
+      <anchor>ae631cbecc26c01f38e221386f5dbf29d</anchor>
       <arglist>(I_DWORD interruptFlags)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual I_SQWORD</type>
       <name>GetCurrentTimer</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>8d7ac777bf18d202797bc8bd9826cc74</anchor>
+      <anchor>a8d7ac777bf18d202797bc8bd9826cc74</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual NativeTimer</type>
       <name>GetCurrentNativeTimer</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>4502a403c549ef698600fed435339862</anchor>
+      <anchor>a4502a403c549ef698600fed435339862</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
       <name>AppendMessage</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>b9a2dbc50c88c032ab9237c6f15e24b9</anchor>
+      <anchor>ab9a2dbc50c88c032ab9237c6f15e24b9</anchor>
       <arglist>(int category, int id, const char *text, bool doSend=true)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual int</type>
       <name>CreateSignalId</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>0718202dfc52c5f98eb21c72ace16bea</anchor>
+      <anchor>a0718202dfc52c5f98eb21c72ace16bea</anchor>
       <arglist>()=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
       <name>SetSignalState</name>
       <anchorfile>classilolv_1_1_i_driver.html</anchorfile>
-      <anchor>58e5036dcd602b75bb1ce5266c0c2541</anchor>
+      <anchor>a58e5036dcd602b75bb1ce5266c0c2541</anchor>
       <arglist>(int signalId, int state)=0</arglist>
     </member>
   </compound>
@@ -8073,118 +8057,118 @@
     <member kind="enumvalue">
       <name>MAX_SIZE</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>047c7b535d605ee1a2e2f10805b9bb33a3f5b6dac66f2a4496acecdb363d35e4</anchor>
+      <anchor>a047c7b535d605ee1a2e2f10805b9bb33aa3f5b6dac66f2a4496acecdb363d35e4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>INDEX_MASK</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>047c7b535d605ee1a2e2f10805b9bb331179cea4b14e90f9593d30f513c7ea8b</anchor>
+      <anchor>a047c7b535d605ee1a2e2f10805b9bb33a1179cea4b14e90f9593d30f513c7ea8b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>IsEmpty</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>d14069742ce5bcf75546cb6643964b5e</anchor>
+      <anchor>ad14069742ce5bcf75546cb6643964b5e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>Reset</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>cdf3a17e5e88094e596621e126dbe834</anchor>
+      <anchor>acdf3a17e5e88094e596621e126dbe834</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>Insert</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>cfbd60104dedd4f12b4e97ef547c44b1</anchor>
+      <anchor>acfbd60104dedd4f12b4e97ef547c44b1</anchor>
       <arglist>(I_DWORD position, const Object *objectPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>FindByPosition</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>ec6a8feef033335152f528b03d691e93</anchor>
+      <anchor>aec6a8feef033335152f528b03d691e93</anchor>
       <arglist>(I_DWORD position, int tolerance) const </arglist>
     </member>
     <member kind="function">
       <type>I_DWORD</type>
       <name>GetPositionAt</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>0fb9d30032c389d2f2d18b29c1aaf8f9</anchor>
+      <anchor>a0fb9d30032c389d2f2d18b29c1aaf8f9</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function">
       <type>const Object &amp;</type>
       <name>GetObjectAt</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>aa2188e3d847107ee9ce57e7effd5d76</anchor>
+      <anchor>aaa2188e3d847107ee9ce57e7effd5d76</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function">
       <type>Object &amp;</type>
       <name>GetObjectAt</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>26d376efdd0abc1861442ae8fb5a5ce5</anchor>
+      <anchor>a26d376efdd0abc1861442ae8fb5a5ce5</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="function">
       <type>I_DWORD</type>
       <name>GetBackPosition</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>6b0958b8b108c56983787e7ab7f3eea0</anchor>
+      <anchor>a6b0958b8b108c56983787e7ab7f3eea0</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>const Object &amp;</type>
       <name>GetBackObject</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>7a9db622fe1e48baf087356b1c1d2528</anchor>
+      <anchor>a7a9db622fe1e48baf087356b1c1d2528</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>Object &amp;</type>
       <name>GetBackObject</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>be15fd6d5ae80ec409523f813074a2e5</anchor>
+      <anchor>abe15fd6d5ae80ec409523f813074a2e5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>GetBackIndex</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>762c86c004c807e0045912b70d784592</anchor>
+      <anchor>a762c86c004c807e0045912b70d784592</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>GetNextFrontIndex</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>f1aeb1cc13306d531b7806281fa6c23b</anchor>
+      <anchor>af1aeb1cc13306d531b7806281fa6c23b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>PopBack</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>83c2d7814ad775634a45e5d27ab2f44a</anchor>
+      <anchor>a83c2d7814ad775634a45e5d27ab2f44a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static int</type>
       <name>GetPrevIndex</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>5fa7822b6a8e0875ec97189a60d6f6a6</anchor>
+      <anchor>a5fa7822b6a8e0875ec97189a60d6f6a6</anchor>
       <arglist>(int fifoIndex)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static int</type>
       <name>GetNextIndex</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue.html</anchorfile>
-      <anchor>672aba82c3811b89263ee8e528a28948</anchor>
+      <anchor>a672aba82c3811b89263ee8e528a28948</anchor>
       <arglist>(int fifoIndex)</arglist>
     </member>
   </compound>
@@ -8195,14 +8179,14 @@
       <type>I_DWORD</type>
       <name>position</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue_1_1_element.html</anchorfile>
-      <anchor>2f5c39b49e821c75db2afeeba65fa6e8</anchor>
+      <anchor>a2f5c39b49e821c75db2afeeba65fa6e8</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>Object</type>
       <name>object</name>
       <anchorfile>structilolv_1_1_t_ordered_positions_queue_1_1_element.html</anchorfile>
-      <anchor>6f8ea508ec2d775a0be2a981f3be1428</anchor>
+      <anchor>a6f8ea508ec2d775a0be2a981f3be1428</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -8222,21 +8206,21 @@
       <type></type>
       <name>CMilEngine</name>
       <anchorfile>classimil_1_1_c_mil_engine.html</anchorfile>
-      <anchor>d14da5248edd79525b1d8d2dc5300051</anchor>
+      <anchor>ad14da5248edd79525b1d8d2dc5300051</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>~CMilEngine</name>
       <anchorfile>classimil_1_1_c_mil_engine.html</anchorfile>
-      <anchor>2eb404b80695cdd40f57911a3fc20865</anchor>
+      <anchor>a2eb404b80695cdd40f57911a3fc20865</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>MIL_ID</type>
       <name>GetSystemId</name>
       <anchorfile>classimil_1_1_c_mil_engine.html</anchorfile>
-      <anchor>22b6a4f3fe3ade87a2c83c7d8cacda84</anchor>
+      <anchor>a22b6a4f3fe3ade87a2c83c7d8cacda84</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -8248,70 +8232,70 @@
       <type></type>
       <name>CMilSearchModel</name>
       <anchorfile>classimil_1_1_c_mil_search_model.html</anchorfile>
-      <anchor>cd1b8daae444db3d2c159676d8a77521</anchor>
+      <anchor>acd1b8daae444db3d2c159676d8a77521</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>~CMilSearchModel</name>
       <anchorfile>classimil_1_1_c_mil_search_model.html</anchorfile>
-      <anchor>83df37a3692c4030d7a1d8ceac03f6e1</anchor>
+      <anchor>a83df37a3692c4030d7a1d8ceac03f6e1</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>ReleaseMilContext</name>
       <anchorfile>classimil_1_1_c_mil_search_model.html</anchorfile>
-      <anchor>508580b073322d18dacac85805cd4b16</anchor>
+      <anchor>a508580b073322d18dacac85805cd4b16</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>MIL_ID</type>
       <name>GetContextId</name>
       <anchorfile>classimil_1_1_c_mil_search_model.html</anchorfile>
-      <anchor>06e0f463f0a3bf6a31f33f9c1410c3fd</anchor>
+      <anchor>a06e0f463f0a3bf6a31f33f9c1410c3fd</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>EnsurePreprocessing</name>
       <anchorfile>classimil_1_1_c_mil_search_model.html</anchorfile>
-      <anchor>c25f3f28c1f6bbe7258c16770aa54c78</anchor>
+      <anchor>ac25f3f28c1f6bbe7258c16770aa54c78</anchor>
       <arglist>(const imil::CMilSearchParams &amp;params, bool preprocess=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsModelValid</name>
       <anchorfile>classimil_1_1_c_mil_search_model.html</anchorfile>
-      <anchor>ae3e2ea3b0b6cc95789eb8ae54fc16a0</anchor>
+      <anchor>aae3e2ea3b0b6cc95789eb8ae54fc16a0</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetModel</name>
       <anchorfile>classimil_1_1_c_mil_search_model.html</anchorfile>
-      <anchor>2e684eadf263dad7dcec39c0e3109e63</anchor>
+      <anchor>a2e684eadf263dad7dcec39c0e3109e63</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetImage</name>
       <anchorfile>classimil_1_1_c_mil_search_model.html</anchorfile>
-      <anchor>726b2b11a2f30f4794f5e26cac46b3fc</anchor>
+      <anchor>a726b2b11a2f30f4794f5e26cac46b3fc</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>CreateFromImage</name>
       <anchorfile>classimil_1_1_c_mil_search_model.html</anchorfile>
-      <anchor>38a16ff58ebe785fe20cb954ab2a3030</anchor>
+      <anchor>a38a16ff58ebe785fe20cb954ab2a3030</anchor>
       <arglist>(const iimg::IBitmap &amp;modelImage, const iipr::ISearchParams *params)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classimil_1_1_c_mil_search_model.html</anchorfile>
-      <anchor>7a92819692dc319966b6caa56200fb2c</anchor>
+      <anchor>a7a92819692dc319966b6caa56200fb2c</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -8322,401 +8306,401 @@
     <member kind="enumeration">
       <name>Speed</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e928c53c0fd481d4521d7423524eb168</anchor>
+      <anchor>ae928c53c0fd481d4521d7423524eb168</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>LowSpeed</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e928c53c0fd481d4521d7423524eb1688ac71ff7df7b9a80b0f7c8dfa12f73c6</anchor>
+      <anchor>ae928c53c0fd481d4521d7423524eb168a8ac71ff7df7b9a80b0f7c8dfa12f73c6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MediumSpeed</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e928c53c0fd481d4521d7423524eb1683b6708e79234b2e39366a96876f7de9f</anchor>
+      <anchor>ae928c53c0fd481d4521d7423524eb168a3b6708e79234b2e39366a96876f7de9f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>HighSpeed</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e928c53c0fd481d4521d7423524eb16816c158c846597cbe306afd1c79ec7b79</anchor>
+      <anchor>ae928c53c0fd481d4521d7423524eb168a16c158c846597cbe306afd1c79ec7b79</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>VeryHighSpeed</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e928c53c0fd481d4521d7423524eb16849c1a04b3e8edb6b49c8237ec05f9348</anchor>
+      <anchor>ae928c53c0fd481d4521d7423524eb168a49c1a04b3e8edb6b49c8237ec05f9348</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>Accuracy</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>dd675ee46c125cdf235b5ec4c8be5ab6</anchor>
+      <anchor>add675ee46c125cdf235b5ec4c8be5ab6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MediumAccuracy</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>dd675ee46c125cdf235b5ec4c8be5ab6db947bfe85aa3e8236948a631f19a180</anchor>
+      <anchor>add675ee46c125cdf235b5ec4c8be5ab6adb947bfe85aa3e8236948a631f19a180</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>HighAccuracy</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>dd675ee46c125cdf235b5ec4c8be5ab68c7ce622713846cb88bd5d64d73195cc</anchor>
+      <anchor>add675ee46c125cdf235b5ec4c8be5ab6a8c7ce622713846cb88bd5d64d73195cc</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>DetailLevel</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e76dc8c8586d4611dcc7090963b6ae80</anchor>
+      <anchor>ae76dc8c8586d4611dcc7090963b6ae80</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MediumLevel</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e76dc8c8586d4611dcc7090963b6ae80d1cf36ec16436133f0d8c071eeba4455</anchor>
+      <anchor>ae76dc8c8586d4611dcc7090963b6ae80ad1cf36ec16436133f0d8c071eeba4455</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>HighLevel</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e76dc8c8586d4611dcc7090963b6ae80173bf1d622d8c991aff4d6d45ecce834</anchor>
+      <anchor>ae76dc8c8586d4611dcc7090963b6ae80a173bf1d622d8c991aff4d6d45ecce834</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>VeryHighLevel</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e76dc8c8586d4611dcc7090963b6ae80f20d58433f3329a5655464e310aefd6d</anchor>
+      <anchor>ae76dc8c8586d4611dcc7090963b6ae80af20d58433f3329a5655464e310aefd6d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>Polarity</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e70c1eabb18b7c5477f795725ada7eb7</anchor>
+      <anchor>ae70c1eabb18b7c5477f795725ada7eb7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>AnyPolarity</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e70c1eabb18b7c5477f795725ada7eb7ef6cc661b7c62a8b38df59e2979f67ed</anchor>
+      <anchor>ae70c1eabb18b7c5477f795725ada7eb7aef6cc661b7c62a8b38df59e2979f67ed</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SamePolarity</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e70c1eabb18b7c5477f795725ada7eb7d2a15cf92777bab4a6d35d9532a82909</anchor>
+      <anchor>ae70c1eabb18b7c5477f795725ada7eb7ad2a15cf92777bab4a6d35d9532a82909</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>ReversePolarity</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e70c1eabb18b7c5477f795725ada7eb7bfe482698453cfcd303014a97ab314ee</anchor>
+      <anchor>ae70c1eabb18b7c5477f795725ada7eb7abfe482698453cfcd303014a97ab314ee</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SameOrReversePolarity</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e70c1eabb18b7c5477f795725ada7eb7d5e57de610b7257599422d0e7596f9eb</anchor>
+      <anchor>ae70c1eabb18b7c5477f795725ada7eb7ad5e57de610b7257599422d0e7596f9eb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>FilterType</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e62d7eb346e3abb5eaf3638f4e953c25</anchor>
+      <anchor>ae62d7eb346e3abb5eaf3638f4e953c25</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>RecursiveFilter</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e62d7eb346e3abb5eaf3638f4e953c25e170279c0785a31fa28ee2ca2df63bce</anchor>
+      <anchor>ae62d7eb346e3abb5eaf3638f4e953c25ae170279c0785a31fa28ee2ca2df63bce</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>NonRecursiveFilter</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e62d7eb346e3abb5eaf3638f4e953c258c78db5575d9cf2eedbb95897375c867</anchor>
+      <anchor>ae62d7eb346e3abb5eaf3638f4e953c25a8c78db5575d9cf2eedbb95897375c867</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>iipr::CSearchParams</type>
       <name>BaseClass</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>2dd3daaf88aaa2fadde7749679628372</anchor>
+      <anchor>a2dd3daaf88aaa2fadde7749679628372</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CMilSearchParams</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>95aa13ac59b937df9f190ef8862ab9fd</anchor>
+      <anchor>a95aa13ac59b937df9f190ef8862ab9fd</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetTimeout</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>1d5dcac61c812099841e40af066f7c38</anchor>
+      <anchor>a1d5dcac61c812099841e40af066f7c38</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetTimeout</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>63d0e38bc49c2da6040ff96eb78d8edf</anchor>
+      <anchor>a63d0e38bc49c2da6040ff96eb78d8edf</anchor>
       <arglist>(double timeout)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::CRange &amp;</type>
       <name>GetDownsamplingRange</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>b4a0d2481dcde6ecc8d5cca7ba4ee411</anchor>
+      <anchor>ab4a0d2481dcde6ecc8d5cca7ba4ee411</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetDownsamplingRange</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>bc028f59177e0bffae18b860c4b4e369</anchor>
+      <anchor>abc028f59177e0bffae18b860c4b4e369</anchor>
       <arglist>(const istd::CRange &amp;downsamplingRange)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSpeed</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>dbc465e93193cf8d9c3aa2d50bc5f557</anchor>
+      <anchor>adbc465e93193cf8d9c3aa2d50bc5f557</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetSpeed</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>4ea9a38fa1fb197eb0bc65ae53144e6e</anchor>
+      <anchor>a4ea9a38fa1fb197eb0bc65ae53144e6e</anchor>
       <arglist>(int searchSpeed)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetAccuracy</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>50396423025966f3d918a9cfbe961819</anchor>
+      <anchor>a50396423025966f3d918a9cfbe961819</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetAccuracy</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>47d3a6a4334036ce900e00f954d19b88</anchor>
+      <anchor>a47d3a6a4334036ce900e00f954d19b88</anchor>
       <arglist>(int accuracy)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetDetailLevel</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>0627398d903591f6cd50e9bcb74f9f6f</anchor>
+      <anchor>a0627398d903591f6cd50e9bcb74f9f6f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetDetailLevel</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>402259e82448dfcd9f22c4f3cf10f54c</anchor>
+      <anchor>a402259e82448dfcd9f22c4f3cf10f54c</anchor>
       <arglist>(int detailLevel)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetPolarity</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>f69ad464cb941777e6bef5f451063b93</anchor>
+      <anchor>af69ad464cb941777e6bef5f451063b93</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetPolarity</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>617ae5934109d4441e78a90b5e3e360f</anchor>
+      <anchor>a617ae5934109d4441e78a90b5e3e360f</anchor>
       <arglist>(int polarity)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetAcceptanceTarget</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>c7af434f2130e404a8afcc48ab1c36ba</anchor>
+      <anchor>ac7af434f2130e404a8afcc48ab1c36ba</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetAcceptanceTarget</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>72a279b557ab502e175216008adfcfc1</anchor>
+      <anchor>a72a279b557ab502e175216008adfcfc1</anchor>
       <arglist>(int acceptanceTarget)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetCertainty</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>5b56a1b6079551b20c97ce2e7fe300e2</anchor>
+      <anchor>a5b56a1b6079551b20c97ce2e7fe300e2</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetCertainty</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>f7eca9be5e83a6d1c75c9be00382c2a5</anchor>
+      <anchor>af7eca9be5e83a6d1c75c9be00382c2a5</anchor>
       <arglist>(int certainty)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetCertaintyTarget</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>45bd6995bc50c1fe825448ccd8304b06</anchor>
+      <anchor>a45bd6995bc50c1fe825448ccd8304b06</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetCertaintyTarget</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>366da5116e5e0161a34e2fd5cc41e028</anchor>
+      <anchor>a366da5116e5e0161a34e2fd5cc41e028</anchor>
       <arglist>(int certaintyTarget)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetFitErrorWeight</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>6266c2ca02c1f04e23826a83dd71290b</anchor>
+      <anchor>a6266c2ca02c1f04e23826a83dd71290b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetFitErrorWeight</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>555803af5479c8a6480456d959dbd4d7</anchor>
+      <anchor>a555803af5479c8a6480456d959dbd4d7</anchor>
       <arglist>(int fitErrorWeight)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSmoothness</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>8a4aaa578fb27b89d14cd9f2ce120298</anchor>
+      <anchor>a8a4aaa578fb27b89d14cd9f2ce120298</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetSmoothness</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>9bec20b1ef479edf97ed48c2beb467e6</anchor>
+      <anchor>a9bec20b1ef479edf97ed48c2beb467e6</anchor>
       <arglist>(int smoothness)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetFilterType</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>f6c009faff38ede0df0447cd92cad349</anchor>
+      <anchor>af6c009faff38ede0df0447cd92cad349</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetFilterType</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>80aa79258c589a617a09e91c07697519</anchor>
+      <anchor>a80aa79258c589a617a09e91c07697519</anchor>
       <arglist>(int filterType)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetKernelSize</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>35a86dcc452b811811092f0ede99365c</anchor>
+      <anchor>a35a86dcc452b811811092f0ede99365c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetKernelSize</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>bc8a463656d1e40bbc0539fdade8382a</anchor>
+      <anchor>abc8a463656d1e40bbc0539fdade8382a</anchor>
       <arglist>(int kernelSize)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetNominalScale</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>52d3bcd1ad19a007c47581fbd102e792</anchor>
+      <anchor>a52d3bcd1ad19a007c47581fbd102e792</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetNominalScale</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>2708ad0e631e989ba43c9c445d7b0e4e</anchor>
+      <anchor>a2708ad0e631e989ba43c9c445d7b0e4e</anchor>
       <arglist>(double nominalScale)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetNominalAngle</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>f6ac1ad167dc9b792dd308607c9a9f0b</anchor>
+      <anchor>af6ac1ad167dc9b792dd308607c9a9f0b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetNominalAngle</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>8cc9c682225e478d91edf32975ab061f</anchor>
+      <anchor>a8cc9c682225e478d91edf32975ab061f</anchor>
       <arglist>(double nominalAngle)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsTargetCachingEnabled</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>4c220e8d88e3856daf6da0412905ea9a</anchor>
+      <anchor>a4c220e8d88e3856daf6da0412905ea9a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetTargetCachingEnabled</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>aa9b8f1e12e983fa5865be54c0b3c81d</anchor>
+      <anchor>aaa9b8f1e12e983fa5865be54c0b3c81d</anchor>
       <arglist>(bool isTargetCachingEnabled)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>AreSharedEdgesEnabled</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>f1fce65dab761cc767babc2f72c2639f</anchor>
+      <anchor>af1fce65dab761cc767babc2f72c2639f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetSharedEdgesEnabled</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>83daf0acfd587d1e7bfc9266dda0dfc7</anchor>
+      <anchor>a83daf0acfd587d1e7bfc9266dda0dfc7</anchor>
       <arglist>(bool areSharedEdgesEnabled)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetParams</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>e7d7d952bcd0422cfad8147c04297fc5</anchor>
+      <anchor>ae7d7d952bcd0422cfad8147c04297fc5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imil::CMilSearchModel &amp;</type>
       <name>GetModel</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>5311e76016caf334140b412dac2791bb</anchor>
+      <anchor>a5311e76016caf334140b412dac2791bb</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetModelImage</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>a91dd1af6a407e565f0d3147009a98a3</anchor>
+      <anchor>aa91dd1af6a407e565f0d3147009a98a3</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classimil_1_1_c_mil_search_params.html</anchorfile>
-      <anchor>1ad316420a16dfb329c1366027b3efc5</anchor>
+      <anchor>a1ad316420a16dfb329c1366027b3efc5</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -8728,49 +8712,49 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CMilSearchParamsGuiComp, imil::CMilSearchParams &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classimil_1_1_c_mil_search_params_gui_comp.html</anchorfile>
-      <anchor>8a97ea0bddd88fb0e70371e3d015bfe1</anchor>
+      <anchor>a8a97ea0bddd88fb0e70371e3d015bfe1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type>I_END_COMPONENT</type>
       <name>CMilSearchParamsGuiComp</name>
       <anchorfile>classimil_1_1_c_mil_search_params_gui_comp.html</anchorfile>
-      <anchor>b83f40714efa0c448cf1be1a04f31f72</anchor>
+      <anchor>ab83f40714efa0c448cf1be1a04f31f72</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classimil_1_1_c_mil_search_params_gui_comp.html</anchorfile>
-      <anchor>5fa82f0c685bd7ea517f5acced991018</anchor>
+      <anchor>a5fa82f0c685bd7ea517f5acced991018</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnParameterChanged</name>
       <anchorfile>classimil_1_1_c_mil_search_params_gui_comp.html</anchorfile>
-      <anchor>325f7288ba537ca032e0f3bd9015e442</anchor>
+      <anchor>a325f7288ba537ca032e0f3bd9015e442</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnFilterTypeChanged</name>
       <anchorfile>classimil_1_1_c_mil_search_params_gui_comp.html</anchorfile>
-      <anchor>4e8b45d02a7cfef3b5644b37c8e2b641</anchor>
+      <anchor>a4e8b45d02a7cfef3b5644b37c8e2b641</anchor>
       <arglist>(int filterType)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classimil_1_1_c_mil_search_params_gui_comp.html</anchorfile>
-      <anchor>3a2c99e0b323b23482a5e929f6cf052c</anchor>
+      <anchor>a3a2c99e0b323b23482a5e929f6cf052c</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classimil_1_1_c_mil_search_params_gui_comp.html</anchorfile>
-      <anchor>3bf1d09dc5af502a9cef65d2a36c5d2f</anchor>
+      <anchor>a3bf1d09dc5af502a9cef65d2a36c5d2f</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -8781,41 +8765,41 @@
     <member kind="enumeration">
       <name>FeatureTypeId</name>
       <anchorfile>classimil_1_1_c_mil_search_processor_comp.html</anchorfile>
-      <anchor>05969802443b48adbfb94c4bcaf05388</anchor>
+      <anchor>a05969802443b48adbfb94c4bcaf05388</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>FTI_MIL_SEARCH_FEATURE</name>
       <anchorfile>classimil_1_1_c_mil_search_processor_comp.html</anchorfile>
-      <anchor>05969802443b48adbfb94c4bcaf05388ea075b4ee0ade4d38954455a940980bc</anchor>
+      <anchor>a05969802443b48adbfb94c4bcaf05388aea075b4ee0ade4d38954455a940980bc</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>iproc::TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classimil_1_1_c_mil_search_processor_comp.html</anchorfile>
-      <anchor>dc2128cb7205a819c3f3d7098841aec1</anchor>
+      <anchor>adc2128cb7205a819c3f3d7098841aec1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT int</type>
       <name>DoExtractFeatures</name>
       <anchorfile>classimil_1_1_c_mil_search_processor_comp.html</anchorfile>
-      <anchor>4ac15bc671ed99d39f2b7d117e728112</anchor>
+      <anchor>a4ac15bc671ed99d39f2b7d117e728112</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;results)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classimil_1_1_c_mil_search_processor_comp.html</anchorfile>
-      <anchor>1a4f48d0043c1916394ee3dc4d1cff74</anchor>
+      <anchor>a1a4f48d0043c1916394ee3dc4d1cff74</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>DoModelSearch</name>
       <anchorfile>classimil_1_1_c_mil_search_processor_comp.html</anchorfile>
-      <anchor>1fcd8f4c23bd7c08f17b5574f4816aab</anchor>
+      <anchor>a1fcd8f4c23bd7c08f17b5574f4816aab</anchor>
       <arglist>(const CMilSearchParams &amp;params, const iimg::IBitmap &amp;bitmap, const i2d::CRectangle *aoiPtr, iipr::IFeaturesConsumer &amp;result)</arglist>
     </member>
   </compound>
@@ -8835,63 +8819,63 @@
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>eccc867e45d338bbb44145d69b62e24d</anchor>
+      <anchor>aeccc867e45d338bbb44145d69b62e24d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>a0ee535d1bc6aa64c53be2f79d8e74ba</anchor>
+      <anchor>aa0ee535d1bc6aa64c53be2f79d8e74ba</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>COcvAcquisitionComp</name>
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>51d27aae4ca682c2cb799477bea4dabb</anchor>
+      <anchor>a51d27aae4ca682c2cb799477bea4dabb</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>IsCameraValid</name>
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>60fe39d2f91594a455a9c3f28c326e60</anchor>
+      <anchor>a60fe39d2f91594a455a9c3f28c326e60</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>7bea30d048fac25427174ae9ebc37b36</anchor>
+      <anchor>a7bea30d048fac25427174ae9ebc37b36</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>2f421ded15797848b6f474a587ebf5e2</anchor>
+      <anchor>a2f421ded15797848b6f474a587ebf5e2</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsTriggerModeSupported</name>
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>ac566bdb5c9b922cec4d4610bedde958</anchor>
+      <anchor>aac566bdb5c9b922cec4d4610bedde958</anchor>
       <arglist>(int triggerMode) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>a3b92bb978a2d9c290707c0c9eb8bed8</anchor>
+      <anchor>aa3b92bb978a2d9c290707c0c9eb8bed8</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>34db5ccc34e5b6ce35c9ebfc2e5f53ee</anchor>
+      <anchor>a34db5ccc34e5b6ce35c9ebfc2e5f53ee</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -8903,14 +8887,14 @@
       <type></type>
       <name>COcvImage</name>
       <anchorfile>classiocv_1_1_c_ocv_image.html</anchorfile>
-      <anchor>c04fe227e70b681d25489809260f4aa1</anchor>
+      <anchor>ac04fe227e70b681d25489809260f4aa1</anchor>
       <arglist>(const IplImage &amp;image)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
       <name>ConvertToBitmap</name>
       <anchorfile>classiocv_1_1_c_ocv_image.html</anchorfile>
-      <anchor>048bc2b81b42c38bf0d314cf570138da</anchor>
+      <anchor>a048bc2b81b42c38bf0d314cf570138da</anchor>
       <arglist>(const IplImage &amp;image, iimg::IBitmap &amp;outputBitmap)</arglist>
     </member>
   </compound>
@@ -8923,154 +8907,154 @@
       <type>iproc::TSyncProcessorCompBase&lt; iproc::IBitmapAcquisition &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>fd188dd4b515c867ca3c440d8a034cdb</anchor>
+      <anchor>afd188dd4b515c867ca3c440d8a034cdb</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>COcvVideoControllerComp</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>446d59e8430994ffd31f47d71989c937</anchor>
+      <anchor>a446d59e8430994ffd31f47d71989c937</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>da752da881c4fad86827ba0e6b1f8a20</anchor>
+      <anchor>ada752da881c4fad86827ba0e6b1f8a20</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>b31b942c5c3c5c39c4f6f112c88d2079</anchor>
+      <anchor>ab31b942c5c3c5c39c4f6f112c88d2079</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
       <name>GetOpenedMediumUrl</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>04c47d484338be8601c3c73bdadf93d9</anchor>
+      <anchor>a04c47d484338be8601c3c73bdadf93d9</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OpenMediumUrl</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>6b6114556f64398a615cc365dbb11c07</anchor>
+      <anchor>a6b6114556f64398a615cc365dbb11c07</anchor>
       <arglist>(const istd::CString &amp;url, bool autoPlay=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>CloseMedium</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>c898ba19fca09132b5ff1fe95f66ceaf</anchor>
+      <anchor>ac898ba19fca09132b5ff1fe95f66ceaf</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsPlaying</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>c56c3fb29a7ea0ed37d8bb4a33225b5d</anchor>
+      <anchor>ac56c3fb29a7ea0ed37d8bb4a33225b5d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetPlaying</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>c9218e58f10318107032546a07a63522</anchor>
+      <anchor>ac9218e58f10318107032546a07a63522</anchor>
       <arglist>(bool state=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetMediumLength</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>4b837a3e2dfa60f3b0b418ea9cafaa02</anchor>
+      <anchor>a4b837a3e2dfa60f3b0b418ea9cafaa02</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetCurrentPosition</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>50e710fdd9c50725d5566704489605c2</anchor>
+      <anchor>a50e710fdd9c50725d5566704489605c2</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetCurrentPosition</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>ec0a01a7dd90c7ccd91f273de6eccfb0</anchor>
+      <anchor>aec0a01a7dd90c7ccd91f273de6eccfb0</anchor>
       <arglist>(double position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedFeatures</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>d49a13d768f898d49cf7b976bb338c38</anchor>
+      <anchor>ad49a13d768f898d49cf7b976bb338c38</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetFramesCount</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>24f093828449772d3dcdb120197b0271</anchor>
+      <anchor>a24f093828449772d3dcdb120197b0271</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetFrameIntervall</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>74ae882672ee6121a3bdb201cc914049</anchor>
+      <anchor>a74ae882672ee6121a3bdb201cc914049</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetFrameSize</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>8fb4073855376938f7cee47cb93bfed3</anchor>
+      <anchor>a8fb4073855376938f7cee47cb93bfed3</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetPixelAspectRatio</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>577bd83bf393efef79b1226ad1d596a6</anchor>
+      <anchor>a577bd83bf393efef79b1226ad1d596a6</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetCurrentFrame</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>eed1fa78895b7fb7e80480012fc787bb</anchor>
+      <anchor>aeed1fa78895b7fb7e80480012fc787bb</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetCurrentFrame</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>2eba5e9fef9b03bed830a557a00ee5aa</anchor>
+      <anchor>a2eba5e9fef9b03bed830a557a00ee5aa</anchor>
       <arglist>(int frameIndex)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>GrabCurrentFrame</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>71b63629c15a11118143c57e186b2b90</anchor>
+      <anchor>a71b63629c15a11118143c57e186b2b90</anchor>
       <arglist>(iimg::IBitmap &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>SeekToPosition</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>567589b45bb2206064833933fba051f2</anchor>
+      <anchor>a567589b45bb2206064833933fba051f2</anchor>
       <arglist>(int frameIndex) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>8323bb34a993612efeb7f1d2b34b4874</anchor>
+      <anchor>a8323bb34a993612efeb7f1d2b34b4874</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -9092,63 +9076,63 @@
       <type></type>
       <name>CHypothesesSet</name>
       <anchorfile>classiorn_1_1_c_hypotheses_set.html</anchorfile>
-      <anchor>0b14207a314d54d38a9bfaeb7cb1452e</anchor>
+      <anchor>a0b14207a314d54d38a9bfaeb7cb1452e</anchor>
       <arglist>(const istd::TTransPtr&lt; CHypothesisInfo &gt; &amp;infoPtr)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CHypothesesSet</name>
       <anchorfile>classiorn_1_1_c_hypotheses_set.html</anchorfile>
-      <anchor>8a6ff6ac5939d5ed4e08e56f9e65ddc8</anchor>
+      <anchor>a8a6ff6ac5939d5ed4e08e56f9e65ddc8</anchor>
       <arglist>(const imeas::IDataSequence *hypothesisPtr, double weight, bool isOwned)</arglist>
     </member>
     <member kind="function">
       <type>const istd::TTransPtr&lt; CHypothesisInfo &gt; &amp;</type>
       <name>GetInfo</name>
       <anchorfile>classiorn_1_1_c_hypotheses_set.html</anchorfile>
-      <anchor>6b24c0aadc7f477e14b3a9758797d3bc</anchor>
+      <anchor>a6b24c0aadc7f477e14b3a9758797d3bc</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetHypothesesCount</name>
       <anchorfile>classiorn_1_1_c_hypotheses_set.html</anchorfile>
-      <anchor>e1442287711629cb7c10ef2ecd750fcf</anchor>
+      <anchor>ae1442287711629cb7c10ef2ecd750fcf</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetHypothesesCount</name>
       <anchorfile>classiorn_1_1_c_hypotheses_set.html</anchorfile>
-      <anchor>75a2054b8c320c7e2dc1258a1749d830</anchor>
+      <anchor>a75a2054b8c320c7e2dc1258a1749d830</anchor>
       <arglist>(int count)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::IDataSequence *</type>
       <name>GetHypothesis</name>
       <anchorfile>classiorn_1_1_c_hypotheses_set.html</anchorfile>
-      <anchor>1ab0a193470db917e3d97d51bacdbeda</anchor>
+      <anchor>a1ab0a193470db917e3d97d51bacdbeda</anchor>
       <arglist>(int index, double &amp;weight) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetHypothesis</name>
       <anchorfile>classiorn_1_1_c_hypotheses_set.html</anchorfile>
-      <anchor>022e44d62a5f14da935b78a4a823fb7f</anchor>
+      <anchor>a022e44d62a5f14da935b78a4a823fb7f</anchor>
       <arglist>(int index, const imeas::IDataSequence *hypothesisPtr, double weight, bool isOwned=false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::IDataSequence *</type>
       <name>PopHypothesis</name>
       <anchorfile>classiorn_1_1_c_hypotheses_set.html</anchorfile>
-      <anchor>e202e6c6f95cc331eae3b3b80ce6e308</anchor>
+      <anchor>ae202e6c6f95cc331eae3b3b80ce6e308</anchor>
       <arglist>(int index, double &amp;weight, bool &amp;isOwned)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetBestHypothesisIndex</name>
       <anchorfile>classiorn_1_1_c_hypotheses_set.html</anchorfile>
-      <anchor>e874f02fe3c6a6302f08069c162dc4fb</anchor>
+      <anchor>ae874f02fe3c6a6302f08069c162dc4fb</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -9159,75 +9143,75 @@
     <member kind="enumeration">
       <name>ChannelType</name>
       <anchorfile>classiorn_1_1_c_hypothesis_info.html</anchorfile>
-      <anchor>193d44cb0fc7acd7203f9a4aebf988cf</anchor>
+      <anchor>a193d44cb0fc7acd7203f9a4aebf988cf</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CT_NORMAL</name>
       <anchorfile>classiorn_1_1_c_hypothesis_info.html</anchorfile>
-      <anchor>193d44cb0fc7acd7203f9a4aebf988cf5a69460b2f8f24da4713ec2692d0a75d</anchor>
+      <anchor>a193d44cb0fc7acd7203f9a4aebf988cfa5a69460b2f8f24da4713ec2692d0a75d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CT_WEIGHT</name>
       <anchorfile>classiorn_1_1_c_hypothesis_info.html</anchorfile>
-      <anchor>193d44cb0fc7acd7203f9a4aebf988cf58948d5ebd8c15b135259c966d79c202</anchor>
+      <anchor>a193d44cb0fc7acd7203f9a4aebf988cfa58948d5ebd8c15b135259c966d79c202</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CHypothesisInfo</name>
       <anchorfile>classiorn_1_1_c_hypothesis_info.html</anchorfile>
-      <anchor>0219aaa5a60fa74aff8e47d5ff2e95fc</anchor>
+      <anchor>a0219aaa5a60fa74aff8e47d5ff2e95fc</anchor>
       <arglist>(int samplesCount, int activeChannelsCount, bool isWeightChannel)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>GetActiveChannelsCount</name>
       <anchorfile>classiorn_1_1_c_hypothesis_info.html</anchorfile>
-      <anchor>832651fe64e1922024c41cb918a670c0</anchor>
+      <anchor>a832651fe64e1922024c41cb918a670c0</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>GetWeightChannelIndex</name>
       <anchorfile>classiorn_1_1_c_hypothesis_info.html</anchorfile>
-      <anchor>e155a3e60f3afd6fa266048ca95319a9</anchor>
+      <anchor>ae155a3e60f3afd6fa266048ca95319a9</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSamplesCount</name>
       <anchorfile>classiorn_1_1_c_hypothesis_info.html</anchorfile>
-      <anchor>b7a5e05a857a57cecd56b15a06e993fd</anchor>
+      <anchor>ab7a5e05a857a57cecd56b15a06e993fd</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetChannelsCount</name>
       <anchorfile>classiorn_1_1_c_hypothesis_info.html</anchorfile>
-      <anchor>f5cc2329b03a7c55296829fdfd68ce99</anchor>
+      <anchor>af5cc2329b03a7c55296829fdfd68ce99</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetValueRange</name>
       <anchorfile>classiorn_1_1_c_hypothesis_info.html</anchorfile>
-      <anchor>e2c5ae86f61a4cc4cf26f490103a6bba</anchor>
+      <anchor>ae2c5ae86f61a4cc4cf26f490103a6bba</anchor>
       <arglist>(int channelIndex=-1) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>HasChannelType</name>
       <anchorfile>classiorn_1_1_c_hypothesis_info.html</anchorfile>
-      <anchor>a30026c94fe57044bc71009f5e2eb15f</anchor>
+      <anchor>aa30026c94fe57044bc71009f5e2eb15f</anchor>
       <arglist>(int channelType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetChannelType</name>
       <anchorfile>classiorn_1_1_c_hypothesis_info.html</anchorfile>
-      <anchor>16b8e81152e58e85fa92b9c310d6176a</anchor>
+      <anchor>a16b8e81152e58e85fa92b9c310d6176a</anchor>
       <arglist>(int channelIndex) const </arglist>
     </member>
   </compound>
@@ -9239,42 +9223,42 @@
       <type>virtual double</type>
       <name>GetOperationQuality</name>
       <anchorfile>classiorn_1_1_c_sigmoidal_objectron_comp.html</anchorfile>
-      <anchor>0ae30801130e85296d00fdff8ede7392</anchor>
+      <anchor>a0ae30801130e85296d00fdff8ede7392</anchor>
       <arglist>(int qualityQuery) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessHypotheses</name>
       <anchorfile>classiorn_1_1_c_sigmoidal_objectron_comp.html</anchorfile>
-      <anchor>724c00b839869ebb8298942ad510fc41</anchor>
+      <anchor>a724c00b839869ebb8298942ad510fc41</anchor>
       <arglist>(const CHypothesesSet &amp;inputSet, CHypothesesSet &amp;outputSet) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BackpropagateHypotheses</name>
       <anchorfile>classiorn_1_1_c_sigmoidal_objectron_comp.html</anchorfile>
-      <anchor>35988b9bcc08b79a2af5ec20014703e8</anchor>
+      <anchor>a35988b9bcc08b79a2af5ec20014703e8</anchor>
       <arglist>(const CHypothesesSet *inputSetPtr, const CHypothesesSet &amp;outputSet, CHypothesesSet &amp;approxInputSet) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BackpropagateError</name>
       <anchorfile>classiorn_1_1_c_sigmoidal_objectron_comp.html</anchorfile>
-      <anchor>e8d68c9e2fae1b47e0a03978e5ee5fbd</anchor>
+      <anchor>ae8d68c9e2fae1b47e0a03978e5ee5fbd</anchor>
       <arglist>(const CHypothesesSet &amp;inputSet, double outputError, double &amp;approxInputError, double &amp;approxQuality) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoLearning</name>
       <anchorfile>classiorn_1_1_c_sigmoidal_objectron_comp.html</anchorfile>
-      <anchor>46c1610e2bb115db2369e587eb6b3912</anchor>
+      <anchor>a46c1610e2bb115db2369e587eb6b3912</anchor>
       <arglist>(const ILearningSet &amp;learningSet, const ILearnFeedback *learnFeedbackPtr, bool isProgressive=false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiorn_1_1_c_sigmoidal_objectron_comp.html</anchorfile>
-      <anchor>7c82d29cc8b742a5c13f84f827c2b241</anchor>
+      <anchor>a7c82d29cc8b742a5c13f84f827c2b241</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -9285,47 +9269,47 @@
     <member kind="enumeration">
       <name>LearningType</name>
       <anchorfile>classiorn_1_1_i_learn_feedback.html</anchorfile>
-      <anchor>a2cf1021676733d3f9a07e7d5759632a</anchor>
+      <anchor>aa2cf1021676733d3f9a07e7d5759632a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>LT_EXAMPLE</name>
       <anchorfile>classiorn_1_1_i_learn_feedback.html</anchorfile>
-      <anchor>a2cf1021676733d3f9a07e7d5759632a16e0f885cb8f4b46658b6190dc622888</anchor>
+      <anchor>aa2cf1021676733d3f9a07e7d5759632aa16e0f885cb8f4b46658b6190dc622888</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>LT_CRITIC</name>
       <anchorfile>classiorn_1_1_i_learn_feedback.html</anchorfile>
-      <anchor>a2cf1021676733d3f9a07e7d5759632aeaf1ba90daaa993cf53cf5532c656798</anchor>
+      <anchor>aa2cf1021676733d3f9a07e7d5759632aaeaf1ba90daaa993cf53cf5532c656798</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetLearningTypeQuality</name>
       <anchorfile>classiorn_1_1_i_learn_feedback.html</anchorfile>
-      <anchor>a3eb61d0cef2690a87867a2bee3739b2</anchor>
+      <anchor>aa3eb61d0cef2690a87867a2bee3739b2</anchor>
       <arglist>(int learningType) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>EnterLearningStep</name>
       <anchorfile>classiorn_1_1_i_learn_feedback.html</anchorfile>
-      <anchor>1b5019c9e08bba121289208982ad01a7</anchor>
+      <anchor>a1b5019c9e08bba121289208982ad01a7</anchor>
       <arglist>(const ILearningSet &amp;learningSet, int learningSetIndex)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const CHypothesesSet *</type>
       <name>GetExample</name>
       <anchorfile>classiorn_1_1_i_learn_feedback.html</anchorfile>
-      <anchor>5039b679d04afde969e18c11bc22a57a</anchor>
+      <anchor>a5039b679d04afde969e18c11bc22a57a</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetCriticForOutput</name>
       <anchorfile>classiorn_1_1_i_learn_feedback.html</anchorfile>
-      <anchor>ccdfe012024756b04661ca3f9a009355</anchor>
+      <anchor>accdfe012024756b04661ca3f9a009355</anchor>
       <arglist>(const CHypothesesSet &amp;outputSet) const =0</arglist>
     </member>
   </compound>
@@ -9337,14 +9321,14 @@
       <type>virtual int</type>
       <name>GetSetsCount</name>
       <anchorfile>classiorn_1_1_i_learning_set.html</anchorfile>
-      <anchor>9765c30234df41f40b078f7387250eda</anchor>
+      <anchor>a9765c30234df41f40b078f7387250eda</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const CHypothesesSet *</type>
       <name>GetSingleSet</name>
       <anchorfile>classiorn_1_1_i_learning_set.html</anchorfile>
-      <anchor>dce73b4d979aa7b82a0aea4e96442428</anchor>
+      <anchor>adce73b4d979aa7b82a0aea4e96442428</anchor>
       <arglist>(int index, double &amp;weight) const </arglist>
     </member>
   </compound>
@@ -9355,90 +9339,90 @@
     <member kind="enumeration">
       <name>QualityQuery</name>
       <anchorfile>classiorn_1_1_i_objectron.html</anchorfile>
-      <anchor>6ee1e7d089768a9605be51968d6dd889</anchor>
+      <anchor>a6ee1e7d089768a9605be51968d6dd889</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>QQ_PROCESSING</name>
       <anchorfile>classiorn_1_1_i_objectron.html</anchorfile>
-      <anchor>6ee1e7d089768a9605be51968d6dd889824add5ab5ab1c475422baab42cce372</anchor>
+      <anchor>a6ee1e7d089768a9605be51968d6dd889a824add5ab5ab1c475422baab42cce372</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>QQ_BACKPROPAGATION</name>
       <anchorfile>classiorn_1_1_i_objectron.html</anchorfile>
-      <anchor>6ee1e7d089768a9605be51968d6dd889ec26367fd8ac5c496ed0acacee96dadf</anchor>
+      <anchor>a6ee1e7d089768a9605be51968d6dd889aec26367fd8ac5c496ed0acacee96dadf</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>QQ_BACKPROPAGATION_INPUT</name>
       <anchorfile>classiorn_1_1_i_objectron.html</anchorfile>
-      <anchor>6ee1e7d089768a9605be51968d6dd88934dd03b6e8c227b4ea02dc7f152e49b2</anchor>
+      <anchor>a6ee1e7d089768a9605be51968d6dd889a34dd03b6e8c227b4ea02dc7f152e49b2</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>QQ_ERROR_BACKPROPAGATION</name>
       <anchorfile>classiorn_1_1_i_objectron.html</anchorfile>
-      <anchor>6ee1e7d089768a9605be51968d6dd8898b7cddbaae07f5b188464624b0edd271</anchor>
+      <anchor>a6ee1e7d089768a9605be51968d6dd889a8b7cddbaae07f5b188464624b0edd271</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>QQ_PROGRESSIVE_LEARNING</name>
       <anchorfile>classiorn_1_1_i_objectron.html</anchorfile>
-      <anchor>6ee1e7d089768a9605be51968d6dd889e609eb73ecc7d78fb66d719e61276e0c</anchor>
+      <anchor>a6ee1e7d089768a9605be51968d6dd889ae609eb73ecc7d78fb66d719e61276e0c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>QQ_UNSUPERVISED_LEARNING</name>
       <anchorfile>classiorn_1_1_i_objectron.html</anchorfile>
-      <anchor>6ee1e7d089768a9605be51968d6dd8898283f489936f365dc3925263d668e9cb</anchor>
+      <anchor>a6ee1e7d089768a9605be51968d6dd889a8283f489936f365dc3925263d668e9cb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>QQ_EXAMPLE_LEARNING</name>
       <anchorfile>classiorn_1_1_i_objectron.html</anchorfile>
-      <anchor>6ee1e7d089768a9605be51968d6dd889a7b853cc8d119af4e3ab0fe7f47759ca</anchor>
+      <anchor>a6ee1e7d089768a9605be51968d6dd889aa7b853cc8d119af4e3ab0fe7f47759ca</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>QQ_CRITIC_LEARNING</name>
       <anchorfile>classiorn_1_1_i_objectron.html</anchorfile>
-      <anchor>6ee1e7d089768a9605be51968d6dd889998dae3c2900b650dc1849a61f7670b0</anchor>
+      <anchor>a6ee1e7d089768a9605be51968d6dd889a998dae3c2900b650dc1849a61f7670b0</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetOperationQuality</name>
       <anchorfile>classiorn_1_1_i_objectron.html</anchorfile>
-      <anchor>d59c973ff75bbbef0cac8b9a6329e46b</anchor>
+      <anchor>ad59c973ff75bbbef0cac8b9a6329e46b</anchor>
       <arglist>(int qualityQuery) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>ProcessHypotheses</name>
       <anchorfile>classiorn_1_1_i_objectron.html</anchorfile>
-      <anchor>a2f4b6a696a0194341a207109b14acf6</anchor>
+      <anchor>aa2f4b6a696a0194341a207109b14acf6</anchor>
       <arglist>(const CHypothesesSet &amp;inputSet, CHypothesesSet &amp;outputSet) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>BackpropagateHypotheses</name>
       <anchorfile>classiorn_1_1_i_objectron.html</anchorfile>
-      <anchor>71cf187df34b00c45e1c24cf8e5d54ca</anchor>
+      <anchor>a71cf187df34b00c45e1c24cf8e5d54ca</anchor>
       <arglist>(const CHypothesesSet *inputSetPtr, const CHypothesesSet &amp;outputSet, CHypothesesSet &amp;approxInputSet) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>BackpropagateError</name>
       <anchorfile>classiorn_1_1_i_objectron.html</anchorfile>
-      <anchor>1772e3b04c5757bb8c195ff6fff1f1c2</anchor>
+      <anchor>a1772e3b04c5757bb8c195ff6fff1f1c2</anchor>
       <arglist>(const CHypothesesSet &amp;inputSet, double outputError, double &amp;approxInputError, double &amp;approxQuality) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>DoLearning</name>
       <anchorfile>classiorn_1_1_i_objectron.html</anchorfile>
-      <anchor>438a199c4a6e1cfe548a792d1850fada</anchor>
+      <anchor>a438a199c4a6e1cfe548a792d1850fada</anchor>
       <arglist>(const ILearningSet &amp;learningSet, const ILearnFeedback *learnFeedbackPtr, bool isProgressive=false)=0</arglist>
     </member>
   </compound>
@@ -9458,77 +9442,77 @@
       <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp, iipr::IBitmapSupplier &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>434d1d7a17b256c1df8e6c944442c9b9</anchor>
+      <anchor>a434d1d7a17b256c1df8e6c944442c9b9</anchor>
       <arglist></arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SnapImageButton_clicked</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>9b82dcb61bb1e63a97c070ba2fb34866</anchor>
+      <anchor>a9b82dcb61bb1e63a97c070ba2fb34866</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SaveImageButton_clicked</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>1d5000ee4e690bcf3ad3e6f9821fd589</anchor>
+      <anchor>a1d5000ee4e690bcf3ad3e6f9821fd589</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_LoadParamsButton_clicked</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>36fa4884cd4a524d961262a7d40b6321</anchor>
+      <anchor>a36fa4884cd4a524d961262a7d40b6321</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SaveParamsButton_clicked</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>62609bf9f1b449ee327a9916d67159dd</anchor>
+      <anchor>a62609bf9f1b449ee327a9916d67159dd</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>63d8908addcc55bf4ce82b3c2effb1b0</anchor>
+      <anchor>a63d8908addcc55bf4ce82b3c2effb1b0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QWidget *</type>
       <name>GetParamsWidget</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>efb298cf05d5ed0e8db01486f27249b7</anchor>
+      <anchor>aefb298cf05d5ed0e8db01486f27249b7</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>b77f75801c4dda1ddcde577ef7733856</anchor>
+      <anchor>ab77f75801c4dda1ddcde577ef7733856</anchor>
       <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>7187188354d8bf4cfdd4dd0681b901c9</anchor>
+      <anchor>a7187188354d8bf4cfdd4dd0681b901c9</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>ce6a629516d2430b02e4ef4dad4268b3</anchor>
+      <anchor>ace6a629516d2430b02e4ef4dad4268b3</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>09679cc02dbb54b0470d77ac459f0fae</anchor>
+      <anchor>a09679cc02dbb54b0470d77ac459f0fae</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
@@ -9540,42 +9524,42 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CExposureParamsGuiComp, icam::IExposureParams &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
-      <anchor>f89666c177e115a5e908be66fc506079</anchor>
+      <anchor>af89666c177e115a5e908be66fc506079</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
-      <anchor>59f4c0d992720d17c76ea273613c70ab</anchor>
+      <anchor>a59f4c0d992720d17c76ea273613c70ab</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelDetached</name>
       <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
-      <anchor>921df935784531c58e3e114a3a4f0d49</anchor>
+      <anchor>a921df935784531c58e3e114a3a4f0d49</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
-      <anchor>d17ddebf3c197a1dafc87bfc23a1ecb2</anchor>
+      <anchor>ad17ddebf3c197a1dafc87bfc23a1ecb2</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
-      <anchor>4de1e6df00d310222b60b095ae465b88</anchor>
+      <anchor>a4de1e6df00d310222b60b095ae465b88</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnParamsChanged</name>
       <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
-      <anchor>b102c5e5e8a623af668af7d9b1b799e7</anchor>
+      <anchor>ab102c5e5e8a623af668af7d9b1b799e7</anchor>
       <arglist>(double value)</arglist>
     </member>
   </compound>
@@ -9589,28 +9573,28 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
-      <anchor>7594ee3b412cd8e21401d545160de53f</anchor>
+      <anchor>a7594ee3b412cd8e21401d545160de53f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CFileAcquisitionComp</name>
       <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
-      <anchor>bef7d68d9023d1ebfbfac20631fca9b5</anchor>
+      <anchor>abef7d68d9023d1ebfbfac20631fca9b5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
-      <anchor>d3bf15fa5ca1cc96706fbe9442841fa2</anchor>
+      <anchor>ad3bf15fa5ca1cc96706fbe9442841fa2</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
       <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
-      <anchor>034c5fac994e1ac0f1b20fd05ab8541a</anchor>
+      <anchor>a034c5fac994e1ac0f1b20fd05ab8541a</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
   </compound>
@@ -9621,28 +9605,28 @@
       <type></type>
       <name>ParamsInfo</name>
       <anchorfile>structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html</anchorfile>
-      <anchor>2417de269261f8f5e371116757a5357a</anchor>
+      <anchor>a2417de269261f8f5e371116757a5357a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable">
       <type>QStringList</type>
       <name>files</name>
       <anchorfile>structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html</anchorfile>
-      <anchor>c23ff89f244f108fe3aebc36fa32fc9c</anchor>
+      <anchor>ac23ff89f244f108fe3aebc36fa32fc9c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>QStringList::Iterator</type>
       <name>filesIter</name>
       <anchorfile>structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html</anchorfile>
-      <anchor>81b734452993b611d95dde263c55b1b5</anchor>
+      <anchor>a81b734452993b611d95dde263c55b1b5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>I_DWORD</type>
       <name>idStamp</name>
       <anchorfile>structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html</anchorfile>
-      <anchor>72e335ee8684933de7526c856e83c4b6</anchor>
+      <anchor>a72e335ee8684933de7526c856e83c4b6</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -9654,133 +9638,133 @@
       <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSnapImageGuiComp, QWidget &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>7f9c9ece8874c988de645acef23feaf7</anchor>
+      <anchor>a7f9c9ece8874c988de645acef23feaf7</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>403ad461a4eb12abdef546be5fd9737a</anchor>
+      <anchor>a403ad461a4eb12abdef546be5fd9737a</anchor>
       <arglist>(m_bitmapModelCompPtr, m_bitmapCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>d3ec78030023af7f6e39dad69b4cb734</anchor>
+      <anchor>ad3ec78030023af7f6e39dad69b4cb734</anchor>
       <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>6333db3415850d4e26916ff5cc7063bd</anchor>
+      <anchor>a6333db3415850d4e26916ff5cc7063bd</anchor>
       <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>c92a7492c29c88c35ae70b3fc8afa39e</anchor>
+      <anchor>ac92a7492c29c88c35ae70b3fc8afa39e</anchor>
       <arglist>(m_paramsSetExtenderCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type>I_END_COMPONENT</type>
       <name>CSnapImageGuiComp</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>caff48c2a34500c22e8511a85b759282</anchor>
+      <anchor>acaff48c2a34500c22e8511a85b759282</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AddItemsToScene</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>29044bae5f1081a183384da2f08ed00e</anchor>
+      <anchor>a29044bae5f1081a183384da2f08ed00e</anchor>
       <arglist>(iqt2d::ISceneProvider *providerPtr, int flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveItemsFromScene</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>e6f8eb226d6dc6278aa2ba266e2a756c</anchor>
+      <anchor>ae6f8eb226d6dc6278aa2ba266e2a756c</anchor>
       <arglist>(iqt2d::ISceneProvider *providerPtr)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SnapImageButton_clicked</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>f7ad31175d58bd356db84487ccb860b6</anchor>
+      <anchor>af7ad31175d58bd356db84487ccb860b6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_LiveImageButton_toggled</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>8903aa2ab3cc1fa6670569f4531535a3</anchor>
+      <anchor>a8903aa2ab3cc1fa6670569f4531535a3</anchor>
       <arglist>(bool checked)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SaveImageButton_clicked</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>12f3d0b735891816953921c80b4acc16</anchor>
+      <anchor>a12f3d0b735891816953921c80b4acc16</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_LoadParamsButton_clicked</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>e58f87180e2538bea4691db1a2c6a04c</anchor>
+      <anchor>ae58f87180e2538bea4691db1a2c6a04c</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SaveParamsButton_clicked</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>22008650fe7d0b4707d27a91cfeb2ed3</anchor>
+      <anchor>a22008650fe7d0b4707d27a91cfeb2ed3</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnTimerReady</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>513a429bb80dd61c5859bbc42dd0e831</anchor>
+      <anchor>a513a429bb80dd61c5859bbc42dd0e831</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SnapImage</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>41d4d06b619c8b4a7768d1bcc603160f</anchor>
+      <anchor>a41d4d06b619c8b4a7768d1bcc603160f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>c36f01cde393cf3127d3fddd04c1b0de</anchor>
+      <anchor>ac36f01cde393cf3127d3fddd04c1b0de</anchor>
       <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>4335c96470759561d6913f4ef4360010</anchor>
+      <anchor>a4335c96470759561d6913f4ef4360010</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>ce398d36c92e317269f704daa0c2fba7</anchor>
+      <anchor>ace398d36c92e317269f704daa0c2fba7</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>4cad6f246901f20cb0eb1a4bcf74ce68</anchor>
+      <anchor>a4cad6f246901f20cb0eb1a4bcf74ce68</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -9799,28 +9783,28 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CAutomaticControllerGuiComp, icntl::IAutomaticController &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcntl_1_1_c_automatic_controller_gui_comp.html</anchorfile>
-      <anchor>f118531f1283111609bcba58dee59950</anchor>
+      <anchor>af118531f1283111609bcba58dee59950</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtcntl_1_1_c_automatic_controller_gui_comp.html</anchorfile>
-      <anchor>39e21f733905a3a169104705b946506a</anchor>
+      <anchor>a39e21f733905a3a169104705b946506a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_AutomaticButton_toggled</name>
       <anchorfile>classiqtcntl_1_1_c_automatic_controller_gui_comp.html</anchorfile>
-      <anchor>2f647b3e55756086a32263e4dc590b4f</anchor>
+      <anchor>a2f647b3e55756086a32263e4dc590b4f</anchor>
       <arglist>(bool checked)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtcntl_1_1_c_automatic_controller_gui_comp.html</anchorfile>
-      <anchor>e91a4753e66f0b70318c34391cb23df2</anchor>
+      <anchor>ae91a4753e66f0b70318c34391cb23df2</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
@@ -9839,133 +9823,133 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>faa0f01ed530eb604e51944a556a3fb5</anchor>
+      <anchor>afaa0f01ed530eb604e51944a556a3fb5</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>ce4c8f485779b8880a9b560c85b52155</anchor>
+      <anchor>ace4c8f485779b8880a9b560c85b52155</anchor>
       <arglist>(m_multiLineModelCompPtr, m_multiLineParamsCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CDriverControllerComp</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>2f8beb23f236540f688d813d6efd231b</anchor>
+      <anchor>a2f8beb23f236540f688d813d6efd231b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetWorkMode</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>1fe098a529b24aa6206427604ba2f30a</anchor>
+      <anchor>a1fe098a529b24aa6206427604ba2f30a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetWorkMode</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>e2ae67a0f47fa8f81111adf8a78883c4</anchor>
+      <anchor>ae2ae67a0f47fa8f81111adf8a78883c4</anchor>
       <arglist>(int mode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsModeSupported</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>06192a0bcce983d7e2d3fcd977300a2c</anchor>
+      <anchor>a06192a0bcce983d7e2d3fcd977300a2c</anchor>
       <arglist>(int mode) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetLinesCount</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>423be963c01769e510dc4bfa0ac5b226</anchor>
+      <anchor>a423be963c01769e510dc4bfa0ac5b226</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual icntl::ILineController &amp;</type>
       <name>GetLineController</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>d243fc8a917126a1db9a68b2ba71e634</anchor>
+      <anchor>ad243fc8a917126a1db9a68b2ba71e634</anchor>
       <arglist>(int lineIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>ee07d66deca5e2ba6535bbbdf7ec59f7</anchor>
+      <anchor>aee07d66deca5e2ba6535bbbdf7ec59f7</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>620685b65d9a823cadff1e6d9604ae7f</anchor>
+      <anchor>a620685b65d9a823cadff1e6d9604ae7f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>std::vector&lt; UnitController &gt;</type>
       <name>UnitControllers</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>fd15f16b8923a2a2ff0c4e39117ca1e5</anchor>
+      <anchor>afd15f16b8923a2a2ff0c4e39117ca1e5</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>std::vector&lt; EjectorController &gt;</type>
       <name>EjectorControllers</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>335ed6b04beaf7ed9702f40b435f26ee</anchor>
+      <anchor>a335ed6b04beaf7ed9702f40b435f26ee</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>std::vector&lt; LineController &gt;</type>
       <name>LineControllers</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>586cfa659c6b464ac34e3567f25c2039</anchor>
+      <anchor>a586cfa659c6b464ac34e3567f25c2039</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>ilolv::ICommandCaller *</type>
       <name>GetCommandCaller</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>a418ee36774727635c11ad92685e081e</anchor>
+      <anchor>aa418ee36774727635c11ad92685e081e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetParamsToDriver</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>dfe808257a0f60b9b357b556f2f26ae3</anchor>
+      <anchor>adfe808257a0f60b9b357b556f2f26ae3</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetLineParamsToDriver</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>787444da8389df306febff2dd3719c3a</anchor>
+      <anchor>a787444da8389df306febff2dd3719c3a</anchor>
       <arglist>(int lineIndex, const icntl::ILineParams &amp;lineParams, LineController &amp;controller)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetUnitParamsToDriver</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>33b631eee4c11e1fca08614ffd44df5f</anchor>
+      <anchor>a33b631eee4c11e1fca08614ffd44df5f</anchor>
       <arglist>(int lineIndex, int unitIndex, const icntl::IInspectionUnitParams &amp;unitParams, double ticksPerDistUnit, UnitController &amp;controller)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetEjectorParamsToDriver</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>f9c9071398d668e44d83441aeb160f2f</anchor>
+      <anchor>af9c9071398d668e44d83441aeb160f2f</anchor>
       <arglist>(int lineIndex, int ejectorIndex, const icntl::IEjectorParams &amp;ejectorParams, double ticksPerDistUnit, EjectorController &amp;controller)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp.html</anchorfile>
-      <anchor>aa57609930b29d9798d0c1a9047e16c9</anchor>
+      <anchor>aaa57609930b29d9798d0c1a9047e16c9</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
@@ -9977,35 +9961,35 @@
       <type>virtual int</type>
       <name>GetEjectedCounter</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_ejector_controller.html</anchorfile>
-      <anchor>bff0c88ae6a49a370310a95d2fd55c99</anchor>
+      <anchor>abff0c88ae6a49a370310a95d2fd55c99</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>DoTestEjection</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_ejector_controller.html</anchorfile>
-      <anchor>e71467677ef6574dbe4ef3e1377580d9</anchor>
+      <anchor>ae71467677ef6574dbe4ef3e1377580d9</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>ejectorIndex</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_ejector_controller.html</anchorfile>
-      <anchor>111a92640c943c9dad1249d2e7d18ae6</anchor>
+      <anchor>a111a92640c943c9dad1249d2e7d18ae6</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>lineIndex</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_ejector_controller.html</anchorfile>
-      <anchor>f74a857c9ef2ca3142d33604fa8913a6</anchor>
+      <anchor>af74a857c9ef2ca3142d33604fa8913a6</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CDriverControllerComp *</type>
       <name>parentPtr</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_ejector_controller.html</anchorfile>
-      <anchor>494dfa356643e2ee0cb51dcda75ab9ac</anchor>
+      <anchor>a494dfa356643e2ee0cb51dcda75ab9ac</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -10017,84 +10001,84 @@
       <type>virtual int</type>
       <name>GetInspectionUnitsCount</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_line_controller.html</anchorfile>
-      <anchor>55f6c264c07128408895142d268eee3b</anchor>
+      <anchor>a55f6c264c07128408895142d268eee3b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual icntl::IInspectionUnitController &amp;</type>
       <name>GetInspectionUnitController</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_line_controller.html</anchorfile>
-      <anchor>6ac893963676d7eb11fcf9cbdf46389c</anchor>
+      <anchor>a6ac893963676d7eb11fcf9cbdf46389c</anchor>
       <arglist>(int unitIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetEjectorsCount</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_line_controller.html</anchorfile>
-      <anchor>adfaf2163d59889003c8463297a2e892</anchor>
+      <anchor>aadfaf2163d59889003c8463297a2e892</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual icntl::IEjectorController &amp;</type>
       <name>GetEjectorController</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_line_controller.html</anchorfile>
-      <anchor>fbdad60978c009622b3df1d98ef911e9</anchor>
+      <anchor>afbdad60978c009622b3df1d98ef911e9</anchor>
       <arglist>(int ejectorIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetTransmissionPosition</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_line_controller.html</anchorfile>
-      <anchor>c506d5d19d15b0d407282aea57a6ab65</anchor>
+      <anchor>ac506d5d19d15b0d407282aea57a6ab65</anchor>
       <arglist>(double &amp;result) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetObjectPosition</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_line_controller.html</anchorfile>
-      <anchor>9a111ab93696f62bfae883543811faec</anchor>
+      <anchor>a9a111ab93696f62bfae883543811faec</anchor>
       <arglist>(I_DWORD objectId, double &amp;result) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetLastObjectId</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_line_controller.html</anchorfile>
-      <anchor>0a6f4870e0b07c6a92338b502d14db69</anchor>
+      <anchor>a0a6f4870e0b07c6a92338b502d14db69</anchor>
       <arglist>(I_DWORD &amp;result) const </arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>lineIndex</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_line_controller.html</anchorfile>
-      <anchor>81804257b7c61ffdfd7f08db276b0297</anchor>
+      <anchor>a81804257b7c61ffdfd7f08db276b0297</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>UnitControllers</type>
       <name>unitControllers</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_line_controller.html</anchorfile>
-      <anchor>162c02e1b50fe4ed0416722f53e539ab</anchor>
+      <anchor>a162c02e1b50fe4ed0416722f53e539ab</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>EjectorControllers</type>
       <name>ejectorControllers</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_line_controller.html</anchorfile>
-      <anchor>f4514356b550277a911b7c5d86e73552</anchor>
+      <anchor>af4514356b550277a911b7c5d86e73552</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>ticksPerDistanceUnit</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_line_controller.html</anchorfile>
-      <anchor>b5361b43d0300ce1789110afb9701875</anchor>
+      <anchor>ab5361b43d0300ce1789110afb9701875</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CDriverControllerComp *</type>
       <name>parentPtr</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_line_controller.html</anchorfile>
-      <anchor>ae1ea54a8fe8aee9bc60807d8535d43e</anchor>
+      <anchor>aae1ea54a8fe8aee9bc60807d8535d43e</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -10106,28 +10090,28 @@
       <type></type>
       <name>ObjectInspection</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_object_inspection.html</anchorfile>
-      <anchor>fcb572184ae658de0d5c8b3838bcb36c</anchor>
+      <anchor>afcb572184ae658de0d5c8b3838bcb36c</anchor>
       <arglist>(ilolv::ICommandCaller *commandCallerPtr, int lineIndex, int stationIndex, const ilolv::CMultiTracerCommands::PopId::Result &amp;objectParams)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_DWORD</type>
       <name>GetObjectId</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_object_inspection.html</anchorfile>
-      <anchor>06a3a5f7ebb28a7f6162230ef1f54097</anchor>
+      <anchor>a06a3a5f7ebb28a7f6162230ef1f54097</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const isys::ITimer &amp;</type>
       <name>GetTimestamp</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_object_inspection.html</anchorfile>
-      <anchor>74f2dac431b33aac25eb9699dab3eafd</anchor>
+      <anchor>a74f2dac431b33aac25eb9699dab3eafd</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetEjector</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_object_inspection.html</anchorfile>
-      <anchor>4cd1506a9dce58d17d3cdcb5b5127294</anchor>
+      <anchor>a4cd1506a9dce58d17d3cdcb5b5127294</anchor>
       <arglist>(int ejectorIndex)</arglist>
     </member>
   </compound>
@@ -10139,35 +10123,35 @@
       <type>virtual icntl::IObjectInspection *</type>
       <name>PopObjectInspection</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_unit_controller.html</anchorfile>
-      <anchor>1b4a67f89f23a9f85a02ebd773d5af81</anchor>
+      <anchor>a1b4a67f89f23a9f85a02ebd773d5af81</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual isys::ITimer *</type>
       <name>DoCameraTrigger</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_unit_controller.html</anchorfile>
-      <anchor>695fb4c188016147bfc8cd31c7ce1b4b</anchor>
+      <anchor>a695fb4c188016147bfc8cd31c7ce1b4b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>unitIndex</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_unit_controller.html</anchorfile>
-      <anchor>21c01cc0a5418bf5c07f4eb4a51189f7</anchor>
+      <anchor>a21c01cc0a5418bf5c07f4eb4a51189f7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>lineIndex</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_unit_controller.html</anchorfile>
-      <anchor>85dece6912b74db56095299b798251d5</anchor>
+      <anchor>a85dece6912b74db56095299b798251d5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>CDriverControllerComp *</type>
       <name>parentPtr</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_unit_controller.html</anchorfile>
-      <anchor>2df887e357fd4776812b8f262a9fc8bc</anchor>
+      <anchor>a2df887e357fd4776812b8f262a9fc8bc</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -10183,154 +10167,154 @@
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CSimulatedMultiTracerGuiComp &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>6e6654cfe8fcb7c04ff04a842fb90fb5</anchor>
+      <anchor>a6e6654cfe8fcb7c04ff04a842fb90fb5</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
       <type>void</type>
       <name>OutputChanged</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>52c71a0f2a11d8f31b4d41ce3a24e879</anchor>
+      <anchor>a52c71a0f2a11d8f31b4d41ce3a24e879</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CSimulatedMultiTracerGuiComp</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>5032c5671e1fba7ec5496e508a620f67</anchor>
+      <anchor>a5032c5671e1fba7ec5496e508a620f67</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CallCommand</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>d1b380f345abade758b155fb6de536a0</anchor>
+      <anchor>ad1b380f345abade758b155fb6de536a0</anchor>
       <arglist>(int commandCode, const void *commandBuffer, int commandBufferSize, void *responseBuffer, int responseBufferSize, int &amp;responseSize)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnPeriodicTimer</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>e14d25c32e667b0a947bef9d3b51c2eb</anchor>
+      <anchor>ae14d25c32e667b0a947bef9d3b51c2eb</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnRunTimer</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>ef81245bbcae5e6c05c3d8ea398111b6</anchor>
+      <anchor>aef81245bbcae5e6c05c3d8ea398111b6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnInputChanged</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>19be1459cbd46dcd02daa9274786c7b0</anchor>
+      <anchor>a19be1459cbd46dcd02daa9274786c7b0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnOutputChanged</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>7a3ce2f6fc6b9114c6dbac3f71a637b2</anchor>
+      <anchor>a7a3ce2f6fc6b9114c6dbac3f71a637b2</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_EncoderDial_valueChanged</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>4ab50773614ce77a2484687595400b0f</anchor>
+      <anchor>a4ab50773614ce77a2484687595400b0f</anchor>
       <arglist>(int value)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_RunButton_toggled</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>cd8adb7e549544ba707df68d9fac63f4</anchor>
+      <anchor>acd8adb7e549544ba707df68d9fac63f4</anchor>
       <arglist>(bool checked)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual I_WORD</type>
       <name>ReadCounter</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>a89f067640ce77b9303a86e958b4a2e4</anchor>
+      <anchor>aa89f067640ce77b9303a86e958b4a2e4</anchor>
       <arglist>(int counterIndex)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>WriteCounter</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>02ecc8a6da6920fd3cf189acf95a6f22</anchor>
+      <anchor>a02ecc8a6da6920fd3cf189acf95a6f22</anchor>
       <arglist>(int counterIndex, I_WORD value)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>WriteInterruptsMask</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>9c8d4878b431f808949a7fc241143090</anchor>
+      <anchor>a9c8d4878b431f808949a7fc241143090</anchor>
       <arglist>(I_DWORD value)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnCommand</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>e66622919cd66701b591c4c30c8e78f3</anchor>
+      <anchor>ae66622919cd66701b591c4c30c8e78f3</anchor>
       <arglist>(int commandCode, const void *commandBuffer, int commandBufferSize, void *responseBuffer, int responseBufferSize, int &amp;responseSize)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnHardwareInterrupt</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>69bcb323bf6502f309ed1020d2fbca6d</anchor>
+      <anchor>a69bcb323bf6502f309ed1020d2fbca6d</anchor>
       <arglist>(I_DWORD interruptFlags)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual I_SQWORD</type>
       <name>GetCurrentTimer</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>848931ead38ce745d34b54c76218f949</anchor>
+      <anchor>a848931ead38ce745d34b54c76218f949</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual NativeTimer</type>
       <name>GetCurrentNativeTimer</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>c8456fdf059f607bb055ac7f78876ad1</anchor>
+      <anchor>ac8456fdf059f607bb055ac7f78876ad1</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual I_DWORD</type>
       <name>GetInputBits</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>f785649ff65d1fd140631f45215023f1</anchor>
+      <anchor>af785649ff65d1fd140631f45215023f1</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetOutputBits</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>1550e234c53ed5cc880a377c626afff7</anchor>
+      <anchor>a1550e234c53ed5cc880a377c626afff7</anchor>
       <arglist>(I_DWORD value, I_DWORD mask)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>18d3860700442f5eea992e5beaa4b306</anchor>
+      <anchor>a18d3860700442f5eea992e5beaa4b306</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>87825e8a2689f51d5ad42c3c67236d96</anchor>
+      <anchor>a87825e8a2689f51d5ad42c3c67236d96</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiqtcntl_1_1_c_simulated_multi_tracer_gui_comp.html</anchorfile>
-      <anchor>f6cdcb0ff5cac681d43702f713ec641c</anchor>
+      <anchor>af6cdcb0ff5cac681d43702f713ec641c</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -10349,49 +10333,49 @@
       <type>TSupplierGuiCompBase&lt; Ui::CGeneralSupplierGuiComp, iproc::ISupplier &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>2b8eb2bb23d7a1577dfbefb662e6cdb4</anchor>
+      <anchor>a2b8eb2bb23d7a1577dfbefb662e6cdb4</anchor>
       <arglist></arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_TestButton_clicked</name>
       <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>de039256b336e4c8d2069f7548e9d5d4</anchor>
+      <anchor>ade039256b336e4c8d2069f7548e9d5d4</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_LoadParamsButton_clicked</name>
       <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>b6db33e28929b7b8fe20b22e54b808d2</anchor>
+      <anchor>ab6db33e28929b7b8fe20b22e54b808d2</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SaveParamsButton_clicked</name>
       <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>42dc82083fec12373815fe696ddd5d17</anchor>
+      <anchor>a42dc82083fec12373815fe696ddd5d17</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QWidget *</type>
       <name>GetParamsWidget</name>
       <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>b8ca1190d3a8ced0d9b69bac1ed5c497</anchor>
+      <anchor>ab8ca1190d3a8ced0d9b69bac1ed5c497</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>292de76a8651f5a98731df87c0d6c82a</anchor>
+      <anchor>a292de76a8651f5a98731df87c0d6c82a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>a635fb30331f46d5efc33b4adb2f192f</anchor>
+      <anchor>aa635fb30331f46d5efc33b4adb2f192f</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
@@ -10403,154 +10387,154 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CInspectionTaskGuiComp, iinsp::IInspectionTask &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>fd4f936d4b70cd95d6c23a82318a5812</anchor>
+      <anchor>afd4f936d4b70cd95d6c23a82318a5812</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
       <type>void</type>
       <name>DoAutoTest</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>2a04d3e528fc60d0d35bd6e8f0e5c283</anchor>
+      <anchor>a2a04d3e528fc60d0d35bd6e8f0e5c283</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>d76e132cd277dc7a99870a71bf756c1a</anchor>
+      <anchor>ad76e132cd277dc7a99870a71bf756c1a</anchor>
       <arglist>(m_guisCompPtr, m_editorsCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>b9de90683f30623b9318356ded411bf5</anchor>
+      <anchor>ab9de90683f30623b9318356ded411bf5</anchor>
       <arglist>(m_observersCompPtr, m_editorsCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>bd19b6a62dc7042e2c4f68014753de67</anchor>
+      <anchor>abd19b6a62dc7042e2c4f68014753de67</anchor>
       <arglist>(m_extendersCompPtr, m_editorsCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>c85e9cb36d628b5c9ba6edee679590b6</anchor>
+      <anchor>ac85e9cb36d628b5c9ba6edee679590b6</anchor>
       <arglist>(m_previewObserversCompPtr, m_previewGuisCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>382d1b7091a1a22f56f1872e646e2b4b</anchor>
+      <anchor>a382d1b7091a1a22f56f1872e646e2b4b</anchor>
       <arglist>(m_previewSceneProvidersCompPtr, m_previewGuisCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>7d19ed1ee264436b7194f0b58b83f0cf</anchor>
+      <anchor>a7d19ed1ee264436b7194f0b58b83f0cf</anchor>
       <arglist>(m_generalParamsObserverCompPtr, m_generalParamsGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>5c5f5b4c45efb71fe754894f5faa94b7</anchor>
+      <anchor>a5c5f5b4c45efb71fe754894f5faa94b7</anchor>
       <arglist>(m_generalParamsEditorCompPtr, m_generalParamsGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CInspectionTaskGuiComp</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>78984eb4157ca41fefa1a24af00cf62e</anchor>
+      <anchor>a78984eb4157ca41fefa1a24af00cf62e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>66aa60cd6d6869f9f3478b4dafa34e17</anchor>
+      <anchor>a66aa60cd6d6869f9f3478b4dafa34e17</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateEditor</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>c51d6d24325bcd194b3716c47b8fc393</anchor>
+      <anchor>ac51d6d24325bcd194b3716c47b8fc393</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnAttached</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>b3b2edce0b992c95cae41f1e2d077647</anchor>
+      <anchor>ab3b2edce0b992c95cae41f1e2d077647</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnDetached</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>cc6411cb93ad635b4ad96c6fcaf88f58</anchor>
+      <anchor>acc6411cb93ad635b4ad96c6fcaf88f58</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnEditorChanged</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>0d37fc605b71cd0d4ca36c279c2810dc</anchor>
+      <anchor>a0d37fc605b71cd0d4ca36c279c2810dc</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnAutoTest</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>1cddc4786a0052dadce7819e10b1c380</anchor>
+      <anchor>a1cddc4786a0052dadce7819e10b1c380</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_TestAllButton_clicked</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>c510d3d7c36ad1a46809403bd704f666</anchor>
+      <anchor>ac510d3d7c36ad1a46809403bd704f666</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_AutoTestButton_clicked</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>f9deac7d7047539e17471bb4ef2b9dad</anchor>
+      <anchor>af9deac7d7047539e17471bb4ef2b9dad</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_LoadParamsButton_clicked</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>9e8ba6d29f90019a62f7419cb45b446f</anchor>
+      <anchor>a9e8ba6d29f90019a62f7419cb45b446f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SaveParamsButton_clicked</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>f94b0c396c2dba3ac4fb78412e34bb06</anchor>
+      <anchor>af94b0c396c2dba3ac4fb78412e34bb06</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>da49cbc8477c5762f0440350d78eeafc</anchor>
+      <anchor>ada49cbc8477c5762f0440350d78eeafc</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>193feab80d5fff0e3e5c9d2e88dc0613</anchor>
+      <anchor>a193feab80d5fff0e3e5c9d2e88dc0613</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -10565,105 +10549,105 @@
       <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, Model &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>2adfb74c07681ead8769eda99f2b3118</anchor>
+      <anchor>a2adfb74c07681ead8769eda99f2b3118</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>e9f00f25a17e65d9bd0f52db7b8e11fa</anchor>
+      <anchor>ae9f00f25a17e65d9bd0f52db7b8e11fa</anchor>
       <arglist>(m_paramsSetExtenderCompPtr, m_paramsSetObserverCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TSupplierGuiCompBase</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>fcac32d5384b56743d4e6ec600bebab0</anchor>
+      <anchor>afcac32d5384b56743d4e6ec600bebab0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AddItemsToScene</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>6ab49ca8028f6282d4556d35bd4536dc</anchor>
+      <anchor>a6ab49ca8028f6282d4556d35bd4536dc</anchor>
       <arglist>(iqt2d::ISceneProvider *providerPtr, int flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveItemsFromScene</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>8cf8d0f92bcd35bbbef07938eb6724bb</anchor>
+      <anchor>a8cf8d0f92bcd35bbbef07938eb6724bb</anchor>
       <arglist>(iqt2d::ISceneProvider *providerPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>AreParamsEditable</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>0d61c5e3110bff56e72d7a77f596cf2c</anchor>
+      <anchor>a0d61c5e3110bff56e72d7a77f596cf2c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>IsLoadParamsSupported</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>5b6641547287ea3c19b8a2a0bfc0608f</anchor>
+      <anchor>a5b6641547287ea3c19b8a2a0bfc0608f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>IsSaveParamsSupported</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>7cf3901cffbbcfd428e664a42b2d3912</anchor>
+      <anchor>a7cf3901cffbbcfd428e664a42b2d3912</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>LoadParams</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>ae24b31b8da0d2ca3df9f97e48566eff</anchor>
+      <anchor>aae24b31b8da0d2ca3df9f97e48566eff</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SaveParams</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>ab80f2dae15642273dbbe69c172c29fa</anchor>
+      <anchor>aab80f2dae15642273dbbe69c172c29fa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>DoTest</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>d81578bae2993dc1b3ec60ce55510818</anchor>
+      <anchor>ad81578bae2993dc1b3ec60ce55510818</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>6469c19c06f101239f420aa6c748ba3b</anchor>
+      <anchor>a6469c19c06f101239f420aa6c748ba3b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelDetached</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>55307315d1b7d6ecc47146ae78a1edb7</anchor>
+      <anchor>a55307315d1b7d6ecc47146ae78a1edb7</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>ee92492aaa074581ef2da47d73c5e19d</anchor>
+      <anchor>aee92492aaa074581ef2da47d73c5e19d</anchor>
       <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual QWidget *</type>
       <name>GetParamsWidget</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>7dc3e265dfa53f99c80936f5d9607de7</anchor>
+      <anchor>a7dc3e265dfa53f99c80936f5d9607de7</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -10687,42 +10671,42 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CCaliperParamsGuiComp, iipr::ICaliperParams &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtipr_1_1_c_caliper_params_gui_comp.html</anchorfile>
-      <anchor>084b3142033a6867421eac5e78836464</anchor>
+      <anchor>a084b3142033a6867421eac5e78836464</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtipr_1_1_c_caliper_params_gui_comp.html</anchorfile>
-      <anchor>a67dc317f6424c63d853f2fd48fb2794</anchor>
+      <anchor>aa67dc317f6424c63d853f2fd48fb2794</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_ThresholdSB_valueChanged</name>
       <anchorfile>classiqtipr_1_1_c_caliper_params_gui_comp.html</anchorfile>
-      <anchor>a66183178a9ff3258ed35e810fadc372</anchor>
+      <anchor>aa66183178a9ff3258ed35e810fadc372</anchor>
       <arglist>(int value)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_EdgePolarityCB_currentIndexChanged</name>
       <anchorfile>classiqtipr_1_1_c_caliper_params_gui_comp.html</anchorfile>
-      <anchor>eb650c88ddaeb1d98d28f9b36dbd3ea3</anchor>
+      <anchor>aeb650c88ddaeb1d98d28f9b36dbd3ea3</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_DirectionCB_currentIndexChanged</name>
       <anchorfile>classiqtipr_1_1_c_caliper_params_gui_comp.html</anchorfile>
-      <anchor>e7517f929bb0035783307753d57fd4d4</anchor>
+      <anchor>ae7517f929bb0035783307753d57fd4d4</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_caliper_params_gui_comp.html</anchorfile>
-      <anchor>ec23a0f33b5231159b8cd1d5b728ecf6</anchor>
+      <anchor>aec23a0f33b5231159b8cd1d5b728ecf6</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
@@ -10734,49 +10718,49 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CCircleFinderParamsGuiComp, iipr::ICircleFinderParams &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
-      <anchor>dbbbed76288d9871b050a2727fa338c0</anchor>
+      <anchor>adbbbed76288d9871b050a2727fa338c0</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
-      <anchor>fe838b9e0e22dbe86cadc4505ae1f7fb</anchor>
+      <anchor>afe838b9e0e22dbe86cadc4505ae1f7fb</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_EnableOutliersElimination_toggled</name>
       <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
-      <anchor>355093321ce3e8be8e0542d1b30a1def</anchor>
+      <anchor>a355093321ce3e8be8e0542d1b30a1def</anchor>
       <arglist>(bool value)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_MinOutliersDistance_valueChanged</name>
       <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
-      <anchor>95aaabb29f9e659c0d665c64fa13d5b3</anchor>
+      <anchor>a95aaabb29f9e659c0d665c64fa13d5b3</anchor>
       <arglist>(double value)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_MaxRaysCount_valueChanged</name>
       <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
-      <anchor>cf3a43588c0177263de7b47b9882e61c</anchor>
+      <anchor>acf3a43588c0177263de7b47b9882e61c</anchor>
       <arglist>(int value)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_CaliperMode_currentIndexChanged</name>
       <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
-      <anchor>c3a823b15cf3464be10108e075d9de70</anchor>
+      <anchor>ac3a823b15cf3464be10108e075d9de70</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
-      <anchor>c7946e515605ac530c82aff1f6e0475d</anchor>
+      <anchor>ac7946e515605ac530c82aff1f6e0475d</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
@@ -10788,77 +10772,77 @@
       <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CLineProjectionSupplierGuiComp, iipr::ILineProjectionSupplier &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>20f5500aaa932ce8f0a1e72b7aa4f193</anchor>
+      <anchor>a20f5500aaa932ce8f0a1e72b7aa4f193</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>be8caf5790d925e9e82f39c98471e726</anchor>
+      <anchor>abe8caf5790d925e9e82f39c98471e726</anchor>
       <arglist>(m_projectionObserverGuiCompPtr, m_projectionObserverCompPtr, true)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_TestButton_clicked</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>766df6faba54705cb2e465b1e2b7adfd</anchor>
+      <anchor>a766df6faba54705cb2e465b1e2b7adfd</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_LoadParamsButton_clicked</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>ec0f358b252599dc7b7672354c6dd886</anchor>
+      <anchor>aec0f358b252599dc7b7672354c6dd886</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SaveParamsButton_clicked</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>f23dc96c69f295b89d2d0a236ba1578a</anchor>
+      <anchor>af23dc96c69f295b89d2d0a236ba1578a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QWidget *</type>
       <name>GetParamsWidget</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>c4d745df35322e7c765ec39dab0c4da7</anchor>
+      <anchor>ac4d745df35322e7c765ec39dab0c4da7</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>75c2b66a0f4b4612a010e8679121dcc6</anchor>
+      <anchor>a75c2b66a0f4b4612a010e8679121dcc6</anchor>
       <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>8be5a2e26a406acec2365dff698169b5</anchor>
+      <anchor>a8be5a2e26a406acec2365dff698169b5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>4bfc1b681d2ac1f8a401e332c72c7b17</anchor>
+      <anchor>a4bfc1b681d2ac1f8a401e332c72c7b17</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>838d4130fc62181b43bf052244d23ff3</anchor>
+      <anchor>a838d4130fc62181b43bf052244d23ff3</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>81b79cf0034b245d650cf65ec0a1342b</anchor>
+      <anchor>a81b79cf0034b245d650cf65ec0a1342b</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -10871,21 +10855,21 @@
       <type>imod::CMultiModelObserverBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtipr_1_1_c_projection_shape.html</anchorfile>
-      <anchor>87f4aaf7564d78c18f0acff894df6edf</anchor>
+      <anchor>a87f4aaf7564d78c18f0acff894df6edf</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CProjectionShape</name>
       <anchorfile>classiqtipr_1_1_c_projection_shape.html</anchorfile>
-      <anchor>8e55c3767cb9349db2ff6b09cd7d77b8</anchor>
+      <anchor>a8e55c3767cb9349db2ff6b09cd7d77b8</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtipr_1_1_c_projection_shape.html</anchorfile>
-      <anchor>4be8acc861e1d2e09d3a80babde1f0c5</anchor>
+      <anchor>a4be8acc861e1d2e09d3a80babde1f0c5</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
@@ -10897,63 +10881,63 @@
       <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSearchGuiComp, QWidget &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>3b53977a981118c8b40f9bfa2e7855a5</anchor>
+      <anchor>a3b53977a981118c8b40f9bfa2e7855a5</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>058138f97172bd1415df23252f0c3cf4</anchor>
+      <anchor>a058138f97172bd1415df23252f0c3cf4</anchor>
       <arglist>(m_searchResultsCompPtr, m_searchResultsModelCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>4c20ad144c9483e3a01fa0f558b253d5</anchor>
+      <anchor>a4c20ad144c9483e3a01fa0f558b253d5</anchor>
       <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>2f08efb78093a618afaf36ef8135f001</anchor>
+      <anchor>a2f08efb78093a618afaf36ef8135f001</anchor>
       <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>626c80e934c44086b1d96c99fc6e5260</anchor>
+      <anchor>a626c80e934c44086b1d96c99fc6e5260</anchor>
       <arglist>(m_bitmapModelCompPtr, m_bitmapCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>4e5f3f9bca81b68a0370e42f0c1c1258</anchor>
+      <anchor>a4e5f3f9bca81b68a0370e42f0c1c1258</anchor>
       <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_FindButton_clicked</name>
       <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>89ab12a148c4f74c35dba9f86a3275b9</anchor>
+      <anchor>a89ab12a148c4f74c35dba9f86a3275b9</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>c4f037352e285a5046bd308287f83654</anchor>
+      <anchor>ac4f037352e285a5046bd308287f83654</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>e8d51cadbee296415ffb5cdf730acb45</anchor>
+      <anchor>ae8d51cadbee296415ffb5cdf730acb45</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -10965,49 +10949,49 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSearchParamsGuiComp, iipr::ISearchParams &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>2bcf3e4478c2566fd4e77283ce8f1cd9</anchor>
+      <anchor>a2bcf3e4478c2566fd4e77283ce8f1cd9</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>d28de1e7375e67bfbdccce22239182dc</anchor>
+      <anchor>ad28de1e7375e67bfbdccce22239182dc</anchor>
       <arglist>(m_modelObserverCompPtr, m_modelViewCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>92aa297a44b7fd88c8da694efdcafbcf</anchor>
+      <anchor>a92aa297a44b7fd88c8da694efdcafbcf</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnParameterChanged</name>
       <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>dd8d7032a32e5870a17dd298bc37d199</anchor>
+      <anchor>add8d7032a32e5870a17dd298bc37d199</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>180977f89cdd4712d842018f314ee61f</anchor>
+      <anchor>a180977f89cdd4712d842018f314ee61f</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>561a06b857067639cd49a87f796778e4</anchor>
+      <anchor>a561a06b857067639cd49a87f796778e4</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>dd406bb60ec8fa85ceea3ea466e601b8</anchor>
+      <anchor>add406bb60ec8fa85ceea3ea466e601b8</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -11019,14 +11003,14 @@
       <type>virtual void</type>
       <name>BeforeUpdate</name>
       <anchorfile>classiqtipr_1_1_c_search_result_shape.html</anchorfile>
-      <anchor>722b893742311e89eb0f4d39ed3180a6</anchor>
+      <anchor>a722b893742311e89eb0f4d39ed3180a6</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtipr_1_1_c_search_result_shape.html</anchorfile>
-      <anchor>a867b06cc7a28a1f5d58af77da77c62a</anchor>
+      <anchor>aa867b06cc7a28a1f5d58af77da77c62a</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
@@ -11039,77 +11023,77 @@
       <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CValueSupplierGuiComp, iproc::IValueSupplier &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>b4ca155b85b7e61dc3dca928ff9a8a97</anchor>
+      <anchor>ab4ca155b85b7e61dc3dca928ff9a8a97</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CValueSupplierGuiComp</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>7d8efb5edf206b772927592e9e447f89</anchor>
+      <anchor>a7d8efb5edf206b772927592e9e447f89</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_TestButton_clicked</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>2a069ba016951766ebff106d2ab12d1e</anchor>
+      <anchor>a2a069ba016951766ebff106d2ab12d1e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_LoadParamsButton_clicked</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>90e391a9826f908325672bd356a807f7</anchor>
+      <anchor>a90e391a9826f908325672bd356a807f7</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SaveParamsButton_clicked</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>9b3f30ba419e41290f655ec6806fae5a</anchor>
+      <anchor>a9b3f30ba419e41290f655ec6806fae5a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QWidget *</type>
       <name>GetParamsWidget</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>8a9dfb272378b56fc59c478ff601aa78</anchor>
+      <anchor>a8a9dfb272378b56fc59c478ff601aa78</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>4cfce61899a27800165748d2cc4a3416</anchor>
+      <anchor>a4cfce61899a27800165748d2cc4a3416</anchor>
       <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>b36269efd80ebc95485d9b7cfccfbc75</anchor>
+      <anchor>ab36269efd80ebc95485d9b7cfccfbc75</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>fbfa844c008eb0d274bd8dd48d0a5b40</anchor>
+      <anchor>afbfa844c008eb0d274bd8dd48d0a5b40</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>b5160a7f3c50ad892ae7d549b2e9b913</anchor>
+      <anchor>ab5160a7f3c50ad892ae7d549b2e9b913</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>81524cf0dd4f101573bb6a44bb62dee8</anchor>
+      <anchor>a81524cf0dd4f101573bb6a44bb62dee8</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -11121,14 +11105,14 @@
       <type></type>
       <name>ParamsObserver</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html</anchorfile>
-      <anchor>5145b7e8b579f7ee70c48e081abec0e5</anchor>
+      <anchor>a5145b7e8b579f7ee70c48e081abec0e5</anchor>
       <arglist>(CValueSupplierGuiComp *parentPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html</anchorfile>
-      <anchor>810879a03b633f6a863612453e50020c</anchor>
+      <anchor>a810879a03b633f6a863612453e50020c</anchor>
       <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
@@ -11148,91 +11132,91 @@
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CSampleAcquisitionGuiComp, QWidget &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>ca5ba7f42895aa248c99d9e6fe90e7c3</anchor>
+      <anchor>aca5ba7f42895aa248c99d9e6fe90e7c3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>c1d265b41bf65806df4d92dfc13f231e</anchor>
+      <anchor>ac1d265b41bf65806df4d92dfc13f231e</anchor>
       <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>1b21daacdcedc23868b320fae3e6a13d</anchor>
+      <anchor>a1b21daacdcedc23868b320fae3e6a13d</anchor>
       <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type>I_END_COMPONENT</type>
       <name>CSampleAcquisitionGuiComp</name>
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>27de55f2ed768f3b706306e62415a666</anchor>
+      <anchor>a27de55f2ed768f3b706306e62415a666</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_StartButton_toggled</name>
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>64fe404c2cec2b3c56cf18a038d5c708</anchor>
+      <anchor>a64fe404c2cec2b3c56cf18a038d5c708</anchor>
       <arglist>(bool checked)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SaveSampleButton_clicked</name>
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>be1aa8c1c3b26e77a74717b0390fe0e0</anchor>
+      <anchor>abe1aa8c1c3b26e77a74717b0390fe0e0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_LoadParamsButton_clicked</name>
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>405c43c3c07dad69bf45a262af9e2c6d</anchor>
+      <anchor>a405c43c3c07dad69bf45a262af9e2c6d</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SaveParamsButton_clicked</name>
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>f7feea23fa1befdbae56d156b969dd79</anchor>
+      <anchor>af7feea23fa1befdbae56d156b969dd79</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnTimerReady</name>
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>468f8d960f407ddf9b954ef482dc7da1</anchor>
+      <anchor>a468f8d960f407ddf9b954ef482dc7da1</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>AcquireSample</name>
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>c31a1dc5968aa8414de80c0205cb0520</anchor>
+      <anchor>ac31a1dc5968aa8414de80c0205cb0520</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>1273339e0ff7f6080ef5da64beb15971</anchor>
+      <anchor>a1273339e0ff7f6080ef5da64beb15971</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>4d6f7f417396647ef0505ee22c8442d2</anchor>
+      <anchor>a4d6f7f417396647ef0505ee22c8442d2</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>9c25be04b81fd90d42f4b462f13485b6</anchor>
+      <anchor>a9c25be04b81fd90d42f4b462f13485b6</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -11244,42 +11228,42 @@
       <type>QWidget</type>
       <name>BaseClass</name>
       <anchorfile>classiqtsig_1_1_c_sample_container_view.html</anchorfile>
-      <anchor>7a875da2777df55a7cc0e5402ff166ef</anchor>
+      <anchor>a7a875da2777df55a7cc0e5402ff166ef</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>imod::TSingleModelObserverBase&lt; imeas::IDataSequence &gt;</type>
       <name>BaseClass2</name>
       <anchorfile>classiqtsig_1_1_c_sample_container_view.html</anchorfile>
-      <anchor>1e25141e39080892b2b4c0e1fffdda1d</anchor>
+      <anchor>a1e25141e39080892b2b4c0e1fffdda1d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CSampleContainerView</name>
       <anchorfile>classiqtsig_1_1_c_sample_container_view.html</anchorfile>
-      <anchor>8310e81a412d92d43ebe50e5e13241b9</anchor>
+      <anchor>a8310e81a412d92d43ebe50e5e13241b9</anchor>
       <arglist>(QWidget *parentPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>SetDisplayedRange</name>
       <anchorfile>classiqtsig_1_1_c_sample_container_view.html</anchorfile>
-      <anchor>a064bef04c9090fb94c99d56a91b1d5c</anchor>
+      <anchor>aa064bef04c9090fb94c99d56a91b1d5c</anchor>
       <arglist>(const istd::CRange &amp;range)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiqtsig_1_1_c_sample_container_view.html</anchorfile>
-      <anchor>431ab0d32f8ecba1c02143a52c8a5f97</anchor>
+      <anchor>a431ab0d32f8ecba1c02143a52c8a5f97</anchor>
       <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>paintEvent</name>
       <anchorfile>classiqtsig_1_1_c_sample_container_view.html</anchorfile>
-      <anchor>ca2dba8ee02f27eeff3c2f92ce030add</anchor>
+      <anchor>aca2dba8ee02f27eeff3c2f92ce030add</anchor>
       <arglist>(QPaintEvent *event)</arglist>
     </member>
   </compound>
@@ -11291,35 +11275,35 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSamplingParamsGuiComp, isig::ISamplingParams &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtsig_1_1_c_sampling_params_gui_comp.html</anchorfile>
-      <anchor>bfff7c5ee2a72f8db68c7b25ce9d22f3</anchor>
+      <anchor>abfff7c5ee2a72f8db68c7b25ce9d22f3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtsig_1_1_c_sampling_params_gui_comp.html</anchorfile>
-      <anchor>6f1d7aeebdaac0e12378aab93f63b481</anchor>
+      <anchor>a6f1d7aeebdaac0e12378aab93f63b481</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtsig_1_1_c_sampling_params_gui_comp.html</anchorfile>
-      <anchor>7bd0afc921e1c8eae36bf3bca954927d</anchor>
+      <anchor>a7bd0afc921e1c8eae36bf3bca954927d</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_IntervalSB_valueChanged</name>
       <anchorfile>classiqtsig_1_1_c_sampling_params_gui_comp.html</anchorfile>
-      <anchor>fa5bcac98b1fb6e7b1023f8427906e46</anchor>
+      <anchor>afa5bcac98b1fb6e7b1023f8427906e46</anchor>
       <arglist>(double value)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_ModeCB_currentIndexChanged</name>
       <anchorfile>classiqtsig_1_1_c_sampling_params_gui_comp.html</anchorfile>
-      <anchor>8a12767a1fb7378a9cf90fbb3f982584</anchor>
+      <anchor>a8a12767a1fb7378a9cf90fbb3f982584</anchor>
       <arglist>(int index)</arglist>
     </member>
   </compound>
@@ -11327,61 +11311,61 @@
     <name>iqtsig::CScriptDataProcessorComp</name>
     <filename>classiqtsig_1_1_c_script_data_processor_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
-    <base>TSyncProcessorWrap&lt; IProcessor &gt;</base>
+    <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>8468ba0584c1a8101e02aa735c550b0e</anchor>
+      <anchor>a8468ba0584c1a8101e02aa735c550b0e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type>I_END_COMPONENT</type>
       <name>CScriptDataProcessorComp</name>
       <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>a0e1187959b8bde21cc0bab87c6040a4</anchor>
+      <anchor>aa0e1187959b8bde21cc0bab87c6040a4</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>a8eb6c524209cd20317be01fe8a777f6</anchor>
+      <anchor>aa8eb6c524209cd20317be01fe8a777f6</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetIntervalRange</name>
       <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>bc7bd09ca1f2ca6aa543eb944c5bd833</anchor>
+      <anchor>abc7bd09ca1f2ca6aa543eb944c5bd833</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsSamplingModeSupported</name>
       <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>5264292f917d63866788b35d19d06da4</anchor>
+      <anchor>a5264292f917d63866788b35d19d06da4</anchor>
       <arglist>(int mode) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetValueRange</name>
       <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>cf837e72ccb12d66dcbd31583fbff654</anchor>
+      <anchor>acf837e72ccb12d66dcbd31583fbff654</anchor>
       <arglist>(bool forInput=true, bool forOutput=true, const iprm::IParamsSet *paramsSetPtr=0) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetMaximalSamplesCount</name>
       <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>8bb49c30779938f1f181e6a0a1640d9b</anchor>
+      <anchor>a8bb49c30779938f1f181e6a0a1640d9b</anchor>
       <arglist>(bool forInput=true, bool forOutput=true, const iprm::IParamsSet *paramsSetPtr=0) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>34bdaad5171c27cca12366a81947adfe</anchor>
+      <anchor>a34bdaad5171c27cca12366a81947adfe</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -11399,77 +11383,77 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSwissRangerAcquisitionDataViewComp, iswr::ISwissRangerAcquisitionData &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
-      <anchor>f773fd473324ca034d14192e75803d8f</anchor>
+      <anchor>af773fd473324ca034d14192e75803d8f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
-      <anchor>3c3263c82ca32c57c15602f87f8b2e10</anchor>
+      <anchor>a3c3263c82ca32c57c15602f87f8b2e10</anchor>
       <arglist>(m_depthImageObserverCompPtr, m_depthImageGuiCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
-      <anchor>7123e7ac2755880edd4f5348dd4e6e52</anchor>
+      <anchor>a7123e7ac2755880edd4f5348dd4e6e52</anchor>
       <arglist>(m_depthImageObserver3dCompPtr, m_depthImageGui3dCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
-      <anchor>cbe79828d81d3da573a8b2a6a90a5014</anchor>
+      <anchor>acbe79828d81d3da573a8b2a6a90a5014</anchor>
       <arglist>(m_amplitudeImageObserverCompPtr, m_amplitudeImageGuiCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
-      <anchor>fd983d0688a710a4b01db5da005b1285</anchor>
+      <anchor>afd983d0688a710a4b01db5da005b1285</anchor>
       <arglist>(m_confidenceMapObserverCompPtr, m_confidenceMapGuiCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
-      <anchor>befd0fda1213240204042011052236ee</anchor>
+      <anchor>abefd0fda1213240204042011052236ee</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
-      <anchor>e5c0288a3cd9f07d655dbdfadb7557aa</anchor>
+      <anchor>ae5c0288a3cd9f07d655dbdfadb7557aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelDetached</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
-      <anchor>6c28ceb85daba37bc33e39c42b75c66f</anchor>
+      <anchor>a6c28ceb85daba37bc33e39c42b75c66f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
-      <anchor>b6fb0c08117fe5b4c9e8a148493cbfa8</anchor>
+      <anchor>ab6fb0c08117fe5b4c9e8a148493cbfa8</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
-      <anchor>8fcf98e960f87b3ba19de0b95471c19c</anchor>
+      <anchor>a8fcf98e960f87b3ba19de0b95471c19c</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_acquisition_data_view_comp.html</anchorfile>
-      <anchor>2ab7b5e17c41cdff4e2cd556b67a1273</anchor>
+      <anchor>a2ab7b5e17c41cdff4e2cd556b67a1273</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -11481,35 +11465,35 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSwissRangerParamsGuiComp, iswr::ISwissRangerParams &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_params_gui_comp.html</anchorfile>
-      <anchor>7187353cdfe994aaf8c43a49c6748902</anchor>
+      <anchor>a7187353cdfe994aaf8c43a49c6748902</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_END_COMPONENT void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_params_gui_comp.html</anchorfile>
-      <anchor>98d21a46f12efa22f4d91b6dfae82683</anchor>
+      <anchor>a98d21a46f12efa22f4d91b6dfae82683</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_params_gui_comp.html</anchorfile>
-      <anchor>a31f37c6c28beb235181cc4809c433ea</anchor>
+      <anchor>aa31f37c6c28beb235181cc4809c433ea</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_params_gui_comp.html</anchorfile>
-      <anchor>7785607b60050b8e80b867d9c91d6cc2</anchor>
+      <anchor>a7785607b60050b8e80b867d9c91d6cc2</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnModelChanged</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_params_gui_comp.html</anchorfile>
-      <anchor>b3b1e26734f756e2714b5512fb294c97</anchor>
+      <anchor>ab3b1e26734f756e2714b5512fb294c97</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -11532,190 +11516,190 @@
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>f964bba310c519da790022d88e4bc861</anchor>
+      <anchor>af964bba310c519da790022d88e4bc861</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_INIT</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>f964bba310c519da790022d88e4bc861a767e02276f16dd3ed16aab21d283e22</anchor>
+      <anchor>af964bba310c519da790022d88e4bc861aa767e02276f16dd3ed16aab21d283e22</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_SET</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>f964bba310c519da790022d88e4bc861442e1f3cf452f2bca5de4b10c55829fa</anchor>
+      <anchor>af964bba310c519da790022d88e4bc861a442e1f3cf452f2bca5de4b10c55829fa</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_TIMEOUT</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>f964bba310c519da790022d88e4bc861d02127f21a5ed546e59ac0bf64834d63</anchor>
+      <anchor>af964bba310c519da790022d88e4bc861ad02127f21a5ed546e59ac0bf64834d63</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_CONNECT</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>f964bba310c519da790022d88e4bc8613b8fed01b702ff78b799f91f7a59e6df</anchor>
+      <anchor>af964bba310c519da790022d88e4bc861a3b8fed01b702ff78b799f91f7a59e6df</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_CAPTURE</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>f964bba310c519da790022d88e4bc86134a515551101c10af5733d8cd491973c</anchor>
+      <anchor>af964bba310c519da790022d88e4bc861a34a515551101c10af5733d8cd491973c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_DEVICE_INTERN</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>f964bba310c519da790022d88e4bc861093142c0cdabfac4a26641c2a70a7871</anchor>
+      <anchor>af964bba310c519da790022d88e4bc861a093142c0cdabfac4a26641c2a70a7871</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>a5db57cf1d0a1337b75c79618a8b5271</anchor>
+      <anchor>aa5db57cf1d0a1337b75c79618a8b5271</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CGenicamCameraComp</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>23853dac6ec50f3daf81e3f7dc299040</anchor>
+      <anchor>a23853dac6ec50f3daf81e3f7dc299040</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
       <name>~CGenicamCameraComp</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>52c218bc6430254d4620a0643286f413</anchor>
+      <anchor>a52c218bc6430254d4620a0643286f413</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>3bc9da2b7fa7bb0915786bda4524984c</anchor>
+      <anchor>a3bc9da2b7fa7bb0915786bda4524984c</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>4c18ec417df00333e03c4005da5617e4</anchor>
+      <anchor>a4c18ec417df00333e03c4005da5617e4</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InitProcessor</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>291333a4ffb80ed4276ec4ddea081feb</anchor>
+      <anchor>a291333a4ffb80ed4276ec4ddea081feb</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetShutterTimeRange</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>c4affd07ec14226def792807e12bf1c5</anchor>
+      <anchor>ac4affd07ec14226def792807e12bf1c5</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetDelayTimeRange</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>8447be4880dd86b10a1b45177b1bc5d5</anchor>
+      <anchor>a8447be4880dd86b10a1b45177b1bc5d5</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetEenDelayRange</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>372fe50902b50887f8889d57cbe2112d</anchor>
+      <anchor>a372fe50902b50887f8889d57cbe2112d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsTriggerModeSupported</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>52e67d03b5c625aef4e7b47070ad8451</anchor>
+      <anchor>a52e67d03b5c625aef4e7b47070ad8451</anchor>
       <arglist>(int triggerMode) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetOptionsCount</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>d2febe27e69ab9d11e2dcbec498da76e</anchor>
+      <anchor>ad2febe27e69ab9d11e2dcbec498da76e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
       <name>GetOptionName</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>75c9b3d67fec6f18db4add906ed9c619</anchor>
+      <anchor>a75c9b3d67fec6f18db4add906ed9c619</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnCameraEventLog</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>4ea3ed595409af72643acc5258d8e09e</anchor>
+      <anchor>a4ea3ed595409af72643acc5258d8e09e</anchor>
       <arglist>(int type, QString message)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>DeviceInfo *</type>
       <name>GetDeviceByUrl</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>918a32146ec30bdb6013e0b5f8d966ce</anchor>
+      <anchor>a918a32146ec30bdb6013e0b5f8d966ce</anchor>
       <arglist>(const istd::CString &amp;urlString) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>DeviceInfo *</type>
       <name>GetDeviceByParams</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>0f8c8b4f90a0b866306f2b9d6bd35635</anchor>
+      <anchor>a0f8c8b4f90a0b866306f2b9d6bd35635</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>int</type>
       <name>GetTriggerModeByParams</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>e64d89482caf21ca9ce2d8e92ca957d4</anchor>
+      <anchor>ae64d89482caf21ca9ce2d8e92ca957d4</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>const i2d::CRectangle *</type>
       <name>GetRoiFromParams</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>7e661bfbd2a02f3fff4d024bf6e75417</anchor>
+      <anchor>a7e661bfbd2a02f3fff4d024bf6e75417</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>const icam::IExposureParams *</type>
       <name>GetEposureTimeFromParams</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>9633d06c9013faef34b81fdfa1feff19</anchor>
+      <anchor>a9633d06c9013faef34b81fdfa1feff19</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>DeviceInfo *</type>
       <name>EnsureDeviceSynchronized</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>4116a821146ebcc687047e978f00075f</anchor>
+      <anchor>a4116a821146ebcc687047e978f00075f</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SynchronizeCameraParams</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>aca4a7f4a2098fea27266294d651fe51</anchor>
+      <anchor>aaca4a7f4a2098fea27266294d651fe51</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, DeviceInfo &amp;deviceInfo)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>562cfb945ccb1164ed19546647c98377</anchor>
+      <anchor>a562cfb945ccb1164ed19546647c98377</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -11726,63 +11710,63 @@
       <type></type>
       <name>DeviceInfo</name>
       <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
-      <anchor>711886dbe9075215055e743de3492097</anchor>
+      <anchor>a711886dbe9075215055e743de3492097</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>exposureTime</name>
       <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
-      <anchor>dd16f6265426bde4e791c604dcae7ac5</anchor>
+      <anchor>add16f6265426bde4e791c604dcae7ac5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>brightness</name>
       <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
-      <anchor>971cb23a87e8d52a0a0e9d8f37b34a28</anchor>
+      <anchor>a971cb23a87e8d52a0a0e9d8f37b34a28</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>contrast</name>
       <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
-      <anchor>edfa7a957809c99476af0e2e54caf2b3</anchor>
+      <anchor>aedfa7a957809c99476af0e2e54caf2b3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>triggerMode</name>
       <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
-      <anchor>889181deb2180f7b9d23b393c6f45ab1</anchor>
+      <anchor>a889181deb2180f7b9d23b393c6f45ab1</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>i2d::CRectangle</type>
       <name>roi</name>
       <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
-      <anchor>4f808cd196204472f2ad21bfe6aff32a</anchor>
+      <anchor>a4f808cd196204472f2ad21bfe6aff32a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>gige::IDevice</type>
       <name>devicePtr</name>
       <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
-      <anchor>7ed6da3d2ad709ec7946753f8b284594</anchor>
+      <anchor>a7ed6da3d2ad709ec7946753f8b284594</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>istd::CString</type>
       <name>cameraId</name>
       <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
-      <anchor>cdbfd3070ae8e203a8f8c00887b8977e</anchor>
+      <anchor>acdbfd3070ae8e203a8f8c00887b8977e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>bool</type>
       <name>isInitialized</name>
       <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
-      <anchor>942cd5e5fa6467fa4b541fbcff4f28c5</anchor>
+      <anchor>a942cd5e5fa6467fa4b541fbcff4f28c5</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -11794,49 +11778,49 @@
       <type>void</type>
       <name>CameraEventLog</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_singleton.html</anchorfile>
-      <anchor>d18ff9968307e07a5c82e2bfb6ba2e23</anchor>
+      <anchor>ad18ff9968307e07a5c82e2bfb6ba2e23</anchor>
       <arglist>(int type, QString message)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CGenicamCameraSingleton</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_singleton.html</anchorfile>
-      <anchor>fc0ba7121e8d6ca50b5fbe276d4bb51e</anchor>
+      <anchor>afc0ba7121e8d6ca50b5fbe276d4bb51e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
       <name>~CGenicamCameraSingleton</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_singleton.html</anchorfile>
-      <anchor>bd8e26e421efd1789726a842c145d0c7</anchor>
+      <anchor>abd8e26e421efd1789726a842c145d0c7</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable">
       <type>gige::IGigEVisionAPI</type>
       <name>gigeApi</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_singleton.html</anchorfile>
-      <anchor>c02d6070474301e74b03988c2626b8b6</anchor>
+      <anchor>ac02d6070474301e74b03988c2626b8b6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnConnect</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_singleton.html</anchorfile>
-      <anchor>7c7c04ab98049f7c558d596793519940</anchor>
+      <anchor>a7c7c04ab98049f7c558d596793519940</anchor>
       <arglist>(gige::IDevice devicePtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnDisconnect</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_singleton.html</anchorfile>
-      <anchor>778b6b97c55962d506370a0309f06e39</anchor>
+      <anchor>a778b6b97c55962d506370a0309f06e39</anchor>
       <arglist>(gige::IDevice devicePtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnLog</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_singleton.html</anchorfile>
-      <anchor>c4b63a2515401989f6b6bff22fe25309</anchor>
+      <anchor>ac4b63a2515401989f6b6bff22fe25309</anchor>
       <arglist>(gige::IDevice devicePtr, gige::EventMessage eMessage)</arglist>
     </member>
   </compound>
@@ -11862,77 +11846,77 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
-      <anchor>b093943e915a003b71de65254e197368</anchor>
+      <anchor>ab093943e915a003b71de65254e197368</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CPulseParamsComp</name>
       <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
-      <anchor>472e2ea45d4491d1142451e4f94588ee</anchor>
+      <anchor>a472e2ea45d4491d1142451e4f94588ee</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IPulseConstraints *</type>
       <name>GetPulseConstraints</name>
       <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
-      <anchor>544e3f5bd3f184bd66021b04fa42dd7f</anchor>
+      <anchor>a544e3f5bd3f184bd66021b04fa42dd7f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetDelayTime</name>
       <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
-      <anchor>a2abc8ece98501079bcfc7edd334f980</anchor>
+      <anchor>aa2abc8ece98501079bcfc7edd334f980</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetDelayTime</name>
       <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
-      <anchor>72a810f1526c9038621c05983c883ea5</anchor>
+      <anchor>a72a810f1526c9038621c05983c883ea5</anchor>
       <arglist>(double time)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetPulseDuration</name>
       <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
-      <anchor>dae6a971bb3f3e85b660a770dc840acf</anchor>
+      <anchor>adae6a971bb3f3e85b660a770dc840acf</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetPulseDuration</name>
       <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
-      <anchor>1cad8ea224b17b2941e7ec7b9aaa8962</anchor>
+      <anchor>a1cad8ea224b17b2941e7ec7b9aaa8962</anchor>
       <arglist>(double time)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetRelaxingTime</name>
       <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
-      <anchor>4a8422857c07323d72c4df7f295fbf6f</anchor>
+      <anchor>a4a8422857c07323d72c4df7f295fbf6f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetRelaxingTime</name>
       <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
-      <anchor>f881376d2ab1c27be36051097ed60d95</anchor>
+      <anchor>af881376d2ab1c27be36051097ed60d95</anchor>
       <arglist>(double time)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
-      <anchor>554833d46374d72b56657a54746a558b</anchor>
+      <anchor>a554833d46374d72b56657a54746a558b</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classisig_1_1_c_pulse_params_comp.html</anchorfile>
-      <anchor>778420fd49cce87b37364e4b30372f5a</anchor>
+      <anchor>a778420fd49cce87b37364e4b30372f5a</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -11945,63 +11929,63 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classisig_1_1_c_sampling_params_comp.html</anchorfile>
-      <anchor>78621ba7d6de0be67d8ea1b3818a1398</anchor>
+      <anchor>a78621ba7d6de0be67d8ea1b3818a1398</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type>I_END_COMPONENT</type>
       <name>CSamplingParamsComp</name>
       <anchorfile>classisig_1_1_c_sampling_params_comp.html</anchorfile>
-      <anchor>ff653a68dc92de910ea63a63fa99d055</anchor>
+      <anchor>aff653a68dc92de910ea63a63fa99d055</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ISamplingConstraints *</type>
       <name>GetSamplingConstraints</name>
       <anchorfile>classisig_1_1_c_sampling_params_comp.html</anchorfile>
-      <anchor>6983d01a7b1128af97e1f581bdb442f7</anchor>
+      <anchor>a6983d01a7b1128af97e1f581bdb442f7</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetInterval</name>
       <anchorfile>classisig_1_1_c_sampling_params_comp.html</anchorfile>
-      <anchor>17c14dbd1bea96d6d19e4c0cbe5696f5</anchor>
+      <anchor>a17c14dbd1bea96d6d19e4c0cbe5696f5</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetInterval</name>
       <anchorfile>classisig_1_1_c_sampling_params_comp.html</anchorfile>
-      <anchor>892e618c6e1d7e615552a1af21a5232b</anchor>
+      <anchor>a892e618c6e1d7e615552a1af21a5232b</anchor>
       <arglist>(double value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSamplingMode</name>
       <anchorfile>classisig_1_1_c_sampling_params_comp.html</anchorfile>
-      <anchor>2496f9c8aed2b00da161229d92eb79e6</anchor>
+      <anchor>a2496f9c8aed2b00da161229d92eb79e6</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetSamplingMode</name>
       <anchorfile>classisig_1_1_c_sampling_params_comp.html</anchorfile>
-      <anchor>3e3b254253d5c15aace3e939b26507d4</anchor>
+      <anchor>a3e3b254253d5c15aace3e939b26507d4</anchor>
       <arglist>(int mode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classisig_1_1_c_sampling_params_comp.html</anchorfile>
-      <anchor>9b8c3144db570285cc7781c9a22439a4</anchor>
+      <anchor>a9b8c3144db570285cc7781c9a22439a4</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classisig_1_1_c_sampling_params_comp.html</anchorfile>
-      <anchor>7b69fd98c04f4a29edd36dbabbcce649</anchor>
+      <anchor>a7b69fd98c04f4a29edd36dbabbcce649</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -12014,49 +11998,49 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>d16135821778b4f3a13bad5309635a42</anchor>
+      <anchor>ad16135821778b4f3a13bad5309635a42</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CTriggerParamsComp</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>59a3773c1df8b113b1aadeb86c8ea1e5</anchor>
+      <anchor>a59a3773c1df8b113b1aadeb86c8ea1e5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ITriggerConstraints *</type>
       <name>GetTriggerConstraints</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>2cbfc6732018cbd0379758fc62b4597a</anchor>
+      <anchor>a2cbfc6732018cbd0379758fc62b4597a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetTriggerMode</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>1ff71af657ff8b284c5d76979f14deee</anchor>
+      <anchor>a1ff71af657ff8b284c5d76979f14deee</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetTriggerMode</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>670d41fc9ce3033bba4475114b27bb30</anchor>
+      <anchor>a670d41fc9ce3033bba4475114b27bb30</anchor>
       <arglist>(int triggerMode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>c2ac5146f3ccba17864e9a53d4e00852</anchor>
+      <anchor>ac2ac5146f3ccba17864e9a53d4e00852</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>0d20fcd9935ffc329ddf54541baa8c6b</anchor>
+      <anchor>a0d20fcd9935ffc329ddf54541baa8c6b</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -12067,59 +12051,59 @@
     <member kind="enumeration">
       <name>PulseSupportedFlags</name>
       <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
-      <anchor>125134ee442e4c6cf8ad963ddf7f7bd6</anchor>
+      <anchor>a125134ee442e4c6cf8ad963ddf7f7bd6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>PSF_NONE</name>
       <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
-      <anchor>125134ee442e4c6cf8ad963ddf7f7bd67c012755c7c71fc55601ed51aab5e699</anchor>
+      <anchor>a125134ee442e4c6cf8ad963ddf7f7bd6a7c012755c7c71fc55601ed51aab5e699</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>PSF_DELAY_TIME</name>
       <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
-      <anchor>125134ee442e4c6cf8ad963ddf7f7bd6c22eaf1311809da5d444fb80a6fcf597</anchor>
+      <anchor>a125134ee442e4c6cf8ad963ddf7f7bd6ac22eaf1311809da5d444fb80a6fcf597</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>PSF_PULSE_DURATION</name>
       <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
-      <anchor>125134ee442e4c6cf8ad963ddf7f7bd6e0d2b922870fd21bacf900986462cbe7</anchor>
+      <anchor>a125134ee442e4c6cf8ad963ddf7f7bd6ae0d2b922870fd21bacf900986462cbe7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>PSF_RELAXING_TIME</name>
       <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
-      <anchor>125134ee442e4c6cf8ad963ddf7f7bd60cadd24a4b30e81e0d427a40ca378fab</anchor>
+      <anchor>a125134ee442e4c6cf8ad963ddf7f7bd6a0cadd24a4b30e81e0d427a40ca378fab</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetPulseSupportedFlags</name>
       <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
-      <anchor>48b3217a46c7d808434efff2fe7aa7e5</anchor>
+      <anchor>a48b3217a46c7d808434efff2fe7aa7e5</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
       <name>GetDelayTimeRange</name>
       <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
-      <anchor>9e8b99a9496753c7a8e8868aae409c2a</anchor>
+      <anchor>a9e8b99a9496753c7a8e8868aae409c2a</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
       <name>GetPulseDurationRange</name>
       <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
-      <anchor>21f82390cff03780d3c0a666f5afc7e0</anchor>
+      <anchor>a21f82390cff03780d3c0a666f5afc7e0</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
       <name>GetRelaxingTimeRange</name>
       <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
-      <anchor>848595a734501488e7cf54c9082a2363</anchor>
+      <anchor>a848595a734501488e7cf54c9082a2363</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -12131,49 +12115,49 @@
       <type>virtual const IPulseConstraints *</type>
       <name>GetPulseConstraints</name>
       <anchorfile>classisig_1_1_i_pulse_params.html</anchorfile>
-      <anchor>df1a6200b4109b0f6888552d9c5a40e6</anchor>
+      <anchor>adf1a6200b4109b0f6888552d9c5a40e6</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetDelayTime</name>
       <anchorfile>classisig_1_1_i_pulse_params.html</anchorfile>
-      <anchor>37501fdf68c8ea680062d5de25519781</anchor>
+      <anchor>a37501fdf68c8ea680062d5de25519781</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetDelayTime</name>
       <anchorfile>classisig_1_1_i_pulse_params.html</anchorfile>
-      <anchor>6ada4c5021ec1f693aa08ac70f73019b</anchor>
+      <anchor>a6ada4c5021ec1f693aa08ac70f73019b</anchor>
       <arglist>(double time)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetPulseDuration</name>
       <anchorfile>classisig_1_1_i_pulse_params.html</anchorfile>
-      <anchor>0e5236bb3e8667987fd05d33c0b216c1</anchor>
+      <anchor>a0e5236bb3e8667987fd05d33c0b216c1</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetPulseDuration</name>
       <anchorfile>classisig_1_1_i_pulse_params.html</anchorfile>
-      <anchor>52b952298dbecdccaae1bb6ba143ddad</anchor>
+      <anchor>a52b952298dbecdccaae1bb6ba143ddad</anchor>
       <arglist>(double time)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetRelaxingTime</name>
       <anchorfile>classisig_1_1_i_pulse_params.html</anchorfile>
-      <anchor>f496a3dcc5f35ecb84d56cae19c988b6</anchor>
+      <anchor>af496a3dcc5f35ecb84d56cae19c988b6</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetRelaxingTime</name>
       <anchorfile>classisig_1_1_i_pulse_params.html</anchorfile>
-      <anchor>acd96123409ab4b2341ce6a075d3a42f</anchor>
+      <anchor>aacd96123409ab4b2341ce6a075d3a42f</anchor>
       <arglist>(double time)=0</arglist>
     </member>
   </compound>
@@ -12185,28 +12169,28 @@
       <type>virtual istd::CRange</type>
       <name>GetIntervalRange</name>
       <anchorfile>classisig_1_1_i_sampling_constraints.html</anchorfile>
-      <anchor>4efbd428e366387b5052fe059033663c</anchor>
+      <anchor>a4efbd428e366387b5052fe059033663c</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsSamplingModeSupported</name>
       <anchorfile>classisig_1_1_i_sampling_constraints.html</anchorfile>
-      <anchor>d70e1e6bec266406dcad2f3c9411c1b4</anchor>
+      <anchor>ad70e1e6bec266406dcad2f3c9411c1b4</anchor>
       <arglist>(int mode) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
       <name>GetValueRange</name>
       <anchorfile>classisig_1_1_i_sampling_constraints.html</anchorfile>
-      <anchor>2857554bc1b511c0fb6e330069b04582</anchor>
+      <anchor>a2857554bc1b511c0fb6e330069b04582</anchor>
       <arglist>(bool forInput=true, bool forOutput=true, const iprm::IParamsSet *paramsSetPtr=NULL) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetMaximalSamplesCount</name>
       <anchorfile>classisig_1_1_i_sampling_constraints.html</anchorfile>
-      <anchor>1d5930545f1cf572b584a24b756c8981</anchor>
+      <anchor>a1d5930545f1cf572b584a24b756c8981</anchor>
       <arglist>(bool forInput=true, bool forOutput=true, const iprm::IParamsSet *paramsSetPtr=NULL) const =0</arglist>
     </member>
   </compound>
@@ -12217,66 +12201,66 @@
     <member kind="enumeration">
       <name>SamplingMode</name>
       <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>f3fded8527fd5d3658143ff3fbbbfbb1</anchor>
+      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SM_SINGLE</name>
       <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>f3fded8527fd5d3658143ff3fbbbfbb1e09c80c5d30b5b67f6a3f39a3734e9b8</anchor>
+      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1ae09c80c5d30b5b67f6a3f39a3734e9b8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SM_PERIODIC</name>
       <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>f3fded8527fd5d3658143ff3fbbbfbb1e62a987faf4e073d2b9acc4c63f8cbd1</anchor>
+      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1ae62a987faf4e073d2b9acc4c63f8cbd1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SM_SYNCHRONIZED</name>
       <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>f3fded8527fd5d3658143ff3fbbbfbb1eb5f27a8faa3fe5b3e39a46ef76e852e</anchor>
+      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1aeb5f27a8faa3fe5b3e39a46ef76e852e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SM_LAST</name>
       <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>f3fded8527fd5d3658143ff3fbbbfbb1b79088096685516dac12e9d921811be6</anchor>
+      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1ab79088096685516dac12e9d921811be6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const ISamplingConstraints *</type>
       <name>GetSamplingConstraints</name>
       <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>65f8157f24680d1be3124cd374b90a6c</anchor>
+      <anchor>a65f8157f24680d1be3124cd374b90a6c</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetInterval</name>
       <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>df59fc6368524d6bde03130332c0a56f</anchor>
+      <anchor>adf59fc6368524d6bde03130332c0a56f</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetInterval</name>
       <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>77b6183a53efefcffb77c2b4cc5e4b17</anchor>
+      <anchor>a77b6183a53efefcffb77c2b4cc5e4b17</anchor>
       <arglist>(double value)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetSamplingMode</name>
       <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>d913065a1a45e689609b7c404fa7673d</anchor>
+      <anchor>ad913065a1a45e689609b7c404fa7673d</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>SetSamplingMode</name>
       <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>7986473439f5e287204fab691b90901a</anchor>
+      <anchor>a7986473439f5e287204fab691b90901a</anchor>
       <arglist>(int mode)=0</arglist>
     </member>
   </compound>
@@ -12288,7 +12272,7 @@
       <type>virtual bool</type>
       <name>IsTriggerModeSupported</name>
       <anchorfile>classisig_1_1_i_trigger_constraints.html</anchorfile>
-      <anchor>c3e65147f53a4110240add5d288bb668</anchor>
+      <anchor>ac3e65147f53a4110240add5d288bb668</anchor>
       <arglist>(int triggerMode) const =0</arglist>
     </member>
   </compound>
@@ -12299,70 +12283,70 @@
     <member kind="enumeration">
       <name>TriggerMode</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>283940d30e3c2ac921ff3d7976ddb124</anchor>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TM_NONE</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>283940d30e3c2ac921ff3d7976ddb124eec4255e489c1752afee8ba975583c71</anchor>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124aeec4255e489c1752afee8ba975583c71</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TM_CONTINUOUS</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>283940d30e3c2ac921ff3d7976ddb124912d4ed4ec34a814156359bb766f2a6a</anchor>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124a912d4ed4ec34a814156359bb766f2a6a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TM_RISING_EDGE</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>283940d30e3c2ac921ff3d7976ddb1242f3d73f8b6544a6294b5a2536e89de0f</anchor>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124a2f3d73f8b6544a6294b5a2536e89de0f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TM_FALLING_EDGE</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>283940d30e3c2ac921ff3d7976ddb124058e033dc8b13ea678ec231784dae8d4</anchor>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124a058e033dc8b13ea678ec231784dae8d4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TM_POSITIVE_LEVEL</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>283940d30e3c2ac921ff3d7976ddb12456371f2edfe1d8d0ea2d968fac8c6ad5</anchor>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124a56371f2edfe1d8d0ea2d968fac8c6ad5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TM_NEGATIVE_LEVEL</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>283940d30e3c2ac921ff3d7976ddb1249588d9376705b9578c1a434ac19baff1</anchor>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124a9588d9376705b9578c1a434ac19baff1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TM_SOFTWARE</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>283940d30e3c2ac921ff3d7976ddb124948567cdf845741a89ba68394a29128c</anchor>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124a948567cdf845741a89ba68394a29128c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const ITriggerConstraints *</type>
       <name>GetTriggerConstraints</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>93ea697ceb89129a7a41943a70544e60</anchor>
+      <anchor>a93ea697ceb89129a7a41943a70544e60</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetTriggerMode</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>dda9d7ea9c4d729be3b6581eee07fc54</anchor>
+      <anchor>adda9d7ea9c4d729be3b6581eee07fc54</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetTriggerMode</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>66ebe1c5c3511d7fbe95d5e8124d3887</anchor>
+      <anchor>a66ebe1c5c3511d7fbe95d5e8124d3887</anchor>
       <arglist>(int triggerMode)=0</arglist>
     </member>
   </compound>
@@ -12388,108 +12372,108 @@
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>c8304970df8885033eebc3ee649d8ce2</anchor>
+      <anchor>ac8304970df8885033eebc3ee649d8ce2</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_INIT</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>c8304970df8885033eebc3ee649d8ce2d2024d8b46252a549d97a56829eeb465</anchor>
+      <anchor>ac8304970df8885033eebc3ee649d8ce2ad2024d8b46252a549d97a56829eeb465</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_CONNECT</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>c8304970df8885033eebc3ee649d8ce2fcf6f638e737742a09eeb0a0c235dd08</anchor>
+      <anchor>ac8304970df8885033eebc3ee649d8ce2afcf6f638e737742a09eeb0a0c235dd08</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_OPEN</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>c8304970df8885033eebc3ee649d8ce2f9e7cf7c573668a3fd7755b7835d2a22</anchor>
+      <anchor>ac8304970df8885033eebc3ee649d8ce2af9e7cf7c573668a3fd7755b7835d2a22</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_START</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>c8304970df8885033eebc3ee649d8ce2202bad98bb279bdf701bccfbd7da6081</anchor>
+      <anchor>ac8304970df8885033eebc3ee649d8ce2a202bad98bb279bdf701bccfbd7da6081</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>b2be02289cc24e1b994e779585161b5f</anchor>
+      <anchor>ab2be02289cc24e1b994e779585161b5f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CSwissRangerAcquisitionComp</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>8c833059b264f60e85150ec60dba0134</anchor>
+      <anchor>a8c833059b264f60e85150ec60dba0134</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>IsCameraValid</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>5bb632ec9f0064b5debf0bb420355d72</anchor>
+      <anchor>a5bb632ec9f0064b5debf0bb420355d72</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>ad9338778283b767fb1d36f9b469a903</anchor>
+      <anchor>aad9338778283b767fb1d36f9b469a903</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>8a64341ab3fe62e14eb734ec2b2cb32e</anchor>
+      <anchor>a8a64341ab3fe62e14eb734ec2b2cb32e</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const SupportedFrequencies &amp;</type>
       <name>GetSupportedFrequences</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>9156f76609a8dfce26235cc85793234b</anchor>
+      <anchor>a9156f76609a8dfce26235cc85793234b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetShutterTimeRange</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>e5bbbcf72bf4d69a4f82a884d9dc71fd</anchor>
+      <anchor>ae5bbbcf72bf4d69a4f82a884d9dc71fd</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetDelayTimeRange</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>cb530f1be256bceefcc1d76cbb881a12</anchor>
+      <anchor>acb530f1be256bceefcc1d76cbb881a12</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetEenDelayRange</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>05565a95182ee23cbf18a9908b1fd355</anchor>
+      <anchor>a05565a95182ee23cbf18a9908b1fd355</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>bc7e8d50ad67f02e5d21a4f141372e73</anchor>
+      <anchor>abc7e8d50ad67f02e5d21a4f141372e73</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_comp.html</anchorfile>
-      <anchor>158bbd7454c048be6091ba5c63e175cd</anchor>
+      <anchor>a158bbd7454c048be6091ba5c63e175cd</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -12501,77 +12485,77 @@
       <type></type>
       <name>CSwissRangerAcquisitionData</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>a389d3ceff429b2668f3b305464a1110</anchor>
+      <anchor>aa389d3ceff429b2668f3b305464a1110</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateData</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>b291435b4c1f6db99f9ef488bf62010c</anchor>
+      <anchor>ab291435b4c1f6db99f9ef488bf62010c</anchor>
       <arglist>(int maximalDepth, const iimg::IBitmap &amp;depthImage, const iimg::IBitmap &amp;confidenceMap, const iimg::IBitmap &amp;intensityImage, const iimg::IBitmap &amp;amplitudeImage, const I_SWORD *xBufferPtr, const I_SWORD *yBufferPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetMaxDistance</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>afd64bd4abb37fc50ccdc81b9ed66227</anchor>
+      <anchor>aafd64bd4abb37fc50ccdc81b9ed66227</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetDistanceImage</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>8fb2e3092de85441e092c5c38d08a25e</anchor>
+      <anchor>a8fb2e3092de85441e092c5c38d08a25e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetDepthImage</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>55fdc8f51e4b3a3cae485d0631506a67</anchor>
+      <anchor>a55fdc8f51e4b3a3cae485d0631506a67</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetConfidenceMap</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>f7791dfb67077b94a1f930f1e5e87ced</anchor>
+      <anchor>af7791dfb67077b94a1f930f1e5e87ced</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetIntensityImage</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>da74eb0f0300e4db26a0be02c2459332</anchor>
+      <anchor>ada74eb0f0300e4db26a0be02c2459332</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetAmplitudeImage</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>4bd61b7ce88f418d73e3b61b60b6ab28</anchor>
+      <anchor>a4bd61b7ce88f418d73e3b61b60b6ab28</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const I_SWORD *</type>
       <name>GetXCoordinatesBuffer</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>919288cec5fd887a41c07d7111fffdc2</anchor>
+      <anchor>a919288cec5fd887a41c07d7111fffdc2</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const I_SWORD *</type>
       <name>GetYCoordinatesBuffer</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>d3b4d24969d1b18d76fd68f989217902</anchor>
+      <anchor>ad3b4d24969d1b18d76fd68f989217902</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>61cab8a57fdcdf4282f942808007da0d</anchor>
+      <anchor>a61cab8a57fdcdf4282f942808007da0d</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -12588,70 +12572,70 @@
       <type></type>
       <name>CSwissRangerParams</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_params.html</anchorfile>
-      <anchor>e2c1c352217af52262d3f6ac7a112607</anchor>
+      <anchor>ae2c1c352217af52262d3f6ac7a112607</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetMedianFilterEnabled</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_params.html</anchorfile>
-      <anchor>9e947c2b0a3def437bcfefdcbb050246</anchor>
+      <anchor>a9e947c2b0a3def437bcfefdcbb050246</anchor>
       <arglist>(bool isMedianFilterEnabled=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsMedianFilterEnabled</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_params.html</anchorfile>
-      <anchor>974a6bfe674bb3603880c819e453fe1b</anchor>
+      <anchor>a974a6bfe674bb3603880c819e453fe1b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetAdaptiveFilterEnabled</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_params.html</anchorfile>
-      <anchor>7f865f95cf8292fe24ac22bf8cdaa01a</anchor>
+      <anchor>a7f865f95cf8292fe24ac22bf8cdaa01a</anchor>
       <arglist>(bool isAdaptiveFilterEnabled=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsAdaptiveFilterEnabled</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_params.html</anchorfile>
-      <anchor>71e6008f01f73b917027a50eb6452507</anchor>
+      <anchor>a71e6008f01f73b917027a50eb6452507</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetAmplitudeThreshold</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_params.html</anchorfile>
-      <anchor>d6e4a18192fd1a552e307391ccd0ce0d</anchor>
+      <anchor>ad6e4a18192fd1a552e307391ccd0ce0d</anchor>
       <arglist>(double amplitudeThreshold)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetAmplitudeThreshold</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_params.html</anchorfile>
-      <anchor>3c9c4a5b7887930803540ed6280fb813</anchor>
+      <anchor>a3c9c4a5b7887930803540ed6280fb813</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetModulationFrequencyMode</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_params.html</anchorfile>
-      <anchor>5e88331c1066c5a916b13025197611ec</anchor>
+      <anchor>a5e88331c1066c5a916b13025197611ec</anchor>
       <arglist>(int modulationFrequencyMode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetModulationFrequencyMode</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_params.html</anchorfile>
-      <anchor>4330db5063a82f8d66379797d11ba48c</anchor>
+      <anchor>a4330db5063a82f8d66379797d11ba48c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_params.html</anchorfile>
-      <anchor>a4db5e4f319d2db1c465b158ee920762</anchor>
+      <anchor>aa4db5e4f319d2db1c465b158ee920762</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -12664,14 +12648,14 @@
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_params_comp.html</anchorfile>
-      <anchor>729052371913b17f7255363d29523c37</anchor>
+      <anchor>a729052371913b17f7255363d29523c37</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiswr_1_1_c_swiss_ranger_params_comp.html</anchorfile>
-      <anchor>021135e28a949c559f6f036f9bcdd8a4</anchor>
+      <anchor>a021135e28a949c559f6f036f9bcdd8a4</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -12683,63 +12667,63 @@
       <type>virtual bool</type>
       <name>CreateData</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>51cd1cd464d976199a5016212034bc47</anchor>
+      <anchor>a51cd1cd464d976199a5016212034bc47</anchor>
       <arglist>(int maximalDepth, const iimg::IBitmap &amp;depthImage, const iimg::IBitmap &amp;confidenceMap, const iimg::IBitmap &amp;intensityImage, const iimg::IBitmap &amp;amplitudeImage, const I_SWORD *xBufferPtr, const I_SWORD *yBufferPtr)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetMaxDistance</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>f885998ec3cef5cee3f343f0aa3dbb23</anchor>
+      <anchor>af885998ec3cef5cee3f343f0aa3dbb23</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetDepthImage</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>01eeb1bb3de6172b05b7de97c78b3ff8</anchor>
+      <anchor>a01eeb1bb3de6172b05b7de97c78b3ff8</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetDistanceImage</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>103914674f99339e906c8684f07ab5f3</anchor>
+      <anchor>a103914674f99339e906c8684f07ab5f3</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetConfidenceMap</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>d0c2c09a1585e6b056a8e4a4959dcf13</anchor>
+      <anchor>ad0c2c09a1585e6b056a8e4a4959dcf13</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetIntensityImage</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>0e16ad62a3b046808c25360c8c0e3fd2</anchor>
+      <anchor>a0e16ad62a3b046808c25360c8c0e3fd2</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetAmplitudeImage</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>7583969a9d76f1a3b9f06e4a04122e4e</anchor>
+      <anchor>a7583969a9d76f1a3b9f06e4a04122e4e</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const I_SWORD *</type>
       <name>GetXCoordinatesBuffer</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>b3f66b0f1d5ba5bf52b156382a4c449a</anchor>
+      <anchor>ab3f66b0f1d5ba5bf52b156382a4c449a</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const I_SWORD *</type>
       <name>GetYCoordinatesBuffer</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_acquisition_data.html</anchorfile>
-      <anchor>0c3156c776ee48f099a9ee3cfdebf872</anchor>
+      <anchor>a0c3156c776ee48f099a9ee3cfdebf872</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -12751,14 +12735,14 @@
       <type>std::set&lt; int &gt;</type>
       <name>SupportedFrequencies</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_constrains.html</anchorfile>
-      <anchor>7df3e0c16df3fce1bcc2ee2e7f6fcb20</anchor>
+      <anchor>a7df3e0c16df3fce1bcc2ee2e7f6fcb20</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const SupportedFrequencies &amp;</type>
       <name>GetSupportedFrequences</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_constrains.html</anchorfile>
-      <anchor>c61977f4c88c7a08dde30919bf23e21f</anchor>
+      <anchor>ac61977f4c88c7a08dde30919bf23e21f</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -12770,56 +12754,56 @@
       <type>virtual void</type>
       <name>SetMedianFilterEnabled</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_params.html</anchorfile>
-      <anchor>01c9a3cb9efd1b76f0c782aba0a80ff9</anchor>
+      <anchor>a01c9a3cb9efd1b76f0c782aba0a80ff9</anchor>
       <arglist>(bool isEnabled=true)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsMedianFilterEnabled</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_params.html</anchorfile>
-      <anchor>078aca417ec10aa8921f8054dde57843</anchor>
+      <anchor>a078aca417ec10aa8921f8054dde57843</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetAdaptiveFilterEnabled</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_params.html</anchorfile>
-      <anchor>7a773e364cc047d797cee268d0ad3bd9</anchor>
+      <anchor>a7a773e364cc047d797cee268d0ad3bd9</anchor>
       <arglist>(bool isEnabled=true)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsAdaptiveFilterEnabled</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_params.html</anchorfile>
-      <anchor>30b41f7da418a033ba8b2bca34aa31d4</anchor>
+      <anchor>a30b41f7da418a033ba8b2bca34aa31d4</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetAmplitudeThreshold</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_params.html</anchorfile>
-      <anchor>a0975a3c185ef9c3e750623e1da60185</anchor>
+      <anchor>aa0975a3c185ef9c3e750623e1da60185</anchor>
       <arglist>(double amplitudeThreshold)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetAmplitudeThreshold</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_params.html</anchorfile>
-      <anchor>d11a918a4643cc87a176862e20b2488b</anchor>
+      <anchor>ad11a918a4643cc87a176862e20b2488b</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetModulationFrequencyMode</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_params.html</anchorfile>
-      <anchor>0776c02f8956d24a3ebbe2949061b49e</anchor>
+      <anchor>a0776c02f8956d24a3ebbe2949061b49e</anchor>
       <arglist>(int modulationFrequencyMode)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetModulationFrequencyMode</name>
       <anchorfile>classiswr_1_1_i_swiss_ranger_params.html</anchorfile>
-      <anchor>b992ef81d9d727f3c558ca5f8ca5444b</anchor>
+      <anchor>ab992ef81d9d727f3c558ca5f8ca5444b</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>

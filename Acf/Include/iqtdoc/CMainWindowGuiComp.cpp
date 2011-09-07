@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -274,13 +274,13 @@ void CMainWindowGuiComp::SetupNewCommand()
 
 	m_newCommand.SetGroupId(GI_DOCUMENT);
 
-	bool isNewSupported = templatePtr->IsFeatureSupported(idoc::IDocumentTemplate::New, ids.front());
+	bool isNewSupported = templatePtr->IsFeatureSupported(idoc::IDocumentTemplate::SF_NEW_DOCUMENT, ids.front());
 
 	if (ids.size() > 1){
 		for (		idoc::IDocumentTemplate::Ids::const_iterator iter = ids.begin();
 					iter != ids.end();
 					++iter){
-			if (templatePtr->IsFeatureSupported(idoc::IDocumentTemplate::New, *iter)){
+			if (templatePtr->IsFeatureSupported(idoc::IDocumentTemplate::SF_NEW_DOCUMENT, *iter)){
 				NewDocumentCommand* newCommandPtr = new NewDocumentCommand(this, *iter);
 				if (newCommandPtr != NULL){
 					QString commandName = iqt::GetQString(*iter);
@@ -517,7 +517,7 @@ void CMainWindowGuiComp::UpdateFixedCommands(iqtgui::CHierarchicalCommand& fixed
 				std::string documentTypeId = m_documentManagerCompPtr->GetDocumentTypeId(*m_activeDocumentPtr);
 					
 				const idoc::IDocumentTemplate* templatePtr = m_documentManagerCompPtr->GetDocumentTemplate();
-				if ((templatePtr != NULL) && templatePtr->IsFeatureSupported(idoc::IDocumentTemplate::Edit, documentTypeId)){
+				if ((templatePtr != NULL) && templatePtr->IsFeatureSupported(idoc::IDocumentTemplate::SF_EDIT_DOCUMENT, documentTypeId)){
 					fixedCommands.InsertChild(&m_editCommand, false, 1);
 				}
 			}

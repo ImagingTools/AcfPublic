@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -26,6 +26,8 @@
 // STL includes
 #include <algorithm>
 
+
+// ACF includes
 #include "istd/CStaticServicesProvider.h"
 
 #include "iser/ISerializable.h"

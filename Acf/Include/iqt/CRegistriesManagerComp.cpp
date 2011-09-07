@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -216,6 +216,8 @@ bool CRegistriesManagerComp::LoadConfigFile(const istd::CString& configFile)
 	retVal = retVal && archive.BeginMultiTag(configFilesTag, filePathTag, configFilesCount);
 
 	if (!retVal){
+		SendVerboseMessage(istd::CString("Load of configuration file: ") + configFilePath + istd::CString(" failed"));
+	
 		return false;
 	}
 
@@ -238,6 +240,8 @@ bool CRegistriesManagerComp::LoadConfigFile(const istd::CString& configFile)
 	retVal = retVal && archive.BeginMultiTag(packageDirsTag, dirPathTag, dirsCount);
 
 	if (!retVal){
+		SendVerboseMessage(istd::CString("Load of configuration file: ") + configFilePath + istd::CString(" failed"));
+
 		return false;
 	}
 
@@ -259,6 +263,8 @@ bool CRegistriesManagerComp::LoadConfigFile(const istd::CString& configFile)
 	retVal = retVal && archive.BeginMultiTag(packageFilesTag, filePathTag, filesCount);
 
 	if (!retVal){
+		SendVerboseMessage(istd::CString("Load of configuration file: ") + configFilePath + istd::CString(" failed"));
+
 		return false;
 	}
 
@@ -276,13 +282,26 @@ bool CRegistriesManagerComp::LoadConfigFile(const istd::CString& configFile)
 
 	retVal = retVal && archive.EndTag(packageFilesTag);
 
+	if (!retVal){
+		SendVerboseMessage(istd::CString("Load of configuration file: ") + configFilePath + istd::CString(" failed"));
+
+		return false;
+	}
+
 	return retVal;
 }
 
 
 bool CRegistriesManagerComp::CheckAndMarkPath(const QDir& directory, const istd::CString& path, istd::CString& resultPath) const
 {
-	istd::CString fullPath = iqt::GetCString(directory.absoluteFilePath(iqt::CFileSystem::GetEnrolledPath(iqt::GetQString(path))));
+	SendVerboseMessage(istd::CString("Check path: ") + path);
+
+	QString enrolledPath = iqt::CFileSystem::GetEnrolledPath(iqt::GetQString(path));
+	SendVerboseMessage(istd::CString("Enrolled path: ") + iqt::GetCString(enrolledPath));
+
+	istd::CString fullPath = iqt::GetCString(directory.absoluteFilePath(enrolledPath));
+	SendVerboseMessage(istd::CString("Full path: ") + fullPath);
+
 	if (m_usedFilesList.find(fullPath) == m_usedFilesList.end()){
 		m_usedFilesList.insert(fullPath);
 

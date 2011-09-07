@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
-**  by Skype to ACF_infoline for further information about the ACF.
-**
-********************************************************************************/
-
-
 #ifndef icmpstr_CAttributeEditorComp_included
 #define icmpstr_CAttributeEditorComp_included
 
@@ -29,8 +7,8 @@
 #include <QtGui/QIcon>
 #include <QtGui/QItemDelegate>
 
-
 // ACF includes
+#include "istd/TPointerBase.h"
 #include "istd/TDelPtr.h"
 #include "istd/TOptDelPtr.h"
 #include "istd/CClassInfo.h"
@@ -87,30 +65,31 @@ public:
 
 	enum AttrMeaning
 	{
-		Reference = 0x1,
-		MultipleReference,
-		Attribute,
-		SelectableAttribute,
-		MultipleAttribute,
-		AttributeExport,
-		ComponentExport
+		AM_NONE = 0,
+		AM_REFERENCE,
+		AM_MULTI_REFERENCE,
+		AM_ATTRIBUTE,
+		AM_SELECTABLE_ATTRIBUTE,
+		AM_MULTI_ATTRIBUTE,
+		AM_EXPORTED_ATTR,
+		AM_EXPORTED_COMP,
+		AM_MULTI
 	};
 
 	enum AttributeColumns
 	{
-		NameColumn = 0,
-		ValueColumn = 1
+		AC_NAME = 0,
+		AC_VALUE = 1
 	};
 
-	enum
+	enum AttributeRole
 	{
 		AttributeMining = Qt::UserRole + 1,
 		AttributeId,
 		AttributeValue,
-		AttributeType,
+		AttributeTypeId,
 		ElementId,
-		InterfaceName,
-		ExportId
+		InterfaceName
 	};
 
 public:
@@ -126,27 +105,62 @@ protected Q_SLOTS:
 	void on_InterfacesTree_itemSelectionChanged();
 	void on_InterfacesTree_itemChanged(QTreeWidgetItem* item, int column);
 	void on_AutoInstanceCB_toggled(bool checked);
+	void UpdateGeneralView();
+	void UpdateAttributesView();
+	void UpdateInterfacesView();
+	void UpdateFlagsView();
+	void UpdateSubcomponentsView();
+
+Q_SIGNALS:
+	void AfterAttributesChange();
+	void AfterInterfacesChange();
+	void AfterSubcomponentsChange();
 
 protected:
-	void UpdateSelectedAttr();
+	struct AttrInfo
+	{
+		istd::TPointerBase<const icomp::IRegistryElement::AttributeInfo> infoPtr;
+		istd::TPointerBase<const icomp::IAttributeStaticInfo> staticInfoPtr;
+	};
+	typedef std::map<std::string, AttrInfo> ElementIdToAttrInfoMap;
+	typedef std::map<std::string, ElementIdToAttrInfoMap> AttrInfosMap;
 
-	bool SetAttributeToItems(
-				const std::string& id,
-				const icomp::IRegistryElement& element,
-				const icomp::IAttributeStaticInfo& staticInfo,
+	const icomp::IComponentStaticInfo* GetComponentMetaInfo(const icomp::CComponentAddress& address) const;
+
+	void UpdateAddressToMetaInfoMap();
+
+	bool SetAttributeToItem(
 				QTreeWidgetItem& attributeItem,
-				bool* hasExportPtr);
+				const icomp::IRegistry& registry,
+				const std::string& attributeId,
+				const ElementIdToAttrInfoMap& infos,
+				bool* hasErrorPtr = NULL,
+				bool* hasWarningPtr = NULL,
+				bool* hasExportPtr = NULL) const;
+	bool SetInterfaceToItem(
+				QTreeWidgetItem& item,
+				const icomp::IRegistry& registry,
+				const std::string& elementId,
+				const std::string& interfaceName,
+				bool useFullPath,
+				bool* hasWarningPtr = NULL,
+				bool* hasExportPtr = NULL) const;
 	bool DecodeAttribute(
 				const iser::ISerializable& attribute,
 				QString& text,
-				int& meaning);
+				int& meaning) const;
+	bool EncodeAttribute(
+				const QString& text,
+				int meaning,
+				iser::ISerializable& result) const;
 
 	void CreateExportedComponentsTree(
 				const std::string& elementId,
-				const icomp::IComponentStaticInfo& elementStaticInfo,
-				QTreeWidgetItem& rootItem) const;
-
-	void UpdateExportIcon();
+				const std::string& globalElementId,
+				const icomp::IComponentStaticInfo* elementMetaInfoPtr,
+				QTreeWidgetItem& item,
+				bool* hasWarningPtr = NULL,
+				bool* hasExportPtr = NULL) const;
 
 	// reimplemented (iqt::TGuiObserverWrap)
 	virtual void OnGuiModelDetached();
@@ -179,15 +193,6 @@ private:
 		bool SetAttributeValueEditor(const std::string& id, int propertyMining, QWidget& editor) const;
 
 		bool SetComponentExportData(const std::string& attributeId, const QWidget& editor) const;
-		bool SetAttributeExportData(
-					const std::string& id,
-					const std::string& typeName,
-					const QWidget& editor) const;
-		bool SetAttributeValueData(
-					const std::string& id,
-					const std::string& typeName,
-					int propertyMining,
-					const QWidget& editor) const;
 
 	private:
 		CAttributeEditorComp& m_parent;
@@ -206,17 +211,6 @@ private:
 		CAttributeEditorComp& m_parent;
 	};
 
-	AttributeItemDelegate m_attributeItemDelegate;
-	RegistryObserver m_registryObserver;
-
-	typedef std::map<std::string, QString> AttributeTypesMap;
-	AttributeTypesMap m_attributeTypesMap;
-	istd::TDelPtr<iqtgui::CTreeWidgetFilter> m_treeWidgetFilter;
-
-	imod::IModel* m_lastRegistryModelPtr;
-
-	QIcon m_exportIcon;
-
 	I_REF(icomp::IComponentEnvironmentManager, m_metaInfoManagerCompPtr);
 	I_REF(IAttributeSelectionObserver, m_attributeSelectionObserverCompPtr);
 	I_REF(idoc::IHelpViewer, m_quickHelpViewerCompPtr);
@@ -224,7 +218,23 @@ private:
 	I_REF(iqtgui::IGuiObject, m_registryPropGuiCompPtr);
 	I_REF(imod::IObserver, m_registryPropObserverCompPtr);
 
+	AttributeItemDelegate m_attributeItemDelegate;
+	RegistryObserver m_registryObserver;
+
+	typedef std::map<std::string, QString> AttributeTypesMap;
+	AttributeTypesMap m_attributeTypesMap;
+	istd::TDelPtr<iqtgui::CTreeWidgetFilter> m_attributesTreeFilter;
+	istd::TDelPtr<iqtgui::CTreeWidgetFilter> m_interfacesTreeFilter;
+	istd::TDelPtr<iqtgui::CTreeWidgetFilter> m_subcomponentsTreeFilter;
+
+	imod::IModel* m_lastRegistryModelPtr;
+
+	QIcon m_invalidIcon;
+	QIcon m_warningIcon;
+	QIcon m_exportIcon;
+
 	typedef std::map<icomp::CComponentAddress, istd::TOptDelPtr<const icomp::IComponentStaticInfo> > AddressToInfoMap;
+	AddressToInfoMap m_adressToMetaInfoMap;
 };
 
 

@@ -6,8 +6,8 @@
 	<Rules>
 		<CustomBuildRule
 			Name="SubVersionTransform"
-			DisplayName="Nock'outed SubVersion Transformation"
-			CommandLine="rem SubWCRev [$SubVersionPath] $(InputPath) [$OutputDir]\$(InputName)"
+			DisplayName="SubVersion Transformation"
+			CommandLine="SubWCRev [$SubVersionPath] $(InputPath) [$OutputDir]\$(InputName)"
 			Outputs="[$OutputDir]\$(InputName)"
 			FileExtensions="*.xtrsvn"
 			ExecutionDescription="Transforming with SubVersion $(InputName)..."

@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -185,6 +185,54 @@ void CMultiDocumentWorkspaceGuiComp::OnViewsCountChanged()
 	m_tileHorizontallyCommand.SetEnabled(m_viewsCount > 1);
 	m_tileVerticallyCommand.SetEnabled(m_viewsCount > 1);
 	m_closeAllDocumentsCommand.SetEnabled(m_viewsCount > 0);
+}
+
+
+// reimplemented (idoc::CMultiDocumentManagerBase)
+
+istd::IChangeable* CMultiDocumentWorkspaceGuiComp::OpenDocument(
+			const istd::CString& filePath,
+			bool createView,
+			const std::string& viewTypeId,
+			std::string& documentTypeId)
+{
+	bool allowViewRepeating = true;
+	if (m_allowViewRepeatingAttrPtr.IsValid()){
+		allowViewRepeating = *m_allowViewRepeatingAttrPtr;
+	}
+
+	SingleDocumentData* documentInfoPtr = GetDocumentInfoFromPath(filePath);
+	if (documentInfoPtr != NULL && !allowViewRepeating){
+		createView = false;
+	}
+		
+	return BaseClass::OpenDocument(filePath, createView, viewTypeId, documentTypeId);
+}
+
+
+void CMultiDocumentWorkspaceGuiComp::SetActiveView(istd::IPolymorphic* viewPtr)
+{
+	if (viewPtr != GetActiveView()){
+		QMdiArea* workspacePtr = GetQtWidget();
+		I_ASSERT(workspacePtr != NULL);
+
+		QList<QMdiSubWindow *> windows = workspacePtr->subWindowList();
+		for (int viewIndex = 0; viewIndex < windows.count(); viewIndex++){
+			QMdiSubWindow* windowPtr = windows.at(viewIndex);
+			if (windowPtr != NULL){
+				QWidget* viewWidgetPtr = windowPtr->widget();
+				if (viewWidgetPtr != NULL){
+					iqtgui::IGuiObject* guiObjectPtr = NULL;
+					guiObjectPtr = GetViewFromWidget(*viewWidgetPtr);
+					if (viewPtr == guiObjectPtr){
+						workspacePtr->setActiveSubWindow(windowPtr);
+					}
+				}
+			}
+		}
+	}
+		
+	BaseClass::SetActiveView(viewPtr);
 }
 
 

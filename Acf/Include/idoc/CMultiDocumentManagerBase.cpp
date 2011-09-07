@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -26,6 +26,8 @@
 // STL includes
 #include <algorithm>
 
+
+// ACF includes
 #include "istd/TChangeNotifier.h"
 
 #include "imod/IModel.h"
@@ -438,6 +440,14 @@ istd::IChangeable* CMultiDocumentManagerBase::OpenDocument(
 				existingInfoPtr->views.back().SetPtr(viewPtr);
 
 				OnViewRegistered(viewPtr);
+			}
+		}
+		else{
+			if (!existingInfoPtr->views.empty()){
+				istd::IPolymorphic* viewPtr = existingInfoPtr->views.front().GetPtr();
+				I_ASSERT(viewPtr != NULL);
+
+				SetActiveView(viewPtr);
 			}
 		}
 

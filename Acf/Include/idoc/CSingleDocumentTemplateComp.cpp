@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -128,11 +128,11 @@ void CSingleDocumentTemplateComp::OnComponentCreated()
 
 	int featureFlags = 0;
 	if (*m_isNewSupportedAttrPtr){
-		featureFlags |= idoc::IDocumentTemplate::New;
+		featureFlags |= idoc::IDocumentTemplate::SF_NEW_DOCUMENT;
 	}
 
 	if (*m_isEditSupportedAttrPtr){
-		featureFlags |= idoc::IDocumentTemplate::Edit;
+		featureFlags |= idoc::IDocumentTemplate::SF_EDIT_DOCUMENT;
 	}
 
 	SetSupportedFeatures(featureFlags);

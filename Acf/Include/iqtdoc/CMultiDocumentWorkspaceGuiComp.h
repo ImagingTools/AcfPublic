@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
-**  by Skype to ACF_infoline for further information about the ACF.
-**
-********************************************************************************/
-
-
 #ifndef iqtdoc_CMultiDocumentWorkspaceGuiComp_included
 #define iqtdoc_CMultiDocumentWorkspaceGuiComp_included
 
@@ -64,11 +42,12 @@ public:
 						iqtgui::TRestorableGuiWrap<
 									iqtgui::TGuiComponentBase<QMdiArea> > > BaseClass;
 
-	I_BEGIN_COMPONENT(CMultiDocumentWorkspaceGuiComp)
-		I_REGISTER_INTERFACE(idoc::IDocumentManager)
-		I_REGISTER_INTERFACE(ibase::ICommandsProvider)
-		I_ASSIGN(m_showMaximizedAttrPtr, "ShowViewMaximized", "At start shows the document view maximized", false, true)
-		I_ASSIGN(m_documentTemplateCompPtr, "DocumentTemplate", "Document template", true, "DocumentTemplate")
+	I_BEGIN_COMPONENT(CMultiDocumentWorkspaceGuiComp);
+		I_REGISTER_INTERFACE(idoc::IDocumentManager);
+		I_REGISTER_INTERFACE(ibase::ICommandsProvider);
+		I_ASSIGN(m_documentTemplateCompPtr, "DocumentTemplate", "Document template", true, "DocumentTemplate");
+		I_ASSIGN(m_showMaximizedAttrPtr, "ShowViewMaximized", "At start shows the document view maximized", false, true);
+		I_ASSIGN(m_allowViewRepeatingAttrPtr, "AllowViewRepeating", "If enabled, multiple views for the same document are allowed", false, true);
 	I_END_COMPONENT
 
 	enum GroupId
@@ -87,7 +66,8 @@ public:
 	virtual void OnTryClose(bool* ignoredPtr = NULL);
 
 protected:
-	/**
+
+/**
 		Update titles of views or all views of specified document.
 		\param	optional document object, if you want to update only views of single document.
 	*/
@@ -109,6 +89,14 @@ protected:
 		Called when number of windows changed.
 	*/
 	void OnViewsCountChanged();
+
+	// reimplemented (idoc::CMultiDocumentManagerBase)
+	virtual istd::IChangeable* OpenDocument(
+				const istd::CString& filePath,
+				bool createView,
+				const std::string& viewTypeId,
+				std::string& documentTypeId);
+	virtual void SetActiveView(istd::IPolymorphic* viewPtr);
 
 	// reimplemented (QObject)
 	virtual bool eventFilter(QObject* sourcePtr, QEvent* eventPtr);
@@ -136,7 +124,7 @@ protected:
 	// reimplemented (istd:IChangeable)
 	virtual void OnEndChanges(int changeFlags, istd::IPolymorphic* changeParamsPtr);
 
-protected slots:
+protected Q_SLOTS:
 	void OnWindowActivated(QMdiSubWindow* window);
 	void OnTileHorizontally();
 	void OnTile();
@@ -159,8 +147,9 @@ private:
 	iqtgui::CHierarchicalCommand m_subWindowCommand;
 	iqtgui::CHierarchicalCommand m_tabbedCommand;
 
-	I_ATTR(bool, m_showMaximizedAttrPtr);
 	I_REF(idoc::IDocumentTemplate, m_documentTemplateCompPtr);
+	I_ATTR(bool, m_showMaximizedAttrPtr);
+	I_ATTR(bool, m_allowViewRepeatingAttrPtr);
 	
 	mutable QString m_lastDirectory;
 

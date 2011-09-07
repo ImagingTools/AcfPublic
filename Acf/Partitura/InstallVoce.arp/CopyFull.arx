@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          1646
+          1860
         </Number>
         <Description>
           ACF
@@ -18,7 +18,7 @@
           1
         </Id>
         <Number>
-          293
+          369
         </Number>
         <Description>
           ACF-Solutions
@@ -465,13 +465,13 @@
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              SourceExcludeFilters
+              OtherExcludeFilters
             </Id>
             <Type>
               icomp::TMultiAttribute&lt;istd::CString&gt;
             </Type>
             <ExportId>
-              SourceExcludeFilters
+              OtherExcludeFilters
             </ExportId>
             <Data>
               <IsEnabled>
@@ -481,13 +481,13 @@
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              VersionInfo
+              SourceExcludeFilters
             </Id>
             <Type>
-              icomp::CReferenceAttribute
+              icomp::TMultiAttribute&lt;istd::CString&gt;
             </Type>
             <ExportId>
-              ApplicationInfo
+              SourceExcludeFilters
             </ExportId>
             <Data>
               <IsEnabled>

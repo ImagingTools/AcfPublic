@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (c) 2007-2010 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -50,10 +50,10 @@ static void ShowUsage()
 {
 	std::cout << "Usage";
 	std::cout << "\tArxc.exe [registryName] {options}      - convertion registry to C++ code" << std::endl;
-	std::cout << "\t-h or -help              - showing this help" << std::endl;
+	std::cout << "\t-h or -help				 - showing this help" << std::endl;
 	std::cout << "\t-o outputFile            - output file path" << std::endl;
 	std::cout << "\t-config configFile       - specify ACF packages configuration file" << std::endl;
-	std::cout << "\t-v						 - enable verbose mode" << std::endl;
+	std::cout << "\t-v			 - enable verbose mode" << std::endl;
 }
 
 
@@ -100,7 +100,9 @@ int main(int argc, char *argv[])
 
 		iqt::CProcessEnvironment::EnvironmentVariables environmentVariables = processEnvironment.GetEnvironmentVariables();
 
-		for (iqt::CProcessEnvironment::EnvironmentVariables::const_iterator index = environmentVariables.begin(); index != environmentVariables.end(); ++index){
+		for (		iqt::CProcessEnvironment::EnvironmentVariables::const_iterator index = environmentVariables.begin();
+					index != environmentVariables.end();
+					++index){
 			std::cout << index->first.ToString() << " = " << index->second.ToString() << std::endl;
 		}
 	}

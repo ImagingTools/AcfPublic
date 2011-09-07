@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          1708
+          1860
         </Number>
         <Description>
           ACF
@@ -18,7 +18,7 @@
           1
         </Id>
         <Number>
-          315
+          369
         </Number>
         <Description>
           ACF-Solutions
@@ -354,6 +354,30 @@
           </AttributeInfo>
           <AttributeInfo>
             <Id>
+              OtherExcludeFilters
+            </Id>
+            <Type>
+              icomp::TMultiAttribute&lt;istd::CString&gt;
+            </Type>
+            <ExportId>
+              OtherExcludeFilters
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Values count="2">
+                <Value>
+                  Generated
+                </Value>
+                <Value>
+                  generated
+                </Value>
+              </Values>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
               SourceExcludeFilters
             </Id>
             <Type>
@@ -364,24 +388,16 @@
             </ExportId>
             <Data>
               <IsEnabled>
-                false
+                true
               </IsEnabled>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              VersionInfo
-            </Id>
-            <Type>
-              icomp::CReferenceAttribute
-            </Type>
-            <ExportId>
-              ApplicationInfo
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                false
-              </IsEnabled>
+              <Values count="2">
+                <Value>
+                  Generated
+                </Value>
+                <Value>
+                  generated
+                </Value>
+              </Values>
             </Data>
           </AttributeInfo>
         </AttributeInfoMap>
