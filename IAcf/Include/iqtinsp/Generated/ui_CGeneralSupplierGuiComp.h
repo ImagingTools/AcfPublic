@@ -1,30 +1,8 @@
 /********************************************************************************
-**
-**	Copyright (C) 2007-2010 Witold Gantzke & Kirill Lepskiy
-**	All rights reserved.
-**
-**	This file is part of the IACF Toolkit.
-**
-**	Licensees holding valid IACF Commercial licenses may use this file in
-**	accordance with the IACF Commercial License Agreement provided with the
-**	Software and appearing in the file License.txt or,
-**	alternatively, in accordance with the terms contained in
-**	a written agreement between you and Witold Gantzke & Kirill Lepskiy.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.imagingtools.de or email info@imagingtools.de for further
-** 	information about the IACF.
-**
-********************************************************************************/
-
-
-/********************************************************************************
 ** Form generated from reading UI file 'CGeneralSupplierGuiComp.ui'
 **
-** Created: Wed 27. Jul 17:19:09 2011
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Thu 8. Sep 17:24:23 2011
+**      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
