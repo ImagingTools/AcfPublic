@@ -1,457 +1,238 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="8,00"
 	Name="istd"
-	ProjectGUID="{126B67F7-B779-4A80-A651-1111D5EDF583}"
-	RootNamespace="istd"
-	TargetFrameworkVersion="0"
-	>
+	ProjectGUID="{EF65BF59-2BFF-3FEC-96F3-26D5EACB4205}"
+	Keyword="Qt4VSv1.0">
 	<Platforms>
 		<Platform
-			Name="Win32"
-		/>
+			Name="Win32" />
 	</Platforms>
-	<ToolFiles>
-		<ToolFile
-			RelativePath="..\..\..\Config\VC9\Acf.rules"
-		/>
-		<ToolFile
-			RelativePath="..\..\..\Config\VC9\Tortoise.rules"
-		/>
-	</ToolFiles>
 	<Configurations>
 		<Configuration
-			Name="Release|Win32"
-			ConfigurationType="4"
-			InheritedPropertySheets="..\..\..\Config\VC9\Static.vsprops;..\..\..\Config\VC9\Release.vsprops"
-			UseOfMFC="0"
+			Name="Debug|Win32"
+			OutputDirectory="."
 			ATLMinimizesCRunTimeLibraryUsage="false"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="FileConvertCopy"
-			/>
-			<Tool
-				Name="SubVersionTransform"
-				AdditionalDependencies="..\svnflag"
-				OutputDir="..\Generated"
-				SubVersionPath="..\..\.."
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="DeployCopy"
-			/>
-			<Tool
-				Name="Arxc"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-				PreprocessorDefinitions="NDEBUG"
-				MkTypLibCompatible="true"
-				SuppressStartupBanner="true"
-				TargetEnvironment="1"
-				TypeLibraryName="./iwin/ReleaseVC7/iwin.tlb"
-				HeaderFileName=""
-			/>
+			ConfigurationType="4"
+			IntermediateDirectory="debug\"
+			UseOfMfc="0">
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="2"
-				AdditionalIncludeDirectories="../../"
-				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS"
-				StringPooling="true"
-				RuntimeLibrary="2"
-				EnableFunctionLevelLinking="true"
-				EnableEnhancedInstructionSet="2"
-				UsePrecompiledHeader="0"
-				PrecompiledHeaderFile=""
-				WarningLevel="4"
+				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include\QtCore&quot;,&quot;c:\Qt\4.7.3\include\QtGui&quot;,&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;..\..&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;debug&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
+				AdditionalOptions="-Zm200"
+				AssemblerListingLocation="debug\"
+				BufferSecurityCheck="false"
+				DebugInformationFormat="3"
+				ExceptionHandling="1"
+				GeneratePreprocessedFile="0"
+				ObjectFile="debug\"
+				Optimization ="4"
+				PreprocessorDefinitions="UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
+				ProgramDataBaseFileName=".\"
+				RuntimeLibrary="3"
+				RuntimeTypeInfo="true"
 				SuppressStartupBanner="true"
-				CompileAs="0"
-			/>
+				WarningLevel="4" />
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="NDEBUG"
-				Culture="1031"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCCustomBuildTool" />
 			<Tool
 				Name="VCLibrarianTool"
-			/>
+				OutputFile="..\..\..\Lib\DebugVC9\istd.lib"
+				SuppressStartupBanner="true" />
 			<Tool
-				Name="VCALinkTool"
-			/>
+				Name="VCMIDLTool"
+				DefaultCharType="0"
+				EnableErrorChecks="1"
+				WarningLevel="0" />
 			<Tool
-				Name="VCXDCMakeTool"
-			/>
+				Name="VCPostBuildEventTool" />
 			<Tool
-				Name="VCBscMakeTool"
-			/>
+				Name="VCPreBuildEventTool" />
 			<Tool
-				Name="VCFxCopTool"
-			/>
+				Name="VCPreLinkEventTool" />
 			<Tool
-				Name="VCPostBuildEventTool"
-				CommandLine=""
-			/>
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,_DEBUG"
+				ResourceOutputFileName="..\..\..\Lib\DebugVC9\/$(InputName).res" />
 		</Configuration>
 		<Configuration
-			Name="Debug|Win32"
-			ConfigurationType="4"
-			InheritedPropertySheets="..\..\..\Config\VC9\Debug.vsprops;..\..\..\Config\VC9\Static.vsprops"
-			UseOfMFC="0"
+			Name="Release|Win32"
+			OutputDirectory="."
 			ATLMinimizesCRunTimeLibraryUsage="false"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="FileConvertCopy"
-			/>
-			<Tool
-				Name="SubVersionTransform"
-				AdditionalDependencies="..\svnflag"
-				OutputDir="..\Generated"
-				SubVersionPath="..\..\.."
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="DeployCopy"
-			/>
-			<Tool
-				Name="Arxc"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-				PreprocessorDefinitions="_DEBUG"
-				MkTypLibCompatible="true"
-				SuppressStartupBanner="true"
-				TargetEnvironment="1"
-				TypeLibraryName="./iwin/DebugVC7/iwin.tlb"
-				HeaderFileName=""
-			/>
+			ConfigurationType="4"
+			IntermediateDirectory="release\"
+			UseOfMfc="0">
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="0"
-				AdditionalIncludeDirectories="../../"
-				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS"
-				StringPooling="true"
-				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
-				PrecompiledHeaderFile=""
-				BrowseInformation="1"
-				WarningLevel="4"
+				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include\QtCore&quot;,&quot;c:\Qt\4.7.3\include\QtGui&quot;,&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;..\..&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;release&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
+				AdditionalOptions="-Zm200"
+				AssemblerListingLocation="release\"
+				BufferSecurityCheck="false"
+				DebugInformationFormat="0"
+				ExceptionHandling="1"
+				GeneratePreprocessedFile="0"
+				ObjectFile="release\"
+				Optimization ="2"
+				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_NO_DEBUG,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,NDEBUG"
+				ProgramDataBaseFileName=".\"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="true"
 				SuppressStartupBanner="true"
-				DebugInformationFormat="3"
-				CompileAs="0"
-			/>
+				WarningLevel="4" />
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_DEBUG"
-				Culture="1031"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCCustomBuildTool" />
 			<Tool
 				Name="VCLibrarianTool"
-			/>
+				OutputFile="..\..\..\Lib\ReleaseVC9\istd.lib"
+				SuppressStartupBanner="true" />
 			<Tool
-				Name="VCALinkTool"
-			/>
+				Name="VCMIDLTool"
+				DefaultCharType="0"
+				EnableErrorChecks="1"
+				WarningLevel="0" />
 			<Tool
-				Name="VCXDCMakeTool"
-			/>
+				Name="VCPostBuildEventTool" />
 			<Tool
-				Name="VCBscMakeTool"
-			/>
+				Name="VCPreBuildEventTool" />
 			<Tool
-				Name="VCFxCopTool"
-			/>
+				Name="VCPreLinkEventTool" />
 			<Tool
-				Name="VCPostBuildEventTool"
-				CommandLine=""
-			/>
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_NO_DEBUG,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
+				ResourceOutputFileName="..\..\..\Lib\ReleaseVC9\/$(InputName).res" />
 		</Configuration>
 	</Configurations>
-	<References>
-	</References>
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp"
-			>
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
 			<File
-				RelativePath="..\CBase64.cpp"
-				>
-			</File>
+				RelativePath="..\CBase64.cpp" />
 			<File
-				RelativePath="..\CBitManip.cpp"
-				>
-			</File>
+				RelativePath="..\CBitManip.cpp" />
 			<File
-				RelativePath="..\CChangeDelegator.cpp"
-				>
-			</File>
+				RelativePath="..\CChangeDelegator.cpp" />
 			<File
-				RelativePath="..\CClassInfo.cpp"
-				>
-			</File>
+				RelativePath="..\CClassInfo.cpp" />
 			<File
-				RelativePath="..\CCrcCalculator.cpp"
-				>
-			</File>
+				RelativePath="..\CCrcCalculator.cpp" />
 			<File
-				RelativePath="..\CIdManipBase.cpp"
-				>
-			</File>
+				RelativePath="..\CIdManipBase.cpp" />
 			<File
-				RelativePath="..\CRandomNumber.cpp"
-				>
-			</File>
+				RelativePath="..\CRandomNumber.cpp" />
 			<File
-				RelativePath="..\CRange.cpp"
-				>
-			</File>
+				RelativePath="..\CRange.cpp" />
 			<File
-				RelativePath="..\CStaticServicesProvider.cpp"
-				>
-			</File>
+				RelativePath="..\CStaticServicesProvider.cpp" />
 			<File
-				RelativePath="..\CString.cpp"
-				>
-			</File>
+				RelativePath="..\CString.cpp" />
 			<File
-				RelativePath="..\CVarIndex.cpp"
-				>
-			</File>
+				RelativePath="..\CVarIndex.cpp" />
 			<File
-				RelativePath="..\istd.cpp"
-				>
-			</File>
+				RelativePath="..\istd.cpp" />
 		</Filter>
 		<Filter
 			Name="Header Files"
-			Filter="h"
-			>
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
 			<File
-				RelativePath="..\AcfVersion.h"
-				>
-			</File>
+				RelativePath="..\AcfVersion.h" />
 			<File
-				RelativePath="..\CBase64.h"
-				>
-			</File>
+				RelativePath="..\CBase64.h" />
 			<File
-				RelativePath="..\CBitManip.h"
-				>
-			</File>
+				RelativePath="..\CBitManip.h" />
 			<File
-				RelativePath="..\CChangeDelegator.h"
-				>
-			</File>
+				RelativePath="..\CChangeDelegator.h" />
 			<File
-				RelativePath="..\CClassInfo.h"
-				>
-			</File>
+				RelativePath="..\CClassInfo.h" />
 			<File
-				RelativePath="..\CCrcCalculator.h"
-				>
-			</File>
+				RelativePath="..\CCrcCalculator.h" />
 			<File
-				RelativePath="..\CFastBinaryIndex.h"
-				>
-			</File>
+				RelativePath="..\CFastBinaryIndex.h" />
 			<File
-				RelativePath="..\CIdManipBase.h"
-				>
-			</File>
+				RelativePath="..\CIdManipBase.h" />
 			<File
-				RelativePath="..\CIndex2d.h"
-				>
-			</File>
+				RelativePath="..\CIndex2d.h" />
 			<File
-				RelativePath="..\CRandomNumber.h"
-				>
-			</File>
+				RelativePath="..\CRandomNumber.h" />
 			<File
-				RelativePath="..\CRange.h"
-				>
-			</File>
+				RelativePath="..\CRange.h" />
 			<File
-				RelativePath="..\CStaticServicesProvider.h"
-				>
-			</File>
+				RelativePath="..\CStaticServicesProvider.h" />
 			<File
-				RelativePath="..\CString.h"
-				>
-			</File>
+				RelativePath="..\CString.h" />
 			<File
-				RelativePath="..\CVarIndex.h"
-				>
-			</File>
+				RelativePath="..\CVarIndex.h" />
 			<File
-				RelativePath="..\IChangeable.h"
-				>
-			</File>
+				RelativePath="..\IChangeDelegator.h" />
 			<File
-				RelativePath="..\IChangeDelegator.h"
-				>
-			</File>
+				RelativePath="..\IChangeable.h" />
 			<File
-				RelativePath="..\IContainerInfo.h"
-				>
-			</File>
+				RelativePath="..\IContainerInfo.h" />
 			<File
-				RelativePath="..\IEnableable.h"
-				>
-			</File>
+				RelativePath="..\IEnableable.h" />
 			<File
-				RelativePath="..\IFactoryInfo.h"
-				>
-			</File>
+				RelativePath="..\IFactoryInfo.h" />
 			<File
-				RelativePath="..\ILocalizer.h"
-				>
-			</File>
+				RelativePath="..\ILocalizer.h" />
 			<File
-				RelativePath="..\ILogger.h"
-				>
-			</File>
+				RelativePath="..\ILogger.h" />
 			<File
-				RelativePath="..\INamed.h"
-				>
-			</File>
+				RelativePath="..\INamed.h" />
 			<File
-				RelativePath="..\IPolymorphic.h"
-				>
-			</File>
+				RelativePath="..\IPolymorphic.h" />
 			<File
-				RelativePath="..\IServicesProvider.h"
-				>
-			</File>
+				RelativePath="..\IServicesProvider.h" />
 			<File
-				RelativePath="..\istd.h"
-				>
-			</File>
+				RelativePath="..\ITrace.h" />
 			<File
-				RelativePath="..\itr.h"
-				>
-			</File>
+				RelativePath="..\TArray.h" />
 			<File
-				RelativePath="..\ITrace.h"
-				>
-			</File>
+				RelativePath="..\TCachedUpdateManagerWrap.h" />
 			<File
-				RelativePath="..\TArray.h"
-				>
-			</File>
+				RelativePath="..\TCascadedMap.h" />
 			<File
-				RelativePath="..\TCachedUpdateManagerWrap.h"
-				>
-			</File>
+				RelativePath="..\TChangeBinder.h" />
 			<File
-				RelativePath="..\TCascadedMap.h"
-				>
-			</File>
+				RelativePath="..\TChangeDelegator.h" />
 			<File
-				RelativePath="..\TChangeBinder.h"
-				>
-			</File>
+				RelativePath="..\TChangeNotifier.h" />
 			<File
-				RelativePath="..\TChangeDelegator.h"
-				>
-			</File>
+				RelativePath="..\TComposedFactory.h" />
 			<File
-				RelativePath="..\TChangeNotifier.h"
-				>
-			</File>
+				RelativePath="..\TDelPtr.h" />
 			<File
-				RelativePath="..\TComposedFactory.h"
-				>
-			</File>
+				RelativePath="..\TIFactory.h" />
 			<File
-				RelativePath="..\TDelPtr.h"
-				>
-			</File>
+				RelativePath="..\TIHierarchical.h" />
 			<File
-				RelativePath="..\TIFactory.h"
-				>
-			</File>
+				RelativePath="..\TIMap.h" />
 			<File
-				RelativePath="..\TIHierarchical.h"
-				>
-			</File>
+				RelativePath="..\TIndex.h" />
 			<File
-				RelativePath="..\TIMap.h"
-				>
-			</File>
+				RelativePath="..\TOptDelPtr.h" />
 			<File
-				RelativePath="..\TIndex.h"
-				>
-			</File>
+				RelativePath="..\TOptPointerVector.h" />
 			<File
-				RelativePath="..\TOptDelPtr.h"
-				>
-			</File>
+				RelativePath="..\TPointerBase.h" />
 			<File
-				RelativePath="..\TOptPointerVector.h"
-				>
-			</File>
+				RelativePath="..\TPointerVector.h" />
 			<File
-				RelativePath="..\TPointerBase.h"
-				>
-			</File>
+				RelativePath="..\TSingleFactory.h" />
 			<File
-				RelativePath="..\TPointerVector.h"
-				>
-			</File>
+				RelativePath="..\TSmartPtr.h" />
 			<File
-				RelativePath="..\TSingleFactory.h"
-				>
-			</File>
+				RelativePath="..\TTransPtr.h" />
 			<File
-				RelativePath="..\TSmartPtr.h"
-				>
-			</File>
+				RelativePath="..\TUpdateManagerWrap.h" />
 			<File
-				RelativePath="..\TTransPtr.h"
-				>
-			</File>
+				RelativePath="..\TVarArray.h" />
 			<File
-				RelativePath="..\TUpdateManagerWrap.h"
-				>
-			</File>
+				RelativePath="..\istd.h" />
 			<File
-				RelativePath="..\TVarArray.h"
-				>
-			</File>
+				RelativePath="..\itr.h" />
 		</Filter>
 	</Files>
 	<Globals>

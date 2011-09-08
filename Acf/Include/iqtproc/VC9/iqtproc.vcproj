@@ -1,299 +1,272 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="8,00"
 	Name="iqtproc"
-	ProjectGUID="{67FB72B1-029B-4152-9267-B91970E6EC6D}"
-	RootNamespace="iqtproc"
-	Keyword="Qt4VSv1.0"
-	TargetFrameworkVersion="0"
-	>
+	ProjectGUID="{2CCE99DE-14D2-3CBF-A061-00C52905A3DD}"
+	Keyword="Qt4VSv1.0">
 	<Platforms>
 		<Platform
-			Name="Win32"
-		/>
+			Name="Win32" />
 	</Platforms>
-	<ToolFiles>
-		<ToolFile
-			RelativePath="..\..\..\Config\VC9\QtUIForm.rules"
-		/>
-	</ToolFiles>
 	<Configurations>
 		<Configuration
-			Name="Release|Win32"
+			Name="Debug|Win32"
+			OutputDirectory="."
+			ATLMinimizesCRunTimeLibraryUsage="false"
 			ConfigurationType="4"
-			InheritedPropertySheets="..\..\..\Config\VC9\Static.vsprops;..\..\..\Config\VC9\Release.vsprops"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="QT Moc Metafile"
-			/>
-			<Tool
-				Name="Qt Linguist"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="QT Resources"
-			/>
-			<Tool
-				Name="QT Designer Form"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
+			IntermediateDirectory="debug\"
+			UseOfMfc="0">
 			<Tool
 				Name="VCCLCompilerTool"
-				InlineFunctionExpansion="0"
-				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="../../;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtXml&quot;"
-				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
-				StringPooling="true"
-				RuntimeLibrary="2"
-				EnableEnhancedInstructionSet="2"
-				PrecompiledHeaderFile=""
-				WarningLevel="4"
-				DebugInformationFormat="0"
-			/>
+				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include\QtCore&quot;,&quot;c:\Qt\4.7.3\include\QtNetwork&quot;,&quot;c:\Qt\4.7.3\include\QtGui&quot;,&quot;c:\Qt\4.7.3\include\QtXml&quot;,&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot;,&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;..\..&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;..\Generated&quot;,&quot;..\Generated&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
+				AdditionalOptions="-Zm200"
+				AssemblerListingLocation="debug\"
+				BufferSecurityCheck="false"
+				DebugInformationFormat="3"
+				ExceptionHandling="1"
+				GeneratePreprocessedFile="0"
+				ObjectFile="debug\"
+				Optimization ="4"
+				PreprocessorDefinitions="UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_XMLPATTERNS_LIB,QT_XML_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
+				ProgramDataBaseFileName=".\"
+				RuntimeLibrary="3"
+				RuntimeTypeInfo="true"
+				SuppressStartupBanner="true"
+				WarningLevel="4" />
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCCustomBuildTool" />
 			<Tool
 				Name="VCLibrarianTool"
-			/>
+				OutputFile="..\..\..\Lib\DebugVC9\iqtproc.lib"
+				SuppressStartupBanner="true" />
 			<Tool
-				Name="VCALinkTool"
-			/>
+				Name="VCMIDLTool"
+				DefaultCharType="0"
+				EnableErrorChecks="1"
+				WarningLevel="0" />
 			<Tool
-				Name="VCXDCMakeTool"
-			/>
+				Name="VCPostBuildEventTool" />
 			<Tool
-				Name="VCBscMakeTool"
-			/>
+				Name="VCPreBuildEventTool" />
 			<Tool
-				Name="VCFxCopTool"
-			/>
+				Name="VCPreLinkEventTool" />
 			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_XMLPATTERNS_LIB,QT_XML_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,_DEBUG"
+				ResourceOutputFileName="..\..\..\Lib\DebugVC9\/$(InputName).res" />
 		</Configuration>
 		<Configuration
-			Name="Debug|Win32"
+			Name="Release|Win32"
+			OutputDirectory="."
+			ATLMinimizesCRunTimeLibraryUsage="false"
 			ConfigurationType="4"
-			InheritedPropertySheets="..\..\..\Config\VC9\Debug.vsprops;..\..\..\Config\VC9\Static.vsprops"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="QT Moc Metafile"
-			/>
-			<Tool
-				Name="Qt Linguist"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="QT Resources"
-			/>
-			<Tool
-				Name="QT Designer Form"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
+			IntermediateDirectory="release\"
+			UseOfMfc="0">
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="0"
-				AdditionalIncludeDirectories="../../;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtXml&quot;"
-				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
-				StringPooling="true"
-				RuntimeLibrary="3"
-				PrecompiledHeaderFile=""
-				BrowseInformation="1"
-				WarningLevel="4"
-				DebugInformationFormat="3"
-			/>
+				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include\QtCore&quot;,&quot;c:\Qt\4.7.3\include\QtNetwork&quot;,&quot;c:\Qt\4.7.3\include\QtGui&quot;,&quot;c:\Qt\4.7.3\include\QtXml&quot;,&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot;,&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;..\..&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;..\Generated&quot;,&quot;..\Generated&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
+				AdditionalOptions="-Zm200"
+				AssemblerListingLocation="release\"
+				BufferSecurityCheck="false"
+				DebugInformationFormat="0"
+				ExceptionHandling="1"
+				GeneratePreprocessedFile="0"
+				ObjectFile="release\"
+				Optimization ="2"
+				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_NO_DEBUG,QT_XMLPATTERNS_LIB,QT_XML_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,NDEBUG"
+				ProgramDataBaseFileName=".\"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="true"
+				SuppressStartupBanner="true"
+				WarningLevel="4" />
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCCustomBuildTool" />
 			<Tool
 				Name="VCLibrarianTool"
-			/>
+				OutputFile="..\..\..\Lib\ReleaseVC9\iqtproc.lib"
+				SuppressStartupBanner="true" />
 			<Tool
-				Name="VCALinkTool"
-			/>
+				Name="VCMIDLTool"
+				DefaultCharType="0"
+				EnableErrorChecks="1"
+				WarningLevel="0" />
 			<Tool
-				Name="VCXDCMakeTool"
-			/>
+				Name="VCPostBuildEventTool" />
 			<Tool
-				Name="VCBscMakeTool"
-			/>
+				Name="VCPreBuildEventTool" />
 			<Tool
-				Name="VCFxCopTool"
-			/>
+				Name="VCPreLinkEventTool" />
 			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_NO_DEBUG,QT_XMLPATTERNS_LIB,QT_XML_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
+				ResourceOutputFileName="..\..\..\Lib\ReleaseVC9\/$(InputName).res" />
 		</Configuration>
 	</Configurations>
-	<References>
-	</References>
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp;cxx;c;def"
-			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
-			>
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
 			<File
-				RelativePath="..\CDocumentProcessingCommandComp.cpp"
-				>
-			</File>
+				RelativePath="..\CDocumentProcessingCommandComp.cpp" />
 			<File
-				RelativePath="..\CDocumentProcessingManagerComp.cpp"
-				>
-			</File>
+				RelativePath="..\CDocumentProcessingManagerComp.cpp" />
 			<File
-				RelativePath="..\CDocumentProcessingManagerCompBase.cpp"
-				>
-			</File>
+				RelativePath="..\CDocumentProcessingManagerCompBase.cpp" />
 			<File
-				RelativePath="..\CDocumentProcessingManagerCompBase.moc"
-				>
-			</File>
+				RelativePath="..\CProcessorControlGuiComp.cpp" />
 			<File
-				RelativePath="..\CProcessorControlGuiComp.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\CProcessorControlGuiComp.moc"
-				>
-			</File>
-			<File
-				RelativePath="..\CProgressManagerGuiComp.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\CProgressManagerGuiComp.moc"
-				>
-			</File>
+				RelativePath="..\CProgressManagerGuiComp.cpp" />
 		</Filter>
 		<Filter
 			Name="Header Files"
-			Filter="h"
-			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
-			>
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
 			<File
-				RelativePath="..\CDocumentProcessingCommandComp.h"
-				>
+				RelativePath="..\CDocumentProcessingCommandComp.h" />
+			<File
+				RelativePath="..\CDocumentProcessingManagerComp.h" />
+			<File
+				RelativePath="..\CDocumentProcessingManagerCompBase.h">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CDocumentProcessingManagerCompBase.h;@echo"
+						CommandLine="@echo moc ..\CDocumentProcessingManagerCompBase.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CDocumentProcessingManagerCompBase.h -o ..\Generated\moc_CDocumentProcessingManagerCompBase.cpp"
+						Description="MOC ..\CDocumentProcessingManagerCompBase.h"
+						Outputs="..\Generated\moc_CDocumentProcessingManagerCompBase.cpp"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CDocumentProcessingManagerCompBase.h;@echo"
+						CommandLine="@echo moc ..\CDocumentProcessingManagerCompBase.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CDocumentProcessingManagerCompBase.h -o ..\Generated\moc_CDocumentProcessingManagerCompBase.cpp"
+						Description="MOC ..\CDocumentProcessingManagerCompBase.h"
+						Outputs="..\Generated\moc_CDocumentProcessingManagerCompBase.cpp"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CDocumentProcessingManagerComp.h"
-				>
+				RelativePath="..\CProcessorControlGuiComp.h">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CProcessorControlGuiComp.h;@echo"
+						CommandLine="@echo moc ..\CProcessorControlGuiComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CProcessorControlGuiComp.h -o ..\Generated\moc_CProcessorControlGuiComp.cpp"
+						Description="MOC ..\CProcessorControlGuiComp.h"
+						Outputs="..\Generated\moc_CProcessorControlGuiComp.cpp"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CProcessorControlGuiComp.h;@echo"
+						CommandLine="@echo moc ..\CProcessorControlGuiComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CProcessorControlGuiComp.h -o ..\Generated\moc_CProcessorControlGuiComp.cpp"
+						Description="MOC ..\CProcessorControlGuiComp.h"
+						Outputs="..\Generated\moc_CProcessorControlGuiComp.cpp"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CDocumentProcessingManagerCompBase.h"
-				>
+				RelativePath="..\CProgressManagerGuiComp.h">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CProgressManagerGuiComp.h;@echo"
+						CommandLine="@echo moc ..\CProgressManagerGuiComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CProgressManagerGuiComp.h -o ..\Generated\moc_CProgressManagerGuiComp.cpp"
+						Description="MOC ..\CProgressManagerGuiComp.h"
+						Outputs="..\Generated\moc_CProgressManagerGuiComp.cpp"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CProgressManagerGuiComp.h;@echo"
+						CommandLine="@echo moc ..\CProgressManagerGuiComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CProgressManagerGuiComp.h -o ..\Generated\moc_CProgressManagerGuiComp.cpp"
+						Description="MOC ..\CProgressManagerGuiComp.h"
+						Outputs="..\Generated\moc_CProgressManagerGuiComp.cpp"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CProcessorControlGuiComp.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CProgressManagerGuiComp.h"
-				>
-			</File>
-			<File
-				RelativePath="..\iqtproc.h"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="Resource Files"
-			Filter="qrc;*"
-			UniqueIdentifier="{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}"
-			ParseFiles="false"
-			>
+				RelativePath="..\iqtproc.h" />
 		</Filter>
 		<Filter
 			Name="Generated Files"
-			Filter="moc;h;cpp"
-			UniqueIdentifier="{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}"
-			>
+			Filter="cpp;c;cxx;moc;h;def;odl;idl;res;"
+			UniqueIdentifier="{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}">
 			<File
-				RelativePath="..\generated\moc_CDocumentProcessingManagerCompBase.cpp"
-				>
-			</File>
+				RelativePath="..\Generated\moc_CDocumentProcessingManagerCompBase.cpp" />
 			<File
-				RelativePath="..\generated\moc_CProcessorControlGuiComp.cpp"
-				>
-			</File>
+				RelativePath="..\Generated\moc_CProcessorControlGuiComp.cpp" />
 			<File
-				RelativePath="..\generated\moc_CProgressManagerGuiComp.cpp"
-				>
-			</File>
+				RelativePath="..\Generated\moc_CProgressManagerGuiComp.cpp" />
 			<File
-				RelativePath="..\generated\ui_CProcessorControlGuiComp.h"
-				>
-			</File>
+				RelativePath="..\Generated\ui_CProcessorControlGuiComp.h" />
 			<File
-				RelativePath="..\generated\ui_CProgressManagerGuiComp.h"
-				>
-			</File>
+				RelativePath="..\Generated\ui_CProgressManagerGuiComp.h" />
 		</Filter>
 		<Filter
-			Name="Forms"
-			>
+			Name="Form Files"
+			Filter="ui"
+			UniqueIdentifier="{99349809-55BA-4b9d-BF79-8FDBB0286EB3}"
+			ParseFiles="false">
 			<File
-				RelativePath="..\CProcessorControlGuiComp.ui"
-				>
+				RelativePath="..\CProcessorControlGuiComp.ui">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CProcessorControlGuiComp.ui;@echo"
+						CommandLine="@echo uic ..\CProcessorControlGuiComp.ui &amp;&amp; C:\Qt\4.7.3\bin\uic.exe ..\CProcessorControlGuiComp.ui -o ..\Generated\ui_CProcessorControlGuiComp.h"
+						Description="UIC ..\CProcessorControlGuiComp.ui"
+						Outputs="..\Generated\ui_CProcessorControlGuiComp.h"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CProcessorControlGuiComp.ui;@echo"
+						CommandLine="@echo uic ..\CProcessorControlGuiComp.ui &amp;&amp; C:\Qt\4.7.3\bin\uic.exe ..\CProcessorControlGuiComp.ui -o ..\Generated\ui_CProcessorControlGuiComp.h"
+						Description="UIC ..\CProcessorControlGuiComp.ui"
+						Outputs="..\Generated\ui_CProcessorControlGuiComp.h"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CProgressManagerGuiComp.ui"
-				>
+				RelativePath="..\CProgressManagerGuiComp.ui">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CProgressManagerGuiComp.ui;@echo"
+						CommandLine="@echo uic ..\CProgressManagerGuiComp.ui &amp;&amp; C:\Qt\4.7.3\bin\uic.exe ..\CProgressManagerGuiComp.ui -o ..\Generated\ui_CProgressManagerGuiComp.h"
+						Description="UIC ..\CProgressManagerGuiComp.ui"
+						Outputs="..\Generated\ui_CProgressManagerGuiComp.h"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CProgressManagerGuiComp.ui;@echo"
+						CommandLine="@echo uic ..\CProgressManagerGuiComp.ui &amp;&amp; C:\Qt\4.7.3\bin\uic.exe ..\CProgressManagerGuiComp.ui -o ..\Generated\ui_CProgressManagerGuiComp.h"
+						Description="UIC ..\CProgressManagerGuiComp.ui"
+						Outputs="..\Generated\ui_CProgressManagerGuiComp.h"
+						Path="." />
+				</FileConfiguration>
 			</File>
 		</Filter>
 	</Files>
 	<Globals>
-		<Global
-			Name="MocDir"
-			Value="$(InputDir)\Generated"
-		/>
-		<Global
-			Name="QtVersion"
-			Value="4.2.3"
-		/>
-		<Global
-			Name="UicDir"
-			Value="$(InputDir)\Generated"
-		/>
 	</Globals>
 </VisualStudioProject>

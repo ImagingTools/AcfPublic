@@ -1,0 +1,52 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BasePck", "C:/Temp/Acf/Install/Temp/Impl/BasePck/VC8\BasePck.vcproj", "{8AD6C67E-7D3A-3B10-B4E5-152CFB429099}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtPck", "C:/Temp/Acf/Install/Temp/Impl/QtPck/VC8\QtPck.vcproj", "{DF996132-E2F5-3F15-8758-8F1EA0F79ED2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtGuiPck", "C:/Temp/Acf/Install/Temp/Impl/QtGuiPck/VC8\QtGuiPck.vcproj", "{4B645CC5-DF97-37D7-BAE7-BB9B6F6CC0E8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtViewPck", "C:/Temp/Acf/Install/Temp/Impl/QtViewPck/VC8\QtViewPck.vcproj", "{E8C14C49-E597-3FE7-A38E-AA2AF908107A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtMmPck", "C:/Temp/Acf/Install/Temp/Impl/QtMmPck/VC8\QtMmPck.vcproj", "{0A0149C6-E88E-3173-AF9D-668C64DF8C97}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CmpstrPck", "C:/Temp/Acf/Install/Temp/Impl/CmpstrPck/VC8\CmpstrPck.vcproj", "{55390627-F5CA-3FCE-AC42-018AC10AA5F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug|Win32
+		ConfigName.1 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{8AD6C67E-7D3A-3B10-B4E5-152CFB429099}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8AD6C67E-7D3A-3B10-B4E5-152CFB429099}.Debug|Win32.Build.0 = Debug|Win32
+		{8AD6C67E-7D3A-3B10-B4E5-152CFB429099}.Release|Win32.ActiveCfg = Release|Win32
+		{8AD6C67E-7D3A-3B10-B4E5-152CFB429099}.Release|Win32.Build.0 = Release|Win32
+		{DF996132-E2F5-3F15-8758-8F1EA0F79ED2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DF996132-E2F5-3F15-8758-8F1EA0F79ED2}.Debug|Win32.Build.0 = Debug|Win32
+		{DF996132-E2F5-3F15-8758-8F1EA0F79ED2}.Release|Win32.ActiveCfg = Release|Win32
+		{DF996132-E2F5-3F15-8758-8F1EA0F79ED2}.Release|Win32.Build.0 = Release|Win32
+		{4B645CC5-DF97-37D7-BAE7-BB9B6F6CC0E8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4B645CC5-DF97-37D7-BAE7-BB9B6F6CC0E8}.Debug|Win32.Build.0 = Debug|Win32
+		{4B645CC5-DF97-37D7-BAE7-BB9B6F6CC0E8}.Release|Win32.ActiveCfg = Release|Win32
+		{4B645CC5-DF97-37D7-BAE7-BB9B6F6CC0E8}.Release|Win32.Build.0 = Release|Win32
+		{E8C14C49-E597-3FE7-A38E-AA2AF908107A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E8C14C49-E597-3FE7-A38E-AA2AF908107A}.Debug|Win32.Build.0 = Debug|Win32
+		{E8C14C49-E597-3FE7-A38E-AA2AF908107A}.Release|Win32.ActiveCfg = Release|Win32
+		{E8C14C49-E597-3FE7-A38E-AA2AF908107A}.Release|Win32.Build.0 = Release|Win32
+		{0A0149C6-E88E-3173-AF9D-668C64DF8C97}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0A0149C6-E88E-3173-AF9D-668C64DF8C97}.Debug|Win32.Build.0 = Debug|Win32
+		{0A0149C6-E88E-3173-AF9D-668C64DF8C97}.Release|Win32.ActiveCfg = Release|Win32
+		{0A0149C6-E88E-3173-AF9D-668C64DF8C97}.Release|Win32.Build.0 = Release|Win32
+		{55390627-F5CA-3FCE-AC42-018AC10AA5F2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{55390627-F5CA-3FCE-AC42-018AC10AA5F2}.Debug|Win32.Build.0 = Debug|Win32
+		{55390627-F5CA-3FCE-AC42-018AC10AA5F2}.Release|Win32.ActiveCfg = Release|Win32
+		{55390627-F5CA-3FCE-AC42-018AC10AA5F2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

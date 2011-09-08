@@ -1,461 +1,540 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="8,00"
 	Name="icmpstr"
-	ProjectGUID="{E089473F-CFF6-478B-99A3-6C9109CFC9A3}"
-	RootNamespace="icmpstr"
-	Keyword="Qt4VSv1.0"
-	TargetFrameworkVersion="0"
-	>
+	ProjectGUID="{912D90C1-57D0-3C42-A322-15F6B6E3037E}"
+	Keyword="Qt4VSv1.0">
 	<Platforms>
 		<Platform
-			Name="Win32"
-		/>
+			Name="Win32" />
 	</Platforms>
-	<ToolFiles>
-		<ToolFile
-			RelativePath="..\..\..\Config\VC9\QtUIForm.rules"
-		/>
-	</ToolFiles>
 	<Configurations>
 		<Configuration
-			Name="Release|Win32"
+			Name="Debug|Win32"
+			OutputDirectory="."
+			ATLMinimizesCRunTimeLibraryUsage="false"
 			ConfigurationType="4"
-			InheritedPropertySheets="..\..\..\Config\VC9\Static.vsprops;..\..\..\Config\VC9\Release.vsprops"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="QT Moc Metafile"
-			/>
-			<Tool
-				Name="Qt Linguist"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="QT Resources"
-			/>
-			<Tool
-				Name="QT Designer Form"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
+			IntermediateDirectory="debug\"
+			UseOfMfc="0">
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtXml&quot;"
-				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
-				StringPooling="true"
-				RuntimeLibrary="2"
-				EnableEnhancedInstructionSet="2"
-				PrecompiledHeaderFile=""
-				WarningLevel="4"
-				DebugInformationFormat="0"
-			/>
+				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include\QtCore&quot;,&quot;c:\Qt\4.7.3\include\QtNetwork&quot;,&quot;c:\Qt\4.7.3\include\QtGui&quot;,&quot;c:\Qt\4.7.3\include\QtXml&quot;,&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot;,&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;..\..&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;..\Generated&quot;,&quot;..\Generated&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
+				AdditionalOptions="-Zm200"
+				AssemblerListingLocation="debug\"
+				BufferSecurityCheck="false"
+				DebugInformationFormat="3"
+				ExceptionHandling="1"
+				GeneratePreprocessedFile="0"
+				ObjectFile="debug\"
+				Optimization ="4"
+				PreprocessorDefinitions="UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_XMLPATTERNS_LIB,QT_XML_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
+				ProgramDataBaseFileName=".\"
+				RuntimeLibrary="3"
+				RuntimeTypeInfo="true"
+				SuppressStartupBanner="true"
+				WarningLevel="4" />
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCCustomBuildTool" />
 			<Tool
 				Name="VCLibrarianTool"
-			/>
+				OutputFile="..\..\..\Lib\DebugVC9\icmpstr.lib"
+				SuppressStartupBanner="true" />
 			<Tool
-				Name="VCALinkTool"
-			/>
+				Name="VCMIDLTool"
+				DefaultCharType="0"
+				EnableErrorChecks="1"
+				WarningLevel="0" />
 			<Tool
-				Name="VCXDCMakeTool"
-			/>
+				Name="VCPostBuildEventTool" />
 			<Tool
-				Name="VCBscMakeTool"
-			/>
+				Name="VCPreBuildEventTool" />
 			<Tool
-				Name="VCFxCopTool"
-			/>
+				Name="VCPreLinkEventTool" />
 			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_XMLPATTERNS_LIB,QT_XML_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,_DEBUG"
+				ResourceOutputFileName="..\..\..\Lib\DebugVC9\/$(InputName).res" />
 		</Configuration>
 		<Configuration
-			Name="Debug|Win32"
+			Name="Release|Win32"
+			OutputDirectory="."
+			ATLMinimizesCRunTimeLibraryUsage="false"
 			ConfigurationType="4"
-			InheritedPropertySheets="..\..\..\Config\VC9\Debug.vsprops;..\..\..\Config\VC9\Static.vsprops"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="QT Moc Metafile"
-			/>
-			<Tool
-				Name="Qt Linguist"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="QT Resources"
-			/>
-			<Tool
-				Name="QT Designer Form"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
+			IntermediateDirectory="release\"
+			UseOfMfc="0">
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="0"
-				AdditionalIncludeDirectories="../../;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtXml&quot;"
-				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
-				StringPooling="true"
-				RuntimeLibrary="3"
-				PrecompiledHeaderFile=""
-				BrowseInformation="1"
-				WarningLevel="4"
-				DebugInformationFormat="3"
-			/>
+				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include\QtCore&quot;,&quot;c:\Qt\4.7.3\include\QtNetwork&quot;,&quot;c:\Qt\4.7.3\include\QtGui&quot;,&quot;c:\Qt\4.7.3\include\QtXml&quot;,&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot;,&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;..\..&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;..\Generated&quot;,&quot;..\Generated&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
+				AdditionalOptions="-Zm200"
+				AssemblerListingLocation="release\"
+				BufferSecurityCheck="false"
+				DebugInformationFormat="0"
+				ExceptionHandling="1"
+				GeneratePreprocessedFile="0"
+				ObjectFile="release\"
+				Optimization ="2"
+				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_NO_DEBUG,QT_XMLPATTERNS_LIB,QT_XML_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,NDEBUG"
+				ProgramDataBaseFileName=".\"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="true"
+				SuppressStartupBanner="true"
+				WarningLevel="4" />
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCCustomBuildTool" />
 			<Tool
 				Name="VCLibrarianTool"
-			/>
+				OutputFile="..\..\..\Lib\ReleaseVC9\icmpstr.lib"
+				SuppressStartupBanner="true" />
 			<Tool
-				Name="VCALinkTool"
-			/>
+				Name="VCMIDLTool"
+				DefaultCharType="0"
+				EnableErrorChecks="1"
+				WarningLevel="0" />
 			<Tool
-				Name="VCXDCMakeTool"
-			/>
+				Name="VCPostBuildEventTool" />
 			<Tool
-				Name="VCBscMakeTool"
-			/>
+				Name="VCPreBuildEventTool" />
 			<Tool
-				Name="VCFxCopTool"
-			/>
+				Name="VCPreLinkEventTool" />
 			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_NO_DEBUG,QT_XMLPATTERNS_LIB,QT_XML_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
+				ResourceOutputFileName="..\..\..\Lib\ReleaseVC9\/$(InputName).res" />
 		</Configuration>
 	</Configurations>
-	<References>
-	</References>
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp;cxx;c;def"
-			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
-			>
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
 			<File
-				RelativePath="..\CAttributeEditorComp.cpp"
-				>
-			</File>
+				RelativePath="..\CAttributeEditorComp.cpp" />
 			<File
-				RelativePath="..\CComponentHelpFileProviderComp.cpp"
-				>
-			</File>
+				RelativePath="..\CComponentHelpFileProviderComp.cpp" />
 			<File
-				RelativePath="..\CGraphicsConnectorItem.cpp"
-				>
-			</File>
+				RelativePath="..\CGraphicsConnectorItem.cpp" />
 			<File
-				RelativePath="..\CPackageOverviewComp.cpp"
-				>
-			</File>
+				RelativePath="..\CPackageOverviewComp.cpp" />
 			<File
-				RelativePath="..\CPackagesLoaderExtComp.cpp"
-				>
-			</File>
+				RelativePath="..\CPackagesLoaderExtComp.cpp" />
 			<File
-				RelativePath="..\CQuickHelpViewerComp.cpp"
-				>
-			</File>
+				RelativePath="..\CQuickHelpViewerComp.cpp" />
 			<File
-				RelativePath="..\CRegistryConsistInfoComp.cpp"
-				>
-			</File>
+				RelativePath="..\CRegistryConsistInfoComp.cpp" />
 			<File
-				RelativePath="..\CRegistryElementShape.cpp"
-				>
-			</File>
+				RelativePath="..\CRegistryElementShape.cpp" />
 			<File
-				RelativePath="..\CRegistryLoaderComp.cpp"
-				>
-			</File>
+				RelativePath="..\CRegistryLoaderComp.cpp" />
 			<File
-				RelativePath="..\CRegistryPreviewComp.cpp"
-				>
-			</File>
+				RelativePath="..\CRegistryPreviewComp.cpp" />
 			<File
-				RelativePath="..\CRegistryPropEditorComp.cpp"
-				>
-			</File>
+				RelativePath="..\CRegistryPropEditorComp.cpp" />
 			<File
-				RelativePath="..\CVisualRegistryComp.cpp"
-				>
-			</File>
+				RelativePath="..\CVisualRegistryComp.cpp" />
 			<File
-				RelativePath="..\CVisualRegistryElement.cpp"
-				>
-			</File>
+				RelativePath="..\CVisualRegistryElement.cpp" />
 			<File
-				RelativePath="..\CVisualRegistryScenographerComp.cpp"
-				>
-			</File>
+				RelativePath="..\CVisualRegistryScenographerComp.cpp" />
 		</Filter>
 		<Filter
 			Name="Header Files"
-			Filter="h"
-			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
-			>
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
 			<File
-				RelativePath="..\CAttributeEditorComp.h"
-				>
+				RelativePath="..\CAttributeEditorComp.h">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CAttributeEditorComp.h;@echo"
+						CommandLine="@echo moc ..\CAttributeEditorComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CAttributeEditorComp.h -o ..\Generated\moc_CAttributeEditorComp.cpp"
+						Description="MOC ..\CAttributeEditorComp.h"
+						Outputs="..\Generated\moc_CAttributeEditorComp.cpp"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CAttributeEditorComp.h;@echo"
+						CommandLine="@echo moc ..\CAttributeEditorComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CAttributeEditorComp.h -o ..\Generated\moc_CAttributeEditorComp.cpp"
+						Description="MOC ..\CAttributeEditorComp.h"
+						Outputs="..\Generated\moc_CAttributeEditorComp.cpp"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CComponentHelpFileProviderComp.h"
-				>
+				RelativePath="..\CComponentHelpFileProviderComp.h" />
+			<File
+				RelativePath="..\CGraphicsConnectorItem.h">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CGraphicsConnectorItem.h;@echo"
+						CommandLine="@echo moc ..\CGraphicsConnectorItem.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CGraphicsConnectorItem.h -o ..\Generated\moc_CGraphicsConnectorItem.cpp"
+						Description="MOC ..\CGraphicsConnectorItem.h"
+						Outputs="..\Generated\moc_CGraphicsConnectorItem.cpp"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CGraphicsConnectorItem.h;@echo"
+						CommandLine="@echo moc ..\CGraphicsConnectorItem.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CGraphicsConnectorItem.h -o ..\Generated\moc_CGraphicsConnectorItem.cpp"
+						Description="MOC ..\CGraphicsConnectorItem.h"
+						Outputs="..\Generated\moc_CGraphicsConnectorItem.cpp"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CGraphicsConnectorItem.h"
-				>
+				RelativePath="..\CPackageOverviewComp.h">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CPackageOverviewComp.h;@echo"
+						CommandLine="@echo moc ..\CPackageOverviewComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CPackageOverviewComp.h -o ..\Generated\moc_CPackageOverviewComp.cpp"
+						Description="MOC ..\CPackageOverviewComp.h"
+						Outputs="..\Generated\moc_CPackageOverviewComp.cpp"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CPackageOverviewComp.h;@echo"
+						CommandLine="@echo moc ..\CPackageOverviewComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CPackageOverviewComp.h -o ..\Generated\moc_CPackageOverviewComp.cpp"
+						Description="MOC ..\CPackageOverviewComp.h"
+						Outputs="..\Generated\moc_CPackageOverviewComp.cpp"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CPackageOverviewComp.h"
-				>
+				RelativePath="..\CPackagesLoaderExtComp.h" />
+			<File
+				RelativePath="..\CQuickHelpViewerComp.h">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CQuickHelpViewerComp.h;@echo"
+						CommandLine="@echo moc ..\CQuickHelpViewerComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CQuickHelpViewerComp.h -o ..\Generated\moc_CQuickHelpViewerComp.cpp"
+						Description="MOC ..\CQuickHelpViewerComp.h"
+						Outputs="..\Generated\moc_CQuickHelpViewerComp.cpp"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CQuickHelpViewerComp.h;@echo"
+						CommandLine="@echo moc ..\CQuickHelpViewerComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CQuickHelpViewerComp.h -o ..\Generated\moc_CQuickHelpViewerComp.cpp"
+						Description="MOC ..\CQuickHelpViewerComp.h"
+						Outputs="..\Generated\moc_CQuickHelpViewerComp.cpp"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CPackagesLoaderExtComp.h"
-				>
+				RelativePath="..\CRegistryConsistInfoComp.h" />
+			<File
+				RelativePath="..\CRegistryElementShape.h">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CRegistryElementShape.h;@echo"
+						CommandLine="@echo moc ..\CRegistryElementShape.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CRegistryElementShape.h -o ..\Generated\moc_CRegistryElementShape.cpp"
+						Description="MOC ..\CRegistryElementShape.h"
+						Outputs="..\Generated\moc_CRegistryElementShape.cpp"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CRegistryElementShape.h;@echo"
+						CommandLine="@echo moc ..\CRegistryElementShape.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CRegistryElementShape.h -o ..\Generated\moc_CRegistryElementShape.cpp"
+						Description="MOC ..\CRegistryElementShape.h"
+						Outputs="..\Generated\moc_CRegistryElementShape.cpp"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CQuickHelpViewerComp.h"
-				>
+				RelativePath="..\CRegistryLoaderComp.h" />
+			<File
+				RelativePath="..\CRegistryPreviewComp.h">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CRegistryPreviewComp.h;@echo"
+						CommandLine="@echo moc ..\CRegistryPreviewComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CRegistryPreviewComp.h -o ..\Generated\moc_CRegistryPreviewComp.cpp"
+						Description="MOC ..\CRegistryPreviewComp.h"
+						Outputs="..\Generated\moc_CRegistryPreviewComp.cpp"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CRegistryPreviewComp.h;@echo"
+						CommandLine="@echo moc ..\CRegistryPreviewComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CRegistryPreviewComp.h -o ..\Generated\moc_CRegistryPreviewComp.cpp"
+						Description="MOC ..\CRegistryPreviewComp.h"
+						Outputs="..\Generated\moc_CRegistryPreviewComp.cpp"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CRegistryConsistInfoComp.h"
-				>
+				RelativePath="..\CRegistryPropEditorComp.h">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CRegistryPropEditorComp.h;@echo"
+						CommandLine="@echo moc ..\CRegistryPropEditorComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CRegistryPropEditorComp.h -o ..\Generated\moc_CRegistryPropEditorComp.cpp"
+						Description="MOC ..\CRegistryPropEditorComp.h"
+						Outputs="..\Generated\moc_CRegistryPropEditorComp.cpp"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CRegistryPropEditorComp.h;@echo"
+						CommandLine="@echo moc ..\CRegistryPropEditorComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CRegistryPropEditorComp.h -o ..\Generated\moc_CRegistryPropEditorComp.cpp"
+						Description="MOC ..\CRegistryPropEditorComp.h"
+						Outputs="..\Generated\moc_CRegistryPropEditorComp.cpp"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CRegistryElementShape.h"
-				>
+				RelativePath="..\CVisualRegistryComp.h" />
+			<File
+				RelativePath="..\CVisualRegistryElement.h" />
+			<File
+				RelativePath="..\CVisualRegistryScenographerComp.h">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CVisualRegistryScenographerComp.h;@echo"
+						CommandLine="@echo moc ..\CVisualRegistryScenographerComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CVisualRegistryScenographerComp.h -o ..\Generated\moc_CVisualRegistryScenographerComp.cpp"
+						Description="MOC ..\CVisualRegistryScenographerComp.h"
+						Outputs="..\Generated\moc_CVisualRegistryScenographerComp.cpp"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CVisualRegistryScenographerComp.h;@echo"
+						CommandLine="@echo moc ..\CVisualRegistryScenographerComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CVisualRegistryScenographerComp.h -o ..\Generated\moc_CVisualRegistryScenographerComp.cpp"
+						Description="MOC ..\CVisualRegistryScenographerComp.h"
+						Outputs="..\Generated\moc_CVisualRegistryScenographerComp.cpp"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CRegistryLoaderComp.h"
-				>
+				RelativePath="..\IAttributeSelectionObserver.h" />
+			<File
+				RelativePath="..\IComponentNote.h" />
+			<File
+				RelativePath="..\IElementSelectionInfo.h" />
+			<File
+				RelativePath="..\IExternalMetaInfoManager.h" />
+			<File
+				RelativePath="..\IRegistryConsistInfo.h" />
+			<File
+				RelativePath="..\IRegistryPreview.h" />
+			<File
+				RelativePath="..\icmpstr.h" />
+		</Filter>
+		<Filter
+			Name="Generated Files"
+			Filter="cpp;c;cxx;moc;h;def;odl;idl;res;"
+			UniqueIdentifier="{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}">
+			<File
+				RelativePath="..\Generated\moc_CAttributeEditorComp.cpp" />
+			<File
+				RelativePath="..\Generated\moc_CGraphicsConnectorItem.cpp" />
+			<File
+				RelativePath="..\Generated\moc_CPackageOverviewComp.cpp" />
+			<File
+				RelativePath="..\Generated\moc_CQuickHelpViewerComp.cpp" />
+			<File
+				RelativePath="..\Generated\moc_CRegistryElementShape.cpp" />
+			<File
+				RelativePath="..\Generated\moc_CRegistryPreviewComp.cpp" />
+			<File
+				RelativePath="..\Generated\moc_CRegistryPropEditorComp.cpp" />
+			<File
+				RelativePath="..\Generated\moc_CVisualRegistryScenographerComp.cpp" />
+			<File
+				RelativePath="..\Generated\qrc_icmpstr.cpp" />
+			<File
+				RelativePath="..\Generated\ui_CAttributeEditorComp.h" />
+			<File
+				RelativePath="..\Generated\ui_CPackageOverviewComp.h" />
+			<File
+				RelativePath="..\Generated\ui_CQuickHelpViewerComp.h" />
+			<File
+				RelativePath="..\Generated\ui_CRegistryPropEditorComp.h" />
+		</Filter>
+		<Filter
+			Name="Form Files"
+			Filter="ui"
+			UniqueIdentifier="{99349809-55BA-4b9d-BF79-8FDBB0286EB3}"
+			ParseFiles="false">
+			<File
+				RelativePath="..\CAttributeEditorComp.ui">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CAttributeEditorComp.ui;@echo"
+						CommandLine="@echo uic ..\CAttributeEditorComp.ui &amp;&amp; C:\Qt\4.7.3\bin\uic.exe ..\CAttributeEditorComp.ui -o ..\Generated\ui_CAttributeEditorComp.h"
+						Description="UIC ..\CAttributeEditorComp.ui"
+						Outputs="..\Generated\ui_CAttributeEditorComp.h"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CAttributeEditorComp.ui;@echo"
+						CommandLine="@echo uic ..\CAttributeEditorComp.ui &amp;&amp; C:\Qt\4.7.3\bin\uic.exe ..\CAttributeEditorComp.ui -o ..\Generated\ui_CAttributeEditorComp.h"
+						Description="UIC ..\CAttributeEditorComp.ui"
+						Outputs="..\Generated\ui_CAttributeEditorComp.h"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CRegistryPreviewComp.h"
-				>
+				RelativePath="..\CPackageOverviewComp.ui">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CPackageOverviewComp.ui;@echo"
+						CommandLine="@echo uic ..\CPackageOverviewComp.ui &amp;&amp; C:\Qt\4.7.3\bin\uic.exe ..\CPackageOverviewComp.ui -o ..\Generated\ui_CPackageOverviewComp.h"
+						Description="UIC ..\CPackageOverviewComp.ui"
+						Outputs="..\Generated\ui_CPackageOverviewComp.h"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CPackageOverviewComp.ui;@echo"
+						CommandLine="@echo uic ..\CPackageOverviewComp.ui &amp;&amp; C:\Qt\4.7.3\bin\uic.exe ..\CPackageOverviewComp.ui -o ..\Generated\ui_CPackageOverviewComp.h"
+						Description="UIC ..\CPackageOverviewComp.ui"
+						Outputs="..\Generated\ui_CPackageOverviewComp.h"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CRegistryPropEditorComp.h"
-				>
+				RelativePath="..\CQuickHelpViewerComp.ui">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CQuickHelpViewerComp.ui;@echo"
+						CommandLine="@echo uic ..\CQuickHelpViewerComp.ui &amp;&amp; C:\Qt\4.7.3\bin\uic.exe ..\CQuickHelpViewerComp.ui -o ..\Generated\ui_CQuickHelpViewerComp.h"
+						Description="UIC ..\CQuickHelpViewerComp.ui"
+						Outputs="..\Generated\ui_CQuickHelpViewerComp.h"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CQuickHelpViewerComp.ui;@echo"
+						CommandLine="@echo uic ..\CQuickHelpViewerComp.ui &amp;&amp; C:\Qt\4.7.3\bin\uic.exe ..\CQuickHelpViewerComp.ui -o ..\Generated\ui_CQuickHelpViewerComp.h"
+						Description="UIC ..\CQuickHelpViewerComp.ui"
+						Outputs="..\Generated\ui_CQuickHelpViewerComp.h"
+						Path="." />
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\CVisualRegistryComp.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CVisualRegistryElement.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CVisualRegistryScenographerComp.h"
-				>
-			</File>
-			<File
-				RelativePath="..\IAttributeSelectionObserver.h"
-				>
-			</File>
-			<File
-				RelativePath="..\icmpstr.h"
-				>
-			</File>
-			<File
-				RelativePath="..\IComponentNote.h"
-				>
-			</File>
-			<File
-				RelativePath="..\IElementSelectionInfo.h"
-				>
-			</File>
-			<File
-				RelativePath="..\IExternalMetaInfoManager.h"
-				>
-			</File>
-			<File
-				RelativePath="..\IRegistryConsistInfo.h"
-				>
-			</File>
-			<File
-				RelativePath="..\IRegistryPreview.h"
-				>
+				RelativePath="..\CRegistryPropEditorComp.ui">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CRegistryPropEditorComp.ui;@echo"
+						CommandLine="@echo uic ..\CRegistryPropEditorComp.ui &amp;&amp; C:\Qt\4.7.3\bin\uic.exe ..\CRegistryPropEditorComp.ui -o ..\Generated\ui_CRegistryPropEditorComp.h"
+						Description="UIC ..\CRegistryPropEditorComp.ui"
+						Outputs="..\Generated\ui_CRegistryPropEditorComp.h"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\CRegistryPropEditorComp.ui;@echo"
+						CommandLine="@echo uic ..\CRegistryPropEditorComp.ui &amp;&amp; C:\Qt\4.7.3\bin\uic.exe ..\CRegistryPropEditorComp.ui -o ..\Generated\ui_CRegistryPropEditorComp.h"
+						Description="UIC ..\CRegistryPropEditorComp.ui"
+						Outputs="..\Generated\ui_CRegistryPropEditorComp.h"
+						Path="." />
+				</FileConfiguration>
 			</File>
 		</Filter>
 		<Filter
 			Name="Resource Files"
 			Filter="qrc;*"
 			UniqueIdentifier="{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}"
-			ParseFiles="false"
-			>
+			ParseFiles="false">
 			<File
-				RelativePath="..\icmpstr.qrc"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="Generated Files"
-			Filter="moc;h;cpp"
-			UniqueIdentifier="{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}"
-			>
+				RelativePath="..\Resources\Icons\Anchor.svg" />
 			<File
-				RelativePath="..\generated\moc_CAttributeEditorComp.cpp"
-				>
-			</File>
+				RelativePath="..\Resources\Icons\CompositeComponent.svg" />
 			<File
-				RelativePath="..\generated\moc_CGraphicsConnectorItem.cpp"
-				>
-			</File>
+				RelativePath="..\Resources\Icons\CompositorIcon.svg" />
 			<File
-				RelativePath="..\generated\moc_CPackageOverviewComp.cpp"
-				>
-			</File>
+				RelativePath="..\Resources\Icons\CompositorLogo.svg" />
 			<File
-				RelativePath="..\generated\moc_CQuickHelpViewerComp.cpp"
-				>
-			</File>
+				RelativePath="..\Resources\Icons\EmbeddedComponent.svg" />
 			<File
-				RelativePath="..\generated\moc_CRegistryElementShape.cpp"
-				>
-			</File>
+				RelativePath="..\Resources\Icons\Export.svg" />
 			<File
-				RelativePath="..\generated\moc_CRegistryPreviewComp.cpp"
-				>
-			</File>
+				RelativePath="..\Resources\Icons\ExportToCode.svg" />
 			<File
-				RelativePath="..\generated\moc_CRegistryPropEditorComp.cpp"
-				>
-			</File>
+				RelativePath="..\Resources\Icons\MixedComponent.svg" />
 			<File
-				RelativePath="..\generated\moc_CVisualRegistryScenographerComp.cpp"
-				>
-			</File>
+				RelativePath="..\Resources\Icons\RealComponent.svg" />
 			<File
-				RelativePath="..\generated\qrc_icmpstr.cpp"
-				>
-			</File>
+				RelativePath="..\Resources\Icons\ToEmbeddedComponent.svg" />
 			<File
-				RelativePath="..\generated\ui_CAttributeEditorComp.h"
-				>
-			</File>
+				RelativePath="..\Resources\Icons\back_128.png" />
 			<File
-				RelativePath="..\generated\ui_CPackageOverviewComp.h"
-				>
-			</File>
+				RelativePath="..\Resources\Icons\folder_64.png" />
 			<File
-				RelativePath="..\generated\ui_CQuickHelpViewerComp.h"
-				>
-			</File>
-			<File
-				RelativePath="..\generated\ui_CRegistryPropEditorComp.h"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="Forms"
-			>
-			<File
-				RelativePath="..\CAttributeEditorComp.ui"
-				>
-			</File>
-			<File
-				RelativePath="..\CPackageOverviewComp.ui"
-				>
-			</File>
-			<File
-				RelativePath="..\CQuickHelpViewerComp.ui"
-				>
-			</File>
-			<File
-				RelativePath="..\CRegistryPropEditorComp.ui"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="Moc Files"
-			>
-			<File
-				RelativePath="..\CAttributeEditorComp.moc"
-				>
-			</File>
-			<File
-				RelativePath="..\CGraphicsConnectorItem.moc"
-				>
-			</File>
-			<File
-				RelativePath="..\CPackageOverviewComp.moc"
-				>
-			</File>
-			<File
-				RelativePath="..\CQuickHelpViewerComp.moc"
-				>
-			</File>
-			<File
-				RelativePath="..\CRegistryElementShape.moc"
-				>
-			</File>
-			<File
-				RelativePath="..\CRegistryPreviewComp.moc"
-				>
-			</File>
-			<File
-				RelativePath="..\CRegistryPropEditorComp.moc"
-				>
-			</File>
-			<File
-				RelativePath="..\CVisualRegistryScenographerComp.moc"
-				>
+				RelativePath="..\icmpstr.qrc">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\Resources\Icons\Anchor.svg;..\Resources\Icons\CompositeComponent.svg;..\Resources\Icons\CompositorIcon.svg;..\Resources\Icons\CompositorLogo.svg;..\Resources\Icons\EmbeddedComponent.svg;..\Resources\Icons\Export.svg;..\Resources\Icons\ExportToCode.svg;..\Resources\Icons\MixedComponent.svg;..\Resources\Icons\RealComponent.svg;..\Resources\Icons\ToEmbeddedComponent.svg;..\Resources\Icons\back_128.png;..\Resources\Icons\folder_64.png;..\icmpstr.qrc;@echo"
+						CommandLine="@echo rcc ..\icmpstr.qrc &amp;&amp; C:\Qt\4.7.3\bin\rcc.exe -name icmpstr ..\icmpstr.qrc -o ..\Generated\qrc_icmpstr.cpp"
+						Description="RCC ..\icmpstr.qrc"
+						Outputs="..\Generated\qrc_icmpstr.cpp"
+						Path="." />
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						AdditionalDependencies="..\Resources\Icons\Anchor.svg;..\Resources\Icons\CompositeComponent.svg;..\Resources\Icons\CompositorIcon.svg;..\Resources\Icons\CompositorLogo.svg;..\Resources\Icons\EmbeddedComponent.svg;..\Resources\Icons\Export.svg;..\Resources\Icons\ExportToCode.svg;..\Resources\Icons\MixedComponent.svg;..\Resources\Icons\RealComponent.svg;..\Resources\Icons\ToEmbeddedComponent.svg;..\Resources\Icons\back_128.png;..\Resources\Icons\folder_64.png;..\icmpstr.qrc;@echo"
+						CommandLine="@echo rcc ..\icmpstr.qrc &amp;&amp; C:\Qt\4.7.3\bin\rcc.exe -name icmpstr ..\icmpstr.qrc -o ..\Generated\qrc_icmpstr.cpp"
+						Description="RCC ..\icmpstr.qrc"
+						Outputs="..\Generated\qrc_icmpstr.cpp"
+						Path="." />
+				</FileConfiguration>
 			</File>
 		</Filter>
 	</Files>
 	<Globals>
-		<Global
-			Name="MocDir"
-			Value="$(InputDir)\Generated"
-		/>
-		<Global
-			Name="QtVersion"
-			Value="4.2.3"
-		/>
-		<Global
-			Name="UicDir"
-			Value="$(InputDir)\Generated"
-		/>
 	</Globals>
 </VisualStudioProject>

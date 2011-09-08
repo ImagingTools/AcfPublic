@@ -1,515 +1,268 @@
-<?xml version="1.0" encoding="windows-1251"?>
+<?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="8,00"
 	Name="ibase"
-	ProjectGUID="{C30159C1-C8F9-49F4-AE32-C014F87B12BD}"
-	RootNamespace="ibase"
-	TargetFrameworkVersion="0"
-	>
+	ProjectGUID="{E330D6D3-DEAC-3F98-8B65-8B190423A581}"
+	Keyword="Qt4VSv1.0">
 	<Platforms>
 		<Platform
-			Name="Win32"
-		/>
+			Name="Win32" />
 	</Platforms>
-	<ToolFiles>
-		<ToolFile
-			RelativePath="..\..\..\Config\VC9\Acf.rules"
-		/>
-		<ToolFile
-			RelativePath="..\..\..\Config\VC9\Tortoise.rules"
-		/>
-	</ToolFiles>
 	<Configurations>
 		<Configuration
-			Name="Release|Win32"
-			ConfigurationType="4"
-			InheritedPropertySheets="..\..\..\Config\VC9\Static.vsprops;..\..\..\Config\VC9\Release.vsprops"
-			UseOfMFC="0"
+			Name="Debug|Win32"
+			OutputDirectory="."
 			ATLMinimizesCRunTimeLibraryUsage="false"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="FileConvertCopy"
-			/>
-			<Tool
-				Name="SubVersionTransform"
-				AdditionalDependencies="..\svnflag"
-				OutputDir="..\..\..\Partitura\AcfVoce.arp"
-				SubVersionPath="..\..\.."
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="DeployCopy"
-			/>
-			<Tool
-				Name="Arxc"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-				PreprocessorDefinitions="NDEBUG"
-				MkTypLibCompatible="true"
-				SuppressStartupBanner="true"
-				TargetEnvironment="1"
-				TypeLibraryName="./iwin/ReleaseVC7/iwin.tlb"
-				HeaderFileName=""
-			/>
+			ConfigurationType="4"
+			IntermediateDirectory="debug\"
+			UseOfMfc="0">
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="2"
-				AdditionalIncludeDirectories="../../"
-				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS"
-				StringPooling="true"
-				RuntimeLibrary="2"
-				EnableFunctionLevelLinking="true"
-				EnableEnhancedInstructionSet="2"
-				UsePrecompiledHeader="0"
-				PrecompiledHeaderFile=""
-				WarningLevel="3"
+				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include\QtCore&quot;,&quot;c:\Qt\4.7.3\include\QtGui&quot;,&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;..\..&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;debug&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
+				AdditionalOptions="-Zm200"
+				AssemblerListingLocation="debug\"
+				BufferSecurityCheck="false"
+				DebugInformationFormat="3"
+				ExceptionHandling="1"
+				GeneratePreprocessedFile="0"
+				ObjectFile="debug\"
+				Optimization ="4"
+				PreprocessorDefinitions="UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
+				ProgramDataBaseFileName=".\"
+				RuntimeLibrary="3"
+				RuntimeTypeInfo="true"
 				SuppressStartupBanner="true"
-				CompileAs="0"
-			/>
+				WarningLevel="4" />
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="NDEBUG"
-				Culture="1031"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCCustomBuildTool" />
 			<Tool
 				Name="VCLibrarianTool"
-			/>
+				OutputFile="..\..\..\Lib\DebugVC9\ibase.lib"
+				SuppressStartupBanner="true" />
 			<Tool
-				Name="VCALinkTool"
-			/>
+				Name="VCMIDLTool"
+				DefaultCharType="0"
+				EnableErrorChecks="1"
+				WarningLevel="0" />
 			<Tool
-				Name="VCXDCMakeTool"
-			/>
+				Name="VCPostBuildEventTool" />
 			<Tool
-				Name="VCBscMakeTool"
-			/>
+				Name="VCPreBuildEventTool" />
 			<Tool
-				Name="VCFxCopTool"
-			/>
+				Name="VCPreLinkEventTool" />
 			<Tool
-				Name="VCPostBuildEventTool"
-				CommandLine=""
-			/>
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,_DEBUG"
+				ResourceOutputFileName="..\..\..\Lib\DebugVC9\/$(InputName).res" />
 		</Configuration>
 		<Configuration
-			Name="Debug|Win32"
-			ConfigurationType="4"
-			InheritedPropertySheets="..\..\..\Config\VC9\Debug.vsprops;..\..\..\Config\VC9\Static.vsprops"
-			UseOfMFC="0"
+			Name="Release|Win32"
+			OutputDirectory="."
 			ATLMinimizesCRunTimeLibraryUsage="false"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="FileConvertCopy"
-			/>
-			<Tool
-				Name="SubVersionTransform"
-				AdditionalDependencies="..\svnflag"
-				OutputDir="..\..\..\Partitura\AcfVoce.arp"
-				SubVersionPath="..\..\.."
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="DeployCopy"
-			/>
-			<Tool
-				Name="Arxc"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-				PreprocessorDefinitions="_DEBUG"
-				MkTypLibCompatible="true"
-				SuppressStartupBanner="true"
-				TargetEnvironment="1"
-				TypeLibraryName="./iwin/DebugVC7/iwin.tlb"
-				HeaderFileName=""
-			/>
+			ConfigurationType="4"
+			IntermediateDirectory="release\"
+			UseOfMfc="0">
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="0"
-				AdditionalIncludeDirectories="../../"
-				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS"
-				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
-				PrecompiledHeaderFile=""
-				WarningLevel="3"
+				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include\QtCore&quot;,&quot;c:\Qt\4.7.3\include\QtGui&quot;,&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;..\..&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;release&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
+				AdditionalOptions="-Zm200"
+				AssemblerListingLocation="release\"
+				BufferSecurityCheck="false"
+				DebugInformationFormat="0"
+				ExceptionHandling="1"
+				GeneratePreprocessedFile="0"
+				ObjectFile="release\"
+				Optimization ="2"
+				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_NO_DEBUG,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,NDEBUG"
+				ProgramDataBaseFileName=".\"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="true"
 				SuppressStartupBanner="true"
-				DebugInformationFormat="4"
-				CompileAs="0"
-			/>
+				WarningLevel="4" />
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_DEBUG"
-				Culture="1031"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCCustomBuildTool" />
 			<Tool
 				Name="VCLibrarianTool"
-			/>
+				OutputFile="..\..\..\Lib\ReleaseVC9\ibase.lib"
+				SuppressStartupBanner="true" />
 			<Tool
-				Name="VCALinkTool"
-			/>
+				Name="VCMIDLTool"
+				DefaultCharType="0"
+				EnableErrorChecks="1"
+				WarningLevel="0" />
 			<Tool
-				Name="VCXDCMakeTool"
-			/>
+				Name="VCPostBuildEventTool" />
 			<Tool
-				Name="VCBscMakeTool"
-			/>
+				Name="VCPreBuildEventTool" />
 			<Tool
-				Name="VCFxCopTool"
-			/>
+				Name="VCPreLinkEventTool" />
 			<Tool
-				Name="VCPostBuildEventTool"
-				CommandLine=""
-			/>
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_NO_DEBUG,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
+				ResourceOutputFileName="..\..\..\Lib\ReleaseVC9\/$(InputName).res" />
 		</Configuration>
 	</Configurations>
-	<References>
-	</References>
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp"
-			>
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
 			<File
-				RelativePath="..\CApplicationInfoComp.cpp"
-				>
-			</File>
+				RelativePath="..\CApplicationInfoComp.cpp" />
 			<File
-				RelativePath="..\CAutoPersistenceComp.cpp"
-				>
-			</File>
+				RelativePath="..\CAutoPersistenceComp.cpp" />
 			<File
-				RelativePath="..\CComposedLoaderComp.cpp"
-				>
-			</File>
+				RelativePath="..\CComposedLoaderComp.cpp" />
 			<File
-				RelativePath="..\CConsoleLogComp.cpp"
-				>
-			</File>
+				RelativePath="..\CConsoleLogComp.cpp" />
 			<File
-				RelativePath="..\CCopyAppComp.cpp"
-				>
-			</File>
+				RelativePath="..\CCopyAppComp.cpp" />
 			<File
-				RelativePath="..\CExternalFileConverterComp.cpp"
-				>
-			</File>
+				RelativePath="..\CExternalFileConverterComp.cpp" />
 			<File
-				RelativePath="..\CFileConvertOverProcessorComp.cpp"
-				>
-			</File>
+				RelativePath="..\CFileConvertOverProcessorComp.cpp" />
 			<File
-				RelativePath="..\CFileCopyOverLoaderComp.cpp"
-				>
-			</File>
+				RelativePath="..\CFileCopyOverLoaderComp.cpp" />
 			<File
-				RelativePath="..\CFileTypeInfoComp.cpp"
-				>
-			</File>
+				RelativePath="..\CFileTypeInfoComp.cpp" />
 			<File
-				RelativePath="..\CInstantiatorComp.cpp"
-				>
-			</File>
+				RelativePath="..\CInstantiatorComp.cpp" />
 			<File
-				RelativePath="..\CLogComp.cpp"
-				>
-			</File>
+				RelativePath="..\CLogComp.cpp" />
 			<File
-				RelativePath="..\CMessage.cpp"
-				>
-			</File>
+				RelativePath="..\CMessage.cpp" />
 			<File
-				RelativePath="..\CModelBinderComp.cpp"
-				>
-			</File>
+				RelativePath="..\CModelBinderComp.cpp" />
 			<File
-				RelativePath="..\CModelProxyComp.cpp"
-				>
-			</File>
+				RelativePath="..\CModelProxyComp.cpp" />
 			<File
-				RelativePath="..\CObjectQueueComp.cpp"
-				>
-			</File>
+				RelativePath="..\CObjectQueueComp.cpp" />
 			<File
-				RelativePath="..\CRegistryCodeSaverComp.cpp"
-				>
-			</File>
+				RelativePath="..\CRegistryCodeSaverComp.cpp" />
 			<File
-				RelativePath="..\CSelectableFileConverterComp.cpp"
-				>
-			</File>
+				RelativePath="..\CSelectableFileConverterComp.cpp" />
 			<File
-				RelativePath="..\CSize.cpp"
-				>
-			</File>
+				RelativePath="..\CSize.cpp" />
 			<File
-				RelativePath="..\CStreamLogCompBase.cpp"
-				>
-			</File>
+				RelativePath="..\CStreamLogCompBase.cpp" />
 			<File
-				RelativePath="..\CTextDocumentComp.cpp"
-				>
-			</File>
+				RelativePath="..\CTextDocumentComp.cpp" />
 			<File
-				RelativePath="..\CTextFileLoaderComp.cpp"
-				>
-			</File>
+				RelativePath="..\CTextFileLoaderComp.cpp" />
 			<File
-				RelativePath="..\CTextFileLogComp.cpp"
-				>
-			</File>
+				RelativePath="..\CTextFileLogComp.cpp" />
 			<File
-				RelativePath="..\CUuidComp.cpp"
-				>
-			</File>
+				RelativePath="..\CUuidComp.cpp" />
 			<File
-				RelativePath="..\CVersionInfoComp.cpp"
-				>
-			</File>
+				RelativePath="..\CVersionInfoComp.cpp" />
 		</Filter>
 		<Filter
 			Name="Header Files"
-			Filter="h"
-			>
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
 			<File
-				RelativePath="..\CApplicationInfoComp.h"
-				>
-			</File>
+				RelativePath="..\CApplicationInfoComp.h" />
 			<File
-				RelativePath="..\CAutoPersistenceComp.h"
-				>
-			</File>
+				RelativePath="..\CAutoPersistenceComp.h" />
 			<File
-				RelativePath="..\CComposedLoaderComp.h"
-				>
-			</File>
+				RelativePath="..\CComposedLoaderComp.h" />
 			<File
-				RelativePath="..\CConsoleLogComp.h"
-				>
-			</File>
+				RelativePath="..\CConsoleLogComp.h" />
 			<File
-				RelativePath="..\CCopyAppComp.h"
-				>
-			</File>
+				RelativePath="..\CCopyAppComp.h" />
 			<File
-				RelativePath="..\CExternalFileConverterComp.h"
-				>
-			</File>
+				RelativePath="..\CExternalFileConverterComp.h" />
 			<File
-				RelativePath="..\CFileConvertOverProcessorComp.h"
-				>
-			</File>
+				RelativePath="..\CFileConvertOverProcessorComp.h" />
 			<File
-				RelativePath="..\CFileCopyOverLoaderComp.h"
-				>
-			</File>
+				RelativePath="..\CFileCopyOverLoaderComp.h" />
 			<File
-				RelativePath="..\CFileTypeInfoComp.h"
-				>
-			</File>
+				RelativePath="..\CFileTypeInfoComp.h" />
 			<File
-				RelativePath="..\CInstantiatorComp.h"
-				>
-			</File>
+				RelativePath="..\CInstantiatorComp.h" />
 			<File
-				RelativePath="..\CLogComp.h"
-				>
-			</File>
+				RelativePath="..\CLogComp.h" />
 			<File
-				RelativePath="..\CMessage.h"
-				>
-			</File>
+				RelativePath="..\CMessage.h" />
 			<File
-				RelativePath="..\CModelBinderComp.h"
-				>
-			</File>
+				RelativePath="..\CModelBinderComp.h" />
 			<File
-				RelativePath="..\CModelProxyComp.h"
-				>
-			</File>
+				RelativePath="..\CModelProxyComp.h" />
 			<File
-				RelativePath="..\CObjectQueueComp.h"
-				>
-			</File>
+				RelativePath="..\CObjectQueueComp.h" />
 			<File
-				RelativePath="..\CRegistryCodeSaverComp.h"
-				>
-			</File>
+				RelativePath="..\CRegistryCodeSaverComp.h" />
 			<File
-				RelativePath="..\CSelectableFileConverterComp.h"
-				>
-			</File>
+				RelativePath="..\CSelectableFileConverterComp.h" />
 			<File
-				RelativePath="..\CSize.h"
-				>
-			</File>
+				RelativePath="..\CSize.h" />
 			<File
-				RelativePath="..\CStreamLogCompBase.h"
-				>
-			</File>
+				RelativePath="..\CStreamLogCompBase.h" />
 			<File
-				RelativePath="..\CTextDocumentComp.h"
-				>
-			</File>
+				RelativePath="..\CTextDocumentComp.h" />
 			<File
-				RelativePath="..\CTextFileLoaderComp.h"
-				>
-			</File>
+				RelativePath="..\CTextFileLoaderComp.h" />
 			<File
-				RelativePath="..\CTextFileLogComp.h"
-				>
-			</File>
+				RelativePath="..\CTextFileLogComp.h" />
 			<File
-				RelativePath="..\CUuidComp.h"
-				>
-			</File>
+				RelativePath="..\CUuidComp.h" />
 			<File
-				RelativePath="..\CVersionInfoComp.h"
-				>
-			</File>
+				RelativePath="..\CVersionInfoComp.h" />
 			<File
-				RelativePath="..\IApplication.h"
-				>
-			</File>
+				RelativePath="..\IApplication.h" />
 			<File
-				RelativePath="..\IApplicationInfo.h"
-				>
-			</File>
+				RelativePath="..\IApplicationInfo.h" />
 			<File
-				RelativePath="..\ibase.h"
-				>
-			</File>
+				RelativePath="..\ICommand.h" />
 			<File
-				RelativePath="..\ICommand.h"
-				>
-			</File>
+				RelativePath="..\ICommandsProvider.h" />
 			<File
-				RelativePath="..\ICommandsProvider.h"
-				>
-			</File>
+				RelativePath="..\IFileConvertCopy.h" />
 			<File
-				RelativePath="..\IFileConvertCopy.h"
-				>
-			</File>
+				RelativePath="..\IFileListProvider.h" />
 			<File
-				RelativePath="..\IFileListProvider.h"
-				>
-			</File>
+				RelativePath="..\ILoggable.h" />
 			<File
-				RelativePath="..\ILoggable.h"
-				>
-			</File>
+				RelativePath="..\IMessage.h" />
 			<File
-				RelativePath="..\IMessage.h"
-				>
-			</File>
+				RelativePath="..\IMessageConsumer.h" />
 			<File
-				RelativePath="..\IMessageConsumer.h"
-				>
-			</File>
+				RelativePath="..\IMessageContainer.h" />
 			<File
-				RelativePath="..\IMessageContainer.h"
-				>
-			</File>
+				RelativePath="..\IObjectQueue.h" />
 			<File
-				RelativePath="..\IObjectQueue.h"
-				>
-			</File>
+				RelativePath="..\IObjectSnap.h" />
 			<File
-				RelativePath="..\IObjectSnap.h"
-				>
-			</File>
+				RelativePath="..\IProcessExecutor.h" />
 			<File
-				RelativePath="..\IProcessExecutor.h"
-				>
-			</File>
+				RelativePath="..\ITextDocument.h" />
 			<File
-				RelativePath="..\ITextDocument.h"
-				>
-			</File>
+				RelativePath="..\TComposedFactoryComp.h" />
 			<File
-				RelativePath="..\TComposedFactoryComp.h"
-				>
-			</File>
+				RelativePath="..\TContainer.h" />
 			<File
-				RelativePath="..\TContainer.h"
-				>
-			</File>
+				RelativePath="..\TEnableableWrap.h" />
 			<File
-				RelativePath="..\TEnableableWrap.h"
-				>
-			</File>
+				RelativePath="..\TFactorisableContainer.h" />
 			<File
-				RelativePath="..\TFactorisableContainer.h"
-				>
-			</File>
+				RelativePath="..\TFileSerializerComp.h" />
 			<File
-				RelativePath="..\TFileSerializerComp.h"
-				>
-			</File>
+				RelativePath="..\THierarchicalBase.h" />
 			<File
-				RelativePath="..\THierarchicalBase.h"
-				>
-			</File>
+				RelativePath="..\TLoggerCompWrap.h" />
 			<File
-				RelativePath="..\TLoggerCompWrap.h"
-				>
-			</File>
+				RelativePath="..\TLoggerWrap.h" />
 			<File
-				RelativePath="..\TLoggerWrap.h"
-				>
-			</File>
+				RelativePath="..\TMessageContainerWrap.h" />
 			<File
-				RelativePath="..\TMessageContainerWrap.h"
-				>
-			</File>
+				RelativePath="..\TMsbWord.h" />
 			<File
-				RelativePath="..\TMsbWord.h"
-				>
-			</File>
+				RelativePath="..\TNamedWrap.h" />
 			<File
-				RelativePath="..\TNamedWrap.h"
-				>
-			</File>
+				RelativePath="..\TSerializableContainer.h" />
 			<File
-				RelativePath="..\TSerializableContainer.h"
-				>
-			</File>
+				RelativePath="..\ibase.h" />
 		</Filter>
 	</Files>
 	<Globals>
