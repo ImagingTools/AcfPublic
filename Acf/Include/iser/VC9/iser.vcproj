@@ -1,242 +1,426 @@
-<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding="windows-1251"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="8,00"
+	Version="9,00"
 	Name="iser"
-	ProjectGUID="{36E52977-7083-3C3C-AAE5-9C0D29057566}"
-	Keyword="Qt4VSv1.0">
+	ProjectGUID="{6DFD9DED-F84C-43C5-953A-9713464D7D15}"
+	TargetFrameworkVersion="0"
+	>
 	<Platforms>
 		<Platform
-			Name="Win32" />
+			Name="Win32"
+		/>
 	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
 	<Configurations>
 		<Configuration
-			Name="Debug|Win32"
-			OutputDirectory="."
-			ATLMinimizesCRunTimeLibraryUsage="false"
+			Name="Release|Win32"
 			ConfigurationType="4"
-			IntermediateDirectory="debug\"
-			UseOfMfc="0">
+			InheritedPropertySheets="..\..\..\Config\VC9\Static.vsprops;..\..\..\Config\VC9\Release.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include\QtCore&quot;,&quot;c:\Qt\4.7.3\include\QtGui&quot;,&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;..\..&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;debug&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
-				AdditionalOptions="-Zm200"
-				AssemblerListingLocation="debug\"
-				BufferSecurityCheck="false"
-				DebugInformationFormat="3"
-				ExceptionHandling="1"
-				GeneratePreprocessedFile="0"
-				ObjectFile="debug\"
-				Optimization ="4"
-				PreprocessorDefinitions="UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
-				ProgramDataBaseFileName=".\"
-				RuntimeLibrary="3"
-				RuntimeTypeInfo="true"
-				SuppressStartupBanner="true"
-				WarningLevel="4" />
+				Name="VCPreBuildEventTool"
+			/>
 			<Tool
-				Name="VCCustomBuildTool" />
+				Name="VCCustomBuildTool"
+			/>
 			<Tool
-				Name="VCLibrarianTool"
-				OutputFile="..\..\..\Lib\DebugVC9\iser.lib"
-				SuppressStartupBanner="true" />
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
 			<Tool
 				Name="VCMIDLTool"
-				DefaultCharType="0"
-				EnableErrorChecks="1"
-				WarningLevel="0" />
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="true"
+				SuppressStartupBanner="true"
+				TargetEnvironment="1"
+				TypeLibraryName="./iwin/ReleaseVC7/iwin.tlb"
+				HeaderFileName=""
+			/>
 			<Tool
-				Name="VCPostBuildEventTool" />
+				Name="VCCLCompilerTool"
+				Optimization="2"
+				AdditionalIncludeDirectories="../../"
+				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS"
+				StringPooling="true"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="true"
+				EnableEnhancedInstructionSet="2"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderFile=""
+				WarningLevel="4"
+				SuppressStartupBanner="true"
+				CompileAs="0"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool" />
-			<Tool
-				Name="VCPreLinkEventTool" />
+				Name="VCManagedResourceCompilerTool"
+			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,_DEBUG"
-				ResourceOutputFileName="..\..\..\Lib\DebugVC9\/$(InputName).res" />
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1031"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 		<Configuration
-			Name="Release|Win32"
-			OutputDirectory="."
-			ATLMinimizesCRunTimeLibraryUsage="false"
+			Name="Debug|Win32"
 			ConfigurationType="4"
-			IntermediateDirectory="release\"
-			UseOfMfc="0">
+			InheritedPropertySheets="..\..\..\Config\VC9\Debug.vsprops;..\..\..\Config\VC9\Static.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include\QtCore&quot;,&quot;c:\Qt\4.7.3\include\QtGui&quot;,&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;..\..&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;release&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
-				AdditionalOptions="-Zm200"
-				AssemblerListingLocation="release\"
-				BufferSecurityCheck="false"
-				DebugInformationFormat="0"
-				ExceptionHandling="1"
-				GeneratePreprocessedFile="0"
-				ObjectFile="release\"
-				Optimization ="2"
-				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_NO_DEBUG,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,NDEBUG"
-				ProgramDataBaseFileName=".\"
-				RuntimeLibrary="2"
-				RuntimeTypeInfo="true"
-				SuppressStartupBanner="true"
-				WarningLevel="4" />
+				Name="VCPreBuildEventTool"
+			/>
 			<Tool
-				Name="VCCustomBuildTool" />
+				Name="VCCustomBuildTool"
+			/>
 			<Tool
-				Name="VCLibrarianTool"
-				OutputFile="..\..\..\Lib\ReleaseVC9\iser.lib"
-				SuppressStartupBanner="true" />
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
 			<Tool
 				Name="VCMIDLTool"
-				DefaultCharType="0"
-				EnableErrorChecks="1"
-				WarningLevel="0" />
+				PreprocessorDefinitions="_DEBUG"
+				MkTypLibCompatible="true"
+				SuppressStartupBanner="true"
+				TargetEnvironment="1"
+				TypeLibraryName="./iwin/DebugVC7/iwin.tlb"
+				HeaderFileName=""
+			/>
 			<Tool
-				Name="VCPostBuildEventTool" />
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="../../"
+				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS"
+				StringPooling="true"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				PrecompiledHeaderFile=""
+				BrowseInformation="1"
+				WarningLevel="4"
+				SuppressStartupBanner="true"
+				DebugInformationFormat="3"
+				CompileAs="0"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool" />
-			<Tool
-				Name="VCPreLinkEventTool" />
+				Name="VCManagedResourceCompilerTool"
+			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_NO_DEBUG,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
-				ResourceOutputFileName="..\..\..\Lib\ReleaseVC9\/$(InputName).res" />
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1031"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 	</Configurations>
+	<References>
+	</References>
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
-			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			Filter="cpp"
+			>
 			<File
-				RelativePath="..\CArchiveBase.cpp" />
+				RelativePath="..\CArchiveBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CArchiveTag.cpp" />
+				RelativePath="..\CArchiveTag.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CBinaryReadArchiveBase.cpp" />
+				RelativePath="..\CBinaryReadArchiveBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CBinaryWriteArchiveBase.cpp" />
+				RelativePath="..\CBinaryWriteArchiveBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CBitMemoryReadArchive.cpp" />
+				RelativePath="..\CBitMemoryReadArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CBitMemoryWriteArchive.cpp" />
+				RelativePath="..\CBitMemoryWriteArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CFileArchiveInfo.cpp" />
+				RelativePath="..\CFileArchiveInfo.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CFileReadArchive.cpp" />
+				RelativePath="..\CFileReadArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CFileWriteArchive.cpp" />
+				RelativePath="..\CFileWriteArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CMemoryReadArchive.cpp" />
+				RelativePath="..\CMemoryReadArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CMemoryWriteArchive.cpp" />
+				RelativePath="..\CMemoryWriteArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CMinimalVersionInfo.cpp" />
+				RelativePath="..\CMinimalVersionInfo.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CReadArchiveBase.cpp" />
+				RelativePath="..\CReadArchiveBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CReaderVersionInfo.cpp" />
+				RelativePath="..\CReaderVersionInfo.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CTextReadArchiveBase.cpp" />
+				RelativePath="..\CTextReadArchiveBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CTextWriteArchiveBase.cpp" />
+				RelativePath="..\CTextWriteArchiveBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CWriteArchiveBase.cpp" />
+				RelativePath="..\CWriteArchiveBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlDocumentInfoBase.cpp" />
+				RelativePath="..\CXmlDocumentInfoBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlFileReadArchive.cpp" />
+				RelativePath="..\CXmlFileReadArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlFileWriteArchive.cpp" />
+				RelativePath="..\CXmlFileWriteArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlReadArchiveBase.cpp" />
+				RelativePath="..\CXmlReadArchiveBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlStringReadArchive.cpp" />
+				RelativePath="..\CXmlStringReadArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlStringWriteArchive.cpp" />
+				RelativePath="..\CXmlStringWriteArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlWriteArchiveBase.cpp" />
+				RelativePath="..\CXmlWriteArchiveBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\TCopySerializedWrap.cpp" />
+				RelativePath="..\TCopySerializedWrap.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
-			Filter="h;hpp;hxx;hm;inl;inc;xsd"
-			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			Filter="h"
+			>
 			<File
-				RelativePath="..\CArchiveBase.h" />
+				RelativePath="..\CArchiveBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CArchiveTag.h" />
+				RelativePath="..\CArchiveTag.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CBinaryReadArchiveBase.h" />
+				RelativePath="..\CBinaryReadArchiveBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CBinaryWriteArchiveBase.h" />
+				RelativePath="..\CBinaryWriteArchiveBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CBitMemoryReadArchive.h" />
+				RelativePath="..\CBitMemoryReadArchive.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CBitMemoryWriteArchive.h" />
+				RelativePath="..\CBitMemoryWriteArchive.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CFileArchiveInfo.h" />
+				RelativePath="..\CFileArchiveInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CFileReadArchive.h" />
+				RelativePath="..\CFileReadArchive.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CFileWriteArchive.h" />
+				RelativePath="..\CFileWriteArchive.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CMemoryReadArchive.h" />
+				RelativePath="..\CMemoryReadArchive.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CMemoryWriteArchive.h" />
+				RelativePath="..\CMemoryWriteArchive.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CMinimalVersionInfo.h" />
+				RelativePath="..\CMinimalVersionInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CReadArchiveBase.h" />
+				RelativePath="..\CReadArchiveBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CReaderVersionInfo.h" />
+				RelativePath="..\CReaderVersionInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CTextReadArchiveBase.h" />
+				RelativePath="..\CTextReadArchiveBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CTextWriteArchiveBase.h" />
+				RelativePath="..\CTextWriteArchiveBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CWriteArchiveBase.h" />
+				RelativePath="..\CWriteArchiveBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlDocumentInfoBase.h" />
+				RelativePath="..\CXmlDocumentInfoBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlFileReadArchive.h" />
+				RelativePath="..\CXmlFileReadArchive.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlFileWriteArchive.h" />
+				RelativePath="..\CXmlFileWriteArchive.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlReadArchiveBase.h" />
+				RelativePath="..\CXmlReadArchiveBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlStringReadArchive.h" />
+				RelativePath="..\CXmlStringReadArchive.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlStringWriteArchive.h" />
+				RelativePath="..\CXmlStringWriteArchive.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlWriteArchiveBase.h" />
+				RelativePath="..\CXmlWriteArchiveBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IArchive.h" />
+				RelativePath="..\IArchive.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IFileArchiveInfo.h" />
+				RelativePath="..\IFileArchiveInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IFileLoader.h" />
+				RelativePath="..\IFileLoader.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IFileLoaderInfo.h" />
+				RelativePath="..\IFileLoaderInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IFileTypeInfo.h" />
+				RelativePath="..\IFileTypeInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IObject.h" />
+				RelativePath="..\IObject.h"
+				>
+			</File>
 			<File
-				RelativePath="..\ISerializable.h" />
+				RelativePath="..\iser.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IVersionInfo.h" />
+				RelativePath="..\ISerializable.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TCopySerializedWrap.h" />
+				RelativePath="..\IVersionInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TVersionInfoSerializer.h" />
+				RelativePath="..\TCopySerializedWrap.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TXmlStreamReadArchiveBase.h" />
+				RelativePath="..\TVersionInfoSerializer.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TXmlStreamWriteArchiveBase.h" />
+				RelativePath="..\TXmlStreamReadArchiveBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\iser.h" />
+				RelativePath="..\TXmlStreamWriteArchiveBase.h"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>

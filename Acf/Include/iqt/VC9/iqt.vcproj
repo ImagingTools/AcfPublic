@@ -1,410 +1,586 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="8,00"
+	Version="9,00"
 	Name="iqt"
-	ProjectGUID="{5782F8F8-7A79-3190-8754-D0F0A9D97329}"
-	Keyword="Qt4VSv1.0">
+	ProjectGUID="{FB8AA493-6CFD-4E1B-ABF8-09E4BE6CDD59}"
+	RootNamespace="iqt"
+	Keyword="Qt4VSv1.0"
+	TargetFrameworkVersion="0"
+	>
 	<Platforms>
 		<Platform
-			Name="Win32" />
+			Name="Win32"
+		/>
 	</Platforms>
+	<ToolFiles>
+		<ToolFile
+			RelativePath="..\..\..\Config\VC9\QtUIForm.rules"
+		/>
+	</ToolFiles>
 	<Configurations>
 		<Configuration
-			Name="Debug|Win32"
-			OutputDirectory="."
-			ATLMinimizesCRunTimeLibraryUsage="false"
+			Name="Release|Win32"
 			ConfigurationType="4"
-			IntermediateDirectory="debug\"
-			UseOfMfc="0">
+			InheritedPropertySheets="..\..\..\Config\VC9\Static.vsprops;..\..\..\Config\VC9\Release.vsprops"
+			>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include\QtCore&quot;,&quot;c:\Qt\4.7.3\include\QtNetwork&quot;,&quot;c:\Qt\4.7.3\include\QtGui&quot;,&quot;c:\Qt\4.7.3\include\QtXml&quot;,&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot;,&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;..\..&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;..\Generated&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
-				AdditionalOptions="-Zm200"
-				AssemblerListingLocation="debug\"
-				BufferSecurityCheck="false"
-				DebugInformationFormat="3"
-				ExceptionHandling="1"
-				GeneratePreprocessedFile="0"
-				ObjectFile="debug\"
-				Optimization ="4"
-				PreprocessorDefinitions="UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_XMLPATTERNS_LIB,QT_XML_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
-				ProgramDataBaseFileName=".\"
-				RuntimeLibrary="3"
-				RuntimeTypeInfo="true"
-				SuppressStartupBanner="true"
-				WarningLevel="4" />
+				Name="VCPreBuildEventTool"
+			/>
 			<Tool
-				Name="VCCustomBuildTool" />
+				Name="QT Moc Metafile"
+			/>
 			<Tool
-				Name="VCLibrarianTool"
-				OutputFile="..\..\..\Lib\DebugVC9\iqt.lib"
-				SuppressStartupBanner="true" />
+				Name="Qt Linguist"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="QT Resources"
+			/>
+			<Tool
+				Name="QT Designer Form"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
 			<Tool
 				Name="VCMIDLTool"
-				DefaultCharType="0"
-				EnableErrorChecks="1"
-				WarningLevel="0" />
+			/>
 			<Tool
-				Name="VCPostBuildEventTool" />
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="../../;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtXml&quot;;&quot;$(QTDIR)\include\QtNetwork&quot;;&quot;$(QTDIR)\include\QtXmlPatterns&quot;"
+				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB;NO_QT_STL_SUPPORT"
+				StringPooling="true"
+				RuntimeLibrary="2"
+				EnableEnhancedInstructionSet="2"
+				PrecompiledHeaderFile=""
+				WarningLevel="4"
+				DebugInformationFormat="0"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool" />
-			<Tool
-				Name="VCPreLinkEventTool" />
+				Name="VCManagedResourceCompilerTool"
+			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_XMLPATTERNS_LIB,QT_XML_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,_DEBUG"
-				ResourceOutputFileName="..\..\..\Lib\DebugVC9\/$(InputName).res" />
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 		<Configuration
-			Name="Release|Win32"
-			OutputDirectory="."
-			ATLMinimizesCRunTimeLibraryUsage="false"
+			Name="Debug|Win32"
 			ConfigurationType="4"
-			IntermediateDirectory="release\"
-			UseOfMfc="0">
+			InheritedPropertySheets="..\..\..\Config\VC9\Debug.vsprops;..\..\..\Config\VC9\Static.vsprops"
+			>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include\QtCore&quot;,&quot;c:\Qt\4.7.3\include\QtNetwork&quot;,&quot;c:\Qt\4.7.3\include\QtGui&quot;,&quot;c:\Qt\4.7.3\include\QtXml&quot;,&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot;,&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;..\..&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;..\Generated&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
-				AdditionalOptions="-Zm200"
-				AssemblerListingLocation="release\"
-				BufferSecurityCheck="false"
-				DebugInformationFormat="0"
-				ExceptionHandling="1"
-				GeneratePreprocessedFile="0"
-				ObjectFile="release\"
-				Optimization ="2"
-				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_NO_DEBUG,QT_XMLPATTERNS_LIB,QT_XML_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,NDEBUG"
-				ProgramDataBaseFileName=".\"
-				RuntimeLibrary="2"
-				RuntimeTypeInfo="true"
-				SuppressStartupBanner="true"
-				WarningLevel="4" />
+				Name="VCPreBuildEventTool"
+			/>
 			<Tool
-				Name="VCCustomBuildTool" />
+				Name="QT Moc Metafile"
+			/>
 			<Tool
-				Name="VCLibrarianTool"
-				OutputFile="..\..\..\Lib\ReleaseVC9\iqt.lib"
-				SuppressStartupBanner="true" />
+				Name="Qt Linguist"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="QT Resources"
+			/>
+			<Tool
+				Name="QT Designer Form"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
 			<Tool
 				Name="VCMIDLTool"
-				DefaultCharType="0"
-				EnableErrorChecks="1"
-				WarningLevel="0" />
+			/>
 			<Tool
-				Name="VCPostBuildEventTool" />
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="../../;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtXml&quot;;&quot;$(QTDIR)\include\QtNetwork&quot;;&quot;$(QTDIR)\include\QtXmlPatterns&quot;"
+				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB;NO_QT_STL_SUPPORT"
+				StringPooling="true"
+				RuntimeLibrary="3"
+				PrecompiledHeaderFile=""
+				BrowseInformation="1"
+				WarningLevel="4"
+				DebugInformationFormat="3"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool" />
-			<Tool
-				Name="VCPreLinkEventTool" />
+				Name="VCManagedResourceCompilerTool"
+			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_NO_DEBUG,QT_XMLPATTERNS_LIB,QT_XML_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
-				ResourceOutputFileName="..\..\..\Lib\ReleaseVC9\/$(InputName).res" />
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 	</Configurations>
+	<References>
+	</References>
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
-			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			Filter="cpp;cxx;c;def"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
+			>
 			<File
-				RelativePath="..\CApplicationSettingsProviderComp.cpp" />
+				RelativePath="..\CApplicationSettingsProviderComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CBitmap.cpp" />
+				RelativePath="..\CBitmap.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CBitmapLoaderComp.cpp" />
+				RelativePath="..\CBitmapLoaderComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CBitmapSurface.cpp" />
+				RelativePath="..\CBitmapSurface.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CClipboardSerializerComp.cpp" />
+				RelativePath="..\CClipboardSerializerComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CCopyProcessorComp.cpp" />
+				RelativePath="..\CCopyProcessorComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CCriticalSection.cpp" />
+				RelativePath="..\CCriticalSection.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CDateTime.cpp" />
+				RelativePath="..\CDateTime.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CDefaultRegistryLoaderProvider.cpp" />
+				RelativePath="..\CDefaultRegistryLoaderProvider.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CDefaultServicesProvider.cpp" />
+				RelativePath="..\CDefaultServicesProvider.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CDirList.cpp" />
+				RelativePath="..\CDirList.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CDllFunctionsProvider.cpp" />
+				RelativePath="..\CDllFunctionsProvider.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CFileInfoCopyComp.cpp" />
+				RelativePath="..\CFileInfoCopyComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CFileList.cpp" />
+				RelativePath="..\CFileList.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CFileListProviderComp.cpp" />
+				RelativePath="..\CFileListProviderComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CFileSystem.cpp" />
+				RelativePath="..\CFileSystem.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CIniSettingsProviderComp.cpp" />
+				RelativePath="..\CIniSettingsProviderComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CLocalizer.cpp" />
+				RelativePath="..\CLocalizer.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CNetworkWriteArchive.cpp" />
+				RelativePath="..\CNetworkWriteArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CPackagesLoaderComp.cpp" />
+				RelativePath="..\CPackagesLoaderComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CProcessEnvironment.cpp" />
+				RelativePath="..\CProcessEnvironment.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CProcessExecutorComp.cpp" />
+				RelativePath="..\CProcessExecutorComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CReflectedBitmapBase.cpp" />
+				RelativePath="..\CReflectedBitmapBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CRegistriesManagerComp.cpp" />
+				RelativePath="..\CRegistriesManagerComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CRenderedObjectFileLoaderComp.cpp" />
+				RelativePath="..\CRenderedObjectFileLoaderComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CSafeNotifier.cpp" />
+				RelativePath="..\CSafeNotifier.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CSettingsArchiveBase.cpp" />
+				RelativePath="..\CSettingsArchiveBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CSettingsReadArchive.cpp" />
+				RelativePath="..\CSettingsReadArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CSettingsSerializerComp.cpp" />
+				RelativePath="..\CSettingsSerializerComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CSettingsWriteArchive.cpp" />
+				RelativePath="..\CSettingsWriteArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CSignalBlocker.cpp" />
+				RelativePath="..\CSignalBlocker.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CSystemEnvironment.cpp" />
+				RelativePath="..\CSystemEnvironment.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CTimer.cpp" />
+				RelativePath="..\CTimer.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CTrace.cpp" />
+				RelativePath="..\CTrace.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CTranslationManagerComp.cpp" />
+				RelativePath="..\CTranslationManagerComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlFileReadArchive.cpp" />
+				RelativePath="..\CXmlFileReadArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlFileWriteArchive.cpp" />
+				RelativePath="..\CXmlFileWriteArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CXslSerializerComp.cpp" />
+				RelativePath="..\CXslSerializerComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CXslTransformationReadArchive.cpp" />
+				RelativePath="..\CXslTransformationReadArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CXslTransformationWriteArchive.cpp" />
+				RelativePath="..\CXslTransformationWriteArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\iqt.cpp" />
+				RelativePath="..\iqt.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
-			Filter="h;hpp;hxx;hm;inl;inc;xsd"
-			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			Filter="h"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
+			>
 			<File
-				RelativePath="..\CApplicationSettingsProviderComp.h" />
-			<File
-				RelativePath="..\CBitmap.h" />
-			<File
-				RelativePath="..\CBitmapLoaderComp.h" />
-			<File
-				RelativePath="..\CBitmapSurface.h" />
-			<File
-				RelativePath="..\CClipboardSerializerComp.h" />
-			<File
-				RelativePath="..\CCopyProcessorComp.h" />
-			<File
-				RelativePath="..\CCriticalSection.h" />
-			<File
-				RelativePath="..\CDateTime.h" />
-			<File
-				RelativePath="..\CDefaultRegistryLoaderProvider.h" />
-			<File
-				RelativePath="..\CDefaultServicesProvider.h" />
-			<File
-				RelativePath="..\CDirList.h">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						AdditionalDependencies="..\CDirList.h;@echo"
-						CommandLine="@echo moc ..\CDirList.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CDirList.h -o ..\Generated\moc_CDirList.cpp"
-						Description="MOC ..\CDirList.h"
-						Outputs="..\Generated\moc_CDirList.cpp"
-						Path="." />
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						AdditionalDependencies="..\CDirList.h;@echo"
-						CommandLine="@echo moc ..\CDirList.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CDirList.h -o ..\Generated\moc_CDirList.cpp"
-						Description="MOC ..\CDirList.h"
-						Outputs="..\Generated\moc_CDirList.cpp"
-						Path="." />
-				</FileConfiguration>
+				RelativePath="..\CApplicationSettingsProviderComp.h"
+				>
 			</File>
 			<File
-				RelativePath="..\CDllFunctionsProvider.h" />
-			<File
-				RelativePath="..\CFileInfoCopyComp.h" />
-			<File
-				RelativePath="..\CFileList.h">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						AdditionalDependencies="..\CFileList.h;@echo"
-						CommandLine="@echo moc ..\CFileList.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CFileList.h -o ..\Generated\moc_CFileList.cpp"
-						Description="MOC ..\CFileList.h"
-						Outputs="..\Generated\moc_CFileList.cpp"
-						Path="." />
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						AdditionalDependencies="..\CFileList.h;@echo"
-						CommandLine="@echo moc ..\CFileList.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CFileList.h -o ..\Generated\moc_CFileList.cpp"
-						Description="MOC ..\CFileList.h"
-						Outputs="..\Generated\moc_CFileList.cpp"
-						Path="." />
-				</FileConfiguration>
+				RelativePath="..\CBitmap.h"
+				>
 			</File>
 			<File
-				RelativePath="..\CFileListProviderComp.h" />
-			<File
-				RelativePath="..\CFileSystem.h" />
-			<File
-				RelativePath="..\CIniSettingsProviderComp.h" />
-			<File
-				RelativePath="..\CLocalizer.h" />
-			<File
-				RelativePath="..\CNetworkWriteArchive.h">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						AdditionalDependencies="..\CNetworkWriteArchive.h;@echo"
-						CommandLine="@echo moc ..\CNetworkWriteArchive.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CNetworkWriteArchive.h -o ..\Generated\moc_CNetworkWriteArchive.cpp"
-						Description="MOC ..\CNetworkWriteArchive.h"
-						Outputs="..\Generated\moc_CNetworkWriteArchive.cpp"
-						Path="." />
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						AdditionalDependencies="..\CNetworkWriteArchive.h;@echo"
-						CommandLine="@echo moc ..\CNetworkWriteArchive.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CNetworkWriteArchive.h -o ..\Generated\moc_CNetworkWriteArchive.cpp"
-						Description="MOC ..\CNetworkWriteArchive.h"
-						Outputs="..\Generated\moc_CNetworkWriteArchive.cpp"
-						Path="." />
-				</FileConfiguration>
+				RelativePath="..\CBitmapLoaderComp.h"
+				>
 			</File>
 			<File
-				RelativePath="..\CPackagesLoaderComp.h" />
-			<File
-				RelativePath="..\CProcessEnvironment.h" />
-			<File
-				RelativePath="..\CProcessExecutorComp.h">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						AdditionalDependencies="..\CProcessExecutorComp.h;@echo"
-						CommandLine="@echo moc ..\CProcessExecutorComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CProcessExecutorComp.h -o ..\Generated\moc_CProcessExecutorComp.cpp"
-						Description="MOC ..\CProcessExecutorComp.h"
-						Outputs="..\Generated\moc_CProcessExecutorComp.cpp"
-						Path="." />
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						AdditionalDependencies="..\CProcessExecutorComp.h;@echo"
-						CommandLine="@echo moc ..\CProcessExecutorComp.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CProcessExecutorComp.h -o ..\Generated\moc_CProcessExecutorComp.cpp"
-						Description="MOC ..\CProcessExecutorComp.h"
-						Outputs="..\Generated\moc_CProcessExecutorComp.cpp"
-						Path="." />
-				</FileConfiguration>
+				RelativePath="..\CBitmapSurface.h"
+				>
 			</File>
 			<File
-				RelativePath="..\CReflectedBitmapBase.h" />
-			<File
-				RelativePath="..\CRegistriesManagerComp.h" />
-			<File
-				RelativePath="..\CRenderedObjectFileLoaderComp.h" />
-			<File
-				RelativePath="..\CSafeNotifier.h">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						AdditionalDependencies="..\CSafeNotifier.h;@echo"
-						CommandLine="@echo moc ..\CSafeNotifier.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CSafeNotifier.h -o ..\Generated\moc_CSafeNotifier.cpp"
-						Description="MOC ..\CSafeNotifier.h"
-						Outputs="..\Generated\moc_CSafeNotifier.cpp"
-						Path="." />
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						AdditionalDependencies="..\CSafeNotifier.h;@echo"
-						CommandLine="@echo moc ..\CSafeNotifier.h &amp;&amp; C:\Qt\4.7.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.7.3\include\QtCore&quot; -I&quot;c:\Qt\4.7.3\include\QtNetwork&quot; -I&quot;c:\Qt\4.7.3\include\QtGui&quot; -I&quot;c:\Qt\4.7.3\include\QtXml&quot; -I&quot;c:\Qt\4.7.3\include\QtXmlPatterns&quot; -I&quot;c:\Qt\4.7.3\include&quot; -I&quot;..\..\..\Include&quot; -I&quot;..\..&quot; -I&quot;c:\Qt\4.7.3\include\ActiveQt&quot; -I&quot;..\Generated&quot; -Ic:\Qt\4.7.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ..\CSafeNotifier.h -o ..\Generated\moc_CSafeNotifier.cpp"
-						Description="MOC ..\CSafeNotifier.h"
-						Outputs="..\Generated\moc_CSafeNotifier.cpp"
-						Path="." />
-				</FileConfiguration>
+				RelativePath="..\CClipboardSerializerComp.h"
+				>
 			</File>
 			<File
-				RelativePath="..\CSettingsArchiveBase.h" />
+				RelativePath="..\CCopyProcessorComp.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CSettingsReadArchive.h" />
+				RelativePath="..\CCriticalSection.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CSettingsSerializerComp.h" />
+				RelativePath="..\CDateTime.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CSettingsWriteArchive.h" />
+				RelativePath="..\CDefaultRegistryLoaderProvider.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CSignalBlocker.h" />
+				RelativePath="..\CDefaultServicesProvider.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CSystemEnvironment.h" />
+				RelativePath="..\CDirList.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CTimer.h" />
+				RelativePath="..\CDllFunctionsProvider.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CTrace.h" />
+				RelativePath="..\CFileInfoCopyComp.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CTranslationManagerComp.h" />
+				RelativePath="..\CFileList.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlFileReadArchive.h" />
+				RelativePath="..\CFileListProviderComp.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CXmlFileWriteArchive.h" />
+				RelativePath="..\CFileSystem.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CXslSerializerComp.h" />
+				RelativePath="..\CIniSettingsProviderComp.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CXslTransformationReadArchive.h" />
+				RelativePath="..\CLocalizer.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CXslTransformationWriteArchive.h" />
+				RelativePath="..\CNetworkWriteArchive.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IQImageProvider.h" />
+				RelativePath="..\CPackagesLoaderComp.h"
+				>
+			</File>
 			<File
-				RelativePath="..\ISettingsProvider.h" />
+				RelativePath="..\CProcessEnvironment.h"
+				>
+			</File>
 			<File
-				RelativePath="..\ITranslationManager.h" />
+				RelativePath="..\CProcessExecutorComp.h"
+				>
+			</File>
 			<File
-				RelativePath="..\iqt.h" />
+				RelativePath="..\CReflectedBitmapBase.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CRegistriesManagerComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CRenderedObjectFileLoaderComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CSafeNotifier.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CSettingsArchiveBase.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CSettingsReadArchive.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CSettingsSerializerComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CSettingsWriteArchive.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CSignalBlocker.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CSystemEnvironment.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CTimer.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CTrace.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CTranslationManagerComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CXmlFileReadArchive.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CXmlFileWriteArchive.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CXslSerializerComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CXslTransformationReadArchive.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CXslTransformationWriteArchive.h"
+				>
+			</File>
+			<File
+				RelativePath="..\IQImageProvider.h"
+				>
+			</File>
+			<File
+				RelativePath="..\iqt.h"
+				>
+			</File>
+			<File
+				RelativePath="..\ISettingsProvider.h"
+				>
+			</File>
+			<File
+				RelativePath="..\ITranslationManager.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Generated Files"
-			Filter="cpp;c;cxx;moc;h;def;odl;idl;res;"
-			UniqueIdentifier="{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}">
+			Filter="moc;h;cpp"
+			UniqueIdentifier="{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}"
+			>
 			<File
-				RelativePath="..\Generated\moc_CDirList.cpp" />
+				RelativePath="..\Generated\moc_CDirList.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\Generated\moc_CFileList.cpp" />
+				RelativePath="..\Generated\moc_CFileList.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\Generated\moc_CNetworkWriteArchive.cpp" />
+				RelativePath="..\generated\moc_CNetworkWriteArchive.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\Generated\moc_CProcessExecutorComp.cpp" />
+				RelativePath="..\generated\moc_CProcessExecutorComp.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\Generated\moc_CSafeNotifier.cpp" />
+				RelativePath="..\generated\moc_CSafeNotifier.cpp"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Other"
+			>
+			<File
+				RelativePath="..\CDirList.moc"
+				>
+			</File>
+			<File
+				RelativePath="..\CFileList.moc"
+				>
+			</File>
+			<File
+				RelativePath="..\CNetworkWriteArchive.moc"
+				>
+			</File>
+			<File
+				RelativePath="..\CProcessExecutorComp.moc"
+				>
+			</File>
+			<File
+				RelativePath="..\CSafeNotifier.moc"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>
+		<Global
+			Name="MocDir"
+			Value="$(InputDir)\Generated"
+		/>
+		<Global
+			Name="QtVersion"
+			Value="4.2.3"
+		/>
+		<Global
+			Name="UicDir"
+			Value="$(InputDir)\Generated"
+		/>
 	</Globals>
 </VisualStudioProject>

@@ -1,268 +1,481 @@
-<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding="windows-1251"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="8,00"
+	Version="9,00"
 	Name="icomp"
-	ProjectGUID="{79BC695E-4FD9-3C07-B429-12663EE2B845}"
-	Keyword="Qt4VSv1.0">
+	ProjectGUID="{F3A159CA-14B5-4800-8039-0157CF31EA27}"
+	RootNamespace="icomp"
+	TargetFrameworkVersion="0"
+	>
 	<Platforms>
 		<Platform
-			Name="Win32" />
+			Name="Win32"
+		/>
 	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
 	<Configurations>
 		<Configuration
-			Name="Debug|Win32"
-			OutputDirectory="."
-			ATLMinimizesCRunTimeLibraryUsage="false"
+			Name="Release|Win32"
 			ConfigurationType="4"
-			IntermediateDirectory="debug\"
-			UseOfMfc="0">
+			InheritedPropertySheets="..\..\..\Config\VC9\Static.vsprops;..\..\..\Config\VC9\Release.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include\QtCore&quot;,&quot;c:\Qt\4.7.3\include\QtGui&quot;,&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;..\..&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;debug&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
-				AdditionalOptions="-Zm200"
-				AssemblerListingLocation="debug\"
-				BufferSecurityCheck="false"
-				DebugInformationFormat="3"
-				ExceptionHandling="1"
-				GeneratePreprocessedFile="0"
-				ObjectFile="debug\"
-				Optimization ="4"
-				PreprocessorDefinitions="UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
-				ProgramDataBaseFileName=".\"
-				RuntimeLibrary="3"
-				RuntimeTypeInfo="true"
-				SuppressStartupBanner="true"
-				WarningLevel="4" />
+				Name="VCPreBuildEventTool"
+			/>
 			<Tool
-				Name="VCCustomBuildTool" />
+				Name="VCCustomBuildTool"
+			/>
 			<Tool
-				Name="VCLibrarianTool"
-				OutputFile="..\..\..\Lib\DebugVC9\icomp.lib"
-				SuppressStartupBanner="true" />
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
 			<Tool
 				Name="VCMIDLTool"
-				DefaultCharType="0"
-				EnableErrorChecks="1"
-				WarningLevel="0" />
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="true"
+				SuppressStartupBanner="true"
+				TargetEnvironment="1"
+				TypeLibraryName="./iwin/ReleaseVC7/iwin.tlb"
+				HeaderFileName=""
+			/>
 			<Tool
-				Name="VCPostBuildEventTool" />
+				Name="VCCLCompilerTool"
+				Optimization="2"
+				AdditionalIncludeDirectories="../../"
+				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS"
+				StringPooling="true"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="true"
+				EnableEnhancedInstructionSet="2"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderFile=""
+				WarningLevel="4"
+				SuppressStartupBanner="true"
+				CompileAs="0"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool" />
-			<Tool
-				Name="VCPreLinkEventTool" />
+				Name="VCManagedResourceCompilerTool"
+			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,_DEBUG"
-				ResourceOutputFileName="..\..\..\Lib\DebugVC9\/$(InputName).res" />
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1031"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine=""
+			/>
 		</Configuration>
 		<Configuration
-			Name="Release|Win32"
-			OutputDirectory="."
-			ATLMinimizesCRunTimeLibraryUsage="false"
+			Name="Debug|Win32"
 			ConfigurationType="4"
-			IntermediateDirectory="release\"
-			UseOfMfc="0">
+			InheritedPropertySheets="..\..\..\Config\VC9\Debug.vsprops;..\..\..\Config\VC9\Static.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include\QtCore&quot;,&quot;c:\Qt\4.7.3\include\QtGui&quot;,&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;..\..&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;release&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
-				AdditionalOptions="-Zm200"
-				AssemblerListingLocation="release\"
-				BufferSecurityCheck="false"
-				DebugInformationFormat="0"
-				ExceptionHandling="1"
-				GeneratePreprocessedFile="0"
-				ObjectFile="release\"
-				Optimization ="2"
-				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_NO_DEBUG,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,NDEBUG"
-				ProgramDataBaseFileName=".\"
-				RuntimeLibrary="2"
-				RuntimeTypeInfo="true"
-				SuppressStartupBanner="true"
-				WarningLevel="4" />
+				Name="VCPreBuildEventTool"
+			/>
 			<Tool
-				Name="VCCustomBuildTool" />
+				Name="VCCustomBuildTool"
+			/>
 			<Tool
-				Name="VCLibrarianTool"
-				OutputFile="..\..\..\Lib\ReleaseVC9\icomp.lib"
-				SuppressStartupBanner="true" />
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
 			<Tool
 				Name="VCMIDLTool"
-				DefaultCharType="0"
-				EnableErrorChecks="1"
-				WarningLevel="0" />
+				PreprocessorDefinitions="_DEBUG"
+				MkTypLibCompatible="true"
+				SuppressStartupBanner="true"
+				TargetEnvironment="1"
+				TypeLibraryName="./iwin/DebugVC7/iwin.tlb"
+				HeaderFileName=""
+			/>
 			<Tool
-				Name="VCPostBuildEventTool" />
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="../../"
+				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS"
+				StringPooling="true"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				PrecompiledHeaderFile=""
+				BrowseInformation="1"
+				WarningLevel="4"
+				SuppressStartupBanner="true"
+				DebugInformationFormat="3"
+				CompileAs="0"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool" />
-			<Tool
-				Name="VCPreLinkEventTool" />
+				Name="VCManagedResourceCompilerTool"
+			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_NO_DEBUG,QT_GUI_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
-				ResourceOutputFileName="..\..\..\Lib\ReleaseVC9\/$(InputName).res" />
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1031"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine=""
+			/>
 		</Configuration>
 	</Configurations>
+	<References>
+	</References>
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
-			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			Filter="cpp"
+			>
 			<File
-				RelativePath="..\CBaseComponentStaticInfo.cpp" />
+				RelativePath="..\CBaseComponentStaticInfo.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CComponentAccessor.cpp" />
+				RelativePath="..\CComponentAccessor.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CComponentAddress.cpp" />
+				RelativePath="..\CComponentAddress.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CComponentBase.cpp" />
+				RelativePath="..\CComponentBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CComponentContext.cpp" />
+				RelativePath="..\CComponentContext.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CComponentMetaDescriptionEncoder.cpp" />
+				RelativePath="..\CComponentMetaDescriptionEncoder.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CComponentStaticInfoBase.cpp" />
+				RelativePath="..\CComponentStaticInfoBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CCompositeComponent.cpp" />
+				RelativePath="..\CCompositeComponent.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CCompositeComponentContext.cpp" />
+				RelativePath="..\CCompositeComponentContext.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CCompositeComponentStaticInfo.cpp" />
+				RelativePath="..\CCompositeComponentStaticInfo.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CCompositePackageStaticInfo.cpp" />
+				RelativePath="..\CCompositePackageStaticInfo.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CEnvironmentManagerBase.cpp" />
+				RelativePath="..\CEnvironmentManagerBase.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CFactoryAttribute.cpp" />
+				RelativePath="..\CFactoryAttribute.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CMultFactoryAttribute.cpp" />
+				RelativePath="..\CMultFactoryAttribute.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CMultiReferenceAttribute.cpp" />
+				RelativePath="..\CMultiReferenceAttribute.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CPackageStaticInfo.cpp" />
+				RelativePath="..\CPackageStaticInfo.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CReferenceAttribute.cpp" />
+				RelativePath="..\CReferenceAttribute.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CRegistry.cpp" />
+				RelativePath="..\CRegistry.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CRegistryElement.cpp" />
+				RelativePath="..\CRegistryElement.cpp"
+				>
+			</File>
 			<File
-				RelativePath="..\CSimComponentContextBase.cpp" />
+				RelativePath="..\CSimComponentContextBase.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
-			Filter="h;hpp;hxx;hm;inl;inc;xsd"
-			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			Filter="h"
+			>
 			<File
-				RelativePath="..\CBaseComponentStaticInfo.h" />
+				RelativePath="..\CBaseComponentStaticInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CComponentAccessor.h" />
+				RelativePath="..\CComponentAccessor.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CComponentAddress.h" />
+				RelativePath="..\CComponentAddress.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CComponentBase.h" />
+				RelativePath="..\CComponentBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CComponentContext.h" />
+				RelativePath="..\CComponentContext.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CComponentMetaDescriptionEncoder.h" />
+				RelativePath="..\CComponentMetaDescriptionEncoder.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CComponentStaticInfoBase.h" />
+				RelativePath="..\CComponentStaticInfoBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CCompositeComponent.h" />
+				RelativePath="..\CCompositeComponent.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CCompositeComponentContext.h" />
+				RelativePath="..\CCompositeComponentContext.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CCompositeComponentStaticInfo.h" />
+				RelativePath="..\CCompositeComponentStaticInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CCompositePackageStaticInfo.h" />
+				RelativePath="..\CCompositePackageStaticInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CEnvironmentManagerBase.h" />
+				RelativePath="..\CEnvironmentManagerBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CFactoryAttribute.h" />
+				RelativePath="..\CFactoryAttribute.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CInterfaceManipBase.h" />
+				RelativePath="..\CInterfaceManipBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CMultiFactoryAttribute.h" />
+				RelativePath="..\CMultiFactoryAttribute.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CMultiReferenceAttribute.h" />
+				RelativePath="..\CMultiReferenceAttribute.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CPackageStaticInfo.h" />
+				RelativePath="..\CPackageStaticInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CReferenceAttribute.h" />
+				RelativePath="..\CReferenceAttribute.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CRegistry.h" />
+				RelativePath="..\CRegistry.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CRegistryElement.h" />
+				RelativePath="..\CRegistryElement.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CRelatedInfoRegistrator.h" />
+				RelativePath="..\CRelatedInfoRegistrator.h"
+				>
+			</File>
 			<File
-				RelativePath="..\CSimComponentContextBase.h" />
+				RelativePath="..\CSimComponentContextBase.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IAttributeStaticInfo.h" />
+				RelativePath="..\export.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IComponent.h" />
+				RelativePath="..\IAttributeStaticInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IComponentContext.h" />
+				RelativePath="..\icomp.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IComponentEnvironmentManager.h" />
+				RelativePath="..\IComponent.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IComponentStaticInfo.h" />
+				RelativePath="..\IComponentContext.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IMetaInfoManager.h" />
+				RelativePath="..\IComponentEnvironmentManager.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IRealAttributeStaticInfo.h" />
+				RelativePath="..\IComponentStaticInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IRealComponentStaticInfo.h" />
+				RelativePath="..\IMetaInfoManager.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IRegistriesManager.h" />
+				RelativePath="..\IRealAttributeStaticInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IRegistry.h" />
+				RelativePath="..\IRealComponentStaticInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IRegistryElement.h" />
+				RelativePath="..\IRegistriesManager.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IRegistryLoader.h" />
+				RelativePath="..\IRegistry.h"
+				>
+			</File>
 			<File
-				RelativePath="..\IRegistryLoaderProvider.h" />
+				RelativePath="..\IRegistryElement.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TAttribute.h" />
+				RelativePath="..\IRegistryLoader.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TAttributeMember.h" />
+				RelativePath="..\IRegistryLoaderProvider.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TAttributeStaticInfo.h" />
+				RelativePath="..\TAttribute.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TComponentCloneWrap.h" />
+				RelativePath="..\TAttributeMember.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TComponentRegistrator.h" />
+				RelativePath="..\TAttributeStaticInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TComponentStaticInfo.h" />
+				RelativePath="..\TComponentCloneWrap.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TComponentWrap.h" />
+				RelativePath="..\TComponentRegistrator.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TFactoryMember.h" />
+				RelativePath="..\TComponentStaticInfo.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TInterfaceRegistrator.h" />
+				RelativePath="..\TComponentWrap.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TMakeComponentWrap.h" />
+				RelativePath="..\TFactoryMember.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TModelCompWrap.h" />
+				RelativePath="..\TInterfaceRegistrator.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TMultiAttribute.h" />
+				RelativePath="..\TMakeComponentWrap.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TMultiAttributeMember.h" />
+				RelativePath="..\TModelCompWrap.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TMultiFactoryMember.h" />
+				RelativePath="..\TMultiAttribute.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TMultiReferenceMember.h" />
+				RelativePath="..\TMultiAttributeMember.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TReferenceMember.h" />
+				RelativePath="..\TMultiFactoryMember.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TSimComponentWrap.h" />
+				RelativePath="..\TMultiReferenceMember.h"
+				>
+			</File>
 			<File
-				RelativePath="..\TSimComponentsFactory.h" />
+				RelativePath="..\TReferenceMember.h"
+				>
+			</File>
 			<File
-				RelativePath="..\export.h" />
+				RelativePath="..\TSimComponentsFactory.h"
+				>
+			</File>
 			<File
-				RelativePath="..\icomp.h" />
+				RelativePath="..\TSimComponentWrap.h"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>

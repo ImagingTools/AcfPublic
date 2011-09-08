@@ -1,137 +1,208 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="8,00"
+	Version="9,00"
 	Name="BasePck"
-	ProjectGUID="{8AD6C67E-7D3A-3B10-B4E5-152CFB429099}"
-	Keyword="Qt4VSv1.0">
+	ProjectGUID="{030936A8-23C4-45EE-8E3D-196FF4D405C6}"
+	RootNamespace="BasePck"
+	Keyword="Qt4VSv1.0"
+	TargetFrameworkVersion="0"
+	>
 	<Platforms>
 		<Platform
-			Name="Win32" />
+			Name="Win32"
+		/>
 	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
 	<Configurations>
 		<Configuration
-			Name="Debug|Win32"
-			OutputDirectory="."
-			ATLMinimizesCRunTimeLibraryUsage="false"
+			Name="Release|Win32"
 			ConfigurationType="2"
-			IntermediateDirectory="debug\"
-			UseOfMfc="0">
+			InheritedPropertySheets="..\..\..\Config\VC9\Release.vsprops;..\..\..\Config\VC9\Component.vsprops"
+			>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;debug&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
-				AdditionalOptions="-Zm200"
-				AssemblerListingLocation="debug\"
-				BufferSecurityCheck="false"
-				DebugInformationFormat="3"
-				ExceptionHandling="1"
-				GeneratePreprocessedFile="0"
-				ObjectFile="debug\"
-				Optimization ="4"
-				PreprocessorDefinitions="_WINDOWS,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_DLL,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
-				ProgramDataBaseFileName=".\"
-				RuntimeLibrary="3"
-				RuntimeTypeInfo="true"
-				SuppressStartupBanner="true"
-				WarningLevel="4" />
+				Name="VCPreBuildEventTool"
+			/>
 			<Tool
-				Name="VCCustomBuildTool" />
+				Name="VCCustomBuildTool"
+			/>
 			<Tool
-				Name="VCLinkerTool"
-				AdditionalDependencies="C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9\ibase.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9\icomp.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9\i2d.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9\iproc.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9\idoc.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9\isec.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9\iprm.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9\iimg.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9\icmm.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9\imath.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9\isys.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9\imod.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9\iser.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9\istd.lib c:\Qt\4.7.3\lib\QtGuid4.lib c:\Qt\4.7.3\lib\QtCored4.lib"
-				AdditionalLibraryDirectories="c:\Qt\4.7.3\lib,C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/DebugVC9"
-				GenerateDebugInformation="true"
-				IgnoreImportLibrary="true"
-				LinkTimeCodeGeneration="0"
-				OutputFile="..\..\..\Bin\DebugVC9\BasePck.arp"
-				ProgramDatabaseFile=""
-				SubSystem="0"
-				SuppressStartupBanner="true" />
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
 			<Tool
 				Name="VCMIDLTool"
-				DefaultCharType="0"
-				EnableErrorChecks="1"
-				WarningLevel="0" />
+			/>
 			<Tool
-				Name="VCPostBuildEventTool" />
+				Name="VCCLCompilerTool"
+				InlineFunctionExpansion="0"
+				EnableIntrinsicFunctions="true"
+				AdditionalIncludeDirectories="..\..\..\Include"
+				PreprocessorDefinitions="UNICODE;WIN32;NDEBUG"
+				RuntimeLibrary="2"
+				EnableEnhancedInstructionSet="2"
+				PrecompiledHeaderFile=""
+				WarningLevel="4"
+				DebugInformationFormat="0"
+				CompileAs="0"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool" />
-			<Tool
-				Name="VCPreLinkEventTool" />
+				Name="VCManagedResourceCompilerTool"
+			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_WINDOWS,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_DLL,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,_DEBUG" />
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLinkerTool"
+				OutputFile="$(OutDir)\$(ProjectName).arp"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories=""
+				GenerateDebugInformation="false"
+				SubSystem="1"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 		<Configuration
-			Name="Release|Win32"
-			OutputDirectory="."
-			ATLMinimizesCRunTimeLibraryUsage="false"
+			Name="Debug|Win32"
 			ConfigurationType="2"
-			IntermediateDirectory="release\"
-			UseOfMfc="0">
+			InheritedPropertySheets="..\..\..\Config\VC9\Debug.vsprops;..\..\..\Config\VC9\Component.vsprops"
+			>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;c:\Qt\4.7.3\include&quot;,&quot;..\..\..\Include&quot;,&quot;c:\Qt\4.7.3\include\ActiveQt&quot;,&quot;release&quot;,c:\Qt\4.7.3\mkspecs\win32-msvc2008"
-				AdditionalOptions="-Zm200"
-				AssemblerListingLocation="release\"
-				BufferSecurityCheck="false"
-				DebugInformationFormat="0"
-				ExceptionHandling="1"
-				GeneratePreprocessedFile="0"
-				ObjectFile="release\"
-				Optimization ="2"
-				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,_WINDOWS,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_DLL,QT_NO_DEBUG,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,NDEBUG"
-				ProgramDataBaseFileName=".\"
-				RuntimeLibrary="2"
-				RuntimeTypeInfo="true"
-				SuppressStartupBanner="true"
-				WarningLevel="4" />
+				Name="VCPreBuildEventTool"
+			/>
 			<Tool
-				Name="VCCustomBuildTool" />
+				Name="VCCustomBuildTool"
+			/>
 			<Tool
-				Name="VCLinkerTool"
-				AdditionalDependencies="C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9\ibase.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9\icomp.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9\i2d.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9\iproc.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9\idoc.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9\isec.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9\iprm.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9\iimg.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9\icmm.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9\imath.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9\isys.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9\imod.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9\iser.lib C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9\istd.lib c:\Qt\4.7.3\lib\QtGui4.lib c:\Qt\4.7.3\lib\QtCore4.lib"
-				AdditionalLibraryDirectories="c:\Qt\4.7.3\lib,C:/Temp/Acf/Install/Temp/Config/QMake/../../Lib/ReleaseVC9"
-				GenerateDebugInformation="false"
-				IgnoreImportLibrary="true"
-				LinkIncremental="1"
-				LinkTimeCodeGeneration="0"
-				OutputFile="..\..\..\Bin\ReleaseVC9\BasePck.arp"
-				ProgramDatabaseFile=""
-				SubSystem="0"
-				SuppressStartupBanner="true" />
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
 			<Tool
 				Name="VCMIDLTool"
-				DefaultCharType="0"
-				EnableErrorChecks="1"
-				WarningLevel="0" />
+			/>
 			<Tool
-				Name="VCPostBuildEventTool" />
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="..\..\..\Include"
+				PreprocessorDefinitions="UNICODE;WIN32"
+				RuntimeLibrary="3"
+				PrecompiledHeaderFile=""
+				BrowseInformation="1"
+				WarningLevel="4"
+				DebugInformationFormat="3"
+				CompileAs="0"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool" />
-			<Tool
-				Name="VCPreLinkEventTool" />
+				Name="VCManagedResourceCompilerTool"
+			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,_WINDOWS,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_DLL,QT_NO_DEBUG,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT" />
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLinkerTool"
+				OutputFile="$(OutDir)\$(ProjectName).arp"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories=""
+				GenerateDebugInformation="true"
+				SubSystem="1"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 	</Configurations>
+	<References>
+	</References>
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
-			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			Filter="cpp;cxx;c;def"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
+			>
 			<File
-				RelativePath="..\BasePck.cpp" />
+				RelativePath="..\BasePck.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
-			Filter="h;hpp;hxx;hm;inl;inc;xsd"
-			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			Filter="h"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
+			>
 			<File
-				RelativePath="..\BasePck.h" />
+				RelativePath="..\BasePck.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="qrc;*"
+			UniqueIdentifier="{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}"
+			ParseFiles="false"
+			>
 		</Filter>
 	</Files>
 	<Globals>
+		<Global
+			Name="MocDir"
+			Value="$(InputDir)\Generated"
+		/>
+		<Global
+			Name="QtVersion"
+			Value="4.2.3"
+		/>
+		<Global
+			Name="UicDir"
+			Value="$(InputDir)\Generated"
+		/>
 	</Globals>
 </VisualStudioProject>
