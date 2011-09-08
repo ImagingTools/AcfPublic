@@ -22,7 +22,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">ACF
-   &#160;<span id="projectnumber">1.4.1.82</span>
+   &#160;<span id="projectnumber">1.4.1.89</span>
    </div>
    
   </td>
@@ -105,7 +105,7 @@
 <a name="l00097"></a>00097        <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_matrix2d.html#aacfaafd9151995496ace7cdd4410e93a" title="Calculte inverted matrix.">GetInverted</a>(<a class="code" href="classi2d_1_1_c_matrix2d.html" title="2D matrix.">CMatrix2d</a>&amp; result) <span class="keyword">const</span>;
 <a name="l00098"></a>00098 
 <a name="l00099"></a>00099        <span class="keyword">using</span> <a class="code" href="classimath_1_1_t_matrix.html#a8dfc35b4bb6e41d950c3abeed744ea72" title="Get transposed matrix.">BaseClass::GetTransposed</a>;
-<a name="l00103"></a>00103        <a class="code" href="classi2d_1_1_c_matrix2d.html" title="2D matrix.">CMatrix2d</a> <a class="code" href="classimath_1_1_t_matrix.html#a8dfc35b4bb6e41d950c3abeed744ea72" title="Get transposed matrix.">CMatrix2d::GetTransposed</a>() <span class="keyword">const</span>;
+<a name="l00103"></a>00103        <a class="code" href="classi2d_1_1_c_matrix2d.html" title="2D matrix.">CMatrix2d</a> <a class="code" href="classi2d_1_1_c_matrix2d.html#abb7c8d69ed1b3bf0a979367562452851" title="Calculate transposed matrix.">GetTransposed</a>() <span class="keyword">const</span>;
 <a name="l00104"></a>00104 
 <a name="l00108"></a>00108        <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_matrix2d.html#a0dd5c7ad94342c53fa02de8ce996abca" title="Calculate decomposition in form of QDQ where Q is ortogonal matrix and D is diagonal one...">GetDecompositionQDQ</a>(<a class="code" href="classi2d_1_1_c_matrix2d.html" title="2D matrix.">i2d::CMatrix2d</a>&amp; matrixQ, <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; diagonalD);
 <a name="l00109"></a>00109 
@@ -215,7 +215,7 @@
 <a name="l00225"></a>00225 }
 <a name="l00226"></a>00226 
 <a name="l00227"></a>00227 
-<a name="l00228"></a>00228 <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_matrix2d.html" title="2D matrix.">CMatrix2d</a> <a class="code" href="classimath_1_1_t_matrix.html#a8dfc35b4bb6e41d950c3abeed744ea72" title="Get transposed matrix.">CMatrix2d::GetTransposed</a>()<span class="keyword"> const</span>
+<a name="l00228"></a><a class="code" href="classi2d_1_1_c_matrix2d.html#abb7c8d69ed1b3bf0a979367562452851">00228</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_matrix2d.html" title="2D matrix.">CMatrix2d</a> <a class="code" href="classi2d_1_1_c_matrix2d.html#abb7c8d69ed1b3bf0a979367562452851" title="Calculate transposed matrix.">CMatrix2d::GetTransposed</a>()<span class="keyword"> const</span>
 <a name="l00229"></a>00229 <span class="keyword"></span>{
 <a name="l00230"></a>00230        <span class="keywordflow">return</span> <a class="code" href="classi2d_1_1_c_matrix2d.html#aa3c6614af549fd015e8d3018a0967c59" title="Constructor with no member initialization.">CMatrix2d</a>(<a class="code" href="classimath_1_1_t_matrix.html#ae52105d58c85c406a987afa8a5bcd165" title="Get element stored at specified index.">GetAt</a>(0, 0), <a class="code" href="classimath_1_1_t_matrix.html#ae52105d58c85c406a987afa8a5bcd165" title="Get element stored at specified index.">GetAt</a>(0, 1), <a class="code" href="classimath_1_1_t_matrix.html#ae52105d58c85c406a987afa8a5bcd165" title="Get element stored at specified index.">GetAt</a>(1, 0), <a class="code" href="classimath_1_1_t_matrix.html#ae52105d58c85c406a987afa8a5bcd165" title="Get element stored at specified index.">GetAt</a>(1, 1));
 <a name="l00231"></a>00231 }

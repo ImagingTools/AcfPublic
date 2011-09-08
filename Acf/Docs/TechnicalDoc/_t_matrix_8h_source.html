@@ -22,7 +22,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">ACF
-   &#160;<span id="projectnumber">1.4.1.82</span>
+   &#160;<span id="projectnumber">1.4.1.89</span>
    </div>
    
   </td>
@@ -91,7 +91,7 @@
 <a name="l00043"></a><a class="code" href="classimath_1_1_t_matrix.html#a5d81e1902fdd24b57f644ad2d2de9802a5b68d7d36314e1eb5d05bca70b06cbaa">00043</a>               <a class="code" href="classimath_1_1_t_matrix.html#a5d81e1902fdd24b57f644ad2d2de9802a5b68d7d36314e1eb5d05bca70b06cbaa" title="All elements initialized to 1.">MIM_ONES</a>,
 <a name="l00047"></a><a class="code" href="classimath_1_1_t_matrix.html#a5d81e1902fdd24b57f644ad2d2de9802aa4eb4c891cb90e577ca945a15bf794b8">00047</a>               <a class="code" href="classimath_1_1_t_matrix.html#a5d81e1902fdd24b57f644ad2d2de9802aa4eb4c891cb90e577ca945a15bf794b8" title="Identity matrix.">MIM_IDENTITY</a>,
 <a name="l00051"></a><a class="code" href="classimath_1_1_t_matrix.html#a5d81e1902fdd24b57f644ad2d2de9802aff023d827e1bca0b5e16ba538e73cf52">00051</a>               <a class="code" href="classimath_1_1_t_matrix.html#a5d81e1902fdd24b57f644ad2d2de9802aff023d827e1bca0b5e16ba538e73cf52" title="Upper triangle matrix.">MIM_UPPER_TRIANGLE</a>,
-<a name="l00055"></a><a class="code" href="classimath_1_1_t_matrix.html#a5d81e1902fdd24b57f644ad2d2de9802a5883781021b67c7dd1a1cbaff9018e5e">00055</a>               <a class="code" href="classimath_1_1_t_matrix.html#a5d81e1902fdd24b57f644ad2d2de9802a5883781021b67c7dd1a1cbaff9018e5e" title="Downer triangle matrix.">MIM_DOWNER_TRIANLE</a>
+<a name="l00055"></a><a class="code" href="classimath_1_1_t_matrix.html#a5d81e1902fdd24b57f644ad2d2de9802afbb16ac3c68b3d1e762b1289dcf92ece">00055</a>               <a class="code" href="classimath_1_1_t_matrix.html#a5d81e1902fdd24b57f644ad2d2de9802afbb16ac3c68b3d1e762b1289dcf92ece" title="Downer triangle matrix.">MIM_DOWNER_TRIANGLE</a>
 <a name="l00056"></a>00056        };
 <a name="l00057"></a>00057 
 <a name="l00061"></a>00061        <a class="code" href="classimath_1_1_t_matrix.html#a86102d91d282580125b4b8ede6bf29d1" title="Create matrix without initialization.">TMatrix</a>();
@@ -375,7 +375,7 @@
 <a name="l00452"></a>00452               }
 <a name="l00453"></a>00453               <span class="keywordflow">break</span>;
 <a name="l00454"></a>00454 
-<a name="l00455"></a>00455        <span class="keywordflow">case</span> MIM_DOWNER_TRIANL:
+<a name="l00455"></a>00455        <span class="keywordflow">case</span> MIM_DOWNER_TRIANGLE:
 <a name="l00456"></a>00456               <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; Width; ++x){
 <a name="l00457"></a>00457                      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; Height; ++y){
 <a name="l00458"></a>00458                             <span class="keywordflow">if</span> (x &gt;= y){
@@ -698,7 +698,7 @@
 <a name="l00775"></a>00775        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(rowIndex &lt; Height);
 <a name="l00776"></a>00776 
 <a name="l00777"></a>00777        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; Width; ++x){
-<a name="l00778"></a>00778               result[y] = m_elements[x][rowIndex];
+<a name="l00778"></a>00778               result[rowIndex] = m_elements[x][rowIndex];
 <a name="l00779"></a>00779        }
 <a name="l00780"></a>00780 }
 <a name="l00781"></a>00781 

@@ -22,7 +22,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">ACF
-   &#160;<span id="projectnumber">1.4.1.82</span>
+   &#160;<span id="projectnumber">1.4.1.89</span>
    </div>
    
   </td>
@@ -125,8 +125,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculte inverted matrix.  <a href="#aacfaafd9151995496ace7cdd4410e93a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#a244850520a59b4176010fee2eee9dbb6">GetInverted</a> (<a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a> &amp;result) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculte inverted matrix.  <a href="#a244850520a59b4176010fee2eee9dbb6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#a4a86c036fd0ae3fa8dcfde7966398d1e">CMatrix2d::GetTransposed</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate transposed matrix.  <a href="#a4a86c036fd0ae3fa8dcfde7966398d1e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#abb7c8d69ed1b3bf0a979367562452851">GetTransposed</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate transposed matrix.  <a href="#abb7c8d69ed1b3bf0a979367562452851"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#a0dd5c7ad94342c53fa02de8ce996abca">GetDecompositionQDQ</a> (<a class="el" href="classi2d_1_1_c_matrix2d.html">i2d::CMatrix2d</a> &amp;matrixQ, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;diagonalD)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate decomposition in form of QDQ where <code>Q</code> is ortogonal matrix and <code>D</code> is diagonal one.  <a href="#a0dd5c7ad94342c53fa02de8ce996abca"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#a90697e65a6c715e6bbfee71bdcef8069">GetDet</a> () const </td></tr>
@@ -180,7 +180,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00140">140</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_matrix2d_8h_source.html#l00260">operator/()</a>.</p>
+<p>Referenced by <a class="el" href="_c_matrix2d_8h_source.html#l00228">GetTransposed()</a>, and <a class="el" href="_c_matrix2d_8h_source.html#l00260">operator/()</a>.</p>
 
 </div>
 </div>
@@ -282,24 +282,6 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a4a86c036fd0ae3fa8dcfde7966398d1e"></a><!-- doxytag: member="i2d::CMatrix2d::CMatrix2d::GetTransposed" ref="a4a86c036fd0ae3fa8dcfde7966398d1e" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a> i2d::CMatrix2d::CMatrix2d::GetTransposed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Calculate transposed matrix. </p>
-
-</div>
-</div>
 <a class="anchor" id="a128b442e17c97b2c711074b9d2b62e9c"></a><!-- doxytag: member="i2d::CMatrix2d::GetApproxAngle" ref="a128b442e17c97b2c711074b9d2b62e9c" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -623,6 +605,30 @@ Static Public Member Functions</h2></td></tr>
 <p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00179">179</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
 <p>References <a class="el" href="_c_matrix2d_8h_source.html#l00169">GetMultiplied()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abb7c8d69ed1b3bf0a979367562452851"></a><!-- doxytag: member="i2d::CMatrix2d::GetTransposed" ref="abb7c8d69ed1b3bf0a979367562452851" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a> i2d::CMatrix2d::GetTransposed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Calculate transposed matrix. </p>
+
+<p>Reimplemented from <a class="el" href="classimath_1_1_t_matrix.html#a8dfc35b4bb6e41d950c3abeed744ea72">imath::TMatrix&lt; 2, 2 &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00228">228</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+
+<p>References <a class="el" href="_c_matrix2d_8h_source.html#l00140">CMatrix2d()</a>, and <a class="el" href="classimath_1_1_t_matrix.html#ae52105d58c85c406a987afa8a5bcd165">imath::TMatrix&lt; 2, 2 &gt;::GetAt()</a>.</p>
 
 </div>
 </div>

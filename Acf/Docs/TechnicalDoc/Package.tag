@@ -2628,6 +2628,16 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CSelectionConstraintsComp.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_c_selection_constraints_comp_8h</filename>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <class kind="class">iprm::CSelectionConstraintsComp</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectionParamComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_selection_param_comp_8h</filename>
@@ -7161,9 +7171,9 @@
     </member>
     <member kind="function">
       <type>CMatrix2d</type>
-      <name>CMatrix2d::GetTransposed</name>
+      <name>GetTransposed</name>
       <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
-      <anchor>a4a86c036fd0ae3fa8dcfde7966398d1e</anchor>
+      <anchor>abb7c8d69ed1b3bf0a979367562452851</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -22791,9 +22801,9 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>MIM_DOWNER_TRIANLE</name>
+      <name>MIM_DOWNER_TRIANGLE</name>
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
-      <anchor>a5d81e1902fdd24b57f644ad2d2de9802a5883781021b67c7dd1a1cbaff9018e5e</anchor>
+      <anchor>a5d81e1902fdd24b57f644ad2d2de9802afbb16ac3c68b3d1e762b1289dcf92ece</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -24571,6 +24581,7 @@
     <class kind="class">iprm::CParamsManagerComp</class>
     <class kind="class">iprm::CParamsSet</class>
     <class kind="class">iprm::CSelectableParamsSetComp</class>
+    <class kind="class">iprm::CSelectionConstraintsComp</class>
     <class kind="class">iprm::CSelectionParamComp</class>
     <class kind="class">iprm::CVariableParamComp</class>
     <class kind="class">iprm::IFileNameParam</class>
@@ -25240,6 +25251,33 @@
       <name>GetOptionName</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
       <anchor>aae6b92bf0b46593dc5e65ddd6c0f4a1a</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::CSelectionConstraintsComp</name>
+    <filename>classiprm_1_1_c_selection_constraints_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iprm::ISelectionConstraints</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
+      <anchor>a18681d0cbe06155c7954d645d753529e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
+      <anchor>a9bad2d8c5ed6f399ca3b273212c5bcaa</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
+      <anchor>ac5dee2700d01dd8a9e1424a43833df62</anchor>
       <arglist>(int index) const </arglist>
     </member>
   </compound>
