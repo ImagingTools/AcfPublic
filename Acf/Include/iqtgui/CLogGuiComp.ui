@@ -92,21 +92,6 @@
      <attribute name="headerHighlightSections">
       <bool>false</bool>
      </attribute>
-     <attribute name="headerStretchLastSection">
-      <bool>false</bool>
-     </attribute>
-     <attribute name="headerCascadingSectionResizes">
-      <bool>true</bool>
-     </attribute>
-     <attribute name="headerVisible">
-      <bool>true</bool>
-     </attribute>
-     <attribute name="headerHighlightSections">
-      <bool>false</bool>
-     </attribute>
-     <attribute name="headerStretchLastSection">
-      <bool>false</bool>
-     </attribute>
      <column>
       <property name="text">
        <string>State</string>

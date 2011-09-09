@@ -289,7 +289,6 @@ void TMessageContainerWrap<Base>::AddMessage(const ibase::IMessageContainer::Mes
 			m_messages.pop_back();
 		}
 	}
-
 }
 
 
