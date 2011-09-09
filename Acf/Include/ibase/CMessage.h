@@ -25,8 +25,6 @@
 
 
 #include "istd/ILogger.h"
-#include "istd/TSmartPtr.h"
-
 #include "istd/CString.h"
 
 #include "isys/CSimpleDateTime.h"
@@ -66,9 +64,6 @@ public:
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
-private:
-	void InitializeMessageTime();
-
 protected:
 	istd::ILogger::MessageCategory m_category;
 	int m_id;
@@ -76,7 +71,7 @@ protected:
 	istd::CString m_source;
 	int m_flags;
 
-	istd::TSmartPtr<isys::IDateTime> m_timePtr;
+	isys::CSimpleDateTime m_time;
 };
 
 
@@ -86,7 +81,7 @@ protected:
 
 inline const isys::IDateTime& CMessage::GetTimeStamp() const
 {
-	return *m_timePtr;
+	return m_time;
 }
 
 

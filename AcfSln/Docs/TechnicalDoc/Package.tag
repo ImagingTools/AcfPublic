@@ -1010,8 +1010,8 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>ad67e39740232d86a23e4ebf4b92bf69c</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+      <anchor>a53c6f2eaf1a063401ab9f809211aa460</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -1031,8 +1031,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a92054600a5278633558b8a2fe2162448</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>aa6072a94edbd62cb33e425d9b448aba1</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -1408,8 +1408,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>aed74e177bab4c17a55207fe88fa60bad</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>a2be0b5ebd32472335ee2ed620911ab1e</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -3847,8 +3847,8 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
-      <anchor>af6ef194a694546f2a4fb8e0d3adee2d1</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+      <anchor>a52649306a2f0cc49eb2f7fc756c14e5a</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -3868,8 +3868,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
-      <anchor>a61cbdaed4c7f5d72fc48d391a94dfa7b</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>a2dddc42f58fb5e19ee4ec4d43a9a765f</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>

@@ -44,13 +44,13 @@ bool CFileDialogLoaderComp::IsOperationSupported(
 	if (filePathPtr != NULL && !filePathPtr->IsEmpty()){
 		const iser::IFileLoader* loaderPtr = GetLoaderFor(iqt::GetQString(*filePathPtr), -1, flags, beQuiet);
 		if (loaderPtr != NULL){
-			return loaderPtr->IsOperationSupported(dataObjectPtr, filePathPtr, flags | QF_FILE_ONLY, beQuiet);
+			return loaderPtr->IsOperationSupported(dataObjectPtr, filePathPtr, flags, beQuiet);
 		}
 		return false;
 	}
 
 	if (m_loadersCompPtr.IsValid()){
-		int correctedFlags = (flags | QF_FILE_ONLY) & (~QF_ANONYMOUS_ONLY);
+		int correctedFlags = (flags | QF_FILE) & (~QF_ANONYMOUS);
 		int loaderCount = m_loadersCompPtr.GetCount();
 		for (int index = 0; index < loaderCount; index++){
 			const iser::IFileLoader* slaveLoaderPtr = m_loadersCompPtr[index];
@@ -76,7 +76,7 @@ int CFileDialogLoaderComp::LoadFromFile(istd::IChangeable& data, const istd::CSt
 		return StateAborted;
 	}
 
-	iser::IFileLoader* loaderPtr = GetLoaderFor(openFileName, selectionIndex, QF_NO_SAVING, false);
+	iser::IFileLoader* loaderPtr = GetLoaderFor(openFileName, selectionIndex, QF_LOAD, false);
 	if (loaderPtr != NULL){
 		return loaderPtr->LoadFromFile(data, iqt::GetCString(openFileName));
 	}
@@ -94,7 +94,7 @@ int CFileDialogLoaderComp::SaveToFile(const istd::IChangeable& data, const istd:
 		return StateAborted;
 	}
 
-	iser::IFileLoader* loaderPtr = GetLoaderFor(saveFileName, selectionIndex, QF_NO_LOADING, false);
+	iser::IFileLoader* loaderPtr = GetLoaderFor(saveFileName, selectionIndex, QF_SAVE, false);
 	if (loaderPtr != NULL){
 		return loaderPtr->SaveToFile(data, iqt::GetCString(saveFileName));
 	}
@@ -158,9 +158,7 @@ int CFileDialogLoaderComp::AppendLoaderFilterList(const iser::IFileTypeInfo& fil
 	int retVal = 0;
 
 	istd::CStringList docExtensions;
-	if (!fileTypeInfo.GetFileExtensions(docExtensions, flags)){
-		return 0;
-	}
+	fileTypeInfo.GetFileExtensions(docExtensions, flags);
 
 	istd::CString commonDescription = fileTypeInfo.GetTypeDescription();
 
@@ -246,7 +244,7 @@ QString CFileDialogLoaderComp::GetFileName(const istd::CString& filePath, bool i
 		for (int i = 0; i < loadersCount; ++i){
 			iser::IFileLoader* loaderPtr = m_loadersCompPtr[i];
 			if (loaderPtr != NULL){
-				filtersCount += iqtgui::CFileDialogLoaderComp::AppendLoaderFilterList(*loaderPtr, isSaving? QF_NO_LOADING: QF_NO_SAVING, allExt, filterList);
+				filtersCount += iqtgui::CFileDialogLoaderComp::AppendLoaderFilterList(*loaderPtr, isSaving? QF_SAVE: QF_LOAD, allExt, filterList);
 			}
 		}
 
@@ -260,7 +258,7 @@ QString CFileDialogLoaderComp::GetFileName(const istd::CString& filePath, bool i
 			retVal = QFileDialog::getSaveFileName(
 						NULL,
 						tr("Enter file name"), 
-						m_lastSaveInfo.absoluteFilePath(),
+						m_lastSaveInfo.absolutePath(),
 						filterList,
 						&selectedFilter); 
 		}
@@ -268,7 +266,7 @@ QString CFileDialogLoaderComp::GetFileName(const istd::CString& filePath, bool i
 			retVal = QFileDialog::getOpenFileName(
 						NULL,
 						tr("Select a file to open"),
-						m_lastOpenInfo.absoluteFilePath(),
+						m_lastOpenInfo.absolutePath(),
 						filterList,
 						&selectedFilter);
 		}
@@ -278,18 +276,16 @@ QString CFileDialogLoaderComp::GetFileName(const istd::CString& filePath, bool i
 		selectionIndex = filterList.count('\n');
 	}
 
-	if (!retVal.isEmpty()){
-		QFileInfo fileInfo(retVal);
-		if (isSaving){
-			m_lastSaveInfo = fileInfo;
-		}
-		else{
-			m_lastOpenInfo = fileInfo;
-		}
+	QFileInfo fileInfo(retVal);
+	if (isSaving){
+		m_lastSaveInfo = fileInfo;
+	}
+	else{
+		m_lastOpenInfo = fileInfo;
+	}
 
-		if (m_statupDirectoryCompPtr.IsValid()){
-			m_statupDirectoryCompPtr->SetPath(iqt::GetCString(fileInfo.dir().absolutePath()));
-		}
+	if (m_statupDirectoryCompPtr.IsValid()){
+		m_statupDirectoryCompPtr->SetPath(iqt::GetCString(fileInfo.dir().absolutePath()));
 	}
 
 	return retVal;

@@ -22,7 +22,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">ACF
-   &#160;<span id="projectnumber">1.4.1.90</span>
+   &#160;<span id="projectnumber">1.4.1.93</span>
    </div>
    
   </td>
@@ -98,16 +98,16 @@
 <a name="l00044"></a>00044        };
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046        <span class="comment">// reimplemented (iser::IFileLoader)</span>
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#ae63486eb91d80724c104f1b60442ed3b" title="Returns true if object dataObject can be loaded/saved.">IsOperationSupported</a>(
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#a5ef52e5251fe223eea3b6da03a9ef880" title="Returns true if object dataObject can be loaded/saved.">IsOperationSupported</a>(
 <a name="l00048"></a>00048                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* dataObjectPtr,
 <a name="l00049"></a>00049                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>* filePathPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
-<a name="l00050"></a>00050                             <span class="keywordtype">int</span> flags = 0,
+<a name="l00050"></a>00050                             <span class="keywordtype">int</span> flags = -1,
 <a name="l00051"></a>00051                             <span class="keywordtype">bool</span> beQuiet = <span class="keyword">true</span>) <span class="keyword">const</span>;
 <a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#a47b8dc530a068ad76b273ef5a128bfb2" title="This function loads data data from file filePath.">LoadFromFile</a>(<a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; data, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath) <span class="keyword">const</span>;
 <a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#aa6c0bec0408ee299ced7425b75ff2a5b" title="This function saves data data to file filePath.">SaveToFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; data, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath) <span class="keyword">const</span>;
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055        <span class="comment">// reimplemented (iser::IFileTypeInfo)</span>
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#ad785dc9a98ea77be581673290ba4d1e6" title="Get file extensions supported by this loader.">GetFileExtensions</a>(<a class="code" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a>&amp; result, <span class="keywordtype">int</span> flags = 0, <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>) <span class="keyword">const</span>;
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#a28cee48be683503a7a2c5a33a855ea06" title="Get file extensions supported by this loader.">GetFileExtensions</a>(<a class="code" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a>&amp; result, <span class="keywordtype">int</span> flags = -1, <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>) <span class="keyword">const</span>;
 <a name="l00057"></a>00057        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#a49bd3b99af916a25ade1b6e2f3f68a2e" title="Get description of object type associated with single extension.">GetTypeDescription</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>* extensionPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059 <span class="keyword">private</span>:

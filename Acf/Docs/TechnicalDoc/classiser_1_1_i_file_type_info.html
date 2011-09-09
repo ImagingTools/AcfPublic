@@ -22,7 +22,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">ACF
-   &#160;<span id="projectnumber">1.4.1.90</span>
+   &#160;<span id="projectnumber">1.4.1.93</span>
    </div>
    
   </td>
@@ -103,14 +103,20 @@ Inheritance diagram for iser::IFileTypeInfo:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8">QueryFlags</a> { <a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a80c9ac5a575559134acf4e8fb440ca69">QF_NO_LOADING</a> =  1 &lt;&lt; 0, 
-<a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8ac85558a35626076e7dab2d2032ed0431">QF_NO_SAVING</a> =  1 &lt;&lt; 1
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8">QueryFlags</a> { <br/>
+&#160;&#160;<a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a5ff3ec0ae476ca071cc761ed8cba3a81">QF_SAVE</a> =  1 &lt;&lt; 0, 
+<a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a9dbb719698b08d4104837a5dbfabc8df">QF_LOAD</a> =  1 &lt;&lt; 1, 
+<a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8aa405328fad211e44b5a3eca44411accb">QF_FILE</a> =  1 &lt;&lt; 2, 
+<a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8abc2f74556d1904cab80e4dd9ac8a257d">QF_DIRECTORY</a> =  1 &lt;&lt; 3, 
+<br/>
+&#160;&#160;<a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8aff35564fbdfdf7851b718104d70ef8c9">QF_ANONYMOUS</a> =  1 &lt;&lt; 4
+<br/>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Describe detailed options of query.  <a href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_type_info.html#a8f29431afe244e2f48751835015049a8">GetFileExtensions</a> (<a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> &amp;result, int flags=0, bool doAppend=false) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#a8f29431afe244e2f48751835015049a8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_type_info.html#a580f9a5411ebeb6d5108613e01551fd6">GetFileExtensions</a> (<a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> &amp;result, int flags=-1, bool doAppend=false) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#a580f9a5411ebeb6d5108613e01551fd6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_type_info.html#a744c6451505c91c0abf6177b9f693a35">GetTypeDescription</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *extensionPtr=NULL) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of object type associated with single extension.  <a href="#a744c6451505c91c0abf6177b9f693a35"></a><br/></td></tr>
 </table>
@@ -132,24 +138,31 @@ Public Member Functions</h2></td></tr>
 
 <p>Describe detailed options of query. </p>
 <dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="a2d24774c415748d3c04a27608a6e05e8a80c9ac5a575559134acf4e8fb440ca69"></a><!-- doxytag: member="QF_NO_LOADING" ref="a2d24774c415748d3c04a27608a6e05e8a80c9ac5a575559134acf4e8fb440ca69" args="" -->QF_NO_LOADING</em>&nbsp;</td><td>
+<tr><td valign="top"><em><a class="anchor" id="a2d24774c415748d3c04a27608a6e05e8a5ff3ec0ae476ca071cc761ed8cba3a81"></a><!-- doxytag: member="QF_SAVE" ref="a2d24774c415748d3c04a27608a6e05e8a5ff3ec0ae476ca071cc761ed8cba3a81" args="" -->QF_SAVE</em>&nbsp;</td><td>
 <p>No loading operation should be considered. </p>
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a2d24774c415748d3c04a27608a6e05e8ac85558a35626076e7dab2d2032ed0431"></a><!-- doxytag: member="QF_NO_SAVING" ref="a2d24774c415748d3c04a27608a6e05e8ac85558a35626076e7dab2d2032ed0431" args="" -->QF_NO_SAVING</em>&nbsp;</td><td>
+<tr><td valign="top"><em><a class="anchor" id="a2d24774c415748d3c04a27608a6e05e8a9dbb719698b08d4104837a5dbfabc8df"></a><!-- doxytag: member="QF_LOAD" ref="a2d24774c415748d3c04a27608a6e05e8a9dbb719698b08d4104837a5dbfabc8df" args="" -->QF_LOAD</em>&nbsp;</td><td>
 <p>No saving operation should be considered. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a2d24774c415748d3c04a27608a6e05e8aa405328fad211e44b5a3eca44411accb"></a><!-- doxytag: member="QF_FILE" ref="a2d24774c415748d3c04a27608a6e05e8aa405328fad211e44b5a3eca44411accb" args="" -->QF_FILE</em>&nbsp;</td><td>
+<p>Operations with specified file name should be considered. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a2d24774c415748d3c04a27608a6e05e8abc2f74556d1904cab80e4dd9ac8a257d"></a><!-- doxytag: member="QF_DIRECTORY" ref="a2d24774c415748d3c04a27608a6e05e8abc2f74556d1904cab80e4dd9ac8a257d" args="" -->QF_DIRECTORY</em>&nbsp;</td><td>
+<p>Operations with specified directory name should be considered. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a2d24774c415748d3c04a27608a6e05e8aff35564fbdfdf7851b718104d70ef8c9"></a><!-- doxytag: member="QF_ANONYMOUS" ref="a2d24774c415748d3c04a27608a6e05e8aff35564fbdfdf7851b718104d70ef8c9" args="" -->QF_ANONYMOUS</em>&nbsp;</td><td>
+<p>Operations without specified path (anonymous) should be considered. </p>
 </td></tr>
 </table>
 </dd>
 </dl>
-
-<p>Reimplemented in <a class="el" href="classiser_1_1_i_file_loader.html#afc2afcdf99af4690e151f3956d2bab98">iser::IFileLoader</a>.</p>
 
 <p>Definition at line <a class="el" href="_i_file_type_info_8h_source.html#l00025">25</a> of file <a class="el" href="_i_file_type_info_8h_source.html">IFileTypeInfo.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a8f29431afe244e2f48751835015049a8"></a><!-- doxytag: member="iser::IFileTypeInfo::GetFileExtensions" ref="a8f29431afe244e2f48751835015049a8" args="(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const =0" -->
+<a class="anchor" id="a580f9a5411ebeb6d5108613e01551fd6"></a><!-- doxytag: member="iser::IFileTypeInfo::GetFileExtensions" ref="a580f9a5411ebeb6d5108613e01551fd6" args="(istd::CStringList &amp;result, int flags=&#45;1, bool doAppend=false) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -163,7 +176,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>flags</em> = <code>0</code>, </td>
+          <td class="paramname"><em>flags</em> = <code>-1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -196,7 +209,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a82fb88ace0e4ae6b0e3271891e7d397d">iqtgui::CFileDialogLoaderComp</a>, <a class="el" href="classiqt_1_1_c_bitmap_loader_comp.html#a1c6f0df2eb160f5b8b5a4c9a6f0156c0">iqt::CBitmapLoaderComp</a>, <a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#ae1c01a84d1a68f47b29f11abdef4d90c">iqt::CRenderedObjectFileLoaderComp</a>, <a class="el" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#ad785dc9a98ea77be581673290ba4d1e6">iqtmm::CSvgBitmapLoaderComp</a>, <a class="el" href="classiqtmm_1_1_c_media_loader_comp.html#a3c5f1e6641b5c3f005c3313441aa1c89">iqtmm::CMediaLoaderComp</a>, <a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#af3bd456ce010fc9d3a213fee0f0e23d6">ibase::CRegistryCodeSaverComp</a>, <a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#a6fd2ffd38a250c442548f587c5f71835">iqt::CSettingsSerializerComp</a>, <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#ad401a83a226f86d43da78c5da075899a">icmpstr::CRegistryLoaderComp</a>, <a class="el" href="classibase_1_1_c_composed_loader_comp.html#a7e39abf89bbf30954b14258d35ca5255">ibase::CComposedLoaderComp</a>, <a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#a17c08eeba45a34ad206927643835351d">iqt::CClipboardSerializerComp</a>, <a class="el" href="classibase_1_1_c_file_type_info_comp.html#a93d79252a8fe3a39287463578de53729">ibase::CFileTypeInfoComp</a>, and <a class="el" href="classibase_1_1_c_text_file_loader_comp.html#a14a5665916446b4863db2348c8e1608d">ibase::CTextFileLoaderComp</a>.</p>
+<p>Implemented in <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a50cfd371a1b688150cea7ba70766a282">iqtgui::CFileDialogLoaderComp</a>, <a class="el" href="classiqt_1_1_c_bitmap_loader_comp.html#a785e3da102b8ebec697e522ecbf49c2e">iqt::CBitmapLoaderComp</a>, <a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#ae0e5e2d06aabb3fa73be0de118e3baf3">iqt::CRenderedObjectFileLoaderComp</a>, <a class="el" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#a28cee48be683503a7a2c5a33a855ea06">iqtmm::CSvgBitmapLoaderComp</a>, <a class="el" href="classiqtmm_1_1_c_media_loader_comp.html#ab0f2585b4717e73574ca9b8b7187416a">iqtmm::CMediaLoaderComp</a>, <a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ab02ff8fb4a25d44f30ba62d35c83f8ba">ibase::CRegistryCodeSaverComp</a>, <a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#a97dcbbec504d5f3aa424fec0b757751d">iqt::CSettingsSerializerComp</a>, <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#a59648a5de4886a6ab0d8b4ca630c7f9f">icmpstr::CRegistryLoaderComp</a>, <a class="el" href="classibase_1_1_c_composed_loader_comp.html#abccc664270aaf6fda71d126c57f8bc7e">ibase::CComposedLoaderComp</a>, <a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#a4cf7e75063f2cf036ee39687eaf680ff">iqt::CClipboardSerializerComp</a>, <a class="el" href="classibase_1_1_c_file_type_info_comp.html#ad836e6d45b822135976913ff4dbc665f">ibase::CFileTypeInfoComp</a>, and <a class="el" href="classibase_1_1_c_text_file_loader_comp.html#a0e7bb080d3fcaa8f47f8d8d86c2d808f">ibase::CTextFileLoaderComp</a>.</p>
 
 </div>
 </div>

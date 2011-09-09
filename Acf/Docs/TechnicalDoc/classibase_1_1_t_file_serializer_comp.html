@@ -22,7 +22,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">ACF
-   &#160;<span id="projectnumber">1.4.1.90</span>
+   &#160;<span id="projectnumber">1.4.1.93</span>
    </div>
    
   </td>
@@ -114,8 +114,8 @@ Public Types</h2></td></tr>
 &lt; <a class="el" href="classibase_1_1_c_file_type_info_comp.html">CFileTypeInfoComp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#a427c1f360b2f92c946dcdc150cc91ddc">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#a8c0dea236747ff90dc7b0c451b694642">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#a8c0dea236747ff90dc7b0c451b694642"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#a4c78c087a4336e3512f8ac5582705fe2">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#a4c78c087a4336e3512f8ac5582705fe2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#adaa4150e1e9d6c6c5ce3ac531c846147">LoadFromFile</a> (<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function loads data <code>data</code> from file <code>filePath</code>.  <a href="#adaa4150e1e9d6c6c5ce3ac531c846147"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#a99a5f8f4b2f5e554ac83a21e78771d52">SaveToFile</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const </td></tr>
@@ -296,7 +296,7 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a8c0dea236747ff90dc7b0c451b694642"></a><!-- doxytag: member="ibase::TFileSerializerComp::IsOperationSupported" ref="a8c0dea236747ff90dc7b0c451b694642" args="(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const " -->
+<a class="anchor" id="a4c78c087a4336e3512f8ac5582705fe2"></a><!-- doxytag: member="ibase::TFileSerializerComp::IsOperationSupported" ref="a4c78c087a4336e3512f8ac5582705fe2" args="(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=&#45;1, bool beQuiet=true) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -318,7 +318,7 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>flags</em> = <code>0</code>, </td>
+          <td class="paramname"><em>flags</em> = <code>-1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -346,7 +346,7 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#ae85f13328b0fdf79776ec255924d3cf8">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a7118893dbc48418fd3f6ebae054e883c">iser::IFileLoader</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00164">164</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
 

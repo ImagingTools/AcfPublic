@@ -22,7 +22,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">ACF
-   &#160;<span id="projectnumber">1.4.1.90</span>
+   &#160;<span id="projectnumber">1.4.1.93</span>
    </div>
    
   </td>
@@ -87,16 +87,16 @@
 <a name="l00033"></a>00033        I_END_COMPONENT
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035        <span class="comment">// reimplemented (iser::IFileLoader)</span>
-<a name="l00036"></a>00036        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_serializer_comp.html#aae8311a927e2db0b6db311ecd9f17a60" title="Returns true if object dataObject can be loaded/saved.">IsOperationSupported</a>(
+<a name="l00036"></a>00036        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_serializer_comp.html#a3221e741c0c57f32d9e18b1da26abc51" title="Returns true if object dataObject can be loaded/saved.">IsOperationSupported</a>(
 <a name="l00037"></a>00037                             const istd::IChangeable* dataObjectPtr,
 <a name="l00038"></a>00038                             const istd::CString* filePathPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
-<a name="l00039"></a>00039                             <span class="keywordtype">int</span> flags = 0,
+<a name="l00039"></a>00039                             <span class="keywordtype">int</span> flags = -1,
 <a name="l00040"></a>00040                             <span class="keywordtype">bool</span> beQuiet = true) const;
 <a name="l00041"></a>00041        virtual <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_c_settings_serializer_comp.html#a0dd072e7db95327940a5e0a3fc04e606" title="This function loads data data from file filePath.">LoadFromFile</a>(istd::IChangeable&amp; data, const istd::CString&amp; filePath = istd::CString()) const;
 <a name="l00042"></a>00042        virtual <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_c_settings_serializer_comp.html#a8e069e0bf3cab9a4b80eb5d49e574a34" title="This function saves data data to file filePath.">SaveToFile</a>(const istd::IChangeable&amp; data, const istd::CString&amp; filePath = istd::CString()) const;
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044        <span class="comment">// reimplemented (iser::IFileTypeInfo)</span>
-<a name="l00045"></a>00045        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_serializer_comp.html#a6fd2ffd38a250c442548f587c5f71835" title="Get file extensions supported by this loader.">GetFileExtensions</a>(istd::<a class="code" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">CStringList</a>&amp; result, <span class="keywordtype">int</span> flags = 0, <span class="keywordtype">bool</span> doAppend = false) const;
+<a name="l00045"></a>00045        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_serializer_comp.html#a97dcbbec504d5f3aa424fec0b757751d" title="Get file extensions supported by this loader.">GetFileExtensions</a>(istd::<a class="code" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">CStringList</a>&amp; result, <span class="keywordtype">int</span> flags = -1, <span class="keywordtype">bool</span> doAppend = false) const;
 <a name="l00046"></a>00046        virtual istd::CString <a class="code" href="classiqt_1_1_c_settings_serializer_comp.html#a76fedb8d9ca6e5b481dd678d3df68fb6" title="Get description of object type associated with single extension.">GetTypeDescription</a>(const istd::CString* extensionPtr = NULL) const;
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048 private:

@@ -41,12 +41,16 @@ bool CXslSerializerComp::IsOperationSupported(
 		return false;
 	}
 
-	if ((flags & (QF_DIRECTORY_ONLY | QF_ANONYMOUS_ONLY)) != 0){
+	if ((flags & QF_FILE) != 0){
+		return false;
+	}
+
+	if ((flags & (QF_LOAD | QF_SAVE)) == 0){
 		return false;
 	}
 
 	if (filePathPtr != NULL){
-		if ((flags & QF_NO_SAVING) != 0){
+		if ((flags & QF_LOAD) != 0){
 			isys::IFileSystem* fileSystemPtr = istd::GetService<isys::IFileSystem>();
 			if (fileSystemPtr != NULL){
 				if (!fileSystemPtr->IsPresent(*filePathPtr)){
@@ -83,7 +87,7 @@ int CXslSerializerComp::LoadFromFile(istd::IChangeable& data, const istd::CStrin
 		return false;
 	}
 
-	if (IsOperationSupported(&data, &filePath, QF_NO_SAVING, false)){
+	if (IsOperationSupported(&data, &filePath, QF_LOAD | QF_FILE, false)){
 		CXslTransformationReadArchive archive(filePath, m_xslReadFilePath.GetPtr()->GetPath());
 
 		I_ASSERT(!archive.IsStoring());
@@ -112,7 +116,7 @@ int CXslSerializerComp::SaveToFile(const istd::IChangeable& data, const istd::CS
 		return StateFailed;
 	}
 
-	if (IsOperationSupported(&data, &filePath, QF_NO_LOADING, false)){
+	if (IsOperationSupported(&data, &filePath, QF_SAVE | QF_FILE, false)){
 		CXslTransformationWriteArchive archive(filePath, m_xslWriteFilePath.GetPtr()->GetPath(), GetVersionInfo(), this);
 		I_ASSERT(archive.IsStoring());
 

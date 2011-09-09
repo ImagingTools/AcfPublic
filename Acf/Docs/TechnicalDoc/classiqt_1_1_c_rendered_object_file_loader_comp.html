@@ -22,7 +22,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">ACF
-   &#160;<span id="projectnumber">1.4.1.90</span>
+   &#160;<span id="projectnumber">1.4.1.93</span>
    </div>
    
   </td>
@@ -94,14 +94,14 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a0f8989232abed2886fc3da546413340f">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a41b199e858939e20ca6c5d3adcf8e8e2">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#a41b199e858939e20ca6c5d3adcf8e8e2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#aa169995bfb541aae7063f72fe5604a1c">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#aa169995bfb541aae7063f72fe5604a1c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#af16758b35d1f543f3b9529d2d17fe69e">LoadFromFile</a> (<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function loads data <code>data</code> from file <code>filePath</code>.  <a href="#af16758b35d1f543f3b9529d2d17fe69e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a1a22725355d3b66db86078a8978b4895">SaveToFile</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function saves data <code>data</code> to file <code>filePath</code>.  <a href="#a1a22725355d3b66db86078a8978b4895"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#ae1c01a84d1a68f47b29f11abdef4d90c">GetFileExtensions</a> (<a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> &amp;result, int flags=0, bool doAppend=false) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#ae1c01a84d1a68f47b29f11abdef4d90c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#ae0e5e2d06aabb3fa73be0de118e3baf3">GetFileExtensions</a> (<a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> &amp;result, int flags=-1, bool doAppend=false) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#ae0e5e2d06aabb3fa73be0de118e3baf3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a2075b019de2dfcef81848b419df0c589">GetTypeDescription</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *extensionPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of object type associated with single extension.  <a href="#a2075b019de2dfcef81848b419df0c589"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#ac515121b82b2b3964f6daf7b2ba1b770">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
@@ -127,7 +127,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ae1c01a84d1a68f47b29f11abdef4d90c"></a><!-- doxytag: member="iqt::CRenderedObjectFileLoaderComp::GetFileExtensions" ref="ae1c01a84d1a68f47b29f11abdef4d90c" args="(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const " -->
+<a class="anchor" id="ae0e5e2d06aabb3fa73be0de118e3baf3"></a><!-- doxytag: member="iqt::CRenderedObjectFileLoaderComp::GetFileExtensions" ref="ae0e5e2d06aabb3fa73be0de118e3baf3" args="(istd::CStringList &amp;result, int flags=&#45;1, bool doAppend=false) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -141,7 +141,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>flags</em> = <code>0</code>, </td>
+          <td class="paramname"><em>flags</em> = <code>-1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -166,7 +166,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_file_loader.html#afc2afcdf99af4690e151f3956d2bab98" title="Describe detailed options of query.">QueryFlags</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8" title="Describe detailed options of query.">QueryFlags</a>. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">doAppend</td><td>if true, list of extensions should be appended to existing list. </td></tr>
@@ -174,7 +174,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#a8f29431afe244e2f48751835015049a8">iser::IFileTypeInfo</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#a580f9a5411ebeb6d5108613e01551fd6">iser::IFileTypeInfo</a>.</p>
 
 </div>
 </div>
@@ -199,7 +199,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a41b199e858939e20ca6c5d3adcf8e8e2"></a><!-- doxytag: member="iqt::CRenderedObjectFileLoaderComp::IsOperationSupported" ref="a41b199e858939e20ca6c5d3adcf8e8e2" args="(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const " -->
+<a class="anchor" id="aa169995bfb541aae7063f72fe5604a1c"></a><!-- doxytag: member="iqt::CRenderedObjectFileLoaderComp::IsOperationSupported" ref="aa169995bfb541aae7063f72fe5604a1c" args="(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=&#45;1, bool beQuiet=true) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -219,7 +219,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>flags</em> = <code>0</code>, </td>
+          <td class="paramname"><em>flags</em> = <code>-1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -247,7 +247,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#ae85f13328b0fdf79776ec255924d3cf8">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a7118893dbc48418fd3f6ebae054e883c">iser::IFileLoader</a>.</p>
 
 </div>
 </div>

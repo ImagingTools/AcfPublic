@@ -1,3 +1,25 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
 #include "iqtgui/CLogGuiComp.h"
 
 
@@ -19,12 +41,7 @@ namespace iqtgui
 // public methods
 
 CLogGuiComp::CLogGuiComp()
-	:m_currentMessageMode(MM_ALL),
-	m_infoAction(NULL),
-	m_warningAction(NULL),
-	m_errorAction(NULL),
-	m_clearAction(NULL),
-	m_exportAction(NULL)
+	:m_currentMessageMode(MM_ALL)
 {
 	qRegisterMetaType<QVariant>("QVariant");
 
@@ -85,28 +102,6 @@ void CLogGuiComp::UpdateItemState(QTreeWidgetItem& item) const
 }
 
 
-QIcon CLogGuiComp::GetIcon(istd::ILogger::MessageCategory mode)
-{
-	QIcon messageIcon;
-	switch (mode)
-	{
-	case istd::ILogger::MC_WARNING:
-		messageIcon = m_warningIcon;
-		break;
-
-	case istd::ILogger::MC_ERROR:
-	case istd::ILogger::MC_CRITICAL:
-		messageIcon = m_errorIcon;
-		break;
-
-	case istd::ILogger::MC_INFO:
-		messageIcon = m_infoIcon;
-		break;
-	}
-	return messageIcon;
-}
-
-
 // reimplemented (iqtgui::TGuiObserverWrap)
 
 void CLogGuiComp::OnGuiModelAttached()
@@ -141,10 +136,8 @@ void CLogGuiComp::OnGuiCreated()
 	iqtgui::CItemDelegate* itemDelegate = new iqtgui::CItemDelegate(20, this);
 	LogView->setItemDelegate(itemDelegate);
 
-	if(m_showLogDescriptionAttrPtr.IsValid() && !*m_showLogDescriptionAttrPtr){
-		LogView->header()->hide();
-	}
-	LogView->setSortingEnabled(true);
+	LogView->header()->hide();
+
 	LogView->header()->setResizeMode(CT_ICON, QHeaderView::Fixed);
 	LogView->header()->resizeSection(CT_ICON, itemDelegate->GetItemHeight());
 
@@ -156,49 +149,49 @@ void CLogGuiComp::OnGuiCreated()
 	QActionGroup* actionGroup = new QActionGroup(this);
 	actionGroup->setExclusive(true);
 
-	m_infoAction = new QAction(QIcon(QString::fromUtf8(":/Icons/Info.svg")), tr("Info"), ToolBarFrame);
-	m_infoAction->setCheckable(true);
-	m_infoAction->setData(MM_INFO);
-	connect(m_infoAction, SIGNAL(toggled(bool)), this, SLOT(OnMessageModeChanged()), Qt::QueuedConnection);
-	actionGroup->addAction(m_infoAction);
+	QAction* infoAction = new QAction(QIcon(QString::fromUtf8(":/Icons/Info.svg")), tr("Info"), ToolBarFrame);
+	infoAction->setCheckable(true);
+	infoAction->setData(MM_INFO);
+	connect(infoAction, SIGNAL(toggled(bool)), this, SLOT(OnMessageModeChanged()), Qt::QueuedConnection);
+	actionGroup->addAction(infoAction);
 	if (*m_defaultModeAttrPtr == 0){
-		m_infoAction->setChecked(true);
+		infoAction->setChecked(true);
 	}
 
-	m_warningAction = new QAction(QIcon(":/Icons/Warning.svg"), tr("Warning"), ToolBarFrame);
-	m_warningAction->setCheckable(true);
-	m_warningAction->setData(MM_WARNING);
-	connect(m_warningAction, SIGNAL(toggled(bool)), this, SLOT(OnMessageModeChanged()), Qt::QueuedConnection);
-	actionGroup->addAction(m_warningAction);
+	QAction* warningAction = new QAction(QIcon(":/Icons/Warning.svg"), tr("Warning"), ToolBarFrame);
+	warningAction->setCheckable(true);
+	warningAction->setData(MM_WARNING);
+	connect(warningAction, SIGNAL(toggled(bool)), this, SLOT(OnMessageModeChanged()), Qt::QueuedConnection);
+	actionGroup->addAction(warningAction);
 	if (*m_defaultModeAttrPtr == 1){
-		m_warningAction->setChecked(true);
+		warningAction->setChecked(true);
 	}
 
-	m_errorAction = new QAction(QIcon(QString::fromUtf8(":/Icons/Error.svg")), tr("Error"), ToolBarFrame);
-	m_errorAction->setCheckable(true);
-	m_errorAction->setData(MM_ERROR);
-	connect(m_errorAction, SIGNAL(toggled(bool)), this, SLOT(OnMessageModeChanged()), Qt::QueuedConnection);
-	actionGroup->addAction(m_errorAction);
+	QAction* errorAction = new QAction(QIcon(QString::fromUtf8(":/Icons/Error.svg")), tr("Error"), ToolBarFrame);
+	errorAction->setCheckable(true);
+	errorAction->setData(MM_ERROR);
+	connect(errorAction, SIGNAL(toggled(bool)), this, SLOT(OnMessageModeChanged()), Qt::QueuedConnection);
+	actionGroup->addAction(errorAction);
 	if (*m_defaultModeAttrPtr == 2){
-		m_errorAction->setChecked(true);
+		errorAction->setChecked(true);
 	}
 
-	m_clearAction = new QAction(QIcon(QString::fromUtf8(":/Icons/Clear")), tr("Clear"), ToolBarFrame);
-	connect(m_clearAction, SIGNAL(triggered()), this, SLOT(OnClearAction()), Qt::QueuedConnection);
+	QAction* clearAction = new QAction(QIcon(QString::fromUtf8(":/Icons/Clear")), tr("Clear"), ToolBarFrame);
+	connect(clearAction, SIGNAL(triggered()), this, SLOT(OnClearAction()), Qt::QueuedConnection);
 
 	toolBar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 	toolBar->setIconSize(QSize(16, 16));
-	toolBar->addAction(m_infoAction);
-	toolBar->addAction(m_warningAction);
-	toolBar->addAction(m_errorAction);
-	toolBar->addAction(m_clearAction);
-	toolBar->insertSeparator(m_clearAction);
+	toolBar->addAction(infoAction);
+	toolBar->addAction(warningAction);
+	toolBar->addAction(errorAction);
+	toolBar->addAction(clearAction);
+	toolBar->insertSeparator(clearAction);
 
 	if (m_fileLoaderCompPtr.IsValid()){
-		m_exportAction = new QAction(QIcon(QString::fromUtf8(":/Icons/DocumentExport.svg")), tr("Export..."), ToolBarFrame);
-		connect(m_exportAction, SIGNAL(triggered()), this, SLOT(OnExportAction()), Qt::QueuedConnection);		
-		toolBar->addAction(m_exportAction);
-		toolBar->insertSeparator(m_exportAction);
+		QAction* exportAction = new QAction(QIcon(QString::fromUtf8(":/Icons/DocumentExport.svg")), tr("Export..."), ToolBarFrame);
+		connect(exportAction, SIGNAL(triggered()), this, SLOT(OnExportAction()), Qt::QueuedConnection);		
+		toolBar->addAction(exportAction);
+		toolBar->insertSeparator(exportAction);
 	}
 
 	m_infoIcon = QIcon(":/Icons/Info.svg").pixmap(QSize(12, 12),QIcon::Normal, QIcon::On);
@@ -232,6 +225,7 @@ void CLogGuiComp::BeforeUpdate(imod::IModel* modelPtr, int updateFlags, istd::IP
 
 void CLogGuiComp::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr)
 {
+
 	if (((updateFlags & ibase::IMessageContainer::CF_MESSAGE_ADDED) != 0) && IsGuiCreated()){
 		ibase::IMessage* messagePtr = dynamic_cast<ibase::IMessage*>(updateParamsPtr);
 		if (messagePtr != NULL){

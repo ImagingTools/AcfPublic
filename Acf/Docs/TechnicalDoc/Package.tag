@@ -246,6 +246,7 @@
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
     <class kind="class">ibase::CAutoPersistenceComp</class>
     <namespace>ibase</namespace>
   </compound>
@@ -8833,8 +8834,8 @@
       <type>virtual I_END_COMPONENT bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classibase_1_1_c_composed_loader_comp.html</anchorfile>
-      <anchor>aa2a3724573b536c0a46e7801774abdca</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+      <anchor>ae96f9b1ae27a4de6492276932ac09376</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -8854,8 +8855,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classibase_1_1_c_composed_loader_comp.html</anchorfile>
-      <anchor>a7e39abf89bbf30954b14258d35ca5255</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>abccc664270aaf6fda71d126c57f8bc7e</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -9026,8 +9027,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classibase_1_1_c_file_type_info_comp.html</anchorfile>
-      <anchor>a93d79252a8fe3a39287463578de53729</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>ad836e6d45b822135976913ff4dbc665f</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -9430,8 +9431,8 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>acaa484ddd6fb29bdbca6246bd3126404</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+      <anchor>ac0ece656e7d080b9fa98f76f58b3563a</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -9451,8 +9452,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>af3bd456ce010fc9d3a213fee0f0e23d6</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>ab02ff8fb4a25d44f30ba62d35c83f8ba</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -9881,8 +9882,8 @@
       <type>virtual I_END_COMPONENT bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classibase_1_1_c_text_file_loader_comp.html</anchorfile>
-      <anchor>a26f0e0ff8794d548037a2b8e074c91d3</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+      <anchor>a1127c095b5bbbbc03545aec0af7bdbf2</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -9902,8 +9903,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classibase_1_1_c_text_file_loader_comp.html</anchorfile>
-      <anchor>a14a5665916446b4863db2348c8e1608d</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>a0e7bb080d3fcaa8f47f8d8d86c2d808f</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -10921,8 +10922,8 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>a8c0dea236747ff90dc7b0c451b694642</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+      <anchor>a4c78c087a4336e3512f8ac5582705fe2</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -14316,8 +14317,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
-      <anchor>ad401a83a226f86d43da78c5da075899a</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>a59648a5de4886a6ab0d8b4ca630c7f9f</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -27338,8 +27339,8 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiqt_1_1_c_bitmap_loader_comp.html</anchorfile>
-      <anchor>a30c62b5a8e1e59f9dd1e505055ef7e41</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+      <anchor>aece2f8ca9bf1432291823b0825d1f508</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -27359,8 +27360,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqt_1_1_c_bitmap_loader_comp.html</anchorfile>
-      <anchor>a1c6f0df2eb160f5b8b5a4c9a6f0156c0</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>a785e3da102b8ebec697e522ecbf49c2e</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -27434,8 +27435,8 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiqt_1_1_c_clipboard_serializer_comp.html</anchorfile>
-      <anchor>a743db31088744ce47e2799a00fd52088</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+      <anchor>abcb74548023fb74119b8c3c605fc02ee</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -27455,8 +27456,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqt_1_1_c_clipboard_serializer_comp.html</anchorfile>
-      <anchor>a17c08eeba45a34ad206927643835351d</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>a4cf7e75063f2cf036ee39687eaf680ff</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -28504,8 +28505,8 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiqt_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
-      <anchor>a41b199e858939e20ca6c5d3adcf8e8e2</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+      <anchor>aa169995bfb541aae7063f72fe5604a1c</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -28525,8 +28526,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqt_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
-      <anchor>ae1c01a84d1a68f47b29f11abdef4d90c</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>ae0e5e2d06aabb3fa73be0de118e3baf3</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -28766,8 +28767,8 @@
       <type>virtual I_END_COMPONENT bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiqt_1_1_c_settings_serializer_comp.html</anchorfile>
-      <anchor>aae8311a927e2db0b6db311ecd9f17a60</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+      <anchor>a3221e741c0c57f32d9e18b1da26abc51</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -28787,8 +28788,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqt_1_1_c_settings_serializer_comp.html</anchorfile>
-      <anchor>a6fd2ffd38a250c442548f587c5f71835</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>a97dcbbec504d5f3aa424fec0b757751d</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -29493,8 +29494,8 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiqt_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>a52d74ae384cfbd7690aee1d706f81a37</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+      <anchor>aaa83b493be10dde043378d66e6cea7cb</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -33398,8 +33399,8 @@
       <type>virtual I_END_COMPONENT bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a376d367dff9ff7c4803538df3226e759</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+      <anchor>ae1b6b95adb5ba70735d566f2d8fca0d7</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -33419,8 +33420,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a82fb88ace0e4ae6b0e3271891e7d397d</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>a50cfd371a1b688150cea7ba70766a282</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -35539,8 +35540,8 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
-      <anchor>ae2c7797949a9aaf60c6051ed2cbef481</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+      <anchor>ab04877783eefba8967643d4e6fcc13c7</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -35560,8 +35561,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
-      <anchor>a3c5f1e6641b5c3f005c3313441aa1c89</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>ab0f2585b4717e73574ca9b8b7187416a</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -35804,8 +35805,8 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
-      <anchor>ae63486eb91d80724c104f1b60442ed3b</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </arglist>
+      <anchor>a5ef52e5251fe223eea3b6da03a9ef880</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -35825,8 +35826,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
-      <anchor>ad785dc9a98ea77be581673290ba4d1e6</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const </arglist>
+      <anchor>a28cee48be683503a7a2c5a33a855ea06</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -39035,36 +39036,12 @@
       <anchor>a885bc2cad957c89052cf890e68436bf4a23433678f728922ea7537fd394c50bb1</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
-      <name>QueryFlags</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>afc2afcdf99af4690e151f3956d2bab98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QF_FILE_ONLY</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>afc2afcdf99af4690e151f3956d2bab98ae62f0db855b6461a10c28696efa0f003</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QF_DIRECTORY_ONLY</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>afc2afcdf99af4690e151f3956d2bab98af5acafd5c0b64f8b35b269536287fbc0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QF_ANONYMOUS_ONLY</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>afc2afcdf99af4690e151f3956d2bab98a23b1a54d8c4e2d38c2c28131c0f2450d</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>ae85f13328b0fdf79776ec255924d3cf8</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const =0</arglist>
+      <anchor>a7118893dbc48418fd3f6ebae054e883c</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -39152,23 +39129,41 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>QF_NO_LOADING</name>
+      <name>QF_SAVE</name>
       <anchorfile>classiser_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a2d24774c415748d3c04a27608a6e05e8a80c9ac5a575559134acf4e8fb440ca69</anchor>
+      <anchor>a2d24774c415748d3c04a27608a6e05e8a5ff3ec0ae476ca071cc761ed8cba3a81</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>QF_NO_SAVING</name>
+      <name>QF_LOAD</name>
       <anchorfile>classiser_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a2d24774c415748d3c04a27608a6e05e8ac85558a35626076e7dab2d2032ed0431</anchor>
+      <anchor>a2d24774c415748d3c04a27608a6e05e8a9dbb719698b08d4104837a5dbfabc8df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QF_FILE</name>
+      <anchorfile>classiser_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a2d24774c415748d3c04a27608a6e05e8aa405328fad211e44b5a3eca44411accb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QF_DIRECTORY</name>
+      <anchorfile>classiser_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a2d24774c415748d3c04a27608a6e05e8abc2f74556d1904cab80e4dd9ac8a257d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QF_ANONYMOUS</name>
+      <anchorfile>classiser_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a2d24774c415748d3c04a27608a6e05e8aff35564fbdfdf7851b718104d70ef8c9</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiser_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a8f29431afe244e2f48751835015049a8</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const =0</arglist>
+      <anchor>a580f9a5411ebeb6d5108613e01551fd6</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CString</type>

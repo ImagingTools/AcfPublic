@@ -50,7 +50,7 @@ public:
 	};
 
 	/**
-		Get number of managed set.
+		Get number of managed options.
 	*/
 	virtual int GetOptionsCount() const = 0;
 

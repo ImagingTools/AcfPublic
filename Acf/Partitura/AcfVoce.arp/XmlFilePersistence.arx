@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          1860
+          1899
         </Number>
         <Description>
           ACF
@@ -18,7 +18,7 @@
           1
         </Id>
         <Number>
-          369
+          384
         </Number>
         <Description>
           ACF-Solutions
@@ -69,7 +69,7 @@
               FilePath
             </Id>
             <Type>
-              icomp::TAttribute&lt;istd::CString&gt;
+              icomp::CReferenceAttribute
             </Type>
             <ExportId>
               FilePath
@@ -88,7 +88,7 @@
               icomp::CReferenceAttribute
             </Type>
             <ExportId>
-              Hotfolder
+              Object
             </ExportId>
             <Data>
               <IsEnabled>

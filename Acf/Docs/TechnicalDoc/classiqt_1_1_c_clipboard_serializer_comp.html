@@ -22,7 +22,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">ACF
-   &#160;<span id="projectnumber">1.4.1.90</span>
+   &#160;<span id="projectnumber">1.4.1.93</span>
    </div>
    
   </td>
@@ -95,14 +95,14 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#a1409759ade160279d3b021bcdfe79e1c">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#a743db31088744ce47e2799a00fd52088">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *filePathPtr=NULL, int flags=0, bool beQuiet=true) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#a743db31088744ce47e2799a00fd52088"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#abcb74548023fb74119b8c3c605fc02ee">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#abcb74548023fb74119b8c3c605fc02ee"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#af3e2bbe260a97a9232f0dfeeb75efc28">LoadFromFile</a> (<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function loads data <code>data</code> from file <code>filePath</code>.  <a href="#af3e2bbe260a97a9232f0dfeeb75efc28"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#a10800aba63ff96babcf87aa24ccc1639">SaveToFile</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function saves data <code>data</code> to file <code>filePath</code>.  <a href="#a10800aba63ff96babcf87aa24ccc1639"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#a17c08eeba45a34ad206927643835351d">GetFileExtensions</a> (<a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> &amp;result, int flags=0, bool doAppend=false) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#a17c08eeba45a34ad206927643835351d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#a4cf7e75063f2cf036ee39687eaf680ff">GetFileExtensions</a> (<a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> &amp;result, int flags=-1, bool doAppend=false) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#a4cf7e75063f2cf036ee39687eaf680ff"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#a9e0e81c32bfee59b85f821a850af8706">GetTypeDescription</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *extensionPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of object type associated with single extension.  <a href="#a9e0e81c32bfee59b85f821a850af8706"></a><br/></td></tr>
 </table>
@@ -128,7 +128,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a17c08eeba45a34ad206927643835351d"></a><!-- doxytag: member="iqt::CClipboardSerializerComp::GetFileExtensions" ref="a17c08eeba45a34ad206927643835351d" args="(istd::CStringList &amp;result, int flags=0, bool doAppend=false) const " -->
+<a class="anchor" id="a4cf7e75063f2cf036ee39687eaf680ff"></a><!-- doxytag: member="iqt::CClipboardSerializerComp::GetFileExtensions" ref="a4cf7e75063f2cf036ee39687eaf680ff" args="(istd::CStringList &amp;result, int flags=&#45;1, bool doAppend=false) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -142,7 +142,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>flags</em> = <code>0</code>, </td>
+          <td class="paramname"><em>flags</em> = <code>-1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -167,7 +167,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_file_loader.html#afc2afcdf99af4690e151f3956d2bab98" title="Describe detailed options of query.">QueryFlags</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8" title="Describe detailed options of query.">QueryFlags</a>. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">doAppend</td><td>if true, list of extensions should be appended to existing list. </td></tr>
@@ -175,7 +175,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#a8f29431afe244e2f48751835015049a8">iser::IFileTypeInfo</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#a580f9a5411ebeb6d5108613e01551fd6">iser::IFileTypeInfo</a>.</p>
 
 </div>
 </div>
@@ -200,7 +200,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a743db31088744ce47e2799a00fd52088"></a><!-- doxytag: member="iqt::CClipboardSerializerComp::IsOperationSupported" ref="a743db31088744ce47e2799a00fd52088" args="(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const " -->
+<a class="anchor" id="abcb74548023fb74119b8c3c605fc02ee"></a><!-- doxytag: member="iqt::CClipboardSerializerComp::IsOperationSupported" ref="abcb74548023fb74119b8c3c605fc02ee" args="(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=&#45;1, bool beQuiet=true) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -220,7 +220,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>flags</em> = <code>0</code>, </td>
+          <td class="paramname"><em>flags</em> = <code>-1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -248,7 +248,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#ae85f13328b0fdf79776ec255924d3cf8">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a7118893dbc48418fd3f6ebae054e883c">iser::IFileLoader</a>.</p>
 
 </div>
 </div>

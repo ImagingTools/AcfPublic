@@ -22,7 +22,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">ACF
-   &#160;<span id="projectnumber">1.4.1.90</span>
+   &#160;<span id="projectnumber">1.4.1.93</span>
    </div>
    
   </td>
@@ -110,15 +110,10 @@ Public Types</h2></td></tr>
 <a class="el" href="classiser_1_1_i_file_loader.html#a885bc2cad957c89052cf890e68436bf4a23433678f728922ea7537fd394c50bb1">MI_CANNOT_SAVE</a>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">List of possible message ids used in context of this interface.  <a href="classiser_1_1_i_file_loader.html#a885bc2cad957c89052cf890e68436bf4">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_loader.html#afc2afcdf99af4690e151f3956d2bab98">QueryFlags</a> { <a class="el" href="classiser_1_1_i_file_loader.html#afc2afcdf99af4690e151f3956d2bab98ae62f0db855b6461a10c28696efa0f003">QF_FILE_ONLY</a> =  1 &lt;&lt; 2, 
-<a class="el" href="classiser_1_1_i_file_loader.html#afc2afcdf99af4690e151f3956d2bab98af5acafd5c0b64f8b35b269536287fbc0">QF_DIRECTORY_ONLY</a> =  1 &lt;&lt; 3, 
-<a class="el" href="classiser_1_1_i_file_loader.html#afc2afcdf99af4690e151f3956d2bab98a23b1a54d8c4e2d38c2c28131c0f2450d">QF_ANONYMOUS_ONLY</a> =  1 &lt;&lt; 4
- }</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Describe detailed options of query.  <a href="classiser_1_1_i_file_loader.html#afc2afcdf99af4690e151f3956d2bab98">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_loader.html#ae85f13328b0fdf79776ec255924d3cf8">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *filePathPtr=NULL, int flags=0, bool beQuiet=true) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#ae85f13328b0fdf79776ec255924d3cf8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_loader.html#a7118893dbc48418fd3f6ebae054e883c">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#a7118893dbc48418fd3f6ebae054e883c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_loader.html#a692b19c2e18506de95d02aed942890e6">LoadFromFile</a> (<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function loads data <code>data</code> from file <code>filePath</code>.  <a href="#a692b19c2e18506de95d02aed942890e6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_loader.html#aa9a5a8765a0c04900696029914ac9a26">SaveToFile</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const =0</td></tr>
@@ -188,40 +183,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afc2afcdf99af4690e151f3956d2bab98"></a><!-- doxytag: member="iser::IFileLoader::QueryFlags" ref="afc2afcdf99af4690e151f3956d2bab98" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classiser_1_1_i_file_loader.html#afc2afcdf99af4690e151f3956d2bab98">iser::IFileLoader::QueryFlags</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Describe detailed options of query. </p>
-<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="afc2afcdf99af4690e151f3956d2bab98ae62f0db855b6461a10c28696efa0f003"></a><!-- doxytag: member="QF_FILE_ONLY" ref="afc2afcdf99af4690e151f3956d2bab98ae62f0db855b6461a10c28696efa0f003" args="" -->QF_FILE_ONLY</em>&nbsp;</td><td>
-<p>Only operations with specified file name should be considered. </p>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="afc2afcdf99af4690e151f3956d2bab98af5acafd5c0b64f8b35b269536287fbc0"></a><!-- doxytag: member="QF_DIRECTORY_ONLY" ref="afc2afcdf99af4690e151f3956d2bab98af5acafd5c0b64f8b35b269536287fbc0" args="" -->QF_DIRECTORY_ONLY</em>&nbsp;</td><td>
-<p>Only operations with specified directory name should be considered. </p>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="afc2afcdf99af4690e151f3956d2bab98a23b1a54d8c4e2d38c2c28131c0f2450d"></a><!-- doxytag: member="QF_ANONYMOUS_ONLY" ref="afc2afcdf99af4690e151f3956d2bab98a23b1a54d8c4e2d38c2c28131c0f2450d" args="" -->QF_ANONYMOUS_ONLY</em>&nbsp;</td><td>
-<p>Only operations without specified path (anonymous) should be considered. </p>
-</td></tr>
-</table>
-</dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8">iser::IFileTypeInfo</a>.</p>
-
-<p>Definition at line <a class="el" href="_i_file_loader_8h_source.html#l00056">56</a> of file <a class="el" href="_i_file_loader_8h_source.html">IFileLoader.h</a>.</p>
-
-</div>
-</div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ae85f13328b0fdf79776ec255924d3cf8"></a><!-- doxytag: member="iser::IFileLoader::IsOperationSupported" ref="ae85f13328b0fdf79776ec255924d3cf8" args="(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=0, bool beQuiet=true) const =0" -->
+<a class="anchor" id="a7118893dbc48418fd3f6ebae054e883c"></a><!-- doxytag: member="iser::IFileLoader::IsOperationSupported" ref="a7118893dbc48418fd3f6ebae054e883c" args="(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=&#45;1, bool beQuiet=true) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -241,7 +204,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>flags</em> = <code>0</code>, </td>
+          <td class="paramname"><em>flags</em> = <code>-1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -269,7 +232,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_xsl_serializer_comp.html#a52d74ae384cfbd7690aee1d706f81a37">iqt::CXslSerializerComp</a>, <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a376d367dff9ff7c4803538df3226e759">iqtgui::CFileDialogLoaderComp</a>, <a class="el" href="classibase_1_1_t_file_serializer_comp.html#a8c0dea236747ff90dc7b0c451b694642">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;</a>, <a class="el" href="classiqt_1_1_c_bitmap_loader_comp.html#a30c62b5a8e1e59f9dd1e505055ef7e41">iqt::CBitmapLoaderComp</a>, <a class="el" href="classibase_1_1_t_file_serializer_comp.html#a8c0dea236747ff90dc7b0c451b694642">ibase::TFileSerializerComp&lt; iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive &gt;</a>, <a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a41b199e858939e20ca6c5d3adcf8e8e2">iqt::CRenderedObjectFileLoaderComp</a>, <a class="el" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#ae63486eb91d80724c104f1b60442ed3b">iqtmm::CSvgBitmapLoaderComp</a>, <a class="el" href="classiqtmm_1_1_c_media_loader_comp.html#ae2c7797949a9aaf60c6051ed2cbef481">iqtmm::CMediaLoaderComp</a>, <a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#acaa484ddd6fb29bdbca6246bd3126404">ibase::CRegistryCodeSaverComp</a>, <a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#aae8311a927e2db0b6db311ecd9f17a60">iqt::CSettingsSerializerComp</a>, <a class="el" href="classibase_1_1_c_composed_loader_comp.html#aa2a3724573b536c0a46e7801774abdca">ibase::CComposedLoaderComp</a>, <a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#a743db31088744ce47e2799a00fd52088">iqt::CClipboardSerializerComp</a>, and <a class="el" href="classibase_1_1_c_text_file_loader_comp.html#a26f0e0ff8794d548037a2b8e074c91d3">ibase::CTextFileLoaderComp</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_xsl_serializer_comp.html#aaa83b493be10dde043378d66e6cea7cb">iqt::CXslSerializerComp</a>, <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#ae1b6b95adb5ba70735d566f2d8fca0d7">iqtgui::CFileDialogLoaderComp</a>, <a class="el" href="classibase_1_1_t_file_serializer_comp.html#a4c78c087a4336e3512f8ac5582705fe2">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;</a>, <a class="el" href="classiqt_1_1_c_bitmap_loader_comp.html#aece2f8ca9bf1432291823b0825d1f508">iqt::CBitmapLoaderComp</a>, <a class="el" href="classibase_1_1_t_file_serializer_comp.html#a4c78c087a4336e3512f8ac5582705fe2">ibase::TFileSerializerComp&lt; iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive &gt;</a>, <a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#aa169995bfb541aae7063f72fe5604a1c">iqt::CRenderedObjectFileLoaderComp</a>, <a class="el" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#a5ef52e5251fe223eea3b6da03a9ef880">iqtmm::CSvgBitmapLoaderComp</a>, <a class="el" href="classiqtmm_1_1_c_media_loader_comp.html#ab04877783eefba8967643d4e6fcc13c7">iqtmm::CMediaLoaderComp</a>, <a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ac0ece656e7d080b9fa98f76f58b3563a">ibase::CRegistryCodeSaverComp</a>, <a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#a3221e741c0c57f32d9e18b1da26abc51">iqt::CSettingsSerializerComp</a>, <a class="el" href="classibase_1_1_c_composed_loader_comp.html#ae96f9b1ae27a4de6492276932ac09376">ibase::CComposedLoaderComp</a>, <a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#abcb74548023fb74119b8c3c605fc02ee">iqt::CClipboardSerializerComp</a>, and <a class="el" href="classibase_1_1_c_text_file_loader_comp.html#a1127c095b5bbbbc03545aec0af7bdbf2">ibase::CTextFileLoaderComp</a>.</p>
 
 </div>
 </div>
