@@ -158,7 +158,9 @@ int CFileDialogLoaderComp::AppendLoaderFilterList(const iser::IFileTypeInfo& fil
 	int retVal = 0;
 
 	istd::CStringList docExtensions;
-	fileTypeInfo.GetFileExtensions(docExtensions, flags);
+	if (!fileTypeInfo.GetFileExtensions(docExtensions, flags)){
+		return 0;
+	}
 
 	istd::CString commonDescription = fileTypeInfo.GetTypeDescription();
 
@@ -258,7 +260,7 @@ QString CFileDialogLoaderComp::GetFileName(const istd::CString& filePath, bool i
 			retVal = QFileDialog::getSaveFileName(
 						NULL,
 						tr("Enter file name"), 
-						m_lastSaveInfo.absolutePath(),
+						m_lastSaveInfo.absoluteFilePath(),
 						filterList,
 						&selectedFilter); 
 		}
@@ -266,7 +268,7 @@ QString CFileDialogLoaderComp::GetFileName(const istd::CString& filePath, bool i
 			retVal = QFileDialog::getOpenFileName(
 						NULL,
 						tr("Select a file to open"),
-						m_lastOpenInfo.absolutePath(),
+						m_lastOpenInfo.absoluteFilePath(),
 						filterList,
 						&selectedFilter);
 		}
@@ -276,16 +278,18 @@ QString CFileDialogLoaderComp::GetFileName(const istd::CString& filePath, bool i
 		selectionIndex = filterList.count('\n');
 	}
 
-	QFileInfo fileInfo(retVal);
-	if (isSaving){
-		m_lastSaveInfo = fileInfo;
-	}
-	else{
-		m_lastOpenInfo = fileInfo;
-	}
+	if (!retVal.isEmpty()){
+		QFileInfo fileInfo(retVal);
+		if (isSaving){
+			m_lastSaveInfo = fileInfo;
+		}
+		else{
+			m_lastOpenInfo = fileInfo;
+		}
 
-	if (m_statupDirectoryCompPtr.IsValid()){
-		m_statupDirectoryCompPtr->SetPath(iqt::GetCString(fileInfo.dir().absolutePath()));
+		if (m_statupDirectoryCompPtr.IsValid()){
+			m_statupDirectoryCompPtr->SetPath(iqt::GetCString(fileInfo.dir().absolutePath()));
+		}
 	}
 
 	return retVal;
