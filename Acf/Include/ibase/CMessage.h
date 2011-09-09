@@ -25,7 +25,7 @@
 
 
 #include "istd/ILogger.h"
-#include "istd/TOptDelPtr.h"
+#include "istd/TSmartPtr.h"
 
 #include "istd/CString.h"
 
@@ -76,7 +76,7 @@ protected:
 	istd::CString m_source;
 	int m_flags;
 
-	istd::TOptDelPtr<isys::IDateTime> m_timePtr;
+	istd::TSmartPtr<isys::IDateTime> m_timePtr;
 };
 
 

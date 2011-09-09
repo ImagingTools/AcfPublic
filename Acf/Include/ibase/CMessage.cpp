@@ -114,9 +114,9 @@ bool CMessage::Serialize(iser::IArchive& archive)
 
 void CMessage::InitializeMessageTime()
 {
-	m_timePtr.SetPtr(istd::CreateService<isys::IDateTime>());
+	m_timePtr = istd::CreateService<isys::IDateTime>();
 	if (!m_timePtr.IsValid()){
-		m_timePtr.SetPtr(new isys::CSimpleDateTime, true);
+		m_timePtr.SetPtr(new isys::CSimpleDateTime);
 	}
 	m_timePtr->SetCurrentTime();
 }
