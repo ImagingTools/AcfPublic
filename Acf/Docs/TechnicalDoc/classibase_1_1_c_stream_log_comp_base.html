@@ -22,7 +22,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">ACF
-   &#160;<span id="projectnumber">1.4.1.94</span>
+   &#160;<span id="projectnumber">1.4.1.95</span>
    </div>
    
   </td>
@@ -105,6 +105,8 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a1e58023a198a0433e4e3e911839d241c">WriteMessageToStream</a> (const <a class="el" href="classibase_1_1_i_message.html">ibase::IMessage</a> &amp;message)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Write formatted the message to the output stream.  <a href="#a1e58023a198a0433e4e3e911839d241c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#aab133a573f1095a66b61f62f7df010c7">GenerateMessageText</a> (const <a class="el" href="classibase_1_1_i_message.html">ibase::IMessage</a> &amp;message) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate formatted message text for the output.  <a href="#aab133a573f1095a66b61f62f7df010c7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a21cfe7c1d5dff9fb1988454d3ddd3db7">WriteText</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;text)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a text line to the output stream.  <a href="#a21cfe7c1d5dff9fb1988454d3ddd3db7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a23fabb0113f9e6990eca7bd3967b2a5f">NewLine</a> ()=0</td></tr>
@@ -169,6 +171,25 @@ Protected Member Functions</h2></td></tr>
 <p>Adds a message item to the container. </p>
 
 <p>Implements <a class="el" href="classibase_1_1_i_message_consumer.html#a00ab2d3aa60b88bf13a8c4ac687273cb">ibase::IMessageConsumer</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aab133a573f1095a66b61f62f7df010c7"></a><!-- doxytag: member="ibase::CStreamLogCompBase::GenerateMessageText" ref="aab133a573f1095a66b61f62f7df010c7" args="(const ibase::IMessage &amp;message) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> ibase::CStreamLogCompBase::GenerateMessageText </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classibase_1_1_i_message.html">ibase::IMessage</a> &amp;&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td> const<code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Generate formatted message text for the output. </p>
 
 </div>
 </div>

@@ -22,7 +22,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">ACF
-   &#160;<span id="projectnumber">1.4.1.94</span>
+   &#160;<span id="projectnumber">1.4.1.95</span>
    </div>
    
   </td>
@@ -93,30 +93,32 @@
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040 protected:
 <a name="l00044"></a>00044        virtual <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_stream_log_comp_base.html#a1e58023a198a0433e4e3e911839d241c" title="Write formatted the message to the output stream.">WriteMessageToStream</a>(const ibase::<a class="code" href="classibase_1_1_i_message.html" title="Common interface for an message.">IMessage</a>&amp; message);
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046        <span class="comment">// abstract methods</span>
-<a name="l00047"></a>00047 
-<a name="l00051"></a>00051        virtual <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_stream_log_comp_base.html#a21cfe7c1d5dff9fb1988454d3ddd3db7" title="Write a text line to the output stream.">WriteText</a>(const istd::CString&amp; text) = 0;
+<a name="l00045"></a>00045        
+<a name="l00049"></a>00049        virtual istd::CString <a class="code" href="classibase_1_1_c_stream_log_comp_base.html#aab133a573f1095a66b61f62f7df010c7" title="Generate formatted message text for the output.">GenerateMessageText</a>(const ibase::<a class="code" href="classibase_1_1_i_message.html" title="Common interface for an message.">IMessage</a>&amp; message) const;
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051        <span class="comment">// abstract methods</span>
 <a name="l00052"></a>00052 
-<a name="l00056"></a>00056        virtual <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_stream_log_comp_base.html#a23fabb0113f9e6990eca7bd3967b2a5f" title="Make new line.">NewLine</a>() = 0;
+<a name="l00056"></a>00056        virtual <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_stream_log_comp_base.html#a21cfe7c1d5dff9fb1988454d3ddd3db7" title="Write a text line to the output stream.">WriteText</a>(const istd::CString&amp; text) = 0;
 <a name="l00057"></a>00057 
-<a name="l00058"></a>00058        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00059"></a>00059        virtual <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_stream_log_comp_base.html#acea6b8ea476102049991780341479b56">OnComponentDestroyed</a>();
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 private:
-<a name="l00062"></a>00062        I_ATTR(<span class="keywordtype">int</span>, m_minPriorityAttrPtr);
-<a name="l00063"></a>00063        I_ATTR(<span class="keywordtype">bool</span>, m_isDotEnabledAttrPtr);
-<a name="l00064"></a>00064        I_ATTR(<span class="keywordtype">bool</span>, m_useTimeStampAttrPtr);
+<a name="l00061"></a>00061        virtual <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_stream_log_comp_base.html#a23fabb0113f9e6990eca7bd3967b2a5f" title="Make new line.">NewLine</a>() = 0;
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00064"></a>00064        virtual <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_stream_log_comp_base.html#acea6b8ea476102049991780341479b56">OnComponentDestroyed</a>();
 <a name="l00065"></a>00065 
-<a name="l00066"></a>00066        <span class="keywordtype">bool</span> m_isLastDotShown;
-<a name="l00067"></a>00067 };
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070 } <span class="comment">// namespace ibase</span>
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073 <span class="preprocessor">#endif // !ibase_CStreamLogCompBase_included</span>
-<a name="l00074"></a>00074 <span class="preprocessor"></span>
+<a name="l00066"></a>00066 private:
+<a name="l00067"></a>00067        I_ATTR(<span class="keywordtype">int</span>, m_minPriorityAttrPtr);
+<a name="l00068"></a>00068        I_ATTR(<span class="keywordtype">bool</span>, m_isDotEnabledAttrPtr);
+<a name="l00069"></a>00069        I_ATTR(<span class="keywordtype">bool</span>, m_useTimeStampAttrPtr);
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071        <span class="keywordtype">bool</span> m_isLastDotShown;
+<a name="l00072"></a>00072 };
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075 } <span class="comment">// namespace ibase</span>
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 <span class="preprocessor">#endif // !ibase_CStreamLogCompBase_included</span>
+<a name="l00079"></a>00079 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

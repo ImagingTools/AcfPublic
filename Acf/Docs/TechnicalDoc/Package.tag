@@ -348,6 +348,7 @@
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_message_8h</filename>
     <includes id="_i_logger_8h" name="ILogger.h" local="yes" imported="no">istd/ILogger.h</includes>
+    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
     <includes id="_c_simple_date_time_8h" name="CSimpleDateTime.h" local="yes" imported="no">isys/CSimpleDateTime.h</includes>
     <includes id="_i_message_8h" name="IMessage.h" local="yes" imported="no">ibase/IMessage.h</includes>
@@ -9172,6 +9173,13 @@
       <anchor>a2cfd9251b94e5f9a6fd5b4bfd281bb19</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>istd::TSmartPtr&lt; isys::IDateTime &gt;</type>
+      <name>TimePtr</name>
+      <anchorfile>classibase_1_1_c_message.html</anchorfile>
+      <anchor>a2676ddc340aaf455cec1ea7473795b48</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>istd::ILogger::MessageCategory</type>
       <name>m_category</name>
@@ -9208,10 +9216,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>isys::CSimpleDateTime</type>
-      <name>m_time</name>
+      <type>TimePtr</type>
+      <name>m_timePtr</name>
       <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a6875b2ec8729184a8c65947d1e82e5f1</anchor>
+      <anchor>abb3a9d8f8c020158151ad00ffc2ec448</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -9802,6 +9810,13 @@
       <anchorfile>classibase_1_1_c_stream_log_comp_base.html</anchorfile>
       <anchor>a1e58023a198a0433e4e3e911839d241c</anchor>
       <arglist>(const ibase::IMessage &amp;message)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GenerateMessageText</name>
+      <anchorfile>classibase_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>aab133a573f1095a66b61f62f7df010c7</anchor>
+      <arglist>(const ibase::IMessage &amp;message) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
@@ -34131,61 +34146,68 @@
       <anchor>ae690e3b2dfa33b48acf1c7513d42ae14ac2a7717d903429e38286ff80005ec858</anchor>
       <arglist></arglist>
     </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnAddMessage</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a4d46b6477fded36370462f614125fb9b</anchor>
+      <anchor>aad28c392f20131213ad382c9b1ab96fc</anchor>
       <arglist>(QTreeWidgetItem *itemPtr)</arglist>
     </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnRemoveMessage</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a8f0b019a0b11bef3d9a0420d45257e62</anchor>
+      <anchor>abfab01555ef6be6e1a3d119300302a26</anchor>
       <arglist>(QVariant messageId)</arglist>
     </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnReset</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a686e7da92ba272e37c95ec412506460e</anchor>
+      <anchor>a691f3484a4b4a29013125cb082fb905b</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnMessageModeChanged</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ac0f5d137910c0738be1a22b86a01a389</anchor>
+      <anchor>a47403ce2904f27d0a6ef3a1f193a7acf</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnClearAction</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a49c93623b65dc39fd6d354ca6b0f454d</anchor>
+      <anchor>ad96063bc481cedd226e746a125a671a2</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnExportAction</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a1fe31f066389d00fc37fedd1e737104f</anchor>
+      <anchor>acc4ebe610e35d3894f18c2f238f2d0c8</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>QTreeWidgetItem *</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QTreeWidgetItem *</type>
       <name>CreateGuiItem</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>abb84cb4779d5e83c50a2c8467fe90a5f</anchor>
+      <anchor>ad71fa6cabc06d472657c68625fec9fa2</anchor>
       <arglist>(const ibase::IMessage &amp;message)</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateItemState</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a2cd4ada9b299e4e4e548f9c0c75bcb84</anchor>
+      <anchor>a44909e40ef9b41d478dd952b85df1d21</anchor>
       <arglist>(QTreeWidgetItem &amp;item) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>GetIcon</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a1ab4405f0e140cbcb77e89e8f9cdcb4c</anchor>
+      <arglist>(istd::ILogger::MessageCategory mode)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -34214,6 +34236,41 @@
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
       <anchor>abdb9cdbe1c6f0e14ba5be543000a1c64</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction *</type>
+      <name>m_infoAction</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a98860c4c7f7db9e41527e2223ab07366</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction *</type>
+      <name>m_warningAction</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a613a9b6e8d533aab49908418f5598d6f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction *</type>
+      <name>m_errorAction</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>acae48f6a282b407013061115c92936f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction *</type>
+      <name>m_clearAction</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a09b464efdd211a6439f0954cbf5180c9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction *</type>
+      <name>m_exportAction</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a562431876996d842a9168ef1ed1b0a1d</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">

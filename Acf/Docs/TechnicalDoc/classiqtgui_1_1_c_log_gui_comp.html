@@ -22,7 +22,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">ACF
-   &#160;<span id="projectnumber">1.4.1.94</span>
+   &#160;<span id="projectnumber">1.4.1.95</span>
    </div>
    
   </td>
@@ -66,7 +66,8 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-slots">Protected Slots</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">iqtgui::CLogGuiComp Class Reference</div>  </div>
 </div>
@@ -135,17 +136,19 @@ Protected Types</h2></td></tr>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a4d46b6477fded36370462f614125fb9b">OnAddMessage</a> (QTreeWidgetItem *itemPtr)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a8f0b019a0b11bef3d9a0420d45257e62">OnRemoveMessage</a> (QVariant messageId)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a686e7da92ba272e37c95ec412506460e">OnReset</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#ac0f5d137910c0738be1a22b86a01a389">OnMessageModeChanged</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a49c93623b65dc39fd6d354ca6b0f454d">OnClearAction</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a1fe31f066389d00fc37fedd1e737104f">OnExportAction</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#aad28c392f20131213ad382c9b1ab96fc">OnAddMessage</a> (QTreeWidgetItem *itemPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#abfab01555ef6be6e1a3d119300302a26">OnRemoveMessage</a> (QVariant messageId)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a691f3484a4b4a29013125cb082fb905b">OnReset</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a47403ce2904f27d0a6ef3a1f193a7acf">OnMessageModeChanged</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#ad96063bc481cedd226e746a125a671a2">OnClearAction</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#acc4ebe610e35d3894f18c2f238f2d0c8">OnExportAction</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QTreeWidgetItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#abb84cb4779d5e83c50a2c8467fe90a5f">CreateGuiItem</a> (const <a class="el" href="classibase_1_1_i_message.html">ibase::IMessage</a> &amp;message)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create GUI item corresponding to specified message.  <a href="#abb84cb4779d5e83c50a2c8467fe90a5f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a2cd4ada9b299e4e4e548f9c0c75bcb84">UpdateItemState</a> (QTreeWidgetItem &amp;item) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QTreeWidgetItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#ad71fa6cabc06d472657c68625fec9fa2">CreateGuiItem</a> (const <a class="el" href="classibase_1_1_i_message.html">ibase::IMessage</a> &amp;message)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create GUI item corresponding to specified message.  <a href="#ad71fa6cabc06d472657c68625fec9fa2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a44909e40ef9b41d478dd952b85df1d21">UpdateItemState</a> (QTreeWidgetItem &amp;item) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QIcon&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a1ab4405f0e140cbcb77e89e8f9cdcb4c">GetIcon</a> (<a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">istd::ILogger::MessageCategory</a> mode)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get icons corresponding to specified MessageMode.  <a href="#a1ab4405f0e140cbcb77e89e8f9cdcb4c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#aeed1e50c8be9461a77121f946c7ecd49">OnGuiModelAttached</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#aeed1e50c8be9461a77121f946c7ecd49"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#aca39e9db4d7598da61351ccc6a2c8f50">OnGuiCreated</a> ()</td></tr>
@@ -154,11 +157,18 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called before update of the observer contents occures.  <a href="#ada1e10d11a41bb9192e0c5db7070ee40"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#abdb9cdbe1c6f0e14ba5be543000a1c64">AfterUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called after update of the observer contents occures.  <a href="#abdb9cdbe1c6f0e14ba5be543000a1c64"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a98860c4c7f7db9e41527e2223ab07366">m_infoAction</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a613a9b6e8d533aab49908418f5598d6f">m_warningAction</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#acae48f6a282b407013061115c92936f3">m_errorAction</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a09b464efdd211a6439f0954cbf5180c9">m_clearAction</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a562431876996d842a9168ef1ed1b0a1d">m_exportAction</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Message container displaying messages as log list. </p>
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00026">26</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a0908358f361b942063e5d9b3e951300e"></a><!-- doxytag: member="iqtgui::CLogGuiComp::BaseClass" ref="a0908358f361b942063e5d9b3e951300e" args="" -->
 <div class="memitem">
@@ -173,7 +183,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html#a4db84ac5f380ecdc510e2866d34e4a99">iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CLogGuiComp, ibase::IMessageContainer &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00030">30</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -201,7 +211,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00040">40</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00045">45</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -224,7 +234,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00056">56</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00061">61</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -251,7 +261,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00048">48</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00053">53</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -348,16 +358,16 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abb84cb4779d5e83c50a2c8467fe90a5f"></a><!-- doxytag: member="iqtgui::CLogGuiComp::CreateGuiItem" ref="abb84cb4779d5e83c50a2c8467fe90a5f" args="(const ibase::IMessage &amp;message)" -->
+<a class="anchor" id="ad71fa6cabc06d472657c68625fec9fa2"></a><!-- doxytag: member="iqtgui::CLogGuiComp::CreateGuiItem" ref="ad71fa6cabc06d472657c68625fec9fa2" args="(const ibase::IMessage &amp;message)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QTreeWidgetItem* iqtgui::CLogGuiComp::CreateGuiItem </td>
+          <td class="memname">virtual QTreeWidgetItem* iqtgui::CLogGuiComp::CreateGuiItem </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classibase_1_1_i_message.html">ibase::IMessage</a> &amp;&#160;</td>
           <td class="paramname"><em>message</em></td><td>)</td>
-          <td><code> [protected]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -417,16 +427,35 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4d46b6477fded36370462f614125fb9b"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnAddMessage" ref="a4d46b6477fded36370462f614125fb9b" args="(QTreeWidgetItem *itemPtr)" -->
+<a class="anchor" id="a1ab4405f0e140cbcb77e89e8f9cdcb4c"></a><!-- doxytag: member="iqtgui::CLogGuiComp::GetIcon" ref="a1ab4405f0e140cbcb77e89e8f9cdcb4c" args="(istd::ILogger::MessageCategory mode)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iqtgui::CLogGuiComp::OnAddMessage </td>
+          <td class="memname">virtual QIcon iqtgui::CLogGuiComp::GetIcon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">istd::ILogger::MessageCategory</a>&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get icons corresponding to specified MessageMode. </p>
+
+</div>
+</div>
+<a class="anchor" id="aad28c392f20131213ad382c9b1ab96fc"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnAddMessage" ref="aad28c392f20131213ad382c9b1ab96fc" args="(QTreeWidgetItem *itemPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CLogGuiComp::OnAddMessage </td>
           <td>(</td>
           <td class="paramtype">QTreeWidgetItem *&#160;</td>
           <td class="paramname"><em>itemPtr</em></td><td>)</td>
-          <td><code> [protected, slot]</code></td>
+          <td><code> [protected, virtual, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -434,15 +463,15 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a49c93623b65dc39fd6d354ca6b0f454d"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnClearAction" ref="a49c93623b65dc39fd6d354ca6b0f454d" args="()" -->
+<a class="anchor" id="ad96063bc481cedd226e746a125a671a2"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnClearAction" ref="ad96063bc481cedd226e746a125a671a2" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iqtgui::CLogGuiComp::OnClearAction </td>
+          <td class="memname">virtual void iqtgui::CLogGuiComp::OnClearAction </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [protected, slot]</code></td>
+          <td><code> [protected, virtual, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -450,15 +479,15 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1fe31f066389d00fc37fedd1e737104f"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnExportAction" ref="a1fe31f066389d00fc37fedd1e737104f" args="()" -->
+<a class="anchor" id="acc4ebe610e35d3894f18c2f238f2d0c8"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnExportAction" ref="acc4ebe610e35d3894f18c2f238f2d0c8" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iqtgui::CLogGuiComp::OnExportAction </td>
+          <td class="memname">virtual void iqtgui::CLogGuiComp::OnExportAction </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [protected, slot]</code></td>
+          <td><code> [protected, virtual, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -506,15 +535,15 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac0f5d137910c0738be1a22b86a01a389"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnMessageModeChanged" ref="ac0f5d137910c0738be1a22b86a01a389" args="()" -->
+<a class="anchor" id="a47403ce2904f27d0a6ef3a1f193a7acf"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnMessageModeChanged" ref="a47403ce2904f27d0a6ef3a1f193a7acf" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iqtgui::CLogGuiComp::OnMessageModeChanged </td>
+          <td class="memname">virtual void iqtgui::CLogGuiComp::OnMessageModeChanged </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [protected, slot]</code></td>
+          <td><code> [protected, virtual, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -522,16 +551,16 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8f0b019a0b11bef3d9a0420d45257e62"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnRemoveMessage" ref="a8f0b019a0b11bef3d9a0420d45257e62" args="(QVariant messageId)" -->
+<a class="anchor" id="abfab01555ef6be6e1a3d119300302a26"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnRemoveMessage" ref="abfab01555ef6be6e1a3d119300302a26" args="(QVariant messageId)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iqtgui::CLogGuiComp::OnRemoveMessage </td>
+          <td class="memname">virtual void iqtgui::CLogGuiComp::OnRemoveMessage </td>
           <td>(</td>
           <td class="paramtype">QVariant&#160;</td>
           <td class="paramname"><em>messageId</em></td><td>)</td>
-          <td><code> [protected, slot]</code></td>
+          <td><code> [protected, virtual, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -539,15 +568,15 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a686e7da92ba272e37c95ec412506460e"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnReset" ref="a686e7da92ba272e37c95ec412506460e" args="()" -->
+<a class="anchor" id="a691f3484a4b4a29013125cb082fb905b"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnReset" ref="a691f3484a4b4a29013125cb082fb905b" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iqtgui::CLogGuiComp::OnReset </td>
+          <td class="memname">virtual void iqtgui::CLogGuiComp::OnReset </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [protected, slot]</code></td>
+          <td><code> [protected, virtual, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -555,20 +584,96 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2cd4ada9b299e4e4e548f9c0c75bcb84"></a><!-- doxytag: member="iqtgui::CLogGuiComp::UpdateItemState" ref="a2cd4ada9b299e4e4e548f9c0c75bcb84" args="(QTreeWidgetItem &amp;item) const " -->
+<a class="anchor" id="a44909e40ef9b41d478dd952b85df1d21"></a><!-- doxytag: member="iqtgui::CLogGuiComp::UpdateItemState" ref="a44909e40ef9b41d478dd952b85df1d21" args="(QTreeWidgetItem &amp;item) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iqtgui::CLogGuiComp::UpdateItemState </td>
+          <td class="memname">virtual void iqtgui::CLogGuiComp::UpdateItemState </td>
           <td>(</td>
           <td class="paramtype">QTreeWidgetItem &amp;&#160;</td>
           <td class="paramname"><em>item</em></td><td>)</td>
-          <td> const<code> [protected]</code></td>
+          <td> const<code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a09b464efdd211a6439f0954cbf5180c9"></a><!-- doxytag: member="iqtgui::CLogGuiComp::m_clearAction" ref="a09b464efdd211a6439f0954cbf5180c9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction* <a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a09b464efdd211a6439f0954cbf5180c9">iqtgui::CLogGuiComp::m_clearAction</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00106">106</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acae48f6a282b407013061115c92936f3"></a><!-- doxytag: member="iqtgui::CLogGuiComp::m_errorAction" ref="acae48f6a282b407013061115c92936f3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction* <a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#acae48f6a282b407013061115c92936f3">iqtgui::CLogGuiComp::m_errorAction</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00105">105</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a562431876996d842a9168ef1ed1b0a1d"></a><!-- doxytag: member="iqtgui::CLogGuiComp::m_exportAction" ref="a562431876996d842a9168ef1ed1b0a1d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction* <a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a562431876996d842a9168ef1ed1b0a1d">iqtgui::CLogGuiComp::m_exportAction</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00107">107</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98860c4c7f7db9e41527e2223ab07366"></a><!-- doxytag: member="iqtgui::CLogGuiComp::m_infoAction" ref="a98860c4c7f7db9e41527e2223ab07366" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction* <a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a98860c4c7f7db9e41527e2223ab07366">iqtgui::CLogGuiComp::m_infoAction</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00103">103</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a613a9b6e8d533aab49908418f5598d6f"></a><!-- doxytag: member="iqtgui::CLogGuiComp::m_warningAction" ref="a613a9b6e8d533aab49908418f5598d6f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction* <a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a613a9b6e8d533aab49908418f5598d6f">iqtgui::CLogGuiComp::m_warningAction</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00104">104</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
