@@ -1,8 +1,8 @@
 /********************************************************************************
 **
-**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF-Solutions Toolkit.
+**	This file is part of the IACF Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,24 +15,38 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**	by Skype to ACF_infoline for further information about the IACF.
 **
 ********************************************************************************/
 
 
-//{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ generated include file.
-// Used by Compositor.rc
-//
-#define IDI_ICON1                       102
+#ifndef IMeilhausAccess_included
+#define IMeilhausAccess_included
 
-// Next default values for new objects
-// 
-#ifdef APSTUDIO_INVOKED
-#ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        103
-#define _APS_NEXT_COMMAND_VALUE         40001
-#define _APS_NEXT_CONTROL_VALUE         1001
-#define _APS_NEXT_SYMED_VALUE           101
-#endif
-#endif
+
+#include "istd/IPolymorphic.h"
+#include "istd/CRange.h"
+
+#include "isig/ISamplingConstraints.h"
+
+
+namespace imebase
+{
+
+
+class CChannelSelectionNode;
+
+
+class IMeilhausAccess: public isig::ISamplingConstraints
+{
+public:
+	virtual bool CreateSelectionTree(CChannelSelectionNode& result) const = 0;
+};
+
+
+} // namespace imebase
+
+
+#endif // !IMeilhausAccess_included
+
+
