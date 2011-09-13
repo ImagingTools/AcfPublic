@@ -49,6 +49,11 @@ public:
 		\return	pointer to observed model, or NULL if no model is connected.
 	*/
 	imod::IModel* GetModelPtr() const;
+	/**
+		Make sure this observer is detached.
+		It calls model method DetachObserver() if model is available.
+	*/
+	void EnsureModelDetached();
 
 	// reimplemented (imod::IObserver)
 	virtual bool IsModelAttached(const imod::IModel* modelPtr) const;
@@ -62,11 +67,6 @@ protected:
 		Set internal model pointer to specified value.
 	*/
 	void SetModelPtr(imod::IModel* modelPtr);
-	/**
-		Make sure this observer is detached.
-		It calls model method DetachObserver() if model is available.
-	*/
-	void EnsureModelDetached();
 
 	virtual void OnUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr);
 

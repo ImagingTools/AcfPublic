@@ -44,6 +44,16 @@ CSingleModelObserverBase::~CSingleModelObserverBase()
 }
 
 
+void CSingleModelObserverBase::EnsureModelDetached()
+{
+	if (m_modelPtr != NULL){
+		m_modelPtr->DetachObserver(this);
+	}
+
+	m_modelPtr = NULL;
+}
+
+
 // reimplemented (IObserver)
 
 bool CSingleModelObserverBase::OnAttached(imod::IModel* modelPtr)
@@ -97,16 +107,6 @@ void CSingleModelObserverBase::AfterUpdate(
 
 
 // protected methods
-
-void CSingleModelObserverBase::EnsureModelDetached()
-{
-	if (m_modelPtr != NULL){
-		m_modelPtr->DetachObserver(this);
-	}
-
-	m_modelPtr = NULL;
-}
-
 
 void CSingleModelObserverBase::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {

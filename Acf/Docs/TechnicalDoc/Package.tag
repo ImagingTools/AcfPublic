@@ -5114,10 +5114,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>TSmartPtr&lt; Service &gt;</type>
+      <type>TTransPtr&lt; Service &gt;</type>
       <name>CreateService</name>
       <anchorfile>group___system.html</anchorfile>
-      <anchor>gaa90c00dd340d2fe1b716e7a87ae0ab26</anchor>
+      <anchor>ga71f9fc449ec076ba12a9c2d1b124bbf0</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -5997,10 +5997,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>TSmartPtr&lt; Service &gt;</type>
+      <type>TTransPtr&lt; Service &gt;</type>
       <name>CreateService</name>
       <anchorfile>group___system.html</anchorfile>
-      <anchor>gaa90c00dd340d2fe1b716e7a87ae0ab26</anchor>
+      <anchor>ga71f9fc449ec076ba12a9c2d1b124bbf0</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -24147,6 +24147,13 @@
       <anchor>aa829b5502a451e194324e36688d2352b</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>EnsureModelDetached</name>
+      <anchorfile>classimod_1_1_c_single_model_observer_base.html</anchorfile>
+      <anchor>a96b2bae380788b93b7d324b6e8947d97</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsModelAttached</name>
@@ -24188,13 +24195,6 @@
       <anchorfile>classimod_1_1_c_single_model_observer_base.html</anchorfile>
       <anchor>aaed65edfc15ffaabacc45627ea7a38b4</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>EnsureModelDetached</name>
-      <anchorfile>classimod_1_1_c_single_model_observer_base.html</anchorfile>
-      <anchor>a96b2bae380788b93b7d324b6e8947d97</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -26040,6 +26040,13 @@
       <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
       <anchor>a1e77a85bac7e41c195721e403f6ba204</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
+      <anchor>ad4e2f3e85eccbfeaa8aad7b2c29dad3d</anchor>
+      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -39673,10 +39680,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>TSmartPtr&lt; Service &gt;</type>
+      <type>TTransPtr&lt; Service &gt;</type>
       <name>CreateService</name>
       <anchorfile>group___system.html</anchorfile>
-      <anchor>gaa90c00dd340d2fe1b716e7a87ae0ab26</anchor>
+      <anchor>ga71f9fc449ec076ba12a9c2d1b124bbf0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -43492,20 +43499,6 @@
       <arglist>(const TSmartPtr &amp;pointer)</arglist>
     </member>
     <member kind="function">
-      <type></type>
-      <name>~TSmartPtr</name>
-      <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>a2378a8b9047b4afdb6404342ed68e319</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Reset</name>
-      <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>ab7c830426e5f20e66334add2b405cf40</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
       <name>SetPtr</name>
       <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
@@ -43516,22 +43509,22 @@
       <type>bool</type>
       <name>SetCastedOrRemove</name>
       <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>a37521dd1f62f2275e112d9bf1a94b967</anchor>
-      <arglist>(SourceType *ptr)</arglist>
+      <anchor>accf7ef1b8873d4e1af461bb0f4005bb4</anchor>
+      <arglist>(SourceType *pointer)</arglist>
     </member>
     <member kind="function">
       <type>TSmartPtr &amp;</type>
       <name>operator=</name>
       <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>a1b0b76eedc84eada195966e864859f26</anchor>
-      <arglist>(const TSmartPtr &amp;otherCounter)</arglist>
+      <anchor>a7bd1b22c0b70bec2057075e76008877b</anchor>
+      <arglist>(const TTransPtr&lt; Type &gt; &amp;pointer)</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>Detach</name>
+    <member kind="function">
+      <type>TSmartPtr &amp;</type>
+      <name>operator=</name>
       <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>a54b1d1d1439f6f083a72fa451ee59b3f</anchor>
-      <arglist>()</arglist>
+      <anchor>a5dda1d2164a27bc539f6e87c9419e581</anchor>
+      <arglist>(const TSmartPtr &amp;pointer)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43549,8 +43542,8 @@
       <type></type>
       <name>RefCounter</name>
       <anchorfile>classistd_1_1_t_smart_ptr_1_1_ref_counter.html</anchorfile>
-      <anchor>a79eee9f7b818960b0142e71af9ef64c1</anchor>
-      <arglist>(Type *ptr)</arglist>
+      <anchor>a96ebd3e13fb4935ba9fb64022b847666</anchor>
+      <arglist>(Type *pointer)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -43576,8 +43569,15 @@
       <type></type>
       <name>TTransPtr</name>
       <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
-      <anchor>a57353c0e5f2caf36db29f88b355bf66b</anchor>
-      <arglist>(const TTransPtr &amp;other)</arglist>
+      <anchor>aeb7c7e8c6b357085786f5e4c29553848</anchor>
+      <arglist>(const TTransPtr &amp;pointer)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~TTransPtr</name>
+      <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
+      <anchor>a6c74e3d7f215631bccb9e0e3a8225ff4</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -43601,11 +43601,25 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
+      <anchor>ace05713d228ce99dee02383e4ffbf3da</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>CastedType</type>
       <name>Cast</name>
       <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
       <anchor>ac934238a4fee37066d7c0bb4f5fcad11</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>TTransPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
+      <anchor>a2ca95649b6b7161a36af150ff52e50d6</anchor>
+      <arglist>(TTransPtr &amp;pointer)</arglist>
     </member>
     <member kind="function">
       <type>Type &amp;</type>
@@ -43627,6 +43641,20 @@
       <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
       <anchor>ac28e3078693dd9f3f7d0dc8288b5b13e</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>Detach</name>
+      <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
+      <anchor>afacf60454ad11ebcc52ecde7d7ab58be</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>RefCountBase *</type>
+      <name>GetInternalCounter</name>
+      <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
+      <anchor>a2a4201d4498d60dc9eb96d5f5483caec</anchor>
+      <arglist>(const TTransPtr &amp;pointer) const </arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>RefCountBase *</type>
@@ -43651,8 +43679,8 @@
       <type></type>
       <name>RefCountBase</name>
       <anchorfile>classistd_1_1_t_trans_ptr_1_1_ref_count_base.html</anchorfile>
-      <anchor>ad9258d3ea8693aba9c1a6207c5ac9083</anchor>
-      <arglist>(Type *ptr)</arglist>
+      <anchor>a2c807993381b564d3a03d036070fc8ff</anchor>
+      <arglist>(Type *pointer)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>

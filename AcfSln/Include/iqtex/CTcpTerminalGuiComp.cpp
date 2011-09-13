@@ -100,11 +100,10 @@ void CTcpTerminalGuiComp::OnComponentCreated()
 void CTcpTerminalGuiComp::OnComponentDestroyed()
 {
 	m_socket.disconnectFromHost();
-	BaseClass::OnComponentDestroyed();
 
-	if (m_urlParamModelCompPtr.IsValid() && m_urlParamModelCompPtr->IsAttached(this)){
-		m_urlParamModelCompPtr->DetachObserver(this);
-	}
+	imod::CSingleModelObserverBase::EnsureModelDetached();
+
+	BaseClass::OnComponentDestroyed();
 }
 
 

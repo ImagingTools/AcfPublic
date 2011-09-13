@@ -43,7 +43,9 @@ void CObjectPreviewGuiComp::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
-	if (m_objectModelCompPtr.IsValid() && m_objectObserverCompPtr.IsValid() && !m_objectModelCompPtr->IsAttached(m_objectObserverCompPtr.GetPtr())){
+	if (		m_objectModelCompPtr.IsValid() &&
+				m_objectObserverCompPtr.IsValid() &&
+				!m_objectModelCompPtr->IsAttached(m_objectObserverCompPtr.GetPtr())){
 		m_objectModelCompPtr->AttachObserver(m_objectObserverCompPtr.GetPtr());
 	}
 }
@@ -51,10 +53,10 @@ void CObjectPreviewGuiComp::OnGuiModelAttached()
 
 void CObjectPreviewGuiComp::OnGuiModelDetached()
 {
-	if (m_objectModelCompPtr.IsValid() && m_objectObserverCompPtr.IsValid()){
-		if (m_objectModelCompPtr->IsAttached(m_objectObserverCompPtr.GetPtr())){
-			m_objectModelCompPtr->DetachObserver(m_objectObserverCompPtr.GetPtr());
-		}
+	if (		m_objectModelCompPtr.IsValid() &&
+				m_objectObserverCompPtr.IsValid() &&
+				m_objectModelCompPtr->IsAttached(m_objectObserverCompPtr.GetPtr())){
+		m_objectModelCompPtr->DetachObserver(m_objectObserverCompPtr.GetPtr());
 	}
 
 	BaseClass::OnGuiModelDetached();
