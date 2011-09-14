@@ -154,7 +154,7 @@
 <a name="l00134"></a>00134 <span class="keyword"></span>{
 <a name="l00135"></a>00135        QString filter = CreateFileDialogFilter(&amp;documentTypeId, <a class="code" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8aa405328fad211e44b5a3eca44411accb" title="Operations with specified file name should be considered.">iser::IFileLoader::QF_FILE</a> | <a class="code" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a5ff3ec0ae476ca071cc761ed8cba3a81" title="No loading operation should be considered.">iser::IFileLoader::QF_SAVE</a>);
 <a name="l00136"></a>00136 
-<a name="l00137"></a>00137        QString filePath = QFileDialog::getSaveFileName(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, tr(<span class="stringliteral">&quot;Save...&quot;</span>), m_lastDirectory, filter);
+<a name="l00137"></a>00137        QString filePath = QFileDialog::getSaveFileName(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, Gui::tr(<span class="stringliteral">&quot;Save...&quot;</span>), m_lastDirectory, filter);
 <a name="l00138"></a>00138 
 <a name="l00139"></a>00139        UpdateLastDirectory(filePath);
 <a name="l00140"></a>00140 
@@ -169,7 +169,7 @@
 <a name="l00149"></a>00149 <span class="keyword"></span>{
 <a name="l00150"></a>00150        QString retVal;
 <a name="l00151"></a>00151 
-<a name="l00152"></a>00152        <span class="keyword">const</span> <a class="code" href="classidoc_1_1_i_document_template.html" title="Document template creating and controling views and models.">idoc::IDocumentTemplate</a>* templatePtr = GetDocumentTemplate();
+<a name="l00152"></a>00152        <span class="keyword">const</span> <a class="code" href="classidoc_1_1_i_document_template.html" title="Document template creating and controling views and models.">idoc::IDocumentTemplate</a>* templatePtr = BaseClass::GetDocumentTemplate();
 <a name="l00153"></a>00153        <span class="keywordflow">if</span> (templatePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00154"></a>00154               <a class="code" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">idoc::IDocumentTemplate::Ids</a> docTypeIds = templatePtr-&gt;<a class="code" href="classidoc_1_1_i_document_template.html#a2d8f24efbd48c2042415c52cb227d7f2" title="Get list of supported document ID&#39;s can be created for specified file.">GetDocumentTypeIds</a>();
 <a name="l00155"></a>00155 
@@ -194,7 +194,7 @@
 <a name="l00174"></a>00174               }
 <a name="l00175"></a>00175 
 <a name="l00176"></a>00176               <span class="keywordflow">if</span> ((filtersCount &gt; 1) &amp;&amp; ((flags &amp; <a class="code" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a5ff3ec0ae476ca071cc761ed8cba3a81" title="No loading operation should be considered.">iser::IFileLoader::QF_SAVE</a>) == 0)){
-<a name="l00177"></a>00177                      retVal = tr(<span class="stringliteral">&quot;All known documents (%1)\n&quot;</span>).arg(allExt) + retVal;
+<a name="l00177"></a>00177                      retVal = Gui::tr(<span class="stringliteral">&quot;All known documents (%1)\n&quot;</span>).arg(allExt) + retVal;
 <a name="l00178"></a>00178               }
 <a name="l00179"></a>00179        }
 <a name="l00180"></a>00180 
@@ -215,7 +215,7 @@
 <a name="l00195"></a>00195 <span class="keyword"></span>{
 <a name="l00196"></a>00196        QString filter = CreateFileDialogFilter(documentTypeIdPtr, <a class="code" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8aa405328fad211e44b5a3eca44411accb" title="Operations with specified file name should be considered.">iser::IFileLoader::QF_FILE</a> | <a class="code" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a9dbb719698b08d4104837a5dbfabc8df" title="No saving operation should be considered.">iser::IFileLoader::QF_LOAD</a>);
 <a name="l00197"></a>00197 
-<a name="l00198"></a>00198        <span class="keywordflow">return</span> QFileDialog::getOpenFileNames(GetWidget(), tr(<span class="stringliteral">&quot;Open Files...&quot;</span>), m_lastDirectory, filter);
+<a name="l00198"></a>00198        <span class="keywordflow">return</span> QFileDialog::getOpenFileNames(Gui::GetWidget(), Gui::tr(<span class="stringliteral">&quot;Open Files...&quot;</span>), m_lastDirectory, filter);
 <a name="l00199"></a>00199 }
 <a name="l00200"></a>00200 
 <a name="l00201"></a>00201 

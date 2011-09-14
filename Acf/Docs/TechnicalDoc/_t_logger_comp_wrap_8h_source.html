@@ -78,7 +78,7 @@
 <a name="l00059"></a><a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a39587000b2300dfaf8101e3dde41deed">00059</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a39587000b2300dfaf8101e3dde41deed" title="Send verbose message.">TLoggerCompWrap&lt;Base&gt;::SendVerboseMessage</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; message, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; messageSource)<span class="keyword"> const</span>
 <a name="l00060"></a>00060 <span class="keyword"></span>{
 <a name="l00061"></a>00061        <span class="keywordflow">if</span> (m_verboseEnabledAttrPtr.IsValid() &amp;&amp; *m_verboseEnabledAttrPtr){
-<a name="l00062"></a>00062               SendInfoMessage(0, message, messageSource);
+<a name="l00062"></a>00062               BaseClass::SendInfoMessage(0, message, messageSource);
 <a name="l00063"></a>00063        }
 <a name="l00064"></a>00064 }
 <a name="l00065"></a>00065 

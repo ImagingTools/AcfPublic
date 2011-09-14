@@ -177,20 +177,20 @@
 <a name="l00284"></a>00284        <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_t_matrix.html#ada002989c6f60d89047c89bdb0412bca">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
 <a name="l00285"></a>00285 
 <a name="l00286"></a>00286        <span class="comment">// operators</span>
-<a name="l00287"></a>00287        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#a8b0b676ddbeed43b27690b5501139919">operator+</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a>&amp; b) <span class="keyword">const</span>;
-<a name="l00288"></a>00288        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#ad0d553a1168ed6c9533555349d1e0d31">operator-</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a>&amp; b) <span class="keyword">const</span>;
+<a name="l00287"></a>00287        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#a221eaa1dfa52bdf40be89cf0bad1e6fe">operator+</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a>&amp; matrix) <span class="keyword">const</span>;
+<a name="l00288"></a>00288        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#ad0d553a1168ed6c9533555349d1e0d31">operator-</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a>&amp; matrix) <span class="keyword">const</span>;
 <a name="l00289"></a>00289        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#ad0d553a1168ed6c9533555349d1e0d31">operator-</a>();
 <a name="l00290"></a>00290        <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> SecondW<span class="keywordtype">id</span>th&gt;
-<a name="l00291"></a><a class="code" href="classimath_1_1_t_matrix.html#a8b89877861cd1f8da36bd6e66dbcff15">00291</a>        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;SecondWidth, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#a8b89877861cd1f8da36bd6e66dbcff15">operator*</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;SecondWidth, Width, Element&gt;</a>&amp; b)<span class="keyword"> const</span>
+<a name="l00291"></a><a class="code" href="classimath_1_1_t_matrix.html#adcca608b9046b007787d749234ab6526">00291</a>        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;SecondWidth, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#adcca608b9046b007787d749234ab6526">operator*</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;SecondWidth, Width, Element&gt;</a>&amp; matrix)<span class="keyword"> const</span>
 <a name="l00292"></a>00292 <span class="keyword">       </span>{
-<a name="l00293"></a>00293               <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;SecondWidth, Height, Element&gt;</a> result;
+<a name="l00293"></a>00293               <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;SecondWidth, Height, Element&gt;</a> retVal;
 <a name="l00294"></a>00294 
-<a name="l00295"></a>00295               <a class="code" href="classimath_1_1_t_matrix.html#a1d3d7510fce268e181d90eb77ec39180" title="Get result of multiplication of two matrices.">GetMultiplied</a>(matrix, result);
+<a name="l00295"></a>00295               <a class="code" href="classimath_1_1_t_matrix.html#a1d3d7510fce268e181d90eb77ec39180" title="Get result of multiplication of two matrices.">GetMultiplied</a>(matrix, retVal);
 <a name="l00296"></a>00296 
-<a name="l00297"></a>00297               <span class="keywordflow">return</span> result;
+<a name="l00297"></a>00297               <span class="keywordflow">return</span> retVal;
 <a name="l00298"></a>00298        }
 <a name="l00299"></a>00299 
-<a name="l00300"></a>00300        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#a8b89877861cd1f8da36bd6e66dbcff15">operator*</a>(<span class="keywordtype">double</span> value) <span class="keyword">const</span>;
+<a name="l00300"></a>00300        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#adcca608b9046b007787d749234ab6526">operator*</a>(<span class="keywordtype">double</span> value) <span class="keyword">const</span>;
 <a name="l00301"></a>00301 
 <a name="l00302"></a>00302        <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_t_matrix.html#a2c549382f105735a0b9c55706a9239ab">operator==</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a>&amp; matrix) <span class="keyword">const</span>;
 <a name="l00303"></a>00303        <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_t_matrix.html#a53ce294f1419f261f51db31dbd07b110">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a>&amp; matrix) <span class="keyword">const</span>;
@@ -212,7 +212,7 @@
 <a name="l00319"></a>00319 <span class="keyword"></span>{
 <a name="l00320"></a>00320     <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Height, Width, Element&gt;</a> retVal;
 <a name="l00321"></a>00321 
-<a name="l00322"></a>00322        GetTransposed(result);
+<a name="l00322"></a>00322        GetTransposed(retVal);
 <a name="l00323"></a>00323 
 <a name="l00324"></a>00324        <span class="keywordflow">return</span> retVal;
 <a name="l00325"></a>00325 }
@@ -221,11 +221,11 @@
 <a name="l00328"></a>00328 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> W<span class="keywordtype">id</span>th, <span class="keywordtype">int</span> Height, <span class="keyword">typename</span> Element&gt;
 <a name="l00329"></a><a class="code" href="classimath_1_1_t_matrix.html#a64a00ccfe1d0606e27b24d1b8ba8c815">00329</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_t_matrix.html#a64a00ccfe1d0606e27b24d1b8ba8c815" title="Transpose matrix.">TMatrix&lt;Width, Height, Element&gt;::Transpose</a>()
 <a name="l00330"></a>00330 {
-<a name="l00331"></a>00331     <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Height, Width, Element&gt;</a> result;
+<a name="l00331"></a>00331        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Height, Width, Element&gt;</a> retVal;
 <a name="l00332"></a>00332 
-<a name="l00333"></a>00333        GetTransposed(result);
+<a name="l00333"></a>00333        GetTransposed(retVal);
 <a name="l00334"></a>00334 
-<a name="l00335"></a>00335        *<span class="keyword">this</span> = result;
+<a name="l00335"></a>00335        *<span class="keyword">this</span> = retVal;
 <a name="l00336"></a>00336 }
 <a name="l00337"></a>00337 
 <a name="l00338"></a>00338 
@@ -241,46 +241,46 @@
 <a name="l00348"></a>00348 
 <a name="l00349"></a>00349 
 <a name="l00350"></a>00350 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> W<span class="keywordtype">id</span>th, <span class="keywordtype">int</span> Height, <span class="keyword">typename</span> Element&gt;
-<a name="l00351"></a><a class="code" href="classimath_1_1_t_matrix.html#a8b0b676ddbeed43b27690b5501139919">00351</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#a8b0b676ddbeed43b27690b5501139919">TMatrix&lt;Width, Height, Element&gt;::operator+</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a>&amp; matrix)<span class="keyword"> const</span>
+<a name="l00351"></a><a class="code" href="classimath_1_1_t_matrix.html#a221eaa1dfa52bdf40be89cf0bad1e6fe">00351</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#a221eaa1dfa52bdf40be89cf0bad1e6fe">TMatrix&lt;Width, Height, Element&gt;::operator+</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a>&amp; matrix)<span class="keyword"> const</span>
 <a name="l00352"></a>00352 <span class="keyword"></span>{
-<a name="l00353"></a>00353     <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> result;
+<a name="l00353"></a>00353        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> retVal;
 <a name="l00354"></a>00354 
-<a name="l00355"></a>00355        GetAdded(matrix, result);
+<a name="l00355"></a>00355        GetAdded(matrix, retVal);
 <a name="l00356"></a>00356 
-<a name="l00357"></a>00357        <span class="keywordflow">return</span> result;
+<a name="l00357"></a>00357        <span class="keywordflow">return</span> retVal;
 <a name="l00358"></a>00358 }
 <a name="l00359"></a>00359 
 <a name="l00360"></a>00360 
 <a name="l00361"></a>00361 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> W<span class="keywordtype">id</span>th, <span class="keywordtype">int</span> Height, <span class="keyword">typename</span> Element&gt;
-<a name="l00362"></a><a class="code" href="classimath_1_1_t_matrix.html#a81dd99491068e7e5655903d002bb2d0d">00362</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#ad0d553a1168ed6c9533555349d1e0d31">TMatrix&lt;Width, Height, Element&gt;::operator-</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a>&amp; matrix)<span class="keyword"> const</span>
+<a name="l00362"></a><a class="code" href="classimath_1_1_t_matrix.html#acbd42dabc264366aabdb3c5cae59a432">00362</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#ad0d553a1168ed6c9533555349d1e0d31">TMatrix&lt;Width, Height, Element&gt;::operator-</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a>&amp; matrix)<span class="keyword"> const</span>
 <a name="l00363"></a>00363 <span class="keyword"></span>{
-<a name="l00364"></a>00364     <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> result;
+<a name="l00364"></a>00364        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> retVal;
 <a name="l00365"></a>00365 
-<a name="l00366"></a>00366     GetSubstracted(matrix, result);
+<a name="l00366"></a>00366        GetSubstracted(matrix, retVal);
 <a name="l00367"></a>00367 
-<a name="l00368"></a>00368        <span class="keywordflow">return</span> result;
+<a name="l00368"></a>00368        <span class="keywordflow">return</span> retVal;
 <a name="l00369"></a>00369 }
 <a name="l00370"></a>00370 
 <a name="l00371"></a>00371 
 <a name="l00372"></a>00372 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> W<span class="keywordtype">id</span>th, <span class="keywordtype">int</span> Height, <span class="keyword">typename</span> Element&gt;
 <a name="l00373"></a><a class="code" href="classimath_1_1_t_matrix.html#ad0d553a1168ed6c9533555349d1e0d31">00373</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#ad0d553a1168ed6c9533555349d1e0d31">TMatrix&lt;Width, Height, Element&gt;::operator-</a>()
 <a name="l00374"></a>00374 {
-<a name="l00375"></a>00375        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> result;
+<a name="l00375"></a>00375        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> retVal;
 <a name="l00376"></a>00376 
-<a name="l00377"></a>00377        GetNegated(result);
+<a name="l00377"></a>00377        GetNegated(retVal);
 <a name="l00378"></a>00378 
-<a name="l00379"></a>00379        <span class="keywordflow">return</span> result;
+<a name="l00379"></a>00379        <span class="keywordflow">return</span> retVal;
 <a name="l00380"></a>00380 }
 <a name="l00381"></a>00381 
 <a name="l00382"></a>00382 
 <a name="l00383"></a>00383 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> W<span class="keywordtype">id</span>th, <span class="keywordtype">int</span> Height, <span class="keyword">typename</span> Element&gt;
-<a name="l00384"></a><a class="code" href="classimath_1_1_t_matrix.html#a2bb5b7ed96c113150e5644309a99bc04">00384</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#a8b89877861cd1f8da36bd6e66dbcff15">TMatrix&lt;Width, Height, Element&gt;::operator*</a>(<span class="keywordtype">double</span> value)<span class="keyword"> const</span>
+<a name="l00384"></a><a class="code" href="classimath_1_1_t_matrix.html#a2bb5b7ed96c113150e5644309a99bc04">00384</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#adcca608b9046b007787d749234ab6526">TMatrix&lt;Width, Height, Element&gt;::operator*</a>(<span class="keywordtype">double</span> value)<span class="keyword"> const</span>
 <a name="l00385"></a>00385 <span class="keyword"></span>{
-<a name="l00386"></a>00386     <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix</a> result;
+<a name="l00386"></a>00386        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix</a> retVal;
 <a name="l00387"></a>00387 
-<a name="l00388"></a>00388     GetScaled(value, result);
+<a name="l00388"></a>00388        GetScaled(value, retVal);
 <a name="l00389"></a>00389 
-<a name="l00390"></a>00390        <span class="keywordflow">return</span> result;
+<a name="l00390"></a>00390        <span class="keywordflow">return</span> retVal;
 <a name="l00391"></a>00391 }
 <a name="l00392"></a>00392 
 <a name="l00393"></a>00393 

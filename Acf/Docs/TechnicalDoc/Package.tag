@@ -2804,6 +2804,7 @@
     <path>C:/Temp/Acf/Include/iproc/</path>
     <filename>_i_processor_8h</filename>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
+    <includes id="_i_progress_manager_8h" name="IProgressManager.h" local="yes" imported="no">iproc/IProgressManager.h</includes>
     <class kind="class">iproc::IProcessor</class>
     <namespace>iproc</namespace>
   </compound>
@@ -23113,15 +23114,15 @@
       <type>TMatrix&lt; Width, Height, Element &gt;</type>
       <name>operator+</name>
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
-      <anchor>a8b0b676ddbeed43b27690b5501139919</anchor>
-      <arglist>(const TMatrix&lt; Width, Height, Element &gt; &amp;b) const </arglist>
+      <anchor>a221eaa1dfa52bdf40be89cf0bad1e6fe</anchor>
+      <arglist>(const TMatrix&lt; Width, Height, Element &gt; &amp;matrix) const </arglist>
     </member>
     <member kind="function">
       <type>TMatrix&lt; Width, Height, Element &gt;</type>
       <name>operator-</name>
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
-      <anchor>a81dd99491068e7e5655903d002bb2d0d</anchor>
-      <arglist>(const TMatrix&lt; Width, Height, Element &gt; &amp;b) const </arglist>
+      <anchor>acbd42dabc264366aabdb3c5cae59a432</anchor>
+      <arglist>(const TMatrix&lt; Width, Height, Element &gt; &amp;matrix) const </arglist>
     </member>
     <member kind="function">
       <type>TMatrix&lt; Width, Height, Element &gt;</type>
@@ -23134,8 +23135,8 @@
       <type>TMatrix&lt; SecondWidth, Height, Element &gt;</type>
       <name>operator*</name>
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
-      <anchor>a8b89877861cd1f8da36bd6e66dbcff15</anchor>
-      <arglist>(const TMatrix&lt; SecondWidth, Width, Element &gt; &amp;b) const </arglist>
+      <anchor>adcca608b9046b007787d749234ab6526</anchor>
+      <arglist>(const TMatrix&lt; SecondWidth, Width, Element &gt; &amp;matrix) const </arglist>
     </member>
     <member kind="function">
       <type>TMatrix&lt; Width, Height, Element &gt;</type>
@@ -32091,7 +32092,21 @@
       <anchor>aba51796f5924e076cd2d9312024d1e4d</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
+    <member kind="typedef" protection="protected">
+      <type>BaseClass::Shapes</type>
+      <name>Shapes</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a5db7151254ce104ef7708b2d555f0e6c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>BaseClass::ShapesMap</type>
+      <name>ShapesMap</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a27862fab2ed4e52b9f32a2a51d71f5f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
@@ -36897,16 +36912,16 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>CProgressManagerGuiComp::OnCancelable</name>
+      <name>OnCancelable</name>
       <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>a386dbd37e5ed0db0436231d1ca3b7957</anchor>
+      <anchor>a1b5b216de1397e5be6557a9919d11fa4</anchor>
       <arglist>(bool cancelState)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
-      <name>CProgressManagerGuiComp::BeginProgressSession</name>
+      <name>BeginProgressSession</name>
       <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>a2d856c459f8af7b2a598a20bcbc5866a</anchor>
+      <anchor>a143483a6c95cb18bded1261c81bd338d</anchor>
       <arglist>(const std::string &amp;progressId, const istd::CString &amp;description, bool isCancelable)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

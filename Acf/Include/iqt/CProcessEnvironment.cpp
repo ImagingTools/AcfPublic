@@ -53,7 +53,7 @@ public:
 
 int CProcessEnvironment::GetMainThreadId() const
 {
-	return reinterpret_cast<int>(QThread::currentThreadId());
+	return int(QThread::currentThreadId());
 }
 
 

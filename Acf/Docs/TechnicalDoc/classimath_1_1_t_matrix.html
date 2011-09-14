@@ -135,12 +135,12 @@ Element &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="e
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_matrix.html#a69ad4ba83d0adf1b056b2b1b5b03d238">GetRowVector</a> (int rowIndex, <a class="el" href="classimath_1_1_t_vector.html">TVector</a>&lt; Width, Element &gt; &amp;result)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get single row as vector.  <a href="#a69ad4ba83d0adf1b056b2b1b5b03d238"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_matrix.html#ada002989c6f60d89047c89bdb0412bca">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_matrix.html#a8b0b676ddbeed43b27690b5501139919">operator+</a> (const <a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt; &amp;b) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_matrix.html#a81dd99491068e7e5655903d002bb2d0d">operator-</a> (const <a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt; &amp;b) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_matrix.html#a221eaa1dfa52bdf40be89cf0bad1e6fe">operator+</a> (const <a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt; &amp;matrix) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_matrix.html#acbd42dabc264366aabdb3c5cae59a432">operator-</a> (const <a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt; &amp;matrix) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_matrix.html#ad0d553a1168ed6c9533555349d1e0d31">operator-</a> ()</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;int SecondWidth&gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; SecondWidth, Height, <br class="typebreak"/>
-Element &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_matrix.html#a8b89877861cd1f8da36bd6e66dbcff15">operator*</a> (const <a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; SecondWidth, Width, Element &gt; &amp;b) const </td></tr>
+Element &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_matrix.html#adcca608b9046b007787d749234ab6526">operator*</a> (const <a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; SecondWidth, Width, Element &gt; &amp;matrix) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_matrix.html#a2bb5b7ed96c113150e5644309a99bc04">operator*</a> (double value) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_matrix.html#a2c549382f105735a0b9c55706a9239ab">operator==</a> (const <a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt; &amp;matrix) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_t_matrix.html#a53ce294f1419f261f51db31dbd07b110">operator!=</a> (const <a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt; &amp;matrix) const </td></tr>
@@ -1080,7 +1080,7 @@ template&lt;int Width, int Height, typename Element&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a8b89877861cd1f8da36bd6e66dbcff15"></a><!-- doxytag: member="imath::TMatrix::operator*" ref="a8b89877861cd1f8da36bd6e66dbcff15" args="(const TMatrix&lt; SecondWidth, Width, Element &gt; &amp;b) const " -->
+<a class="anchor" id="adcca608b9046b007787d749234ab6526"></a><!-- doxytag: member="imath::TMatrix::operator*" ref="adcca608b9046b007787d749234ab6526" args="(const TMatrix&lt; SecondWidth, Width, Element &gt; &amp;matrix) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1092,7 +1092,7 @@ template&lt;int SecondWidth&gt; </div>
           <td class="memname"><a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt;SecondWidth, Height, Element&gt; <a class="el" href="classimath_1_1_t_matrix.html">imath::TMatrix</a>&lt; Width, Height, Element &gt;::operator* </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; SecondWidth, Width, Element &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
           <td> const<code> [inline]</code></td>
         </tr>
       </table>
@@ -1126,7 +1126,7 @@ template&lt;int Width, int Height, typename Element &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a8b0b676ddbeed43b27690b5501139919"></a><!-- doxytag: member="imath::TMatrix::operator+" ref="a8b0b676ddbeed43b27690b5501139919" args="(const TMatrix&lt; Width, Height, Element &gt; &amp;b) const " -->
+<a class="anchor" id="a221eaa1dfa52bdf40be89cf0bad1e6fe"></a><!-- doxytag: member="imath::TMatrix::operator+" ref="a221eaa1dfa52bdf40be89cf0bad1e6fe" args="(const TMatrix&lt; Width, Height, Element &gt; &amp;matrix) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1136,7 +1136,7 @@ template&lt;int Width, int Height, typename Element&gt; </div>
           <td class="memname"><a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt; <a class="el" href="classimath_1_1_t_matrix.html">imath::TMatrix</a>&lt; Width, Height, Element &gt;::operator+ </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
           <td> const<code> [inline]</code></td>
         </tr>
       </table>
@@ -1147,7 +1147,7 @@ template&lt;int Width, int Height, typename Element&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a81dd99491068e7e5655903d002bb2d0d"></a><!-- doxytag: member="imath::TMatrix::operator&#45;" ref="a81dd99491068e7e5655903d002bb2d0d" args="(const TMatrix&lt; Width, Height, Element &gt; &amp;b) const " -->
+<a class="anchor" id="acbd42dabc264366aabdb3c5cae59a432"></a><!-- doxytag: member="imath::TMatrix::operator&#45;" ref="acbd42dabc264366aabdb3c5cae59a432" args="(const TMatrix&lt; Width, Height, Element &gt; &amp;matrix) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1157,7 +1157,7 @@ template&lt;int Width, int Height, typename Element&gt; </div>
           <td class="memname"><a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt; <a class="el" href="classimath_1_1_t_matrix.html">imath::TMatrix</a>&lt; Width, Height, Element &gt;::operator- </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classimath_1_1_t_matrix.html">TMatrix</a>&lt; Width, Height, Element &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
           <td> const<code> [inline]</code></td>
         </tr>
       </table>

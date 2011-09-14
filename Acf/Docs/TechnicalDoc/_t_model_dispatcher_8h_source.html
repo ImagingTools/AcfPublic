@@ -115,7 +115,7 @@
 <a name="l00113"></a>00113 <span class="keyword">template</span> &lt;<span class="keyword">class</span> NotifyReceiver&gt;
 <a name="l00114"></a><a class="code" href="classimod_1_1_t_model_dispatcher.html#ab580df5b24fe0ddc677ddff5cfa93468">00114</a> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_t_model_dispatcher.html#ab580df5b24fe0ddc677ddff5cfa93468" title="Unregister the data model object.">TModelDispatcher&lt;NotifyReceiver&gt;::UnregisterModel</a>(<span class="keywordtype">int</span> modelId)
 <a name="l00115"></a>00115 {
-<a name="l00116"></a>00116        <span class="keywordflow">for</span> (ModelMap::iterator index = m_modelMap.begin(); index != m_modelMap.end(); index++){
+<a name="l00116"></a>00116        <span class="keywordflow">for</span> (<span class="keyword">typename</span> ModelMap::iterator index = m_modelMap.begin(); index != m_modelMap.end(); index++){
 <a name="l00117"></a>00117               <span class="keywordflow">if</span> (modelId == index-&gt;second.modelId){
 <a name="l00118"></a>00118                      <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr = index-&gt;first;
 <a name="l00119"></a>00119 
@@ -133,7 +133,7 @@
 <a name="l00131"></a><a class="code" href="classimod_1_1_t_model_dispatcher.html#a6da7e3c6043fa3d7556b6e86715339c8">00131</a> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_t_model_dispatcher.html#a6da7e3c6043fa3d7556b6e86715339c8" title="Unregister all observed data objects.">TModelDispatcher&lt;NotifyReceiver&gt;::UnregisterAllModels</a>()
 <a name="l00132"></a>00132 {
 <a name="l00133"></a>00133        <span class="keywordflow">while</span> (!m_modelMap.empty()){
-<a name="l00134"></a>00134               ModelMap::iterator currentIter = m_modelMap.begin();
+<a name="l00134"></a>00134               <span class="keyword">typename</span> ModelMap::iterator currentIter = m_modelMap.begin();
 <a name="l00135"></a>00135 
 <a name="l00136"></a>00136               <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr = currentIter-&gt;first;
 <a name="l00137"></a>00137 
@@ -150,7 +150,7 @@
 <a name="l00148"></a>00148 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Object&gt;
 <a name="l00149"></a><a class="code" href="classimod_1_1_t_model_dispatcher.html#ad005880288bd02d83113cad97a5130f9">00149</a> Object* <a class="code" href="classimod_1_1_t_model_dispatcher.html#ad005880288bd02d83113cad97a5130f9" title="Get concrete object instance of the obsered model.">TModelDispatcher&lt;NotifyReceiver&gt;::GetObjectPtr</a>(<span class="keywordtype">int</span> modelId)<span class="keyword"> const</span>
 <a name="l00150"></a>00150 <span class="keyword"></span>{
-<a name="l00151"></a>00151        <span class="keywordflow">for</span> (ModelMap::const_iterator index = m_modelMap.begin(); index != m_modelMap.end(); index++){
+<a name="l00151"></a>00151        <span class="keywordflow">for</span> (<span class="keyword">typename</span> ModelMap::const_iterator index = m_modelMap.begin(); index != m_modelMap.end(); index++){
 <a name="l00152"></a>00152               <span class="keywordflow">if</span> (modelId == index-&gt;second.modelId){
 <a name="l00153"></a>00153                      Object* objectPtr = <span class="keyword">dynamic_cast&lt;</span>Object*<span class="keyword">&gt;</span>(index-&gt;first);
 <a name="l00154"></a>00154 
@@ -170,7 +170,7 @@
 <a name="l00168"></a><a class="code" href="classimod_1_1_t_model_dispatcher.html#a08669f8a0e2e319285b384936d3a807b">00168</a> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_t_model_dispatcher.html#a08669f8a0e2e319285b384936d3a807b" title="This call back function will be called, if an observable object is about to be detached.">TModelDispatcher&lt;NotifyReceiver&gt;::OnDetached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr)
 <a name="l00169"></a>00169 {
 <a name="l00170"></a>00170        <span class="keywordflow">if</span> (BaseClass::OnDetached(modelPtr)){
-<a name="l00171"></a>00171               <span class="keywordflow">for</span> (ModelMap::iterator index = m_modelMap.begin(); index != m_modelMap.end(); index++){
+<a name="l00171"></a>00171               <span class="keywordflow">for</span> (<span class="keyword">typename</span> ModelMap::iterator index = m_modelMap.begin(); index != m_modelMap.end(); index++){
 <a name="l00172"></a>00172                      <span class="keywordflow">if</span> (index-&gt;first == modelPtr){
 <a name="l00173"></a>00173                             m_modelMap.erase(index);
 <a name="l00174"></a>00174 
@@ -190,7 +190,7 @@
 <a name="l00188"></a>00188 <span class="keyword">template</span> &lt;<span class="keyword">class</span> NotifyReceiver&gt;
 <a name="l00189"></a><a class="code" href="classimod_1_1_t_model_dispatcher.html#a9aa3cbfce2e349c04ed4067955a61c0c">00189</a> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_t_model_dispatcher.html#a9aa3cbfce2e349c04ed4067955a61c0c">TModelDispatcher&lt;NotifyReceiver&gt;::OnUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr)
 <a name="l00190"></a>00190 {
-<a name="l00191"></a>00191        ModelMap::iterator foundModelIter = m_modelMap.find(modelPtr);
+<a name="l00191"></a>00191        <span class="keyword">typename</span> ModelMap::iterator foundModelIter = m_modelMap.find(modelPtr);
 <a name="l00192"></a>00192        <span class="keywordflow">if</span> (foundModelIter != m_modelMap.end()){
 <a name="l00193"></a>00193               <span class="keywordtype">int</span> relevantFlags = foundModelIter-&gt;second.relevantFlags;
 <a name="l00194"></a>00194               <span class="keywordflow">if</span> (relevantFlags != 0 &amp;&amp; (relevantFlags &amp; changeFlags) == 0){

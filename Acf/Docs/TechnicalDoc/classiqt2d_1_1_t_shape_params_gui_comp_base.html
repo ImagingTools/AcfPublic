@@ -32,7 +32,9 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iqt2d::TShapeParamsGuiCompBase&lt; Ui, Shape, ShapeModel &gt; Class Template Reference</div>  </div>
 </div>
@@ -82,7 +84,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#a7251aef8234d39513e85129dbbb4d2ae"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#aba51796f5924e076cd2d9312024d1e4d">OnDetached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be detached.  <a href="#aba51796f5924e076cd2d9312024d1e4d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a065de61285326f12b547600de2e6cd9c">CreateShapes</a> (int sceneId, bool inactiveOnly, <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a39d68e9f5afe0172658d469e55a5e699">Shapes</a> &amp;result)</td></tr>
+<tr><td colspan="2"><h2><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a39d68e9f5afe0172658d469e55a5e699">BaseClass::Shapes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">Shapes</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#af50360216b807015db7a34af595c405f">BaseClass::ShapesMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">ShapesMap</a></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a065de61285326f12b547600de2e6cd9c">CreateShapes</a> (int sceneId, bool inactiveOnly, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">Shapes</a> &amp;result)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class Ui, class Shape, class ShapeModel&gt;<br/>
@@ -112,6 +120,44 @@ template&lt;class Ui, class Shape, class ShapeModel&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a5db7151254ce104ef7708b2d555f0e6c"></a><!-- doxytag: member="iqt2d::TShapeParamsGuiCompBase::Shapes" ref="a5db7151254ce104ef7708b2d555f0e6c" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Ui, class Shape, class ShapeModel&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a39d68e9f5afe0172658d469e55a5e699">BaseClass::Shapes</a> <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">iqt2d::TShapeParamsGuiCompBase</a>&lt; Ui, Shape, ShapeModel &gt;::<a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">Shapes</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a39d68e9f5afe0172658d469e55a5e699">iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui, ShapeModel &gt; &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html#l00032">32</a> of file <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html">TShapeParamsGuiCompBase.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a27862fab2ed4e52b9f32a2a51d71f5f2"></a><!-- doxytag: member="iqt2d::TShapeParamsGuiCompBase::ShapesMap" ref="a27862fab2ed4e52b9f32a2a51d71f5f2" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Ui, class Shape, class ShapeModel&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#af50360216b807015db7a34af595c405f">BaseClass::ShapesMap</a> <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">iqt2d::TShapeParamsGuiCompBase</a>&lt; Ui, Shape, ShapeModel &gt;::<a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">ShapesMap</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#af50360216b807015db7a34af595c405f">iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui, ShapeModel &gt; &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html#l00033">33</a> of file <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html">TShapeParamsGuiCompBase.h</a>.</p>
+
+</div>
+</div>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a065de61285326f12b547600de2e6cd9c"></a><!-- doxytag: member="iqt2d::TShapeParamsGuiCompBase::CreateShapes" ref="a065de61285326f12b547600de2e6cd9c" args="(int sceneId, bool inactiveOnly, Shapes &amp;result)" -->
 <div class="memitem">
@@ -134,13 +180,13 @@ template&lt;class Ui , class Shape , class ShapeModel &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a39d68e9f5afe0172658d469e55a5e699">Shapes</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">Shapes</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [virtual]</code></td>
+          <td></td><td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -148,7 +194,7 @@ template&lt;class Ui , class Shape , class ShapeModel &gt; </div>
 
 <p>Implements <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a234d9e955c1224937d65b4882ddcebfe">iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui, ShapeModel &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html#l00103">103</a> of file <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html">TShapeParamsGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html#l00108">108</a> of file <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html">TShapeParamsGuiCompBase.h</a>.</p>
 
 <p>References <a class="el" href="classimod_1_1_i_model.html#ac6c63f2699bce472fc0b7e556604c5cd">imod::IModel::AttachObserver()</a>, <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, <a class="el" href="istd_8h_source.html#l00183">NULL</a>, and <a class="el" href="_t_pointer_vector_8h_source.html#l00295">istd::TPointerVector&lt; Pointer, AccessAdapter &gt;::PushBack()</a>.</p>
 
@@ -176,7 +222,7 @@ template&lt;class Ui , class Shape , class ShapeModel &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a1e5ea143e01a0798090e8989ded7fb94">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui, QWidget &gt;, imod::TSingleModelObserverBase&lt; ShapeModel &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html#l00045">45</a> of file <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html">TShapeParamsGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html#l00048">48</a> of file <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html">TShapeParamsGuiCompBase.h</a>.</p>
 
 <p>References <a class="el" href="classimod_1_1_i_model.html#ac6c63f2699bce472fc0b7e556604c5cd">imod::IModel::AttachObserver()</a>, <a class="el" href="_t_pointer_vector_8h_source.html#l00222">istd::TPointerVector&lt; Pointer, AccessAdapter &gt;::GetAt()</a>, <a class="el" href="_t_pointer_vector_8h_source.html#l00170">istd::TPointerVector&lt; Pointer, AccessAdapter &gt;::GetCount()</a>, and <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
 
@@ -203,7 +249,7 @@ template&lt;class Ui , class Shape , class ShapeModel &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#adc9cd1c668357a08d839a51b6403a40c">iqtgui::TGuiObserverWrap&lt; TDesignerGuiCompBase&lt; Ui, QWidget &gt;, imod::TSingleModelObserverBase&lt; ShapeModel &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html#l00073">73</a> of file <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html">TShapeParamsGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html#l00076">76</a> of file <a class="el" href="_t_shape_params_gui_comp_base_8h_source.html">TShapeParamsGuiCompBase.h</a>.</p>
 
 <p>References <a class="el" href="classimod_1_1_i_model.html#a7397e5498b4db60234160a97f570eb66">imod::IModel::DetachObserver()</a>, <a class="el" href="_t_pointer_vector_8h_source.html#l00222">istd::TPointerVector&lt; Pointer, AccessAdapter &gt;::GetAt()</a>, <a class="el" href="_t_pointer_vector_8h_source.html#l00170">istd::TPointerVector&lt; Pointer, AccessAdapter &gt;::GetCount()</a>, and <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
 
