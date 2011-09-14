@@ -24,18 +24,17 @@
 
 
 // Qt includes
-#include <QApplication>
 #include <QVBoxLayout>
 
 
 namespace iqtgui
 {
 
-	
+
 CGuiComponentDialog::CGuiComponentDialog(
-			iqtgui::IGuiObject* guiObjectPtr, 
-			int buttons,  
-			bool isModal, 
+			iqtgui::IGuiObject* guiObjectPtr,
+			int buttons,
+			bool isModal,
 			QWidget* parentWidgetPtr)
 :	BaseClass(parentWidgetPtr),
 	m_buttonsBox(NULL),
@@ -43,8 +42,8 @@ CGuiComponentDialog::CGuiComponentDialog(
 {
 	// GUI pointer must be valid:
 	I_ASSERT(guiObjectPtr != NULL);
-	
-	// GUI must not be created: 
+
+	// GUI must not be created:
 	I_ASSERT(!guiObjectPtr->IsGuiCreated());
 	if(!guiObjectPtr->IsGuiCreated()){
 		BaseClass::setModal(isModal);
@@ -56,7 +55,7 @@ CGuiComponentDialog::CGuiComponentDialog(
 				m_guiObjectPtr = guiObjectPtr;
 
 				dialogLayout->addWidget(m_guiObjectPtr->GetWidget());
-				
+
 				QWidget* slaveWidgetPtr = guiObjectPtr->GetWidget();
 				I_ASSERT(slaveWidgetPtr != NULL);
 
@@ -75,8 +74,6 @@ CGuiComponentDialog::CGuiComponentDialog(
 
 			dialogLayout->addWidget(m_buttonsBox);
 		}
-
-		QApplication::processEvents();
 	}
 }
 
