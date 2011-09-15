@@ -69,7 +69,7 @@ public:
 				ifpf::IHotfolderProcessingInfo> BaseClass;
 	typedef imod::CModelProxy BaseClass2;
 
-	I_BEGIN_COMPONENT(CHotfolderGuiComp)
+	I_BEGIN_COMPONENT(CHotfolderGuiComp);
 		I_REGISTER_INTERFACE(ibase::ICommandsProvider);
 		I_ASSIGN(m_stateIconsProviderCompPtr, "StateIcons", "Icons for the file state", true, "StateIcons");
 		I_ASSIGN(m_statisticsCompPtr, "HotfolderStatistics", "Simple statistics of the hotfolder", true, "HotfolderStatistics");
@@ -145,8 +145,9 @@ private:
 		void AddFileItem(const ifpf::IHotfolderProcessingItem& fileItem);
 
 	private:
-		QDir m_directory;
 		CHotfolderGuiComp& m_parent;
+
+		QDir m_directory;
 
 		istd::TDelPtr<icomp::IComponent> m_directoryItemCompPtr;
 	};

@@ -50,36 +50,36 @@
 <a name="l00033"></a>00033 <span class="keyword">public</span>:
 <a name="l00034"></a><a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#a8468ba0584c1a8101e02aa735c550b0e">00034</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::CLoggerComponentBase</a> <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#a8468ba0584c1a8101e02aa735c550b0e">BaseClass</a>;
 <a name="l00035"></a>00035 
-<a name="l00036"></a>00036        I_BEGIN_COMPONENT(<a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html" title="Processor creating some data sequence (sample) using user defined script.">CScriptDataProcessorComp</a>)
-<a name="l00037"></a>00037               I_REGISTER_INTERFACE(iproc::IProcessor)
-<a name="l00038"></a>00038               I_ASSIGN(m_minValueAttrPtr, &quot;MinValue&quot;, &quot;Minimal value of sample&quot;, true, 0.0);
-<a name="l00039"></a>00039               I_ASSIGN(m_maxValueAttrPtr, &quot;MaxValue&quot;, &quot;Maximal value of sample&quot;, true, 100.0);
-<a name="l00040"></a>00040               I_ASSIGN(m_samplesCountAttrPtr, &quot;SamplesCount&quot;, &quot;Number of samples processed in single step&quot;, false, 100);
-<a name="l00041"></a>00041               I_ASSIGN(m_channelsCountAttrPtr, &quot;ChannelsCount&quot;, &quot;Number of channels processed in single step&quot;, false, 100);
-<a name="l00042"></a>00042               I_ASSIGN(m_defaultScriptAttrPtr, &quot;DefaultScript&quot;, &quot;Default script used to calculate sample output in &#39;Calc&#39; function&quot;, false, &quot;minValue&quot;);
-<a name="l00043"></a>00043               I_ASSIGN(m_scriptParamIdAttrPtr, &quot;ScriptParamId&quot;, &quot;ID of script in parameter set (defined as ibase::ITextDocument)&quot;, false, &quot;ScriptId&quot;);
-<a name="l00044"></a>00044        I_END_COMPONENT
+<a name="l00036"></a>00036        I_BEGIN_COMPONENT(<a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html" title="Processor creating some data sequence (sample) using user defined script.">CScriptDataProcessorComp</a>);
+<a name="l00037"></a>00037               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_processor.html">iproc::IProcessor</a>);
+<a name="l00038"></a>00038               I_ASSIGN(m_minValueAttrPtr, <span class="stringliteral">&quot;MinValue&quot;</span>, <span class="stringliteral">&quot;Minimal value of sample&quot;</span>, <span class="keyword">true</span>, 0.0);
+<a name="l00039"></a>00039               I_ASSIGN(m_maxValueAttrPtr, <span class="stringliteral">&quot;MaxValue&quot;</span>, <span class="stringliteral">&quot;Maximal value of sample&quot;</span>, <span class="keyword">true</span>, 100.0);
+<a name="l00040"></a>00040               I_ASSIGN(m_samplesCountAttrPtr, <span class="stringliteral">&quot;SamplesCount&quot;</span>, <span class="stringliteral">&quot;Number of samples processed in single step&quot;</span>, <span class="keyword">false</span>, 100);
+<a name="l00041"></a>00041               I_ASSIGN(m_channelsCountAttrPtr, <span class="stringliteral">&quot;ChannelsCount&quot;</span>, <span class="stringliteral">&quot;Number of channels processed in single step&quot;</span>, <span class="keyword">false</span>, 100);
+<a name="l00042"></a>00042               I_ASSIGN(m_defaultScriptAttrPtr, <span class="stringliteral">&quot;DefaultScript&quot;</span>, <span class="stringliteral">&quot;Default script used to calculate sample output in &#39;Calc&#39; function&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;minValue&quot;</span>);
+<a name="l00043"></a>00043               I_ASSIGN(m_scriptParamIdAttrPtr, <span class="stringliteral">&quot;ScriptParamId&quot;</span>, <span class="stringliteral">&quot;ID of script in parameter set (defined as ibase::ITextDocument)&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ScriptId&quot;</span>);
+<a name="l00044"></a>00044        I_END_COMPONENT;
 <a name="l00045"></a>00045 
-<a name="l00046"></a>00046        <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html" title="Processor creating some data sequence (sample) using user defined script.">CScriptDataProcessorComp</a>();
+<a name="l00046"></a>00046        <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#abdb15e7bca5de76c4ad23358b0dda149">CScriptDataProcessorComp</a>();
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048        <span class="comment">// reimplemented (iproc::IProcessor)</span>
-<a name="l00049"></a>00049        virtual <span class="keywordtype">int</span> <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#aa8eb6c524209cd20317be01fe8a777f6">DoProcessing</a>(
-<a name="l00050"></a>00050                             const iprm::IParamsSet* paramsPtr,
-<a name="l00051"></a>00051                             const istd::IPolymorphic* inputPtr,
-<a name="l00052"></a>00052                             istd::IChangeable* outputPtr,
-<a name="l00053"></a>00053                             iproc::IProgressManager* progressManagerPtr = NULL);
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#aa8eb6c524209cd20317be01fe8a777f6">DoProcessing</a>(
+<a name="l00050"></a>00050                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00051"></a>00051                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
+<a name="l00052"></a>00052                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
+<a name="l00053"></a>00053                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a>* progressManagerPtr = NULL);
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055        <span class="comment">// reimplemented (isig::ISamplingConstraints)</span>
-<a name="l00056"></a>00056        virtual istd::CRange <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#abc7bd09ca1f2ca6aa543eb944c5bd833">GetIntervalRange</a>() const;
-<a name="l00057"></a>00057        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#a5264292f917d63866788b35d19d06da4">IsSamplingModeSupported</a>(<span class="keywordtype">int</span> mode) const;
-<a name="l00058"></a>00058        virtual istd::CRange <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#acf837e72ccb12d66dcbd31583fbff654">GetValueRange</a>(<span class="keywordtype">bool</span> forInput = true, <span class="keywordtype">bool</span> forOutput = true, const iprm::IParamsSet* paramsSetPtr = 0) const;
-<a name="l00059"></a>00059        virtual <span class="keywordtype">int</span> <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#a8bb49c30779938f1f181e6a0a1640d9b">GetMaximalSamplesCount</a>(<span class="keywordtype">bool</span> forInput = true, <span class="keywordtype">bool</span> forOutput = true, const iprm::IParamsSet* paramsSetPtr = 0) const;
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a> <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#abc7bd09ca1f2ca6aa543eb944c5bd833">GetIntervalRange</a>() <span class="keyword">const</span>;
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#a5264292f917d63866788b35d19d06da4">IsSamplingModeSupported</a>(<span class="keywordtype">int</span> mode) <span class="keyword">const</span>;
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a> <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#acf837e72ccb12d66dcbd31583fbff654">GetValueRange</a>(<span class="keywordtype">bool</span> forInput = <span class="keyword">true</span>, <span class="keywordtype">bool</span> forOutput = <span class="keyword">true</span>, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsSetPtr = 0) <span class="keyword">const</span>;
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#a8bb49c30779938f1f181e6a0a1640d9b">GetMaximalSamplesCount</a>(<span class="keywordtype">bool</span> forInput = <span class="keyword">true</span>, <span class="keywordtype">bool</span> forOutput = <span class="keyword">true</span>, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsSetPtr = 0) <span class="keyword">const</span>;
 <a name="l00060"></a>00060 
-<a name="l00061"></a>00061 protected:
+<a name="l00061"></a>00061 <span class="keyword">protected</span>:
 <a name="l00062"></a>00062        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00063"></a>00063        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#a34bdaad5171c27cca12366a81947adfe">OnComponentCreated</a>();
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtsig_1_1_c_script_data_processor_comp.html#a34bdaad5171c27cca12366a81947adfe">OnComponentCreated</a>();
 <a name="l00064"></a>00064 
-<a name="l00065"></a>00065 private:
+<a name="l00065"></a>00065 <span class="keyword">private</span>:
 <a name="l00066"></a>00066        QScriptEngine m_scriptEngine;
 <a name="l00067"></a>00067        <span class="keywordtype">int</span> m_frameNumber;
 <a name="l00068"></a>00068 
@@ -87,8 +87,8 @@
 <a name="l00070"></a>00070        I_ATTR(<span class="keywordtype">double</span>, m_maxValueAttrPtr);
 <a name="l00071"></a>00071        I_ATTR(<span class="keywordtype">int</span>, m_samplesCountAttrPtr);
 <a name="l00072"></a>00072        I_ATTR(<span class="keywordtype">int</span>, m_channelsCountAttrPtr);
-<a name="l00073"></a>00073        I_ATTR(istd::CString, m_defaultScriptAttrPtr);
-<a name="l00074"></a>00074        I_ATTR(istd::CString, m_scriptParamIdAttrPtr);
+<a name="l00073"></a>00073        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_defaultScriptAttrPtr);
+<a name="l00074"></a>00074        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_scriptParamIdAttrPtr);
 <a name="l00075"></a>00075 };
 <a name="l00076"></a>00076 
 <a name="l00077"></a>00077 

@@ -47,24 +47,24 @@
 <a name="l00020"></a>00020 <span class="keyword">public</span>:
 <a name="l00021"></a><a class="code" href="classiqt_1_1_c_application_settings_provider_comp.html#afd275f0dad7fae011bebb10ebac4aaa2">00021</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classiqt_1_1_c_application_settings_provider_comp.html#afd275f0dad7fae011bebb10ebac4aaa2">BaseClass</a>;
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023        I_BEGIN_COMPONENT(<a class="code" href="classiqt_1_1_c_application_settings_provider_comp.html">CApplicationSettingsProviderComp</a>)
-<a name="l00024"></a>00024               I_REGISTER_INTERFACE(iqt::<a class="code" href="classiqt_1_1_i_settings_provider.html" title="Interface for access the application settings object.">ISettingsProvider</a>)
-<a name="l00025"></a>00025               I_ASSIGN(m_applicationInfoCompPtr, &quot;ApplicationInfo&quot;, &quot;Application info&quot;, true, &quot;ApplicationInfo&quot;);
-<a name="l00026"></a>00026        I_END_COMPONENT
+<a name="l00023"></a>00023        I_BEGIN_COMPONENT(<a class="code" href="classiqt_1_1_c_application_settings_provider_comp.html">CApplicationSettingsProviderComp</a>);
+<a name="l00024"></a>00024               I_REGISTER_INTERFACE(<a class="code" href="classiqt_1_1_i_settings_provider.html" title="Interface for access the application settings object.">iqt::ISettingsProvider</a>);
+<a name="l00025"></a>00025               I_ASSIGN(m_applicationInfoCompPtr, <span class="stringliteral">&quot;ApplicationInfo&quot;</span>, <span class="stringliteral">&quot;Application info&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;ApplicationInfo&quot;</span>);
+<a name="l00026"></a>00026        I_END_COMPONENT;
 <a name="l00027"></a>00027 
-<a name="l00028"></a>00028        <a class="code" href="classiqt_1_1_c_application_settings_provider_comp.html">CApplicationSettingsProviderComp</a>();
+<a name="l00028"></a>00028        <a class="code" href="classiqt_1_1_c_application_settings_provider_comp.html#a2e6af537ab9bbd58891fd2c6f3fe4c28">CApplicationSettingsProviderComp</a>();
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030        <span class="comment">// reimplemented (iqt::ISettingsProvider)</span>
-<a name="l00031"></a>00031        virtual QSettings&amp; <a class="code" href="classiqt_1_1_c_application_settings_provider_comp.html#a6ded2fc86809aea5d248c47fd85be999">GetSettings</a>() const;
+<a name="l00031"></a>00031        <span class="keyword">virtual</span> QSettings&amp; <a class="code" href="classiqt_1_1_c_application_settings_provider_comp.html#a6ded2fc86809aea5d248c47fd85be999">GetSettings</a>() <span class="keyword">const</span>;
 <a name="l00032"></a>00032 
-<a name="l00033"></a>00033 protected:
+<a name="l00033"></a>00033 <span class="keyword">protected</span>:
 <a name="l00034"></a>00034        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00035"></a>00035        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_c_application_settings_provider_comp.html#a13ace9904588d526120b0633721ff464">OnComponentCreated</a>();
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_c_application_settings_provider_comp.html#a13ace9904588d526120b0633721ff464">OnComponentCreated</a>();
 <a name="l00036"></a>00036        
-<a name="l00037"></a>00037 private:
-<a name="l00038"></a>00038        I_REF(ibase::IApplicationInfo, m_applicationInfoCompPtr);
+<a name="l00037"></a>00037 <span class="keyword">private</span>:
+<a name="l00038"></a>00038        I_REF(<a class="code" href="classibase_1_1_i_application_info.html" title="This interface provides some information about the application.">ibase::IApplicationInfo</a>, m_applicationInfoCompPtr);
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040        istd::TDelPtr&lt;QSettings&gt; m_settingsPtr;
+<a name="l00040"></a>00040        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QSettings&gt;</a> m_settingsPtr;
 <a name="l00041"></a>00041 };
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043 

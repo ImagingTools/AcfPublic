@@ -54,19 +54,19 @@
 <a name="l00027"></a>00027                             Ui::CDirectoryMonitorParamsGui,
 <a name="l00028"></a><a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html#a7347344c630fc38a3d1a5221a670a63e">00028</a>                             <a class="code" href="classifpf_1_1_i_directory_monitor_params.html" title="Interface for a folder monitor parameters.">ifpf::IDirectoryMonitorParams</a>&gt; <a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html#a7347344c630fc38a3d1a5221a670a63e">BaseClass</a>;
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030        I_BEGIN_COMPONENT(<a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html">CDirectoryMonitorParamsGui</a>)
+<a name="l00030"></a>00030        I_BEGIN_COMPONENT(<a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html">CDirectoryMonitorParamsGui</a>);
 <a name="l00031"></a>00031        I_END_COMPONENT;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00034"></a>00034        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html#a1296ad87605c817738e96c00b9e24e46">UpdateModel</a>() const;
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html#a1296ad87605c817738e96c00b9e24e46">UpdateModel</a>() <span class="keyword">const</span>;
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036        <span class="comment">// reimplemenented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00037"></a>00037        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html#a3607dc55e2d69e0cb4329355572a6674">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html#a3607dc55e2d69e0cb4329355572a6674">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00038"></a>00038 
 <a name="l00039"></a>00039        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00040"></a>00040        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html#a821a6695b0a971a9522681fc3c33964d">OnGuiCreated</a>();
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html#a821a6695b0a971a9522681fc3c33964d">OnGuiCreated</a>();
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042 protected Q_SLOTS:
+<a name="l00042"></a>00042 <span class="keyword">protected</span> Q_SLOTS:
 <a name="l00043"></a>00043        <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html#a5f848eb96a2307e507614dfa0e802d63">on_FilesCheck_toggled</a>(<span class="keywordtype">bool</span> isChecked);
 <a name="l00044"></a>00044        <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html#a314ce70105966cdcf07cb3e7593793f5">on_DirsCheck_toggled</a>(<span class="keywordtype">bool</span> isChecked);
 <a name="l00045"></a>00045        <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html#a95b577fc12632e056ee7eab34caac334">on_DrivesCheck_toggled</a>(<span class="keywordtype">bool</span> isChecked);
@@ -84,8 +84,8 @@
 <a name="l00057"></a>00057        <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html#a7e27b28d8a3bcc6dd86a7dd8eb50e1a2">on_IgnorePatternsList_itemSelectionChanged</a>();
 <a name="l00058"></a>00058        <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_directory_monitor_params_gui.html#a2edf27b250c4125a409ee8c4ded54704">on_IgnorePatternsList_itemChanged</a>(QTreeWidgetItem* item, <span class="keywordtype">int</span> column);
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060 private:
-<a name="l00061"></a>00061        <span class="keywordtype">void</span> AddPattern(const QString&amp; filter, QTreeWidget* treeView);
+<a name="l00060"></a>00060 <span class="keyword">private</span>:
+<a name="l00061"></a>00061        <span class="keywordtype">void</span> AddPattern(<span class="keyword">const</span> QString&amp; filter, QTreeWidget* treeView);
 <a name="l00062"></a>00062        <span class="keywordtype">void</span> RemoveSelectedPatterns(QTreeWidget* treeView);
 <a name="l00063"></a>00063        <span class="keywordtype">void</span> ResetEditor();
 <a name="l00064"></a>00064        <span class="keywordtype">void</span> OnModelUpdate();

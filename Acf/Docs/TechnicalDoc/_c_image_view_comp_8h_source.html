@@ -44,25 +44,25 @@
 <a name="l00021"></a>00021 <span class="keyword">public</span>:
 <a name="l00022"></a><a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a5c60057226772e2d22399c92b6679c31">00022</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html">iqtgui::TGuiObserverWrap&lt;CSceneProviderGuiComp, CImageShape&gt;</a> <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a5c60057226772e2d22399c92b6679c31">BaseClass</a>;
 <a name="l00023"></a>00023 
-<a name="l00024"></a>00024        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_image_view_comp.html" title="Show observed bitmap on the scene.">CImageViewComp</a>)
-<a name="l00025"></a>00025               I_REGISTER_INTERFACE(imod::IObserver)
-<a name="l00026"></a>00026               I_ASSIGN(m_isFrameVisibleAttrPtr, &quot;IsImageFrameVisible&quot;, &quot;If true, image frame will be visible&quot;, true, false);
-<a name="l00027"></a>00027               I_ASSIGN(m_imagePositionModeAttrPtr, &quot;ImagePositionMode&quot;, &quot;Mode of image position:\n 0 - corner\n 1 - center&quot;, true, 0);
-<a name="l00028"></a>00028               I_ASSIGN(m_fitToViewOnChangeAttrPtr, &quot;FitToViewOnImageChanges&quot;, &quot;Fit the current image to view&quot;, false, false);
-<a name="l00029"></a>00029        I_END_COMPONENT
+<a name="l00024"></a>00024        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_image_view_comp.html" title="Show observed bitmap on the scene.">CImageViewComp</a>);
+<a name="l00025"></a>00025               I_REGISTER_INTERFACE(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>);
+<a name="l00026"></a>00026               I_ASSIGN(m_isFrameVisibleAttrPtr, <span class="stringliteral">&quot;IsImageFrameVisible&quot;</span>, <span class="stringliteral">&quot;If true, image frame will be visible&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00027"></a>00027               I_ASSIGN(m_imagePositionModeAttrPtr, <span class="stringliteral">&quot;ImagePositionMode&quot;</span>, <span class="stringliteral">&quot;Mode of image position:\n 0 - corner\n 1 - center&quot;</span>, <span class="keyword">true</span>, 0);
+<a name="l00028"></a>00028               I_ASSIGN(m_fitToViewOnChangeAttrPtr, <span class="stringliteral">&quot;FitToViewOnImageChanges&quot;</span>, <span class="stringliteral">&quot;Fit the current image to view&quot;</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);
+<a name="l00029"></a>00029        I_END_COMPONENT;
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00032"></a>00032        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#aa5447ae133069ff9fb3efb908ef83a16">OnDetached</a>(imod::IModel* modelPtr);
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a3ef397bc23b7b85b76e2669570353305">OnDetached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
 <a name="l00033"></a>00033 
-<a name="l00034"></a>00034 protected:
+<a name="l00034"></a>00034 <span class="keyword">protected</span>:
 <a name="l00035"></a>00035        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00036"></a>00036        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a0d0aaa63924c63662b4d9e95029fcca9" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a0d0aaa63924c63662b4d9e95029fcca9" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00039"></a>00039        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a86eab23c6253d004a56d7b0aa1bc8377">OnGuiCreated</a>();
-<a name="l00040"></a>00040        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a93c2502b98b18d61ddf5b9cd76b7d279">OnGuiDestroyed</a>();
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a86eab23c6253d004a56d7b0aa1bc8377">OnGuiCreated</a>();
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a93c2502b98b18d61ddf5b9cd76b7d279">OnGuiDestroyed</a>();
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042 private:
+<a name="l00042"></a>00042 <span class="keyword">private</span>:
 <a name="l00043"></a>00043        I_ATTR(<span class="keywordtype">bool</span>, m_isFrameVisibleAttrPtr);
 <a name="l00044"></a>00044        I_ATTR(<span class="keywordtype">int</span>, m_imagePositionModeAttrPtr);
 <a name="l00045"></a>00045        I_ATTR(<span class="keywordtype">bool</span>, m_fitToViewOnChangeAttrPtr);

@@ -3930,10 +3930,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT int</type>
+      <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_image_crop_processor_comp.html</anchorfile>
-      <anchor>a11f0082918027d17f1def230e5f37e23</anchor>
+      <anchor>a20d0f2d9fbeadeffcab0ae6b094c5f18</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
@@ -3949,10 +3949,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT int</type>
+      <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_image_histogram_processor_comp.html</anchorfile>
-      <anchor>a313683b45b508e5f331addde67df67d7</anchor>
+      <anchor>adebac71e0c1360a26e6ccfc79627f79d</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
@@ -4020,10 +4020,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT int</type>
+      <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_image_polar_transform_processor_comp.html</anchorfile>
-      <anchor>ace93c67ff5bca73aac845308b9281382</anchor>
+      <anchor>a5f89719ff9e74d5b3e8a3748bb9232e0</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
@@ -4082,10 +4082,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT bool</type>
+      <type>bool</type>
       <name>DoAutosizeProjection</name>
       <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
-      <anchor>a3b354656e206956f585a019b460e948d</anchor>
+      <anchor>ae44ec554e811baad8884bfb77f9aafd9</anchor>
       <arglist>(const iimg::IBitmap &amp;bitmap, const i2d::CLine2d &amp;projectionLine, imeas::IDataSequence &amp;results) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4216,10 +4216,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT istd::CIndex2d</type>
+      <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
       <anchorfile>classiipr_1_1_c_processed_acquisition_comp.html</anchorfile>
-      <anchor>abb730f5aa7398a372c779133816a15e6</anchor>
+      <anchor>a611b211a8a87843f02eb31b05230921c</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4533,10 +4533,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT int</type>
+      <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_ring_pattern_generator_comp.html</anchorfile>
-      <anchor>a04f7e83bb8b8f0a61c49ee8793166581</anchor>
+      <anchor>a70f1f5afa949e3ae093a5b1f209fc9cd</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
@@ -8807,10 +8807,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
       <name>CMilSearchParamsGuiComp</name>
       <anchorfile>classimil_1_1_c_mil_search_params_gui_comp.html</anchorfile>
-      <anchor>ab83f40714efa0c448cf1be1a04f31f72</anchor>
+      <anchor>a224c12d61ad23a72dd91067a338aed67</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -8873,10 +8873,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT int</type>
+      <type>virtual int</type>
       <name>DoExtractFeatures</name>
       <anchorfile>classimil_1_1_c_mil_search_processor_comp.html</anchorfile>
-      <anchor>a4ac15bc671ed99d39f2b7d117e728112</anchor>
+      <anchor>a8534ff383b4eddbd4f43686e2d862201</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;results)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9761,10 +9761,10 @@
       <arglist>(m_paramsSetExtenderCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
       <name>CSnapImageGuiComp</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>acaff48c2a34500c22e8511a85b759282</anchor>
+      <anchor>ab2b13cedf8526c1495f6975d436555ad</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9878,10 +9878,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtcntl_1_1_c_automatic_controller_gui_comp.html</anchorfile>
-      <anchor>a39e21f733905a3a169104705b946506a</anchor>
+      <anchor>a9b18041666f1f9df7ee4a480c01310db</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -11004,10 +11004,10 @@
       <arglist>(m_bitmapModelCompPtr, m_bitmapCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>a4e5f3f9bca81b68a0370e42f0c1c1258</anchor>
+      <anchor>a6e5675c698fe001ebbe9a07e9c67d65e</anchor>
       <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -11051,10 +11051,10 @@
       <arglist>(m_modelObserverCompPtr, m_modelViewCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>a92aa297a44b7fd88c8da694efdcafbcf</anchor>
+      <anchor>adc7316aed2f2c18079b341a6c63a074d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -11241,10 +11241,10 @@
       <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
       <name>CSampleAcquisitionGuiComp</name>
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>a27de55f2ed768f3b706306e62415a666</anchor>
+      <anchor>ac1189293d6dc67c8d1205fb901623388</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -11370,10 +11370,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtsig_1_1_c_sampling_params_gui_comp.html</anchorfile>
-      <anchor>a6f1d7aeebdaac0e12378aab93f63b481</anchor>
+      <anchor>a48a624f6f1e89a526932ccbbb1804af3</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11411,10 +11411,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
       <name>CScriptDataProcessorComp</name>
       <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>aa0e1187959b8bde21cc0bab87c6040a4</anchor>
+      <anchor>abdb15e7bca5de76c4ad23358b0dda149</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11560,10 +11560,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtswr_1_1_c_swiss_ranger_params_gui_comp.html</anchorfile>
-      <anchor>a98d21a46f12efa22f4d91b6dfae82683</anchor>
+      <anchor>a6bee149d4f6fcb0802da746e03234490</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -12024,10 +12024,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
       <name>CSamplingParamsComp</name>
       <anchorfile>classisig_1_1_c_sampling_params_comp.html</anchorfile>
-      <anchor>aff653a68dc92de910ea63a63fa99d055</anchor>
+      <anchor>a34de75630f29e0f9a392bc326e2f32c8</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">

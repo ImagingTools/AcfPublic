@@ -51,40 +51,40 @@
 <a name="l00028"></a>00028 <span class="keyword">public</span>:
 <a name="l00029"></a><a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a1371c7ed5bf8f44dc19bd2061752336e">00029</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a1371c7ed5bf8f44dc19bd2061752336e">BaseClass</a>;
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html" title="Component realizing static connection between GUI and model components.">CModelEditorGuiComp</a>)
-<a name="l00032"></a>00032               I_REGISTER_INTERFACE(iqtgui::<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>)
-<a name="l00033"></a>00033               I_REGISTER_INTERFACE(imod::IModelEditor)
-<a name="l00034"></a>00034               I_ASSIGN(m_slaveEditorCompPtr, &quot;SlaveEditorGui&quot;, &quot;Slave GUI <span class="keywordtype">object</span> will be connected to model&quot;, true, &quot;SlaveEditor&quot;);
-<a name="l00035"></a>00035               <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a9b878cf5670e53a1ac6587a6df26a576">I_ASSIGN_TO</a>(m_slaveGuiCompPtr, m_slaveEditorCompPtr, true);
-<a name="l00036"></a>00036               <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a9b878cf5670e53a1ac6587a6df26a576">I_ASSIGN_TO</a>(m_slaveObserverCompPtr, m_slaveEditorCompPtr, false);
-<a name="l00037"></a>00037               I_ASSIGN(m_modelCompPtr, &quot;Model&quot;, &quot;Model will be observed and modify using editor&quot;, true, &quot;Model&quot;);
-<a name="l00038"></a>00038        I_END_COMPONENT
+<a name="l00031"></a>00031        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html" title="Component realizing static connection between GUI and model components.">CModelEditorGuiComp</a>);
+<a name="l00032"></a>00032               I_REGISTER_INTERFACE(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>);
+<a name="l00033"></a>00033               I_REGISTER_INTERFACE(<a class="code" href="classimod_1_1_i_model_editor.html" title="Common interface for an model editor.">imod::IModelEditor</a>);
+<a name="l00034"></a>00034               I_ASSIGN(m_slaveEditorCompPtr, <span class="stringliteral">&quot;SlaveEditorGui&quot;</span>, <span class="stringliteral">&quot;Slave GUI object will be connected to model&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;SlaveEditor&quot;</span>);
+<a name="l00035"></a>00035               <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a9b878cf5670e53a1ac6587a6df26a576">I_ASSIGN_TO</a>(m_slaveGuiCompPtr, m_slaveEditorCompPtr, <span class="keyword">true</span>);
+<a name="l00036"></a>00036               <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a9b878cf5670e53a1ac6587a6df26a576">I_ASSIGN_TO</a>(m_slaveObserverCompPtr, m_slaveEditorCompPtr, <span class="keyword">false</span>);
+<a name="l00037"></a>00037               I_ASSIGN(m_modelCompPtr, <span class="stringliteral">&quot;Model&quot;</span>, <span class="stringliteral">&quot;Model will be observed and modify using editor&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Model&quot;</span>);
+<a name="l00038"></a>00038        I_END_COMPONENT;
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040        <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html" title="Component realizing static connection between GUI and model components.">CModelEditorGuiComp</a>();
+<a name="l00040"></a>00040        <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a1474c5b49d1ca6262584bbc5435b0aaa">CModelEditorGuiComp</a>();
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042        <span class="comment">// reimplemented (iqtgui::IGuiObject)</span>
-<a name="l00043"></a>00043        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a752f93d0a275a23596ba31db8c10b151" title="Inform if GUI was initilized.">IsGuiCreated</a>() const;
-<a name="l00044"></a>00044        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a5d2f5b143eb706db912bff2174673fb1" title="Initialize GUI and connect it to the parent.">CreateGui</a>(QWidget* parentPtr);
-<a name="l00045"></a>00045        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#ab85e5f0592a8df99910ba75d3b02a7a8" title="Release GUI and disconnect it from parent.">DestroyGui</a>();
-<a name="l00046"></a>00046        virtual QWidget* <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a4a38e54975372439e4e118c2f392fd94" title="Get access to internal QWidget object.">GetWidget</a>() const;
-<a name="l00047"></a>00047        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#ac68150c5067bc0bc01e55504061aa567" title="Called on trying to close application.">OnTryClose</a>(<span class="keywordtype">bool</span>* ignoredPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a752f93d0a275a23596ba31db8c10b151" title="Inform if GUI was initilized.">IsGuiCreated</a>() <span class="keyword">const</span>;
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a5d2f5b143eb706db912bff2174673fb1" title="Initialize GUI and connect it to the parent.">CreateGui</a>(QWidget* parentPtr);
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#ab85e5f0592a8df99910ba75d3b02a7a8" title="Release GUI and disconnect it from parent.">DestroyGui</a>();
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a4a38e54975372439e4e118c2f392fd94" title="Get access to internal QWidget object.">GetWidget</a>() <span class="keyword">const</span>;
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#ac68150c5067bc0bc01e55504061aa567" title="Called on trying to close application.">OnTryClose</a>(<span class="keywordtype">bool</span>* ignoredPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00050"></a>00050        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a34b4837523017ead26b01ac23fb2b814" title="Updates editor with model data.">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00051"></a>00051        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a6990829d631adab8dad41702f05458d3" title="Updates model from editor.">UpdateModel</a>() const;
-<a name="l00052"></a>00052        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a57e99424a6abfd13f000e3fd6773c153" title="Returns true if the model data can be changed.">IsReadOnly</a>() const;
-<a name="l00053"></a>00053        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#abbf685c4d273c584b4f6b478a1037f75" title="Set flag that the model data can be changed.">SetReadOnly</a>(<span class="keywordtype">bool</span> state);
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a34b4837523017ead26b01ac23fb2b814" title="Updates editor with model data.">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a6990829d631adab8dad41702f05458d3" title="Updates model from editor.">UpdateModel</a>() <span class="keyword">const</span>;
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a57e99424a6abfd13f000e3fd6773c153" title="Returns true if the model data can be changed.">IsReadOnly</a>() <span class="keyword">const</span>;
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#abbf685c4d273c584b4f6b478a1037f75" title="Set flag that the model data can be changed.">SetReadOnly</a>(<span class="keywordtype">bool</span> state);
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055 protected:
+<a name="l00055"></a>00055 <span class="keyword">protected</span>:
 <a name="l00056"></a>00056        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00057"></a>00057        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a445d7a8185158442c293109692f6bb76">OnComponentCreated</a>();
-<a name="l00058"></a>00058        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#ab781888549dfc8ce829d67c9b58da83b">OnComponentDestroyed</a>();
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a445d7a8185158442c293109692f6bb76">OnComponentCreated</a>();
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_model_editor_gui_comp.html#ab781888549dfc8ce829d67c9b58da83b">OnComponentDestroyed</a>();
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060 private:
-<a name="l00061"></a>00061        I_REF(iqtgui::<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>, m_slaveGuiCompPtr);
-<a name="l00062"></a>00062        I_REF(imod::IObserver, m_slaveObserverCompPtr);
-<a name="l00063"></a>00063        I_REF(imod::IModelEditor, m_slaveEditorCompPtr);
-<a name="l00064"></a>00064        I_REF(imod::IModel, m_modelCompPtr);
+<a name="l00060"></a>00060 <span class="keyword">private</span>:
+<a name="l00061"></a>00061        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_slaveGuiCompPtr);
+<a name="l00062"></a>00062        I_REF(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>, m_slaveObserverCompPtr);
+<a name="l00063"></a>00063        I_REF(<a class="code" href="classimod_1_1_i_model_editor.html" title="Common interface for an model editor.">imod::IModelEditor</a>, m_slaveEditorCompPtr);
+<a name="l00064"></a>00064        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_modelCompPtr);
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066        <span class="keywordtype">bool</span> m_isConnected;
 <a name="l00067"></a>00067 };

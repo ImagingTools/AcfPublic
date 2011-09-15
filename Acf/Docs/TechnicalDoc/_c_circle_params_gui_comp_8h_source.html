@@ -55,23 +55,23 @@
 <a name="l00028"></a>00028                             <a class="code" href="classiqt2d_1_1_c_circle_shape.html">iqt2d::CCircleShape</a>,
 <a name="l00029"></a><a class="code" href="classiqt2d_1_1_c_circle_params_gui_comp.html#afe11ba9d2fe376797798ba94c772c408">00029</a>                             <a class="code" href="classi2d_1_1_c_circle.html" title="Definition of graphical circle object.">i2d::CCircle</a>&gt; <a class="code" href="classiqt2d_1_1_c_circle_params_gui_comp.html#afe11ba9d2fe376797798ba94c772c408">BaseClass</a>;
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_circle_params_gui_comp.html">CCircleParamsGuiComp</a>)
-<a name="l00032"></a>00032        I_END_COMPONENT
+<a name="l00031"></a>00031        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_circle_params_gui_comp.html">CCircleParamsGuiComp</a>);
+<a name="l00032"></a>00032        I_END_COMPONENT;
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00035"></a>00035        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a04228cb85f2014ffa4d86ff6a6b5a36b" title="Updates model from editor.">UpdateModel</a>() const;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a2583ba5148363c31c957d1cc44a2f242" title="Updates model from editor.">UpdateModel</a>() <span class="keyword">const</span>;
 <a name="l00036"></a>00036 
-<a name="l00037"></a>00037 protected:
+<a name="l00037"></a>00037 <span class="keyword">protected</span>:
 <a name="l00038"></a>00038        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00039"></a>00039        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a2d70a6c4987519a7100186ba8ea5eff8" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
-<a name="l00040"></a>00040        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a48fb4fde3b242e415c08b6fc8119cd9f" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
-<a name="l00041"></a>00041        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a4d31720672516f003690bf36e7de4c48" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a2d70a6c4987519a7100186ba8ea5eff8" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a48fb4fde3b242e415c08b6fc8119cd9f" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a4d31720672516f003690bf36e7de4c48" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043 protected Q_SLOTS:
+<a name="l00043"></a>00043 <span class="keyword">protected</span> Q_SLOTS:
 <a name="l00044"></a>00044        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a55f85e6bfb1d1febeb5a8a4151b619a2">OnParamsChanged</a>(<span class="keywordtype">double</span> value);
 <a name="l00045"></a>00045 
-<a name="l00046"></a>00046 private:
-<a name="l00047"></a>00047        I_ATTR(istd::CString, m_unitNameAttrPtr);
+<a name="l00046"></a>00046 <span class="keyword">private</span>:
+<a name="l00047"></a>00047        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_unitNameAttrPtr);
 <a name="l00048"></a>00048        I_ATTR(<span class="keywordtype">double</span>, m_circleZValueAttrPtr);
 <a name="l00049"></a>00049 };
 <a name="l00050"></a>00050 

@@ -50,16 +50,16 @@
 <a name="l00026"></a><a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html#ae7231378d49277f210d184366095ac75">00026</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_sync_processor_wrap.html" title="Wrapper of iproc::IProcessor for simple synchrone processor implementations.">iproc::TSyncProcessorWrap&lt;Base&gt;</a> <a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html#ae7231378d49277f210d184366095ac75">BaseClass2</a>;
 <a name="l00027"></a><a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html#aeb82b61f5619c5cfd1cfdefe18320b2d">00027</a>        <span class="keyword">typedef</span> Interface <a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html#aeb82b61f5619c5cfd1cfdefe18320b2d">InterfaceType</a>;
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029        I_BEGIN_BASE_COMPONENT(<a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html" title="Simple definition macro for a synchronous processor.">TSyncProcessorCompBase</a>)
-<a name="l00030"></a>00030               I_REGISTER_INTERFACE(Interface)
-<a name="l00031"></a>00031               I_REGISTER_INTERFACE(iproc::<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">IProcessor</a>)
-<a name="l00032"></a>00032        I_END_COMPONENT
+<a name="l00029"></a>00029        I_BEGIN_BASE_COMPONENT(<a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html" title="Simple definition macro for a synchronous processor.">TSyncProcessorCompBase</a>);
+<a name="l00030"></a>00030               I_REGISTER_INTERFACE(Interface);
+<a name="l00031"></a>00031               I_REGISTER_INTERFACE(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>);
+<a name="l00032"></a>00032        I_END_COMPONENT;
 <a name="l00033"></a>00033 };
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="comment">// global typedefs</span>
 <a name="l00037"></a>00037 
-<a name="l00038"></a><a class="code" href="namespaceiproc.html#ae4e50b4ac8fab9a33b89f56b5dadccc5">00038</a> typedef <a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html" title="Simple definition macro for a synchronous processor.">TSyncProcessorCompBase</a>&lt;iproc::<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">IProcessor</a>&gt; <a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html" title="Simple definition macro for a synchronous processor.">CSyncProcessorCompBase</a>;
+<a name="l00038"></a><a class="code" href="namespaceiproc.html#ae4e50b4ac8fab9a33b89f56b5dadccc5">00038</a> <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html" title="Simple definition macro for a synchronous processor.">TSyncProcessorCompBase&lt;iproc::IProcessor&gt;</a> <a class="code" href="namespaceiproc.html#ae4e50b4ac8fab9a33b89f56b5dadccc5">CSyncProcessorCompBase</a>;
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 } <span class="comment">// namespace iproc</span>

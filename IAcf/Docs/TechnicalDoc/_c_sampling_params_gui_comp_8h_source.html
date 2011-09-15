@@ -52,14 +52,14 @@
 <a name="l00026"></a>00026                             Ui::CSamplingParamsGuiComp,
 <a name="l00027"></a><a class="code" href="classiqtsig_1_1_c_sampling_params_gui_comp.html#abfff7c5ee2a72f8db68c7b25ce9d22f3">00027</a>                             <a class="code" href="classisig_1_1_i_sampling_params.html" title="Sampler parameters.">isig::ISamplingParams</a>&gt; <a class="code" href="classiqtsig_1_1_c_sampling_params_gui_comp.html#abfff7c5ee2a72f8db68c7b25ce9d22f3">BaseClass</a>;
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiqtsig_1_1_c_sampling_params_gui_comp.html">CSamplingParamsGuiComp</a>)
-<a name="l00030"></a>00030        I_END_COMPONENT
+<a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiqtsig_1_1_c_sampling_params_gui_comp.html">CSamplingParamsGuiComp</a>);
+<a name="l00030"></a>00030        I_END_COMPONENT;
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00033"></a>00033        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtsig_1_1_c_sampling_params_gui_comp.html#a6f1d7aeebdaac0e12378aab93f63b481">OnGuiModelAttached</a>();
-<a name="l00034"></a>00034        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtsig_1_1_c_sampling_params_gui_comp.html#a7bd0afc921e1c8eae36bf3bca954927d">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtsig_1_1_c_sampling_params_gui_comp.html#a48a624f6f1e89a526932ccbbb1804af3">OnGuiModelAttached</a>();
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtsig_1_1_c_sampling_params_gui_comp.html#a7bd0afc921e1c8eae36bf3bca954927d">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00035"></a>00035 
-<a name="l00036"></a>00036 protected Q_SLOTS:
+<a name="l00036"></a>00036 <span class="keyword">protected</span> Q_SLOTS:
 <a name="l00037"></a>00037        <span class="keywordtype">void</span> <a class="code" href="classiqtsig_1_1_c_sampling_params_gui_comp.html#afa5bcac98b1fb6e7b1023f8427906e46">on_IntervalSB_valueChanged</a>(<span class="keywordtype">double</span> value);
 <a name="l00038"></a>00038        <span class="keywordtype">void</span> <a class="code" href="classiqtsig_1_1_c_sampling_params_gui_comp.html#a8a12767a1fb7378a9cf90fbb3f982584">on_ModeCB_currentIndexChanged</a>(<span class="keywordtype">int</span> index);
 <a name="l00039"></a>00039 };

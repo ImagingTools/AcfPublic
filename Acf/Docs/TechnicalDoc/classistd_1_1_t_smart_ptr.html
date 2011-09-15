@@ -74,6 +74,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_smart_ptr.html#accf7ef1b8873d4e1af461bb0f4005bb4">SetCastedOrRemove</a> (SourceType *pointer)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this pointer using casted pointer of other type.  <a href="#accf7ef1b8873d4e1af461bb0f4005bb4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_smart_ptr.html">TSmartPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_smart_ptr.html#a7bd1b22c0b70bec2057075e76008877b">operator=</a> (const <a class="el" href="classistd_1_1_t_trans_ptr.html">TTransPtr</a>&lt; Type &gt; &amp;pointer)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy operator overtaking the pointer.  <a href="#a7bd1b22c0b70bec2057075e76008877b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_smart_ptr.html">TSmartPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_smart_ptr.html#a5dda1d2164a27bc539f6e87c9419e581">operator=</a> (const <a class="el" href="classistd_1_1_t_smart_ptr.html">TSmartPtr</a> &amp;pointer)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -227,9 +228,19 @@ template&lt;class Type, class Accessor &gt; </div>
 </div>
 <div class="memdoc">
 
+<p>Copy operator overtaking the pointer. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pointer</td><td>pointer to overtake - WARNING: After this operation this pointer is invalid! </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_t_trans_ptr.html#a12ba9177b0c9931eea3a0b53b7d63d4b">istd::TTransPtr&lt; Type &gt;</a>.</p>
+
 <p>Definition at line <a class="el" href="_t_smart_ptr_8h_source.html#l00151">151</a> of file <a class="el" href="_t_smart_ptr_8h_source.html">TSmartPtr.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, <a class="el" href="istd_8h_source.html#l00183">NULL</a>, and <a class="el" href="classistd_1_1_t_trans_ptr_1_1_ref_count_base.html#acf654338b83564f53669dfef077a6c2f">istd::TTransPtr&lt; Type &gt;::RefCountBase::OnAttached()</a>.</p>
 
 </div>
 </div>
@@ -250,9 +261,9 @@ template&lt;class Type, class Accessor &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_smart_ptr_8h_source.html#l00166">166</a> of file <a class="el" href="_t_smart_ptr_8h_source.html">TSmartPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_smart_ptr_8h_source.html#l00172">172</a> of file <a class="el" href="_t_smart_ptr_8h_source.html">TSmartPtr.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, <a class="el" href="istd_8h_source.html#l00183">NULL</a>, and <a class="el" href="classistd_1_1_t_trans_ptr_1_1_ref_count_base.html#acf654338b83564f53669dfef077a6c2f">istd::TTransPtr&lt; Type &gt;::RefCountBase::OnAttached()</a>.</p>
 
 </div>
 </div>

@@ -58,38 +58,38 @@
 <a name="l00031"></a>00031                             Ui::CProcessingItemPreviewGuiComp,
 <a name="l00032"></a><a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#ac0156132be12e1fe25c99ddf68819667">00032</a>                             <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">ifpf::IHotfolderProcessingItem</a>&gt; <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#ac0156132be12e1fe25c99ddf68819667">BaseClass</a>;
 <a name="l00033"></a>00033 
-<a name="l00034"></a>00034        I_BEGIN_COMPONENT(<a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html">CProcessingItemPreviewGuiComp</a>)
-<a name="l00035"></a>00035               I_ASSIGN(m_inputPreviewObserverCompPtr, &quot;InputPreview&quot;, &quot;View of the input file&quot;, true, &quot;InputPreview&quot;);
-<a name="l00036"></a>00036               <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a8a76f8ec8b01d2ffb14159ad7ad939f9">I_ASSIGN_TO</a>(m_inputPreviewGuiCompPtr, m_inputPreviewObserverCompPtr, true);
-<a name="l00037"></a>00037               I_ASSIGN(m_outputPreviewObserverCompPtr, &quot;OutputPreview&quot;, &quot;View of the input file&quot;, true, &quot;OutputPreview&quot;);
-<a name="l00038"></a>00038               <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a8a76f8ec8b01d2ffb14159ad7ad939f9">I_ASSIGN_TO</a>(m_outputPreviewGuiCompPtr, m_outputPreviewObserverCompPtr, true);
-<a name="l00039"></a>00039               I_ASSIGN(m_inputFileNameParamCompPtr, &quot;InputFileName&quot;, &quot;File name parameter for the input file&quot;, true, &quot;InputFileName&quot;);
-<a name="l00040"></a>00040               <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a8a76f8ec8b01d2ffb14159ad7ad939f9">I_ASSIGN_TO</a>(m_inputFileNameParamModelCompPtr, m_inputFileNameParamCompPtr, true);
-<a name="l00041"></a>00041               I_ASSIGN(m_outputFileNameParamCompPtr, &quot;OutputFileName&quot;, &quot;File name parameter for the output file&quot;, true, &quot;OutputFileName&quot;);
-<a name="l00042"></a>00042               <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a8a76f8ec8b01d2ffb14159ad7ad939f9">I_ASSIGN_TO</a>(m_outputFileNameParamModelCompPtr, m_outputFileNameParamCompPtr, true);
+<a name="l00034"></a>00034        I_BEGIN_COMPONENT(<a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html">CProcessingItemPreviewGuiComp</a>);
+<a name="l00035"></a>00035               I_ASSIGN(m_inputPreviewObserverCompPtr, <span class="stringliteral">&quot;InputPreview&quot;</span>, <span class="stringliteral">&quot;View of the input file&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;InputPreview&quot;</span>);
+<a name="l00036"></a>00036               <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a8a76f8ec8b01d2ffb14159ad7ad939f9">I_ASSIGN_TO</a>(m_inputPreviewGuiCompPtr, m_inputPreviewObserverCompPtr, <span class="keyword">true</span>);
+<a name="l00037"></a>00037               I_ASSIGN(m_outputPreviewObserverCompPtr, <span class="stringliteral">&quot;OutputPreview&quot;</span>, <span class="stringliteral">&quot;View of the input file&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;OutputPreview&quot;</span>);
+<a name="l00038"></a>00038               <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a8a76f8ec8b01d2ffb14159ad7ad939f9">I_ASSIGN_TO</a>(m_outputPreviewGuiCompPtr, m_outputPreviewObserverCompPtr, <span class="keyword">true</span>);
+<a name="l00039"></a>00039               I_ASSIGN(m_inputFileNameParamCompPtr, <span class="stringliteral">&quot;InputFileName&quot;</span>, <span class="stringliteral">&quot;File name parameter for the input file&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;InputFileName&quot;</span>);
+<a name="l00040"></a>00040               <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a8a76f8ec8b01d2ffb14159ad7ad939f9">I_ASSIGN_TO</a>(m_inputFileNameParamModelCompPtr, m_inputFileNameParamCompPtr, <span class="keyword">true</span>);
+<a name="l00041"></a>00041               I_ASSIGN(m_outputFileNameParamCompPtr, <span class="stringliteral">&quot;OutputFileName&quot;</span>, <span class="stringliteral">&quot;File name parameter for the output file&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;OutputFileName&quot;</span>);
+<a name="l00042"></a>00042               <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a8a76f8ec8b01d2ffb14159ad7ad939f9">I_ASSIGN_TO</a>(m_outputFileNameParamModelCompPtr, m_outputFileNameParamCompPtr, <span class="keyword">true</span>);
 <a name="l00043"></a>00043        I_END_COMPONENT;
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00046"></a>00046        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a761a5380f7386d96526680d086f4320c">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00047"></a>00047        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a6d2308472859c754e9cdc2bce0559fff">OnGuiModelAttached</a>();
-<a name="l00048"></a>00048        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a8e2649ce75757e0eafc50c73131cce88">OnGuiModelDetached</a>();
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a761a5380f7386d96526680d086f4320c">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a6d2308472859c754e9cdc2bce0559fff">OnGuiModelAttached</a>();
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a8e2649ce75757e0eafc50c73131cce88">OnGuiModelDetached</a>();
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00051"></a>00051        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#aaa4c021145972e447c3a9c1450a9e47e">OnGuiCreated</a>();
-<a name="l00052"></a>00052        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a71e1620de6631083e707215000e7b665">OnGuiDestroyed</a>();
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#aaa4c021145972e447c3a9c1450a9e47e">OnGuiCreated</a>();
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_processing_item_preview_gui_comp.html#a71e1620de6631083e707215000e7b665">OnGuiDestroyed</a>();
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054 private:
+<a name="l00054"></a>00054 <span class="keyword">private</span>:
 <a name="l00055"></a>00055        <span class="keywordtype">void</span> ResetEditor();
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057 private:
-<a name="l00058"></a>00058        I_REF(imod::IObserver, m_inputPreviewObserverCompPtr);
-<a name="l00059"></a>00059        I_REF(iqtgui::IGuiObject, m_inputPreviewGuiCompPtr);
-<a name="l00060"></a>00060        I_REF(imod::IObserver, m_outputPreviewObserverCompPtr);
-<a name="l00061"></a>00061        I_REF(iqtgui::IGuiObject, m_outputPreviewGuiCompPtr);
-<a name="l00062"></a>00062        I_REF(iprm::IFileNameParam, m_inputFileNameParamCompPtr);
-<a name="l00063"></a>00063        I_REF(imod::IModel, m_inputFileNameParamModelCompPtr);
-<a name="l00064"></a>00064        I_REF(iprm::IFileNameParam, m_outputFileNameParamCompPtr);
-<a name="l00065"></a>00065        I_REF(imod::IModel, m_outputFileNameParamModelCompPtr);
+<a name="l00057"></a>00057 <span class="keyword">private</span>:
+<a name="l00058"></a>00058        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_inputPreviewObserverCompPtr);
+<a name="l00059"></a>00059        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_inputPreviewGuiCompPtr);
+<a name="l00060"></a>00060        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_outputPreviewObserverCompPtr);
+<a name="l00061"></a>00061        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_outputPreviewGuiCompPtr);
+<a name="l00062"></a>00062        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_file_name_param.html">iprm::IFileNameParam</a>, m_inputFileNameParamCompPtr);
+<a name="l00063"></a>00063        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_inputFileNameParamModelCompPtr);
+<a name="l00064"></a>00064        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_file_name_param.html">iprm::IFileNameParam</a>, m_outputFileNameParamCompPtr);
+<a name="l00065"></a>00065        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_outputFileNameParamModelCompPtr);
 <a name="l00066"></a>00066 };
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068 

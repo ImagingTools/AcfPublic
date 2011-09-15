@@ -73,29 +73,29 @@
 <a name="l00047"></a>00047               <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#ad76e132cd277dc7a99870a71bf756c1a">I_ASSIGN_TO</a>(m_generalParamsEditorCompPtr, m_generalParamsGuiCompPtr, <span class="keyword">false</span>);
 <a name="l00048"></a>00048               I_ASSIGN_MULTI_0(m_namesAttrPtr, <span class="stringliteral">&quot;Names&quot;</span>, <span class="stringliteral">&quot;List of of gui names&quot;</span>, <span class="keyword">false</span>);
 <a name="l00049"></a>00049               I_ASSIGN(m_useHorizontalLayoutAttrPtr, <span class="stringliteral">&quot;UseHorizontalLayout&quot;</span>, <span class="stringliteral">&quot;Use horizontal layout for tool box design&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
-<a name="l00050"></a>00050               I_ASSIGN(m_tabOrientationAttrPtr, <span class="stringliteral">&quot;TabBarOrientation&quot;</span>, <span class="stringliteral">&quot;Orientation of the tab bar for tab design\n 0 - North\n 1 - South\n 2 - West\n 3 - East&quot;</span>, <span class="keyword">true</span>, 0)
-<a name="l00051"></a>00051               I_ASSIGN(m_designTypeAttrPtr, &quot;DesignType&quot;, &quot;Type of design:\n* 1 - tool box\n* 2 - tab&quot;, true, 1);
+<a name="l00050"></a>00050               I_ASSIGN(m_tabOrientationAttrPtr, <span class="stringliteral">&quot;TabBarOrientation&quot;</span>, <span class="stringliteral">&quot;Orientation of the tab bar for tab design\n 0 - North\n 1 - South\n 2 - West\n 3 - East&quot;</span>, <span class="keyword">true</span>, 0);
+<a name="l00051"></a>00051               I_ASSIGN(m_designTypeAttrPtr, <span class="stringliteral">&quot;DesignType&quot;</span>, <span class="stringliteral">&quot;Type of design:\n* 1 - tool box\n* 2 - tab&quot;</span>, <span class="keyword">true</span>, 1);
 <a name="l00052"></a>00052        I_END_COMPONENT;
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054        <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html">CInspectionTaskGuiComp</a>();
+<a name="l00054"></a>00054        <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a78984eb4157ca41fefa1a24af00cf62e">CInspectionTaskGuiComp</a>();
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00057"></a>00057        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a66aa60cd6d6869f9f3478b4dafa34e17">UpdateModel</a>() const;
-<a name="l00058"></a>00058        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#ac51d6d24325bcd194b3716c47b8fc393">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a66aa60cd6d6869f9f3478b4dafa34e17">UpdateModel</a>() <span class="keyword">const</span>;
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#ac51d6d24325bcd194b3716c47b8fc393">UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00059"></a>00059 
 <a name="l00060"></a>00060        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00061"></a>00061        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#ab3b2edce0b992c95cae41f1e2d077647">OnAttached</a>(imod::IModel* modelPtr);
-<a name="l00062"></a>00062        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#acc6411cb93ad635b4ad96c6fcaf88f58">OnDetached</a>(imod::IModel* modelPtr);
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#ab3b2edce0b992c95cae41f1e2d077647">OnAttached</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr);
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#acc6411cb93ad635b4ad96c6fcaf88f58">OnDetached</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr);
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064 protected:
+<a name="l00064"></a>00064 <span class="keyword">protected</span>:
 <a name="l00065"></a>00065        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00066"></a>00066        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#ada49cbc8477c5762f0440350d78eeafc">OnGuiCreated</a>();
-<a name="l00067"></a>00067        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a193feab80d5fff0e3e5c9d2e88dc0613">OnGuiDestroyed</a>();
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#ada49cbc8477c5762f0440350d78eeafc">OnGuiCreated</a>();
+<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a193feab80d5fff0e3e5c9d2e88dc0613">OnGuiDestroyed</a>();
 <a name="l00068"></a>00068 
 <a name="l00069"></a>00069 Q_SIGNALS:
 <a name="l00070"></a>00070        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a2a04d3e528fc60d0d35bd6e8f0e5c283">DoAutoTest</a>();
 <a name="l00071"></a>00071 
-<a name="l00072"></a>00072 protected Q_SLOTS:
+<a name="l00072"></a>00072 <span class="keyword">protected</span> Q_SLOTS:
 <a name="l00073"></a>00073        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a0d37fc605b71cd0d4ca36c279c2810dc">OnEditorChanged</a>(<span class="keywordtype">int</span> index);
 <a name="l00074"></a>00074        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a1cddc4786a0052dadce7819e10b1c380">OnAutoTest</a>();
 <a name="l00075"></a>00075        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#ac510d3d7c36ad1a46809403bd704f666">on_TestAllButton_clicked</a>();
@@ -103,11 +103,11 @@
 <a name="l00077"></a>00077        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a9e8ba6d29f90019a62f7419cb45b446f">on_LoadParamsButton_clicked</a>();
 <a name="l00078"></a>00078        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#af94b0c396c2dba3ac4fb78412e34bb06">on_SaveParamsButton_clicked</a>();
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080 private:
+<a name="l00080"></a>00080 <span class="keyword">private</span>:
 <a name="l00081"></a>00081        <span class="keywordtype">void</span> UpdateProcessingState();
 <a name="l00082"></a>00082 
-<a name="l00083"></a>00083 private:
-<a name="l00084"></a>00084        class TasksObserver: public imod::CMultiModelObserverBase
+<a name="l00083"></a>00083 <span class="keyword">private</span>:
+<a name="l00084"></a>00084        <span class="keyword">class </span>TasksObserver: <span class="keyword">public</span> imod::CMultiModelObserverBase
 <a name="l00085"></a>00085        {
 <a name="l00086"></a>00086        <span class="keyword">public</span>:
 <a name="l00087"></a>00087               TasksObserver(<a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html">CInspectionTaskGuiComp</a>* parentPtr);

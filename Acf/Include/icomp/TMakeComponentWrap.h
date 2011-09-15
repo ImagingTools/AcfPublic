@@ -54,7 +54,7 @@ public:
 	typedef icomp::CComponentBase BaseClass;
 	typedef Base BaseClass2;
 
-	I_BEGIN_COMPONENT(TMakeComponentWrap)
+	I_BEGIN_COMPONENT(TMakeComponentWrap);
 		I_REGISTER_INTERFACE(Interface1);
 		I_REGISTER_INTERFACE(Interface2);
 		I_REGISTER_INTERFACE(Interface3);
@@ -65,7 +65,7 @@ public:
 		I_REGISTER_INTERFACE(Interface8);
 		I_REGISTER_INTERFACE(Interface9);
 		I_REGISTER_INTERFACE(Interface10);
-	I_END_COMPONENT
+	I_END_COMPONENT;
 };
 
 

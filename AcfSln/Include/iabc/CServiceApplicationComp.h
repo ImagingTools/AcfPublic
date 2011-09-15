@@ -26,8 +26,9 @@
 
 // Qt includes
 #include <QSystemTrayIcon>
-#include "QtService.h"
 
+// Qt Solutions
+#include "QtService.h"
 
 // ACF includes
 #include "iabc/iabc.h"
@@ -56,13 +57,13 @@ class CServiceApplicationComp:
 public:
 	typedef ibase::CLoggerComponentBase BaseClass;
 
-	I_BEGIN_COMPONENT(CServiceApplicationComp)
-		I_REGISTER_INTERFACE(ibase::IApplication)
+	I_BEGIN_COMPONENT(CServiceApplicationComp);
+		I_REGISTER_INTERFACE(ibase::IApplication);
 		I_ASSIGN(m_applicationCompPtr, "ApplicationInstance", "Service application object", true, "Application");
 		I_ASSIGN(m_serviceDescriptionAttrPtr, "SeriviceDescription", "Service description", true, "This services provides...");
 		I_ASSIGN(m_serviceNameAttrPtr, "ServiceName", "The name of the service", true, "MyService");
 		I_ASSIGN(m_manualStartupAttrPtr, "ManualStartup", "If enabled, the service is registered with manual start up", false, false);
-	I_END_COMPONENT
+	I_END_COMPONENT;
 
 	QStringList GetApplicationArguments(int argc, char** argv) const;
 
@@ -94,7 +95,7 @@ protected:
 		virtual void start();
 		virtual void stop();
 		virtual void pause();
-   		virtual void resume();
+		virtual void resume();
 		virtual void createApplication(int &argc, char **argv);
 		virtual int executeApplication();
 

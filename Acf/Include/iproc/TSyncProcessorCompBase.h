@@ -48,10 +48,10 @@ public:
 	typedef iproc::TSyncProcessorWrap<Base> BaseClass2;
 	typedef Interface InterfaceType;
 
-	I_BEGIN_BASE_COMPONENT(TSyncProcessorCompBase)
-		I_REGISTER_INTERFACE(Interface)
-		I_REGISTER_INTERFACE(iproc::IProcessor)
-	I_END_COMPONENT
+	I_BEGIN_BASE_COMPONENT(TSyncProcessorCompBase);
+		I_REGISTER_INTERFACE(Interface);
+		I_REGISTER_INTERFACE(iproc::IProcessor);
+	I_END_COMPONENT;
 };
 
 

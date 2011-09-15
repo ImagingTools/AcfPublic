@@ -54,45 +54,45 @@
 <a name="l00028"></a>00028 <span class="keyword">public</span>:
 <a name="l00029"></a><a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#a3b53977a981118c8b40f9bfa2e7855a5">00029</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase&lt;iqtgui::TDesignerGuiCompBase&lt;Ui::CSearchGuiComp, QWidget&gt;</a> &gt; <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#a3b53977a981118c8b40f9bfa2e7855a5">BaseClass</a>;
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031        I_BEGIN_COMPONENT(<a class="code" href="classiqtipr_1_1_c_search_gui_comp.html">CSearchGuiComp</a>)
-<a name="l00032"></a>00032               I_ASSIGN(m_searchResultsModelCompPtr, &quot;SearchResults&quot;, &quot;Search results model&quot;, true, &quot;SearchResults&quot;);
-<a name="l00033"></a>00033               <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#a058138f97172bd1415df23252f0c3cf4">I_ASSIGN_TO</a>(m_searchResultsCompPtr, m_searchResultsModelCompPtr, true);
-<a name="l00034"></a>00034               I_ASSIGN(m_paramsSetCompPtr, &quot;ParamsSet&quot;, &quot;Parameters set&quot;, false, &quot;ParamsSet&quot;);
-<a name="l00035"></a>00035               <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#a058138f97172bd1415df23252f0c3cf4">I_ASSIGN_TO</a>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false);
-<a name="l00036"></a>00036               I_ASSIGN(m_paramsSetGuiCompPtr, &quot;ParamsSetGui&quot;, &quot;Shows parameter set&quot;, false, &quot;ParamsSetGui&quot;);
-<a name="l00037"></a>00037               <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#a058138f97172bd1415df23252f0c3cf4">I_ASSIGN_TO</a>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false);
-<a name="l00038"></a>00038               I_ASSIGN(m_bitmapAcquisitionCompPtr, &quot;BitmapAcquisition&quot;, &quot;Gets image&quot;, true, &quot;BitmapAcquisition&quot;);
-<a name="l00039"></a>00039               I_ASSIGN(m_searchProcessorCompPtr, &quot;Processor&quot;, &quot;Does model search in an image&quot;, true, &quot;Processor&quot;);
-<a name="l00040"></a>00040               I_ASSIGN(m_bitmapCompPtr, &quot;Bitmap&quot;, &quot;Bitmap&quot;, true, &quot;Bitmap&quot;);
-<a name="l00041"></a>00041               <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#a058138f97172bd1415df23252f0c3cf4">I_ASSIGN_TO</a>(m_bitmapModelCompPtr, m_bitmapCompPtr, true);
-<a name="l00042"></a>00042        I_END_COMPONENT
+<a name="l00031"></a>00031        I_BEGIN_COMPONENT(<a class="code" href="classiqtipr_1_1_c_search_gui_comp.html">CSearchGuiComp</a>);
+<a name="l00032"></a>00032               I_ASSIGN(m_searchResultsModelCompPtr, <span class="stringliteral">&quot;SearchResults&quot;</span>, <span class="stringliteral">&quot;Search results model&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;SearchResults&quot;</span>);
+<a name="l00033"></a>00033               <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#a058138f97172bd1415df23252f0c3cf4">I_ASSIGN_TO</a>(m_searchResultsCompPtr, m_searchResultsModelCompPtr, <span class="keyword">true</span>);
+<a name="l00034"></a>00034               I_ASSIGN(m_paramsSetCompPtr, <span class="stringliteral">&quot;ParamsSet&quot;</span>, <span class="stringliteral">&quot;Parameters set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ParamsSet&quot;</span>);
+<a name="l00035"></a>00035               <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#a058138f97172bd1415df23252f0c3cf4">I_ASSIGN_TO</a>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, <span class="keyword">false</span>);
+<a name="l00036"></a>00036               I_ASSIGN(m_paramsSetGuiCompPtr, <span class="stringliteral">&quot;ParamsSetGui&quot;</span>, <span class="stringliteral">&quot;Shows parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ParamsSetGui&quot;</span>);
+<a name="l00037"></a>00037               <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#a058138f97172bd1415df23252f0c3cf4">I_ASSIGN_TO</a>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, <span class="keyword">false</span>);
+<a name="l00038"></a>00038               I_ASSIGN(m_bitmapAcquisitionCompPtr, <span class="stringliteral">&quot;BitmapAcquisition&quot;</span>, <span class="stringliteral">&quot;Gets image&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;BitmapAcquisition&quot;</span>);
+<a name="l00039"></a>00039               I_ASSIGN(m_searchProcessorCompPtr, <span class="stringliteral">&quot;Processor&quot;</span>, <span class="stringliteral">&quot;Does model search in an image&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Processor&quot;</span>);
+<a name="l00040"></a>00040               I_ASSIGN(m_bitmapCompPtr, <span class="stringliteral">&quot;Bitmap&quot;</span>, <span class="stringliteral">&quot;Bitmap&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Bitmap&quot;</span>);
+<a name="l00041"></a>00041               <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#a058138f97172bd1415df23252f0c3cf4">I_ASSIGN_TO</a>(m_bitmapModelCompPtr, m_bitmapCompPtr, <span class="keyword">true</span>);
+<a name="l00042"></a>00042        I_END_COMPONENT;
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044        <span class="comment">// reimplemented (iqt2d::TSceneExtenderCompBase)</span>
-<a name="l00045"></a>00045        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#a4e5f3f9bca81b68a0370e42f0c1c1258">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <span class="keywordtype">bool</span> inactiveOnly, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Shapes</a>&amp; result);
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#a6e5675c698fe001ebbe9a07e9c67d65e">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <span class="keywordtype">bool</span> inactiveOnly, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Shapes</a>&amp; result);
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047 protected:
+<a name="l00047"></a>00047 <span class="keyword">protected</span>:
 <a name="l00048"></a>00048        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00049"></a>00049        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#ac4f037352e285a5046bd308287f83654">OnGuiCreated</a>();
-<a name="l00050"></a>00050        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#ae8d51cadbee296415ffb5cdf730acb45">OnGuiDestroyed</a>();
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#ac4f037352e285a5046bd308287f83654">OnGuiCreated</a>();
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#ae8d51cadbee296415ffb5cdf730acb45">OnGuiDestroyed</a>();
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052 protected Q_SLOTS:
+<a name="l00052"></a>00052 <span class="keyword">protected</span> Q_SLOTS:
 <a name="l00053"></a>00053        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_gui_comp.html#a89ab12a148c4f74c35dba9f86a3275b9">on_FindButton_clicked</a>();
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055 private:
+<a name="l00055"></a>00055 <span class="keyword">private</span>:
 <a name="l00056"></a>00056        <span class="keywordtype">void</span> DoSearch();
 <a name="l00057"></a>00057 
-<a name="l00058"></a>00058 private:
-<a name="l00059"></a>00059        I_ATTR(istd::CString, m_unitNameAttrPtr);
-<a name="l00060"></a>00060        I_REF(iproc::IProcessor, m_searchProcessorCompPtr);
-<a name="l00061"></a>00061        I_REF(imod::IModel, m_searchResultsModelCompPtr);
-<a name="l00062"></a>00062        I_REF(iipr::IFeaturesConsumer, m_searchResultsCompPtr);
-<a name="l00063"></a>00063        I_REF(iprm::IParamsSet, m_paramsSetCompPtr);
-<a name="l00064"></a>00064        I_REF(imod::IModel, m_paramsSetModelCompPtr);
-<a name="l00065"></a>00065        I_REF(iqtgui::IGuiObject, m_paramsSetGuiCompPtr);
-<a name="l00066"></a>00066        I_REF(imod::IObserver, m_paramsSetObserverCompPtr);
-<a name="l00067"></a>00067        I_REF(iproc::IBitmapAcquisition, m_bitmapAcquisitionCompPtr);
-<a name="l00068"></a>00068        I_REF(iimg::IBitmap, m_bitmapCompPtr);
-<a name="l00069"></a>00069        I_REF(imod::IModel, m_bitmapModelCompPtr);
+<a name="l00058"></a>00058 <span class="keyword">private</span>:
+<a name="l00059"></a>00059        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_unitNameAttrPtr);
+<a name="l00060"></a>00060        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_processor.html">iproc::IProcessor</a>, m_searchProcessorCompPtr);
+<a name="l00061"></a>00061        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_searchResultsModelCompPtr);
+<a name="l00062"></a>00062        I_REF(<a class="code" href="classiipr_1_1_i_features_consumer.html" title="Common interface for a features container consuming feature objects.">iipr::IFeaturesConsumer</a>, m_searchResultsCompPtr);
+<a name="l00063"></a>00063        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>, m_paramsSetCompPtr);
+<a name="l00064"></a>00064        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_paramsSetModelCompPtr);
+<a name="l00065"></a>00065        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_paramsSetGuiCompPtr);
+<a name="l00066"></a>00066        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_paramsSetObserverCompPtr);
+<a name="l00067"></a>00067        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_bitmap_acquisition.html">iproc::IBitmapAcquisition</a>, m_bitmapAcquisitionCompPtr);
+<a name="l00068"></a>00068        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>, m_bitmapCompPtr);
+<a name="l00069"></a>00069        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_bitmapModelCompPtr);
 <a name="l00070"></a>00070 };
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072 

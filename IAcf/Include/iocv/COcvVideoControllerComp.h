@@ -58,7 +58,7 @@ public:
 		I_REGISTER_INTERFACE(imm::IVideoInfo);
 		I_REGISTER_INTERFACE(imm::IVideoController);
 		I_ASSIGN(m_frameDataCompPtr, "FrameData", "Frame instance will be loaded with loader", true, "FrameData");
-	I_END_COMPONENT();
+	I_END_COMPONENT;
 
 	COcvVideoControllerComp();
 

@@ -60,36 +60,36 @@
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037        <a class="code" href="classiqtdoc_1_1_c_extended_document_template_comp.html#af06d324a54d2d219dec474c00b691aa2">CExtendedDocumentTemplateComp</a>();
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039        I_BEGIN_COMPONENT(<a class="code" href="classiqtdoc_1_1_c_extended_document_template_comp.html" title="Extension of idoc::CSingleDocumentTemplateComp providing additional Qt-specified functionality.">CExtendedDocumentTemplateComp</a>)
-<a name="l00040"></a>00040               I_REGISTER_INTERFACE(ibase::ICommandsProvider)
-<a name="l00041"></a>00041               I_ASSIGN(m_aboutCommandTextAttrPtr, &quot;AboutCommandText&quot;, &quot;Text used in about menu&quot;, true, &quot;Document&quot;);
-<a name="l00042"></a>00042               I_ASSIGN(m_aboutGuiCompPtr, &quot;AboutGui&quot;, &quot;GUI used inside about dialog box&quot;, false, &quot;AboutGui&quot;);
-<a name="l00043"></a>00043               I_ASSIGN(m_viewGuiCompFact, &quot;ViewFactory&quot;, &quot;Create of document GUI&quot;, true, &quot;ViewFactory&quot;);
-<a name="l00044"></a>00044        I_END_COMPONENT
+<a name="l00039"></a>00039        I_BEGIN_COMPONENT(<a class="code" href="classiqtdoc_1_1_c_extended_document_template_comp.html" title="Extension of idoc::CSingleDocumentTemplateComp providing additional Qt-specified functionality.">CExtendedDocumentTemplateComp</a>);
+<a name="l00040"></a>00040               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>);
+<a name="l00041"></a>00041               I_ASSIGN(m_aboutCommandTextAttrPtr, <span class="stringliteral">&quot;AboutCommandText&quot;</span>, <span class="stringliteral">&quot;Text used in about menu&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Document&quot;</span>);
+<a name="l00042"></a>00042               I_ASSIGN(m_aboutGuiCompPtr, <span class="stringliteral">&quot;AboutGui&quot;</span>, <span class="stringliteral">&quot;GUI used inside about dialog box&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;AboutGui&quot;</span>);
+<a name="l00043"></a>00043               I_ASSIGN(m_viewGuiCompFact, <span class="stringliteral">&quot;ViewFactory&quot;</span>, <span class="stringliteral">&quot;Create of document GUI&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;ViewFactory&quot;</span>);
+<a name="l00044"></a>00044        I_END_COMPONENT;
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046        <span class="comment">// reimplemented (ibase::ICommandsProvider)</span>
-<a name="l00047"></a>00047        virtual const ibase::<a class="code" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd" title="Hierarchical command structure used to create dynamic menu structures.">IHierarchicalCommand</a>* <a class="code" href="classiqtdoc_1_1_c_extended_document_template_comp.html#ab503375212f1fe299e4826eb3cbaac6e" title="Get list of menu commands.">GetCommands</a>() const;
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures.">ibase::IHierarchicalCommand</a>* <a class="code" href="classiqtdoc_1_1_c_extended_document_template_comp.html#a6efcf1e335a0bc04bd9c57c394a2aa5a" title="Get list of menu commands.">GetCommands</a>() <span class="keyword">const</span>;
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049        <span class="comment">// reimplemented (idoc::IDocumentTemplate)</span>
-<a name="l00050"></a>00050        virtual <a class="code" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">Ids</a> <a class="code" href="classiqtdoc_1_1_c_extended_document_template_comp.html#a55be0f7c45cc25ce4de4549b33e65ac7" title="Get list of supported document ID&#39;s can be created for specified file.">GetDocumentTypeIdsForFile</a>(const istd::CString&amp; filePath) const;
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <a class="code" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">Ids</a> <a class="code" href="classiqtdoc_1_1_c_extended_document_template_comp.html#a55be0f7c45cc25ce4de4549b33e65ac7" title="Get list of supported document ID&#39;s can be created for specified file.">GetDocumentTypeIdsForFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath) <span class="keyword">const</span>;
 <a name="l00051"></a>00051 
 <a name="l00052"></a>00052        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00053"></a>00053        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_extended_document_template_comp.html#a19e27f6edb58d09562447c1b7b11d300">OnComponentCreated</a>();
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_extended_document_template_comp.html#a19e27f6edb58d09562447c1b7b11d300">OnComponentCreated</a>();
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055 protected Q_SLOTS:
+<a name="l00055"></a>00055 <span class="keyword">protected</span> Q_SLOTS:
 <a name="l00056"></a>00056        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_extended_document_template_comp.html#a4c6f7defab48ec7ed0af37af87d79a70">OnAboutCommand</a>();
 <a name="l00057"></a>00057 
-<a name="l00058"></a>00058 protected:
+<a name="l00058"></a>00058 <span class="keyword">protected</span>:
 <a name="l00059"></a>00059        <span class="comment">// reimplemented (idoc::CSingleDocumentTemplateComp)</span>
-<a name="l00060"></a>00060        virtual istd::IPolymorphic* <a class="code" href="classiqtdoc_1_1_c_extended_document_template_comp.html#a0363b20f960817f159ac407e58e57968" title="Extract pointer of view interface from factorisied view component.">ExtractViewInterface</a>(icomp::IComponent* componentPtr) const;
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <a class="code" href="classiqtdoc_1_1_c_extended_document_template_comp.html#a0363b20f960817f159ac407e58e57968" title="Extract pointer of view interface from factorisied view component.">ExtractViewInterface</a>(<a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">icomp::IComponent</a>* componentPtr) <span class="keyword">const</span>;
 <a name="l00061"></a>00061 
-<a name="l00062"></a>00062 private:
-<a name="l00063"></a>00063        I_ATTR(istd::CString, m_aboutCommandTextAttrPtr);
-<a name="l00064"></a>00064        I_REF(iqtgui::IGuiObject, m_aboutGuiCompPtr);
-<a name="l00065"></a>00065        I_FACT(iqtgui::IGuiObject, m_viewGuiCompFact);
+<a name="l00062"></a>00062 <span class="keyword">private</span>:
+<a name="l00063"></a>00063        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_aboutCommandTextAttrPtr);
+<a name="l00064"></a>00064        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_aboutGuiCompPtr);
+<a name="l00065"></a>00065        I_FACT(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_viewGuiCompFact);
 <a name="l00066"></a>00066 
-<a name="l00067"></a>00067        iqtgui::CHierarchicalCommand m_globalMenuCommands;
-<a name="l00068"></a>00068        istd::CString m_aboutCommandText;
+<a name="l00067"></a>00067        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_globalMenuCommands;
+<a name="l00068"></a>00068        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_aboutCommandText;
 <a name="l00069"></a>00069 };
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071 

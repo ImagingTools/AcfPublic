@@ -80,7 +80,7 @@ public:
 		Copy operator overtaking the pointer.
 		\param	pointer	pointer to overtake - WARNING: After this operation this pointer is invalid!
 	*/
-	TTransPtr& operator=(TTransPtr& pointer);
+	TTransPtr& operator=(const TTransPtr& pointer);
 	Type& operator*() const;
 	Type* operator->() const;
 
@@ -181,13 +181,15 @@ void TTransPtr<Type>::Reset()
 
 
 template <class Type>
-TTransPtr<Type>& TTransPtr<Type>::operator=(TTransPtr& pointer)
+TTransPtr<Type>& TTransPtr<Type>::operator=(const TTransPtr& pointer)
 {
-	Detach();
+	if (m_counterPtr != pointer.m_counterPtr){
+		Detach();
 
-	m_counterPtr = pointer.m_counterPtr;
+		m_counterPtr = pointer.m_counterPtr;
 
-	pointer.m_counterPtr = NULL;
+		const_cast<TTransPtr&>(pointer).m_counterPtr = NULL;
+	}
 
 	return *this;
 }

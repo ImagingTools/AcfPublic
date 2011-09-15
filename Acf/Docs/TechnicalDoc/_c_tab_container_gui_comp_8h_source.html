@@ -48,26 +48,26 @@
 <a name="l00026"></a>00026 <span class="keyword">public</span>:
 <a name="l00027"></a><a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a90c8e4fbaec412fd71bfd82c9ce3eeb1">00027</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase&lt;QTabWidget&gt;</a> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a90c8e4fbaec412fd71bfd82c9ce3eeb1">BaseClass</a>;
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html" title="Component to create the tab widget, that shows the specified sub-UI-component in its tab page...">CTabContainerGuiComp</a>)
-<a name="l00030"></a>00030               I_ASSIGN_MULTI_0(m_slaveWidgetsCompPtr, &quot;Guis&quot;, &quot;Slave widgets for tab window&quot;, true)
-<a name="l00031"></a>00031               I_ASSIGN(m_iconsProviderCompPtr, &quot;IconsProvider&quot;, &quot;Provider of tab icons&quot;, false, &quot;IconsProvider&quot;)
-<a name="l00032"></a>00032               I_ASSIGN(m_cornerGuiCompPtr, &quot;CornerWidget&quot;, &quot;Optional corner widget&quot;, false, &quot;CornerWidget&quot;)
-<a name="l00033"></a>00033               I_ASSIGN_MULTI_0(m_tabNamesAttrPtr, &quot;Names&quot;, &quot;Titles for the tab&quot;, true)
-<a name="l00034"></a>00034               I_ASSIGN(m_iconSizeAttrPtr, &quot;IconSize&quot;, &quot;Size for tab icons&quot;, false, 16)
-<a name="l00035"></a>00035               I_ASSIGN(m_useTriangularTabsAttrPtr, &quot;UseTriangularTabs&quot;, &quot;Using triangular tab form&quot;, true, false)
-<a name="l00036"></a>00036               I_ASSIGN(m_tabOrientationAttrPtr, &quot;TabBarOrientation&quot;, &quot;Orientation of the tab bar\n 0 - North\n 1 - South\n 2 - West\n 3 - East&quot;, true, 0)
-<a name="l00037"></a>00037        I_END_COMPONENT
+<a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html" title="Component to create the tab widget, that shows the specified sub-UI-component in its tab page...">CTabContainerGuiComp</a>);
+<a name="l00030"></a>00030               I_ASSIGN_MULTI_0(m_slaveWidgetsCompPtr, <span class="stringliteral">&quot;Guis&quot;</span>, <span class="stringliteral">&quot;Slave widgets for tab window&quot;</span>, <span class="keyword">true</span>);
+<a name="l00031"></a>00031               I_ASSIGN(m_iconsProviderCompPtr, <span class="stringliteral">&quot;IconsProvider&quot;</span>, <span class="stringliteral">&quot;Provider of tab icons&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;IconsProvider&quot;</span>);
+<a name="l00032"></a>00032               I_ASSIGN(m_cornerGuiCompPtr, <span class="stringliteral">&quot;CornerWidget&quot;</span>, <span class="stringliteral">&quot;Optional corner widget&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;CornerWidget&quot;</span>);
+<a name="l00033"></a>00033               I_ASSIGN_MULTI_0(m_tabNamesAttrPtr, <span class="stringliteral">&quot;Names&quot;</span>, <span class="stringliteral">&quot;Titles for the tab&quot;</span>, <span class="keyword">true</span>);
+<a name="l00034"></a>00034               I_ASSIGN(m_iconSizeAttrPtr, <span class="stringliteral">&quot;IconSize&quot;</span>, <span class="stringliteral">&quot;Size for tab icons&quot;</span>, <span class="keyword">false</span>, 16);
+<a name="l00035"></a>00035               I_ASSIGN(m_useTriangularTabsAttrPtr, <span class="stringliteral">&quot;UseTriangularTabs&quot;</span>, <span class="stringliteral">&quot;Using triangular tab form&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00036"></a>00036               I_ASSIGN(m_tabOrientationAttrPtr, <span class="stringliteral">&quot;TabBarOrientation&quot;</span>, <span class="stringliteral">&quot;Orientation of the tab bar\n 0 - North\n 1 - South\n 2 - West\n 3 - East&quot;</span>, <span class="keyword">true</span>, 0);
+<a name="l00037"></a>00037        I_END_COMPONENT;
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039 protected:
+<a name="l00039"></a>00039 <span class="keyword">protected</span>:
 <a name="l00040"></a>00040        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00041"></a>00041        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a70e404a18b0b9cb082f97614e33f2a02" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00042"></a>00042        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a339d7874c2db7d67e5fd6dad1bfdfaa5" title="Called just before GUI is released.">OnGuiDestroyed</a>();
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a70e404a18b0b9cb082f97614e33f2a02" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a339d7874c2db7d67e5fd6dad1bfdfaa5" title="Called just before GUI is released.">OnGuiDestroyed</a>();
 <a name="l00043"></a>00043 
-<a name="l00044"></a>00044 private:
-<a name="l00045"></a>00045        I_MULTIREF(iqtgui::<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>, m_slaveWidgetsCompPtr);
-<a name="l00046"></a>00046        I_REF(iqtgui::<a class="code" href="classiqtgui_1_1_i_icon_provider.html" title="This interface provides acces to an icon.">IIconProvider</a>, m_iconsProviderCompPtr);
-<a name="l00047"></a>00047        I_REF(iqtgui::IGuiObject, m_cornerGuiCompPtr);
-<a name="l00048"></a>00048        I_MULTIATTR(istd::CString, m_tabNamesAttrPtr);
+<a name="l00044"></a>00044 <span class="keyword">private</span>:
+<a name="l00045"></a>00045        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_slaveWidgetsCompPtr);
+<a name="l00046"></a>00046        I_REF(<a class="code" href="classiqtgui_1_1_i_icon_provider.html" title="This interface provides acces to an icon.">iqtgui::IIconProvider</a>, m_iconsProviderCompPtr);
+<a name="l00047"></a>00047        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_cornerGuiCompPtr);
+<a name="l00048"></a>00048        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_tabNamesAttrPtr);
 <a name="l00049"></a>00049        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
 <a name="l00050"></a>00050        I_ATTR(<span class="keywordtype">bool</span>, m_useTriangularTabsAttrPtr);
 <a name="l00051"></a>00051        I_ATTR(<span class="keywordtype">int</span>, m_tabOrientationAttrPtr);

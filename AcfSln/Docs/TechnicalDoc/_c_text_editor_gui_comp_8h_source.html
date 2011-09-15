@@ -56,35 +56,35 @@
 <a name="l00029"></a>00029                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase&lt;CTextEditor&gt;</a>,
 <a name="l00030"></a><a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#aeb4e2cf9d12956a25b7860db88fdfdf3">00030</a>                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;ibase::ITextDocument&gt;</a> &gt; <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#aeb4e2cf9d12956a25b7860db88fdfdf3">BaseClass</a>;
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032        I_BEGIN_COMPONENT(<a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html">CTextEditorGuiComp</a>)
-<a name="l00033"></a>00033               I_REGISTER_INTERFACE(ibase::ICommandsProvider)
-<a name="l00034"></a>00034               I_REGISTER_INTERFACE(imod::IObserver)
-<a name="l00035"></a>00035               I_ASSIGN(m_languageAttrPtr, &quot;Language&quot;, &quot;Use syntax highlighting for defined language&quot;, false, &quot;Language&quot;);
-<a name="l00036"></a>00036               I_ASSIGN(m_useFoldingAttrPtr, &quot;UseFolding&quot;, &quot;Use folding in the text document&quot;, false, true);
-<a name="l00037"></a>00037               I_ASSIGN(m_readOnlyAttrPtr, &quot;ReadOnly&quot;, &quot;Document view is read only&quot;, false, false);
+<a name="l00032"></a>00032        I_BEGIN_COMPONENT(<a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html">CTextEditorGuiComp</a>);
+<a name="l00033"></a>00033               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>);
+<a name="l00034"></a>00034               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>);
+<a name="l00035"></a>00035               I_ASSIGN(m_languageAttrPtr, <span class="stringliteral">&quot;Language&quot;</span>, <span class="stringliteral">&quot;Use syntax highlighting for defined language&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Language&quot;</span>);
+<a name="l00036"></a>00036               I_ASSIGN(m_useFoldingAttrPtr, <span class="stringliteral">&quot;UseFolding&quot;</span>, <span class="stringliteral">&quot;Use folding in the text document&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
+<a name="l00037"></a>00037               I_ASSIGN(m_readOnlyAttrPtr, <span class="stringliteral">&quot;ReadOnly&quot;</span>, <span class="stringliteral">&quot;Document view is read only&quot;</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);
 <a name="l00038"></a>00038        I_END_COMPONENT;
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00041"></a>00041        virtual <span class="keywordtype">void</span> <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ad98795e7386a0745cdab5e6c7476ee87">UpdateModel</a>() const;
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ad98795e7386a0745cdab5e6c7476ee87">UpdateModel</a>() <span class="keyword">const</span>;
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043        <span class="comment">// reimplemenented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00044"></a>00044        virtual <span class="keywordtype">void</span> <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ac2664adf63eb9bae26d7b38c21efb313">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00045"></a>00045        virtual <span class="keywordtype">void</span> <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ad9b3fb8be8766613c0e23ff1f638adca">OnGuiModelDetached</a>();
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ac2664adf63eb9bae26d7b38c21efb313">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ad9b3fb8be8766613c0e23ff1f638adca">OnGuiModelDetached</a>();
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047        <span class="comment">// reimplemented (ibase::ICommandsProvider)</span>
-<a name="l00048"></a>00048        virtual const ibase::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_i_hierarchical.html">IHierarchicalCommand</a>* <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ad3ffb186808d13da2ba66df8890d66eb">GetCommands</a>() const;
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_i_hierarchical.html">ibase::IHierarchicalCommand</a>* <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ad3ffb186808d13da2ba66df8890d66eb">GetCommands</a>() <span class="keyword">const</span>;
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050 protected:
+<a name="l00050"></a>00050 <span class="keyword">protected</span>:
 <a name="l00051"></a>00051        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00052"></a>00052        virtual <span class="keywordtype">void</span> <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#a1f9596413103b00e959deda7e14deddc">OnGuiCreated</a>();
-<a name="l00053"></a>00053        virtual <span class="keywordtype">void</span> <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ae28a0159bc3b18e8fb256ea02851b155">OnGuiRetranslate</a>();
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#a1f9596413103b00e959deda7e14deddc">OnGuiCreated</a>();
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ae28a0159bc3b18e8fb256ea02851b155">OnGuiRetranslate</a>();
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055 protected Q_SLOTS:
-<a name="l00056"></a>00056        virtual <span class="keywordtype">void</span> <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ad5d9fc48a322f1e3a18c8e8f628961da">OnTextChanged</a>();
+<a name="l00055"></a>00055 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ad5d9fc48a322f1e3a18c8e8f628961da">OnTextChanged</a>();
 <a name="l00057"></a>00057 
-<a name="l00058"></a>00058 private:
+<a name="l00058"></a>00058 <span class="keyword">private</span>:
 <a name="l00059"></a>00059        I_ATTR(<span class="keywordtype">bool</span>, m_useFoldingAttrPtr);
-<a name="l00060"></a>00060        I_ATTR(istd::CString, m_languageAttrPtr);
+<a name="l00060"></a>00060        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_languageAttrPtr);
 <a name="l00061"></a>00061        I_ATTR(<span class="keywordtype">bool</span>, m_readOnlyAttrPtr);
 <a name="l00062"></a>00062 };
 <a name="l00063"></a>00063 

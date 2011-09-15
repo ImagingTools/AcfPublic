@@ -55,36 +55,36 @@
 <a name="l00032"></a><a class="code" href="classimil_1_1_c_mil_search_processor_comp.html#a05969802443b48adbfb94c4bcaf05388aea075b4ee0ade4d38954455a940980bc">00032</a>               <a class="code" href="classimil_1_1_c_mil_search_processor_comp.html#a05969802443b48adbfb94c4bcaf05388aea075b4ee0ade4d38954455a940980bc" title="Unique ID of caliper fearutes.">FTI_MIL_SEARCH_FEATURE</a> = 73731
 <a name="l00033"></a>00033        };
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035        I_BEGIN_COMPONENT(<a class="code" href="classimil_1_1_c_mil_search_processor_comp.html">CMilSearchProcessorComp</a>)
-<a name="l00036"></a>00036               I_ASSIGN(m_milParamsIdAttrPtr, &quot;MilParamsId&quot;, &quot;ID of MIL-specific parameters&quot;, true, &quot;MilParamsId&quot;);
-<a name="l00037"></a>00037               I_ASSIGN(m_aoiParamIdAttrPtr, &quot;AoiParamsId&quot;, &quot;ID of rectangle area of interest&quot;, true, &quot;AoiParamsId&quot;);
-<a name="l00038"></a>00038        I_END_COMPONENT
+<a name="l00035"></a>00035        I_BEGIN_COMPONENT(<a class="code" href="classimil_1_1_c_mil_search_processor_comp.html">CMilSearchProcessorComp</a>);
+<a name="l00036"></a>00036               I_ASSIGN(m_milParamsIdAttrPtr, <span class="stringliteral">&quot;MilParamsId&quot;</span>, <span class="stringliteral">&quot;ID of MIL-specific parameters&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;MilParamsId&quot;</span>);
+<a name="l00037"></a>00037               I_ASSIGN(m_aoiParamIdAttrPtr, <span class="stringliteral">&quot;AoiParamsId&quot;</span>, <span class="stringliteral">&quot;ID of rectangle area of interest&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;AoiParamsId&quot;</span>);
+<a name="l00038"></a>00038        I_END_COMPONENT;
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040        <span class="comment">// reimplemented (iipr::IImageToFeatureProcessor)</span>
-<a name="l00041"></a>00041        virtual <span class="keywordtype">int</span> <a class="code" href="classimil_1_1_c_mil_search_processor_comp.html#a4ac15bc671ed99d39f2b7d117e728112">DoExtractFeatures</a>(
-<a name="l00042"></a>00042                             const iprm::IParamsSet* paramsPtr,
-<a name="l00043"></a>00043                             const iimg::IBitmap&amp; image,
-<a name="l00044"></a>00044                             iipr::IFeaturesConsumer&amp; results);
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimil_1_1_c_mil_search_processor_comp.html#a8534ff383b4eddbd4f43686e2d862201">DoExtractFeatures</a>(
+<a name="l00042"></a>00042                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00043"></a>00043                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; image,
+<a name="l00044"></a>00044                             <a class="code" href="classiipr_1_1_i_features_consumer.html" title="Common interface for a features container consuming feature objects.">iipr::IFeaturesConsumer</a>&amp; results);
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046        <span class="comment">// reimplemented (iproc::IProcessor)</span>
-<a name="l00047"></a>00047        virtual <span class="keywordtype">int</span> <a class="code" href="classimil_1_1_c_mil_search_processor_comp.html#a1a4f48d0043c1916394ee3dc4d1cff74">DoProcessing</a>(
-<a name="l00048"></a>00048                             const iprm::IParamsSet* paramsPtr,
-<a name="l00049"></a>00049                             const istd::IPolymorphic* inputPtr,
-<a name="l00050"></a>00050                             istd::IChangeable* outputPtr,
-<a name="l00051"></a>00051                             iproc::IProgressManager* progressManagerPtr = NULL);
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimil_1_1_c_mil_search_processor_comp.html#a1a4f48d0043c1916394ee3dc4d1cff74">DoProcessing</a>(
+<a name="l00048"></a>00048                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00049"></a>00049                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
+<a name="l00050"></a>00050                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
+<a name="l00051"></a>00051                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a>* progressManagerPtr = NULL);
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053 protected:
-<a name="l00054"></a>00054        virtual <span class="keywordtype">bool</span> <a class="code" href="classimil_1_1_c_mil_search_processor_comp.html#a1fcd8f4c23bd7c08f17b5574f4816aab">DoModelSearch</a>(
-<a name="l00055"></a>00055                             const <a class="code" href="classimil_1_1_c_mil_search_params.html">CMilSearchParams</a>&amp; params,
-<a name="l00056"></a>00056                             const iimg::IBitmap&amp; bitmap,
-<a name="l00057"></a>00057                             const i2d::CRectangle* aoiPtr,
-<a name="l00058"></a>00058                             iipr::IFeaturesConsumer&amp; result);
+<a name="l00053"></a>00053 <span class="keyword">protected</span>:
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimil_1_1_c_mil_search_processor_comp.html#a1fcd8f4c23bd7c08f17b5574f4816aab">DoModelSearch</a>(
+<a name="l00055"></a>00055                             <span class="keyword">const</span> <a class="code" href="classimil_1_1_c_mil_search_params.html">CMilSearchParams</a>&amp; params,
+<a name="l00056"></a>00056                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; bitmap,
+<a name="l00057"></a>00057                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rectangle.html">i2d::CRectangle</a>* aoiPtr,
+<a name="l00058"></a>00058                             <a class="code" href="classiipr_1_1_i_features_consumer.html" title="Common interface for a features container consuming feature objects.">iipr::IFeaturesConsumer</a>&amp; result);
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060 private:
-<a name="l00061"></a>00061        imil::<a class="code" href="classimil_1_1_c_mil_engine.html">CMilEngine</a> m_engine;
+<a name="l00060"></a>00060 <span class="keyword">private</span>:
+<a name="l00061"></a>00061        <a class="code" href="classimil_1_1_c_mil_engine.html">imil::CMilEngine</a> m_engine;
 <a name="l00062"></a>00062 
-<a name="l00063"></a>00063        I_ATTR(istd::CString, m_milParamsIdAttrPtr);
-<a name="l00064"></a>00064        I_ATTR(istd::CString, m_aoiParamIdAttrPtr);
+<a name="l00063"></a>00063        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_milParamsIdAttrPtr);
+<a name="l00064"></a>00064        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_aoiParamIdAttrPtr);
 <a name="l00065"></a>00065 };
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067 

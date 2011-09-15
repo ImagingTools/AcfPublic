@@ -868,10 +868,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT QStringList</type>
+      <type>QStringList</type>
       <name>GetApplicationArguments</name>
       <anchorfile>classiabc_1_1_c_service_application_comp.html</anchorfile>
-      <anchor>adbf3dffc346392436e649882defdfbd6</anchor>
+      <anchor>af0ad88325091c94bff1f4414bbe197e4</anchor>
       <arglist>(int argc, char **argv) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -3548,10 +3548,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT int</type>
+      <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classimeas_1_1_c_histogram_statistics_processor_comp.html</anchorfile>
-      <anchor>a5dfb346bff5d6cc262ea3598f3177379</anchor>
+      <anchor>ab21d63d8bc7cee624761f53c251012eb</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
@@ -5835,10 +5835,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
       <name>CNumericParamsGuiComp</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
-      <anchor>a7cbc6dcbd694de0a03a0834f83ac0642</anchor>
+      <anchor>ab6aa965aac9c4047f11d513fc7ff14b0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -6030,10 +6030,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
       <name>CSurfaceViewComp</name>
       <anchorfile>classiqwt3d_1_1_c_surface_view_comp.html</anchorfile>
-      <anchor>a402b21710ffda15e2a7f95dd5244c0f6</anchor>
+      <anchor>ae9b8d991771ddf2f4b80c97f135fff1c</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">

@@ -45,33 +45,33 @@
 <a name="l00023"></a>00023 <span class="keyword">public</span>:
 <a name="l00024"></a><a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a1ed917583abc8a477ebd0f33efe481c2">00024</a>        <span class="keyword">typedef</span> Gui <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a1ed917583abc8a477ebd0f33efe481c2">BaseClass</a>;
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026        I_BEGIN_BASE_COMPONENT(<a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html" title="A wrapper for saving/restoring of GUI component states in the application settings.">TRestorableGuiWrap</a>)
-<a name="l00027"></a>00027               I_ASSIGN(m_settingsProviderCompPtr, &quot;SettingsProvider&quot;, &quot;Application settings provider&quot;, false, &quot;SettingsProvider&quot;)
-<a name="l00028"></a>00028        I_END_COMPONENT
+<a name="l00026"></a>00026        I_BEGIN_BASE_COMPONENT(<a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html" title="A wrapper for saving/restoring of GUI component states in the application settings.">TRestorableGuiWrap</a>);
+<a name="l00027"></a>00027               I_ASSIGN(m_settingsProviderCompPtr, <span class="stringliteral">&quot;SettingsProvider&quot;</span>, <span class="stringliteral">&quot;Application settings provider&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;SettingsProvider&quot;</span>);
+<a name="l00028"></a>00028        I_END_COMPONENT;
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030 protected:
+<a name="l00030"></a>00030 <span class="keyword">protected</span>:
 <a name="l00031"></a>00031        <span class="comment">// abstract methods</span>
-<a name="l00032"></a>00032        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a8d9133ac255ebcd27bf7d34e2f080250">OnRestoreSettings</a>(const QSettings&amp; settings) = 0;
-<a name="l00033"></a>00033        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#af2c77312dacc51064f1a99946c01338d">OnSaveSettings</a>(QSettings&amp; settings) const = 0;
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a8d9133ac255ebcd27bf7d34e2f080250">OnRestoreSettings</a>(<span class="keyword">const</span> QSettings&amp; settings) = 0;
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#af2c77312dacc51064f1a99946c01338d">OnSaveSettings</a>(QSettings&amp; settings) <span class="keyword">const</span> = 0;
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035        <span class="comment">// pseudo-reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00036"></a>00036        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a438afd8dfe3cc4c89ac85a727761acab">CreateGui</a>(QWidget* parentPtr);
-<a name="l00037"></a>00037        virtual <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a95493638d02221c6e0d14ffe5e5037c0">DestroyGui</a>();
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a438afd8dfe3cc4c89ac85a727761acab">CreateGui</a>(QWidget* parentPtr);
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a95493638d02221c6e0d14ffe5e5037c0">DestroyGui</a>();
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039 private:
-<a name="l00040"></a>00040        I_REF(iqt::ISettingsProvider, m_settingsProviderCompPtr);
+<a name="l00039"></a>00039 <span class="keyword">private</span>:
+<a name="l00040"></a>00040        I_REF(<a class="code" href="classiqt_1_1_i_settings_provider.html" title="Interface for access the application settings object.">iqt::ISettingsProvider</a>, m_settingsProviderCompPtr);
 <a name="l00041"></a>00041 };
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044 <span class="comment">// protected methods</span>
 <a name="l00045"></a>00045 
-<a name="l00046"></a>00046 template &lt;class Gui&gt;
-<a name="l00047"></a><a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a438afd8dfe3cc4c89ac85a727761acab">00047</a> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html" title="A wrapper for saving/restoring of GUI component states in the application settings.">TRestorableGuiWrap</a>&lt;Gui&gt;::<a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a438afd8dfe3cc4c89ac85a727761acab">CreateGui</a>(QWidget* parentPtr)
+<a name="l00046"></a>00046 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui&gt;
+<a name="l00047"></a><a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a438afd8dfe3cc4c89ac85a727761acab">00047</a> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a438afd8dfe3cc4c89ac85a727761acab">TRestorableGuiWrap&lt;Gui&gt;::CreateGui</a>(QWidget* parentPtr)
 <a name="l00048"></a>00048 {
-<a name="l00049"></a>00049        <span class="keywordtype">bool</span> retVal = <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a438afd8dfe3cc4c89ac85a727761acab">BaseClass::CreateGui</a>(parentPtr);
+<a name="l00049"></a>00049        <span class="keywordtype">bool</span> retVal = BaseClass::CreateGui(parentPtr);
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051        <span class="keywordflow">if</span> (m_settingsProviderCompPtr.IsValid()){
-<a name="l00052"></a>00052               <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a8d9133ac255ebcd27bf7d34e2f080250">OnRestoreSettings</a>(m_settingsProviderCompPtr-&gt;GetSettings());
+<a name="l00052"></a>00052               OnRestoreSettings(m_settingsProviderCompPtr-&gt;GetSettings());
 <a name="l00053"></a>00053        }
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055        <span class="keywordflow">return</span> retVal;
@@ -82,10 +82,10 @@
 <a name="l00060"></a><a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a95493638d02221c6e0d14ffe5e5037c0">00060</a> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a95493638d02221c6e0d14ffe5e5037c0">TRestorableGuiWrap&lt;Gui&gt;::DestroyGui</a>()
 <a name="l00061"></a>00061 {
 <a name="l00062"></a>00062        <span class="keywordflow">if</span> (m_settingsProviderCompPtr.IsValid()){
-<a name="l00063"></a>00063               <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#af2c77312dacc51064f1a99946c01338d">OnSaveSettings</a>(m_settingsProviderCompPtr-&gt;GetSettings());
+<a name="l00063"></a>00063               OnSaveSettings(m_settingsProviderCompPtr-&gt;GetSettings());
 <a name="l00064"></a>00064        }
 <a name="l00065"></a>00065 
-<a name="l00066"></a>00066        <span class="keywordflow">return</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a95493638d02221c6e0d14ffe5e5037c0">BaseClass::DestroyGui</a>();
+<a name="l00066"></a>00066        <span class="keywordflow">return</span> BaseClass::DestroyGui();
 <a name="l00067"></a>00067 }
 <a name="l00068"></a>00068 
 <a name="l00069"></a>00069 

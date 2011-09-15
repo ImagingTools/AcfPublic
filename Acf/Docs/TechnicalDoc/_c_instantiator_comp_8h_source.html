@@ -41,15 +41,15 @@
 <a name="l00018"></a>00018 <span class="keyword">public</span>:
 <a name="l00019"></a><a class="code" href="classibase_1_1_c_instantiator_comp.html#a06a097b4afb9d86bcb5c33b000bffcae">00019</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classibase_1_1_c_instantiator_comp.html#a06a097b4afb9d86bcb5c33b000bffcae">BaseClass</a>;
 <a name="l00020"></a>00020 
-<a name="l00021"></a>00021        I_BEGIN_COMPONENT(<a class="code" href="classibase_1_1_c_instantiator_comp.html" title="This help component simply instanciate set of dependent components during its instantiation.">CInstantiatorComp</a>)
-<a name="l00022"></a>00022               I_ASSIGN_MULTI_0(m_instancesAttrPtr, &quot;Instances&quot;, &quot;List of instances will be created during instantiator is created&quot;, false)
-<a name="l00023"></a>00023        I_END_COMPONENT
+<a name="l00021"></a>00021        I_BEGIN_COMPONENT(<a class="code" href="classibase_1_1_c_instantiator_comp.html" title="This help component simply instanciate set of dependent components during its instantiation.">CInstantiatorComp</a>);
+<a name="l00022"></a>00022               I_ASSIGN_MULTI_0(m_instancesAttrPtr, <span class="stringliteral">&quot;Instances&quot;</span>, <span class="stringliteral">&quot;List of instances will be created during instantiator is created&quot;</span>, <span class="keyword">false</span>);
+<a name="l00023"></a>00023        I_END_COMPONENT;
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025 protected:
+<a name="l00025"></a>00025 <span class="keyword">protected</span>:
 <a name="l00026"></a>00026        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00027"></a>00027        virtual <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_instantiator_comp.html#a06d0a3d99a6b3d1edf057fda6216e46a">OnComponentCreated</a>();
+<a name="l00027"></a>00027        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_instantiator_comp.html#a06d0a3d99a6b3d1edf057fda6216e46a">OnComponentCreated</a>();
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029 private:
+<a name="l00029"></a>00029 <span class="keyword">private</span>:
 <a name="l00030"></a>00030        I_MULTIREF(<span class="keywordtype">void</span>*, m_instancesAttrPtr);
 <a name="l00031"></a>00031 };
 <a name="l00032"></a>00032 

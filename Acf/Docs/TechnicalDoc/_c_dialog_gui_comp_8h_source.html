@@ -43,23 +43,23 @@
 <a name="l00019"></a>00019 <span class="keyword">public</span>:
 <a name="l00020"></a><a class="code" href="classiqtgui_1_1_c_dialog_gui_comp.html#acd7fe5ded9a9e2fbb78cd1c38277d961">00020</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classiqtgui_1_1_c_dialog_gui_comp.html#acd7fe5ded9a9e2fbb78cd1c38277d961">BaseClass</a>;
 <a name="l00021"></a>00021 
-<a name="l00022"></a>00022        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_dialog_gui_comp.html" title="Dialog based represenation of any UI-Component.">CDialogGuiComp</a>)
-<a name="l00023"></a>00023               I_REGISTER_INTERFACE(iqtgui::<a class="code" href="classiqtgui_1_1_i_dialog.html" title="Interface for a dialog widget.">IDialog</a>);
-<a name="l00024"></a>00024               I_ASSIGN(m_guiCompPtr, &quot;Gui&quot;, &quot;UI to show in the dialog&quot;, true, &quot;Gui&quot;);
-<a name="l00025"></a>00025               I_ASSIGN(m_dialogTitleAttrPtr, &quot;DialogTitle&quot;, &quot;Title for the dialog&quot;, false, &quot;DialogTitle&quot;);
-<a name="l00026"></a>00026               I_ASSIGN(m_dialogIconPathAttrPtr, &quot;DialogIconPath&quot;, &quot;Icon path for the dialog&quot;, false, &quot;IconPath&quot;);
-<a name="l00027"></a>00027        I_END_COMPONENT
+<a name="l00022"></a>00022        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_dialog_gui_comp.html" title="Dialog based represenation of any UI-Component.">CDialogGuiComp</a>);
+<a name="l00023"></a>00023               I_REGISTER_INTERFACE(<a class="code" href="classiqtgui_1_1_i_dialog.html" title="Interface for a dialog widget.">iqtgui::IDialog</a>);
+<a name="l00024"></a>00024               I_ASSIGN(m_guiCompPtr, <span class="stringliteral">&quot;Gui&quot;</span>, <span class="stringliteral">&quot;UI to show in the dialog&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Gui&quot;</span>);
+<a name="l00025"></a>00025               I_ASSIGN(m_dialogTitleAttrPtr, <span class="stringliteral">&quot;DialogTitle&quot;</span>, <span class="stringliteral">&quot;Title for the dialog&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;DialogTitle&quot;</span>);
+<a name="l00026"></a>00026               I_ASSIGN(m_dialogIconPathAttrPtr, <span class="stringliteral">&quot;DialogIconPath&quot;</span>, <span class="stringliteral">&quot;Icon path for the dialog&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;IconPath&quot;</span>);
+<a name="l00027"></a>00027        I_END_COMPONENT;
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029        <span class="comment">// reimplemented (iqtgui::IDialog)</span>
-<a name="l00030"></a>00030        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_dialog_gui_comp.html#a3c1d66bd2f6c166bb8f8a32194824cd9" title="Execute dialog instance.">ExecuteDialog</a>(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>* parentPtr);
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_dialog_gui_comp.html#a862eb095cd18cd5b1eed60b340e6046f" title="Execute dialog instance.">ExecuteDialog</a>(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>* parentPtr);
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032 protected:
-<a name="l00033"></a>00033        virtual iqtgui::<a class="code" href="classiqtgui_1_1_c_gui_component_dialog.html" title="Class to display an ACF GUI component in a dialog.">CGuiComponentDialog</a>* <a class="code" href="classiqtgui_1_1_c_dialog_gui_comp.html#afb30a131b9ab242f3f01d1aac318343b">CreateComponentDialog</a>(<span class="keywordtype">int</span> buttons, <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>* parentPtr) const;
+<a name="l00032"></a>00032 <span class="keyword">protected</span>:
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <a class="code" href="classiqtgui_1_1_c_gui_component_dialog.html" title="Class to display an ACF GUI component in a dialog.">iqtgui::CGuiComponentDialog</a>* <a class="code" href="classiqtgui_1_1_c_dialog_gui_comp.html#afb30a131b9ab242f3f01d1aac318343b">CreateComponentDialog</a>(<span class="keywordtype">int</span> buttons, <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>* parentPtr) <span class="keyword">const</span>;
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035 private:
-<a name="l00036"></a>00036        I_REF(iqtgui::<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>, m_guiCompPtr);
-<a name="l00037"></a>00037        I_ATTR(istd::CString, m_dialogTitleAttrPtr);
-<a name="l00038"></a>00038        I_ATTR(istd::CString, m_dialogIconPathAttrPtr);
+<a name="l00035"></a>00035 <span class="keyword">private</span>:
+<a name="l00036"></a>00036        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_guiCompPtr);
+<a name="l00037"></a>00037        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_dialogTitleAttrPtr);
+<a name="l00038"></a>00038        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_dialogIconPathAttrPtr);
 <a name="l00039"></a>00039 };
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 

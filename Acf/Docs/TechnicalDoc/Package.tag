@@ -8833,10 +8833,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT bool</type>
+      <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classibase_1_1_c_composed_loader_comp.html</anchorfile>
-      <anchor>ae96f9b1ae27a4de6492276932ac09376</anchor>
+      <anchor>abe1458b49a843110d82377096103a7c0</anchor>
       <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9312,10 +9312,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT int</type>
+      <type>virtual int</type>
       <name>GetObjectsCount</name>
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
-      <anchor>a3d5f3d3feb54558e0511d185dc16e90f</anchor>
+      <anchor>a8dbd1f1c24bb964fb34e64daa339188a</anchor>
       <arglist>(const std::string *typeIdPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9627,10 +9627,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
       <name>CSelectableFileConverterComp</name>
       <anchorfile>classibase_1_1_c_selectable_file_converter_comp.html</anchorfile>
-      <anchor>a621b1ef264025ca3e8aca170481fba16</anchor>
+      <anchor>a9a0f3690d1b31cea61b7e69ac3aadb14</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9854,10 +9854,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT istd::CString</type>
+      <type>virtual istd::CString</type>
       <name>GetText</name>
       <anchorfile>classibase_1_1_c_text_document_comp.html</anchorfile>
-      <anchor>a17d3fffcae6d3d9630461ad7e3f1a702</anchor>
+      <anchor>a9d943296306c41bc5c379ed190918766</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9895,10 +9895,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT bool</type>
+      <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classibase_1_1_c_text_file_loader_comp.html</anchorfile>
-      <anchor>a1127c095b5bbbbc03545aec0af7bdbf2</anchor>
+      <anchor>a9f7491e9af201a90c3c145d8b8521a66</anchor>
       <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -18644,10 +18644,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT bool</type>
+      <type>virtual bool</type>
       <name>IsFeatureSupported</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>adda20bb20a3a7853aaa5ebfa55b9b06a</anchor>
+      <anchor>add86c3cc0946b7357a80bfafaceead28</anchor>
       <arglist>(int featureFlags, const std::string &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -18782,10 +18782,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
       <name>CDocumentManagerListenerComp</name>
       <anchorfile>classidoc_1_1_c_document_manager_listener_comp.html</anchorfile>
-      <anchor>a1c330e6ed99d19f3a6c56325469319f3</anchor>
+      <anchor>af6a1c08453f66b9ee9c2aba7aaf3208b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -25194,10 +25194,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
       <name>CSelectableParamsSetComp</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>abbc087b2e25fc32881d16c6a10db6038</anchor>
+      <anchor>a87cac9890335a0a4d45b7c553f95dbec</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -27125,10 +27125,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
       <name>CApplicationSettingsProviderComp</name>
       <anchorfile>classiqt_1_1_c_application_settings_provider_comp.html</anchorfile>
-      <anchor>acd93a1d801b894f9a070c8231be46d9a</anchor>
+      <anchor>a2e6af537ab9bbd58891fd2c6f3fe4c28</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -28787,10 +28787,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT bool</type>
+      <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiqt_1_1_c_settings_serializer_comp.html</anchorfile>
-      <anchor>a3221e741c0c57f32d9e18b1da26abc51</anchor>
+      <anchor>aab2a782790f0b9b7ed822a971389bb7a</anchor>
       <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -30070,10 +30070,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqt2d_1_1_c_annulus_params_gui_comp.html</anchorfile>
-      <anchor>a1054509b475b77bdabc2154fd377e7a8</anchor>
+      <anchor>ab04362d233a3cf6448f67bdc9ae486d0</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -30117,10 +30117,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqt2d_1_1_c_annulus_segment_params_gui_comp.html</anchorfile>
-      <anchor>ad09cb1f71b6e0d4f46f4b90eac787d0d</anchor>
+      <anchor>a81b05338488bddd762094064b8aed6b0</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -30251,10 +30251,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>a04228cb85f2014ffa4d86ff6a6b5a36b</anchor>
+      <anchor>a2583ba5148363c31c957d1cc44a2f242</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -30515,10 +30515,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT bool</type>
+      <type>virtual bool</type>
       <name>OnDetached</name>
       <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>aa5447ae133069ff9fb3efb908ef83a16</anchor>
+      <anchor>a3ef397bc23b7b85b76e2669570353305</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -30555,10 +30555,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
-      <anchor>a433f3e07629ff7a7de6e8f3aadbb3a3f</anchor>
+      <anchor>afa5f1cd8c311b44d74c8af433a86d85d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -30683,10 +30683,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</anchorfile>
-      <anchor>aa7f2c44a4bc8672a39984ecdfeeed3c2</anchor>
+      <anchor>a7962915cad8738c41ab016a5002cf607</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -30784,10 +30784,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
-      <anchor>a0833c20626506add1e4716a9378d2a8d</anchor>
+      <anchor>af7c3cf891907f4c5a530e3e0e4a72ced</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -30940,10 +30940,10 @@
       <arglist>(m_extenderCompPtr, m_extenderGuiCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT const ibase::IHierarchicalCommand *</type>
+      <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classiqt2d_1_1_c_scene_connector_gui_comp.html</anchorfile>
-      <anchor>a3d130e31959edbfabaec98313304cf6f</anchor>
+      <anchor>aae7ed6a34aa79e0d1f73ba022527786a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -31692,7 +31692,7 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>AddItemsToScene</name>
       <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
       <anchor>a51e2199e9e3e14fe52baae9cce24900e</anchor>
@@ -31755,7 +31755,7 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>AddItemsToScene</name>
       <anchorfile>classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html</anchorfile>
       <anchor>a261b0dee3c1a4664a02feabb3f224a31</anchor>
@@ -32079,7 +32079,7 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT bool</type>
+      <type>virtual bool</type>
       <name>OnAttached</name>
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
       <anchor>a7251aef8234d39513e85129dbbb4d2ae</anchor>
@@ -32188,10 +32188,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT const ibase::IHierarchicalCommand *</type>
+      <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classiqtdoc_1_1_c_extended_document_template_comp.html</anchorfile>
-      <anchor>ab503375212f1fe299e4826eb3cbaac6e</anchor>
+      <anchor>a6efcf1e335a0bc04bd9c57c394a2aa5a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -33277,10 +33277,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>ExecuteDialog</name>
       <anchorfile>classiqtgui_1_1_c_dialog_gui_comp.html</anchorfile>
-      <anchor>a3c1d66bd2f6c166bb8f8a32194824cd9</anchor>
+      <anchor>a862eb095cd18cd5b1eed60b340e6046f</anchor>
       <arglist>(IGuiObject *parentPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -33433,10 +33433,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT bool</type>
+      <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>ae1b6b95adb5ba70735d566f2d8fca0d7</anchor>
+      <anchor>a63cd2f018bf4a3310e36085fc06abc20</anchor>
       <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -33953,10 +33953,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT int</type>
+      <type>virtual int</type>
       <name>GetIconCount</name>
       <anchorfile>classiqtgui_1_1_c_icon_provider_comp.html</anchorfile>
-      <anchor>a2ab1901e9e5fee5c45bdb61733e19796</anchor>
+      <anchor>a636c5c65d703406a8c80466c2f6fbeb4</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -34397,10 +34397,10 @@
       <arglist>(m_slaveObserverCompPtr, m_slaveEditorCompPtr, false)</arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
       <name>CModelEditorGuiComp</name>
       <anchorfile>classiqtgui_1_1_c_model_editor_gui_comp.html</anchorfile>
-      <anchor>a745f9b34b563cccfc3b7273555cad134</anchor>
+      <anchor>a1474c5b49d1ca6262584bbc5435b0aaa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -36189,10 +36189,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
       <name>CParamsManagerGuiComp</name>
       <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>ac5cf5f27006360059f771c6bd0a1a4b7</anchor>
+      <anchor>a7326f307c91669a3248659ccfc536405</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -36504,10 +36504,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_END_COMPONENT void</type>
+      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtprm_1_1_c_selection_param_index_gui_comp.html</anchorfile>
-      <anchor>a3de7b008af49dccaf507f9663b07d190</anchor>
+      <anchor>a7e61289f9e4b267450d9e03e267dd263</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -36786,10 +36786,10 @@
       <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
-      <type>I_END_COMPONENT</type>
+      <type></type>
       <name>CProcessorControlGuiComp</name>
       <anchorfile>classiqtproc_1_1_c_processor_control_gui_comp.html</anchorfile>
-      <anchor>a56454cb15bbd11e47ba56d2541d81e7a</anchor>
+      <anchor>a59034c5a2fefb72f1aca7e82b9e66c1d</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -43633,8 +43633,8 @@
       <type>TTransPtr &amp;</type>
       <name>operator=</name>
       <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
-      <anchor>a2ca95649b6b7161a36af150ff52e50d6</anchor>
-      <arglist>(TTransPtr &amp;pointer)</arglist>
+      <anchor>a12ba9177b0c9931eea3a0b53b7d63d4b</anchor>
+      <arglist>(const TTransPtr &amp;pointer)</arglist>
     </member>
     <member kind="function">
       <type>Type &amp;</type>

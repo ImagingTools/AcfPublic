@@ -51,17 +51,17 @@
 <a name="l00024"></a>00024                             Ui::CSelectionParamIndexGuiComp,
 <a name="l00025"></a><a class="code" href="classiqtprm_1_1_c_selection_param_index_gui_comp.html#a48e62f91bf1c4d0bcd1481052a7f8d99">00025</a>                             <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>&gt; <a class="code" href="classiqtprm_1_1_c_selection_param_index_gui_comp.html#a48e62f91bf1c4d0bcd1481052a7f8d99">BaseClass</a>;
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027        I_BEGIN_COMPONENT(<a class="code" href="classiqtprm_1_1_c_selection_param_index_gui_comp.html">CSelectionParamIndexGuiComp</a>)
-<a name="l00028"></a>00028        I_END_COMPONENT
+<a name="l00027"></a>00027        I_BEGIN_COMPONENT(<a class="code" href="classiqtprm_1_1_c_selection_param_index_gui_comp.html">CSelectionParamIndexGuiComp</a>);
+<a name="l00028"></a>00028        I_END_COMPONENT;
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00031"></a>00031        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_index_gui_comp.html#a3de7b008af49dccaf507f9663b07d190" title="Updates model from editor.">UpdateModel</a>() const;
+<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_index_gui_comp.html#a7e61289f9e4b267450d9e03e267dd263" title="Updates model from editor.">UpdateModel</a>() <span class="keyword">const</span>;
 <a name="l00032"></a>00032 
-<a name="l00033"></a>00033 protected:
+<a name="l00033"></a>00033 <span class="keyword">protected</span>:
 <a name="l00034"></a>00034        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00035"></a>00035        virtual <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_index_gui_comp.html#a97b557162c545ae1eea0f03d725b1bfc" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_index_gui_comp.html#a97b557162c545ae1eea0f03d725b1bfc" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00036"></a>00036 
-<a name="l00037"></a>00037 protected Q_SLOTS:
+<a name="l00037"></a>00037 <span class="keyword">protected</span> Q_SLOTS:
 <a name="l00038"></a>00038        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_index_gui_comp.html#a907e41e7db242b07322ca72774fbb3fc">on_OptionIndexSlider_valueChanged</a>(<span class="keywordtype">int</span> value);
 <a name="l00039"></a>00039 };
 <a name="l00040"></a>00040 

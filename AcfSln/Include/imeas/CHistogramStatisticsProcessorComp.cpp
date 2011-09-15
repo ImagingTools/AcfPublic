@@ -23,6 +23,9 @@
 #include "imeas/CHistogramStatisticsProcessorComp.h"
 
 
+// STL includes
+#include <cmath>
+
  // ACF includes
 #include "istd/TChangeNotifier.h"
 
@@ -73,7 +76,7 @@ bool CHistogramStatisticsProcessorComp::CalculateHistogramStatistics(
 
 	if (input.IsEmpty()){
 		histogramStatistics.ResetStatistics();
-	
+
 		return true;
 	}
 
@@ -134,7 +137,7 @@ bool CHistogramStatisticsProcessorComp::CalculateChannelStatistics(
 
 		weights += sample;
 
-		if (weights >= 0.5 && median < 0){	
+		if (weights >= 0.5 && median < 0){
 			median = sampleIndex;
 		}
 	}
@@ -145,7 +148,7 @@ bool CHistogramStatisticsProcessorComp::CalculateChannelStatistics(
 		standardDeviation += sample * (sampleIndex - average) * (sampleIndex - average);
 	}
 
-	standardDeviation = sqrt(standardDeviation);
+	standardDeviation = std::sqrt(standardDeviation);
 
 	dataStatistics.CreateStatistics(average, median, standardDeviation, boundaries);
 

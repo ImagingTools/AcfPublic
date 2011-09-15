@@ -50,13 +50,13 @@
 <a name="l00023"></a>00023 <span class="keyword">public</span>:
 <a name="l00024"></a><a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#a4be55073d384153a8eaa7bcd7d5b7eca">00024</a>        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">ibase::CLoggerComponentBase</a> <a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#a4be55073d384153a8eaa7bcd7d5b7eca">BaseClass</a>;
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026        I_BEGIN_COMPONENT(<a class="code" href="classiqtmm_1_1_c_media_loader_comp.html">CMediaLoaderComp</a>)
-<a name="l00027"></a>00027               I_REGISTER_INTERFACE(iser::IFileTypeInfo);
-<a name="l00028"></a>00028               I_REGISTER_INTERFACE(iser::IFileLoader);
-<a name="l00029"></a>00029               I_ASSIGN(m_autoPlayAttrPtr, &quot;AutoPlay&quot;, &quot;If enabled, movie will be automatically played after loading&quot;, true, true);
-<a name="l00030"></a>00030        I_END_COMPONENT
+<a name="l00026"></a>00026        I_BEGIN_COMPONENT(<a class="code" href="classiqtmm_1_1_c_media_loader_comp.html">CMediaLoaderComp</a>);
+<a name="l00027"></a>00027               I_REGISTER_INTERFACE(<a class="code" href="classiser_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">iser::IFileTypeInfo</a>);
+<a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="code" href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects.">iser::IFileLoader</a>);
+<a name="l00029"></a>00029               I_ASSIGN(m_autoPlayAttrPtr, <span class="stringliteral">&quot;AutoPlay&quot;</span>, <span class="stringliteral">&quot;If enabled, movie will be automatically played after loading&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
+<a name="l00030"></a>00030        I_END_COMPONENT;
 <a name="l00031"></a>00031 
-<a name="l00032"></a><a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3">00032</a>        enum <a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3" title="List of possible message ids used in context of this interface.">MessageId</a>
+<a name="l00032"></a><a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3">00032</a>        <span class="keyword">enum</span> <a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3" title="List of possible message ids used in context of this interface.">MessageId</a>
 <a name="l00033"></a>00033        {
 <a name="l00034"></a><a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a3a42aedf094e46ddd36ccb2f540f419b">00034</a>               <a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a3a42aedf094e46ddd36ccb2f540f419b">MI_BAD_EXTENSION</a> = 0xa7e0,
 <a name="l00035"></a><a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a0788b7124d3bb82f4fbbe0b818ebfb98">00035</a>               <a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a0788b7124d3bb82f4fbbe0b818ebfb98">MI_FILE_NOT_EXIST</a>,

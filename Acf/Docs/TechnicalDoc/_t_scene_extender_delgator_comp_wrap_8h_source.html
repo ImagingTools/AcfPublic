@@ -47,25 +47,25 @@
 <a name="l00020"></a>00020 <span class="keyword">public</span>:
 <a name="l00021"></a><a class="code" href="classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html#a76f4c88e79c91e86a64850422b883407">00021</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html#a76f4c88e79c91e86a64850422b883407">BaseClass</a>;
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html">TSceneExtenderDelgatorCompWrap</a>)
-<a name="l00024"></a>00024               I_REGISTER_INTERFACE(iqt2d::<a class="code" href="classiqt2d_1_1_i_scene_extender.html" title="Interface for GUI objects presenting its results using extern scene objects.">ISceneExtender</a>)
-<a name="l00025"></a>00025               I_ASSIGN(m_slaveExtenderCompPtr, &quot;SlaveSceneExtender&quot;, &quot;Slave scene extender&quot;, false, &quot;SlaveSceneExtender&quot;);
-<a name="l00026"></a>00026        I_END_COMPONENT
+<a name="l00023"></a>00023        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html">TSceneExtenderDelgatorCompWrap</a>);
+<a name="l00024"></a>00024               I_REGISTER_INTERFACE(<a class="code" href="classiqt2d_1_1_i_scene_extender.html" title="Interface for GUI objects presenting its results using extern scene objects.">iqt2d::ISceneExtender</a>);
+<a name="l00025"></a>00025               I_ASSIGN(m_slaveExtenderCompPtr, <span class="stringliteral">&quot;SlaveSceneExtender&quot;</span>, <span class="stringliteral">&quot;Slave scene extender&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;SlaveSceneExtender&quot;</span>);
+<a name="l00026"></a>00026        I_END_COMPONENT;
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028        <span class="comment">// reimplemented (iqt2d::ISceneExtender)</span>
-<a name="l00029"></a>00029        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html#a261b0dee3c1a4664a02feabb3f224a31" title="Called when items should be added to specified scene.">AddItemsToScene</a>(iqt2d::<a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">ISceneProvider</a>* providerPtr, <span class="keywordtype">int</span> flags);
-<a name="l00030"></a>00030        virtual <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html#a463e9be45cf21eb3383d2d4bd8bbc768" title="Called when items should be removed from specified scene.">RemoveItemsFromScene</a>(iqt2d::<a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">ISceneProvider</a>* providerPtr);
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html#a261b0dee3c1a4664a02feabb3f224a31" title="Called when items should be added to specified scene.">AddItemsToScene</a>(<a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">iqt2d::ISceneProvider</a>* providerPtr, <span class="keywordtype">int</span> flags);
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html#a463e9be45cf21eb3383d2d4bd8bbc768" title="Called when items should be removed from specified scene.">RemoveItemsFromScene</a>(<a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">iqt2d::ISceneProvider</a>* providerPtr);
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032 private:
-<a name="l00033"></a>00033        I_REF(iqt2d::<a class="code" href="classiqt2d_1_1_i_scene_extender.html" title="Interface for GUI objects presenting its results using extern scene objects.">ISceneExtender</a>, m_slaveExtenderCompPtr);
+<a name="l00032"></a>00032 <span class="keyword">private</span>:
+<a name="l00033"></a>00033        I_REF(<a class="code" href="classiqt2d_1_1_i_scene_extender.html" title="Interface for GUI objects presenting its results using extern scene objects.">iqt2d::ISceneExtender</a>, m_slaveExtenderCompPtr);
 <a name="l00034"></a>00034 };
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038 <span class="comment">// reimplemented (iqt2d::ISceneExtender)</span>
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040 template&lt;class <a class="code" href="class_base.html">Base</a>&gt;
-<a name="l00041"></a><a class="code" href="classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html#a261b0dee3c1a4664a02feabb3f224a31">00041</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html">TSceneExtenderDelgatorCompWrap</a>&lt;<a class="code" href="class_base.html">Base</a>&gt;::<a class="code" href="classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html#a261b0dee3c1a4664a02feabb3f224a31" title="Called when items should be added to specified scene.">AddItemsToScene</a>(iqt2d::<a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">ISceneProvider</a>* providerPtr, <span class="keywordtype">int</span> flags)
+<a name="l00040"></a>00040 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Base&gt;
+<a name="l00041"></a><a class="code" href="classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html#a261b0dee3c1a4664a02feabb3f224a31">00041</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html#a261b0dee3c1a4664a02feabb3f224a31" title="Called when items should be added to specified scene.">TSceneExtenderDelgatorCompWrap&lt;Base&gt;::AddItemsToScene</a>(<a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">iqt2d::ISceneProvider</a>* providerPtr, <span class="keywordtype">int</span> flags)
 <a name="l00042"></a>00042 {
 <a name="l00043"></a>00043        <span class="keywordflow">if</span> (m_slaveExtenderCompPtr.IsValid()){
 <a name="l00044"></a>00044               m_slaveExtenderCompPtr-&gt;AddItemsToScene(providerPtr, flags);

@@ -58,9 +58,9 @@
 <a name="l00034"></a>00034               I_REGISTER_INTERFACE(<a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>);
 <a name="l00035"></a>00035               I_ASSIGN(m_selectionIdAttrPtr, <span class="stringliteral">&quot;SelectionId&quot;</span>, <span class="stringliteral">&quot;ID of selection in parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Input&quot;</span>);
 <a name="l00036"></a>00036               I_ASSIGN(m_paramsManagerCompPtr, <span class="stringliteral">&quot;ParamsManager&quot;</span>, <span class="stringliteral">&quot;Manager of parameter set used to realize selection&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;ParamsManager&quot;</span>);
-<a name="l00037"></a>00037        I_END_COMPONENT
+<a name="l00037"></a>00037        I_END_COMPONENT;
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039        <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#abbc087b2e25fc32881d16c6a10db6038">CSelectableParamsSetComp</a>();
+<a name="l00039"></a>00039        <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#a87cac9890335a0a4d45b7c553f95dbec">CSelectableParamsSetComp</a>();
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041        <span class="comment">// reimplemented (iprm::IParamsSet)</span>
 <a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* <a class="code" href="classiprm_1_1_c_selectable_params_set_comp.html#a90cb2ee3f8504c557c0bb614348d7319" title="Get any parameter.">GetParameter</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>) <span class="keyword">const</span>;
