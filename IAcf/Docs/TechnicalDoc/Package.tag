@@ -477,6 +477,13 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CRgbToGrayProcessorComp.h</name>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
+    <filename>_c_rgb_to_gray_processor_comp_8h</filename>
+    <class kind="class">iipr::CRgbToGrayProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CRingPatternGeneratorComp.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_ring_pattern_generator_comp_8h</filename>
@@ -3197,6 +3204,7 @@
     <class kind="class">iipr::CRectDerivativeProcessor</class>
     <class kind="class">iipr::CRectDerivativeProcessorComp</class>
     <class kind="class">iipr::CRectImageSmoothProcessorComp</class>
+    <class kind="class">iipr::CRgbToGrayProcessorComp</class>
     <class kind="class">iipr::CRingPatternGeneratorComp</class>
     <class kind="class">iipr::CRingPatternGeneratorParamsComp</class>
     <class kind="class">iipr::CSearchBasedFeaturesSupplierComp</class>
@@ -4519,6 +4527,32 @@
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
       <anchor>adbf9f15b2cf3d9c99818945965c1aabd</anchor>
       <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CRgbToGrayProcessorComp</name>
+    <filename>classiipr_1_1_c_rgb_to_gray_processor_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_rgb_to_gray_processor_comp.html</anchorfile>
+      <anchor>abc81ba5d137044297386268b28ec91be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_DECLARE_TR_FUNCTION</name>
+      <anchorfile>classiipr_1_1_c_rgb_to_gray_processor_comp.html</anchorfile>
+      <anchor>ae15773b0eb50978cb40167156e89b4b6</anchor>
+      <arglist>(CRgbToGrayProcessorComp)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_rgb_to_gray_processor_comp.html</anchorfile>
+      <anchor>aca24af0d4224de36f56ee13e427f5c9c</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
