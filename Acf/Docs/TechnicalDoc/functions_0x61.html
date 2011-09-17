@@ -260,9 +260,9 @@
 , <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#ae97572f44492b12a88117a22db51483d">iproc::TSyncProcessorWrap&lt; Base &gt;</a>
 </li>
 <li>ArgumentType
-: <a class="el" href="classimath_1_1_t_i_sampled_function.html#a635b1cce21e7750f3fa765fac2dbc59d">imath::TISampledFunction&lt; ArgumentDimensions, ResultDimensions &gt;</a>
+: <a class="el" href="classimath_1_1_t_i_math_function.html#a841cc046852e3530a344e4a13e81a746">imath::TIMathFunction&lt; Argument, Result &gt;</a>
+, <a class="el" href="classimath_1_1_t_i_sampled_function.html#a635b1cce21e7750f3fa765fac2dbc59d">imath::TISampledFunction&lt; ArgumentDimensions, ResultDimensions &gt;</a>
 , <a class="el" href="classimath_1_1_t_fulcrum_grid_function_base.html#af258eb86f07f9abc969d2b99556a31d0">imath::TFulcrumGridFunctionBase&lt; Argument, Result, Fulcrums &gt;</a>
-, <a class="el" href="classimath_1_1_t_i_math_function.html#a841cc046852e3530a344e4a13e81a746">imath::TIMathFunction&lt; Argument, Result &gt;</a>
 </li>
 <li>AssignTypeId()
 : <a class="el" href="classiprm_1_1_i_variable_param.html#a09d03ec12c861f2d7c3ad8a1b28e38d0">iprm::IVariableParam</a>
@@ -288,8 +288,14 @@
 <li>AttributeColumns
 : <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a9ea46939bda9debd7aa6f5c1a753dc44">icmpstr::CAttributeEditorComp</a>
 </li>
+<li>attributeDescription
+: <a class="el" href="structiattr_1_1_c_attributed_object_1_1_attribute_info.html#a8a32184415306e4e5b562441635691c6">iattr::CAttributedObject::AttributeInfo</a>
+</li>
 <li>AttributeFlags
 : <a class="el" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2">icomp::IAttributeStaticInfo</a>
+</li>
+<li>attributeId
+: <a class="el" href="structiattr_1_1_c_attributed_object_1_1_attribute_info.html#aa172cc44414be46b6afb3e430cbb93b1">iattr::CAttributedObject::AttributeInfo</a>
 </li>
 <li>AttributeId
 : <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a1a4a9e9cbf809497cf176f751f9f5648a476002d65af7e52c853ae13fb0b6ebe6">icmpstr::CAttributeEditorComp</a>
@@ -297,18 +303,19 @@
 <li>AttributeMining
 : <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a1a4a9e9cbf809497cf176f751f9f5648a23130885ba3e0afe66dcf40e11b671bd">icmpstr::CAttributeEditorComp</a>
 </li>
-<li>attributePtr
-: <a class="el" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html#aa843663d1e14cf48eec03d6f89909599">icomp::IRegistryElement::AttributeInfo</a>
-</li>
 <li>AttributePtr
 : <a class="el" href="classicomp_1_1_i_registry_element.html#a84b9d1ca8a1ccbdf3f9306a74ae56b17">icomp::IRegistryElement</a>
+</li>
+<li>attributePtr
+: <a class="el" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html#aa843663d1e14cf48eec03d6f89909599">icomp::IRegistryElement::AttributeInfo</a>
 </li>
 <li>AttributeRole
 : <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a1a4a9e9cbf809497cf176f751f9f5648">icmpstr::CAttributeEditorComp</a>
 </li>
 <li>AttributeType
-: <a class="el" href="classicomp_1_1_t_attribute_member.html#a2ad0f7feafb9ac0fea4ac73ef5b9a96f">icomp::TAttributeMember&lt; Attribute &gt;</a>
-, <a class="el" href="classicomp_1_1_t_multi_attribute_member.html#ac48fb6319b7e58d65aec46d97b616c68">icomp::TMultiAttributeMember&lt; Attribute &gt;</a>
+: <a class="el" href="classicomp_1_1_t_multi_attribute_member.html#ac48fb6319b7e58d65aec46d97b616c68">icomp::TMultiAttributeMember&lt; Attribute &gt;</a>
+, <a class="el" href="classiattr_1_1_t_attribute.html#afdc43f8cce1036a1740065c40a1848da">iattr::TAttribute&lt; Value &gt;</a>
+, <a class="el" href="classicomp_1_1_t_attribute_member.html#a2ad0f7feafb9ac0fea4ac73ef5b9a96f">icomp::TAttributeMember&lt; Attribute &gt;</a>
 </li>
 <li>AttributeTypeId
 : <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a1a4a9e9cbf809497cf176f751f9f5648a056649771f29361711e45eed782cc345">icmpstr::CAttributeEditorComp</a>
@@ -326,7 +333,7 @@
 : <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03">icmpstr::CAttributeEditorComp</a>
 </li>
 <li>CAffine2d()
-: <a class="el" href="classi2d_1_1_c_affine2d.html#a9cbd50b25782d2d96e6cb2ea3d83e534">i2d::CAffine2d</a>
+: <a class="el" href="classi2d_1_1_c_affine2d.html#ab7e5007dd130d75d0d3dae9ac26cc9be">i2d::CAffine2d</a>
 </li>
 <li>CalcCacheFilePath()
 : <a class="el" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a48536a21e6e0b7eec37e54476320ea62">iproc::TFileCachedProducerCompBase&lt; Key, CacheObject &gt;</a>
@@ -357,12 +364,12 @@
 </li>
 <li>CalculateCache()
 : <a class="el" href="classimath_1_1_t_fulcrum_grid_function_base.html#ada48f7c94f0c9eeace68d5630f8b64b5">imath::TFulcrumGridFunctionBase&lt; Argument, Result, Fulcrums &gt;</a>
-, <a class="el" href="classiqt_1_1_c_reflected_bitmap_base.html#a164fdb7c77c03cebcd7a37af78c8f83f">iqt::CReflectedBitmapBase</a>
 , <a class="el" href="classistd_1_1_t_cached_update_manager_wrap.html#a50c578d83e24435ffc5f53c681bf1a0e">istd::TCachedUpdateManagerWrap&lt; Base &gt;</a>
+, <a class="el" href="classiqt_1_1_c_reflected_bitmap_base.html#a164fdb7c77c03cebcd7a37af78c8f83f">iqt::CReflectedBitmapBase</a>
 </li>
 <li>CalcVisualization()
-: <a class="el" href="classiqt2d_1_1_c_annulus_segment_shape.html#a07ed171b121bb9d0c58f3d37b889eb33">iqt2d::CAnnulusSegmentShape</a>
-, <a class="el" href="classiqt2d_1_1_c_annulus_shape.html#af7cc2b49331b74ade5330a04441c4041">iqt2d::CAnnulusShape</a>
+: <a class="el" href="classiqt2d_1_1_c_annulus_shape.html#af7cc2b49331b74ade5330a04441c4041">iqt2d::CAnnulusShape</a>
+, <a class="el" href="classiqt2d_1_1_c_annulus_segment_shape.html#a07ed171b121bb9d0c58f3d37b889eb33">iqt2d::CAnnulusSegmentShape</a>
 </li>
 <li>CancelTask()
 : <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#a0a5cd08f5800f4d01eeae041dd5a5aa7">iproc::TSyncProcessorWrap&lt; Base &gt;</a>
@@ -372,7 +379,7 @@
 : <a class="el" href="classi2d_1_1_c_annulus.html#a09e6185368adb086ab5612b8f8a954ee">i2d::CAnnulus</a>
 </li>
 <li>CAnnulusSegment()
-: <a class="el" href="classi2d_1_1_c_annulus_segment.html#ab16b3c1a5c2e87e48eca35c70b149d8f">i2d::CAnnulusSegment</a>
+: <a class="el" href="classi2d_1_1_c_annulus_segment.html#ab689973bda99b3aa72e8fbca5539441a">i2d::CAnnulusSegment</a>
 </li>
 <li>CAnnulusSegmentShape()
 : <a class="el" href="classiqt2d_1_1_c_annulus_segment_shape.html#a8937f2136987d121896f1d173373913a">iqt2d::CAnnulusSegmentShape</a>
@@ -390,8 +397,14 @@
 : <a class="el" href="classiser_1_1_c_archive_tag.html#a6bd7b71acd667548adba4c18bdfa0da9">iser::CArchiveTag</a>
 </li>
 <li>Cast()
-: <a class="el" href="classistd_1_1_t_pointer_base.html#ad9d3268685e431621229b5742561dcae">istd::TPointerBase&lt; Type &gt;</a>
-, <a class="el" href="classistd_1_1_t_trans_ptr.html#ac934238a4fee37066d7c0bb4f5fcad11">istd::TTransPtr&lt; Type &gt;</a>
+: <a class="el" href="classistd_1_1_t_trans_ptr.html#ac934238a4fee37066d7c0bb4f5fcad11">istd::TTransPtr&lt; Type &gt;</a>
+, <a class="el" href="classistd_1_1_t_pointer_base.html#ad9d3268685e431621229b5742561dcae">istd::TPointerBase&lt; Type &gt;</a>
+</li>
+<li>CAttributeBase()
+: <a class="el" href="classiattr_1_1_c_attribute_base.html#a214a799a3dd35845934e4d59239b52fb">iattr::CAttributeBase</a>
+</li>
+<li>CAttributedObject()
+: <a class="el" href="classiattr_1_1_c_attributed_object.html#a95d4f04ff7dd6a29fb7941f682c9374e">iattr::CAttributedObject</a>
 </li>
 <li>CAttributeEditorComp()
 : <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a7080437833d523b1baad9011458c7a35">icmpstr::CAttributeEditorComp</a>
@@ -403,8 +416,8 @@
 : <a class="el" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#af102f49d300794d0c62f257bbdfe33e3">iqt::CSettingsArchiveBase::TagInfo</a>
 </li>
 <li>TakeOver()
-: <a class="el" href="classistd_1_1_t_del_ptr.html#a44f838475fdc9654f29ba624593e88ec">istd::TDelPtr&lt; Type, Accessor &gt;</a>
-, <a class="el" href="classistd_1_1_t_opt_del_ptr.html#a51d576768e7a35762b01667bf2b4f5c8">istd::TOptDelPtr&lt; Type, DelArray &gt;</a>
+: <a class="el" href="classistd_1_1_t_opt_del_ptr.html#a51d576768e7a35762b01667bf2b4f5c8">istd::TOptDelPtr&lt; Type, DelArray &gt;</a>
+, <a class="el" href="classistd_1_1_t_del_ptr.html#a44f838475fdc9654f29ba624593e88ec">istd::TDelPtr&lt; Type, Accessor &gt;</a>
 </li>
 <li>TArray()
 : <a class="el" href="classistd_1_1_t_array.html#a0e31092bc584bffa1705ec1097bdd7ff">istd::TArray&lt; Element, Dimensions &gt;</a>
@@ -416,7 +429,10 @@
 : <a class="el" href="classiproc_1_1_i_processor.html#a53fe9860f57b67e209887f985cf3ea73">iproc::IProcessor</a>
 </li>
 <li>TAttribute()
-: <a class="el" href="classicomp_1_1_t_attribute.html#af0ed4a27ee9fcdeae6047a57d5daca43">icomp::TAttribute&lt; Value &gt;</a>
+: <a class="el" href="classiattr_1_1_t_attribute.html#aed358020b181c79d0bd24dbd7315106f">iattr::TAttribute&lt; Value &gt;</a>
+, <a class="el" href="classicomp_1_1_t_attribute.html#af0ed4a27ee9fcdeae6047a57d5daca43">icomp::TAttribute&lt; Value &gt;</a>
+, <a class="el" href="classiattr_1_1_t_attribute.html#a08fecc770cf4c537047ae45018100210">iattr::TAttribute&lt; Value &gt;</a>
+, <a class="el" href="classicomp_1_1_t_attribute.html#af5ca1d0124e7a5fe224a167fddbd9b58">icomp::TAttribute&lt; Value &gt;</a>
 </li>
 <li>TAttributeMember()
 : <a class="el" href="classicomp_1_1_t_attribute_member.html#a96df462b9134ae1d77cb3ccfcc0f6baa">icomp::TAttributeMember&lt; Attribute &gt;</a>
