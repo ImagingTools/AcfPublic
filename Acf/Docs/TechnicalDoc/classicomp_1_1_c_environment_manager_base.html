@@ -45,18 +45,21 @@ Inheritance diagram for icomp::CEnvironmentManagerBase:</div>
   <img src="classicomp_1_1_c_environment_manager_base.png" usemap="#icomp::CEnvironmentManagerBase_map" alt=""/>
   <map id="icomp::CEnvironmentManagerBase_map" name="icomp::CEnvironmentManagerBase_map">
 <area href="classicomp_1_1_c_package_static_info.html" title="Static info for component package." alt="icomp::CPackageStaticInfo" shape="rect" coords="0,168,238,192"/>
-<area href="classicomp_1_1_i_component_environment_manager.html" alt="icomp::IComponentEnvironmentManager" shape="rect" coords="372,168,610,192"/>
+<area href="classicomp_1_1_i_component_environment_manager.html" alt="icomp::IComponentEnvironmentManager" shape="rect" coords="496,168,734,192"/>
 <area href="classicomp_1_1_c_component_static_info_base.html" alt="icomp::CComponentStaticInfoBase" shape="rect" coords="0,112,238,136"/>
-<area href="classicomp_1_1_i_registries_manager.html" alt="icomp::IRegistriesManager" shape="rect" coords="248,112,486,136"/>
-<area href="classicomp_1_1_i_meta_info_manager.html" alt="icomp::IMetaInfoManager" shape="rect" coords="496,112,734,136"/>
+<area href="classicomp_1_1_i_packages_manager.html" alt="icomp::IPackagesManager" shape="rect" coords="248,112,486,136"/>
+<area href="classicomp_1_1_i_registries_manager.html" alt="icomp::IRegistriesManager" shape="rect" coords="496,112,734,136"/>
+<area href="classicomp_1_1_i_meta_info_manager.html" alt="icomp::IMetaInfoManager" shape="rect" coords="744,112,982,136"/>
 <area href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info." alt="icomp::IComponentStaticInfo" shape="rect" coords="0,56,238,80"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="248,56,486,80"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="496,56,734,80"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="744,56,982,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,238,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="248,0,486,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="496,0,734,24"/>
-<area href="classiqt_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries." alt="iqt::CPackagesLoaderComp" shape="rect" coords="186,280,424,304"/>
-<area href="classicmpstr_1_1_c_packages_loader_ext_comp.html" alt="icmpstr::CPackagesLoaderExtComp" shape="rect" coords="186,336,424,360"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="744,0,982,24"/>
+<area href="classiqt_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries." alt="iqt::CPackagesLoaderComp" shape="rect" coords="248,280,486,304"/>
+<area href="classicmpstr_1_1_c_packages_loader_ext_comp.html" alt="icmpstr::CPackagesLoaderExtComp" shape="rect" coords="248,336,486,360"/>
 </map>
  </div></div>
 
@@ -64,15 +67,16 @@ Inheritance diagram for icomp::CEnvironmentManagerBase:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_environment_manager_base.html#a20dbc28730ef97502e2d4622c04824ef">GetRegistryFromFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;path) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_environment_manager_base.html#a3ea53f214a943bbcb8daf6431640a04c">ConfigureEnvironment</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;configFilePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>())</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure environment for specified file path.  <a href="#a3ea53f214a943bbcb8daf6431640a04c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_environment_manager_base.html#a5d53e5e2a6d1c85bafb49719c571c3bf">GetConfigFilePath</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file path of real used config file.  <a href="#a5d53e5e2a6d1c85bafb49719c571c3bf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_environment_manager_base.html#a70dd5db3fdf569c368ee77f672797503">LoadPackages</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;configFilePath=istd::CString::GetEmpty())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure environment for specified file path.  <a href="#a70dd5db3fdf569c368ee77f672797503"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_environment_manager_base.html#a480bd52a1c68d754538bffd1a51e8422">GetPackageType</a> (const std::string &amp;packageId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type of package as defined in <code>PackageType</code>.  <a href="#a480bd52a1c68d754538bffd1a51e8422"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_environment_manager_base.html#a682802fed344eaddc42b07324c6734d3">GetPackagePath</a> (const std::string &amp;packageId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get directory path of specified component package.  <a href="#a682802fed344eaddc42b07324c6734d3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_environment_manager_base.html#abebdc4e9c6cd773c84c5afbffa712e46">GetRegistry</a> (const <a class="el" href="classicomp_1_1_c_component_address.html">CComponentAddress</a> &amp;address, const <a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a> *contextRegistryPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to stored registry.  <a href="#abebdc4e9c6cd773c84c5afbffa712e46"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_environment_manager_base.html#a110e148a4775b698a86c2844d8c3db23">GetPackageDirPath</a> (const std::string &amp;packageId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get directory path of specified component package.  <a href="#a110e148a4775b698a86c2844d8c3db23"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_meta_info_manager.html#a3910cc2d0502d41961d1c0560a94ddb2">ComponentAddresses</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_environment_manager_base.html#a1ebf06f18d63fd873e3d37e38ae60e74">GetComponentAddresses</a> (int typeFlag=CTF_ALL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get addresses of known components.  <a href="#a1ebf06f18d63fd873e3d37e38ae60e74"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
@@ -86,30 +90,6 @@ Public Member Functions</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_c_environment_manager_base_8h_source.html#l00013">13</a> of file <a class="el" href="_c_environment_manager_base_8h_source.html">CEnvironmentManagerBase.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a3ea53f214a943bbcb8daf6431640a04c"></a><!-- doxytag: member="icomp::CEnvironmentManagerBase::ConfigureEnvironment" ref="a3ea53f214a943bbcb8daf6431640a04c" args="(const istd::CString &amp;configFilePath=istd::CString())" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool icomp::CEnvironmentManagerBase::ConfigureEnvironment </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
-          <td class="paramname"><em>configFilePath</em> = <code><a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()</code></td><td>)</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Configure environment for specified file path. </p>
-<p>If this file path is invalid or empty, standard configuration file will be used. </p>
-
-<p>Implements <a class="el" href="classicomp_1_1_i_component_environment_manager.html#a5194d86ca333b7d8324cdf85372b24e7">icomp::IComponentEnvironmentManager</a>.</p>
-
-<p>Reimplemented in <a class="el" href="classiqt_1_1_c_packages_loader_comp.html#ae5ada8d4204bd7885865e9c6ad76c1ea">iqt::CPackagesLoaderComp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a1ebf06f18d63fd873e3d37e38ae60e74"></a><!-- doxytag: member="icomp::CEnvironmentManagerBase::GetComponentAddresses" ref="a1ebf06f18d63fd873e3d37e38ae60e74" args="(int typeFlag=CTF_ALL) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -184,36 +164,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a110e148a4775b698a86c2844d8c3db23"></a><!-- doxytag: member="icomp::CEnvironmentManagerBase::GetPackageDirPath" ref="a110e148a4775b698a86c2844d8c3db23" args="(const std::string &amp;packageId) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> icomp::CEnvironmentManagerBase::GetPackageDirPath </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>packageId</em></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get directory path of specified component package. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">packageId</td><td>ID of component package. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>package dir path or empty string if specified package is not registered. </dd></dl>
-
-<p>Implements <a class="el" href="classicomp_1_1_i_registries_manager.html#ace75937be0d6dc324863b1477c3edd9f">icomp::IRegistriesManager</a>.</p>
-
-<p>Reimplemented in <a class="el" href="classiqt_1_1_c_packages_loader_comp.html#aefaadf510ce113b2759282f52ae69867">iqt::CPackagesLoaderComp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="ac733a848457e4917e1996275d61072a5"></a><!-- doxytag: member="icomp::CEnvironmentManagerBase::GetPackageMetaInfo" ref="ac733a848457e4917e1996275d61072a5" args="(const std::string &amp;packageId) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -239,6 +189,59 @@ Public Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>static info of the package or NULL, if no package for specified ID was found. </dd></dl>
 
 <p>Implements <a class="el" href="classicomp_1_1_i_meta_info_manager.html#a88918c073f8f85aa86623b76fec96ac8">icomp::IMetaInfoManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a682802fed344eaddc42b07324c6734d3"></a><!-- doxytag: member="icomp::CEnvironmentManagerBase::GetPackagePath" ref="a682802fed344eaddc42b07324c6734d3" args="(const std::string &amp;packageId) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> icomp::CEnvironmentManagerBase::GetPackagePath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>packageId</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get directory path of specified component package. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packageId</td><td>ID of component package. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>package path or empty string if specified package is not registered. </dd></dl>
+
+<p>Implements <a class="el" href="classicomp_1_1_i_packages_manager.html#ad326050fb9d0ccbefe264b3ffd62ce0b">icomp::IPackagesManager</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classiqt_1_1_c_packages_loader_comp.html#ac401d67360e3c6bf299450f3a21576a0">iqt::CPackagesLoaderComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a480bd52a1c68d754538bffd1a51e8422"></a><!-- doxytag: member="icomp::CEnvironmentManagerBase::GetPackageType" ref="a480bd52a1c68d754538bffd1a51e8422" args="(const std::string &amp;packageId) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int icomp::CEnvironmentManagerBase::GetPackageType </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>packageId</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get type of package as defined in <code>PackageType</code>. </p>
+
+<p>Implements <a class="el" href="classicomp_1_1_i_packages_manager.html#a3e615375ca1f15a86c3d211ea6f9acb4">icomp::IPackagesManager</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a29fc5fb5ce684187f775775ac8879448">iqt::CPackagesLoaderComp</a>.</p>
 
 </div>
 </div>
@@ -282,22 +285,27 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a20dbc28730ef97502e2d4622c04824ef"></a><!-- doxytag: member="icomp::CEnvironmentManagerBase::GetRegistryFromFile" ref="a20dbc28730ef97502e2d4622c04824ef" args="(const istd::CString &amp;path) const " -->
+<a class="anchor" id="a70dd5db3fdf569c368ee77f672797503"></a><!-- doxytag: member="icomp::CEnvironmentManagerBase::LoadPackages" ref="a70dd5db3fdf569c368ee77f672797503" args="(const istd::CString &amp;configFilePath=istd::CString::GetEmpty())" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a>* icomp::CEnvironmentManagerBase::GetRegistryFromFile </td>
+          <td class="memname">virtual bool icomp::CEnvironmentManagerBase::LoadPackages </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
+          <td class="paramname"><em>configFilePath</em> = <code>istd::CString::GetEmpty()</code></td><td>)</td>
+          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classiqt_1_1_c_packages_loader_comp.html#abb3b3a67be1df099b4a77015a9b7c2ee">iqt::CPackagesLoaderComp</a>.</p>
+<p>Configure environment for specified file path. </p>
+<p>If this file path is invalid or empty, standard configuration file will be used. </p>
+
+<p>Implements <a class="el" href="classicomp_1_1_i_packages_manager.html#a01a7813aaef467f3a79af6b1808099b2">icomp::IPackagesManager</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classiqt_1_1_c_packages_loader_comp.html#acb8a828a95f8c6aa3db52be6751f62b0">iqt::CPackagesLoaderComp</a>.</p>
 
 </div>
 </div>

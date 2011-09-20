@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef icomp_IPackagesManager_included
-#define icomp_IPackagesManager_included
+#ifndef icomp_IMetaInfoManager_included
+#define icomp_IMetaInfoManager_included
 
 
 #include "istd/IChangeable.h"
@@ -71,6 +71,6 @@ public:
 }//namespace icomp
 
 
-#endif // !icomp_IPackagesManager_included
+#endif // !icomp_IMetaInfoManager_included
 
 

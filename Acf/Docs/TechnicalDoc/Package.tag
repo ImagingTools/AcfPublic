@@ -601,10 +601,12 @@
     <name>CRegistryCodeSaverComp.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_registry_code_saver_comp_8h</filename>
+    <includes id="itr_8h" name="itr.h" local="yes" imported="no">istd/itr.h</includes>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
     <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
+    <includes id="_i_packages_manager_8h" name="IPackagesManager.h" local="yes" imported="no">icomp/IPackagesManager.h</includes>
     <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <class kind="class">ibase::CRegistryCodeSaverComp</class>
     <namespace>ibase</namespace>
   </compound>
@@ -1724,6 +1726,7 @@
     <name>IComponentEnvironmentManager.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_i_component_environment_manager_8h</filename>
+    <includes id="_i_packages_manager_8h" name="IPackagesManager.h" local="yes" imported="no">icomp/IPackagesManager.h</includes>
     <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
     <includes id="_i_meta_info_manager_8h" name="IMetaInfoManager.h" local="yes" imported="no">icomp/IMetaInfoManager.h</includes>
     <class kind="class">icomp::IComponentEnvironmentManager</class>
@@ -1746,6 +1749,15 @@
     <includes id="_i_component_static_info_8h" name="IComponentStaticInfo.h" local="yes" imported="no">icomp/IComponentStaticInfo.h</includes>
     <includes id="_c_component_address_8h" name="CComponentAddress.h" local="yes" imported="no">icomp/CComponentAddress.h</includes>
     <class kind="class">icomp::IMetaInfoManager</class>
+    <namespace>icomp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IPackagesManager.h</name>
+    <path>C:/Temp/Acf/Include/icomp/</path>
+    <filename>_i_packages_manager_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
+    <class kind="class">icomp::IPackagesManager</class>
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
@@ -3291,9 +3303,9 @@
     <filename>_c_registries_manager_comp_8h</filename>
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_i_registry_loader_8h" name="IRegistryLoader.h" local="yes" imported="no">icomp/IRegistryLoader.h</includes>
-    <includes id="_c_registry_8h" name="CRegistry.h" local="yes" imported="no">icomp/CRegistry.h</includes>
+    <includes id="_i_packages_manager_8h" name="IPackagesManager.h" local="yes" imported="no">icomp/IPackagesManager.h</includes>
     <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
+    <includes id="_i_registry_loader_8h" name="IRegistryLoader.h" local="yes" imported="no">icomp/IRegistryLoader.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
@@ -10020,13 +10032,37 @@
   <compound kind="class">
     <name>ibase::CRegistryCodeSaverComp</name>
     <filename>classibase_1_1_c_registry_code_saver_comp.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>ibase::TLoggerCompWrap</base>
     <base>iser::IFileLoader</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>ae3857f169f1da68738683035b455f0b0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNDEFINED_PACKAGE</name>
+      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>ae3857f169f1da68738683035b455f0b0a35c7f04910af8999ad71ac8c682301bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNDEFINED_COMPONENT</name>
+      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>ae3857f169f1da68738683035b455f0b0a92982ebfe07cc5b89484e963749dba0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNDEFINED_ATTR_TYPE</name>
+      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>ae3857f169f1da68738683035b455f0b0ac7b563f70cfe3a465924ada1e5a3e261</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a64d89a240c08267be5cf20bbe051adcf</anchor>
+      <anchor>ac97212409e87526ac2eac440373e81b2</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -14742,13 +14778,6 @@
       <arglist>(const std::string &amp;elementId, const icomp::IComponentStaticInfo &amp;elementStaticInfo, const icomp::IComponentStaticInfo::Ids &amp;interfaceNames) const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>istd::CString</type>
-      <name>GetAddressName</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aa3c213444557321bd4f0f34dc4a5468b</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
       <type>bool</type>
       <name>CheckAttributeCompatibility</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
@@ -15815,6 +15844,7 @@
     <class kind="class">icomp::IComponentEnvironmentManager</class>
     <class kind="class">icomp::IComponentStaticInfo</class>
     <class kind="class">icomp::IMetaInfoManager</class>
+    <class kind="class">icomp::IPackagesManager</class>
     <class kind="class">icomp::IRealAttributeStaticInfo</class>
     <class kind="class">icomp::IRealComponentStaticInfo</class>
     <class kind="class">icomp::IRegistriesManager</class>
@@ -16050,6 +16080,13 @@
       <anchorfile>classicomp_1_1_c_component_address.html</anchorfile>
       <anchor>a9aa414c575081d3c61f60f703e5629bf</anchor>
       <arglist>(const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>istd::CString</type>
+      <name>ToString</name>
+      <anchorfile>classicomp_1_1_c_component_address.html</anchorfile>
+      <anchor>a1e7513ac125337489d9ce9a51c1f2455</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -16622,20 +16659,6 @@
     <base>icomp::CPackageStaticInfo</base>
     <base virtualness="virtual">icomp::IComponentEnvironmentManager</base>
     <member kind="function" virtualness="virtual">
-      <type>virtual const IRegistry *</type>
-      <name>GetRegistryFromFile</name>
-      <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
-      <anchor>a20dbc28730ef97502e2d4622c04824ef</anchor>
-      <arglist>(const istd::CString &amp;path) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ConfigureEnvironment</name>
-      <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
-      <anchor>a3ea53f214a943bbcb8daf6431640a04c</anchor>
-      <arglist>(const istd::CString &amp;configFilePath=istd::CString())</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
       <name>GetConfigFilePath</name>
       <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
@@ -16643,18 +16666,32 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>LoadPackages</name>
+      <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
+      <anchor>a70dd5db3fdf569c368ee77f672797503</anchor>
+      <arglist>(const istd::CString &amp;configFilePath=istd::CString::GetEmpty())</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPackageType</name>
+      <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
+      <anchor>a480bd52a1c68d754538bffd1a51e8422</anchor>
+      <arglist>(const std::string &amp;packageId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetPackagePath</name>
+      <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
+      <anchor>a682802fed344eaddc42b07324c6734d3</anchor>
+      <arglist>(const std::string &amp;packageId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const IRegistry *</type>
       <name>GetRegistry</name>
       <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
       <anchor>abebdc4e9c6cd773c84c5afbffa712e46</anchor>
       <arglist>(const CComponentAddress &amp;address, const IRegistry *contextRegistryPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetPackageDirPath</name>
-      <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
-      <anchor>a110e148a4775b698a86c2844d8c3db23</anchor>
-      <arglist>(const std::string &amp;packageId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ComponentAddresses</type>
@@ -17610,15 +17647,9 @@
   <compound kind="class">
     <name>icomp::IComponentEnvironmentManager</name>
     <filename>classicomp_1_1_i_component_environment_manager.html</filename>
+    <base virtualness="virtual">icomp::IPackagesManager</base>
     <base virtualness="virtual">icomp::IRegistriesManager</base>
     <base virtualness="virtual">icomp::IMetaInfoManager</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>ConfigureEnvironment</name>
-      <anchorfile>classicomp_1_1_i_component_environment_manager.html</anchorfile>
-      <anchor>a5194d86ca333b7d8324cdf85372b24e7</anchor>
-      <arglist>(const istd::CString &amp;configFilePath=istd::CString())=0</arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CString</type>
       <name>GetConfigFilePath</name>
@@ -17800,6 +17831,56 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>icomp::IPackagesManager</name>
+    <filename>classicomp_1_1_i_packages_manager.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>PackageType</name>
+      <anchorfile>classicomp_1_1_i_packages_manager.html</anchorfile>
+      <anchor>a8cff064cb5c0f3cb9bee599fc8cd5882</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_UNKNOWN</name>
+      <anchorfile>classicomp_1_1_i_packages_manager.html</anchorfile>
+      <anchor>a8cff064cb5c0f3cb9bee599fc8cd5882a88e88dd75b94a5f2fd0f4483eaf90259</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_REAL</name>
+      <anchorfile>classicomp_1_1_i_packages_manager.html</anchorfile>
+      <anchor>a8cff064cb5c0f3cb9bee599fc8cd5882af76efdbc784accecad568f84d1ba3e87</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_COMPOSED</name>
+      <anchorfile>classicomp_1_1_i_packages_manager.html</anchorfile>
+      <anchor>a8cff064cb5c0f3cb9bee599fc8cd5882a3413f0eb711f0fcffd8473d7acd89207</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>LoadPackages</name>
+      <anchorfile>classicomp_1_1_i_packages_manager.html</anchorfile>
+      <anchor>a01a7813aaef467f3a79af6b1808099b2</anchor>
+      <arglist>(const istd::CString &amp;configFilePath=istd::CString::GetEmpty())=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetPackageType</name>
+      <anchorfile>classicomp_1_1_i_packages_manager.html</anchorfile>
+      <anchor>a3e615375ca1f15a86c3d211ea6f9acb4</anchor>
+      <arglist>(const std::string &amp;packageId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CString</type>
+      <name>GetPackagePath</name>
+      <anchorfile>classicomp_1_1_i_packages_manager.html</anchorfile>
+      <anchor>ad326050fb9d0ccbefe264b3ffd62ce0b</anchor>
+      <arglist>(const std::string &amp;packageId) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>icomp::IRealAttributeStaticInfo</name>
     <filename>classicomp_1_1_i_real_attribute_static_info.html</filename>
     <base virtualness="virtual">icomp::IAttributeStaticInfo</base>
@@ -17847,13 +17928,6 @@
       <anchorfile>classicomp_1_1_i_registries_manager.html</anchorfile>
       <anchor>a8d9985f4754e8477260134808fd0ab13</anchor>
       <arglist>(const CComponentAddress &amp;address, const IRegistry *contextRegistryPtr=NULL) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
-      <name>GetPackageDirPath</name>
-      <anchorfile>classicomp_1_1_i_registries_manager.html</anchorfile>
-      <anchor>ace75937be0d6dc324863b1477c3edd9f</anchor>
-      <arglist>(const std::string &amp;packageId) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28736,13 +28810,6 @@
       <arglist>(const istd::CString &amp;path) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ConfigureEnvironment</name>
-      <anchorfile>classiqt_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>ae5ada8d4204bd7885865e9c6ad76c1ea</anchor>
-      <arglist>(const istd::CString &amp;configFilePath=istd::CString())</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
       <name>GetConfigFilePath</name>
       <anchorfile>classiqt_1_1_c_packages_loader_comp.html</anchorfile>
@@ -28750,18 +28817,32 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>LoadPackages</name>
+      <anchorfile>classiqt_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>acb8a828a95f8c6aa3db52be6751f62b0</anchor>
+      <arglist>(const istd::CString &amp;configFilePath=istd::CString::GetEmpty())</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPackageType</name>
+      <anchorfile>classiqt_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>a29fc5fb5ce684187f775775ac8879448</anchor>
+      <arglist>(const std::string &amp;packageId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetPackagePath</name>
+      <anchorfile>classiqt_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>ac401d67360e3c6bf299450f3a21576a0</anchor>
+      <arglist>(const std::string &amp;packageId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const icomp::IRegistry *</type>
       <name>GetRegistry</name>
       <anchorfile>classiqt_1_1_c_packages_loader_comp.html</anchorfile>
       <anchor>aa2daa7c05ad6c3ce70002d08ac8e8df7</anchor>
       <arglist>(const icomp::CComponentAddress &amp;address, const icomp::IRegistry *contextRegistryPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetPackageDirPath</name>
-      <anchorfile>classiqt_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>aefaadf510ce113b2759282f52ae69867</anchor>
-      <arglist>(const std::string &amp;packageId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ComponentAddresses</type>
@@ -29020,7 +29101,8 @@
     <name>iqt::CRegistriesManagerComp</name>
     <filename>classiqt_1_1_c_registries_manager_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
-    <base>icomp::IRegistriesManager</base>
+    <base virtualness="virtual">icomp::IPackagesManager</base>
+    <base virtualness="virtual">icomp::IRegistriesManager</base>
     <base virtualness="virtual">icomp::IRegistryLoader</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -29047,19 +29129,26 @@
       <anchor>a4a54032eb7d3988cca6b6af01623befe</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>ConfigureEnvironment</name>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>LoadPackages</name>
       <anchorfile>classiqt_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>ad3fec09ce38ca669f555094eac0e7677</anchor>
-      <arglist>(const istd::CString &amp;configFilePath=istd::CString())</arglist>
+      <anchor>a607073e468c86ace50bb2922adfc827e</anchor>
+      <arglist>(const istd::CString &amp;configFilePath=istd::CString::GetEmpty())</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const icomp::IRegistry *</type>
-      <name>GetRegistryFromFile</name>
+      <type>virtual int</type>
+      <name>GetPackageType</name>
       <anchorfile>classiqt_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a688d6512683bb85c4727e2fef9610abc</anchor>
-      <arglist>(const istd::CString &amp;path) const </arglist>
+      <anchor>acf1483bb1a89349d88dd8774cd2e3528</anchor>
+      <arglist>(const std::string &amp;packageId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetPackagePath</name>
+      <anchorfile>classiqt_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>a839cb33673795259230273a714e764e3</anchor>
+      <arglist>(const std::string &amp;packageId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const icomp::IRegistry *</type>
@@ -29069,18 +29158,11 @@
       <arglist>(const icomp::CComponentAddress &amp;address, const icomp::IRegistry *contextRegistryPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetPackageDirPath</name>
+      <type>virtual const icomp::IRegistry *</type>
+      <name>GetRegistryFromFile</name>
       <anchorfile>classiqt_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a2102ab890443e9838a80db00b5421b34</anchor>
-      <arglist>(const std::string &amp;packageId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqt_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>ac189f878c77be3a6e7db62f8d905f800</anchor>
-      <arglist>()</arglist>
+      <anchor>a688d6512683bb85c4727e2fef9610abc</anchor>
+      <arglist>(const istd::CString &amp;path) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -29109,6 +29191,13 @@
       <anchorfile>classiqt_1_1_c_registries_manager_comp.html</anchorfile>
       <anchor>a63eaf1b5bbae8f47da58b31e6e79e97d</anchor>
       <arglist>(const QDir &amp;directory, const istd::CString &amp;path, istd::CString &amp;resultPath) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqt_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>ac189f878c77be3a6e7db62f8d905f800</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

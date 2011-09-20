@@ -20,13 +20,11 @@
 ********************************************************************************/
 
 
-#ifndef icomp_IRegistriesManager_included
-#define icomp_IRegistriesManager_included
+#ifndef icomp_IPackagesManager_included
+#define icomp_IPackagesManager_included
 
 
-#include <string>
-
-#include "istd/istd.h"
+// ACF includes
 #include "istd/IChangeable.h"
 #include "istd/CString.h"
 
@@ -35,25 +33,45 @@ namespace icomp
 {
 
 
-class IRegistry;
-class CComponentAddress;
-
-
-class IRegistriesManager: virtual public istd::IChangeable
+class IPackagesManager: virtual public istd::IChangeable
 {
 public:
+	enum PackageType
+	{
+		PT_UNKNOWN,
+		/**
+			Real packages are stored as dynamic linked libraries in \c arp files.
+		*/
+		PT_REAL,
+		/**
+			Composed packages are stored in folders containing registry files (\c arx files).
+		*/
+		PT_COMPOSED
+	};
+
 	/**
-		Get access to stored registry.
-		\param	address		adress of registry treated as composed component.
-		\return				registry object or NULL if specified composite component is not registered.
+		Configure environment for specified file path.
+		If this file path is invalid or empty, standard configuration file will be used.
 	*/
-	virtual const IRegistry* GetRegistry(const CComponentAddress& address, const IRegistry* contextRegistryPtr = NULL) const = 0;
+	virtual bool LoadPackages(const istd::CString& configFilePath = istd::CString::GetEmpty()) = 0;
+
+	/**
+		Get type of package as defined in \c PackageType.
+	*/
+	virtual int GetPackageType(const std::string& packageId) const = 0;
+
+	/**
+		Get directory path of specified component package.
+		\param	packageId	ID of component package.
+		\return				package path or empty string if specified package is not registered.
+	*/
+	virtual istd::CString GetPackagePath(const std::string& packageId) const = 0;
 };
 
 
 }//namespace icomp
 
 
-#endif // !icomp_IRegistriesManager_included
+#endif // !icomp_IPackagesManager_included
 
 

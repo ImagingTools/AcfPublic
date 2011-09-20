@@ -53,73 +53,75 @@
 <a name="l00035"></a>00035        <span class="keyword">const</span> std::string&amp; <a class="code" href="classicomp_1_1_c_component_address.html#a99c0c9f6382010653cdb01ba3993b7d5">GetComponentId</a>() <span class="keyword">const</span>;
 <a name="l00036"></a>00036        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_component_address.html#a9aa414c575081d3c61f60f703e5629bf">SetComponentId</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>);
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#a3b93432f4712352545b7aa56fa8bbb52">operator==</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">CComponentAddress</a>&amp; address) <span class="keyword">const</span>;
-<a name="l00039"></a>00039        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#ac898c47b5fc1163595f947c1acd42da0">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">CComponentAddress</a>&amp; address) <span class="keyword">const</span>;
-<a name="l00040"></a>00040        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#a8903e07dd5f9488ad62845c58e988e2a">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">CComponentAddress</a>&amp; address) <span class="keyword">const</span>;
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#a77e4dc5ff47a36134f4f441444ca3b44" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="keyword">private</span>:
-<a name="l00046"></a>00046        std::string m_packageId;
-<a name="l00047"></a>00047        std::string m_componentId;
-<a name="l00048"></a>00048 };
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="comment">// inline methods</span>
+<a name="l00038"></a>00038        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classicomp_1_1_c_component_address.html#a1e7513ac125337489d9ce9a51c1f2455">ToString</a>() <span class="keyword">const</span>;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#a3b93432f4712352545b7aa56fa8bbb52">operator==</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">CComponentAddress</a>&amp; address) <span class="keyword">const</span>;
+<a name="l00041"></a>00041        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#ac898c47b5fc1163595f947c1acd42da0">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">CComponentAddress</a>&amp; address) <span class="keyword">const</span>;
+<a name="l00042"></a>00042        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#a8903e07dd5f9488ad62845c58e988e2a">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">CComponentAddress</a>&amp; address) <span class="keyword">const</span>;
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#a77e4dc5ff47a36134f4f441444ca3b44" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 <span class="keyword">private</span>:
+<a name="l00048"></a>00048        std::string m_packageId;
+<a name="l00049"></a>00049        std::string m_componentId;
+<a name="l00050"></a>00050 };
+<a name="l00051"></a>00051 
 <a name="l00052"></a>00052 
-<a name="l00053"></a><a class="code" href="classicomp_1_1_c_component_address.html#a2fd4791136b2e6865bd19854bcfcef0f">00053</a> <span class="keyword">inline</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classicomp_1_1_c_component_address.html#a2fd4791136b2e6865bd19854bcfcef0f">CComponentAddress::GetPackageId</a>()<span class="keyword"> const</span>
-<a name="l00054"></a>00054 <span class="keyword"></span>{
-<a name="l00055"></a>00055        <span class="keywordflow">return</span> m_packageId;
-<a name="l00056"></a>00056 }
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 
-<a name="l00059"></a><a class="code" href="classicomp_1_1_c_component_address.html#a631bfafbbcf347f2415e520e18c840c3">00059</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_component_address.html#a631bfafbbcf347f2415e520e18c840c3">CComponentAddress::SetPackageId</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)
-<a name="l00060"></a>00060 {
-<a name="l00061"></a>00061        m_packageId = id;
-<a name="l00062"></a>00062 }
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 
-<a name="l00065"></a><a class="code" href="classicomp_1_1_c_component_address.html#a99c0c9f6382010653cdb01ba3993b7d5">00065</a> <span class="keyword">inline</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classicomp_1_1_c_component_address.html#a99c0c9f6382010653cdb01ba3993b7d5">CComponentAddress::GetComponentId</a>()<span class="keyword"> const</span>
-<a name="l00066"></a>00066 <span class="keyword"></span>{
-<a name="l00067"></a>00067        <span class="keywordflow">return</span> m_componentId;
-<a name="l00068"></a>00068 }
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070 
-<a name="l00071"></a><a class="code" href="classicomp_1_1_c_component_address.html#a9aa414c575081d3c61f60f703e5629bf">00071</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_component_address.html#a9aa414c575081d3c61f60f703e5629bf">CComponentAddress::SetComponentId</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)
-<a name="l00072"></a>00072 {
-<a name="l00073"></a>00073        m_componentId = id;
-<a name="l00074"></a>00074 }
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 
-<a name="l00077"></a><a class="code" href="classicomp_1_1_c_component_address.html#a3b93432f4712352545b7aa56fa8bbb52">00077</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#a3b93432f4712352545b7aa56fa8bbb52">CComponentAddress::operator==</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">CComponentAddress</a>&amp; address)<span class="keyword"> const</span>
-<a name="l00078"></a>00078 <span class="keyword"></span>{
-<a name="l00079"></a>00079        <span class="keywordflow">return</span> ((m_packageId == address.m_packageId) &amp;&amp; (m_componentId == address.m_componentId));
-<a name="l00080"></a>00080 }
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082 
-<a name="l00083"></a><a class="code" href="classicomp_1_1_c_component_address.html#ac898c47b5fc1163595f947c1acd42da0">00083</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#ac898c47b5fc1163595f947c1acd42da0">CComponentAddress::operator!=</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">CComponentAddress</a>&amp; address)<span class="keyword"> const</span>
-<a name="l00084"></a>00084 <span class="keyword"></span>{
-<a name="l00085"></a>00085        <span class="keywordflow">return</span> ((m_packageId != address.m_packageId) || (m_componentId != address.m_componentId));
-<a name="l00086"></a>00086 }
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088 
-<a name="l00089"></a><a class="code" href="classicomp_1_1_c_component_address.html#a8903e07dd5f9488ad62845c58e988e2a">00089</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#a8903e07dd5f9488ad62845c58e988e2a">CComponentAddress::operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">CComponentAddress</a>&amp; address)<span class="keyword"> const</span>
-<a name="l00090"></a>00090 <span class="keyword"></span>{
-<a name="l00091"></a>00091        <span class="keywordflow">if</span> (m_packageId == address.m_packageId){
-<a name="l00092"></a>00092               <span class="keywordflow">return</span> m_componentId &lt; address.m_componentId;
-<a name="l00093"></a>00093        }
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095        <span class="keywordflow">return</span> m_packageId &lt; address.m_packageId;
-<a name="l00096"></a>00096 }
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099 }<span class="comment">//namespace icomp</span>
+<a name="l00053"></a>00053 <span class="comment">// inline methods</span>
+<a name="l00054"></a>00054 
+<a name="l00055"></a><a class="code" href="classicomp_1_1_c_component_address.html#a2fd4791136b2e6865bd19854bcfcef0f">00055</a> <span class="keyword">inline</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classicomp_1_1_c_component_address.html#a2fd4791136b2e6865bd19854bcfcef0f">CComponentAddress::GetPackageId</a>()<span class="keyword"> const</span>
+<a name="l00056"></a>00056 <span class="keyword"></span>{
+<a name="l00057"></a>00057        <span class="keywordflow">return</span> m_packageId;
+<a name="l00058"></a>00058 }
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 
+<a name="l00061"></a><a class="code" href="classicomp_1_1_c_component_address.html#a631bfafbbcf347f2415e520e18c840c3">00061</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_component_address.html#a631bfafbbcf347f2415e520e18c840c3">CComponentAddress::SetPackageId</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)
+<a name="l00062"></a>00062 {
+<a name="l00063"></a>00063        m_packageId = id;
+<a name="l00064"></a>00064 }
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 
+<a name="l00067"></a><a class="code" href="classicomp_1_1_c_component_address.html#a99c0c9f6382010653cdb01ba3993b7d5">00067</a> <span class="keyword">inline</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classicomp_1_1_c_component_address.html#a99c0c9f6382010653cdb01ba3993b7d5">CComponentAddress::GetComponentId</a>()<span class="keyword"> const</span>
+<a name="l00068"></a>00068 <span class="keyword"></span>{
+<a name="l00069"></a>00069        <span class="keywordflow">return</span> m_componentId;
+<a name="l00070"></a>00070 }
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 
+<a name="l00073"></a><a class="code" href="classicomp_1_1_c_component_address.html#a9aa414c575081d3c61f60f703e5629bf">00073</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_component_address.html#a9aa414c575081d3c61f60f703e5629bf">CComponentAddress::SetComponentId</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)
+<a name="l00074"></a>00074 {
+<a name="l00075"></a>00075        m_componentId = id;
+<a name="l00076"></a>00076 }
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 
+<a name="l00079"></a><a class="code" href="classicomp_1_1_c_component_address.html#a3b93432f4712352545b7aa56fa8bbb52">00079</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#a3b93432f4712352545b7aa56fa8bbb52">CComponentAddress::operator==</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">CComponentAddress</a>&amp; address)<span class="keyword"> const</span>
+<a name="l00080"></a>00080 <span class="keyword"></span>{
+<a name="l00081"></a>00081        <span class="keywordflow">return</span> ((m_packageId == address.m_packageId) &amp;&amp; (m_componentId == address.m_componentId));
+<a name="l00082"></a>00082 }
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 
+<a name="l00085"></a><a class="code" href="classicomp_1_1_c_component_address.html#ac898c47b5fc1163595f947c1acd42da0">00085</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#ac898c47b5fc1163595f947c1acd42da0">CComponentAddress::operator!=</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">CComponentAddress</a>&amp; address)<span class="keyword"> const</span>
+<a name="l00086"></a>00086 <span class="keyword"></span>{
+<a name="l00087"></a>00087        <span class="keywordflow">return</span> ((m_packageId != address.m_packageId) || (m_componentId != address.m_componentId));
+<a name="l00088"></a>00088 }
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 
+<a name="l00091"></a><a class="code" href="classicomp_1_1_c_component_address.html#a8903e07dd5f9488ad62845c58e988e2a">00091</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#a8903e07dd5f9488ad62845c58e988e2a">CComponentAddress::operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">CComponentAddress</a>&amp; address)<span class="keyword"> const</span>
+<a name="l00092"></a>00092 <span class="keyword"></span>{
+<a name="l00093"></a>00093        <span class="keywordflow">if</span> (m_packageId == address.m_packageId){
+<a name="l00094"></a>00094               <span class="keywordflow">return</span> m_componentId &lt; address.m_componentId;
+<a name="l00095"></a>00095        }
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097        <span class="keywordflow">return</span> m_packageId &lt; address.m_packageId;
+<a name="l00098"></a>00098 }
+<a name="l00099"></a>00099 
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="preprocessor">#endif // !icomp_CComponentAddress_included</span>
-<a name="l00103"></a>00103 <span class="preprocessor"></span>
-<a name="l00104"></a>00104 
+<a name="l00101"></a>00101 }<span class="comment">//namespace icomp</span>
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104 <span class="preprocessor">#endif // !icomp_CComponentAddress_included</span>
+<a name="l00105"></a>00105 <span class="preprocessor"></span>
+<a name="l00106"></a>00106 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

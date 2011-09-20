@@ -36,7 +36,7 @@
 <div class="title">icomp::IComponentEnvironmentManager Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="icomp::IComponentEnvironmentManager" --><!-- doxytag: inherits="icomp::IRegistriesManager,icomp::IMetaInfoManager" -->
+<!-- doxytag: class="icomp::IComponentEnvironmentManager" --><!-- doxytag: inherits="icomp::IPackagesManager,icomp::IRegistriesManager,icomp::IMetaInfoManager" -->
 <p><code>#include &lt;<a class="el" href="_i_component_environment_manager_8h_source.html">IComponentEnvironmentManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for icomp::IComponentEnvironmentManager:</div>
@@ -44,15 +44,18 @@ Inheritance diagram for icomp::IComponentEnvironmentManager:</div>
  <div class="center">
   <img src="classicomp_1_1_i_component_environment_manager.png" usemap="#icomp::IComponentEnvironmentManager_map" alt=""/>
   <map id="icomp::IComponentEnvironmentManager_map" name="icomp::IComponentEnvironmentManager_map">
-<area href="classicomp_1_1_i_registries_manager.html" alt="icomp::IRegistriesManager" shape="rect" coords="0,112,238,136"/>
-<area href="classicomp_1_1_i_meta_info_manager.html" alt="icomp::IMetaInfoManager" shape="rect" coords="248,112,486,136"/>
+<area href="classicomp_1_1_i_packages_manager.html" alt="icomp::IPackagesManager" shape="rect" coords="0,112,238,136"/>
+<area href="classicomp_1_1_i_registries_manager.html" alt="icomp::IRegistriesManager" shape="rect" coords="248,112,486,136"/>
+<area href="classicomp_1_1_i_meta_info_manager.html" alt="icomp::IMetaInfoManager" shape="rect" coords="496,112,734,136"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,238,80"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="248,56,486,80"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="496,56,734,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,238,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="248,0,486,24"/>
-<area href="classicomp_1_1_c_environment_manager_base.html" alt="icomp::CEnvironmentManagerBase" shape="rect" coords="124,224,362,248"/>
-<area href="classiqt_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries." alt="iqt::CPackagesLoaderComp" shape="rect" coords="124,280,362,304"/>
-<area href="classicmpstr_1_1_c_packages_loader_ext_comp.html" alt="icmpstr::CPackagesLoaderExtComp" shape="rect" coords="124,336,362,360"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="496,0,734,24"/>
+<area href="classicomp_1_1_c_environment_manager_base.html" alt="icomp::CEnvironmentManagerBase" shape="rect" coords="248,224,486,248"/>
+<area href="classiqt_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries." alt="iqt::CPackagesLoaderComp" shape="rect" coords="248,280,486,304"/>
+<area href="classicmpstr_1_1_c_packages_loader_ext_comp.html" alt="icmpstr::CPackagesLoaderExtComp" shape="rect" coords="248,336,486,360"/>
 </map>
  </div></div>
 
@@ -60,37 +63,13 @@ Inheritance diagram for icomp::IComponentEnvironmentManager:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component_environment_manager.html#a5194d86ca333b7d8324cdf85372b24e7">ConfigureEnvironment</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;configFilePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>())=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure environment for specified file path.  <a href="#a5194d86ca333b7d8324cdf85372b24e7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component_environment_manager.html#aa1ef8086f8bcc26177e8b3887d7d3bde">GetConfigFilePath</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file path of real used config file.  <a href="#aa1ef8086f8bcc26177e8b3887d7d3bde"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_i_component_environment_manager_8h_source.html#l00013">13</a> of file <a class="el" href="_i_component_environment_manager_8h_source.html">IComponentEnvironmentManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_component_environment_manager_8h_source.html#l00014">14</a> of file <a class="el" href="_i_component_environment_manager_8h_source.html">IComponentEnvironmentManager.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a5194d86ca333b7d8324cdf85372b24e7"></a><!-- doxytag: member="icomp::IComponentEnvironmentManager::ConfigureEnvironment" ref="a5194d86ca333b7d8324cdf85372b24e7" args="(const istd::CString &amp;configFilePath=istd::CString())=0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool icomp::IComponentEnvironmentManager::ConfigureEnvironment </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
-          <td class="paramname"><em>configFilePath</em> = <code><a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()</code></td><td>)</td>
-          <td><code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Configure environment for specified file path. </p>
-<p>If this file path is invalid or empty, standard configuration file will be used. </p>
-
-<p>Implemented in <a class="el" href="classiqt_1_1_c_packages_loader_comp.html#ae5ada8d4204bd7885865e9c6ad76c1ea">iqt::CPackagesLoaderComp</a>, and <a class="el" href="classicomp_1_1_c_environment_manager_base.html#a3ea53f214a943bbcb8daf6431640a04c">icomp::CEnvironmentManagerBase</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="aa1ef8086f8bcc26177e8b3887d7d3bde"></a><!-- doxytag: member="icomp::IComponentEnvironmentManager::GetConfigFilePath" ref="aa1ef8086f8bcc26177e8b3887d7d3bde" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">

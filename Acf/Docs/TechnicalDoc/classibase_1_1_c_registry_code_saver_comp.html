@@ -39,7 +39,7 @@
 <div class="title">ibase::CRegistryCodeSaverComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ibase::CRegistryCodeSaverComp" --><!-- doxytag: inherits="icomp::CComponentBase,iser::IFileLoader" -->
+<!-- doxytag: class="ibase::CRegistryCodeSaverComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,iser::IFileLoader" -->
 <p>Save registry as C++ code genereting class with the same functionality.  
  <a href="classibase_1_1_c_registry_code_saver_comp.html#details">More...</a></p>
 
@@ -50,12 +50,16 @@ Inheritance diagram for ibase::CRegistryCodeSaverComp:</div>
  <div class="center">
   <img src="classibase_1_1_c_registry_code_saver_comp.png" usemap="#ibase::CRegistryCodeSaverComp_map" alt=""/>
   <map id="ibase::CRegistryCodeSaverComp_map" name="ibase::CRegistryCodeSaverComp_map">
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,112,199,136"/>
-<area href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects." alt="iser::IFileLoader" shape="rect" coords="209,112,408,136"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,199,80"/>
-<area href="classiser_1_1_i_file_type_info.html" title="Provide loading and saving of objects." alt="iser::IFileTypeInfo" shape="rect" coords="209,56,408,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,199,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="209,0,408,24"/>
+<area href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations." alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="219,168,428,192"/>
+<area href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects." alt="iser::IFileLoader" shape="rect" coords="657,168,866,192"/>
+<area href="classibase_1_1_t_logger_wrap.html" title="Class wrapper implementing interface istd::ILogger sending log messages over ibase::IMessageConsumer..." alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="219,112,428,136"/>
+<area href="classiser_1_1_i_file_type_info.html" title="Provide loading and saving of objects." alt="iser::IFileTypeInfo" shape="rect" coords="657,112,866,136"/>
+<area href="class_base.html" alt="Base" shape="rect" coords="0,56,209,80"/>
+<area href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the." alt="ibase::ILoggable" shape="rect" coords="219,56,428,80"/>
+<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="438,56,647,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="657,56,866,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="219,0,428,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="438,0,647,24"/>
 </map>
  </div></div>
 
@@ -63,7 +67,12 @@ Inheritance diagram for ibase::CRegistryCodeSaverComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#a64d89a240c08267be5cf20bbe051adcf">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ae3857f169f1da68738683035b455f0b0">MessageId</a> { <a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ae3857f169f1da68738683035b455f0b0a35c7f04910af8999ad71ac8c682301bb">MI_UNDEFINED_PACKAGE</a> =  0x341f0, 
+<a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ae3857f169f1da68738683035b455f0b0a92982ebfe07cc5b89484e963749dba0d">MI_UNDEFINED_COMPONENT</a>, 
+<a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ae3857f169f1da68738683035b455f0b0ac7b563f70cfe3a465924ada1e5a3e261">MI_UNDEFINED_ATTR_TYPE</a>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">List of possible message ids used in context of this interface.  <a href="classibase_1_1_c_registry_code_saver_comp.html#ae3857f169f1da68738683035b455f0b0">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ac97212409e87526ac2eac440373e81b2">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#a6ff8beb9bb41b8af4b9b120d880cd3ff">CRegistryCodeSaverComp</a> ()</td></tr>
@@ -108,7 +117,7 @@ Protected Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Save registry as C++ code genereting class with the same functionality. </p>
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00023">23</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="ad4c7993f4197a69ad9f2dc0e12a2eb26"></a><!-- doxytag: member="ibase::CRegistryCodeSaverComp::Addresses" ref="ad4c7993f4197a69ad9f2dc0e12a2eb26" args="" -->
 <div class="memitem">
@@ -121,22 +130,24 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00050">50</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00064">64</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a64d89a240c08267be5cf20bbe051adcf"></a><!-- doxytag: member="ibase::CRegistryCodeSaverComp::BaseClass" ref="a64d89a240c08267be5cf20bbe051adcf" args="" -->
+<a class="anchor" id="ac97212409e87526ac2eac440373e81b2"></a><!-- doxytag: member="ibase::CRegistryCodeSaverComp::BaseClass" ref="ac97212409e87526ac2eac440373e81b2" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#a64d89a240c08267be5cf20bbe051adcf">ibase::CRegistryCodeSaverComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a> <a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ac97212409e87526ac2eac440373e81b2">ibase::CRegistryCodeSaverComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00026">26</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00032">32</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>
@@ -151,7 +162,37 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00051">51</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00065">65</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="ae3857f169f1da68738683035b455f0b0"></a><!-- doxytag: member="ibase::CRegistryCodeSaverComp::MessageId" ref="ae3857f169f1da68738683035b455f0b0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ae3857f169f1da68738683035b455f0b0">ibase::CRegistryCodeSaverComp::MessageId</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>List of possible message ids used in context of this interface. </p>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ae3857f169f1da68738683035b455f0b0a35c7f04910af8999ad71ac8c682301bb"></a><!-- doxytag: member="MI_UNDEFINED_PACKAGE" ref="ae3857f169f1da68738683035b455f0b0a35c7f04910af8999ad71ac8c682301bb" args="" -->MI_UNDEFINED_PACKAGE</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ae3857f169f1da68738683035b455f0b0a92982ebfe07cc5b89484e963749dba0d"></a><!-- doxytag: member="MI_UNDEFINED_COMPONENT" ref="ae3857f169f1da68738683035b455f0b0a92982ebfe07cc5b89484e963749dba0d" args="" -->MI_UNDEFINED_COMPONENT</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ae3857f169f1da68738683035b455f0b0ac7b563f70cfe3a465924ada1e5a3e261"></a><!-- doxytag: member="MI_UNDEFINED_ATTR_TYPE" ref="ae3857f169f1da68738683035b455f0b0ac7b563f70cfe3a465924ada1e5a3e261" args="" -->MI_UNDEFINED_ATTR_TYPE</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classiser_1_1_i_file_loader.html#a885bc2cad957c89052cf890e68436bf4">iser::IFileLoader</a>.</p>
+
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>

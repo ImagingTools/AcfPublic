@@ -57,6 +57,8 @@ public:
 	const std::string& GetComponentId() const;
 	void SetComponentId(const std::string& id);
 
+	istd::CString ToString() const;
+
 	bool operator==(const CComponentAddress& address) const;
 	bool operator!=(const CComponentAddress& address) const;
 	bool operator<(const CComponentAddress& address) const;
