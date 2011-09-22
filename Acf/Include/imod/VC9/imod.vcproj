@@ -250,6 +250,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\TModelDispatcherWrap.h"
+				>
+			</File>
+			<File
 				RelativePath="..\TModelWrap.h"
 				>
 			</File>

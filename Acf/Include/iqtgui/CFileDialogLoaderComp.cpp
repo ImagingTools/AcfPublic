@@ -256,21 +256,61 @@ QString CFileDialogLoaderComp::GetFileName(const istd::CString& filePath, bool i
 		}
 
 		QString selectedFilter;
+		QString caption;
+
+		bool isQtDialogs = (m_useQtDialogsAttrPtr.IsValid() && *m_useQtDialogsAttrPtr);
+
 		if (isSaving){
-			retVal = QFileDialog::getSaveFileName(
-						NULL,
-						tr("Enter file name"), 
-						m_lastSaveInfo.absoluteFilePath(),
-						filterList,
-						&selectedFilter); 
+			caption = tr("Enter file name");
+
+			if (isQtDialogs){
+				QFileDialog dialog(
+					NULL, 
+					caption,
+					m_lastSaveInfo.absoluteFilePath(),
+					filterList);
+
+				dialog.setAcceptMode(QFileDialog::AcceptSave);
+				
+				if (dialog.exec()){
+					selectedFilter = dialog.selectedNameFilter();
+					retVal = dialog.selectedFiles().join(";");
+				}
+			}
+			else {
+				retVal = QFileDialog::getSaveFileName(
+					NULL,
+					caption, 
+					m_lastSaveInfo.absoluteFilePath(),
+					filterList,
+					&selectedFilter); 
+			}
 		}
 		else{
-			retVal = QFileDialog::getOpenFileName(
-						NULL,
-						tr("Select a file to open"),
-						m_lastOpenInfo.absoluteFilePath(),
-						filterList,
-						&selectedFilter);
+			caption = tr("Select a file to open");
+
+			if (isQtDialogs){
+				QFileDialog dialog(
+					NULL, 
+					caption,
+					m_lastSaveInfo.absoluteFilePath(),
+					filterList);
+
+				dialog.setAcceptMode(QFileDialog::AcceptOpen);
+
+				if (dialog.exec()){
+					selectedFilter = dialog.selectedNameFilter();
+					retVal = dialog.selectedFiles().join(";");
+				}
+			}
+			else {
+				retVal = QFileDialog::getOpenFileName(
+					NULL,
+					caption,
+					m_lastOpenInfo.absoluteFilePath(),
+					filterList,
+					&selectedFilter);
+			}
 		}
 
 		int selectedPos = filterList.indexOf(selectedFilter);
