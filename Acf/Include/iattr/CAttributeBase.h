@@ -47,6 +47,7 @@ public:
 				iattr::IAttributesManager* attributeOwnerPtr,
 				const std::string& attributeId,
 				const std::string& attributeDescription,
+				int attributeFlags,
 				int changeFlags = 0);
 
 	// reimplemented (iattr::IAttribute)

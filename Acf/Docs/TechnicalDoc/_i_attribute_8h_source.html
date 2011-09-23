@@ -39,16 +39,21 @@
 <a name="l00015"></a><a class="code" href="classiattr_1_1_i_attribute.html">00015</a> <span class="keyword">class </span><a class="code" href="classiattr_1_1_i_attribute.html" title="Common interface for an attribute.">IAttribute</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iser::IObject
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017 <span class="keyword">public</span>:
-<a name="l00021"></a>00021        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects.">iser::IObject</a>* <a class="code" href="classiattr_1_1_i_attribute.html#ab725708eed572a361e73e97f8f45a489" title="Get default value for the attribute.">GetDefaultAttributeValue</a>() <span class="keyword">const</span> = 0;
-<a name="l00022"></a>00022 };
-<a name="l00023"></a>00023 
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 } <span class="comment">// namespace iattr</span>
-<a name="l00026"></a>00026 
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028 <span class="preprocessor">#endif // !iattr_IAttribute_included</span>
-<a name="l00029"></a>00029 <span class="preprocessor"></span>
-<a name="l00030"></a>00030 
+<a name="l00018"></a><a class="code" href="classiattr_1_1_i_attribute.html#a39d245357fab7c2683ae5f3bc8c28e08">00018</a>        <span class="keyword">enum</span> <a class="code" href="classiattr_1_1_i_attribute.html#a39d245357fab7c2683ae5f3bc8c28e08">AttributeFlags</a>
+<a name="l00019"></a>00019        {
+<a name="l00023"></a><a class="code" href="classiattr_1_1_i_attribute.html#a39d245357fab7c2683ae5f3bc8c28e08a13c56f348a9530599f79da8a06693489">00023</a>               <a class="code" href="classiattr_1_1_i_attribute.html#a39d245357fab7c2683ae5f3bc8c28e08a13c56f348a9530599f79da8a06693489" title="Attribute is persistent.">AF_PERSISTENT</a>
+<a name="l00024"></a>00024        };
+<a name="l00025"></a>00025 
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects.">iser::IObject</a>* <a class="code" href="classiattr_1_1_i_attribute.html#ab725708eed572a361e73e97f8f45a489" title="Get default value for the attribute.">GetDefaultAttributeValue</a>() <span class="keyword">const</span> = 0;
+<a name="l00030"></a>00030 };
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033 } <span class="comment">// namespace iattr</span>
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 <span class="preprocessor">#endif // !iattr_IAttribute_included</span>
+<a name="l00037"></a>00037 <span class="preprocessor"></span>
+<a name="l00038"></a>00038 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -38,7 +38,7 @@
 <div class="title">iqtproc::CDocumentProcessingManagerCompBase Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtproc::CDocumentProcessingManagerCompBase" --><!-- doxytag: inherits="QObject,ibase::TLoggerCompWrap,ibase::ICommandsProvider" -->
+<!-- doxytag: class="iqtproc::CDocumentProcessingManagerCompBase" --><!-- doxytag: inherits="QObject,TModelDispatcherWrap&lt; ibase::CLoggerComponentBase &gt;,ibase::ICommandsProvider" -->
 <p><code>#include &lt;<a class="el" href="_c_document_processing_manager_comp_base_8h_source.html">CDocumentProcessingManagerCompBase.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqtproc::CDocumentProcessingManagerCompBase:</div>
@@ -46,18 +46,19 @@ Inheritance diagram for iqtproc::CDocumentProcessingManagerCompBase:</div>
  <div class="center">
   <img src="classiqtproc_1_1_c_document_processing_manager_comp_base.png" usemap="#iqtproc::CDocumentProcessingManagerCompBase_map" alt=""/>
   <map id="iqtproc::CDocumentProcessingManagerCompBase_map" name="iqtproc::CDocumentProcessingManagerCompBase_map">
-<area href="class_q_object.html" alt="QObject" shape="rect" coords="0,168,295,192"/>
-<area href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations." alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="305,168,600,192"/>
-<area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="610,168,905,192"/>
-<area href="classibase_1_1_t_logger_wrap.html" title="Class wrapper implementing interface istd::ILogger sending log messages over ibase::IMessageConsumer..." alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="305,112,600,136"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="610,112,905,136"/>
-<area href="class_base.html" alt="Base" shape="rect" coords="0,56,295,80"/>
-<area href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the." alt="ibase::ILoggable" shape="rect" coords="305,56,600,80"/>
-<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="610,56,905,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="305,0,600,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="610,0,905,24"/>
-<area href="classiqtproc_1_1_c_document_processing_command_comp.html" title="Component to trigger some processing action for the current document." alt="iqtproc::CDocumentProcessingCommandComp" shape="rect" coords="152,280,447,304"/>
-<area href="classiqtproc_1_1_c_document_processing_manager_comp.html" title="Component to trigger document-to-document processing action." alt="iqtproc::CDocumentProcessingManagerComp" shape="rect" coords="457,280,752,304"/>
+<area href="class_q_object.html" alt="QObject" shape="rect" coords="0,224,377,248"/>
+<area href="classimod_1_1_t_model_dispatcher_wrap.html" alt="imod::TModelDispatcherWrap&lt; ibase::CLoggerComponentBase &gt;" shape="rect" coords="387,224,764,248"/>
+<area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="774,224,1151,248"/>
+<area href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations." alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="387,168,764,192"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="774,168,1151,192"/>
+<area href="classibase_1_1_t_logger_wrap.html" title="Class wrapper implementing interface istd::ILogger sending log messages over ibase::IMessageConsumer..." alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="387,112,764,136"/>
+<area href="class_base.html" alt="Base" shape="rect" coords="0,56,377,80"/>
+<area href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the." alt="ibase::ILoggable" shape="rect" coords="387,56,764,80"/>
+<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="774,56,1151,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="387,0,764,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="774,0,1151,24"/>
+<area href="classiqtproc_1_1_c_document_processing_command_comp.html" title="Component to trigger some processing action for the current document." alt="iqtproc::CDocumentProcessingCommandComp" shape="rect" coords="193,336,570,360"/>
+<area href="classiqtproc_1_1_c_document_processing_manager_comp.html" title="Component to trigger document-to-document processing action." alt="iqtproc::CDocumentProcessingManagerComp" shape="rect" coords="580,336,957,360"/>
 </map>
  </div></div>
 
@@ -65,11 +66,13 @@ Inheritance diagram for iqtproc::CDocumentProcessingManagerCompBase:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#a53e8e449a4a1d227b9bb17ee25716026">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+<a class="el" href="classimod_1_1_t_model_dispatcher_wrap.html">imod::TModelDispatcherWrap</a><br class="typebreak"/>
+&lt; <a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#a433aa32457b191f0927d99b64d39b2c8">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#a035479d4fa5bb05e8f203b61c28b4950">CDocumentProcessingManagerCompBase</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#aaffa826801dec020c6796a147f6ac5cf">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#a2aa39ee74f25fd2b57e8e7703dc97943">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#a7daa3801021ab985bf29f88f79f98564">IsInputDocumentRequired</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code>, if the input document is required for processing.  <a href="#a7daa3801021ab985bf29f88f79f98564"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#aeb34491bf12adccd77c77a7089d3e3e6">SetProcessingCommandEnabled</a> (bool isProcessingCommandEnabled=true)</td></tr>
@@ -91,18 +94,18 @@ Protected Attributes</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html#l00027">27</a> of file <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html">CDocumentProcessingManagerCompBase.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a53e8e449a4a1d227b9bb17ee25716026"></a><!-- doxytag: member="iqtproc::CDocumentProcessingManagerCompBase::BaseClass" ref="a53e8e449a4a1d227b9bb17ee25716026" args="" -->
+<a class="anchor" id="a433aa32457b191f0927d99b64d39b2c8"></a><!-- doxytag: member="iqtproc::CDocumentProcessingManagerCompBase::BaseClass" ref="a433aa32457b191f0927d99b64d39b2c8" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a> <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#a53e8e449a4a1d227b9bb17ee25716026">iqtproc::CDocumentProcessingManagerCompBase::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classimod_1_1_t_model_dispatcher_wrap.html">imod::TModelDispatcherWrap</a>&lt;<a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a>&gt; <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#a433aa32457b191f0927d99b64d39b2c8">iqtproc::CDocumentProcessingManagerCompBase::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classimod_1_1_t_model_dispatcher_wrap.html#a2a48de047ed83ccffb5c093a3d2bfec2">imod::TModelDispatcherWrap&lt; ibase::CLoggerComponentBase &gt;</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp.html#a31baff53dfa8c45ed3951341f8c52088">iqtproc::CDocumentProcessingManagerComp</a>, and <a class="el" href="classiqtproc_1_1_c_document_processing_command_comp.html#afcb699b0f68c975b90235f9da695786e">iqtproc::CDocumentProcessingCommandComp</a>.</p>
 
@@ -232,12 +235,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aaffa826801dec020c6796a147f6ac5cf"></a><!-- doxytag: member="iqtproc::CDocumentProcessingManagerCompBase::OnModelChanged" ref="aaffa826801dec020c6796a147f6ac5cf" args="(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<a class="anchor" id="a2aa39ee74f25fd2b57e8e7703dc97943"></a><!-- doxytag: member="iqtproc::CDocumentProcessingManagerCompBase::OnModelChanged" ref="a2aa39ee74f25fd2b57e8e7703dc97943" args="(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iqtproc::CDocumentProcessingManagerCompBase::OnModelChanged </td>
+          <td class="memname">virtual void iqtproc::CDocumentProcessingManagerCompBase::OnModelChanged </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>modelId</em>, </td>
@@ -257,11 +260,13 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Implements <a class="el" href="classimod_1_1_t_model_dispatcher_wrap.html#a74b7ff1ce808919c520392d6f58e4f58">imod::TModelDispatcherWrap&lt; ibase::CLoggerComponentBase &gt;</a>.</p>
 
 </div>
 </div>
@@ -296,7 +301,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html#l00091">91</a> of file <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html">CDocumentProcessingManagerCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html#l00092">92</a> of file <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html">CDocumentProcessingManagerCompBase.h</a>.</p>
 
 </div>
 </div>
@@ -311,7 +316,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html#l00089">89</a> of file <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html">CDocumentProcessingManagerCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html#l00090">90</a> of file <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html">CDocumentProcessingManagerCompBase.h</a>.</p>
 
 </div>
 </div>
@@ -326,7 +331,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html#l00090">90</a> of file <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html">CDocumentProcessingManagerCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html#l00091">91</a> of file <a class="el" href="_c_document_processing_manager_comp_base_8h_source.html">CDocumentProcessingManagerCompBase.h</a>.</p>
 
 </div>
 </div>

@@ -50,20 +50,21 @@
 <a name="l00036"></a>00036 
 <a name="l00040"></a>00040        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiattr_1_1_i_attributes_manager.html#a263122154ff4b7279364ea12d474861e" title="Get the description of the attribute with the given index attributeIndex.">GetAttributeDescription</a>(<span class="keywordtype">int</span> attributeIndex) <span class="keyword">const</span> = 0;
 <a name="l00041"></a>00041 
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_i_attributes_manager.html#a30e76268552d67fd529c158f86012b92" title="Insert an attribute into the object.">InsertAttribute</a>(
-<a name="l00046"></a>00046                             <a class="code" href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects.">iser::IObject</a>* objectPtr,
-<a name="l00047"></a>00047                             <span class="keyword">const</span> std::string&amp; attributeId,
-<a name="l00048"></a>00048                             <span class="keyword">const</span> std::string&amp; attributeDescription,
-<a name="l00049"></a>00049                             <span class="keywordtype">bool</span> releaseFlag) = 0;
-<a name="l00050"></a>00050 };
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053 } <span class="comment">// namespace iattr</span>
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056 <span class="preprocessor">#endif // !iattr_IAttributesManager_included</span>
-<a name="l00057"></a>00057 <span class="preprocessor"></span>
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_i_attributes_manager.html#a7c108972424ff6e7971542842832840f" title="Insert an attribute into the object.">InsertAttribute</a>(
+<a name="l00052"></a>00052                             <a class="code" href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects.">iser::IObject</a>* objectPtr,
+<a name="l00053"></a>00053                             <span class="keyword">const</span> std::string&amp; attributeId,
+<a name="l00054"></a>00054                             <span class="keyword">const</span> std::string&amp; attributeDescription,
+<a name="l00055"></a>00055                             <span class="keywordtype">int</span> attributeFlags,
+<a name="l00056"></a>00056                             <span class="keywordtype">bool</span> releaseFlag) = 0;
+<a name="l00057"></a>00057 };
 <a name="l00058"></a>00058 
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 } <span class="comment">// namespace iattr</span>
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 <span class="preprocessor">#endif // !iattr_IAttributesManager_included</span>
+<a name="l00064"></a>00064 <span class="preprocessor"></span>
+<a name="l00065"></a>00065 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

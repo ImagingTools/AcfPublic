@@ -258,12 +258,14 @@ QString CFileDialogLoaderComp::GetFileName(const istd::CString& filePath, bool i
 		QString selectedFilter;
 		QString caption;
 
-		bool isQtDialogs = (m_useQtDialogsAttrPtr.IsValid() && *m_useQtDialogsAttrPtr);
+		I_ASSERT(m_useNativeAttrPtr.IsValid());
+
+		bool useNativeDialogs = *m_useNativeAttrPtr;
 
 		if (isSaving){
 			caption = tr("Enter file name");
 
-			if (isQtDialogs){
+			if (!useNativeDialogs){
 				QFileDialog dialog(
 					NULL, 
 					caption,
@@ -289,7 +291,7 @@ QString CFileDialogLoaderComp::GetFileName(const istd::CString& filePath, bool i
 		else{
 			caption = tr("Select a file to open");
 
-			if (isQtDialogs){
+			if (!useNativeDialogs){
 				QFileDialog dialog(
 					NULL, 
 					caption,

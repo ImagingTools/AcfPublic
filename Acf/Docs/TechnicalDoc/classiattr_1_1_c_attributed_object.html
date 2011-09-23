@@ -34,7 +34,8 @@
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iattr::CAttributedObject Class Reference</div>  </div>
 </div>
@@ -78,14 +79,18 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ID of the attribute with the given index <code>attributeIndex</code>.  <a href="#a7afa6859544223c165b8752b5ecd269f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_c_attributed_object.html#a26089f7ac210557add02c2dbff209756">GetAttributeDescription</a> (int attributeIndex) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the description of the attribute with the given index <code>attributeIndex</code>.  <a href="#a26089f7ac210557add02c2dbff209756"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_c_attributed_object.html#a982e889f202b4b9f3afb8a9309ef6601">InsertAttribute</a> (<a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> *objectPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, bool releaseFlag)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an attribute into the object.  <a href="#a982e889f202b4b9f3afb8a9309ef6601"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_c_attributed_object.html#a00877f79b8cc6696231384e765a38ffa">InsertAttribute</a> (<a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> *objectPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, bool releaseFlag)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an attribute into the object.  <a href="#a00877f79b8cc6696231384e765a38ffa"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_c_attributed_object.html#a0dbc48cdf5e8954511836b351ce9f4d2">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a0dbc48cdf5e8954511836b351ce9f4d2"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename AttributeType &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classiattr_1_1_c_attributed_object.html#aedd96432d048ba0dc1c1d30bc1b34de9">RegisterAttributeType</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_c_attributed_object.html#a10c2dfd18f6145fc8cc888e7228e0227">ReadAttributes</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;attributesTag, const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;attributeTag)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_c_attributed_object.html#a84daea7d55ecd29c392f3ae93c06aa54">WriteAttributes</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;attributesTag, const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;attributeTag) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Basic implementation of an attribute container. </p>
@@ -226,7 +231,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a982e889f202b4b9f3afb8a9309ef6601"></a><!-- doxytag: member="iattr::CAttributedObject::InsertAttribute" ref="a982e889f202b4b9f3afb8a9309ef6601" args="(iser::IObject *objectPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, bool releaseFlag)" -->
+<a class="anchor" id="a00877f79b8cc6696231384e765a38ffa"></a><!-- doxytag: member="iattr::CAttributedObject::InsertAttribute" ref="a00877f79b8cc6696231384e765a38ffa" args="(iser::IObject *objectPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, bool releaseFlag)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -251,6 +256,12 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>attributeFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>releaseFlag</em>&#160;</td>
         </tr>
@@ -264,8 +275,57 @@ Static Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Insert an attribute into the object. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objectPtr</td><td>Attribute data object. </td></tr>
+    <tr><td class="paramname">attributeId</td><td>Unique ID of the attribute in the attributes repository. </td></tr>
+    <tr><td class="paramname">attributeDescription</td><td>Human readable description of the attribute. </td></tr>
+    <tr><td class="paramname">attributeFlags</td><td>Attribute flags. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiattr_1_1_i_attribute.html#a39d245357fab7c2683ae5f3bc8c28e08">IAttribute::AttributeFlags</a>. </dd></dl>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">releaseFlag</td><td>Indicate who control the attribute's memory. If <code>releaseFlag</code> is <code>true</code>, the control over the <code>objectPtr</code> will be overtaken by this object. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implements <a class="el" href="classiattr_1_1_i_attributes_manager.html#a30e76268552d67fd529c158f86012b92">iattr::IAttributesManager</a>.</p>
+<p>Implements <a class="el" href="classiattr_1_1_i_attributes_manager.html#a7c108972424ff6e7971542842832840f">iattr::IAttributesManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a10c2dfd18f6145fc8cc888e7228e0227"></a><!-- doxytag: member="iattr::CAttributedObject::ReadAttributes" ref="a10c2dfd18f6145fc8cc888e7228e0227" args="(iser::IArchive &amp;archive, const iser::CArchiveTag &amp;attributesTag, const iser::CArchiveTag &amp;attributeTag)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool iattr::CAttributedObject::ReadAttributes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
+          <td class="paramname"><em>archive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;&#160;</td>
+          <td class="paramname"><em>attributesTag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;&#160;</td>
+          <td class="paramname"><em>attributeTag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -285,7 +345,7 @@ template&lt;typename AttributeImpl &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_attributed_object_8h_source.html#l00076">76</a> of file <a class="el" href="_c_attributed_object_8h_source.html">CAttributedObject.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_attributed_object_8h_source.html#l00086">86</a> of file <a class="el" href="_c_attributed_object_8h_source.html">CAttributedObject.h</a>.</p>
 
 <p>References <a class="el" href="_t_composed_factory_8h_source.html#l00049">istd::TComposedFactory&lt; InterfaceType &gt;::RegisterFactory()</a>.</p>
 
@@ -311,6 +371,39 @@ template&lt;typename AttributeImpl &gt; </div>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a> </dd></dl>
 
 <p>Implements <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a84daea7d55ecd29c392f3ae93c06aa54"></a><!-- doxytag: member="iattr::CAttributedObject::WriteAttributes" ref="a84daea7d55ecd29c392f3ae93c06aa54" args="(iser::IArchive &amp;archive, const iser::CArchiveTag &amp;attributesTag, const iser::CArchiveTag &amp;attributeTag) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool iattr::CAttributedObject::WriteAttributes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
+          <td class="paramname"><em>archive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;&#160;</td>
+          <td class="paramname"><em>attributesTag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;&#160;</td>
+          <td class="paramname"><em>attributeTag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>

@@ -49,23 +49,24 @@
 <a name="l00025"></a>00025                             <a class="code" href="classiattr_1_1_i_attributes_manager.html" title="Interface for an attribute container.">iattr::IAttributesManager</a>* attributeOwnerPtr,
 <a name="l00026"></a>00026                             <span class="keyword">const</span> std::string&amp; attributeId,
 <a name="l00027"></a>00027                             <span class="keyword">const</span> std::string&amp; attributeDescription,
-<a name="l00028"></a>00028                             <span class="keywordtype">int</span> changeFlags = 0);
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030        <span class="comment">// reimplemented (iattr::IAttribute)</span>
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects.">iser::IObject</a>* <a class="code" href="classiattr_1_1_c_attribute_base.html#a51df239159f9f93992281f13dfb737b2" title="Get default value for the attribute.">GetDefaultAttributeValue</a>() <span class="keyword">const</span>;
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 <span class="keyword">protected</span>:
-<a name="l00034"></a><a class="code" href="classiattr_1_1_c_attribute_base.html#abff5254e890573ded492e68096367627">00034</a>        <a class="code" href="classiattr_1_1_i_attributes_manager.html" title="Interface for an attribute container.">iattr::IAttributesManager</a>* <a class="code" href="classiattr_1_1_c_attribute_base.html#abff5254e890573ded492e68096367627">m_attributeOwnerPtr</a>;
-<a name="l00035"></a><a class="code" href="classiattr_1_1_c_attribute_base.html#a8181b4cc48dcf8ca056977c2ec5ca146">00035</a>        <span class="keywordtype">int</span> <a class="code" href="classiattr_1_1_c_attribute_base.html#a8181b4cc48dcf8ca056977c2ec5ca146">m_changeFlags</a>;
-<a name="l00036"></a>00036 };
-<a name="l00037"></a>00037 
+<a name="l00028"></a>00028                             <span class="keywordtype">int</span> attributeFlags,
+<a name="l00029"></a>00029                             <span class="keywordtype">int</span> changeFlags = 0);
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031        <span class="comment">// reimplemented (iattr::IAttribute)</span>
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects.">iser::IObject</a>* <a class="code" href="classiattr_1_1_c_attribute_base.html#a51df239159f9f93992281f13dfb737b2" title="Get default value for the attribute.">GetDefaultAttributeValue</a>() <span class="keyword">const</span>;
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="keyword">protected</span>:
+<a name="l00035"></a><a class="code" href="classiattr_1_1_c_attribute_base.html#abff5254e890573ded492e68096367627">00035</a>        <a class="code" href="classiattr_1_1_i_attributes_manager.html" title="Interface for an attribute container.">iattr::IAttributesManager</a>* <a class="code" href="classiattr_1_1_c_attribute_base.html#abff5254e890573ded492e68096367627">m_attributeOwnerPtr</a>;
+<a name="l00036"></a><a class="code" href="classiattr_1_1_c_attribute_base.html#a8181b4cc48dcf8ca056977c2ec5ca146">00036</a>        <span class="keywordtype">int</span> <a class="code" href="classiattr_1_1_c_attribute_base.html#a8181b4cc48dcf8ca056977c2ec5ca146">m_changeFlags</a>;
+<a name="l00037"></a>00037 };
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039 } <span class="comment">// namespace iattr</span>
-<a name="l00040"></a>00040 
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 } <span class="comment">// namespace iattr</span>
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042 <span class="preprocessor">#endif // !iattr_CAttributeBase_included</span>
-<a name="l00043"></a>00043 <span class="preprocessor"></span>
-<a name="l00044"></a>00044 
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 <span class="preprocessor">#endif // !iattr_CAttributeBase_included</span>
+<a name="l00044"></a>00044 <span class="preprocessor"></span>
+<a name="l00045"></a>00045 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
