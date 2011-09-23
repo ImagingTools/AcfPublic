@@ -9105,8 +9105,8 @@
       <type></type>
       <name>TAttribute</name>
       <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>aed358020b181c79d0bd24dbd7315106f</anchor>
-      <arglist>(iattr::IAttributesManager *attributeOwnerPtr, const std::string &amp;attributeName, const std::string &amp;attributeDescription, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())</arglist>
+      <anchor>ac05d1e900339c2e3c0dac87dafaff0b9</anchor>
+      <arglist>(iattr::IAttributesManager *attributeOwnerPtr, const std::string &amp;attributeName, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())</arglist>
     </member>
     <member kind="function">
       <type>const Value &amp;</type>
@@ -9203,8 +9203,8 @@
       <type></type>
       <name>TMultiAttribute</name>
       <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>aac7e062f5af3c69b6a0fb04da8e1c8ba</anchor>
-      <arglist>(iattr::IAttributesManager *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)</arglist>
+      <anchor>a1b6423ecf23ffaf99bae19842d38acac</anchor>
+      <arglist>(iattr::IAttributesManager *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>

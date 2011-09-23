@@ -71,7 +71,7 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_t_attribute.html#a08fecc770cf4c537047ae45018100210">TAttribute</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_t_attribute.html#aed358020b181c79d0bd24dbd7315106f">TAttribute</a> (<a class="el" href="classiattr_1_1_i_attributes_manager.html">iattr::IAttributesManager</a> *attributeOwnerPtr, const std::string &amp;attributeName, const std::string &amp;attributeDescription, int changeFlags=0, const <a class="el" href="classiattr_1_1_t_attribute.html#aae568507bc87c076732e047b8413b6b5">ValueType</a> &amp;defaultValue=<a class="el" href="classiattr_1_1_t_attribute.html#aae568507bc87c076732e047b8413b6b5">ValueType</a>())</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_t_attribute.html#ac05d1e900339c2e3c0dac87dafaff0b9">TAttribute</a> (<a class="el" href="classiattr_1_1_i_attributes_manager.html">iattr::IAttributesManager</a> *attributeOwnerPtr, const std::string &amp;attributeName, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, const <a class="el" href="classiattr_1_1_t_attribute.html#aae568507bc87c076732e047b8413b6b5">ValueType</a> &amp;defaultValue=<a class="el" href="classiattr_1_1_t_attribute.html#aae568507bc87c076732e047b8413b6b5">ValueType</a>())</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const Value &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_t_attribute.html#ac610ebe980c20935f50aa607219734cb">GetValue</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_t_attribute.html#abcb55aa76d2974024014986ccbf9f2bf">SetValue</a> (const Value &amp;value)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_t_attribute.html#a5ee410cb190b6962e5f77785350ecbd5">ResetValue</a> ()</td></tr>
@@ -165,11 +165,11 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00068">68</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00069">69</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aed358020b181c79d0bd24dbd7315106f"></a><!-- doxytag: member="iattr::TAttribute::TAttribute" ref="aed358020b181c79d0bd24dbd7315106f" args="(iattr::IAttributesManager *attributeOwnerPtr, const std::string &amp;attributeName, const std::string &amp;attributeDescription, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())" -->
+<a class="anchor" id="ac05d1e900339c2e3c0dac87dafaff0b9"></a><!-- doxytag: member="iattr::TAttribute::TAttribute" ref="ac05d1e900339c2e3c0dac87dafaff0b9" args="(iattr::IAttributesManager *attributeOwnerPtr, const std::string &amp;attributeName, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -197,6 +197,12 @@ template&lt;typename Value &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>attributeFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>changeFlags</em> = <code>0</code>, </td>
         </tr>
         <tr>
@@ -214,9 +220,9 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00075">75</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00076">76</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
-<p>References <a class="el" href="_t_pointer_base_8h_source.html#l00133">istd::TPointerBase&lt; Type &gt;::IsValid()</a>, <a class="el" href="iattr_2_t_attribute_8h_source.html#l00058">iattr::TAttribute&lt; Value &gt;::m_defaultAttributeValuePtr</a>, and <a class="el" href="_t_del_ptr_8h_source.html#l00138">istd::TDelPtr&lt; Type, Accessor &gt;::SetPtr()</a>.</p>
+<p>References <a class="el" href="_t_pointer_base_8h_source.html#l00133">istd::TPointerBase&lt; Type &gt;::IsValid()</a>, <a class="el" href="iattr_2_t_attribute_8h_source.html#l00059">iattr::TAttribute&lt; Value &gt;::m_defaultAttributeValuePtr</a>, and <a class="el" href="_t_del_ptr_8h_source.html#l00138">istd::TDelPtr&lt; Type, Accessor &gt;::SetPtr()</a>.</p>
 
 </div>
 </div>
@@ -237,7 +243,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00122">122</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00124">124</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -259,7 +265,7 @@ template&lt;typename Value &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classiser_1_1_i_object.html#a6760120cf6f21ac24e609a6f8f76d360">iser::IObject</a>.</p>
 
-<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00131">131</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00133">133</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -279,7 +285,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00158">158</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00160">160</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -299,7 +305,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00093">93</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00095">95</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -319,7 +325,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00111">111</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00113">113</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -346,7 +352,7 @@ template&lt;typename Value &gt; </div>
 
 <p>Implements <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
 
-<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00140">140</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00142">142</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
 <p>References <a class="el" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive::BeginTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">iser::IArchive::EndTag()</a>, and <a class="el" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">iser::IArchive::Process()</a>.</p>
 
@@ -369,7 +375,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00100">100</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00102">102</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -387,9 +393,9 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00058">58</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00059">59</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
-<p>Referenced by <a class="el" href="iattr_2_t_attribute_8h_source.html#l00075">iattr::TAttribute&lt; Value &gt;::TAttribute()</a>.</p>
+<p>Referenced by <a class="el" href="iattr_2_t_attribute_8h_source.html#l00076">iattr::TAttribute&lt; Value &gt;::TAttribute()</a>.</p>
 
 </div>
 </div>
@@ -406,7 +412,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00056">56</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_attribute_8h_source.html#l00057">57</a> of file <a class="el" href="iattr_2_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
 </div>
 </div>

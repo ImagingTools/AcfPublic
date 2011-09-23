@@ -75,8 +75,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_t_multi_attribute.html#a03b71f2ff4379d2b4e254633d44ba917">TMultiAttribute</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a03b71f2ff4379d2b4e254633d44ba917"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_t_multi_attribute.html#aac7e062f5af3c69b6a0fb04da8e1c8ba">TMultiAttribute</a> (<a class="el" href="classiattr_1_1_i_attributes_manager.html">iattr::IAttributesManager</a> *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aac7e062f5af3c69b6a0fb04da8e1c8ba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_t_multi_attribute.html#a1b6423ecf23ffaf99bae19842d38acac">TMultiAttribute</a> (<a class="el" href="classiattr_1_1_i_attributes_manager.html">iattr::IAttributesManager</a> *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a1b6423ecf23ffaf99bae19842d38acac"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_t_multi_attribute.html#a232d00d6676cd7783fda3f1788c59c3e">GetValuesCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of values in the multi attribute.  <a href="#a232d00d6676cd7783fda3f1788c59c3e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const Value &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_t_multi_attribute.html#a750620e5ecde7c8ed8dd9dfbfd3259ff">GetValueAt</a> (int index) const </td></tr>
@@ -160,11 +160,11 @@ template&lt;typename Value &gt; </div>
 
 <p>Default constructor. </p>
 
-<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00105">105</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00106">106</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aac7e062f5af3c69b6a0fb04da8e1c8ba"></a><!-- doxytag: member="iattr::TMultiAttribute::TMultiAttribute" ref="aac7e062f5af3c69b6a0fb04da8e1c8ba" args="(iattr::IAttributesManager *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)" -->
+<a class="anchor" id="a1b6423ecf23ffaf99bae19842d38acac"></a><!-- doxytag: member="iattr::TMultiAttribute::TMultiAttribute" ref="a1b6423ecf23ffaf99bae19842d38acac" args="(iattr::IAttributesManager *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -187,6 +187,12 @@ template&lt;typename Value &gt; </div>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>attributeDescription</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>attributeFlags</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -228,9 +234,9 @@ template&lt;typename Value &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00111">111</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00112">112</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
-<p>References <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00095">iattr::TMultiAttribute&lt; Value &gt;::m_values</a>, and <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00093">iattr::TMultiAttribute&lt; Value &gt;::Wrap::value</a>.</p>
+<p>References <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00096">iattr::TMultiAttribute&lt; Value &gt;::m_values</a>, and <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00094">iattr::TMultiAttribute&lt; Value &gt;::Wrap::value</a>.</p>
 
 </div>
 </div>
@@ -253,7 +259,7 @@ template&lt;typename Value &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classiser_1_1_i_object.html#a6760120cf6f21ac24e609a6f8f76d360">iser::IObject</a>.</p>
 
-<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00180">180</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00182">182</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -273,7 +279,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00229">229</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00231">231</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -296,7 +302,7 @@ template&lt;typename Value &gt; </div>
 
 <p>Get value at the index <code>index</code>. </p>
 
-<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00136">136</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00138">138</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
 
@@ -320,7 +326,7 @@ template&lt;typename Value &gt; </div>
 
 <p>Get number of values in the multi attribute. </p>
 
-<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00129">129</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00131">131</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -343,9 +349,9 @@ template&lt;typename Value &gt; </div>
 
 <p>Insert new value into container. </p>
 
-<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00160">160</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00162">162</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
-<p>References <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00093">iattr::TMultiAttribute&lt; Value &gt;::Wrap::value</a>.</p>
+<p>References <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00094">iattr::TMultiAttribute&lt; Value &gt;::Wrap::value</a>.</p>
 
 </div>
 </div>
@@ -367,7 +373,7 @@ template&lt;typename Value &gt; </div>
 
 <p>Remove all values from the container. </p>
 
-<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00169">169</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00171">171</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -394,7 +400,7 @@ template&lt;typename Value &gt; </div>
 
 <p>Implements <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
 
-<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00189">189</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00191">191</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 <p>References <a class="el" href="classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">iser::IArchive::BeginMultiTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive::BeginTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">iser::IArchive::EndTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">iser::IArchive::IsStoring()</a>, and <a class="el" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">iser::IArchive::Process()</a>.</p>
 
@@ -429,7 +435,7 @@ template&lt;typename Value &gt; </div>
 
 <p>Set value at the index <code>index</code> to new value <code>value</code>. </p>
 
-<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00146">146</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00148">148</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
 
@@ -449,9 +455,9 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00095">95</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00096">96</a> of file <a class="el" href="iattr_2_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
-<p>Referenced by <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00111">iattr::TMultiAttribute&lt; Value &gt;::TMultiAttribute()</a>.</p>
+<p>Referenced by <a class="el" href="iattr_2_t_multi_attribute_8h_source.html#l00112">iattr::TMultiAttribute&lt; Value &gt;::TMultiAttribute()</a>.</p>
 
 </div>
 </div>

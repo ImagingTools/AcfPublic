@@ -71,6 +71,7 @@ public:
 				iattr::IAttributesManager* attributeOwnerPtr,
 				const std::string& attributeId,
 				const std::string& attributeDescription,
+				int attributeFlags,
 				int changeFlags = 0,
 				int elementsCount = 0,
 				Value* valuesPtr = NULL);
@@ -134,10 +135,11 @@ TMultiAttribute<Value>::TMultiAttribute(
 				iattr::IAttributesManager* attributeOwnerPtr,
 				const std::string& attributeId,
 				const std::string& attributeDescription,
+				int attributeFlags,
 				int changeFlags,
 				int elementsCount,
 				Value* valuesPtr)
-	:BaseClass(attributeOwnerPtr, attributeId, attributeDescription, changeFlags)
+	:BaseClass(attributeOwnerPtr, attributeId, attributeDescription, attributeFlags, changeFlags)
 {
 	for (int i = 0; i < elementsCount; ++i){
 		Wrap wrap;
