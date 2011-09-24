@@ -71,6 +71,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_c_attributed_object.html#a95d4f04ff7dd6a29fb7941f682c9374e">CAttributedObject</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structiattr_1_1_c_attributed_object_1_1_attribute_info.html">AttributeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_c_attributed_object.html#a552d3f89c58a4582a2ea21984b46f089">GetAttributeInfo</a> (const std::string &amp;attributeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get attribute info object for a given attribute ID.  <a href="#a552d3f89c58a4582a2ea21984b46f089"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_c_attributed_object.html#a7e285fbcac32b099a162a8756bfa4c98">GetAttributesCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of attributes.  <a href="#a7e285fbcac32b099a162a8756bfa4c98"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_c_attributed_object.html#a0045f16fd8a9cfbbe0dd13af034596f4">GetAttribute</a> (int attributeIndex) const </td></tr>
@@ -87,6 +88,7 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename AttributeType &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classiattr_1_1_c_attributed_object.html#aedd96432d048ba0dc1c1d30bc1b34de9">RegisterAttributeType</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new attribute type.  <a href="#aedd96432d048ba0dc1c1d30bc1b34de9"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiattr_1_1_c_attributed_object.html#a10c2dfd18f6145fc8cc888e7228e0227">ReadAttributes</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;attributesTag, const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;attributeTag)</td></tr>
@@ -208,6 +210,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Get attribute info object for a given attribute ID. </p>
 
 </div>
 </div>
@@ -345,7 +349,9 @@ template&lt;typename AttributeImpl &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_attributed_object_8h_source.html#l00086">86</a> of file <a class="el" href="_c_attributed_object_8h_source.html">CAttributedObject.h</a>.</p>
+<p>Register a new attribute type. </p>
+
+<p>Definition at line <a class="el" href="_c_attributed_object_8h_source.html#l00092">92</a> of file <a class="el" href="_c_attributed_object_8h_source.html">CAttributedObject.h</a>.</p>
 
 <p>References <a class="el" href="_t_composed_factory_8h_source.html#l00049">istd::TComposedFactory&lt; InterfaceType &gt;::RegisterFactory()</a>.</p>
 

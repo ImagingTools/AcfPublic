@@ -258,12 +258,16 @@
     <name>iattr.h</name>
     <path>C:/Temp/Acf/Include/iattr/</path>
     <filename>iattr_8h</filename>
+    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
+    <includes id="iser_8h" name="iser.h" local="yes" imported="no">iser/iser.h</includes>
+    <namespace>iattr</namespace>
   </compound>
   <compound kind="file">
     <name>IAttribute.h</name>
     <path>C:/Temp/Acf/Include/iattr/</path>
     <filename>_i_attribute_8h</filename>
     <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
+    <includes id="iattr_8h" name="iattr.h" local="yes" imported="no">iattr/iattr.h</includes>
     <class kind="class">iattr::IAttribute</class>
     <namespace>iattr</namespace>
   </compound>
@@ -272,6 +276,7 @@
     <path>C:/Temp/Acf/Include/iattr/</path>
     <filename>_i_attributes_manager_8h</filename>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="iattr_8h" name="iattr.h" local="yes" imported="no">iattr/iattr.h</includes>
     <class kind="class">iattr::IAttributesManager</class>
     <namespace>iattr</namespace>
   </compound>

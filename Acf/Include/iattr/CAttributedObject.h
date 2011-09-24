@@ -62,8 +62,14 @@ public:
 
 	CAttributedObject();
 
+	/**
+		Get attribute info object for a given attribute ID.
+	*/
 	AttributeInfo* GetAttributeInfo(const std::string& attributeId) const;
 
+	/**
+		Register a new attribute type.
+	*/
 	template <typename AttributeType>
 	static bool RegisterAttributeType();
 

@@ -26,6 +26,8 @@
 
 #include "iser/ISerializable.h"
 
+#include "iattr/iattr.h"
+
 
 namespace iattr
 {
