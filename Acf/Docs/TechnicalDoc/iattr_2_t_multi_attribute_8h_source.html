@@ -53,203 +53,273 @@
 <a name="l00030"></a>00030 <span class="keyword">public</span>:
 <a name="l00031"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#afa06be808341d3f3a0f79a7bc475aeae">00031</a>        <span class="keyword">typedef</span> Value <a class="code" href="classiattr_1_1_t_multi_attribute.html#afa06be808341d3f3a0f79a7bc475aeae">ValueType</a>;
 <a name="l00032"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a6ddf1dfb1e90aa85756ad99301b7d3c3">00032</a>        <span class="keyword">typedef</span> <a class="code" href="classiattr_1_1_c_attribute_base.html" title="Basic implementation of an attribute.">iattr::CAttributeBase</a> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a6ddf1dfb1e90aa85756ad99301b7d3c3">BaseClass</a>;
-<a name="l00033"></a>00033 
-<a name="l00037"></a>00037        <a class="code" href="classiattr_1_1_t_multi_attribute.html#a03b71f2ff4379d2b4e254633d44ba917" title="Default constructor.">TMultiAttribute</a>();
-<a name="l00038"></a>00038 
-<a name="l00048"></a>00048        <a class="code" href="classiattr_1_1_t_multi_attribute.html#a03b71f2ff4379d2b4e254633d44ba917" title="Default constructor.">TMultiAttribute</a>(
-<a name="l00049"></a>00049                             <a class="code" href="classiattr_1_1_i_attributes_manager.html" title="Interface for an attribute container.">iattr::IAttributesManager</a>* attributeOwnerPtr,
-<a name="l00050"></a>00050                             <span class="keyword">const</span> std::string&amp; attributeId,
-<a name="l00051"></a>00051                             <span class="keyword">const</span> std::string&amp; attributeDescription,
-<a name="l00052"></a>00052                             <span class="keywordtype">int</span> attributeFlags,
-<a name="l00053"></a>00053                             <span class="keywordtype">int</span> changeFlags = 0,
-<a name="l00054"></a>00054                             <span class="keywordtype">int</span> elementsCount = 0,
-<a name="l00055"></a>00055                             Value* valuesPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00056"></a>00056 
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a232d00d6676cd7783fda3f1788c59c3e" title="Get number of values in the multi attribute.">GetValuesCount</a>() <span class="keyword">const</span>;
+<a name="l00033"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#ae110e1b99f1ca3dce6a613ae8e0d13f4">00033</a>        <span class="keyword">typedef</span> std::vector&lt;ValueType&gt; <a class="code" href="classiattr_1_1_t_multi_attribute.html#ae110e1b99f1ca3dce6a613ae8e0d13f4">ValueList</a>;
+<a name="l00034"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a95bfc1f13cd064bccdc4a387ac788109">00034</a>        <span class="keyword">typedef</span> <span class="keyword">typename</span> ValueList::iterator <a class="code" href="classiattr_1_1_t_multi_attribute.html#a95bfc1f13cd064bccdc4a387ac788109">iterator</a>;
+<a name="l00035"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a659c7a10513dc236eb6922ca622c3909">00035</a>        <span class="keyword">typedef</span> <span class="keyword">typename</span> ValueList::const_iterator <a class="code" href="classiattr_1_1_t_multi_attribute.html#a659c7a10513dc236eb6922ca622c3909">const_iterator</a>;
+<a name="l00036"></a>00036 
+<a name="l00040"></a>00040        <a class="code" href="classiattr_1_1_t_multi_attribute.html#a03b71f2ff4379d2b4e254633d44ba917" title="Default constructor.">TMultiAttribute</a>();
+<a name="l00041"></a>00041 
+<a name="l00051"></a>00051        <a class="code" href="classiattr_1_1_t_multi_attribute.html#a03b71f2ff4379d2b4e254633d44ba917" title="Default constructor.">TMultiAttribute</a>(
+<a name="l00052"></a>00052                             <a class="code" href="classiattr_1_1_i_attributes_manager.html" title="Interface for an attribute container.">iattr::IAttributesManager</a>* attributeOwnerPtr,
+<a name="l00053"></a>00053                             <span class="keyword">const</span> std::string&amp; attributeId,
+<a name="l00054"></a>00054                             <span class="keyword">const</span> std::string&amp; attributeDescription,
+<a name="l00055"></a>00055                             <span class="keywordtype">int</span> attributeFlags,
+<a name="l00056"></a>00056                             <span class="keywordtype">int</span> changeFlags = 0,
+<a name="l00057"></a>00057                             <span class="keywordtype">int</span> elementsCount = 0,
+<a name="l00058"></a>00058                             Value* valuesPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060        <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a9e00181434d72eb1609aa03c9005c204">SetValues</a>(<span class="keyword">const</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#ae110e1b99f1ca3dce6a613ae8e0d13f4">ValueList</a>&amp; valueList);
 <a name="l00061"></a>00061 
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keyword">const</span> Value&amp; <a class="code" href="classiattr_1_1_t_multi_attribute.html#a750620e5ecde7c8ed8dd9dfbfd3259ff" title="Get value at the index index.">GetValueAt</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00066"></a>00066 
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a1dcfbf20398cddc8166ecd983a218642" title="Set value at the index index to new value value.">SetValueAt</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> Value&amp; value);
-<a name="l00071"></a>00071 
-<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#ae92f65e6d54783f28868cb9276d1cf02" title="Insert new value into container.">InsertValue</a>(<span class="keyword">const</span> Value&amp; value);
-<a name="l00076"></a>00076 
-<a name="l00080"></a>00080        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a68443ea3f28aecdaaa1bebb0af66c8d1" title="Remove all values from the container.">ResetValues</a>();
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082        <span class="comment">// reimplemented (iser::IObject)</span>
-<a name="l00083"></a>00083        <span class="keyword">const</span> std::string&amp; <a class="code" href="classiattr_1_1_t_multi_attribute.html#a0bbff7e7e5450972c76a0db0182d7ae3">GetFactoryId</a>() <span class="keyword">const</span>;
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a521e39e50902c95dcb34d42c8c7376c9" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00065"></a>00065        <span class="keyword">template</span> &lt;<span class="keyword">class</span> ContainerImpl&gt;
+<a name="l00066"></a>00066        <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a9e00181434d72eb1609aa03c9005c204">SetValues</a>(<span class="keyword">typename</span> ContainerImpl::const_iterator <a class="code" href="classiattr_1_1_t_multi_attribute.html#a82eeff8f4645fe9e7ed73cbff3eeb4d1">begin</a>, <span class="keyword">typename</span> ContainerImpl::const_iterator <a class="code" href="classiattr_1_1_t_multi_attribute.html#a92b8d9ff8ec67e8c4a583a1c669c09e5">end</a>);
+<a name="l00067"></a>00067 
+<a name="l00071"></a>00071        <span class="keyword">const</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#ae110e1b99f1ca3dce6a613ae8e0d13f4">ValueList</a>&amp; <a class="code" href="classiattr_1_1_t_multi_attribute.html#aaafaf6f5b4e861504592adf3ed563a61" title="Get all values.">GetValues</a>() <span class="keyword">const</span>;
+<a name="l00072"></a>00072 
+<a name="l00076"></a>00076        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a232d00d6676cd7783fda3f1788c59c3e" title="Get number of values in the multi attribute.">GetValuesCount</a>() <span class="keyword">const</span>;
+<a name="l00077"></a>00077 
+<a name="l00081"></a>00081        <span class="keyword">virtual</span> Value <a class="code" href="classiattr_1_1_t_multi_attribute.html#a4b3267402e2dfed2a34d5218d36b82d4" title="Get value at the index index.">GetValueAt</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00082"></a>00082 
+<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a1dcfbf20398cddc8166ecd983a218642" title="Set value at the index index to new value value.">SetValueAt</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> Value&amp; value);
 <a name="l00087"></a>00087 
-<a name="l00088"></a>00088        <span class="comment">// static methods</span>
-<a name="l00089"></a>00089        <span class="keyword">static</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classiattr_1_1_t_multi_attribute.html#a1fa3416e77bc059110798e55e3ca4f4c">GetTypeName</a>();
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091 <span class="keyword">protected</span>:
-<a name="l00092"></a><a class="code" href="structiattr_1_1_t_multi_attribute_1_1_wrap.html">00092</a>        <span class="keyword">struct </span><a class="code" href="structiattr_1_1_t_multi_attribute_1_1_wrap.html">Wrap</a>
-<a name="l00093"></a>00093        {
-<a name="l00094"></a><a class="code" href="structiattr_1_1_t_multi_attribute_1_1_wrap.html#aedb22530319ddc23e9ad18cb5246aa81">00094</a>               Value <a class="code" href="structiattr_1_1_t_multi_attribute_1_1_wrap.html#aedb22530319ddc23e9ad18cb5246aa81">value</a>;
-<a name="l00095"></a>00095        };
-<a name="l00096"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a087df12b6d59dd9b4719100cd832ef3c">00096</a>        std::vector&lt;Wrap&gt; <a class="code" href="classiattr_1_1_t_multi_attribute.html#a087df12b6d59dd9b4719100cd832ef3c">m_values</a>;
+<a name="l00091"></a>00091        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#ae92f65e6d54783f28868cb9276d1cf02" title="Insert new value into container.">InsertValue</a>(<span class="keyword">const</span> Value&amp; value);
+<a name="l00092"></a>00092 
+<a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a68443ea3f28aecdaaa1bebb0af66c8d1" title="Remove all values from the container.">ResetValues</a>();
 <a name="l00097"></a>00097 
-<a name="l00098"></a>00098 <span class="keyword">private</span>:
-<a name="l00099"></a>00099        <span class="keyword">static</span> <span class="keyword">const</span> std::string s_typeName;
-<a name="l00100"></a>00100 };
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103 <span class="comment">// public methods</span>
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00106"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a03b71f2ff4379d2b4e254633d44ba917">00106</a> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a03b71f2ff4379d2b4e254633d44ba917" title="Default constructor.">TMultiAttribute&lt;Value&gt;::TMultiAttribute</a>()
-<a name="l00107"></a>00107 {
-<a name="l00108"></a>00108 }
+<a name="l00098"></a>00098        <span class="comment">// STL compatibility</span>
+<a name="l00099"></a>00099        <a class="code" href="classiattr_1_1_t_multi_attribute.html#a95bfc1f13cd064bccdc4a387ac788109">iterator</a> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a82eeff8f4645fe9e7ed73cbff3eeb4d1">begin</a>();
+<a name="l00100"></a>00100        <a class="code" href="classiattr_1_1_t_multi_attribute.html#a659c7a10513dc236eb6922ca622c3909">const_iterator</a> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a82eeff8f4645fe9e7ed73cbff3eeb4d1">begin</a>() <span class="keyword">const</span>;
+<a name="l00101"></a>00101        <a class="code" href="classiattr_1_1_t_multi_attribute.html#a95bfc1f13cd064bccdc4a387ac788109">iterator</a> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a92b8d9ff8ec67e8c4a583a1c669c09e5">end</a>();
+<a name="l00102"></a>00102        <a class="code" href="classiattr_1_1_t_multi_attribute.html#a659c7a10513dc236eb6922ca622c3909">const_iterator</a> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a92b8d9ff8ec67e8c4a583a1c669c09e5">end</a>() <span class="keyword">const</span>;
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104        <span class="comment">// reimplemented (iser::IObject)</span>
+<a name="l00105"></a>00105        <span class="keyword">const</span> std::string&amp; <a class="code" href="classiattr_1_1_t_multi_attribute.html#a0bbff7e7e5450972c76a0db0182d7ae3">GetFactoryId</a>() <span class="keyword">const</span>;
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00108"></a>00108        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a521e39e50902c95dcb34d42c8c7376c9" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
 <a name="l00109"></a>00109 
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00112"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a1b6423ecf23ffaf99bae19842d38acac">00112</a> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a03b71f2ff4379d2b4e254633d44ba917" title="Default constructor.">TMultiAttribute&lt;Value&gt;::TMultiAttribute</a>(
-<a name="l00113"></a>00113                             <a class="code" href="classiattr_1_1_i_attributes_manager.html" title="Interface for an attribute container.">iattr::IAttributesManager</a>* attributeOwnerPtr,
-<a name="l00114"></a>00114                             <span class="keyword">const</span> std::string&amp; attributeId,
-<a name="l00115"></a>00115                             <span class="keyword">const</span> std::string&amp; attributeDescription,
-<a name="l00116"></a>00116                             <span class="keywordtype">int</span> attributeFlags,
-<a name="l00117"></a>00117                             <span class="keywordtype">int</span> changeFlags,
-<a name="l00118"></a>00118                             <span class="keywordtype">int</span> elementsCount,
-<a name="l00119"></a>00119                             Value* valuesPtr)
-<a name="l00120"></a>00120        :<a class="code" href="classiattr_1_1_c_attribute_base.html" title="Basic implementation of an attribute.">BaseClass</a>(attributeOwnerPtr, attributeId, attributeDescription, attributeFlags, changeFlags)
-<a name="l00121"></a>00121 {
-<a name="l00122"></a>00122        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
-<a name="l00123"></a>00123               <a class="code" href="structiattr_1_1_t_multi_attribute_1_1_wrap.html">Wrap</a> wrap;
-<a name="l00124"></a>00124               wrap.<a class="code" href="structiattr_1_1_t_multi_attribute_1_1_wrap.html#aedb22530319ddc23e9ad18cb5246aa81">value</a> = valuesPtr[i];
-<a name="l00125"></a>00125               <a class="code" href="classiattr_1_1_t_multi_attribute.html#a087df12b6d59dd9b4719100cd832ef3c">m_values</a>.push_back(wrap);
-<a name="l00126"></a>00126        }
-<a name="l00127"></a>00127 }
+<a name="l00110"></a>00110        <span class="comment">// static methods</span>
+<a name="l00111"></a>00111        <span class="keyword">static</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classiattr_1_1_t_multi_attribute.html#a1fa3416e77bc059110798e55e3ca4f4c">GetTypeName</a>();
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113 <span class="keyword">protected</span>:
+<a name="l00114"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#af19f88010634a14ba140cc9e8f8938cd">00114</a>        std::vector&lt;Value&gt; <a class="code" href="classiattr_1_1_t_multi_attribute.html#af19f88010634a14ba140cc9e8f8938cd">m_values</a>;
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116 <span class="keyword">private</span>:
+<a name="l00117"></a>00117        <span class="keyword">static</span> <span class="keyword">const</span> std::string s_typeName;
+<a name="l00118"></a>00118 };
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121 <span class="comment">// public methods</span>
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00124"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a03b71f2ff4379d2b4e254633d44ba917">00124</a> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a03b71f2ff4379d2b4e254633d44ba917" title="Default constructor.">TMultiAttribute&lt;Value&gt;::TMultiAttribute</a>()
+<a name="l00125"></a>00125 {
+<a name="l00126"></a>00126 }
+<a name="l00127"></a>00127 
 <a name="l00128"></a>00128 
-<a name="l00129"></a>00129 
-<a name="l00130"></a>00130 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00131"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a232d00d6676cd7783fda3f1788c59c3e">00131</a> <span class="keywordtype">int</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a232d00d6676cd7783fda3f1788c59c3e" title="Get number of values in the multi attribute.">TMultiAttribute&lt;Value&gt;::GetValuesCount</a>()<span class="keyword"> const</span>
-<a name="l00132"></a>00132 <span class="keyword"></span>{
-<a name="l00133"></a>00133        <span class="keywordflow">return</span> int(m_values.size());
-<a name="l00134"></a>00134 }
-<a name="l00135"></a>00135 
-<a name="l00136"></a>00136 
-<a name="l00137"></a>00137 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00138"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a750620e5ecde7c8ed8dd9dfbfd3259ff">00138</a> <span class="keyword">const</span> Value&amp; <a class="code" href="classiattr_1_1_t_multi_attribute.html#a750620e5ecde7c8ed8dd9dfbfd3259ff" title="Get value at the index index.">TMultiAttribute&lt;Value&gt;::GetValueAt</a>(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
-<a name="l00139"></a>00139 <span class="keyword"></span>{
-<a name="l00140"></a>00140        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00141"></a>00141        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; GetValuesCount());
-<a name="l00142"></a>00142 
-<a name="l00143"></a>00143        <span class="keywordflow">return</span> m_values[index].value;
-<a name="l00144"></a>00144 }
+<a name="l00129"></a>00129 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00130"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a1b6423ecf23ffaf99bae19842d38acac">00130</a> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a03b71f2ff4379d2b4e254633d44ba917" title="Default constructor.">TMultiAttribute&lt;Value&gt;::TMultiAttribute</a>(
+<a name="l00131"></a>00131                             <a class="code" href="classiattr_1_1_i_attributes_manager.html" title="Interface for an attribute container.">iattr::IAttributesManager</a>* attributeOwnerPtr,
+<a name="l00132"></a>00132                             <span class="keyword">const</span> std::string&amp; attributeId,
+<a name="l00133"></a>00133                             <span class="keyword">const</span> std::string&amp; attributeDescription,
+<a name="l00134"></a>00134                             <span class="keywordtype">int</span> attributeFlags,
+<a name="l00135"></a>00135                             <span class="keywordtype">int</span> changeFlags,
+<a name="l00136"></a>00136                             <span class="keywordtype">int</span> elementsCount,
+<a name="l00137"></a>00137                             Value* valuesPtr)
+<a name="l00138"></a>00138        :<a class="code" href="classiattr_1_1_c_attribute_base.html" title="Basic implementation of an attribute.">BaseClass</a>(attributeOwnerPtr, attributeId, attributeDescription, attributeFlags, changeFlags)
+<a name="l00139"></a>00139 {
+<a name="l00140"></a>00140        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
+<a name="l00141"></a>00141               <a class="code" href="classiattr_1_1_t_multi_attribute.html#af19f88010634a14ba140cc9e8f8938cd">m_values</a>.push_back(valuesPtr[i]);
+<a name="l00142"></a>00142        }
+<a name="l00143"></a>00143 }
+<a name="l00144"></a>00144 
 <a name="l00145"></a>00145 
-<a name="l00146"></a>00146 
-<a name="l00147"></a>00147 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00148"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a1dcfbf20398cddc8166ecd983a218642">00148</a> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a1dcfbf20398cddc8166ecd983a218642" title="Set value at the index index to new value value.">TMultiAttribute&lt;Value&gt;::SetValueAt</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> Value&amp; value)
-<a name="l00149"></a>00149 {
-<a name="l00150"></a>00150        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00151"></a>00151        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; GetValuesCount());
+<a name="l00146"></a>00146 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00147"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a9e00181434d72eb1609aa03c9005c204">00147</a> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a9e00181434d72eb1609aa03c9005c204">TMultiAttribute&lt;Value&gt;::SetValues</a>(<span class="keyword">const</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#ae110e1b99f1ca3dce6a613ae8e0d13f4">ValueList</a>&amp; valueList)
+<a name="l00148"></a>00148 {
+<a name="l00149"></a>00149        SetValues&lt;ValueList&gt;(valueList.begin(), valueList.end());
+<a name="l00150"></a>00150 }
+<a name="l00151"></a>00151 
 <a name="l00152"></a>00152 
-<a name="l00153"></a>00153        <span class="keywordflow">if</span> (m_values[index].value != value){
-<a name="l00154"></a>00154               <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(m_attributeOwnerPtr, m_changeFlags);
-<a name="l00155"></a>00155 
-<a name="l00156"></a>00156               m_values[index].value = value;
-<a name="l00157"></a>00157        }
-<a name="l00158"></a>00158 }
-<a name="l00159"></a>00159 
+<a name="l00153"></a>00153 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00154"></a>00154 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ContainerImpl&gt;
+<a name="l00155"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#ad8d20364efa447e735889d014e615fbb">00155</a> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a9e00181434d72eb1609aa03c9005c204">TMultiAttribute&lt;Value&gt;::SetValues</a>(<span class="keyword">typename</span> ContainerImpl::const_iterator beginIter, <span class="keyword">typename</span> ContainerImpl::const_iterator endIter)
+<a name="l00156"></a>00156 {
+<a name="l00157"></a>00157        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(m_attributeOwnerPtr, m_changeFlags);
+<a name="l00158"></a>00158 
+<a name="l00159"></a>00159        ResetValues();
 <a name="l00160"></a>00160 
-<a name="l00161"></a>00161 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00162"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#ae92f65e6d54783f28868cb9276d1cf02">00162</a> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#ae92f65e6d54783f28868cb9276d1cf02" title="Insert new value into container.">TMultiAttribute&lt;Value&gt;::InsertValue</a>(<span class="keyword">const</span> Value&amp; value)
-<a name="l00163"></a>00163 {
-<a name="l00164"></a>00164        <a class="code" href="structiattr_1_1_t_multi_attribute_1_1_wrap.html">Wrap</a> wrap;
-<a name="l00165"></a>00165        wrap.<a class="code" href="structiattr_1_1_t_multi_attribute_1_1_wrap.html#aedb22530319ddc23e9ad18cb5246aa81">value</a> = value;
-<a name="l00166"></a>00166        m_values.push_back(wrap);
-<a name="l00167"></a>00167 }
+<a name="l00161"></a>00161        <span class="keywordflow">while</span> (beginIter != endIter){
+<a name="l00162"></a>00162               InsertValue(*beginIter);
+<a name="l00163"></a>00163 
+<a name="l00164"></a>00164               ++beginIter;
+<a name="l00165"></a>00165        }
+<a name="l00166"></a>00166 }
+<a name="l00167"></a>00167 
 <a name="l00168"></a>00168 
-<a name="l00169"></a>00169 
-<a name="l00170"></a>00170 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00171"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a68443ea3f28aecdaaa1bebb0af66c8d1">00171</a> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a68443ea3f28aecdaaa1bebb0af66c8d1" title="Remove all values from the container.">TMultiAttribute&lt;Value&gt;::ResetValues</a>()
-<a name="l00172"></a>00172 {
-<a name="l00173"></a>00173        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(m_attributeOwnerPtr, m_changeFlags);
-<a name="l00174"></a>00174        
-<a name="l00175"></a>00175        m_values.clear();
-<a name="l00176"></a>00176 }
-<a name="l00177"></a>00177 
-<a name="l00178"></a>00178 
-<a name="l00179"></a>00179 <span class="comment">// reimplemented (iser::IObject)</span>
-<a name="l00180"></a>00180 
-<a name="l00181"></a>00181 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00182"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a0bbff7e7e5450972c76a0db0182d7ae3">00182</a> <span class="keyword">const</span> std::string&amp; <a class="code" href="classiattr_1_1_t_multi_attribute.html#a0bbff7e7e5450972c76a0db0182d7ae3">TMultiAttribute&lt;Value&gt;::GetFactoryId</a>()<span class="keyword"> const</span>
-<a name="l00183"></a>00183 <span class="keyword"></span>{
-<a name="l00184"></a>00184        <span class="keywordflow">return</span> s_typeName;
-<a name="l00185"></a>00185 }
-<a name="l00186"></a>00186 
-<a name="l00187"></a>00187 
-<a name="l00188"></a>00188 <span class="comment">// reimplemented (ISerializable)</span>
-<a name="l00189"></a>00189 
-<a name="l00190"></a>00190 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00191"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a521e39e50902c95dcb34d42c8c7376c9">00191</a> <span class="keywordtype">bool</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a521e39e50902c95dcb34d42c8c7376c9" title="Load or store state of this object as a archive stream.">TMultiAttribute&lt;Value&gt;::Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive)
-<a name="l00192"></a>00192 {
-<a name="l00193"></a>00193        <span class="keywordtype">bool</span> retVal = <span class="keyword">true</span>;
-<a name="l00194"></a>00194 
-<a name="l00195"></a>00195        <span class="keywordtype">bool</span> isStoring = archive.<a class="code" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31" title="Check if this archive is loading or storing.">IsStoring</a>();
-<a name="l00196"></a>00196 
-<a name="l00197"></a>00197        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> valuesTag(<span class="stringliteral">&quot;Values&quot;</span>, <span class="stringliteral">&quot;List of attribute values&quot;</span>);
-<a name="l00198"></a>00198        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> valueTag(<span class="stringliteral">&quot;Value&quot;</span>, <span class="stringliteral">&quot;Single Value&quot;</span>);
-<a name="l00199"></a>00199 
-<a name="l00200"></a>00200        <span class="keywordtype">int</span> valuesCount = 0;
+<a name="l00169"></a>00169 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00170"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#aaafaf6f5b4e861504592adf3ed563a61">00170</a> <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#ae110e1b99f1ca3dce6a613ae8e0d13f4">TMultiAttribute&lt;Value&gt;::ValueList</a>&amp; <a class="code" href="classiattr_1_1_t_multi_attribute.html#aaafaf6f5b4e861504592adf3ed563a61" title="Get all values.">TMultiAttribute&lt;Value&gt;::GetValues</a>()<span class="keyword"> const</span>
+<a name="l00171"></a>00171 <span class="keyword"></span>{
+<a name="l00172"></a>00172        <span class="keywordflow">return</span> m_values;
+<a name="l00173"></a>00173 }
+<a name="l00174"></a>00174 
+<a name="l00175"></a>00175 
+<a name="l00176"></a>00176 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00177"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a232d00d6676cd7783fda3f1788c59c3e">00177</a> <span class="keywordtype">int</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a232d00d6676cd7783fda3f1788c59c3e" title="Get number of values in the multi attribute.">TMultiAttribute&lt;Value&gt;::GetValuesCount</a>()<span class="keyword"> const</span>
+<a name="l00178"></a>00178 <span class="keyword"></span>{
+<a name="l00179"></a>00179        <span class="keywordflow">return</span> int(m_values.size());
+<a name="l00180"></a>00180 }
+<a name="l00181"></a>00181 
+<a name="l00182"></a>00182 
+<a name="l00183"></a>00183 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00184"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a4b3267402e2dfed2a34d5218d36b82d4">00184</a> Value <a class="code" href="classiattr_1_1_t_multi_attribute.html#a4b3267402e2dfed2a34d5218d36b82d4" title="Get value at the index index.">TMultiAttribute&lt;Value&gt;::GetValueAt</a>(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
+<a name="l00185"></a>00185 <span class="keyword"></span>{
+<a name="l00186"></a>00186        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
+<a name="l00187"></a>00187        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; GetValuesCount());
+<a name="l00188"></a>00188 
+<a name="l00189"></a>00189        <span class="keywordflow">return</span> m_values[index];
+<a name="l00190"></a>00190 }
+<a name="l00191"></a>00191 
+<a name="l00192"></a>00192 
+<a name="l00193"></a>00193 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00194"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a1dcfbf20398cddc8166ecd983a218642">00194</a> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a1dcfbf20398cddc8166ecd983a218642" title="Set value at the index index to new value value.">TMultiAttribute&lt;Value&gt;::SetValueAt</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> Value&amp; value)
+<a name="l00195"></a>00195 {
+<a name="l00196"></a>00196        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
+<a name="l00197"></a>00197        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; GetValuesCount());
+<a name="l00198"></a>00198 
+<a name="l00199"></a>00199        <span class="keywordflow">if</span> (m_values[index] != value){
+<a name="l00200"></a>00200               <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(m_attributeOwnerPtr, m_changeFlags);
 <a name="l00201"></a>00201 
-<a name="l00202"></a>00202        <span class="keywordflow">if</span> (isStoring){
-<a name="l00203"></a>00203               valuesCount = int(m_values.size());
-<a name="l00204"></a>00204        }
+<a name="l00202"></a>00202               m_values[index] = value;
+<a name="l00203"></a>00203        }
+<a name="l00204"></a>00204 }
 <a name="l00205"></a>00205 
-<a name="l00206"></a>00206        retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e" title="Begin of archive tag containing set of subelements of the same type.">BeginMultiTag</a>(valuesTag, valueTag, valuesCount);
-<a name="l00207"></a>00207 
-<a name="l00208"></a>00208        <span class="keywordflow">if</span> (!isStoring){
-<a name="l00209"></a>00209               <span class="keywordflow">if</span> (!retVal){
-<a name="l00210"></a>00210                      <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00211"></a>00211               }
+<a name="l00206"></a>00206 
+<a name="l00207"></a>00207 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00208"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#ae92f65e6d54783f28868cb9276d1cf02">00208</a> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#ae92f65e6d54783f28868cb9276d1cf02" title="Insert new value into container.">TMultiAttribute&lt;Value&gt;::InsertValue</a>(<span class="keyword">const</span> Value&amp; value)
+<a name="l00209"></a>00209 {
+<a name="l00210"></a>00210        m_values.push_back(value);
+<a name="l00211"></a>00211 }
 <a name="l00212"></a>00212 
-<a name="l00213"></a>00213               m_values.resize(valuesCount);
-<a name="l00214"></a>00214        }
-<a name="l00215"></a>00215 
-<a name="l00216"></a>00216        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; valuesCount; ++i){
-<a name="l00217"></a>00217               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(valueTag);
-<a name="l00218"></a>00218               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575" title="Process primitive type.">Process</a>(m_values[i].value);
-<a name="l00219"></a>00219               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(valueTag);
-<a name="l00220"></a>00220        }
+<a name="l00213"></a>00213 
+<a name="l00214"></a>00214 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00215"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a68443ea3f28aecdaaa1bebb0af66c8d1">00215</a> <span class="keywordtype">void</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a68443ea3f28aecdaaa1bebb0af66c8d1" title="Remove all values from the container.">TMultiAttribute&lt;Value&gt;::ResetValues</a>()
+<a name="l00216"></a>00216 {
+<a name="l00217"></a>00217        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(m_attributeOwnerPtr, m_changeFlags);
+<a name="l00218"></a>00218        
+<a name="l00219"></a>00219        m_values.clear();
+<a name="l00220"></a>00220 }
 <a name="l00221"></a>00221 
-<a name="l00222"></a>00222        retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(valuesTag);
-<a name="l00223"></a>00223 
-<a name="l00224"></a>00224        <span class="keywordflow">return</span> retVal;
-<a name="l00225"></a>00225 }
-<a name="l00226"></a>00226 
-<a name="l00227"></a>00227 
-<a name="l00228"></a>00228 <span class="comment">// static methods</span>
-<a name="l00229"></a>00229 
-<a name="l00230"></a>00230 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00231"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a1fa3416e77bc059110798e55e3ca4f4c">00231</a> <span class="keyword">const</span> std::string&amp; <a class="code" href="classiattr_1_1_t_multi_attribute.html#a1fa3416e77bc059110798e55e3ca4f4c">TMultiAttribute&lt;Value&gt;::GetTypeName</a>()
-<a name="l00232"></a>00232 {
-<a name="l00233"></a>00233        <span class="keywordflow">return</span> s_typeName;
-<a name="l00234"></a>00234 }
-<a name="l00235"></a>00235 
-<a name="l00236"></a>00236 
-<a name="l00237"></a>00237 <span class="comment">// private static attributes</span>
+<a name="l00222"></a>00222 
+<a name="l00223"></a>00223 <span class="comment">// STL compatibility</span>
+<a name="l00224"></a>00224 
+<a name="l00225"></a>00225 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00226"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a82eeff8f4645fe9e7ed73cbff3eeb4d1">00226</a> <span class="keyword">typename</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a95bfc1f13cd064bccdc4a387ac788109">TMultiAttribute&lt;Value&gt;::iterator</a> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a82eeff8f4645fe9e7ed73cbff3eeb4d1">TMultiAttribute&lt;Value&gt;::begin</a>()
+<a name="l00227"></a>00227 {
+<a name="l00228"></a>00228        <span class="keywordflow">return</span> m_values.begin();
+<a name="l00229"></a>00229 }
+<a name="l00230"></a>00230 
+<a name="l00231"></a>00231 
+<a name="l00232"></a>00232 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00233"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#abe708ef3493e536d69ecebcf617d6a00">00233</a> <span class="keyword">typename</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a659c7a10513dc236eb6922ca622c3909">TMultiAttribute&lt;Value&gt;::const_iterator</a> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a82eeff8f4645fe9e7ed73cbff3eeb4d1">TMultiAttribute&lt;Value&gt;::begin</a>()<span class="keyword"> const</span>
+<a name="l00234"></a>00234 <span class="keyword"></span>{
+<a name="l00235"></a>00235        <span class="keywordflow">return</span> m_values.begin();
+<a name="l00236"></a>00236 }
+<a name="l00237"></a>00237 
 <a name="l00238"></a>00238 
 <a name="l00239"></a>00239 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00240"></a>00240 <span class="keyword">const</span> std::string <a class="code" href="classiattr_1_1_t_multi_attribute.html" title="Template implementation of multiple attribute.">TMultiAttribute&lt;Value&gt;::s_typeName</a>(<a class="code" href="classistd_1_1_c_class_info.html#aa933e42f37d56bdd4236e0833b1adb14" title="Get undecorated and platform undependent class name.">istd::CClassInfo::GetName</a>&lt;<a class="code" href="classiattr_1_1_t_multi_attribute.html" title="Template implementation of multiple attribute.">TMultiAttribute&lt;Value&gt;</a> &gt;());
-<a name="l00241"></a>00241 
-<a name="l00242"></a>00242 
-<a name="l00243"></a>00243 <span class="comment">// typedefs</span>
-<a name="l00244"></a>00244 
-<a name="l00245"></a><a class="code" href="namespaceiattr.html#a692b032edd0bd57e414f6aaa4a904674">00245</a> <span class="keyword">typedef</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html" title="Template implementation of multiple attribute.">TMultiAttribute&lt;double&gt;</a> <a class="code" href="namespaceiattr.html#a692b032edd0bd57e414f6aaa4a904674">CMultiDoubleAttribute</a>;
-<a name="l00246"></a><a class="code" href="namespaceiattr.html#a217cc807ae31339ae3e6a236e60945fd">00246</a> <span class="keyword">typedef</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html" title="Template implementation of multiple attribute.">TMultiAttribute&lt;bool&gt;</a> <a class="code" href="namespaceiattr.html#a217cc807ae31339ae3e6a236e60945fd">CMultiBoolAttribute</a>;
-<a name="l00247"></a><a class="code" href="namespaceiattr.html#ad5034fa86ba960f8e5457fc9af0f6aaf">00247</a> <span class="keyword">typedef</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html" title="Template implementation of multiple attribute.">TMultiAttribute&lt;int&gt;</a> <a class="code" href="namespaceiattr.html#ad5034fa86ba960f8e5457fc9af0f6aaf">CMultiIntAttribute</a>;
-<a name="l00248"></a><a class="code" href="namespaceiattr.html#a4c5730745650d8561b9e825d80f49be2">00248</a> <span class="keyword">typedef</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html" title="Template implementation of multiple attribute.">TMultiAttribute&lt;istd::CString&gt;</a> <a class="code" href="namespaceiattr.html#a4c5730745650d8561b9e825d80f49be2">CMultiStringAttribute</a>;
-<a name="l00249"></a>00249 
-<a name="l00250"></a>00250 
-<a name="l00251"></a>00251 } <span class="comment">// namespace iattr</span>
+<a name="l00240"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a92b8d9ff8ec67e8c4a583a1c669c09e5">00240</a> <span class="keyword">typename</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a95bfc1f13cd064bccdc4a387ac788109">TMultiAttribute&lt;Value&gt;::iterator</a> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a92b8d9ff8ec67e8c4a583a1c669c09e5">TMultiAttribute&lt;Value&gt;::end</a>()
+<a name="l00241"></a>00241 {
+<a name="l00242"></a>00242        <span class="keywordflow">return</span> m_values.end();
+<a name="l00243"></a>00243 }
+<a name="l00244"></a>00244        
+<a name="l00245"></a>00245 
+<a name="l00246"></a>00246 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00247"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a4d6bfc835cdd3134b2736820960501a8">00247</a> <span class="keyword">typename</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a659c7a10513dc236eb6922ca622c3909">TMultiAttribute&lt;Value&gt;::const_iterator</a> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a92b8d9ff8ec67e8c4a583a1c669c09e5">TMultiAttribute&lt;Value&gt;::end</a>()<span class="keyword"> const</span>
+<a name="l00248"></a>00248 <span class="keyword"></span>{
+<a name="l00249"></a>00249        <span class="keywordflow">return</span> m_values.end();
+<a name="l00250"></a>00250 }
+<a name="l00251"></a>00251 
 <a name="l00252"></a>00252 
-<a name="l00253"></a>00253 
-<a name="l00254"></a>00254 <span class="preprocessor">#endif // !iattr_TMultiAttribute_included</span>
-<a name="l00255"></a>00255 <span class="preprocessor"></span>
-<a name="l00256"></a>00256 
+<a name="l00253"></a>00253 <span class="comment">// reimplemented (iser::IObject)</span>
+<a name="l00254"></a>00254 
+<a name="l00255"></a>00255 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00256"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a0bbff7e7e5450972c76a0db0182d7ae3">00256</a> <span class="keyword">const</span> std::string&amp; <a class="code" href="classiattr_1_1_t_multi_attribute.html#a0bbff7e7e5450972c76a0db0182d7ae3">TMultiAttribute&lt;Value&gt;::GetFactoryId</a>()<span class="keyword"> const</span>
+<a name="l00257"></a>00257 <span class="keyword"></span>{
+<a name="l00258"></a>00258        <span class="keywordflow">return</span> s_typeName;
+<a name="l00259"></a>00259 }
+<a name="l00260"></a>00260 
+<a name="l00261"></a>00261 
+<a name="l00262"></a>00262 <span class="comment">// reimplemented (ISerializable)</span>
+<a name="l00263"></a>00263 
+<a name="l00264"></a>00264 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00265"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a521e39e50902c95dcb34d42c8c7376c9">00265</a> <span class="keywordtype">bool</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html#a521e39e50902c95dcb34d42c8c7376c9" title="Load or store state of this object as a archive stream.">TMultiAttribute&lt;Value&gt;::Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive)
+<a name="l00266"></a>00266 {
+<a name="l00267"></a>00267        <span class="keywordtype">bool</span> retVal = <span class="keyword">true</span>;
+<a name="l00268"></a>00268 
+<a name="l00269"></a>00269        <span class="keywordtype">bool</span> isStoring = archive.<a class="code" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31" title="Check if this archive is loading or storing.">IsStoring</a>();
+<a name="l00270"></a>00270 
+<a name="l00271"></a>00271        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> valuesTag(<span class="stringliteral">&quot;Values&quot;</span>, <span class="stringliteral">&quot;List of attribute values&quot;</span>);
+<a name="l00272"></a>00272        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> valueTag(<span class="stringliteral">&quot;Value&quot;</span>, <span class="stringliteral">&quot;Single Value&quot;</span>);
+<a name="l00273"></a>00273 
+<a name="l00274"></a>00274        <span class="keywordtype">int</span> valuesCount = 0;
+<a name="l00275"></a>00275 
+<a name="l00276"></a>00276        <span class="keywordflow">if</span> (isStoring){
+<a name="l00277"></a>00277               valuesCount = int(m_values.size());
+<a name="l00278"></a>00278        }
+<a name="l00279"></a>00279 
+<a name="l00280"></a>00280        retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e" title="Begin of archive tag containing set of subelements of the same type.">BeginMultiTag</a>(valuesTag, valueTag, valuesCount);
+<a name="l00281"></a>00281 
+<a name="l00282"></a>00282        <span class="keywordflow">if</span> (!isStoring){
+<a name="l00283"></a>00283               <span class="keywordflow">if</span> (!retVal){
+<a name="l00284"></a>00284                      <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00285"></a>00285               }
+<a name="l00286"></a>00286 
+<a name="l00287"></a>00287               m_values.resize(valuesCount);
+<a name="l00288"></a>00288        }
+<a name="l00289"></a>00289 
+<a name="l00290"></a>00290        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; valuesCount; ++i){
+<a name="l00291"></a>00291               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(valueTag);
+<a name="l00292"></a>00292               Value value = m_values[i];
+<a name="l00293"></a>00293               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575" title="Process primitive type.">Process</a>(value);
+<a name="l00294"></a>00294               m_values[i] = value;
+<a name="l00295"></a>00295               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(valueTag);
+<a name="l00296"></a>00296        }
+<a name="l00297"></a>00297 
+<a name="l00298"></a>00298        retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(valuesTag);
+<a name="l00299"></a>00299 
+<a name="l00300"></a>00300        <span class="keywordflow">return</span> retVal;
+<a name="l00301"></a>00301 }
+<a name="l00302"></a>00302 
+<a name="l00303"></a>00303 
+<a name="l00304"></a>00304 <span class="comment">// static methods</span>
+<a name="l00305"></a>00305 
+<a name="l00306"></a>00306 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00307"></a><a class="code" href="classiattr_1_1_t_multi_attribute.html#a1fa3416e77bc059110798e55e3ca4f4c">00307</a> <span class="keyword">const</span> std::string&amp; <a class="code" href="classiattr_1_1_t_multi_attribute.html#a1fa3416e77bc059110798e55e3ca4f4c">TMultiAttribute&lt;Value&gt;::GetTypeName</a>()
+<a name="l00308"></a>00308 {
+<a name="l00309"></a>00309        <span class="keywordflow">return</span> s_typeName;
+<a name="l00310"></a>00310 }
+<a name="l00311"></a>00311 
+<a name="l00312"></a>00312 
+<a name="l00313"></a>00313 <span class="comment">// private static attributes</span>
+<a name="l00314"></a>00314 
+<a name="l00315"></a>00315 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00316"></a>00316 <span class="keyword">const</span> std::string <a class="code" href="classiattr_1_1_t_multi_attribute.html" title="Template implementation of multiple attribute.">TMultiAttribute&lt;Value&gt;::s_typeName</a>(<a class="code" href="classistd_1_1_c_class_info.html#aa933e42f37d56bdd4236e0833b1adb14" title="Get undecorated and platform undependent class name.">istd::CClassInfo::GetName</a>&lt;<a class="code" href="classiattr_1_1_t_multi_attribute.html" title="Template implementation of multiple attribute.">TMultiAttribute&lt;Value&gt;</a> &gt;());
+<a name="l00317"></a>00317 
+<a name="l00318"></a>00318 
+<a name="l00319"></a>00319 <span class="comment">// typedefs</span>
+<a name="l00320"></a>00320 
+<a name="l00321"></a><a class="code" href="namespaceiattr.html#a692b032edd0bd57e414f6aaa4a904674">00321</a> <span class="keyword">typedef</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html" title="Template implementation of multiple attribute.">TMultiAttribute&lt;double&gt;</a> <a class="code" href="namespaceiattr.html#a692b032edd0bd57e414f6aaa4a904674">CMultiDoubleAttribute</a>;
+<a name="l00322"></a><a class="code" href="namespaceiattr.html#a217cc807ae31339ae3e6a236e60945fd">00322</a> <span class="keyword">typedef</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html" title="Template implementation of multiple attribute.">TMultiAttribute&lt;bool&gt;</a> <a class="code" href="namespaceiattr.html#a217cc807ae31339ae3e6a236e60945fd">CMultiBoolAttribute</a>;
+<a name="l00323"></a><a class="code" href="namespaceiattr.html#ad5034fa86ba960f8e5457fc9af0f6aaf">00323</a> <span class="keyword">typedef</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html" title="Template implementation of multiple attribute.">TMultiAttribute&lt;int&gt;</a> <a class="code" href="namespaceiattr.html#ad5034fa86ba960f8e5457fc9af0f6aaf">CMultiIntAttribute</a>;
+<a name="l00324"></a><a class="code" href="namespaceiattr.html#a4c5730745650d8561b9e825d80f49be2">00324</a> <span class="keyword">typedef</span> <a class="code" href="classiattr_1_1_t_multi_attribute.html" title="Template implementation of multiple attribute.">TMultiAttribute&lt;istd::CString&gt;</a> <a class="code" href="namespaceiattr.html#a4c5730745650d8561b9e825d80f49be2">CMultiStringAttribute</a>;
+<a name="l00325"></a>00325 
+<a name="l00326"></a>00326 
+<a name="l00327"></a>00327 } <span class="comment">// namespace iattr</span>
+<a name="l00328"></a>00328 
+<a name="l00329"></a>00329 
+<a name="l00330"></a>00330 <span class="preprocessor">#endif // !iattr_TMultiAttribute_included</span>
+<a name="l00331"></a>00331 <span class="preprocessor"></span>
+<a name="l00332"></a>00332 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

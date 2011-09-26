@@ -249,6 +249,7 @@
     <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <includes id="iattr_2_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">iattr/TAttribute.h</includes>
+    <includes id="iattr_2_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">iattr/TMultiAttribute.h</includes>
     <includes id="_i_attributes_manager_8h" name="IAttributesManager.h" local="yes" imported="no">iattr/IAttributesManager.h</includes>
     <class kind="class">iattr::CAttributedObject</class>
     <class kind="struct">iattr::CAttributedObject::AttributeInfo</class>
@@ -372,7 +373,6 @@
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <includes id="_c_attribute_base_8h" name="CAttributeBase.h" local="yes" imported="no">iattr/CAttributeBase.h</includes>
     <class kind="class">iattr::TMultiAttribute</class>
-    <class kind="struct">iattr::TMultiAttribute::Wrap</class>
     <namespace>iattr</namespace>
     <member kind="typedef">
       <type>TMultiAttribute&lt; double &gt;</type>
@@ -9182,7 +9182,6 @@
     <filename>classiattr_1_1_t_multi_attribute.html</filename>
     <templarg></templarg>
     <base>iattr::CAttributeBase</base>
-    <class kind="struct">iattr::TMultiAttribute::Wrap</class>
     <member kind="typedef">
       <type>Value</type>
       <name>ValueType</name>
@@ -9195,6 +9194,27 @@
       <name>BaseClass</name>
       <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
       <anchor>a6ddf1dfb1e90aa85756ad99301b7d3c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; ValueType &gt;</type>
+      <name>ValueList</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>ae110e1b99f1ca3dce6a613ae8e0d13f4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ValueList::iterator</type>
+      <name>iterator</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a95bfc1f13cd064bccdc4a387ac788109</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ValueList::const_iterator</type>
+      <name>const_iterator</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a659c7a10513dc236eb6922ca622c3909</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -9211,6 +9231,27 @@
       <anchor>a1b6423ecf23ffaf99bae19842d38acac</anchor>
       <arglist>(iattr::IAttributesManager *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetValues</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a9e00181434d72eb1609aa03c9005c204</anchor>
+      <arglist>(const ValueList &amp;valueList)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetValues</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>ad8d20364efa447e735889d014e615fbb</anchor>
+      <arglist>(typename ContainerImpl::const_iterator begin, typename ContainerImpl::const_iterator end)</arglist>
+    </member>
+    <member kind="function">
+      <type>const ValueList &amp;</type>
+      <name>GetValues</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>aaafaf6f5b4e861504592adf3ed563a61</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetValuesCount</name>
@@ -9219,10 +9260,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const Value &amp;</type>
+      <type>virtual Value</type>
       <name>GetValueAt</name>
       <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a750620e5ecde7c8ed8dd9dfbfd3259ff</anchor>
+      <anchor>a4b3267402e2dfed2a34d5218d36b82d4</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9247,6 +9288,34 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type>iterator</type>
+      <name>begin</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a82eeff8f4645fe9e7ed73cbff3eeb4d1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>begin</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>abe708ef3493e536d69ecebcf617d6a00</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>iterator</type>
+      <name>end</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a92b8d9ff8ec67e8c4a583a1c669c09e5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>end</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a4d6bfc835cdd3134b2736820960501a8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>const std::string &amp;</type>
       <name>GetFactoryId</name>
       <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
@@ -9268,21 +9337,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>std::vector&lt; Wrap &gt;</type>
+      <type>std::vector&lt; Value &gt;</type>
       <name>m_values</name>
       <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a087df12b6d59dd9b4719100cd832ef3c</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>iattr::TMultiAttribute::Wrap</name>
-    <filename>structiattr_1_1_t_multi_attribute_1_1_wrap.html</filename>
-    <member kind="variable">
-      <type>Value</type>
-      <name>value</name>
-      <anchorfile>structiattr_1_1_t_multi_attribute_1_1_wrap.html</anchorfile>
-      <anchor>aedb22530319ddc23e9ad18cb5246aa81</anchor>
+      <anchor>af19f88010634a14ba140cc9e8f8938cd</anchor>
       <arglist></arglist>
     </member>
   </compound>
