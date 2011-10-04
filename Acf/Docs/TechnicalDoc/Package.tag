@@ -2564,6 +2564,17 @@
     <namespace>imod</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiModelDispatcherBase.h</name>
+    <path>C:/Temp/Acf/Include/imod/</path>
+    <filename>_c_multi_model_dispatcher_base_8h</filename>
+    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
+    <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
+    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <class kind="class">imod::CMultiModelDispatcherBase</class>
+    <class kind="class">imod::CMultiModelDispatcherBase::ObserverProxy</class>
+    <namespace>imod</namespace>
+  </compound>
+  <compound kind="file">
     <name>CMultiModelObserverBase.h</name>
     <path>C:/Temp/Acf/Include/imod/</path>
     <filename>_c_multi_model_observer_base_8h</filename>
@@ -2641,15 +2652,6 @@
     <filename>_i_undo_manager_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <class kind="class">imod::IUndoManager</class>
-    <namespace>imod</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TModelDispatcherWrap.h</name>
-    <path>C:/Temp/Acf/Include/imod/</path>
-    <filename>_t_model_dispatcher_wrap_8h</filename>
-    <includes id="_c_multi_model_observer_base_8h" name="CMultiModelObserverBase.h" local="yes" imported="no">imod/CMultiModelObserverBase.h</includes>
-    <class kind="class">imod::TModelDispatcherWrap</class>
-    <class kind="class">imod::TModelDispatcherWrap::ModelObserver</class>
     <namespace>imod</namespace>
   </compound>
   <compound kind="file">
@@ -4730,7 +4732,7 @@
     <name>CDocumentProcessingManagerCompBase.h</name>
     <path>C:/Temp/Acf/Include/iqtproc/</path>
     <filename>_c_document_processing_manager_comp_base_8h</filename>
-    <includes id="_t_model_dispatcher_wrap_8h" name="TModelDispatcherWrap.h" local="yes" imported="no">imod/TModelDispatcherWrap.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
@@ -24546,6 +24548,7 @@
     <class kind="class">imod::CModelBase</class>
     <class kind="class">imod::CModelProxy</class>
     <class kind="class">imod::CMultiModelBridgeBase</class>
+    <class kind="class">imod::CMultiModelDispatcherBase</class>
     <class kind="class">imod::CMultiModelObserverBase</class>
     <class kind="class">imod::CSerializedUndoManager</class>
     <class kind="class">imod::CSingleModelObserverBase</class>
@@ -24554,7 +24557,6 @@
     <class kind="class">imod::IModelSelection</class>
     <class kind="class">imod::IObserver</class>
     <class kind="class">imod::IUndoManager</class>
-    <class kind="class">imod::TModelDispatcherWrap</class>
     <class kind="class">imod::TModelWrap</class>
     <class kind="class">imod::TMultiModelObserverBase</class>
     <class kind="class">imod::TSingleModelObserverBase</class>
@@ -24755,6 +24757,73 @@
       <anchorfile>classimod_1_1_c_multi_model_bridge_base.html</anchorfile>
       <anchor>aab36864c19a5855839ebc1d5a3f749cf</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imod::CMultiModelDispatcherBase</name>
+    <filename>classimod_1_1_c_multi_model_dispatcher_base.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <class kind="class">imod::CMultiModelDispatcherBase::ObserverProxy</class>
+    <member kind="function">
+      <type>bool</type>
+      <name>RegisterModel</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>a5463cae647ee22796d9389bac721692f</anchor>
+      <arglist>(IModel *modelPtr, int modelId=0, int relevantFlags=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UnregisterModel</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>ae131419147b8d67ae7600f426465804b</anchor>
+      <arglist>(int modelId=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UnregisterAllModels</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>a870c0f1ab69a56f2b01fbc136d36ce76</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Object *</type>
+      <name>GetObjectAt</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>ac95053e3935765098a79b3dcf127e968</anchor>
+      <arglist>(int modelId) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>aa28b9338ca45e28b03cadaf4454f14e8</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imod::CMultiModelDispatcherBase::ObserverProxy</name>
+    <filename>classimod_1_1_c_multi_model_dispatcher_base_1_1_observer_proxy.html</filename>
+    <base>imod::CSingleModelObserverBase</base>
+    <member kind="typedef">
+      <type>CSingleModelObserverBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base_1_1_observer_proxy.html</anchorfile>
+      <anchor>ab05bf81748e1b2a3900f73733e96760d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ObserverProxy</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base_1_1_observer_proxy.html</anchorfile>
+      <anchor>a17ddbef5500896d20dba37bdcaed8f7e</anchor>
+      <arglist>(CMultiModelDispatcherBase *parentPtr, int modelId, int relevantFlags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base_1_1_observer_proxy.html</anchorfile>
+      <anchor>aa7acb8c3f61e424b1348fe2e6482ff97</anchor>
+      <arglist>(int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25163,102 +25232,6 @@
       <anchorfile>classimod_1_1_i_undo_manager.html</anchorfile>
       <anchor>aecce84541bedf141dd7d5cb9719cc559</anchor>
       <arglist>()=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>imod::TModelDispatcherWrap</name>
-    <filename>classimod_1_1_t_model_dispatcher_wrap.html</filename>
-    <templarg>Base</templarg>
-    <base>Base</base>
-    <class kind="class">imod::TModelDispatcherWrap::ModelObserver</class>
-    <member kind="typedef">
-      <type>Base</type>
-      <name>BaseClass</name>
-      <anchorfile>classimod_1_1_t_model_dispatcher_wrap.html</anchorfile>
-      <anchor>a2a48de047ed83ccffb5c093a3d2bfec2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TModelDispatcherWrap</name>
-      <anchorfile>classimod_1_1_t_model_dispatcher_wrap.html</anchorfile>
-      <anchor>af1f2579c0e0cf1229ced02c6886d5cdf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~TModelDispatcherWrap</name>
-      <anchorfile>classimod_1_1_t_model_dispatcher_wrap.html</anchorfile>
-      <anchor>a68373801013184d450b39c587b7224be</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>RegisterModel</name>
-      <anchorfile>classimod_1_1_t_model_dispatcher_wrap.html</anchorfile>
-      <anchor>a097f4645aaa09bc4cab86b8eaa8383c8</anchor>
-      <arglist>(imod::IModel *modelPtr, int modelId=0, int relevantFlags=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>UnregisterModel</name>
-      <anchorfile>classimod_1_1_t_model_dispatcher_wrap.html</anchorfile>
-      <anchor>ad42606fbdef3a6e7bc423049eccdc7bf</anchor>
-      <arglist>(int modelId=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>UnregisterAllModels</name>
-      <anchorfile>classimod_1_1_t_model_dispatcher_wrap.html</anchorfile>
-      <anchor>afc57892623edc338af7463482b6a90c2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Object *</type>
-      <name>GetObjectPtr</name>
-      <anchorfile>classimod_1_1_t_model_dispatcher_wrap.html</anchorfile>
-      <anchor>ae1ec7f4c9b28c823d732f1174599b3cc</anchor>
-      <arglist>(int modelId) const </arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>OnModelChanged</name>
-      <anchorfile>classimod_1_1_t_model_dispatcher_wrap.html</anchorfile>
-      <anchor>a74b7ff1ce808919c520392d6f58e4f58</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>imod::TModelDispatcherWrap::ModelObserver</name>
-    <filename>classimod_1_1_t_model_dispatcher_wrap_1_1_model_observer.html</filename>
-    <base>imod::CMultiModelObserverBase</base>
-    <member kind="typedef">
-      <type>imod::CMultiModelObserverBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classimod_1_1_t_model_dispatcher_wrap_1_1_model_observer.html</anchorfile>
-      <anchor>af3b3df6044bcf85a96164eb88c9f43db</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ModelObserver</name>
-      <anchorfile>classimod_1_1_t_model_dispatcher_wrap_1_1_model_observer.html</anchorfile>
-      <anchor>a3b3baa55480206402ff84cbd1881fdc5</anchor>
-      <arglist>(TModelDispatcherWrap &amp;parent)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDetached</name>
-      <anchorfile>classimod_1_1_t_model_dispatcher_wrap_1_1_model_observer.html</anchorfile>
-      <anchor>a7397b13cbd26729e6ffd4388209ce756</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classimod_1_1_t_model_dispatcher_wrap_1_1_model_observer.html</anchorfile>
-      <anchor>a7701c31a8782b45b818179b15bb52d1f</anchor>
-      <arglist>(imod::IModel *modelPtr, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -37493,14 +37466,22 @@
     <name>iqtproc::CDocumentProcessingManagerCompBase</name>
     <filename>classiqtproc_1_1_c_document_processing_manager_comp_base.html</filename>
     <base>QObject</base>
-    <base>TModelDispatcherWrap&lt; ibase::CLoggerComponentBase &gt;</base>
+    <base>ibase::TLoggerCompWrap</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
-      <type>imod::TModelDispatcherWrap&lt; ibase::CLoggerComponentBase &gt;</type>
+      <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
-      <anchor>a433aa32457b191f0927d99b64d39b2c8</anchor>
+      <anchor>a53e8e449a4a1d227b9bb17ee25716026</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>aac47f6c95a1ec7a4ef7fc500f0330b6d</anchor>
+      <arglist>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -37508,13 +37489,6 @@
       <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
       <anchor>a035479d4fa5bb05e8f203b61c28b4950</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnModelChanged</name>
-      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
-      <anchor>a2aa39ee74f25fd2b57e8e7703dc97943</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -37557,6 +37531,13 @@
       <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
       <anchor>ad153c1bfe80cd1c712353efe3f1271f8</anchor>
       <arglist>(const istd::IChangeable *inputDocumentPtr, const std::string &amp;documentTypeId)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>a2aa39ee74f25fd2b57e8e7703dc97943</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>iqtgui::CHierarchicalCommand</type>
