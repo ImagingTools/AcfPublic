@@ -23,10 +23,6 @@
 #include "iqsci/CTextEditorGuiComp.h"
 
 
-// ACF includes
-#include "iqt/CSignalBlocker.h"
-
-
 namespace iqsci
 {
 
@@ -51,15 +47,11 @@ void CTextEditorGuiComp::UpdateModel() const
 
 void CTextEditorGuiComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
-
-
 	CTextEditor* textEditPtr = GetQtWidget();
 	I_ASSERT(textEditPtr != NULL);
 
 	ibase::ITextDocument* objectPtr = GetObjectPtr();
-
-	if ((objectPtr != NULL) && !textEditPtr->signalsBlocked()){
+	if (objectPtr != NULL){
 		textEditPtr->SetText(iqt::GetQString(objectPtr->GetText()));
 	}
 }
@@ -136,8 +128,6 @@ void CTextEditorGuiComp::OnGuiRetranslate()
 
 void CTextEditorGuiComp::OnTextChanged()
 {
-	iqt::CSignalBlocker block(this);
-
 	UpdateBlocker updateBlocker(this);
 
 	UpdateModel();

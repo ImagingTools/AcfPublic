@@ -35,9 +35,9 @@ namespace icomp
 
 
 #if defined _MSC_VER
-        #define I_FUNCTION_EXPORT __declspec(dllexport) // Note: actually gcc seems also to supports this syntax.
+	#define I_FUNCTION_EXPORT __declspec(dllexport) // Note: actually gcc seems also to supports this syntax.
 #elif defined __GNUC__
-        #define I_FUNCTION_EXPORT __attribute__ ((visibility ("default")))
+	#define I_FUNCTION_EXPORT __attribute__ ((visibility("default")))
 #else
 	#define I_FUNCTION_EXPORT
 #endif
@@ -74,13 +74,13 @@ namespace icomp
 
 
 #define I_EXPORT_PACKAGE(logicalName, description, keywords) \
-        icomp::CPackageStaticInfo packageInfo(description, keywords);\
+	static icomp::CPackageStaticInfo packageInfo(description, keywords);\
 	extern "C" I_FUNCTION_EXPORT icomp::CPackageStaticInfo* I_PACKAGE_EXPORT_FUNCTION(){\
 		return &packageInfo;\
 	}
 
 #define I_EXPORT_COMPONENT(component, description, keywords) \
-        icomp::TComponentRegistrator<component> component##_registrator(#component, packageInfo, description, keywords);\
+	static icomp::TComponentRegistrator<component> component##_registrator(#component, packageInfo, description, keywords);\
 
 typedef icomp::CPackageStaticInfo* (*GetPackageInfoFunc)();
 typedef void (*RegisterServicesFunc)(const istd::IServicesProvider*);
