@@ -62,7 +62,7 @@ public:
 	// reimplemented (imod::IModelEditor)
 	virtual void UpdateModel() const;
 
-	// reimplemenented (iqtgui::TGuiObserverWrap)
+	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void UpdateGui(int updateFlags = 0);
 	virtual void OnGuiModelDetached();
 

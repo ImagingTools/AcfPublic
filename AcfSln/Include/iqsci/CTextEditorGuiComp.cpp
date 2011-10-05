@@ -47,11 +47,12 @@ void CTextEditorGuiComp::UpdateModel() const
 }
 
 
-// reimplemenented (iqtgui::TGuiObserverWrap)
+// reimplemented (iqtgui::TGuiObserverWrap)
 
 void CTextEditorGuiComp::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
+
 
 	CTextEditor* textEditPtr = GetQtWidget();
 	I_ASSERT(textEditPtr != NULL);
@@ -136,6 +137,8 @@ void CTextEditorGuiComp::OnGuiRetranslate()
 void CTextEditorGuiComp::OnTextChanged()
 {
 	iqt::CSignalBlocker block(this);
+
+	UpdateBlocker updateBlocker(this);
 
 	UpdateModel();
 }
