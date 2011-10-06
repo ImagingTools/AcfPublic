@@ -291,6 +291,7 @@
     <name>CLibAvVideoDecoderComp.h</name>
     <path>C:/Temp/AcfSln/Include/ilibav/</path>
     <filename>_c_lib_av_video_decoder_comp_8h</filename>
+    <includes id="_i_video_controller_8h" name="IVideoController.h" local="yes" imported="no">imm/IVideoController.h</includes>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
     <includes id="_i_sample_acquisition_8h" name="ISampleAcquisition.h" local="yes" imported="no">imeas/ISampleAcquisition.h</includes>
     <class kind="class">ilibav::CLibAvVideoDecoderComp</class>
@@ -314,6 +315,7 @@
     <name>ilibav.h</name>
     <path>C:/Temp/AcfSln/Include/ilibav/</path>
     <filename>ilibav_8h</filename>
+    <includes id="iqtmm_8h" name="iqtmm.h" local="yes" imported="no">iqtmm/iqtmm.h</includes>
     <namespace>iqaxmm</namespace>
   </compound>
   <compound kind="file">
@@ -493,6 +495,37 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>IMediaController.h</name>
+    <path>C:/Temp/AcfSln/Include/imm/</path>
+    <filename>_i_media_controller_8h</filename>
+    <includes id="imm_8h" name="imm.h" local="yes" imported="no">imm/imm.h</includes>
+    <class kind="class">imm::IMediaController</class>
+    <namespace>imm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>imm.h</name>
+    <path>C:/Temp/AcfSln/Include/imm/</path>
+    <filename>imm_8h</filename>
+    <namespace>imm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IVideoController.h</name>
+    <path>C:/Temp/AcfSln/Include/imm/</path>
+    <filename>_i_video_controller_8h</filename>
+    <includes id="_i_media_controller_8h" name="IMediaController.h" local="yes" imported="no">imm/IMediaController.h</includes>
+    <includes id="_i_video_info_8h" name="IVideoInfo.h" local="yes" imported="no">imm/IVideoInfo.h</includes>
+    <class kind="class">imm::IVideoController</class>
+    <namespace>imm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IVideoInfo.h</name>
+    <path>C:/Temp/AcfSln/Include/imm/</path>
+    <filename>_i_video_info_8h</filename>
+    <includes id="imm_8h" name="imm.h" local="yes" imported="no">imm/imm.h</includes>
+    <class kind="class">imm::IVideoInfo</class>
+    <namespace>imm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCriticalSection.h</name>
     <path>C:/Temp/AcfSln/Include/inat/</path>
     <filename>inat_2_c_critical_section_8h</filename>
@@ -556,6 +589,7 @@
     <name>CVlcVideoViewGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqaxmm/</path>
     <filename>_c_vlc_video_view_gui_comp_8h</filename>
+    <includes id="_i_video_controller_8h" name="IVideoController.h" local="yes" imported="no">imm/IVideoController.h</includes>
     <class kind="class">iqaxmm::CVlcVideoViewGuiComp</class>
     <namespace>iqaxmm</namespace>
   </compound>
@@ -563,6 +597,7 @@
     <name>iqaxmm.h</name>
     <path>C:/Temp/AcfSln/Include/iqaxmm/</path>
     <filename>iqaxmm_8h</filename>
+    <includes id="iqtmm_8h" name="iqtmm.h" local="yes" imported="no">iqtmm/iqtmm.h</includes>
     <namespace>iqaxmm</namespace>
   </compound>
   <compound kind="file">
@@ -735,6 +770,60 @@
     <filename>iqtmeas_8h</filename>
     <includes id="imeas_8h" name="imeas.h" local="yes" imported="no">imeas/imeas.h</includes>
     <namespace>iqtmeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFrameSeqVideoControllerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
+    <filename>_c_frame_seq_video_controller_comp_8h</filename>
+    <includes id="_i_video_controller_8h" name="IVideoController.h" local="yes" imported="no">imm/IVideoController.h</includes>
+    <class kind="class">iqtmm::CFrameSeqVideoControllerComp</class>
+    <namespace>iqtmm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CMediaLoaderComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
+    <filename>_c_media_loader_comp_8h</filename>
+    <includes id="iqtmm_8h" name="iqtmm.h" local="yes" imported="no">iqtmm/iqtmm.h</includes>
+    <class kind="class">iqtmm::CMediaLoaderComp</class>
+    <namespace>iqtmm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPhononVideoViewGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
+    <filename>_c_phonon_video_view_gui_comp_8h</filename>
+    <includes id="_i_video_controller_8h" name="IVideoController.h" local="yes" imported="no">imm/IVideoController.h</includes>
+    <class kind="class">iqtmm::CPhononVideoViewGuiComp</class>
+    <namespace>iqtmm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPlaybackControllerGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
+    <filename>_c_playback_controller_gui_comp_8h</filename>
+    <includes id="_i_video_controller_8h" name="IVideoController.h" local="yes" imported="no">imm/IVideoController.h</includes>
+    <class kind="class">iqtmm::CPlaybackControllerGuiComp</class>
+    <namespace>iqtmm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSvgBitmapLoaderComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
+    <filename>_c_svg_bitmap_loader_comp_8h</filename>
+    <includes id="iqtmm_8h" name="iqtmm.h" local="yes" imported="no">iqtmm/iqtmm.h</includes>
+    <class kind="class">iqtmm::CSvgBitmapLoaderComp</class>
+    <namespace>iqtmm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CVideoPlayerGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
+    <filename>_c_video_player_gui_comp_8h</filename>
+    <includes id="_i_media_controller_8h" name="IMediaController.h" local="yes" imported="no">imm/IMediaController.h</includes>
+    <class kind="class">iqtmm::CVideoPlayerGuiComp</class>
+    <namespace>iqtmm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>iqtmm.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
+    <filename>iqtmm_8h</filename>
+    <namespace>iqtmm</namespace>
   </compound>
   <compound kind="file">
     <name>CHistogramViewComp.h</name>
@@ -4405,6 +4494,194 @@
     </member>
   </compound>
   <compound kind="namespace">
+    <name>imm</name>
+    <filename>namespaceimm.html</filename>
+    <class kind="class">imm::IMediaController</class>
+    <class kind="class">imm::IVideoController</class>
+    <class kind="class">imm::IVideoInfo</class>
+  </compound>
+  <compound kind="class">
+    <name>imm::IMediaController</name>
+    <filename>classimm_1_1_i_media_controller.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>ad820c57afd1272ae3bcd813f71c6e3fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_STATUS</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>ad820c57afd1272ae3bcd813f71c6e3fea1dec1bff679d77f6124c17a8b6b4476d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_MEDIA_POSITION</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>ad820c57afd1272ae3bcd813f71c6e3feae439a98cbcc8c795731c62792f0d6797</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>SupportedFeatures</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>a98e93bc476c1ce47e84b78937e885e19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SF_OPEN_MEDIA</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>a98e93bc476c1ce47e84b78937e885e19a6d81c8319e25aa88aaaaf95ca7e0ebc4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SF_PLAY</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>a98e93bc476c1ce47e84b78937e885e19a1896a0372549e1d6f42b4b515a80ea11</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SF_SEEK</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>a98e93bc476c1ce47e84b78937e885e19af6a6d1b7a8fd246f2389dbf05a5c641d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SF_AUTO_PLAY</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>a98e93bc476c1ce47e84b78937e885e19ad642806ddd9ed2bb3a5ba8202234c285</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CString</type>
+      <name>GetOpenedMediumUrl</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>aa49ff7eb11e67f2eef3ce919a855b1a6</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>OpenMediumUrl</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>ae94917a1946992edb7f5fa35ae0d0f88</anchor>
+      <arglist>(const istd::CString &amp;url, bool autoPlay=true)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>CloseMedium</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>ab9ff24390cfaca63b02248fff7561814</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsPlaying</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>ae80717fb919f51b794702fd00a7680d3</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetPlaying</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>a095f5dc155518cdc55419ee8d6461acc</anchor>
+      <arglist>(bool state=true)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetMediumLength</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>a04529bcc93a91f5fef6ffd442413da35</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetCurrentPosition</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>ad89bf0799583e1af21d952ae27cc4b57</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetCurrentPosition</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>a00d9ee7b2cc1c117ce01e9b6c6bebadf</anchor>
+      <arglist>(double position)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetSupportedFeatures</name>
+      <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
+      <anchor>a648fc192658a7eb5417c4e809fc8f09a</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imm::IVideoController</name>
+    <filename>classimm_1_1_i_video_controller.html</filename>
+    <base virtualness="virtual">imm::IMediaController</base>
+    <base virtualness="virtual">imm::IVideoInfo</base>
+    <member kind="enumeration">
+      <name>SupportedFeatures</name>
+      <anchorfile>classimm_1_1_i_video_controller.html</anchorfile>
+      <anchor>a10c1c0b9aa0bfe9801ef4d214d6f3567</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SF_GRAB_ANY</name>
+      <anchorfile>classimm_1_1_i_video_controller.html</anchorfile>
+      <anchor>a10c1c0b9aa0bfe9801ef4d214d6f3567a6612a0dbec929f89e574f5f2576f28df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetCurrentFrame</name>
+      <anchorfile>classimm_1_1_i_video_controller.html</anchorfile>
+      <anchor>a66668d75cca92072054684cd2204c8ab</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetCurrentFrame</name>
+      <anchorfile>classimm_1_1_i_video_controller.html</anchorfile>
+      <anchor>a231971797056e643f1ebcf8cad4aaa24</anchor>
+      <arglist>(int frameIndex)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imm::IVideoInfo</name>
+    <filename>classimm_1_1_i_video_info.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetFramesCount</name>
+      <anchorfile>classimm_1_1_i_video_info.html</anchorfile>
+      <anchor>a0c5b8c33aca0d273b3c6bf38c34a0aaa</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetFrameIntervall</name>
+      <anchorfile>classimm_1_1_i_video_info.html</anchorfile>
+      <anchor>a0042c9e46b917928773ff908100feccb</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetFrameSize</name>
+      <anchorfile>classimm_1_1_i_video_info.html</anchorfile>
+      <anchor>a2e76c46d3287d1c4015ff4189a94804a</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetPixelAspectRatio</name>
+      <anchorfile>classimm_1_1_i_video_info.html</anchorfile>
+      <anchor>a0b40fbd17d7be62d702032088b63e82f</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
     <name>inat</name>
     <filename>namespaceinat.html</filename>
   </compound>
@@ -5882,6 +6159,557 @@
       <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
       <anchor>ade46846b596bf5f4495c788e1248e3d3</anchor>
       <arglist>(int updateFlags=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iqtmm</name>
+    <filename>namespaceiqtmm.html</filename>
+    <class kind="class">iqtmm::CFrameSeqVideoControllerComp</class>
+    <class kind="class">iqtmm::CMediaLoaderComp</class>
+    <class kind="class">iqtmm::CPhononVideoViewGuiComp</class>
+    <class kind="class">iqtmm::CPlaybackControllerGuiComp</class>
+    <class kind="class">iqtmm::CSvgBitmapLoaderComp</class>
+    <class kind="class">iqtmm::CVideoPlayerGuiComp</class>
+  </compound>
+  <compound kind="class">
+    <name>iqtmm::CFrameSeqVideoControllerComp</name>
+    <filename>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</filename>
+    <base>QObject</base>
+    <base>TSyncProcessorCompBase&lt; iproc::IBitmapAcquisition &gt;</base>
+    <base virtualness="virtual">imm::IVideoController</base>
+    <base protection="protected">imod::CSingleModelObserverBase</base>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorCompBase&lt; iproc::IBitmapAcquisition &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>ac5c10a04eccdd9aee4ee35c7adc7e26b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CFrameSeqVideoControllerComp</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>a5168eac4c5de325028d45195ec5d6d05</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetBitmapSize</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>acac6c0e00469686686e148db1a287edd</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>acb42990b3904ff2a265d3865c6cf8ca6</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetOpenedMediumUrl</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>a066a2b3296a69134a9b25f04cb638823</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OpenMediumUrl</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>aedb7bb4b1c39484d600e9a6a9a9dfc67</anchor>
+      <arglist>(const istd::CString &amp;url, bool autoPlay=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CloseMedium</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>a71c867a3d7229f7bfd0ba9fbef28fe0a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPlaying</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>ae14d96c1dd0cdb2edacc9cbc9845e1be</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPlaying</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>a078dce8d61fd34f1b714112ceac6b50c</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetMediumLength</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>a59ee552679135ce6fbc528ba409c79b1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetCurrentPosition</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>a567959e290148c8367289b00115e12e4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentPosition</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>ac45315a279dd18b2e2e2703fe91dfefd</anchor>
+      <arglist>(double position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedFeatures</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>a552fcac6651c759df2e8ba9f375f1846</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetFramesCount</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>ab2c93d185a6206086e3b16ba379f7219</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetFrameIntervall</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>a3c32d956979c2da76bf53decddf7592d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetFrameSize</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>a2a6f9fc3cf99a7804f16d77cfb814277</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetPixelAspectRatio</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>aa24fcf4a1bd9c3627fbb99e2a87ed2e1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCurrentFrame</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>a3b8910baf2d4c87a906a76e257910841</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentFrame</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>a703bfebc04bbaab94b2e5dfd0493a4c3</anchor>
+      <arglist>(int frameIndex)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>LoadCurrentFrame</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>aee89b20ed39da37313ec714a80c74441</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtmm::CMediaLoaderComp</name>
+    <filename>classiqtmm_1_1_c_media_loader_comp.html</filename>
+    <base>QObject</base>
+    <base>ibase::TLoggerCompWrap</base>
+    <base virtualness="virtual">iser::IFileLoader</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
+      <anchor>abfe262925b385db6acd4c72ba1cf0cd3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_BAD_EXTENSION</name>
+      <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
+      <anchor>abfe262925b385db6acd4c72ba1cf0cd3a3a42aedf094e46ddd36ccb2f540f419b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_FILE_NOT_EXIST</name>
+      <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
+      <anchor>abfe262925b385db6acd4c72ba1cf0cd3a0788b7124d3bb82f4fbbe0b818ebfb98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_BAD_FORMAT</name>
+      <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
+      <anchor>abfe262925b385db6acd4c72ba1cf0cd3a9207dd4779261f20991d0a35f62b13a5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
+      <anchor>a4be55073d384153a8eaa7bcd7d5b7eca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
+      <anchor>ab04877783eefba8967643d4e6fcc13c7</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
+      <anchor>a203cc0aa10900b5725063c8c7388f26f</anchor>
+      <arglist>(istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
+      <anchor>a8c24cb92d5d3c950cc9db31ad975a8f9</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
+      <anchor>ab0f2585b4717e73574ca9b8b7187416a</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
+      <anchor>a132f1213e266d3f1e3f2d134f0b8d2c4</anchor>
+      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtmm::CPhononVideoViewGuiComp</name>
+    <filename>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</filename>
+    <base>TGuiComponentBase&lt; Phonon::VideoWidget &gt;</base>
+    <base virtualness="virtual">imm::IVideoController</base>
+    <member kind="typedef">
+      <type>iqtgui::TGuiComponentBase&lt; Phonon::VideoWidget &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a9088fe245c6c967e4ee4fd1a37df8774</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CPhononVideoViewGuiComp</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a96e2e6a4025d3ea8b11c190f7ec99a73</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetOpenedMediumUrl</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>ad0df3028d53b4cca643355937008f65e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OpenMediumUrl</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a8950dce23b0b4483ae63695379653b5a</anchor>
+      <arglist>(const istd::CString &amp;url, bool autoPlay=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CloseMedium</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a44f77de152106e7738b3456d926967de</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPlaying</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a9bee80d9722798174ea8e1ca9dd9034a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPlaying</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>af269d00721bce3bce9b183fa3bcf6c39</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetMediumLength</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a5d4a19d4e6db80c489abf790870a86dd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetCurrentPosition</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a8f6da23b7fba501ba9bdf1c0a553a043</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentPosition</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>aea02b2fb7cddfdb4db95b7982fb6912b</anchor>
+      <arglist>(double position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedFeatures</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>ad360b005839154a6d9fcf5c3246baa76</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetFramesCount</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>ac47c96dc12ca7265fd2be9dcd0725ed8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetFrameIntervall</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a2efbae309243ab4c7e755174ca2be2a0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetFrameSize</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a196e370e974c8892505ec04c41f6043c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetPixelAspectRatio</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>aefc3efd8d486d4cd36088a1ba353fac0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCurrentFrame</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>aa709c8e2b5a7426670dd1def9c2de47f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentFrame</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a18656f4f4d7a10833cc741ae0179c56c</anchor>
+      <arglist>(int frameIndex)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>EnsureSync</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>ab8dafdf880548a160a6de8a07af19915</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a75c2c90f9a9798ba86d8756373fbb286</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>adb4dc62a34d7001c31be54a60f3f404a</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtmm::CPlaybackControllerGuiComp</name>
+    <filename>classiqtmm_1_1_c_playback_controller_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CPlaybackControllerGuiComp, imm::IVideoController &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPlaybackControllerGuiComp, imm::IVideoController &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtmm_1_1_c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>a09014012bec5d4bf6438029815b23f6f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtmm_1_1_c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>a4eb4b21cb9bc3b9efe904f5cc2010bb6</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtmm_1_1_c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>aeb22f89ddc60e74bbf9a14007eab226f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtmm_1_1_c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>a62424b4f93762edeb84af94fea612565</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtmm_1_1_c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>a3bdd16025eaee674daa5f25fc5d35a71</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtmm::CSvgBitmapLoaderComp</name>
+    <filename>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</filename>
+    <base>QObject</base>
+    <base>ibase::TLoggerCompWrap</base>
+    <base virtualness="virtual">iser::IFileLoader</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
+      <anchor>ada050c80d54608502eac377685442414</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_BAD_EXTENSION</name>
+      <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
+      <anchor>ada050c80d54608502eac377685442414a550efe30c51ffa56478377a8c24c8fa5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_FILE_NOT_EXIST</name>
+      <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
+      <anchor>ada050c80d54608502eac377685442414ae59647782c05f5326569833d51e24ac9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_BAD_FORMAT</name>
+      <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
+      <anchor>ada050c80d54608502eac377685442414a5f2be7a8b2922bd1c946f18b0c9ee582</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_BITMAP_TYPE</name>
+      <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
+      <anchor>ada050c80d54608502eac377685442414af10d7a8e0c0328f1484c439b67cfcc45</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
+      <anchor>a4445bfedc9aee35ee8347f6ec6165859</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
+      <anchor>a5ef52e5251fe223eea3b6da03a9ef880</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
+      <anchor>a47b8dc530a068ad76b273ef5a128bfb2</anchor>
+      <arglist>(istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
+      <anchor>aa6c0bec0408ee299ced7425b75ff2a5b</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
+      <anchor>a28cee48be683503a7a2c5a33a855ea06</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
+      <anchor>a49bd3b99af916a25ade1b6e2f3f68a2e</anchor>
+      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtmm::CVideoPlayerGuiComp</name>
+    <filename>classiqtmm_1_1_c_video_player_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CVideoPlayerGuiComp &gt;</base>
+    <base protection="protected">imod::CSingleModelObserverBase</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CVideoPlayerGuiComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtmm_1_1_c_video_player_gui_comp.html</anchorfile>
+      <anchor>ab5217c2fcee2175a5732942aaccf0d0c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtmm_1_1_c_video_player_gui_comp.html</anchorfile>
+      <anchor>a7c830a57d6d4d338438108154e082ead</anchor>
+      <arglist>(m_urlParamModelCompPtr, m_urlParamCompPtr, true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtmm_1_1_c_video_player_gui_comp.html</anchorfile>
+      <anchor>a4558c71fc6ee57a4e7cf56e662e3d78c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtmm_1_1_c_video_player_gui_comp.html</anchorfile>
+      <anchor>ac1743b375a141676eddcf1138af981f7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiqtmm_1_1_c_video_player_gui_comp.html</anchorfile>
+      <anchor>a7e07a16a5ddfdcb86104352e57fb8963</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtmm_1_1_c_video_player_gui_comp.html</anchorfile>
+      <anchor>a9d9b77cbee3bbca6966f4e7ac96c8f26</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtmm_1_1_c_video_player_gui_comp.html</anchorfile>
+      <anchor>a834c46eff5036c6f12da74d686a65bc3</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="namespace">

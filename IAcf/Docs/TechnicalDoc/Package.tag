@@ -1533,22 +1533,6 @@
     <title>MIL</title>
     <filename>group__mil.html</filename>
   </compound>
-  <compound kind="class">
-    <name>ICaliperProcessor</name>
-    <filename>class_i_caliper_processor.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>IFeatureToFeatureProcessor</name>
-    <filename>class_i_feature_to_feature_processor.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>IImageToFeatureProcessor</name>
-    <filename>class_i_image_to_feature_processor.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>ILineProjectionProcessor</name>
-    <filename>class_i_line_projection_processor.html</filename>
-  </compound>
   <compound kind="namespace">
     <name>iavt</name>
     <filename>namespaceiavt.html</filename>

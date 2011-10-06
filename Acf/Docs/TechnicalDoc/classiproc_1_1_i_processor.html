@@ -48,11 +48,8 @@ Inheritance diagram for iproc::IProcessor:</div>
  <div class="center">
   <img src="classiproc_1_1_i_processor.png" usemap="#iproc::IProcessor_map" alt=""/>
   <map id="iproc::IProcessor_map" name="iproc::IProcessor_map">
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,361,24"/>
-<area href="classiproc_1_1_i_bitmap_acquisition.html" title="Bitmap acquisition processor." alt="iproc::IBitmapAcquisition" shape="rect" coords="0,112,361,136"/>
-<area href="classiproc_1_1_t_sync_processor_wrap.html" alt="iproc::TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;" shape="rect" coords="0,168,361,192"/>
-<area href="classiproc_1_1_t_sync_processor_comp_base.html" alt="iproc::TSyncProcessorCompBase&lt; iproc::IBitmapAcquisition &gt;" shape="rect" coords="0,224,361,248"/>
-<area href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html" title="Component to play some image (frame) sequence from a directory." alt="iqtmm::CFrameSeqVideoControllerComp" shape="rect" coords="0,280,361,304"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,148,24"/>
+<area href="classiproc_1_1_i_bitmap_acquisition.html" title="Bitmap acquisition processor." alt="iproc::IBitmapAcquisition" shape="rect" coords="0,112,148,136"/>
 </map>
  </div></div>
 
@@ -248,8 +245,6 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>task ID or -1 if it was not possible to add new task. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#ae97572f44492b12a88117a22db51483d">iproc::TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="adfbc0edfe58d7ec3b9db47190b5b85c7"></a><!-- doxytag: member="iproc::IProcessor::BeginTask" ref="adfbc0edfe58d7ec3b9db47190b5b85c7" args="(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, IProgressManager *progressManagerPtr=NULL)=0" -->
@@ -301,8 +296,6 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>task ID or -1 if it was not possible to add new task. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#af4ec587c11a28b59b22c3f7c0efc5903">iproc::TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="aa73693c6c682f31cf5bb344c6e816d6f"></a><!-- doxytag: member="iproc::IProcessor::CancelTask" ref="aa73693c6c682f31cf5bb344c6e816d6f" args="(int taskId=&#45;1)=0" -->
@@ -327,8 +320,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-<p>Implemented in <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#a0a5cd08f5800f4d01eeae041dd5a5aa7">iproc::TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</a>.</p>
 
 </div>
 </div>
@@ -373,8 +364,6 @@ Public Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>state of processing task </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiproc_1_1_i_processor.html#a53fe9860f57b67e209887f985cf3ea73" title="Describe state of task.">TaskState</a>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#acb42990b3904ff2a265d3865c6cf8ca6">iqtmm::CFrameSeqVideoControllerComp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a21bebcb085e8e93dc6920ad3dcf6c4ce"></a><!-- doxytag: member="iproc::IProcessor::GetProcessorState" ref="a21bebcb085e8e93dc6920ad3dcf6c4ce" args="(const iprm::IParamsSet *paramsPtr) const =0" -->
@@ -402,8 +391,6 @@ Public Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>state of this processor </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiproc_1_1_i_processor.html#aa94aa4786e71ae61cf56e58d93675e7a" title="State of processing.">ProcessorState</a>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#adc1704c346843a8bcaf57e055e902b71">iproc::TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a4afcb910ebe56624cb240a09b998581a"></a><!-- doxytag: member="iproc::IProcessor::GetReadyTask" ref="a4afcb910ebe56624cb240a09b998581a" args="()=0" -->
@@ -423,8 +410,6 @@ Public Member Functions</h2></td></tr>
 <p>Get the ID of any ready task. </p>
 <p>Also for ready task it is necessary to call <a class="el" href="classiproc_1_1_i_processor.html#abb082ed0fb7e87d975848e53aad84f89" title="Wait for task is finished.">WaitTaskFinished()</a>. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>ID of ready task or -1. </dd></dl>
-
-<p>Implemented in <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#a7644b6e2edc8e32f3e4a9987a2a97ab9">iproc::TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</a>.</p>
 
 </div>
 </div>
@@ -454,8 +439,6 @@ Public Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>state of selected task or all tasks </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiproc_1_1_i_processor.html#a53fe9860f57b67e209887f985cf3ea73" title="Describe state of task.">TaskState</a>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#aeea1cf5b8c422a59cb9c76550cb83a81">iproc::TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a71cf33bedd0292459b281926cb2df448"></a><!-- doxytag: member="iproc::IProcessor::InitProcessor" ref="a71cf33bedd0292459b281926cb2df448" args="(const iprm::IParamsSet *paramsPtr)=0" -->
@@ -481,8 +464,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-<p>Implemented in <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#a6f942530e7a40f0cb4f7f3b0076e8410">iproc::TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</a>.</p>
 
 </div>
 </div>
@@ -528,8 +509,6 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>state of selected task or all tasks </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiproc_1_1_i_processor.html#a53fe9860f57b67e209887f985cf3ea73" title="Describe state of task.">TaskState</a>. </dd></dl>
-
-<p>Implemented in <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#a5e249d7e56f018e4e4f3ce872f1d622d">iproc::TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</a>.</p>
 
 </div>
 </div>
