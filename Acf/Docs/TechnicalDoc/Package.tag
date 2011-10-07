@@ -230,222 +230,6 @@
     <namespace>i3d</namespace>
   </compound>
   <compound kind="file">
-    <name>CAttributeBase.h</name>
-    <path>C:/Temp/Acf/Include/iattr/</path>
-    <filename>_c_attribute_base_8h</filename>
-    <includes id="_t_copy_serialized_wrap_8h" name="TCopySerializedWrap.h" local="yes" imported="no">iser/TCopySerializedWrap.h</includes>
-    <includes id="_i_attribute_8h" name="IAttribute.h" local="yes" imported="no">iattr/IAttribute.h</includes>
-    <class kind="class">iattr::CAttributeBase</class>
-    <namespace>iattr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CAttributedObject.h</name>
-    <path>C:/Temp/Acf/Include/iattr/</path>
-    <filename>_c_attributed_object_8h</filename>
-    <includes id="_t_composed_factory_8h" name="TComposedFactory.h" local="yes" imported="no">istd/TComposedFactory.h</includes>
-    <includes id="_t_single_factory_8h" name="TSingleFactory.h" local="yes" imported="no">istd/TSingleFactory.h</includes>
-    <includes id="_t_opt_pointer_vector_8h" name="TOptPointerVector.h" local="yes" imported="no">istd/TOptPointerVector.h</includes>
-    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
-    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="iattr_2_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">iattr/TAttribute.h</includes>
-    <includes id="iattr_2_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">iattr/TMultiAttribute.h</includes>
-    <includes id="_i_attributes_manager_8h" name="IAttributesManager.h" local="yes" imported="no">iattr/IAttributesManager.h</includes>
-    <class kind="class">iattr::CAttributedObject</class>
-    <class kind="struct">iattr::CAttributedObject::AttributeInfo</class>
-    <namespace>iattr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>iattr.h</name>
-    <path>C:/Temp/Acf/Include/iattr/</path>
-    <filename>iattr_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
-    <includes id="iser_8h" name="iser.h" local="yes" imported="no">iser/iser.h</includes>
-    <namespace>iattr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IAttribute.h</name>
-    <path>C:/Temp/Acf/Include/iattr/</path>
-    <filename>_i_attribute_8h</filename>
-    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
-    <includes id="iattr_8h" name="iattr.h" local="yes" imported="no">iattr/iattr.h</includes>
-    <class kind="class">iattr::IAttribute</class>
-    <namespace>iattr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IAttributesManager.h</name>
-    <path>C:/Temp/Acf/Include/iattr/</path>
-    <filename>_i_attributes_manager_8h</filename>
-    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
-    <includes id="iattr_8h" name="iattr.h" local="yes" imported="no">iattr/iattr.h</includes>
-    <class kind="class">iattr::IAttributesManager</class>
-    <namespace>iattr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TAttribute.h</name>
-    <path>C:/Temp/Acf/Include/iattr/</path>
-    <filename>iattr_2_t_attribute_8h</filename>
-    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
-    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
-    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_t_copy_serialized_wrap_8h" name="TCopySerializedWrap.h" local="yes" imported="no">iser/TCopySerializedWrap.h</includes>
-    <includes id="_c_attribute_base_8h" name="CAttributeBase.h" local="yes" imported="no">iattr/CAttributeBase.h</includes>
-    <class kind="class">iattr::TAttribute</class>
-    <namespace>iattr</namespace>
-    <member kind="typedef">
-      <type>TAttribute&lt; double &gt;</type>
-      <name>CDoubleAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>af22d1d2dd8d39ba3e485e76d7bd48f52</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; bool &gt;</type>
-      <name>CBoolAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>ab1a7ac8fae7a9b58ce182c70cf6f637d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; int &gt;</type>
-      <name>CIntAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>a8a630524b843de8ab72aadf88c03a818</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; istd::CString &gt;</type>
-      <name>CStringAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>ae26270278318782b8360d17d39d9d804</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>TAttribute.h</name>
-    <path>C:/Temp/Acf/Include/icomp/</path>
-    <filename>icomp_2_t_attribute_8h</filename>
-    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
-    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
-    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_t_copy_serialized_wrap_8h" name="TCopySerializedWrap.h" local="yes" imported="no">iser/TCopySerializedWrap.h</includes>
-    <includes id="_i_attribute_static_info_8h" name="IAttributeStaticInfo.h" local="yes" imported="no">icomp/IAttributeStaticInfo.h</includes>
-    <class kind="class">icomp::TAttribute</class>
-    <namespace>icomp</namespace>
-    <member kind="typedef">
-      <type>TAttribute&lt; double &gt;</type>
-      <name>CDoubleAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a8b0216a085980d12e60d9a66764a97fc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; bool &gt;</type>
-      <name>CBoolAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>aabced1d32c941bc1bc0820b04bdbca97</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; int &gt;</type>
-      <name>CIntAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a2e9c5b3f483b27a3dbd390798812dd42</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; istd::CString &gt;</type>
-      <name>CStringAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>ac907af0a36ea7f83d4cbcbff904b7465</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>TMultiAttribute.h</name>
-    <path>C:/Temp/Acf/Include/iattr/</path>
-    <filename>iattr_2_t_multi_attribute_8h</filename>
-    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
-    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
-    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_c_attribute_base_8h" name="CAttributeBase.h" local="yes" imported="no">iattr/CAttributeBase.h</includes>
-    <class kind="class">iattr::TMultiAttribute</class>
-    <namespace>iattr</namespace>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; double &gt;</type>
-      <name>CMultiDoubleAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>a692b032edd0bd57e414f6aaa4a904674</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; bool &gt;</type>
-      <name>CMultiBoolAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>a217cc807ae31339ae3e6a236e60945fd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; int &gt;</type>
-      <name>CMultiIntAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>ad5034fa86ba960f8e5457fc9af0f6aaf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; istd::CString &gt;</type>
-      <name>CMultiStringAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>a4c5730745650d8561b9e825d80f49be2</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>TMultiAttribute.h</name>
-    <path>C:/Temp/Acf/Include/icomp/</path>
-    <filename>icomp_2_t_multi_attribute_8h</filename>
-    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
-    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
-    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_t_copy_serialized_wrap_8h" name="TCopySerializedWrap.h" local="yes" imported="no">iser/TCopySerializedWrap.h</includes>
-    <includes id="_i_attribute_static_info_8h" name="IAttributeStaticInfo.h" local="yes" imported="no">icomp/IAttributeStaticInfo.h</includes>
-    <class kind="class">icomp::TMultiAttribute</class>
-    <class kind="struct">icomp::TMultiAttribute::Wrap</class>
-    <namespace>icomp</namespace>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; double &gt;</type>
-      <name>CMultiDoubleAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a9d590d9d09073e9e6589b6947529a9c5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; bool &gt;</type>
-      <name>CMultiBoolAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a2188a94be4eb593ef40bf51833bf6d09</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; int &gt;</type>
-      <name>CMultiIntAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a3fac49d7b6b1176bfdb11a7e5c4a8ec9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; istd::CString &gt;</type>
-      <name>CMultiStringAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a14cb213e6d6b2ec4061d74205a99b803</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>CApplicationInfoComp.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_application_info_comp_8h</filename>
@@ -1462,8 +1246,8 @@
     <includes id="_i_component_8h" name="IComponent.h" local="yes" imported="no">icomp/IComponent.h</includes>
     <includes id="_i_real_component_static_info_8h" name="IRealComponentStaticInfo.h" local="yes" imported="no">icomp/IRealComponentStaticInfo.h</includes>
     <includes id="_t_interface_registrator_8h" name="TInterfaceRegistrator.h" local="yes" imported="no">icomp/TInterfaceRegistrator.h</includes>
-    <includes id="icomp_2_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
-    <includes id="icomp_2_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
+    <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
     <includes id="_t_attribute_member_8h" name="TAttributeMember.h" local="yes" imported="no">icomp/TAttributeMember.h</includes>
     <includes id="_t_multi_attribute_member_8h" name="TMultiAttributeMember.h" local="yes" imported="no">icomp/TMultiAttributeMember.h</includes>
     <includes id="_t_reference_member_8h" name="TReferenceMember.h" local="yes" imported="no">icomp/TReferenceMember.h</includes>
@@ -1604,7 +1388,7 @@
     <name>CFactoryAttribute.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_c_factory_attribute_8h</filename>
-    <includes id="icomp_2_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
     <class kind="class">icomp::CFactoryAttribute</class>
     <namespace>icomp</namespace>
   </compound>
@@ -1621,7 +1405,7 @@
     <name>CMultiFactoryAttribute.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_c_multi_factory_attribute_8h</filename>
-    <includes id="icomp_2_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
+    <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
     <class kind="class">icomp::CMultiFactoryAttribute</class>
     <namespace>icomp</namespace>
   </compound>
@@ -1629,7 +1413,7 @@
     <name>CMultiReferenceAttribute.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_c_multi_reference_attribute_8h</filename>
-    <includes id="icomp_2_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
+    <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
     <class kind="class">icomp::CMultiReferenceAttribute</class>
     <namespace>icomp</namespace>
   </compound>
@@ -1646,7 +1430,7 @@
     <name>CReferenceAttribute.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_c_reference_attribute_8h</filename>
-    <includes id="icomp_2_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
     <class kind="class">icomp::CReferenceAttribute</class>
     <namespace>icomp</namespace>
   </compound>
@@ -1687,8 +1471,8 @@
     <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
     <includes id="_i_component_static_info_8h" name="IComponentStaticInfo.h" local="yes" imported="no">icomp/IComponentStaticInfo.h</includes>
     <includes id="_c_registry_element_8h" name="CRegistryElement.h" local="yes" imported="no">icomp/CRegistryElement.h</includes>
-    <includes id="icomp_2_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
-    <includes id="icomp_2_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
+    <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
     <class kind="class">icomp::CSimComponentContextBase</class>
     <namespace>icomp</namespace>
   </compound>
@@ -1833,6 +1617,47 @@
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
+    <name>TAttribute.h</name>
+    <path>C:/Temp/Acf/Include/icomp/</path>
+    <filename>_t_attribute_8h</filename>
+    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
+    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
+    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_t_copy_serialized_wrap_8h" name="TCopySerializedWrap.h" local="yes" imported="no">iser/TCopySerializedWrap.h</includes>
+    <includes id="_i_attribute_static_info_8h" name="IAttributeStaticInfo.h" local="yes" imported="no">icomp/IAttributeStaticInfo.h</includes>
+    <class kind="class">icomp::TAttribute</class>
+    <namespace>icomp</namespace>
+    <member kind="typedef">
+      <type>TAttribute&lt; double &gt;</type>
+      <name>CDoubleAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>a8b0216a085980d12e60d9a66764a97fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TAttribute&lt; bool &gt;</type>
+      <name>CBoolAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>aabced1d32c941bc1bc0820b04bdbca97</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TAttribute&lt; int &gt;</type>
+      <name>CIntAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>a2e9c5b3f483b27a3dbd390798812dd42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TAttribute&lt; istd::CString &gt;</type>
+      <name>CStringAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>ac907af0a36ea7f83d4cbcbff904b7465</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>TAttributeMember.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_t_attribute_member_8h</filename>
@@ -1926,6 +1751,48 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">icomp::TModelCompWrap</class>
     <namespace>icomp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TMultiAttribute.h</name>
+    <path>C:/Temp/Acf/Include/icomp/</path>
+    <filename>_t_multi_attribute_8h</filename>
+    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
+    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
+    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_t_copy_serialized_wrap_8h" name="TCopySerializedWrap.h" local="yes" imported="no">iser/TCopySerializedWrap.h</includes>
+    <includes id="_i_attribute_static_info_8h" name="IAttributeStaticInfo.h" local="yes" imported="no">icomp/IAttributeStaticInfo.h</includes>
+    <class kind="class">icomp::TMultiAttribute</class>
+    <class kind="struct">icomp::TMultiAttribute::Wrap</class>
+    <namespace>icomp</namespace>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; double &gt;</type>
+      <name>CMultiDoubleAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>a9d590d9d09073e9e6589b6947529a9c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; bool &gt;</type>
+      <name>CMultiBoolAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>a2188a94be4eb593ef40bf51833bf6d09</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; int &gt;</type>
+      <name>CMultiIntAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>a3fac49d7b6b1176bfdb11a7e5c4a8ec9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; istd::CString &gt;</type>
+      <name>CMultiStringAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>a14cb213e6d6b2ec4061d74205a99b803</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>TMultiAttributeMember.h</name>
@@ -4075,7 +3942,7 @@
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_application_comp_8h</filename>
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
-    <includes id="icomp_2_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_translation_manager_8h" name="ITranslationManager.h" local="yes" imported="no">iqt/ITranslationManager.h</includes>
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
@@ -4322,7 +4189,7 @@
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_splash_screen_gui_comp_8h</filename>
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
-    <includes id="icomp_2_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
     <class kind="class">iqtgui::CSplashScreenGuiComp</class>
     <namespace>iqtgui</namespace>
@@ -8665,569 +8532,6 @@
       <anchorfile>classi3d_1_1_c_vector3d.html</anchorfile>
       <anchor>a52d044a947820a19b61f802cb389ab88</anchor>
       <arglist>(double scalar)</arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
-    <name>iattr</name>
-    <filename>namespaceiattr.html</filename>
-    <class kind="class">iattr::CAttributeBase</class>
-    <class kind="class">iattr::CAttributedObject</class>
-    <class kind="class">iattr::IAttribute</class>
-    <class kind="class">iattr::IAttributesManager</class>
-    <class kind="class">iattr::TAttribute</class>
-    <class kind="class">iattr::TMultiAttribute</class>
-    <member kind="typedef">
-      <type>TAttribute&lt; double &gt;</type>
-      <name>CDoubleAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>af22d1d2dd8d39ba3e485e76d7bd48f52</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; bool &gt;</type>
-      <name>CBoolAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>ab1a7ac8fae7a9b58ce182c70cf6f637d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; int &gt;</type>
-      <name>CIntAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>a8a630524b843de8ab72aadf88c03a818</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; istd::CString &gt;</type>
-      <name>CStringAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>ae26270278318782b8360d17d39d9d804</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; double &gt;</type>
-      <name>CMultiDoubleAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>a692b032edd0bd57e414f6aaa4a904674</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; bool &gt;</type>
-      <name>CMultiBoolAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>a217cc807ae31339ae3e6a236e60945fd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; int &gt;</type>
-      <name>CMultiIntAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>ad5034fa86ba960f8e5457fc9af0f6aaf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; istd::CString &gt;</type>
-      <name>CMultiStringAttribute</name>
-      <anchorfile>namespaceiattr.html</anchorfile>
-      <anchor>a4c5730745650d8561b9e825d80f49be2</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iattr::CAttributeBase</name>
-    <filename>classiattr_1_1_c_attribute_base.html</filename>
-    <base>TCopySerializedWrap&lt; iattr::IAttribute &gt;</base>
-    <member kind="function">
-      <type></type>
-      <name>CAttributeBase</name>
-      <anchorfile>classiattr_1_1_c_attribute_base.html</anchorfile>
-      <anchor>aa96831bccb1356003be98464ff2b76c4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CAttributeBase</name>
-      <anchorfile>classiattr_1_1_c_attribute_base.html</anchorfile>
-      <anchor>a96beba75419d05270de964f8ff12dd71</anchor>
-      <arglist>(iattr::IAttributesManager *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const iser::IObject *</type>
-      <name>GetDefaultAttributeValue</name>
-      <anchorfile>classiattr_1_1_c_attribute_base.html</anchorfile>
-      <anchor>a51df239159f9f93992281f13dfb737b2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>iattr::IAttributesManager *</type>
-      <name>m_attributeOwnerPtr</name>
-      <anchorfile>classiattr_1_1_c_attribute_base.html</anchorfile>
-      <anchor>abff5254e890573ded492e68096367627</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>m_changeFlags</name>
-      <anchorfile>classiattr_1_1_c_attribute_base.html</anchorfile>
-      <anchor>a8181b4cc48dcf8ca056977c2ec5ca146</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iattr::CAttributedObject</name>
-    <filename>classiattr_1_1_c_attributed_object.html</filename>
-    <base virtualness="virtual">iattr::IAttributesManager</base>
-    <class kind="struct">iattr::CAttributedObject::AttributeInfo</class>
-    <member kind="typedef">
-      <type>istd::TComposedFactory&lt; iser::IObject &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiattr_1_1_c_attributed_object.html</anchorfile>
-      <anchor>a2a5ee77b583a5ed10d332b400341d8ad</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CAttributedObject</name>
-      <anchorfile>classiattr_1_1_c_attributed_object.html</anchorfile>
-      <anchor>a95d4f04ff7dd6a29fb7941f682c9374e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>AttributeInfo *</type>
-      <name>GetAttributeInfo</name>
-      <anchorfile>classiattr_1_1_c_attributed_object.html</anchorfile>
-      <anchor>a552d3f89c58a4582a2ea21984b46f089</anchor>
-      <arglist>(const std::string &amp;attributeId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetAttributesCount</name>
-      <anchorfile>classiattr_1_1_c_attributed_object.html</anchorfile>
-      <anchor>a7e285fbcac32b099a162a8756bfa4c98</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual iser::IObject *</type>
-      <name>GetAttribute</name>
-      <anchorfile>classiattr_1_1_c_attributed_object.html</anchorfile>
-      <anchor>a0045f16fd8a9cfbbe0dd13af034596f4</anchor>
-      <arglist>(int attributeIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
-      <name>GetAttributeId</name>
-      <anchorfile>classiattr_1_1_c_attributed_object.html</anchorfile>
-      <anchor>a7afa6859544223c165b8752b5ecd269f</anchor>
-      <arglist>(int attributeIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetAttributeDescription</name>
-      <anchorfile>classiattr_1_1_c_attributed_object.html</anchorfile>
-      <anchor>a26089f7ac210557add02c2dbff209756</anchor>
-      <arglist>(int attributeIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>InsertAttribute</name>
-      <anchorfile>classiattr_1_1_c_attributed_object.html</anchorfile>
-      <anchor>a00877f79b8cc6696231384e765a38ffa</anchor>
-      <arglist>(iser::IObject *objectPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, bool releaseFlag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiattr_1_1_c_attributed_object.html</anchorfile>
-      <anchor>a0dbc48cdf5e8954511836b351ce9f4d2</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static bool</type>
-      <name>RegisterAttributeType</name>
-      <anchorfile>classiattr_1_1_c_attributed_object.html</anchorfile>
-      <anchor>aedd96432d048ba0dc1c1d30bc1b34de9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>ReadAttributes</name>
-      <anchorfile>classiattr_1_1_c_attributed_object.html</anchorfile>
-      <anchor>a10c2dfd18f6145fc8cc888e7228e0227</anchor>
-      <arglist>(iser::IArchive &amp;archive, const iser::CArchiveTag &amp;attributesTag, const iser::CArchiveTag &amp;attributeTag)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteAttributes</name>
-      <anchorfile>classiattr_1_1_c_attributed_object.html</anchorfile>
-      <anchor>a84daea7d55ecd29c392f3ae93c06aa54</anchor>
-      <arglist>(iser::IArchive &amp;archive, const iser::CArchiveTag &amp;attributesTag, const iser::CArchiveTag &amp;attributeTag) const </arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>iattr::CAttributedObject::AttributeInfo</name>
-    <filename>structiattr_1_1_c_attributed_object_1_1_attribute_info.html</filename>
-    <member kind="variable">
-      <type>std::string</type>
-      <name>attributeId</name>
-      <anchorfile>structiattr_1_1_c_attributed_object_1_1_attribute_info.html</anchorfile>
-      <anchor>aa172cc44414be46b6afb3e430cbb93b1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::string</type>
-      <name>attributeDescription</name>
-      <anchorfile>structiattr_1_1_c_attributed_object_1_1_attribute_info.html</anchorfile>
-      <anchor>a8a32184415306e4e5b562441635691c6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>attributeFlags</name>
-      <anchorfile>structiattr_1_1_c_attributed_object_1_1_attribute_info.html</anchorfile>
-      <anchor>a81e83bface17385cd9e6b5263f5301a5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>istd::TOptDelPtr&lt; iser::IObject &gt;</type>
-      <name>objectPtr</name>
-      <anchorfile>structiattr_1_1_c_attributed_object_1_1_attribute_info.html</anchorfile>
-      <anchor>a2ce2fbc8cfef4aceb5430b8845058e3b</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iattr::IAttribute</name>
-    <filename>classiattr_1_1_i_attribute.html</filename>
-    <base virtualness="virtual">iser::IObject</base>
-    <member kind="enumeration">
-      <name>AttributeFlags</name>
-      <anchorfile>classiattr_1_1_i_attribute.html</anchorfile>
-      <anchor>a39d245357fab7c2683ae5f3bc8c28e08</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AF_PERSISTENT</name>
-      <anchorfile>classiattr_1_1_i_attribute.html</anchorfile>
-      <anchor>a39d245357fab7c2683ae5f3bc8c28e08a13c56f348a9530599f79da8a06693489</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const iser::IObject *</type>
-      <name>GetDefaultAttributeValue</name>
-      <anchorfile>classiattr_1_1_i_attribute.html</anchorfile>
-      <anchor>ab725708eed572a361e73e97f8f45a489</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iattr::IAttributesManager</name>
-    <filename>classiattr_1_1_i_attributes_manager.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetAttributesCount</name>
-      <anchorfile>classiattr_1_1_i_attributes_manager.html</anchorfile>
-      <anchor>a10549db8afe38be1ef7076b2bd4a8720</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual iser::IObject *</type>
-      <name>GetAttribute</name>
-      <anchorfile>classiattr_1_1_i_attributes_manager.html</anchorfile>
-      <anchor>a5cd1fed9346914f46e3d5095ed929bc0</anchor>
-      <arglist>(int attributeIndex) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual std::string</type>
-      <name>GetAttributeId</name>
-      <anchorfile>classiattr_1_1_i_attributes_manager.html</anchorfile>
-      <anchor>a0f6920e85b5558a6bc72f8858dc26b4b</anchor>
-      <arglist>(int attributeIndex) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
-      <name>GetAttributeDescription</name>
-      <anchorfile>classiattr_1_1_i_attributes_manager.html</anchorfile>
-      <anchor>a263122154ff4b7279364ea12d474861e</anchor>
-      <arglist>(int attributeIndex) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>InsertAttribute</name>
-      <anchorfile>classiattr_1_1_i_attributes_manager.html</anchorfile>
-      <anchor>a7c108972424ff6e7971542842832840f</anchor>
-      <arglist>(iser::IObject *objectPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, bool releaseFlag)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iattr::TAttribute</name>
-    <filename>classiattr_1_1_t_attribute.html</filename>
-    <templarg></templarg>
-    <base>iattr::CAttributeBase</base>
-    <member kind="typedef">
-      <type>Value</type>
-      <name>ValueType</name>
-      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>aae568507bc87c076732e047b8413b6b5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; Value &gt;</type>
-      <name>AttributeType</name>
-      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>afdc43f8cce1036a1740065c40a1848da</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iattr::CAttributeBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>a26adebdb104168e27847d0594b8aefc2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TAttribute</name>
-      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>a08fecc770cf4c537047ae45018100210</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TAttribute</name>
-      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>ac05d1e900339c2e3c0dac87dafaff0b9</anchor>
-      <arglist>(iattr::IAttributesManager *attributeOwnerPtr, const std::string &amp;attributeName, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())</arglist>
-    </member>
-    <member kind="function">
-      <type>const Value &amp;</type>
-      <name>GetValue</name>
-      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>ac610ebe980c20935f50aa607219734cb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetValue</name>
-      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>abcb55aa76d2974024014986ccbf9f2bf</anchor>
-      <arglist>(const Value &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>ResetValue</name>
-      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>a5ee410cb190b6962e5f77785350ecbd5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const iser::IObject *</type>
-      <name>GetDefaultAttributePtr</name>
-      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>afa1866ab8453a7d62f17911dcef0023f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const std::string &amp;</type>
-      <name>GetFactoryId</name>
-      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>a8d81bccbf9f9958bfc8ddf866349a366</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>a6c01dced06bb15c6ca30c7a5ccc910d0</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static const std::string &amp;</type>
-      <name>GetTypeName</name>
-      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>a28c97f01a33e0fe8959d804174fdc1ad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>Value</type>
-      <name>m_value</name>
-      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>a1b7af508fcc3481171319efc30d8e2ea</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>istd::TDelPtr&lt; AttributeType &gt;</type>
-      <name>m_defaultAttributeValuePtr</name>
-      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>aaded367984690d3ca7f3640e4cbdf364</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iattr::TMultiAttribute</name>
-    <filename>classiattr_1_1_t_multi_attribute.html</filename>
-    <templarg></templarg>
-    <base>iattr::CAttributeBase</base>
-    <member kind="typedef">
-      <type>Value</type>
-      <name>ValueType</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>afa06be808341d3f3a0f79a7bc475aeae</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iattr::CAttributeBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a6ddf1dfb1e90aa85756ad99301b7d3c3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::vector&lt; ValueType &gt;</type>
-      <name>ValueList</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>ae110e1b99f1ca3dce6a613ae8e0d13f4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ValueList::iterator</type>
-      <name>iterator</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a95bfc1f13cd064bccdc4a387ac788109</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ValueList::const_iterator</type>
-      <name>const_iterator</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a659c7a10513dc236eb6922ca622c3909</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TMultiAttribute</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a03b71f2ff4379d2b4e254633d44ba917</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TMultiAttribute</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a1b6423ecf23ffaf99bae19842d38acac</anchor>
-      <arglist>(iattr::IAttributesManager *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetValues</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a9e00181434d72eb1609aa03c9005c204</anchor>
-      <arglist>(const ValueList &amp;valueList)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetValues</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>ad8d20364efa447e735889d014e615fbb</anchor>
-      <arglist>(typename ContainerImpl::const_iterator begin, typename ContainerImpl::const_iterator end)</arglist>
-    </member>
-    <member kind="function">
-      <type>const ValueList &amp;</type>
-      <name>GetValues</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>aaafaf6f5b4e861504592adf3ed563a61</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetValuesCount</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a232d00d6676cd7783fda3f1788c59c3e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual Value</type>
-      <name>GetValueAt</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a4b3267402e2dfed2a34d5218d36b82d4</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetValueAt</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a1dcfbf20398cddc8166ecd983a218642</anchor>
-      <arglist>(int index, const Value &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>InsertValue</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>ae92f65e6d54783f28868cb9276d1cf02</anchor>
-      <arglist>(const Value &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ResetValues</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a68443ea3f28aecdaaa1bebb0af66c8d1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>iterator</type>
-      <name>begin</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a82eeff8f4645fe9e7ed73cbff3eeb4d1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const_iterator</type>
-      <name>begin</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>abe708ef3493e536d69ecebcf617d6a00</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>iterator</type>
-      <name>end</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a92b8d9ff8ec67e8c4a583a1c669c09e5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const_iterator</type>
-      <name>end</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a4d6bfc835cdd3134b2736820960501a8</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>const std::string &amp;</type>
-      <name>GetFactoryId</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a0bbff7e7e5450972c76a0db0182d7ae3</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a521e39e50902c95dcb34d42c8c7376c9</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static const std::string &amp;</type>
-      <name>GetTypeName</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a1fa3416e77bc059110798e55e3ca4f4c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>std::vector&lt; Value &gt;</type>
-      <name>m_values</name>
-      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>af19f88010634a14ba140cc9e8f8938cd</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="namespace">

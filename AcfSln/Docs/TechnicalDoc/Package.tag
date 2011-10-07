@@ -586,6 +586,119 @@
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
+    <name>CPropertiesManager.h</name>
+    <path>C:/Temp/AcfSln/Include/iprop/</path>
+    <filename>_c_properties_manager_8h</filename>
+    <includes id="_t_property_8h" name="TProperty.h" local="yes" imported="no">iprop/TProperty.h</includes>
+    <includes id="_t_multi_property_8h" name="TMultiProperty.h" local="yes" imported="no">iprop/TMultiProperty.h</includes>
+    <includes id="_i_properties_manager_8h" name="IPropertiesManager.h" local="yes" imported="no">iprop/IPropertiesManager.h</includes>
+    <class kind="class">iprop::CPropertiesManager</class>
+    <class kind="struct">iprop::CPropertiesManager::AttributeInfo</class>
+    <namespace>iprop</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPropertyBase.h</name>
+    <path>C:/Temp/AcfSln/Include/iprop/</path>
+    <filename>_c_property_base_8h</filename>
+    <includes id="_i_property_8h" name="IProperty.h" local="yes" imported="no">iprop/IProperty.h</includes>
+    <class kind="class">iprop::CPropertyBase</class>
+    <namespace>iprop</namespace>
+  </compound>
+  <compound kind="file">
+    <name>iprop.h</name>
+    <path>C:/Temp/AcfSln/Include/iprop/</path>
+    <filename>iprop_8h</filename>
+    <namespace>iprop</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IPropertiesManager.h</name>
+    <path>C:/Temp/AcfSln/Include/iprop/</path>
+    <filename>_i_properties_manager_8h</filename>
+    <includes id="iprop_8h" name="iprop.h" local="yes" imported="no">iprop/iprop.h</includes>
+    <class kind="class">iprop::IPropertiesManager</class>
+    <namespace>iprop</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IProperty.h</name>
+    <path>C:/Temp/AcfSln/Include/iprop/</path>
+    <filename>_i_property_8h</filename>
+    <includes id="iprop_8h" name="iprop.h" local="yes" imported="no">iprop/iprop.h</includes>
+    <class kind="class">iprop::IProperty</class>
+    <namespace>iprop</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TMultiProperty.h</name>
+    <path>C:/Temp/AcfSln/Include/iprop/</path>
+    <filename>_t_multi_property_8h</filename>
+    <includes id="_c_property_base_8h" name="CPropertyBase.h" local="yes" imported="no">iprop/CPropertyBase.h</includes>
+    <class kind="class">iprop::TMultiProperty</class>
+    <namespace>iprop</namespace>
+    <member kind="typedef">
+      <type>TMultiProperty&lt; double &gt;</type>
+      <name>CMultiDoubleAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>a144dca0ab9d685e92b923e31bf7268cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiProperty&lt; bool &gt;</type>
+      <name>CMultiBoolAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>a8d6dd797b7c8fd63e6f86a6bd90b1308</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiProperty&lt; int &gt;</type>
+      <name>CMultiIntAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>a1321fa2101e02f51a5a3e2e3da2eb6bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiProperty&lt; istd::CString &gt;</type>
+      <name>CMultiStringAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>ad810f9685b48cad58299d2c1b18048b3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>TProperty.h</name>
+    <path>C:/Temp/AcfSln/Include/iprop/</path>
+    <filename>_t_property_8h</filename>
+    <includes id="_c_property_base_8h" name="CPropertyBase.h" local="yes" imported="no">iprop/CPropertyBase.h</includes>
+    <class kind="class">iprop::TProperty</class>
+    <namespace>iprop</namespace>
+    <member kind="typedef">
+      <type>TProperty&lt; double &gt;</type>
+      <name>CDoubleAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>a51c17074805d3dc3e6c6454d29889d9e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TProperty&lt; bool &gt;</type>
+      <name>CBoolAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>ae6e12f69ae337ee36046ac3e79b3c948</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TProperty&lt; int &gt;</type>
+      <name>CIntAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>a46fdbfff78c8ea3f6759781ebbc01dae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TProperty&lt; istd::CString &gt;</type>
+      <name>CStringAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>a6302d28e82c49d4a6c67d37785e3ff4c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>CVlcVideoViewGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqaxmm/</path>
     <filename>_c_vlc_video_view_gui_comp_8h</filename>
@@ -4684,6 +4797,569 @@
   <compound kind="namespace">
     <name>inat</name>
     <filename>namespaceinat.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>iprop</name>
+    <filename>namespaceiprop.html</filename>
+    <class kind="class">iprop::CPropertiesManager</class>
+    <class kind="class">iprop::CPropertyBase</class>
+    <class kind="class">iprop::IPropertiesManager</class>
+    <class kind="class">iprop::IProperty</class>
+    <class kind="class">iprop::TMultiProperty</class>
+    <class kind="class">iprop::TProperty</class>
+    <member kind="typedef">
+      <type>TMultiProperty&lt; double &gt;</type>
+      <name>CMultiDoubleAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>a144dca0ab9d685e92b923e31bf7268cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiProperty&lt; bool &gt;</type>
+      <name>CMultiBoolAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>a8d6dd797b7c8fd63e6f86a6bd90b1308</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiProperty&lt; int &gt;</type>
+      <name>CMultiIntAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>a1321fa2101e02f51a5a3e2e3da2eb6bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiProperty&lt; istd::CString &gt;</type>
+      <name>CMultiStringAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>ad810f9685b48cad58299d2c1b18048b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TProperty&lt; double &gt;</type>
+      <name>CDoubleAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>a51c17074805d3dc3e6c6454d29889d9e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TProperty&lt; bool &gt;</type>
+      <name>CBoolAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>ae6e12f69ae337ee36046ac3e79b3c948</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TProperty&lt; int &gt;</type>
+      <name>CIntAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>a46fdbfff78c8ea3f6759781ebbc01dae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TProperty&lt; istd::CString &gt;</type>
+      <name>CStringAttribute</name>
+      <anchorfile>namespaceiprop.html</anchorfile>
+      <anchor>a6302d28e82c49d4a6c67d37785e3ff4c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprop::CPropertiesManager</name>
+    <filename>classiprop_1_1_c_properties_manager.html</filename>
+    <base virtualness="virtual">iprop::IPropertiesManager</base>
+    <class kind="struct">iprop::CPropertiesManager::AttributeInfo</class>
+    <member kind="typedef">
+      <type>istd::TComposedFactory&lt; iser::IObject &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>a313506c7d256c3c7027d1edf4e998dae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CPropertiesManager</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>abacef93956d1f3745f38d1f6c24f76ff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>AttributeInfo *</type>
+      <name>GetAttributeInfo</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>ac5bf0df441679fd97c5952f77eb477f5</anchor>
+      <arglist>(const std::string &amp;attributeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetAttributesCount</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>a66133c9330fe51944b3d5d2debe9f92d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iser::IObject *</type>
+      <name>GetAttribute</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>a6d15781e7f9adccccec52387b6ae7cec</anchor>
+      <arglist>(int attributeIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>GetAttributeId</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>a8f11b522761e040848972dfdc0f74e12</anchor>
+      <arglist>(int attributeIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetAttributeDescription</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>a84df66cf14d5277ca135d1128521d80a</anchor>
+      <arglist>(int attributeIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InsertAttribute</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>a73284b183953ea0dfb6166259c3ee7dc</anchor>
+      <arglist>(iser::IObject *objectPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, bool releaseFlag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>a34b0f875ef53c24aeb5e3524291cb2fb</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>RegisterAttributeType</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>a42e6e51491dfe135e66945794dd2e444</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>ReadAttributes</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>a93093e01439323439a503641eaf4374e</anchor>
+      <arglist>(iser::IArchive &amp;archive, const iser::CArchiveTag &amp;attributesTag, const iser::CArchiveTag &amp;attributeTag)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteAttributes</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>a8cdd693e9345966494670d3b6fd1b84b</anchor>
+      <arglist>(iser::IArchive &amp;archive, const iser::CArchiveTag &amp;attributesTag, const iser::CArchiveTag &amp;attributeTag) const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iprop::CPropertiesManager::AttributeInfo</name>
+    <filename>structiprop_1_1_c_properties_manager_1_1_attribute_info.html</filename>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>attributeId</name>
+      <anchorfile>structiprop_1_1_c_properties_manager_1_1_attribute_info.html</anchorfile>
+      <anchor>abb51ed05045f5e760b175af3cb54c7ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>attributeDescription</name>
+      <anchorfile>structiprop_1_1_c_properties_manager_1_1_attribute_info.html</anchorfile>
+      <anchor>a0c16b586e4ebdaf05b5e0f884ab286a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>attributeFlags</name>
+      <anchorfile>structiprop_1_1_c_properties_manager_1_1_attribute_info.html</anchorfile>
+      <anchor>a415a1405ed82c42884c2fb686c996b09</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::TOptDelPtr&lt; iser::IObject &gt;</type>
+      <name>objectPtr</name>
+      <anchorfile>structiprop_1_1_c_properties_manager_1_1_attribute_info.html</anchorfile>
+      <anchor>ae3bf01d549ff0871a244704e623d3fed</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprop::CPropertyBase</name>
+    <filename>classiprop_1_1_c_property_base.html</filename>
+    <base>TCopySerializedWrap&lt; iprop::IProperty &gt;</base>
+    <member kind="function">
+      <type></type>
+      <name>CPropertyBase</name>
+      <anchorfile>classiprop_1_1_c_property_base.html</anchorfile>
+      <anchor>a764e7d80d22aeb6b014fc40e43697449</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CPropertyBase</name>
+      <anchorfile>classiprop_1_1_c_property_base.html</anchorfile>
+      <anchor>a4d03052826fc881b0b952618e4d833ee</anchor>
+      <arglist>(iprop::IPropertiesManager *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::IObject *</type>
+      <name>GetDefaultAttributeValue</name>
+      <anchorfile>classiprop_1_1_c_property_base.html</anchorfile>
+      <anchor>a496a0d06f387a114bf6c37d5a2f03b6a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iprop::IPropertiesManager *</type>
+      <name>m_attributeOwnerPtr</name>
+      <anchorfile>classiprop_1_1_c_property_base.html</anchorfile>
+      <anchor>aef3362a3a86cb5019cd383f4fc12c0e8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_changeFlags</name>
+      <anchorfile>classiprop_1_1_c_property_base.html</anchorfile>
+      <anchor>ae34a533b9856610d0bcc8eb7314c25d5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprop::IPropertiesManager</name>
+    <filename>classiprop_1_1_i_properties_manager.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetAttributesCount</name>
+      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
+      <anchor>a5b29d4bda006cc5b11608b76f7b8c6bf</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual iser::IObject *</type>
+      <name>GetAttribute</name>
+      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
+      <anchor>a0558b98bcab00e85c9a15a6469c2bf08</anchor>
+      <arglist>(int attributeIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual std::string</type>
+      <name>GetAttributeId</name>
+      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
+      <anchor>a2e9292678f99a1804273cb2b4ff1b00f</anchor>
+      <arglist>(int attributeIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CString</type>
+      <name>GetAttributeDescription</name>
+      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
+      <anchor>abfed898b449e59bd61c8bb03f2eb00d2</anchor>
+      <arglist>(int attributeIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>InsertAttribute</name>
+      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
+      <anchor>abf714669b6cff63ae444e0d834c2fd04</anchor>
+      <arglist>(iser::IObject *objectPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, bool releaseFlag)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprop::IProperty</name>
+    <filename>classiprop_1_1_i_property.html</filename>
+    <base virtualness="virtual">iser::IObject</base>
+    <member kind="enumeration">
+      <name>AttributeFlags</name>
+      <anchorfile>classiprop_1_1_i_property.html</anchorfile>
+      <anchor>a729808fd69460e4b5372c6433db9f55e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>AF_PERSISTENT</name>
+      <anchorfile>classiprop_1_1_i_property.html</anchorfile>
+      <anchor>a729808fd69460e4b5372c6433db9f55ea35268f169913d4a46594803d08bc3261</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iser::IObject *</type>
+      <name>GetDefaultAttributeValue</name>
+      <anchorfile>classiprop_1_1_i_property.html</anchorfile>
+      <anchor>abe775b7e3468042cc8437281c237898a</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprop::TMultiProperty</name>
+    <filename>classiprop_1_1_t_multi_property.html</filename>
+    <templarg></templarg>
+    <base>iprop::CPropertyBase</base>
+    <member kind="typedef">
+      <type>Value</type>
+      <name>ValueType</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>ad2f3b2fb933117f3cdd66ac3ec3fb323</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iprop::CPropertyBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a2bff7ca6e94531fcdf6cb88624e164e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; ValueType &gt;</type>
+      <name>ValueList</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>ae5a53373ea96d95af943f2a61dcf8e77</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ValueList::iterator</type>
+      <name>iterator</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a38953f61120133e753953496457293f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ValueList::const_iterator</type>
+      <name>const_iterator</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a62268feb56b38fa17155e57bcf95c6e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TMultiProperty</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a929c75a98989f9cdb710f8df863bae5e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TMultiProperty</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>abfd4f4cfd5a3fbe551788c3322024bed</anchor>
+      <arglist>(iprop::IPropertiesManager *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetValues</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a4018a9a473113a9960e0c43f7c7bda75</anchor>
+      <arglist>(const ValueList &amp;valueList)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetValues</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a585d4caaea4bf0c05bf947db4e735c00</anchor>
+      <arglist>(typename ContainerImpl::const_iterator begin, typename ContainerImpl::const_iterator end)</arglist>
+    </member>
+    <member kind="function">
+      <type>const ValueList &amp;</type>
+      <name>GetValues</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a19f1352db3cc8ff50889ece2c502a592</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetValuesCount</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>ac53767f3346e9e98c3d5213faf11176e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Value</type>
+      <name>GetValueAt</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>abcd01eb677df3392c6f7f2d553c3bcf5</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetValueAt</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a0c80db0425b8e6dd60de52e293489ef4</anchor>
+      <arglist>(int index, const Value &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InsertValue</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a23047bfc213d63d61e7584958241e454</anchor>
+      <arglist>(const Value &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetValues</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a081fda931ae3b69d75d44566466747b9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>iterator</type>
+      <name>begin</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a9062556998a219b85ab1e2c83a2ecd94</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>begin</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>aceeb27e525de202e3f47f63f01ae7a03</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>iterator</type>
+      <name>end</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a98b2f2ea5160da6a5b50529a798c8f8b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>end</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a783e7f1af8b946008e03aa5d7ef66eca</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>adec08ad6d3b599fa09378df68c76f5de</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a9ddb68757003f115ea033b3895da3952</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const std::string &amp;</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a7f6049f90789075ba23f6a89b8c422ee</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; Value &gt;</type>
+      <name>m_values</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a3131148dfd0676d7ba02d462ac8f60ba</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprop::TProperty</name>
+    <filename>classiprop_1_1_t_property.html</filename>
+    <templarg></templarg>
+    <base>iprop::CPropertyBase</base>
+    <member kind="typedef">
+      <type>Value</type>
+      <name>ValueType</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>ad72c4993f337587ae5ca1edd4b503da8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TProperty&lt; Value &gt;</type>
+      <name>AttributeType</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>aa351d2614fd277b5c36cde9142a65bfb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iprop::CPropertyBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>acc0d5dd8ba1b1cd18d675b39729829dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TProperty</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>a4c56d6ff5047870bfd8992f248c87902</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TProperty</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>afe145d79c941870fc8b43ba7d4f9e992</anchor>
+      <arglist>(iprop::IPropertiesManager *attributeOwnerPtr, const std::string &amp;attributeName, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())</arglist>
+    </member>
+    <member kind="function">
+      <type>const Value &amp;</type>
+      <name>GetValue</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>a5754d5a194cb9e46896fb7c81bdd7c56</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetValue</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>ab5c68424ccbda1e45f55aad0681d6467</anchor>
+      <arglist>(const Value &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ResetValue</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>a0904f16c11e7c363200be61df4a65706</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::IObject *</type>
+      <name>GetDefaultAttributePtr</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>a6d8017bf3eac1fd950281d200cd01336</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const std::string &amp;</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>a69b13e073f0c733533c157882926d7b6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>a035a722c8060bd11d04883aebf697be4</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const std::string &amp;</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>a85a3de5fc9c167a0c87442e0d6b30a71</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Value</type>
+      <name>m_value</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>aa81681a66c380333ad8bad5c13c2bf21</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; AttributeType &gt;</type>
+      <name>m_defaultAttributeValuePtr</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>af4ee0618a93787d2877e51d4b878bc42</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>iqaxmm</name>
