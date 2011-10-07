@@ -39,7 +39,10 @@ namespace iqtgui
 	\ingroup Helpers
 */
 template <class Gui, class Observer>
-class TGuiObserverWrap: public Gui, public Observer, virtual public imod::IModelEditor
+class TGuiObserverWrap:
+			public Gui,
+			public Observer,
+			virtual public imod::IModelEditor
 {
 public:
 	TGuiObserverWrap();
@@ -113,6 +116,7 @@ protected:
 	virtual void SetReadOnly(bool state);
 
 private:
+	void DoPostponedUpdate(int updateFlags);
 	void DoUpdate(int updateFlags);
 
 private:
@@ -211,7 +215,7 @@ void TGuiObserverWrap<Gui, Observer>::OnGuiModelAttached()
 	I_ASSERT(Gui::IsGuiCreated());
 	I_ASSERT(Observer::IsModelAttached(NULL));
 
-	UpdateEditor(CF_INIT_EDITOR);
+	DoPostponedUpdate(CF_INIT_EDITOR);
 }
 
 
@@ -325,15 +329,7 @@ void TGuiObserverWrap<Gui, Observer>::AfterUpdate(imod::IModel* modelPtr, int up
 		return;
 	}
 
-	// skip update if the UI is not visible:
-	if (!Gui::IsGuiShown()){
-		m_updateOnShow = true;
-		m_updateOnShowFlags = m_updateOnShowFlags | updateFlags;
-
-		return;
-	}
-		
-	DoUpdate(updateFlags);
+	DoPostponedUpdate(updateFlags);
 }
 
 
@@ -354,6 +350,20 @@ void TGuiObserverWrap<Gui, Observer>::SetReadOnly(bool state)
 
 
 // private methods
+template <class Gui, class Observer>
+void TGuiObserverWrap<Gui, Observer>::DoPostponedUpdate(int updateFlags)
+{
+	// skip update if the UI is not visible:
+	if (!Gui::IsGuiShown()){
+		m_updateOnShow = true;
+		m_updateOnShowFlags = m_updateOnShowFlags | updateFlags;
+
+		return;
+	}
+		
+	DoUpdate(updateFlags);
+}
+
 
 template <class Gui, class Observer>
 void TGuiObserverWrap<Gui, Observer>::DoUpdate(int updateFlags)
