@@ -586,6 +586,14 @@
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
+    <name>CPropertiesEditorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iprop/</path>
+    <filename>_c_properties_editor_comp_8h</filename>
+    <includes id="_i_properties_manager_8h" name="IPropertiesManager.h" local="yes" imported="no">iprop/IPropertiesManager.h</includes>
+    <class kind="class">iprop::CPropertiesEditorComp</class>
+    <namespace>iprop</namespace>
+  </compound>
+  <compound kind="file">
     <name>CPropertiesManager.h</name>
     <path>C:/Temp/AcfSln/Include/iprop/</path>
     <filename>_c_properties_manager_8h</filename>
@@ -593,7 +601,7 @@
     <includes id="_t_multi_property_8h" name="TMultiProperty.h" local="yes" imported="no">iprop/TMultiProperty.h</includes>
     <includes id="_i_properties_manager_8h" name="IPropertiesManager.h" local="yes" imported="no">iprop/IPropertiesManager.h</includes>
     <class kind="class">iprop::CPropertiesManager</class>
-    <class kind="struct">iprop::CPropertiesManager::AttributeInfo</class>
+    <class kind="struct">iprop::CPropertiesManager::PropertyInfo</class>
     <namespace>iprop</namespace>
   </compound>
   <compound kind="file">
@@ -4801,6 +4809,7 @@
   <compound kind="namespace">
     <name>iprop</name>
     <filename>namespaceiprop.html</filename>
+    <class kind="class">iprop::CPropertiesEditorComp</class>
     <class kind="class">iprop::CPropertiesManager</class>
     <class kind="class">iprop::CPropertyBase</class>
     <class kind="class">iprop::IPropertiesManager</class>
@@ -4865,17 +4874,66 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iprop::CPropertiesEditorComp</name>
+    <filename>classiprop_1_1_c_properties_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CPropertiesEditorComp, iprop::IPropertiesManager &gt;</base>
+    <member kind="enumeration">
+      <name>ColumnType</name>
+      <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
+      <anchor>a7135d1b571e933816afb5f5f2890acc5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_PROPERTY</name>
+      <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
+      <anchor>a7135d1b571e933816afb5f5f2890acc5a0bf83c1ab439c224f507088709c0400b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_VALUE</name>
+      <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
+      <anchor>a7135d1b571e933816afb5f5f2890acc5a64052d14e6938f5148999e686980ef84</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>DataRole</name>
+      <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
+      <anchor>a96870a06596923d38c98deee924873c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_PROPERTY_ID</name>
+      <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
+      <anchor>a96870a06596923d38c98deee924873c5a6a314b864451544d1669a5a86941d8a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPropertiesEditorComp, iprop::IPropertiesManager &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
+      <anchor>aaea59cbb0d456cd6b7cb8913d00e2cf3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
+      <anchor>a85c14911ebfa130035a09311c63e7549</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
+      <anchor>aeba641e35a955353ae95f68d683e8979</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iprop::CPropertiesManager</name>
     <filename>classiprop_1_1_c_properties_manager.html</filename>
     <base virtualness="virtual">iprop::IPropertiesManager</base>
-    <class kind="struct">iprop::CPropertiesManager::AttributeInfo</class>
-    <member kind="typedef">
-      <type>istd::TComposedFactory&lt; iser::IObject &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>a313506c7d256c3c7027d1edf4e998dae</anchor>
-      <arglist></arglist>
-    </member>
+    <class kind="struct">iprop::CPropertiesManager::PropertyInfo</class>
     <member kind="function">
       <type></type>
       <name>CPropertiesManager</name>
@@ -4884,46 +4942,46 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>AttributeInfo *</type>
-      <name>GetAttributeInfo</name>
+      <type>PropertyInfo *</type>
+      <name>GetPropertyInfo</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>ac5bf0df441679fd97c5952f77eb477f5</anchor>
-      <arglist>(const std::string &amp;attributeId) const </arglist>
+      <anchor>a322849498d28097e5298824f3cfc2914</anchor>
+      <arglist>(const std::string &amp;propertyId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetAttributesCount</name>
+      <name>GetPropertiesCount</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>a66133c9330fe51944b3d5d2debe9f92d</anchor>
+      <anchor>a54515331a3cea646cad395502d1ff61c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::IObject *</type>
-      <name>GetAttribute</name>
+      <name>GetProperty</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>a6d15781e7f9adccccec52387b6ae7cec</anchor>
-      <arglist>(int attributeIndex) const </arglist>
+      <anchor>a6693a7edfd5a7c50b637be65af530546</anchor>
+      <arglist>(int propertyIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual std::string</type>
-      <name>GetAttributeId</name>
+      <name>GetPropertyId</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>a8f11b522761e040848972dfdc0f74e12</anchor>
-      <arglist>(int attributeIndex) const </arglist>
+      <anchor>a839f698b011a8c0398ec96c5467f2683</anchor>
+      <arglist>(int propertyIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
-      <name>GetAttributeDescription</name>
+      <name>GetPropertyDescription</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>a84df66cf14d5277ca135d1128521d80a</anchor>
-      <arglist>(int attributeIndex) const </arglist>
+      <anchor>a0f336928dc0befd4bd2dd0d2f8b93bcb</anchor>
+      <arglist>(int propertyIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>InsertAttribute</name>
+      <name>InsertProperty</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>a73284b183953ea0dfb6166259c3ee7dc</anchor>
-      <arglist>(iser::IObject *objectPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, bool releaseFlag)</arglist>
+      <anchor>a097683f6c8805e9497cdcbce2def8041</anchor>
+      <arglist>(iser::IObject *objectPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, bool releaseFlag)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -4934,55 +4992,55 @@
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
-      <name>RegisterAttributeType</name>
+      <name>RegisterPropertyType</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>a42e6e51491dfe135e66945794dd2e444</anchor>
+      <anchor>a3a5afd3f335fbe328c5f30d589826c04</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
-      <name>ReadAttributes</name>
+      <name>ReadProperties</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>a93093e01439323439a503641eaf4374e</anchor>
+      <anchor>ad027d92d135101a1fba68651d71339a2</anchor>
       <arglist>(iser::IArchive &amp;archive, const iser::CArchiveTag &amp;attributesTag, const iser::CArchiveTag &amp;attributeTag)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
-      <name>WriteAttributes</name>
+      <name>WriteProperties</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>a8cdd693e9345966494670d3b6fd1b84b</anchor>
+      <anchor>a7d402dd804701670f58354ee41d50e2f</anchor>
       <arglist>(iser::IArchive &amp;archive, const iser::CArchiveTag &amp;attributesTag, const iser::CArchiveTag &amp;attributeTag) const </arglist>
     </member>
   </compound>
   <compound kind="struct">
-    <name>iprop::CPropertiesManager::AttributeInfo</name>
-    <filename>structiprop_1_1_c_properties_manager_1_1_attribute_info.html</filename>
+    <name>iprop::CPropertiesManager::PropertyInfo</name>
+    <filename>structiprop_1_1_c_properties_manager_1_1_property_info.html</filename>
     <member kind="variable">
       <type>std::string</type>
-      <name>attributeId</name>
-      <anchorfile>structiprop_1_1_c_properties_manager_1_1_attribute_info.html</anchorfile>
-      <anchor>abb51ed05045f5e760b175af3cb54c7ac</anchor>
+      <name>propertyId</name>
+      <anchorfile>structiprop_1_1_c_properties_manager_1_1_property_info.html</anchorfile>
+      <anchor>a6d1e1f89c9eff7fb833a010ef3f27a83</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
-      <name>attributeDescription</name>
-      <anchorfile>structiprop_1_1_c_properties_manager_1_1_attribute_info.html</anchorfile>
-      <anchor>a0c16b586e4ebdaf05b5e0f884ab286a2</anchor>
+      <name>propertyDescription</name>
+      <anchorfile>structiprop_1_1_c_properties_manager_1_1_property_info.html</anchorfile>
+      <anchor>aabf7ed62c73bc6cc9c396cd3322f76cd</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
-      <name>attributeFlags</name>
-      <anchorfile>structiprop_1_1_c_properties_manager_1_1_attribute_info.html</anchorfile>
-      <anchor>a415a1405ed82c42884c2fb686c996b09</anchor>
+      <name>propertyFlags</name>
+      <anchorfile>structiprop_1_1_c_properties_manager_1_1_property_info.html</anchorfile>
+      <anchor>ae19b1e00a65be25fc0c01118f171a852</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>istd::TOptDelPtr&lt; iser::IObject &gt;</type>
       <name>objectPtr</name>
-      <anchorfile>structiprop_1_1_c_properties_manager_1_1_attribute_info.html</anchorfile>
-      <anchor>ae3bf01d549ff0871a244704e623d3fed</anchor>
+      <anchorfile>structiprop_1_1_c_properties_manager_1_1_property_info.html</anchorfile>
+      <anchor>a5d7811d3852065bf22c1f7af8e84952b</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5001,21 +5059,21 @@
       <type></type>
       <name>CPropertyBase</name>
       <anchorfile>classiprop_1_1_c_property_base.html</anchorfile>
-      <anchor>a4d03052826fc881b0b952618e4d833ee</anchor>
-      <arglist>(iprop::IPropertiesManager *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0)</arglist>
+      <anchor>a7210dfba409a41bb48912d04a21edf69</anchor>
+      <arglist>(iprop::IPropertiesManager *propertyOwnerPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iser::IObject *</type>
-      <name>GetDefaultAttributeValue</name>
+      <name>GetDefaultPropertyValue</name>
       <anchorfile>classiprop_1_1_c_property_base.html</anchorfile>
-      <anchor>a496a0d06f387a114bf6c37d5a2f03b6a</anchor>
+      <anchor>aa987a946b7dc18f56dab4d79a0d84945</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>iprop::IPropertiesManager *</type>
-      <name>m_attributeOwnerPtr</name>
+      <name>m_propertyOwnerPtr</name>
       <anchorfile>classiprop_1_1_c_property_base.html</anchorfile>
-      <anchor>aef3362a3a86cb5019cd383f4fc12c0e8</anchor>
+      <anchor>afe293936f18ac1a5427bcdbd2ed19989</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -5032,38 +5090,38 @@
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
-      <name>GetAttributesCount</name>
+      <name>GetPropertiesCount</name>
       <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
-      <anchor>a5b29d4bda006cc5b11608b76f7b8c6bf</anchor>
+      <anchor>ac8f07c4483169a61ca474f4a04222097</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual iser::IObject *</type>
-      <name>GetAttribute</name>
+      <name>GetProperty</name>
       <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
-      <anchor>a0558b98bcab00e85c9a15a6469c2bf08</anchor>
-      <arglist>(int attributeIndex) const =0</arglist>
+      <anchor>ab4acd8685206a2c66929d9cc5637f62a</anchor>
+      <arglist>(int propertyIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual std::string</type>
-      <name>GetAttributeId</name>
+      <name>GetPropertyId</name>
       <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
-      <anchor>a2e9292678f99a1804273cb2b4ff1b00f</anchor>
-      <arglist>(int attributeIndex) const =0</arglist>
+      <anchor>a254e852f43e291befc3ef52e30a69d0b</anchor>
+      <arglist>(int propertyIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CString</type>
-      <name>GetAttributeDescription</name>
+      <name>GetPropertyDescription</name>
       <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
-      <anchor>abfed898b449e59bd61c8bb03f2eb00d2</anchor>
-      <arglist>(int attributeIndex) const =0</arglist>
+      <anchor>a4b1a1be2a1667384c195d7370e2b3c14</anchor>
+      <arglist>(int propertyIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
-      <name>InsertAttribute</name>
+      <name>InsertProperty</name>
       <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
-      <anchor>abf714669b6cff63ae444e0d834c2fd04</anchor>
-      <arglist>(iser::IObject *objectPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, bool releaseFlag)=0</arglist>
+      <anchor>a9e4fc381ff4c92672a110f3d386b32bd</anchor>
+      <arglist>(iser::IObject *objectPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, bool releaseFlag)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5071,22 +5129,22 @@
     <filename>classiprop_1_1_i_property.html</filename>
     <base virtualness="virtual">iser::IObject</base>
     <member kind="enumeration">
-      <name>AttributeFlags</name>
+      <name>PropertyFlags</name>
       <anchorfile>classiprop_1_1_i_property.html</anchorfile>
-      <anchor>a729808fd69460e4b5372c6433db9f55e</anchor>
+      <anchor>a99af505245ee2046b16ab69bc239844e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>AF_PERSISTENT</name>
+      <name>PF_PERSISTENT</name>
       <anchorfile>classiprop_1_1_i_property.html</anchorfile>
-      <anchor>a729808fd69460e4b5372c6433db9f55ea35268f169913d4a46594803d08bc3261</anchor>
+      <anchor>a99af505245ee2046b16ab69bc239844ea937799e06875e1f14dd7bdddbe37c08d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iser::IObject *</type>
-      <name>GetDefaultAttributeValue</name>
+      <name>GetDefaultPropertyValue</name>
       <anchorfile>classiprop_1_1_i_property.html</anchorfile>
-      <anchor>abe775b7e3468042cc8437281c237898a</anchor>
+      <anchor>abefac683df80e74878855a36dd6355fd</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -5141,8 +5199,8 @@
       <type></type>
       <name>TMultiProperty</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>abfd4f4cfd5a3fbe551788c3322024bed</anchor>
-      <arglist>(iprop::IPropertiesManager *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)</arglist>
+      <anchor>a8095ef32f30163dabfc52cdb8f68ce1a</anchor>
+      <arglist>(iprop::IPropertiesManager *propertyOwnerPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -5271,9 +5329,9 @@
     </member>
     <member kind="typedef">
       <type>TProperty&lt; Value &gt;</type>
-      <name>AttributeType</name>
+      <name>PropertyType</name>
       <anchorfile>classiprop_1_1_t_property.html</anchorfile>
-      <anchor>aa351d2614fd277b5c36cde9142a65bfb</anchor>
+      <anchor>a7c94d23d1dfc476e5ae93972874e63fd</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -5294,8 +5352,8 @@
       <type></type>
       <name>TProperty</name>
       <anchorfile>classiprop_1_1_t_property.html</anchorfile>
-      <anchor>afe145d79c941870fc8b43ba7d4f9e992</anchor>
-      <arglist>(iprop::IPropertiesManager *attributeOwnerPtr, const std::string &amp;attributeName, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())</arglist>
+      <anchor>a6d1d8cb1e5065cb36ab485f844d26597</anchor>
+      <arglist>(iprop::IPropertiesManager *propertyOwnerPtr, const std::string &amp;propertyName, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())</arglist>
     </member>
     <member kind="function">
       <type>const Value &amp;</type>
@@ -5354,10 +5412,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>istd::TDelPtr&lt; AttributeType &gt;</type>
-      <name>m_defaultAttributeValuePtr</name>
+      <type>istd::TDelPtr&lt; PropertyType &gt;</type>
+      <name>m_defaultPropertyValuePtr</name>
       <anchorfile>classiprop_1_1_t_property.html</anchorfile>
-      <anchor>af4ee0618a93787d2877e51d4b878bc42</anchor>
+      <anchor>a83bda4b555a7767f6d9ccac142c1ed54</anchor>
       <arglist></arglist>
     </member>
   </compound>

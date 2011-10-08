@@ -40,7 +40,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="iprop::TProperty" --><!-- doxytag: inherits="iprop::CPropertyBase" -->
-<p>Template implementation of an atomic attribute.  
+<p>Template implementation of an atomic property.  
  <a href="classiprop_1_1_t_property.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_t_property_8h_source.html">TProperty.h</a>&gt;</code></p>
@@ -50,7 +50,7 @@ Inheritance diagram for iprop::TProperty&lt; Value &gt;:</div>
  <div class="center">
   <img src="classiprop_1_1_t_property.png" usemap="#iprop::TProperty&lt; Value &gt;_map" alt=""/>
   <map id="iprop::TProperty&lt; Value &gt;_map" name="iprop::TProperty&lt; Value &gt;_map">
-<area href="classiprop_1_1_c_property_base.html" title="Basic implementation of an attribute." alt="iprop::CPropertyBase" shape="rect" coords="0,168,273,192"/>
+<area href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property." alt="iprop::CPropertyBase" shape="rect" coords="0,168,273,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_t_copy_serialized_wrap.html" alt="iser::TCopySerializedWrap&lt; iprop::IProperty &gt;" shape="rect" coords="0,112,273,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_update_manager_wrap.html" alt="istd::TUpdateManagerWrap&lt; Base &gt;" shape="rect" coords="0,56,273,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="0,0,273,24"/>
@@ -62,12 +62,12 @@ Inheritance diagram for iprop::TProperty&lt; Value &gt;:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#ad72c4993f337587ae5ca1edd4b503da8">ValueType</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiprop_1_1_t_property.html">TProperty</a>&lt; Value &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#aa351d2614fd277b5c36cde9142a65bfb">AttributeType</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiprop_1_1_t_property.html">TProperty</a>&lt; Value &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a7c94d23d1dfc476e5ae93972874e63fd">PropertyType</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiprop_1_1_c_property_base.html">iprop::CPropertyBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#acc0d5dd8ba1b1cd18d675b39729829dc">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a4c56d6ff5047870bfd8992f248c87902">TProperty</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#afe145d79c941870fc8b43ba7d4f9e992">TProperty</a> (<a class="el" href="classiprop_1_1_i_properties_manager.html">iprop::IPropertiesManager</a> *attributeOwnerPtr, const std::string &amp;attributeName, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, const <a class="el" href="classiprop_1_1_t_property.html#ad72c4993f337587ae5ca1edd4b503da8">ValueType</a> &amp;defaultValue=<a class="el" href="classiprop_1_1_t_property.html#ad72c4993f337587ae5ca1edd4b503da8">ValueType</a>())</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a6d1d8cb1e5065cb36ab485f844d26597">TProperty</a> (<a class="el" href="classiprop_1_1_i_properties_manager.html">iprop::IPropertiesManager</a> *propertyOwnerPtr, const std::string &amp;propertyName, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0, const <a class="el" href="classiprop_1_1_t_property.html#ad72c4993f337587ae5ca1edd4b503da8">ValueType</a> &amp;defaultValue=<a class="el" href="classiprop_1_1_t_property.html#ad72c4993f337587ae5ca1edd4b503da8">ValueType</a>())</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const Value &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a5754d5a194cb9e46896fb7c81bdd7c56">GetValue</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#ab5c68424ccbda1e45f55aad0681d6467">SetValue</a> (const Value &amp;value)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a0904f16c11e7c363200be61df4a65706">ResetValue</a> ()</td></tr>
@@ -80,33 +80,16 @@ Static Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#aa81681a66c380333ad8bad5c13c2bf21">m_value</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr</a>&lt; <a class="el" href="classiprop_1_1_t_property.html#aa351d2614fd277b5c36cde9142a65bfb">AttributeType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#af4ee0618a93787d2877e51d4b878bc42">m_defaultAttributeValuePtr</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr</a>&lt; <a class="el" href="classiprop_1_1_t_property.html#a7c94d23d1dfc476e5ae93972874e63fd">PropertyType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a83bda4b555a7767f6d9ccac142c1ed54">m_defaultPropertyValuePtr</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename Value&gt;<br/>
 class iprop::TProperty&lt; Value &gt;</h3>
 
-<p>Template implementation of an atomic attribute. </p>
+<p>Template implementation of an atomic property. </p>
 
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00023">23</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00024">24</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="aa351d2614fd277b5c36cde9142a65bfb"></a><!-- doxytag: member="iprop::TProperty::AttributeType" ref="aa351d2614fd277b5c36cde9142a65bfb" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Value &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="classiprop_1_1_t_property.html">TProperty</a>&lt;Value&gt; <a class="el" href="classiprop_1_1_t_property.html">iprop::TProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_property.html#aa351d2614fd277b5c36cde9142a65bfb">AttributeType</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00027">27</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="acc0d5dd8ba1b1cd18d675b39729829dc"></a><!-- doxytag: member="iprop::TProperty::BaseClass" ref="acc0d5dd8ba1b1cd18d675b39729829dc" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -121,6 +104,23 @@ template&lt;typename Value &gt; </div>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_t_copy_serialized_wrap.html#a714e7d87980f3b867b0b133a62d0ed74">iser::TCopySerializedWrap&lt; iprop::IProperty &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00029">29</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c94d23d1dfc476e5ae93972874e63fd"></a><!-- doxytag: member="iprop::TProperty::PropertyType" ref="a7c94d23d1dfc476e5ae93972874e63fd" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Value &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classiprop_1_1_t_property.html">TProperty</a>&lt;Value&gt; <a class="el" href="classiprop_1_1_t_property.html">iprop::TProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_property.html#a7c94d23d1dfc476e5ae93972874e63fd">PropertyType</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 <p>Definition at line <a class="el" href="_t_property_8h_source.html#l00028">28</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 
@@ -139,7 +139,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00026">26</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00027">27</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 
 </div>
 </div>
@@ -160,11 +160,11 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00069">69</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00070">70</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="afe145d79c941870fc8b43ba7d4f9e992"></a><!-- doxytag: member="iprop::TProperty::TProperty" ref="afe145d79c941870fc8b43ba7d4f9e992" args="(iprop::IPropertiesManager *attributeOwnerPtr, const std::string &amp;attributeName, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())" -->
+<a class="anchor" id="a6d1d8cb1e5065cb36ab485f844d26597"></a><!-- doxytag: member="iprop::TProperty::TProperty" ref="a6d1d8cb1e5065cb36ab485f844d26597" args="(iprop::IPropertiesManager *propertyOwnerPtr, const std::string &amp;propertyName, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -174,25 +174,25 @@ template&lt;typename Value &gt; </div>
           <td class="memname"><a class="el" href="classiprop_1_1_t_property.html">iprop::TProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_property.html">TProperty</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiprop_1_1_i_properties_manager.html">iprop::IPropertiesManager</a> *&#160;</td>
-          <td class="paramname"><em>attributeOwnerPtr</em>, </td>
+          <td class="paramname"><em>propertyOwnerPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>attributeName</em>, </td>
+          <td class="paramname"><em>propertyName</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>attributeDescription</em>, </td>
+          <td class="paramname"><em>propertyDescription</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>attributeFlags</em>, </td>
+          <td class="paramname"><em>propertyFlags</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -215,9 +215,9 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00076">76</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00077">77</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 
-<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf">istd::TPointerBase&lt; Type &gt;::IsValid()</a>, <a class="el" href="_t_property_8h_source.html#l00059">iprop::TProperty&lt; Value &gt;::m_defaultAttributeValuePtr</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; Type, Accessor &gt;::SetPtr()</a>.</p>
+<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf">istd::TPointerBase&lt; Type &gt;::IsValid()</a>, <a class="el" href="_t_property_8h_source.html#l00060">iprop::TProperty&lt; Value &gt;::m_defaultPropertyValuePtr</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; Type, Accessor &gt;::SetPtr()</a>.</p>
 
 </div>
 </div>
@@ -238,7 +238,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00124">124</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00125">125</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 
 </div>
 </div>
@@ -258,7 +258,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00133">133</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00134">134</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 
 </div>
 </div>
@@ -278,7 +278,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00160">160</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00161">161</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 
 </div>
 </div>
@@ -298,7 +298,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00095">95</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00096">96</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 
 </div>
 </div>
@@ -318,7 +318,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00113">113</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00114">114</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 
 </div>
 </div>
@@ -339,7 +339,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00142">142</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00143">143</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive::BeginTag()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">iser::IArchive::EndTag()</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">iser::IArchive::Process()</a>.</p>
 
@@ -362,27 +362,27 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00102">102</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00103">103</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="af4ee0618a93787d2877e51d4b878bc42"></a><!-- doxytag: member="iprop::TProperty::m_defaultAttributeValuePtr" ref="af4ee0618a93787d2877e51d4b878bc42" args="" -->
+<a class="anchor" id="a83bda4b555a7767f6d9ccac142c1ed54"></a><!-- doxytag: member="iprop::TProperty::m_defaultPropertyValuePtr" ref="a83bda4b555a7767f6d9ccac142c1ed54" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Value &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr</a>&lt;<a class="el" href="classiprop_1_1_t_property.html#aa351d2614fd277b5c36cde9142a65bfb">AttributeType</a>&gt; <a class="el" href="classiprop_1_1_t_property.html">iprop::TProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_property.html#af4ee0618a93787d2877e51d4b878bc42">m_defaultAttributeValuePtr</a><code> [mutable, protected]</code></td>
+          <td class="memname"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr</a>&lt;<a class="el" href="classiprop_1_1_t_property.html#a7c94d23d1dfc476e5ae93972874e63fd">PropertyType</a>&gt; <a class="el" href="classiprop_1_1_t_property.html">iprop::TProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_property.html#a83bda4b555a7767f6d9ccac142c1ed54">m_defaultPropertyValuePtr</a><code> [mutable, protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00059">59</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00060">60</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_property_8h_source.html#l00076">iprop::TProperty&lt; Value &gt;::TProperty()</a>.</p>
+<p>Referenced by <a class="el" href="_t_property_8h_source.html#l00077">iprop::TProperty&lt; Value &gt;::TProperty()</a>.</p>
 
 </div>
 </div>
@@ -399,7 +399,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00057">57</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00058">58</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 
 </div>
 </div>

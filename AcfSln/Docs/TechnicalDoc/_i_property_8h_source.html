@@ -38,15 +38,15 @@
 <a name="l00011"></a>00011 {
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
-<a name="l00017"></a><a class="code" href="classiprop_1_1_i_property.html">00017</a> <span class="keyword">class </span><a class="code" href="classiprop_1_1_i_property.html" title="Common interface for an attribute.">IProperty</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iser::IObject
+<a name="l00017"></a><a class="code" href="classiprop_1_1_i_property.html">00017</a> <span class="keyword">class </span><a class="code" href="classiprop_1_1_i_property.html" title="Common interface for an abstract property.">IProperty</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iser::IObject
 <a name="l00018"></a>00018 {
 <a name="l00019"></a>00019 <span class="keyword">public</span>:
-<a name="l00020"></a><a class="code" href="classiprop_1_1_i_property.html#a729808fd69460e4b5372c6433db9f55e">00020</a>        <span class="keyword">enum</span> <a class="code" href="classiprop_1_1_i_property.html#a729808fd69460e4b5372c6433db9f55e">AttributeFlags</a>
+<a name="l00020"></a><a class="code" href="classiprop_1_1_i_property.html#a99af505245ee2046b16ab69bc239844e">00020</a>        <span class="keyword">enum</span> <a class="code" href="classiprop_1_1_i_property.html#a99af505245ee2046b16ab69bc239844e">PropertyFlags</a>
 <a name="l00021"></a>00021        {
-<a name="l00025"></a><a class="code" href="classiprop_1_1_i_property.html#a729808fd69460e4b5372c6433db9f55ea35268f169913d4a46594803d08bc3261">00025</a>               <a class="code" href="classiprop_1_1_i_property.html#a729808fd69460e4b5372c6433db9f55ea35268f169913d4a46594803d08bc3261" title="Attribute is persistent.">AF_PERSISTENT</a> = 0x1
+<a name="l00025"></a><a class="code" href="classiprop_1_1_i_property.html#a99af505245ee2046b16ab69bc239844ea937799e06875e1f14dd7bdddbe37c08d">00025</a>               <a class="code" href="classiprop_1_1_i_property.html#a99af505245ee2046b16ab69bc239844ea937799e06875e1f14dd7bdddbe37c08d" title="Property is persistent.">PF_PERSISTENT</a> = 0x1
 <a name="l00026"></a>00026        };
 <a name="l00027"></a>00027 
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_i_property.html#abe775b7e3468042cc8437281c237898a" title="Get default value for the attribute.">GetDefaultAttributeValue</a>() <span class="keyword">const</span> = 0;
+<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_i_property.html#abefac683df80e74878855a36dd6355fd" title="Get default value for the property.">GetDefaultPropertyValue</a>() <span class="keyword">const</span> = 0;
 <a name="l00032"></a>00032 };
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 

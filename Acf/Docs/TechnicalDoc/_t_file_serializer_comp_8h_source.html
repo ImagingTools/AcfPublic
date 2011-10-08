@@ -206,7 +206,7 @@
 <a name="l00191"></a>00191 
 <a name="l00192"></a>00192               <a class="code" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> fileExtensions;
 <a name="l00193"></a>00193               <span class="keywordflow">if</span> (GetFileExtensions(fileExtensions)){
-<a name="l00194"></a>00194                      <span class="keywordtype">int</span> extensionsCount = fileExtensions.size();
+<a name="l00194"></a>00194                      <span class="keywordtype">int</span> extensionsCount = int(fileExtensions.size());
 <a name="l00195"></a>00195                      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; extensionsCount; ++i){
 <a name="l00196"></a>00196                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; extension = fileExtensions[i];
 <a name="l00197"></a>00197                             <span class="keywordflow">if</span> (!filePathPtr-&gt;<a class="code" href="classistd_1_1_c_string.html#a71448bf5758726f6c3d8445675e78fbe" title="This function returns standard 8-bit string.">IsEmpty</a>() &amp;&amp; filePathPtr-&gt;substr(filePathPtr-&gt;length() - extension.length() - 1) == <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>(<span class="stringliteral">&quot;.&quot;</span>) + extension.<a class="code" href="classistd_1_1_c_string.html#aa5642dce9cfc43df80c1187dfcaf50c7">ToLower</a>()){

@@ -38,7 +38,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="iprop::CPropertyBase" --><!-- doxytag: inherits="TCopySerializedWrap&lt; iprop::IProperty &gt;" -->
-<p>Basic implementation of an attribute.  
+<p>Basic implementation of an property.  
  <a href="classiprop_1_1_c_property_base.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_property_base_8h_source.html">CPropertyBase.h</a>&gt;</code></p>
@@ -51,8 +51,8 @@ Inheritance diagram for iprop::CPropertyBase:</div>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_t_copy_serialized_wrap.html" alt="iser::TCopySerializedWrap&lt; iprop::IProperty &gt;" shape="rect" coords="141,112,414,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_update_manager_wrap.html" alt="istd::TUpdateManagerWrap&lt; Base &gt;" shape="rect" coords="141,56,414,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="141,0,414,24"/>
-<area href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple attribute." alt="iprop::TMultiProperty&lt; Value &gt;" shape="rect" coords="0,224,273,248"/>
-<area href="classiprop_1_1_t_property.html" title="Template implementation of an atomic attribute." alt="iprop::TProperty&lt; Value &gt;" shape="rect" coords="283,224,556,248"/>
+<area href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property." alt="iprop::TMultiProperty&lt; Value &gt;" shape="rect" coords="0,224,273,248"/>
+<area href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property." alt="iprop::TProperty&lt; Value &gt;" shape="rect" coords="283,224,556,248"/>
 </map>
  </div></div>
 
@@ -61,15 +61,15 @@ Inheritance diagram for iprop::CPropertyBase:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_property_base.html#a764e7d80d22aeb6b014fc40e43697449">CPropertyBase</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_property_base.html#a4d03052826fc881b0b952618e4d833ee">CPropertyBase</a> (<a class="el" href="classiprop_1_1_i_properties_manager.html">iprop::IPropertiesManager</a> *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_property_base.html#a496a0d06f387a114bf6c37d5a2f03b6a">GetDefaultAttributeValue</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_property_base.html#a7210dfba409a41bb48912d04a21edf69">CPropertyBase</a> (<a class="el" href="classiprop_1_1_i_properties_manager.html">iprop::IPropertiesManager</a> *propertyOwnerPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_property_base.html#aa987a946b7dc18f56dab4d79a0d84945">GetDefaultPropertyValue</a> () const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiprop_1_1_i_properties_manager.html">iprop::IPropertiesManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_property_base.html#aef3362a3a86cb5019cd383f4fc12c0e8">m_attributeOwnerPtr</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiprop_1_1_i_properties_manager.html">iprop::IPropertiesManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_property_base.html#afe293936f18ac1a5427bcdbd2ed19989">m_propertyOwnerPtr</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_property_base.html#ae34a533b9856610d0bcc8eb7314c25d5">m_changeFlags</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Basic implementation of an attribute. </p>
+<div class="textblock"><p>Basic implementation of an property. </p>
 
 <p>Definition at line <a class="el" href="_c_property_base_8h_source.html#l00020">20</a> of file <a class="el" href="_c_property_base_8h_source.html">CPropertyBase.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -89,7 +89,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4d03052826fc881b0b952618e4d833ee"></a><!-- doxytag: member="iprop::CPropertyBase::CPropertyBase" ref="a4d03052826fc881b0b952618e4d833ee" args="(iprop::IPropertiesManager *attributeOwnerPtr, const std::string &amp;attributeId, const std::string &amp;attributeDescription, int attributeFlags, int changeFlags=0)" -->
+<a class="anchor" id="a7210dfba409a41bb48912d04a21edf69"></a><!-- doxytag: member="iprop::CPropertyBase::CPropertyBase" ref="a7210dfba409a41bb48912d04a21edf69" args="(iprop::IPropertiesManager *propertyOwnerPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -97,25 +97,25 @@ Protected Attributes</h2></td></tr>
           <td class="memname">iprop::CPropertyBase::CPropertyBase </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiprop_1_1_i_properties_manager.html">iprop::IPropertiesManager</a> *&#160;</td>
-          <td class="paramname"><em>attributeOwnerPtr</em>, </td>
+          <td class="paramname"><em>propertyOwnerPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>attributeId</em>, </td>
+          <td class="paramname"><em>propertyId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>attributeDescription</em>, </td>
+          <td class="paramname"><em>propertyDescription</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>attributeFlags</em>, </td>
+          <td class="paramname"><em>propertyFlags</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -135,12 +135,12 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a496a0d06f387a114bf6c37d5a2f03b6a"></a><!-- doxytag: member="iprop::CPropertyBase::GetDefaultAttributeValue" ref="a496a0d06f387a114bf6c37d5a2f03b6a" args="() const " -->
+<a class="anchor" id="aa987a946b7dc18f56dab4d79a0d84945"></a><!-- doxytag: member="iprop::CPropertyBase::GetDefaultPropertyValue" ref="aa987a946b7dc18f56dab4d79a0d84945" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* iprop::CPropertyBase::GetDefaultAttributeValue </td>
+          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* iprop::CPropertyBase::GetDefaultPropertyValue </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -152,21 +152,6 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="aef3362a3a86cb5019cd383f4fc12c0e8"></a><!-- doxytag: member="iprop::CPropertyBase::m_attributeOwnerPtr" ref="aef3362a3a86cb5019cd383f4fc12c0e8" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classiprop_1_1_i_properties_manager.html">iprop::IPropertiesManager</a>* <a class="el" href="classiprop_1_1_c_property_base.html#aef3362a3a86cb5019cd383f4fc12c0e8">iprop::CPropertyBase::m_attributeOwnerPtr</a><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_c_property_base_8h_source.html#l00035">35</a> of file <a class="el" href="_c_property_base_8h_source.html">CPropertyBase.h</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="ae34a533b9856610d0bcc8eb7314c25d5"></a><!-- doxytag: member="iprop::CPropertyBase::m_changeFlags" ref="ae34a533b9856610d0bcc8eb7314c25d5" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -179,6 +164,21 @@ Protected Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>Definition at line <a class="el" href="_c_property_base_8h_source.html#l00036">36</a> of file <a class="el" href="_c_property_base_8h_source.html">CPropertyBase.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afe293936f18ac1a5427bcdbd2ed19989"></a><!-- doxytag: member="iprop::CPropertyBase::m_propertyOwnerPtr" ref="afe293936f18ac1a5427bcdbd2ed19989" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classiprop_1_1_i_properties_manager.html">iprop::IPropertiesManager</a>* <a class="el" href="classiprop_1_1_c_property_base.html#afe293936f18ac1a5427bcdbd2ed19989">iprop::CPropertyBase::m_propertyOwnerPtr</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_property_base_8h_source.html#l00035">35</a> of file <a class="el" href="_c_property_base_8h_source.html">CPropertyBase.h</a>.</p>
 
 </div>
 </div>
