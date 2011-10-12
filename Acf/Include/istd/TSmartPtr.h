@@ -46,7 +46,7 @@ public:
 	typedef typename BaseClass::RefCountBase RefCountBase;
 
 	TSmartPtr();
-	TSmartPtr(Type* pointer);
+	explicit TSmartPtr(Type* pointer);
 	TSmartPtr(const TTransPtr<Type>& pointer);
 	TSmartPtr(const TSmartPtr& pointer);
 

@@ -72,8 +72,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code>, if the feature(s) is supported by this document template.  <a href="#a8fc0f8fb1bdcb61cf4f39f230c048efd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#a2d8f24efbd48c2042415c52cb227d7f2">GetDocumentTypeIds</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported document ID's can be created for specified file.  <a href="#a2d8f24efbd48c2042415c52cb227d7f2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#aba51259b2e8f243d17443c9d51a3c992">GetDocumentTypeName</a> (const std::string &amp;documentTypeId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some document type ID.  <a href="#aba51259b2e8f243d17443c9d51a3c992"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#a0343f3438b62ab79a59c94d32dcb83cc">GetViewTypeIds</a> (const std::string &amp;documentTypeId) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return supported view type IDs for specified document type.  <a href="#a0343f3438b62ab79a59c94d32dcb83cc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#ada7284c75d4ab77df6fc5f6e980cd7d2">GetViewTypeName</a> (const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some view type ID.  <a href="#ada7284c75d4ab77df6fc5f6e980cd7d2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#a321383fa3c9b552bb1918910ed32ee7d">GetDocumentTypeIdsForFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported document ID's can be created for specified file.  <a href="#a321383fa3c9b552bb1918910ed32ee7d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_file_loader.html">iser::IFileLoader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#ad59ff45c30342761796803a89ad00b35">GetFileLoader</a> (const std::string &amp;documentTypeId) const =0</td></tr>
@@ -354,6 +358,27 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aba51259b2e8f243d17443c9d51a3c992"></a><!-- doxytag: member="idoc::IDocumentTemplate::GetDocumentTypeName" ref="aba51259b2e8f243d17443c9d51a3c992" args="(const std::string &amp;documentTypeId) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> idoc::IDocumentTemplate::GetDocumentTypeName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>documentTypeId</em></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get human readable name of some document type ID. </p>
+
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#af1792a5c67448c90e2ebe970000a4cb4">idoc::CSingleDocumentTemplateBase</a>, and <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a475f18106a9ef142cd49ad4ddf3bbffd">idoc::CCompositeDocumentTemplateComp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ad59ff45c30342761796803a89ad00b35"></a><!-- doxytag: member="idoc::IDocumentTemplate::GetFileLoader" ref="ad59ff45c30342761796803a89ad00b35" args="(const std::string &amp;documentTypeId) const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -407,6 +432,37 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a2c81c1791751fde5ead7d0a73b3c2ea2">idoc::CSingleDocumentTemplateBase</a>, and <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#af416b4338e0042f350e65f8b4eb30c5b">idoc::CCompositeDocumentTemplateComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ada7284c75d4ab77df6fc5f6e980cd7d2"></a><!-- doxytag: member="idoc::IDocumentTemplate::GetViewTypeName" ref="ada7284c75d4ab77df6fc5f6e980cd7d2" args="(const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> idoc::IDocumentTemplate::GetViewTypeName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>documentTypeId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>viewTypeId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get human readable name of some view type ID. </p>
+
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a6ce9a195025063853c783820ff189e30">idoc::CSingleDocumentTemplateBase</a>, and <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#ae37b869c37ba90091b556b10ddf50138">idoc::CCompositeDocumentTemplateComp</a>.</p>
 
 </div>
 </div>

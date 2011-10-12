@@ -61,14 +61,21 @@ Inheritance diagram for idoc::CSingleDocumentTemplateBase:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#abbb33951e7fdc864f75cb722fccf5054">GetDocumentTypeId</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#a6ad8702005467fbcc55241e114ebe236">SetSupportedFeatures</a> (int featureFlags)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#a98af5af0c5f0070aafa507d0a25de425">SetDocumentTypeId</a> (const std::string &amp;documentTypeId)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#a985f7d103a0844c728e181ea84ed562d">SetDocumentTypeId</a> (const std::string &amp;id)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#aab43b7ed3486d8ddff9dc104d956fad7">SetDocumentTypeName</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;name)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#a4f30c50a92f943e73d4dfcb8f593d529">SetViewTypeId</a> (const std::string &amp;id)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#a1f3ac936a0898f146cae1e9ebc242ab7">SetViewTypeName</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;name)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#a46bb2849037eed3194f5312ebb182f59">SetDefaultDirectory</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;defaultDirectory)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#af762cd6be44415c970675bee13401ddd">IsFeatureSupported</a> (int featureFlags, const std::string &amp;documentTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code>, if the feature(s) is supported by this document template.  <a href="#af762cd6be44415c970675bee13401ddd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#a2ae522b582bf3cad811c0c1f7b5f3174">GetDocumentTypeIds</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported document ID's can be created for specified file.  <a href="#a2ae522b582bf3cad811c0c1f7b5f3174"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#af1792a5c67448c90e2ebe970000a4cb4">GetDocumentTypeName</a> (const std::string &amp;documentTypeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some document type ID.  <a href="#af1792a5c67448c90e2ebe970000a4cb4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#a2c81c1791751fde5ead7d0a73b3c2ea2">GetViewTypeIds</a> (const std::string &amp;documentTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return supported view type IDs for specified document type.  <a href="#a2c81c1791751fde5ead7d0a73b3c2ea2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#a6ce9a195025063853c783820ff189e30">GetViewTypeName</a> (const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some view type ID.  <a href="#a6ce9a195025063853c783820ff189e30"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#a404948e8f8a169a4f18a5e83aa5ed988">GetDocumentTypeIdsForFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported document ID's can be created for specified file.  <a href="#a404948e8f8a169a4f18a5e83aa5ed988"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_state_comparator.html">IDocumentStateComparator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_base.html#a12c0a1f3478d159b420f63a03466b10c">CreateStateComparator</a> (const std::string &amp;documentTypeId) const </td></tr>
@@ -158,7 +165,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_single_document_template_base_8h_source.html#l00055">55</a> of file <a class="el" href="_c_single_document_template_base_8h_source.html">CSingleDocumentTemplateBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_single_document_template_base_8h_source.html#l00064">64</a> of file <a class="el" href="_c_single_document_template_base_8h_source.html">CSingleDocumentTemplateBase.h</a>.</p>
 
 </div>
 </div>
@@ -205,6 +212,27 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af1792a5c67448c90e2ebe970000a4cb4"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateBase::GetDocumentTypeName" ref="af1792a5c67448c90e2ebe970000a4cb4" args="(const std::string &amp;documentTypeId) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> idoc::CSingleDocumentTemplateBase::GetDocumentTypeName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>documentTypeId</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get human readable name of some document type ID. </p>
+
+<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#aba51259b2e8f243d17443c9d51a3c992">idoc::IDocumentTemplate</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a2c81c1791751fde5ead7d0a73b3c2ea2"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateBase::GetViewTypeIds" ref="a2c81c1791751fde5ead7d0a73b3c2ea2" args="(const std::string &amp;documentTypeId) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -232,6 +260,37 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6ce9a195025063853c783820ff189e30"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateBase::GetViewTypeName" ref="a6ce9a195025063853c783820ff189e30" args="(const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> idoc::CSingleDocumentTemplateBase::GetViewTypeName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>documentTypeId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>viewTypeId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get human readable name of some view type ID. </p>
+
+<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#ada7284c75d4ab77df6fc5f6e980cd7d2">idoc::IDocumentTemplate</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a8da29592b5068cc84e3335143cf5155a"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateBase::IsDocumentTypeSupported" ref="a8da29592b5068cc84e3335143cf5155a" args="(const std::string &amp;documentTypeId) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +306,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_single_document_template_base_8h_source.html#l00063">63</a> of file <a class="el" href="_c_single_document_template_base_8h_source.html">CSingleDocumentTemplateBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_single_document_template_base_8h_source.html#l00072">72</a> of file <a class="el" href="_c_single_document_template_base_8h_source.html">CSingleDocumentTemplateBase.h</a>.</p>
 
 </div>
 </div>
@@ -297,7 +356,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_single_document_template_base_8h_source.html#l00069">69</a> of file <a class="el" href="_c_single_document_template_base_8h_source.html">CSingleDocumentTemplateBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_single_document_template_base_8h_source.html#l00078">78</a> of file <a class="el" href="_c_single_document_template_base_8h_source.html">CSingleDocumentTemplateBase.h</a>.</p>
 
 </div>
 </div>
@@ -318,7 +377,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a98af5af0c5f0070aafa507d0a25de425"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateBase::SetDocumentTypeId" ref="a98af5af0c5f0070aafa507d0a25de425" args="(const std::string &amp;documentTypeId)" -->
+<a class="anchor" id="a985f7d103a0844c728e181ea84ed562d"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateBase::SetDocumentTypeId" ref="a985f7d103a0844c728e181ea84ed562d" args="(const std::string &amp;id)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -326,7 +385,24 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">virtual void idoc::CSingleDocumentTemplateBase::SetDocumentTypeId </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>documentTypeId</em></td><td>)</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aab43b7ed3486d8ddff9dc104d956fad7"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateBase::SetDocumentTypeName" ref="aab43b7ed3486d8ddff9dc104d956fad7" args="(const istd::CString &amp;name)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void idoc::CSingleDocumentTemplateBase::SetDocumentTypeName </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>
@@ -344,6 +420,40 @@ Protected Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>featureFlags</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4f30c50a92f943e73d4dfcb8f593d529"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateBase::SetViewTypeId" ref="a4f30c50a92f943e73d4dfcb8f593d529" args="(const std::string &amp;id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void idoc::CSingleDocumentTemplateBase::SetViewTypeId </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1f3ac936a0898f146cae1e9ebc242ab7"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateBase::SetViewTypeName" ref="a1f3ac936a0898f146cae1e9ebc242ab7" args="(const istd::CString &amp;name)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void idoc::CSingleDocumentTemplateBase::SetViewTypeName </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>

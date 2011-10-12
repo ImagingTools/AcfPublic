@@ -743,10 +743,10 @@
     <class kind="class">ibase::TMessageContainerWrap</class>
     <namespace>ibase</namespace>
     <member kind="typedef">
-      <type>ibase::TMessageContainerWrap&lt; ibase::IHierarchicalMessageContainer &gt;</type>
+      <type>TMessageContainerWrap&lt; IHierarchicalMessageContainer &gt;</type>
       <name>CMessageContainer</name>
       <anchorfile>namespaceibase.html</anchorfile>
-      <anchor>abeda835dc26c498371f7f415fa5c791b</anchor>
+      <anchor>ad18f70e34fdb313a13c197d43127c463</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -8624,10 +8624,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::TMessageContainerWrap&lt; ibase::IHierarchicalMessageContainer &gt;</type>
+      <type>TMessageContainerWrap&lt; IHierarchicalMessageContainer &gt;</type>
       <name>CMessageContainer</name>
       <anchorfile>namespaceibase.html</anchorfile>
-      <anchor>abeda835dc26c498371f7f415fa5c791b</anchor>
+      <anchor>ad18f70e34fdb313a13c197d43127c463</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -11174,10 +11174,10 @@
     <templarg></templarg>
     <base>THierarchicalBase&lt; Base &gt;</base>
     <member kind="typedef">
-      <type>ibase::THierarchicalBase&lt; Base &gt;</type>
+      <type>THierarchicalBase&lt; Base &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a08bbc4521fadd4c51ec4605d67312b78</anchor>
+      <anchor>a22f8898ecec1631d8ee8c995314d8f82</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -11198,8 +11198,8 @@
       <type>virtual void</type>
       <name>AddChildContainer</name>
       <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>ad6113d0e96323a21e1d2a202b79ec5db</anchor>
-      <arglist>(ibase::IMessageContainer *childContainerPtr)</arglist>
+      <anchor>a43cbfcd4ed31f51878219674f73767f6</anchor>
+      <arglist>(IMessageContainer *childContainerPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -11230,10 +11230,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual ibase::IMessageContainer::Messages</type>
+      <type>virtual IMessageContainer::Messages</type>
       <name>GetMessages</name>
       <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>ac342b47cea41361c4de5ce138c7c7ece</anchor>
+      <anchor>a783de0b2ef703a6e00d0f860383f3147</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11254,8 +11254,8 @@
       <type>virtual void</type>
       <name>AddMessage</name>
       <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>abc1a9b51c492c31077c18608aaca18d1</anchor>
-      <arglist>(const ibase::IMessageContainer::MessagePtr &amp;messagePtr)</arglist>
+      <anchor>aeaa3bd93b11e51c3376f79699a04dc2a</anchor>
+      <arglist>(const IMessageConsumer::MessagePtr &amp;messagePtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -11265,17 +11265,17 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual ibase::IMessageContainer *</type>
+      <type>virtual IMessageContainer *</type>
       <name>GetChild</name>
       <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>ab5a8333f2b2b89fc11285af3ee71f9e9</anchor>
+      <anchor>a6ac518f8a9f2415dc794903bb6acb9b2</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::list&lt; ibase::IMessageContainer::MessagePtr &gt;</type>
+      <type>std::list&lt; IMessageContainer::MessagePtr &gt;</type>
       <name>MessageList</name>
       <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a4f35e56757edeeddedfde71b4561f854</anchor>
+      <anchor>aef90c2e7302c0ca0f3d1478edce66722</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -18655,11 +18655,25 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetDocumentTypeName</name>
+      <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
+      <anchor>a475f18106a9ef142cd49ad4ddf3bbffd</anchor>
+      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetViewTypeIds</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
       <anchor>af416b4338e0042f350e65f8b4eb30c5b</anchor>
       <arglist>(const std::string &amp;documentTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetViewTypeName</name>
+      <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
+      <anchor>ae37b869c37ba90091b556b10ddf50138</anchor>
+      <arglist>(const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -19381,8 +19395,29 @@
       <type>virtual void</type>
       <name>SetDocumentTypeId</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>a98af5af0c5f0070aafa507d0a25de425</anchor>
-      <arglist>(const std::string &amp;documentTypeId)</arglist>
+      <anchor>a985f7d103a0844c728e181ea84ed562d</anchor>
+      <arglist>(const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetDocumentTypeName</name>
+      <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
+      <anchor>aab43b7ed3486d8ddff9dc104d956fad7</anchor>
+      <arglist>(const istd::CString &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetViewTypeId</name>
+      <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
+      <anchor>a4f30c50a92f943e73d4dfcb8f593d529</anchor>
+      <arglist>(const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetViewTypeName</name>
+      <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
+      <anchor>a1f3ac936a0898f146cae1e9ebc242ab7</anchor>
+      <arglist>(const istd::CString &amp;name)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -19406,11 +19441,25 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetDocumentTypeName</name>
+      <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
+      <anchor>af1792a5c67448c90e2ebe970000a4cb4</anchor>
+      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetViewTypeIds</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
       <anchor>a2c81c1791751fde5ead7d0a73b3c2ea2</anchor>
       <arglist>(const std::string &amp;documentTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetViewTypeName</name>
+      <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
+      <anchor>a6ce9a195025063853c783820ff189e30</anchor>
+      <arglist>(const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -19814,11 +19863,25 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
+      <type>virtual istd::CString</type>
+      <name>GetDocumentTypeName</name>
+      <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
+      <anchor>aba51259b2e8f243d17443c9d51a3c992</anchor>
+      <arglist>(const std::string &amp;documentTypeId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual Ids</type>
       <name>GetViewTypeIds</name>
       <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
       <anchor>a0343f3438b62ab79a59c94d32dcb83cc</anchor>
       <arglist>(const std::string &amp;documentTypeId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CString</type>
+      <name>GetViewTypeName</name>
+      <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
+      <anchor>ada7284c75d4ab77df6fc5f6e980cd7d2</anchor>
+      <arglist>(const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual Ids</type>

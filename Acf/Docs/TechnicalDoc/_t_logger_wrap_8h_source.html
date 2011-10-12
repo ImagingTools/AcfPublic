@@ -171,7 +171,7 @@
 <a name="l00179"></a>00179 
 <a name="l00180"></a>00180               DecorateMessage(category, <span class="keywordtype">id</span>, flags, correctedMessage, correctedMessageSource);
 <a name="l00181"></a>00181 
-<a name="l00182"></a>00182               m_logPtr-&gt;AddMessage(<span class="keyword">new</span> <a class="code" href="classibase_1_1_c_message.html" title="Basic implementation of the ibase::IMessage interface.">ibase::CMessage</a>(category, <span class="keywordtype">id</span>, correctedMessage, correctedMessageSource, flags));
+<a name="l00182"></a>00182               m_logPtr-&gt;AddMessage(<a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">istd::TSmartPtr&lt;const IMessage&gt;</a>(<span class="keyword">new</span> <a class="code" href="classibase_1_1_c_message.html" title="Basic implementation of the ibase::IMessage interface.">ibase::CMessage</a>(category, <span class="keywordtype">id</span>, correctedMessage, correctedMessageSource, flags)));
 <a name="l00183"></a>00183        
 <a name="l00184"></a>00184               <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00185"></a>00185        }

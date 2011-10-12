@@ -57,6 +57,20 @@ IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetDocumentTypeIds() cons
 }
 
 
+istd::CString CCompositeDocumentTemplateComp::GetDocumentTypeName(const std::string& documentTypeId) const
+{
+	IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(documentTypeId);
+	if (iter != m_idToTemplateMap.end()){
+		I_ASSERT(iter->second != NULL);
+
+		return iter->second->GetDocumentTypeName(documentTypeId);
+	}
+	else{
+		return "";
+	}
+}
+
+
 IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetViewTypeIds(const std::string& documentTypeId) const
 {
 	IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(documentTypeId);
@@ -67,6 +81,22 @@ IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetViewTypeIds(const std:
 	}
 	else{
 		return Ids();
+	}
+}
+
+
+istd::CString CCompositeDocumentTemplateComp::GetViewTypeName(
+			const std::string& documentTypeId,
+			const std::string& viewTypeId) const
+{
+	IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(documentTypeId);
+	if (iter != m_idToTemplateMap.end()){
+		I_ASSERT(iter->second != NULL);
+
+		return iter->second->GetViewTypeName(documentTypeId, viewTypeId);
+	}
+	else{
+		return "";
 	}
 }
 
