@@ -64,7 +64,7 @@ public:
 	// reimplemented (imeas::IDataSequence)
 	virtual bool CreateSequence(int samplesCount, int channelsCount = 1);
 	virtual bool CreateSequenceWithInfo(
-				istd::TTransPtr<const IDataSequenceInfo> infoPtr,
+				const istd::TTransPtr<const IDataSequenceInfo>& infoPtr,
 				int samplesCount = -1,
 				int channelsCount = -1);
 	virtual const IDataSequenceInfo* GetSequenceInfo() const;
@@ -209,7 +209,7 @@ bool TDiscrDataSequence<Element>::CreateSequence(int samplesCount, int channelsC
 
 template <typename Element>
 bool TDiscrDataSequence<Element>::CreateSequenceWithInfo(
-			istd::TTransPtr<const IDataSequenceInfo> infoPtr,
+			const istd::TTransPtr<const IDataSequenceInfo>& infoPtr,
 			int samplesCount,
 			int channelsCount)
 {

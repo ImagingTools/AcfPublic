@@ -3010,8 +3010,8 @@
       <type>static bool</type>
       <name>ConvertBitmap</name>
       <anchorfile>classilibav_1_1_c_lib_av_converter.html</anchorfile>
-      <anchor>a1ffe299e0b2b8f3750a2636ac53404a0</anchor>
-      <arglist>(const AVFrame &amp;avFrame, const istd::CIndex2d &amp;size, PixelFormat frameFormat, iimg::IBitmap &amp;result)</arglist>
+      <anchor>a0eb48e93ce6b8446110fae1081a4aeb4</anchor>
+      <arglist>(const AVFrame &amp;avFrame, const istd::CIndex2d &amp;size, int frameFormat, iimg::IBitmap &amp;result)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -3273,6 +3273,20 @@
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
       <anchor>a48118e9d420d4d263f56d7e9bc4a3ffe</anchor>
       <arglist>(int frameIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ae3ca803ceb7819292f77436eaadec2a9</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a0ec683b2a4f52940e484a15271de17c4</anchor>
+      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
     </member>
     <member kind="enumeration">
       <name>FrameType</name>
@@ -3541,8 +3555,8 @@
       <type>virtual bool</type>
       <name>CreateSequenceWithInfo</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a4450d5775b190c510be52f5b690fee9a</anchor>
-      <arglist>(istd::TTransPtr&lt; const IDataSequenceInfo &gt; infoPtr, int samplesCount=-1, int channelsCount=-1)</arglist>
+      <anchor>a8a021f5747dd23089fa8c1c827eb3af1</anchor>
+      <arglist>(const istd::TTransPtr&lt; const IDataSequenceInfo &gt; &amp;infoPtr, int samplesCount=-1, int channelsCount=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IDataSequenceInfo *</type>
@@ -4122,8 +4136,8 @@
       <type>virtual bool</type>
       <name>CreateSequenceWithInfo</name>
       <anchorfile>classimeas_1_1_i_data_sequence.html</anchorfile>
-      <anchor>a8d2652e18f4879231dc7ffbdf1749903</anchor>
-      <arglist>(istd::TTransPtr&lt; const IDataSequenceInfo &gt; infoPtr, int samplesCount=-1, int channelsCount=-1)=0</arglist>
+      <anchor>a901e49a1803d67c0bce2fdbed259bcf2</anchor>
+      <arglist>(const istd::TTransPtr&lt; const IDataSequenceInfo &gt; &amp;infoPtr, int samplesCount=-1, int channelsCount=-1)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const IDataSequenceInfo *</type>
@@ -4547,8 +4561,8 @@
       <type>virtual bool</type>
       <name>CreateSequenceWithInfo</name>
       <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>abf1969f6f2c9efdfa3280b6de7787a85</anchor>
-      <arglist>(istd::TTransPtr&lt; const IDataSequenceInfo &gt; infoPtr, int samplesCount=-1, int channelsCount=-1)</arglist>
+      <anchor>ab89da317ca871d50a9b2b0d50c56f0b0</anchor>
+      <arglist>(const istd::TTransPtr&lt; const IDataSequenceInfo &gt; &amp;infoPtr, int samplesCount=-1, int channelsCount=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IDataSequenceInfo *</type>
@@ -4625,6 +4639,7 @@
     <name>imm::IMediaController</name>
     <filename>classimm_1_1_i_media_controller.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
+    <base virtualness="virtual">iser::IFileTypeInfo</base>
     <member kind="enumeration">
       <name>ChangeFlags</name>
       <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
@@ -5561,6 +5576,20 @@
       <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
       <anchor>aaf9cb38260297605cab0c572464e0ea9</anchor>
       <arglist>(int frameIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>a8731bf5fdbead1470205a649f9d7a93a</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>a8c674705c009ed96aee8316af8a3bf39</anchor>
+      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -7045,6 +7074,20 @@
       <anchor>a703bfebc04bbaab94b2e5dfd0493a4c3</anchor>
       <arglist>(int frameIndex)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>ac9d24849be17b7a9cce2e2814f584376</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
+      <anchor>ad0deb30a5ba878080ff4595cf1992ca7</anchor>
+      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>LoadCurrentFrame</name>
@@ -7249,6 +7292,20 @@
       <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
       <anchor>a18656f4f4d7a10833cc741ae0179c56c</anchor>
       <arglist>(int frameIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a2a7e0af926e76f27884fa09a7000568a</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>ad52843dd2486d58f1afd3d9c102ca4e1</anchor>
+      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>

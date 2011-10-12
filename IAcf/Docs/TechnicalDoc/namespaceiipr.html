@@ -24,7 +24,8 @@
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">iipr Namespace Reference</div>  </div>
 </div>
@@ -45,6 +46,8 @@ Classes</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Processor finding circle on the image.  <a href="classiipr_1_1_c_circle_find_processor_comp.html#details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_convolution_kernel2d.html">CConvolutionKernel2d</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of a general 2D convolution kernel.  <a href="classiipr_1_1_c_convolution_kernel2d.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_convolution_processor_comp.html">CConvolutionProcessorComp</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of image processor using convolution kernel.  <a href="classiipr_1_1_c_convolution_processor_comp.html#details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html">CDelegatedBitmapSupplierComp</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Image supplier delegating the calls to another one or accessing some bitmap object directly.  <a href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_extremum_caliper_processor_comp.html">CExtremumCaliperProcessorComp</a></td></tr>
@@ -96,6 +99,7 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_caliper_processor.html">ICaliperProcessor</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_circle_finder_params.html">ICircleFinderParams</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for the circle finder parameter.  <a href="classiipr_1_1_i_circle_finder_params.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_convolution_kernel2d.html">IConvolutionKernel2d</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_feature.html">IFeature</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html">Base</a> interface for all features can be consumed by feature consumer.  <a href="classiipr_1_1_i_feature.html#details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_features_consumer.html">IFeaturesConsumer</a></td></tr>
@@ -127,8 +131,6 @@ Classes</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Common interface for all search model implementations for pattern matching.  <a href="classiipr_1_1_i_search_model.html#details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html">ISearchParams</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Common interface for a set of parameters for a model search.  <a href="classiipr_1_1_i_search_params.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_t_convolution_processor_comp.html">TConvolutionProcessorComp</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of general convolution operator.  <a href="classiipr_1_1_t_convolution_processor_comp.html#details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_t_feature_wrap.html">TFeatureWrap</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper allowing to create feature object from some another serializable one.  <a href="classiipr_1_1_t_feature_wrap.html#details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_t_image_param_processor_comp_base.html">TImageParamProcessorCompBase</a></td></tr>
@@ -143,6 +145,10 @@ Typedefs</h2></td></tr>
 <a class="el" href="classiipr_1_1_t_unary_transform_processor_comp.html">TUnaryTransformProcessorComp</a><br class="typebreak"/>
 &lt; <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a>, <a class="el" href="classiipr_1_1_invert_function.html">InvertFunction</a><br class="typebreak"/>
 &lt; <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceiipr.html#a1338874f6c5f00966ec64e0b06992393">CInvertOperatorComp</a></td></tr>
+<tr><td colspan="2"><h2><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceiipr.html#a310caaf2e3e829aef8247d0eb1e37aad">VersionId</a> { <a class="el" href="namespaceiipr.html#a310caaf2e3e829aef8247d0eb1e37aada28eae46bbb14021d34f46b02f4ecc45f">IacfVersionId</a> =  10
+ }</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Contains the image processing classes. </p>
@@ -167,6 +173,28 @@ Typedefs</h2></td></tr>
 <div class="memdoc">
 
 <p>Definition at line <a class="el" href="_t_unary_transform_processor_comp_8h_source.html#l00093">93</a> of file <a class="el" href="_t_unary_transform_processor_comp_8h_source.html">TUnaryTransformProcessorComp.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Enumeration Type Documentation</h2>
+<a class="anchor" id="a310caaf2e3e829aef8247d0eb1e37aad"></a><!-- doxytag: member="iipr::VersionId" ref="a310caaf2e3e829aef8247d0eb1e37aad" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespaceiipr.html#a310caaf2e3e829aef8247d0eb1e37aad">iipr::VersionId</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a310caaf2e3e829aef8247d0eb1e37aada28eae46bbb14021d34f46b02f4ecc45f"></a><!-- doxytag: member="IacfVersionId" ref="a310caaf2e3e829aef8247d0eb1e37aada28eae46bbb14021d34f46b02f4ecc45f" args="" -->IacfVersionId</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="iipr_8h_source.html#l00021">21</a> of file <a class="el" href="iipr_8h_source.html">iipr.h</a>.</p>
 
 </div>
 </div>

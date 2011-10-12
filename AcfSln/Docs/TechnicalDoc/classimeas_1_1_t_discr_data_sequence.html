@@ -67,8 +67,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set discrete sample at specified position.  <a href="#a7989198bfe9280d4a89a5b4f32f02d9f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discr_data_sequence.html#a73e72f5675b89a08997ced50e957a205">CreateSequence</a> (int samplesCount, int channelsCount=1)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for sample sequence with specified number of samples, channels and sample depth.  <a href="#a73e72f5675b89a08997ced50e957a205"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discr_data_sequence.html#abf1969f6f2c9efdfa3280b6de7787a85">CreateSequenceWithInfo</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; infoPtr, int samplesCount=-1, int channelsCount=-1)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create sequence and set the info object.  <a href="#abf1969f6f2c9efdfa3280b6de7787a85"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discr_data_sequence.html#ab89da317ca871d50a9b2b0d50c56f0b0">CreateSequenceWithInfo</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;infoPtr, int samplesCount=-1, int channelsCount=-1)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create sequence and set the info object.  <a href="#ab89da317ca871d50a9b2b0d50c56f0b0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discr_data_sequence.html#a9b7f315b962573d46b3e277954864784">GetSequenceInfo</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get additional information about this sequence.  <a href="#a9b7f315b962573d46b3e277954864784"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discr_data_sequence.html#a10bfdac8bf99e7b2abd4c6dbb9617797">IsEmpty</a> () const </td></tr>
@@ -262,7 +262,7 @@ template&lt;typename Element &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="abf1969f6f2c9efdfa3280b6de7787a85"></a><!-- doxytag: member="imeas::TDiscrDataSequence::CreateSequenceWithInfo" ref="abf1969f6f2c9efdfa3280b6de7787a85" args="(istd::TTransPtr&lt; const IDataSequenceInfo &gt; infoPtr, int samplesCount=&#45;1, int channelsCount=&#45;1)" -->
+<a class="anchor" id="ab89da317ca871d50a9b2b0d50c56f0b0"></a><!-- doxytag: member="imeas::TDiscrDataSequence::CreateSequenceWithInfo" ref="ab89da317ca871d50a9b2b0d50c56f0b0" args="(const istd::TTransPtr&lt; const IDataSequenceInfo &gt; &amp;infoPtr, int samplesCount=&#45;1, int channelsCount=&#45;1)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -271,7 +271,7 @@ template&lt;typename Element &gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classimeas_1_1_t_discr_data_sequence.html">imeas::TDiscrDataSequence</a>&lt; Element &gt;::CreateSequenceWithInfo </td>
           <td>(</td>
-          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>infoPtr</em>, </td>
         </tr>
         <tr>
@@ -305,7 +305,7 @@ template&lt;typename Element &gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_data_sequence.html#a8d2652e18f4879231dc7ffbdf1749903">imeas::IDataSequence</a>.</p>
+<p>Implements <a class="el" href="classimeas_1_1_i_data_sequence.html#a901e49a1803d67c0bce2fdbed259bcf2">imeas::IDataSequence</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_discr_data_sequence_8h_source.html#l00189">189</a> of file <a class="el" href="_t_discr_data_sequence_8h_source.html">TDiscrDataSequence.h</a>.</p>
 

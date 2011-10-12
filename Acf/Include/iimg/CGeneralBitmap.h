@@ -42,10 +42,11 @@ public:
 	CGeneralBitmap();
 
 	// reimplemented (iimg::IBitmap)
-	virtual PixelFormat GetPixelFormat() const;
-	virtual bool CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size);
-	virtual bool CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, void* dataPtr, bool releaseFlag, int linesDifference = 0);
+	virtual int GetPixelFormat() const;
+	virtual bool CreateBitmap(int pixelFormat, const istd::CIndex2d& size);
+	virtual bool CreateBitmap(int pixelFormat, const istd::CIndex2d& size, void* dataPtr, bool releaseFlag, int linesDifference = 0);
 	virtual int GetLinesDifference() const;
+	virtual int GetPixelsDifference() const;
 	virtual int GetPixelBitsCount() const;
 	virtual const void* GetLinePtr(int positionY) const;
 	virtual void* GetLinePtr(int positionY);
@@ -72,7 +73,7 @@ protected:
 				const istd::CIndex2d& size,
 				int pixelBitsCount,
 				int componentsCount,
-				PixelFormat pixelFormat);
+				int pixelFormat);
 
 	/**
 		Create bitmap using external image buffer.
@@ -91,7 +92,7 @@ protected:
 				int linesDifference,
 				int pixelBitsCount,
 				int componentsCount,
-				PixelFormat pixelFormat);
+				int pixelFormat);
 
 private:
 	istd::TOptDelPtr<I_BYTE, true> m_buffer;
@@ -100,7 +101,7 @@ private:
 	int m_linesDifference;
 	int m_pixelBitsCount;
 	int m_componentsCount;
-	PixelFormat m_pixelFormat;
+	int m_pixelFormat;
 };
 
 

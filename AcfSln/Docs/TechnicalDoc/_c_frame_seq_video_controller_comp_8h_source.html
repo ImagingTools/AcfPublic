@@ -105,31 +105,35 @@
 <a name="l00081"></a>00081        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#a3b8910baf2d4c87a906a76e257910841" title="Get index of current frame.">GetCurrentFrame</a>() <span class="keyword">const</span>;
 <a name="l00082"></a>00082        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#a703bfebc04bbaab94b2e5dfd0493a4c3" title="Set index of current frame.">SetCurrentFrame</a>(<span class="keywordtype">int</span> frameIndex);
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084 <span class="keyword">protected</span>:
-<a name="l00085"></a>00085        <span class="keywordtype">bool</span> <a class="code" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#aee89b20ed39da37313ec714a80c74441">LoadCurrentFrame</a>();
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087 <span class="keyword">private</span>:
-<a name="l00088"></a>00088        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_defaultSequenceDirectoryAttrPtr);
-<a name="l00089"></a>00089        I_ATTR(<span class="keywordtype">double</span>, m_framesPerSecondAttrPtr);
-<a name="l00090"></a>00090        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_frameLoaderCompPtr);
-<a name="l00091"></a>00091        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>, m_frameDataCompPtr);
-<a name="l00092"></a>00092 
-<a name="l00093"></a>00093        <span class="keywordtype">int</span> m_currentFrameIndex;
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> m_mediumUrl;
+<a name="l00084"></a>00084        <span class="comment">// reimplemented (iser::IFileTypeInfo)</span>
+<a name="l00085"></a>00085        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#ac9d24849be17b7a9cce2e2814f584376">GetFileExtensions</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a>&amp; result, <span class="keywordtype">int</span> flags = -1, <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>) <span class="keyword">const</span>;
+<a name="l00086"></a>00086        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> <a class="code" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#ad0deb30a5ba878080ff4595cf1992ca7">GetTypeDescription</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>* extensionPtr = NULL) <span class="keyword">const</span>;
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="keyword">protected</span>:
+<a name="l00089"></a>00089        <span class="keywordtype">bool</span> <a class="code" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#aee89b20ed39da37313ec714a80c74441">LoadCurrentFrame</a>();
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 <span class="keyword">private</span>:
+<a name="l00092"></a>00092        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_defaultSequenceDirectoryAttrPtr);
+<a name="l00093"></a>00093        I_ATTR(<span class="keywordtype">double</span>, m_framesPerSecondAttrPtr);
+<a name="l00094"></a>00094        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_frameLoaderCompPtr);
+<a name="l00095"></a>00095        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>, m_frameDataCompPtr);
 <a name="l00096"></a>00096 
-<a name="l00097"></a>00097        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt_1_1_c_file_list.html">iqt::CFileList</a> m_fileList;
-<a name="l00098"></a>00098        <span class="keywordtype">bool</span> m_isPlaying;
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100        <span class="keywordtype">bool</span> m_isFrameLoaded;
-<a name="l00101"></a>00101 };
-<a name="l00102"></a>00102 
+<a name="l00097"></a>00097        <span class="keywordtype">int</span> m_currentFrameIndex;
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> m_mediumUrl;
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt_1_1_c_file_list.html">iqt::CFileList</a> m_fileList;
+<a name="l00102"></a>00102        <span class="keywordtype">bool</span> m_isPlaying;
 <a name="l00103"></a>00103 
-<a name="l00104"></a>00104 } <span class="comment">// namespace iqtmm</span>
-<a name="l00105"></a>00105 
+<a name="l00104"></a>00104        <span class="keywordtype">bool</span> m_isFrameLoaded;
+<a name="l00105"></a>00105 };
 <a name="l00106"></a>00106 
-<a name="l00107"></a>00107 <span class="preprocessor">#endif // !iqtmm_CFrameSeqVideoControllerComp_included</span>
-<a name="l00108"></a>00108 <span class="preprocessor"></span>
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 } <span class="comment">// namespace iqtmm</span>
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111 <span class="preprocessor">#endif // !iqtmm_CFrameSeqVideoControllerComp_included</span>
+<a name="l00112"></a>00112 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

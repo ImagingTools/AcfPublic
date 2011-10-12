@@ -317,9 +317,17 @@
     <name>CConvolutionKernel2d.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_convolution_kernel2d_8h</filename>
-    <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
+    <includes id="_i_convolution_kernel2d_8h" name="IConvolutionKernel2d.h" local="yes" imported="no">iipr/IConvolutionKernel2d.h</includes>
     <class kind="class">iipr::CConvolutionKernel2d</class>
-    <class kind="struct">iipr::CConvolutionKernel2d::KernelValue</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CConvolutionProcessorComp.h</name>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
+    <filename>_c_convolution_processor_comp_8h</filename>
+    <includes id="_t_image_param_processor_comp_base_8h" name="TImageParamProcessorCompBase.h" local="yes" imported="no">iipr/TImageParamProcessorCompBase.h</includes>
+    <includes id="_i_convolution_kernel2d_8h" name="IConvolutionKernel2d.h" local="yes" imported="no">iipr/IConvolutionKernel2d.h</includes>
+    <class kind="class">iipr::CConvolutionProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -564,6 +572,13 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>IConvolutionKernel2d.h</name>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
+    <filename>_i_convolution_kernel2d_8h</filename>
+    <class kind="class">iipr::IConvolutionKernel2d</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>IFeature.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_feature_8h</filename>
@@ -638,6 +653,18 @@
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>iipr_8h</filename>
     <namespace>iipr</namespace>
+    <member kind="enumeration">
+      <name>VersionId</name>
+      <anchorfile>namespaceiipr.html</anchorfile>
+      <anchor>a310caaf2e3e829aef8247d0eb1e37aad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IacfVersionId</name>
+      <anchorfile>namespaceiipr.html</anchorfile>
+      <anchor>a310caaf2e3e829aef8247d0eb1e37aada28eae46bbb14021d34f46b02f4ecc45f</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>ILineProjectionProcessor.h</name>
@@ -701,15 +728,6 @@
     <name>IValueSupplier.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_value_supplier_8h</filename>
-  </compound>
-  <compound kind="file">
-    <name>TConvolutionProcessorComp.h</name>
-    <path>C:/Temp/Iacf/Include/iipr/</path>
-    <filename>_t_convolution_processor_comp_8h</filename>
-    <includes id="_t_image_param_processor_comp_base_8h" name="TImageParamProcessorCompBase.h" local="yes" imported="no">iipr/TImageParamProcessorCompBase.h</includes>
-    <includes id="_c_convolution_kernel2d_8h" name="CConvolutionKernel2d.h" local="yes" imported="no">iipr/CConvolutionKernel2d.h</includes>
-    <class kind="class">iipr::TConvolutionProcessorComp</class>
-    <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>TFeatureWrap.h</name>
@@ -3169,6 +3187,7 @@
     <class kind="class">iipr::CCircleFinderParamsComp</class>
     <class kind="class">iipr::CCircleFindProcessorComp</class>
     <class kind="class">iipr::CConvolutionKernel2d</class>
+    <class kind="class">iipr::CConvolutionProcessorComp</class>
     <class kind="class">iipr::CDelegatedBitmapSupplierComp</class>
     <class kind="class">iipr::CExtremumCaliperProcessorComp</class>
     <class kind="class">iipr::CFeatureBase</class>
@@ -3199,6 +3218,7 @@
     <class kind="class">iipr::ICaliperParams</class>
     <class kind="class">iipr::ICaliperProcessor</class>
     <class kind="class">iipr::ICircleFinderParams</class>
+    <class kind="class">iipr::IConvolutionKernel2d</class>
     <class kind="class">iipr::IFeature</class>
     <class kind="class">iipr::IFeaturesConsumer</class>
     <class kind="class">iipr::IFeaturesContainer</class>
@@ -3216,7 +3236,6 @@
     <class kind="class">iipr::IRingPatternGeneratorParams</class>
     <class kind="class">iipr::ISearchModel</class>
     <class kind="class">iipr::ISearchParams</class>
-    <class kind="class">iipr::TConvolutionProcessorComp</class>
     <class kind="class">iipr::TFeatureWrap</class>
     <class kind="class">iipr::TImageParamProcessorCompBase</class>
     <class kind="class">iipr::TImagePixelInterpolator</class>
@@ -3227,6 +3246,18 @@
       <name>CInvertOperatorComp</name>
       <anchorfile>namespaceiipr.html</anchorfile>
       <anchor>a1338874f6c5f00966ec64e0b06992393</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>VersionId</name>
+      <anchorfile>namespaceiipr.html</anchorfile>
+      <anchor>a310caaf2e3e829aef8247d0eb1e37aad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IacfVersionId</name>
+      <anchorfile>namespaceiipr.html</anchorfile>
+      <anchor>a310caaf2e3e829aef8247d0eb1e37aada28eae46bbb14021d34f46b02f4ecc45f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -3595,19 +3626,13 @@
   <compound kind="class">
     <name>iipr::CConvolutionKernel2d</name>
     <filename>classiipr_1_1_c_convolution_kernel2d.html</filename>
-    <class kind="struct">iipr::CConvolutionKernel2d::KernelValue</class>
+    <base virtualness="virtual">imath::CSampledFunction2d</base>
+    <base virtualness="virtual">iipr::IConvolutionKernel2d</base>
     <member kind="typedef">
-      <type>std::vector&lt; KernelValue &gt;</type>
-      <name>KernelValues</name>
+      <type>imath::CSampledFunction2d</type>
+      <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>a1d6235ce90303b71bcab0bdb582cd104</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>KernelValues::const_iterator</type>
-      <name>Iterator</name>
-      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>a79ea4830d3973f2697fbc720f16f2b79</anchor>
+      <anchor>afc912b92500d13115a58f1f2301176f0</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -3621,89 +3646,62 @@
       <type></type>
       <name>CConvolutionKernel2d</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>aba74dfeb63f62964cdead2dc974811ca</anchor>
-      <arglist>(const imath::ISampledFunction2d &amp;function)</arglist>
+      <anchor>a0414c3cee4da8cdabc17dc922e247a7b</anchor>
+      <arglist>(const imath::ISampledFunction2d &amp;function2d)</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsValid</name>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetKernelSize</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>a4b2ba4600ca1240a1a0ae5a544275d10</anchor>
+      <anchor>a81037c230b91ece65620374bfdd3dadc</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>InitForBitmap</name>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetKernelElement</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>a761f3af2b30709fa0b835a9995922eec</anchor>
-      <arglist>(const iimg::IBitmap &amp;bitmap) const </arglist>
+      <anchor>afa4b80660dab757deff6c32a27d16e2f</anchor>
+      <arglist>(const istd::CIndex2d &amp;index) const </arglist>
     </member>
-    <member kind="function">
-      <type>Iterator</type>
-      <name>Begin</name>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetKernelElement</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>a4bf75f9cb92e1c62b99240be0dcfe8d0</anchor>
-      <arglist>() const </arglist>
+      <anchor>a0ed1b69fc128ad4b7026e6982337e7ac</anchor>
+      <arglist>(const istd::CIndex2d &amp;index, double value)</arglist>
     </member>
-    <member kind="function">
-      <type>Iterator</type>
-      <name>End</name>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>Serialize</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>a6d2593176e5c3b32eb823bf46981693d</anchor>
-      <arglist>() const </arglist>
+      <anchor>a9eb3aee8d75a9edd9fc693d062cd1b49</anchor>
+      <arglist>(iser::IArchive &amp;archive)=0</arglist>
     </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetWeightsSum</name>
+    <member kind="function" virtualness="virtual">
+      <type>virtual I_DWORD</type>
+      <name>GetMinimalVersion</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>aa00450c5710872d9824673b2dae80b6e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>i2d::CRectangle</type>
-      <name>GetBoundingBox</name>
-      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>ae694387374a1fe3c33617bdf906cb985</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>KernelValues</type>
-      <name>m_values</name>
-      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>af4e84d932da8cfb64bb06bb7f6cb5282</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ibase::CSize</type>
-      <name>m_kernelSize</name>
-      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>a627d4cd92399fccc3f6f0022ca8a756b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>m_sumWeights</name>
-      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>a297acf81355464d3a3a944b1274b705b</anchor>
-      <arglist></arglist>
+      <anchor>a193c33ceaa2eb889ce80ab302d2a4957</anchor>
+      <arglist>(int versionId) const </arglist>
     </member>
   </compound>
-  <compound kind="struct">
-    <name>iipr::CConvolutionKernel2d::KernelValue</name>
-    <filename>structiipr_1_1_c_convolution_kernel2d_1_1_kernel_value.html</filename>
-    <member kind="variable">
-      <type>int</type>
-      <name>pixelOffset</name>
-      <anchorfile>structiipr_1_1_c_convolution_kernel2d_1_1_kernel_value.html</anchorfile>
-      <anchor>a2d744e9ba119b3b1f6eb2c905b4cfc1b</anchor>
+  <compound kind="class">
+    <name>iipr::CConvolutionProcessorComp</name>
+    <filename>classiipr_1_1_c_convolution_processor_comp.html</filename>
+    <base>TImageParamProcessorCompBase&lt; IConvolutionKernel2d &gt;</base>
+    <member kind="typedef">
+      <type>iipr::TImageParamProcessorCompBase&lt; IConvolutionKernel2d &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_convolution_processor_comp.html</anchorfile>
+      <anchor>ab48905a537869b8ef04de439029ab8e6</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable">
-      <type>double</type>
-      <name>kernelWeight</name>
-      <anchorfile>structiipr_1_1_c_convolution_kernel2d_1_1_kernel_value.html</anchorfile>
-      <anchor>a4b360c1b2689b37cf53b9a99545db5cb</anchor>
-      <arglist></arglist>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ParamProcessImage</name>
+      <anchorfile>classiipr_1_1_c_convolution_processor_comp.html</anchorfile>
+      <anchor>af26a1888cdbeb4d9828ab0221433c1dd</anchor>
+      <arglist>(const IConvolutionKernel2d *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5160,6 +5158,32 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::IConvolutionKernel2d</name>
+    <filename>classiipr_1_1_i_convolution_kernel2d.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetKernelSize</name>
+      <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
+      <anchor>a9d7bd53714fc36c93b9aef1e3abf4f40</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetKernelElement</name>
+      <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
+      <anchor>ab71eb7f2750ffd41129f5b5ac235bece</anchor>
+      <arglist>(const istd::CIndex2d &amp;index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetKernelElement</name>
+      <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
+      <anchor>a4a3e8b5c7da979d7b3b22d1bfe9036c7</anchor>
+      <arglist>(const istd::CIndex2d &amp;index, double value)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::IFeature</name>
     <filename>classiipr_1_1_i_feature.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
@@ -5620,34 +5644,6 @@
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
       <anchor>a13348f23926f948935266780709018dc</anchor>
       <arglist>(bool isScaleEnabled)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::TConvolutionProcessorComp</name>
-    <filename>classiipr_1_1_t_convolution_processor_comp.html</filename>
-    <templarg></templarg>
-    <templarg></templarg>
-    <base>iipr::TImageParamProcessorCompBase</base>
-    <member kind="typedef">
-      <type>iipr::TImageParamProcessorCompBase&lt; ParameterType &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_t_convolution_processor_comp.html</anchorfile>
-      <anchor>a3cbb69973b5e3ebc6bc37e552936f58e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual CConvolutionKernel2d *</type>
-      <name>CreateKernel</name>
-      <anchorfile>classiipr_1_1_t_convolution_processor_comp.html</anchorfile>
-      <anchor>aba7adcd591c86280738a0e88a34a9cd8</anchor>
-      <arglist>(const ParameterType *paramsPtr)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ParamProcessImage</name>
-      <anchorfile>classiipr_1_1_t_convolution_processor_comp.html</anchorfile>
-      <anchor>afc2f1d21205ea7870647666ed5c5c90c</anchor>
-      <arglist>(const ParameterType *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9144,6 +9140,20 @@
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
       <anchor>a2eba5e9fef9b03bed830a557a00ee5aa</anchor>
       <arglist>(int frameIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
+      <anchor>ad1bea2ee45bb75ac22e0696b2910d872</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
+      <anchor>a2c97af94b951989ccc7dfc0cbdde8373</anchor>
+      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>

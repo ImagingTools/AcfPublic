@@ -138,93 +138,97 @@
 <a name="l00114"></a>00114        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#a96697f7cc792f4ddeacabbaeb875c584" title="Get index of current frame.">GetCurrentFrame</a>() <span class="keyword">const</span>;
 <a name="l00115"></a>00115        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#a48118e9d420d4d263f56d7e9bc4a3ffe" title="Set index of current frame.">SetCurrentFrame</a>(<span class="keywordtype">int</span> frameIndex);
 <a name="l00116"></a>00116 
-<a name="l00117"></a>00117 <span class="keyword">protected</span>:
-<a name="l00118"></a><a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113">00118</a>        <span class="keyword">enum</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113">FrameType</a>
-<a name="l00119"></a>00119        {
-<a name="l00120"></a><a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113af0e448932695ba5e7b7b81dc0b1b93c0">00120</a>               <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113af0e448932695ba5e7b7b81dc0b1b93c0">FT_ERROR</a> = -1,
-<a name="l00121"></a><a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113acc2dd7b18d9d6a02a0c0ce25cba5ea98">00121</a>               <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113acc2dd7b18d9d6a02a0c0ce25cba5ea98">FT_END</a>,
-<a name="l00122"></a><a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a8f56ca8d22864c5343d53accfb76815b">00122</a>               <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a8f56ca8d22864c5343d53accfb76815b">FT_AUDIO_SAMPLE</a>,
-<a name="l00123"></a><a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a50335d24b1847f1560e407ca732fc022">00123</a>               <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a50335d24b1847f1560e407ca732fc022">FT_IMAGE</a>,
-<a name="l00124"></a><a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a98a52e2fa584ff8dd900df58d2cb7dc5">00124</a>               <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a98a52e2fa584ff8dd900df58d2cb7dc5">FT_SKIPPED_AUDIO_SAMPLE</a>,
-<a name="l00125"></a><a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a68a6fed94fdcfc7b1e0e7d3165a68ede">00125</a>               <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a68a6fed94fdcfc7b1e0e7d3165a68ede">FT_SKIPPED_IMAGE</a>
-<a name="l00126"></a>00126        };
-<a name="l00127"></a>00127 
-<a name="l00128"></a>00128        <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113">FrameType</a> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#a29343028654b62f11c26217fbf1dcad1">ReadNextFrame</a>(
-<a name="l00129"></a>00129                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* bitmapPtr,
-<a name="l00130"></a>00130                             <a class="code" href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid.">imeas::IDataSequence</a>* audioSequencePtr,
-<a name="l00131"></a>00131                             <span class="keywordtype">int</span> minimalImageFrame = -1,
-<a name="l00132"></a>00132                             <span class="keywordtype">int</span> minimalAudioFrame = -1);
-<a name="l00133"></a>00133 
-<a name="l00137"></a>00137        <span class="keywordtype">bool</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#adf9cb79a6663eef95c1eb5e04cf2c22b" title="Read next packet from stream.">ReadNextPacket</a>();
-<a name="l00138"></a>00138 
-<a name="l00142"></a>00142        <span class="keywordtype">int</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#af73e0499cbc6789ca76929403cf858c0" title="Fininsh single task and return its ID.">FinishNextTask</a>();
-<a name="l00143"></a>00143 
-<a name="l00144"></a>00144        <span class="keywordtype">bool</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#a2f4281baeb014f7583d4622fb89bf92e">TryTracePosition</a>();
-<a name="l00145"></a>00145 
-<a name="l00146"></a>00146        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00147"></a>00147        <span class="keywordtype">void</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#a0cc965e1514968d67d54697689c2939f">OnComponentCreated</a>();
-<a name="l00148"></a>00148        <span class="keywordtype">void</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#a3c38ff59a2f59fc3607c3c6d936a3844">OnComponentDestroyed</a>();
+<a name="l00117"></a>00117        <span class="comment">// reimplemented (iser::IFileTypeInfo)</span>
+<a name="l00118"></a>00118        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ae3ca803ceb7819292f77436eaadec2a9">GetFileExtensions</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a>&amp; result, <span class="keywordtype">int</span> flags = -1, <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>) <span class="keyword">const</span>;
+<a name="l00119"></a>00119        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#a0ec683b2a4f52940e484a15271de17c4">GetTypeDescription</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>* extensionPtr = NULL) <span class="keyword">const</span>;
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121 <span class="keyword">protected</span>:
+<a name="l00122"></a><a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113">00122</a>        <span class="keyword">enum</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113">FrameType</a>
+<a name="l00123"></a>00123        {
+<a name="l00124"></a><a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113af0e448932695ba5e7b7b81dc0b1b93c0">00124</a>               <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113af0e448932695ba5e7b7b81dc0b1b93c0">FT_ERROR</a> = -1,
+<a name="l00125"></a><a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113acc2dd7b18d9d6a02a0c0ce25cba5ea98">00125</a>               <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113acc2dd7b18d9d6a02a0c0ce25cba5ea98">FT_END</a>,
+<a name="l00126"></a><a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a8f56ca8d22864c5343d53accfb76815b">00126</a>               <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a8f56ca8d22864c5343d53accfb76815b">FT_AUDIO_SAMPLE</a>,
+<a name="l00127"></a><a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a50335d24b1847f1560e407ca732fc022">00127</a>               <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a50335d24b1847f1560e407ca732fc022">FT_IMAGE</a>,
+<a name="l00128"></a><a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a98a52e2fa584ff8dd900df58d2cb7dc5">00128</a>               <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a98a52e2fa584ff8dd900df58d2cb7dc5">FT_SKIPPED_AUDIO_SAMPLE</a>,
+<a name="l00129"></a><a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a68a6fed94fdcfc7b1e0e7d3165a68ede">00129</a>               <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113a68a6fed94fdcfc7b1e0e7d3165a68ede">FT_SKIPPED_IMAGE</a>
+<a name="l00130"></a>00130        };
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132        <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#ab98135d5291c87415f4bfd03727bb113">FrameType</a> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#a29343028654b62f11c26217fbf1dcad1">ReadNextFrame</a>(
+<a name="l00133"></a>00133                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* bitmapPtr,
+<a name="l00134"></a>00134                             <a class="code" href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid.">imeas::IDataSequence</a>* audioSequencePtr,
+<a name="l00135"></a>00135                             <span class="keywordtype">int</span> minimalImageFrame = -1,
+<a name="l00136"></a>00136                             <span class="keywordtype">int</span> minimalAudioFrame = -1);
+<a name="l00137"></a>00137 
+<a name="l00141"></a>00141        <span class="keywordtype">bool</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#adf9cb79a6663eef95c1eb5e04cf2c22b" title="Read next packet from stream.">ReadNextPacket</a>();
+<a name="l00142"></a>00142 
+<a name="l00146"></a>00146        <span class="keywordtype">int</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#af73e0499cbc6789ca76929403cf858c0" title="Fininsh single task and return its ID.">FinishNextTask</a>();
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148        <span class="keywordtype">bool</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#a2f4281baeb014f7583d4622fb89bf92e">TryTracePosition</a>();
 <a name="l00149"></a>00149 
-<a name="l00150"></a>00150 <span class="keyword">private</span>:
-<a name="l00151"></a>00151        <span class="keyword">struct </span>ImageTask
-<a name="l00152"></a>00152        {
-<a name="l00153"></a>00153               <span class="keywordtype">int</span> state;
-<a name="l00154"></a>00154               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* outputPtr;
-<a name="l00155"></a>00155        };
-<a name="l00156"></a>00156        <span class="keyword">typedef</span> std::map&lt;int, ImageTask&gt; ImageTaskMap;
-<a name="l00157"></a>00157        ImageTaskMap m_imageTasks;
-<a name="l00158"></a>00158 
-<a name="l00159"></a>00159        <span class="keyword">struct </span>AudioTask
-<a name="l00160"></a>00160        {
-<a name="l00161"></a>00161               <span class="keywordtype">int</span> state;
-<a name="l00162"></a>00162               <a class="code" href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid.">imeas::IDataSequence</a>* outputPtr;
-<a name="l00163"></a>00163        };
-<a name="l00164"></a>00164        <span class="keyword">typedef</span> std::map&lt;int, AudioTask&gt; AudioTaskMap;
-<a name="l00165"></a>00165        AudioTaskMap m_audioTasks;
-<a name="l00166"></a>00166 
-<a name="l00167"></a>00167        <span class="keywordtype">int</span> m_videoStreamId;
-<a name="l00168"></a>00168        <span class="keywordtype">int</span> m_audioStreamId;
-<a name="l00169"></a>00169        AVFormatContext* m_formatContextPtr;
-<a name="l00170"></a>00170        AVCodecContext* m_videoCodecContextPtr;
-<a name="l00171"></a>00171        AVCodecContext* m_audioCodecContextPtr;
-<a name="l00172"></a>00172        AVCodec* m_videoCodecPtr;
-<a name="l00173"></a>00173        AVCodec* m_audioCodecPtr;
-<a name="l00174"></a>00174 
-<a name="l00175"></a>00175        AVFrame* m_framePtr;
-<a name="l00176"></a>00176        AVFrame* m_frameRgbPtr;
-<a name="l00177"></a>00177 
-<a name="l00178"></a>00178        uint8_t* m_audioInputBuffer;
-<a name="l00179"></a>00179        int16_t* m_audioOutputBuffer;
-<a name="l00180"></a>00180        <span class="keywordtype">bool</span> m_ignoreFirstAudioFrame;
+<a name="l00150"></a>00150        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00151"></a>00151        <span class="keywordtype">void</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#a0cc965e1514968d67d54697689c2939f">OnComponentCreated</a>();
+<a name="l00152"></a>00152        <span class="keywordtype">void</span> <a class="code" href="classilibav_1_1_c_lib_av_video_decoder_comp.html#a3c38ff59a2f59fc3607c3c6d936a3844">OnComponentDestroyed</a>();
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154 <span class="keyword">private</span>:
+<a name="l00155"></a>00155        <span class="keyword">struct </span>ImageTask
+<a name="l00156"></a>00156        {
+<a name="l00157"></a>00157               <span class="keywordtype">int</span> state;
+<a name="l00158"></a>00158               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* outputPtr;
+<a name="l00159"></a>00159        };
+<a name="l00160"></a>00160        <span class="keyword">typedef</span> std::map&lt;int, ImageTask&gt; ImageTaskMap;
+<a name="l00161"></a>00161        ImageTaskMap m_imageTasks;
+<a name="l00162"></a>00162 
+<a name="l00163"></a>00163        <span class="keyword">struct </span>AudioTask
+<a name="l00164"></a>00164        {
+<a name="l00165"></a>00165               <span class="keywordtype">int</span> state;
+<a name="l00166"></a>00166               <a class="code" href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid.">imeas::IDataSequence</a>* outputPtr;
+<a name="l00167"></a>00167        };
+<a name="l00168"></a>00168        <span class="keyword">typedef</span> std::map&lt;int, AudioTask&gt; AudioTaskMap;
+<a name="l00169"></a>00169        AudioTaskMap m_audioTasks;
+<a name="l00170"></a>00170 
+<a name="l00171"></a>00171        <span class="keywordtype">int</span> m_videoStreamId;
+<a name="l00172"></a>00172        <span class="keywordtype">int</span> m_audioStreamId;
+<a name="l00173"></a>00173        AVFormatContext* m_formatContextPtr;
+<a name="l00174"></a>00174        AVCodecContext* m_videoCodecContextPtr;
+<a name="l00175"></a>00175        AVCodecContext* m_audioCodecContextPtr;
+<a name="l00176"></a>00176        AVCodec* m_videoCodecPtr;
+<a name="l00177"></a>00177        AVCodec* m_audioCodecPtr;
+<a name="l00178"></a>00178 
+<a name="l00179"></a>00179        AVFrame* m_framePtr;
+<a name="l00180"></a>00180        AVFrame* m_frameRgbPtr;
 <a name="l00181"></a>00181 
-<a name="l00182"></a>00182        std::vector&lt;I_BYTE&gt; m_imageBuffer;
-<a name="l00183"></a>00183 
-<a name="l00184"></a>00184        AVPacket m_packet;
-<a name="l00185"></a>00185        <span class="keywordtype">int</span> m_bytesRemaining;
-<a name="l00186"></a>00186        uint8_t* m_rawDataPtr;
+<a name="l00182"></a>00182        uint8_t* m_audioInputBuffer;
+<a name="l00183"></a>00183        int16_t* m_audioOutputBuffer;
+<a name="l00184"></a>00184        <span class="keywordtype">bool</span> m_ignoreFirstAudioFrame;
+<a name="l00185"></a>00185 
+<a name="l00186"></a>00186        std::vector&lt;I_BYTE&gt; m_imageBuffer;
 <a name="l00187"></a>00187 
-<a name="l00188"></a>00188        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> m_currentUrl;
-<a name="l00189"></a>00189 
-<a name="l00190"></a>00190        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>, m_bitmapObjectCompPtr);
-<a name="l00191"></a>00191        I_REF(<a class="code" href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid.">imeas::IDataSequence</a>, m_audioSampleObjectCompPtr);
-<a name="l00192"></a>00192        I_ATTR(<span class="keywordtype">bool</span>, m_tracePositionAttrPtr);
-<a name="l00193"></a>00193        I_ATTR(<span class="keywordtype">bool</span>, m_grabProgressiveAttrPtr);
-<a name="l00194"></a>00194        I_ATTR(<span class="keywordtype">double</span>, m_minimalImageDistanceAttrPtr);
-<a name="l00195"></a>00195 
-<a name="l00196"></a>00196        <span class="keywordtype">int</span> m_currentFrame;
-<a name="l00197"></a>00197        <span class="keywordtype">int</span> m_lastReadFrame;
-<a name="l00198"></a>00198 
-<a name="l00199"></a>00199        <span class="keywordtype">bool</span> m_isCurrentImageValid;
-<a name="l00200"></a>00200        <span class="keywordtype">bool</span> m_isCurrentSampleValid;
-<a name="l00201"></a>00201        <span class="keywordtype">int</span> m_nextTaskId;
-<a name="l00202"></a>00202 };
-<a name="l00203"></a>00203 
-<a name="l00204"></a>00204 
-<a name="l00205"></a>00205 } <span class="comment">// namespace ilibav</span>
-<a name="l00206"></a>00206 
+<a name="l00188"></a>00188        AVPacket m_packet;
+<a name="l00189"></a>00189        <span class="keywordtype">int</span> m_bytesRemaining;
+<a name="l00190"></a>00190        uint8_t* m_rawDataPtr;
+<a name="l00191"></a>00191 
+<a name="l00192"></a>00192        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> m_currentUrl;
+<a name="l00193"></a>00193 
+<a name="l00194"></a>00194        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>, m_bitmapObjectCompPtr);
+<a name="l00195"></a>00195        I_REF(<a class="code" href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid.">imeas::IDataSequence</a>, m_audioSampleObjectCompPtr);
+<a name="l00196"></a>00196        I_ATTR(<span class="keywordtype">bool</span>, m_tracePositionAttrPtr);
+<a name="l00197"></a>00197        I_ATTR(<span class="keywordtype">bool</span>, m_grabProgressiveAttrPtr);
+<a name="l00198"></a>00198        I_ATTR(<span class="keywordtype">double</span>, m_minimalImageDistanceAttrPtr);
+<a name="l00199"></a>00199 
+<a name="l00200"></a>00200        <span class="keywordtype">int</span> m_currentFrame;
+<a name="l00201"></a>00201        <span class="keywordtype">int</span> m_lastReadFrame;
+<a name="l00202"></a>00202 
+<a name="l00203"></a>00203        <span class="keywordtype">bool</span> m_isCurrentImageValid;
+<a name="l00204"></a>00204        <span class="keywordtype">bool</span> m_isCurrentSampleValid;
+<a name="l00205"></a>00205        <span class="keywordtype">int</span> m_nextTaskId;
+<a name="l00206"></a>00206 };
 <a name="l00207"></a>00207 
-<a name="l00208"></a>00208 <span class="preprocessor">#endif // !ilibav_CLibAvVideoDecoderComp_included</span>
-<a name="l00209"></a>00209 <span class="preprocessor"></span>
+<a name="l00208"></a>00208 
+<a name="l00209"></a>00209 } <span class="comment">// namespace ilibav</span>
+<a name="l00210"></a>00210 
+<a name="l00211"></a>00211 
+<a name="l00212"></a>00212 <span class="preprocessor">#endif // !ilibav_CLibAvVideoDecoderComp_included</span>
+<a name="l00213"></a>00213 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

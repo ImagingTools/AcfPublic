@@ -2148,6 +2148,7 @@
     <path>C:/Temp/Acf/Include/imath/</path>
     <filename>_c_sampled_function2d_8h</filename>
     <includes id="_t_array_8h" name="TArray.h" local="yes" imported="no">istd/TArray.h</includes>
+    <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
     <includes id="_t_i_sampled_function_8h" name="TISampledFunction.h" local="yes" imported="no">imath/TISampledFunction.h</includes>
     <class kind="class">imath::CSampledFunction2d</class>
     <namespace>imath</namespace>
@@ -16483,8 +16484,8 @@
       <type>virtual I_DWORD</type>
       <name>GetMinimalVersion</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a25e2658c29b3f617f0a06b042263d9a1</anchor>
-      <arglist>(int versionId=iser::IVersionInfo::UserVersionId) const </arglist>
+      <anchor>ab362e17e819beab46934e0458fa7786a</anchor>
+      <arglist>(int versionId) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>imod::TModelWrap&lt; istd::TChangeDelegator&lt; CRegistryElement &gt; &gt;</type>
@@ -20042,31 +20043,38 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual PixelFormat</type>
+      <type>virtual int</type>
       <name>GetPixelFormat</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>a2bbaf7e2d507700a01a1ca6435fe9506</anchor>
+      <anchor>a2f2ca969467aa5d7f4bb9cf6adff520a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>acc089ff6c0beb9d4aac7b0b7d814f1f8</anchor>
-      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size)</arglist>
+      <anchor>a9802b8cb43517aa05f5793e70d8a3a0f</anchor>
+      <arglist>(int pixelFormat, const istd::CIndex2d &amp;size)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>a3a2c6b02d6532bf57d63a9ce209f8cd2</anchor>
-      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
+      <anchor>a6dcaf4b58ad51ab73eb40b5fffa1c081</anchor>
+      <arglist>(int pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetLinesDifference</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
       <anchor>a045279e9d5a1285706a6ccabc6aa9c8a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPixelsDifference</name>
+      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
+      <anchor>a79c7d2e1c546f36265eefd12e38d18cf</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -20136,15 +20144,15 @@
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>a5238bfcf4852d271b9b2f0a2686d01e8</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, int pixelBitsCount, int componentsCount, PixelFormat pixelFormat)</arglist>
+      <anchor>aae02e4922d48dbb44d8e53008c156951</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, int pixelBitsCount, int componentsCount, int pixelFormat)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>aef14b2a80ebb64fb9bb19efbe42baeb9</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference, int pixelBitsCount, int componentsCount, PixelFormat pixelFormat)</arglist>
+      <anchor>a85347d43554f8183d46a55efab9ea677</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference, int pixelBitsCount, int componentsCount, int pixelFormat)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20161,12 +20169,6 @@
       <name>PF_UNKNOWN</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
       <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ead877d1825ea7c83cd83c377c4d8e4ba4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PF_USER</name>
-      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea2d2cb16572347303c10cbe08359ad67b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -20205,26 +20207,32 @@
       <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea0e484bc2610a25401c4164ebce16a475</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>PF_USER</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea2d2cb16572347303c10cbe08359ad67b</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
-      <type>virtual PixelFormat</type>
+      <type>virtual int</type>
       <name>GetPixelFormat</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>aa71b5c7fe94cd389e8b831a56935415e</anchor>
+      <anchor>aa183038c573dd5e980f4bacd727121ed</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a6591ed392c0fa6e0d4b32f3a7ac7cf9d</anchor>
-      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size)=0</arglist>
+      <anchor>a2e432a3dbffea1c93c07cc5521b69297</anchor>
+      <arglist>(int pixelFormat, const istd::CIndex2d &amp;size)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a25cc9d13fc16c753a6bf5adbd003ba87</anchor>
-      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)=0</arglist>
+      <anchor>aeb6fb5c1ef469793975b34468307d2ef</anchor>
+      <arglist>(int pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -20238,6 +20246,13 @@
       <name>GetLinesDifference</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
       <anchor>a617e61e4de45b35f513c169b41a0c0fb</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetPixelsDifference</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a8e095ac801a690ca2c281e80af2ebbf1</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -21108,8 +21123,29 @@
       <type></type>
       <name>CSampledFunction2d</name>
       <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
-      <anchor>ad2523c5f1e3f265006bdb3eea7b50af0</anchor>
-      <arglist>(int width=-1, int height=-1, double defaultValue=0)</arglist>
+      <anchor>aea58266eb0a63dbc8706659187b8eaeb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSampledFunction2d</name>
+      <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
+      <anchor>a8f5abb5738aa2cf304c6fc0c43a147e0</anchor>
+      <arglist>(const CSampledFunction2d &amp;function2d)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSampledFunction2d</name>
+      <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
+      <anchor>a64e8d90679f9fa3c4686da4dd9ff5837</anchor>
+      <arglist>(const imath::ISampledFunction2d &amp;function2d)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSampledFunction2d</name>
+      <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
+      <anchor>aab30de04be4a57a8cb376908b4b624b1</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, double defaultValue=0)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -21119,18 +21155,32 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>Create</name>
+      <type>bool</type>
+      <name>CreateGrid2d</name>
       <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
-      <anchor>abbdfec5852adca62842810dbded6d4a0</anchor>
-      <arglist>(int width, int height, double defaultValue=0)</arglist>
+      <anchor>a42d161e7e06d2838b2bc6a95d80f4d67</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, double defaultValue=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>istd::CIndex2d</type>
+      <name>GetGridSize2d</name>
+      <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
+      <anchor>aff92e46b9839b9f3fc1429f98a4f8c0e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetSampleValue</name>
+      <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
+      <anchor>a0047a0dbbe167576a60fd922e2a5164b</anchor>
+      <arglist>(const istd::CIndex2d &amp;index) const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>SetSampleValue</name>
       <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
-      <anchor>a2123477c9d7020567b31fcc3f4ab6837</anchor>
-      <arglist>(const ArgumentType &amp;index, double value)</arglist>
+      <anchor>aeecca31dfc8a8154f2a47ccb8b539f39</anchor>
+      <arglist>(const istd::CIndex2d &amp;index, double value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -24907,8 +24957,8 @@
       <type>virtual I_DWORD</type>
       <name>GetMinimalVersion</name>
       <anchorfile>classiprm_1_1_c_params_set.html</anchorfile>
-      <anchor>a39bf66895cac7240e9daa0074990110d</anchor>
-      <arglist>(int versionId=iser::IVersionInfo::UserVersionId) const </arglist>
+      <anchor>aff94090a8764dfbdb02499bcd388142b</anchor>
+      <arglist>(int versionId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -25182,8 +25232,8 @@
       <type>virtual I_DWORD</type>
       <name>GetMinimalVersion</name>
       <anchorfile>classiprm_1_1_c_variable_param_comp.html</anchorfile>
-      <anchor>ae3133fcda7d32ab3efae3d146ebd9156</anchor>
-      <arglist>(int versionId=iser::IVersionInfo::UserVersionId) const </arglist>
+      <anchor>ae6fbd05365a9962f9b1c0a6d345fa521</anchor>
+      <arglist>(int versionId) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -26980,31 +27030,38 @@
       <arglist>(const istd::IChangeable &amp;data, iimg::IBitmap &amp;objectSnap, const istd::CIndex2d &amp;size) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual PixelFormat</type>
+      <type>virtual int</type>
       <name>GetPixelFormat</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
-      <anchor>ab2b8a54ff3a7f546e35a22c259c79ba3</anchor>
+      <anchor>af6a2dac6dd9c0f25388fe81875a6efbd</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
-      <anchor>a6804f98a76c2d78bab8352b707960c8b</anchor>
-      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size)</arglist>
+      <anchor>a7f3140bda97ee8bd0463c46f816105c6</anchor>
+      <arglist>(int pixelFormat, const istd::CIndex2d &amp;size)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
-      <anchor>a321cd69a33bc5f1f700c4c1e727f5f2c</anchor>
-      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
+      <anchor>a95de527e58cfecda5801c804fd83379b</anchor>
+      <arglist>(int pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetLinesDifference</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
       <anchor>ad1120c1cae09b43ddda120e59a485a1e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPixelsDifference</name>
+      <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
+      <anchor>a9fa7d525ea9164d9694cc78a6bdf76a6</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -27074,14 +27131,14 @@
       <type>QImage::Format</type>
       <name>CalcQtFormat</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
-      <anchor>a75ac7dc64c0c10b740e127a78c738ad7</anchor>
-      <arglist>(PixelFormat pixelFormat) const </arglist>
+      <anchor>ac3cfdae5ebbafd4d943c7481af9fea1a</anchor>
+      <arglist>(int pixelFormat) const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>PixelFormat</type>
+      <type>int</type>
       <name>CalcFromQtFormat</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
-      <anchor>a8749eedb96425fcb2af56cb8daefa1c1</anchor>
+      <anchor>ad0847e943b6ef08cb11803c5d2a79955</anchor>
       <arglist>(QImage::Format imageFormat) const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -38522,8 +38579,8 @@
       <type>virtual I_DWORD</type>
       <name>GetMinimalVersion</name>
       <anchorfile>classiser_1_1_i_serializable.html</anchorfile>
-      <anchor>aebfb0ffa68a6d8bc33d106cbc1ced8e2</anchor>
-      <arglist>(int versionId=IVersionInfo::UserVersionId) const </arglist>
+      <anchor>a27f3d8c7065ece5fa34fa44927c509a6</anchor>
+      <arglist>(int versionId) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38537,9 +38594,9 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>FrameworkVersionId</name>
+      <name>AcfVersionId</name>
       <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
-      <anchor>a71f9c819b642773712cca9fed1407b80a6ce90c79d5cf3361d8b9ebdc8dff22c4</anchor>
+      <anchor>a71f9c819b642773712cca9fed1407b80ae4ddfc606911640d4595295870f41dc3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">

@@ -43,7 +43,7 @@ namespace ilibav
 bool CLibAvConverter::ConvertBitmap(
 			const AVFrame& avFrame,
 			const istd::CIndex2d& size,
-			PixelFormat frameFormat,
+			int frameFormat,
 			iimg::IBitmap& result)
 {
 	istd::CChangeNotifier notifier(&result);

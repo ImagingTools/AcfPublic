@@ -94,35 +94,39 @@
 <a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#aeed1fa78895b7fb7e80480012fc787bb">GetCurrentFrame</a>() <span class="keyword">const</span>;
 <a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a2eba5e9fef9b03bed830a557a00ee5aa">SetCurrentFrame</a>(<span class="keywordtype">int</span> frameIndex);
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074 <span class="keyword">protected</span>:
-<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a71b63629c15a11118143c57e186b2b90">GrabCurrentFrame</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00076"></a>00076        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a567589b45bb2206064833933fba051f2">SeekToPosition</a>(<span class="keywordtype">int</span> frameIndex) <span class="keyword">const</span>;
+<a name="l00074"></a>00074        <span class="comment">// reimplemented (iser::IFileTypeInfo)</span>
+<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#ad1bea2ee45bb75ac22e0696b2910d872">GetFileExtensions</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a>&amp; result, <span class="keywordtype">int</span> flags = -1, <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>) <span class="keyword">const</span>;
+<a name="l00076"></a>00076        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a2c97af94b951989ccc7dfc0cbdde8373">GetTypeDescription</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>* extensionPtr = NULL) <span class="keyword">const</span>;
 <a name="l00077"></a>00077 
-<a name="l00078"></a>00078        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a8323bb34a993612efeb7f1d2b34b4874">OnComponentDestroyed</a>();
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 <span class="keyword">private</span>:
-<a name="l00082"></a>00082        <span class="keywordtype">void</span> EnsureMediumClosed();
-<a name="l00083"></a>00083        <span class="keywordtype">int</span> GetStreamPosition() <span class="keyword">const</span>;
-<a name="l00084"></a>00084        <span class="keywordtype">bool</span> MoveToNextFrame() <span class="keyword">const</span>;
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086 <span class="keyword">private</span>:
-<a name="l00087"></a>00087        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>, m_frameDataCompPtr);
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> m_mediumUrl;
-<a name="l00090"></a>00090        <span class="keywordtype">bool</span> m_isPlaying;
-<a name="l00091"></a>00091 
-<a name="l00092"></a>00092        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;CvCapture&gt;</a> m_capturePtr;
-<a name="l00093"></a>00093        <span class="keyword">mutable</span> <span class="keywordtype">int</span> m_currentFrameIndex;
-<a name="l00094"></a>00094        <span class="keywordtype">int</span> m_framesCount;
-<a name="l00095"></a>00095 };
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098 } <span class="comment">// namespace iocv</span>
-<a name="l00099"></a>00099 
+<a name="l00078"></a>00078 <span class="keyword">protected</span>:
+<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a71b63629c15a11118143c57e186b2b90">GrabCurrentFrame</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00080"></a>00080        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a567589b45bb2206064833933fba051f2">SeekToPosition</a>(<span class="keywordtype">int</span> frameIndex) <span class="keyword">const</span>;
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a8323bb34a993612efeb7f1d2b34b4874">OnComponentDestroyed</a>();
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 <span class="keyword">private</span>:
+<a name="l00086"></a>00086        <span class="keywordtype">void</span> EnsureMediumClosed();
+<a name="l00087"></a>00087        <span class="keywordtype">int</span> GetStreamPosition() <span class="keyword">const</span>;
+<a name="l00088"></a>00088        <span class="keywordtype">bool</span> MoveToNextFrame() <span class="keyword">const</span>;
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 <span class="keyword">private</span>:
+<a name="l00091"></a>00091        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>, m_frameDataCompPtr);
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> m_mediumUrl;
+<a name="l00094"></a>00094        <span class="keywordtype">bool</span> m_isPlaying;
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;CvCapture&gt;</a> m_capturePtr;
+<a name="l00097"></a>00097        <span class="keyword">mutable</span> <span class="keywordtype">int</span> m_currentFrameIndex;
+<a name="l00098"></a>00098        <span class="keywordtype">int</span> m_framesCount;
+<a name="l00099"></a>00099 };
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101 <span class="preprocessor">#endif // !iocv_COcvVideoControllerComp_included</span>
-<a name="l00102"></a>00102 <span class="preprocessor"></span>
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102 } <span class="comment">// namespace iocv</span>
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105 <span class="preprocessor">#endif // !iocv_COcvVideoControllerComp_included</span>
+<a name="l00106"></a>00106 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
