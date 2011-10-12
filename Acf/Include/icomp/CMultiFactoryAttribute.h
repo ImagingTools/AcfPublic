@@ -27,7 +27,7 @@
 // STL includes
 #include <string>
 
-#include "icomp/TMultiAttribute.h"
+#include "icomp/CMultiReferenceAttribute.h"
 
 
 namespace icomp
@@ -37,10 +37,10 @@ namespace icomp
 /**
 	Special attribute used to store list of referenced component ID's.
 */
-class CMultiFactoryAttribute: public TMultiAttribute<std::string>
+class CMultiFactoryAttribute: public CMultiReferenceAttribute
 {
 public:
-	typedef TMultiAttribute<std::string> BaseClass;
+	typedef CMultiReferenceAttribute BaseClass;
 
 	enum DefaultAttributeFlags
 	{

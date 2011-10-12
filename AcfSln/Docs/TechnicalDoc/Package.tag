@@ -1051,10 +1051,6 @@
     <filename>group___acf_sln.html</filename>
   </compound>
   <compound kind="class">
-    <name>TCopySerializedWrap</name>
-    <filename>class_t_copy_serialized_wrap.html</filename>
-  </compound>
-  <compound kind="class">
     <name>TVector</name>
     <filename>class_t_vector.html</filename>
   </compound>

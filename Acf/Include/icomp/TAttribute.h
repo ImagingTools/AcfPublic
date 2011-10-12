@@ -163,6 +163,7 @@ const std::string TAttribute<Value>::s_typeName(istd::CClassInfo::GetName<TAttri
 typedef TAttribute<double> CDoubleAttribute;
 typedef TAttribute<bool> CBoolAttribute;
 typedef TAttribute<int> CIntAttribute;
+typedef TAttribute<std::string> CStdStringAttribute;
 typedef TAttribute<istd::CString> CStringAttribute;
 
 

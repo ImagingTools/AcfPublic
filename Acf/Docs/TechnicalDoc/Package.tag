@@ -1388,7 +1388,7 @@
     <name>CFactoryAttribute.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_c_factory_attribute_8h</filename>
-    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
+    <includes id="_c_reference_attribute_8h" name="CReferenceAttribute.h" local="yes" imported="no">icomp/CReferenceAttribute.h</includes>
     <class kind="class">icomp::CFactoryAttribute</class>
     <namespace>icomp</namespace>
   </compound>
@@ -1405,7 +1405,7 @@
     <name>CMultiFactoryAttribute.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_c_multi_factory_attribute_8h</filename>
-    <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
+    <includes id="_c_multi_reference_attribute_8h" name="CMultiReferenceAttribute.h" local="yes" imported="no">icomp/CMultiReferenceAttribute.h</includes>
     <class kind="class">icomp::CMultiFactoryAttribute</class>
     <namespace>icomp</namespace>
   </compound>
@@ -1650,6 +1650,13 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>TAttribute&lt; std::string &gt;</type>
+      <name>CStdStringAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>a1a5b78266bc6d2dc552b41a94f5b80c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>TAttribute&lt; istd::CString &gt;</type>
       <name>CStringAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
@@ -1784,6 +1791,13 @@
       <name>CMultiIntAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
       <anchor>a3fac49d7b6b1176bfdb11a7e5c4a8ec9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; std::string &gt;</type>
+      <name>CMultiStdStringAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>ac4f3810d7815442242c51bd82b3ae7da</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -9469,8 +9483,8 @@
       <type>bool</type>
       <name>WriteAttribute</name>
       <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>aac507f8b76ff5910f526d22a8de02180</anchor>
-      <arglist>(const std::string &amp;attributeId, const std::string &amp;attributeName, const iser::IObject &amp;attribute, std::ofstream &amp;stream) const </arglist>
+      <anchor>ad864914520245d08c328134b7e4a32a1</anchor>
+      <arglist>(const std::string &amp;attributeId, const std::string &amp;componentId, const std::string &amp;attributeName, const iser::IObject &amp;attribute, std::ofstream &amp;stream) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -9490,15 +9504,15 @@
       <type>bool</type>
       <name>GetAttributeValue</name>
       <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a10b9889baf2780a58ed30cd7075bb39a</anchor>
-      <arglist>(const iser::ISerializable &amp;attribute, std::string &amp;valueString, std::string &amp;typeName) const </arglist>
+      <anchor>a9c087b9988a0afe5c2ac274b86273a32</anchor>
+      <arglist>(const std::string &amp;attributeId, const std::string &amp;componentId, const iser::ISerializable &amp;attribute, std::string &amp;valueString, std::string &amp;typeName) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>GetMultiAttributeValue</name>
       <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a261775610a67754491d6e8a5fcf2407b</anchor>
-      <arglist>(const iser::ISerializable &amp;attribute, std::list&lt; std::string &gt; &amp;valueStrings, std::string &amp;typeName) const </arglist>
+      <anchor>a21bb7c8daa30baedb4b10fe48ad01ced</anchor>
+      <arglist>(const std::string &amp;attributeId, const std::string &amp;componentId, const iser::ISerializable &amp;attribute, std::list&lt; std::string &gt; &amp;valueStrings, std::string &amp;typeName) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -9534,6 +9548,13 @@
       <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
       <anchor>a04bae1ca7773ccafc01b4bad2380d315</anchor>
       <arglist>(const istd::CString &amp;text) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>std::string</type>
+      <name>GetStdStringLiteral</name>
+      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a4afd9cfddb3132f625d03f7fec5768b4</anchor>
+      <arglist>(const std::string &amp;text) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15180,6 +15201,13 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>TAttribute&lt; std::string &gt;</type>
+      <name>CStdStringAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>a1a5b78266bc6d2dc552b41a94f5b80c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>TAttribute&lt; istd::CString &gt;</type>
       <name>CStringAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
@@ -15205,6 +15233,13 @@
       <name>CMultiIntAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
       <anchor>a3fac49d7b6b1176bfdb11a7e5c4a8ec9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; std::string &gt;</type>
+      <name>CMultiStdStringAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>ac4f3810d7815442242c51bd82b3ae7da</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -16006,7 +16041,7 @@
   <compound kind="class">
     <name>icomp::CFactoryAttribute</name>
     <filename>classicomp_1_1_c_factory_attribute.html</filename>
-    <base>TAttribute&lt; std::string &gt;</base>
+    <base>icomp::CReferenceAttribute</base>
     <member kind="enumeration">
       <name>DefaultAttributeFlags</name>
       <anchorfile>classicomp_1_1_c_factory_attribute.html</anchorfile>
@@ -16026,10 +16061,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TAttribute&lt; std::string &gt;</type>
+      <type>CReferenceAttribute</type>
       <name>BaseClass</name>
       <anchorfile>classicomp_1_1_c_factory_attribute.html</anchorfile>
-      <anchor>aef960242a35bf2ae3c8e582fea3cd231</anchor>
+      <anchor>a07bf8b250e1ef810c60d7daab79e59bc</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -16083,7 +16118,7 @@
   <compound kind="class">
     <name>icomp::CMultiFactoryAttribute</name>
     <filename>classicomp_1_1_c_multi_factory_attribute.html</filename>
-    <base>TMultiAttribute&lt; std::string &gt;</base>
+    <base>icomp::CMultiReferenceAttribute</base>
     <member kind="enumeration">
       <name>DefaultAttributeFlags</name>
       <anchorfile>classicomp_1_1_c_multi_factory_attribute.html</anchorfile>
@@ -16103,10 +16138,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TMultiAttribute&lt; std::string &gt;</type>
+      <type>CMultiReferenceAttribute</type>
       <name>BaseClass</name>
       <anchorfile>classicomp_1_1_c_multi_factory_attribute.html</anchorfile>
-      <anchor>a4d6041033e5886632289e8f6e788aa06</anchor>
+      <anchor>ae7db61803faee911d282b1a5173154dd</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -16148,7 +16183,7 @@
   <compound kind="class">
     <name>icomp::CMultiReferenceAttribute</name>
     <filename>classicomp_1_1_c_multi_reference_attribute.html</filename>
-    <base>TMultiAttribute&lt; std::string &gt;</base>
+    <base>icomp::TMultiAttribute</base>
     <member kind="enumeration">
       <name>DefaultAttributeFlags</name>
       <anchorfile>classicomp_1_1_c_multi_reference_attribute.html</anchorfile>
@@ -16168,10 +16203,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TMultiAttribute&lt; std::string &gt;</type>
+      <type>CMultiStdStringAttribute</type>
       <name>BaseClass</name>
       <anchorfile>classicomp_1_1_c_multi_reference_attribute.html</anchorfile>
-      <anchor>ad54521e566cc7ebd50f8e002b07855a9</anchor>
+      <anchor>a18d6b8e663582945d0ec5646032a1315</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -16281,7 +16316,7 @@
   <compound kind="class">
     <name>icomp::CReferenceAttribute</name>
     <filename>classicomp_1_1_c_reference_attribute.html</filename>
-    <base>TAttribute&lt; std::string &gt;</base>
+    <base>icomp::TAttribute</base>
     <member kind="enumeration">
       <name>DefaultAttributeFlags</name>
       <anchorfile>classicomp_1_1_c_reference_attribute.html</anchorfile>
@@ -16301,10 +16336,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TAttribute&lt; std::string &gt;</type>
+      <type>CStdStringAttribute</type>
       <name>BaseClass</name>
       <anchorfile>classicomp_1_1_c_reference_attribute.html</anchorfile>
-      <anchor>a16ca95c44c5e6c86a1c86ecbbca99e88</anchor>
+      <anchor>a38bc4721d82f394312a0d69a61d6475f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -17590,7 +17625,7 @@
   <compound kind="class">
     <name>icomp::TAttribute</name>
     <filename>classicomp_1_1_t_attribute.html</filename>
-    <templarg>Value</templarg>
+    <templarg></templarg>
     <base virtualness="virtual">TCopySerializedWrap&lt; iser::IObject &gt;</base>
     <member kind="enumeration">
       <name>DefaultAttributeFlags</name>

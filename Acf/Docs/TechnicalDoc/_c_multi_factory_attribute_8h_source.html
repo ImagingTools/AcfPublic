@@ -32,17 +32,17 @@
 <a name="l00005"></a>00005 <span class="comment">// STL includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_t_multi_attribute_8h.html">icomp/TMultiAttribute.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_c_multi_reference_attribute_8h.html">icomp/CMultiReferenceAttribute.h</a>&quot;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="keyword">namespace </span>icomp
 <a name="l00012"></a>00012 {
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 
-<a name="l00018"></a><a class="code" href="classicomp_1_1_c_multi_factory_attribute.html">00018</a> <span class="keyword">class </span><a class="code" href="classicomp_1_1_c_multi_factory_attribute.html" title="Special attribute used to store list of referenced component ID&#39;s.">CMultiFactoryAttribute</a>: <span class="keyword">public</span> <a class="code" href="classicomp_1_1_t_multi_attribute.html" title="Template implementation of multiple component attribute.">TMultiAttribute</a>&lt;std::string&gt;
+<a name="l00018"></a><a class="code" href="classicomp_1_1_c_multi_factory_attribute.html">00018</a> <span class="keyword">class </span><a class="code" href="classicomp_1_1_c_multi_factory_attribute.html" title="Special attribute used to store list of referenced component ID&#39;s.">CMultiFactoryAttribute</a>: <span class="keyword">public</span> <a class="code" href="classicomp_1_1_c_multi_reference_attribute.html" title="Special attribute used to store list of referenced component ID&#39;s.">CMultiReferenceAttribute</a>
 <a name="l00019"></a>00019 {
 <a name="l00020"></a>00020 <span class="keyword">public</span>:
-<a name="l00021"></a><a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#a4d6041033e5886632289e8f6e788aa06">00021</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute&lt;std::string&gt;</a> <a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#a4d6041033e5886632289e8f6e788aa06">BaseClass</a>;
+<a name="l00021"></a><a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#ae7db61803faee911d282b1a5173154dd">00021</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_multi_reference_attribute.html" title="Special attribute used to store list of referenced component ID&#39;s.">CMultiReferenceAttribute</a> <a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#ae7db61803faee911d282b1a5173154dd">BaseClass</a>;
 <a name="l00022"></a>00022 
 <a name="l00023"></a><a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#ae768587d32e5cd426f2acef99f1d6ef1">00023</a>        <span class="keyword">enum</span> <a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#ae768587d32e5cd426f2acef99f1d6ef1">DefaultAttributeFlags</a>
 <a name="l00024"></a>00024        {
@@ -51,8 +51,8 @@
 <a name="l00027"></a>00027        };
 <a name="l00028"></a>00028 
 <a name="l00029"></a><a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#a54a8a3f90c671264e1d7fd82af1e8a41">00029</a>        <a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#a54a8a3f90c671264e1d7fd82af1e8a41">CMultiFactoryAttribute</a>(){}
-<a name="l00030"></a><a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#abf854f7a0db9bb50b03f721512a7853b">00030</a>        <a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#abf854f7a0db9bb50b03f721512a7853b">CMultiFactoryAttribute</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_multi_factory_attribute.html" title="Special attribute used to store list of referenced component ID&#39;s.">CMultiFactoryAttribute</a>&amp; attribute):<a class="code" href="classicomp_1_1_t_multi_attribute.html">BaseClass</a>(attribute){}
-<a name="l00031"></a><a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#a31109a2cc5e85b3a1797222879b5bca4">00031</a>        <a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#a31109a2cc5e85b3a1797222879b5bca4">CMultiFactoryAttribute</a>(<span class="keywordtype">int</span> elementsCount, std::string* valuesPtr):<a class="code" href="classicomp_1_1_t_multi_attribute.html">BaseClass</a>(elementsCount, valuesPtr){}
+<a name="l00030"></a><a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#abf854f7a0db9bb50b03f721512a7853b">00030</a>        <a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#abf854f7a0db9bb50b03f721512a7853b">CMultiFactoryAttribute</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_multi_factory_attribute.html" title="Special attribute used to store list of referenced component ID&#39;s.">CMultiFactoryAttribute</a>&amp; attribute):<a class="code" href="classicomp_1_1_c_multi_reference_attribute.html" title="Special attribute used to store list of referenced component ID&#39;s.">BaseClass</a>(attribute){}
+<a name="l00031"></a><a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#a31109a2cc5e85b3a1797222879b5bca4">00031</a>        <a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#a31109a2cc5e85b3a1797222879b5bca4">CMultiFactoryAttribute</a>(<span class="keywordtype">int</span> elementsCount, std::string* valuesPtr):<a class="code" href="classicomp_1_1_c_multi_reference_attribute.html" title="Special attribute used to store list of referenced component ID&#39;s.">BaseClass</a>(elementsCount, valuesPtr){}
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <span class="comment">// reimplemented (iser::IObject)</span>
 <a name="l00034"></a>00034        <span class="keyword">const</span> std::string&amp; <a class="code" href="classicomp_1_1_c_multi_factory_attribute.html#a55f95fcd7dbafcaa99bc8dfe125e084a">GetFactoryId</a>() <span class="keyword">const</span>;

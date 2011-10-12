@@ -121,55 +121,61 @@
 <a name="l00100"></a>00100                             <span class="keyword">const</span> std::string&amp; componentId,
 <a name="l00101"></a>00101                             <span class="keyword">const</span> <a class="code" href="structicomp_1_1_i_registry_1_1_element_info.html" title="Describe information stored with each element.">icomp::IRegistry::ElementInfo</a>&amp; componentInfo,
 <a name="l00102"></a>00102                             std::ofstream&amp; stream) <span class="keyword">const</span>;
-<a name="l00103"></a>00103        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#aac507f8b76ff5910f526d22a8de02180">WriteAttribute</a>(
+<a name="l00103"></a>00103        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#ad864914520245d08c328134b7e4a32a1">WriteAttribute</a>(
 <a name="l00104"></a>00104                             <span class="keyword">const</span> std::string&amp; attributeId,
-<a name="l00105"></a>00105                             <span class="keyword">const</span> std::string&amp; attributeName,
-<a name="l00106"></a>00106                             <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects.">iser::IObject</a>&amp; attribute,
-<a name="l00107"></a>00107                             std::ofstream&amp; stream) <span class="keyword">const</span>;
-<a name="l00108"></a>00108 
-<a name="l00109"></a>00109        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#a47c046ce3422ceea5aeb48ef37e65209">WriteRegistryClassDeclaration</a>(
-<a name="l00110"></a>00110                             <span class="keyword">const</span> std::string&amp; baseClassName,
-<a name="l00111"></a>00111                             <span class="keyword">const</span> std::string&amp; registryClassName,
-<a name="l00112"></a>00112                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
-<a name="l00113"></a>00113                             std::ofstream&amp; stream) <span class="keyword">const</span>;
-<a name="l00114"></a>00114        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#ad6af1d49dc9e5fc8b1ccb465fcd5075e">WriteRegistryClassBody</a>(
-<a name="l00115"></a>00115                             <span class="keyword">const</span> std::string&amp; baseClassName,
-<a name="l00116"></a>00116                             <span class="keyword">const</span> std::string&amp; registryClassName,
-<a name="l00117"></a>00117                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
-<a name="l00118"></a>00118                             std::ofstream&amp; stream) <span class="keyword">const</span>;
-<a name="l00119"></a>00119 
-<a name="l00120"></a>00120        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#a10b9889baf2780a58ed30cd7075bb39a">GetAttributeValue</a>(
-<a name="l00121"></a>00121                             <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; attribute,
-<a name="l00122"></a>00122                             std::string&amp; valueString,
-<a name="l00123"></a>00123                             std::string&amp; typeName) <span class="keyword">const</span>;
-<a name="l00124"></a>00124        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#a261775610a67754491d6e8a5fcf2407b">GetMultiAttributeValue</a>(
-<a name="l00125"></a>00125                             <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; attribute,
-<a name="l00126"></a>00126                             std::list&lt;std::string&gt;&amp; valueStrings,
-<a name="l00127"></a>00127                             std::string&amp; typeName) <span class="keyword">const</span>;
-<a name="l00128"></a>00128 
-<a name="l00129"></a>00129        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#a9e132b39d847189a55b89f8b9932b6de">NextLine</a>(std::ofstream&amp; stream) <span class="keyword">const</span>;
-<a name="l00130"></a>00130        <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#ad9d8961e903504b48cfae796e4f0daba">ChangeIndent</a>(<span class="keywordtype">int</span> difference) <span class="keyword">const</span>;
-<a name="l00131"></a>00131 
-<a name="l00132"></a>00132        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#af5ab7ea65540ee2e334a0edcf43afdcc">ExtractInfoFromFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath, std::string&amp; className, <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; headerFilePath) <span class="keyword">const</span>;
+<a name="l00105"></a>00105                             <span class="keyword">const</span> std::string&amp; componentId,
+<a name="l00106"></a>00106                             <span class="keyword">const</span> std::string&amp; attributeName,
+<a name="l00107"></a>00107                             <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects.">iser::IObject</a>&amp; attribute,
+<a name="l00108"></a>00108                             std::ofstream&amp; stream) <span class="keyword">const</span>;
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#a47c046ce3422ceea5aeb48ef37e65209">WriteRegistryClassDeclaration</a>(
+<a name="l00111"></a>00111                             <span class="keyword">const</span> std::string&amp; baseClassName,
+<a name="l00112"></a>00112                             <span class="keyword">const</span> std::string&amp; registryClassName,
+<a name="l00113"></a>00113                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
+<a name="l00114"></a>00114                             std::ofstream&amp; stream) <span class="keyword">const</span>;
+<a name="l00115"></a>00115        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#ad6af1d49dc9e5fc8b1ccb465fcd5075e">WriteRegistryClassBody</a>(
+<a name="l00116"></a>00116                             <span class="keyword">const</span> std::string&amp; baseClassName,
+<a name="l00117"></a>00117                             <span class="keyword">const</span> std::string&amp; registryClassName,
+<a name="l00118"></a>00118                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
+<a name="l00119"></a>00119                             std::ofstream&amp; stream) <span class="keyword">const</span>;
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#a9c087b9988a0afe5c2ac274b86273a32">GetAttributeValue</a>(
+<a name="l00122"></a>00122                             <span class="keyword">const</span> std::string&amp; attributeId,
+<a name="l00123"></a>00123                             <span class="keyword">const</span> std::string&amp; componentId,
+<a name="l00124"></a>00124                             <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; attribute,
+<a name="l00125"></a>00125                             std::string&amp; valueString,
+<a name="l00126"></a>00126                             std::string&amp; typeName) <span class="keyword">const</span>;
+<a name="l00127"></a>00127        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#a21bb7c8daa30baedb4b10fe48ad01ced">GetMultiAttributeValue</a>(
+<a name="l00128"></a>00128                             <span class="keyword">const</span> std::string&amp; attributeId,
+<a name="l00129"></a>00129                             <span class="keyword">const</span> std::string&amp; componentId,
+<a name="l00130"></a>00130                             <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; attribute,
+<a name="l00131"></a>00131                             std::list&lt;std::string&gt;&amp; valueStrings,
+<a name="l00132"></a>00132                             std::string&amp; typeName) <span class="keyword">const</span>;
 <a name="l00133"></a>00133 
-<a name="l00134"></a>00134        std::string <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#a93ca2cdf87347f2e44b3a4c126b28182">GetPackageName</a>(<span class="keyword">const</span> std::string&amp; packageId) <span class="keyword">const</span>;
-<a name="l00135"></a>00135 
-<a name="l00139"></a>00139        std::string <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#a04bae1ca7773ccafc01b4bad2380d315" title="Get some string as C++ string literal.">GetStringLiteral</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; text) <span class="keyword">const</span>;
+<a name="l00134"></a>00134        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#a9e132b39d847189a55b89f8b9932b6de">NextLine</a>(std::ofstream&amp; stream) <span class="keyword">const</span>;
+<a name="l00135"></a>00135        <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#ad9d8961e903504b48cfae796e4f0daba">ChangeIndent</a>(<span class="keywordtype">int</span> difference) <span class="keyword">const</span>;
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#af5ab7ea65540ee2e334a0edcf43afdcc">ExtractInfoFromFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath, std::string&amp; className, <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; headerFilePath) <span class="keyword">const</span>;
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139        std::string <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#a93ca2cdf87347f2e44b3a4c126b28182">GetPackageName</a>(<span class="keyword">const</span> std::string&amp; packageId) <span class="keyword">const</span>;
 <a name="l00140"></a>00140 
-<a name="l00141"></a>00141 <span class="keyword">private</span>:
-<a name="l00142"></a>00142        I_REF(<a class="code" href="classicomp_1_1_i_packages_manager.html">icomp::IPackagesManager</a>, m_packagesManagerCompPtr);
-<a name="l00143"></a>00143        I_REF(<a class="code" href="classicomp_1_1_i_registries_manager.html">icomp::IRegistriesManager</a>, m_registriesManagerCompPtr);
-<a name="l00144"></a>00144 
-<a name="l00145"></a>00145        <span class="keyword">mutable</span> <span class="keywordtype">int</span> m_indentCount;
-<a name="l00146"></a>00146 };
-<a name="l00147"></a>00147 
-<a name="l00148"></a>00148 
-<a name="l00149"></a>00149 } <span class="comment">// namespace ibase</span>
-<a name="l00150"></a>00150 
-<a name="l00151"></a>00151 
-<a name="l00152"></a>00152 <span class="preprocessor">#endif // !ibase_CRegistryCodeSaverComp_included</span>
-<a name="l00153"></a>00153 <span class="preprocessor"></span>
-<a name="l00154"></a>00154 
+<a name="l00144"></a>00144        std::string <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#a04bae1ca7773ccafc01b4bad2380d315" title="Get some wide string as C++ string literal.">GetStringLiteral</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; text) <span class="keyword">const</span>;
+<a name="l00148"></a>00148        std::string <a class="code" href="classibase_1_1_c_registry_code_saver_comp.html#a4afd9cfddb3132f625d03f7fec5768b4" title="Get some string as C++ string literal.">GetStdStringLiteral</a>(<span class="keyword">const</span> std::string&amp; text) <span class="keyword">const</span>;
+<a name="l00149"></a>00149 
+<a name="l00150"></a>00150 <span class="keyword">private</span>:
+<a name="l00151"></a>00151        I_REF(<a class="code" href="classicomp_1_1_i_packages_manager.html">icomp::IPackagesManager</a>, m_packagesManagerCompPtr);
+<a name="l00152"></a>00152        I_REF(<a class="code" href="classicomp_1_1_i_registries_manager.html">icomp::IRegistriesManager</a>, m_registriesManagerCompPtr);
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154        <span class="keyword">mutable</span> <span class="keywordtype">int</span> m_indentCount;
+<a name="l00155"></a>00155 };
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157 
+<a name="l00158"></a>00158 } <span class="comment">// namespace ibase</span>
+<a name="l00159"></a>00159 
+<a name="l00160"></a>00160 
+<a name="l00161"></a>00161 <span class="preprocessor">#endif // !ibase_CRegistryCodeSaverComp_included</span>
+<a name="l00162"></a>00162 <span class="preprocessor"></span>
+<a name="l00163"></a>00163 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -102,17 +102,19 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#a27748d4f27e1fb5cbf364391bebbc693">WriteClassDefinitions</a> (const std::string &amp;className, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const <a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ad4c7993f4197a69ad9f2dc0e12a2eb26">Addresses</a> &amp;composedAddresses, const <a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ad4c7993f4197a69ad9f2dc0e12a2eb26">Addresses</a> &amp;realAddresses, std::ofstream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ab9fe601cb6681081db3883c35bcf613c">WriteRegistryInfo</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const std::string &amp;registryCallPrefix, std::ofstream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#a64b16eda794d87f096e2c91d76f0f184">WriteComponentInfo</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const std::string &amp;registryCallPrefix, const std::string &amp;componentId, const <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">icomp::IRegistry::ElementInfo</a> &amp;componentInfo, std::ofstream &amp;stream) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#aac507f8b76ff5910f526d22a8de02180">WriteAttribute</a> (const std::string &amp;attributeId, const std::string &amp;attributeName, const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> &amp;attribute, std::ofstream &amp;stream) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ad864914520245d08c328134b7e4a32a1">WriteAttribute</a> (const std::string &amp;attributeId, const std::string &amp;componentId, const std::string &amp;attributeName, const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> &amp;attribute, std::ofstream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#a47c046ce3422ceea5aeb48ef37e65209">WriteRegistryClassDeclaration</a> (const std::string &amp;baseClassName, const std::string &amp;registryClassName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, std::ofstream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ad6af1d49dc9e5fc8b1ccb465fcd5075e">WriteRegistryClassBody</a> (const std::string &amp;baseClassName, const std::string &amp;registryClassName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, std::ofstream &amp;stream) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#a10b9889baf2780a58ed30cd7075bb39a">GetAttributeValue</a> (const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, std::string &amp;valueString, std::string &amp;typeName) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#a261775610a67754491d6e8a5fcf2407b">GetMultiAttributeValue</a> (const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, std::list&lt; std::string &gt; &amp;valueStrings, std::string &amp;typeName) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#a9c087b9988a0afe5c2ac274b86273a32">GetAttributeValue</a> (const std::string &amp;attributeId, const std::string &amp;componentId, const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, std::string &amp;valueString, std::string &amp;typeName) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#a21bb7c8daa30baedb4b10fe48ad01ced">GetMultiAttributeValue</a> (const std::string &amp;attributeId, const std::string &amp;componentId, const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, std::list&lt; std::string &gt; &amp;valueStrings, std::string &amp;typeName) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#a9e132b39d847189a55b89f8b9932b6de">NextLine</a> (std::ofstream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#ad9d8961e903504b48cfae796e4f0daba">ChangeIndent</a> (int difference) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#af5ab7ea65540ee2e334a0edcf43afdcc">ExtractInfoFromFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath, std::string &amp;className, <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;headerFilePath) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#a93ca2cdf87347f2e44b3a4c126b28182">GetPackageName</a> (const std::string &amp;packageId) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#a04bae1ca7773ccafc01b4bad2380d315">GetStringLiteral</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;text) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get some string as C++ string literal.  <a href="#a04bae1ca7773ccafc01b4bad2380d315"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get some wide string as C++ string literal.  <a href="#a04bae1ca7773ccafc01b4bad2380d315"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html#a4afd9cfddb3132f625d03f7fec5768b4">GetStdStringLiteral</a> (const std::string &amp;text) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get some string as C++ string literal.  <a href="#a4afd9cfddb3132f625d03f7fec5768b4"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Save registry as C++ code genereting class with the same functionality. </p>
@@ -343,13 +345,25 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a10b9889baf2780a58ed30cd7075bb39a"></a><!-- doxytag: member="ibase::CRegistryCodeSaverComp::GetAttributeValue" ref="a10b9889baf2780a58ed30cd7075bb39a" args="(const iser::ISerializable &amp;attribute, std::string &amp;valueString, std::string &amp;typeName) const " -->
+<a class="anchor" id="a9c087b9988a0afe5c2ac274b86273a32"></a><!-- doxytag: member="ibase::CRegistryCodeSaverComp::GetAttributeValue" ref="a9c087b9988a0afe5c2ac274b86273a32" args="(const std::string &amp;attributeId, const std::string &amp;componentId, const iser::ISerializable &amp;attribute, std::string &amp;valueString, std::string &amp;typeName) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool ibase::CRegistryCodeSaverComp::GetAttributeValue </td>
           <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>attributeId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>componentId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;&#160;</td>
           <td class="paramname"><em>attribute</em>, </td>
         </tr>
@@ -427,13 +441,25 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a261775610a67754491d6e8a5fcf2407b"></a><!-- doxytag: member="ibase::CRegistryCodeSaverComp::GetMultiAttributeValue" ref="a261775610a67754491d6e8a5fcf2407b" args="(const iser::ISerializable &amp;attribute, std::list&lt; std::string &gt; &amp;valueStrings, std::string &amp;typeName) const " -->
+<a class="anchor" id="a21bb7c8daa30baedb4b10fe48ad01ced"></a><!-- doxytag: member="ibase::CRegistryCodeSaverComp::GetMultiAttributeValue" ref="a21bb7c8daa30baedb4b10fe48ad01ced" args="(const std::string &amp;attributeId, const std::string &amp;componentId, const iser::ISerializable &amp;attribute, std::list&lt; std::string &gt; &amp;valueStrings, std::string &amp;typeName) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool ibase::CRegistryCodeSaverComp::GetMultiAttributeValue </td>
           <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>attributeId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>componentId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;&#160;</td>
           <td class="paramname"><em>attribute</em>, </td>
         </tr>
@@ -477,6 +503,25 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4afd9cfddb3132f625d03f7fec5768b4"></a><!-- doxytag: member="ibase::CRegistryCodeSaverComp::GetStdStringLiteral" ref="a4afd9cfddb3132f625d03f7fec5768b4" args="(const std::string &amp;text) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ibase::CRegistryCodeSaverComp::GetStdStringLiteral </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get some string as C++ string literal. </p>
+
+</div>
+</div>
 <a class="anchor" id="a04bae1ca7773ccafc01b4bad2380d315"></a><!-- doxytag: member="ibase::CRegistryCodeSaverComp::GetStringLiteral" ref="a04bae1ca7773ccafc01b4bad2380d315" args="(const istd::CString &amp;text) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -492,7 +537,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get some string as C++ string literal. </p>
+<p>Get some wide string as C++ string literal. </p>
 
 </div>
 </div>
@@ -652,7 +697,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aac507f8b76ff5910f526d22a8de02180"></a><!-- doxytag: member="ibase::CRegistryCodeSaverComp::WriteAttribute" ref="aac507f8b76ff5910f526d22a8de02180" args="(const std::string &amp;attributeId, const std::string &amp;attributeName, const iser::IObject &amp;attribute, std::ofstream &amp;stream) const " -->
+<a class="anchor" id="ad864914520245d08c328134b7e4a32a1"></a><!-- doxytag: member="ibase::CRegistryCodeSaverComp::WriteAttribute" ref="ad864914520245d08c328134b7e4a32a1" args="(const std::string &amp;attributeId, const std::string &amp;componentId, const std::string &amp;attributeName, const iser::IObject &amp;attribute, std::ofstream &amp;stream) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -661,6 +706,12 @@ Protected Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>componentId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

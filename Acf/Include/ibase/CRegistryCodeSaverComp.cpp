@@ -232,6 +232,8 @@ bool CRegistryCodeSaverComp::WriteHeader(
 	NextLine(stream);
 	stream << "// ACF includes";
 	NextLine(stream);
+	stream << "#include \"istd/TDelPtr.h\"";
+	NextLine(stream);
 	stream << "#include \"icomp/IRegistriesManager.h\"";
 	NextLine(stream);
 	stream << "#include \"icomp/CRegistry.h\"";
@@ -484,13 +486,7 @@ bool CRegistryCodeSaverComp::WriteHeader(
 	ChangeIndent(1);
 
 	NextLine(stream);
-	stream << "static icomp::CRegistryElement s_mainElement;";
-	NextLine(stream);
-	stream << "static CMainRegistry s_mainRegistry;";
-	NextLine(stream);
-	stream << "static CLocalEnvironmentManager s_localEnvironmentManager;";
-	NextLine(stream);
-	stream << "static icomp::CCompositeComponentContext s_mainComponentContext;";
+	stream << "istd::TDelPtr<icomp::CCompositeComponentContext> m_mainContextPtr;";
 
 	ChangeIndent(-1);
 	NextLine(stream);
@@ -515,6 +511,7 @@ bool CRegistryCodeSaverComp::WriteIncludes(
 	stream << "#include \"" << className << ".h\"" << std::endl;
 	stream << std::endl << std::endl;
 	stream << "// ACF includes" << std::endl;
+	stream << "#include \"istd/itr.h\"" << std::endl;
 	stream << "#include \"icomp/TAttribute.h\"" << std::endl;
 	stream << "#include \"icomp/TMultiAttribute.h\"" << std::endl;
 	stream << "#include \"icomp/CRegistryElement.h\"" << std::endl;
@@ -538,6 +535,7 @@ bool CRegistryCodeSaverComp::WriteIncludes(
 	}
 
 	stream << std::endl << std::endl;
+	stream << "I_DECLARE_TR_FUNCTION(" << className << ")" << std::endl << std::endl;
 
 	return !stream.fail();
 }
@@ -558,23 +556,21 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 	ChangeIndent(1);
 
 	NextLine(stream);
-	stream << "SetComponentContext(&s_mainComponentContext, NULL, false);";
+	stream << "static icomp::CRegistryElement mainElement;";
+	NextLine(stream);
+	stream << "static CMainRegistry mainRegistry;";
+	NextLine(stream);
+	stream << "static CLocalEnvironmentManager localEnvironmentManager;";
+	stream << std::endl;
+	NextLine(stream);
+	stream << "m_mainContextPtr.SetPtr(new icomp::CCompositeComponentContext(&mainElement, &localEnvironmentManager, &mainRegistry, &localEnvironmentManager, NULL));";
+	stream << std::endl;
+	NextLine(stream);
+	stream << "SetComponentContext(m_mainContextPtr.GetPtr(), NULL, false);";
 
 	ChangeIndent(-1);
 	NextLine(stream);
 	stream << "}";
-	stream << std::endl << std::endl;
-
-	NextLine(stream);
-	stream << "// static attributes";
-	NextLine(stream);
-	stream << "icomp::CRegistryElement " << className << "::" << "s_mainElement;";
-	NextLine(stream);
-	stream << className << "::" << "CMainRegistry " << className << "::" << "s_mainRegistry;";
-	NextLine(stream);
-	stream << className << "::" << "CLocalEnvironmentManager " << className << "::" << "s_localEnvironmentManager;";
-	NextLine(stream);
-	stream << "icomp::CCompositeComponentContext " << className << "::" << "s_mainComponentContext(&s_mainElement, &s_localEnvironmentManager, &s_mainRegistry, &s_localEnvironmentManager, NULL);";
 	stream << std::endl << std::endl;
 
 	if (!WriteRegistryClassBody(className, "CMainRegistry", registry, stream)){
@@ -987,7 +983,7 @@ bool CRegistryCodeSaverComp::WriteComponentInfo(
 						}
 
 						if (isAttributeValid){
-							if (!WriteAttribute(attributeId, attributeInfoName, *attrInfoPtr->attributePtr, stream)){
+							if (!WriteAttribute(attributeId, componentId, attributeInfoName, *attrInfoPtr->attributePtr, stream)){
 								return false;
 							}
 						}
@@ -1011,6 +1007,7 @@ bool CRegistryCodeSaverComp::WriteComponentInfo(
 
 bool CRegistryCodeSaverComp::WriteAttribute(
 			const std::string& attributeId,
+			const std::string& componentId,
 			const std::string& attributeInfoName,
 			const iser::IObject& attribute,
 			std::ofstream& stream) const
@@ -1028,7 +1025,7 @@ bool CRegistryCodeSaverComp::WriteAttribute(
 
 	std::string attributeName = "attr" + attributeId + "Ptr";
 
-	if (GetAttributeValue(attribute, valueString, attributeType)){
+	if (GetAttributeValue(attributeId, componentId, attribute, valueString, attributeType)){
 		NextLine(stream);
 		stream << attributeType << "* " << attributeName << " = dynamic_cast<" << attributeType << "*>(" << attributeInfoName << "->attributePtr.GetPtr());";
 		NextLine(stream);
@@ -1036,7 +1033,7 @@ bool CRegistryCodeSaverComp::WriteAttribute(
 		NextLine(stream);
 		stream << attributeName << "->SetValue(" << valueString << ");";
 	}
-	else if (GetMultiAttributeValue(attribute, valueStrings, attributeType)){
+	else if (GetMultiAttributeValue(attributeId, componentId, attribute, valueStrings, attributeType)){
 		if (!valueStrings.empty()){
 			NextLine(stream);
 			stream << attributeType << "* n" << attributeInfoName << " = dynamic_cast<" << attributeType << "*>(" << attributeInfoName << "->attributePtr.GetPtr());";
@@ -1135,6 +1132,8 @@ bool CRegistryCodeSaverComp::WriteRegistryClassBody(
 
 
 bool CRegistryCodeSaverComp::GetAttributeValue(
+			const std::string& attributeId,
+			const std::string& componentId,
 			const iser::ISerializable& attribute,
 			std::string& valueString,
 			std::string& typeName) const
@@ -1165,16 +1164,16 @@ bool CRegistryCodeSaverComp::GetAttributeValue(
 
 	const icomp::CStringAttribute* stringAttribute = dynamic_cast<const icomp::CStringAttribute*>(&attribute);
 	if (stringAttribute != NULL){
-		valueString = GetStringLiteral(stringAttribute->GetValue());
+		valueString = "tr(" + GetStringLiteral(stringAttribute->GetValue()) + ", \"" + componentId + "/" + attributeId + "\")";
 		typeName = "icomp::CStringAttribute";
 
 		return true;
 	}
 
-	const icomp::TAttribute<std::string>* idPtr = dynamic_cast<const icomp::TAttribute<std::string>*>(&attribute);
-	if (idPtr != NULL){		
-		valueString = istd::CString("\"" + idPtr->GetValue() + "\"").ToString();
-		typeName = "icomp::TAttribute<std::string>";
+	const icomp::CStdStringAttribute* stdStringAttributePtr = dynamic_cast<const icomp::CStdStringAttribute*>(&attribute);
+	if (stdStringAttributePtr != NULL){		
+		valueString = GetStdStringLiteral(stdStringAttributePtr->GetValue());
+		typeName = "icomp::CStdStringAttribute";
 
 		return true;
 	}
@@ -1184,6 +1183,8 @@ bool CRegistryCodeSaverComp::GetAttributeValue(
 
 
 bool CRegistryCodeSaverComp::GetMultiAttributeValue(
+			const std::string& attributeId,
+			const std::string& componentId,
 			const iser::ISerializable& attribute,
 			std::list<std::string>& valueStrings,
 			std::string& typeName) const
@@ -1197,17 +1198,6 @@ bool CRegistryCodeSaverComp::GetMultiAttributeValue(
 		}
 
 		typeName = "icomp::CMultiBoolAttribute";
-
-		return true;
-	}
-
-	const icomp::CMultiStringAttribute* stringListAttribute = dynamic_cast<const icomp::CMultiStringAttribute*>(&attribute);
-	if (stringListAttribute != NULL){
-		for (int index = 0; index < stringListAttribute->GetValuesCount(); index++){
-			valueStrings.push_back(GetStringLiteral(stringListAttribute->GetValueAt(index)));
-		}
-
-		typeName = "icomp::CMultiStringAttribute";
 
 		return true;
 	}
@@ -1234,13 +1224,24 @@ bool CRegistryCodeSaverComp::GetMultiAttributeValue(
 		return true;
 	}
 
-	const icomp::TMultiAttribute<std::string>* multiIdPtr = dynamic_cast<const icomp::TMultiAttribute<std::string>*>(&attribute);
-	if (multiIdPtr != NULL){
-		for (int index = 0; index < multiIdPtr->GetValuesCount(); index++){
-			valueStrings.push_back(istd::CString("\"" + multiIdPtr->GetValueAt(index) + "\"").ToString());
+	const icomp::CMultiStringAttribute* stringListAttribute = dynamic_cast<const icomp::CMultiStringAttribute*>(&attribute);
+	if (stringListAttribute != NULL){
+		for (int index = 0; index < stringListAttribute->GetValuesCount(); index++){
+			valueStrings.push_back("tr(" + GetStringLiteral(stringListAttribute->GetValueAt(index)) + ", \"" + componentId + "/" + attributeId + "\")");
 		}
 
-		typeName = "icomp::TMultiAttribute<std::string>";
+		typeName = "icomp::CMultiStringAttribute";
+
+		return true;
+	}
+
+	const icomp::CMultiStdStringAttribute* multiStdStringAttributePtr = dynamic_cast<const icomp::CMultiStdStringAttribute*>(&attribute);
+	if (multiStdStringAttributePtr != NULL){
+		for (int index = 0; index < multiStdStringAttributePtr->GetValuesCount(); index++){
+			valueStrings.push_back(GetStdStringLiteral(multiStdStringAttributePtr->GetValueAt(index)));
+		}
+
+		typeName = "icomp::CMultiStdStringAttribute";
 
 		return true;
 	}
@@ -1308,7 +1309,7 @@ std::string CRegistryCodeSaverComp::GetStringLiteral(const istd::CString& text) 
 {
 	static const char* hexCiphers = "0123456789ABCDEF";
 
-	std::string retVal("L\"");
+	std::string retVal("\"");
 
 	for (		istd::CString::const_iterator iter = text.begin();
 				iter != text.end();
@@ -1339,10 +1340,62 @@ std::string CRegistryCodeSaverComp::GetStringLiteral(const istd::CString& text) 
 		else if (c == '\"'){
 			retVal += "\\\"";
 		}
+		else if (c >= 255){
+			retVal += ".";
+		}
 		else if ((c >= 128) || (c < 32)){
 			retVal += "\\x";
-			retVal += hexCiphers[(c >> 12) & 15];
-			retVal += hexCiphers[(c >> 8) & 15];
+			retVal += hexCiphers[(c >> 4) & 15];
+			retVal += hexCiphers[c & 15];
+		}
+		else{
+			retVal += char(c);
+		}
+	}
+
+	retVal += "\"";
+
+	return retVal;
+}
+
+
+std::string CRegistryCodeSaverComp::GetStdStringLiteral(const std::string& text) const
+{
+	static const char* hexCiphers = "0123456789ABCDEF";
+
+	std::string retVal("\"");
+
+	for (		std::string::const_iterator iter = text.begin();
+				iter != text.end();
+				++iter){
+		std::string::value_type c = *iter;
+
+		if (c == '\a'){
+			retVal += "\\a";
+		}
+		else if (c == '\b'){
+			retVal += "\\b";
+		}
+		else if (c == '\f'){
+			retVal += "\\f";
+		}
+		else if (c == '\n'){
+			retVal += "\\n";
+		}
+		else if (c == '\r'){
+			retVal += "\\r";
+		}
+		else if (c == '\t'){
+			retVal += "\\t";
+		}
+		else if (c == '\\'){
+			retVal += "\\\\";
+		}
+		else if (c == '\"'){
+			retVal += "\\\"";
+		}
+		else if ((c >= 128) || (c < 32)){
+			retVal += "\\x";
 			retVal += hexCiphers[(c >> 4) & 15];
 			retVal += hexCiphers[c & 15];
 		}
