@@ -189,19 +189,13 @@ int CLibAvVideoDecoderComp::BeginTask(
 int CLibAvVideoDecoderComp::WaitTaskFinished(
 				int taskId,
 				double /*timeoutTime*/,
-				bool killOnTimeout)
+				bool /*killOnTimeout*/)
 {
 	if (taskId >= 0){
 		I_ASSERT(GetTaskState(taskId) != TS_NONE);	// task exists
 
 		while (GetTaskState(taskId) == TS_WAIT){
-			if (FinishNextTask() < 0){
-				if (killOnTimeout){
-					m_imageTasks.erase(taskId);
-				}
-
-				return TS_INVALID;
-			}
+			FinishNextTask();
 		}
 
 		int taskState = TS_NONE;

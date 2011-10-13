@@ -48,8 +48,6 @@ bool CopyByArchive(const istd::IChangeable& object, istd::IChangeable& result)
 }
 
 
-
-
 } // namespace iser
 
 
