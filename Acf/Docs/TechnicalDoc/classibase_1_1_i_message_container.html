@@ -64,7 +64,7 @@ Public Types</h2></td></tr>
 <a class="el" href="classibase_1_1_i_message_container.html#af2755abeca53284af38ccf73ba57d8a9af6c8498da8eec2fafe45d980c7f5a2cf">CF_MESSAGE_REMOVED</a> =  1 &lt;&lt; 7, 
 <a class="el" href="classibase_1_1_i_message_container.html#af2755abeca53284af38ccf73ba57d8a9a631695e22f718627f841bf47167c4627">CF_RESET</a> =  1 &lt;&lt; 8
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="classibase_1_1_i_message_consumer.html#a3ce48ac791b8d674f4b8b35de07b7948">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a3ce88f2ff591fa31ea01bcd4f0fb166f">Messages</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="classibase_1_1_i_message_consumer.html#a3ce48ac791b8d674f4b8b35de07b7948">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#aca3800f565c96e50a48cd06cac3d304c">Messages</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a908b3361d6c15f45eae3802e18ba4e5c">SetMaxMessageCount</a> (int maxMessageCount=-1)=0</td></tr>
@@ -73,7 +73,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximum time difference between the oldest and newest message.  <a href="#a00747812d58911bf2bb1accc64630fe8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#adaec1546c8caaeac32971c96ea73e2eb">GetWorstCategory</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get worst message category.  <a href="#adaec1546c8caaeac32971c96ea73e2eb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classibase_1_1_i_message_container.html#a3ce88f2ff591fa31ea01bcd4f0fb166f">Messages</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a0c3f5911eeb22ad94eaa97fe64fae100">GetMessages</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classibase_1_1_i_message_container.html#aca3800f565c96e50a48cd06cac3d304c">Messages</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a0c3f5911eeb22ad94eaa97fe64fae100">GetMessages</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns messages in the container.  <a href="#a0c3f5911eeb22ad94eaa97fe64fae100"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a0d9d1d0a86950ceb646c3e25bad7502c">ClearMessages</a> ()=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all message items from container.  <a href="#a0d9d1d0a86950ceb646c3e25bad7502c"></a><br/></td></tr>
@@ -83,12 +83,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_i_message_container_8h_source.html#l00020">20</a> of file <a class="el" href="_i_message_container_8h_source.html">IMessageContainer.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a3ce88f2ff591fa31ea01bcd4f0fb166f"></a><!-- doxytag: member="ibase::IMessageContainer::Messages" ref="a3ce88f2ff591fa31ea01bcd4f0fb166f" args="" -->
+<a class="anchor" id="aca3800f565c96e50a48cd06cac3d304c"></a><!-- doxytag: member="ibase::IMessageContainer::Messages" ref="aca3800f565c96e50a48cd06cac3d304c" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::vector&lt; <a class="el" href="classibase_1_1_i_message_consumer.html#a3ce48ac791b8d674f4b8b35de07b7948">MessagePtr</a> &gt; <a class="el" href="classibase_1_1_i_message_container.html#a3ce88f2ff591fa31ea01bcd4f0fb166f">ibase::IMessageContainer::Messages</a></td>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="classibase_1_1_i_message_consumer.html#a3ce48ac791b8d674f4b8b35de07b7948">MessagePtr</a>&gt; <a class="el" href="classibase_1_1_i_message_container.html#aca3800f565c96e50a48cd06cac3d304c">ibase::IMessageContainer::Messages</a></td>
         </tr>
       </table>
 </div>
@@ -150,7 +150,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classibase_1_1_i_message_container.html#a3ce88f2ff591fa31ea01bcd4f0fb166f">Messages</a> ibase::IMessageContainer::GetMessages </td>
+          <td class="memname">virtual <a class="el" href="classibase_1_1_i_message_container.html#aca3800f565c96e50a48cd06cac3d304c">Messages</a> ibase::IMessageContainer::GetMessages </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>

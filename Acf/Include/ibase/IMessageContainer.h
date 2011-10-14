@@ -42,7 +42,7 @@ namespace ibase
 class IMessageContainer: virtual public IMessageConsumer, virtual public iser::ISerializable
 {
 public:
-	typedef std::vector< MessagePtr > Messages;
+	typedef std::vector<MessagePtr> Messages;
 
 	enum ChangeFlags
 	{

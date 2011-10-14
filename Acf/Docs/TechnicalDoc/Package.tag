@@ -10364,7 +10364,7 @@
       <type>std::vector&lt; MessagePtr &gt;</type>
       <name>Messages</name>
       <anchorfile>classibase_1_1_i_message_container.html</anchorfile>
-      <anchor>a3ce88f2ff591fa31ea01bcd4f0fb166f</anchor>
+      <anchor>aca3800f565c96e50a48cd06cac3d304c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">

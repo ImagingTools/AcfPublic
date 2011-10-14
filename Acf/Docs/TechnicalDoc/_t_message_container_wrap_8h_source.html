@@ -66,7 +66,7 @@
 <a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_message_container_wrap.html#af046e8c26bc30938f1f2ce5e9a734a2f">SetMaxMessageCount</a>(<span class="keywordtype">int</span> maxMessageCount = -1);
 <a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_message_container_wrap.html#a29d4aff6325c9eb1d46ba06f7f08b993">SetMaxLiveTime</a>(<span class="keywordtype">int</span> maxLiveTime = -1);
 <a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_t_message_container_wrap.html#aaa613df1d9dcdbcc621e9badc899fe46">GetWorstCategory</a>() <span class="keyword">const</span>;
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <a class="code" href="classibase_1_1_i_message_container.html#a3ce88f2ff591fa31ea01bcd4f0fb166f">IMessageContainer::Messages</a> <a class="code" href="classibase_1_1_t_message_container_wrap.html#a783de0b2ef703a6e00d0f860383f3147">GetMessages</a>() <span class="keyword">const</span>;
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <a class="code" href="classibase_1_1_i_message_container.html#aca3800f565c96e50a48cd06cac3d304c">IMessageContainer::Messages</a> <a class="code" href="classibase_1_1_t_message_container_wrap.html#a783de0b2ef703a6e00d0f860383f3147">GetMessages</a>() <span class="keyword">const</span>;
 <a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_message_container_wrap.html#a0e6b48fc72490f4a02a98e3e171ca062">ClearMessages</a>();
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048        <span class="comment">// pseudo-reimplemented (ibase::IMessageConsumer)</span>
@@ -214,9 +214,9 @@
 <a name="l00190"></a>00190 
 <a name="l00191"></a>00191 
 <a name="l00192"></a>00192 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00193"></a><a class="code" href="classibase_1_1_t_message_container_wrap.html#a783de0b2ef703a6e00d0f860383f3147">00193</a> <a class="code" href="classibase_1_1_i_message_container.html#a3ce88f2ff591fa31ea01bcd4f0fb166f">IMessageContainer::Messages</a> <a class="code" href="classibase_1_1_t_message_container_wrap.html#a783de0b2ef703a6e00d0f860383f3147">TMessageContainerWrap&lt;Base&gt;::GetMessages</a>()<span class="keyword"> const</span>
+<a name="l00193"></a><a class="code" href="classibase_1_1_t_message_container_wrap.html#a783de0b2ef703a6e00d0f860383f3147">00193</a> <a class="code" href="classibase_1_1_i_message_container.html#aca3800f565c96e50a48cd06cac3d304c">IMessageContainer::Messages</a> <a class="code" href="classibase_1_1_t_message_container_wrap.html#a783de0b2ef703a6e00d0f860383f3147">TMessageContainerWrap&lt;Base&gt;::GetMessages</a>()<span class="keyword"> const</span>
 <a name="l00194"></a>00194 <span class="keyword"></span>{
-<a name="l00195"></a>00195        <a class="code" href="classibase_1_1_i_message_container.html#a3ce88f2ff591fa31ea01bcd4f0fb166f">IMessageContainer::Messages</a> messages;
+<a name="l00195"></a>00195        <a class="code" href="classibase_1_1_i_message_container.html#aca3800f565c96e50a48cd06cac3d304c">IMessageContainer::Messages</a> messages;
 <a name="l00196"></a>00196 
 <a name="l00197"></a>00197        <span class="keywordflow">for</span> (         MessageList::const_iterator iter = m_messages.begin();
 <a name="l00198"></a>00198                             iter != m_messages.end();
@@ -231,7 +231,7 @@
 <a name="l00207"></a>00207               <a class="code" href="classibase_1_1_i_message_container.html" title="Common interface for an message container.">IMessageContainer</a>* childPtr = GetChild(childIndex);
 <a name="l00208"></a>00208               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(childPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00209"></a>00209 
-<a name="l00210"></a>00210               <a class="code" href="classibase_1_1_i_message_container.html#a3ce88f2ff591fa31ea01bcd4f0fb166f">IMessageContainer::Messages</a> childMessages = childPtr-&gt;<a class="code" href="classibase_1_1_i_message_container.html#a0c3f5911eeb22ad94eaa97fe64fae100" title="This function returns messages in the container.">GetMessages</a>();
+<a name="l00210"></a>00210               <a class="code" href="classibase_1_1_i_message_container.html#aca3800f565c96e50a48cd06cac3d304c">IMessageContainer::Messages</a> childMessages = childPtr-&gt;<a class="code" href="classibase_1_1_i_message_container.html#a0c3f5911eeb22ad94eaa97fe64fae100" title="This function returns messages in the container.">GetMessages</a>();
 <a name="l00211"></a>00211 
 <a name="l00212"></a>00212               messages.insert(messages.end(), childMessages.begin(), childMessages.end());
 <a name="l00213"></a>00213        }

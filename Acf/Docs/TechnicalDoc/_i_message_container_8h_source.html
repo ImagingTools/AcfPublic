@@ -44,7 +44,7 @@
 <a name="l00020"></a><a class="code" href="classibase_1_1_i_message_container.html">00020</a> <span class="keyword">class </span><a class="code" href="classibase_1_1_i_message_container.html" title="Common interface for an message container.">IMessageContainer</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">IMessageConsumer</a>, <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00023"></a><a class="code" href="classibase_1_1_i_message_container.html#a3ce88f2ff591fa31ea01bcd4f0fb166f">00023</a>        <span class="keyword">typedef</span> std::vector&lt; MessagePtr &gt; <a class="code" href="classibase_1_1_i_message_container.html#a3ce88f2ff591fa31ea01bcd4f0fb166f">Messages</a>;
+<a name="l00023"></a><a class="code" href="classibase_1_1_i_message_container.html#aca3800f565c96e50a48cd06cac3d304c">00023</a>        <span class="keyword">typedef</span> std::vector&lt;MessagePtr&gt; <a class="code" href="classibase_1_1_i_message_container.html#aca3800f565c96e50a48cd06cac3d304c">Messages</a>;
 <a name="l00024"></a>00024 
 <a name="l00025"></a><a class="code" href="classibase_1_1_i_message_container.html#af2755abeca53284af38ccf73ba57d8a9">00025</a>        <span class="keyword">enum</span> <a class="code" href="classibase_1_1_i_message_container.html#af2755abeca53284af38ccf73ba57d8a9">ChangeFlags</a>
 <a name="l00026"></a>00026        {
@@ -59,7 +59,7 @@
 <a name="l00046"></a>00046 
 <a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_i_message_container.html#adaec1546c8caaeac32971c96ea73e2eb" title="Get worst message category.">GetWorstCategory</a>() <span class="keyword">const</span> = 0;
 <a name="l00052"></a>00052 
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <a class="code" href="classibase_1_1_i_message_container.html#a3ce88f2ff591fa31ea01bcd4f0fb166f">Messages</a> <a class="code" href="classibase_1_1_i_message_container.html#a0c3f5911eeb22ad94eaa97fe64fae100" title="This function returns messages in the container.">GetMessages</a>() <span class="keyword">const</span> = 0;
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <a class="code" href="classibase_1_1_i_message_container.html#aca3800f565c96e50a48cd06cac3d304c">Messages</a> <a class="code" href="classibase_1_1_i_message_container.html#a0c3f5911eeb22ad94eaa97fe64fae100" title="This function returns messages in the container.">GetMessages</a>() <span class="keyword">const</span> = 0;
 <a name="l00057"></a>00057 
 <a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_message_container.html#a0d9d1d0a86950ceb646c3e25bad7502c" title="Remove all message items from container.">ClearMessages</a>() = 0;
 <a name="l00062"></a>00062 };
