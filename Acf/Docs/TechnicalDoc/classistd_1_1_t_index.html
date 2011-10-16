@@ -111,6 +111,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_index.html#ae06db313a59627c04a16d11b9563d2de">operator[]</a> (int index)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_index.html#a9c24b49a7736e5e5d3862bbd27ef7ac7">operator==</a> (const <a class="el" href="classistd_1_1_t_index.html">TIndex</a> &amp;index) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_index.html#a27b04f8ecd333e38e4f4258066e025ea">operator!=</a> (const <a class="el" href="classistd_1_1_t_index.html">TIndex</a> &amp;index) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_index.html">TIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_index.html#a779d1dfc6b70416bc20c0d59271ad97c">operator+</a> (const <a class="el" href="classistd_1_1_t_index.html">TIndex</a> &amp;index) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_index.html">TIndex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_index.html#a956bf91c6f4d8c70a4aebbe39613e588">operator+=</a> (const <a class="el" href="classistd_1_1_t_index.html">TIndex</a> &amp;index)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_index.html">TIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_index.html#a46da906c7085fd5ca0b13fc5a5b34b77">operator-</a> (const <a class="el" href="classistd_1_1_t_index.html">TIndex</a> &amp;index) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_index.html">TIndex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_index.html#a9f9a1007da61b22df660716e8ef3b550">operator-=</a> (const <a class="el" href="classistd_1_1_t_index.html">TIndex</a> &amp;index)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classistd_1_1_t_index.html">TIndex</a>&lt; Dimensions &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_index.html#a0cdb2a04223ebfae1d6caed45c8bf921">GetZero</a> ()</td></tr>
@@ -203,7 +207,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Default constructor without member initialization. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00361">361</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00424">424</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -226,7 +230,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Constructor initializing all member to specified value. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00354">354</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00417">417</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -249,7 +253,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Copy constructor. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00370">370</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00433">433</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -273,7 +277,7 @@ template&lt;int Dimensions&gt; </div>
 <p>Get begin value of element access iterator. </p>
 <p>Please refer to general description of ACF iterators, STL iterators or Qt iterators concept. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00301">301</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00307">307</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -295,7 +299,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Set all components to 0. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00250">250</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00256">256</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -319,7 +323,7 @@ template&lt;int Dimensions&gt; </div>
 <p>Decrese this index inside the boundaries. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>false, if decrease wasn't possible (e.g. overflow). </dd></dl>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00425">425</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00488">488</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
 
@@ -351,7 +355,7 @@ template&lt;int Dimensions&gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if success. It is provided for template implementations. In this case it returns always true. </dd></dl>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00289">289</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00295">295</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
 
@@ -376,7 +380,7 @@ template&lt;int Dimensions&gt; </div>
 <p>Get end value of element access iterator. </p>
 <p>Please refer to general description of ACF iterators, STL iterators or Qt iterators concept. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00308">308</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00314">314</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -399,7 +403,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Get element stored at specified index. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00257">257</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00263">263</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
 
@@ -423,7 +427,9 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Get number of dimensions of this index. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00190">190</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00196">196</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_index_8h_source.html#l00358">istd::TIndex&lt; Dimensions &gt;::operator+()</a>, <a class="el" href="_t_index_8h_source.html#l00373">istd::TIndex&lt; Dimensions &gt;::operator+=()</a>, <a class="el" href="_t_index_8h_source.html#l00386">istd::TIndex&lt; Dimensions &gt;::operator-()</a>, and <a class="el" href="_t_index_8h_source.html#l00401">istd::TIndex&lt; Dimensions &gt;::operator-=()</a>.</p>
 
 </div>
 </div>
@@ -445,7 +451,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Get global instance of invalid index. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00472">472</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00535">535</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -468,7 +474,7 @@ template&lt;int Dimensions&gt; </div>
 <p>Get total number of elements if this index is treated as size. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>multiplication of all elements. </dd></dl>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00450">450</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00513">513</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -490,7 +496,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Get global instance of zero index. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00465">465</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00528">528</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -514,7 +520,7 @@ template&lt;int Dimensions&gt; </div>
 <p>Increase this index inside the boundaries. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>false, if increase wasn't possible (e.g. overflow). </dd></dl>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00403">403</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00466">466</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
 
@@ -546,7 +552,7 @@ template&lt;int Dimensions&gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if success. It is provided for template implementations. In this case it returns always true. </dd></dl>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00277">277</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00283">283</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
 
@@ -571,7 +577,7 @@ template&lt;int Dimensions&gt; </div>
 <p>Check, if number dimensions is fixed. </p>
 <p>It is provided for template implementations. It returns always true. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00183">183</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00189">189</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -595,7 +601,7 @@ template&lt;int Dimensions&gt; </div>
 <p>Check if index is inside boundaries. </p>
 <p>Index is inside boundaries, if all its components are smaller than according boundary components. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00388">388</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00451">451</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
 
@@ -622,7 +628,7 @@ template&lt;int Dimensions&gt; </div>
 <p>Check if this index interpreted as size is empty. </p>
 <p>It means, it returns true, is some of components is less or equal 0. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00230">230</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00236">236</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -645,7 +651,7 @@ template&lt;int Dimensions&gt; </div>
 <p>Check if this index is valid. </p>
 <p>Index is valid, if all its components are bigger or equal 0. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00204">204</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00210">210</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -668,7 +674,7 @@ template&lt;int Dimensions&gt; </div>
 <p>Check if this index point at zero element. </p>
 <p>In other words, it checks if all components are 0. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00217">217</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00223">223</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -689,7 +695,99 @@ template&lt;int Dimensions&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00345">345</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00351">351</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a779d1dfc6b70416bc20c0d59271ad97c"></a><!-- doxytag: member="istd::TIndex::operator+" ref="a779d1dfc6b70416bc20c0d59271ad97c" args="(const TIndex &amp;index) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_t_index.html">TIndex</a>&lt; Dimensions &gt; <a class="el" href="classistd_1_1_t_index.html">istd::TIndex</a>&lt; Dimensions &gt;::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_t_index.html">TIndex</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00358">358</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+
+<p>References <a class="el" href="_t_index_8h_source.html#l00196">istd::TIndex&lt; Dimensions &gt;::GetDimensionsCount()</a>, and <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a956bf91c6f4d8c70a4aebbe39613e588"></a><!-- doxytag: member="istd::TIndex::operator+=" ref="a956bf91c6f4d8c70a4aebbe39613e588" args="(const TIndex &amp;index)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_t_index.html">TIndex</a>&lt; Dimensions &gt; &amp; <a class="el" href="classistd_1_1_t_index.html">istd::TIndex</a>&lt; Dimensions &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_t_index.html">TIndex</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00373">373</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+
+<p>References <a class="el" href="_t_index_8h_source.html#l00196">istd::TIndex&lt; Dimensions &gt;::GetDimensionsCount()</a>, and <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a46da906c7085fd5ca0b13fc5a5b34b77"></a><!-- doxytag: member="istd::TIndex::operator&#45;" ref="a46da906c7085fd5ca0b13fc5a5b34b77" args="(const TIndex &amp;index) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_t_index.html">TIndex</a>&lt; Dimensions &gt; <a class="el" href="classistd_1_1_t_index.html">istd::TIndex</a>&lt; Dimensions &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_t_index.html">TIndex</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00386">386</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+
+<p>References <a class="el" href="_t_index_8h_source.html#l00196">istd::TIndex&lt; Dimensions &gt;::GetDimensionsCount()</a>, and <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f9a1007da61b22df660716e8ef3b550"></a><!-- doxytag: member="istd::TIndex::operator&#45;=" ref="a9f9a1007da61b22df660716e8ef3b550" args="(const TIndex &amp;index)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_t_index.html">TIndex</a>&lt; Dimensions &gt; &amp; <a class="el" href="classistd_1_1_t_index.html">istd::TIndex</a>&lt; Dimensions &gt;::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_t_index.html">TIndex</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00401">401</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+
+<p>References <a class="el" href="_t_index_8h_source.html#l00196">istd::TIndex&lt; Dimensions &gt;::GetDimensionsCount()</a>, and <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
 
 </div>
 </div>
@@ -710,7 +808,7 @@ template&lt;int Dimensions&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00332">332</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00338">338</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -731,7 +829,7 @@ template&lt;int Dimensions&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00315">315</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00321">321</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -752,7 +850,7 @@ template&lt;int Dimensions&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00322">322</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00328">328</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
 
@@ -778,7 +876,7 @@ template&lt;int Dimensions&gt; </div>
 <p>For this (fixed-size) implementation, it does the same as clear. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_t_index.html#a6adfade64d3ecbb28ecca3820dda7638" title="Set all components to 0.">Clear()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00243">243</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00249">249</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -801,7 +899,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Set all components to specified value. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00379">379</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00442">442</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>
@@ -834,7 +932,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Set element at specified index. </p>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00267">267</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00273">273</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
 
@@ -867,7 +965,7 @@ template&lt;int Dimensions&gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if number of set dimensions equals template parameter or false if isn't. </dd></dl>
 
-<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00197">197</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_index_8h_source.html#l00203">203</a> of file <a class="el" href="_t_index_8h_source.html">TIndex.h</a>.</p>
 
 </div>
 </div>

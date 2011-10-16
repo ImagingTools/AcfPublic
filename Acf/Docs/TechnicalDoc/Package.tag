@@ -6831,6 +6831,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>double</type>
+      <name>GetLength</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a3066cdefd32b69f924505b792af3cd53</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>CLine2d</type>
       <name>GetClipped</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
@@ -10576,7 +10583,6 @@
     <templarg>ItemClass</templarg>
     <templarg>ContainerClass</templarg>
     <base virtualness="virtual">istd::IContainerInfo</base>
-    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <name>ChangeFlags</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
@@ -18026,8 +18032,8 @@
       <type>static Interface *</type>
       <name>ExtractInterface</name>
       <anchorfile>classicomp_1_1_t_factory_member.html</anchorfile>
-      <anchor>a8dd4f70a3613e093ebcc2e916abe586f</anchor>
-      <arglist>(IComponent *componentPtr, const std::string &amp;subId=&quot;&quot;)</arglist>
+      <anchor>a48e09ece8599caad2636a5a7f1434a9a</anchor>
+      <arglist>(istd::IPolymorphic *instancePtr, const std::string &amp;subId=&quot;&quot;)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type></type>
@@ -42280,6 +42286,34 @@
       <anchorfile>classistd_1_1_t_index.html</anchorfile>
       <anchor>a27b04f8ecd333e38e4f4258066e025ea</anchor>
       <arglist>(const TIndex &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TIndex</type>
+      <name>operator+</name>
+      <anchorfile>classistd_1_1_t_index.html</anchorfile>
+      <anchor>a779d1dfc6b70416bc20c0d59271ad97c</anchor>
+      <arglist>(const TIndex &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TIndex &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classistd_1_1_t_index.html</anchorfile>
+      <anchor>a956bf91c6f4d8c70a4aebbe39613e588</anchor>
+      <arglist>(const TIndex &amp;index)</arglist>
+    </member>
+    <member kind="function">
+      <type>TIndex</type>
+      <name>operator-</name>
+      <anchorfile>classistd_1_1_t_index.html</anchorfile>
+      <anchor>a46da906c7085fd5ca0b13fc5a5b34b77</anchor>
+      <arglist>(const TIndex &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TIndex &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>classistd_1_1_t_index.html</anchorfile>
+      <anchor>a9f9a1007da61b22df660716e8ef3b550</anchor>
+      <arglist>(const TIndex &amp;index)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static const TIndex&lt; Dimensions &gt; &amp;</type>

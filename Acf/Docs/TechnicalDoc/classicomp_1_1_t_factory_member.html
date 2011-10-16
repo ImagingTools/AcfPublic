@@ -76,8 +76,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of this interface.  <a href="#aa127c868b5fe267d400ff1338761b977"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static Interface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#a8dd4f70a3613e093ebcc2e916abe586f">ExtractInterface</a> (<a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *componentPtr, const std::string &amp;subId=&quot;&quot;)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract interface from some component.  <a href="#a8dd4f70a3613e093ebcc2e916abe586f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static Interface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#a48e09ece8599caad2636a5a7f1434a9a">ExtractInterface</a> (<a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *instancePtr, const std::string &amp;subId=&quot;&quot;)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract interface from some component.  <a href="#a48e09ece8599caad2636a5a7f1434a9a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#aa47b9875f79f341e4802dfb1af2b6611">TFactoryMember</a> (const <a class="el" href="classicomp_1_1_t_factory_member.html">TFactoryMember</a> &amp;ptr)</td></tr>
@@ -182,7 +182,7 @@ template&lt;class Interface &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00144">144</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00151">151</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
 
 </div>
 </div>
@@ -228,7 +228,7 @@ template&lt;class Interface &gt; </div>
 <div class="memdoc">
 
 <p>Create instance of this interface. </p>
-<p>This is combination of the methods <a class="el" href="classicomp_1_1_t_factory_member.html#a4ff275e88eac06a043a85c6d8e385a0a" title="Create component without extracting any interface.">CreateComponent()</a> and <a class="el" href="classicomp_1_1_t_factory_member.html#a8dd4f70a3613e093ebcc2e916abe586f" title="Extract interface from some component.">ExtractInterface()</a> provided for convinience, if only one interface is asked in factorisied objects. </p>
+<p>This is combination of the methods <a class="el" href="classicomp_1_1_t_factory_member.html#a4ff275e88eac06a043a85c6d8e385a0a" title="Create component without extracting any interface.">CreateComponent()</a> and <a class="el" href="classicomp_1_1_t_factory_member.html#a48e09ece8599caad2636a5a7f1434a9a" title="Extract interface from some component.">ExtractInterface()</a> provided for convinience, if only one interface is asked in factorisied objects. </p>
 
 <p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00116">116</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
 
@@ -236,7 +236,7 @@ template&lt;class Interface &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a8dd4f70a3613e093ebcc2e916abe586f"></a><!-- doxytag: member="icomp::TFactoryMember::ExtractInterface" ref="a8dd4f70a3613e093ebcc2e916abe586f" args="(IComponent *componentPtr, const std::string &amp;subId=&quot;&quot;)" -->
+<a class="anchor" id="a48e09ece8599caad2636a5a7f1434a9a"></a><!-- doxytag: member="icomp::TFactoryMember::ExtractInterface" ref="a48e09ece8599caad2636a5a7f1434a9a" args="(istd::IPolymorphic *instancePtr, const std::string &amp;subId=&quot;&quot;)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -245,8 +245,8 @@ template&lt;class Interface &gt; </div>
         <tr>
           <td class="memname">Interface * <a class="el" href="classicomp_1_1_t_factory_member.html">icomp::TFactoryMember</a>&lt; Interface &gt;::ExtractInterface </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td>
-          <td class="paramname"><em>componentPtr</em>, </td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramname"><em>instancePtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -267,16 +267,16 @@ template&lt;class Interface &gt; </div>
 <p>Type of extracted interface is specified by template parameter of this class. If you want to force some factory to support more interfaces, you should simply define multiply I_FACT members with the same ID, factorise instances with any of them and extract specified interfaces using this method. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">componentPtr</td><td>pointer to component object, typically returned by method <a class="el" href="classicomp_1_1_t_factory_member.html#a4ff275e88eac06a043a85c6d8e385a0a" title="Create component without extracting any interface.">CreateComponent()</a>. </td></tr>
+    <tr><td class="paramname">instancePtr</td><td>pointer to component object, typically returned by method <a class="el" href="classicomp_1_1_t_factory_member.html#a4ff275e88eac06a043a85c6d8e385a0a" title="Create component without extracting any interface.">CreateComponent()</a>. </td></tr>
     <tr><td class="paramname">subId</td><td>optionally ID parameter identifing subcomponent. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to interface or NULL, if such interface could not be extracted. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classicomp_1_1_c_interface_manip_base.html#a85e2e8be34b3d6d89d415cb77505c039">icomp::CInterfaceManipBase</a>.</p>
-
 <p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00135">135</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
+
+<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
 
 </div>
 </div>

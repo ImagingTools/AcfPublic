@@ -100,6 +100,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get position of point using normed 'alpha' value.  <a href="#a355085ad5e60bef10dd50dc34f9e5495"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a3595f44318fbc6a3561642c36d8e4b9d">GetDiffVector</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get difference vector from point 1 to point 2.  <a href="#a3595f44318fbc6a3561642c36d8e4b9d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a3066cdefd32b69f924505b792af3cd53">GetLength</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get distance between line points.  <a href="#a3066cdefd32b69f924505b792af3cd53"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#acc982e5ebef4ea9e9f61602e84e2a2db">GetClipped</a> (const <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a> &amp;rect) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get part of line intersecting specified rectangle.  <a href="#acc982e5ebef4ea9e9f61602e84e2a2db"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a127e8bf9cdfc5cba30e92cf735c4158a">GetSwapped</a> () const </td></tr>
@@ -302,9 +304,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Get Y position of cutting this line by specified horizontal line. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00235">235</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00240">240</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_line2d_8h_source.html#l00205">GetDiffVector()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">i2d::CVector2d::GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">i2d::CVector2d::GetY()</a>.</p>
+<p>References <a class="el" href="_c_line2d_8h_source.html#l00210">GetDiffVector()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">i2d::CVector2d::GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">i2d::CVector2d::GetY()</a>.</p>
 
 </div>
 </div>
@@ -325,9 +327,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Get X position of cutting this line by specified vertical line. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00244">244</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00249">249</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_line2d_8h_source.html#l00205">GetDiffVector()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">i2d::CVector2d::GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">i2d::CVector2d::GetY()</a>.</p>
+<p>References <a class="el" href="_c_line2d_8h_source.html#l00210">GetDiffVector()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">i2d::CVector2d::GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">i2d::CVector2d::GetY()</a>.</p>
 
 </div>
 </div>
@@ -347,9 +349,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Get difference vector from point 1 to point 2. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00205">205</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00210">210</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_line2d_8h_source.html#l00235">GetCutXPos()</a>, and <a class="el" href="_c_line2d_8h_source.html#l00244">GetCutYPos()</a>.</p>
+<p>Referenced by <a class="el" href="_c_line2d_8h_source.html#l00240">GetCutXPos()</a>, and <a class="el" href="_c_line2d_8h_source.html#l00249">GetCutYPos()</a>.</p>
 
 </div>
 </div>
@@ -538,6 +540,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a3066cdefd32b69f924505b792af3cd53"></a><!-- doxytag: member="i2d::CLine2d::GetLength" ref="a3066cdefd32b69f924505b792af3cd53" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double i2d::CLine2d::GetLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get distance between line points. </p>
+
+</div>
+</div>
 <a class="anchor" id="a408923bfb0255d8d0c120e2345f22920"></a><!-- doxytag: member="i2d::CLine2d::GetPoint1" ref="a408923bfb0255d8d0c120e2345f22920" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -554,7 +574,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get value of first line point. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00211">211</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00216">216</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
 </div>
 </div>
@@ -575,7 +595,7 @@ Public Member Functions</h2></td></tr>
 <p>Get reference to first line point. </p>
 <p>Please avoid to use this function, becouse of eventuel update problems. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00217">217</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00222">222</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
 </div>
 </div>
@@ -595,7 +615,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get value of second line point. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00223">223</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00228">228</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
 </div>
 </div>
@@ -616,7 +636,7 @@ Public Member Functions</h2></td></tr>
 <p>Get reference to second line point. </p>
 <p>Please avoid to use this function, becouse of eventuel update problems. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00229">229</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00234">234</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
 </div>
 </div>
@@ -816,7 +836,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns <code>true</code>, if the line has a length equal 0. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00199">199</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00204">204</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
 </div>
 </div>
@@ -875,9 +895,9 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00193">193</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00198">198</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_line2d_8h_source.html#l00187">operator==()</a>.</p>
+<p>References <a class="el" href="_c_line2d_8h_source.html#l00192">operator==()</a>.</p>
 
 </div>
 </div>
@@ -913,9 +933,9 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00187">187</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00192">192</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_line2d_8h_source.html#l00193">operator!=()</a>.</p>
+<p>Referenced by <a class="el" href="_c_line2d_8h_source.html#l00198">operator!=()</a>.</p>
 
 </div>
 </div>
