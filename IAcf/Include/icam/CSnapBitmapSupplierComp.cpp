@@ -31,7 +31,7 @@ namespace icam
 {
 
 
-// reimplemented (iipr::IBitmapSupplier)
+// reimplemented (iipr::IBitmapProvider)
 
 const iimg::IBitmap* CSnapBitmapSupplierComp::GetBitmap() const
 {

@@ -91,10 +91,6 @@ void CGeneralSupplierGuiComp::UpdateGui(int /*updateFlags*/)
 
 	iproc::ISupplier* supplierPtr = GetObjectPtr();
 	if (supplierPtr != NULL){
-		double inspectionTime = supplierPtr->GetWorkDurationTime();
-		QString inspectionText = tr("%1 ms").arg(inspectionTime * 1000);
-		InspectionTimeLabel->setText(inspectionText);
-
 		int workStatus = supplierPtr->GetWorkStatus();
 
 		switch (workStatus){
@@ -126,9 +122,6 @@ void CGeneralSupplierGuiComp::UpdateGui(int /*updateFlags*/)
 			statusText = tr("Critical");
 			break;
 		}
-	}
-	else{
-		InspectionTimeLabel->setText(tr("-"));
 	}
 
 	StatusLabel->setText(statusText);

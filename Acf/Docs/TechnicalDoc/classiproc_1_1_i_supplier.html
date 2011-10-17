@@ -48,9 +48,9 @@ Inheritance diagram for iproc::ISupplier:</div>
  <div class="center">
   <img src="classiproc_1_1_i_supplier.png" usemap="#iproc::ISupplier_map" alt=""/>
   <map id="iproc::ISupplier_map" name="iproc::ISupplier_map">
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,130,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,130,24"/>
-<area href="classiproc_1_1_i_value_supplier.html" title="2D vector or position supplier." alt="iproc::IValueSupplier" shape="rect" coords="0,168,130,192"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,231,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,231,24"/>
+<area href="classiproc_1_1_t_supplier_comp_wrap.html" title="Wrapper implementation of interface iproc::ISupplier with preparation for component implementation..." alt="iproc::TSupplierCompWrap&lt; Product &gt;" shape="rect" coords="0,168,231,192"/>
 </map>
  </div></div>
 
@@ -81,18 +81,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all stored work results.  <a href="#a9ca6810fbb13f002e9eaaece19ddf31a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_supplier.html#afcc7cf98a07ad365e35635eab32d8bcb">GetWorkStatus</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get status of last work.  <a href="#afcc7cf98a07ad365e35635eab32d8bcb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_supplier.html#a324e6ad997edafc5e80c279b5d23aa2b">GetWorkDurationTime</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get duration time of work.  <a href="#a324e6ad997edafc5e80c279b5d23aa2b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52">GetModelParametersSet</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parameter set using by this supplier.  <a href="#a676cd5ff0426c1f72076c1847cb84a52"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_supplier.html#a10065712800704b32f414cc6ae2f2dc1">OnOutputSubscribed</a> (<a class="el" href="classiproc_1_1_i_supplier.html">ISupplier</a> *outputSupplierPtr)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register output supplier object.  <a href="#a10065712800704b32f414cc6ae2f2dc1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_supplier.html#aefb5ee63ea87fd34f10682406e67883f">OnOutputUnsubscribed</a> (const <a class="el" href="classiproc_1_1_i_supplier.html">ISupplier</a> *outputSupplierPtr)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister output supplier object.  <a href="#aefb5ee63ea87fd34f10682406e67883f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_base.html">Base</a> interface for suppliers providing synchrone processing of single object with <em>"pull data" model</em>. </p>
-<p>Derivated interfaces should provide access to intern stored produced object for specified object ID. For example image supplier should provide method <code></code>{const <a class="el" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>* GetBitmap(const I_DWORD* objectIdPtr) const}. The internal stored object should be created on demand. </p>
+<p>Additional interfaces (providers) should provide access to intern stored produced objects. For example image provider should provide method <code></code>{const <a class="el" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>* GetBitmap(const I_DWORD* objectIdPtr) const}. The internal stored object should be created on demand. </p>
 
 <p>Definition at line <a class="el" href="_i_supplier_8h_source.html#l00022">22</a> of file <a class="el" href="_i_supplier_8h_source.html">ISupplier.h</a>.</p>
 </div><hr/><h2>Member Enumeration Documentation</h2>
@@ -177,7 +171,7 @@ Public Member Functions</h2></td></tr>
 <p>Remove all stored work results. </p>
 <p>This set also work state to <code>WS_INIT</code>. </p>
 
-<p>Referenced by <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00199">iproc::TSupplierCompWrap&lt; SupplierInterface, Product &gt;::ClearWorkResults()</a>.</p>
+<p>Implemented in <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a0a5893f9c6a884949e2ccb5286c37921">iproc::TSupplierCompWrap&lt; Product &gt;</a>.</p>
 
 </div>
 </div>
@@ -197,7 +191,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Ensure that all objects are produced. </p>
 
-<p>Referenced by <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00161">iproc::TSupplierCompWrap&lt; SupplierInterface, Product &gt;::EnsureWorkFinished()</a>.</p>
+<p>Implemented in <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a94292879cc623a44e70067a7ef78c05e">iproc::TSupplierCompWrap&lt; Product &gt;</a>.</p>
 
 </div>
 </div>
@@ -217,24 +211,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get parameter set using by this supplier. </p>
 
-</div>
-</div>
-<a class="anchor" id="a324e6ad997edafc5e80c279b5d23aa2b"></a><!-- doxytag: member="iproc::ISupplier::GetWorkDurationTime" ref="a324e6ad997edafc5e80c279b5d23aa2b" args="() const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double iproc::ISupplier::GetWorkDurationTime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get duration time of work. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>time of duration or negative value if this time is unknown. </dd></dl>
+<p>Implemented in <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6f30ac3f2d05e657c1263026630fd6d">iproc::TSupplierCompWrap&lt; Product &gt;</a>.</p>
 
 </div>
 </div>
@@ -255,6 +232,8 @@ Public Member Functions</h2></td></tr>
 <p>Get status of last work. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>work status defined in <a class="el" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251e">iproc::ISupplier::WorkStatus</a>. </dd></dl>
 
+<p>Implemented in <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#aae3ac83c656d4b0de834372fdca85ee2">iproc::TSupplierCompWrap&lt; Product &gt;</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a0496343d4f5ae9a3f71caf5163b35d13"></a><!-- doxytag: member="iproc::ISupplier::InvalidateSupplier" ref="a0496343d4f5ae9a3f71caf5163b35d13" args="()=0" -->
@@ -274,50 +253,7 @@ Public Member Functions</h2></td></tr>
 <p>Called to signalize that this supplier is invalid. </p>
 <p>This signal will be transfered to all supplier which are registered as output. </p>
 
-<p>Referenced by <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00134">iproc::TSupplierCompWrap&lt; SupplierInterface, Product &gt;::InvalidateSupplier()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a10065712800704b32f414cc6ae2f2dc1"></a><!-- doxytag: member="iproc::ISupplier::OnOutputSubscribed" ref="a10065712800704b32f414cc6ae2f2dc1" args="(ISupplier *outputSupplierPtr)=0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iproc::ISupplier::OnOutputSubscribed </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classiproc_1_1_i_supplier.html">ISupplier</a> *&#160;</td>
-          <td class="paramname"><em>outputSupplierPtr</em></td><td>)</td>
-          <td><code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Register output supplier object. </p>
-<p>The output object will be informed about invalidate of this supplier. </p>
-
-<p>Referenced by <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00269">iproc::TSupplierCompWrap&lt; SupplierInterface, Product &gt;::AddInputSupplier()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aefb5ee63ea87fd34f10682406e67883f"></a><!-- doxytag: member="iproc::ISupplier::OnOutputUnsubscribed" ref="aefb5ee63ea87fd34f10682406e67883f" args="(const ISupplier *outputSupplierPtr)=0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iproc::ISupplier::OnOutputUnsubscribed </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiproc_1_1_i_supplier.html">ISupplier</a> *&#160;</td>
-          <td class="paramname"><em>outputSupplierPtr</em></td><td>)</td>
-          <td><code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Unregister output supplier object. </p>
-
-<p>Referenced by <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00293">iproc::TSupplierCompWrap&lt; SupplierInterface, Product &gt;::RemoveAllInputSuppliers()</a>, and <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00282">iproc::TSupplierCompWrap&lt; SupplierInterface, Product &gt;::RemoveInputSupplier()</a>.</p>
+<p>Implemented in <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#ad5e0a872fbc23c641a87a0e722e7a3e2">iproc::TSupplierCompWrap&lt; Product &gt;</a>.</p>
 
 </div>
 </div>

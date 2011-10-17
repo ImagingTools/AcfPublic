@@ -55,7 +55,7 @@
     <name>CSnapBitmapSupplierComp.h</name>
     <path>C:/Temp/Iacf/Include/icam/</path>
     <filename>_c_snap_bitmap_supplier_comp_8h</filename>
-    <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <class kind="class">icam::CSnapBitmapSupplierComp</class>
     <namespace>icam</namespace>
   </compound>
@@ -304,7 +304,7 @@
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_circle_find_processor_comp_8h</filename>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
-    <includes id="_i_features_container_8h" name="IFeaturesContainer.h" local="yes" imported="no">iipr/IFeaturesContainer.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="yes" imported="no">iipr/IFeaturesProvider.h</includes>
     <includes id="_i_feature_to_image_mapper_8h" name="IFeatureToImageMapper.h" local="yes" imported="no">iipr/IFeatureToImageMapper.h</includes>
     <includes id="_i_circle_finder_params_8h" name="ICircleFinderParams.h" local="yes" imported="no">iipr/ICircleFinderParams.h</includes>
     <includes id="_t_feature_wrap_8h" name="TFeatureWrap.h" local="yes" imported="no">iipr/TFeatureWrap.h</includes>
@@ -334,7 +334,7 @@
     <name>CDelegatedBitmapSupplierComp.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_delegated_bitmap_supplier_comp_8h</filename>
-    <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <class kind="class">iipr::CDelegatedBitmapSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -359,7 +359,8 @@
     <name>CFeaturesContainer.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_features_container_8h</filename>
-    <includes id="_i_features_container_8h" name="IFeaturesContainer.h" local="yes" imported="no">iipr/IFeaturesContainer.h</includes>
+    <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="yes" imported="no">iipr/IFeaturesProvider.h</includes>
     <class kind="class">iipr::CFeaturesContainer</class>
     <namespace>iipr</namespace>
   </compound>
@@ -432,8 +433,8 @@
     <name>CLineProjectionSupplierComp.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_line_projection_supplier_comp_8h</filename>
-    <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
-    <includes id="_i_line_projection_supplier_8h" name="ILineProjectionSupplier.h" local="yes" imported="no">iipr/ILineProjectionSupplier.h</includes>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
+    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">iipr/IDataSequenceProvider.h</includes>
     <includes id="_i_line_projection_processor_8h" name="ILineProjectionProcessor.h" local="yes" imported="no">iipr/ILineProjectionProcessor.h</includes>
     <class kind="class">iipr::CLineProjectionSupplierComp</class>
     <namespace>iipr</namespace>
@@ -442,7 +443,7 @@
     <name>CPositionFromImageSupplierComp.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_position_from_image_supplier_comp_8h</filename>
-    <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -457,7 +458,7 @@
     <name>CProcessedBitmapSupplierComp.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_processed_bitmap_supplier_comp_8h</filename>
-    <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <class kind="class">iipr::CProcessedBitmapSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -510,8 +511,8 @@
     <name>CSearchBasedFeaturesSupplierComp.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_search_based_features_supplier_comp_8h</filename>
-    <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
-    <includes id="_i_features_supplier_8h" name="IFeaturesSupplier.h" local="yes" imported="no">iipr/IFeaturesSupplier.h</includes>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="yes" imported="no">iipr/IFeaturesProvider.h</includes>
     <includes id="_c_features_container_8h" name="CFeaturesContainer.h" local="yes" imported="no">iipr/CFeaturesContainer.h</includes>
     <class kind="class">iipr::CSearchBasedFeaturesSupplierComp</class>
     <namespace>iipr</namespace>
@@ -536,15 +537,16 @@
     <name>CSingleFeatureConsumer.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_c_single_feature_consumer_8h</filename>
-    <includes id="_i_features_container_8h" name="IFeaturesContainer.h" local="yes" imported="no">iipr/IFeaturesContainer.h</includes>
+    <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="yes" imported="no">iipr/IFeaturesProvider.h</includes>
     <class kind="class">iipr::CSingleFeatureConsumer</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
-    <name>IBitmapSupplier.h</name>
+    <name>IBitmapProvider.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
-    <filename>_i_bitmap_supplier_8h</filename>
-    <class kind="class">iipr::IBitmapSupplier</class>
+    <filename>_i_bitmap_provider_8h</filename>
+    <class kind="class">iipr::IBitmapProvider</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -579,6 +581,13 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>IDataSequenceProvider.h</name>
+    <path>C:/Temp/Iacf/Include/iipr/</path>
+    <filename>_i_data_sequence_provider_8h</filename>
+    <class kind="class">iipr::IDataSequenceProvider</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>IFeature.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_feature_8h</filename>
@@ -595,19 +604,10 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
-    <name>IFeaturesContainer.h</name>
+    <name>IFeaturesProvider.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
-    <filename>_i_features_container_8h</filename>
-    <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
-    <class kind="class">iipr::IFeaturesContainer</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IFeaturesSupplier.h</name>
-    <path>C:/Temp/Iacf/Include/iipr/</path>
-    <filename>_i_features_supplier_8h</filename>
-    <includes id="_i_features_container_8h" name="IFeaturesContainer.h" local="yes" imported="no">iipr/IFeaturesContainer.h</includes>
-    <class kind="class">iipr::IFeaturesSupplier</class>
+    <filename>_i_features_provider_8h</filename>
+    <class kind="class">iipr::IFeaturesProvider</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -615,7 +615,7 @@
     <path>C:/Temp/Iacf/Include/iipr/</path>
     <filename>_i_feature_to_feature_processor_8h</filename>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
-    <includes id="_i_features_container_8h" name="IFeaturesContainer.h" local="yes" imported="no">iipr/IFeaturesContainer.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="yes" imported="no">iipr/IFeaturesProvider.h</includes>
     <class kind="class">iipr::IFeatureToFeatureProcessor</class>
     <namespace>iipr</namespace>
   </compound>
@@ -674,18 +674,10 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
-    <name>ILineProjectionSupplier.h</name>
+    <name>IMultiBitmapProvider.h</name>
     <path>C:/Temp/Iacf/Include/iipr/</path>
-    <filename>_i_line_projection_supplier_8h</filename>
-    <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
-    <class kind="class">iipr::ILineProjectionSupplier</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IMultiBitmapSupplier.h</name>
-    <path>C:/Temp/Iacf/Include/iipr/</path>
-    <filename>_i_multi_bitmap_supplier_8h</filename>
-    <class kind="class">iipr::IMultiBitmapSupplier</class>
+    <filename>_i_multi_bitmap_provider_8h</filename>
+    <class kind="class">iipr::IMultiBitmapProvider</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -723,11 +715,6 @@
     <filename>_i_search_params_8h</filename>
     <class kind="class">iipr::ISearchParams</class>
     <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IValueSupplier.h</name>
-    <path>C:/Temp/Iacf/Include/iipr/</path>
-    <filename>_i_value_supplier_8h</filename>
   </compound>
   <compound kind="file">
     <name>TFeatureWrap.h</name>
@@ -1110,7 +1097,7 @@
     <name>CBitmapSupplierGuiComp.h</name>
     <path>C:/Temp/Iacf/Include/iqtcam/</path>
     <filename>_c_bitmap_supplier_gui_comp_8h</filename>
-    <includes id="_i_bitmap_supplier_8h" name="IBitmapSupplier.h" local="yes" imported="no">iipr/IBitmapSupplier.h</includes>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtcam_8h" name="iqtcam.h" local="yes" imported="no">iqtcam/iqtcam.h</includes>
     <class kind="class">iqtcam::CBitmapSupplierGuiComp</class>
@@ -1250,7 +1237,7 @@
     <name>CLineProjectionSupplierGuiComp.h</name>
     <path>C:/Temp/Iacf/Include/iqtipr/</path>
     <filename>_c_line_projection_supplier_gui_comp_8h</filename>
-    <includes id="_i_line_projection_supplier_8h" name="ILineProjectionSupplier.h" local="yes" imported="no">iipr/ILineProjectionSupplier.h</includes>
+    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">iipr/IDataSequenceProvider.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
     <class kind="class">iqtipr::CLineProjectionSupplierGuiComp</class>
@@ -1285,7 +1272,7 @@
     <name>CSearchResultShape.h</name>
     <path>C:/Temp/Iacf/Include/iqtipr/</path>
     <filename>_c_search_result_shape_8h</filename>
-    <includes id="_i_features_container_8h" name="IFeaturesContainer.h" local="yes" imported="no">iipr/IFeaturesContainer.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="yes" imported="no">iipr/IFeaturesProvider.h</includes>
     <class kind="class">iqtipr::CSearchResultShape</class>
     <namespace>iqtipr</namespace>
   </compound>
@@ -1979,12 +1966,13 @@
   <compound kind="class">
     <name>icam::CSnapBitmapSupplierComp</name>
     <filename>classicam_1_1_c_snap_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; std::pair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base virtualness="virtual">iipr::IBitmapProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; std::pair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>aa2abe0ecef284d6c4c0eeba619c8e32f</anchor>
+      <anchor>ae66705cdf0b4267f2b6438fcf5b31825</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -3214,23 +3202,22 @@
     <class kind="class">iipr::CSearchFeature</class>
     <class kind="class">iipr::CSearchParams</class>
     <class kind="class">iipr::CSingleFeatureConsumer</class>
-    <class kind="class">iipr::IBitmapSupplier</class>
+    <class kind="class">iipr::IBitmapProvider</class>
     <class kind="class">iipr::ICaliperParams</class>
     <class kind="class">iipr::ICaliperProcessor</class>
     <class kind="class">iipr::ICircleFinderParams</class>
     <class kind="class">iipr::IConvolutionKernel2d</class>
+    <class kind="class">iipr::IDataSequenceProvider</class>
     <class kind="class">iipr::IFeature</class>
     <class kind="class">iipr::IFeaturesConsumer</class>
-    <class kind="class">iipr::IFeaturesContainer</class>
-    <class kind="class">iipr::IFeaturesSupplier</class>
+    <class kind="class">iipr::IFeaturesProvider</class>
     <class kind="class">iipr::IFeatureToFeatureProcessor</class>
     <class kind="class">iipr::IFeatureToImageMapper</class>
     <class kind="class">iipr::IFeatureToProjectionMapper</class>
     <class kind="class">iipr::IImageInterpolationParams</class>
     <class kind="class">iipr::IImageToFeatureProcessor</class>
     <class kind="class">iipr::ILineProjectionProcessor</class>
-    <class kind="class">iipr::ILineProjectionSupplier</class>
-    <class kind="class">iipr::IMultiBitmapSupplier</class>
+    <class kind="class">iipr::IMultiBitmapProvider</class>
     <class kind="class">iipr::IProjectionConstraints</class>
     <class kind="class">iipr::IProjectionParams</class>
     <class kind="class">iipr::IRingPatternGeneratorParams</class>
@@ -3576,8 +3563,8 @@
       <type>void</type>
       <name>AddProjectionResultsToRays</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>a9acfdeea5060c979398f44a3f7755132</anchor>
-      <arglist>(const iprm::IParamsSet &amp;params, const IFeaturesContainer &amp;container, Rays &amp;inRays, Rays &amp;outRays)</arglist>
+      <anchor>a33a3f28f99f8d5979f6bf69987c87108</anchor>
+      <arglist>(const iprm::IParamsSet &amp;params, const IFeaturesProvider &amp;container, Rays &amp;inRays, Rays &amp;outRays)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -3707,14 +3694,21 @@
   <compound kind="class">
     <name>iipr::CDelegatedBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</base>
-    <base protection="protected">imod::CMultiModelObserverBase</base>
+    <base>TSupplierCompWrap&lt; std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</base>
+    <base virtualness="virtual">iipr::IBitmapProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a892437e7f9a9dccfd4e25d9b904cfa1d</anchor>
+      <anchor>aeea0adeff277f6a55e382db5a3e085b7</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a0597dfa29b168beb07e8731186a66ddb</anchor>
+      <arglist>(m_inputBitmapProviderModelCompPtr, m_inputBitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -3757,20 +3751,6 @@
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a02c62def2d9d7e2964b87c6d35370a29</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a3dc8acf51b529498be7280f6d042fa3b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>ae5c5d3a1a89099b1009de0a3a3c5550b</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3851,7 +3831,8 @@
   <compound kind="class">
     <name>iipr::CFeaturesContainer</name>
     <filename>classiipr_1_1_c_features_container.html</filename>
-    <base>iipr::IFeaturesContainer</base>
+    <base virtualness="virtual">iipr::IFeaturesConsumer</base>
+    <base virtualness="virtual">iipr::IFeaturesProvider</base>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetFeatures</name>
@@ -3890,8 +3871,8 @@
       <type>virtual int</type>
       <name>DoConvertFeatures</name>
       <anchorfile>classiipr_1_1_c_feature_to_image_mapper_processor_comp.html</anchorfile>
-      <anchor>a01ffa76e8296a7624fe4cd817fdfa269</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const IFeaturesContainer &amp;container, IFeaturesConsumer &amp;results)</arglist>
+      <anchor>a9740b304b91847e996ec61b10f88433d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const IFeaturesProvider &amp;container, IFeaturesConsumer &amp;results)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -4131,19 +4112,27 @@
   <compound kind="class">
     <name>iipr::CLineProjectionSupplierComp</name>
     <filename>classiipr_1_1_c_line_projection_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; iipr::ILineProjectionSupplier, imeas::CGeneralDataSequence &gt;</base>
+    <base>TSupplierCompWrap&lt; imeas::CGeneralDataSequence &gt;</base>
+    <base virtualness="virtual">iipr::IDataSequenceProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; iipr::ILineProjectionSupplier, imeas::CGeneralDataSequence &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; imeas::CGeneralDataSequence &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_line_projection_supplier_comp.html</anchorfile>
-      <anchor>a3b0ee8b9399590e0e644acfaf33eb61e</anchor>
+      <anchor>a5bde4403e33afa66b1753583a84739ed</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_line_projection_supplier_comp.html</anchorfile>
+      <anchor>a05b7dfdcc2ac7bcf2ba536da9a60a4b7</anchor>
+      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::IDataSequence *</type>
-      <name>GetLineProjection</name>
+      <name>GetDataSequence</name>
       <anchorfile>classiipr_1_1_c_line_projection_supplier_comp.html</anchorfile>
-      <anchor>a9a367586e0ef20f4188e9b810274c97a</anchor>
+      <anchor>af47da20ba23508739186cab85cf2e65e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -4164,13 +4153,21 @@
   <compound kind="class">
     <name>iipr::CPositionFromImageSupplierComp</name>
     <filename>classiipr_1_1_c_position_from_image_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; iproc::IValueSupplier, imath::CVarVector &gt;</base>
+    <base>TSupplierCompWrap&lt; imath::CVarVector &gt;</base>
+    <base virtualness="virtual">iproc::IValueProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; iproc::IValueSupplier, imath::CVarVector &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; imath::CVarVector &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>a98c3c029d0a43e2a766150555e1168e0</anchor>
+      <anchor>ab187d64547bef3091dba6aa44b96dc37</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
+      <anchor>af0e2eab9108af52e18ec896365e39493</anchor>
+      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual imath::CVarVector</type>
@@ -4223,13 +4220,21 @@
   <compound kind="class">
     <name>iipr::CProcessedBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_processed_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; istd::TDelPtr&lt; i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; std::pair&lt; istd::TDelPtr&lt; i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base virtualness="virtual">iipr::IBitmapProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; iipr::IBitmapSupplier, std::pair&lt; istd::TDelPtr&lt; i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; std::pair&lt; istd::TDelPtr&lt; i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a36a0f071668edfdd42d00ce778a5c27e</anchor>
+      <anchor>a93e515ce868806141ef5e77d96c6c077</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a6ddc62f438e357669453ca2d2a22e68d</anchor>
+      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -4264,13 +4269,6 @@
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
       <anchor>a81741a268acf9a5682ee358f508b4746</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a188b70a9369e3ed26986e14d9a3f0907</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -4621,19 +4619,27 @@
   <compound kind="class">
     <name>iipr::CSearchBasedFeaturesSupplierComp</name>
     <filename>classiipr_1_1_c_search_based_features_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; iipr::IFeaturesSupplier, CFeaturesContainer &gt;</base>
+    <base>TSupplierCompWrap&lt; CFeaturesContainer &gt;</base>
+    <base virtualness="virtual">iipr::IFeaturesProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; iipr::IFeaturesSupplier, CFeaturesContainer &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; CFeaturesContainer &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>a6b0399199eda3d7accc8af94d5d48de8</anchor>
+      <anchor>af22caa63961730d177fe0d64e9d29ddb</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
+      <anchor>af443611390935b7aa23e1fd3692c4c4a</anchor>
+      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const iipr::IFeaturesContainer *</type>
+      <type>virtual Features</type>
       <name>GetFeatures</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>a8a293092ca82d2d5a40a1b2a031738fe</anchor>
+      <anchor>a48f843415e7195e4adf3d24320a85de2</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -4853,7 +4859,8 @@
   <compound kind="class">
     <name>iipr::CSingleFeatureConsumer</name>
     <filename>classiipr_1_1_c_single_feature_consumer.html</filename>
-    <base virtualness="virtual">iipr::IFeaturesContainer</base>
+    <base virtualness="virtual">iipr::IFeaturesConsumer</base>
+    <base virtualness="virtual">iipr::IFeaturesProvider</base>
     <member kind="enumeration">
       <name>FeaturePolicy</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
@@ -4929,21 +4936,21 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iipr::IBitmapSupplier</name>
-    <filename>classiipr_1_1_i_bitmap_supplier.html</filename>
-    <base virtualness="virtual">iproc::ISupplier</base>
+    <name>iipr::IBitmapProvider</name>
+    <filename>classiipr_1_1_i_bitmap_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const iimg::IBitmap *</type>
       <name>GetBitmap</name>
-      <anchorfile>classiipr_1_1_i_bitmap_supplier.html</anchorfile>
-      <anchor>ab9a9ce2b3d9306db73ec531a36af6c74</anchor>
+      <anchorfile>classiipr_1_1_i_bitmap_provider.html</anchorfile>
+      <anchor>ae43b432f1334ca40461f8bea3ac2be9d</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const i2d::ITransformation2d *</type>
       <name>GetLogTransform</name>
-      <anchorfile>classiipr_1_1_i_bitmap_supplier.html</anchorfile>
-      <anchor>abeabe7425471134d2e2091965bc940a0</anchor>
+      <anchorfile>classiipr_1_1_i_bitmap_provider.html</anchorfile>
+      <anchor>a425b722a257299b331c008262f8eca97</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -5184,6 +5191,18 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::IDataSequenceProvider</name>
+    <filename>classiipr_1_1_i_data_sequence_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const imeas::IDataSequence *</type>
+      <name>GetDataSequence</name>
+      <anchorfile>classiipr_1_1_i_data_sequence_provider.html</anchorfile>
+      <anchor>afd8a62f06d9b48bf8b77e1564c1e5867</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::IFeature</name>
     <filename>classiipr_1_1_i_feature.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
@@ -5215,33 +5234,21 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iipr::IFeaturesContainer</name>
-    <filename>classiipr_1_1_i_features_container.html</filename>
-    <base virtualness="virtual">iipr::IFeaturesConsumer</base>
+    <name>iipr::IFeaturesProvider</name>
+    <filename>classiipr_1_1_i_features_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="typedef">
       <type>std::vector&lt; const iipr::IFeature * &gt;</type>
       <name>Features</name>
-      <anchorfile>classiipr_1_1_i_features_container.html</anchorfile>
-      <anchor>abbb77272c032c92f07228ccb82b62b95</anchor>
+      <anchorfile>classiipr_1_1_i_features_provider.html</anchorfile>
+      <anchor>a7bc363cb37d59685e631224feba31523</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual Features</type>
       <name>GetFeatures</name>
-      <anchorfile>classiipr_1_1_i_features_container.html</anchorfile>
-      <anchor>ab8c3b4d19dc88d1ebe9c918c5c33d468</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::IFeaturesSupplier</name>
-    <filename>classiipr_1_1_i_features_supplier.html</filename>
-    <base virtualness="virtual">iproc::ISupplier</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual const iipr::IFeaturesContainer *</type>
-      <name>GetFeatures</name>
-      <anchorfile>classiipr_1_1_i_features_supplier.html</anchorfile>
-      <anchor>a9f0a58d67f648ba29c72a27e88a7e8e0</anchor>
+      <anchorfile>classiipr_1_1_i_features_provider.html</anchorfile>
+      <anchor>a818ac59d15c003b4db45407440d968e8</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -5253,8 +5260,8 @@
       <type>virtual int</type>
       <name>DoConvertFeatures</name>
       <anchorfile>classiipr_1_1_i_feature_to_feature_processor.html</anchorfile>
-      <anchor>a5c172520881f416f66394b89c706034f</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const IFeaturesContainer &amp;container, IFeaturesConsumer &amp;results)=0</arglist>
+      <anchor>ae06f7780e0d806f7b2b46516ae31d5dd</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const IFeaturesProvider &amp;container, IFeaturesConsumer &amp;results)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5349,40 +5356,28 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iipr::ILineProjectionSupplier</name>
-    <filename>classiipr_1_1_i_line_projection_supplier.html</filename>
-    <base virtualness="virtual">iproc::ISupplier</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual const imeas::IDataSequence *</type>
-      <name>GetLineProjection</name>
-      <anchorfile>classiipr_1_1_i_line_projection_supplier.html</anchorfile>
-      <anchor>a24fa5cf5e6a9feecf12b43b215d5e9c8</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::IMultiBitmapSupplier</name>
-    <filename>classiipr_1_1_i_multi_bitmap_supplier.html</filename>
-    <base virtualness="virtual">iproc::ISupplier</base>
+    <name>iipr::IMultiBitmapProvider</name>
+    <filename>classiipr_1_1_i_multi_bitmap_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetBitmapsCount</name>
-      <anchorfile>classiipr_1_1_i_multi_bitmap_supplier.html</anchorfile>
-      <anchor>afc9f684d00d3e4ec573449fe6654c6be</anchor>
+      <anchorfile>classiipr_1_1_i_multi_bitmap_provider.html</anchorfile>
+      <anchor>adbbc199bbbd46260346727eb875fe400</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iimg::IBitmap *</type>
       <name>GetBitmap</name>
-      <anchorfile>classiipr_1_1_i_multi_bitmap_supplier.html</anchorfile>
-      <anchor>a67a13ca13ebef16b57c844bc63a0a13d</anchor>
+      <anchorfile>classiipr_1_1_i_multi_bitmap_provider.html</anchorfile>
+      <anchor>a4ae922bcc1d3c6b663f00c5ac85dae88</anchor>
       <arglist>(int bitmapIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const i2d::ITransformation2d *</type>
       <name>GetLogTransform</name>
-      <anchorfile>classiipr_1_1_i_multi_bitmap_supplier.html</anchorfile>
-      <anchor>a990ac38bf2b354238a8e9233284360f8</anchor>
+      <anchorfile>classiipr_1_1_i_multi_bitmap_provider.html</anchorfile>
+      <anchor>a057e0b21e14709b95fb1e19e5f3fcb9b</anchor>
       <arglist>(int bitmapIndex) const =0</arglist>
     </member>
   </compound>
@@ -9556,12 +9551,12 @@
   <compound kind="class">
     <name>iqtcam::CBitmapSupplierGuiComp</name>
     <filename>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</filename>
-    <base>TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp, iipr::IBitmapSupplier &gt;</base>
+    <base>TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp &gt;</base>
     <member kind="typedef">
-      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp, iipr::IBitmapSupplier &gt;</type>
+      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a434d1d7a17b256c1df8e6c944442c9b9</anchor>
+      <anchor>a52d8572b4c335331a5659a09962a39f9</anchor>
       <arglist></arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -10661,112 +10656,111 @@
     <name>iqtinsp::TSupplierGuiCompBase</name>
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
     <templarg>UI</templarg>
-    <templarg>Model</templarg>
     <templarg>WidgetType</templarg>
-    <base>TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, Model &gt; &gt;</base>
+    <base>TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, Model &gt; &gt;</type>
+      <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a2adfb74c07681ead8769eda99f2b3118</anchor>
+      <anchor>a673bdc37b989c792b0ba2456a2b7722a</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>ae9f00f25a17e65d9bd0f52db7b8e11fa</anchor>
+      <anchor>abf1aac9d43bdb0ae48cfc62cba7a249b</anchor>
       <arglist>(m_paramsSetExtenderCompPtr, m_paramsSetObserverCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TSupplierGuiCompBase</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>afcac32d5384b56743d4e6ec600bebab0</anchor>
+      <anchor>a93a1e2eb77a8f09cc034a697315e4613</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AddItemsToScene</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a6ab49ca8028f6282d4556d35bd4536dc</anchor>
+      <anchor>a7a48acaf7d94e8f4de49aac6d9787bdc</anchor>
       <arglist>(iqt2d::ISceneProvider *providerPtr, int flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveItemsFromScene</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a8cf8d0f92bcd35bbbef07938eb6724bb</anchor>
+      <anchor>a03723ace6afc4cce19f77bdd402c7a48</anchor>
       <arglist>(iqt2d::ISceneProvider *providerPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>AreParamsEditable</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a0d61c5e3110bff56e72d7a77f596cf2c</anchor>
+      <anchor>a9381e23de0731ff450f46b140b8e5436</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>IsLoadParamsSupported</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a5b6641547287ea3c19b8a2a0bfc0608f</anchor>
+      <anchor>a5b135f5bdaf8c57bc957c43beaadcb27</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>IsSaveParamsSupported</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a7cf3901cffbbcfd428e664a42b2d3912</anchor>
+      <anchor>ae768663d0842e6ea748260107fc5c5b9</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>LoadParams</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>aae24b31b8da0d2ca3df9f97e48566eff</anchor>
+      <anchor>a596baed6d56db375721673757cd7f4e2</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SaveParams</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>aab80f2dae15642273dbbe69c172c29fa</anchor>
+      <anchor>a12252b5f658c5140ce9a50e0efa5d4d5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>DoTest</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>ad81578bae2993dc1b3ec60ce55510818</anchor>
+      <anchor>acf07d958d1c85d95214a89437e58aff5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a6469c19c06f101239f420aa6c748ba3b</anchor>
+      <anchor>a10421a5f009909833e71dbc9bca46dc5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelDetached</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a55307315d1b7d6ecc47146ae78a1edb7</anchor>
+      <anchor>a8c94b477ef9e003078f52435ca5eebd7</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>aee92492aaa074581ef2da47d73c5e19d</anchor>
+      <anchor>a6c7422967d05ce81217b7bc3adaa5505</anchor>
       <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual QWidget *</type>
       <name>GetParamsWidget</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a7dc3e265dfa53f99c80936f5d9607de7</anchor>
+      <anchor>a8c61d390a1ca63f329d97352bea72536</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -10886,12 +10880,12 @@
   <compound kind="class">
     <name>iqtipr::CLineProjectionSupplierGuiComp</name>
     <filename>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</filename>
-    <base>TSupplierGuiCompBase&lt; Ui::CLineProjectionSupplierGuiComp, iipr::ILineProjectionSupplier &gt;</base>
+    <base>TSupplierGuiCompBase&lt; Ui::CLineProjectionSupplierGuiComp, iipr::IDataSequenceProvider &gt;</base>
     <member kind="typedef">
-      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CLineProjectionSupplierGuiComp, iipr::ILineProjectionSupplier &gt;</type>
+      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CLineProjectionSupplierGuiComp, iipr::IDataSequenceProvider &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>a20f5500aaa932ce8f0a1e72b7aa4f193</anchor>
+      <anchor>af812edf117339a24f89e5d23b171ac57</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -11117,7 +11111,7 @@
   <compound kind="class">
     <name>iqtipr::CSearchResultShape</name>
     <filename>classiqtipr_1_1_c_search_result_shape.html</filename>
-    <base>TSingleModelObserverBase&lt; iipr::IFeaturesContainer &gt;</base>
+    <base>TSingleModelObserverBase&lt; iipr::IFeaturesProvider &gt;</base>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeforeUpdate</name>
@@ -11136,13 +11130,13 @@
   <compound kind="class">
     <name>iqtipr::CValueSupplierGuiComp</name>
     <filename>classiqtipr_1_1_c_value_supplier_gui_comp.html</filename>
-    <base>TSupplierGuiCompBase&lt; Ui::CValueSupplierGuiComp, iproc::IValueSupplier &gt;</base>
+    <base>TSupplierGuiCompBase&lt; Ui::CValueSupplierGuiComp &gt;</base>
     <class kind="class">iqtipr::CValueSupplierGuiComp::ParamsObserver</class>
     <member kind="typedef">
-      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CValueSupplierGuiComp, iproc::IValueSupplier &gt;</type>
+      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CValueSupplierGuiComp &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>ab4ca155b85b7e61dc3dca928ff9a8a97</anchor>
+      <anchor>a57344afe1ef47fe90364bbba2fc1c8ef</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -11213,6 +11207,13 @@
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
       <anchor>a81524cf0dd4f101573bb6a44bb62dee8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a4c562b8bc6c096b14fe17472875d15d9</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

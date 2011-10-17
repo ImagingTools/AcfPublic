@@ -142,7 +142,7 @@ istd::CString CPackagesLoaderComp::GetPackagePath(const std::string& packageId) 
 {
 	RealPackagesMap::const_iterator foundNormalIter = m_realPackagesMap.find(packageId);
 	if (foundNormalIter != m_realPackagesMap.end()){
-		return foundNormalIter->second;
+		return iqt::GetCString(foundNormalIter->second);
 	}
 
 	CompositePackagesMap::const_iterator foundCompositeIter = m_compositePackagesMap.find(packageId);
@@ -260,7 +260,7 @@ bool CPackagesLoaderComp::RegisterPackageFile(const istd::CString& file)
 				if (getInfoPtr != NULL){
 					icomp::CPackageStaticInfo* infoPtr = getInfoPtr();
 					if (infoPtr != NULL){
-						m_realPackagesMap[packageId] = iqt::GetCString(fileInfo.absoluteFilePath());
+						m_realPackagesMap[packageId] = fileInfo.canonicalFilePath();
 
 						RegisterEmbeddedComponentInfo(packageId, infoPtr);
 
@@ -269,12 +269,12 @@ bool CPackagesLoaderComp::RegisterPackageFile(const istd::CString& file)
 				}
 			}
 		}
-		else{
+		else if (foundIter->second != fileInfo.canonicalFilePath()){
 			SendWarningMessage(
 						MI_CANNOT_REGISTER,
 						iqt::GetCString(QObject::tr("Second real package definition was ignored %1 (previous: %2)")
-									.arg(fileInfo.absoluteFilePath())
-									.arg(iqt::GetQString(foundIter->second))));
+									.arg(fileInfo.canonicalFilePath())
+									.arg(foundIter->second)));
 		}
 	}
 	else if (fileInfo.isDir()){
@@ -321,8 +321,8 @@ bool CPackagesLoaderComp::RegisterPackageFile(const istd::CString& file)
 			SendWarningMessage(
 						MI_CANNOT_REGISTER,
 						iqt::GetCString(QObject::tr("Second composed package definition was ignored %1 (previous: %2)")
-									.arg(fileInfo.absoluteFilePath())
-									.arg(foundIter->second.directory.absolutePath())));
+									.arg(fileInfo.canonicalFilePath())
+									.arg(foundIter->second.directory.canonicalPath())));
 		}
 	}
 
@@ -357,11 +357,11 @@ bool CPackagesLoaderComp::LoadConfigFile(const istd::CString& configFile)
 
 	QDir baseDir = fileInfo.absoluteDir();
 
-	istd::CString configFilePath = GetCString(fileInfo.absoluteFilePath());
+	QString configFilePath = fileInfo.absoluteFilePath();
 
-	SendVerboseMessage(istd::CString("Load configuration file: ") + configFilePath);
+	SendVerboseMessage(iqt::GetCString(tr("Load configuration file: %1").arg(configFilePath)));
 
-	iser::CXmlFileReadArchive archive(configFilePath);
+	iser::CXmlFileReadArchive archive(GetCString(configFilePath));
 
 	bool retVal = true;
 

@@ -42,7 +42,7 @@ namespace iqt
 /**
 	Loads component packages from dynamic link libraries.
 */
-class CDefaultRegistryLoaderProvider: public icomp::IRegistryLoaderProvider
+class CDefaultRegistryLoaderProvider: virtual public icomp::IRegistryLoaderProvider
 {
 public:
 	CDefaultRegistryLoaderProvider();

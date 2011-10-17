@@ -156,12 +156,14 @@ void CRegistriesManagerComp::RegisterPackageFile(const istd::CString& file)
 	if (fileInfo.isFile()){
 		RealPackagesMap::const_iterator foundIter = m_realPackagesMap.find(packageId);
 		if (foundIter == m_realPackagesMap.end()){
-			m_realPackagesMap[packageId] = fileInfo.absoluteFilePath();
+			m_realPackagesMap[packageId] = fileInfo.canonicalFilePath();
 		}
-		else{
+		else if (foundIter->second != fileInfo.canonicalFilePath()){
 			SendWarningMessage(
 						MI_CANNOT_REGISTER,
-						iqt::GetCString(QObject::tr("Second real package definition was ignored %1 (previous: %2)").arg(fileInfo.absoluteFilePath()).arg(foundIter->second)));
+						iqt::GetCString(QObject::tr("Second real package definition was ignored %1 (previous: %2)")
+									.arg(fileInfo.canonicalFilePath())
+									.arg(foundIter->second)));
 		}
 	}
 	else if (fileInfo.isDir()){
@@ -171,7 +173,7 @@ void CRegistriesManagerComp::RegisterPackageFile(const istd::CString& file)
 
 			QStringList filters;
 			filters.append("*.arx");
-			QDir packageDir(fileInfo.absoluteFilePath());
+			QDir packageDir(fileInfo.canonicalFilePath());
 			QStringList componentFiles = packageDir.entryList(filters, QDir::Files | QDir::NoDotAndDotDot);
 			for (		QStringList::iterator iter = componentFiles.begin();
 						iter != componentFiles.end();
@@ -183,10 +185,12 @@ void CRegistriesManagerComp::RegisterPackageFile(const istd::CString& file)
 
 			m_compositePackagesMap[packageId] = packageDir;
 		}
-		else{
+		else if (foundIter->second != fileInfo.canonicalFilePath()){
 			SendWarningMessage(
 						MI_CANNOT_REGISTER,
-						iqt::GetCString(QObject::tr("Second composed package definition was ignored %1 (previous: %2)").arg(fileInfo.absoluteFilePath()).arg(foundIter->second.absolutePath())));
+						iqt::GetCString(QObject::tr("Second composed package definition was ignored %1 (previous: %2)")
+									.arg(fileInfo.canonicalFilePath())
+									.arg(foundIter->second.canonicalPath())));
 		}
 	}
 }
@@ -196,7 +200,7 @@ void CRegistriesManagerComp::RegisterPackagesDir(const istd::CString& path)
 {
 	QDir packagesDir(GetQString(path));
 
-	SendVerboseMessage(istd::CString("Register package directory: ") + path);
+	SendVerboseMessage(iqt::GetCString(QObject::tr("Register package directory: %1").arg(packagesDir.canonicalPath())));
 
 	QStringList filters;
 	filters.append("*.arp");
@@ -217,11 +221,11 @@ bool CRegistriesManagerComp::LoadConfigFile(const istd::CString& configFile)
 
 	QDir baseDir = fileInfo.absoluteDir();
 
-	istd::CString configFilePath = GetCString(fileInfo.absoluteFilePath());
+	QString configFilePath = fileInfo.absoluteFilePath();
 
-	SendVerboseMessage(istd::CString("Load configuration file: ") + configFilePath);
+	SendVerboseMessage(iqt::GetCString(QObject::tr("Load configuration file: %1").arg(configFilePath)));
 
-	iser::CXmlFileReadArchive archive(configFilePath);
+	iser::CXmlFileReadArchive archive(GetCString(configFilePath));
 
 	bool retVal = true;
 
@@ -237,7 +241,7 @@ bool CRegistriesManagerComp::LoadConfigFile(const istd::CString& configFile)
 	retVal = retVal && archive.BeginMultiTag(configFilesTag, filePathTag, configFilesCount);
 
 	if (!retVal){
-		SendVerboseMessage(istd::CString("Load of configuration file: ") + configFilePath + istd::CString(" failed"));
+		SendVerboseMessage(iqt::GetCString(QObject::tr("Load of configuration file: %1 failed").arg(configFilePath)));
 	
 		return false;
 	}
@@ -261,7 +265,7 @@ bool CRegistriesManagerComp::LoadConfigFile(const istd::CString& configFile)
 	retVal = retVal && archive.BeginMultiTag(packageDirsTag, dirPathTag, dirsCount);
 
 	if (!retVal){
-		SendVerboseMessage(istd::CString("Load of configuration file: ") + configFilePath + istd::CString(" failed"));
+		SendVerboseMessage(iqt::GetCString(QObject::tr("Load of configuration file: %1 failed").arg(configFilePath)));
 
 		return false;
 	}
@@ -284,7 +288,7 @@ bool CRegistriesManagerComp::LoadConfigFile(const istd::CString& configFile)
 	retVal = retVal && archive.BeginMultiTag(packageFilesTag, filePathTag, filesCount);
 
 	if (!retVal){
-		SendVerboseMessage(istd::CString("Load of configuration file: ") + configFilePath + istd::CString(" failed"));
+		SendVerboseMessage(iqt::GetCString(QObject::tr("Load of configuration file: %1 failed").arg(configFilePath)));
 
 		return false;
 	}
@@ -304,7 +308,7 @@ bool CRegistriesManagerComp::LoadConfigFile(const istd::CString& configFile)
 	retVal = retVal && archive.EndTag(packageFilesTag);
 
 	if (!retVal){
-		SendVerboseMessage(istd::CString("Load of configuration file: ") + configFilePath + istd::CString(" failed"));
+		SendVerboseMessage(iqt::GetCString(QObject::tr("Load of configuration file: %1 failed").arg(configFilePath)));
 
 		return false;
 	}

@@ -67,21 +67,16 @@
 <a name="l00078"></a>00078 
 <a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_i_supplier.html#afcc7cf98a07ad365e35635eab32d8bcb" title="Get status of last work.">GetWorkStatus</a>() <span class="keyword">const</span> = 0;
 <a name="l00084"></a>00084 
-<a name="l00089"></a>00089        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiproc_1_1_i_supplier.html#a324e6ad997edafc5e80c279b5d23aa2b" title="Get duration time of work.">GetWorkDurationTime</a>() <span class="keyword">const</span> = 0;
+<a name="l00088"></a>00088        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">iprm::IParamsSet</a>* <a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>() <span class="keyword">const</span> = 0;
+<a name="l00089"></a>00089 };
 <a name="l00090"></a>00090 
-<a name="l00094"></a>00094        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">iprm::IParamsSet</a>* <a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>() <span class="keyword">const</span> = 0;
-<a name="l00095"></a>00095 
-<a name="l00100"></a>00100        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_i_supplier.html#a10065712800704b32f414cc6ae2f2dc1" title="Register output supplier object.">OnOutputSubscribed</a>(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* outputSupplierPtr) = 0;
-<a name="l00104"></a>00104        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_i_supplier.html#aefb5ee63ea87fd34f10682406e67883f" title="Unregister output supplier object.">OnOutputUnsubscribed</a>(<span class="keyword">const</span> <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* outputSupplierPtr) = 0;
-<a name="l00105"></a>00105 };
-<a name="l00106"></a>00106 
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108 } <span class="comment">// namespace iproc</span>
-<a name="l00109"></a>00109 
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111 <span class="preprocessor">#endif // !iproc_ISupplier_included</span>
-<a name="l00112"></a>00112 <span class="preprocessor"></span>
-<a name="l00113"></a>00113 
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 } <span class="comment">// namespace iproc</span>
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 <span class="preprocessor">#endif // !iproc_ISupplier_included</span>
+<a name="l00096"></a>00096 <span class="preprocessor"></span>
+<a name="l00097"></a>00097 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

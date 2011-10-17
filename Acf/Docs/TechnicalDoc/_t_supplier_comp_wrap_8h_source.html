@@ -39,305 +39,250 @@
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_c_static_services_provider_8h.html">istd/CStaticServicesProvider.h</a>&quot;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_model_8h.html">imod/IModel.h</a>&quot;</span>
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
-<a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="_i_timer_8h.html">isys/ITimer.h</a>&quot;</span>
-<a name="l00021"></a>00021 
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_c_multi_model_observer_base_8h.html">imod/CMultiModelObserverBase.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="code" href="_i_timer_8h.html">isys/ITimer.h</a>&quot;</span>
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <span class="comment">// ACF includes</span>
-<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="_i_supplier_8h.html">iproc/ISupplier.h</a>&quot;</span>
-<a name="l00025"></a>00025 
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="comment">// ACF includes</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="_i_supplier_8h.html">iproc/ISupplier.h</a>&quot;</span>
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027 <span class="keyword">namespace </span>iproc
-<a name="l00028"></a>00028 {
-<a name="l00029"></a>00029 
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 <span class="keyword">namespace </span>iproc
+<a name="l00029"></a>00029 {
 <a name="l00030"></a>00030 
-<a name="l00035"></a>00035 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00036"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html">00036</a> <span class="keyword">class </span><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Wrapper implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap</a>:
-<a name="l00037"></a>00037                      <span class="keyword">public</span> ibase::<a class="code" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93" title="Type defininig base class for simple components outputing log messages.">CLoggerComponentBase</a>,
-<a name="l00038"></a>00038                      <span class="keyword">virtual</span> <span class="keyword">public</span> SupplierInterface
-<a name="l00039"></a>00039 {
-<a name="l00040"></a>00040 <span class="keyword">public</span>:
-<a name="l00041"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a494d8a4d654d8c65258849351da24f80">00041</a>        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">ibase::CLoggerComponentBase</a> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a494d8a4d654d8c65258849351da24f80">BaseClass</a>;
-<a name="l00042"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ac11c3c0f49899742302133659279298c">00042</a>        <span class="keyword">typedef</span> Product <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ac11c3c0f49899742302133659279298c">ProductType</a>;
-<a name="l00043"></a>00043 
-<a name="l00044"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ae4928500a07bc7997704eb06d7effb9f">00044</a>        <span class="keyword">enum</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ae4928500a07bc7997704eb06d7effb9f">MessageId</a>
-<a name="l00045"></a>00045        {
-<a name="l00046"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ae4928500a07bc7997704eb06d7effb9fa7b73f41f70e7b6be245069500b6b1e86">00046</a>               <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ae4928500a07bc7997704eb06d7effb9fa7b73f41f70e7b6be245069500b6b1e86">MI_DURATION_TIME</a> = 0x077a1b
-<a name="l00047"></a>00047        };
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049        I_BEGIN_BASE_COMPONENT(<a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Wrapper implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap</a>);
-<a name="l00050"></a>00050               I_REGISTER_INTERFACE(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>);
-<a name="l00051"></a>00051               I_REGISTER_INTERFACE(SupplierInterface);
+<a name="l00031"></a>00031 
+<a name="l00036"></a>00036 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00037"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html">00037</a> <span class="keyword">class </span><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Wrapper implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap</a>:
+<a name="l00038"></a>00038                      <span class="keyword">public</span> ibase::<a class="code" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93" title="Type defininig base class for simple components outputing log messages.">CLoggerComponentBase</a>,
+<a name="l00039"></a>00039                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>
+<a name="l00040"></a>00040 {
+<a name="l00041"></a>00041 <span class="keyword">public</span>:
+<a name="l00042"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#aa798f2691f94a39db1097a56727a68b9">00042</a>        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">ibase::CLoggerComponentBase</a> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#aa798f2691f94a39db1097a56727a68b9">BaseClass</a>;
+<a name="l00043"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">00043</a>        <span class="keyword">typedef</span> Product <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a>;
+<a name="l00044"></a>00044 
+<a name="l00045"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ae4928500a07bc7997704eb06d7effb9f">00045</a>        <span class="keyword">enum</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ae4928500a07bc7997704eb06d7effb9f">MessageId</a>
+<a name="l00046"></a>00046        {
+<a name="l00047"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ae4928500a07bc7997704eb06d7effb9faab1f299aea6b4bfa72738cc9cdb34670">00047</a>               <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ae4928500a07bc7997704eb06d7effb9faab1f299aea6b4bfa72738cc9cdb34670">MI_DURATION_TIME</a> = 0x077a1b
+<a name="l00048"></a>00048        };
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050        I_BEGIN_BASE_COMPONENT(<a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Wrapper implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap</a>);
+<a name="l00051"></a>00051               I_REGISTER_INTERFACE(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>);
 <a name="l00052"></a>00052               I_ASSIGN(m_diagnosticNameAttrPtr, <span class="stringliteral">&quot;DiagnosticName&quot;</span>, <span class="stringliteral">&quot;Name of this supplier for diagnostic, if it is not set, no diagnostic log message will be send&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>);
 <a name="l00053"></a>00053               I_ASSIGN(m_paramsSetCompPtr, <span class="stringliteral">&quot;ParamsSet&quot;</span>, <span class="stringliteral">&quot;Parameters set describing model parameter used to produce results&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ParamsSet&quot;</span>);
-<a name="l00054"></a>00054               <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a9b448738771a401729f852d264b31b1c">I_ASSIGN_TO</a>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, <span class="keyword">false</span>);
+<a name="l00054"></a>00054               <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a9f63ea1c39f5e17fabf56729c317cd1f">I_ASSIGN_TO</a>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, <span class="keyword">false</span>);
 <a name="l00055"></a>00055        I_END_COMPONENT;
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057        <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a343f6bc269a60e4631ad9576818529bd">TSupplierCompWrap</a>();
+<a name="l00057"></a>00057        <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a11d01e8db5c10dc62b7b795c1c38d358">TSupplierCompWrap</a>();
 <a name="l00058"></a>00058 
-<a name="l00059"></a>00059        <span class="comment">// pseudo-reimplemented (iproc::ISupplier)</span>
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a20c5b35651818986f82a5d557ec84db5">InvalidateSupplier</a>();
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a5c71c76b6117e4d87ea6a5c23019fcc2">EnsureWorkFinished</a>();
-<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a9b4792f126bc8f76895030a0ebd8fcb5">ClearWorkResults</a>();
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ad5c6e90dff41db0687b3a3ad2c4aadfc">GetWorkStatus</a>() <span class="keyword">const</span>;
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a3267e1939cbbc9c213e699b2caee3499">GetWorkDurationTime</a>() <span class="keyword">const</span>;
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">iprm::IParamsSet</a>* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ac66ac1772f0d32f03b8489a4ca80891d">GetModelParametersSet</a>() <span class="keyword">const</span>;
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a280687e03dcb2a8d7a61b1eadf6eea2b">OnOutputSubscribed</a>(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* outputSupplierPtr);
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#add219c0facb75ba995854526514aa8d9">OnOutputUnsubscribed</a>(<span class="keyword">const</span> <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* outputSupplierPtr);
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="keyword">protected</span>:
-<a name="l00073"></a>00073        <span class="keyword">const</span> Product* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a1490622ae0ea46cf8fe87195157ead88" title="Get current work product, if work was done correctly.">GetWorkProduct</a>() <span class="keyword">const</span>;
-<a name="l00074"></a>00074 
-<a name="l00078"></a>00078        <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a738a019cea36f88490cc53f788dba768" title="Add some supplier to input supplier list.">AddInputSupplier</a>(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* supplierPtr);
-<a name="l00082"></a>00082        <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a4d292fc23555416e7bbad761fc197e89" title="Remove supplier from input supplier list.">RemoveInputSupplier</a>(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* supplierPtr);
-<a name="l00086"></a>00086        <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a1938b1e7385981aa91fae84f71ddc255" title="Remove all suppliers from input supplier list.">RemoveAllInputSuppliers</a>();
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088        <span class="comment">// abstract methods</span>
-<a name="l00093"></a>00093 <span class="comment"></span>       <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a292a1dafea387b1c20276d35a26985ca" title="Produce single object.">ProduceObject</a>(Product&amp; result) <span class="keyword">const</span> = 0;
+<a name="l00059"></a>00059        <span class="comment">// reimplemented (iproc::ISupplier)</span>
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ad5e0a872fbc23c641a87a0e722e7a3e2" title="Called to signalize that this supplier is invalid.">InvalidateSupplier</a>();
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a94292879cc623a44e70067a7ef78c05e" title="Ensure that all objects are produced.">EnsureWorkFinished</a>();
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a0a5893f9c6a884949e2ccb5286c37921" title="Remove all stored work results.">ClearWorkResults</a>();
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#aae3ac83c656d4b0de834372fdca85ee2" title="Get status of last work.">GetWorkStatus</a>() <span class="keyword">const</span>;
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">iprm::IParamsSet</a>* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6f30ac3f2d05e657c1263026630fd6d" title="Get parameter set using by this supplier.">GetModelParametersSet</a>() <span class="keyword">const</span>;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="keyword">protected</span>:
+<a name="l00070"></a>00070        <span class="keyword">const</span> Product* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a9afc17fb076daf8bd801d1fa979fd2f3" title="Get current work product, if work was done correctly.">GetWorkProduct</a>() <span class="keyword">const</span>;
+<a name="l00071"></a>00071 
+<a name="l00077"></a>00077        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a6003440e8b69055a64692bcf5da84408" title="Register supplier input.">RegisterSupplierInput</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
+<a name="l00082"></a>00082        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#af3699e19481feebf476a3f823ac98bfb" title="Unregister supplier input.">UnregisterSupplierInput</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084        <span class="comment">// abstract methods</span>
+<a name="l00089"></a>00089 <span class="comment"></span>       <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a6230575f0d5b0ccfd28cdf7082866c62" title="Produce single object.">ProduceObject</a>(Product&amp; result) <span class="keyword">const</span> = 0;
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00092"></a>00092        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a87209e190b38fd6513767b16208ed1ce">OnComponentCreated</a>();
+<a name="l00093"></a>00093        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6c61739f6153e4f37b82ca110468afe">OnComponentDestroyed</a>();
 <a name="l00094"></a>00094 
-<a name="l00095"></a>00095        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ae9744a2ce6ca29690fa8f8ee1a38afe0">OnComponentCreated</a>();
-<a name="l00097"></a>00097        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a8776dafdf5776b3674255096a4ade6df">OnComponentDestroyed</a>();
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099 <span class="keyword">private</span>:
-<a name="l00100"></a>00100        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_diagnosticNameAttrPtr);
-<a name="l00101"></a>00101        I_REF(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">iprm::IParamsSet</a>, m_paramsSetCompPtr);
-<a name="l00102"></a>00102        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_paramsSetModelCompPtr);
-<a name="l00103"></a>00103 
-<a name="l00104"></a>00104        <span class="keyword">typedef</span> std::set&lt;ISupplier*&gt; Suppliers;
-<a name="l00105"></a>00105        Suppliers m_inputSuppliers;
-<a name="l00106"></a>00106        Suppliers m_outputSuppliers;
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108        Product m_product;
-<a name="l00109"></a>00109        <span class="keywordtype">int</span> m_workStatus;
-<a name="l00110"></a>00110        <span class="keywordtype">double</span> m_durationTime;
-<a name="l00111"></a>00111 };
-<a name="l00112"></a>00112 
-<a name="l00113"></a>00113 
-<a name="l00114"></a>00114 <span class="comment">// public methods</span>
-<a name="l00115"></a>00115 
-<a name="l00116"></a>00116 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00117"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a343f6bc269a60e4631ad9576818529bd">00117</a> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a343f6bc269a60e4631ad9576818529bd">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::TSupplierCompWrap</a>()
-<a name="l00118"></a>00118 :      m_workStatus(WS_NONE),
-<a name="l00119"></a>00119        m_durationTime(0)
-<a name="l00120"></a>00120 {
-<a name="l00121"></a>00121 }
-<a name="l00122"></a>00122 
+<a name="l00095"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html">00095</a>        <span class="keyword">class </span><a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html">InputObserver</a>: <span class="keyword">public</span> imod::CMultiModelObserverBase
+<a name="l00096"></a>00096        {
+<a name="l00097"></a>00097        <span class="keyword">public</span>:
+<a name="l00098"></a>00098               <a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html#aef95decb5518150f7c51a5c8b9d421c8">InputObserver</a>(<a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Wrapper implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;</a>* parentPtr);
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100               <span class="keyword">using</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a6bfa8b39bc6680c04dbfc20966257289">imod::CMultiModelObserverBase::EnsureModelsDetached</a>;
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102        <span class="keyword">protected</span>:
+<a name="l00103"></a>00103               <span class="comment">// reimplemented (imod::CMultiModelObserverBase)</span>
+<a name="l00104"></a>00104               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html#a12f8316cddc6667f774114f05d0fd755">OnUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106        <span class="keyword">private</span>:
+<a name="l00107"></a>00107               <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Wrapper implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;</a>&amp; m_parent;
+<a name="l00108"></a>00108        };
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 <span class="keyword">private</span>:
+<a name="l00111"></a>00111        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_diagnosticNameAttrPtr);
+<a name="l00112"></a>00112        I_REF(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">iprm::IParamsSet</a>, m_paramsSetCompPtr);
+<a name="l00113"></a>00113        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_paramsSetModelCompPtr);
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;Product&gt;</a> m_productPtr;
+<a name="l00116"></a>00116        <span class="keywordtype">int</span> m_workStatus;
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118        <a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html">InputObserver</a> m_inputObserver;
+<a name="l00119"></a>00119 };
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122 <span class="comment">// public methods</span>
 <a name="l00123"></a>00123 
-<a name="l00124"></a>00124 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00125"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ac66ac1772f0d32f03b8489a4ca80891d">00125</a> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">iprm::IParamsSet</a>* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ac66ac1772f0d32f03b8489a4ca80891d">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::GetModelParametersSet</a>()<span class="keyword"> const</span>
-<a name="l00126"></a>00126 <span class="keyword"></span>{
-<a name="l00127"></a>00127        <span class="keywordflow">return</span> m_paramsSetCompPtr.GetPtr();
-<a name="l00128"></a>00128 }
-<a name="l00129"></a>00129 
+<a name="l00124"></a>00124 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00125"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a11d01e8db5c10dc62b7b795c1c38d358">00125</a> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a11d01e8db5c10dc62b7b795c1c38d358">TSupplierCompWrap&lt;Product&gt;::TSupplierCompWrap</a>()
+<a name="l00126"></a>00126 :      m_workStatus(WS_NONE),
+<a name="l00127"></a>00127        m_inputObserver(this)
+<a name="l00128"></a>00128 {
+<a name="l00129"></a>00129 }
 <a name="l00130"></a>00130 
-<a name="l00131"></a>00131 <span class="comment">// pseudo-reimplemented (iproc::ISupplier)</span>
-<a name="l00132"></a>00132 
-<a name="l00133"></a>00133 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00134"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a20c5b35651818986f82a5d557ec84db5">00134</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a20c5b35651818986f82a5d557ec84db5">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::InvalidateSupplier</a>()
-<a name="l00135"></a>00135 {
-<a name="l00136"></a>00136        <span class="keywordflow">if</span> (m_workStatus == <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ead862cf2007aad54dfe8699bc4bf209d6" title="Supplier is locked becouse it is doing processing step.">ISupplier::WS_LOCKED</a>){
-<a name="l00137"></a>00137               <span class="keywordflow">return</span>;
-<a name="l00138"></a>00138        }
-<a name="l00139"></a>00139 
-<a name="l00140"></a>00140        <span class="keywordflow">if</span> (m_workStatus != <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251eaff938cd606e9e8d2cc881b961277aa18" title="New work is initialized.">ISupplier::WS_INIT</a>){
-<a name="l00141"></a>00141               <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> notifier(<span class="keyword">this</span>, <a class="code" href="classiproc_1_1_i_supplier.html#a493b9bac260cff15679441656b15f3caabe63c0459792ec8459c0304337047833">ISupplier::CF_SUPPLIER_RESULTS</a>);
-<a name="l00142"></a>00142 
-<a name="l00143"></a>00143               m_workStatus = <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ead862cf2007aad54dfe8699bc4bf209d6" title="Supplier is locked becouse it is doing processing step.">ISupplier::WS_LOCKED</a>;
-<a name="l00144"></a>00144 
-<a name="l00145"></a>00145               <span class="keywordflow">for</span> (         Suppliers::const_iterator iter = m_outputSuppliers.begin();
-<a name="l00146"></a>00146                                    iter != m_outputSuppliers.end();
-<a name="l00147"></a>00147                                    ++iter){
-<a name="l00148"></a>00148                      <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* supplierPtr = *iter;
-<a name="l00149"></a>00149                      <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(supplierPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00133"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6f30ac3f2d05e657c1263026630fd6d">00133</a> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">iprm::IParamsSet</a>* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6f30ac3f2d05e657c1263026630fd6d" title="Get parameter set using by this supplier.">TSupplierCompWrap&lt;Product&gt;::GetModelParametersSet</a>()<span class="keyword"> const</span>
+<a name="l00134"></a>00134 <span class="keyword"></span>{
+<a name="l00135"></a>00135        <span class="keywordflow">return</span> m_paramsSetCompPtr.GetPtr();
+<a name="l00136"></a>00136 }
+<a name="l00137"></a>00137 
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139 <span class="comment">// pseudo-reimplemented (iproc::ISupplier)</span>
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00142"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ad5e0a872fbc23c641a87a0e722e7a3e2">00142</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ad5e0a872fbc23c641a87a0e722e7a3e2" title="Called to signalize that this supplier is invalid.">TSupplierCompWrap&lt;Product&gt;::InvalidateSupplier</a>()
+<a name="l00143"></a>00143 {
+<a name="l00144"></a>00144        <span class="keywordflow">if</span> (m_workStatus == <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ead862cf2007aad54dfe8699bc4bf209d6" title="Supplier is locked becouse it is doing processing step.">ISupplier::WS_LOCKED</a>){
+<a name="l00145"></a>00145               <span class="keywordflow">return</span>;
+<a name="l00146"></a>00146        }
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148        <span class="keywordflow">if</span> (m_workStatus != <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251eaff938cd606e9e8d2cc881b961277aa18" title="New work is initialized.">ISupplier::WS_INIT</a>){
+<a name="l00149"></a>00149               <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> notifier(<span class="keyword">this</span>, <a class="code" href="classiproc_1_1_i_supplier.html#a493b9bac260cff15679441656b15f3caabe63c0459792ec8459c0304337047833">ISupplier::CF_SUPPLIER_RESULTS</a>);
 <a name="l00150"></a>00150 
-<a name="l00151"></a>00151                      supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a0496343d4f5ae9a3f71caf5163b35d13" title="Called to signalize that this supplier is invalid.">InvalidateSupplier</a>();
-<a name="l00152"></a>00152               }
-<a name="l00153"></a>00153 
-<a name="l00154"></a>00154               m_workStatus = <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251eaff938cd606e9e8d2cc881b961277aa18" title="New work is initialized.">ISupplier::WS_INIT</a>;
-<a name="l00155"></a>00155               m_durationTime = 0;
-<a name="l00156"></a>00156        }
-<a name="l00157"></a>00157 }
-<a name="l00158"></a>00158 
-<a name="l00159"></a>00159 
-<a name="l00160"></a>00160 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00161"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a5c71c76b6117e4d87ea6a5c23019fcc2">00161</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a5c71c76b6117e4d87ea6a5c23019fcc2">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::EnsureWorkFinished</a>()
-<a name="l00162"></a>00162 {
-<a name="l00163"></a>00163        <span class="keywordflow">if</span> (m_workStatus &lt;= <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251eaff938cd606e9e8d2cc881b961277aa18" title="New work is initialized.">ISupplier::WS_INIT</a>){
-<a name="l00164"></a>00164               <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> notifier(<span class="keyword">this</span>, <a class="code" href="classiproc_1_1_i_supplier.html#a493b9bac260cff15679441656b15f3caabe63c0459792ec8459c0304337047833">ISupplier::CF_SUPPLIER_RESULTS</a>);
-<a name="l00165"></a>00165 
-<a name="l00166"></a>00166               m_workStatus = WS_LOCKED;
+<a name="l00151"></a>00151               m_workStatus = <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251eaff938cd606e9e8d2cc881b961277aa18" title="New work is initialized.">ISupplier::WS_INIT</a>;
+<a name="l00152"></a>00152        }
+<a name="l00153"></a>00153 }
+<a name="l00154"></a>00154 
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00157"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a94292879cc623a44e70067a7ef78c05e">00157</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a94292879cc623a44e70067a7ef78c05e" title="Ensure that all objects are produced.">TSupplierCompWrap&lt;Product&gt;::EnsureWorkFinished</a>()
+<a name="l00158"></a>00158 {
+<a name="l00159"></a>00159        <span class="keywordflow">if</span> (m_workStatus &lt;= <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251eaff938cd606e9e8d2cc881b961277aa18" title="New work is initialized.">ISupplier::WS_INIT</a>){
+<a name="l00160"></a>00160               <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> notifier(<span class="keyword">this</span>, <a class="code" href="classiproc_1_1_i_supplier.html#a493b9bac260cff15679441656b15f3caabe63c0459792ec8459c0304337047833">ISupplier::CF_SUPPLIER_RESULTS</a>);
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162               m_workStatus = WS_LOCKED;
+<a name="l00163"></a>00163 
+<a name="l00164"></a>00164               <span class="keywordflow">if</span> (!m_productPtr.IsValid()){
+<a name="l00165"></a>00165                      m_productPtr.SetPtr(<span class="keyword">new</span> Product());
+<a name="l00166"></a>00166               }
 <a name="l00167"></a>00167 
-<a name="l00168"></a>00168               <a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">istd::TSmartPtr&lt;isys::ITimer&gt;</a> timerPtr(istd::CreateService&lt;isys::ITimer&gt;());
-<a name="l00169"></a>00169 
-<a name="l00170"></a>00170               <span class="keywordflow">if</span> (timerPtr.<a class="code" href="classistd_1_1_t_trans_ptr.html#ad5818e39639b1ce9b4ef5cf9c8769f4e" title="Check, whether the object is in valid state.">IsValid</a>()){
-<a name="l00171"></a>00171                      <span class="comment">// before time measurement is started, we have to ensure that all input suppliers has work finished</span>
-<a name="l00172"></a>00172                      <span class="keywordflow">for</span> (         Suppliers::const_iterator iter = m_inputSuppliers.begin();
-<a name="l00173"></a>00173                                           iter != m_inputSuppliers.end();
-<a name="l00174"></a>00174                                           ++iter){
-<a name="l00175"></a>00175                             <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* supplierPtr = *iter;
-<a name="l00176"></a>00176                             <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(supplierPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00177"></a>00177 
-<a name="l00178"></a>00178                             supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a8407cf9f0d773e91bfa10d6616a36e4d" title="Ensure that all objects are produced.">EnsureWorkFinished</a>();
-<a name="l00179"></a>00179                      }
-<a name="l00180"></a>00180 
-<a name="l00181"></a>00181                      timerPtr-&gt;Start();
-<a name="l00182"></a>00182               }
-<a name="l00183"></a>00183 
-<a name="l00184"></a>00184               m_workStatus = ProduceObject(m_product);
-<a name="l00185"></a>00185               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_workStatus &gt;= WS_OK);   <span class="comment">// No initial states are possible</span>
+<a name="l00168"></a>00168               m_workStatus = ProduceObject(*m_productPtr);
+<a name="l00169"></a>00169               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_workStatus &gt;= WS_OK);   <span class="comment">// No initial states are possible</span>
+<a name="l00170"></a>00170        }
+<a name="l00171"></a>00171 }
+<a name="l00172"></a>00172 
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00175"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a0a5893f9c6a884949e2ccb5286c37921">00175</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a0a5893f9c6a884949e2ccb5286c37921" title="Remove all stored work results.">TSupplierCompWrap&lt;Product&gt;::ClearWorkResults</a>()
+<a name="l00176"></a>00176 {
+<a name="l00177"></a>00177        <span class="keywordflow">if</span> (m_workStatus != <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea67f3e6492065f90039b36834b4d5031e" title="No status is provided, no work was done.">ISupplier::WS_NONE</a>){
+<a name="l00178"></a>00178               <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> notifier(<span class="keyword">this</span>, <a class="code" href="classiproc_1_1_i_supplier.html#a493b9bac260cff15679441656b15f3caabe63c0459792ec8459c0304337047833">ISupplier::CF_SUPPLIER_RESULTS</a>);
+<a name="l00179"></a>00179 
+<a name="l00180"></a>00180               m_productPtr.Reset();
+<a name="l00181"></a>00181 
+<a name="l00182"></a>00182               m_workStatus = <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea67f3e6492065f90039b36834b4d5031e" title="No status is provided, no work was done.">ISupplier::WS_NONE</a>;
+<a name="l00183"></a>00183        }
+<a name="l00184"></a>00184 }
+<a name="l00185"></a>00185 
 <a name="l00186"></a>00186 
-<a name="l00187"></a>00187               <span class="keywordflow">if</span> (timerPtr.<a class="code" href="classistd_1_1_t_trans_ptr.html#ad5818e39639b1ce9b4ef5cf9c8769f4e" title="Check, whether the object is in valid state.">IsValid</a>()){
-<a name="l00188"></a>00188                      m_durationTime = timerPtr-&gt;GetElapsed();
-<a name="l00189"></a>00189 
-<a name="l00190"></a>00190                      <span class="keywordflow">if</span> (m_diagnosticNameAttrPtr.IsValid() &amp;&amp; !(*m_diagnosticNameAttrPtr).empty()){
-<a name="l00191"></a>00191                             SendInfoMessage(MI_DURATION_TIME, *m_diagnosticNameAttrPtr + <span class="stringliteral">&quot;: Calculation time &quot;</span> + <a class="code" href="classistd_1_1_c_string.html#a8c58d1891380aa3981027d205b20669c">istd::CString::FromNumber</a>(m_durationTime * 1000) + <span class="stringliteral">&quot; ms.&quot;</span>);
-<a name="l00192"></a>00192                      }
-<a name="l00193"></a>00193               }
-<a name="l00194"></a>00194        }
-<a name="l00195"></a>00195 }
-<a name="l00196"></a>00196 
-<a name="l00197"></a>00197 
-<a name="l00198"></a>00198 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00199"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a9b4792f126bc8f76895030a0ebd8fcb5">00199</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a9b4792f126bc8f76895030a0ebd8fcb5">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::ClearWorkResults</a>()
-<a name="l00200"></a>00200 {
-<a name="l00201"></a>00201        <span class="keywordflow">if</span> (m_workStatus != <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea67f3e6492065f90039b36834b4d5031e" title="No status is provided, no work was done.">ISupplier::WS_NONE</a>){
-<a name="l00202"></a>00202               <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> notifier(<span class="keyword">this</span>, <a class="code" href="classiproc_1_1_i_supplier.html#a493b9bac260cff15679441656b15f3caabe63c0459792ec8459c0304337047833">ISupplier::CF_SUPPLIER_RESULTS</a>);
-<a name="l00203"></a>00203 
-<a name="l00204"></a>00204               m_workStatus = <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea67f3e6492065f90039b36834b4d5031e" title="No status is provided, no work was done.">ISupplier::WS_NONE</a>;
-<a name="l00205"></a>00205               m_durationTime = 0;
-<a name="l00206"></a>00206 
-<a name="l00207"></a>00207               <span class="keywordflow">for</span> (         Suppliers::const_iterator iter = m_inputSuppliers.begin();
-<a name="l00208"></a>00208                                    iter != m_inputSuppliers.end();
-<a name="l00209"></a>00209                                    ++iter){
-<a name="l00210"></a>00210                      <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* supplierPtr = *iter;
-<a name="l00211"></a>00211                      <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(supplierPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00212"></a>00212 
-<a name="l00213"></a>00213                      supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a9ca6810fbb13f002e9eaaece19ddf31a" title="Remove all stored work results.">ClearWorkResults</a>();
-<a name="l00214"></a>00214               }
-<a name="l00215"></a>00215        }
-<a name="l00216"></a>00216 }
+<a name="l00187"></a>00187 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00188"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#aae3ac83c656d4b0de834372fdca85ee2">00188</a> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#aae3ac83c656d4b0de834372fdca85ee2" title="Get status of last work.">TSupplierCompWrap&lt;Product&gt;::GetWorkStatus</a>()<span class="keyword"> const</span>
+<a name="l00189"></a>00189 <span class="keyword"></span>{
+<a name="l00190"></a>00190        <span class="keywordflow">return</span> m_workStatus;
+<a name="l00191"></a>00191 }
+<a name="l00192"></a>00192 
+<a name="l00193"></a>00193 
+<a name="l00194"></a>00194 <span class="comment">// protected methods</span>
+<a name="l00195"></a>00195 
+<a name="l00196"></a>00196 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00197"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a9afc17fb076daf8bd801d1fa979fd2f3">00197</a> <span class="keyword">const</span> Product* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a9afc17fb076daf8bd801d1fa979fd2f3" title="Get current work product, if work was done correctly.">TSupplierCompWrap&lt;Product&gt;::GetWorkProduct</a>()<span class="keyword"> const</span>
+<a name="l00198"></a>00198 <span class="keyword"></span>{
+<a name="l00199"></a>00199        <span class="keyword">const_cast&lt;</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Wrapper implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;</a>* <span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;EnsureWorkFinished();
+<a name="l00200"></a>00200 
+<a name="l00201"></a>00201        <span class="keywordflow">if</span> (m_workStatus == WS_OK){
+<a name="l00202"></a>00202               <span class="keywordflow">return</span> m_productPtr.GetPtr();
+<a name="l00203"></a>00203        }
+<a name="l00204"></a>00204        <span class="keywordflow">else</span>{
+<a name="l00205"></a>00205               <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00206"></a>00206        }
+<a name="l00207"></a>00207 }
+<a name="l00208"></a>00208 
+<a name="l00209"></a>00209 
+<a name="l00210"></a>00210 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00211"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a6003440e8b69055a64692bcf5da84408">00211</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a6003440e8b69055a64692bcf5da84408" title="Register supplier input.">TSupplierCompWrap&lt;Product&gt;::RegisterSupplierInput</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr)
+<a name="l00212"></a>00212 {
+<a name="l00213"></a>00213        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(modelPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00214"></a>00214        modelPtr-&gt;<a class="code" href="classimod_1_1_i_model.html#ac6c63f2699bce472fc0b7e556604c5cd" title="Attaches model object to observer observerPtr.">AttachObserver</a>(&amp;m_inputObserver);
+<a name="l00215"></a>00215 }
+<a name="l00216"></a>00216 
 <a name="l00217"></a>00217 
-<a name="l00218"></a>00218 
-<a name="l00219"></a>00219 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00220"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ad5c6e90dff41db0687b3a3ad2c4aadfc">00220</a> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ad5c6e90dff41db0687b3a3ad2c4aadfc">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::GetWorkStatus</a>()<span class="keyword"> const</span>
-<a name="l00221"></a>00221 <span class="keyword"></span>{
-<a name="l00222"></a>00222        <span class="keywordflow">return</span> m_workStatus;
-<a name="l00223"></a>00223 }
-<a name="l00224"></a>00224 
-<a name="l00225"></a>00225 
-<a name="l00226"></a>00226 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00227"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a3267e1939cbbc9c213e699b2caee3499">00227</a> <span class="keywordtype">double</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a3267e1939cbbc9c213e699b2caee3499">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::GetWorkDurationTime</a>()<span class="keyword"> const</span>
-<a name="l00228"></a>00228 <span class="keyword"></span>{
-<a name="l00229"></a>00229        <span class="keywordflow">return</span> m_durationTime;
-<a name="l00230"></a>00230 }
-<a name="l00231"></a>00231 
-<a name="l00232"></a>00232 
-<a name="l00233"></a>00233 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00234"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a280687e03dcb2a8d7a61b1eadf6eea2b">00234</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a280687e03dcb2a8d7a61b1eadf6eea2b">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::OnOutputSubscribed</a>(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* outputSupplierPtr)
-<a name="l00235"></a>00235 {
-<a name="l00236"></a>00236        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(outputSupplierPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00237"></a>00237 
-<a name="l00238"></a>00238        m_outputSuppliers.insert(outputSupplierPtr);
-<a name="l00239"></a>00239 }
-<a name="l00240"></a>00240 
+<a name="l00218"></a>00218 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00219"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#af3699e19481feebf476a3f823ac98bfb">00219</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#af3699e19481feebf476a3f823ac98bfb" title="Unregister supplier input.">TSupplierCompWrap&lt;Product&gt;::UnregisterSupplierInput</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr)
+<a name="l00220"></a>00220 {
+<a name="l00221"></a>00221        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(modelPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00222"></a>00222        <span class="keywordflow">if</span> (m_inputObserver.IsModelAttached(modelPtr)){
+<a name="l00223"></a>00223               modelPtr-&gt;<a class="code" href="classimod_1_1_i_model.html#a7397e5498b4db60234160a97f570eb66" title="Detaches model object from observer observerPtr.">DetachObserver</a>(&amp;m_inputObserver);
+<a name="l00224"></a>00224        }
+<a name="l00225"></a>00225 }
+<a name="l00226"></a>00226 
+<a name="l00227"></a>00227 
+<a name="l00228"></a>00228 <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00229"></a>00229 
+<a name="l00230"></a>00230 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00231"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a87209e190b38fd6513767b16208ed1ce">00231</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a87209e190b38fd6513767b16208ed1ce">TSupplierCompWrap&lt;Product&gt;::OnComponentCreated</a>()
+<a name="l00232"></a>00232 {
+<a name="l00233"></a>00233        BaseClass::OnComponentCreated();
+<a name="l00234"></a>00234 
+<a name="l00235"></a>00235        <span class="keywordflow">if</span> (m_paramsSetModelCompPtr.IsValid()){
+<a name="l00236"></a>00236               m_paramsSetModelCompPtr-&gt;AttachObserver(&amp;m_inputObserver);
+<a name="l00237"></a>00237        }
+<a name="l00238"></a>00238 
+<a name="l00239"></a>00239        m_workStatus = <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea67f3e6492065f90039b36834b4d5031e" title="No status is provided, no work was done.">ISupplier::WS_NONE</a>;
+<a name="l00240"></a>00240 }
 <a name="l00241"></a>00241 
-<a name="l00242"></a>00242 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00243"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#add219c0facb75ba995854526514aa8d9">00243</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#add219c0facb75ba995854526514aa8d9">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::OnOutputUnsubscribed</a>(<span class="keyword">const</span> <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* outputSupplierPtr)
-<a name="l00244"></a>00244 {
-<a name="l00245"></a>00245        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(outputSupplierPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00246"></a>00246        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_outputSuppliers.find(const_cast&lt;ISupplier*&gt;(outputSupplierPtr)) != m_outputSuppliers.end());
+<a name="l00242"></a>00242 
+<a name="l00243"></a>00243 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00244"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6c61739f6153e4f37b82ca110468afe">00244</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6c61739f6153e4f37b82ca110468afe">TSupplierCompWrap&lt;Product&gt;::OnComponentDestroyed</a>()
+<a name="l00245"></a>00245 {
+<a name="l00246"></a>00246        m_inputObserver.EnsureModelsDetached();
 <a name="l00247"></a>00247 
-<a name="l00248"></a>00248        m_outputSuppliers.erase(const_cast&lt;ISupplier*&gt;(outputSupplierPtr));
+<a name="l00248"></a>00248        BaseClass::OnComponentDestroyed();
 <a name="l00249"></a>00249 }
 <a name="l00250"></a>00250 
 <a name="l00251"></a>00251 
-<a name="l00252"></a>00252 <span class="comment">// protected methods</span>
+<a name="l00252"></a>00252 <span class="comment">// public methods of embedded class InputObserver</span>
 <a name="l00253"></a>00253 
-<a name="l00254"></a>00254 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00255"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a1490622ae0ea46cf8fe87195157ead88">00255</a> <span class="keyword">const</span> Product* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a1490622ae0ea46cf8fe87195157ead88" title="Get current work product, if work was done correctly.">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::GetWorkProduct</a>()<span class="keyword"> const</span>
-<a name="l00256"></a>00256 <span class="keyword"></span>{
-<a name="l00257"></a>00257        <span class="keyword">const_cast&lt;</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Wrapper implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;SupplierInterface, Product&gt;</a>* <span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;EnsureWorkFinished();
-<a name="l00258"></a>00258 
-<a name="l00259"></a>00259        <span class="keywordflow">if</span> (m_workStatus == WS_OK){
-<a name="l00260"></a>00260               <span class="keywordflow">return</span> &amp;m_product;
-<a name="l00261"></a>00261        }
-<a name="l00262"></a>00262        <span class="keywordflow">else</span>{
-<a name="l00263"></a>00263               <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
-<a name="l00264"></a>00264        }
-<a name="l00265"></a>00265 }
-<a name="l00266"></a>00266 
-<a name="l00267"></a>00267 
-<a name="l00268"></a>00268 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00269"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a738a019cea36f88490cc53f788dba768">00269</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a738a019cea36f88490cc53f788dba768" title="Add some supplier to input supplier list.">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::AddInputSupplier</a>(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* supplierPtr)
-<a name="l00270"></a>00270 {
-<a name="l00271"></a>00271        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(supplierPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00254"></a>00254 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00255"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html#aef95decb5518150f7c51a5c8b9d421c8">00255</a> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html#aef95decb5518150f7c51a5c8b9d421c8">TSupplierCompWrap&lt;Product&gt;::InputObserver::InputObserver</a>(<a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Wrapper implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;</a>* parentPtr)
+<a name="l00256"></a>00256 :      m_parent(*parentPtr)
+<a name="l00257"></a>00257 {
+<a name="l00258"></a>00258        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(parentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00259"></a>00259 }
+<a name="l00260"></a>00260 
+<a name="l00261"></a>00261 
+<a name="l00262"></a>00262 <span class="comment">// protected methods of embedded class InputObserver</span>
+<a name="l00263"></a>00263 
+<a name="l00264"></a>00264 <span class="comment">// reimplemented (imod::CMultiModelObserverBase)</span>
+<a name="l00265"></a>00265 
+<a name="l00266"></a>00266 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00267"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html#a12f8316cddc6667f774114f05d0fd755">00267</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Wrapper implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;::InputObserver::OnUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* <span class="comment">/*modelPtr*/</span>, <span class="keywordtype">int</span> <span class="comment">/*updateFlags*/</span>, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <span class="comment">/*updateParamsPtr*/</span>)
+<a name="l00268"></a>00268 {
+<a name="l00269"></a>00269        m_parent.<a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ad5e0a872fbc23c641a87a0e722e7a3e2" title="Called to signalize that this supplier is invalid.">InvalidateSupplier</a>();
+<a name="l00270"></a>00270 }
+<a name="l00271"></a>00271 
 <a name="l00272"></a>00272 
-<a name="l00273"></a>00273        std::pair&lt;Suppliers::iterator, bool&gt; status = m_inputSuppliers.insert(supplierPtr);
+<a name="l00273"></a>00273 } <span class="comment">// namespace iproc</span>
 <a name="l00274"></a>00274 
-<a name="l00275"></a>00275        <span class="keywordflow">if</span> (status.second){
-<a name="l00276"></a>00276               supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a10065712800704b32f414cc6ae2f2dc1" title="Register output supplier object.">OnOutputSubscribed</a>(<span class="keyword">this</span>);
-<a name="l00277"></a>00277        }
-<a name="l00278"></a>00278 }
-<a name="l00279"></a>00279 
-<a name="l00280"></a>00280 
-<a name="l00281"></a>00281 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00282"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a4d292fc23555416e7bbad761fc197e89">00282</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a4d292fc23555416e7bbad761fc197e89" title="Remove supplier from input supplier list.">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::RemoveInputSupplier</a>(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* supplierPtr)
-<a name="l00283"></a>00283 {
-<a name="l00284"></a>00284        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(supplierPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00285"></a>00285 
-<a name="l00286"></a>00286        supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#aefb5ee63ea87fd34f10682406e67883f" title="Unregister output supplier object.">OnOutputUnsubscribed</a>(<span class="keyword">this</span>);
-<a name="l00287"></a>00287 
-<a name="l00288"></a>00288        m_inputSuppliers.erase(supplierPtr);
-<a name="l00289"></a>00289 }
-<a name="l00290"></a>00290 
-<a name="l00291"></a>00291 
-<a name="l00292"></a>00292 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00293"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a1938b1e7385981aa91fae84f71ddc255">00293</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a1938b1e7385981aa91fae84f71ddc255" title="Remove all suppliers from input supplier list.">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::RemoveAllInputSuppliers</a>()
-<a name="l00294"></a>00294 {
-<a name="l00295"></a>00295        <span class="keywordflow">for</span> (         Suppliers::const_iterator iter = m_inputSuppliers.begin();
-<a name="l00296"></a>00296                             iter != m_inputSuppliers.end();
-<a name="l00297"></a>00297                             ++iter){
-<a name="l00298"></a>00298               <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* supplierPtr = *iter;
-<a name="l00299"></a>00299               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(supplierPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00300"></a>00300 
-<a name="l00301"></a>00301               supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#aefb5ee63ea87fd34f10682406e67883f" title="Unregister output supplier object.">OnOutputUnsubscribed</a>(<span class="keyword">this</span>);
-<a name="l00302"></a>00302        }
-<a name="l00303"></a>00303 
-<a name="l00304"></a>00304        m_inputSuppliers.clear();
-<a name="l00305"></a>00305 }
-<a name="l00306"></a>00306 
-<a name="l00307"></a>00307 
-<a name="l00308"></a>00308 <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00309"></a>00309 
-<a name="l00310"></a>00310 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00311"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ae9744a2ce6ca29690fa8f8ee1a38afe0">00311</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ae9744a2ce6ca29690fa8f8ee1a38afe0">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::OnComponentCreated</a>()
-<a name="l00312"></a>00312 {
-<a name="l00313"></a>00313        BaseClass::OnComponentCreated();
-<a name="l00314"></a>00314 
-<a name="l00315"></a>00315        m_workStatus = <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea67f3e6492065f90039b36834b4d5031e" title="No status is provided, no work was done.">ISupplier::WS_NONE</a>;
-<a name="l00316"></a>00316 }
-<a name="l00317"></a>00317 
-<a name="l00318"></a>00318 
-<a name="l00319"></a>00319 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SupplierInterface, <span class="keyword">class</span> Product&gt;
-<a name="l00320"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a8776dafdf5776b3674255096a4ade6df">00320</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a8776dafdf5776b3674255096a4ade6df">TSupplierCompWrap&lt;SupplierInterface, Product&gt;::OnComponentDestroyed</a>()
-<a name="l00321"></a>00321 {
-<a name="l00322"></a>00322        RemoveAllInputSuppliers();
-<a name="l00323"></a>00323 
-<a name="l00324"></a>00324        BaseClass::OnComponentDestroyed();
-<a name="l00325"></a>00325 }
-<a name="l00326"></a>00326 
-<a name="l00327"></a>00327 
-<a name="l00328"></a>00328 } <span class="comment">// namespace iproc</span>
-<a name="l00329"></a>00329 
-<a name="l00330"></a>00330 
-<a name="l00331"></a>00331 <span class="preprocessor">#endif // !iproc_TSupplierCompWrap_included</span>
-<a name="l00332"></a>00332 <span class="preprocessor"></span>
-<a name="l00333"></a>00333 
+<a name="l00275"></a>00275 
+<a name="l00276"></a>00276 <span class="preprocessor">#endif // !iproc_TSupplierCompWrap_included</span>
+<a name="l00277"></a>00277 <span class="preprocessor"></span>
+<a name="l00278"></a>00278 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -23,6 +23,10 @@
 #include "iipr/CFeaturesContainer.h"
 
 
+// ACF includes
+#include "istd/TChangeNotifier.h"
+
+
 namespace iipr
 {
 
@@ -51,11 +55,11 @@ bool CFeaturesContainer::AddFeature(const iipr::IFeature* featurePtr, bool* /*is
 }
 
 
-// reimplemented (iipr::IFeaturesContainer)
+// reimplemented (iipr::IFeaturesProvider)
 
-iipr::IFeaturesContainer::Features CFeaturesContainer::GetFeatures() const
+iipr::IFeaturesProvider::Features CFeaturesContainer::GetFeatures() const
 {
-	iipr::IFeaturesContainer::Features featuresList;
+	iipr::IFeaturesProvider::Features featuresList;
 	
 	for (int index = 0; index < m_featuresList.GetCount(); index++){
 		featuresList.push_back(m_featuresList.GetAt(index));

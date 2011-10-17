@@ -2819,12 +2819,12 @@
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
-    <name>IValueSupplier.h</name>
+    <name>IValueProvider.h</name>
     <path>C:/Temp/Acf/Include/iproc/</path>
-    <filename>_i_value_supplier_8h</filename>
+    <filename>_i_value_provider_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_c_var_vector_8h" name="CVarVector.h" local="yes" imported="no">imath/CVarVector.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <class kind="class">iproc::IValueSupplier</class>
+    <class kind="class">iproc::IValueProvider</class>
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
@@ -2870,11 +2870,13 @@
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <includes id="_c_static_services_provider_8h" name="CStaticServicesProvider.h" local="yes" imported="no">istd/CStaticServicesProvider.h</includes>
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
+    <includes id="_c_multi_model_observer_base_8h" name="CMultiModelObserverBase.h" local="yes" imported="no">imod/CMultiModelObserverBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="_i_timer_8h" name="ITimer.h" local="yes" imported="no">isys/ITimer.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <class kind="class">iproc::TSupplierCompWrap</class>
+    <class kind="class">iproc::TSupplierCompWrap::InputObserver</class>
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
@@ -25715,7 +25717,7 @@
     <class kind="class">iproc::IProcessor</class>
     <class kind="class">iproc::IProgressManager</class>
     <class kind="class">iproc::ISupplier</class>
-    <class kind="class">iproc::IValueSupplier</class>
+    <class kind="class">iproc::IValueProvider</class>
     <class kind="class">iproc::TFileCachedProducerCompBase</class>
     <class kind="class">iproc::TILockedProducer</class>
     <class kind="class">iproc::TMemCachedProducerComp</class>
@@ -26293,85 +26295,64 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual double</type>
-      <name>GetWorkDurationTime</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>a324e6ad997edafc5e80c279b5d23aa2b</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
       <type>virtual iprm::IParamsSet *</type>
       <name>GetModelParametersSet</name>
       <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
       <anchor>a676cd5ff0426c1f72076c1847cb84a52</anchor>
       <arglist>() const =0</arglist>
     </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>OnOutputSubscribed</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>a10065712800704b32f414cc6ae2f2dc1</anchor>
-      <arglist>(ISupplier *outputSupplierPtr)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>OnOutputUnsubscribed</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>aefb5ee63ea87fd34f10682406e67883f</anchor>
-      <arglist>(const ISupplier *outputSupplierPtr)=0</arglist>
-    </member>
   </compound>
   <compound kind="class">
-    <name>iproc::IValueSupplier</name>
-    <filename>classiproc_1_1_i_value_supplier.html</filename>
-    <base virtualness="virtual">iproc::ISupplier</base>
+    <name>iproc::IValueProvider</name>
+    <filename>classiproc_1_1_i_value_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <name>ValueTypeId</name>
-      <anchorfile>classiproc_1_1_i_value_supplier.html</anchorfile>
-      <anchor>a7eb15812ddce1e75c86b3b26fd9940a9</anchor>
+      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
+      <anchor>a41b0645115a2166c8b41cf3d0191e5c0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>VTI_AUTO</name>
-      <anchorfile>classiproc_1_1_i_value_supplier.html</anchorfile>
-      <anchor>a7eb15812ddce1e75c86b3b26fd9940a9af193b6fc09741df9e6d7af72a7b331cf</anchor>
+      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
+      <anchor>a41b0645115a2166c8b41cf3d0191e5c0aeafc034f96c357f4b494215d2c6a360c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>VTI_POSITION</name>
-      <anchorfile>classiproc_1_1_i_value_supplier.html</anchorfile>
-      <anchor>a7eb15812ddce1e75c86b3b26fd9940a9aabbc0b1e7261588323e509dcb40e0d3f</anchor>
+      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
+      <anchor>a41b0645115a2166c8b41cf3d0191e5c0aacb2b7b5d7bd14a36bc2251d732eb3a7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>VTI_RADIUS</name>
-      <anchorfile>classiproc_1_1_i_value_supplier.html</anchorfile>
-      <anchor>a7eb15812ddce1e75c86b3b26fd9940a9aa220f1d5aa72f933373201cd7ce069d0</anchor>
+      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
+      <anchor>a41b0645115a2166c8b41cf3d0191e5c0a77a15678c2e57a871f4a6b0cfeab7d02</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>VTI_QUALITY</name>
-      <anchorfile>classiproc_1_1_i_value_supplier.html</anchorfile>
-      <anchor>a7eb15812ddce1e75c86b3b26fd9940a9a32b1490958d912bee2d492cf9f4cb5e4</anchor>
+      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
+      <anchor>a41b0645115a2166c8b41cf3d0191e5c0a23a762dbc632ff5b5f57b699aaa45318</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>VTI_ANGLE</name>
-      <anchorfile>classiproc_1_1_i_value_supplier.html</anchorfile>
-      <anchor>a7eb15812ddce1e75c86b3b26fd9940a9aea6a1238d7c9120380fae69d71dccc44</anchor>
+      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
+      <anchor>a41b0645115a2166c8b41cf3d0191e5c0ad4cf3532d6138bd64f798cd894820869</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>VTI_LENGTH</name>
-      <anchorfile>classiproc_1_1_i_value_supplier.html</anchorfile>
-      <anchor>a7eb15812ddce1e75c86b3b26fd9940a9a008599d1c56b10286c728f8a7d67437d</anchor>
+      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
+      <anchor>a41b0645115a2166c8b41cf3d0191e5c0a6ef40f3281d45868105cd4d1c19537d2</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual imath::CVarVector</type>
       <name>GetValue</name>
-      <anchorfile>classiproc_1_1_i_value_supplier.html</anchorfile>
-      <anchor>aaccabd4cfc950f42f8e5665cbf8818a9</anchor>
+      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
+      <anchor>ae9166958dfafd199fde41d7795761e04</anchor>
       <arglist>(int index=-1, int valueTypeId=VTI_AUTO) const =0</arglist>
     </member>
   </compound>
@@ -26591,9 +26572,10 @@
   <compound kind="class">
     <name>iproc::TSupplierCompWrap</name>
     <filename>classiproc_1_1_t_supplier_comp_wrap.html</filename>
-    <templarg></templarg>
-    <templarg></templarg>
+    <templarg>Product</templarg>
     <base>ibase::TLoggerCompWrap</base>
+    <base virtualness="virtual">iproc::ISupplier</base>
+    <class kind="class">iproc::TSupplierCompWrap::InputObserver</class>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
@@ -26603,141 +26585,132 @@
     <member kind="enumvalue">
       <name>MI_DURATION_TIME</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ae4928500a07bc7997704eb06d7effb9fa7b73f41f70e7b6be245069500b6b1e86</anchor>
+      <anchor>ae4928500a07bc7997704eb06d7effb9faab1f299aea6b4bfa72738cc9cdb34670</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a494d8a4d654d8c65258849351da24f80</anchor>
+      <anchor>aa798f2691f94a39db1097a56727a68b9</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Product</type>
       <name>ProductType</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ac11c3c0f49899742302133659279298c</anchor>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9b448738771a401729f852d264b31b1c</anchor>
+      <anchor>a9f63ea1c39f5e17fabf56729c317cd1f</anchor>
       <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TSupplierCompWrap</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a343f6bc269a60e4631ad9576818529bd</anchor>
+      <anchor>a11d01e8db5c10dc62b7b795c1c38d358</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InvalidateSupplier</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a20c5b35651818986f82a5d557ec84db5</anchor>
+      <anchor>ad5e0a872fbc23c641a87a0e722e7a3e2</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a5c71c76b6117e4d87ea6a5c23019fcc2</anchor>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9b4792f126bc8f76895030a0ebd8fcb5</anchor>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetWorkStatus</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ad5c6e90dff41db0687b3a3ad2c4aadfc</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetWorkDurationTime</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3267e1939cbbc9c213e699b2caee3499</anchor>
+      <anchor>aae3ac83c656d4b0de834372fdca85ee2</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iprm::IParamsSet *</type>
       <name>GetModelParametersSet</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ac66ac1772f0d32f03b8489a4ca80891d</anchor>
+      <anchor>ab6f30ac3f2d05e657c1263026630fd6d</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnOutputSubscribed</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a280687e03dcb2a8d7a61b1eadf6eea2b</anchor>
-      <arglist>(ISupplier *outputSupplierPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnOutputUnsubscribed</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>add219c0facb75ba995854526514aa8d9</anchor>
-      <arglist>(const ISupplier *outputSupplierPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>const Product *</type>
       <name>GetWorkProduct</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a1490622ae0ea46cf8fe87195157ead88</anchor>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>AddInputSupplier</name>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RegisterSupplierInput</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a738a019cea36f88490cc53f788dba768</anchor>
-      <arglist>(ISupplier *supplierPtr)</arglist>
+      <anchor>a6003440e8b69055a64692bcf5da84408</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>RemoveInputSupplier</name>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UnregisterSupplierInput</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a4d292fc23555416e7bbad761fc197e89</anchor>
-      <arglist>(ISupplier *supplierPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>RemoveAllInputSuppliers</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a1938b1e7385981aa91fae84f71ddc255</anchor>
-      <arglist>()</arglist>
+      <anchor>af3699e19481feebf476a3f823ac98bfb</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual int</type>
       <name>ProduceObject</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a292a1dafea387b1c20276d35a26985ca</anchor>
+      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
       <arglist>(Product &amp;result) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ae9744a2ce6ca29690fa8f8ee1a38afe0</anchor>
+      <anchor>a87209e190b38fd6513767b16208ed1ce</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a8776dafdf5776b3674255096a4ade6df</anchor>
+      <anchor>ab6c61739f6153e4f37b82ca110468afe</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::TSupplierCompWrap::InputObserver</name>
+    <filename>classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html</filename>
+    <base>imod::CMultiModelObserverBase</base>
+    <member kind="function">
+      <type></type>
+      <name>InputObserver</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html</anchorfile>
+      <anchor>aef95decb5518150f7c51a5c8b9d421c8</anchor>
+      <arglist>(TSupplierCompWrap&lt; Product &gt; *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html</anchorfile>
+      <anchor>a12f8316cddc6667f774114f05d0fd755</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -27041,7 +27014,7 @@
     <name>iqt::CApplicationSettingsProviderComp</name>
     <filename>classiqt_1_1_c_application_settings_provider_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base>iqt::ISettingsProvider</base>
+    <base virtualness="virtual">iqt::ISettingsProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -27598,7 +27571,7 @@
   <compound kind="class">
     <name>iqt::CDefaultRegistryLoaderProvider</name>
     <filename>classiqt_1_1_c_default_registry_loader_provider.html</filename>
-    <base>icomp::IRegistryLoaderProvider</base>
+    <base virtualness="virtual">icomp::IRegistryLoaderProvider</base>
     <member kind="function">
       <type></type>
       <name>CDefaultRegistryLoaderProvider</name>
@@ -27675,7 +27648,7 @@
   <compound kind="class">
     <name>iqt::CDllFunctionsProvider</name>
     <filename>classiqt_1_1_c_dll_functions_provider.html</filename>
-    <base>isys::IFunctionsProvider</base>
+    <base virtualness="virtual">isys::IFunctionsProvider</base>
     <member kind="function">
       <type></type>
       <name>CDllFunctionsProvider</name>
@@ -27944,7 +27917,7 @@
     <name>iqt::CIniSettingsProviderComp</name>
     <filename>classiqt_1_1_c_ini_settings_provider_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base>iqt::ISettingsProvider</base>
+    <base virtualness="virtual">iqt::ISettingsProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -32538,7 +32511,7 @@
     <name>iqtdoc::CMultiDocumentWorkspaceGuiComp</name>
     <filename>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</filename>
     <base>TQtDocumentManagerWrap&lt; idoc::CMultiDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMdiArea &gt; &gt; &gt;</base>
-    <base>ibase::ICommandsProvider</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="enumeration">
       <name>GroupId</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
@@ -33891,7 +33864,7 @@
     <name>iqtgui::CIconProviderComp</name>
     <filename>classiqtgui_1_1_c_icon_provider_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base>iqtgui::IIconProvider</base>
+    <base virtualness="virtual">iqtgui::IIconProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>

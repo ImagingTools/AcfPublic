@@ -27,11 +27,16 @@ namespace iipr
 {
 
 
-// reimplemented (iipr::IFeaturesSupplier)
+// reimplemented (iipr::IFeaturesProvider)
 
-const iipr::IFeaturesContainer* CSearchBasedFeaturesSupplierComp::GetFeatures() const
+iipr::IFeaturesProvider::Features CSearchBasedFeaturesSupplierComp::GetFeatures() const
 {
-	return GetWorkProduct();
+	const CFeaturesContainer* containerPtr = GetWorkProduct();
+	if (containerPtr != NULL){
+		return containerPtr->GetFeatures();
+	}
+
+	return iipr::IFeaturesProvider::Features();
 }
 
 
@@ -41,9 +46,9 @@ const iipr::IFeaturesContainer* CSearchBasedFeaturesSupplierComp::GetFeatures() 
 
 int CSearchBasedFeaturesSupplierComp::ProduceObject(CFeaturesContainer& result) const
 {
-	if (		m_bitmapSupplierCompPtr.IsValid() &&
+	if (		m_bitmapProviderCompPtr.IsValid() &&
 				m_searchProcessorCompPtr.IsValid()){
-		const iimg::IBitmap* bitmapPtr = m_bitmapSupplierCompPtr->GetBitmap();
+		const iimg::IBitmap* bitmapPtr = m_bitmapProviderCompPtr->GetBitmap();
 		if (bitmapPtr != NULL){
 			iprm::IParamsSet* paramsSetPtr = GetModelParametersSet();
 
@@ -70,7 +75,9 @@ void CSearchBasedFeaturesSupplierComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	AddInputSupplier(m_bitmapSupplierCompPtr.GetPtr());
+	if (m_bitmapProviderModelCompPtr.IsValid()){
+		RegisterSupplierInput(m_bitmapProviderModelCompPtr.GetPtr());
+	}
 }
 
 

@@ -37,7 +37,7 @@
 <div class="title">iipr::CSingleFeatureConsumer Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CSingleFeatureConsumer" --><!-- doxytag: inherits="iipr::IFeaturesContainer" -->
+<!-- doxytag: class="iipr::CSingleFeatureConsumer" --><!-- doxytag: inherits="iipr::IFeaturesConsumer,iipr::IFeaturesProvider" -->
 <p>Feature consumer implmentation storing one feature only.  
  <a href="classiipr_1_1_c_single_feature_consumer.html#details">More...</a></p>
 
@@ -48,10 +48,12 @@ Inheritance diagram for iipr::CSingleFeatureConsumer:</div>
  <div class="center">
   <img src="classiipr_1_1_c_single_feature_consumer.png" usemap="#iipr::CSingleFeatureConsumer_map" alt=""/>
   <map id="iipr::CSingleFeatureConsumer_map" name="iipr::CSingleFeatureConsumer_map">
-<area href="classiipr_1_1_i_features_container.html" title="Common interface for a features container." alt="iipr::IFeaturesContainer" shape="rect" coords="0,168,181,192"/>
 <area href="classiipr_1_1_i_features_consumer.html" title="Common interface for a features container consuming feature objects." alt="iipr::IFeaturesConsumer" shape="rect" coords="0,112,181,136"/>
+<area href="classiipr_1_1_i_features_provider.html" title="Common interface for someone who can provide access to list of features." alt="iipr::IFeaturesProvider" shape="rect" coords="191,112,372,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,181,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="191,56,372,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,181,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="191,0,372,24"/>
 </map>
  </div></div>
 
@@ -76,13 +78,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all features from this container.  <a href="#acdb775a6dfd92ef69a17f03a24a27c04"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#a3bec6ac1367b659ba6980108e6278005">AddFeature</a> (const <a class="el" href="classiipr_1_1_i_feature.html">IFeature</a> *featurePtr, bool *isFullPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new feature to the set of features.  <a href="#a3bec6ac1367b659ba6980108e6278005"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiipr_1_1_i_features_container.html#abbb77272c032c92f07228ccb82b62b95">Features</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#a1c6931be6a8162f5a1b0440325792192">GetFeatures</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiipr_1_1_i_features_provider.html#a7bc363cb37d59685e631224feba31523">Features</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#a1c6931be6a8162f5a1b0440325792192">GetFeatures</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get container features.  <a href="#a1c6931be6a8162f5a1b0440325792192"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Feature consumer implmentation storing one feature only. </p>
 
-<p>Definition at line <a class="el" href="_c_single_feature_consumer_8h_source.html#l00017">17</a> of file <a class="el" href="_c_single_feature_consumer_8h_source.html">CSingleFeatureConsumer.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_single_feature_consumer_8h_source.html#l00018">18</a> of file <a class="el" href="_c_single_feature_consumer_8h_source.html">CSingleFeatureConsumer.h</a>.</p>
 </div><hr/><h2>Member Enumeration Documentation</h2>
 <a class="anchor" id="a2d23349d96dd0fa958edac3f6ffbaa26"></a><!-- doxytag: member="iipr::CSingleFeatureConsumer::FeaturePolicy" ref="a2d23349d96dd0fa958edac3f6ffbaa26" args="" -->
 <div class="memitem">
@@ -110,7 +112,7 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_single_feature_consumer_8h_source.html#l00024">24</a> of file <a class="el" href="_c_single_feature_consumer_8h_source.html">CSingleFeatureConsumer.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_single_feature_consumer_8h_source.html#l00027">27</a> of file <a class="el" href="_c_single_feature_consumer_8h_source.html">CSingleFeatureConsumer.h</a>.</p>
 
 </div>
 </div>
@@ -212,7 +214,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classiipr_1_1_i_features_container.html#abbb77272c032c92f07228ccb82b62b95">Features</a> iipr::CSingleFeatureConsumer::GetFeatures </td>
+          <td class="memname">virtual <a class="el" href="classiipr_1_1_i_features_provider.html#a7bc363cb37d59685e631224feba31523">Features</a> iipr::CSingleFeatureConsumer::GetFeatures </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -223,7 +225,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get container features. </p>
 
-<p>Implements <a class="el" href="classiipr_1_1_i_features_container.html#ab8c3b4d19dc88d1ebe9c918c5c33d468">iipr::IFeaturesContainer</a>.</p>
+<p>Implements <a class="el" href="classiipr_1_1_i_features_provider.html#a818ac59d15c003b4db45407440d968e8">iipr::IFeaturesProvider</a>.</p>
 
 </div>
 </div>

@@ -30,7 +30,7 @@ namespace iipr
 {
 
 
-// reimplemented (iipr::IBitmapSupplier)
+// reimplemented (iipr::IBitmapProvider)
 
 const iimg::IBitmap* CProcessedBitmapSupplierComp::GetBitmap() const
 {
@@ -75,7 +75,7 @@ bool CProcessedBitmapSupplierComp::EnsureBitmapCreated(ProductType& result) cons
 
 int CProcessedBitmapSupplierComp::ProduceObject(ProductType& result) const
 {
-	if (!m_inputBitmapSupplierCompPtr.IsValid() || !m_imageProcessorCompPtr.IsValid()){
+	if (!m_bitmapProviderCompPtr.IsValid() || !m_imageProcessorCompPtr.IsValid()){
 		return WS_CRITICAL;
 	}
 
@@ -84,7 +84,7 @@ int CProcessedBitmapSupplierComp::ProduceObject(ProductType& result) const
 	}
 	I_ASSERT(result.second.IsValid());
 
-	const iimg::IBitmap* bitmapPtr = m_inputBitmapSupplierCompPtr->GetBitmap();
+	const iimg::IBitmap* bitmapPtr = m_bitmapProviderCompPtr->GetBitmap();
 	if (bitmapPtr == NULL){
 		return WS_ERROR;
 	}
@@ -109,19 +109,9 @@ void CProcessedBitmapSupplierComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	if (m_inputBitmapSupplierCompPtr.IsValid()){
-		AddInputSupplier(m_inputBitmapSupplierCompPtr.GetPtr());
+	if (m_bitmapProviderModelCompPtr.IsValid()){
+		RegisterSupplierInput(m_bitmapProviderModelCompPtr.GetPtr());
 	}
-}
-
-
-void CProcessedBitmapSupplierComp::OnComponentDestroyed()
-{
-	if (m_inputBitmapSupplierCompPtr.IsValid()){
-		RemoveInputSupplier(m_inputBitmapSupplierCompPtr.GetPtr());
-	}
-
-	BaseClass::OnComponentDestroyed();
 }
 
 

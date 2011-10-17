@@ -33,7 +33,7 @@ namespace iipr
 {
 
 
-// reimplemented (iproc::IValueSupplier)
+// reimplemented (iproc::IValueProvider)
 
 imath::CVarVector CPositionFromImageSupplierComp::GetValue(int /*index*/, int valueTypeId) const
 {
@@ -67,9 +67,9 @@ imath::CVarVector CPositionFromImageSupplierComp::GetValue(int /*index*/, int va
 
 int CPositionFromImageSupplierComp::ProduceObject(imath::CVarVector& result) const
 {
-	if (		m_bitmapSupplierCompPtr.IsValid() &&
+	if (		m_bitmapProviderCompPtr.IsValid() &&
 				m_processorCompPtr.IsValid()){
-		const iimg::IBitmap* bitmapPtr = m_bitmapSupplierCompPtr->GetBitmap();
+		const iimg::IBitmap* bitmapPtr = m_bitmapProviderCompPtr->GetBitmap();
 		if (bitmapPtr != NULL){
 			iprm::IParamsSet* paramsSetPtr = GetModelParametersSet();
 
@@ -110,7 +110,9 @@ void CPositionFromImageSupplierComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	AddInputSupplier(m_bitmapSupplierCompPtr.GetPtr());
+	if (m_bitmapProviderModelCompPtr.IsValid()){
+		RegisterSupplierInput(m_bitmapProviderModelCompPtr.GetPtr());
+	}
 }
 
 
