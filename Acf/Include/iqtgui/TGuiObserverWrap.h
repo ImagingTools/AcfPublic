@@ -215,7 +215,7 @@ void TGuiObserverWrap<Gui, Observer>::OnGuiModelAttached()
 	I_ASSERT(Gui::IsGuiCreated());
 	I_ASSERT(Observer::IsModelAttached(NULL));
 
-	DoPostponedUpdate(CF_INIT_EDITOR);
+	DoUpdate(CF_INIT_EDITOR);
 }
 
 
@@ -272,9 +272,6 @@ void TGuiObserverWrap<Gui, Observer>::OnGuiShown()
 	if (Observer::IsModelAttached(NULL)){
 		if (m_updateOnShow){
 			DoUpdate(m_updateOnShowFlags);
-
-			m_updateOnShow = false;
-			m_updateOnShowFlags = 0;
 		}
 
 		OnGuiModelShown();
@@ -360,7 +357,7 @@ void TGuiObserverWrap<Gui, Observer>::DoPostponedUpdate(int updateFlags)
 
 		return;
 	}
-		
+
 	DoUpdate(updateFlags);
 }
 
@@ -376,6 +373,9 @@ void TGuiObserverWrap<Gui, Observer>::DoUpdate(int updateFlags)
 	if (!skipUpdate){
 		UpdateEditor(updateFlags);
 	}
+
+	m_updateOnShow = false;
+	m_updateOnShowFlags = 0;
 }
 
 
