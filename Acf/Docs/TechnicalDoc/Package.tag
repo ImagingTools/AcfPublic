@@ -7480,6 +7480,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>a1c8fa000480d4e79fc50bffb3cba7f3f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>double</type>
       <name>GetLeft</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
@@ -7716,6 +7723,20 @@
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
       <anchor>ad557859f866600525e3dd824b52f68d9</anchor>
       <arglist>(const CRectangle &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type>CRectangle</type>
+      <name>GetUnion</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>ac794f3be40d8a5b02f5382e709b7a0c7</anchor>
+      <arglist>(const i2d::CVector2d &amp;position) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Unite</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>a500c7ad8f06f5ecc9e225afe1f085c94</anchor>
+      <arglist>(const i2d::CVector2d &amp;position)</arglist>
     </member>
     <member kind="function">
       <type>CRectangle</type>

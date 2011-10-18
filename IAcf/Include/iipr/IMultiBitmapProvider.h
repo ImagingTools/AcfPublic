@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef iipr_IMultiBitmapSupplier_included
-#define iipr_IMultiBitmapSupplier_included
+#ifndef iipr_IMultiBitmapProvider_included
+#define iipr_IMultiBitmapProvider_included
 
 
 // ACF includes
@@ -62,6 +62,6 @@ public:
 } // namespace iipr
 
 
-#endif // !iipr_IMultiBitmapSupplier_included
+#endif // !iipr_IMultiBitmapProvider_included
 
 
