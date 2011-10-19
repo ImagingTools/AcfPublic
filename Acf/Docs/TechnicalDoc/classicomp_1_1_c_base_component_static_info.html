@@ -77,8 +77,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register static subcomponent info.  <a href="#a588dcbab10b5ada319b133cb9154593b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#a88d6137204c454aba4affd413805eab8">CreateComponent</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create component instance.  <a href="#a88d6137204c454aba4affd413805eab8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#a4b7c0f304bfb933c745b77e8248adfd4">GetComponentInterface</a> (const std::string &amp;interfaceName, <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> &amp;component) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract instance implemented specified interface from some component.  <a href="#a4b7c0f304bfb933c745b77e8248adfd4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#a7ff0e8164d4edaadd7c8f09a2485fffc">GetComponentInterface</a> (const <a class="el" href="classistd_1_1_c_class_info.html">istd::CClassInfo</a> &amp;interfaceType, <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> &amp;component) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract instance implemented specified interface from some component.  <a href="#a7ff0e8164d4edaadd7c8f09a2485fffc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="classicomp_1_1_i_attribute_static_info.html">IAttributeStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#aec976e0a49319d8f48eafa216cec211e">GetAttributeInfo</a> (const std::string &amp;attributeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of attributes.  <a href="#aec976e0a49319d8f48eafa216cec211e"></a><br/></td></tr>
@@ -189,15 +189,15 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4b7c0f304bfb933c745b77e8248adfd4"></a><!-- doxytag: member="icomp::CBaseComponentStaticInfo::GetComponentInterface" ref="a4b7c0f304bfb933c745b77e8248adfd4" args="(const std::string &amp;interfaceName, IComponent &amp;component) const " -->
+<a class="anchor" id="a7ff0e8164d4edaadd7c8f09a2485fffc"></a><!-- doxytag: member="icomp::CBaseComponentStaticInfo::GetComponentInterface" ref="a7ff0e8164d4edaadd7c8f09a2485fffc" args="(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void* icomp::CBaseComponentStaticInfo::GetComponentInterface </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>interfaceName</em>, </td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_class_info.html">istd::CClassInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>interfaceType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -216,7 +216,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Extract instance implemented specified interface from some component. </p>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_real_component_static_info.html#a9fd15e7000e1e468a6d528a991542580">icomp::IRealComponentStaticInfo</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_real_component_static_info.html#a20668c7a5216b9f4d4a874ef2618d39e">icomp::IRealComponentStaticInfo</a>.</p>
 
 </div>
 </div>

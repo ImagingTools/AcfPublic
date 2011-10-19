@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the IACF Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,47 +15,47 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF.
+**	by Skype to ACF_infoline for further information about the IACF.
 **
 ********************************************************************************/
 
 
-#ifndef icomp_IRealComponentStaticInfo_included
-#define icomp_IRealComponentStaticInfo_included
+#ifndef iinsp_IIdProvider_included
+#define iinsp_IIdProvider_included
 
 
 // ACF includes
-#include "istd/CClassInfo.h"
-#include "icomp/IComponentStaticInfo.h"
+#include "istd/IChangeable.h"
 
 
-namespace icomp
+namespace iinsp
 {
 
 
 /**
-	Interface adding to component static info functionality existing only for real components.
-	Real components are components which can be created in memory.
+	Allow access to some ID.
+	The meaning of the ID is depend on use case and implementation.
+	Typically ID is used to unique identify inspection objects.
 */
-class IRealComponentStaticInfo: virtual public IComponentStaticInfo
+class IIdProvider: virtual public istd::IChangeable
 {
 public:
 	/**
-		Create component instance.
-		\return				pointer to created component or NULL if this component cannot be created.
-	 */
-	virtual IComponent* CreateComponent() const = 0;
+		Get current ID value.
+	*/
+	virtual I_DWORD GetCurrentId() const = 0;
 
 	/**
-		Extract instance implemented specified interface from some component.
+		Set current ID value.
+		\return	true if ID could be set in the implementation.
 	*/
-	virtual void* GetComponentInterface(const istd::CClassInfo& interfaceType, IComponent& component) const = 0;
+	virtual bool SetCurrentId(I_DWORD id) = 0;
 };
 
 
-}//namespace icomp
+} // namespace iinsp
 
 
-#endif // !icomp_IRealComponentStaticInfo_included
+#endif // !iinsp_IIdProvider_included
 
 

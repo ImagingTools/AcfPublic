@@ -240,6 +240,13 @@
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
+    <name>IIdProvider.h</name>
+    <path>C:/Temp/Iacf/Include/iinsp/</path>
+    <filename>_i_id_provider_8h</filename>
+    <class kind="class">iinsp::IIdProvider</class>
+    <namespace>iinsp</namespace>
+  </compound>
+  <compound kind="file">
     <name>iinsp.h</name>
     <path>C:/Temp/Iacf/Include/iinsp/</path>
     <filename>iinsp_8h</filename>
@@ -1147,6 +1154,7 @@
     <name>CDriverControllerComp.h</name>
     <path>C:/Temp/Iacf/Include/iqtcntl/</path>
     <filename>_c_driver_controller_comp_8h</filename>
+    <includes id="_i_id_provider_8h" name="IIdProvider.h" local="yes" imported="no">iinsp/IIdProvider.h</includes>
     <includes id="_i_command_caller_8h" name="ICommandCaller.h" local="yes" imported="no">ilolv/ICommandCaller.h</includes>
     <includes id="_c_multi_tracer_commands_8h" name="CMultiTracerCommands.h" local="yes" imported="no">ilolv/CMultiTracerCommands.h</includes>
     <includes id="_i_automatic_controller_8h" name="IAutomaticController.h" local="yes" imported="no">icntl/IAutomaticController.h</includes>
@@ -2738,13 +2746,6 @@
     <filename>classicntl_1_1_i_object_inspection.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
-      <type>virtual I_DWORD</type>
-      <name>GetObjectId</name>
-      <anchorfile>classicntl_1_1_i_object_inspection.html</anchorfile>
-      <anchor>a632b80fd6f86e3f9ff0c56dac427bf3d</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
       <type>virtual const isys::ITimer &amp;</type>
       <name>GetTimestamp</name>
       <anchorfile>classicntl_1_1_i_object_inspection.html</anchorfile>
@@ -2933,6 +2934,7 @@
     <filename>namespaceiinsp.html</filename>
     <class kind="class">iinsp::CInspectionComp</class>
     <class kind="class">iinsp::CInspectionTaskComp</class>
+    <class kind="class">iinsp::IIdProvider</class>
     <class kind="class">iinsp::IInspection</class>
     <class kind="class">iinsp::IInspectionTask</class>
   </compound>
@@ -3111,6 +3113,25 @@
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>a278e42c65aded923511687058ca5de3c</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::IIdProvider</name>
+    <filename>classiinsp_1_1_i_id_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual I_DWORD</type>
+      <name>GetCurrentId</name>
+      <anchorfile>classiinsp_1_1_i_id_provider.html</anchorfile>
+      <anchor>a278a0d0ce1fdf7437bd71fb9f4a2e0d6</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetCurrentId</name>
+      <anchorfile>classiinsp_1_1_i_id_provider.html</anchorfile>
+      <anchor>abdc3057670b0f6eca66db91b65cb25c1</anchor>
+      <arglist>(I_DWORD id)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10199,6 +10220,7 @@
   <compound kind="class">
     <name>iqtcntl::CDriverControllerComp::ObjectInspection</name>
     <filename>classiqtcntl_1_1_c_driver_controller_comp_1_1_object_inspection.html</filename>
+    <base virtualness="virtual">iinsp::IIdProvider</base>
     <base virtualness="virtual">icntl::IObjectInspection</base>
     <member kind="function">
       <type></type>
@@ -10209,10 +10231,17 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_DWORD</type>
-      <name>GetObjectId</name>
+      <name>GetCurrentId</name>
       <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_object_inspection.html</anchorfile>
-      <anchor>a06a3a5f7ebb28a7f6162230ef1f54097</anchor>
+      <anchor>ada8fbba34e8b6371f6bfd8374ee32880</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentId</name>
+      <anchorfile>classiqtcntl_1_1_c_driver_controller_comp_1_1_object_inspection.html</anchorfile>
+      <anchor>a34c93c31d98167c54cd1ce4d6c4b5197</anchor>
+      <arglist>(I_DWORD id)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const isys::ITimer &amp;</type>

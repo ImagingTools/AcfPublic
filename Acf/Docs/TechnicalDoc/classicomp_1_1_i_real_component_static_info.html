@@ -62,14 +62,14 @@ Inheritance diagram for icomp::IRealComponentStaticInfo:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_real_component_static_info.html#a92b146f3a6f519815ac225d22c6cecf0">CreateComponent</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create component instance.  <a href="#a92b146f3a6f519815ac225d22c6cecf0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_real_component_static_info.html#a9fd15e7000e1e468a6d528a991542580">GetComponentInterface</a> (const std::string &amp;interfaceName, <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> &amp;component) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract instance implemented specified interface from some component.  <a href="#a9fd15e7000e1e468a6d528a991542580"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_real_component_static_info.html#a20668c7a5216b9f4d4a874ef2618d39e">GetComponentInterface</a> (const <a class="el" href="classistd_1_1_c_class_info.html">istd::CClassInfo</a> &amp;interfaceType, <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> &amp;component) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract instance implemented specified interface from some component.  <a href="#a20668c7a5216b9f4d4a874ef2618d39e"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface adding to component static info functionality existing only for real components. </p>
 <p>Real components are components which can be created in memory. </p>
 
-<p>Definition at line <a class="el" href="_i_real_component_static_info_8h_source.html#l00016">16</a> of file <a class="el" href="_i_real_component_static_info_8h_source.html">IRealComponentStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_real_component_static_info_8h_source.html#l00018">18</a> of file <a class="el" href="_i_real_component_static_info_8h_source.html">IRealComponentStaticInfo.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a92b146f3a6f519815ac225d22c6cecf0"></a><!-- doxytag: member="icomp::IRealComponentStaticInfo::CreateComponent" ref="a92b146f3a6f519815ac225d22c6cecf0" args="() const =0" -->
 <div class="memitem">
@@ -92,15 +92,15 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9fd15e7000e1e468a6d528a991542580"></a><!-- doxytag: member="icomp::IRealComponentStaticInfo::GetComponentInterface" ref="a9fd15e7000e1e468a6d528a991542580" args="(const std::string &amp;interfaceName, IComponent &amp;component) const =0" -->
+<a class="anchor" id="a20668c7a5216b9f4d4a874ef2618d39e"></a><!-- doxytag: member="icomp::IRealComponentStaticInfo::GetComponentInterface" ref="a20668c7a5216b9f4d4a874ef2618d39e" args="(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void* icomp::IRealComponentStaticInfo::GetComponentInterface </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>interfaceName</em>, </td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_class_info.html">istd::CClassInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>interfaceType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -119,7 +119,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Extract instance implemented specified interface from some component. </p>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_base_component_static_info.html#a4b7c0f304bfb933c745b77e8248adfd4">icomp::CBaseComponentStaticInfo</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_base_component_static_info.html#a7ff0e8164d4edaadd7c8f09a2485fffc">icomp::CBaseComponentStaticInfo</a>.</p>
 
 </div>
 </div>

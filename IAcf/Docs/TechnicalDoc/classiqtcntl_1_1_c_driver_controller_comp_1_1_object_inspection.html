@@ -37,7 +37,7 @@
 <div class="title">iqtcntl::CDriverControllerComp::ObjectInspection Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtcntl::CDriverControllerComp::ObjectInspection" --><!-- doxytag: inherits="icntl::IObjectInspection" -->
+<!-- doxytag: class="iqtcntl::CDriverControllerComp::ObjectInspection" --><!-- doxytag: inherits="iinsp::IIdProvider,icntl::IObjectInspection" -->
 <p><code>#include &lt;<a class="el" href="_c_driver_controller_comp_8h_source.html">CDriverControllerComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqtcntl::CDriverControllerComp::ObjectInspection:</div>
@@ -45,7 +45,10 @@ Inheritance diagram for iqtcntl::CDriverControllerComp::ObjectInspection:</div>
  <div class="center">
   <img src="classiqtcntl_1_1_c_driver_controller_comp_1_1_object_inspection.png" usemap="#iqtcntl::CDriverControllerComp::ObjectInspection_map" alt=""/>
   <map id="iqtcntl::CDriverControllerComp::ObjectInspection_map" name="iqtcntl::CDriverControllerComp::ObjectInspection_map">
-<area href="classicntl_1_1_i_object_inspection.html" title="Represent single inspection session for one unit and one object." alt="icntl::IObjectInspection" shape="rect" coords="0,56,283,80"/>
+<area href="classiinsp_1_1_i_id_provider.html" title="Allow access to some ID." alt="iinsp::IIdProvider" shape="rect" coords="0,112,283,136"/>
+<area href="classicntl_1_1_i_object_inspection.html" title="Represent single inspection session for one unit and one object." alt="icntl::IObjectInspection" shape="rect" coords="293,112,576,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,283,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="293,56,576,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,283,24"/>
 </map>
  </div></div>
@@ -55,8 +58,10 @@ Inheritance diagram for iqtcntl::CDriverControllerComp::ObjectInspection:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtcntl_1_1_c_driver_controller_comp_1_1_object_inspection.html#afcb572184ae658de0d5c8b3838bcb36c">ObjectInspection</a> (<a class="el" href="classilolv_1_1_i_command_caller.html">ilolv::ICommandCaller</a> *commandCallerPtr, int lineIndex, int stationIndex, const <a class="el" href="structilolv_1_1_c_multi_tracer_commands_1_1_pop_id.html#aaf1e20c961d51ed8f98375775b74dabe">ilolv::CMultiTracerCommands::PopId::Result</a> &amp;objectParams)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtcntl_1_1_c_driver_controller_comp_1_1_object_inspection.html#a06a3a5f7ebb28a7f6162230ef1f54097">GetObjectId</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get object ID identifying physical object.  <a href="#a06a3a5f7ebb28a7f6162230ef1f54097"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtcntl_1_1_c_driver_controller_comp_1_1_object_inspection.html#ada8fbba34e8b6371f6bfd8374ee32880">GetCurrentId</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current ID value.  <a href="#ada8fbba34e8b6371f6bfd8374ee32880"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtcntl_1_1_c_driver_controller_comp_1_1_object_inspection.html#a34c93c31d98167c54cd1ce4d6c4b5197">SetCurrentId</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> id)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current ID value.  <a href="#a34c93c31d98167c54cd1ce4d6c4b5197"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_i_timer.html">isys::ITimer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtcntl_1_1_c_driver_controller_comp_1_1_object_inspection.html#a74f2dac431b33aac25eb9699dab3eafd">GetTimestamp</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timestamp of this inspection.  <a href="#a74f2dac431b33aac25eb9699dab3eafd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtcntl_1_1_c_driver_controller_comp_1_1_object_inspection.html#a4cd1506a9dce58d17d3cdcb5b5127294">SetEjector</a> (int ejectorIndex)</td></tr>
@@ -64,7 +69,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_driver_controller_comp_8h_source.html#l00077">77</a> of file <a class="el" href="_c_driver_controller_comp_8h_source.html">CDriverControllerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_driver_controller_comp_8h_source.html#l00079">79</a> of file <a class="el" href="_c_driver_controller_comp_8h_source.html">CDriverControllerComp.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="afcb572184ae658de0d5c8b3838bcb36c"></a><!-- doxytag: member="iqtcntl::CDriverControllerComp::ObjectInspection::ObjectInspection" ref="afcb572184ae658de0d5c8b3838bcb36c" args="(ilolv::ICommandCaller *commandCallerPtr, int lineIndex, int stationIndex, const ilolv::CMultiTracerCommands::PopId::Result &amp;objectParams)" -->
 <div class="memitem">
@@ -106,12 +111,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a06a3a5f7ebb28a7f6162230ef1f54097"></a><!-- doxytag: member="iqtcntl::CDriverControllerComp::ObjectInspection::GetObjectId" ref="a06a3a5f7ebb28a7f6162230ef1f54097" args="() const " -->
+<a class="anchor" id="ada8fbba34e8b6371f6bfd8374ee32880"></a><!-- doxytag: member="iqtcntl::CDriverControllerComp::ObjectInspection::GetCurrentId" ref="ada8fbba34e8b6371f6bfd8374ee32880" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> iqtcntl::CDriverControllerComp::ObjectInspection::GetObjectId </td>
+          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> iqtcntl::CDriverControllerComp::ObjectInspection::GetCurrentId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -120,10 +125,9 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get object ID identifying physical object. </p>
-<p>This ID is identical for all inspections of the same physical object. </p>
+<p>Get current ID value. </p>
 
-<p>Implements <a class="el" href="classicntl_1_1_i_object_inspection.html#a632b80fd6f86e3f9ff0c56dac427bf3d">icntl::IObjectInspection</a>.</p>
+<p>Implements <a class="el" href="classiinsp_1_1_i_id_provider.html#a278a0d0ce1fdf7437bd71fb9f4a2e0d6">iinsp::IIdProvider</a>.</p>
 
 </div>
 </div>
@@ -145,6 +149,28 @@ Public Member Functions</h2></td></tr>
 <p>Typically camera trigger timestamp is taken. </p>
 
 <p>Implements <a class="el" href="classicntl_1_1_i_object_inspection.html#aaf5ac31152379536de148d822687bf61">icntl::IObjectInspection</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a34c93c31d98167c54cd1ce4d6c4b5197"></a><!-- doxytag: member="iqtcntl::CDriverControllerComp::ObjectInspection::SetCurrentId" ref="a34c93c31d98167c54cd1ce4d6c4b5197" args="(I_DWORD id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iqtcntl::CDriverControllerComp::ObjectInspection::SetCurrentId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set current ID value. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if ID could be set in the implementation. </dd></dl>
+
+<p>Implements <a class="el" href="classiinsp_1_1_i_id_provider.html#abdc3057670b0f6eca66db91b65cb25c1">iinsp::IIdProvider</a>.</p>
 
 </div>
 </div>

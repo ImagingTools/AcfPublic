@@ -65,7 +65,7 @@ void* CComponentBase::GetInterface(const istd::CClassInfo& interfaceType, const 
 
 		const IRealComponentStaticInfo& staticInfo = GetComponentStaticInfo();
 
-		return staticInfo.GetComponentInterface(interfaceType.GetName(), *this);
+		return staticInfo.GetComponentInterface(interfaceType, *this);
 	}
 
 	return NULL;

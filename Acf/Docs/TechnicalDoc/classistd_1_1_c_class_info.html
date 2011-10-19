@@ -66,6 +66,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get undecorated and platform undependent class name.  <a href="#aa933e42f37d56bdd4236e0833b1adb14"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#acaed9c22fe1af105a444c8bf6a708637">IsVoid</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this class information represents void type.  <a href="#acaed9c22fe1af105a444c8bf6a708637"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#adf934af254454700be4cc5d94ed8fd42">IsConst</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this class information represents const class.  <a href="#adf934af254454700be4cc5d94ed8fd42"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_class_info.html">CClassInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#a021429dedcb0fcbd47eebd4b5957c3b8">GetConstCasted</a> (bool enableConst=true) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get class with enabled or disabled const attribute.  <a href="#a021429dedcb0fcbd47eebd4b5957c3b8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#ab3ba8f01c6e66ad5b996335ac16597c7">ConstCast</a> (bool enableConst=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable const attribute.  <a href="#ab3ba8f01c6e66ad5b996335ac16597c7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#a570fa74f5c23b58fe22e64fa376d03f9">IsTemplateClass</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this class information represents template class.  <a href="#a570fa74f5c23b58fe22e64fa376d03f9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#a65042ccebaf87e1199e49b27b830a4c2">GetTemplateParamsCount</a> () const </td></tr>
@@ -114,7 +120,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00103">103</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00118">118</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -133,7 +139,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00108">108</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00123">123</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -152,7 +158,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00114">114</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00129">129</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -171,11 +177,49 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00120">120</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00135">135</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ab3ba8f01c6e66ad5b996335ac16597c7"></a><!-- doxytag: member="istd::CClassInfo::ConstCast" ref="ab3ba8f01c6e66ad5b996335ac16597c7" args="(bool enableConst=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool istd::CClassInfo::ConstCast </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enableConst</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enable or disable const attribute. </p>
+
+</div>
+</div>
+<a class="anchor" id="a021429dedcb0fcbd47eebd4b5957c3b8"></a><!-- doxytag: member="istd::CClassInfo::GetConstCasted" ref="a021429dedcb0fcbd47eebd4b5957c3b8" args="(bool enableConst=true) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_c_class_info.html">CClassInfo</a> istd::CClassInfo::GetConstCasted </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enableConst</em> = <code>true</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get class with enabled or disabled const attribute. </p>
+
+</div>
+</div>
 <a class="anchor" id="a46bdcff7600b3b3ed435662e3503bf53"></a><!-- doxytag: member="istd::CClassInfo::GetInfo" ref="a46bdcff7600b3b3ed435662e3503bf53" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -194,7 +238,7 @@ template&lt;class C &gt; </div>
 
 <p>Get class name defined as template parameter. </p>
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00194">194</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00209">209</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -215,9 +259,9 @@ template&lt;class C &gt; </div>
 <p>Get undecorated and platform undependent class name. </p>
 <p>This name has format "namespace::class_name", for example "iser::ISerializable". </p>
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00132">132</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00147">147</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_sim_component_context_base_8h_source.html#l00090">icomp::CSimComponentContextBase::InsertMultiAttr()</a>, <a class="el" href="_c_class_info_8h_source.html#l00145">IsType()</a>, <a class="el" href="_c_class_info_8h_source.html#l00151">operator=()</a>, <a class="el" href="_t_attribute_static_info_8h_source.html#l00056">icomp::TAttributeStaticInfo&lt; Attribute &gt;::TAttributeStaticInfo()</a>, and <a class="el" href="_t_interface_registrator_8h_source.html#l00031">icomp::TInterfaceRegistrator&lt; Interface &gt;::TInterfaceRegistrator()</a>.</p>
+<p>Referenced by <a class="el" href="_c_sim_component_context_base_8h_source.html#l00090">icomp::CSimComponentContextBase::InsertMultiAttr()</a>, <a class="el" href="_c_class_info_8h_source.html#l00160">IsType()</a>, <a class="el" href="_c_class_info_8h_source.html#l00166">operator=()</a>, <a class="el" href="_t_attribute_static_info_8h_source.html#l00056">icomp::TAttributeStaticInfo&lt; Attribute &gt;::TAttributeStaticInfo()</a>, and <a class="el" href="_t_interface_registrator_8h_source.html#l00031">icomp::TInterfaceRegistrator&lt; Interface &gt;::TInterfaceRegistrator()</a>.</p>
 
 </div>
 </div>
@@ -239,7 +283,7 @@ template&lt;class C &gt; </div>
 
 <p>Get class name defined as template parameter. </p>
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00203">203</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00218">218</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 <p>References <a class="el" href="classistd_1_1_c_class_info.html#aa420abf60099b2c65a374f238a5f13eb">GetUndecoratedName()</a>.</p>
 
@@ -338,7 +382,25 @@ template&lt;class C &gt; </div>
 
 <p>Get undecorated class name from raw name. </p>
 
-<p>Referenced by <a class="el" href="_c_class_info_8h_source.html#l00203">GetName()</a>.</p>
+<p>Referenced by <a class="el" href="_c_class_info_8h_source.html#l00218">GetName()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adf934af254454700be4cc5d94ed8fd42"></a><!-- doxytag: member="istd::CClassInfo::IsConst" ref="adf934af254454700be4cc5d94ed8fd42" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool istd::CClassInfo::IsConst </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if this class information represents const class. </p>
 
 </div>
 </div>
@@ -376,9 +438,9 @@ template&lt;class C &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00145">145</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00160">160</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
-<p>References <a class="el" href="_c_class_info_8h_source.html#l00132">GetName()</a>.</p>
+<p>References <a class="el" href="_c_class_info_8h_source.html#l00147">GetName()</a>.</p>
 
 </div>
 </div>
@@ -399,7 +461,7 @@ template&lt;class C &gt; </div>
 <p>Check if this class info object is valid. </p>
 <p>It is valid if stored RTTI type info is set. </p>
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00126">126</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00141">141</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_attribute_static_info_8h_source.html#l00056">icomp::TAttributeStaticInfo&lt; Attribute &gt;::TAttributeStaticInfo()</a>.</p>
 
@@ -421,7 +483,7 @@ template&lt;class C &gt; </div>
 
 <p>Check if this class information represents void type. </p>
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00138">138</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00153">153</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_attribute_static_info_8h_source.html#l00056">icomp::TAttributeStaticInfo&lt; Attribute &gt;::TAttributeStaticInfo()</a>, and <a class="el" href="_t_interface_registrator_8h_source.html#l00031">icomp::TInterfaceRegistrator&lt; Interface &gt;::TInterfaceRegistrator()</a>.</p>
 
@@ -442,7 +504,7 @@ template&lt;class C &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00173">173</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00188">188</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -461,7 +523,7 @@ template&lt;class C &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00179">179</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00194">194</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -480,9 +542,9 @@ template&lt;class C &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00151">151</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00166">166</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
-<p>References <a class="el" href="_c_class_info_8h_source.html#l00132">GetName()</a>.</p>
+<p>References <a class="el" href="_c_class_info_8h_source.html#l00147">GetName()</a>.</p>
 
 </div>
 </div>
@@ -501,7 +563,7 @@ template&lt;class C &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00159">159</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00174">174</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -520,7 +582,7 @@ template&lt;class C &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00167">167</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00182">182</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -539,7 +601,7 @@ template&lt;class C &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00185">185</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00200">200</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>

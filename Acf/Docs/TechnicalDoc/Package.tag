@@ -1561,6 +1561,7 @@
     <name>IRealComponentStaticInfo.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_i_real_component_static_info_8h</filename>
+    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
     <includes id="_i_component_static_info_8h" name="IComponentStaticInfo.h" local="yes" imported="no">icomp/IComponentStaticInfo.h</includes>
     <class kind="class">icomp::IRealComponentStaticInfo</class>
     <namespace>icomp</namespace>
@@ -15337,8 +15338,8 @@
       <type>virtual void *</type>
       <name>GetComponentInterface</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>a4b7c0f304bfb933c745b77e8248adfd4</anchor>
-      <arglist>(const std::string &amp;interfaceName, IComponent &amp;component) const </arglist>
+      <anchor>a7ff0e8164d4edaadd7c8f09a2485fffc</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IAttributeStaticInfo *</type>
@@ -17266,8 +17267,8 @@
       <type>virtual void *</type>
       <name>GetComponentInterface</name>
       <anchorfile>classicomp_1_1_i_real_component_static_info.html</anchorfile>
-      <anchor>a9fd15e7000e1e468a6d528a991542580</anchor>
-      <arglist>(const std::string &amp;interfaceName, IComponent &amp;component) const =0</arglist>
+      <anchor>a20668c7a5216b9f4d4a874ef2618d39e</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -39305,6 +39306,27 @@
       <anchorfile>classistd_1_1_c_class_info.html</anchorfile>
       <anchor>acaed9c22fe1af105a444c8bf6a708637</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsConst</name>
+      <anchorfile>classistd_1_1_c_class_info.html</anchorfile>
+      <anchor>adf934af254454700be4cc5d94ed8fd42</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>CClassInfo</type>
+      <name>GetConstCasted</name>
+      <anchorfile>classistd_1_1_c_class_info.html</anchorfile>
+      <anchor>a021429dedcb0fcbd47eebd4b5957c3b8</anchor>
+      <arglist>(bool enableConst=true) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ConstCast</name>
+      <anchorfile>classistd_1_1_c_class_info.html</anchorfile>
+      <anchor>ab3ba8f01c6e66ad5b996335ac16597c7</anchor>
+      <arglist>(bool enableConst=true)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
