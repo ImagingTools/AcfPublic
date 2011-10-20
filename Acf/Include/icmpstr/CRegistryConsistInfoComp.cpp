@@ -438,7 +438,7 @@ icomp::IRegistry::Ids CRegistryConsistInfoComp::GetCompatibleSubcomponents(
 		std::string nonConstInterfaceName = interfaceType.GetConstCasted(false).GetName();
 		bool isInterfaceCompatible =
 					(supportedInterfaces.find(interfaceName) != supportedInterfaces.end()) ||
-					(supportedInterfaces.find(nonConstInterfaceName) == supportedInterfaces.end());
+					(supportedInterfaces.find(nonConstInterfaceName) != supportedInterfaces.end());
 		if (!isInterfaceCompatible){
 			areInterfacesSupported = false;
 
@@ -725,7 +725,7 @@ bool CRegistryConsistInfoComp::CheckPointedElementInfoCompatibility(
 			std::string nonConstInterfaceName = interfaceType.GetConstCasted(false).GetName();
 			bool isInterfaceCompatible =
 						(supportedInterfaces.find(interfaceName) != supportedInterfaces.end()) ||
-						(supportedInterfaces.find(nonConstInterfaceName) == supportedInterfaces.end());
+						(supportedInterfaces.find(nonConstInterfaceName) != supportedInterfaces.end());
 			if (!isInterfaceCompatible){
 				if (reasonConsumerPtr != NULL){
 					reasonConsumerPtr->AddMessage(istd::TSmartPtr<const ibase::IMessage>(new ibase::CMessage(

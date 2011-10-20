@@ -3920,6 +3920,16 @@
     <namespace>iqtdoc</namespace>
   </compound>
   <compound kind="file">
+    <name>CStaticHelpFileProviderComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtdoc/</path>
+    <filename>_c_static_help_file_provider_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_i_help_file_provider_8h" name="IHelpFileProvider.h" local="yes" imported="no">idoc/IHelpFileProvider.h</includes>
+    <class kind="class">iqtdoc::CStaticHelpFileProviderComp</class>
+    <namespace>iqtdoc</namespace>
+  </compound>
+  <compound kind="file">
     <name>IPrintable.h</name>
     <path>C:/Temp/Acf/Include/iqtdoc/</path>
     <filename>_i_printable_8h</filename>
@@ -4406,6 +4416,16 @@
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
+    <name>COptionsListGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtprm/</path>
+    <filename>_c_options_list_gui_comp_8h</filename>
+    <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">iqtprm::COptionsListGuiComp</class>
+    <namespace>iqtprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CParamsManagerGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_params_manager_gui_comp_8h</filename>
@@ -4472,6 +4492,19 @@
     <includes id="_i_scene_extender_8h" name="ISceneExtender.h" local="yes" imported="no">iqt2d/ISceneExtender.h</includes>
     <includes id="iqtprm_8h" name="iqtprm.h" local="yes" imported="no">iqtprm/iqtprm.h</includes>
     <class kind="class">iqtprm::CVariableParamGuiComp</class>
+    <namespace>iqtprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CWizardGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtprm/</path>
+    <filename>_c_wizard_gui_comp_8h</filename>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
+    <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
+    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <class kind="class">iqtprm::CWizardGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
@@ -25659,6 +25692,12 @@
       <anchor>a092f5d4176d748b596be4ec0464827b3ac597b3a6b80fed78027d9e3caf50db6d</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>NO_SELECTION</name>
+      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
+      <anchor>a991db11ac0dc689ba0b1d31a7f806f8ba7c687b23162301178cafe954f53c7702</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual const ISelectionConstraints *</type>
       <name>GetSelectionConstraints</name>
@@ -32065,6 +32104,7 @@
     <class kind="class">iqtdoc::CMainWindowGuiComp</class>
     <class kind="class">iqtdoc::CMultiDocumentWorkspaceGuiComp</class>
     <class kind="class">iqtdoc::CSingleDocumentWorkspaceGuiComp</class>
+    <class kind="class">iqtdoc::CStaticHelpFileProviderComp</class>
     <class kind="class">iqtdoc::IPrintable</class>
     <class kind="class">iqtdoc::TQtDocumentManagerWrap</class>
   </compound>
@@ -32880,6 +32920,33 @@
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
       <anchor>a2b4d958077fa93a481d34b7967d123c2</anchor>
       <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtdoc::CStaticHelpFileProviderComp</name>
+    <filename>classiqtdoc_1_1_c_static_help_file_provider_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">idoc::IHelpFileProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtdoc_1_1_c_static_help_file_provider_comp.html</anchorfile>
+      <anchor>aa465a3555ad1ebc289c85187e00f9e7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetHelpQuality</name>
+      <anchorfile>classiqtdoc_1_1_c_static_help_file_provider_comp.html</anchorfile>
+      <anchor>aaef3982d2b497f6615d38641d3cac9c2</anchor>
+      <arglist>(const istd::CString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetHelpFilePath</name>
+      <anchorfile>classiqtdoc_1_1_c_static_help_file_provider_comp.html</anchorfile>
+      <anchor>ae64b84805be43944377993078b61a2c8</anchor>
+      <arglist>(const istd::CString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35367,6 +35434,7 @@
     <filename>namespaceiqtprm.html</filename>
     <class kind="class">iqtprm::CComposedParamsSetGuiComp</class>
     <class kind="class">iqtprm::CFileNameParamGuiComp</class>
+    <class kind="class">iqtprm::COptionsListGuiComp</class>
     <class kind="class">iqtprm::CParamsManagerGuiComp</class>
     <class kind="class">iqtprm::CRelativeFileNameParamComp</class>
     <class kind="class">iqtprm::CSelectableGuiComp</class>
@@ -35374,6 +35442,7 @@
     <class kind="class">iqtprm::CSelectionParamGuiComp</class>
     <class kind="class">iqtprm::CSelectionParamIndexGuiComp</class>
     <class kind="class">iqtprm::CVariableParamGuiComp</class>
+    <class kind="class">iqtprm::CWizardGuiComp</class>
   </compound>
   <compound kind="class">
     <name>iqtprm::CComposedParamsSetGuiComp</name>
@@ -35565,6 +35634,71 @@
       <name>OnDirectoryUp</name>
       <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
       <anchor>add1303146e14f2b7e7fcc0e70d4c69fd</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtprm::COptionsListGuiComp</name>
+    <filename>classiqtprm_1_1_c_options_list_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::COptionsListGuiComp, iprm::ISelectionParam &gt;</base>
+    <member kind="enumeration">
+      <name>DataRole</name>
+      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
+      <anchor>ac3c47a4371adbe6665ed10be61291c24</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_SELECTION_INDEX</name>
+      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
+      <anchor>ac3c47a4371adbe6665ed10be61291c24a2b876a29350cf53665920e95df71ca9d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_SELECTION_PARAM</name>
+      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
+      <anchor>ac3c47a4371adbe6665ed10be61291c24adc65e3a922d95a910f14685210aaea39</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::COptionsListGuiComp, iprm::ISelectionParam &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
+      <anchor>a4e28165175f491bc7521932720debd54</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
+      <anchor>a033faeb023e5df5f8ebb17cc4c40bc87</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnSelectionChanged</name>
+      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
+      <anchor>a51b18b2090680df74aff85ae2fe43413</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
+      <anchor>a0c030d123ed1a364b088ccf0e05a06c5</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
+      <anchor>ac4dc20223a7abe097aadf9195f0de7f4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
+      <anchor>a672fd35ffb353da27138c5cf1ef7fbcb</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -36017,6 +36151,102 @@
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
       <anchor>a7ba45acc51cb57e86abece3bc2cecba7</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtprm::CWizardGuiComp</name>
+    <filename>classiqtprm_1_1_c_wizard_gui_comp.html</filename>
+    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWizard &gt;, imod::TSingleModelObserverBase&lt; iprm::IParamsManager &gt; &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWizard &gt;, imod::TSingleModelObserverBase&lt; iprm::IParamsManager &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a1cda4d946b7e9c07e336704a24e8485f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>adb674fbe4e322e482181625844c9e37c</anchor>
+      <arglist>(m_helpViewerGuiCompPtr, m_helpViewerCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>abf607b43f71a65e1d3c4c241606c2030</anchor>
+      <arglist>(m_guisCompPtr, m_editorsCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>af0aaa35b04d180f6f99a4fb5806d3332</anchor>
+      <arglist>(m_observersCompPtr, m_editorsCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CWizardGuiComp</name>
+      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a2a4fd02cdcabdae8437a4472f339fcda</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnCurrentPageChanged</name>
+      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a31dabe0c13f797de29d6d04d8b727a17</anchor>
+      <arglist>(int pageId)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnHelpRequested</name>
+      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a37ed6433c62e7ea7558f8c174159ee86</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>GetSelectedIndex</name>
+      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>af01f4ed4635a6f31133b274aa3672bd7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a935d00cd97b55cfcd2aeaafa3d00d2ca</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>ab77a19e2f1aa9a723439f21aa7c4db09</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>af721b7c689653339e4c389db2d9fad3a</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a2e7f5e36e5b31282786bb5fa1af5507b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a5daf9951a37db8a459d05cff6bad26c9</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -36809,7 +37039,7 @@
     <member kind="enumvalue">
       <name>MaxStringLength</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a4515d997a13667d732ae946fecef00cda1a2beb3a975a90f733fb0c1ab64525be</anchor>
+      <anchor>a49645d55a027d7ff46b455096d56d0f7a1a2beb3a975a90f733fb0c1ab64525be</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -38707,7 +38937,7 @@
     <member kind="enumvalue">
       <name>UnknownVersion</name>
       <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
-      <anchor>a41704f75da7d978f4be5064bd72ab3cdaf9fa112e0f25b4bc6c7b7b7bc3ee742f</anchor>
+      <anchor>a60cc015d568ce2139b8d17245f6ebef9af9fa112e0f25b4bc6c7b7b7bc3ee742f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -39480,7 +39710,7 @@
     <member kind="enumvalue">
       <name>MAX_ELEMENTS_COUNT</name>
       <anchorfile>classistd_1_1_c_fast_binary_index.html</anchorfile>
-      <anchor>a4d4814acfbe44c2399618e1aafc532b7abbd51a4d709be2d7e1ab0cc554dd3944</anchor>
+      <anchor>a02e0e12d1e6d33cd315f7a1dca5481a2abbd51a4d709be2d7e1ab0cc554dd3944</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -42104,7 +42334,7 @@
     <member kind="enumvalue">
       <name>DIMENSIONS</name>
       <anchorfile>classistd_1_1_t_index.html</anchorfile>
-      <anchor>ae5a570876a164730b812843080a1b375a45842b3fa4ac21fb16cb7a478a51ad6a</anchor>
+      <anchor>afc1b837ba113166e458223c75ae33bc8a45842b3fa4ac21fb16cb7a478a51ad6a</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -42747,7 +42977,7 @@
     <member kind="enumvalue">
       <name>InvalidIndex</name>
       <anchorfile>classistd_1_1_t_pointer_vector.html</anchorfile>
-      <anchor>a01df72dd3f97b868188f2c6bb493e66aa5e9e43a0fe51bd123229d4b73c161110</anchor>
+      <anchor>ad91619ce68c064307824cfc03e86506ea5e9e43a0fe51bd123229d4b73c161110</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
