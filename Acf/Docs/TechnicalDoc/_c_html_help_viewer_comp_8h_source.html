@@ -34,47 +34,50 @@
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_t_gui_component_base_8h.html">iqtgui/TGuiComponentBase.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_t_del_ptr_8h.html">istd/TDelPtr.h</a>&quot;</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_help_viewer_8h.html">idoc/IHelpViewer.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_help_file_provider_8h.html">idoc/IHelpFileProvider.h</a>&quot;</span>
-<a name="l00014"></a>00014 
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="keyword">namespace </span>iqtdoc
-<a name="l00017"></a>00017 {
-<a name="l00018"></a>00018 
-<a name="l00019"></a>00019 
-<a name="l00020"></a><a class="code" href="classiqtdoc_1_1_c_html_help_viewer_comp.html">00020</a> <span class="keyword">class </span><a class="code" href="classiqtdoc_1_1_c_html_help_viewer_comp.html">CHtmlHelpViewerComp</a>:
-<a name="l00021"></a>00021                      <span class="keyword">public</span> iqtgui::TGuiComponentBase&lt;QTextBrowser&gt;,
-<a name="l00022"></a>00022                      <span class="keyword">virtual</span> <span class="keyword">public</span> idoc::IHelpViewer
-<a name="l00023"></a>00023 {
-<a name="l00024"></a>00024 <span class="keyword">public</span>:
-<a name="l00025"></a><a class="code" href="classiqtdoc_1_1_c_html_help_viewer_comp.html#a15029b9f090b8d17fdd19aa46da99cab">00025</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase&lt;QTextBrowser&gt;</a> <a class="code" href="classiqtdoc_1_1_c_html_help_viewer_comp.html#a15029b9f090b8d17fdd19aa46da99cab">BaseClass</a>;
-<a name="l00026"></a>00026 
-<a name="l00027"></a>00027        I_BEGIN_COMPONENT(<a class="code" href="classiqtdoc_1_1_c_html_help_viewer_comp.html">CHtmlHelpViewerComp</a>);
-<a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="code" href="classidoc_1_1_i_help_viewer.html" title="Allow to show help document to specified object or text.">idoc::IHelpViewer</a>);
-<a name="l00029"></a>00029               I_ASSIGN(m_helpFileProviderCompPtr, <span class="stringliteral">&quot;HelpFileProvider&quot;</span>, <span class="stringliteral">&quot;Calculate path of html document&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;HelpFileProvider&quot;</span>);
-<a name="l00030"></a>00030        I_END_COMPONENT;
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032        <span class="comment">// reimplemented (idoc::IHelpViewer)</span>
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_html_help_viewer_comp.html#a561ab72863e09372d4b081aa0cdaaafe">ShowHelp</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; contextText, <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* contextObjectPtr);
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_help_viewer_8h.html">idoc/IHelpViewer.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_i_help_file_provider_8h.html">idoc/IHelpFileProvider.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="keyword">namespace </span>iqtdoc
+<a name="l00019"></a>00019 {
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 
+<a name="l00022"></a><a class="code" href="classiqtdoc_1_1_c_html_help_viewer_comp.html">00022</a> <span class="keyword">class </span><a class="code" href="classiqtdoc_1_1_c_html_help_viewer_comp.html">CHtmlHelpViewerComp</a>:
+<a name="l00023"></a>00023                      <span class="keyword">public</span> icomp::CComponentBase,
+<a name="l00024"></a>00024                      <span class="keyword">virtual</span> <span class="keyword">public</span> idoc::IHelpViewer
+<a name="l00025"></a>00025 {
+<a name="l00026"></a>00026 <span class="keyword">public</span>:
+<a name="l00027"></a><a class="code" href="classiqtdoc_1_1_c_html_help_viewer_comp.html#aa1f7fcb055b21b5761de2d00dd4ff4bb">00027</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classiqtdoc_1_1_c_html_help_viewer_comp.html#aa1f7fcb055b21b5761de2d00dd4ff4bb">BaseClass</a>;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiqtdoc_1_1_c_html_help_viewer_comp.html">CHtmlHelpViewerComp</a>);
+<a name="l00030"></a>00030               I_REGISTER_INTERFACE(<a class="code" href="classidoc_1_1_i_help_info_provider.html" title="Allow to show help document to specified object or text.">idoc::IHelpInfoProvider</a>);
+<a name="l00031"></a>00031               I_REGISTER_INTERFACE(<a class="code" href="classidoc_1_1_i_help_viewer.html" title="Allow to show help document to specified object or text.">idoc::IHelpViewer</a>);
+<a name="l00032"></a>00032               I_ASSIGN(m_helpFileProviderCompPtr, <span class="stringliteral">&quot;HelpFileProvider&quot;</span>, <span class="stringliteral">&quot;Calculate path of html document&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;HelpFileProvider&quot;</span>);
+<a name="l00033"></a>00033        I_END_COMPONENT;
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_html_help_viewer_comp.html#aee9ef3ae2245b8f9c0453c7941072377" title="Called from widget event filter when slave widget is shown.">OnGuiShown</a>();
+<a name="l00035"></a>00035        <span class="comment">// reimplemented (idoc::IHelpInfoProvider)</span>
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiqtdoc_1_1_c_html_help_viewer_comp.html#a48e88c87b88eb93fdd2c2e44bd9f648d" title="Get quality of help information for specified context and/or object.">GetHelpQuality</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; contextText, <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* contextObjectPtr) <span class="keyword">const</span>;
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="keyword">private</span>:
-<a name="l00039"></a>00039        I_REF(<a class="code" href="classidoc_1_1_i_help_file_provider.html" title="Allow to show help document to specified object or text.">idoc::IHelpFileProvider</a>, m_helpFileProviderCompPtr);
+<a name="l00038"></a>00038        <span class="comment">// reimplemented (idoc::IHelpViewer)</span>
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_html_help_viewer_comp.html#a561ab72863e09372d4b081aa0cdaaafe" title="Show some help information for specified context.">ShowHelp</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; contextText, <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* contextObjectPtr);
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041        <span class="keyword">mutable</span> QUrl m_urlToShow;
-<a name="l00042"></a>00042 };
+<a name="l00041"></a>00041 <span class="keyword">private</span>:
+<a name="l00042"></a>00042        I_REF(<a class="code" href="classidoc_1_1_i_help_file_provider.html" title="Allow to show help document to specified object or text.">idoc::IHelpFileProvider</a>, m_helpFileProviderCompPtr);
 <a name="l00043"></a>00043 
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 } <span class="comment">// namespace iqtdoc</span>
+<a name="l00044"></a>00044        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QTextBrowser&gt;</a> m_helpWidgetPtr;
+<a name="l00045"></a>00045 };
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 <span class="preprocessor">#endif // !iqtdoc_CHtmlHelpViewerComp_included</span>
-<a name="l00049"></a>00049 <span class="preprocessor"></span>
+<a name="l00048"></a>00048 } <span class="comment">// namespace iqtdoc</span>
+<a name="l00049"></a>00049 
 <a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="preprocessor">#endif // !iqtdoc_CHtmlHelpViewerComp_included</span>
+<a name="l00052"></a>00052 <span class="preprocessor"></span>
+<a name="l00053"></a>00053 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

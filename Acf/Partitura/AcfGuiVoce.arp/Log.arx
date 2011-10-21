@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          1941
+          1860
         </Number>
         <Description>
           ACF
@@ -18,7 +18,7 @@
           1
         </Id>
         <Number>
-          400
+          369
         </Number>
         <Description>
           ACF-Solutions
@@ -179,7 +179,7 @@
   </ElementsList>
   <EmbeddedRegistriesList count="0">
   </EmbeddedRegistriesList>
-  <ExportedInterfaces count="4">
+  <ExportedInterfaces count="3">
     <Interface>
       <InterfaceId>
         ibase::IMessageConsumer
@@ -191,14 +191,6 @@
     <Interface>
       <InterfaceId>
         ibase::IMessageContainer
-      </InterfaceId>
-      <ComponentId>
-        LogModel
-      </ComponentId>
-    </Interface>
-    <Interface>
-      <InterfaceId>
-        imod::IModel
       </InterfaceId>
       <ComponentId>
         LogModel

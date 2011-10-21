@@ -1026,16 +1026,16 @@
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
-    <name>CQuickHelpViewerComp.h</name>
+    <name>CQuickHelpGuiComp.h</name>
     <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_quick_help_viewer_comp_8h</filename>
+    <filename>_c_quick_help_gui_comp_8h</filename>
     <includes id="_i_meta_info_manager_8h" name="IMetaInfoManager.h" local="yes" imported="no">icomp/IMetaInfoManager.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
     <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
     <includes id="_i_help_file_provider_8h" name="IHelpFileProvider.h" local="yes" imported="no">idoc/IHelpFileProvider.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
     <includes id="_i_external_meta_info_manager_8h" name="IExternalMetaInfoManager.h" local="yes" imported="no">icmpstr/IExternalMetaInfoManager.h</includes>
-    <class kind="class">icmpstr::CQuickHelpViewerComp</class>
+    <class kind="class">icmpstr::CQuickHelpGuiComp</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
@@ -2022,7 +2022,17 @@
     <filename>_i_help_file_provider_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
+    <includes id="_i_help_info_provider_8h" name="IHelpInfoProvider.h" local="yes" imported="no">idoc/IHelpInfoProvider.h</includes>
     <class kind="class">idoc::IHelpFileProvider</class>
+    <namespace>idoc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IHelpInfoProvider.h</name>
+    <path>C:/Temp/Acf/Include/idoc/</path>
+    <filename>_i_help_info_provider_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
+    <class kind="class">idoc::IHelpInfoProvider</class>
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
@@ -2031,6 +2041,7 @@
     <filename>_i_help_viewer_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
+    <includes id="_i_help_info_provider_8h" name="IHelpInfoProvider.h" local="yes" imported="no">idoc/IHelpInfoProvider.h</includes>
     <class kind="class">idoc::IHelpViewer</class>
     <namespace>idoc</namespace>
   </compound>
@@ -3868,10 +3879,21 @@
     <namespace>iqtdoc</namespace>
   </compound>
   <compound kind="file">
+    <name>CHtmlHelpGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtdoc/</path>
+    <filename>_c_html_help_gui_comp_8h</filename>
+    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
+    <includes id="_i_help_file_provider_8h" name="IHelpFileProvider.h" local="yes" imported="no">idoc/IHelpFileProvider.h</includes>
+    <class kind="class">iqtdoc::CHtmlHelpGuiComp</class>
+    <namespace>iqtdoc</namespace>
+  </compound>
+  <compound kind="file">
     <name>CHtmlHelpViewerComp.h</name>
     <path>C:/Temp/Acf/Include/iqtdoc/</path>
     <filename>_c_html_help_viewer_comp_8h</filename>
-    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
     <includes id="_i_help_file_provider_8h" name="IHelpFileProvider.h" local="yes" imported="no">idoc/IHelpFileProvider.h</includes>
     <class kind="class">iqtdoc::CHtmlHelpViewerComp</class>
@@ -13060,7 +13082,7 @@
     <class kind="class">icmpstr::CGraphicsConnectorItem</class>
     <class kind="class">icmpstr::CPackageOverviewComp</class>
     <class kind="class">icmpstr::CPackagesLoaderExtComp</class>
-    <class kind="class">icmpstr::CQuickHelpViewerComp</class>
+    <class kind="class">icmpstr::CQuickHelpGuiComp</class>
     <class kind="class">icmpstr::CRegistryConsistInfoComp</class>
     <class kind="class">icmpstr::CRegistryElementShape</class>
     <class kind="class">icmpstr::CRegistryLoaderComp</class>
@@ -13965,64 +13987,71 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>icmpstr::CQuickHelpViewerComp</name>
-    <filename>classicmpstr_1_1_c_quick_help_viewer_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CQuickHelpViewerComp &gt;</base>
+    <name>icmpstr::CQuickHelpGuiComp</name>
+    <filename>classicmpstr_1_1_c_quick_help_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CQuickHelpGuiComp &gt;</base>
     <base virtualness="virtual">idoc::IHelpViewer</base>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CQuickHelpViewerComp &gt;</type>
+      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CQuickHelpGuiComp &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_viewer_comp.html</anchorfile>
-      <anchor>a0bfa7fc89ddd4d6c9099f259a9fd4382</anchor>
+      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
+      <anchor>abd6d4923c6fae328a8ebd9501bd6d467</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_viewer_comp.html</anchorfile>
-      <anchor>a88a8c2e5c5bcc8568d193a6cc054be9c</anchor>
+      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a1b51ecdc891608520d53a6b41416203a</anchor>
       <arglist>(m_externalMetaInfoManagerCompPtr, m_metaInfoManagerCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetHelpQuality</name>
+      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a9645c09a4704de10e6fd586a980f6e16</anchor>
+      <arglist>(const istd::CString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ShowHelp</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_viewer_comp.html</anchorfile>
-      <anchor>aded55b1844836a5b12cff79bf4287a8a</anchor>
+      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a7053f8c79e7814189b3746f59b8b85aa</anchor>
       <arglist>(const istd::CString &amp;contextText, const istd::IPolymorphic *contextObjectPtr)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_EditButton_clicked</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_viewer_comp.html</anchorfile>
-      <anchor>a172c89702f7816aa5a0fd08fbadfb78e</anchor>
+      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a5c721f8c6a9c26849cda2bcd40e638b1</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_NewButton_clicked</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_viewer_comp.html</anchorfile>
-      <anchor>a3f8aa887330b1d00d38bd564357a3aab</anchor>
+      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a8b8ff5efeb4d056b3d884113e29a7335</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_ShowTechButton_clicked</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_viewer_comp.html</anchorfile>
-      <anchor>a392e0ea9f7cb769675f11a6c530c809a</anchor>
+      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
+      <anchor>aec890469399b06568f4326064df12845</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>istd::CString</type>
       <name>CalcDoxygenFileName</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_viewer_comp.html</anchorfile>
-      <anchor>a51aae3a039b40d2ed8094652500ff628</anchor>
+      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
+      <anchor>ae83219ee737b532d32120b3f73f9fb64</anchor>
       <arglist>(const istd::CClassInfo &amp;classInfo) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_viewer_comp.html</anchorfile>
-      <anchor>a559f2af390dce2c0538d56ead9c6b088</anchor>
+      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a2727cfda8e9845b3216202ec606bbbae</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -18689,6 +18718,7 @@
     <class kind="class">idoc::IDocumentStateComparator</class>
     <class kind="class">idoc::IDocumentTemplate</class>
     <class kind="class">idoc::IHelpFileProvider</class>
+    <class kind="class">idoc::IHelpInfoProvider</class>
     <class kind="class">idoc::IHelpViewer</class>
   </compound>
   <compound kind="class">
@@ -19999,14 +20029,7 @@
   <compound kind="class">
     <name>idoc::IHelpFileProvider</name>
     <filename>classidoc_1_1_i_help_file_provider.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual double</type>
-      <name>GetHelpQuality</name>
-      <anchorfile>classidoc_1_1_i_help_file_provider.html</anchorfile>
-      <anchor>ad019793d9db114e28b84422b0ef997e3</anchor>
-      <arglist>(const istd::CString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const =0</arglist>
-    </member>
+    <base virtualness="virtual">idoc::IHelpInfoProvider</base>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CString</type>
       <name>GetHelpFilePath</name>
@@ -20016,9 +20039,21 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>idoc::IHelpInfoProvider</name>
+    <filename>classidoc_1_1_i_help_info_provider.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetHelpQuality</name>
+      <anchorfile>classidoc_1_1_i_help_info_provider.html</anchorfile>
+      <anchor>ad123c0eb8b1f037bc6f4e0110d10b82d</anchor>
+      <arglist>(const istd::CString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>idoc::IHelpViewer</name>
     <filename>classidoc_1_1_i_help_viewer.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <base virtualness="virtual">idoc::IHelpInfoProvider</base>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>ShowHelp</name>
@@ -24210,8 +24245,8 @@
       <type>virtual bool</type>
       <name>IsModelAttached</name>
       <anchorfile>classimod_1_1_c_single_model_observer_base.html</anchorfile>
-      <anchor>a27b5b655396864098f5a3780f201c11c</anchor>
-      <arglist>(const imod::IModel *modelPtr) const </arglist>
+      <anchor>a673545a0b46f7f590c3766869a636c17</anchor>
+      <arglist>(const imod::IModel *modelPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -24361,8 +24396,8 @@
       <type>virtual bool</type>
       <name>IsModelAttached</name>
       <anchorfile>classimod_1_1_i_observer.html</anchorfile>
-      <anchor>a5bc9cff9aa68a99b2b0c3fb700364bdf</anchor>
-      <arglist>(const IModel *modelPtr) const =0</arglist>
+      <anchor>ab87f1b3fb98ebfa6d878826011f09568</anchor>
+      <arglist>(const IModel *modelPtr=NULL) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -32100,6 +32135,7 @@
     <filename>namespaceiqtdoc.html</filename>
     <class kind="class">iqtdoc::CDoxygenHelpFileProviderComp</class>
     <class kind="class">iqtdoc::CExtendedDocumentTemplateComp</class>
+    <class kind="class">iqtdoc::CHtmlHelpGuiComp</class>
     <class kind="class">iqtdoc::CHtmlHelpViewerComp</class>
     <class kind="class">iqtdoc::CMainWindowGuiComp</class>
     <class kind="class">iqtdoc::CMultiDocumentWorkspaceGuiComp</class>
@@ -32206,16 +32242,57 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqtdoc::CHtmlHelpViewerComp</name>
-    <filename>classiqtdoc_1_1_c_html_help_viewer_comp.html</filename>
+    <name>iqtdoc::CHtmlHelpGuiComp</name>
+    <filename>classiqtdoc_1_1_c_html_help_gui_comp.html</filename>
     <base>TGuiComponentBase&lt; QTextBrowser &gt;</base>
     <base virtualness="virtual">idoc::IHelpViewer</base>
     <member kind="typedef">
       <type>iqtgui::TGuiComponentBase&lt; QTextBrowser &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classiqtdoc_1_1_c_html_help_viewer_comp.html</anchorfile>
-      <anchor>a15029b9f090b8d17fdd19aa46da99cab</anchor>
+      <anchorfile>classiqtdoc_1_1_c_html_help_gui_comp.html</anchorfile>
+      <anchor>a50a5f7183e0b9100f5c2fe8051b16253</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetHelpQuality</name>
+      <anchorfile>classiqtdoc_1_1_c_html_help_gui_comp.html</anchorfile>
+      <anchor>a665d701059cfb8d65276727037cf9c1d</anchor>
+      <arglist>(const istd::CString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ShowHelp</name>
+      <anchorfile>classiqtdoc_1_1_c_html_help_gui_comp.html</anchorfile>
+      <anchor>a9467a6d5053d33ced7ae3511eea3460e</anchor>
+      <arglist>(const istd::CString &amp;contextText, const istd::IPolymorphic *contextObjectPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiShown</name>
+      <anchorfile>classiqtdoc_1_1_c_html_help_gui_comp.html</anchorfile>
+      <anchor>a60fe9c9243713f42a819015d9d91cf9f</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtdoc::CHtmlHelpViewerComp</name>
+    <filename>classiqtdoc_1_1_c_html_help_viewer_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">idoc::IHelpViewer</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtdoc_1_1_c_html_help_viewer_comp.html</anchorfile>
+      <anchor>aa1f7fcb055b21b5761de2d00dd4ff4bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetHelpQuality</name>
+      <anchorfile>classiqtdoc_1_1_c_html_help_viewer_comp.html</anchorfile>
+      <anchor>a48e88c87b88eb93fdd2c2e44bd9f648d</anchor>
+      <arglist>(const istd::CString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -32223,13 +32300,6 @@
       <anchorfile>classiqtdoc_1_1_c_html_help_viewer_comp.html</anchorfile>
       <anchor>a561ab72863e09372d4b081aa0cdaaafe</anchor>
       <arglist>(const istd::CString &amp;contextText, const istd::IPolymorphic *contextObjectPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiShown</name>
-      <anchorfile>classiqtdoc_1_1_c_html_help_viewer_comp.html</anchorfile>
-      <anchor>aee9ef3ae2245b8f9c0453c7941072377</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35677,8 +35747,8 @@
       <type>void</type>
       <name>OnSelectionChanged</name>
       <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
-      <anchor>a51b18b2090680df74aff85ae2fe43413</anchor>
-      <arglist>(int index)</arglist>
+      <anchor>a4469b9a319bc96d8dd0f3dfce7ee25e5</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -36169,13 +36239,6 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>adb674fbe4e322e482181625844c9e37c</anchor>
-      <arglist>(m_helpViewerGuiCompPtr, m_helpViewerCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
       <anchor>abf607b43f71a65e1d3c4c241606c2030</anchor>
       <arglist>(m_guisCompPtr, m_editorsCompPtr, true)</arglist>
     </member>
@@ -36185,13 +36248,6 @@
       <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
       <anchor>af0aaa35b04d180f6f99a4fb5806d3332</anchor>
       <arglist>(m_observersCompPtr, m_editorsCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CWizardGuiComp</name>
-      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a2a4fd02cdcabdae8437a4472f339fcda</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>

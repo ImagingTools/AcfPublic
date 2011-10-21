@@ -98,8 +98,8 @@ Inheritance diagram for imod::IObserver:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_i_observer.html#a5bc9cff9aa68a99b2b0c3fb700364bdf">IsModelAttached</a> (const <a class="el" href="classimod_1_1_i_model.html">IModel</a> *modelPtr) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if specified model is attached.  <a href="#a5bc9cff9aa68a99b2b0c3fb700364bdf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_i_observer.html#ab87f1b3fb98ebfa6d878826011f09568">IsModelAttached</a> (const <a class="el" href="classimod_1_1_i_model.html">IModel</a> *modelPtr=NULL) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if specified model is attached.  <a href="#ab87f1b3fb98ebfa6d878826011f09568"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_i_observer.html#a29ea818f3bffae0e5062a8cf0232edaf">OnAttached</a> (<a class="el" href="classimod_1_1_i_model.html">IModel</a> *modelPtr)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#a29ea818f3bffae0e5062a8cf0232edaf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_i_observer.html#aa5202936ac2e810044fa4a7a9e02a7ef">OnDetached</a> (<a class="el" href="classimod_1_1_i_model.html">IModel</a> *modelPtr)=0</td></tr>
@@ -189,7 +189,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5bc9cff9aa68a99b2b0c3fb700364bdf"></a><!-- doxytag: member="imod::IObserver::IsModelAttached" ref="a5bc9cff9aa68a99b2b0c3fb700364bdf" args="(const IModel *modelPtr) const =0" -->
+<a class="anchor" id="ab87f1b3fb98ebfa6d878826011f09568"></a><!-- doxytag: member="imod::IObserver::IsModelAttached" ref="ab87f1b3fb98ebfa6d878826011f09568" args="(const IModel *modelPtr=NULL) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -197,7 +197,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual bool imod::IObserver::IsModelAttached </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classimod_1_1_i_model.html">IModel</a> *&#160;</td>
-          <td class="paramname"><em>modelPtr</em></td><td>)</td>
+          <td class="paramname"><em>modelPtr</em> = <code>NULL</code></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
       </table>
@@ -208,7 +208,7 @@ Public Member Functions</h2></td></tr>
 <p>pointer to model object. If this pointer is NULL, any model is meaned. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if <code>modelPtr</code> is attached yet to this observer, false otherwise. </dd></dl>
 
-<p>Implemented in <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#ac67ff92f141874ee0afa9574ef3a55ad">imod::CMultiModelBridgeBase</a>, <a class="el" href="classimod_1_1_c_single_model_observer_base.html#a27b5b655396864098f5a3780f201c11c">imod::CSingleModelObserverBase</a>, and <a class="el" href="classimod_1_1_c_multi_model_observer_base.html#a92391a2b6e1dcccfc3987e89ace6da32">imod::CMultiModelObserverBase</a>.</p>
+<p>Implemented in <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#ac67ff92f141874ee0afa9574ef3a55ad">imod::CMultiModelBridgeBase</a>, <a class="el" href="classimod_1_1_c_single_model_observer_base.html#a673545a0b46f7f590c3766869a636c17">imod::CSingleModelObserverBase</a>, and <a class="el" href="classimod_1_1_c_multi_model_observer_base.html#a92391a2b6e1dcccfc3987e89ace6da32">imod::CMultiModelObserverBase</a>.</p>
 
 </div>
 </div>

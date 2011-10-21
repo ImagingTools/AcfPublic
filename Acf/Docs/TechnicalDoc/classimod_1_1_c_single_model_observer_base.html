@@ -98,8 +98,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to observed model.  <a href="#aa829b5502a451e194324e36688d2352b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_single_model_observer_base.html#a96b2bae380788b93b7d324b6e8947d97">EnsureModelDetached</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make sure this observer is detached.  <a href="#a96b2bae380788b93b7d324b6e8947d97"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_single_model_observer_base.html#a27b5b655396864098f5a3780f201c11c">IsModelAttached</a> (const <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if specified model is attached.  <a href="#a27b5b655396864098f5a3780f201c11c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_single_model_observer_base.html#a673545a0b46f7f590c3766869a636c17">IsModelAttached</a> (const <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr=NULL) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if specified model is attached.  <a href="#a673545a0b46f7f590c3766869a636c17"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_single_model_observer_base.html#ac4bd0d47cd4361c1e3a8fd6dea150c40">OnAttached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#ac4bd0d47cd4361c1e3a8fd6dea150c40"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_single_model_observer_base.html#ae0480c59f12c9af2f40fda28b7ea1a57">OnDetached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
@@ -272,7 +272,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a27b5b655396864098f5a3780f201c11c"></a><!-- doxytag: member="imod::CSingleModelObserverBase::IsModelAttached" ref="a27b5b655396864098f5a3780f201c11c" args="(const imod::IModel *modelPtr) const " -->
+<a class="anchor" id="a673545a0b46f7f590c3766869a636c17"></a><!-- doxytag: member="imod::CSingleModelObserverBase::IsModelAttached" ref="a673545a0b46f7f590c3766869a636c17" args="(const imod::IModel *modelPtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -280,7 +280,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool imod::CSingleModelObserverBase::IsModelAttached </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
-          <td class="paramname"><em>modelPtr</em></td><td>)</td>
+          <td class="paramname"><em>modelPtr</em> = <code>NULL</code></td><td>)</td>
           <td> const<code> [inline, virtual]</code></td>
         </tr>
       </table>
@@ -291,7 +291,7 @@ Protected Member Functions</h2></td></tr>
 <p>pointer to model object. If this pointer is NULL, any model is meaned. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if <code>modelPtr</code> is attached yet to this observer, false otherwise. </dd></dl>
 
-<p>Implements <a class="el" href="classimod_1_1_i_observer.html#a5bc9cff9aa68a99b2b0c3fb700364bdf">imod::IObserver</a>.</p>
+<p>Implements <a class="el" href="classimod_1_1_i_observer.html#ab87f1b3fb98ebfa6d878826011f09568">imod::IObserver</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_single_model_observer_base_8h_source.html#l00066">66</a> of file <a class="el" href="_c_single_model_observer_base_8h_source.html">CSingleModelObserverBase.h</a>.</p>
 

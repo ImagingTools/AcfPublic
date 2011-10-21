@@ -36,7 +36,7 @@
 #include "icmpstr/CVisualRegistryScenographerComp.h"
 #include "icmpstr/CRegistryConsistInfoComp.h"
 #include "icmpstr/CRegistryPropEditorComp.h"
-#include "icmpstr/CQuickHelpViewerComp.h"
+#include "icmpstr/CQuickHelpGuiComp.h"
 #include "icmpstr/CPackagesLoaderExtComp.h"
 
 
@@ -63,7 +63,7 @@ typedef icomp::TMakeComponentWrap<
 			imod::IModel> Registry;
 typedef icmpstr::CRegistryConsistInfoComp RegistryConsistInfo;
 typedef icmpstr::CRegistryPropEditorComp RegistryPropEditor;
-typedef icmpstr::CQuickHelpViewerComp QuickHelpViewer;
+typedef icmpstr::CQuickHelpGuiComp QuickHelpGui;
 typedef icomp::TModelCompWrap<icmpstr::CPackagesLoaderExtComp> PackagesLoaderExt;
 
 

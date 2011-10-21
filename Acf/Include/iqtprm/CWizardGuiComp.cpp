@@ -38,14 +38,6 @@ namespace iqtprm
 {
 
 
-// public methods
-
-CWizardGuiComp::CWizardGuiComp()
-:	m_helpWidgetPtr(NULL)
-{
-}
-
-
 // protected slots
 
 void CWizardGuiComp::OnCurrentPageChanged(int pageId)
@@ -67,18 +59,6 @@ void CWizardGuiComp::OnHelpRequested()
 {
 	if (m_helpViewerCompPtr.IsValid()){
 		m_helpViewerCompPtr->ShowHelp(istd::CString(), this);
-	}
-
-	if (m_helpViewerGuiCompPtr.IsValid()){
-		if (m_helpWidgetPtr == NULL){
-			m_helpWidgetPtr = new QWidget(GetWidget());
-			QVBoxLayout* layoutPtr = new QVBoxLayout(m_helpWidgetPtr);
-			layoutPtr->setMargin(0);
-
-			m_helpViewerGuiCompPtr->CreateGui(m_helpWidgetPtr);
-		}
-
-		m_helpWidgetPtr->show();
 	}
 }
 
@@ -247,6 +227,7 @@ void CWizardGuiComp::OnGuiCreated()
 		}
 	}
 
+#if QT_VERSION > 0x040700
 	if (m_sideGuiCompPtr.IsValid()){
 		QWidget* sideWidgetContainer = new QWidget(wizardPtr);
 		sideWidgetContainer->setMinimumWidth(250);
@@ -257,6 +238,7 @@ void CWizardGuiComp::OnGuiCreated()
 			wizardPtr->setSideWidget(sideWidgetContainer);
 		}
 	}
+#endif
 
 	connect(wizardPtr, SIGNAL(currentIdChanged(int)), this, SLOT(OnCurrentPageChanged(int)));
 	connect(wizardPtr, SIGNAL(helpRequested()), this, SLOT(OnHelpRequested()));

@@ -61,10 +61,12 @@
 #include "iqtprm/CSelectableGuiComp.h"
 #include "iqtprm/CSelectableParamsSetGuiComp.h"
 #include "iqtprm/CWizardGuiComp.h"
+#include "iqtprm/COptionsListGuiComp.h"
 
 #include "iqtdoc/CMainWindowGuiComp.h"
 #include "iqtdoc/CSingleDocumentWorkspaceGuiComp.h"
 #include "iqtdoc/CMultiDocumentWorkspaceGuiComp.h"
+#include "iqtdoc/CHtmlHelpGuiComp.h"
 #include "iqtdoc/CHtmlHelpViewerComp.h"
 
 #include "iqtproc/CProgressManagerGuiComp.h"
@@ -114,10 +116,12 @@ typedef iqtprm::CSelectionParamIndexGuiComp SelectionParamIndexGui;
 typedef iqtprm::CSelectableGuiComp SelectableGui;
 typedef iqtprm::CSelectableParamsSetGuiComp SelectableParamsSetGui;
 typedef iqtprm::CWizardGuiComp WizardGui;
+typedef iqtprm::COptionsListGuiComp OptionsListGui;
 
 typedef iqtdoc::CMainWindowGuiComp MainWindowGui;
 typedef icomp::TModelCompWrap<iqtdoc::CSingleDocumentWorkspaceGuiComp> SingleDocWorkspaceGui;
 typedef icomp::TModelCompWrap<iqtdoc::CMultiDocumentWorkspaceGuiComp> MultiDocWorkspaceGui;
+typedef iqtdoc::CHtmlHelpGuiComp HtmlHelpGui;
 typedef iqtdoc::CHtmlHelpViewerComp HtmlHelpViewer;
 
 typedef iqtproc::CProgressManagerGuiComp ProgressManagerGui;

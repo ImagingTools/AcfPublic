@@ -1,0 +1,102 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef icmpstr_CQuickHelpGuiComp_included
+#define icmpstr_CQuickHelpGuiComp_included
+
+
+// Qt includes
+#include <QTextBrowser>
+
+
+#include "icomp/IMetaInfoManager.h"
+
+#include "iprm/IFileNameParam.h"
+
+#include "idoc/IHelpViewer.h"
+#include "idoc/IHelpFileProvider.h"
+
+#include "iqtgui/TDesignerGuiCompBase.h"
+
+#include "icmpstr/IExternalMetaInfoManager.h"
+
+#include "Generated/ui_CQuickHelpGuiComp.h"
+
+
+namespace icmpstr
+{
+
+
+class CQuickHelpGuiComp:
+			public iqtgui::TDesignerGuiCompBase<Ui::CQuickHelpGuiComp>,
+			virtual public idoc::IHelpViewer
+{
+	Q_OBJECT
+
+public:
+	typedef iqtgui::TDesignerGuiCompBase<Ui::CQuickHelpGuiComp> BaseClass;
+
+	I_BEGIN_COMPONENT(CQuickHelpGuiComp);
+		I_REGISTER_INTERFACE(idoc::IHelpInfoProvider);
+		I_REGISTER_INTERFACE(idoc::IHelpViewer);
+		I_ASSIGN(m_descriptionFileProviderCompPtr, "HelpFileProvider", "Calculate path of html document for short description", true, "HelpFileProvider");
+		I_ASSIGN(m_docuEditorFileParamsCompPtr, "DocuEditorFileParam", "Object storing path to html editor used to edit the description", true, "DocuEditorFileParam");
+		I_ASSIGN(m_techDocuViewerFileParamsCompPtr, "TechDocuViewerParam", "Object storing path to html viewer used to show technical documentation", true, "TechDocuViewerParam");
+		I_ASSIGN(m_metaInfoManagerCompPtr, "MetaInfoManager", "Allows access to component meta information", true, "MetaInfoManager");
+		I_ASSIGN_TO(m_externalMetaInfoManagerCompPtr, m_metaInfoManagerCompPtr, false);
+	I_END_COMPONENT;
+
+	// reimplemented (idoc::IHelpInfoProvider)
+	virtual double GetHelpQuality(const istd::CString& contextText, const istd::IPolymorphic* contextObjectPtr) const;
+
+	// reimplemented (idoc::IHelpViewer)
+	virtual void ShowHelp(const istd::CString& contextText, const istd::IPolymorphic* contextObjectPtr);
+
+protected:
+	istd::CString CalcDoxygenFileName(const istd::CClassInfo& classInfo) const;
+
+	// reimplemented (CGuiComponentBase)
+	virtual void OnGuiCreated();
+
+protected Q_SLOTS:
+	void on_EditButton_clicked();
+	void on_NewButton_clicked();
+	void on_ShowTechButton_clicked();
+
+private:
+	I_REF(idoc::IHelpFileProvider, m_descriptionFileProviderCompPtr);
+	I_REF(iprm::IFileNameParam, m_docuEditorFileParamsCompPtr);
+	I_REF(iprm::IFileNameParam, m_techDocuViewerFileParamsCompPtr);
+	I_REF(icomp::IMetaInfoManager, m_metaInfoManagerCompPtr);
+	I_REF(IExternalMetaInfoManager, m_externalMetaInfoManagerCompPtr);
+
+	istd::CString m_descrFilePath;
+	istd::CString m_techFilePath;
+};
+
+
+} // namespace icmpstr
+
+
+#endif // !icmpstr_CQuickHelpGuiComp_included
+
+

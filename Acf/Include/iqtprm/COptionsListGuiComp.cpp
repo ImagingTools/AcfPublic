@@ -81,6 +81,8 @@ void COptionsListGuiComp::UpdateGui(int /*updateFlags*/)
 void COptionsListGuiComp::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
+
+	connect(OptionsList, SIGNAL(itemSelectionChanged()), this, SLOT(OnSelectionChanged()));
 }
 
 
@@ -92,9 +94,9 @@ void COptionsListGuiComp::OnGuiDestroyed()
 
 // protected slots
 
-void COptionsListGuiComp::OnSelectionChanged(int /*index*/)
+void COptionsListGuiComp::OnSelectionChanged()
 {
-	if (!IsUpdateBlocked()){
+	if (!IsUpdateBlocked() && IsModelAttached()){
 		UpdateBlocker updateBlocker(this);
 
 		UpdateModel();

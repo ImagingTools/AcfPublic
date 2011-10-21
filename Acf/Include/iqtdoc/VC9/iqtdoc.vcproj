@@ -183,6 +183,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CHtmlHelpGuiComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CHtmlHelpViewerComp.cpp"
 				>
 			</File>
@@ -222,6 +226,10 @@
 			</File>
 			<File
 				RelativePath="..\CExtendedDocumentTemplateComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CHtmlHelpGuiComp.h"
 				>
 			</File>
 			<File

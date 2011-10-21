@@ -36,7 +36,7 @@
 <div class="title">idoc::IHelpFileProvider Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="idoc::IHelpFileProvider" --><!-- doxytag: inherits="istd::IPolymorphic" -->
+<!-- doxytag: class="idoc::IHelpFileProvider" --><!-- doxytag: inherits="idoc::IHelpInfoProvider" -->
 <p>Allow to show help document to specified object or text.  
  <a href="classidoc_1_1_i_help_file_provider.html#details">More...</a></p>
 
@@ -47,10 +47,11 @@ Inheritance diagram for idoc::IHelpFileProvider:</div>
  <div class="center">
   <img src="classidoc_1_1_i_help_file_provider.png" usemap="#idoc::IHelpFileProvider_map" alt=""/>
   <map id="idoc::IHelpFileProvider_map" name="idoc::IHelpFileProvider_map">
+<area href="classidoc_1_1_i_help_info_provider.html" title="Allow to show help document to specified object or text." alt="idoc::IHelpInfoProvider" shape="rect" coords="268,56,526,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="268,0,526,24"/>
-<area href="classicmpstr_1_1_c_component_help_file_provider_comp.html" alt="icmpstr::CComponentHelpFileProviderComp" shape="rect" coords="0,112,258,136"/>
-<area href="classiqtdoc_1_1_c_doxygen_help_file_provider_comp.html" alt="iqtdoc::CDoxygenHelpFileProviderComp" shape="rect" coords="268,112,526,136"/>
-<area href="classiqtdoc_1_1_c_static_help_file_provider_comp.html" alt="iqtdoc::CStaticHelpFileProviderComp" shape="rect" coords="536,112,794,136"/>
+<area href="classicmpstr_1_1_c_component_help_file_provider_comp.html" alt="icmpstr::CComponentHelpFileProviderComp" shape="rect" coords="0,168,258,192"/>
+<area href="classiqtdoc_1_1_c_doxygen_help_file_provider_comp.html" alt="iqtdoc::CDoxygenHelpFileProviderComp" shape="rect" coords="268,168,526,192"/>
+<area href="classiqtdoc_1_1_c_static_help_file_provider_comp.html" alt="iqtdoc::CStaticHelpFileProviderComp" shape="rect" coords="536,168,794,192"/>
 </map>
  </div></div>
 
@@ -58,14 +59,13 @@ Inheritance diagram for idoc::IHelpFileProvider:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_help_file_provider.html#ad019793d9db114e28b84422b0ef997e3">GetHelpQuality</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;contextText, const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *contextObjectPtr) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get quality of help information for specified context and/or object.  <a href="#ad019793d9db114e28b84422b0ef997e3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_help_file_provider.html#a104010f4d32b1e4461ed7c7d35eb2946">GetHelpFilePath</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;contextText, const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *contextObjectPtr) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to help file path for specified help information.  <a href="#a104010f4d32b1e4461ed7c7d35eb2946"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Allow to show help document to specified object or text. </p>
 
-<p>Definition at line <a class="el" href="_i_help_file_provider_8h_source.html#l00016">16</a> of file <a class="el" href="_i_help_file_provider_8h_source.html">IHelpFileProvider.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_help_file_provider_8h_source.html#l00019">19</a> of file <a class="el" href="_i_help_file_provider_8h_source.html">IHelpFileProvider.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a104010f4d32b1e4461ed7c7d35eb2946"></a><!-- doxytag: member="idoc::IHelpFileProvider::GetHelpFilePath" ref="a104010f4d32b1e4461ed7c7d35eb2946" args="(const istd::CString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const =0" -->
 <div class="memitem">
@@ -92,39 +92,9 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Get access to help file path for specified help information. </p>
+
 <p>Implemented in <a class="el" href="classicmpstr_1_1_c_component_help_file_provider_comp.html#acedd11c76c441b7330c626ba94326bfd">icmpstr::CComponentHelpFileProviderComp</a>, <a class="el" href="classiqtdoc_1_1_c_static_help_file_provider_comp.html#ae64b84805be43944377993078b61a2c8">iqtdoc::CStaticHelpFileProviderComp</a>, and <a class="el" href="classiqtdoc_1_1_c_doxygen_help_file_provider_comp.html#a95d9883d076ea7cf821684ab2e6d94a0">iqtdoc::CDoxygenHelpFileProviderComp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad019793d9db114e28b84422b0ef997e3"></a><!-- doxytag: member="idoc::IHelpFileProvider::GetHelpQuality" ref="ad019793d9db114e28b84422b0ef997e3" args="(const istd::CString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double idoc::IHelpFileProvider::GetHelpQuality </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
-          <td class="paramname"><em>contextText</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
-          <td class="paramname"><em>contextObjectPtr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get quality of help information for specified context and/or object. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>quality of help. It represented as value in range [0, 1]. </dd></dl>
-
-<p>Implemented in <a class="el" href="classicmpstr_1_1_c_component_help_file_provider_comp.html#a4300be667702d28f3ff68d209837dbb2">icmpstr::CComponentHelpFileProviderComp</a>, <a class="el" href="classiqtdoc_1_1_c_static_help_file_provider_comp.html#aaef3982d2b497f6615d38641d3cac9c2">iqtdoc::CStaticHelpFileProviderComp</a>, and <a class="el" href="classiqtdoc_1_1_c_doxygen_help_file_provider_comp.html#accafa9c5efe1170fa0081724fa4949c0">iqtdoc::CDoxygenHelpFileProviderComp</a>.</p>
 
 </div>
 </div>
