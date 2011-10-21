@@ -49,11 +49,13 @@ public:
 		Check if automatic is on.
 	*/
 	virtual int GetWorkMode() const = 0;
+
 	/**
 		Set automatic on or off.
 		\return	true if automatic mode was switched to specified.
 	*/
 	virtual bool SetWorkMode(int mode) = 0;
+
 	/**
 		Check if some work mode is supported.
 	*/
