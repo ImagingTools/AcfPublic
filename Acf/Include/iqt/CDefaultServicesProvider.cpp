@@ -44,6 +44,9 @@ namespace iqt
 
 void CDefaultServicesProvider::RegisterServices()
 {
+	static iqt::CDateTime dateTime;
+	istd::CStaticServicesProvider::RegisterService<isys::IDateTime>(&dateTime);
+
 	static iqt::CTrace trace;
 	istd::CStaticServicesProvider::RegisterService<istd::ITrace>(&trace);
 
