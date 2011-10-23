@@ -78,6 +78,8 @@
 #include "iprm/CSelectionParamComp.h"
 #include "iprm/CManagerParamsSetShadowerComp.h"
 #include "iprm/CSelectionConstraintsComp.h"
+#include "iprm/CLinearWizardControllerComp.h"
+#include "iprm/CWizardPageComp.h"
 
 #include "i2d/CPosition2dComp.h"
 #include "i2d/CRectangleComp.h"
@@ -138,6 +140,8 @@ typedef icomp::TModelCompWrap<iprm::CLinearAdjustParamsComp> LinearAdjustParams;
 typedef icomp::TModelCompWrap<iprm::CSelectionParamComp> SelectionParam;
 typedef iprm::CManagerParamsSetShadowerComp ManagerParamsSetShadower;
 typedef iprm::CSelectionConstraintsComp SelectionConstraints;
+typedef iprm::CLinearWizardControllerComp LinearWizardController;
+typedef icomp::TModelCompWrap<iprm::CWizardPageComp> WizardPage;
 
 typedef idoc::CSingleDocumentTemplateComp SingleDocumentTemplate;
 typedef idoc::CCompositeDocumentTemplateComp CompositeDocumentTemplate;

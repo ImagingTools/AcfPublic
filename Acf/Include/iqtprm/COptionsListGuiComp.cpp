@@ -26,8 +26,6 @@
 // ACF includes
 #include "istd/TChangeNotifier.h"
 
-#include "iprm/ISelectionConstraints.h"
-
 
 namespace iqtprm
 {
@@ -50,7 +48,7 @@ void COptionsListGuiComp::UpdateModel() const
 		QTreeWidgetItem* selectedItemPtr = selectedItems[0];
 
 		int selectedIndex = selectedItemPtr->data(0, DR_SELECTION_INDEX).toInt();
-		iprm::ISelectionParam* selectionParamPtr = reinterpret_cast<iprm::ISelectionParam*>(selectedItemPtr->data(0, DR_SELECTION_PARAM).toUInt());
+		iprm::IParamsManager* selectionParamPtr = reinterpret_cast<iprm::IParamsManager*>(selectedItemPtr->data(0, DR_OBJECT_PTR).toUInt());
 
 		I_ASSERT(selectionParamPtr != NULL);
 
@@ -69,7 +67,7 @@ void COptionsListGuiComp::UpdateGui(int /*updateFlags*/)
 
 	OptionsList->clear();
 	
-	iprm::ISelectionParam* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
 		CreateOptionsTree(objectPtr);
 	}
@@ -106,19 +104,18 @@ void COptionsListGuiComp::OnSelectionChanged()
 
 // private methods
 
-void COptionsListGuiComp::CreateOptionsTree(const iprm::ISelectionParam* selectionParamPtr, QTreeWidgetItem* parentItemPtr)
+void COptionsListGuiComp::CreateOptionsTree(const iprm::IParamsManager* paramsManagerPtr, QTreeWidgetItem* parentItemPtr)
 {
-	const iprm::ISelectionConstraints* selectionContraints = selectionParamPtr->GetSelectionConstraints();
-	if (selectionParamPtr != NULL){
-		int selectedOptionIndex = selectionParamPtr->GetSelectedOptionIndex();
+	if (paramsManagerPtr != NULL){
+		int selectedOptionIndex = paramsManagerPtr->GetSelectedOptionIndex();
 
-		for (int optionIndex = 0; optionIndex < selectionContraints->GetOptionsCount(); optionIndex++){
-			QString optionName = iqt::GetQString(selectionContraints->GetOptionName(optionIndex));
+		for (int optionIndex = 0; optionIndex < paramsManagerPtr->GetParamsSetsCount(); optionIndex++){
+			QString optionName = iqt::GetQString(paramsManagerPtr->GetParamsSetName(optionIndex));
 
 			QTreeWidgetItem* itemPtr = new QTreeWidgetItem(OptionsList);
 			itemPtr->setText(0, optionName);
 			itemPtr->setData(0, DR_SELECTION_INDEX, optionIndex);
-			itemPtr->setData(0, DR_SELECTION_PARAM, quintptr(selectionParamPtr));
+			itemPtr->setData(0, DR_OBJECT_PTR, quintptr(paramsManagerPtr));
 
 			if (parentItemPtr != NULL){
 				parentItemPtr->addChild(itemPtr);
@@ -130,11 +127,6 @@ void COptionsListGuiComp::CreateOptionsTree(const iprm::ISelectionParam* selecti
 			if (selectedOptionIndex == optionIndex){
 				itemPtr->setSelected(true);
 			}
-		}
-
-		iprm::ISelectionParam* subSelectionPtr = selectionParamPtr->GetActiveSubselection();
-		if (subSelectionPtr != NULL){
-			CreateOptionsTree(subSelectionPtr, parentItemPtr);
 		}
 	}
 }
