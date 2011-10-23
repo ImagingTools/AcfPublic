@@ -124,7 +124,7 @@ public:
 	const_iterator end() const;
 
 	// reimplemented (iser::IObject)
-	const std::string& GetFactoryId() const;
+	std::string GetFactoryId() const;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
@@ -275,7 +275,7 @@ typename TMultiProperty<Value>::const_iterator TMultiProperty<Value>::end() cons
 // reimplemented (iser::IObject)
 
 template <typename Value>
-const std::string& TMultiProperty<Value>::GetFactoryId() const
+std::string TMultiProperty<Value>::GetFactoryId() const
 {
 	return s_typeName;
 }

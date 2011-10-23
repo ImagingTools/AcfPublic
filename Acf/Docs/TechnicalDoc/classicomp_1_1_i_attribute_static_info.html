@@ -67,8 +67,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of this attribute.  <a href="#ad8a8d405ab807a83eb70dbe32140c4aa"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_attribute_static_info.html#aa80838789b803591b3a373a91601e070">GetAttributeDefaultValue</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get default attribute value.  <a href="#aa80838789b803591b3a373a91601e070"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_attribute_static_info.html#a2fe4bacf5c299338a2d7f6bff28569b2">GetAttributeTypeName</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute type description.  <a href="#a2fe4bacf5c299338a2d7f6bff28569b2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_attribute_static_info.html#ace2fcb22fe103d605039c2f2dba30ae0">GetAttributeTypeName</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute type description.  <a href="#ace2fcb22fe103d605039c2f2dba30ae0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">IComponentStaticInfo::Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_attribute_static_info.html#a32d44931a8f911bf543d2e2cdfde9a8f">GetRelatedMetaIds</a> (int metaGroupId, int flags, int flagsMask) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get related meta information.  <a href="#a32d44931a8f911bf543d2e2cdfde9a8f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_attribute_static_info.html#a11731fa4869453bd098b0a00e8c524a7">GetAttributeFlags</a> () const =0</td></tr>
@@ -76,7 +76,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_i_attribute_static_info_8h_source.html#l00018">18</a> of file <a class="el" href="_i_attribute_static_info_8h_source.html">IAttributeStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_attribute_static_info_8h_source.html#l00021">21</a> of file <a class="el" href="_i_attribute_static_info_8h_source.html">IAttributeStaticInfo.h</a>.</p>
 </div><hr/><h2>Member Enumeration Documentation</h2>
 <a class="anchor" id="ae025080e9458b4c432cc607b5be883d2"></a><!-- doxytag: member="icomp::IAttributeStaticInfo::AttributeFlags" ref="ae025080e9458b4c432cc607b5be883d2" args="" -->
 <div class="memitem">
@@ -106,7 +106,7 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_attribute_static_info_8h_source.html#l00021">21</a> of file <a class="el" href="_i_attribute_static_info_8h_source.html">IAttributeStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_attribute_static_info_8h_source.html#l00024">24</a> of file <a class="el" href="_i_attribute_static_info_8h_source.html">IAttributeStaticInfo.h</a>.</p>
 
 </div>
 </div>
@@ -172,12 +172,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2fe4bacf5c299338a2d7f6bff28569b2"></a><!-- doxytag: member="icomp::IAttributeStaticInfo::GetAttributeTypeName" ref="a2fe4bacf5c299338a2d7f6bff28569b2" args="() const =0" -->
+<a class="anchor" id="ace2fcb22fe103d605039c2f2dba30ae0"></a><!-- doxytag: member="icomp::IAttributeStaticInfo::GetAttributeTypeName" ref="ace2fcb22fe103d605039c2f2dba30ae0" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const std::string&amp; icomp::IAttributeStaticInfo::GetAttributeTypeName </td>
+          <td class="memname">virtual std::string icomp::IAttributeStaticInfo::GetAttributeTypeName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -188,7 +188,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return attribute type description. </p>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html#a3673f0675a83b77e9728480d8922fb4f">icomp::CCompositeComponentStaticInfo::AttrAsOptionalDelegator</a>, and <a class="el" href="classicomp_1_1_t_attribute_static_info.html#afc46907872067d8539ea47700b3b0a90">icomp::TAttributeStaticInfo&lt; Attribute &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html#add48bae8c9c4cd97c0c2fc01697256d5">icomp::CCompositeComponentStaticInfo::AttrAsOptionalDelegator</a>, and <a class="el" href="classicomp_1_1_t_attribute_static_info.html#acec70912a52b02668e28593b8c294ef3">icomp::TAttributeStaticInfo&lt; Attribute &gt;</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_sim_component_context_base_8h_source.html#l00149">icomp::CSimComponentContextBase::IsAttributeTypeCorrect()</a>.</p>
 

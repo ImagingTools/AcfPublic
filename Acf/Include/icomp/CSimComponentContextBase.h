@@ -172,7 +172,7 @@ bool CSimComponentContextBase::IsAttributeTypeCorrect(const std::string& attribu
 {
 	const IAttributeStaticInfo* attributeInfoPtr = m_metaInfo.GetAttributeInfo(attributeId);
 	if (attributeInfoPtr != NULL){
-		const std::string& attributeType = attributeInfoPtr->GetAttributeTypeName();
+		std::string attributeType = attributeInfoPtr->GetAttributeTypeName();
 
 		return attributeType == AttrType::GetTypeName();
 	}
@@ -181,7 +181,7 @@ bool CSimComponentContextBase::IsAttributeTypeCorrect(const std::string& attribu
 }
 
 
-}//namespace icomp
+} // namespace icomp
 
 
 #endif // !icomp_CSimComponentContextBase_included

@@ -1223,14 +1223,6 @@
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
-    <name>CComponentAccessor.h</name>
-    <path>C:/Temp/Acf/Include/icomp/</path>
-    <filename>_c_component_accessor_8h</filename>
-    <includes id="_c_composite_component_8h" name="CCompositeComponent.h" local="yes" imported="no">icomp/CCompositeComponent.h</includes>
-    <class kind="class">icomp::CComponentAccessor</class>
-    <namespace>icomp</namespace>
-  </compound>
-  <compound kind="file">
     <name>CComponentAddress.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_c_component_address_8h</filename>
@@ -2975,6 +2967,14 @@
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <class kind="class">iqt::CClipboardSerializerComp</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CComponentAccessor.h</name>
+    <path>C:/Temp/Acf/Include/iqt/</path>
+    <filename>_c_component_accessor_8h</filename>
+    <includes id="_c_composite_component_8h" name="CCompositeComponent.h" local="yes" imported="no">icomp/CCompositeComponent.h</includes>
+    <class kind="class">iqt::CComponentAccessor</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -15218,7 +15218,6 @@
     <name>icomp</name>
     <filename>namespaceicomp.html</filename>
     <class kind="class">icomp::CBaseComponentStaticInfo</class>
-    <class kind="class">icomp::CComponentAccessor</class>
     <class kind="class">icomp::CComponentAddress</class>
     <class kind="class">icomp::CComponentBase</class>
     <class kind="class">icomp::CComponentContext</class>
@@ -15423,24 +15422,6 @@
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
       <anchor>a10ae26844c9f939b7ea229bfd99acbb7</anchor>
       <arglist>(int metaGroupId) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icomp::CComponentAccessor</name>
-    <filename>classicomp_1_1_c_component_accessor.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>CComponentAccessor</name>
-      <anchorfile>classicomp_1_1_c_component_accessor.html</anchorfile>
-      <anchor>ab7c096b8c49297758dc5b81dd7d6ddef</anchor>
-      <arglist>(const istd::CString &amp;registryFile, const istd::CString &amp;configFile=istd::CString())</arglist>
-    </member>
-    <member kind="function">
-      <type>InterfaceType *</type>
-      <name>GetComponentInterface</name>
-      <anchorfile>classicomp_1_1_c_component_accessor.html</anchorfile>
-      <anchor>a85f96d5b1f4057a6b921db4e46ae4ac0</anchor>
-      <arglist>(const std::string &amp;componentId=std::string())</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16007,10 +15988,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const std::string &amp;</type>
+      <type>virtual std::string</type>
       <name>GetAttributeTypeName</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html</anchorfile>
-      <anchor>a3673f0675a83b77e9728480d8922fb4f</anchor>
+      <anchor>add48bae8c9c4cd97c0c2fc01697256d5</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -16181,17 +16162,17 @@
       <arglist>(const std::string &amp;value)</arglist>
     </member>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>std::string</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_c_factory_attribute.html</anchorfile>
-      <anchor>a029d291fc254e27b0b67036678ab332e</anchor>
+      <anchor>a97509157c44d0c838638b14911954b13</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static const std::string &amp;</type>
+      <type>static std::string</type>
       <name>GetTypeName</name>
       <anchorfile>classicomp_1_1_c_factory_attribute.html</anchorfile>
-      <anchor>a1eb65b99bfc974679490d15a793eaf51</anchor>
+      <anchor>a1ad902ecdd91c19bd0c23935e3d65700</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -16258,17 +16239,17 @@
       <arglist>(int elementsCount, std::string *valuesPtr)</arglist>
     </member>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>std::string</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_c_multi_factory_attribute.html</anchorfile>
-      <anchor>a55f95fcd7dbafcaa99bc8dfe125e084a</anchor>
+      <anchor>a43cca0a2185a2017b126944a8a400db8</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static const std::string &amp;</type>
+      <type>static std::string</type>
       <name>GetTypeName</name>
       <anchorfile>classicomp_1_1_c_multi_factory_attribute.html</anchorfile>
-      <anchor>a7710f10394fc0fed18adab118b093e81</anchor>
+      <anchor>a1a2080734b1be654ecbe0b85480a1adc</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -16323,17 +16304,17 @@
       <arglist>(int elementsCount, std::string *valuesPtr)</arglist>
     </member>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>std::string</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_c_multi_reference_attribute.html</anchorfile>
-      <anchor>a8f15351b947b7133d90f84034515c633</anchor>
+      <anchor>ace5f0fde26ee35d1bd3c3228e8663b10</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static const std::string &amp;</type>
+      <type>static std::string</type>
       <name>GetTypeName</name>
       <anchorfile>classicomp_1_1_c_multi_reference_attribute.html</anchorfile>
-      <anchor>a4b365134a8f224b2b665e09b7a2425d3</anchor>
+      <anchor>ac156160e13b068b5c90c555eef2ff6e7</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -16456,17 +16437,17 @@
       <arglist>(const std::string &amp;value)</arglist>
     </member>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>std::string</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_c_reference_attribute.html</anchorfile>
-      <anchor>a4a9c2ad177237bc74e68928cf6c9bd76</anchor>
+      <anchor>a5d4f65765ab8400b0d953476b8f06d0c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static const std::string &amp;</type>
+      <type>static std::string</type>
       <name>GetTypeName</name>
       <anchorfile>classicomp_1_1_c_reference_attribute.html</anchorfile>
-      <anchor>ab8ded94f5d6d95271d42d1a107d87ede</anchor>
+      <anchor>a6a57c568c28e2ac8ff246ea6903a2ca7</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -16944,10 +16925,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const std::string &amp;</type>
+      <type>virtual std::string</type>
       <name>GetAttributeTypeName</name>
       <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
-      <anchor>a2fe4bacf5c299338a2d7f6bff28569b2</anchor>
+      <anchor>ace2fcb22fe103d605039c2f2dba30ae0</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -17780,10 +17761,10 @@
       <arglist>(const Value &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const std::string &amp;</type>
+      <type>virtual std::string</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>a99afc1807f34cb1b538abcf375942f5d</anchor>
+      <anchor>a98aa51935005cf51d4810a3f3e683b54</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17794,10 +17775,10 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static const std::string &amp;</type>
+      <type>static std::string</type>
       <name>GetTypeName</name>
       <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>af32c60aa0656aebe6cd991734a24e8f9</anchor>
+      <anchor>a11211164cc1618eea3d04fa47c273f5f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -17917,10 +17898,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const std::string &amp;</type>
+      <type>virtual std::string</type>
       <name>GetAttributeTypeName</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>afc46907872067d8539ea47700b3b0a90</anchor>
+      <anchor>acec70912a52b02668e28593b8c294ef3</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -18294,10 +18275,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>std::string</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>adc8041dde55b06f625c1bc64b6d8bf5a</anchor>
+      <anchor>a0670e6d2938a20cfb9bcb5048cda90c9</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -18308,10 +18289,10 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static const std::string &amp;</type>
+      <type>static std::string</type>
       <name>GetTypeName</name>
       <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a53d17111c1dcc40b37c23c4b081a563d</anchor>
+      <anchor>aa1a0f334aa274dcb0a08affb9d61e9c1</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -26926,6 +26907,7 @@
     <class kind="class">iqt::CBitmapLoaderComp</class>
     <class kind="class">iqt::CBitmapSurface</class>
     <class kind="class">iqt::CClipboardSerializerComp</class>
+    <class kind="class">iqt::CComponentAccessor</class>
     <class kind="class">iqt::CCopyProcessorComp</class>
     <class kind="class">iqt::CCriticalSection</class>
     <class kind="class">iqt::CDateTime</class>
@@ -27489,6 +27471,24 @@
       <anchorfile>classiqt_1_1_c_clipboard_serializer_comp.html</anchorfile>
       <anchor>a9e0e81c32bfee59b85f821a850af8706</anchor>
       <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt::CComponentAccessor</name>
+    <filename>classiqt_1_1_c_component_accessor.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CComponentAccessor</name>
+      <anchorfile>classiqt_1_1_c_component_accessor.html</anchorfile>
+      <anchor>a80b5af24ab92664714db32f2c1800c39</anchor>
+      <arglist>(const istd::CString &amp;registryFile, const istd::CString &amp;configFile=istd::CString())</arglist>
+    </member>
+    <member kind="function">
+      <type>InterfaceType *</type>
+      <name>GetComponentInterface</name>
+      <anchorfile>classiqt_1_1_c_component_accessor.html</anchorfile>
+      <anchor>a0ed214d7d2e8b23254a1ced9c4955405</anchor>
+      <arglist>(const std::string &amp;componentId=std::string())</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38942,10 +38942,10 @@
     <filename>classiser_1_1_i_object.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="virtual">
-      <type>virtual const std::string &amp;</type>
+      <type>virtual std::string</type>
       <name>GetFactoryId</name>
       <anchorfile>classiser_1_1_i_object.html</anchorfile>
-      <anchor>a6760120cf6f21ac24e609a6f8f76d360</anchor>
+      <anchor>a0f9e26783fb2dac0fdcb7126268bb7cb</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>

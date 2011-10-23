@@ -27,6 +27,8 @@
 // STL includes
 #include <map>
 
+
+// ACF includes
 #include "istd/CClassInfo.h"
 
 #include "icomp/IRealAttributeStaticInfo.h"
@@ -56,7 +58,7 @@ public:
 	// reimplemented (icomp::IAttributeStaticInfo)
 	virtual const std::string& GetAttributeDescription() const;
 	virtual const iser::IObject* GetAttributeDefaultValue() const;
-	virtual const std::string& GetAttributeTypeName() const;
+	virtual std::string GetAttributeTypeName() const;
 	virtual IComponentStaticInfo::Ids GetRelatedMetaIds(int metaGroupId, int flags, int flagsMask) const;
 	virtual int GetAttributeFlags() const;
 
@@ -144,7 +146,7 @@ const iser::IObject* TAttributeStaticInfo<Attribute>::GetAttributeDefaultValue()
 
 
 template <class Attribute>
-const std::string& TAttributeStaticInfo<Attribute>::GetAttributeTypeName() const
+std::string TAttributeStaticInfo<Attribute>::GetAttributeTypeName() const
 {
 	return Attribute::GetTypeName();
 }
@@ -182,7 +184,7 @@ int TAttributeStaticInfo<Attribute>::GetAttributeFlags() const
 }
 
 
-}//namespace icomp
+} // namespace icomp
 
 
 #endif // !icomp_TAttributeStaticInfo_included

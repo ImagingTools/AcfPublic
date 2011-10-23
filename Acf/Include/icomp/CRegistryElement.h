@@ -24,9 +24,12 @@
 #define icomp_CRegistryElement_included
 
 
+// STL includes
 #include <map>
 #include <string>
 
+
+// ACF includes
 #include "icomp/IRegistryElement.h"
 
 
@@ -64,7 +67,7 @@ private:
 };
 
 
-}//namespace icomp
+} // namespace icomp
 
 
 #endif // !icomp_CRegistryElement_included

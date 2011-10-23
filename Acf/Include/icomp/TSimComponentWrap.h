@@ -24,6 +24,7 @@
 #define icomp_TSimComponentWrap_included
 
 
+// ACF includes
 #include "icomp/TComponentWrap.h"
 #include "icomp/CSimComponentContextBase.h"
 
@@ -117,7 +118,7 @@ IComponent* TSimComponentWrap<Base>::CreateSubcomponent(const std::string& compo
 }
 
 
-}//namespace icomp
+} // namespace icomp
 
 
 #endif // !icomp_TSimComponentWrap_included

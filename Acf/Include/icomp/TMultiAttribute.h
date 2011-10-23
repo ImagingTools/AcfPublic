@@ -77,13 +77,13 @@ public:
 	virtual void Reset();
 
 	// reimplemented (iser::IObject)
-	const std::string& GetFactoryId() const;
+	std::string GetFactoryId() const;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
 	// static methods
-	static const std::string& GetTypeName();
+	static std::string GetTypeName();
 
 protected:
 	struct Wrap
@@ -92,8 +92,6 @@ protected:
 	};
 	std::vector<Wrap> m_values;
 
-private:
-	static const std::string s_typeName;
 };
 
 
@@ -169,9 +167,9 @@ void TMultiAttribute<Value>::Reset()
 // reimplemented (iser::IObject)
 
 template <typename Value>
-const std::string& TMultiAttribute<Value>::GetFactoryId() const
+std::string TMultiAttribute<Value>::GetFactoryId() const
 {
-	return s_typeName;
+	return GetTypeName();
 }
 
 
@@ -218,19 +216,14 @@ bool TMultiAttribute<Value>::Serialize(iser::IArchive& archive)
 // static methods
 
 template <typename Value>
-const std::string& TMultiAttribute<Value>::GetTypeName()
+std::string TMultiAttribute<Value>::GetTypeName()
 {
-	return s_typeName;
+	if (typeid(Value) == typeid(std::string)){
+		return "icomp::TMultiAttribute<std::string>";
+	}
+
+	return istd::CClassInfo::GetName<TMultiAttribute<Value> >();
 }
-
-
-// private static attributes
-
-template <>
-const std::string TMultiAttribute<std::string>::s_typeName("icomp::TMultiAttribute<std::string>");
-
-template <typename Value>
-const std::string TMultiAttribute<Value>::s_typeName(istd::CClassInfo::GetName<TMultiAttribute<Value> >());
 
 
 // typedefs

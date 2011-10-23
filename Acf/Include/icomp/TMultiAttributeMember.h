@@ -24,6 +24,7 @@
 #define icomp_TMultiAttributeMember_included
 
 
+// ACF includes
 #include "icomp/IComponentContext.h"
 
 
@@ -149,7 +150,7 @@ const typename Attribute::ValueType& TMultiAttributeMember<Attribute>::operator[
 }
 
 
-}//namespace icomp
+} // namespace icomp
 
 
 #endif // !icomp_TMultiAttributeMember_included

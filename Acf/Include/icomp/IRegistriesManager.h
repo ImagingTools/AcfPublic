@@ -24,8 +24,11 @@
 #define icomp_IRegistriesManager_included
 
 
+// STL includes
 #include <string>
 
+
+// ACF includes
 #include "istd/istd.h"
 #include "istd/IChangeable.h"
 #include "istd/CString.h"
@@ -51,7 +54,7 @@ public:
 };
 
 
-}//namespace icomp
+} // namespace icomp
 
 
 #endif // !icomp_IRegistriesManager_included

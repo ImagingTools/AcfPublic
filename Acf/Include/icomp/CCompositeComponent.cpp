@@ -391,6 +391,6 @@ bool CCompositeComponent::EnsureAutoInitComponentsCreated() const
 }
 
 
-}//namespace icomp
+} // namespace icomp
 
 

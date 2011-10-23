@@ -91,7 +91,7 @@ private:
 };
 
 
-}//namespace icomp
+} // namespace icomp
 
 
 #endif // !icomp_CBaseComponentStaticInfo_included

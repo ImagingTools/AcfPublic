@@ -79,7 +79,7 @@ protected:
 
 		virtual const std::string& GetAttributeDescription() const;
 		virtual const iser::IObject* GetAttributeDefaultValue() const;
-		virtual const std::string& GetAttributeTypeName() const;
+		virtual std::string GetAttributeTypeName() const;
 		virtual IComponentStaticInfo::Ids GetRelatedMetaIds(int metaGroupId, int flags, int flagsMask) const;
 		virtual int GetAttributeFlags() const;
 
@@ -103,7 +103,7 @@ private:
 };
 
 
-}//namespace icomp
+} // namespace icomp
 
 
 #endif // !icomp_CCompositeComponentStaticInfo_included

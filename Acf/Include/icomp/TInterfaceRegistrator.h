@@ -24,6 +24,7 @@
 #define icomp_TInterfaceRegistrator_included
 
 
+// ACF includes
 #include "istd/CClassInfo.h"
 
 #include "icomp/CBaseComponentStaticInfo.h"
@@ -84,7 +85,7 @@ inline void* TInterfaceRegistrator<void>::InterfaceExtractor(IComponent& /*compo
 }
 
 
-}//namespace icomp
+} // namespace icomp
 
 
 #endif // !icomp_TInterfaceRegistrator_included

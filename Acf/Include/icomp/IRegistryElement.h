@@ -24,9 +24,12 @@
 #define icomp_IRegistryElement_included
 
 
+// STL includes
 #include <set>
 #include <string>
 
+
+// ACF includes
 #include "istd/istd.h"
 #include "istd/TDelPtr.h"
 
@@ -120,7 +123,7 @@ public:
 };
 
 
-}//namespace icomp
+} // namespace icomp
 
 
 #endif // !icomp_IRegistryElement_included

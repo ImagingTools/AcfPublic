@@ -57,7 +57,7 @@ inline CRelatedInfoRegistrator::CRelatedInfoRegistrator(
 }
 
 
-}//namespace icomp
+} // namespace icomp
 
 
 #endif // !icomp_CRelatedInfoRegistrator_included

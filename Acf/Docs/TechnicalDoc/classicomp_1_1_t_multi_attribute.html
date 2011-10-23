@@ -84,12 +84,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_multi_attribute.html#aa4cec5469b031988a151b864dd9fc9d9">SetValueAt</a> (int index, const Value &amp;value)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_multi_attribute.html#a9e56288747c422302cbcefb615d487c8">InsertValue</a> (const Value &amp;value)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_multi_attribute.html#abb45a7682f056c338256dce63724b730">Reset</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_multi_attribute.html#adc8041dde55b06f625c1bc64b6d8bf5a">GetFactoryId</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_multi_attribute.html#a0670e6d2938a20cfb9bcb5048cda90c9">GetFactoryId</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_multi_attribute.html#a8f5501147cb3282be1873454817c45d7">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a8f5501147cb3282be1873454817c45d7"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_multi_attribute.html#a53d17111c1dcc40b37c23c4b081a563d">GetTypeName</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_multi_attribute.html#aa1a0f334aa274dcb0a08affb9d61e9c1">GetTypeName</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structicomp_1_1_t_multi_attribute_1_1_wrap.html">Wrap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_multi_attribute.html#a1a0ff63fde5364b80d8a3efd6a1247db">m_values</a></td></tr>
@@ -164,7 +164,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00081">81</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00079">79</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -185,7 +185,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00087">87</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00085">85</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -225,21 +225,21 @@ template&lt;typename Value &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00094">94</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00092">92</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 <p>References <a class="el" href="_t_multi_attribute_8h_source.html#l00069">icomp::TMultiAttribute&lt; Value &gt;::Wrap::value</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="adc8041dde55b06f625c1bc64b6d8bf5a"></a><!-- doxytag: member="icomp::TMultiAttribute::GetFactoryId" ref="adc8041dde55b06f625c1bc64b6d8bf5a" args="() const " -->
+<a class="anchor" id="a0670e6d2938a20cfb9bcb5048cda90c9"></a><!-- doxytag: member="icomp::TMultiAttribute::GetFactoryId" ref="a0670e6d2938a20cfb9bcb5048cda90c9" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Value &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const std::string &amp; <a class="el" href="classicomp_1_1_t_multi_attribute.html">icomp::TMultiAttribute</a>&lt; Value &gt;::GetFactoryId </td>
+          <td class="memname">std::string <a class="el" href="classicomp_1_1_t_multi_attribute.html">icomp::TMultiAttribute</a>&lt; Value &gt;::GetFactoryId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -248,22 +248,22 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiser_1_1_i_object.html#a6760120cf6f21ac24e609a6f8f76d360">iser::IObject</a>.</p>
+<p>Reimplemented from <a class="el" href="classiser_1_1_i_object.html#a0f9e26783fb2dac0fdcb7126268bb7cb">iser::IObject</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classicomp_1_1_c_multi_factory_attribute.html#a55f95fcd7dbafcaa99bc8dfe125e084a">icomp::CMultiFactoryAttribute</a>, and <a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#a8f15351b947b7133d90f84034515c633">icomp::CMultiReferenceAttribute</a>.</p>
+<p>Reimplemented in <a class="el" href="classicomp_1_1_c_multi_factory_attribute.html#a43cca0a2185a2017b126944a8a400db8">icomp::CMultiFactoryAttribute</a>, and <a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#ace5f0fde26ee35d1bd3c3228e8663b10">icomp::CMultiReferenceAttribute</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00150">150</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00148">148</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a53d17111c1dcc40b37c23c4b081a563d"></a><!-- doxytag: member="icomp::TMultiAttribute::GetTypeName" ref="a53d17111c1dcc40b37c23c4b081a563d" args="()" -->
+<a class="anchor" id="aa1a0f334aa274dcb0a08affb9d61e9c1"></a><!-- doxytag: member="icomp::TMultiAttribute::GetTypeName" ref="aa1a0f334aa274dcb0a08affb9d61e9c1" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Value &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const std::string &amp; <a class="el" href="classicomp_1_1_t_multi_attribute.html">icomp::TMultiAttribute</a>&lt; Value &gt;::GetTypeName </td>
+          <td class="memname">std::string <a class="el" href="classicomp_1_1_t_multi_attribute.html">icomp::TMultiAttribute</a>&lt; Value &gt;::GetTypeName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [static]</code></td>
@@ -272,9 +272,9 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classicomp_1_1_c_multi_factory_attribute.html#a7710f10394fc0fed18adab118b093e81">icomp::CMultiFactoryAttribute</a>, and <a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#a4b365134a8f224b2b665e09b7a2425d3">icomp::CMultiReferenceAttribute</a>.</p>
+<p>Reimplemented in <a class="el" href="classicomp_1_1_c_multi_factory_attribute.html#a1a2080734b1be654ecbe0b85480a1adc">icomp::CMultiFactoryAttribute</a>, and <a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#ac156160e13b068b5c90c555eef2ff6e7">icomp::CMultiReferenceAttribute</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00199">199</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00197">197</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -295,7 +295,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00112">112</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00110">110</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
 
@@ -317,7 +317,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00105">105</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00103">103</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -338,7 +338,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00132">132</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00130">130</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 <p>References <a class="el" href="_t_multi_attribute_8h_source.html#l00069">icomp::TMultiAttribute&lt; Value &gt;::Wrap::value</a>.</p>
 
@@ -362,7 +362,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00141">141</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00139">139</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -389,7 +389,7 @@ template&lt;typename Value &gt; </div>
 
 <p>Implements <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00159">159</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00157">157</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 <p>References <a class="el" href="classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">iser::IArchive::BeginMultiTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive::BeginTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">iser::IArchive::EndTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">iser::IArchive::IsStoring()</a>, and <a class="el" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">iser::IArchive::Process()</a>.</p>
 
@@ -422,7 +422,7 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00122">122</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00120">120</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>.</p>
 

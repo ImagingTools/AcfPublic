@@ -24,8 +24,11 @@
 #define icomp_IAttributeStaticInfo_included
 
 
+// STL includes
 #include <string>
 
+
+// ACF includes
 #include "istd/IPolymorphic.h"
 
 #include "iser/IObject.h"
@@ -75,7 +78,7 @@ public:
 	/**
 		Return attribute type description.
 	 */
-	virtual const std::string& GetAttributeTypeName() const = 0;
+	virtual std::string GetAttributeTypeName() const = 0;
 
 	/**
 		Get related meta information.
@@ -90,7 +93,7 @@ public:
 };
 
 
-}//namespace icomp
+} // namespace icomp
 
 
 #endif // !icomp_IAttributeStaticInfo_included

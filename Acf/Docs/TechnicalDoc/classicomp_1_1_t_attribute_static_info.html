@@ -63,8 +63,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of this attribute.  <a href="#ab5f79373bc844b87302b768277b72ef8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_static_info.html#a4abf142659317c25b01f440ede0ab00a">GetAttributeDefaultValue</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get default attribute value.  <a href="#a4abf142659317c25b01f440ede0ab00a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_static_info.html#afc46907872067d8539ea47700b3b0a90">GetAttributeTypeName</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute type description.  <a href="#afc46907872067d8539ea47700b3b0a90"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_static_info.html#acec70912a52b02668e28593b8c294ef3">GetAttributeTypeName</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute type description.  <a href="#acec70912a52b02668e28593b8c294ef3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">IComponentStaticInfo::Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_static_info.html#a3f34086a16c0ce029de592f6a3fd07f1">GetRelatedMetaIds</a> (int metaGroupId, int flags, int flagsMask) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get related meta information.  <a href="#a3f34086a16c0ce029de592f6a3fd07f1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_static_info.html#aadd27979065fd88cac5725391b8d7747">GetAttributeFlags</a> () const </td></tr>
@@ -75,7 +75,7 @@ Public Member Functions</h2></td></tr>
 class icomp::TAttributeStaticInfo&lt; Attribute &gt;</h3>
 
 
-<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00019">19</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00021">21</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa5be552087ce6f6cd0d9353abeb41c95"></a><!-- doxytag: member="icomp::TAttributeStaticInfo::TAttributeStaticInfo" ref="aa5be552087ce6f6cd0d9353abeb41c95" args="(icomp::CBaseComponentStaticInfo &amp;staticInfo, const std::string &amp;id, const std::string &amp;description, const Attribute *defaultValuePtr, int flags, const istd::CClassInfo &amp;relatedInterfaceInfo)" -->
 <div class="memitem">
@@ -128,9 +128,9 @@ template&lt;class Attribute &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00056">56</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00058">58</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
 
-<p>References <a class="el" href="_c_class_info_8h_source.html#l00147">istd::CClassInfo::GetName()</a>, <a class="el" href="_c_class_info_8h_source.html#l00141">istd::CClassInfo::IsValid()</a>, <a class="el" href="_c_class_info_8h_source.html#l00153">istd::CClassInfo::IsVoid()</a>, <a class="el" href="_i_component_static_info_8h_source.html#l00057">icomp::IComponentStaticInfo::MGI_INTERFACES</a>, and <a class="el" href="classicomp_1_1_c_base_component_static_info.html#aea5446f0f0360a369d4d629605864240">icomp::CBaseComponentStaticInfo::RegisterAttributeInfo()</a>.</p>
+<p>References <a class="el" href="_c_class_info_8h_source.html#l00145">istd::CClassInfo::GetName()</a>, <a class="el" href="_c_class_info_8h_source.html#l00139">istd::CClassInfo::IsValid()</a>, <a class="el" href="_c_class_info_8h_source.html#l00151">istd::CClassInfo::IsVoid()</a>, <a class="el" href="_i_component_static_info_8h_source.html#l00059">icomp::IComponentStaticInfo::MGI_INTERFACES</a>, and <a class="el" href="classicomp_1_1_c_base_component_static_info.html#aea5446f0f0360a369d4d629605864240">icomp::CBaseComponentStaticInfo::RegisterAttributeInfo()</a>.</p>
 
 </div>
 </div>
@@ -179,9 +179,9 @@ template&lt;class Attribute &gt; </div>
 
 <p>Implements <a class="el" href="classicomp_1_1_i_real_attribute_static_info.html#a453b360e2f666040cbecbc2854066726">icomp::IRealAttributeStaticInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00086">86</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00088">88</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_i_component_static_info_8h_source.html#l00057">icomp::IComponentStaticInfo::MGI_INTERFACES</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_i_component_static_info_8h_source.html#l00059">icomp::IComponentStaticInfo::MGI_INTERFACES</a>.</p>
 
 </div>
 </div>
@@ -206,7 +206,7 @@ template&lt;class Attribute &gt; </div>
 
 <p>Implements <a class="el" href="classicomp_1_1_i_attribute_static_info.html#aa80838789b803591b3a373a91601e070">icomp::IAttributeStaticInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00118">118</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00120">120</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
 
 </div>
 </div>
@@ -230,7 +230,7 @@ template&lt;class Attribute &gt; </div>
 
 <p>Implements <a class="el" href="classicomp_1_1_i_attribute_static_info.html#ad8a8d405ab807a83eb70dbe32140c4aa">icomp::IAttributeStaticInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00111">111</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00113">113</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
 
 </div>
 </div>
@@ -254,7 +254,7 @@ template&lt;class Attribute &gt; </div>
 
 <p>Implements <a class="el" href="classicomp_1_1_i_attribute_static_info.html#a11731fa4869453bd098b0a00e8c524a7">icomp::IAttributeStaticInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00157">157</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00159">159</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
 
 </div>
 </div>
@@ -278,18 +278,18 @@ template&lt;class Attribute &gt; </div>
 
 <p>Implements <a class="el" href="classicomp_1_1_i_real_attribute_static_info.html#a3d7a7a61cb294dc2f73cebac60f9c12f">icomp::IRealAttributeStaticInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00079">79</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00081">81</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="afc46907872067d8539ea47700b3b0a90"></a><!-- doxytag: member="icomp::TAttributeStaticInfo::GetAttributeTypeName" ref="afc46907872067d8539ea47700b3b0a90" args="() const " -->
+<a class="anchor" id="acec70912a52b02668e28593b8c294ef3"></a><!-- doxytag: member="icomp::TAttributeStaticInfo::GetAttributeTypeName" ref="acec70912a52b02668e28593b8c294ef3" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Attribute &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const std::string &amp; <a class="el" href="classicomp_1_1_t_attribute_static_info.html">icomp::TAttributeStaticInfo</a>&lt; Attribute &gt;::GetAttributeTypeName </td>
+          <td class="memname">std::string <a class="el" href="classicomp_1_1_t_attribute_static_info.html">icomp::TAttributeStaticInfo</a>&lt; Attribute &gt;::GetAttributeTypeName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -300,9 +300,9 @@ template&lt;class Attribute &gt; </div>
 
 <p>Return attribute type description. </p>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_attribute_static_info.html#a2fe4bacf5c299338a2d7f6bff28569b2">icomp::IAttributeStaticInfo</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_attribute_static_info.html#ace2fcb22fe103d605039c2f2dba30ae0">icomp::IAttributeStaticInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00125">125</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00127">127</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
 
 </div>
 </div>
@@ -344,7 +344,7 @@ template&lt;class Attribute &gt; </div>
 
 <p>Implements <a class="el" href="classicomp_1_1_i_attribute_static_info.html#a32d44931a8f911bf543d2e2cdfde9a8f">icomp::IAttributeStaticInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00132">132</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00134">134</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
 
 </div>
 </div>

@@ -28,6 +28,8 @@
 #include <map>
 #include <string>
 
+
+// ACF includes
 #include "icomp/IComponentStaticInfo.h"
 
 
@@ -63,7 +65,7 @@ inline const istd::CString& CComponentStaticInfoBase::GetKeywords() const
 }
 
 
-}//namespace icomp
+} // namespace icomp
 
 
 #endif // !icomp_CComponentStaticInfoBase_included

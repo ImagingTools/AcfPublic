@@ -92,7 +92,7 @@
 <a name="l00102"></a>00102        <a class="code" href="classiprop_1_1_t_multi_property.html#a62268feb56b38fa17155e57bcf95c6e9">const_iterator</a> <a class="code" href="classiprop_1_1_t_multi_property.html#a98b2f2ea5160da6a5b50529a798c8f8b">end</a>() <span class="keyword">const</span>;
 <a name="l00103"></a>00103 
 <a name="l00104"></a>00104        <span class="comment">// reimplemented (iser::IObject)</span>
-<a name="l00105"></a>00105        <span class="keyword">const</span> std::string&amp; <a class="code" href="classiprop_1_1_t_multi_property.html#adec08ad6d3b599fa09378df68c76f5de">GetFactoryId</a>() <span class="keyword">const</span>;
+<a name="l00105"></a>00105        std::string <a class="code" href="classiprop_1_1_t_multi_property.html#a28dc23c710715429717bc26e9c3bae19">GetFactoryId</a>() <span class="keyword">const</span>;
 <a name="l00106"></a>00106 
 <a name="l00107"></a>00107        <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00108"></a>00108        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_t_multi_property.html#a9ddb68757003f115ea033b3895da3952">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
@@ -243,7 +243,7 @@
 <a name="l00253"></a>00253 <span class="comment">// reimplemented (iser::IObject)</span>
 <a name="l00254"></a>00254 
 <a name="l00255"></a>00255 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00256"></a><a class="code" href="classiprop_1_1_t_multi_property.html#adec08ad6d3b599fa09378df68c76f5de">00256</a> <span class="keyword">const</span> std::string&amp; <a class="code" href="classiprop_1_1_t_multi_property.html#adec08ad6d3b599fa09378df68c76f5de">TMultiProperty&lt;Value&gt;::GetFactoryId</a>()<span class="keyword"> const</span>
+<a name="l00256"></a><a class="code" href="classiprop_1_1_t_multi_property.html#a28dc23c710715429717bc26e9c3bae19">00256</a> std::string <a class="code" href="classiprop_1_1_t_multi_property.html#a28dc23c710715429717bc26e9c3bae19">TMultiProperty&lt;Value&gt;::GetFactoryId</a>()<span class="keyword"> const</span>
 <a name="l00257"></a>00257 <span class="keyword"></span>{
 <a name="l00258"></a>00258        <span class="keywordflow">return</span> s_typeName;
 <a name="l00259"></a>00259 }

@@ -195,6 +195,6 @@ const iser::IObject* CSimComponentContextBase::GetAttribute(const std::string& a
 }
 
 
-}//namespace icomp
+} // namespace icomp
 
 

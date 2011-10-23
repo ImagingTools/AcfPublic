@@ -953,7 +953,7 @@ bool CAttributeEditorComp::SetAttributeToItem(
 				attributeDescription = description;
 			}
 
-			const std::string& statAttrTypeId = attrInfo.staticInfoPtr->GetAttributeTypeName();
+			std::string statAttrTypeId = attrInfo.staticInfoPtr->GetAttributeTypeName();
 			if (currentAttrTypeId.empty()){
 				currentAttrTypeId = statAttrTypeId;
 			}

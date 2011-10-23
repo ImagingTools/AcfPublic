@@ -799,6 +799,6 @@ bool CRegistry::SerializeExportedComponents(iser::IArchive& archive)
 }
 
 
-}//namespace icomp
+} // namespace icomp
 
 

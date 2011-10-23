@@ -319,6 +319,14 @@
     <namespace>iqaxmm</namespace>
   </compound>
   <compound kind="file">
+    <name>CDataSequenceInfoBase.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_c_data_sequence_info_base_8h</filename>
+    <includes id="_i_data_sequence_info_8h" name="IDataSequenceInfo.h" local="yes" imported="no">imeas/IDataSequenceInfo.h</includes>
+    <class kind="class">imeas::CDataSequenceInfoBase</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>CDataSequenceStatistics.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_data_sequence_statistics_8h</filename>
@@ -491,6 +499,13 @@
       <name>CSimpleSamplesSequence32</name>
       <anchorfile>namespaceimeas.html</anchorfile>
       <anchor>a16a6f34a4a9d77942981bec31328b65b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TDiscrDataSequence&lt; I_QWORD &gt;</type>
+      <name>CSimpleSamplesSequence64</name>
+      <anchorfile>namespaceimeas.html</anchorfile>
+      <anchor>a4d8da0b7ba5d4837166b8330c0b84440</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -3372,6 +3387,7 @@
   <compound kind="namespace">
     <name>imeas</name>
     <filename>namespaceimeas.html</filename>
+    <class kind="class">imeas::CDataSequenceInfoBase</class>
     <class kind="class">imeas::CDataSequenceStatistics</class>
     <class kind="class">imeas::CDataStatistics</class>
     <class kind="class">imeas::CGeneralDataSequence</class>
@@ -3411,6 +3427,53 @@
       <anchorfile>namespaceimeas.html</anchorfile>
       <anchor>a16a6f34a4a9d77942981bec31328b65b</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TDiscrDataSequence&lt; I_QWORD &gt;</type>
+      <name>CSimpleSamplesSequence64</name>
+      <anchorfile>namespaceimeas.html</anchorfile>
+      <anchor>a4d8da0b7ba5d4837166b8330c0b84440</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::CDataSequenceInfoBase</name>
+    <filename>classimeas_1_1_c_data_sequence_info_base.html</filename>
+    <base virtualness="virtual">imeas::IDataSequenceInfo</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSequenceInfoFlags</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>ab8742552b73f99a3b0c3a2215cbead96</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetDefaultSamplesCount</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>aa920243bbfc4bbd954ea23c0a7a77f6e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetDefaultChannelsCount</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>a4a74931ff01bae453404a7e69d9531f0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWeightMode</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>a946cf8663a6c859940e218187f6412c0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>af078794b6798ac77fdeb986c085f4c84</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5298,10 +5361,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>std::string</type>
       <name>GetFactoryId</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>adec08ad6d3b599fa09378df68c76f5de</anchor>
+      <anchor>a28dc23c710715429717bc26e9c3bae19</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -5395,10 +5458,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const std::string &amp;</type>
+      <type>virtual std::string</type>
       <name>GetFactoryId</name>
       <anchorfile>classiprop_1_1_t_property.html</anchorfile>
-      <anchor>a69b13e073f0c733533c157882926d7b6</anchor>
+      <anchor>a800b050ed8ae99b2750eb645c0beec95</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
