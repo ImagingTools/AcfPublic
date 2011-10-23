@@ -25,6 +25,7 @@ QMAKE_CXXFLAGS_WARN_ON = -Wall
 CONFIG(debug, debug|release){
 	COMPILER_DIR = Debug$$COMPILER_NAME
 }
+
 CONFIG(release, debug|release){
 	COMPILER_DIR = Release$$COMPILER_NAME
 	CONFIG += sse2
