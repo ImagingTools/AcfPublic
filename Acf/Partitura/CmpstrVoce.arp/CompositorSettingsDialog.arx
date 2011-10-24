@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          2001
+          1945
         </Number>
         <Description>
           ACF
@@ -172,15 +172,12 @@
               <IsEnabled>
                 true
               </IsEnabled>
-              <Values count="3">
+              <Values count="2">
                 <Value>
                   exe
                 </Value>
                 <Value>
                   bat
-                </Value>
-                <Value>
-                  .
                 </Value>
               </Values>
             </Data>
