@@ -284,8 +284,8 @@ void CWizardGuiComp::GoToPage(int pageIndex)
 
 
 CWizardGuiComp::CWizardPage::CWizardPage(CWizardGuiComp& parent)
-	:m_parent(parent),
-	BaseClass(parent.GetQtWidget())
+:	BaseClass(parent.GetQtWidget()),
+	m_parent(parent)
 {
 }
 

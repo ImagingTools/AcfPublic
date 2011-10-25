@@ -867,7 +867,6 @@ bool CAttributeEditorComp::SetAttributeToItem(
 		exportItemPtr = attributeItem.child(0);
 	}
 
-	bool isAttributeDefined = false;
 	bool isAttributeEditable = true;
 	bool isAttributeEnabled = false;
 	bool isAttributeObligatory = false;
@@ -976,8 +975,6 @@ bool CAttributeEditorComp::SetAttributeToItem(
 						0,
 						icomp::IAttributeStaticInfo::AF_OBLIGATORY);	// Names of optional interfaces
 			optionalInterfaces.insert(interfaces.begin(), interfaces.end());
-
-			isAttributeDefined = true;
 		}
 		else{
 			if (!attributeValueTip.isEmpty()){
