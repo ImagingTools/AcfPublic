@@ -20,11 +20,12 @@
 ********************************************************************************/
 
 
+#include "QwtPck.h"
+
+
 #include "icomp/export.h"
 
 #include "iqt/CDefaultServicesProvider.h"
-
-#include "QwtPck.h"
 
 
 static struct StaticInit

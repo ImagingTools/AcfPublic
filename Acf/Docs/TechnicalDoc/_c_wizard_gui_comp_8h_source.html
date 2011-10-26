@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Include/iqtprm/CWizardGuiComp.h Source File</title>
+<title>Include/iqtwiz/CWizardGuiComp.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -22,11 +22,11 @@
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Include/iqtprm/CWizardGuiComp.h</div>  </div>
+<div class="title">Include/iqtwiz/CWizardGuiComp.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_c_wizard_gui_comp_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iqtprm_CWizardGuiComp_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iqtprm_CWizardGuiComp_included</span>
+<a href="_c_wizard_gui_comp_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iqtwiz_CWizardGuiComp_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iqtwiz_CWizardGuiComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
@@ -38,7 +38,7 @@
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_selection_param_8h.html">iprm/ISelectionParam.h</a>&quot;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_params_manager_8h.html">iprm/IParamsManager.h</a>&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_wizard_navigation_controller_8h.html">iprm/IWizardNavigationController.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_wizard_navigation_controller_8h.html">iwiz/IWizardNavigationController.h</a>&quot;</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_i_help_viewer_8h.html">idoc/IHelpViewer.h</a>&quot;</span>
 <a name="l00017"></a>00017 
@@ -46,11 +46,11 @@
 <a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="_t_gui_component_base_8h.html">iqtgui/TGuiComponentBase.h</a>&quot;</span>
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021 
-<a name="l00022"></a>00022 <span class="keyword">namespace </span>iqtprm
+<a name="l00022"></a><a class="code" href="namespaceiqtwiz.html">00022</a> <span class="keyword">namespace </span>iqtwiz
 <a name="l00023"></a>00023 {
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025 
-<a name="l00029"></a><a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html">00029</a> <span class="keyword">class </span><a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html" title="Parameter manager UI implemented as wizard.">CWizardGuiComp</a>:
+<a name="l00029"></a><a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html">00029</a> <span class="keyword">class </span><a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html" title="Parameter manager UI implemented as wizard.">CWizardGuiComp</a>:
 <a name="l00030"></a>00030                      <span class="keyword">public</span> iqtgui::TGuiObserverWrap&lt;
 <a name="l00031"></a>00031                                           iqtgui::TGuiComponentBase&lt;QWizard&gt;,
 <a name="l00032"></a>00032                                           imod::TSingleModelObserverBase&lt;iprm::IParamsManager&gt; &gt;
@@ -60,58 +60,58 @@
 <a name="l00036"></a>00036 <span class="keyword">public</span>:
 <a name="l00037"></a>00037        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html" title="Join functionality of iqtgui::IGuiObject interface and imod::IObserver.">iqtgui::TGuiObserverWrap</a>&lt;
 <a name="l00038"></a>00038                             <a class="code" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase&lt;QWizard&gt;</a>,
-<a name="l00039"></a><a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html#a1cda4d946b7e9c07e336704a24e8485f">00039</a>                             <a class="code" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;iprm::IParamsManager&gt;</a> &gt; <a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html#a1cda4d946b7e9c07e336704a24e8485f">BaseClass</a>;
+<a name="l00039"></a><a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html#af744914f5e5fa2831fedb3ed1156412e">00039</a>                             <a class="code" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;iprm::IParamsManager&gt;</a> &gt; <a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html#af744914f5e5fa2831fedb3ed1156412e">BaseClass</a>;
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041        I_BEGIN_COMPONENT(<a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html" title="Parameter manager UI implemented as wizard.">CWizardGuiComp</a>);
+<a name="l00041"></a>00041        I_BEGIN_COMPONENT(<a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html" title="Parameter manager UI implemented as wizard.">CWizardGuiComp</a>);
 <a name="l00042"></a>00042               I_REGISTER_INTERFACE(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>);
 <a name="l00043"></a>00043               I_REGISTER_INTERFACE(<a class="code" href="classimod_1_1_i_model_editor.html" title="Common interface for an model editor.">imod::IModelEditor</a>);
 <a name="l00044"></a>00044               I_ASSIGN(m_wizardControllerCompPtr, <span class="stringliteral">&quot;LinearWizardController&quot;</span>, <span class="stringliteral">&quot;Wizard navigation controller&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;LinearWizardController&quot;</span>);
 <a name="l00045"></a>00045               I_ASSIGN(m_sideGuiCompPtr, <span class="stringliteral">&quot;SideWidget&quot;</span>, <span class="stringliteral">&quot;Side widget of the wizard&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;SideWidget&quot;</span>);
 <a name="l00046"></a>00046               I_ASSIGN(m_helpViewerCompPtr, <span class="stringliteral">&quot;HelpViewer&quot;</span>, <span class="stringliteral">&quot;Help view component&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;HelpViewer&quot;</span>);
 <a name="l00047"></a>00047               I_ASSIGN_MULTI_0(m_editorsCompPtr, <span class="stringliteral">&quot;Editors&quot;</span>, <span class="stringliteral">&quot;List of GUI&#39;s for parameters edition&quot;</span>, <span class="keyword">true</span>);
-<a name="l00048"></a>00048               <a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html#abf607b43f71a65e1d3c4c241606c2030">I_ASSIGN_TO</a>(m_guisCompPtr, m_editorsCompPtr, <span class="keyword">true</span>);
-<a name="l00049"></a>00049               <a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html#abf607b43f71a65e1d3c4c241606c2030">I_ASSIGN_TO</a>(m_observersCompPtr, m_editorsCompPtr, <span class="keyword">true</span>);
+<a name="l00048"></a>00048               <a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html#a52e161ad47f2b44bab498d080e46754e">I_ASSIGN_TO</a>(m_guisCompPtr, m_editorsCompPtr, <span class="keyword">true</span>);
+<a name="l00049"></a>00049               <a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html#a52e161ad47f2b44bab498d080e46754e">I_ASSIGN_TO</a>(m_observersCompPtr, m_editorsCompPtr, <span class="keyword">true</span>);
 <a name="l00050"></a>00050               I_ASSIGN_MULTI_0(m_titelsAttrPtr, <span class="stringliteral">&quot;PageTitels&quot;</span>, <span class="stringliteral">&quot;List of page titels&quot;</span>, <span class="keyword">false</span>);
 <a name="l00051"></a>00051               I_ASSIGN_MULTI_0(m_subTitelsAttrPtr, <span class="stringliteral">&quot;PageSubTitels&quot;</span>, <span class="stringliteral">&quot;List of page sub-titels&quot;</span>, <span class="keyword">false</span>);
 <a name="l00052"></a>00052               I_ASSIGN(m_wizardStyleAttrPtr, <span class="stringliteral">&quot;WizardStyle&quot;</span>, <span class="stringliteral">&quot;Set the look of the wizard UI\n0 - Classic\n1 - Modern\n2 - MacStyle\n3 - Aero&quot;</span>, <span class="keyword">false</span>, 0);
 <a name="l00053"></a>00053        I_END_COMPONENT;
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00056"></a>00056        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html#a31dabe0c13f797de29d6d04d8b727a17">OnCurrentPageChanged</a>(<span class="keywordtype">int</span> pageId);
-<a name="l00057"></a>00057        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html#a37ed6433c62e7ea7558f8c174159ee86">OnHelpRequested</a>();
+<a name="l00056"></a>00056        <span class="keywordtype">void</span> <a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html#aa9ff1097c3be1427651e7bcaa253c504">OnCurrentPageChanged</a>(<span class="keywordtype">int</span> pageId);
+<a name="l00057"></a>00057        <span class="keywordtype">void</span> <a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html#a0db65c16c0c7d8cdde89174916476603">OnHelpRequested</a>();
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059 <span class="keyword">protected</span>:
-<a name="l00060"></a>00060        <span class="keywordtype">int</span> <a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html#a6331656d287a25b171a0e86da70dca23">GetNextPageId</a>() <span class="keyword">const</span>;
+<a name="l00060"></a>00060        <span class="keywordtype">int</span> <a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html#a3bcb4fd34add57e3039348df23b71d71">GetNextPageId</a>() <span class="keyword">const</span>;
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html#a935d00cd97b55cfcd2aeaafa3d00d2ca" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html#ab77a19e2f1aa9a723439f21aa7c4db09" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html#af721b7c689653339e4c389db2d9fad3a" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html#a3b07f4c315d78d1114fcb640309d89f6" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html#a84fe8087ce73e356bac383d7950b6d3d" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html#a4a2303c524b499e312e352ee79cda226" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067        <span class="comment">// reimplemented (iqtgui::CComponentBase)</span>
-<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html#a2e7f5e36e5b31282786bb5fa1af5507b" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html#a5daf9951a37db8a459d05cff6bad26c9" title="Called just before GUI is released.">OnGuiDestroyed</a>();
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html#a6cdeada1a4b6cea6cb5cd4c23a91326f" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html#a8f6838b3b4ef5b9b7c16ac379ef4a804" title="Called just before GUI is released.">OnGuiDestroyed</a>();
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071 <span class="keyword">private</span>:
 <a name="l00072"></a>00072        <span class="keyword">class </span>CWizardPage: <span class="keyword">public</span> QWizardPage
 <a name="l00073"></a>00073        {
 <a name="l00074"></a>00074        <span class="keyword">public</span>:
-<a name="l00075"></a>00075               <span class="keyword">typedef</span> QWizardPage <a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html#a1cda4d946b7e9c07e336704a24e8485f">BaseClass</a>;
+<a name="l00075"></a>00075               <span class="keyword">typedef</span> QWizardPage <a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html#af744914f5e5fa2831fedb3ed1156412e">BaseClass</a>;
 <a name="l00076"></a>00076 
-<a name="l00077"></a>00077               CWizardPage(<a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html" title="Parameter manager UI implemented as wizard.">CWizardGuiComp</a>&amp; parent);
+<a name="l00077"></a>00077               CWizardPage(<a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html" title="Parameter manager UI implemented as wizard.">CWizardGuiComp</a>&amp; parent);
 <a name="l00078"></a>00078 
 <a name="l00079"></a>00079               <span class="comment">// reimplemented (QWizardPage)</span>
 <a name="l00080"></a>00080               <span class="keyword">virtual</span> <span class="keywordtype">int</span> nextId() <span class="keyword">const</span>;
 <a name="l00081"></a>00081        
 <a name="l00082"></a>00082        <span class="keyword">private</span>:
-<a name="l00083"></a>00083               <a class="code" href="classiqtprm_1_1_c_wizard_gui_comp.html" title="Parameter manager UI implemented as wizard.">CWizardGuiComp</a>&amp; m_parent;
+<a name="l00083"></a>00083               <a class="code" href="classiqtwiz_1_1_c_wizard_gui_comp.html" title="Parameter manager UI implemented as wizard.">CWizardGuiComp</a>&amp; m_parent;
 <a name="l00084"></a>00084        };
 <a name="l00085"></a>00085 
 <a name="l00086"></a>00086 <span class="keyword">private</span>:
 <a name="l00087"></a>00087        <span class="keywordtype">void</span> GoToPage(<span class="keywordtype">int</span> pageIndex);
 <a name="l00088"></a>00088 
 <a name="l00089"></a>00089 <span class="keyword">private</span>:
-<a name="l00090"></a>00090        I_REF(<a class="code" href="classiprm_1_1_i_wizard_navigation_controller.html" title="Interface for wizard navigation.">iprm::IWizardNavigationController</a>, m_wizardControllerCompPtr);
+<a name="l00090"></a>00090        I_REF(<a class="code" href="classiwiz_1_1_i_wizard_navigation_controller.html" title="Interface for wizard navigation.">iwiz::IWizardNavigationController</a>, m_wizardControllerCompPtr);
 <a name="l00091"></a>00091        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_sideGuiCompPtr);
 <a name="l00092"></a>00092        I_REF(<a class="code" href="classidoc_1_1_i_help_viewer.html" title="Allow to show help document to specified object or text.">idoc::IHelpViewer</a>, m_helpViewerCompPtr);
 <a name="l00093"></a>00093        I_MULTIREF(<a class="code" href="classimod_1_1_i_model_editor.html" title="Common interface for an model editor.">imod::IModelEditor</a>, m_editorsCompPtr);
@@ -123,10 +123,10 @@
 <a name="l00099"></a>00099 };
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101 
-<a name="l00102"></a>00102 } <span class="comment">// namespace iqtprm</span>
+<a name="l00102"></a>00102 } <span class="comment">// namespace iqtwiz</span>
 <a name="l00103"></a>00103 
 <a name="l00104"></a>00104 
-<a name="l00105"></a>00105 <span class="preprocessor">#endif // !iqtprm_CWizardGuiComp_included</span>
+<a name="l00105"></a>00105 <span class="preprocessor">#endif // !iqtwiz_CWizardGuiComp_included</span>
 <a name="l00106"></a>00106 <span class="preprocessor"></span>
 <a name="l00107"></a>00107 
 </pre></div></div>

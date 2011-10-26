@@ -20,9 +20,10 @@
 ********************************************************************************/
 
 
-#include "icomp/export.h"
-
 #include "IprPck.h"
+
+
+#include "icomp/export.h"
 
 
 namespace IprPck

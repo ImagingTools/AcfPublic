@@ -20,13 +20,17 @@
 ********************************************************************************/
 
 
+#include "QtIprPck.h"
+
+
+// Qt includes
 #include <QDir>
 
+
+// ACF includes
 #include "icomp/export.h"
 
 #include "iqt/CDefaultServicesProvider.h"
-
-#include "QtIprPck.h"
 
 
 namespace QtIprPck

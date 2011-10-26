@@ -360,6 +360,13 @@
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
+    <name>IGeneralResultProvider.h</name>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
+    <filename>_i_general_result_provider_8h</filename>
+    <class kind="class">iinsp::IGeneralResultProvider</class>
+    <namespace>iinsp</namespace>
+  </compound>
+  <compound kind="file">
     <name>IIdProvider.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_i_id_provider_8h</filename>
@@ -4272,6 +4279,7 @@
     <filename>namespaceiinsp.html</filename>
     <class kind="class">iinsp::CInspectionComp</class>
     <class kind="class">iinsp::CInspectionTaskComp</class>
+    <class kind="class">iinsp::IGeneralResultProvider</class>
     <class kind="class">iinsp::IIdProvider</class>
     <class kind="class">iinsp::IInspection</class>
     <class kind="class">iinsp::IInspectionTask</class>
@@ -4452,6 +4460,48 @@
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>a278e42c65aded923511687058ca5de3c</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::IGeneralResultProvider</name>
+    <filename>classiinsp_1_1_i_general_result_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>GeneralResult</name>
+      <anchorfile>classiinsp_1_1_i_general_result_provider.html</anchorfile>
+      <anchor>a5ac924d47e2d8e2d11b421ef354adb80</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GR_OK</name>
+      <anchorfile>classiinsp_1_1_i_general_result_provider.html</anchorfile>
+      <anchor>a5ac924d47e2d8e2d11b421ef354adb80a430ec473223f2446b4c6840d95ad2ebf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GR_WARNING</name>
+      <anchorfile>classiinsp_1_1_i_general_result_provider.html</anchorfile>
+      <anchor>a5ac924d47e2d8e2d11b421ef354adb80a0208431a6b9d3c6a64d3f6475fee8dc7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GR_FAILED</name>
+      <anchorfile>classiinsp_1_1_i_general_result_provider.html</anchorfile>
+      <anchor>a5ac924d47e2d8e2d11b421ef354adb80af4e5edb6db3297184d099bd9399ed529</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GR_CRITICAL</name>
+      <anchorfile>classiinsp_1_1_i_general_result_provider.html</anchorfile>
+      <anchor>a5ac924d47e2d8e2d11b421ef354adb80a5f9b23d25e54e129b9be060a1ba96960</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual GeneralResult</type>
+      <name>GetGeneralResult</name>
+      <anchorfile>classiinsp_1_1_i_general_result_provider.html</anchorfile>
+      <anchor>a81657bc2837c134e107f78996e2364b7</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">

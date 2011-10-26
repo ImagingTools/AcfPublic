@@ -20,9 +20,10 @@
 ********************************************************************************/
 
 
-#include "icomp/export.h"
-
 #include "CameraPck.h"
+
+
+#include "icomp/export.h"
 
 
 namespace CameraPck

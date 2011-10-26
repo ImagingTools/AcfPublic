@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#include "icomp/export.h"
-
 #include "QtMeasPck.h"
 
+
+#include "icomp/export.h"
 
 #include "iqtgui/iqtgui.h"
 

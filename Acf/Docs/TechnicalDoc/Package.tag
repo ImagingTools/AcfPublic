@@ -2572,17 +2572,6 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
-    <name>CLinearWizardControllerComp.h</name>
-    <path>C:/Temp/Acf/Include/iprm/</path>
-    <filename>_c_linear_wizard_controller_comp_8h</filename>
-    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
-    <includes id="_i_wizard_navigation_controller_8h" name="IWizardNavigationController.h" local="yes" imported="no">iprm/IWizardNavigationController.h</includes>
-    <includes id="_i_wizard_page_controller_8h" name="IWizardPageController.h" local="yes" imported="no">iprm/IWizardPageController.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <class kind="class">iprm::CLinearWizardControllerComp</class>
-    <namespace>iprm</namespace>
-  </compound>
-  <compound kind="file">
     <name>CManagerParamsSetShadowerComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_manager_params_set_shadower_comp_8h</filename>
@@ -2666,17 +2655,6 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
-    <name>CWizardPageComp.h</name>
-    <path>C:/Temp/Acf/Include/iprm/</path>
-    <filename>_c_wizard_page_comp_8h</filename>
-    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
-    <includes id="_i_wizard_page_info_8h" name="IWizardPageInfo.h" local="yes" imported="no">iprm/IWizardPageInfo.h</includes>
-    <includes id="_i_wizard_page_controller_8h" name="IWizardPageController.h" local="yes" imported="no">iprm/IWizardPageController.h</includes>
-    <includes id="_c_composed_params_set_comp_8h" name="CComposedParamsSetComp.h" local="yes" imported="no">iprm/CComposedParamsSetComp.h</includes>
-    <class kind="class">iprm::CWizardPageComp</class>
-    <namespace>iprm</namespace>
-  </compound>
-  <compound kind="file">
     <name>IFileNameParam.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_i_file_name_param_8h</filename>
@@ -2756,31 +2734,6 @@
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="iprm_8h" name="iprm.h" local="yes" imported="no">iprm/iprm.h</includes>
     <class kind="class">iprm::IVariableParam</class>
-    <namespace>iprm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IWizardNavigationController.h</name>
-    <path>C:/Temp/Acf/Include/iprm/</path>
-    <filename>_i_wizard_navigation_controller_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">iprm::IWizardNavigationController</class>
-    <namespace>iprm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IWizardPageController.h</name>
-    <path>C:/Temp/Acf/Include/iprm/</path>
-    <filename>_i_wizard_page_controller_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">iprm::IWizardPageController</class>
-    <namespace>imod</namespace>
-    <namespace>iprm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IWizardPageInfo.h</name>
-    <path>C:/Temp/Acf/Include/iprm/</path>
-    <filename>_i_wizard_page_info_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <class kind="class">iprm::IWizardPageInfo</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -4485,16 +4438,6 @@
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
-    <name>COptionsListGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtprm/</path>
-    <filename>_c_options_list_gui_comp_8h</filename>
-    <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
-    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <class kind="class">iqtprm::COptionsListGuiComp</class>
-    <namespace>iqtprm</namespace>
-  </compound>
-  <compound kind="file">
     <name>CParamsManagerGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_params_manager_gui_comp_8h</filename>
@@ -4561,20 +4504,6 @@
     <includes id="_i_scene_extender_8h" name="ISceneExtender.h" local="yes" imported="no">iqt2d/ISceneExtender.h</includes>
     <includes id="iqtprm_8h" name="iqtprm.h" local="yes" imported="no">iqtprm/iqtprm.h</includes>
     <class kind="class">iqtprm::CVariableParamGuiComp</class>
-    <namespace>iqtprm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CWizardGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtprm/</path>
-    <filename>_c_wizard_gui_comp_8h</filename>
-    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
-    <includes id="_i_wizard_navigation_controller_8h" name="IWizardNavigationController.h" local="yes" imported="no">iprm/IWizardNavigationController.h</includes>
-    <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
-    <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
-    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
-    <class kind="class">iqtprm::CWizardGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
@@ -4646,6 +4575,30 @@
     <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
     <includes id="iqtdoc_8h" name="iqtdoc.h" local="yes" imported="no">iqtdoc/iqtdoc.h</includes>
     <namespace>iqproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CWizardGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtwiz/</path>
+    <filename>_c_wizard_gui_comp_8h</filename>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
+    <includes id="_i_wizard_navigation_controller_8h" name="IWizardNavigationController.h" local="yes" imported="no">iwiz/IWizardNavigationController.h</includes>
+    <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
+    <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
+    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <class kind="class">iqtwiz::CWizardGuiComp</class>
+    <namespace>iqtwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CWizardOptionsListGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtwiz/</path>
+    <filename>_c_wizard_options_list_gui_comp_8h</filename>
+    <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
+    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">iqtwiz::CWizardOptionsListGuiComp</class>
+    <namespace>iqtwiz</namespace>
   </compound>
   <compound kind="file">
     <name>CComposedAuthorizationVerifierComp.h</name>
@@ -5856,6 +5809,70 @@
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <class kind="class">isys::ITimer</class>
     <namespace>isys</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CLinearWizardControllerComp.h</name>
+    <path>C:/Temp/Acf/Include/iwiz/</path>
+    <filename>_c_linear_wizard_controller_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
+    <includes id="_i_wizard_navigation_controller_8h" name="IWizardNavigationController.h" local="yes" imported="no">iwiz/IWizardNavigationController.h</includes>
+    <includes id="_i_wizard_page_controller_8h" name="IWizardPageController.h" local="yes" imported="no">iwiz/IWizardPageController.h</includes>
+    <class kind="class">iwiz::CLinearWizardControllerComp</class>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CNonLinearWizardControllerComp.h</name>
+    <path>C:/Temp/Acf/Include/iwiz/</path>
+    <filename>_c_non_linear_wizard_controller_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
+    <includes id="_i_wizard_navigation_controller_8h" name="IWizardNavigationController.h" local="yes" imported="no">iwiz/IWizardNavigationController.h</includes>
+    <includes id="_i_wizard_page_controller_8h" name="IWizardPageController.h" local="yes" imported="no">iwiz/IWizardPageController.h</includes>
+    <class kind="class">iwiz::CNonLinearWizardControllerComp</class>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CWizardPageComp.h</name>
+    <path>C:/Temp/Acf/Include/iwiz/</path>
+    <filename>_c_wizard_page_comp_8h</filename>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
+    <includes id="_c_composed_params_set_comp_8h" name="CComposedParamsSetComp.h" local="yes" imported="no">iprm/CComposedParamsSetComp.h</includes>
+    <includes id="_i_wizard_page_info_8h" name="IWizardPageInfo.h" local="yes" imported="no">iwiz/IWizardPageInfo.h</includes>
+    <includes id="_i_wizard_page_controller_8h" name="IWizardPageController.h" local="yes" imported="no">iwiz/IWizardPageController.h</includes>
+    <class kind="class">iwiz::CWizardPageComp</class>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>iwiz.h</name>
+    <path>C:/Temp/Acf/Include/iwiz/</path>
+    <filename>iwiz_8h</filename>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IWizardNavigationController.h</name>
+    <path>C:/Temp/Acf/Include/iwiz/</path>
+    <filename>_i_wizard_navigation_controller_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <class kind="class">iwiz::IWizardNavigationController</class>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IWizardPageController.h</name>
+    <path>C:/Temp/Acf/Include/iwiz/</path>
+    <filename>_i_wizard_page_controller_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <class kind="class">iwiz::IWizardPageController</class>
+    <namespace>imod</namespace>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IWizardPageInfo.h</name>
+    <path>C:/Temp/Acf/Include/iwiz/</path>
+    <filename>_i_wizard_page_info_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <class kind="class">iwiz::IWizardPageInfo</class>
+    <namespace>iwiz</namespace>
   </compound>
   <compound kind="group">
     <name>ACF</name>
@@ -24640,7 +24657,6 @@
     <class kind="class">iprm::CEnableableParamComp</class>
     <class kind="class">iprm::CFileNameParamComp</class>
     <class kind="class">iprm::CLinearAdjustParamsComp</class>
-    <class kind="class">iprm::CLinearWizardControllerComp</class>
     <class kind="class">iprm::CManagerParamsSetShadowerComp</class>
     <class kind="class">iprm::CParamsManagerComp</class>
     <class kind="class">iprm::CParamsSet</class>
@@ -24648,7 +24664,6 @@
     <class kind="class">iprm::CSelectionConstraintsComp</class>
     <class kind="class">iprm::CSelectionParamComp</class>
     <class kind="class">iprm::CVariableParamComp</class>
-    <class kind="class">iprm::CWizardPageComp</class>
     <class kind="class">iprm::IFileNameParam</class>
     <class kind="class">iprm::ILinearAdjustConstraints</class>
     <class kind="class">iprm::ILinearAdjustParams</class>
@@ -24657,9 +24672,6 @@
     <class kind="class">iprm::ISelectionConstraints</class>
     <class kind="class">iprm::ISelectionParam</class>
     <class kind="class">iprm::IVariableParam</class>
-    <class kind="class">iprm::IWizardNavigationController</class>
-    <class kind="class">iprm::IWizardPageController</class>
-    <class kind="class">iprm::IWizardPageInfo</class>
   </compound>
   <compound kind="class">
     <name>iprm::CComposedParamsSetComp</name>
@@ -24909,33 +24921,6 @@
       <anchorfile>classiprm_1_1_c_linear_adjust_params_comp.html</anchorfile>
       <anchor>abde43f5a6e0cc0c7967b2391d68ea5a5</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iprm::CLinearWizardControllerComp</name>
-    <filename>classiprm_1_1_c_linear_wizard_controller_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iprm::IWizardNavigationController</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiprm_1_1_c_linear_wizard_controller_comp.html</anchorfile>
-      <anchor>aabd578bee5a77168662f9830aade0717</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetPagesCount</name>
-      <anchorfile>classiprm_1_1_c_linear_wizard_controller_comp.html</anchorfile>
-      <anchor>a0714575f3d55cb5b71f27a6baeb634e4</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNextPageId</name>
-      <anchorfile>classiprm_1_1_c_linear_wizard_controller_comp.html</anchorfile>
-      <anchor>a71464c35ef8ebabfa9cde9a57c38f967</anchor>
-      <arglist>(int currentPage)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25494,69 +25479,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iprm::CWizardPageComp</name>
-    <filename>classiprm_1_1_c_wizard_page_comp.html</filename>
-    <base>iprm::CComposedParamsSetComp</base>
-    <base protection="protected">imod::CMultiModelDispatcherBase</base>
-    <base virtualness="virtual">iprm::IWizardPageInfo</base>
-    <member kind="typedef">
-      <type>iprm::CComposedParamsSetComp</type>
-      <name>BaseClass</name>
-      <anchorfile>classiprm_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>a03b4771c588914e4174aeaaf96b55788</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::CMultiModelDispatcherBase</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiprm_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>aa60d286a3144be5f2f76c9660503ef7f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CWizardPageComp</name>
-      <anchorfile>classiprm_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>a0a5a983d4d3cdad8eb5da0ba19e3d9f9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsPageFinished</name>
-      <anchorfile>classiprm_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>a7379db358200a9369624c4203dec7169</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPageFinished</name>
-      <anchorfile>classiprm_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>abd1aa66bd5d5962317b944c201638271</anchor>
-      <arglist>(bool isPageFinished=true)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnModelChanged</name>
-      <anchorfile>classiprm_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>ae6b884eb30fe323c2c5642352018b7e8</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiprm_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>a048a291d5340b393008a208c78613d01</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiprm_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>a0adf57f5135581ca78cdd543a1c4b186</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iprm::IFileNameParam</name>
     <filename>classiprm_1_1_i_file_name_param.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
@@ -25924,61 +25846,6 @@
       <anchorfile>classiprm_1_1_i_variable_param.html</anchorfile>
       <anchor>a09d03ec12c861f2d7c3ad8a1b28e38d0</anchor>
       <arglist>(const std::string &amp;typeId)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iprm::IWizardNavigationController</name>
-    <filename>classiprm_1_1_i_wizard_navigation_controller.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetNextPageId</name>
-      <anchorfile>classiprm_1_1_i_wizard_navigation_controller.html</anchorfile>
-      <anchor>a070d8cf993e7124a9acc955c1fe663d2</anchor>
-      <arglist>(int currentPageId)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iprm::IWizardPageController</name>
-    <filename>classiprm_1_1_i_wizard_page_controller.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>UpdateWizardPage</name>
-      <anchorfile>classiprm_1_1_i_wizard_page_controller.html</anchorfile>
-      <anchor>a76aafed87b1fcb927637edddcad961c3</anchor>
-      <arglist>(iprm::IWizardPageInfo &amp;page, imod::IModel &amp;pageDataModel)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iprm::IWizardPageInfo</name>
-    <filename>classiprm_1_1_i_wizard_page_info.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classiprm_1_1_i_wizard_page_info.html</anchorfile>
-      <anchor>a8b0fdf1dda8812be2c8b84be98db1d90</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_PAGE_FINISHED</name>
-      <anchorfile>classiprm_1_1_i_wizard_page_info.html</anchorfile>
-      <anchor>a8b0fdf1dda8812be2c8b84be98db1d90a4ce20c092041d9add0065b93698bd671</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsPageFinished</name>
-      <anchorfile>classiprm_1_1_i_wizard_page_info.html</anchorfile>
-      <anchor>abe30980c680a25eef02438588137d085</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetPageFinished</name>
-      <anchorfile>classiprm_1_1_i_wizard_page_info.html</anchorfile>
-      <anchor>a3e35f5148b45293537e76b3e83720591</anchor>
-      <arglist>(bool isPageFinished=true)=0</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -35702,7 +35569,6 @@
     <filename>namespaceiqtprm.html</filename>
     <class kind="class">iqtprm::CComposedParamsSetGuiComp</class>
     <class kind="class">iqtprm::CFileNameParamGuiComp</class>
-    <class kind="class">iqtprm::COptionsListGuiComp</class>
     <class kind="class">iqtprm::CParamsManagerGuiComp</class>
     <class kind="class">iqtprm::CRelativeFileNameParamComp</class>
     <class kind="class">iqtprm::CSelectableGuiComp</class>
@@ -35710,7 +35576,6 @@
     <class kind="class">iqtprm::CSelectionParamGuiComp</class>
     <class kind="class">iqtprm::CSelectionParamIndexGuiComp</class>
     <class kind="class">iqtprm::CVariableParamGuiComp</class>
-    <class kind="class">iqtprm::CWizardGuiComp</class>
   </compound>
   <compound kind="class">
     <name>iqtprm::CComposedParamsSetGuiComp</name>
@@ -35902,71 +35767,6 @@
       <name>OnDirectoryUp</name>
       <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
       <anchor>add1303146e14f2b7e7fcc0e70d4c69fd</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtprm::COptionsListGuiComp</name>
-    <filename>classiqtprm_1_1_c_options_list_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::COptionsListGuiComp, iprm::IParamsManager &gt;</base>
-    <member kind="enumeration">
-      <name>DataRole</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
-      <anchor>ac3c47a4371adbe6665ed10be61291c24</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DR_SELECTION_INDEX</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
-      <anchor>ac3c47a4371adbe6665ed10be61291c24a2b876a29350cf53665920e95df71ca9d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DR_OBJECT_PTR</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
-      <anchor>ac3c47a4371adbe6665ed10be61291c24accdf95a6da2ec4c207328891c830cdf1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::COptionsListGuiComp, iprm::IParamsManager &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
-      <anchor>a5405c7b2ebb0d5c86543b6a988742de8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
-      <anchor>a033faeb023e5df5f8ebb17cc4c40bc87</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnSelectionChanged</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
-      <anchor>a4469b9a319bc96d8dd0f3dfce7ee25e5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
-      <anchor>a0c030d123ed1a364b088ccf0e05a06c5</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
-      <anchor>ac4dc20223a7abe097aadf9195f0de7f4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_gui_comp.html</anchorfile>
-      <anchor>a672fd35ffb353da27138c5cf1ef7fbcb</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -36422,88 +36222,6 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="class">
-    <name>iqtprm::CWizardGuiComp</name>
-    <filename>classiqtprm_1_1_c_wizard_gui_comp.html</filename>
-    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWizard &gt;, imod::TSingleModelObserverBase&lt; iprm::IParamsManager &gt; &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWizard &gt;, imod::TSingleModelObserverBase&lt; iprm::IParamsManager &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a1cda4d946b7e9c07e336704a24e8485f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>abf607b43f71a65e1d3c4c241606c2030</anchor>
-      <arglist>(m_guisCompPtr, m_editorsCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>af0aaa35b04d180f6f99a4fb5806d3332</anchor>
-      <arglist>(m_observersCompPtr, m_editorsCompPtr, true)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnCurrentPageChanged</name>
-      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a31dabe0c13f797de29d6d04d8b727a17</anchor>
-      <arglist>(int pageId)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnHelpRequested</name>
-      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a37ed6433c62e7ea7558f8c174159ee86</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>GetNextPageId</name>
-      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a6331656d287a25b171a0e86da70dca23</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a935d00cd97b55cfcd2aeaafa3d00d2ca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>ab77a19e2f1aa9a723439f21aa7c4db09</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>af721b7c689653339e4c389db2d9fad3a</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a2e7f5e36e5b31282786bb5fa1af5507b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtprm_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a5daf9951a37db8a459d05cff6bad26c9</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
   <compound kind="namespace">
     <name>iqtproc</name>
     <filename>namespaceiqtproc.html</filename>
@@ -36826,6 +36544,159 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
       <anchor>af3cbd1a3bb22e117e0468e1bcf14cf93</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iqtwiz</name>
+    <filename>namespaceiqtwiz.html</filename>
+    <class kind="class">iqtwiz::CWizardGuiComp</class>
+    <class kind="class">iqtwiz::CWizardOptionsListGuiComp</class>
+  </compound>
+  <compound kind="class">
+    <name>iqtwiz::CWizardGuiComp</name>
+    <filename>classiqtwiz_1_1_c_wizard_gui_comp.html</filename>
+    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWizard &gt;, imod::TSingleModelObserverBase&lt; iprm::IParamsManager &gt; &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWizard &gt;, imod::TSingleModelObserverBase&lt; iprm::IParamsManager &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>af744914f5e5fa2831fedb3ed1156412e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a52e161ad47f2b44bab498d080e46754e</anchor>
+      <arglist>(m_guisCompPtr, m_editorsCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a399f78fa243cfc4b4bd022e939802b5f</anchor>
+      <arglist>(m_observersCompPtr, m_editorsCompPtr, true)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnCurrentPageChanged</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>aa9ff1097c3be1427651e7bcaa253c504</anchor>
+      <arglist>(int pageId)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnHelpRequested</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a0db65c16c0c7d8cdde89174916476603</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>GetNextPageId</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a3bcb4fd34add57e3039348df23b71d71</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a3b07f4c315d78d1114fcb640309d89f6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a84fe8087ce73e356bac383d7950b6d3d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a4a2303c524b499e312e352ee79cda226</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a6cdeada1a4b6cea6cb5cd4c23a91326f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
+      <anchor>a8f6838b3b4ef5b9b7c16ac379ef4a804</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtwiz::CWizardOptionsListGuiComp</name>
+    <filename>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CWizardOptionsListGuiComp, iprm::IParamsManager &gt;</base>
+    <member kind="enumeration">
+      <name>DataRole</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a4d6a869867b1a4f2c139e413fa7c1053</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_SELECTION_INDEX</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a4d6a869867b1a4f2c139e413fa7c1053a9003ffbf49f179b3815dae7e7c2173ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_OBJECT_PTR</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a4d6a869867b1a4f2c139e413fa7c1053afb3c81410b1c152ee92a51d025c65dd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CWizardOptionsListGuiComp, iprm::IParamsManager &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a2f5697ddb66677118316731ce66c3c6f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a3821b33cd902d3310b0f8721e231ffc2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnSelectionChanged</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a5f7b57ca66208534a5cd44bac321fb87</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a643fb518b88f27dd91b354c7812b1ab3</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>ab756be9fa17a29ea51bf0278814f793a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>ad683d17160d4ef88fa85a47917951024</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -44778,6 +44649,214 @@
       <anchorfile>classisys_1_1_i_timer.html</anchorfile>
       <anchor>a1e9f1a87e32077210ee2208668148ea4</anchor>
       <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iwiz</name>
+    <filename>namespaceiwiz.html</filename>
+    <class kind="class">iwiz::CLinearWizardControllerComp</class>
+    <class kind="class">iwiz::CNonLinearWizardControllerComp</class>
+    <class kind="class">iwiz::CWizardPageComp</class>
+    <class kind="class">iwiz::IWizardNavigationController</class>
+    <class kind="class">iwiz::IWizardPageController</class>
+    <class kind="class">iwiz::IWizardPageInfo</class>
+  </compound>
+  <compound kind="class">
+    <name>iwiz::CLinearWizardControllerComp</name>
+    <filename>classiwiz_1_1_c_linear_wizard_controller_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iwiz::IWizardNavigationController</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwiz_1_1_c_linear_wizard_controller_comp.html</anchorfile>
+      <anchor>ab9e7110174ba27ce0e89930b3c0aefba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetPagesCount</name>
+      <anchorfile>classiwiz_1_1_c_linear_wizard_controller_comp.html</anchorfile>
+      <anchor>afbdca35cfd8b034dc2bd8a4ded9b70ea</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNextPageId</name>
+      <anchorfile>classiwiz_1_1_c_linear_wizard_controller_comp.html</anchorfile>
+      <anchor>a70e1cd8b3f96d9e910babc5fd427b305</anchor>
+      <arglist>(int currentPage)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwiz::CNonLinearWizardControllerComp</name>
+    <filename>classiwiz_1_1_c_non_linear_wizard_controller_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iwiz::IWizardNavigationController</base>
+    <base virtualness="virtual">iwiz::IWizardPageController</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwiz_1_1_c_non_linear_wizard_controller_comp.html</anchorfile>
+      <anchor>af73602ab12579c2770ec2c729dd9fda0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetPagesCount</name>
+      <anchorfile>classiwiz_1_1_c_non_linear_wizard_controller_comp.html</anchorfile>
+      <anchor>a94030a3dae6bed6530185ff53769228c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNextPageId</name>
+      <anchorfile>classiwiz_1_1_c_non_linear_wizard_controller_comp.html</anchorfile>
+      <anchor>a5f37f66d8a83db029ff1be58196f6776</anchor>
+      <arglist>(int currentPage)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>UpdateWizardPage</name>
+      <anchorfile>classiwiz_1_1_c_non_linear_wizard_controller_comp.html</anchorfile>
+      <anchor>ae3510ef23207b83230e15400353f9f68</anchor>
+      <arglist>(iwiz::IWizardPageInfo &amp;page, imod::IModel &amp;pageDataModel)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwiz::CWizardPageComp</name>
+    <filename>classiwiz_1_1_c_wizard_page_comp.html</filename>
+    <base>iprm::CComposedParamsSetComp</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <base virtualness="virtual">iwiz::IWizardPageInfo</base>
+    <member kind="typedef">
+      <type>iprm::CComposedParamsSetComp</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
+      <anchor>acf5d50b6a0d4a586918078fb14a6c838</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelDispatcherBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
+      <anchor>a0ad5f3011dd8267af14143182b8c0729</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CWizardPageComp</name>
+      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
+      <anchor>a1d9edab636ec19c19d40f8518b5c224b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPageFinished</name>
+      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
+      <anchor>a50e5882c85fdec59daf9b5c651c40c43</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPageFinished</name>
+      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
+      <anchor>a41882ae47fc12c5d078a261bd6300346</anchor>
+      <arglist>(bool isPageFinished=true)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
+      <anchor>a932a26e1e1a9131787d7d1265edc652a</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
+      <anchor>ad15f1553b83ed39f2e9383481ed32308</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
+      <anchor>a7b8bfb47535db07b098e0283d5c3797f</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwiz::IWizardNavigationController</name>
+    <filename>classiwiz_1_1_i_wizard_navigation_controller.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetNextPageId</name>
+      <anchorfile>classiwiz_1_1_i_wizard_navigation_controller.html</anchorfile>
+      <anchor>a8828732ec1d59f99b36f080290e03f07</anchor>
+      <arglist>(int currentPageId)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwiz::IWizardPageController</name>
+    <filename>classiwiz_1_1_i_wizard_page_controller.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>UpdateWizardPage</name>
+      <anchorfile>classiwiz_1_1_i_wizard_page_controller.html</anchorfile>
+      <anchor>a2a8d835cbcc67f7d9af359449a49e388</anchor>
+      <arglist>(iwiz::IWizardPageInfo &amp;page, imod::IModel &amp;pageDataModel)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwiz::IWizardPageInfo</name>
+    <filename>classiwiz_1_1_i_wizard_page_info.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classiwiz_1_1_i_wizard_page_info.html</anchorfile>
+      <anchor>a7ed70c85dc69186bda1d112801561aec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_PAGE_FINISHED</name>
+      <anchorfile>classiwiz_1_1_i_wizard_page_info.html</anchorfile>
+      <anchor>a7ed70c85dc69186bda1d112801561aeca68c02612fa7cb14188f7da7c260a40f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>PageStatus</name>
+      <anchorfile>classiwiz_1_1_i_wizard_page_info.html</anchorfile>
+      <anchor>a7bf76841491ca632136c55aeb81aabae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PS_FINISHED</name>
+      <anchorfile>classiwiz_1_1_i_wizard_page_info.html</anchorfile>
+      <anchor>a7bf76841491ca632136c55aeb81aabaeae54e9f435ea1de63e746087277147a69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PS_VISITED</name>
+      <anchorfile>classiwiz_1_1_i_wizard_page_info.html</anchorfile>
+      <anchor>a7bf76841491ca632136c55aeb81aabaeacff412f64c84601d930f89cb07ccda6e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsPageFinished</name>
+      <anchorfile>classiwiz_1_1_i_wizard_page_info.html</anchorfile>
+      <anchor>af85bf30fb1ce2ffc295fe2d8ef2af2ee</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetPageFinished</name>
+      <anchorfile>classiwiz_1_1_i_wizard_page_info.html</anchorfile>
+      <anchor>aa1fe9a5ff943b3d0995ba55e867343b5</anchor>
+      <arglist>(bool isPageFinished=true)=0</arglist>
     </member>
   </compound>
 </tagfile>

@@ -20,9 +20,10 @@
 ********************************************************************************/
 
 
-#include "icomp/export.h"
-
 #include "ZlibPck.h"
+
+
+#include "icomp/export.h"
 
 
 namespace ZlibPck
