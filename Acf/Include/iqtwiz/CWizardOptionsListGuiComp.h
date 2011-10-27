@@ -74,7 +74,6 @@ protected:
 
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();
-	virtual void OnGuiDestroyed();
 
 protected Q_SLOTS:
 	void OnSelectionChanged();

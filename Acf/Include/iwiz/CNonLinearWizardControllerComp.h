@@ -26,7 +26,6 @@
 
 #include "icomp/CComponentBase.h"
 
-
 #include "iprm/IParamsManager.h"
 
 #include "iwiz/IWizardNavigationController.h"

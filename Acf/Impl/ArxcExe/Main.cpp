@@ -43,7 +43,7 @@
 // ACF packages includes
 #include "QtPck/QtPck.h"
 #include "BasePck/BasePck.h"
-#include "CmpstrPck/CmpstrPck.h"
+#include "CompositorPck/CompositorPck.h"
 
 
 static void ShowUsage()
@@ -115,7 +115,7 @@ int main(int argc, char *argv[])
 	icomp::TSimComponentWrap<BasePck::ConsoleLog> log;
 	log.InitComponent();
 
-	icomp::TSimComponentWrap<CmpstrPck::RegistryLoader> registryLoaderComp;
+	icomp::TSimComponentWrap<CompositorPck::RegistryLoader> registryLoaderComp;
 	registryLoaderComp.SetRef("Log", &log);
 	registryLoaderComp.SetRef("VersionInfo", &applicationInfo);
 	registryLoaderComp.SetBoolAttr("EnableVerbose", verboseEnabled);
@@ -136,7 +136,7 @@ int main(int argc, char *argv[])
 	codeSaverComp.InitComponent();
 
 	// registry model
-	icomp::TSimComponentWrap<CmpstrPck::Registry> registryComp;
+	icomp::TSimComponentWrap<CompositorPck::Registry> registryComp;
 	registryComp.InitComponent();
 
 	icomp::TSimComponentWrap<BasePck::FileCopyOverLoader> fileCopyComp;

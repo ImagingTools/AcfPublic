@@ -20,16 +20,14 @@
 ********************************************************************************/
 
 
-#include "icomp/export.h"
-
 #include "BasePck.h"
+
+
+#include "icomp/export.h"
 
 
 namespace BasePck
 {
-
-
-using namespace icomp;
 
 
 I_EXPORT_DEFAULT_SERVICES;

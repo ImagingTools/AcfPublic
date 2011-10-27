@@ -36692,13 +36692,6 @@
       <anchor>ab756be9fa17a29ea51bf0278814f793a</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
-      <anchor>ad683d17160d4ef88fa85a47917951024</anchor>
-      <arglist>()</arglist>
-    </member>
   </compound>
   <compound kind="namespace">
     <name>isec</name>

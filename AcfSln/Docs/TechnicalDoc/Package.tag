@@ -4580,10 +4580,10 @@
     <filename>classiinsp_1_1_i_time_stamp_provider.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
-      <type>virtual isys::ITimer *</type>
+      <type>virtual const isys::ITimer *</type>
       <name>GetCurrentTimeStamp</name>
       <anchorfile>classiinsp_1_1_i_time_stamp_provider.html</anchorfile>
-      <anchor>abe47d95d809b897234bd37f9d2b6c811</anchor>
+      <anchor>a0e70ad4c505dc5c76f7057f38c821faf</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>

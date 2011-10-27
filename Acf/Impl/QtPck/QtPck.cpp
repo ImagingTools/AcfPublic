@@ -20,11 +20,12 @@
 ********************************************************************************/
 
 
+#include "QtPck.h"
+
+
 #include "icomp/export.h"
 
 #include "iqt/CDefaultServicesProvider.h"
-
-#include "QtPck.h"
 
 
 static struct StaticInit
@@ -39,9 +40,6 @@ static struct StaticInit
 
 namespace QtPck
 {
-
-
-using namespace icomp;
 
 
 I_EXPORT_SERVICES_PROVIDER(iqt::CDefaultServicesProvider);
