@@ -288,7 +288,7 @@ void CSimpleMainWindowGuiComp::UpdateToolsCommands(iqtgui::CHierarchicalCommand&
 {
 	toolsCommand.ResetChilds();
 
-	if (m_settingsGuiCompPtr.IsValid()){
+	if (m_settingsDialogCompPtr.IsValid()){
 		m_settingsCommand.SetGroupId(GI_SETTINGS);
 		toolsCommand.InsertChild(&m_settingsCommand, false);
 	}
@@ -297,7 +297,7 @@ void CSimpleMainWindowGuiComp::UpdateToolsCommands(iqtgui::CHierarchicalCommand&
 
 void CSimpleMainWindowGuiComp::UpdateHelpCommands(iqtgui::CHierarchicalCommand& helpCommand)
 {
-	if (m_aboutGuiCompPtr.IsValid()){
+	if (m_aboutDialogCompPtr.IsValid()){
 		helpCommand.InsertChild(&m_aboutCommand, false);
 	}
 }
@@ -385,10 +385,6 @@ void CSimpleMainWindowGuiComp::OnGuiCreated()
 
 	m_showToolBarsCommand.setChecked(true);
 
-	if (m_aboutGuiCompPtr.IsValid()){
-		m_aboutDialogPtr.SetPtr(new iqtgui::CGuiComponentDialog(m_aboutGuiCompPtr.GetPtr(), 0, true, mainWindowPtr)); 
-	}
-
 	CreateMenuBar();
 
 	CreateDefaultToolBar();
@@ -421,8 +417,6 @@ void CSimpleMainWindowGuiComp::OnGuiDestroyed()
 
 	m_menuBarPtr.Reset();
 	m_standardToolBarPtr.Reset();
-
-	m_aboutDialogPtr.Reset(); 
 
 	BaseClass::OnGuiDestroyed();
 }
@@ -460,16 +454,16 @@ void CSimpleMainWindowGuiComp::OnShowToolbars()
 
 void CSimpleMainWindowGuiComp::OnAbout()
 {
-	if (m_aboutDialogPtr.IsValid()){
-		m_aboutDialogPtr->exec();
+	if (m_aboutDialogCompPtr.IsValid()){
+		m_aboutDialogCompPtr->ExecuteDialog(this);
 	}
 }
 
 
 void CSimpleMainWindowGuiComp::OnSettings()
 {
-	if (m_settingsGuiCompPtr.IsValid()){
-		m_settingsGuiCompPtr->ExecuteDialog(this);
+	if (m_settingsDialogCompPtr.IsValid()){
+		m_settingsDialogCompPtr->ExecuteDialog(this);
 	}
 }
 
