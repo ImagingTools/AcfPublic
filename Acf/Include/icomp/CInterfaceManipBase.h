@@ -30,6 +30,7 @@
 
 // ACF includes
 #include "istd/CIdManipBase.h"
+#include "istd/CClassInfo.h"
 
 #include "icomp/IComponent.h"
 

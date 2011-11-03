@@ -1389,6 +1389,7 @@
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_c_interface_manip_base_8h</filename>
     <includes id="_c_id_manip_base_8h" name="CIdManipBase.h" local="yes" imported="no">istd/CIdManipBase.h</includes>
+    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
     <includes id="_i_component_8h" name="IComponent.h" local="yes" imported="no">icomp/IComponent.h</includes>
     <class kind="class">icomp::CInterfaceManipBase</class>
     <namespace>icomp</namespace>
@@ -31216,6 +31217,13 @@
       <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>ae4f969eab9e7db42fb143844135e31a6</anchor>
       <arglist>(bool isAutoScale)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnSelectAllShapes</name>
+      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>af2cd4cb23110dfa7ac738c9c54e9486b</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="signal">
       <type>void</type>

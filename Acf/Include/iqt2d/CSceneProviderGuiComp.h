@@ -146,6 +146,7 @@ public Q_SLOTS:
 	void OnFitToShapes();
 	void OnResetScale();
 	void OnAutoFit(bool isAutoScale);
+	void OnSelectAllShapes();
 
 protected:
 	/**
@@ -214,6 +215,7 @@ private:
 	iqtgui::CHierarchicalCommand m_fitToViewCommand;
 	iqtgui::CHierarchicalCommand m_fitToImageCommand;
 	iqtgui::CHierarchicalCommand m_resetZoomCommand;
+	iqtgui::CHierarchicalCommand m_selectAllCommand;
 
 	I_REF(iqtgui::IGuiObject, m_sceneControllerGuiCompPtr);
 	I_MULTIREF(iqtgui::IDropConsumer, m_dropConsumersCompPtr);
