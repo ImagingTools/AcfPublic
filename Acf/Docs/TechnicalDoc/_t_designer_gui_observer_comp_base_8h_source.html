@@ -36,33 +36,42 @@
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_t_single_model_observer_base_8h.html">imod/TSingleModelObserverBase.h</a>&quot;</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_t_gui_observer_wrap_8h.html">iqtgui/TGuiObserverWrap.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_t_designer_gui_comp_base_8h.html">iqtgui/TDesignerGuiCompBase.h</a>&quot;</span>
-<a name="l00014"></a>00014 
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="keyword">namespace </span>iqtgui
-<a name="l00017"></a>00017 {
-<a name="l00018"></a>00018 
-<a name="l00019"></a>00019 
-<a name="l00023"></a>00023 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> Model, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType = QW<span class="keywordtype">id</span>get&gt;
-<a name="l00024"></a><a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">00024</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI componentes.">TDesignerGuiObserverCompBase</a>: <span class="keyword">public</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html" title="Join functionality of iqtgui::IGuiObject interface and imod::IObserver.">TGuiObserverWrap</a>&lt;TDesignerGuiCompBase&lt;UI, WidgetType&gt;, imod::TSingleModelObserverBase&lt;Model&gt; &gt;
-<a name="l00025"></a>00025 {
-<a name="l00026"></a>00026 <span class="keyword">public</span>:
-<a name="l00027"></a><a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html#a4db84ac5f380ecdc510e2866d34e4a99">00027</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html" title="Join functionality of iqtgui::IGuiObject interface and imod::IObserver.">TGuiObserverWrap&lt;TDesignerGuiCompBase&lt;UI, WidgetType&gt;</a>, <a class="code" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;Model&gt;</a> &gt; <a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html#a4db84ac5f380ecdc510e2866d34e4a99">BaseClass</a>;
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029        I_BEGIN_BASE_COMPONENT(<a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI componentes.">TDesignerGuiObserverCompBase</a>);
-<a name="l00030"></a>00030               I_REGISTER_INTERFACE(<a class="code" href="classimod_1_1_i_model_editor.html" title="Common interface for an model editor.">imod::IModelEditor</a>);
-<a name="l00031"></a>00031               I_REGISTER_INTERFACE(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>);
-<a name="l00032"></a>00032        I_END_COMPONENT;
-<a name="l00033"></a>00033 };
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 } <span class="comment">// namespace iqtgui</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_t_model_observer_comp_wrap_8h.html">ibase/TModelObserverCompWrap.h</a>&quot;</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_t_gui_observer_wrap_8h.html">iqtgui/TGuiObserverWrap.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_t_designer_gui_comp_base_8h.html">iqtgui/TDesignerGuiCompBase.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="keyword">namespace </span>iqtgui
+<a name="l00019"></a>00019 {
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 
+<a name="l00025"></a>00025 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> Model, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType = QW<span class="keywordtype">id</span>get&gt;
+<a name="l00026"></a><a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">00026</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI componentes.">TDesignerGuiObserverCompBase</a>:
+<a name="l00027"></a>00027                      <span class="keyword">public</span> ibase::TModelObserverCompWrap&lt;
+<a name="l00028"></a>00028                                           Model, iqtgui::TGuiObserverWrap&lt;
+<a name="l00029"></a>00029                                                                iqtgui::TDesignerGuiCompBase&lt;UI, WidgetType&gt;,
+<a name="l00030"></a>00030                                                                imod::TSingleModelObserverBase&lt;Model&gt; &gt; &gt;
+<a name="l00031"></a>00031 {
+<a name="l00032"></a>00032 <span class="keyword">public</span>:
+<a name="l00033"></a>00033        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_model_observer_comp_wrap.html" title="Basic implementation for a single model observer component.">ibase::TModelObserverCompWrap</a>&lt;
+<a name="l00034"></a>00034                             Model, <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html" title="Join functionality of iqtgui::IGuiObject interface and imod::IObserver.">iqtgui::TGuiObserverWrap</a>&lt;
+<a name="l00035"></a>00035                                                  <a class="code" href="classiqtgui_1_1_t_designer_gui_comp_base.html" title="Base class for all Qt GUI componentes, which use the Qt designer&#39;s UI.">iqtgui::TDesignerGuiCompBase&lt;UI, WidgetType&gt;</a>,
+<a name="l00036"></a><a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html#a618868f789bda2d3e55cbb657e21c3bb">00036</a>                                                  <a class="code" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;Model&gt;</a> &gt; &gt; <a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html#a618868f789bda2d3e55cbb657e21c3bb">BaseClass</a>;
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039 <span class="preprocessor">#endif // !iqtgui_TDesignerGuiObserverCompBase_included</span>
-<a name="l00040"></a>00040 <span class="preprocessor"></span>
-<a name="l00041"></a>00041 
+<a name="l00038"></a>00038        I_BEGIN_BASE_COMPONENT(<a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI componentes.">TDesignerGuiObserverCompBase</a>);
+<a name="l00039"></a>00039               I_REGISTER_INTERFACE(<a class="code" href="classimod_1_1_i_model_editor.html" title="Common interface for an model editor.">imod::IModelEditor</a>);
+<a name="l00040"></a>00040               I_REGISTER_INTERFACE(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>);
+<a name="l00041"></a>00041        I_END_COMPONENT;
+<a name="l00042"></a>00042 };
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 } <span class="comment">// namespace iqtgui</span>
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="preprocessor">#endif // !iqtgui_TDesignerGuiObserverCompBase_included</span>
+<a name="l00049"></a>00049 <span class="preprocessor"></span>
+<a name="l00050"></a>00050 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

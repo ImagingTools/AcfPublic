@@ -44,22 +44,25 @@
 <a name="l00020"></a>00020 <span class="keyword">public</span>:
 <a name="l00024"></a><a class="code" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1e">00024</a>        <span class="keyword">enum</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1e" title="Flags for changes related to this interface.">ChangeFlags</a>
 <a name="l00025"></a>00025        {
-<a name="l00026"></a><a class="code" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1ea53f4f04b50232a0f67ad957df5efdf4a">00026</a>               <a class="code" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1ea53f4f04b50232a0f67ad957df5efdf4a">CF_OPTIONS_COUNT_CHANGED</a> = 1 &lt;&lt; 18,
-<a name="l00027"></a><a class="code" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1ea9252e2dd649825e860f655fc68b229f3">00027</a>               <a class="code" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1ea9252e2dd649825e860f655fc68b229f3">CF_OPTION_RENAMED</a> = 1 &lt;&lt; 19
-<a name="l00028"></a>00028        };
-<a name="l00029"></a>00029 
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html#a42cb35e4fde66357790cad29dcef9079" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span> = 0;
-<a name="l00034"></a>00034 
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiprm_1_1_i_selection_constraints.html#a62f01670db997af122efa4eeb20d89be" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
-<a name="l00039"></a>00039 };
-<a name="l00040"></a>00040 
+<a name="l00029"></a><a class="code" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1ea35fdf388649b1bf632621fac6649c135">00029</a>               <a class="code" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1ea35fdf388649b1bf632621fac6649c135" title="Option list updated.">CF_OPTIONS_CHANGED</a> = 1 &lt;&lt; 18,
+<a name="l00030"></a>00030 
+<a name="l00034"></a><a class="code" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1ea9252e2dd649825e860f655fc68b229f3">00034</a>               <a class="code" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1ea9252e2dd649825e860f655fc68b229f3" title="One or more options were renamed.">CF_OPTION_RENAMED</a> = 1 &lt;&lt; 19
+<a name="l00035"></a>00035        };
+<a name="l00036"></a>00036 
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html#a42cb35e4fde66357790cad29dcef9079" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span> = 0;
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042 } <span class="comment">// namespace iprm</span>
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="preprocessor">#endif // !iprm_ISelectionContstraints_included</span>
-<a name="l00046"></a>00046 <span class="preprocessor"></span>
-<a name="l00047"></a>00047 
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiprm_1_1_i_selection_constraints.html#a62f01670db997af122efa4eeb20d89be" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
+<a name="l00046"></a>00046 
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiprm_1_1_i_selection_constraints.html#aa134f7e8af11d478320121cee6228701" title="Get description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
+<a name="l00051"></a>00051 };
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 } <span class="comment">// namespace iprm</span>
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 <span class="preprocessor">#endif // !iprm_ISelectionContstraints_included</span>
+<a name="l00058"></a>00058 <span class="preprocessor"></span>
+<a name="l00059"></a>00059 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

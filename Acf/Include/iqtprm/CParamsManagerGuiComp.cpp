@@ -266,14 +266,17 @@ void CParamsManagerGuiComp::OnGuiModelAttached()
 
 	bool areButtonsNeeded = false;
 
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
-	if (objectPtr != NULL){
-		int flags = objectPtr->GetManagerFlags();
-		areButtonsNeeded = ((flags & iprm::IParamsManager::MF_COUNT_FIXED) == 0);
+	if (*m_allowAddRemoveAttrPtr){
+		iprm::IParamsManager* objectPtr = GetObjectPtr();
+		if (objectPtr != NULL){
+			int flags = objectPtr->GetManagerFlags();
+
+			areButtonsNeeded = ((flags & iprm::IParamsManager::MF_COUNT_FIXED) == 0);
+		}
 	}
 
-	ParamsTree->setItemDelegate(new iqtgui::CItemDelegate());
 	ButtonsFrame->setVisible(areButtonsNeeded);
+	ParamsTree->setItemDelegate(new iqtgui::CItemDelegate());
 }
 
 
@@ -303,6 +306,7 @@ void CParamsManagerGuiComp::OnGuiCreated()
 		m_paramsGuiCompPtr->CreateGui(ParamsFrame);
 	}
 
+	ButtonsFrame->setVisible(*m_allowAddRemoveAttrPtr);
 	ParamsFrame->setVisible(false);
 }
 

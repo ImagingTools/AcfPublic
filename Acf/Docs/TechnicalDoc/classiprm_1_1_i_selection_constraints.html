@@ -63,7 +63,7 @@ Inheritance diagram for iprm::ISelectionConstraints:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1e">ChangeFlags</a> { <a class="el" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1ea53f4f04b50232a0f67ad957df5efdf4a">CF_OPTIONS_COUNT_CHANGED</a> =  1 &lt;&lt; 18, 
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1e">ChangeFlags</a> { <a class="el" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1ea35fdf388649b1bf632621fac6649c135">CF_OPTIONS_CHANGED</a> =  1 &lt;&lt; 18, 
 <a class="el" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1ea9252e2dd649825e860f655fc68b229f3">CF_OPTION_RENAMED</a> =  1 &lt;&lt; 19
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags for changes related to this interface.  <a href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1e">More...</a><br/></td></tr>
@@ -73,6 +73,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of managed options.  <a href="#a42cb35e4fde66357790cad29dcef9079"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_selection_constraints.html#a62f01670db997af122efa4eeb20d89be">GetOptionName</a> (int index) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified option.  <a href="#a62f01670db997af122efa4eeb20d89be"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_selection_constraints.html#aa134f7e8af11d478320121cee6228701">GetOptionDescription</a> (int index) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description for a option with the index <code>index</code>.  <a href="#aa134f7e8af11d478320121cee6228701"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Constraints of selection from set of possibilities. </p>
@@ -92,9 +94,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Flags for changes related to this interface. </p>
 <dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="a437f92296b248eb729438492dd5d5e1ea53f4f04b50232a0f67ad957df5efdf4a"></a><!-- doxytag: member="CF_OPTIONS_COUNT_CHANGED" ref="a437f92296b248eb729438492dd5d5e1ea53f4f04b50232a0f67ad957df5efdf4a" args="" -->CF_OPTIONS_COUNT_CHANGED</em>&nbsp;</td><td>
+<tr><td valign="top"><em><a class="anchor" id="a437f92296b248eb729438492dd5d5e1ea35fdf388649b1bf632621fac6649c135"></a><!-- doxytag: member="CF_OPTIONS_CHANGED" ref="a437f92296b248eb729438492dd5d5e1ea35fdf388649b1bf632621fac6649c135" args="" -->CF_OPTIONS_CHANGED</em>&nbsp;</td><td>
+<p>Option list updated. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a437f92296b248eb729438492dd5d5e1ea9252e2dd649825e860f655fc68b229f3"></a><!-- doxytag: member="CF_OPTION_RENAMED" ref="a437f92296b248eb729438492dd5d5e1ea9252e2dd649825e860f655fc68b229f3" args="" -->CF_OPTION_RENAMED</em>&nbsp;</td><td>
+<p>One or more options were renamed. </p>
 </td></tr>
 </table>
 </dd>
@@ -107,6 +111,27 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aa134f7e8af11d478320121cee6228701"></a><!-- doxytag: member="iprm::ISelectionConstraints::GetOptionDescription" ref="aa134f7e8af11d478320121cee6228701" args="(int index) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iprm::ISelectionConstraints::GetOptionDescription </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get description for a option with the index <code>index</code>. </p>
+
+<p>Implemented in <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a0091658f3473778815ceea8c05e9aff8">iprm::CParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#abfeceee168a94de42fcaf48f86cd3e07">iprm::CSelectableParamsSetComp</a>, <a class="el" href="classiqt_1_1_c_translation_manager_comp.html#a4684fec1024fa1bb3eb753da60b1a29a">iqt::CTranslationManagerComp</a>, <a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html#a1712aa721175ef4a162ecf10fa746087">ibase::CSelectableFileConverterComp</a>, <a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a8105d1dea974c95a89e4e06f1250f9df">iproc::CIterativeProcessorComp</a>, and <a class="el" href="classiprm_1_1_c_selection_constraints_comp.html#a9e9f96a98b5af5deb90ab2f0208cd432">iprm::CSelectionConstraintsComp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a62f01670db997af122efa4eeb20d89be"></a><!-- doxytag: member="iprm::ISelectionConstraints::GetOptionName" ref="a62f01670db997af122efa4eeb20d89be" args="(int index) const =0" -->
 <div class="memitem">
 <div class="memproto">

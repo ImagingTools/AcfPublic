@@ -189,12 +189,12 @@ void CCompositeComponent::SetComponentContext(
 					++iter){
 			ComponentInfo& info = iter->second;
 
-			if (info.isInitialized){
+			if (info.isComponentInitialized){
 				if (info.componentPtr.IsValid()){
 					info.componentPtr->SetComponentContext(NULL, NULL, false);
 				}
 
-				info.isInitialized = false;
+				info.isComponentInitialized = false;
 			}
 		}
 	}
@@ -205,10 +205,11 @@ IComponent* CCompositeComponent::GetSubcomponent(const std::string& componentId)
 {
 	if (m_contextPtr != NULL){
 		ComponentInfo& componentInfo = m_componentMap[componentId];
-		if (!componentInfo.isInitialized){
-			CreateSubcomponentInfo(componentId, componentInfo.contextPtr, &componentInfo.componentPtr, true);
+		if (!componentInfo.isComponentInitialized){
+			componentInfo.isComponentInitialized = true;
+			componentInfo.isContextInitialized = true;
 
-			componentInfo.isInitialized = true;
+			CreateSubcomponentInfo(componentId, componentInfo.contextPtr, &componentInfo.componentPtr, true);
 		}
 
 		return componentInfo.componentPtr.GetPtr();
@@ -229,7 +230,9 @@ const IComponentContext* CCompositeComponent::GetSubcomponentContext(const std::
 {
 	if (m_contextPtr != NULL){
 		ComponentInfo& componentInfo = m_componentMap[componentId];
-		if (!componentInfo.isInitialized){
+		if (!componentInfo.isContextInitialized){
+			componentInfo.isContextInitialized = true;
+
 			CreateSubcomponentInfo(componentId, componentInfo.contextPtr, NULL, true);
 		}
 
@@ -254,6 +257,7 @@ IComponent* CCompositeComponent::CreateSubcomponent(const std::string& component
 
 		ComponentInfo& componentInfo = m_componentMap[componentId];
 
+		componentInfo.isContextInitialized = true;
 		CreateSubcomponentInfo(componentId, componentInfo.contextPtr, &retVal, false);
 
 		return retVal.PopPtr();
@@ -272,11 +276,13 @@ void CCompositeComponent::OnSubcomponentDeleted(const IComponent* subcomponentPt
 				++iter){
 		ComponentInfo& info = iter->second;
 		if (info.componentPtr == subcomponentPtr){
+			I_ASSERT(info.isComponentInitialized);
+
 			info.componentPtr->SetComponentContext(NULL, NULL, false);
 
 			info.componentPtr.PopPtr();
 
-			info.isInitialized = false;
+			info.isComponentInitialized = false;
 
 			delete this;
 
@@ -379,10 +385,11 @@ bool CCompositeComponent::EnsureAutoInitComponentsCreated() const
 			m_autoInitComponentIds.erase(m_autoInitComponentIds.begin());
 
 			ComponentInfo& autoInitInfo = m_componentMap[autoInitId];
-			if (!autoInitInfo.isInitialized){
-				CreateSubcomponentInfo(autoInitId, autoInitInfo.contextPtr, &autoInitInfo.componentPtr, true);
+			if (!autoInitInfo.isComponentInitialized){
+				autoInitInfo.isComponentInitialized = true;
+				autoInitInfo.isContextInitialized = true;
 
-				autoInitInfo.isInitialized = true;
+				CreateSubcomponentInfo(autoInitId, autoInitInfo.contextPtr, &autoInitInfo.componentPtr, true);
 			}
 		}
 	}

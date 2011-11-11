@@ -1,27 +1,16 @@
 <?xml version="1.0"?>
 <Acf>
   <AcfHeader>
-    <VersionInfos count="2">
+    <VersionInfos count="1">
       <Version>
         <Id>
           0
         </Id>
         <Number>
-          1458
+          2040
         </Number>
         <Description>
           ACF
-        </Description>
-      </Version>
-      <Version>
-        <Id>
-          1
-        </Id>
-        <Number>
-          180
-        </Number>
-        <Description>
-          ACF-Solutions
         </Description>
       </Version>
     </VersionInfos>
@@ -35,26 +24,15 @@
         725
       </X>
       <X>
-        200
+        250
       </X>
     </Element>
     <Element>
       <ComponentName>
-        FileDialogLoader
+        AutoPersistence
       </ComponentName>
       <X>
-        716
-      </X>
-      <X>
-        639
-      </X>
-    </Element>
-    <Element>
-      <ComponentName>
-        FilePersistence
-      </ComponentName>
-      <X>
-        700
+        725
       </X>
       <X>
         425
@@ -62,13 +40,24 @@
     </Element>
     <Element>
       <ComponentName>
+        FileDialogLoader
+      </ComponentName>
+      <X>
+        725
+      </X>
+      <X>
+        625
+      </X>
+    </Element>
+    <Element>
+      <ComponentName>
         MediaLoader
       </ComponentName>
       <X>
-        399
+        425
       </X>
       <X>
-        642
+        625
       </X>
     </Element>
     <Element>
@@ -76,7 +65,7 @@
         VideoView
       </ComponentName>
       <X>
-        400
+        425
       </X>
       <X>
         425

@@ -1734,6 +1734,13 @@
       <anchor>a75c9b3d67fec6f18db4add906ed9c619</anchor>
       <arglist>(int index) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
+      <anchor>ae1094cf8a807580435ae2a8a0de9cf88</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnCameraEventLog</name>

@@ -138,6 +138,12 @@ istd::CString CIterativeProcessorComp::GetOptionName(int index) const
 }
 
 
+istd::CString CIterativeProcessorComp::GetOptionDescription(int /*index*/) const
+{
+	return istd::CString();
+}
+
+
 // protected methods
 
 int CIterativeProcessorComp::ProcessSlave(
