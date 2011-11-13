@@ -20,25 +20,71 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef IAb_included
+#define IAb_included
 
 
-namespace istd
+// STL includes
+#include <string>
+
+
+// ACF includes
+#include "iser/ISerializable.h"
+
+
+class IAConstraints;
+
+
+/**
+	Interface for AB-object
+*/
+class IAb: virtual public iser::ISerializable
 {
+public:
+	/**
+		Flags for changes indentification
+	*/
+	enum ChangeFlags
+	{
+		/**
+			State of A was changed
+		*/
+		CF_A_CHANGED = 1 << 4,
 
+		/**
+			State of B was changed
+		*/
+		CF_B_CHANGED = 1 << 5
+	};
 
-enum RepositoryState
-{
-	RS_ORIGINAL_VERSION =  2045,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+	/**
+		Get constraints of A.
+		Constraints describes some additional information about allowed parameter ranges and related informations.
+	*/
+	virtual const IAConstraints& GetAConstraints() const = 0;
+
+	/**
+		Get the values of A.
+	*/
+	virtual int GetA() const = 0;
+
+	/**
+		Set the value of A
+	*/
+	virtual bool SetA(int a) = 0;
+
+	/**
+		Get the value of B
+	*/
+	virtual std::string GetB() const = 0;
+
+	/**
+		Set the value of B
+	*/
+	virtual void SetB(const std::string& b) = 0;
 };
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+#endif // !IAb_included
 
 

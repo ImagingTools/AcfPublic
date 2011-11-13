@@ -28,6 +28,8 @@
 
 #include "DocView/CTextEditorComp.h"
 
+#include "ModelObserver/CAbComp.h"
+
 
 /**
 	Base system-undependent general package.
@@ -37,6 +39,8 @@ namespace TutorialPck
 
 
 typedef CTextEditorComp TextEditor;
+
+typedef icomp::TModelCompWrap<CAbComp> AB;
 
 
 } // namespace TutorialPck

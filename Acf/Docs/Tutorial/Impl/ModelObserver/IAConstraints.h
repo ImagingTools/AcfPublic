@@ -20,25 +20,28 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef IAConstraints_included
+#define IAConstraints_included
 
 
-namespace istd
+// ACF includes
+#include "istd/IChangeable.h"
+#include "istd/CRange.h"
+
+
+/**
+	Interface for contraints of A.
+*/
+class IAConstraints: virtual public istd::IChangeable
 {
-
-
-enum RepositoryState
-{
-	RS_ORIGINAL_VERSION =  2045,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	/**
+		Get the possible value range for A.
+	*/
+	virtual const istd::CRange& GetARange() const = 0;
 };
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+#endif // !IAConstraints_included
 
 
