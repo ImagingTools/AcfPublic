@@ -1,6 +1,10 @@
 echo off
 
-call "%VS90COMNTOOLS%vsvars32.bat" x86_amd64
+call "%VS90COMNTOOLS%vsvars32.bat"
+
+set ACFDIR=%ACFPUBLICDIR%\Acf
+set ACFSLNDIR=%ACFPUBLICDIR%\AcfSln
+set IACFDIR=%ACFPUBLICDIR%\Iacf
 
 echo Building ACF
 cd ..\Acf\Impl\VC9
