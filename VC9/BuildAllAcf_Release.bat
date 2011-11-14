@@ -11,12 +11,12 @@ echo Building ACF-Solutions in %ACFSLNDIR%
 echo Building IACF in %IACFDIR%
 
 cd ..\Acf\Impl\VC9
-msbuild AcfAll.sln
+msbuild AcfAll.sln /p:Configuration=Release
 
 cd ..\..\..\AcfSln\Impl\VC9
-msbuild AcfSlnAll.sln
+msbuild AcfSlnAll.sln /p:Configuration=Release
 
 cd ..\..\..\Iacf\Impl\VC9
-msbuild IacfAll.sln
+msbuild IacfAll.sln /p:Configuration=Release
 
 pause
