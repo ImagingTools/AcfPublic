@@ -33,8 +33,8 @@
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_c_composed_params_set_comp_8h.html">iprm/CComposedParamsSetComp.h</a>&quot;</span>
 <a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_wizard_page_info_8h.html">iwiz/IWizardPageInfo.h</a>&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_wizard_page_controller_8h.html">iwiz/IWizardPageController.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_state_controller_8h.html">iproc/IStateController.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_processor_8h.html">iproc/IProcessor.h</a>&quot;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="keyword">namespace </span>iwiz
@@ -44,44 +44,55 @@
 <a name="l00020"></a><a class="code" href="classiwiz_1_1_c_wizard_page_comp.html">00020</a> <span class="keyword">class </span><a class="code" href="classiwiz_1_1_c_wizard_page_comp.html" title="Component implementation of a wizard page.">CWizardPageComp</a>:
 <a name="l00021"></a>00021                      <span class="keyword">public</span> iprm::CComposedParamsSetComp,
 <a name="l00022"></a>00022                      <span class="keyword">protected</span> imod::CMultiModelDispatcherBase,
-<a name="l00023"></a>00023                      <span class="keyword">virtual</span> <span class="keyword">public</span> iwiz::<a class="code" href="classiwiz_1_1_i_wizard_page_info.html" title="Interface for a wizard page status info.">IWizardPageInfo</a>
+<a name="l00023"></a>00023                      <span class="keyword">virtual</span> <span class="keyword">public</span> iproc::IStateController
 <a name="l00024"></a>00024 {
 <a name="l00025"></a>00025 <span class="keyword">public</span>:
 <a name="l00026"></a><a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#acf5d50b6a0d4a586918078fb14a6c838">00026</a>        <span class="keyword">typedef</span> <a class="code" href="classiprm_1_1_c_composed_params_set_comp.html" title="Implementation of interface IParamsSet as component.">iprm::CComposedParamsSetComp</a> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#acf5d50b6a0d4a586918078fb14a6c838">BaseClass</a>;
 <a name="l00027"></a><a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#a0ad5f3011dd8267af14143182b8c0729">00027</a>        <span class="keyword">typedef</span> <a class="code" href="classimod_1_1_c_multi_model_dispatcher_base.html" title="Generic implementation of a data model changes notifier.">imod::CMultiModelDispatcherBase</a> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#a0ad5f3011dd8267af14143182b8c0729">BaseClass2</a>;
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiwiz_1_1_c_wizard_page_comp.html" title="Component implementation of a wizard page.">CWizardPageComp</a>);
-<a name="l00030"></a>00030               I_REGISTER_INTERFACE(<a class="code" href="classiwiz_1_1_i_wizard_page_info.html" title="Interface for a wizard page status info.">iwiz::IWizardPageInfo</a>);
-<a name="l00031"></a>00031               I_ASSIGN(m_pageControllerCompPtr, <span class="stringliteral">&quot;PageController&quot;</span>, <span class="stringliteral">&quot;Wizard page controller&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;PageController&quot;</span>);
-<a name="l00032"></a>00032        I_END_COMPONENT;
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034        <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#a1d9edab636ec19c19d40f8518b5c224b">CWizardPageComp</a>();
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036        <span class="comment">// reimplemented (iwiz::IWizardPageInfo)</span>
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#a50e5882c85fdec59daf9b5c651c40c43" title="The page processing was finished, the page data is complete set.">IsPageFinished</a>() <span class="keyword">const</span>;
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#a41882ae47fc12c5d078a261bd6300346" title="Marks a wizard page as finished.">SetPageFinished</a>(<span class="keywordtype">bool</span> isPageFinished = <span class="keyword">true</span>);
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="keyword">protected</span>:
-<a name="l00041"></a>00041        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#a932a26e1e1a9131787d7d1265edc652a">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#ad15f1553b83ed39f2e9383481ed32308">OnComponentCreated</a>();
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#a7b8bfb47535db07b098e0283d5c3797f">OnComponentDestroyed</a>();
+<a name="l00030"></a>00030               I_REGISTER_INTERFACE(<a class="code" href="classiproc_1_1_i_state_controller.html" title="Interface for a wizard page status info.">iproc::IStateController</a>);
+<a name="l00031"></a>00031               I_ASSIGN_MULTI_0(m_slaveControllersCompPtr, <span class="stringliteral">&quot;SlaveControllers&quot;</span>, <span class="stringliteral">&quot;State controllers used to calculation general page state&quot;</span>, <span class="keyword">true</span>);
+<a name="l00032"></a>00032               <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#ae1479dee3f3d9b720ee5a27b7a1aa717">I_ASSIGN_TO</a>(m_slaveControllerModelsCompPtr, m_slaveControllersCompPtr, <span class="keyword">true</span>);
+<a name="l00033"></a>00033        I_END_COMPONENT;
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035        <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#a1d9edab636ec19c19d40f8518b5c224b">CWizardPageComp</a>();
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037        <span class="comment">// reimplemented (iproc::IStateController)</span>
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#ac488241ae6b25ca912cd2411d6850910" title="Check if state is enabled.">IsStateEnabled</a>() <span class="keyword">const</span>;
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#a4941fa899736f5e93b2d07d75c7c63fa" title="Check if this state is active.">IsStateActive</a>() <span class="keyword">const</span>;
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#a92c3abb7f53d1aa4bd11ae4529a23603">IsEnterAllowed</a>(<span class="keywordtype">bool</span> isActionAllowed = <span class="keyword">true</span>, <span class="keyword">const</span> IStateController* prevStatePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#ace15ff5d04e40e19c65ab32e87936497">IsLeaveAllowed</a>(<span class="keywordtype">bool</span> isActionAllowed = <span class="keyword">true</span>, <span class="keyword">const</span> IStateController* nextStatePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#af3908a49d2483688c1f83cf6cbc348fe">TryEnterState</a>(<span class="keywordtype">bool</span> isActionAllowed = <span class="keyword">true</span>, <span class="keyword">const</span> IStateController* prevStatePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#a64602e567ebe3fb269bd8825030f0fbc">TryLeaveState</a>(<span class="keywordtype">bool</span> isActionAllowed = <span class="keyword">true</span>, <span class="keyword">const</span> IStateController* prevStatePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 <span class="keyword">protected</span>:
+<a name="l00046"></a>00046        <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#afba27785a24a87cdf3e3d32923150a4e">UpdateAllMembers</a>();
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 <span class="keyword">private</span>:
-<a name="l00049"></a>00049        <span class="keywordtype">bool</span> m_isPageFinished;
+<a name="l00048"></a>00048        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#a932a26e1e1a9131787d7d1265edc652a">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051        I_REF(<a class="code" href="classiwiz_1_1_i_wizard_page_controller.html" title="Interface for a wizard page controller.">iwiz::IWizardPageController</a>, m_pageControllerCompPtr);
-<a name="l00052"></a>00052 };
-<a name="l00053"></a>00053 
+<a name="l00051"></a>00051        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#ad15f1553b83ed39f2e9383481ed32308">OnComponentCreated</a>();
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_wizard_page_comp.html#a7b8bfb47535db07b098e0283d5c3797f">OnComponentDestroyed</a>();
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055 } <span class="comment">// namespace iwiz</span>
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="preprocessor">#endif // !iwiz_CWizardPageComp_included</span>
-<a name="l00059"></a>00059 <span class="preprocessor"></span>
-<a name="l00060"></a>00060 
+<a name="l00055"></a>00055 <span class="keyword">private</span>:
+<a name="l00056"></a>00056        <span class="keywordtype">bool</span> m_isStateEnabled;
+<a name="l00057"></a>00057        <span class="keywordtype">bool</span> m_isStateActive;
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059        I_MULTIREF(<a class="code" href="classiproc_1_1_i_state_controller.html" title="Interface for a wizard page status info.">iproc::IStateController</a>, m_slaveControllersCompPtr);
+<a name="l00060"></a>00060        I_MULTIREF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_slaveControllerModelsCompPtr);
+<a name="l00061"></a>00061        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_processOnEnterCompPtr);
+<a name="l00062"></a>00062        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_processOnLeaveCompPtr);
+<a name="l00063"></a>00063 };
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 } <span class="comment">// namespace iwiz</span>
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 <span class="preprocessor">#endif // !iwiz_CWizardPageComp_included</span>
+<a name="l00070"></a>00070 <span class="preprocessor"></span>
+<a name="l00071"></a>00071 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -48,15 +48,19 @@ Inheritance diagram for icomp::CBaseComponentStaticInfo:</div>
  <div class="center">
   <img src="classicomp_1_1_c_base_component_static_info.png" usemap="#icomp::CBaseComponentStaticInfo_map" alt=""/>
   <map id="icomp::CBaseComponentStaticInfo_map" name="icomp::CBaseComponentStaticInfo_map">
-<area href="classicomp_1_1_c_component_static_info_base.html" alt="icomp::CComponentStaticInfoBase" shape="rect" coords="0,112,269,136"/>
-<area href="classicomp_1_1_i_real_component_static_info.html" title="Interface adding to component static info functionality existing only for real components." alt="icomp::IRealComponentStaticInfo" shape="rect" coords="279,112,548,136"/>
-<area href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info." alt="icomp::IComponentStaticInfo" shape="rect" coords="0,56,269,80"/>
-<area href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info." alt="icomp::IComponentStaticInfo" shape="rect" coords="279,56,548,80"/>
+<area href="classicomp_1_1_c_component_static_info_base.html" alt="icomp::CComponentStaticInfoBase" shape="rect" coords="0,168,269,192"/>
+<area href="classicomp_1_1_i_real_component_static_info.html" title="Interface adding to component static info functionality existing only for real components." alt="icomp::IRealComponentStaticInfo" shape="rect" coords="418,168,687,192"/>
+<area href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info." alt="icomp::IComponentStaticInfo" shape="rect" coords="0,112,269,136"/>
+<area href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info." alt="icomp::IComponentStaticInfo" shape="rect" coords="279,112,548,136"/>
+<area href="classicomp_1_1_i_component_interface_extractor.html" title="Provide extracting of some interface from component." alt="icomp::IComponentInterfaceExtractor" shape="rect" coords="558,112,827,136"/>
+<area href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info." alt="icomp::IElementStaticInfo" shape="rect" coords="0,56,269,80"/>
+<area href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info." alt="icomp::IElementStaticInfo" shape="rect" coords="279,56,548,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="558,56,827,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,269,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="279,0,548,24"/>
-<area href="classicomp_1_1_c_composite_component_static_info.html" alt="icomp::CCompositeComponentStaticInfo" shape="rect" coords="0,224,269,248"/>
-<area href="classicomp_1_1_t_component_static_info.html" alt="icomp::TComponentStaticInfo&lt; Component &gt;" shape="rect" coords="279,224,548,248"/>
-<area href="classicomp_1_1_t_component_registrator.html" title="Simple helper class providing registration of template-specified component in package." alt="icomp::TComponentRegistrator&lt; Component &gt;" shape="rect" coords="279,280,548,304"/>
+<area href="classicomp_1_1_c_composite_component_static_info.html" alt="icomp::CCompositeComponentStaticInfo" shape="rect" coords="69,280,338,304"/>
+<area href="classicomp_1_1_t_component_static_info.html" alt="icomp::TComponentStaticInfo&lt; Component &gt;" shape="rect" coords="348,280,617,304"/>
+<area href="classicomp_1_1_t_component_registrator.html" title="Simple helper class providing registration of template-specified component in package." alt="icomp::TComponentRegistrator&lt; Component &gt;" shape="rect" coords="348,336,617,360"/>
 </map>
  </div></div>
 
@@ -73,19 +77,18 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register interface ID for this static component info.  <a href="#abe5f8bd996285e144cca0db5ae035a33"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#aea5446f0f0360a369d4d629605864240">RegisterAttributeInfo</a> (const std::string &amp;attributeId, const <a class="el" href="classicomp_1_1_i_attribute_static_info.html">IAttributeStaticInfo</a> *attributeInfoPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register static attribute info.  <a href="#aea5446f0f0360a369d4d629605864240"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#a588dcbab10b5ada319b133cb9154593b">RegisterSubcomponentInfo</a> (const std::string &amp;subcomponentId, const <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *componentInfoPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register static subcomponent info.  <a href="#a588dcbab10b5ada319b133cb9154593b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#a7a81013c4d322d00f4bd8505e63bf9da">RegisterSubelementInfo</a> (const std::string &amp;subcomponentId, const <a class="el" href="classicomp_1_1_i_element_static_info.html">IElementStaticInfo</a> *staticInfoPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register static subcomponent info.  <a href="#a7a81013c4d322d00f4bd8505e63bf9da"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#a88d6137204c454aba4affd413805eab8">CreateComponent</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create component instance.  <a href="#a88d6137204c454aba4affd413805eab8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#a7ff0e8164d4edaadd7c8f09a2485fffc">GetComponentInterface</a> (const <a class="el" href="classistd_1_1_c_class_info.html">istd::CClassInfo</a> &amp;interfaceType, <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> &amp;component) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract instance implemented specified interface from some component.  <a href="#a7ff0e8164d4edaadd7c8f09a2485fffc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#af4f6c552932600e60737319351c3dc6a">GetComponentInterface</a> (const <a class="el" href="classistd_1_1_c_class_info.html">istd::CClassInfo</a> &amp;interfaceType, <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> &amp;component, const std::string &amp;subId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract instance implemented specified interface from some component.  <a href="#af4f6c552932600e60737319351c3dc6a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="classicomp_1_1_i_attribute_static_info.html">IAttributeStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#aec976e0a49319d8f48eafa216cec211e">GetAttributeInfo</a> (const std::string &amp;attributeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of attributes.  <a href="#aec976e0a49319d8f48eafa216cec211e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#a37223f6002c0fae82b55e1760e594860">GetSubcomponentInfo</a> (const std::string &amp;subcomponentId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of interfaces for specific slot.  <a href="#a37223f6002c0fae82b55e1760e594860"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#a10ae26844c9f939b7ea229bfd99acbb7">GetMetaIds</a> (int metaGroupId) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_element_static_info.html">IElementStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#ad5f6112769956287cdf7186a8c3d0c61">GetSubelementInfo</a> (const std::string &amp;subcomponentId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of interfaces for specific slot.  <a href="#ad5f6112769956287cdf7186a8c3d0c61"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_base_component_static_info.html#a10ae26844c9f939b7ea229bfd99acbb7">GetMetaIds</a> (int metaGroupId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of meta IDs associated with some meta key.  <a href="#a10ae26844c9f939b7ea229bfd99acbb7"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -189,7 +192,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7ff0e8164d4edaadd7c8f09a2485fffc"></a><!-- doxytag: member="icomp::CBaseComponentStaticInfo::GetComponentInterface" ref="a7ff0e8164d4edaadd7c8f09a2485fffc" args="(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component) const " -->
+<a class="anchor" id="af4f6c552932600e60737319351c3dc6a"></a><!-- doxytag: member="icomp::CBaseComponentStaticInfo::GetComponentInterface" ref="af4f6c552932600e60737319351c3dc6a" args="(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const std::string &amp;subId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -203,7 +206,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classicomp_1_1_i_component.html">IComponent</a> &amp;&#160;</td>
-          <td class="paramname"><em>component</em>&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>subId</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -216,7 +225,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Extract instance implemented specified interface from some component. </p>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_real_component_static_info.html#a20668c7a5216b9f4d4a874ef2618d39e">icomp::IRealComponentStaticInfo</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_component_interface_extractor.html#a2bd070cefe8b08bc8e076ee2b06dbc33">icomp::IComponentInterfaceExtractor</a>.</p>
 
 </div>
 </div>
@@ -225,7 +234,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">Ids</a> icomp::CBaseComponentStaticInfo::GetMetaIds </td>
+          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a> icomp::CBaseComponentStaticInfo::GetMetaIds </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>metaGroupId</em></td><td>)</td>
@@ -242,12 +251,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a37223f6002c0fae82b55e1760e594860"></a><!-- doxytag: member="icomp::CBaseComponentStaticInfo::GetSubcomponentInfo" ref="a37223f6002c0fae82b55e1760e594860" args="(const std::string &amp;subcomponentId) const " -->
+<a class="anchor" id="ad5f6112769956287cdf7186a8c3d0c61"></a><!-- doxytag: member="icomp::CBaseComponentStaticInfo::GetSubelementInfo" ref="ad5f6112769956287cdf7186a8c3d0c61" args="(const std::string &amp;subcomponentId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a>* icomp::CBaseComponentStaticInfo::GetSubcomponentInfo </td>
+          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_element_static_info.html">IElementStaticInfo</a>* icomp::CBaseComponentStaticInfo::GetSubelementInfo </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>subcomponentId</em></td><td>)</td>
@@ -264,9 +273,9 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classicomp_1_1_c_base_component_static_info.html#a10ae26844c9f939b7ea229bfd99acbb7" title="Get list of meta IDs associated with some meta key.">GetMetaIds()</a> and <a class="el" href="classicomp_1_1_i_component_static_info.html#ad81479e87967938dbcfdf09433c265ebac93a2e842386788ee791fbfa619b0f5e" title="ID of group for subcomponents.">MGI_SUBCOMPONENTS</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classicomp_1_1_c_base_component_static_info.html#a10ae26844c9f939b7ea229bfd99acbb7" title="Get list of meta IDs associated with some meta key.">GetMetaIds()</a> and <a class="el" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233abaf22287d19fad04e25b37f5e239317c" title="ID of group for component subelements.">MGI_SUBELEMENTS</a>. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_static_info_base.html#a13176e9255dde509b7fe0e521e92e1be">icomp::CComponentStaticInfoBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_static_info_base.html#ad33590843a4f3a292b33dba391f3a0e2">icomp::CComponentStaticInfoBase</a>.</p>
 
 </div>
 </div>
@@ -340,12 +349,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a588dcbab10b5ada319b133cb9154593b"></a><!-- doxytag: member="icomp::CBaseComponentStaticInfo::RegisterSubcomponentInfo" ref="a588dcbab10b5ada319b133cb9154593b" args="(const std::string &amp;subcomponentId, const IComponentStaticInfo *componentInfoPtr)" -->
+<a class="anchor" id="a7a81013c4d322d00f4bd8505e63bf9da"></a><!-- doxytag: member="icomp::CBaseComponentStaticInfo::RegisterSubelementInfo" ref="a7a81013c4d322d00f4bd8505e63bf9da" args="(const std::string &amp;subcomponentId, const IElementStaticInfo *staticInfoPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void icomp::CBaseComponentStaticInfo::RegisterSubcomponentInfo </td>
+          <td class="memname">virtual void icomp::CBaseComponentStaticInfo::RegisterSubelementInfo </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>subcomponentId</em>, </td>
@@ -353,8 +362,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *&#160;</td>
-          <td class="paramname"><em>componentInfoPtr</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_element_static_info.html">IElementStaticInfo</a> *&#160;</td>
+          <td class="paramname"><em>staticInfoPtr</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -373,6 +382,8 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Referenced by <a class="el" href="_t_subelement_static_info_8h_source.html#l00072">icomp::TSubelementStaticInfo&lt; ComponentType &gt;::TSubelementStaticInfo()</a>.</p>
 
 </div>
 </div>

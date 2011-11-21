@@ -56,10 +56,16 @@ Inheritance diagram for icomp::IAttributeStaticInfo:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2">AttributeFlags</a> { <a class="el" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a1a785ee164947b56152234baaeaa9ace">AF_OBLIGATORY</a> =  1 &lt;&lt; 0, 
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2">AttributeFlags</a> { <br/>
+&#160;&#160;<a class="el" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a1a785ee164947b56152234baaeaa9ace">AF_OBLIGATORY</a> =  1 &lt;&lt; 0, 
 <a class="el" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a8d45d95ffcc50f5611339a3c23bf69a4">AF_NULLABLE</a> =  1 &lt;&lt; 1, 
-<a class="el" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a3fab81bf37891355141013bc45ac34fb">AF_REFERENCE</a> =  1 &lt;&lt; 2, 
-<a class="el" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a077526887a967bb955474e513278ed42">AF_FACTORY</a> =  1 &lt;&lt; 2
+<a class="el" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2ac967dab5fe6c208f51fa972ee295fa92">AF_SINGLE</a> =  1 &lt;&lt; 2, 
+<a class="el" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2aba97c2ca3c8105b1e9589db51253973e">AF_MULTIPLE</a> =  1 &lt;&lt; 3, 
+<br/>
+&#160;&#160;<a class="el" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a539016ee0900591d80ff7eeac1abbc9a">AF_VALUE</a> =  1 &lt;&lt; 4, 
+<a class="el" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a3fab81bf37891355141013bc45ac34fb">AF_REFERENCE</a> =  1 &lt;&lt; 5, 
+<a class="el" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a077526887a967bb955474e513278ed42">AF_FACTORY</a> =  1 &lt;&lt; 6
+<br/>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -69,8 +75,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get default attribute value.  <a href="#aa80838789b803591b3a373a91601e070"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_attribute_static_info.html#ace2fcb22fe103d605039c2f2dba30ae0">GetAttributeTypeName</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute type description.  <a href="#ace2fcb22fe103d605039c2f2dba30ae0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">IComponentStaticInfo::Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_attribute_static_info.html#a32d44931a8f911bf543d2e2cdfde9a8f">GetRelatedMetaIds</a> (int metaGroupId, int flags, int flagsMask) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get related meta information.  <a href="#a32d44931a8f911bf543d2e2cdfde9a8f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">IElementStaticInfo::Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_attribute_static_info.html#abb4080e2c50bca861f76b9270c278f51">GetRelatedMetaIds</a> (int metaGroupId, int flags, int flagsMask) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get related meta information.  <a href="#abb4080e2c50bca861f76b9270c278f51"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_attribute_static_info.html#a11731fa4869453bd098b0a00e8c524a7">GetAttributeFlags</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of this attribute.  <a href="#a11731fa4869453bd098b0a00e8c524a7"></a><br/></td></tr>
 </table>
@@ -95,6 +101,15 @@ Public Member Functions</h2></td></tr>
 <tr><td valign="top"><em><a class="anchor" id="ae025080e9458b4c432cc607b5be883d2a8d45d95ffcc50f5611339a3c23bf69a4"></a><!-- doxytag: member="AF_NULLABLE" ref="ae025080e9458b4c432cc607b5be883d2a8d45d95ffcc50f5611339a3c23bf69a4" args="" -->AF_NULLABLE</em>&nbsp;</td><td>
 <p>Active if this attribute can be unset (null). </p>
 <p>Please note, that sometimes obligatory attributes can be nullable - for example for simple types default value can be taken. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ae025080e9458b4c432cc607b5be883d2ac967dab5fe6c208f51fa972ee295fa92"></a><!-- doxytag: member="AF_SINGLE" ref="ae025080e9458b4c432cc607b5be883d2ac967dab5fe6c208f51fa972ee295fa92" args="" -->AF_SINGLE</em>&nbsp;</td><td>
+<p>Attribute is single type. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ae025080e9458b4c432cc607b5be883d2aba97c2ca3c8105b1e9589db51253973e"></a><!-- doxytag: member="AF_MULTIPLE" ref="ae025080e9458b4c432cc607b5be883d2aba97c2ca3c8105b1e9589db51253973e" args="" -->AF_MULTIPLE</em>&nbsp;</td><td>
+<p>Attribute is multiple type. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ae025080e9458b4c432cc607b5be883d2a539016ee0900591d80ff7eeac1abbc9a"></a><!-- doxytag: member="AF_VALUE" ref="ae025080e9458b4c432cc607b5be883d2a539016ee0900591d80ff7eeac1abbc9a" args="" -->AF_VALUE</em>&nbsp;</td><td>
+<p>Attribute is simple value type. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="ae025080e9458b4c432cc607b5be883d2a3fab81bf37891355141013bc45ac34fb"></a><!-- doxytag: member="AF_REFERENCE" ref="ae025080e9458b4c432cc607b5be883d2a3fab81bf37891355141013bc45ac34fb" args="" -->AF_REFERENCE</em>&nbsp;</td><td>
 <p>Attribute is reference to another component. </p>
@@ -194,12 +209,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a32d44931a8f911bf543d2e2cdfde9a8f"></a><!-- doxytag: member="icomp::IAttributeStaticInfo::GetRelatedMetaIds" ref="a32d44931a8f911bf543d2e2cdfde9a8f" args="(int metaGroupId, int flags, int flagsMask) const =0" -->
+<a class="anchor" id="abb4080e2c50bca861f76b9270c278f51"></a><!-- doxytag: member="icomp::IAttributeStaticInfo::GetRelatedMetaIds" ref="abb4080e2c50bca861f76b9270c278f51" args="(int metaGroupId, int flags, int flagsMask) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">IComponentStaticInfo::Ids</a> icomp::IAttributeStaticInfo::GetRelatedMetaIds </td>
+          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">IElementStaticInfo::Ids</a> icomp::IAttributeStaticInfo::GetRelatedMetaIds </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>metaGroupId</em>, </td>
@@ -228,7 +243,7 @@ Public Member Functions</h2></td></tr>
 <p>Get related meta information. </p>
 <p>This information in normally used by references and factories to provide information about related interfaces. </p>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html#ae54f8521b7704e5ed0afaabeb3e80149">icomp::CCompositeComponentStaticInfo::AttrAsOptionalDelegator</a>, and <a class="el" href="classicomp_1_1_t_attribute_static_info.html#a3f34086a16c0ce029de592f6a3fd07f1">icomp::TAttributeStaticInfo&lt; Attribute &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html#aee9b16fd99b8f94bba6c3ea41637b419">icomp::CCompositeComponentStaticInfo::AttrAsOptionalDelegator</a>, and <a class="el" href="classicomp_1_1_t_attribute_static_info.html#a36b454830417ebad8cab0b70cad1bac7">icomp::TAttributeStaticInfo&lt; Attribute &gt;</a>.</p>
 
 </div>
 </div>

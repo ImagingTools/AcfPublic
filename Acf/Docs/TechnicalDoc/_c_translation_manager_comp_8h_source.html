@@ -86,48 +86,50 @@
 <a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_c_translation_manager_comp.html#a7664d8f172b83f6e919d206ca041955a" title="Set default system&#39;s language.">SetSystemLanguage</a>();
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
-<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_c_translation_manager_comp.html#a332815e5227548cca6183ad8bf0ca468" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiqt_1_1_c_translation_manager_comp.html#ab1b7a86af47cd5d76ae628c71dc31a18" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiqt_1_1_c_translation_manager_comp.html#a4684fec1024fa1bb3eb753da60b1a29a" title="Get description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066 <span class="keyword">private</span>:
-<a name="l00067"></a>00067        <span class="keyword">class </span>LanguageSelectionObserver: <span class="keyword">public</span> imod::TSingleModelObserverBase&lt;iprm::ISelectionParam&gt;
-<a name="l00068"></a>00068        {
-<a name="l00069"></a>00069        <span class="keyword">public</span>:
-<a name="l00070"></a>00070               LanguageSelectionObserver(<a class="code" href="classiqt_1_1_c_translation_manager_comp.html">CTranslationManagerComp</a>&amp; parent);
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072        <span class="keyword">protected</span>:
-<a name="l00073"></a>00073               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00074"></a>00074               <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnUpdate(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076        <span class="keyword">private</span>:
-<a name="l00077"></a>00077               <a class="code" href="classiqt_1_1_c_translation_manager_comp.html">CTranslationManagerComp</a>&amp; m_parent;
-<a name="l00078"></a>00078        };
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080 <span class="keyword">private</span>:
-<a name="l00081"></a>00081        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_translationFilePathAttrPtr);
-<a name="l00082"></a>00082        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_translationFilePrefixAttrPtr);
-<a name="l00083"></a>00083        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_languagesAttrPtr);
-<a name="l00084"></a>00084        I_REF(<a class="code" href="classiqt_1_1_i_translation_manager.html">iqt::ITranslationManager</a>, m_slaveTranslationManagerCompPtr);
-<a name="l00085"></a>00085        I_REF(<a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>, m_languageSelectionCompPtr);
-<a name="l00086"></a>00086        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_languageSelectionModelCompPtr);
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QTranslator&gt;</a> TranslatorsList;
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_c_translation_manager_comp.html#ad00f524b280784078cf0afaa39c01bd2" title="Get constraints flags.">GetConstraintsFlags</a>() <span class="keyword">const</span>;
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_c_translation_manager_comp.html#a332815e5227548cca6183ad8bf0ca468" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiqt_1_1_c_translation_manager_comp.html#ab1b7a86af47cd5d76ae628c71dc31a18" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiqt_1_1_c_translation_manager_comp.html#a4684fec1024fa1bb3eb753da60b1a29a" title="Get description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> std::string <a class="code" href="classiqt_1_1_c_translation_manager_comp.html#aa1d884f3c1623bcaa1181557c06c0660" title="Get option ID.">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="keyword">private</span>:
+<a name="l00069"></a>00069        <span class="keyword">class </span>LanguageSelectionObserver: <span class="keyword">public</span> imod::TSingleModelObserverBase&lt;iprm::ISelectionParam&gt;
+<a name="l00070"></a>00070        {
+<a name="l00071"></a>00071        <span class="keyword">public</span>:
+<a name="l00072"></a>00072               LanguageSelectionObserver(<a class="code" href="classiqt_1_1_c_translation_manager_comp.html">CTranslationManagerComp</a>&amp; parent);
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074        <span class="keyword">protected</span>:
+<a name="l00075"></a>00075               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00076"></a>00076               <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnUpdate(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078        <span class="keyword">private</span>:
+<a name="l00079"></a>00079               <a class="code" href="classiqt_1_1_c_translation_manager_comp.html">CTranslationManagerComp</a>&amp; m_parent;
+<a name="l00080"></a>00080        };
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 <span class="keyword">private</span>:
+<a name="l00083"></a>00083        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_translationFilePathAttrPtr);
+<a name="l00084"></a>00084        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_translationFilePrefixAttrPtr);
+<a name="l00085"></a>00085        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_languagesAttrPtr);
+<a name="l00086"></a>00086        I_REF(<a class="code" href="classiqt_1_1_i_translation_manager.html">iqt::ITranslationManager</a>, m_slaveTranslationManagerCompPtr);
+<a name="l00087"></a>00087        I_REF(<a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>, m_languageSelectionCompPtr);
+<a name="l00088"></a>00088        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_languageSelectionModelCompPtr);
 <a name="l00089"></a>00089 
-<a name="l00090"></a>00090        TranslatorsList m_translatorsList;
+<a name="l00090"></a>00090        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QTranslator&gt;</a> TranslatorsList;
 <a name="l00091"></a>00091 
-<a name="l00092"></a>00092        LanguageSelectionObserver m_selectionObserver;
+<a name="l00092"></a>00092        TranslatorsList m_translatorsList;
 <a name="l00093"></a>00093 
-<a name="l00094"></a>00094        <span class="keywordtype">int</span> m_currentLanguageIndex;
-<a name="l00095"></a>00095 };
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098 } <span class="comment">// namespace iqt</span>
+<a name="l00094"></a>00094        LanguageSelectionObserver m_selectionObserver;
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096        <span class="keywordtype">int</span> m_currentLanguageIndex;
+<a name="l00097"></a>00097 };
+<a name="l00098"></a>00098 
 <a name="l00099"></a>00099 
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101 <span class="preprocessor">#endif // !iqt_CTranslationManagerComp_included</span>
-<a name="l00102"></a>00102 <span class="preprocessor"></span>
-<a name="l00103"></a>00103 
+<a name="l00100"></a>00100 } <span class="comment">// namespace iqt</span>
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 <span class="preprocessor">#endif // !iqt_CTranslationManagerComp_included</span>
+<a name="l00104"></a>00104 <span class="preprocessor"></span>
+<a name="l00105"></a>00105 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

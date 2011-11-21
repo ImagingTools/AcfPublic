@@ -59,7 +59,7 @@ public:
 	virtual const std::string& GetAttributeDescription() const;
 	virtual const iser::IObject* GetAttributeDefaultValue() const;
 	virtual std::string GetAttributeTypeName() const;
-	virtual IComponentStaticInfo::Ids GetRelatedMetaIds(int metaGroupId, int flags, int flagsMask) const;
+	virtual IElementStaticInfo::Ids GetRelatedMetaIds(int metaGroupId, int flags, int flagsMask) const;
 	virtual int GetAttributeFlags() const;
 
 private:
@@ -153,9 +153,9 @@ std::string TAttributeStaticInfo<Attribute>::GetAttributeTypeName() const
 
 
 template <class Attribute>
-IComponentStaticInfo::Ids TAttributeStaticInfo<Attribute>::GetRelatedMetaIds(int metaGroupId, int flags, int flagsMask) const
+IElementStaticInfo::Ids TAttributeStaticInfo<Attribute>::GetRelatedMetaIds(int metaGroupId, int flags, int flagsMask) const
 {
-	IComponentStaticInfo::Ids retVal;
+	IElementStaticInfo::Ids retVal;
 
 	RelatedIdsMap::const_iterator foundGroupIter = m_relatedInterfacesMap.find(metaGroupId);
 	if (foundGroupIter != m_relatedInterfacesMap.end()){

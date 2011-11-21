@@ -39,7 +39,7 @@
 <div class="title">iqtgui::CHierarchicalCommand Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtgui::CHierarchicalCommand" --><!-- doxytag: inherits="TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::TNamedWrap&lt; ibase::IHierarchicalCommand &gt; &gt; &gt;" -->
+<!-- doxytag: class="iqtgui::CHierarchicalCommand" --><!-- doxytag: inherits="TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt; &gt;,iprm::CNameParam" -->
 <p>Implementation of hierarchical command based on <code>QAction</code> from Qt.  
  <a href="classiqtgui_1_1_c_hierarchical_command.html#details">More...</a></p>
 
@@ -50,16 +50,20 @@ Inheritance diagram for iqtgui::CHierarchicalCommand:</div>
  <div class="center">
   <img src="classiqtgui_1_1_c_hierarchical_command.png" usemap="#iqtgui::CHierarchicalCommand_map" alt=""/>
   <map id="iqtgui::CHierarchicalCommand_map" name="iqtgui::CHierarchicalCommand_map">
-<area href="classibase_1_1_t_enableable_wrap.html" alt="ibase::TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::TNamedWrap&lt; ibase::IHierarchicalCommand &gt; &gt; &gt;" shape="rect" coords="323,392,960,416"/>
-<area href="classibase_1_1_t_hierarchical_base.html" alt="ibase::THierarchicalBase&lt; ibase::TNamedWrap&lt; ibase::IHierarchicalCommand &gt; &gt;" shape="rect" coords="323,336,960,360"/>
-<area href="classistd_1_1_t_change_delegator.html" alt="istd::TChangeDelegator&lt; ibase::TNamedWrap&lt; ibase::IHierarchicalCommand &gt; &gt;" shape="rect" coords="323,280,960,304"/>
-<area href="classistd_1_1_t_change_binder.html" alt="istd::TChangeBinder&lt; ibase::TNamedWrap&lt; ibase::IHierarchicalCommand &gt;, CChangeDelegator &gt;" shape="rect" coords="323,224,960,248"/>
-<area href="classibase_1_1_t_named_wrap.html" alt="ibase::TNamedWrap&lt; ibase::IHierarchicalCommand &gt;" shape="rect" coords="0,168,637,192"/>
-<area href="classistd_1_1_c_change_delegator.html" title="Delegates calls of IChangeable methods to the given slave." alt="istd::CChangeDelegator" shape="rect" coords="647,168,1284,192"/>
-<area href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures." alt="istd::TIHierarchical&lt; Interface &gt;" shape="rect" coords="0,112,637,136"/>
-<area href="classistd_1_1_i_change_delegator.html" title="Common interface for all classes that supports delegation of their updates to another class..." alt="istd::IChangeDelegator" shape="rect" coords="647,112,1284,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="647,56,1284,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="647,0,1284,24"/>
+<area href="classibase_1_1_t_enableable_wrap.html" alt="ibase::TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt; &gt;" shape="rect" coords="255,392,756,416"/>
+<area href="classiprm_1_1_c_name_param.html" title="Template based implementation of a named object." alt="iprm::CNameParam" shape="rect" coords="1022,392,1523,416"/>
+<area href="classibase_1_1_t_hierarchical_base.html" alt="ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt;" shape="rect" coords="255,336,756,360"/>
+<area href="classiprm_1_1_i_name_param.html" title="Interface for a object containing its name." alt="iprm::INameParam" shape="rect" coords="1022,336,1523,360"/>
+<area href="classistd_1_1_t_change_delegator.html" alt="istd::TChangeDelegator&lt; ibase::IHierarchicalCommand &gt;" shape="rect" coords="255,280,756,304"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="1022,280,1523,304"/>
+<area href="classistd_1_1_t_change_binder.html" alt="istd::TChangeBinder&lt; ibase::IHierarchicalCommand, CChangeDelegator &gt;" shape="rect" coords="255,224,756,248"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="1022,224,1523,248"/>
+<area href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures." alt="istd::TIHierarchical&lt; Interface &gt;" shape="rect" coords="0,168,501,192"/>
+<area href="classistd_1_1_c_change_delegator.html" title="Delegates calls of IChangeable methods to the given slave." alt="istd::CChangeDelegator" shape="rect" coords="511,168,1012,192"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1022,168,1523,192"/>
+<area href="classistd_1_1_i_change_delegator.html" title="Common interface for all classes that supports delegation of their updates to another class..." alt="istd::IChangeDelegator" shape="rect" coords="511,112,1012,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="511,56,1012,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="511,0,1012,24"/>
 </map>
  </div></div>
 
@@ -70,8 +74,8 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef QAction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#af502bbcf3de815f3944f26da2cdb0ac7">BaseClass</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classibase_1_1_t_enableable_wrap.html">ibase::TEnableableWrap</a><br class="typebreak"/>
 &lt; <a class="el" href="classibase_1_1_t_hierarchical_base.html">ibase::THierarchicalBase</a><br class="typebreak"/>
-&lt; <a class="el" href="classibase_1_1_t_named_wrap.html">ibase::TNamedWrap</a><br class="typebreak"/>
-&lt; <a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#ad2df4d24186669a37658d60d51971a58">BaseClass2</a></td></tr>
+&lt; <a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a3885c17e976e1e6f0c038c5562a0e44c">BaseClass2</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiprm_1_1_c_name_param.html">iprm::CNameParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a746852630fba2c048cb2de454ff53d2a">BaseClass3</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a305d85de0204153eb1dfd11faffee66f">CHierarchicalCommand</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;name=&quot;&quot;, int priority=100, int staticFlags=CF_GLOBAL_MENU, int groupId=GI_NORMAL)</td></tr>
@@ -97,6 +101,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classibase_1_1_i_command.html">ibase::ICommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#ae050eab66b37a5a6e1d1915e4bf485b3">GetChild</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get child value.  <a href="#ae050eab66b37a5a6e1d1915e4bf485b3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#abd1f5b84054cf987e5950de54f49dc06">SetName</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the object name.  <a href="#abd1f5b84054cf987e5950de54f49dc06"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a056d90b0c4e74eb40809becb4d9e8c9d">SetEnabled</a> (bool isEnabled=true)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
@@ -124,26 +129,41 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classibase_1_1_t_enableable_wrap.html#a3efd69617c8b4679e889822e63f03bde">ibase::TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::TNamedWrap&lt; ibase::IHierarchicalCommand &gt; &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_enableable_wrap.html#a3efd69617c8b4679e889822e63f03bde">ibase::TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_hierarchical_command_8h_source.html#l00038">38</a> of file <a class="el" href="_c_hierarchical_command_8h_source.html">CHierarchicalCommand.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_hierarchical_command_8h_source.html#l00037">37</a> of file <a class="el" href="_c_hierarchical_command_8h_source.html">CHierarchicalCommand.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad2df4d24186669a37658d60d51971a58"></a><!-- doxytag: member="iqtgui::CHierarchicalCommand::BaseClass2" ref="ad2df4d24186669a37658d60d51971a58" args="" -->
+<a class="anchor" id="a3885c17e976e1e6f0c038c5562a0e44c"></a><!-- doxytag: member="iqtgui::CHierarchicalCommand::BaseClass2" ref="a3885c17e976e1e6f0c038c5562a0e44c" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classibase_1_1_t_enableable_wrap.html">ibase::TEnableableWrap</a>&lt; <a class="el" href="classibase_1_1_t_hierarchical_base.html">ibase::THierarchicalBase</a>&lt; <a class="el" href="classibase_1_1_t_named_wrap.html">ibase::TNamedWrap</a>&lt;<a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a>&gt; &gt; &gt; <a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#ad2df4d24186669a37658d60d51971a58">iqtgui::CHierarchicalCommand::BaseClass2</a></td>
+          <td class="memname">typedef <a class="el" href="classibase_1_1_t_enableable_wrap.html">ibase::TEnableableWrap</a>&lt;<a class="el" href="classibase_1_1_t_hierarchical_base.html">ibase::THierarchicalBase</a>&lt;<a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a>&gt; &gt; <a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a3885c17e976e1e6f0c038c5562a0e44c">iqtgui::CHierarchicalCommand::BaseClass2</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_t_change_binder.html#a13fca783bae6e7251bfb0420f1986860">istd::TChangeBinder&lt; ibase::TNamedWrap&lt; ibase::IHierarchicalCommand &gt;, CChangeDelegator &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_t_change_binder.html#a13fca783bae6e7251bfb0420f1986860">istd::TChangeBinder&lt; ibase::IHierarchicalCommand, CChangeDelegator &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_hierarchical_command_8h_source.html#l00041">41</a> of file <a class="el" href="_c_hierarchical_command_8h_source.html">CHierarchicalCommand.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_hierarchical_command_8h_source.html#l00038">38</a> of file <a class="el" href="_c_hierarchical_command_8h_source.html">CHierarchicalCommand.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a746852630fba2c048cb2de454ff53d2a"></a><!-- doxytag: member="iqtgui::CHierarchicalCommand::BaseClass3" ref="a746852630fba2c048cb2de454ff53d2a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classiprm_1_1_c_name_param.html">iprm::CNameParam</a> <a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a746852630fba2c048cb2de454ff53d2a">iqtgui::CHierarchicalCommand::BaseClass3</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_hierarchical_command_8h_source.html#l00039">39</a> of file <a class="el" href="_c_hierarchical_command_8h_source.html">CHierarchicalCommand.h</a>.</p>
 
 </div>
 </div>
@@ -267,7 +287,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get child value. </p>
 
-<p>Reimplemented from <a class="el" href="classibase_1_1_t_hierarchical_base.html#a04614eb6d4ddcb795c12e10b198bc979">ibase::THierarchicalBase&lt; ibase::TNamedWrap&lt; ibase::IHierarchicalCommand &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_hierarchical_base.html#a04614eb6d4ddcb795c12e10b198bc979">ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt;</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00140">iqtgui::CSimpleMainWindowGuiComp::CreateMenu()</a>.</p>
 
@@ -290,7 +310,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get number of childs. </p>
 <p>For single direction graph when only parent connection is stored it will be always 0. To check if this feature is supported check HF_CHILDS_SUPPORTED in flags. </p>
 
-<p>Reimplemented from <a class="el" href="classibase_1_1_t_hierarchical_base.html#a950be4ab87167bbf72fe856a40ab52ce">ibase::THierarchicalBase&lt; ibase::TNamedWrap&lt; ibase::IHierarchicalCommand &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_hierarchical_base.html#a950be4ab87167bbf72fe856a40ab52ce">ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt;</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00140">iqtgui::CSimpleMainWindowGuiComp::CreateMenu()</a>.</p>
 
@@ -485,7 +505,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classibase_1_1_t_enableable_wrap.html#a583d81f2e6ab6397451516d14a5bb2f8">ibase::TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::TNamedWrap&lt; ibase::IHierarchicalCommand &gt; &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_enableable_wrap.html#a583d81f2e6ab6397451516d14a5bb2f8">ibase::TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -521,7 +541,9 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classibase_1_1_t_named_wrap.html#adbf5d5ef6e9d870f2bb4924f48236edc">ibase::TNamedWrap&lt; ibase::IHierarchicalCommand &gt;</a>.</p>
+<p>Set the object name. </p>
+
+<p>Reimplemented from <a class="el" href="classiprm_1_1_c_name_param.html#a57262562645568adbedb49deb4a526a6">iprm::CNameParam</a>.</p>
 
 </div>
 </div>

@@ -85,8 +85,8 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new property type.  <a href="#a3a5afd3f335fbe328c5f30d589826c04"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_properties_manager.html#ad027d92d135101a1fba68651d71339a2">ReadProperties</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;attributesTag, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;attributeTag)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_properties_manager.html#a7d402dd804701670f58354ee41d50e2f">WriteProperties</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;attributesTag, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;attributeTag) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_properties_manager.html#a1eb5a3fcddc8a1978c2061dad52aee4f">ReadProperties</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;propertiesTag, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;propertyTag)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_properties_manager.html#ab2ee6b37a6e929edf8a37a082c409aee">WriteProperties</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;propertiesTag, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;propertyTag) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Basic implementation of an property container. </p>
@@ -260,7 +260,7 @@ Protected Member Functions</h2></td></tr>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">objectPtr</td><td>Property data object. </td></tr>
-    <tr><td class="paramname">propertyId</td><td>Unique ID of the property in the attributes repository. </td></tr>
+    <tr><td class="paramname">propertyId</td><td>Unique ID of the property in the properties repository. </td></tr>
     <tr><td class="paramname">propertyDescription</td><td>Human readable description of the property. </td></tr>
     <tr><td class="paramname">propertyFlags</td><td>Property flags. </td></tr>
   </table>
@@ -278,7 +278,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad027d92d135101a1fba68651d71339a2"></a><!-- doxytag: member="iprop::CPropertiesManager::ReadProperties" ref="ad027d92d135101a1fba68651d71339a2" args="(iser::IArchive &amp;archive, const iser::CArchiveTag &amp;attributesTag, const iser::CArchiveTag &amp;attributeTag)" -->
+<a class="anchor" id="a1eb5a3fcddc8a1978c2061dad52aee4f"></a><!-- doxytag: member="iprop::CPropertiesManager::ReadProperties" ref="a1eb5a3fcddc8a1978c2061dad52aee4f" args="(iser::IArchive &amp;archive, const iser::CArchiveTag &amp;propertiesTag, const iser::CArchiveTag &amp;propertyTag)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -292,13 +292,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;&#160;</td>
-          <td class="paramname"><em>attributesTag</em>, </td>
+          <td class="paramname"><em>propertiesTag</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;&#160;</td>
-          <td class="paramname"><em>attributeTag</em>&#160;</td>
+          <td class="paramname"><em>propertyTag</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -315,7 +315,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename AttributeImpl &gt; </div>
+template&lt;typename PropertyImpl &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool iprop::CPropertiesManager::RegisterPropertyType </td>
@@ -354,7 +354,7 @@ template&lt;typename AttributeImpl &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a7d402dd804701670f58354ee41d50e2f"></a><!-- doxytag: member="iprop::CPropertiesManager::WriteProperties" ref="a7d402dd804701670f58354ee41d50e2f" args="(iser::IArchive &amp;archive, const iser::CArchiveTag &amp;attributesTag, const iser::CArchiveTag &amp;attributeTag) const " -->
+<a class="anchor" id="ab2ee6b37a6e929edf8a37a082c409aee"></a><!-- doxytag: member="iprop::CPropertiesManager::WriteProperties" ref="ab2ee6b37a6e929edf8a37a082c409aee" args="(iser::IArchive &amp;archive, const iser::CArchiveTag &amp;propertiesTag, const iser::CArchiveTag &amp;propertyTag) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -368,13 +368,13 @@ template&lt;typename AttributeImpl &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;&#160;</td>
-          <td class="paramname"><em>attributesTag</em>, </td>
+          <td class="paramname"><em>propertiesTag</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;&#160;</td>
-          <td class="paramname"><em>attributeTag</em>&#160;</td>
+          <td class="paramname"><em>propertyTag</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

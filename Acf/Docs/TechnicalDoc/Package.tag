@@ -462,7 +462,7 @@
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_uuid_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_t_named_wrap_8h" name="TNamedWrap.h" local="yes" imported="no">ibase/TNamedWrap.h</includes>
+    <includes id="_c_name_param_8h" name="CNameParam.h" local="yes" imported="no">iprm/CNameParam.h</includes>
     <class kind="class">ibase::CUuidComp</class>
     <namespace>ibase</namespace>
   </compound>
@@ -507,9 +507,9 @@
     <name>ICommand.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_i_command_8h</filename>
-    <includes id="_i_named_8h" name="INamed.h" local="yes" imported="no">istd/INamed.h</includes>
     <includes id="_i_enableable_8h" name="IEnableable.h" local="yes" imported="no">istd/IEnableable.h</includes>
     <includes id="_t_i_hierarchical_8h" name="TIHierarchical.h" local="yes" imported="no">istd/TIHierarchical.h</includes>
+    <includes id="_i_name_param_8h" name="INameParam.h" local="yes" imported="no">iprm/INameParam.h</includes>
     <class kind="class">ibase::ICommand</class>
     <namespace>ibase</namespace>
     <member kind="typedef">
@@ -779,25 +779,6 @@
       <name>CMsbWord</name>
       <anchorfile>namespaceibase.html</anchorfile>
       <anchor>a143a6a34f2268b1244c26c5a8dfef11f</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>TNamedWrap.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_t_named_wrap_8h</filename>
-    <includes id="ibase_8h" name="ibase.h" local="yes" imported="no">ibase/ibase.h</includes>
-    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_i_named_8h" name="INamed.h" local="yes" imported="no">istd/INamed.h</includes>
-    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
-    <class kind="class">ibase::TNamedWrap</class>
-    <namespace>ibase</namespace>
-    <member kind="typedef">
-      <type>ibase::TNamedWrap&lt; istd::INamed &gt;</type>
-      <name>CNamed</name>
-      <anchorfile>namespaceibase.html</anchorfile>
-      <anchor>a6e2ed196b3484140edb9533ebc4ba1f9</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1246,6 +1227,7 @@
     <filename>_c_component_base_8h</filename>
     <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
     <includes id="_i_component_8h" name="IComponent.h" local="yes" imported="no">icomp/IComponent.h</includes>
+    <includes id="_i_composite_component_8h" name="ICompositeComponent.h" local="yes" imported="no">icomp/ICompositeComponent.h</includes>
     <includes id="_i_real_component_static_info_8h" name="IRealComponentStaticInfo.h" local="yes" imported="no">icomp/IRealComponentStaticInfo.h</includes>
     <includes id="_t_interface_registrator_8h" name="TInterfaceRegistrator.h" local="yes" imported="no">icomp/TInterfaceRegistrator.h</includes>
     <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
@@ -1258,10 +1240,25 @@
     <includes id="_t_multi_factory_member_8h" name="TMultiFactoryMember.h" local="yes" imported="no">icomp/TMultiFactoryMember.h</includes>
     <includes id="_t_attribute_static_info_8h" name="TAttributeStaticInfo.h" local="yes" imported="no">icomp/TAttributeStaticInfo.h</includes>
     <includes id="_t_component_static_info_8h" name="TComponentStaticInfo.h" local="yes" imported="no">icomp/TComponentStaticInfo.h</includes>
+    <includes id="_t_subelement_static_info_8h" name="TSubelementStaticInfo.h" local="yes" imported="no">icomp/TSubelementStaticInfo.h</includes>
     <includes id="_c_base_component_static_info_8h" name="CBaseComponentStaticInfo.h" local="yes" imported="no">icomp/CBaseComponentStaticInfo.h</includes>
     <includes id="_c_related_info_registrator_8h" name="CRelatedInfoRegistrator.h" local="yes" imported="no">icomp/CRelatedInfoRegistrator.h</includes>
     <class kind="class">icomp::CComponentBase</class>
     <namespace>icomp</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>_c_component_base_8h.html</anchorfile>
+      <anchor>ac4bf5ae770b4ca0f33fb13b7dcf6cb5d</anchor>
+      <arglist>(ElementName)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>_c_component_base_8h.html</anchorfile>
+      <anchor>ab2b90c5b1e9ccfb347bfdcac76cea2fd</anchor>
+      <arglist>(ElementName, InterfaceType, extractorFunction)</arglist>
+    </member>
     <member kind="define">
       <type>#define</type>
       <name>I_ASSIGN_BASE</name>
@@ -1341,6 +1338,7 @@
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_c_composite_component_8h</filename>
     <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
+    <includes id="_i_composite_component_8h" name="ICompositeComponent.h" local="yes" imported="no">icomp/ICompositeComponent.h</includes>
     <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
     <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
     <includes id="_c_interface_manip_base_8h" name="CInterfaceManipBase.h" local="yes" imported="no">icomp/CInterfaceManipBase.h</includes>
@@ -1525,12 +1523,37 @@
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
+    <name>IComponentInterfaceExtractor.h</name>
+    <path>C:/Temp/Acf/Include/icomp/</path>
+    <filename>_i_component_interface_extractor_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
+    <class kind="class">icomp::IComponentInterfaceExtractor</class>
+    <namespace>icomp</namespace>
+  </compound>
+  <compound kind="file">
     <name>IComponentStaticInfo.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_i_component_static_info_8h</filename>
+    <includes id="_i_element_static_info_8h" name="IElementStaticInfo.h" local="yes" imported="no">icomp/IElementStaticInfo.h</includes>
+    <class kind="class">icomp::IComponentStaticInfo</class>
+    <namespace>icomp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ICompositeComponent.h</name>
+    <path>C:/Temp/Acf/Include/icomp/</path>
+    <filename>_i_composite_component_8h</filename>
+    <includes id="_i_component_8h" name="IComponent.h" local="yes" imported="no">icomp/IComponent.h</includes>
+    <class kind="class">icomp::ICompositeComponent</class>
+    <namespace>icomp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IElementStaticInfo.h</name>
+    <path>C:/Temp/Acf/Include/icomp/</path>
+    <filename>_i_element_static_info_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
-    <class kind="class">icomp::IComponentStaticInfo</class>
+    <class kind="class">icomp::IElementStaticInfo</class>
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
@@ -1564,8 +1587,8 @@
     <name>IRealComponentStaticInfo.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_i_real_component_static_info_8h</filename>
-    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
     <includes id="_i_component_static_info_8h" name="IComponentStaticInfo.h" local="yes" imported="no">icomp/IComponentStaticInfo.h</includes>
+    <includes id="_i_component_interface_extractor_8h" name="IComponentInterfaceExtractor.h" local="yes" imported="no">icomp/IComponentInterfaceExtractor.h</includes>
     <class kind="class">icomp::IRealComponentStaticInfo</class>
     <namespace>icomp</namespace>
   </compound>
@@ -1633,6 +1656,13 @@
     <class kind="class">icomp::TAttribute</class>
     <namespace>icomp</namespace>
     <member kind="typedef">
+      <type>TAttribute&lt; int &gt;</type>
+      <name>CIntAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>a2e9c5b3f483b27a3dbd390798812dd42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>TAttribute&lt; double &gt;</type>
       <name>CDoubleAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
@@ -1647,10 +1677,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TAttribute&lt; int &gt;</type>
-      <name>CIntAttribute</name>
+      <type>TAttribute&lt; istd::CString &gt;</type>
+      <name>CStringAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a2e9c5b3f483b27a3dbd390798812dd42</anchor>
+      <anchor>ac907af0a36ea7f83d4cbcbff904b7465</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -1658,13 +1688,6 @@
       <name>CStdStringAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
       <anchor>a1a5b78266bc6d2dc552b41a94f5b80c3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; istd::CString &gt;</type>
-      <name>CStringAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>ac907af0a36ea7f83d4cbcbff904b7465</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1777,6 +1800,13 @@
     <class kind="struct">icomp::TMultiAttribute::Wrap</class>
     <namespace>icomp</namespace>
     <member kind="typedef">
+      <type>TMultiAttribute&lt; int &gt;</type>
+      <name>CMultiIntAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>a3fac49d7b6b1176bfdb11a7e5c4a8ec9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>TMultiAttribute&lt; double &gt;</type>
       <name>CMultiDoubleAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
@@ -1791,10 +1821,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TMultiAttribute&lt; int &gt;</type>
-      <name>CMultiIntAttribute</name>
+      <type>TMultiAttribute&lt; istd::CString &gt;</type>
+      <name>CMultiStringAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a3fac49d7b6b1176bfdb11a7e5c4a8ec9</anchor>
+      <anchor>a14cb213e6d6b2ec4061d74205a99b803</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -1802,13 +1832,6 @@
       <name>CMultiStdStringAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
       <anchor>ac4f3810d7815442242c51bd82b3ae7da</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; istd::CString &gt;</type>
-      <name>CMultiStringAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a14cb213e6d6b2ec4061d74205a99b803</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1881,9 +1904,20 @@
     <name>TSimComponentWrap.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_t_sim_component_wrap_8h</filename>
+    <includes id="_i_composite_component_8h" name="ICompositeComponent.h" local="yes" imported="no">icomp/ICompositeComponent.h</includes>
     <includes id="_t_component_wrap_8h" name="TComponentWrap.h" local="yes" imported="no">icomp/TComponentWrap.h</includes>
     <includes id="_c_sim_component_context_base_8h" name="CSimComponentContextBase.h" local="yes" imported="no">icomp/CSimComponentContextBase.h</includes>
     <class kind="class">icomp::TSimComponentWrap</class>
+    <namespace>icomp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TSubelementStaticInfo.h</name>
+    <path>C:/Temp/Acf/Include/icomp/</path>
+    <filename>_t_subelement_static_info_8h</filename>
+    <includes id="_i_element_static_info_8h" name="IElementStaticInfo.h" local="yes" imported="no">icomp/IElementStaticInfo.h</includes>
+    <includes id="_c_base_component_static_info_8h" name="CBaseComponentStaticInfo.h" local="yes" imported="no">icomp/CBaseComponentStaticInfo.h</includes>
+    <class kind="class">icomp::TSubelementStaticInfo</class>
+    <class kind="class">icomp::TSubelementStaticInfo::Registrator</class>
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
@@ -2596,11 +2630,19 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CNameParam.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_c_name_param_8h</filename>
+    <includes id="_i_name_param_8h" name="INameParam.h" local="yes" imported="no">iprm/INameParam.h</includes>
+    <class kind="class">iprm::CNameParam</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CNameParamComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_name_param_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_t_named_wrap_8h" name="TNamedWrap.h" local="yes" imported="no">ibase/TNamedWrap.h</includes>
+    <includes id="_c_name_param_8h" name="CNameParam.h" local="yes" imported="no">iprm/CNameParam.h</includes>
     <class kind="class">iprm::CNameParamComp</class>
     <namespace>iprm</namespace>
   </compound>
@@ -2660,7 +2702,6 @@
     <filename>_c_selection_param_comp_8h</filename>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
     <class kind="class">iprm::CSelectionParamComp</class>
@@ -2701,6 +2742,15 @@
     <filename>_i_linear_adjust_params_8h</filename>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <class kind="class">iprm::ILinearAdjustParams</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>INameParam.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_i_name_param_8h</filename>
+    <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <class kind="class">iprm::INameParam</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -2831,6 +2881,14 @@
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
     <class kind="class">iproc::IProgressManager</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IStateController.h</name>
+    <path>C:/Temp/Acf/Include/iproc/</path>
+    <filename>_i_state_controller_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <class kind="class">iproc::IStateController</class>
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
@@ -4145,7 +4203,7 @@
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_hierarchical_command_8h</filename>
     <includes id="_t_opt_pointer_vector_8h" name="TOptPointerVector.h" local="yes" imported="no">istd/TOptPointerVector.h</includes>
-    <includes id="_t_named_wrap_8h" name="TNamedWrap.h" local="yes" imported="no">ibase/TNamedWrap.h</includes>
+    <includes id="_c_name_param_8h" name="CNameParam.h" local="yes" imported="no">iprm/CNameParam.h</includes>
     <includes id="_t_hierarchical_base_8h" name="THierarchicalBase.h" local="yes" imported="no">ibase/THierarchicalBase.h</includes>
     <includes id="_t_enableable_wrap_8h" name="TEnableableWrap.h" local="yes" imported="no">ibase/TEnableableWrap.h</includes>
     <includes id="_i_command_8h" name="ICommand.h" local="yes" imported="no">ibase/ICommand.h</includes>
@@ -4460,6 +4518,15 @@
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CNameParamGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtprm/</path>
+    <filename>_c_name_param_gui_comp_8h</filename>
+    <includes id="_i_name_param_8h" name="INameParam.h" local="yes" imported="no">iprm/INameParam.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">iqtprm::CNameParamGuiComp</class>
+    <namespace>iqtprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CParamsManagerGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_params_manager_gui_comp_8h</filename>
@@ -4501,6 +4568,7 @@
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_selection_param_gui_comp_8h</filename>
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtprm::CSelectionParamGuiComp</class>
@@ -4597,20 +4665,6 @@
     <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
     <includes id="iqtdoc_8h" name="iqtdoc.h" local="yes" imported="no">iqtdoc/iqtdoc.h</includes>
     <namespace>iqproc</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CWizardGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtwiz/</path>
-    <filename>_c_wizard_gui_comp_8h</filename>
-    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
-    <includes id="_i_wizard_navigation_controller_8h" name="IWizardNavigationController.h" local="yes" imported="no">iwiz/IWizardNavigationController.h</includes>
-    <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
-    <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
-    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
-    <class kind="class">iqtwiz::CWizardGuiComp</class>
-    <namespace>iqtwiz</namespace>
   </compound>
   <compound kind="file">
     <name>CWizardOptionsListGuiComp.h</name>
@@ -5203,15 +5257,6 @@
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
     <class kind="class">istd::ILogger</class>
-    <namespace>istd</namespace>
-  </compound>
-  <compound kind="file">
-    <name>INamed.h</name>
-    <path>C:/Temp/Acf/Include/istd/</path>
-    <filename>_i_named_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
-    <class kind="class">istd::INamed</class>
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
@@ -5833,25 +5878,14 @@
     <namespace>isys</namespace>
   </compound>
   <compound kind="file">
-    <name>CLinearWizardControllerComp.h</name>
+    <name>CWizardDocumentComp.h</name>
     <path>C:/Temp/Acf/Include/iwiz/</path>
-    <filename>_c_linear_wizard_controller_comp_8h</filename>
+    <filename>_c_wizard_document_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
+    <includes id="_c_params_manager_comp_8h" name="CParamsManagerComp.h" local="yes" imported="no">iprm/CParamsManagerComp.h</includes>
     <includes id="_i_wizard_navigation_controller_8h" name="IWizardNavigationController.h" local="yes" imported="no">iwiz/IWizardNavigationController.h</includes>
-    <includes id="_i_wizard_page_controller_8h" name="IWizardPageController.h" local="yes" imported="no">iwiz/IWizardPageController.h</includes>
-    <class kind="class">iwiz::CLinearWizardControllerComp</class>
-    <namespace>iwiz</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CNonLinearWizardControllerComp.h</name>
-    <path>C:/Temp/Acf/Include/iwiz/</path>
-    <filename>_c_non_linear_wizard_controller_comp_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
-    <includes id="_i_wizard_navigation_controller_8h" name="IWizardNavigationController.h" local="yes" imported="no">iwiz/IWizardNavigationController.h</includes>
-    <includes id="_i_wizard_page_controller_8h" name="IWizardPageController.h" local="yes" imported="no">iwiz/IWizardPageController.h</includes>
-    <class kind="class">iwiz::CNonLinearWizardControllerComp</class>
+    <includes id="_i_params_manager_wizard_8h" name="IParamsManagerWizard.h" local="yes" imported="no">iwiz/IParamsManagerWizard.h</includes>
+    <class kind="class">iwiz::CWizardDocumentComp</class>
     <namespace>iwiz</namespace>
   </compound>
   <compound kind="file">
@@ -5860,9 +5894,18 @@
     <filename>_c_wizard_page_comp_8h</filename>
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_c_composed_params_set_comp_8h" name="CComposedParamsSetComp.h" local="yes" imported="no">iprm/CComposedParamsSetComp.h</includes>
-    <includes id="_i_wizard_page_info_8h" name="IWizardPageInfo.h" local="yes" imported="no">iwiz/IWizardPageInfo.h</includes>
-    <includes id="_i_wizard_page_controller_8h" name="IWizardPageController.h" local="yes" imported="no">iwiz/IWizardPageController.h</includes>
+    <includes id="_i_state_controller_8h" name="IStateController.h" local="yes" imported="no">iproc/IStateController.h</includes>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">iwiz::CWizardPageComp</class>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IParamsManagerWizard.h</name>
+    <path>C:/Temp/Acf/Include/iwiz/</path>
+    <filename>_i_params_manager_wizard_8h</filename>
+    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
+    <includes id="_i_wizard_navigation_controller_8h" name="IWizardNavigationController.h" local="yes" imported="no">iwiz/IWizardNavigationController.h</includes>
+    <class kind="class">iwiz::IParamsManagerWizard</class>
     <namespace>iwiz</namespace>
   </compound>
   <compound kind="file">
@@ -5875,25 +5918,8 @@
     <name>IWizardNavigationController.h</name>
     <path>C:/Temp/Acf/Include/iwiz/</path>
     <filename>_i_wizard_navigation_controller_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">iwiz::IWizardNavigationController</class>
-    <namespace>iwiz</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IWizardPageController.h</name>
-    <path>C:/Temp/Acf/Include/iwiz/</path>
-    <filename>_i_wizard_page_controller_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">iwiz::IWizardPageController</class>
-    <namespace>imod</namespace>
-    <namespace>iwiz</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IWizardPageInfo.h</name>
-    <path>C:/Temp/Acf/Include/iwiz/</path>
-    <filename>_i_wizard_page_info_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <class kind="class">iwiz::IWizardPageInfo</class>
+    <class kind="class">iwiz::IWizardNavigationController</class>
     <namespace>iwiz</namespace>
   </compound>
   <compound kind="group">
@@ -5958,10 +5984,10 @@
     <class kind="class">ibase::TEnableableWrap</class>
     <class kind="class">ibase::TLoggerCompWrap</class>
     <class kind="class">ibase::TLoggerWrap</class>
-    <class kind="class">ibase::TNamedWrap</class>
     <class kind="class">icomp::TMakeComponentWrap</class>
     <class kind="class">icomp::TModelCompWrap</class>
     <class kind="class">imod::TModelWrap</class>
+    <class kind="class">iprm::CNameParam</class>
     <class kind="class">iqtgui::TGuiObserverWrap</class>
     <class kind="class">iqtgui::TRestorableGuiWrap</class>
     <class kind="class">istd::TChangeNotifier</class>
@@ -6074,6 +6100,8 @@
     <class kind="class">icomp::IComponent</class>
     <class kind="class">icomp::IComponentContext</class>
     <class kind="class">icomp::IComponentStaticInfo</class>
+    <class kind="class">icomp::ICompositeComponent</class>
+    <class kind="class">icomp::IElementStaticInfo</class>
     <class kind="class">icomp::IRegistry</class>
     <class kind="class">icomp::IRegistryElement</class>
     <class kind="class">icomp::TMakeComponentWrap</class>
@@ -6113,6 +6141,10 @@
   <compound kind="class">
     <name>QObject</name>
     <filename>class_q_object.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>SelectionInfoImpl</name>
+    <filename>class_selection_info_impl.html</filename>
   </compound>
   <compound kind="class">
     <name>XmlFileSerializer</name>
@@ -8774,7 +8806,6 @@
     <class kind="class">ibase::TMessageContainerWrap</class>
     <class kind="class">ibase::TModelObserverCompWrap</class>
     <class kind="class">ibase::TMsbWord</class>
-    <class kind="class">ibase::TNamedWrap</class>
     <class kind="class">ibase::TSerializableContainer</class>
     <member kind="typedef">
       <type>istd::TIHierarchical&lt; ICommand &gt;</type>
@@ -8816,13 +8847,6 @@
       <name>CMsbWord</name>
       <anchorfile>namespaceibase.html</anchorfile>
       <anchor>a143a6a34f2268b1244c26c5a8dfef11f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ibase::TNamedWrap&lt; istd::INamed &gt;</type>
-      <name>CNamed</name>
-      <anchorfile>namespaceibase.html</anchorfile>
-      <anchor>a6e2ed196b3484140edb9533ebc4ba1f9</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -9803,6 +9827,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
+      <name>GetConstraintsFlags</name>
+      <anchorfile>classibase_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>ad1f5e956a0fbecdab7d29ae215ff6d69</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
       <name>GetOptionsCount</name>
       <anchorfile>classibase_1_1_c_selectable_file_converter_comp.html</anchorfile>
       <anchor>a3d660c559ade781f5dc7264fad3ef5ba</anchor>
@@ -9820,6 +9851,13 @@
       <name>GetOptionDescription</name>
       <anchorfile>classibase_1_1_c_selectable_file_converter_comp.html</anchorfile>
       <anchor>a1712aa721175ef4a162ecf10fa746087</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>GetOptionId</name>
+      <anchorfile>classibase_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>ab848924c7dd3ff557ca4ccb40cd59e29</anchor>
       <arglist>(int index) const </arglist>
     </member>
   </compound>
@@ -10114,21 +10152,13 @@
     <name>ibase::CUuidComp</name>
     <filename>classibase_1_1_c_uuid_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base>ibase::TNamedWrap</base>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <base>iprm::CNameParam</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classibase_1_1_c_uuid_comp.html</anchorfile>
       <anchor>a1ea3f6b62da99333ff84415ac023e519</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classibase_1_1_c_uuid_comp.html</anchorfile>
-      <anchor>a6702aebe9f028b2f58079ed537af794a</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -10281,7 +10311,7 @@
   <compound kind="class">
     <name>ibase::ICommand</name>
     <filename>classibase_1_1_i_command.html</filename>
-    <base virtualness="virtual">istd::INamed</base>
+    <base virtualness="virtual">iprm::INameParam</base>
     <base virtualness="virtual">istd::IEnableable</base>
     <member kind="enumeration">
       <name>StaticFlags</name>
@@ -11476,41 +11506,33 @@
   <compound kind="class">
     <name>ibase::TModelObserverCompWrap</name>
     <filename>classibase_1_1_t_model_observer_comp_wrap.html</filename>
-    <templarg>ObjectInterface</templarg>
-    <templarg>ObserverImpl</templarg>
+    <templarg>ObserverComponent</templarg>
     <member kind="typedef">
-      <type>ObserverImpl</type>
+      <type>ObserverComponent</type>
       <name>BaseClass</name>
       <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>a2c98196f4a16578f081d5ee2234c90ac</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ObjectInterface</type>
-      <name>ModelInterface</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>a7d9d0e8873cec70f68bb4ac7e23de199</anchor>
+      <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>a9b3375317c5af1abb9f7d378d83d3ef4</anchor>
-      <arglist>(m_objectCompPtr, m_modelCompPtr, false)</arglist>
+      <anchor>a00f64a4c2f8b4b762fa946dafc6f0e55</anchor>
+      <arglist>(m_defaultObjectCompPtr, m_defaultModelCompPtr, false)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>a4b372446b7f0bb2d1424155a7f14008c</anchor>
+      <anchor>ac046dfe3995e995397f20a1ebf031436</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>a077f3e348d9d7df441639d27e621a69e</anchor>
+      <anchor>aacf9336769a621402f913fad75bb5cf5</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -11559,46 +11581,6 @@
       <anchorfile>classibase_1_1_t_msb_word.html</anchorfile>
       <anchor>aea7ba38fe39dec635fbc401e2b71dfdc</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::TNamedWrap</name>
-    <filename>classibase_1_1_t_named_wrap.html</filename>
-    <templarg>BaseClass</templarg>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const istd::CString &amp;</type>
-      <name>GetName</name>
-      <anchorfile>classibase_1_1_t_named_wrap.html</anchorfile>
-      <anchor>a06ba5e161beb62e430fa7f1cd3f252c8</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetName</name>
-      <anchorfile>classibase_1_1_t_named_wrap.html</anchorfile>
-      <anchor>adbf5d5ef6e9d870f2bb4924f48236edc</anchor>
-      <arglist>(const istd::CString &amp;name)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsNameFixed</name>
-      <anchorfile>classibase_1_1_t_named_wrap.html</anchorfile>
-      <anchor>a69ccace830ccb056255967e692d086a7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SerializeName</name>
-      <anchorfile>classibase_1_1_t_named_wrap.html</anchorfile>
-      <anchor>afa4b397040a8d1dbb3bbfbeec009c492</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>istd::CString</type>
-      <name>m_name</name>
-      <anchorfile>classibase_1_1_t_named_wrap.html</anchorfile>
-      <anchor>aee961cc45ddd8934e85a4354195ac432</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13588,8 +13570,8 @@
       <type>void</type>
       <name>CreateExportedComponentsTree</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ab7541c75d15f482dc15f00d84fe4a06a</anchor>
-      <arglist>(const std::string &amp;elementId, const std::string &amp;globalElementId, const icomp::IComponentStaticInfo *elementMetaInfoPtr, QTreeWidgetItem &amp;item, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const </arglist>
+      <anchor>a23c5140c70662ea09e5fce1c7edbc8b6</anchor>
+      <arglist>(const std::string &amp;elementId, const std::string &amp;globalElementId, const icomp::IElementStaticInfo *elementMetaInfoPtr, QTreeWidgetItem &amp;item, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -14276,8 +14258,8 @@
       <type>virtual icomp::IRegistry::Ids</type>
       <name>GetCompatibleElements</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a1f20cae86256027216f28672a2e77637</anchor>
-      <arglist>(const icomp::IComponentStaticInfo::Ids &amp;interfaceNames, const icomp::IRegistry &amp;registry, int queryFlags) const </arglist>
+      <anchor>a52361767108785ce2fb137a11cd5b3e8</anchor>
+      <arglist>(const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IRegistry &amp;registry, int queryFlags) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -14318,8 +14300,8 @@
       <type>icomp::IRegistry::Ids</type>
       <name>GetCompatibleSubcomponents</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aa0d7db9f7bff6ef0aaa6dfc850fe27c4</anchor>
-      <arglist>(const std::string &amp;elementId, const icomp::IComponentStaticInfo &amp;elementStaticInfo, const icomp::IComponentStaticInfo::Ids &amp;interfaceNames) const </arglist>
+      <anchor>aa10df24fe11f3d4ec7034e06f195a1c5</anchor>
+      <arglist>(const std::string &amp;elementId, const icomp::IElementStaticInfo &amp;elementStaticInfo, const icomp::IElementStaticInfo::Ids &amp;interfaceNames) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -14332,15 +14314,15 @@
       <type>bool</type>
       <name>CheckPointedElementCompatibility</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>abad9197a22c9e9bff1686647f20c798c</anchor>
-      <arglist>(const std::string &amp;pointedElementName, const icomp::IComponentStaticInfo::Ids &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>a3a9c6aeed0f2467c93fcadb4b1c17783</anchor>
+      <arglist>(const std::string &amp;pointedElementName, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CheckPointedElementInfoCompatibility</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a8b3f7319800c24d10713dd0922f78576</anchor>
-      <arglist>(const std::string &amp;pointedElementName, const icomp::IComponentStaticInfo *pointedMetaInfoPtr, const icomp::IComponentStaticInfo::Ids &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>af55f0203180a6d281286570bdfb2fb32</anchor>
+      <arglist>(const std::string &amp;pointedElementName, const icomp::IElementStaticInfo *pointedMetaInfoPtr, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14881,7 +14863,6 @@
     <filename>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</filename>
     <base>QObject</base>
     <base>TScenographerCompBase&lt; imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</base>
-    <base virtualness="virtual">icmpstr::IElementSelectionInfo</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <class kind="class">icmpstr::CVisualRegistryScenographerComp::EnvironmentObserver</class>
     <member kind="typedef">
@@ -14890,6 +14871,34 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
       <anchor>a3b8dadc23a7b177f65d5418e2a53b9c4</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a7fc831e12d87f443b06afc458baf6e33</anchor>
+      <arglist>(SelectionInfo)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a9bb328309c6ab4b7ebf94ee209a42df7</anchor>
+      <arglist>(SelectionInfo, IElementSelectionInfo, ExtractSelectionInterface)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>ac40d3fb9bbdd4b657136a086497dbba6</anchor>
+      <arglist>(SelectionInfo, imod::IModel, ExtractSelectionInterfaceModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a98a25978c4b9a1be06b92e5e409b6772</anchor>
+      <arglist>(SelectionInfo, istd::IChangeable, ExtractSelectionInterfaceChangeable)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -14939,20 +14948,6 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
       <anchor>ae9b9fada88111cbd8986638eecdad9ea</anchor>
       <arglist>(const CVisualRegistryElement &amp;registryElement) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual icomp::IRegistry *</type>
-      <name>GetSelectedRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a054db9e342db6034725d63fb380fc09d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual Elements</type>
-      <name>GetSelectedElements</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a5b90aa03ac7858a70da441be79985fa6</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>
@@ -15145,6 +15140,34 @@
       <anchor>a9ff4d50e6d37ca1c0d341ad34ed4f807</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static IElementSelectionInfo *</type>
+      <name>ExtractSelectionInterface</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a7211cd41b0e418ba711d50dcf67cf36b</anchor>
+      <arglist>(CVisualRegistryScenographerComp &amp;component)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static imod::IModel *</type>
+      <name>ExtractSelectionInterfaceModel</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a1cfe9234b227da52f9c6cfc8020a9042</anchor>
+      <arglist>(CVisualRegistryScenographerComp &amp;component)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static istd::IChangeable *</type>
+      <name>ExtractSelectionInterfaceChangeable</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a8e2013929f2c6a981fdea9dcf5b9228d</anchor>
+      <arglist>(CVisualRegistryScenographerComp &amp;component)</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>imod::TModelWrap&lt; SelectionInfoImpl &gt;</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a1ecffae37bd7adb0d052fdefe2de32db</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icmpstr::CVisualRegistryScenographerComp::EnvironmentObserver</name>
@@ -15299,8 +15322,8 @@
       <type>virtual icomp::IRegistry::Ids</type>
       <name>GetCompatibleElements</name>
       <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a893d15564e76627474092ea40aa9ae1b</anchor>
-      <arglist>(const icomp::IComponentStaticInfo::Ids &amp;interfaceNames, const icomp::IRegistry &amp;registry, int queryFlags=QF_NONE) const =0</arglist>
+      <anchor>aa144f2dc6342f8096128f17ec3d50f89</anchor>
+      <arglist>(const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IRegistry &amp;registry, int queryFlags=QF_NONE) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -15385,7 +15408,10 @@
     <class kind="class">icomp::IComponent</class>
     <class kind="class">icomp::IComponentContext</class>
     <class kind="class">icomp::IComponentEnvironmentManager</class>
+    <class kind="class">icomp::IComponentInterfaceExtractor</class>
     <class kind="class">icomp::IComponentStaticInfo</class>
+    <class kind="class">icomp::ICompositeComponent</class>
+    <class kind="class">icomp::IElementStaticInfo</class>
     <class kind="class">icomp::IMetaInfoManager</class>
     <class kind="class">icomp::IPackagesManager</class>
     <class kind="class">icomp::IRealAttributeStaticInfo</class>
@@ -15413,6 +15439,14 @@
     <class kind="class">icomp::TReferenceMember</class>
     <class kind="class">icomp::TSimComponentsFactory</class>
     <class kind="class">icomp::TSimComponentWrap</class>
+    <class kind="class">icomp::TSubelementStaticInfo</class>
+    <member kind="typedef">
+      <type>TAttribute&lt; int &gt;</type>
+      <name>CIntAttribute</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>a2e9c5b3f483b27a3dbd390798812dd42</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>TAttribute&lt; double &gt;</type>
       <name>CDoubleAttribute</name>
@@ -15428,10 +15462,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TAttribute&lt; int &gt;</type>
-      <name>CIntAttribute</name>
+      <type>TAttribute&lt; istd::CString &gt;</type>
+      <name>CStringAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a2e9c5b3f483b27a3dbd390798812dd42</anchor>
+      <anchor>ac907af0a36ea7f83d4cbcbff904b7465</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -15442,10 +15476,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TAttribute&lt; istd::CString &gt;</type>
-      <name>CStringAttribute</name>
+      <type>TMultiAttribute&lt; int &gt;</type>
+      <name>CMultiIntAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>ac907af0a36ea7f83d4cbcbff904b7465</anchor>
+      <anchor>a3fac49d7b6b1176bfdb11a7e5c4a8ec9</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -15463,10 +15497,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TMultiAttribute&lt; int &gt;</type>
-      <name>CMultiIntAttribute</name>
+      <type>TMultiAttribute&lt; istd::CString &gt;</type>
+      <name>CMultiStringAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a3fac49d7b6b1176bfdb11a7e5c4a8ec9</anchor>
+      <anchor>a14cb213e6d6b2ec4061d74205a99b803</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -15474,13 +15508,6 @@
       <name>CMultiStdStringAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
       <anchor>ac4f3810d7815442242c51bd82b3ae7da</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; istd::CString &gt;</type>
-      <name>CMultiStringAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a14cb213e6d6b2ec4061d74205a99b803</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -15526,10 +15553,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>RegisterSubcomponentInfo</name>
+      <name>RegisterSubelementInfo</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>a588dcbab10b5ada319b133cb9154593b</anchor>
-      <arglist>(const std::string &amp;subcomponentId, const IComponentStaticInfo *componentInfoPtr)</arglist>
+      <anchor>a7a81013c4d322d00f4bd8505e63bf9da</anchor>
+      <arglist>(const std::string &amp;subcomponentId, const IElementStaticInfo *staticInfoPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IComponent *</type>
@@ -15542,8 +15569,8 @@
       <type>virtual void *</type>
       <name>GetComponentInterface</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>a7ff0e8164d4edaadd7c8f09a2485fffc</anchor>
-      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component) const </arglist>
+      <anchor>af4f6c552932600e60737319351c3dc6a</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const std::string &amp;subId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IAttributeStaticInfo *</type>
@@ -15553,10 +15580,10 @@
       <arglist>(const std::string &amp;attributeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const IComponentStaticInfo *</type>
-      <name>GetSubcomponentInfo</name>
+      <type>virtual const IElementStaticInfo *</type>
+      <name>GetSubelementInfo</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>a37223f6002c0fae82b55e1760e594860</anchor>
+      <anchor>ad5f6112769956287cdf7186a8c3d0c61</anchor>
       <arglist>(const std::string &amp;subcomponentId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -15668,10 +15695,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const IComponent *</type>
+      <type>virtual const ICompositeComponent *</type>
       <name>GetParentComponent</name>
       <anchorfile>classicomp_1_1_c_component_base.html</anchorfile>
-      <anchor>ade1dc1b1064a3cec1e8cc233865083ce</anchor>
+      <anchor>a6724b0ed9408dd2e79c88f9e1a3f18a2</anchor>
       <arglist>(bool ownerOnly=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -15692,36 +15719,8 @@
       <type>virtual void</type>
       <name>SetComponentContext</name>
       <anchorfile>classicomp_1_1_c_component_base.html</anchorfile>
-      <anchor>a68d5c73bc3c793f9fe1b08cbfe53fa26</anchor>
-      <arglist>(const icomp::IComponentContext *contextPtr, const IComponent *parentPtr, bool isParentOwner)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual IComponent *</type>
-      <name>GetSubcomponent</name>
-      <anchorfile>classicomp_1_1_c_component_base.html</anchorfile>
-      <anchor>a9b6858bbc317bd7966b0ed5a1af1606a</anchor>
-      <arglist>(const std::string &amp;componentId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const IComponentContext *</type>
-      <name>GetSubcomponentContext</name>
-      <anchorfile>classicomp_1_1_c_component_base.html</anchorfile>
-      <anchor>aab5a004af55984c1c0661ddc55c58de9</anchor>
-      <arglist>(const std::string &amp;componentId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual IComponent *</type>
-      <name>CreateSubcomponent</name>
-      <anchorfile>classicomp_1_1_c_component_base.html</anchorfile>
-      <anchor>aed5c9c1d5d7b5dcb944d64012fdf9973</anchor>
-      <arglist>(const std::string &amp;componentId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSubcomponentDeleted</name>
-      <anchorfile>classicomp_1_1_c_component_base.html</anchorfile>
-      <anchor>a06ba268cad2a6c57bd13f347ee6985b3</anchor>
-      <arglist>(const IComponent *subcomponentPtr)</arglist>
+      <anchor>ab5fcb684b0cc321196c467398311341f</anchor>
+      <arglist>(const icomp::IComponentContext *contextPtr, const ICompositeComponent *parentPtr, bool isParentOwner)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -15858,24 +15857,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentStaticInfo *</type>
-      <name>GetSubcomponentInfo</name>
-      <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>a13176e9255dde509b7fe0e521e92e1be</anchor>
-      <arglist>(const std::string &amp;subcomponentId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const IComponentStaticInfo *</type>
       <name>GetEmbeddedComponentInfo</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
       <anchor>a815d02162e404f916539f8469f841033</anchor>
       <arglist>(const std::string &amp;embeddedId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual Ids</type>
-      <name>GetMetaIds</name>
-      <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>a733f0ced0af7d33f9eecbbb0eb6ce32e</anchor>
-      <arglist>(int metaGroupId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::CString &amp;</type>
@@ -15891,12 +15876,26 @@
       <anchor>a4b2cc968da1906ed5d10348a047d5ced</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IElementStaticInfo *</type>
+      <name>GetSubelementInfo</name>
+      <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
+      <anchor>ad33590843a4f3a292b33dba391f3a0e2</anchor>
+      <arglist>(const std::string &amp;subcomponentId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Ids</type>
+      <name>GetMetaIds</name>
+      <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
+      <anchor>a733f0ced0af7d33f9eecbbb0eb6ce32e</anchor>
+      <arglist>(int metaGroupId) const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icomp::CCompositeComponent</name>
     <filename>classicomp_1_1_c_composite_component.html</filename>
     <base>icomp::CInterfaceManipBase</base>
-    <base virtualness="virtual">icomp::IComponent</base>
+    <base virtualness="virtual">icomp::ICompositeComponent</base>
     <member kind="function">
       <type></type>
       <name>CCompositeComponent</name>
@@ -15933,34 +15932,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const IComponent *</type>
-      <name>GetParentComponent</name>
-      <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>afc34d43b527e51c2fd9ffd5317b49b6f</anchor>
-      <arglist>(bool ownerOnly=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void *</type>
-      <name>GetInterface</name>
-      <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>a1b8f1f341efddce8037e70f3bd37c89f</anchor>
-      <arglist>(const istd::CClassInfo &amp;interfaceType, const std::string &amp;subId=&quot;&quot;)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const IComponentContext *</type>
-      <name>GetComponentContext</name>
-      <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>aec91efb6ac4d45de9c08310f409657e2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetComponentContext</name>
-      <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>a449c3d2cd95d0a9fb646e75ea5324685</anchor>
-      <arglist>(const icomp::IComponentContext *contextPtr, const IComponent *parentPtr, bool isParentOwner)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual IComponent *</type>
       <name>GetSubcomponent</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
@@ -15987,6 +15958,34 @@
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
       <anchor>a30eb8098644af9755c7d26fecfc77257</anchor>
       <arglist>(const IComponent *subcomponentPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ICompositeComponent *</type>
+      <name>GetParentComponent</name>
+      <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
+      <anchor>aa50293fb5f5979e375b0c48d1123da65</anchor>
+      <arglist>(bool ownerOnly=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void *</type>
+      <name>GetInterface</name>
+      <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
+      <anchor>a1b8f1f341efddce8037e70f3bd37c89f</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, const std::string &amp;subId=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IComponentContext *</type>
+      <name>GetComponentContext</name>
+      <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
+      <anchor>aec91efb6ac4d45de9c08310f409657e2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetComponentContext</name>
+      <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
+      <anchor>ae6657042080e37b072238b98a4ee1f32</anchor>
+      <arglist>(const icomp::IComponentContext *contextPtr, const ICompositeComponent *parentPtr, bool isParentOwner)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>istd::TDelPtr&lt; icomp::IComponent &gt;</type>
@@ -16138,10 +16137,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual IComponentStaticInfo::Ids</type>
+      <type>virtual IElementStaticInfo::Ids</type>
       <name>GetRelatedMetaIds</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html</anchorfile>
-      <anchor>ae54f8521b7704e5ed0afaabeb3e80149</anchor>
+      <anchor>aee9b16fd99b8f94bba6c3ea41637b419</anchor>
       <arglist>(int metaGroupId, int flags, int flagsMask) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17042,6 +17041,24 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <name>AF_SINGLE</name>
+      <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
+      <anchor>ae025080e9458b4c432cc607b5be883d2ac967dab5fe6c208f51fa972ee295fa92</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>AF_MULTIPLE</name>
+      <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
+      <anchor>ae025080e9458b4c432cc607b5be883d2aba97c2ca3c8105b1e9589db51253973e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>AF_VALUE</name>
+      <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
+      <anchor>ae025080e9458b4c432cc607b5be883d2a539016ee0900591d80ff7eeac1abbc9a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
       <name>AF_REFERENCE</name>
       <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
       <anchor>ae025080e9458b4c432cc607b5be883d2a3fab81bf37891355141013bc45ac34fb</anchor>
@@ -17075,10 +17092,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual IComponentStaticInfo::Ids</type>
+      <type>virtual IElementStaticInfo::Ids</type>
       <name>GetRelatedMetaIds</name>
       <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
-      <anchor>a32d44931a8f911bf543d2e2cdfde9a8f</anchor>
+      <anchor>abb4080e2c50bca861f76b9270c278f51</anchor>
       <arglist>(int metaGroupId, int flags, int flagsMask) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -17094,10 +17111,10 @@
     <filename>classicomp_1_1_i_component.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
-      <type>virtual const IComponent *</type>
+      <type>virtual const ICompositeComponent *</type>
       <name>GetParentComponent</name>
       <anchorfile>classicomp_1_1_i_component.html</anchorfile>
-      <anchor>acd7fb900f29bdf88b53a35faa86f9e95</anchor>
+      <anchor>adca938957e64be16768c0cf32c4bf1e1</anchor>
       <arglist>(bool ownerOnly=false) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -17118,36 +17135,8 @@
       <type>virtual void</type>
       <name>SetComponentContext</name>
       <anchorfile>classicomp_1_1_i_component.html</anchorfile>
-      <anchor>aeb913a6930fe58b88f186744a4b5ff54</anchor>
-      <arglist>(const icomp::IComponentContext *contextPtr, const IComponent *parentPtr, bool isParentOwner)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual IComponent *</type>
-      <name>GetSubcomponent</name>
-      <anchorfile>classicomp_1_1_i_component.html</anchorfile>
-      <anchor>acdfd117f6be9a951f3257a3b4b81c4fa</anchor>
-      <arglist>(const std::string &amp;componentId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const IComponentContext *</type>
-      <name>GetSubcomponentContext</name>
-      <anchorfile>classicomp_1_1_i_component.html</anchorfile>
-      <anchor>a1807dab8814efef9468897c9b98099dd</anchor>
-      <arglist>(const std::string &amp;componentId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual IComponent *</type>
-      <name>CreateSubcomponent</name>
-      <anchorfile>classicomp_1_1_i_component.html</anchorfile>
-      <anchor>a7f7489b66739485edd5a86ab4f89f815</anchor>
-      <arglist>(const std::string &amp;componentId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>OnSubcomponentDeleted</name>
-      <anchorfile>classicomp_1_1_i_component.html</anchorfile>
-      <anchor>a852ef0c360d326ac726fa31b80f2d306</anchor>
-      <arglist>(const IComponent *subcomponentPtr)=0</arglist>
+      <anchor>a21eef55c84e916f8e7fc20049728a141</anchor>
+      <arglist>(const icomp::IComponentContext *contextPtr, const ICompositeComponent *parentPtr, bool isParentOwner)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17198,9 +17187,21 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>icomp::IComponentInterfaceExtractor</name>
+    <filename>classicomp_1_1_i_component_interface_extractor.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual void *</type>
+      <name>GetComponentInterface</name>
+      <anchorfile>classicomp_1_1_i_component_interface_extractor.html</anchorfile>
+      <anchor>a2bd070cefe8b08bc8e076ee2b06dbc33</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const std::string &amp;subId) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>icomp::IComponentStaticInfo</name>
     <filename>classicomp_1_1_i_component_static_info.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <base virtualness="virtual">icomp::IElementStaticInfo</base>
     <member kind="enumeration">
       <name>ComponentType</name>
       <anchorfile>classicomp_1_1_i_component_static_info.html</anchorfile>
@@ -17232,34 +17233,15 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>MGI_INTERFACES</name>
-      <anchorfile>classicomp_1_1_i_component_static_info.html</anchorfile>
-      <anchor>ad81479e87967938dbcfdf09433c265ebaa60063b116f080e873800279d5429314</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
       <name>MGI_ATTRIBUTES</name>
       <anchorfile>classicomp_1_1_i_component_static_info.html</anchorfile>
       <anchor>ad81479e87967938dbcfdf09433c265eba4b20bcc50b025ef6404d66b3614406bc</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>MGI_SUBCOMPONENTS</name>
-      <anchorfile>classicomp_1_1_i_component_static_info.html</anchorfile>
-      <anchor>ad81479e87967938dbcfdf09433c265ebac93a2e842386788ee791fbfa619b0f5e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
       <name>MGI_EMBEDDED_COMPONENTS</name>
       <anchorfile>classicomp_1_1_i_component_static_info.html</anchorfile>
       <anchor>ad81479e87967938dbcfdf09433c265eba5c8bd8a1af78edbf4d5ec817c6d302ba</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::set&lt; std::string &gt;</type>
-      <name>Ids</name>
-      <anchorfile>classicomp_1_1_i_component_static_info.html</anchorfile>
-      <anchor>ac3d7d82c828b7130ab73e1e04da2a523</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -17278,24 +17260,10 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const IComponentStaticInfo *</type>
-      <name>GetSubcomponentInfo</name>
-      <anchorfile>classicomp_1_1_i_component_static_info.html</anchorfile>
-      <anchor>a4dfeb9a916d1b73b14675ec708174884</anchor>
-      <arglist>(const std::string &amp;subcomponentId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const IComponentStaticInfo *</type>
       <name>GetEmbeddedComponentInfo</name>
       <anchorfile>classicomp_1_1_i_component_static_info.html</anchorfile>
       <anchor>a27cda16cac1f1560ea60b72db8286633</anchor>
       <arglist>(const std::string &amp;embeddedId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual Ids</type>
-      <name>GetMetaIds</name>
-      <anchorfile>classicomp_1_1_i_component_static_info.html</anchorfile>
-      <anchor>a098ceac6294b17e07fdd448166fc98e4</anchor>
-      <arglist>(int metaGroupId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const istd::CString &amp;</type>
@@ -17310,6 +17278,89 @@
       <anchorfile>classicomp_1_1_i_component_static_info.html</anchorfile>
       <anchor>ab3ef71cb3d9b73eee9ae4e4ff88fa5e9</anchor>
       <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomp::ICompositeComponent</name>
+    <filename>classicomp_1_1_i_composite_component.html</filename>
+    <base virtualness="virtual">icomp::IComponent</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual IComponent *</type>
+      <name>GetSubcomponent</name>
+      <anchorfile>classicomp_1_1_i_composite_component.html</anchorfile>
+      <anchor>a89e7c4653846d3f67fbfc6eeefd8e894</anchor>
+      <arglist>(const std::string &amp;componentId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const IComponentContext *</type>
+      <name>GetSubcomponentContext</name>
+      <anchorfile>classicomp_1_1_i_composite_component.html</anchorfile>
+      <anchor>a290fbf4cc388f69513a1196291e9b768</anchor>
+      <arglist>(const std::string &amp;componentId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual IComponent *</type>
+      <name>CreateSubcomponent</name>
+      <anchorfile>classicomp_1_1_i_composite_component.html</anchorfile>
+      <anchor>a483b17de55177634c9563977773e829d</anchor>
+      <arglist>(const std::string &amp;componentId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnSubcomponentDeleted</name>
+      <anchorfile>classicomp_1_1_i_composite_component.html</anchorfile>
+      <anchor>a64d98464d961b225d9b438263224b349</anchor>
+      <arglist>(const IComponent *subcomponentPtr)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomp::IElementStaticInfo</name>
+    <filename>classicomp_1_1_i_element_static_info.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="enumeration">
+      <name>MetaGroupId</name>
+      <anchorfile>classicomp_1_1_i_element_static_info.html</anchorfile>
+      <anchor>ab7838599fa53c50c56f57227e7982233</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MGI_INTERFACES</name>
+      <anchorfile>classicomp_1_1_i_element_static_info.html</anchorfile>
+      <anchor>ab7838599fa53c50c56f57227e7982233a83c16248487642a0b4e09b4c1658afd5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MGI_SUBELEMENTS</name>
+      <anchorfile>classicomp_1_1_i_element_static_info.html</anchorfile>
+      <anchor>ab7838599fa53c50c56f57227e7982233abaf22287d19fad04e25b37f5e239317c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MGI_LAST</name>
+      <anchorfile>classicomp_1_1_i_element_static_info.html</anchorfile>
+      <anchor>ab7838599fa53c50c56f57227e7982233ac2334816c8eab4cf035dea3a49a49865</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::set&lt; std::string &gt;</type>
+      <name>Ids</name>
+      <anchorfile>classicomp_1_1_i_element_static_info.html</anchorfile>
+      <anchor>ad9eeb4c9eaa1c720a75ef5939f6e5b90</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const IElementStaticInfo *</type>
+      <name>GetSubelementInfo</name>
+      <anchorfile>classicomp_1_1_i_element_static_info.html</anchorfile>
+      <anchor>a7612abddac7e7bbd40c8fcfcce677708</anchor>
+      <arglist>(const std::string &amp;subcomponentId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual Ids</type>
+      <name>GetMetaIds</name>
+      <anchorfile>classicomp_1_1_i_element_static_info.html</anchorfile>
+      <anchor>a989651fb00da877c874e9ddad6d204d5</anchor>
+      <arglist>(int metaGroupId) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17442,19 +17493,13 @@
     <name>icomp::IRealComponentStaticInfo</name>
     <filename>classicomp_1_1_i_real_component_static_info.html</filename>
     <base virtualness="virtual">icomp::IComponentStaticInfo</base>
+    <base virtualness="virtual">icomp::IComponentInterfaceExtractor</base>
     <member kind="function" virtualness="pure">
       <type>virtual IComponent *</type>
       <name>CreateComponent</name>
       <anchorfile>classicomp_1_1_i_real_component_static_info.html</anchorfile>
       <anchor>a92b146f3a6f519815ac225d22c6cecf0</anchor>
       <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void *</type>
-      <name>GetComponentInterface</name>
-      <anchorfile>classicomp_1_1_i_real_component_static_info.html</anchorfile>
-      <anchor>a20668c7a5216b9f4d4a874ef2618d39e</anchor>
-      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18048,10 +18093,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual IComponentStaticInfo::Ids</type>
+      <type>virtual IElementStaticInfo::Ids</type>
       <name>GetRelatedMetaIds</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>a3f34086a16c0ce029de592f6a3fd07f1</anchor>
+      <anchor>a36b454830417ebad8cab0b70cad1bac7</anchor>
       <arglist>(int metaGroupId, int flags, int flagsMask) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -18172,8 +18217,8 @@
       <type>virtual void</type>
       <name>SetComponentContext</name>
       <anchorfile>classicomp_1_1_t_component_wrap.html</anchorfile>
-      <anchor>a849edde086bd96a1750f654301ba66df</anchor>
-      <arglist>(const IComponentContext *contextPtr, const IComponent *parentPtr, bool isParentOwner)</arglist>
+      <anchor>afa82ca73ed858f96d9bc882976254c58</anchor>
+      <arglist>(const IComponentContext *contextPtr, const ICompositeComponent *parentPtr, bool isParentOwner)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18776,6 +18821,7 @@
     <templarg>Base</templarg>
     <base>TComponentWrap&lt; Base &gt;</base>
     <base>icomp::CSimComponentContextBase</base>
+    <base virtualness="virtual">icomp::ICompositeComponent</base>
     <member kind="typedef">
       <type>TComponentWrap&lt; Base &gt;</type>
       <name>BaseClass</name>
@@ -18805,17 +18851,17 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const IComponent *</type>
-      <name>GetParentComponent</name>
-      <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
-      <anchor>a608fbc9214da4b4e013dcf854a82b64d</anchor>
-      <arglist>(bool ownerOnly=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual IComponent *</type>
       <name>GetSubcomponent</name>
       <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
       <anchor>a96819d670ee3fa7dc1b3015fb4c787fe</anchor>
+      <arglist>(const std::string &amp;componentId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IComponentContext *</type>
+      <name>GetSubcomponentContext</name>
+      <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
+      <anchor>a778c7258da1fefd15133dca825cfb4fc</anchor>
       <arglist>(const std::string &amp;componentId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -18824,6 +18870,89 @@
       <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
       <anchor>a0f5ac17b1616b1fd982053204071b595</anchor>
       <arglist>(const std::string &amp;componentId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSubcomponentDeleted</name>
+      <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
+      <anchor>a6f3df92db1b808ecaef7fca81fa6559e</anchor>
+      <arglist>(const IComponent *subcomponentPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ICompositeComponent *</type>
+      <name>GetParentComponent</name>
+      <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
+      <anchor>a8decdf8cc986e669aa9c384060c8f80c</anchor>
+      <arglist>(bool ownerOnly=false) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomp::TSubelementStaticInfo</name>
+    <filename>classicomp_1_1_t_subelement_static_info.html</filename>
+    <templarg></templarg>
+    <base virtualness="virtual">icomp::IElementStaticInfo</base>
+    <base virtualness="virtual">icomp::IComponentInterfaceExtractor</base>
+    <class kind="class">icomp::TSubelementStaticInfo::Registrator</class>
+    <member kind="typedef">
+      <type>void *(*</type>
+      <name>InterfaceExtractorPtr</name>
+      <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
+      <anchor>aa4329a6d27bd188b6ca11e2997c45f5e</anchor>
+      <arglist>)(ComponentType &amp;component)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSubelementStaticInfo</name>
+      <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
+      <anchor>a40f0cf2d9c4617bd2e9626be3048b15e</anchor>
+      <arglist>(const std::string &amp;name, CBaseComponentStaticInfo &amp;owner)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RegisterInterfaceExtractor</name>
+      <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
+      <anchor>a7b72697d410e5c30012634efab1d619b</anchor>
+      <arglist>(const std::string &amp;interfaceName, InterfaceExtractorPtr extractorPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IElementStaticInfo *</type>
+      <name>GetSubelementInfo</name>
+      <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
+      <anchor>a6f761a24baa764c7cf9f9d7e6d9f89b4</anchor>
+      <arglist>(const std::string &amp;subcomponentId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Ids</type>
+      <name>GetMetaIds</name>
+      <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
+      <anchor>a2aef48658bfcded09f62e81fd97c3543</anchor>
+      <arglist>(int metaGroupId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void *</type>
+      <name>GetComponentInterface</name>
+      <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
+      <anchor>aaa481193b3a7e4307bdfc514bb4a229d</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const std::string &amp;subId) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomp::TSubelementStaticInfo::Registrator</name>
+    <filename>classicomp_1_1_t_subelement_static_info_1_1_registrator.html</filename>
+    <templarg></templarg>
+    <member kind="typedef">
+      <type>InterfaceType *(*</type>
+      <name>ExtractorPtr</name>
+      <anchorfile>classicomp_1_1_t_subelement_static_info_1_1_registrator.html</anchorfile>
+      <anchor>a6362dcdeb2fd5df58b58ebc499e987de</anchor>
+      <arglist>)(ComponentType &amp;component)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Registrator</name>
+      <anchorfile>classicomp_1_1_t_subelement_static_info_1_1_registrator.html</anchorfile>
+      <anchor>a413690308046257c35b65ed4933c0169</anchor>
+      <arglist>(TSubelementStaticInfo &amp;staticInfo, const std::string &amp;interfaceName, ExtractorPtr extractorPtr)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -24607,7 +24736,7 @@
   <compound kind="class">
     <name>imod::TModelWrap</name>
     <filename>classimod_1_1_t_model_wrap.html</filename>
-    <templarg></templarg>
+    <templarg>Base</templarg>
     <base>iser::TCopySerializedWrap</base>
     <base>imod::CModelBase</base>
     <member kind="typedef">
@@ -24669,62 +24798,76 @@
       <type>CMultiModelObserverBase</type>
       <name>BaseClass</name>
       <anchorfile>classimod_1_1_t_multi_model_observer_base.html</anchorfile>
-      <anchor>a599a9426b10d162fc4f17f6cf0a39689</anchor>
+      <anchor>a6d2f6878cdcb65df58bc1a4d784cf182</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ModelInterface</type>
+      <name>ModelType</name>
+      <anchorfile>classimod_1_1_t_multi_model_observer_base.html</anchorfile>
+      <anchor>ab668df9995216a1c499635600501918e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>ObjectClass *</type>
+      <type>ModelInterface *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_multi_model_observer_base.html</anchorfile>
-      <anchor>a48637d00cd82cf0682cef964ad301a22</anchor>
+      <anchor>ae49f4bd9d4feb3b984f0c3662e097713</anchor>
       <arglist>(int objectIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnAttached</name>
       <anchorfile>classimod_1_1_t_multi_model_observer_base.html</anchorfile>
-      <anchor>a86cfcfa82d18b42d0be3ff9b81782fe9</anchor>
+      <anchor>a0eb3b71953be9fc2710457e52ebbace0</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>imod::TSingleModelObserverBase</name>
     <filename>classimod_1_1_t_single_model_observer_base.html</filename>
-    <templarg>ObjectClass</templarg>
+    <templarg>ModelInterface</templarg>
     <base>imod::CSingleModelObserverBase</base>
     <member kind="typedef">
       <type>CSingleModelObserverBase</type>
       <name>BaseClass</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a2f3c8aca065327d0d32dafe1c75300be</anchor>
+      <anchor>a4183ada6ca430e22ee43b62c1e03ef5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ModelInterface</type>
+      <name>ModelType</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TSingleModelObserverBase</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>ada779a7c0fafef0949d9d814f83c0757</anchor>
+      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>ObjectClass *</type>
+      <type>ModelInterface *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a47d1a0b8e1421c96c74fc46707a3c948</anchor>
+      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a1fc72fadc2f97178caa87d91e800a23f</anchor>
+      <anchor>a1fa929d4bb7490af4db5e9c4bc4b3282</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a574233cd1c39ecb91e114101780812c7</anchor>
+      <anchor>a72c8c671df6a05c06e182085bb96f028</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
   </compound>
@@ -24736,6 +24879,7 @@
     <class kind="class">iprm::CFileNameParamComp</class>
     <class kind="class">iprm::CLinearAdjustParamsComp</class>
     <class kind="class">iprm::CManagerParamsSetShadowerComp</class>
+    <class kind="class">iprm::CNameParam</class>
     <class kind="class">iprm::CNameParamComp</class>
     <class kind="class">iprm::CParamsManagerComp</class>
     <class kind="class">iprm::CParamsSet</class>
@@ -24746,6 +24890,7 @@
     <class kind="class">iprm::IFileNameParam</class>
     <class kind="class">iprm::ILinearAdjustConstraints</class>
     <class kind="class">iprm::ILinearAdjustParams</class>
+    <class kind="class">iprm::INameParam</class>
     <class kind="class">iprm::IParamsManager</class>
     <class kind="class">iprm::IParamsSet</class>
     <class kind="class">iprm::ISelectionConstraints</class>
@@ -25065,24 +25210,56 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iprm::CNameParam</name>
+    <filename>classiprm_1_1_c_name_param.html</filename>
+    <base virtualness="virtual">iprm::INameParam</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::CString &amp;</type>
+      <name>GetName</name>
+      <anchorfile>classiprm_1_1_c_name_param.html</anchorfile>
+      <anchor>a67d711262525d4a7dff418f0efe1bb5f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetName</name>
+      <anchorfile>classiprm_1_1_c_name_param.html</anchorfile>
+      <anchor>a57262562645568adbedb49deb4a526a6</anchor>
+      <arglist>(const istd::CString &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsNameFixed</name>
+      <anchorfile>classiprm_1_1_c_name_param.html</anchorfile>
+      <anchor>adde19c4f919f311774afc68c047a535e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprm_1_1_c_name_param.html</anchorfile>
+      <anchor>a549884650b1015594460b3d60648dbc7</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::CString</type>
+      <name>m_name</name>
+      <anchorfile>classiprm_1_1_c_name_param.html</anchorfile>
+      <anchor>a68849f7818548a790c2218eace73e180</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iprm::CNameParamComp</name>
     <filename>classiprm_1_1_c_name_param_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base>ibase::TNamedWrap</base>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <base>iprm::CNameParam</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiprm_1_1_c_name_param_comp.html</anchorfile>
       <anchor>addcf20af2470ec8177e0419cf84576be</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiprm_1_1_c_name_param_comp.html</anchorfile>
-      <anchor>a4c03a5831a62a3f72ae9cd4921492d07</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -25206,6 +25383,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
+      <name>GetConstraintsFlags</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a47f8c206a42387c2dab9d53d0f414902</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
       <name>GetOptionsCount</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
       <anchor>ac0839252bfb7cdb764554ac7a3887847</anchor>
@@ -25223,6 +25407,13 @@
       <name>GetOptionDescription</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
       <anchor>a0091658f3473778815ceea8c05e9aff8</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a2065a91e40ce46d7be2bfc7b386a5151</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -25435,6 +25626,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
+      <name>GetConstraintsFlags</name>
+      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
+      <anchor>a71f9f165af9ac95360251444f38d8a1e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
       <name>GetOptionsCount</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
       <anchor>afb132afb680e660db4e12567c955f43c</anchor>
@@ -25454,6 +25652,20 @@
       <anchor>abfeceee168a94de42fcaf48f86cd3e07</anchor>
       <arglist>(int index) const </arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
+      <anchor>a0c56e9e9a3f32b33353a5474ef7f05ea</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
+      <anchor>a0e31b9e305ff327511f8fd4eb2e8458b</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iprm::CSelectionConstraintsComp</name>
@@ -25466,6 +25678,13 @@
       <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
       <anchor>a18681d0cbe06155c7954d645d753529e</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetConstraintsFlags</name>
+      <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
+      <anchor>a0a2897ab796f470021d92540d0bf6772</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -25488,13 +25707,19 @@
       <anchor>a9e9f96a98b5af5deb90ab2f0208cd432</anchor>
       <arglist>(int index) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
+      <anchor>a593f4006e0e6f7daade9d6942299e007</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iprm::CSelectionParamComp</name>
     <filename>classiprm_1_1_c_selection_param_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iprm::ISelectionParam</base>
-    <base protection="protected" virtualness="virtual">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -25544,25 +25769,18 @@
       <anchor>a17fcfd6b1127a11292009ad4f54880b1</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnModelChanged</name>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SetSelectedOptionIndexById</name>
       <anchorfile>classiprm_1_1_c_selection_param_comp.html</anchorfile>
-      <anchor>acbba4b58a3e3c819a6d988152ea20609</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>a51a14f00c8b3921cd66ec990459dc167</anchor>
+      <arglist>(const std::string &amp;selectedOptionId)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiprm_1_1_c_selection_param_comp.html</anchorfile>
       <anchor>a2648409f66e9562968c9d06f2e8f83ba</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiprm_1_1_c_selection_param_comp.html</anchorfile>
-      <anchor>addb95cd97f4d8f00d8bf8c1bdd4e89f8</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -25737,6 +25955,32 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iprm::INameParam</name>
+    <filename>classiprm_1_1_i_name_param.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const istd::CString &amp;</type>
+      <name>GetName</name>
+      <anchorfile>classiprm_1_1_i_name_param.html</anchorfile>
+      <anchor>a0ce5527fad469832fcf58c3833a93282</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetName</name>
+      <anchorfile>classiprm_1_1_i_name_param.html</anchorfile>
+      <anchor>adf174afa922dceceb687a6bbd84ede9d</anchor>
+      <arglist>(const istd::CString &amp;name)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsNameFixed</name>
+      <anchorfile>classiprm_1_1_i_name_param.html</anchorfile>
+      <anchor>a9f7a0c12bd00e62578d602ba271b3c15</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iprm::IParamsManager</name>
     <filename>classiprm_1_1_i_params_manager.html</filename>
     <base virtualness="virtual">iprm::ISelectionParam</base>
@@ -25885,6 +26129,31 @@
       <anchor>a437f92296b248eb729438492dd5d5e1ea9252e2dd649825e860f655fc68b229f3</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <name>SelectionContstraintsFlags</name>
+      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
+      <anchor>ad883cd5ce4e96945cffeaa3e252c912c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SCF_NONE</name>
+      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
+      <anchor>ad883cd5ce4e96945cffeaa3e252c912cab7ff33e6d2167ba10ca394b8d61b3571</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SCF_SUPPORT_UNIQUE_ID</name>
+      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
+      <anchor>ad883cd5ce4e96945cffeaa3e252c912ca317e844d30b736eeb428b6daff17c6c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetConstraintsFlags</name>
+      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
+      <anchor>a5eb4e50e233db8653ade1827f94611a3</anchor>
+      <arglist>() const =0</arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetOptionsCount</name>
@@ -25904,6 +26173,13 @@
       <name>GetOptionDescription</name>
       <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
       <anchor>aa134f7e8af11d478320121cee6228701</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual std::string</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
+      <anchor>a2d9228f4e01880b48336deafeaa6393a</anchor>
       <arglist>(int index) const =0</arglist>
     </member>
   </compound>
@@ -26008,6 +26284,7 @@
     <class kind="class">iproc::IBitmapAcquisition</class>
     <class kind="class">iproc::IProcessor</class>
     <class kind="class">iproc::IProgressManager</class>
+    <class kind="class">iproc::IStateController</class>
     <class kind="class">iproc::ISupplier</class>
     <class kind="class">iproc::IValueProvider</class>
     <class kind="class">iproc::TFileCachedProducerCompBase</class>
@@ -26222,6 +26499,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
+      <name>GetConstraintsFlags</name>
+      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
+      <anchor>aeac3d10f3aac8be90d52bdb1a9fc3fef</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
       <name>GetOptionsCount</name>
       <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
       <anchor>a49477b1df2ddf39f0fa0ecc6f3f4874b</anchor>
@@ -26239,6 +26523,13 @@
       <name>GetOptionDescription</name>
       <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
       <anchor>a8105d1dea974c95a89e4e06f1250f9df</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
+      <anchor>a4964a2062e5fa1799adc5b969bcd1355</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -26499,6 +26790,77 @@
       <anchorfile>classiproc_1_1_i_progress_manager.html</anchorfile>
       <anchor>a931b737da51e1263021eda6c57b297bf</anchor>
       <arglist>(int sessionId) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::IStateController</name>
+    <filename>classiproc_1_1_i_state_controller.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a689c37ae7122c3dcf699bd8d0f721a2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_STATE_ENTERED</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a689c37ae7122c3dcf699bd8d0f721a2eac4e9320a483212dc73c200dcce456e8c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_STATE_LEAVED</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a689c37ae7122c3dcf699bd8d0f721a2ea99855149be815e58d177b0986ace78fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_GRAPH_CHANGED</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a689c37ae7122c3dcf699bd8d0f721a2eaf1c410d785c523a7bc0f7dcbb40bdec5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsStateEnabled</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a3c32dabb91bd5647393bacb82c33fb56</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsStateActive</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a0d6e37fa8bdf58d51168db93855707a8</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsEnterAllowed</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a6ed859c9b3171d0e77e3a0d3268b6782</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsLeaveAllowed</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>af60162b22c686240e70e37eb5643bf52</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>TryEnterState</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a206ddfb8927d571047516503ca243b3d</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>TryLeaveState</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>ad56553811d5eed13d37c5d6b0a40846d</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29359,6 +29721,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
+      <name>GetConstraintsFlags</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>ad00f524b280784078cf0afaa39c01bd2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
       <name>GetOptionsCount</name>
       <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
       <anchor>a332815e5227548cca6183ad8bf0ca468</anchor>
@@ -29376,6 +29745,13 @@
       <name>GetOptionDescription</name>
       <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
       <anchor>a4684fec1024fa1bb3eb753da60b1a29a</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>aa1d884f3c1623bcaa1181557c06c0660</anchor>
       <arglist>(int index) const </arglist>
     </member>
   </compound>
@@ -29976,9 +30352,9 @@
     </member>
     <member kind="friend" protection="private">
       <type>friend class</type>
-      <name>MessageHandler</name>
+      <name>ReadArchiveMessageHandler</name>
       <anchorfile>classiqt_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>add9f4167dc0c761574cbd82aa9ba392f</anchor>
+      <anchor>af738ff8f140a1170f2c4cc3fddb6d39f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -30179,9 +30555,9 @@
     </member>
     <member kind="friend" protection="private">
       <type>friend class</type>
-      <name>MessageHandler</name>
+      <name>WriteArchiveMessageHandler</name>
       <anchorfile>classiqt_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>add9f4167dc0c761574cbd82aa9ba392f</anchor>
+      <anchor>a7fd677761e10234f7e5b9e03363ce1a3</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -31851,7 +32227,7 @@
     <templarg>GraphicsItemClass</templarg>
     <templarg>ObjectClass</templarg>
     <base>iqt2d::TShapeBase</base>
-    <base>imod::TSingleModelObserverBase</base>
+    <base>TSingleModelObserverBase&lt; ObjectClass &gt;</base>
     <member kind="typedef">
       <type>TShapeBase&lt; GraphicsItemClass &gt;</type>
       <name>BaseClass</name>
@@ -34099,7 +34475,8 @@
   <compound kind="class">
     <name>iqtgui::CHierarchicalCommand</name>
     <filename>classiqtgui_1_1_c_hierarchical_command.html</filename>
-    <base>TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::TNamedWrap&lt; ibase::IHierarchicalCommand &gt; &gt; &gt;</base>
+    <base>TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt; &gt;</base>
+    <base>iprm::CNameParam</base>
     <member kind="typedef">
       <type>QAction</type>
       <name>BaseClass</name>
@@ -34108,10 +34485,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::TNamedWrap&lt; ibase::IHierarchicalCommand &gt; &gt; &gt;</type>
+      <type>ibase::TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt; &gt;</type>
       <name>BaseClass2</name>
       <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
-      <anchor>ad2df4d24186669a37658d60d51971a58</anchor>
+      <anchor>a3885c17e976e1e6f0c038c5562a0e44c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iprm::CNameParam</type>
+      <name>BaseClass3</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
+      <anchor>a746852630fba2c048cb2de454ff53d2a</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -35493,12 +35877,12 @@
     <templarg>UI</templarg>
     <templarg>Model</templarg>
     <templarg>WidgetType</templarg>
-    <base>TModelObserverCompWrap&lt; Model, iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; UI, WidgetType &gt;, imod::TSingleModelObserverBase&lt; Model &gt; &gt; &gt;</base>
+    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; UI, WidgetType &gt;, imod::TSingleModelObserverBase&lt; Model &gt; &gt; &gt;</base>
     <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; Model, iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; UI, WidgetType &gt;, imod::TSingleModelObserverBase&lt; Model &gt; &gt; &gt;</type>
+      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; UI, WidgetType &gt;, imod::TSingleModelObserverBase&lt; Model &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_t_designer_gui_observer_comp_base.html</anchorfile>
-      <anchor>a618868f789bda2d3e55cbb657e21c3bb</anchor>
+      <anchor>a5fd4bd071b17d67ebfc151794f14c4ea</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -35740,6 +36124,7 @@
     <filename>namespaceiqtprm.html</filename>
     <class kind="class">iqtprm::CComposedParamsSetGuiComp</class>
     <class kind="class">iqtprm::CFileNameParamGuiComp</class>
+    <class kind="class">iqtprm::CNameParamGuiComp</class>
     <class kind="class">iqtprm::CParamsManagerGuiComp</class>
     <class kind="class">iqtprm::CRelativeFileNameParamComp</class>
     <class kind="class">iqtprm::CSelectableGuiComp</class>
@@ -35938,6 +36323,57 @@
       <name>OnDirectoryUp</name>
       <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
       <anchor>add1303146e14f2b7e7fcc0e70d4c69fd</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtprm::CNameParamGuiComp</name>
+    <filename>classiqtprm_1_1_c_name_param_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CNameParamGuiComp, iprm::INameParam &gt;</base>
+    <member kind="enumeration">
+      <name>LabelPosition</name>
+      <anchorfile>classiqtprm_1_1_c_name_param_gui_comp.html</anchorfile>
+      <anchor>abb6516a011b0d7f470b63e34aea6285a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LP_LEFT</name>
+      <anchorfile>classiqtprm_1_1_c_name_param_gui_comp.html</anchorfile>
+      <anchor>abb6516a011b0d7f470b63e34aea6285aa49c71d27378ea954e497c0a5e4a84232</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LP_TOP</name>
+      <anchorfile>classiqtprm_1_1_c_name_param_gui_comp.html</anchorfile>
+      <anchor>abb6516a011b0d7f470b63e34aea6285aaf5420eacbd96e1ca1cf1b3b0c3e8a6a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CNameParamGuiComp, iprm::INameParam &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtprm_1_1_c_name_param_gui_comp.html</anchorfile>
+      <anchor>adfc3bfba3b6856cfeb20376eb6022d6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtprm_1_1_c_name_param_gui_comp.html</anchorfile>
+      <anchor>af6c7477b920b50e1c91c9b934c83ee8e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_name_param_gui_comp.html</anchorfile>
+      <anchor>adda3490cf59f04f12515ce1cbf4028a1</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_name_param_gui_comp.html</anchorfile>
+      <anchor>a6ba097e6db6101e45035f62ebbd5e9b4</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -36182,6 +36618,7 @@
     <name>iqtprm::CSelectionParamGuiComp</name>
     <filename>classiqtprm_1_1_c_selection_param_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CSelectionParamGuiComp, iprm::ISelectionParam &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="enumeration">
       <name>UiMode</name>
       <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
@@ -36254,6 +36691,20 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a56c87065e5e7a82af60141046247fc94</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>ac03514f920663d14d38f2d8999327cd7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
       <anchor>a2f56abc8c29885436625c37772435a1d</anchor>
@@ -36279,6 +36730,13 @@
       <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
       <anchor>a13bf79e337e866b45b4774337c994320</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>af5368c8e47a06f7343439f4484d820b8</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -36746,90 +37204,7 @@
   <compound kind="namespace">
     <name>iqtwiz</name>
     <filename>namespaceiqtwiz.html</filename>
-    <class kind="class">iqtwiz::CWizardGuiComp</class>
     <class kind="class">iqtwiz::CWizardOptionsListGuiComp</class>
-  </compound>
-  <compound kind="class">
-    <name>iqtwiz::CWizardGuiComp</name>
-    <filename>classiqtwiz_1_1_c_wizard_gui_comp.html</filename>
-    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWizard &gt;, imod::TSingleModelObserverBase&lt; iprm::IParamsManager &gt; &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWizard &gt;, imod::TSingleModelObserverBase&lt; iprm::IParamsManager &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>af744914f5e5fa2831fedb3ed1156412e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a52e161ad47f2b44bab498d080e46754e</anchor>
-      <arglist>(m_guisCompPtr, m_editorsCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a399f78fa243cfc4b4bd022e939802b5f</anchor>
-      <arglist>(m_observersCompPtr, m_editorsCompPtr, true)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnCurrentPageChanged</name>
-      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>aa9ff1097c3be1427651e7bcaa253c504</anchor>
-      <arglist>(int pageId)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnHelpRequested</name>
-      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a0db65c16c0c7d8cdde89174916476603</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>GetNextPageId</name>
-      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a3bcb4fd34add57e3039348df23b71d71</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a3b07f4c315d78d1114fcb640309d89f6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a84fe8087ce73e356bac383d7950b6d3d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a4a2303c524b499e312e352ee79cda226</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a6cdeada1a4b6cea6cb5cd4c23a91326f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtwiz_1_1_c_wizard_gui_comp.html</anchorfile>
-      <anchor>a8f6838b3b4ef5b9b7c16ac379ef4a804</anchor>
-      <arglist>()</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iqtwiz::CWizardOptionsListGuiComp</name>
@@ -36845,12 +37220,6 @@
       <name>DR_SELECTION_INDEX</name>
       <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
       <anchor>a4d6a869867b1a4f2c139e413fa7c1053a9003ffbf49f179b3815dae7e7c2173ce</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DR_OBJECT_PTR</name>
-      <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
-      <anchor>a4d6a869867b1a4f2c139e413fa7c1053afb3c81410b1c152ee92a51d025c65dd9</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -36869,9 +37238,9 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>OnSelectionChanged</name>
+      <name>on_OptionsList_itemSelectionChanged</name>
       <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
-      <anchor>a5f7b57ca66208534a5cd44bac321fb87</anchor>
+      <anchor>a5d80a06ccc13b978b361c9426ff43499</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -36880,13 +37249,6 @@
       <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
       <anchor>a643fb518b88f27dd91b354c7812b1ab3</anchor>
       <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
-      <anchor>ab756be9fa17a29ea51bf0278814f793a</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -39504,7 +39866,6 @@
     <class kind="class">istd::IFactoryInfo</class>
     <class kind="class">istd::ILocalizer</class>
     <class kind="class">istd::ILogger</class>
-    <class kind="class">istd::INamed</class>
     <class kind="class">istd::IPolymorphic</class>
     <class kind="class">istd::IServicesProvider</class>
     <class kind="class">istd::CGroupRegistrator</class>
@@ -41585,32 +41946,6 @@
       <anchorfile>classistd_1_1_i_logger.html</anchorfile>
       <anchor>a7b50e678da2f925150deb58b94d16e7d</anchor>
       <arglist>(MessageCategory category, int id, int flags, istd::CString &amp;message, istd::CString &amp;messageSource) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>istd::INamed</name>
-    <filename>classistd_1_1_i_named.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual const istd::CString &amp;</type>
-      <name>GetName</name>
-      <anchorfile>classistd_1_1_i_named.html</anchorfile>
-      <anchor>a4fd1b927d755c2defb86c3a6890ee1b3</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetName</name>
-      <anchorfile>classistd_1_1_i_named.html</anchorfile>
-      <anchor>a5c5cfa658f42d6042bc83bf491cb9ca4</anchor>
-      <arglist>(const istd::CString &amp;name)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsNameFixed</name>
-      <anchorfile>classistd_1_1_i_named.html</anchorfile>
-      <anchor>abc0a491e09cf619543756af3a0f71e0a</anchor>
-      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -44843,73 +45178,57 @@
   <compound kind="namespace">
     <name>iwiz</name>
     <filename>namespaceiwiz.html</filename>
-    <class kind="class">iwiz::CLinearWizardControllerComp</class>
-    <class kind="class">iwiz::CNonLinearWizardControllerComp</class>
+    <class kind="class">iwiz::CWizardDocumentComp</class>
     <class kind="class">iwiz::CWizardPageComp</class>
+    <class kind="class">iwiz::IParamsManagerWizard</class>
     <class kind="class">iwiz::IWizardNavigationController</class>
-    <class kind="class">iwiz::IWizardPageController</class>
-    <class kind="class">iwiz::IWizardPageInfo</class>
   </compound>
   <compound kind="class">
-    <name>iwiz::CLinearWizardControllerComp</name>
-    <filename>classiwiz_1_1_c_linear_wizard_controller_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iwiz::IWizardNavigationController</base>
+    <name>iwiz::CWizardDocumentComp</name>
+    <filename>classiwiz_1_1_c_wizard_document_comp.html</filename>
+    <base>iprm::CParamsManagerComp</base>
+    <base virtualness="virtual">iwiz::IParamsManagerWizard</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>iprm::CParamsManagerComp</type>
       <name>BaseClass</name>
-      <anchorfile>classiwiz_1_1_c_linear_wizard_controller_comp.html</anchorfile>
-      <anchor>ab9e7110174ba27ce0e89930b3c0aefba</anchor>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>abc470d432c3be03c423963de26809408</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetPagesCount</name>
-      <anchorfile>classiwiz_1_1_c_linear_wizard_controller_comp.html</anchorfile>
-      <anchor>afbdca35cfd8b034dc2bd8a4ded9b70ea</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNextPageId</name>
-      <anchorfile>classiwiz_1_1_c_linear_wizard_controller_comp.html</anchorfile>
-      <anchor>a70e1cd8b3f96d9e910babc5fd427b305</anchor>
-      <arglist>(int currentPage)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iwiz::CNonLinearWizardControllerComp</name>
-    <filename>classiwiz_1_1_c_non_linear_wizard_controller_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iwiz::IWizardNavigationController</base>
-    <base virtualness="virtual">iwiz::IWizardPageController</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiwiz_1_1_c_non_linear_wizard_controller_comp.html</anchorfile>
-      <anchor>af73602ab12579c2770ec2c729dd9fda0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetPagesCount</name>
-      <anchorfile>classiwiz_1_1_c_non_linear_wizard_controller_comp.html</anchorfile>
-      <anchor>a94030a3dae6bed6530185ff53769228c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNextPageId</name>
-      <anchorfile>classiwiz_1_1_c_non_linear_wizard_controller_comp.html</anchorfile>
-      <anchor>a5f37f66d8a83db029ff1be58196f6776</anchor>
-      <arglist>(int currentPage)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>UpdateWizardPage</name>
-      <anchorfile>classiwiz_1_1_c_non_linear_wizard_controller_comp.html</anchorfile>
-      <anchor>ae3510ef23207b83230e15400353f9f68</anchor>
-      <arglist>(iwiz::IWizardPageInfo &amp;page, imod::IModel &amp;pageDataModel)</arglist>
+      <name>IsPageSelectionAllowed</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>a0c4cccfeafd1527041feca741f94d90e</anchor>
+      <arglist>(int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsFinishAllowed</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>a0b1da6f1efbd0990141c4c8004e10d0a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPrevPageIndex</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>aa568b04659070a28e19bf24cca123bd1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNextPageIndex</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>af0d35cfe9b84fee6a4428bf4314fb7ac</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>DoWizardFinish</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>a502e1bd483103bd6e75e94ab6d18c041</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -44917,7 +45236,7 @@
     <filename>classiwiz_1_1_c_wizard_page_comp.html</filename>
     <base>iprm::CComposedParamsSetComp</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
-    <base virtualness="virtual">iwiz::IWizardPageInfo</base>
+    <base virtualness="virtual">iproc::IStateController</base>
     <member kind="typedef">
       <type>iprm::CComposedParamsSetComp</type>
       <name>BaseClass</name>
@@ -44934,6 +45253,13 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
+      <anchor>ae1479dee3f3d9b720ee5a27b7a1aa717</anchor>
+      <arglist>(m_slaveControllerModelsCompPtr, m_slaveControllersCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CWizardPageComp</name>
       <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
       <anchor>a1d9edab636ec19c19d40f8518b5c224b</anchor>
@@ -44941,17 +45267,52 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>IsPageFinished</name>
+      <name>IsStateEnabled</name>
       <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>a50e5882c85fdec59daf9b5c651c40c43</anchor>
+      <anchor>ac488241ae6b25ca912cd2411d6850910</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPageFinished</name>
+      <type>virtual bool</type>
+      <name>IsStateActive</name>
       <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>a41882ae47fc12c5d078a261bd6300346</anchor>
-      <arglist>(bool isPageFinished=true)</arglist>
+      <anchor>a4941fa899736f5e93b2d07d75c7c63fa</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEnterAllowed</name>
+      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
+      <anchor>a92c3abb7f53d1aa4bd11ae4529a23603</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsLeaveAllowed</name>
+      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
+      <anchor>ace15ff5d04e40e19c65ab32e87936497</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TryEnterState</name>
+      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
+      <anchor>af3908a49d2483688c1f83cf6cbc348fe</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TryLeaveState</name>
+      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
+      <anchor>a64602e567ebe3fb269bd8825030f0fbc</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateAllMembers</name>
+      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
+      <anchor>afba27785a24a87cdf3e3d32923150a4e</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -44976,76 +45337,49 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iwiz::IParamsManagerWizard</name>
+    <filename>classiwiz_1_1_i_params_manager_wizard.html</filename>
+    <base virtualness="virtual">iwiz::IWizardNavigationController</base>
+    <base virtualness="virtual">iprm::IParamsManager</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsPageSelectionAllowed</name>
+      <anchorfile>classiwiz_1_1_i_params_manager_wizard.html</anchorfile>
+      <anchor>ab28c47df3df34a3fc0bb3d0bd2c429a5</anchor>
+      <arglist>(int pageIndex) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iwiz::IWizardNavigationController</name>
     <filename>classiwiz_1_1_i_wizard_navigation_controller.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetNextPageId</name>
-      <anchorfile>classiwiz_1_1_i_wizard_navigation_controller.html</anchorfile>
-      <anchor>a8828732ec1d59f99b36f080290e03f07</anchor>
-      <arglist>(int currentPageId)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iwiz::IWizardPageController</name>
-    <filename>classiwiz_1_1_i_wizard_page_controller.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>UpdateWizardPage</name>
-      <anchorfile>classiwiz_1_1_i_wizard_page_controller.html</anchorfile>
-      <anchor>a2a8d835cbcc67f7d9af359449a49e388</anchor>
-      <arglist>(iwiz::IWizardPageInfo &amp;page, imod::IModel &amp;pageDataModel)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iwiz::IWizardPageInfo</name>
-    <filename>classiwiz_1_1_i_wizard_page_info.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classiwiz_1_1_i_wizard_page_info.html</anchorfile>
-      <anchor>a7ed70c85dc69186bda1d112801561aec</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_PAGE_FINISHED</name>
-      <anchorfile>classiwiz_1_1_i_wizard_page_info.html</anchorfile>
-      <anchor>a7ed70c85dc69186bda1d112801561aeca68c02612fa7cb14188f7da7c260a40f2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>PageStatus</name>
-      <anchorfile>classiwiz_1_1_i_wizard_page_info.html</anchorfile>
-      <anchor>a7bf76841491ca632136c55aeb81aabae</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PS_FINISHED</name>
-      <anchorfile>classiwiz_1_1_i_wizard_page_info.html</anchorfile>
-      <anchor>a7bf76841491ca632136c55aeb81aabaeae54e9f435ea1de63e746087277147a69</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PS_VISITED</name>
-      <anchorfile>classiwiz_1_1_i_wizard_page_info.html</anchorfile>
-      <anchor>a7bf76841491ca632136c55aeb81aabaeacff412f64c84601d930f89cb07ccda6e</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>IsPageFinished</name>
-      <anchorfile>classiwiz_1_1_i_wizard_page_info.html</anchorfile>
-      <anchor>af85bf30fb1ce2ffc295fe2d8ef2af2ee</anchor>
+      <name>IsFinishAllowed</name>
+      <anchorfile>classiwiz_1_1_i_wizard_navigation_controller.html</anchorfile>
+      <anchor>aea789412f5e3d249c22a488500ef4b6c</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetPageFinished</name>
-      <anchorfile>classiwiz_1_1_i_wizard_page_info.html</anchorfile>
-      <anchor>aa1fe9a5ff943b3d0995ba55e867343b5</anchor>
-      <arglist>(bool isPageFinished=true)=0</arglist>
+      <type>virtual int</type>
+      <name>GetPrevPageIndex</name>
+      <anchorfile>classiwiz_1_1_i_wizard_navigation_controller.html</anchorfile>
+      <anchor>aeb80543298870964c10c142496b74d4e</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetNextPageIndex</name>
+      <anchorfile>classiwiz_1_1_i_wizard_navigation_controller.html</anchorfile>
+      <anchor>ac92a6df54b9c09499477be2136bf7596</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>DoWizardFinish</name>
+      <anchorfile>classiwiz_1_1_i_wizard_navigation_controller.html</anchorfile>
+      <anchor>a8085bb7e78105404c42c803ab498c34f</anchor>
+      <arglist>()=0</arglist>
     </member>
   </compound>
 </tagfile>

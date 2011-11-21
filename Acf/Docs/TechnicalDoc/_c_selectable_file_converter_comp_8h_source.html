@@ -82,24 +82,26 @@
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056 <span class="keyword">protected</span>:
 <a name="l00057"></a>00057        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_selectable_file_converter_comp.html#a3d660c559ade781f5dc7264fad3ef5ba" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classibase_1_1_c_selectable_file_converter_comp.html#a290829b2f2c8f53b87a64b1011de7a1c" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classibase_1_1_c_selectable_file_converter_comp.html#a1712aa721175ef4a162ecf10fa746087" title="Get description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 <span class="keyword">private</span>:
-<a name="l00063"></a>00063        I_MULTIREF(<a class="code" href="classibase_1_1_i_file_convert_copy.html" title="Common interface for copy a file.">ibase::IFileConvertCopy</a>, m_slaveConvertersCompPtr);
-<a name="l00064"></a>00064        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_slaveConverterNamesAttrPtr);
-<a name="l00065"></a>00065        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_slaveConverterDescriptionsAttrPtr);
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067        <span class="keywordtype">int</span> m_optionsCount;
-<a name="l00068"></a>00068        <span class="keywordtype">int</span> m_selectedOptionIndex;
-<a name="l00069"></a>00069 };
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072 } <span class="comment">// namespace ibase</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_selectable_file_converter_comp.html#ad1f5e956a0fbecdab7d29ae215ff6d69" title="Get constraints flags.">GetConstraintsFlags</a>() <span class="keyword">const</span>;
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_selectable_file_converter_comp.html#a3d660c559ade781f5dc7264fad3ef5ba" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classibase_1_1_c_selectable_file_converter_comp.html#a290829b2f2c8f53b87a64b1011de7a1c" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classibase_1_1_c_selectable_file_converter_comp.html#a1712aa721175ef4a162ecf10fa746087" title="Get description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> std::string <a class="code" href="classibase_1_1_c_selectable_file_converter_comp.html#ab848924c7dd3ff557ca4ccb40cd59e29" title="Get option ID.">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="keyword">private</span>:
+<a name="l00065"></a>00065        I_MULTIREF(<a class="code" href="classibase_1_1_i_file_convert_copy.html" title="Common interface for copy a file.">ibase::IFileConvertCopy</a>, m_slaveConvertersCompPtr);
+<a name="l00066"></a>00066        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_slaveConverterNamesAttrPtr);
+<a name="l00067"></a>00067        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_slaveConverterDescriptionsAttrPtr);
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069        <span class="keywordtype">int</span> m_optionsCount;
+<a name="l00070"></a>00070        <span class="keywordtype">int</span> m_selectedOptionIndex;
+<a name="l00071"></a>00071 };
+<a name="l00072"></a>00072 
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075 <span class="preprocessor">#endif // !ibase_CSelectableFileConverterComp_included</span>
+<a name="l00074"></a>00074 } <span class="comment">// namespace ibase</span>
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 <span class="preprocessor">#endif // !ibase_CSelectableFileConverterComp_included</span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

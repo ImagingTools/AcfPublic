@@ -60,7 +60,7 @@ public:
 	// pseudo-reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
-	// pseudo-reimplemented (IMessageContainer)
+	// pseudo-reimplemented (ibase::IMessageContainer)
 	virtual void SetMaxMessageCount(int maxMessageCount = -1);
 	virtual void SetMaxLiveTime(int maxLiveTime = -1);
 	virtual int GetWorstCategory() const;
@@ -74,7 +74,7 @@ public:
 				const IMessage* messagePtr = NULL) const;
 	virtual void AddMessage(const IMessageConsumer::MessagePtr& messagePtr);
 
-	// pseudo-reimplemented (IHierarchicalMessageContainer)
+	// pseudo-reimplemented (ibase::IHierarchicalMessageContainer)
 	virtual int GetChildsCount() const;
 	virtual IMessageContainer* GetChild(int index) const;
 

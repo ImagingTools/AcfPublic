@@ -54,7 +54,7 @@
 <a name="l00027"></a>00027 {
 <a name="l00028"></a>00028 <span class="keyword">public</span>:
 <a name="l00029"></a><a class="code" href="classiqt2d_1_1_t_object_shape_base.html#a8d4090eae47a8278fd47fdf63fd64f3f">00029</a>        <span class="keyword">typedef</span> <a class="code" href="classiqt2d_1_1_t_shape_base.html">TShapeBase&lt;GraphicsItemClass&gt;</a> <a class="code" href="classiqt2d_1_1_t_object_shape_base.html#a8d4090eae47a8278fd47fdf63fd64f3f">BaseClass</a>;
-<a name="l00030"></a><a class="code" href="classiqt2d_1_1_t_object_shape_base.html#a8f3eaa4fac8ae681fd3b1b54187948d9">00030</a>        <span class="keyword">typedef</span> <a class="code" href="classimod_1_1_t_single_model_observer_base.html" title="Basic implementation for a single model observer.">imod::TSingleModelObserverBase&lt;ObjectClass&gt;</a> <a class="code" href="classiqt2d_1_1_t_object_shape_base.html#a8f3eaa4fac8ae681fd3b1b54187948d9">BaseClass2</a>;
+<a name="l00030"></a><a class="code" href="classiqt2d_1_1_t_object_shape_base.html#a8f3eaa4fac8ae681fd3b1b54187948d9">00030</a>        <span class="keyword">typedef</span> <a class="code" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;ObjectClass&gt;</a> <a class="code" href="classiqt2d_1_1_t_object_shape_base.html#a8f3eaa4fac8ae681fd3b1b54187948d9">BaseClass2</a>;
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032        <a class="code" href="classiqt2d_1_1_t_object_shape_base.html#a6d68b37c1643506259bc1dd6c33af991">TObjectShapeBase</a>(<span class="keywordtype">bool</span> isEditable = <span class="keyword">false</span>, <span class="keyword">const</span> <a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">ISceneProvider</a>* providerPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00033"></a>00033 
@@ -89,7 +89,7 @@
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063 <span class="keyword">template</span> &lt;<span class="keyword">class</span> GraphicsItemClass, <span class="keyword">class</span> ObjectClass&gt;
 <a name="l00064"></a><a class="code" href="classiqt2d_1_1_t_object_shape_base.html#a6d68b37c1643506259bc1dd6c33af991">00064</a> <a class="code" href="classiqt2d_1_1_t_object_shape_base.html#a6d68b37c1643506259bc1dd6c33af991">TObjectShapeBase&lt;GraphicsItemClass, ObjectClass&gt;::TObjectShapeBase</a>(<span class="keywordtype">bool</span> isEditable, <span class="keyword">const</span> <a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">ISceneProvider</a>* providerPtr)
-<a name="l00065"></a>00065 :      <a class="code" href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer.">BaseClass</a>(isEditable, providerPtr),
+<a name="l00065"></a>00065 :      <a class="code" href="classiqt2d_1_1_t_shape_base.html">BaseClass</a>(isEditable, providerPtr),
 <a name="l00066"></a>00066        m_isShapeUpdateBlocked(false),
 <a name="l00067"></a>00067        m_mousePressingNotifier(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, i2d::IObject2d::CF_OBJECT_POSITION | istd::IChangeable::CF_MODEL)
 <a name="l00068"></a>00068 {

@@ -38,7 +38,7 @@
 <div class="title">icomp::CCompositeComponent Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="icomp::CCompositeComponent" --><!-- doxytag: inherits="icomp::CInterfaceManipBase,icomp::IComponent" -->
+<!-- doxytag: class="icomp::CCompositeComponent" --><!-- doxytag: inherits="icomp::CInterfaceManipBase,icomp::ICompositeComponent" -->
 <p><code>#include &lt;<a class="el" href="_c_composite_component_8h_source.html">CCompositeComponent.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for icomp::CCompositeComponent:</div>
@@ -46,9 +46,10 @@ Inheritance diagram for icomp::CCompositeComponent:</div>
  <div class="center">
   <img src="classicomp_1_1_c_composite_component.png" usemap="#icomp::CCompositeComponent_map" alt=""/>
   <map id="icomp::CCompositeComponent_map" name="icomp::CCompositeComponent_map">
-<area href="classicomp_1_1_c_interface_manip_base.html" alt="icomp::CInterfaceManipBase" shape="rect" coords="0,56,181,80"/>
+<area href="classicomp_1_1_c_interface_manip_base.html" alt="icomp::CInterfaceManipBase" shape="rect" coords="0,112,181,136"/>
+<area href="classicomp_1_1_i_composite_component.html" title="Composite component interface." alt="icomp::ICompositeComponent" shape="rect" coords="191,112,372,136"/>
+<area href="classistd_1_1_c_id_manip_base.html" alt="istd::CIdManipBase" shape="rect" coords="0,56,181,80"/>
 <area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="191,56,372,80"/>
-<area href="classistd_1_1_c_id_manip_base.html" alt="istd::CIdManipBase" shape="rect" coords="0,0,181,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="191,0,372,24"/>
 </map>
  </div></div>
@@ -65,14 +66,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin of blocking of automatic component initialization.  <a href="#a43d8529e9d8039274bcca00a050a033f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#abe50437e753adc9f98909a1f1ec081ca">EndAutoInitBlock</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">End of blocking of automatic component initialization.  <a href="#abe50437e753adc9f98909a1f1ec081ca"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#afc34d43b527e51c2fd9ffd5317b49b6f">GetParentComponent</a> (bool ownerOnly=false) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parent of this component.  <a href="#afc34d43b527e51c2fd9ffd5317b49b6f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#a1b8f1f341efddce8037e70f3bd37c89f">GetInterface</a> (const <a class="el" href="classistd_1_1_c_class_info.html">istd::CClassInfo</a> &amp;interfaceType, const std::string &amp;subId=&quot;&quot;)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to specified component interface.  <a href="#a1b8f1f341efddce8037e70f3bd37c89f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#aec91efb6ac4d45de9c08310f409657e2">GetComponentContext</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to component context describing all application-specified component information loaded from components registry.  <a href="#aec91efb6ac4d45de9c08310f409657e2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#a449c3d2cd95d0a9fb646e75ea5324685">SetComponentContext</a> (const <a class="el" href="classicomp_1_1_i_component_context.html">icomp::IComponentContext</a> *contextPtr, const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *parentPtr, bool isParentOwner)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set component context of this component.  <a href="#a449c3d2cd95d0a9fb646e75ea5324685"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#a00d9992c0359610958f464288ad62b1a">GetSubcomponent</a> (const std::string &amp;componentId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to subcomponent using its ID.  <a href="#a00d9992c0359610958f464288ad62b1a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#ab0cdbdad182cec424317cd5c95ec9f37">GetSubcomponentContext</a> (const std::string &amp;componentId) const </td></tr>
@@ -81,6 +74,14 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of subcomponent using its ID.  <a href="#a2ae0866b3c2fd2cf811773df953945a6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#a30eb8098644af9755c7d26fecfc77257">OnSubcomponentDeleted</a> (const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *subcomponentPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called if subcomponent is removed from memory.  <a href="#a30eb8098644af9755c7d26fecfc77257"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_composite_component.html">ICompositeComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#aa50293fb5f5979e375b0c48d1123da65">GetParentComponent</a> (bool ownerOnly=false) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parent of this component.  <a href="#aa50293fb5f5979e375b0c48d1123da65"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#a1b8f1f341efddce8037e70f3bd37c89f">GetInterface</a> (const <a class="el" href="classistd_1_1_c_class_info.html">istd::CClassInfo</a> &amp;interfaceType, const std::string &amp;subId=&quot;&quot;)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to specified component interface.  <a href="#a1b8f1f341efddce8037e70f3bd37c89f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#aec91efb6ac4d45de9c08310f409657e2">GetComponentContext</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to component context describing all application-specified component information loaded from components registry.  <a href="#aec91efb6ac4d45de9c08310f409657e2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#ae6657042080e37b072238b98a4ee1f32">SetComponentContext</a> (const <a class="el" href="classicomp_1_1_i_component_context.html">icomp::IComponentContext</a> *contextPtr, const <a class="el" href="classicomp_1_1_i_composite_component.html">ICompositeComponent</a> *parentPtr, bool isParentOwner)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set component context of this component.  <a href="#ae6657042080e37b072238b98a4ee1f32"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr</a><br class="typebreak"/>
@@ -95,7 +96,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_composite_component_8h_source.html#l00023">23</a> of file <a class="el" href="_c_composite_component_8h_source.html">CCompositeComponent.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_composite_component_8h_source.html#l00024">24</a> of file <a class="el" href="_c_composite_component_8h_source.html">CCompositeComponent.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="aa5c6c9dca7147580502ae37c4f5bc7a8"></a><!-- doxytag: member="icomp::CCompositeComponent::ComponentPtr" ref="aa5c6c9dca7147580502ae37c4f5bc7a8" args="" -->
 <div class="memitem">
@@ -108,7 +109,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_composite_component_8h_source.html#l00057">57</a> of file <a class="el" href="_c_composite_component_8h_source.html">CCompositeComponent.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_composite_component_8h_source.html#l00060">60</a> of file <a class="el" href="_c_composite_component_8h_source.html">CCompositeComponent.h</a>.</p>
 
 </div>
 </div>
@@ -123,7 +124,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_composite_component_8h_source.html#l00058">58</a> of file <a class="el" href="_c_composite_component_8h_source.html">CCompositeComponent.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_composite_component_8h_source.html#l00061">61</a> of file <a class="el" href="_c_composite_component_8h_source.html">CCompositeComponent.h</a>.</p>
 
 </div>
 </div>
@@ -196,7 +197,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Create instance of subcomponent using its ID. </p>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_component.html#a7f7489b66739485edd5a86ab4f89f815">icomp::IComponent</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_composite_component.html#a483b17de55177634c9563977773e829d">icomp::ICompositeComponent</a>.</p>
 
 </div>
 </div>
@@ -324,7 +325,7 @@ template&lt;class InterfaceType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_composite_component_8h_source.html#l00116">116</a> of file <a class="el" href="_c_composite_component_8h_source.html">CCompositeComponent.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_composite_component_8h_source.html#l00119">119</a> of file <a class="el" href="_c_composite_component_8h_source.html">CCompositeComponent.h</a>.</p>
 
 <p>References <a class="el" href="classicomp_1_1_c_composite_component.html#a1b8f1f341efddce8037e70f3bd37c89f">GetInterface()</a>.</p>
 
@@ -358,19 +359,26 @@ template&lt;class InterfaceType &gt; </div>
 <div class="memdoc">
 
 <p>Get access to specified component interface. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interfaceType</td><td>requested interface. </td></tr>
+    <tr><td class="paramname">subId</td><td>some additional ID to identify subelement of this component. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classicomp_1_1_i_component.html#a62a9d2071e6afb0965827cb908c7a1ba">icomp::IComponent</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_composite_component_8h_source.html#l00116">GetComponentInterface()</a>.</p>
+<p>Referenced by <a class="el" href="_c_composite_component_8h_source.html#l00119">GetComponentInterface()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="afc34d43b527e51c2fd9ffd5317b49b6f"></a><!-- doxytag: member="icomp::CCompositeComponent::GetParentComponent" ref="afc34d43b527e51c2fd9ffd5317b49b6f" args="(bool ownerOnly=false) const " -->
+<a class="anchor" id="aa50293fb5f5979e375b0c48d1123da65"></a><!-- doxytag: member="icomp::CCompositeComponent::GetParentComponent" ref="aa50293fb5f5979e375b0c48d1123da65" args="(bool ownerOnly=false) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a>* icomp::CCompositeComponent::GetParentComponent </td>
+          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_composite_component.html">ICompositeComponent</a>* icomp::CCompositeComponent::GetParentComponent </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>ownerOnly</em> = <code>false</code></td><td>)</td>
@@ -390,7 +398,7 @@ template&lt;class InterfaceType &gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to parent component or NULL if parent is not accessible. </dd></dl>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_component.html#acd7fb900f29bdf88b53a35faa86f9e95">icomp::IComponent</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_component.html#adca938957e64be16768c0cf32c4bf1e1">icomp::IComponent</a>.</p>
 
 </div>
 </div>
@@ -411,7 +419,7 @@ template&lt;class InterfaceType &gt; </div>
 
 <p>Get access to subcomponent using its ID. </p>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_component.html#acdfd117f6be9a951f3257a3b4b81c4fa">icomp::IComponent</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_composite_component.html#a89e7c4653846d3f67fbfc6eeefd8e894">icomp::ICompositeComponent</a>.</p>
 
 </div>
 </div>
@@ -433,7 +441,7 @@ template&lt;class InterfaceType &gt; </div>
 <p>Get access to context of subcomponent using its ID. </p>
 <p>Please note, that this does'n create component instance. </p>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_component.html#a1807dab8814efef9468897c9b98099dd">icomp::IComponent</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_composite_component.html#a290fbf4cc388f69513a1196291e9b768">icomp::ICompositeComponent</a>.</p>
 
 </div>
 </div>
@@ -460,11 +468,11 @@ template&lt;class InterfaceType &gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_component.html#a852ef0c360d326ac726fa31b80f2d306">icomp::IComponent</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_composite_component.html#a64d98464d961b225d9b438263224b349">icomp::ICompositeComponent</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a449c3d2cd95d0a9fb646e75ea5324685"></a><!-- doxytag: member="icomp::CCompositeComponent::SetComponentContext" ref="a449c3d2cd95d0a9fb646e75ea5324685" args="(const icomp::IComponentContext *contextPtr, const IComponent *parentPtr, bool isParentOwner)" -->
+<a class="anchor" id="ae6657042080e37b072238b98a4ee1f32"></a><!-- doxytag: member="icomp::CCompositeComponent::SetComponentContext" ref="ae6657042080e37b072238b98a4ee1f32" args="(const icomp::IComponentContext *contextPtr, const ICompositeComponent *parentPtr, bool isParentOwner)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -477,7 +485,7 @@ template&lt;class InterfaceType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_composite_component.html">ICompositeComponent</a> *&#160;</td>
           <td class="paramname"><em>parentPtr</em>, </td>
         </tr>
         <tr>
@@ -505,7 +513,7 @@ template&lt;class InterfaceType &gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_component.html#aeb913a6930fe58b88f186744a4b5ff54">icomp::IComponent</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_component.html#a21eef55c84e916f8e7fc20049728a141">icomp::IComponent</a>.</p>
 
 </div>
 </div>

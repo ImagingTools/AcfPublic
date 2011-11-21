@@ -75,8 +75,8 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#aa2dc071addc8f3a2df5e780034a4880f">I_ASSIGN_TO</a> (m_externalMetaInfoManagerCompPtr, m_envManagerCompPtr, false)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">icomp::IRegistry::Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#a1f20cae86256027216f28672a2e77637">GetCompatibleElements</a> (const <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">icomp::IComponentStaticInfo::Ids</a> &amp;interfaceNames, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, int queryFlags) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of compatible element names.  <a href="#a1f20cae86256027216f28672a2e77637"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">icomp::IRegistry::Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#a52361767108785ce2fb137a11cd5b3e8">GetCompatibleElements</a> (const <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a> &amp;interfaceNames, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, int queryFlags) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of compatible element names.  <a href="#a52361767108785ce2fb137a11cd5b3e8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#ae33ef5db07f2bdddf09afc82a127dbd3">IsRegistryValid</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, bool ignoreUndef, bool allReasons, <a class="el" href="classibase_1_1_i_message_consumer.html">ibase::IMessageConsumer</a> *reasonConsumerPtr) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if registry is valid.  <a href="#ae33ef5db07f2bdddf09afc82a127dbd3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#a1779ee4eacdaa5d0e956fe6bbe2787a0">IsElementValid</a> (const std::string &amp;elementName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, bool ignoreUndef, bool allReasons, <a class="el" href="classibase_1_1_i_message_consumer.html">ibase::IMessageConsumer</a> *reasonConsumerPtr) const </td></tr>
@@ -88,10 +88,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get icon of component.  <a href="#a5e2a5e46247018d56513fc0f419405f8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">icomp::IRegistry::Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#aa0d7db9f7bff6ef0aaa6dfc850fe27c4">GetCompatibleSubcomponents</a> (const std::string &amp;elementId, const <a class="el" href="classicomp_1_1_i_component_static_info.html">icomp::IComponentStaticInfo</a> &amp;elementStaticInfo, const <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">icomp::IComponentStaticInfo::Ids</a> &amp;interfaceNames) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">icomp::IRegistry::Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#aa10df24fe11f3d4ec7034e06f195a1c5">GetCompatibleSubcomponents</a> (const std::string &amp;elementId, const <a class="el" href="classicomp_1_1_i_element_static_info.html">icomp::IElementStaticInfo</a> &amp;elementStaticInfo, const <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a> &amp;interfaceNames) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#abba5bf44fb90ebd55aa4e07ee1a4201e">CheckAttributeCompatibility</a> (const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> &amp;attribute, const <a class="el" href="classicomp_1_1_i_attribute_static_info.html">icomp::IAttributeStaticInfo</a> &amp;attributeMetaInfo, const std::string &amp;attributeName, const std::string &amp;elementName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, bool ignoreUndef, bool allReasons, <a class="el" href="classibase_1_1_i_message_consumer.html">ibase::IMessageConsumer</a> *reasonConsumerPtr) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#abad9197a22c9e9bff1686647f20c798c">CheckPointedElementCompatibility</a> (const std::string &amp;pointedElementName, const <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">icomp::IComponentStaticInfo::Ids</a> &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, bool ignoreUndef, <a class="el" href="classibase_1_1_i_message_consumer.html">ibase::IMessageConsumer</a> *reasonConsumerPtr) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#a8b3f7319800c24d10713dd0922f78576">CheckPointedElementInfoCompatibility</a> (const std::string &amp;pointedElementName, const <a class="el" href="classicomp_1_1_i_component_static_info.html">icomp::IComponentStaticInfo</a> *pointedMetaInfoPtr, const <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">icomp::IComponentStaticInfo::Ids</a> &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, bool ignoreUndef, <a class="el" href="classibase_1_1_i_message_consumer.html">ibase::IMessageConsumer</a> *reasonConsumerPtr) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#a3a9c6aeed0f2467c93fcadb4b1c17783">CheckPointedElementCompatibility</a> (const std::string &amp;pointedElementName, const <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a> &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, bool ignoreUndef, <a class="el" href="classibase_1_1_i_message_consumer.html">ibase::IMessageConsumer</a> *reasonConsumerPtr) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#af55f0203180a6d281286570bdfb2fb32">CheckPointedElementInfoCompatibility</a> (const std::string &amp;pointedElementName, const <a class="el" href="classicomp_1_1_i_element_static_info.html">icomp::IElementStaticInfo</a> *pointedMetaInfoPtr, const <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a> &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, bool ignoreUndef, <a class="el" href="classibase_1_1_i_message_consumer.html">ibase::IMessageConsumer</a> *reasonConsumerPtr) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -212,7 +212,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abad9197a22c9e9bff1686647f20c798c"></a><!-- doxytag: member="icmpstr::CRegistryConsistInfoComp::CheckPointedElementCompatibility" ref="abad9197a22c9e9bff1686647f20c798c" args="(const std::string &amp;pointedElementName, const icomp::IComponentStaticInfo::Ids &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const " -->
+<a class="anchor" id="a3a9c6aeed0f2467c93fcadb4b1c17783"></a><!-- doxytag: member="icmpstr::CRegistryConsistInfoComp::CheckPointedElementCompatibility" ref="a3a9c6aeed0f2467c93fcadb4b1c17783" args="(const std::string &amp;pointedElementName, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -225,7 +225,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">icomp::IComponentStaticInfo::Ids</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a> &amp;&#160;</td>
           <td class="paramname"><em>interfaceNames</em>, </td>
         </tr>
         <tr>
@@ -269,7 +269,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8b3f7319800c24d10713dd0922f78576"></a><!-- doxytag: member="icmpstr::CRegistryConsistInfoComp::CheckPointedElementInfoCompatibility" ref="a8b3f7319800c24d10713dd0922f78576" args="(const std::string &amp;pointedElementName, const icomp::IComponentStaticInfo *pointedMetaInfoPtr, const icomp::IComponentStaticInfo::Ids &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const " -->
+<a class="anchor" id="af55f0203180a6d281286570bdfb2fb32"></a><!-- doxytag: member="icmpstr::CRegistryConsistInfoComp::CheckPointedElementInfoCompatibility" ref="af55f0203180a6d281286570bdfb2fb32" args="(const std::string &amp;pointedElementName, const icomp::IElementStaticInfo *pointedMetaInfoPtr, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -282,13 +282,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_component_static_info.html">icomp::IComponentStaticInfo</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_element_static_info.html">icomp::IElementStaticInfo</a> *&#160;</td>
           <td class="paramname"><em>pointedMetaInfoPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">icomp::IComponentStaticInfo::Ids</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a> &amp;&#160;</td>
           <td class="paramname"><em>interfaceNames</em>, </td>
         </tr>
         <tr>
@@ -326,14 +326,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1f20cae86256027216f28672a2e77637"></a><!-- doxytag: member="icmpstr::CRegistryConsistInfoComp::GetCompatibleElements" ref="a1f20cae86256027216f28672a2e77637" args="(const icomp::IComponentStaticInfo::Ids &amp;interfaceNames, const icomp::IRegistry &amp;registry, int queryFlags) const " -->
+<a class="anchor" id="a52361767108785ce2fb137a11cd5b3e8"></a><!-- doxytag: member="icmpstr::CRegistryConsistInfoComp::GetCompatibleElements" ref="a52361767108785ce2fb137a11cd5b3e8" args="(const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IRegistry &amp;registry, int queryFlags) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">icomp::IRegistry::Ids</a> icmpstr::CRegistryConsistInfoComp::GetCompatibleElements </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">icomp::IComponentStaticInfo::Ids</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a> &amp;&#160;</td>
           <td class="paramname"><em>interfaceNames</em>, </td>
         </tr>
         <tr>
@@ -366,11 +366,11 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classicmpstr_1_1_i_registry_consist_info.html#a893d15564e76627474092ea40aa9ae1b">icmpstr::IRegistryConsistInfo</a>.</p>
+<p>Implements <a class="el" href="classicmpstr_1_1_i_registry_consist_info.html#aa144f2dc6342f8096128f17ec3d50f89">icmpstr::IRegistryConsistInfo</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa0d7db9f7bff6ef0aaa6dfc850fe27c4"></a><!-- doxytag: member="icmpstr::CRegistryConsistInfoComp::GetCompatibleSubcomponents" ref="aa0d7db9f7bff6ef0aaa6dfc850fe27c4" args="(const std::string &amp;elementId, const icomp::IComponentStaticInfo &amp;elementStaticInfo, const icomp::IComponentStaticInfo::Ids &amp;interfaceNames) const " -->
+<a class="anchor" id="aa10df24fe11f3d4ec7034e06f195a1c5"></a><!-- doxytag: member="icmpstr::CRegistryConsistInfoComp::GetCompatibleSubcomponents" ref="aa10df24fe11f3d4ec7034e06f195a1c5" args="(const std::string &amp;elementId, const icomp::IElementStaticInfo &amp;elementStaticInfo, const icomp::IElementStaticInfo::Ids &amp;interfaceNames) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -383,13 +383,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_component_static_info.html">icomp::IComponentStaticInfo</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_element_static_info.html">icomp::IElementStaticInfo</a> &amp;&#160;</td>
           <td class="paramname"><em>elementStaticInfo</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">icomp::IComponentStaticInfo::Ids</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a> &amp;&#160;</td>
           <td class="paramname"><em>interfaceNames</em>&#160;</td>
         </tr>
         <tr>

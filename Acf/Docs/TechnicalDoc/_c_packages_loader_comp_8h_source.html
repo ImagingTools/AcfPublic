@@ -77,98 +77,99 @@
 <a name="l00053"></a>00053               I_REGISTER_INTERFACE(<a class="code" href="classicomp_1_1_i_registry_loader.html" title="Interface for a ACF registry loader.">icomp::IRegistryLoader</a>);
 <a name="l00054"></a>00054               I_REGISTER_INTERFACE(<a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>);
 <a name="l00055"></a>00055               I_REGISTER_INTERFACE(<a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">icomp::IComponentStaticInfo</a>);
-<a name="l00056"></a>00056               I_REGISTER_INTERFACE(<a class="code" href="classicomp_1_1_i_registries_manager.html">icomp::IRegistriesManager</a>);
-<a name="l00057"></a>00057               I_REGISTER_INTERFACE(<a class="code" href="classicomp_1_1_i_meta_info_manager.html">icomp::IMetaInfoManager</a>);
-<a name="l00058"></a>00058               I_ASSIGN(m_registryLoaderCompPtr, <span class="stringliteral">&quot;RegistryLoader&quot;</span>, <span class="stringliteral">&quot;Loader used to read registry&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;RegistryLoader&quot;</span>);
-<a name="l00059"></a>00059               I_ASSIGN(m_configFilePathCompPtr, <span class="stringliteral">&quot;ConfigFilePath&quot;</span>, <span class="stringliteral">&quot;Path of packages configuration file will be loaded, if enabled&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ConfigFilePath&quot;</span>);
-<a name="l00060"></a>00060        I_END_COMPONENT;
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062        <span class="comment">// reimplemented (icomp::IRegistryLoader)</span>
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#abb3b3a67be1df099b4a77015a9b7c2ee" title="Get an ACF registry from a given file.">GetRegistryFromFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; path) <span class="keyword">const</span>;
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065        <span class="comment">// reimplemented (icomp::IComponentEnvironmentManager)</span>
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a88a9c05abec2954e756cec98efc47a55" title="Get file path of real used config file.">GetConfigFilePath</a>() <span class="keyword">const</span>;
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068        <span class="comment">// reimplemented (icomp::IPackagesManager)</span>
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#acb8a828a95f8c6aa3db52be6751f62b0" title="Configure environment for specified file path.">LoadPackages</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; configFilePath = <a class="code" href="classistd_1_1_c_string.html#aa607740cdb27aec5c2ece2466add6408">istd::CString::GetEmpty</a>());
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a29fc5fb5ce684187f775775ac8879448" title="Get type of package as defined in PackageType.">GetPackageType</a>(<span class="keyword">const</span> std::string&amp; packageId) <span class="keyword">const</span>;
-<a name="l00071"></a>00071        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#ac401d67360e3c6bf299450f3a21576a0" title="Get directory path of specified component package.">GetPackagePath</a>(<span class="keyword">const</span> std::string&amp; packageId) <span class="keyword">const</span>;
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073        <span class="comment">// reimplemented (icomp::IRegistriesManager)</span>
-<a name="l00074"></a>00074        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#aa2daa7c05ad6c3ce70002d08ac8e8df7" title="Get access to stored registry.">GetRegistry</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* contextRegistryPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076        <span class="comment">// reimplemented (icomp::IMetaInfoManager)</span>
-<a name="l00077"></a>00077        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_meta_info_manager.html#a3910cc2d0502d41961d1c0560a94ddb2">ComponentAddresses</a> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a562448f22c083a5cd840fde095f39288" title="Get addresses of known components.">GetComponentAddresses</a>(<span class="keywordtype">int</span> typeFlag = <a class="code" href="classicomp_1_1_i_meta_info_manager.html#a9b6818ea2ee2385a8216f49aef6a14caa15594ca56ac70e36ac74a0e9ea3f8a3b">CTF_ALL</a>) <span class="keyword">const</span>;
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00080"></a>00080        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a0b5bcb075bb0966d0be1de557ee201b4">OnComponentCreated</a>();
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082 <span class="keyword">protected</span>:
-<a name="l00083"></a><a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html">00083</a>        <span class="keyword">class </span><a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html">LogingRegistry</a>: <span class="keyword">public</span> icomp::CRegistry
-<a name="l00084"></a>00084        {
-<a name="l00085"></a>00085        <span class="keyword">public</span>:
-<a name="l00086"></a><a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html#aca07475b3315025165ff0e0b1a51731a">00086</a>               <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_registry.html" title="Standard implementation of registry.">icomp::CRegistry</a> <a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html#aca07475b3315025165ff0e0b1a51731a">BaseClass</a>;
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088               <a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html#a17e98e82c652ba4f8dba5069247abaec">LogingRegistry</a>(<a class="code" href="classiqt_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries.">CPackagesLoaderComp</a>* parentPtr);
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090               <span class="comment">// reimplemented (icomp::IRegistry)</span>
-<a name="l00091"></a>00091               <span class="keyword">virtual</span> <a class="code" href="structicomp_1_1_i_registry_1_1_element_info.html" title="Describe information stored with each element.">ElementInfo</a>* <a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html#ac240fa5334f244f2b7c06c2045040c01" title="Insert new attribute info object to collection of attributes.">InsertElementInfo</a>(
-<a name="l00092"></a>00092                                    <span class="keyword">const</span> std::string&amp; elementId,
-<a name="l00093"></a>00093                                    <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address,
-<a name="l00094"></a>00094                                    <span class="keywordtype">bool</span> ensureElementCreated = <span class="keyword">true</span>);
-<a name="l00095"></a>00095 
-<a name="l00096"></a>00096        <span class="keyword">private</span>:
-<a name="l00097"></a>00097               <a class="code" href="classiqt_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries.">CPackagesLoaderComp</a>&amp; m_parent;
-<a name="l00098"></a>00098        };
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#aabaaa3ff5aeff5795c56d0146a608bbf">RegisterPackageFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; file);
-<a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#aaae7ca8b4f93e335aed3150834cc4df7">RegisterPackagesDir</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; subDir);
-<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a7eaf3f98cea4f1516107a6d1a3d01c41">LoadConfigFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; configFile);
-<a name="l00103"></a>00103 
-<a name="l00104"></a>00104        <a class="code" href="classiqt_1_1_c_dll_functions_provider.html" title="Provide access to public functions in DLL.">CDllFunctionsProvider</a>&amp; <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a9439be9178fd4c4a731a36658c174808">GetProviderRef</a>(<span class="keyword">const</span> QFileInfo&amp; fileInfo);
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106        <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#adec50d87f7968e418fd5827125a7685d">CheckAndMarkPath</a>(<span class="keyword">const</span> QDir&amp; directory, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; path, <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; resultPath) <span class="keyword">const</span>;
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108 <span class="keyword">private</span>:
-<a name="l00109"></a>00109        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;CDllFunctionsProvider&gt;</a> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">FunctionsProviderPtr</a>;
-<a name="l00110"></a>00110        <span class="keyword">typedef</span> std::map&lt;QString, FunctionsProviderPtr&gt; DllCacheMap;
-<a name="l00111"></a>00111 
-<a name="l00112"></a>00112        DllCacheMap m_dllCacheMap;
-<a name="l00113"></a>00113 
-<a name="l00114"></a>00114        <span class="keyword">struct </span>CompositePackageInfo
-<a name="l00115"></a>00115        {
-<a name="l00116"></a>00116               <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;icomp::CCompositePackageStaticInfo&gt;</a> staticInfoPtr;
-<a name="l00117"></a>00117               QDir directory;
-<a name="l00118"></a>00118        };
-<a name="l00122"></a>00122        <span class="keyword">typedef</span> std::map&lt;std::string, QString&gt; RealPackagesMap;
-<a name="l00123"></a>00123        RealPackagesMap m_realPackagesMap;
-<a name="l00124"></a>00124 
-<a name="l00128"></a>00128        <span class="keyword">typedef</span> std::map&lt;std::string, CompositePackageInfo&gt; CompositePackagesMap;
-<a name="l00129"></a>00129        CompositePackagesMap m_compositePackagesMap;
-<a name="l00130"></a>00130 
-<a name="l00131"></a>00131        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;icomp::IRegistry&gt;</a> RegistryPtr;
-<a name="l00132"></a>00132        <span class="keyword">typedef</span> std::map&lt;istd::CString, RegistryPtr&gt; RegistriesMap;
-<a name="l00133"></a>00133        <span class="keyword">typedef</span> std::map&lt;const icomp::IRegistry*, QFileInfo&gt; InvRegistriesMap;
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135        <span class="keyword">mutable</span> RegistriesMap m_registriesMap;
-<a name="l00136"></a>00136        <span class="keyword">mutable</span> InvRegistriesMap m_invRegistriesMap;
-<a name="l00137"></a>00137 
-<a name="l00138"></a>00138        <span class="keyword">typedef</span> std::set&lt;istd::CString&gt; UsedFilesList;
-<a name="l00139"></a>00139        <span class="keyword">mutable</span> UsedFilesList m_usedFilesList;
-<a name="l00140"></a>00140 
-<a name="l00141"></a>00141        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_configFilePath;
-<a name="l00142"></a>00142 
-<a name="l00143"></a>00143        I_REF(<a class="code" href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects.">iser::IFileLoader</a>, m_registryLoaderCompPtr);
-<a name="l00144"></a>00144        I_REF(<a class="code" href="classiprm_1_1_i_file_name_param.html" title="Common interface for a file system item settings.">iprm::IFileNameParam</a>, m_configFilePathCompPtr);
-<a name="l00145"></a>00145 };
-<a name="l00146"></a>00146 
+<a name="l00056"></a>00056               I_REGISTER_INTERFACE(<a class="code" href="classicomp_1_1_i_packages_manager.html">icomp::IPackagesManager</a>);
+<a name="l00057"></a>00057               I_REGISTER_INTERFACE(<a class="code" href="classicomp_1_1_i_registries_manager.html">icomp::IRegistriesManager</a>);
+<a name="l00058"></a>00058               I_REGISTER_INTERFACE(<a class="code" href="classicomp_1_1_i_meta_info_manager.html">icomp::IMetaInfoManager</a>);
+<a name="l00059"></a>00059               I_ASSIGN(m_registryLoaderCompPtr, <span class="stringliteral">&quot;RegistryLoader&quot;</span>, <span class="stringliteral">&quot;Loader used to read registry&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;RegistryLoader&quot;</span>);
+<a name="l00060"></a>00060               I_ASSIGN(m_configFilePathCompPtr, <span class="stringliteral">&quot;ConfigFilePath&quot;</span>, <span class="stringliteral">&quot;Path of packages configuration file will be loaded, if enabled&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ConfigFilePath&quot;</span>);
+<a name="l00061"></a>00061        I_END_COMPONENT;
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063        <span class="comment">// reimplemented (icomp::IRegistryLoader)</span>
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#abb3b3a67be1df099b4a77015a9b7c2ee" title="Get an ACF registry from a given file.">GetRegistryFromFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; path) <span class="keyword">const</span>;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066        <span class="comment">// reimplemented (icomp::IComponentEnvironmentManager)</span>
+<a name="l00067"></a>00067        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a88a9c05abec2954e756cec98efc47a55" title="Get file path of real used config file.">GetConfigFilePath</a>() <span class="keyword">const</span>;
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069        <span class="comment">// reimplemented (icomp::IPackagesManager)</span>
+<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#acb8a828a95f8c6aa3db52be6751f62b0" title="Configure environment for specified file path.">LoadPackages</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; configFilePath = <a class="code" href="classistd_1_1_c_string.html#aa607740cdb27aec5c2ece2466add6408">istd::CString::GetEmpty</a>());
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a29fc5fb5ce684187f775775ac8879448" title="Get type of package as defined in PackageType.">GetPackageType</a>(<span class="keyword">const</span> std::string&amp; packageId) <span class="keyword">const</span>;
+<a name="l00072"></a>00072        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#ac401d67360e3c6bf299450f3a21576a0" title="Get directory path of specified component package.">GetPackagePath</a>(<span class="keyword">const</span> std::string&amp; packageId) <span class="keyword">const</span>;
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074        <span class="comment">// reimplemented (icomp::IRegistriesManager)</span>
+<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#aa2daa7c05ad6c3ce70002d08ac8e8df7" title="Get access to stored registry.">GetRegistry</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* contextRegistryPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077        <span class="comment">// reimplemented (icomp::IMetaInfoManager)</span>
+<a name="l00078"></a>00078        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_meta_info_manager.html#a3910cc2d0502d41961d1c0560a94ddb2">ComponentAddresses</a> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a562448f22c083a5cd840fde095f39288" title="Get addresses of known components.">GetComponentAddresses</a>(<span class="keywordtype">int</span> typeFlag = <a class="code" href="classicomp_1_1_i_meta_info_manager.html#a9b6818ea2ee2385a8216f49aef6a14caa15594ca56ac70e36ac74a0e9ea3f8a3b">CTF_ALL</a>) <span class="keyword">const</span>;
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00081"></a>00081        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a0b5bcb075bb0966d0be1de557ee201b4">OnComponentCreated</a>();
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 <span class="keyword">protected</span>:
+<a name="l00084"></a><a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html">00084</a>        <span class="keyword">class </span><a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html">LogingRegistry</a>: <span class="keyword">public</span> icomp::CRegistry
+<a name="l00085"></a>00085        {
+<a name="l00086"></a>00086        <span class="keyword">public</span>:
+<a name="l00087"></a><a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html#aca07475b3315025165ff0e0b1a51731a">00087</a>               <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_registry.html" title="Standard implementation of registry.">icomp::CRegistry</a> <a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html#aca07475b3315025165ff0e0b1a51731a">BaseClass</a>;
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089               <a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html#a17e98e82c652ba4f8dba5069247abaec">LogingRegistry</a>(<a class="code" href="classiqt_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries.">CPackagesLoaderComp</a>* parentPtr);
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091               <span class="comment">// reimplemented (icomp::IRegistry)</span>
+<a name="l00092"></a>00092               <span class="keyword">virtual</span> <a class="code" href="structicomp_1_1_i_registry_1_1_element_info.html" title="Describe information stored with each element.">ElementInfo</a>* <a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html#ac240fa5334f244f2b7c06c2045040c01" title="Insert new attribute info object to collection of attributes.">InsertElementInfo</a>(
+<a name="l00093"></a>00093                                    <span class="keyword">const</span> std::string&amp; elementId,
+<a name="l00094"></a>00094                                    <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address,
+<a name="l00095"></a>00095                                    <span class="keywordtype">bool</span> ensureElementCreated = <span class="keyword">true</span>);
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097        <span class="keyword">private</span>:
+<a name="l00098"></a>00098               <a class="code" href="classiqt_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries.">CPackagesLoaderComp</a>&amp; m_parent;
+<a name="l00099"></a>00099        };
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#aabaaa3ff5aeff5795c56d0146a608bbf">RegisterPackageFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; file);
+<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#aaae7ca8b4f93e335aed3150834cc4df7">RegisterPackagesDir</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; subDir);
+<a name="l00103"></a>00103        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a7eaf3f98cea4f1516107a6d1a3d01c41">LoadConfigFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; configFile);
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105        <a class="code" href="classiqt_1_1_c_dll_functions_provider.html" title="Provide access to public functions in DLL.">CDllFunctionsProvider</a>&amp; <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a9439be9178fd4c4a731a36658c174808">GetProviderRef</a>(<span class="keyword">const</span> QFileInfo&amp; fileInfo);
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107        <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#adec50d87f7968e418fd5827125a7685d">CheckAndMarkPath</a>(<span class="keyword">const</span> QDir&amp; directory, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; path, <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; resultPath) <span class="keyword">const</span>;
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109 <span class="keyword">private</span>:
+<a name="l00110"></a>00110        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;CDllFunctionsProvider&gt;</a> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">FunctionsProviderPtr</a>;
+<a name="l00111"></a>00111        <span class="keyword">typedef</span> std::map&lt;QString, FunctionsProviderPtr&gt; DllCacheMap;
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113        DllCacheMap m_dllCacheMap;
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115        <span class="keyword">struct </span>CompositePackageInfo
+<a name="l00116"></a>00116        {
+<a name="l00117"></a>00117               <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;icomp::CCompositePackageStaticInfo&gt;</a> staticInfoPtr;
+<a name="l00118"></a>00118               QDir directory;
+<a name="l00119"></a>00119        };
+<a name="l00123"></a>00123        <span class="keyword">typedef</span> std::map&lt;std::string, QString&gt; RealPackagesMap;
+<a name="l00124"></a>00124        RealPackagesMap m_realPackagesMap;
+<a name="l00125"></a>00125 
+<a name="l00129"></a>00129        <span class="keyword">typedef</span> std::map&lt;std::string, CompositePackageInfo&gt; CompositePackagesMap;
+<a name="l00130"></a>00130        CompositePackagesMap m_compositePackagesMap;
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;icomp::IRegistry&gt;</a> RegistryPtr;
+<a name="l00133"></a>00133        <span class="keyword">typedef</span> std::map&lt;istd::CString, RegistryPtr&gt; RegistriesMap;
+<a name="l00134"></a>00134        <span class="keyword">typedef</span> std::map&lt;const icomp::IRegistry*, QFileInfo&gt; InvRegistriesMap;
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136        <span class="keyword">mutable</span> RegistriesMap m_registriesMap;
+<a name="l00137"></a>00137        <span class="keyword">mutable</span> InvRegistriesMap m_invRegistriesMap;
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139        <span class="keyword">typedef</span> std::set&lt;istd::CString&gt; UsedFilesList;
+<a name="l00140"></a>00140        <span class="keyword">mutable</span> UsedFilesList m_usedFilesList;
+<a name="l00141"></a>00141 
+<a name="l00142"></a>00142        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_configFilePath;
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144        I_REF(<a class="code" href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects.">iser::IFileLoader</a>, m_registryLoaderCompPtr);
+<a name="l00145"></a>00145        I_REF(<a class="code" href="classiprm_1_1_i_file_name_param.html" title="Common interface for a file system item settings.">iprm::IFileNameParam</a>, m_configFilePathCompPtr);
+<a name="l00146"></a>00146 };
 <a name="l00147"></a>00147 
-<a name="l00148"></a>00148 } <span class="comment">// namespace iqt</span>
-<a name="l00149"></a>00149 
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149 } <span class="comment">// namespace iqt</span>
 <a name="l00150"></a>00150 
-<a name="l00151"></a>00151 <span class="preprocessor">#endif // !iqt_CPackagesLoaderComp_included</span>
-<a name="l00152"></a>00152 <span class="preprocessor"></span>
-<a name="l00153"></a>00153 
+<a name="l00151"></a>00151 
+<a name="l00152"></a>00152 <span class="preprocessor">#endif // !iqt_CPackagesLoaderComp_included</span>
+<a name="l00153"></a>00153 <span class="preprocessor"></span>
+<a name="l00154"></a>00154 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -130,13 +130,18 @@ ISelectionParam* CSelectableParamsSetComp::GetActiveSubselection() const
 
 bool CSelectableParamsSetComp::Serialize(iser::IArchive& archive)
 {
-	static iser::CArchiveTag selectedIndexTag("Selected", "Selected index");
-
 	bool retVal = true;
 
+	int selectedIndex = m_selectedIndex;
+
+	static iser::CArchiveTag selectedIndexTag("Selected", "Selected index");
 	retVal = retVal && archive.BeginTag(selectedIndexTag);
-	retVal = retVal && archive.Process(m_selectedIndex);
+	retVal = retVal && archive.Process(selectedIndex);
 	retVal = retVal && archive.EndTag(selectedIndexTag);
+
+	if (!archive.IsStoring() && selectedIndex != m_selectedIndex){
+		retVal = retVal && SetSelectedOptionIndex(selectedIndex);
+	}
 
 	return retVal;
 }
@@ -167,6 +172,12 @@ void CSelectableParamsSetComp::SetupCurrentParamsSetBridge()
 
 // reimplemented (iprm::ISelectionConstraints)
 
+int CSelectableParamsSetComp::GetConstraintsFlags() const
+{
+	return SCF_NONE;
+}
+
+
 int CSelectableParamsSetComp::GetOptionsCount() const
 {
 	if (m_paramsManagerCompPtr.IsValid()){
@@ -188,6 +199,7 @@ istd::CString CSelectableParamsSetComp::GetOptionName(int index) const
 	return noname;
 }
 
+
 istd::CString CSelectableParamsSetComp::GetOptionDescription(int index) const
 {
 	if (m_paramsManagerCompPtr.IsValid()){
@@ -200,6 +212,23 @@ istd::CString CSelectableParamsSetComp::GetOptionDescription(int index) const
 	return istd::CString();
 }
 
+
+std::string CSelectableParamsSetComp::GetOptionId(int /*index*/) const
+{
+	return std::string();
+}
+
+
+// reimplemented (icomp::CComponentBase)
+
+void CSelectableParamsSetComp::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+
+	if (m_defaultIndexAttrPtr.IsValid()){
+		SetSelectedOptionIndex(*m_defaultIndexAttrPtr);
+	}
+}
 
 
 // public methods of the embedded class CurrentParamsSetObserver

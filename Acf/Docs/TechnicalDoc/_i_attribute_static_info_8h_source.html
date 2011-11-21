@@ -52,28 +52,31 @@
 <a name="l00025"></a>00025        {
 <a name="l00029"></a><a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a1a785ee164947b56152234baaeaa9ace">00029</a>               <a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a1a785ee164947b56152234baaeaa9ace" title="Active if user declared this attribute as obligatory.">AF_OBLIGATORY</a> = 1 &lt;&lt; 0,
 <a name="l00034"></a><a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a8d45d95ffcc50f5611339a3c23bf69a4">00034</a>               <a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a8d45d95ffcc50f5611339a3c23bf69a4" title="Active if this attribute can be unset (null).">AF_NULLABLE</a>   = 1 &lt;&lt; 1,
-<a name="l00038"></a><a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a3fab81bf37891355141013bc45ac34fb">00038</a>               <a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a3fab81bf37891355141013bc45ac34fb" title="Attribute is reference to another component.">AF_REFERENCE</a> = 1 &lt;&lt; 2,
-<a name="l00042"></a><a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a077526887a967bb955474e513278ed42">00042</a>               <a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a077526887a967bb955474e513278ed42" title="Attribute is factory of another component.">AF_FACTORY</a> = 1 &lt;&lt; 2
-<a name="l00043"></a>00043        };
-<a name="l00044"></a>00044 
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classicomp_1_1_i_attribute_static_info.html#ad8a8d405ab807a83eb70dbe32140c4aa" title="Get description of this attribute.">GetAttributeDescription</a>() <span class="keyword">const</span> = 0;
-<a name="l00049"></a>00049 
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects.">iser::IObject</a>* <a class="code" href="classicomp_1_1_i_attribute_static_info.html#aa80838789b803591b3a373a91601e070" title="Get default attribute value.">GetAttributeDefaultValue</a>() <span class="keyword">const</span> = 0;
-<a name="l00055"></a>00055 
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> std::string <a class="code" href="classicomp_1_1_i_attribute_static_info.html#ace2fcb22fe103d605039c2f2dba30ae0" title="Return attribute type description.">GetAttributeTypeName</a>() <span class="keyword">const</span> = 0;
-<a name="l00060"></a>00060 
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">IComponentStaticInfo::Ids</a> <a class="code" href="classicomp_1_1_i_attribute_static_info.html#a32d44931a8f911bf543d2e2cdfde9a8f" title="Get related meta information.">GetRelatedMetaIds</a>(<span class="keywordtype">int</span> metaGroupId, <span class="keywordtype">int</span> flags, <span class="keywordtype">int</span> flagsMask) <span class="keyword">const</span> = 0;
-<a name="l00066"></a>00066 
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classicomp_1_1_i_attribute_static_info.html#a11731fa4869453bd098b0a00e8c524a7" title="Get flags of this attribute.">GetAttributeFlags</a>() <span class="keyword">const</span> = 0;
-<a name="l00071"></a>00071 };
+<a name="l00038"></a><a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2ac967dab5fe6c208f51fa972ee295fa92">00038</a>               <a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2ac967dab5fe6c208f51fa972ee295fa92" title="Attribute is single type.">AF_SINGLE</a> = 1 &lt;&lt; 2,
+<a name="l00042"></a><a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2aba97c2ca3c8105b1e9589db51253973e">00042</a>               <a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2aba97c2ca3c8105b1e9589db51253973e" title="Attribute is multiple type.">AF_MULTIPLE</a> = 1 &lt;&lt; 3,
+<a name="l00046"></a><a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a539016ee0900591d80ff7eeac1abbc9a">00046</a>               <a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a539016ee0900591d80ff7eeac1abbc9a" title="Attribute is simple value type.">AF_VALUE</a> = 1 &lt;&lt; 4,
+<a name="l00050"></a><a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a3fab81bf37891355141013bc45ac34fb">00050</a>               <a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a3fab81bf37891355141013bc45ac34fb" title="Attribute is reference to another component.">AF_REFERENCE</a> = 1 &lt;&lt; 5,
+<a name="l00054"></a><a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a077526887a967bb955474e513278ed42">00054</a>               <a class="code" href="classicomp_1_1_i_attribute_static_info.html#ae025080e9458b4c432cc607b5be883d2a077526887a967bb955474e513278ed42" title="Attribute is factory of another component.">AF_FACTORY</a> = 1 &lt;&lt; 6
+<a name="l00055"></a>00055        };
+<a name="l00056"></a>00056 
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classicomp_1_1_i_attribute_static_info.html#ad8a8d405ab807a83eb70dbe32140c4aa" title="Get description of this attribute.">GetAttributeDescription</a>() <span class="keyword">const</span> = 0;
+<a name="l00061"></a>00061 
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects.">iser::IObject</a>* <a class="code" href="classicomp_1_1_i_attribute_static_info.html#aa80838789b803591b3a373a91601e070" title="Get default attribute value.">GetAttributeDefaultValue</a>() <span class="keyword">const</span> = 0;
+<a name="l00067"></a>00067 
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> std::string <a class="code" href="classicomp_1_1_i_attribute_static_info.html#ace2fcb22fe103d605039c2f2dba30ae0" title="Return attribute type description.">GetAttributeTypeName</a>() <span class="keyword">const</span> = 0;
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074 } <span class="comment">// namespace icomp</span>
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 <span class="preprocessor">#endif // !icomp_IAttributeStaticInfo_included</span>
-<a name="l00078"></a>00078 <span class="preprocessor"></span>
-<a name="l00079"></a>00079 
+<a name="l00077"></a>00077        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">IElementStaticInfo::Ids</a> <a class="code" href="classicomp_1_1_i_attribute_static_info.html#abb4080e2c50bca861f76b9270c278f51" title="Get related meta information.">GetRelatedMetaIds</a>(<span class="keywordtype">int</span> metaGroupId, <span class="keywordtype">int</span> flags, <span class="keywordtype">int</span> flagsMask) <span class="keyword">const</span> = 0;
+<a name="l00078"></a>00078 
+<a name="l00082"></a>00082        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classicomp_1_1_i_attribute_static_info.html#a11731fa4869453bd098b0a00e8c524a7" title="Get flags of this attribute.">GetAttributeFlags</a>() <span class="keyword">const</span> = 0;
+<a name="l00083"></a>00083 };
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 } <span class="comment">// namespace icomp</span>
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 <span class="preprocessor">#endif // !icomp_IAttributeStaticInfo_included</span>
+<a name="l00090"></a>00090 <span class="preprocessor"></span>
+<a name="l00091"></a>00091 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

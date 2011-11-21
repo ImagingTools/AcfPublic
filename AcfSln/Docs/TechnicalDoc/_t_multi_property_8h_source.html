@@ -17,7 +17,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -48,11 +47,11 @@
 <a name="l00021"></a>00021 
 <a name="l00022"></a>00022 
 <a name="l00027"></a>00027 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00028"></a><a class="code" href="classiprop_1_1_t_multi_property.html">00028</a> <span class="keyword">class </span><a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty</a>: <span class="keyword">public</span> iprop::<a class="code" href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property.">CPropertyBase</a>
+<a name="l00028"></a><a class="code" href="classiprop_1_1_t_multi_property.html">00028</a> <span class="keyword">class </span><a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty</a>: <span class="keyword">public</span> <a class="code" href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property.">CPropertyBase</a>
 <a name="l00029"></a>00029 {
 <a name="l00030"></a>00030 <span class="keyword">public</span>:
 <a name="l00031"></a><a class="code" href="classiprop_1_1_t_multi_property.html#ad2f3b2fb933117f3cdd66ac3ec3fb323">00031</a>        <span class="keyword">typedef</span> Value <a class="code" href="classiprop_1_1_t_multi_property.html#ad2f3b2fb933117f3cdd66ac3ec3fb323">ValueType</a>;
-<a name="l00032"></a><a class="code" href="classiprop_1_1_t_multi_property.html#a2bff7ca6e94531fcdf6cb88624e164e2">00032</a>        <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property.">iprop::CPropertyBase</a> <a class="code" href="classiprop_1_1_t_multi_property.html#a2bff7ca6e94531fcdf6cb88624e164e2">BaseClass</a>;
+<a name="l00032"></a><a class="code" href="classiprop_1_1_t_multi_property.html#a97f90da485cc697d056fc750ec1bac83">00032</a>        <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property.">CPropertyBase</a> <a class="code" href="classiprop_1_1_t_multi_property.html#a97f90da485cc697d056fc750ec1bac83">BaseClass</a>;
 <a name="l00033"></a><a class="code" href="classiprop_1_1_t_multi_property.html#ae5a53373ea96d95af943f2a61dcf8e77">00033</a>        <span class="keyword">typedef</span> std::vector&lt;ValueType&gt; <a class="code" href="classiprop_1_1_t_multi_property.html#ae5a53373ea96d95af943f2a61dcf8e77">ValueList</a>;
 <a name="l00034"></a><a class="code" href="classiprop_1_1_t_multi_property.html#a38953f61120133e753953496457293f9">00034</a>        <span class="keyword">typedef</span> <span class="keyword">typename</span> ValueList::iterator <a class="code" href="classiprop_1_1_t_multi_property.html#a38953f61120133e753953496457293f9">iterator</a>;
 <a name="l00035"></a><a class="code" href="classiprop_1_1_t_multi_property.html#a62268feb56b38fa17155e57bcf95c6e9">00035</a>        <span class="keyword">typedef</span> <span class="keyword">typename</span> ValueList::const_iterator <a class="code" href="classiprop_1_1_t_multi_property.html#a62268feb56b38fa17155e57bcf95c6e9">const_iterator</a>;
@@ -60,7 +59,7 @@
 <a name="l00040"></a>00040        <a class="code" href="classiprop_1_1_t_multi_property.html#a929c75a98989f9cdb710f8df863bae5e" title="Default constructor.">TMultiProperty</a>();
 <a name="l00041"></a>00041 
 <a name="l00051"></a>00051        <a class="code" href="classiprop_1_1_t_multi_property.html#a929c75a98989f9cdb710f8df863bae5e" title="Default constructor.">TMultiProperty</a>(
-<a name="l00052"></a>00052                             <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">iprop::IPropertiesManager</a>* propertyOwnerPtr,
+<a name="l00052"></a>00052                             <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>* propertyOwnerPtr,
 <a name="l00053"></a>00053                             <span class="keyword">const</span> std::string&amp; propertyId,
 <a name="l00054"></a>00054                             <span class="keyword">const</span> std::string&amp; propertyDescription,
 <a name="l00055"></a>00055                             <span class="keywordtype">int</span> propertyFlags,
@@ -117,8 +116,8 @@
 <a name="l00127"></a>00127 
 <a name="l00128"></a>00128 
 <a name="l00129"></a>00129 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00130"></a><a class="code" href="classiprop_1_1_t_multi_property.html#a8095ef32f30163dabfc52cdb8f68ce1a">00130</a> <a class="code" href="classiprop_1_1_t_multi_property.html#a929c75a98989f9cdb710f8df863bae5e" title="Default constructor.">TMultiProperty&lt;Value&gt;::TMultiProperty</a>(
-<a name="l00131"></a>00131                             <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">iprop::IPropertiesManager</a>* propertyOwnerPtr,
+<a name="l00130"></a><a class="code" href="classiprop_1_1_t_multi_property.html#abf38f3c5c434ade419b636637a7ac375">00130</a> <a class="code" href="classiprop_1_1_t_multi_property.html#a929c75a98989f9cdb710f8df863bae5e" title="Default constructor.">TMultiProperty&lt;Value&gt;::TMultiProperty</a>(
+<a name="l00131"></a>00131                             <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>* propertyOwnerPtr,
 <a name="l00132"></a>00132                             <span class="keyword">const</span> std::string&amp; propertyId,
 <a name="l00133"></a>00133                             <span class="keyword">const</span> std::string&amp; propertyDescription,
 <a name="l00134"></a>00134                             <span class="keywordtype">int</span> propertyFlags,
@@ -249,7 +248,7 @@
 <a name="l00259"></a>00259 }
 <a name="l00260"></a>00260 
 <a name="l00261"></a>00261 
-<a name="l00262"></a>00262 <span class="comment">// reimplemented (ISerializable)</span>
+<a name="l00262"></a>00262 <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00263"></a>00263 
 <a name="l00264"></a>00264 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
 <a name="l00265"></a><a class="code" href="classiprop_1_1_t_multi_property.html#a9ddb68757003f115ea033b3895da3952">00265</a> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_t_multi_property.html#a9ddb68757003f115ea033b3895da3952">TMultiProperty&lt;Value&gt;::Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive)
@@ -300,7 +299,7 @@
 <a name="l00310"></a>00310 }
 <a name="l00311"></a>00311 
 <a name="l00312"></a>00312 
-<a name="l00313"></a>00313 <span class="comment">// private static attributes</span>
+<a name="l00313"></a>00313 <span class="comment">// private static properties</span>
 <a name="l00314"></a>00314 
 <a name="l00315"></a>00315 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
 <a name="l00316"></a>00316 <span class="keyword">const</span> std::string <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;Value&gt;::s_typeName</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_class_info.html#aa933e42f37d56bdd4236e0833b1adb14">istd::CClassInfo::GetName</a>&lt;<a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;Value&gt;</a> &gt;());
@@ -308,18 +307,19 @@
 <a name="l00318"></a>00318 
 <a name="l00319"></a>00319 <span class="comment">// typedefs</span>
 <a name="l00320"></a>00320 
-<a name="l00321"></a><a class="code" href="namespaceiprop.html#a144dca0ab9d685e92b923e31bf7268cd">00321</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;double&gt;</a> <a class="code" href="namespaceiprop.html#a144dca0ab9d685e92b923e31bf7268cd">CMultiDoubleAttribute</a>;
-<a name="l00322"></a><a class="code" href="namespaceiprop.html#a8d6dd797b7c8fd63e6f86a6bd90b1308">00322</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;bool&gt;</a> <a class="code" href="namespaceiprop.html#a8d6dd797b7c8fd63e6f86a6bd90b1308">CMultiBoolAttribute</a>;
-<a name="l00323"></a><a class="code" href="namespaceiprop.html#a1321fa2101e02f51a5a3e2e3da2eb6bf">00323</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;int&gt;</a> <a class="code" href="namespaceiprop.html#a1321fa2101e02f51a5a3e2e3da2eb6bf">CMultiIntAttribute</a>;
-<a name="l00324"></a><a class="code" href="namespaceiprop.html#ad810f9685b48cad58299d2c1b18048b3">00324</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;istd::CString&gt;</a> <a class="code" href="namespaceiprop.html#ad810f9685b48cad58299d2c1b18048b3">CMultiStringAttribute</a>;
-<a name="l00325"></a>00325 
+<a name="l00321"></a><a class="code" href="namespaceiprop.html#a18873d3b40062f0883b8ee66e2859640">00321</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;double&gt;</a> <a class="code" href="namespaceiprop.html#a18873d3b40062f0883b8ee66e2859640">CMultiDoubleProperty</a>;
+<a name="l00322"></a><a class="code" href="namespaceiprop.html#a42a40f12de60cd4e05115fc792cb62ee">00322</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;bool&gt;</a> <a class="code" href="namespaceiprop.html#a42a40f12de60cd4e05115fc792cb62ee">CMultiBoolProperty</a>;
+<a name="l00323"></a><a class="code" href="namespaceiprop.html#a72c4d8a7d76de3f5cd8f7b486449fade">00323</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;int&gt;</a> <a class="code" href="namespaceiprop.html#a72c4d8a7d76de3f5cd8f7b486449fade">CMultiIntProperty</a>;
+<a name="l00324"></a><a class="code" href="namespaceiprop.html#a317a5f5c3579bdc51edf7837c745f0d6">00324</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;istd::CString&gt;</a> <a class="code" href="namespaceiprop.html#a317a5f5c3579bdc51edf7837c745f0d6">CMultiStringProperty</a>;
+<a name="l00325"></a><a class="code" href="namespaceiprop.html#a9670397b1ae3057c7580f96565f8b712">00325</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;std::string&gt;</a> <a class="code" href="namespaceiprop.html#a9670397b1ae3057c7580f96565f8b712">CMultiStdStringProperty</a>;
 <a name="l00326"></a>00326 
-<a name="l00327"></a>00327 } <span class="comment">// namespace iprop</span>
-<a name="l00328"></a>00328 
+<a name="l00327"></a>00327 
+<a name="l00328"></a>00328 } <span class="comment">// namespace iprop</span>
 <a name="l00329"></a>00329 
-<a name="l00330"></a>00330 <span class="preprocessor">#endif // !iprop_TMultiProperty_included</span>
-<a name="l00331"></a>00331 <span class="preprocessor"></span>
-<a name="l00332"></a>00332 
+<a name="l00330"></a>00330 
+<a name="l00331"></a>00331 <span class="preprocessor">#endif // !iprop_TMultiProperty_included</span>
+<a name="l00332"></a>00332 <span class="preprocessor"></span>
+<a name="l00333"></a>00333 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

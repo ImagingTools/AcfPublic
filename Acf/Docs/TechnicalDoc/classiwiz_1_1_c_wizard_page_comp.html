@@ -38,7 +38,7 @@
 <div class="title">iwiz::CWizardPageComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iwiz::CWizardPageComp" --><!-- doxytag: inherits="iprm::CComposedParamsSetComp,imod::CMultiModelDispatcherBase,iwiz::IWizardPageInfo" -->
+<!-- doxytag: class="iwiz::CWizardPageComp" --><!-- doxytag: inherits="iprm::CComposedParamsSetComp,imod::CMultiModelDispatcherBase,iproc::IStateController" -->
 <p>Component implementation of a wizard page.  
  <a href="classiwiz_1_1_c_wizard_page_comp.html#details">More...</a></p>
 
@@ -51,7 +51,7 @@ Inheritance diagram for iwiz::CWizardPageComp:</div>
   <map id="iwiz::CWizardPageComp_map" name="iwiz::CWizardPageComp_map">
 <area href="classiprm_1_1_c_composed_params_set_comp.html" title="Implementation of interface IParamsSet as component." alt="iprm::CComposedParamsSetComp" shape="rect" coords="392,280,606,304"/>
 <area href="classimod_1_1_c_multi_model_dispatcher_base.html" title="Generic implementation of a data model changes notifier." alt="imod::CMultiModelDispatcherBase" shape="rect" coords="840,280,1054,304"/>
-<area href="classiwiz_1_1_i_wizard_page_info.html" title="Interface for a wizard page status info." alt="iwiz::IWizardPageInfo" shape="rect" coords="1064,280,1278,304"/>
+<area href="classiproc_1_1_i_state_controller.html" title="Interface for a wizard page status info." alt="iproc::IStateController" shape="rect" coords="1064,280,1278,304"/>
 <area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,224,214,248"/>
 <area href="classiprm_1_1_c_params_set.html" title="Basic implementation of interface IParamsSet." alt="iprm::CParamsSet" shape="rect" coords="392,224,606,248"/>
 <area href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures." alt="istd::TIHierarchical&lt; Interface &gt;" shape="rect" coords="616,224,830,248"/>
@@ -82,13 +82,19 @@ Public Types</h2></td></tr>
 <a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html">imod::CMultiModelDispatcherBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a0ad5f3011dd8267af14143182b8c0729">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#ae1479dee3f3d9b720ee5a27b7a1aa717">I_ASSIGN_TO</a> (m_slaveControllerModelsCompPtr, m_slaveControllersCompPtr, true)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a1d9edab636ec19c19d40f8518b5c224b">CWizardPageComp</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a50e5882c85fdec59daf9b5c651c40c43">IsPageFinished</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The page processing was finished, the page data is complete set.  <a href="#a50e5882c85fdec59daf9b5c651c40c43"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a41882ae47fc12c5d078a261bd6300346">SetPageFinished</a> (bool isPageFinished=true)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a wizard page as finished.  <a href="#a41882ae47fc12c5d078a261bd6300346"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#ac488241ae6b25ca912cd2411d6850910">IsStateEnabled</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if state is enabled.  <a href="#ac488241ae6b25ca912cd2411d6850910"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a4941fa899736f5e93b2d07d75c7c63fa">IsStateActive</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this state is active.  <a href="#a4941fa899736f5e93b2d07d75c7c63fa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a92c3abb7f53d1aa4bd11ae4529a23603">IsEnterAllowed</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#ace15ff5d04e40e19c65ab32e87936497">IsLeaveAllowed</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#af3908a49d2483688c1f83cf6cbc348fe">TryEnterState</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a64602e567ebe3fb269bd8825030f0fbc">TryLeaveState</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#afba27785a24a87cdf3e3d32923150a4e">UpdateAllMembers</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a932a26e1e1a9131787d7d1265edc652a">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#ad15f1553b83ed39f2e9383481ed32308">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a7b8bfb47535db07b098e0283d5c3797f">OnComponentDestroyed</a> ()</td></tr>
@@ -150,12 +156,99 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a50e5882c85fdec59daf9b5c651c40c43"></a><!-- doxytag: member="iwiz::CWizardPageComp::IsPageFinished" ref="a50e5882c85fdec59daf9b5c651c40c43" args="() const " -->
+<a class="anchor" id="ae1479dee3f3d9b720ee5a27b7a1aa717"></a><!-- doxytag: member="iwiz::CWizardPageComp::I_ASSIGN_TO" ref="ae1479dee3f3d9b720ee5a27b7a1aa717" args="(m_slaveControllerModelsCompPtr, m_slaveControllersCompPtr, true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool iwiz::CWizardPageComp::IsPageFinished </td>
+          <td class="memname">iwiz::CWizardPageComp::I_ASSIGN_TO </td>
+          <td>(</td>
+          <td class="paramtype">m_slaveControllerModelsCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_slaveControllersCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">true&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a92c3abb7f53d1aa4bd11ae4529a23603"></a><!-- doxytag: member="iwiz::CWizardPageComp::IsEnterAllowed" ref="a92c3abb7f53d1aa4bd11ae4529a23603" args="(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iwiz::CWizardPageComp::IsEnterAllowed </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isActionAllowed</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IStateController *&#160;</td>
+          <td class="paramname"><em>prevStatePtr</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ace15ff5d04e40e19c65ab32e87936497"></a><!-- doxytag: member="iwiz::CWizardPageComp::IsLeaveAllowed" ref="ace15ff5d04e40e19c65ab32e87936497" args="(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iwiz::CWizardPageComp::IsLeaveAllowed </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isActionAllowed</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IStateController *&#160;</td>
+          <td class="paramname"><em>nextStatePtr</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4941fa899736f5e93b2d07d75c7c63fa"></a><!-- doxytag: member="iwiz::CWizardPageComp::IsStateActive" ref="a4941fa899736f5e93b2d07d75c7c63fa" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iwiz::CWizardPageComp::IsStateActive </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -164,9 +257,32 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>The page processing was finished, the page data is complete set. </p>
+<p>Check if this state is active. </p>
+<p>State is active, if it was succesfully entered and becomes inactive if it was succesfully leaved. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><code><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#af3908a49d2483688c1f83cf6cbc348fe">TryEnterState</a></code> and <code><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a64602e567ebe3fb269bd8825030f0fbc">TryLeaveState</a></code>. </dd></dl>
 
-<p>Implements <a class="el" href="classiwiz_1_1_i_wizard_page_info.html#af85bf30fb1ce2ffc295fe2d8ef2af2ee">iwiz::IWizardPageInfo</a>.</p>
+<p>Implements <a class="el" href="classiproc_1_1_i_state_controller.html#a0d6e37fa8bdf58d51168db93855707a8">iproc::IStateController</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac488241ae6b25ca912cd2411d6850910"></a><!-- doxytag: member="iwiz::CWizardPageComp::IsStateEnabled" ref="ac488241ae6b25ca912cd2411d6850910" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iwiz::CWizardPageComp::IsStateEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if state is enabled. </p>
+<p>If state is disabled it will be not considered as a element of transition graph. State is disabled e.g. if some preselection turns it off. </p>
+
+<p>Implements <a class="el" href="classiproc_1_1_i_state_controller.html#a3c32dabb91bd5647393bacb82c33fb56">iproc::IStateController</a>.</p>
 
 </div>
 </div>
@@ -241,25 +357,73 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a41882ae47fc12c5d078a261bd6300346"></a><!-- doxytag: member="iwiz::CWizardPageComp::SetPageFinished" ref="a41882ae47fc12c5d078a261bd6300346" args="(bool isPageFinished=true)" -->
+<a class="anchor" id="af3908a49d2483688c1f83cf6cbc348fe"></a><!-- doxytag: member="iwiz::CWizardPageComp::TryEnterState" ref="af3908a49d2483688c1f83cf6cbc348fe" args="(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iwiz::CWizardPageComp::SetPageFinished </td>
+          <td class="memname">virtual bool iwiz::CWizardPageComp::TryEnterState </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isPageFinished</em> = <code>true</code></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"><em>isActionAllowed</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IStateController *&#160;</td>
+          <td class="paramname"><em>prevStatePtr</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Marks a wizard page as finished. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a50e5882c85fdec59daf9b5c651c40c43" title="The page processing was finished, the page data is complete set.">IsPageFinished</a> </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a64602e567ebe3fb269bd8825030f0fbc"></a><!-- doxytag: member="iwiz::CWizardPageComp::TryLeaveState" ref="a64602e567ebe3fb269bd8825030f0fbc" args="(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iwiz::CWizardPageComp::TryLeaveState </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isActionAllowed</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IStateController *&#160;</td>
+          <td class="paramname"><em>prevStatePtr</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
-<p>Implements <a class="el" href="classiwiz_1_1_i_wizard_page_info.html#aa1fe9a5ff943b3d0995ba55e867343b5">iwiz::IWizardPageInfo</a>.</p>
+</div>
+</div>
+<a class="anchor" id="afba27785a24a87cdf3e3d32923150a4e"></a><!-- doxytag: member="iwiz::CWizardPageComp::UpdateAllMembers" ref="afba27785a24a87cdf3e3d32923150a4e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iwiz::CWizardPageComp::UpdateAllMembers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>

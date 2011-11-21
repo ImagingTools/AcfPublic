@@ -80,7 +80,7 @@ protected:
 		virtual const std::string& GetAttributeDescription() const;
 		virtual const iser::IObject* GetAttributeDefaultValue() const;
 		virtual std::string GetAttributeTypeName() const;
-		virtual IComponentStaticInfo::Ids GetRelatedMetaIds(int metaGroupId, int flags, int flagsMask) const;
+		virtual IElementStaticInfo::Ids GetRelatedMetaIds(int metaGroupId, int flags, int flagsMask) const;
 		virtual int GetAttributeFlags() const;
 
 	private:

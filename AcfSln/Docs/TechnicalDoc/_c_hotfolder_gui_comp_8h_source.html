@@ -17,7 +17,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -119,7 +118,7 @@
 <a name="l00092"></a>00092        <span class="keywordtype">void</span> OnTextFilterChanged(<span class="keyword">const</span> QString&amp; filterText);
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094 <span class="keyword">private</span>:
-<a name="l00095"></a>00095        <span class="keyword">class </span>ProcessingItem: <span class="keyword">public</span> QTreeWidgetItem, <span class="keyword">public</span> imod::TSingleModelObserverBase&lt;ifpf::IHotfolderProcessingItem&gt;
+<a name="l00095"></a>00095        <span class="keyword">class </span>ProcessingItem: <span class="keyword">public</span> QTreeWidgetItem, <span class="keyword">public</span> imod::<a class="code" href="class_t_single_model_observer_base.html">TSingleModelObserverBase</a>&lt;ifpf::IHotfolderProcessingItem&gt;
 <a name="l00096"></a>00096        {
 <a name="l00097"></a>00097        <span class="keyword">public</span>:
 <a name="l00098"></a>00098               <span class="keyword">typedef</span> QTreeWidgetItem <a class="code" href="classiqtfpf_1_1_c_hotfolder_gui_comp.html#a986faf5368da23bdd430971d0076932a">BaseClass</a>;
@@ -154,7 +153,7 @@
 <a name="l00130"></a>00130               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;icomp::IComponent&gt;</a> m_directoryItemCompPtr;
 <a name="l00131"></a>00131        };
 <a name="l00132"></a>00132 
-<a name="l00133"></a>00133        <span class="keyword">class </span>InputDirectoriesObserver: <span class="keyword">public</span> imod::TSingleModelObserverBase&lt;iprm::IParamsManager&gt;
+<a name="l00133"></a>00133        <span class="keyword">class </span>InputDirectoriesObserver: <span class="keyword">public</span> imod::<a class="code" href="class_t_single_model_observer_base.html">TSingleModelObserverBase</a>&lt;iprm::IParamsManager&gt;
 <a name="l00134"></a>00134        {
 <a name="l00135"></a>00135        <span class="keyword">public</span>:
 <a name="l00136"></a>00136               <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;iprm::IParamsManager&gt;</a> <a class="code" href="classiqtfpf_1_1_c_hotfolder_gui_comp.html#a986faf5368da23bdd430971d0076932a">BaseClass</a>;

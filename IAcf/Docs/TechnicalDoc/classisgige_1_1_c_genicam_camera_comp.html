@@ -100,9 +100,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisgige_1_1_c_genicam_camera_comp.html#a8447be4880dd86b10a1b45177b1bc5d5">GetDelayTimeRange</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisgige_1_1_c_genicam_camera_comp.html#a372fe50902b50887f8889d57cbe2112d">GetEenDelayRange</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisgige_1_1_c_genicam_camera_comp.html#a52e67d03b5c625aef4e7b47070ad8451">IsTriggerModeSupported</a> (int triggerMode) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisgige_1_1_c_genicam_camera_comp.html#a1ae00ea6a9097a32f777a64cef50ae7c">GetConstraintsFlags</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisgige_1_1_c_genicam_camera_comp.html#ad2febe27e69ab9d11e2dcbec498da76e">GetOptionsCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisgige_1_1_c_genicam_camera_comp.html#a75c9b3d67fec6f18db4add906ed9c619">GetOptionName</a> (int index) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisgige_1_1_c_genicam_camera_comp.html#ae1094cf8a807580435ae2a8a0de9cf88">GetOptionDescription</a> (int index) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisgige_1_1_c_genicam_camera_comp.html#a7da5d8e32c04f90ac563539895f872b9">GetOptionId</a> (int index) const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisgige_1_1_c_genicam_camera_comp.html#a4ea3ed595409af72643acc5258d8e09e">OnCameraEventLog</a> (int type, QString message)</td></tr>
@@ -278,6 +280,24 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1ae00ea6a9097a32f777a64cef50ae7c"></a><!-- doxytag: member="isgige::CGenicamCameraComp::GetConstraintsFlags" ref="a1ae00ea6a9097a32f777a64cef50ae7c" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int isgige::CGenicamCameraComp::GetConstraintsFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a5eb4e50e233db8653ade1827f94611a3">iprm::ISelectionConstraints</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a8447be4880dd86b10a1b45177b1bc5d5"></a><!-- doxytag: member="isgige::CGenicamCameraComp::GetDelayTimeRange" ref="a8447be4880dd86b10a1b45177b1bc5d5" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -381,6 +401,25 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#aa134f7e8af11d478320121cee6228701">iprm::ISelectionConstraints</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7da5d8e32c04f90ac563539895f872b9"></a><!-- doxytag: member="isgige::CGenicamCameraComp::GetOptionId" ref="a7da5d8e32c04f90ac563539895f872b9" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string isgige::CGenicamCameraComp::GetOptionId </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a2d9228f4e01880b48336deafeaa6393a">iprm::ISelectionConstraints</a>.</p>
 
 </div>
 </div>

@@ -1,27 +1,16 @@
 <?xml version="1.0"?>
 <Acf>
   <AcfHeader>
-    <VersionInfos count="2">
+    <VersionInfos count="1">
       <Version>
         <Id>
           0
         </Id>
         <Number>
-          1571
+          2058
         </Number>
         <Description>
           ACF
-        </Description>
-      </Version>
-      <Version>
-        <Id>
-          1
-        </Id>
-        <Number>
-          256
-        </Number>
-        <Description>
-          ACF-Solutions
         </Description>
       </Version>
     </VersionInfos>
@@ -35,7 +24,7 @@
         825
       </X>
       <X>
-        125
+        150
       </X>
     </Element>
     <Element>
@@ -57,7 +46,7 @@
         650
       </X>
       <X>
-        400
+        375
       </X>
     </Element>
     <Element>
@@ -76,10 +65,10 @@
         RegistryConsistInfo
       </ComponentName>
       <X>
-        1075
+        800
       </X>
       <X>
-        300
+        750
       </X>
     </Element>
     <Element>
@@ -101,7 +90,7 @@
         550
       </X>
       <X>
-        225
+        250
       </X>
     </Element>
     <Element>

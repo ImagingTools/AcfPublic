@@ -181,10 +181,10 @@
 <a name="l00154"></a>00154                             <span class="keywordtype">int</span> meaning,
 <a name="l00155"></a>00155                             <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; result) <span class="keyword">const</span>;
 <a name="l00156"></a>00156 
-<a name="l00157"></a>00157        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ab7541c75d15f482dc15f00d84fe4a06a">CreateExportedComponentsTree</a>(
+<a name="l00157"></a>00157        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a23c5140c70662ea09e5fce1c7edbc8b6">CreateExportedComponentsTree</a>(
 <a name="l00158"></a>00158                             <span class="keyword">const</span> std::string&amp; elementId,
 <a name="l00159"></a>00159                             <span class="keyword">const</span> std::string&amp; globalElementId,
-<a name="l00160"></a>00160                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">icomp::IComponentStaticInfo</a>* elementMetaInfoPtr,
+<a name="l00160"></a>00160                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">icomp::IElementStaticInfo</a>* elementMetaInfoPtr,
 <a name="l00161"></a>00161                             QTreeWidgetItem&amp; item,
 <a name="l00162"></a>00162                             <span class="keywordtype">bool</span>* hasWarningPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
 <a name="l00163"></a>00163                             <span class="keywordtype">bool</span>* hasExportPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
@@ -259,17 +259,18 @@
 <a name="l00232"></a>00232        QIcon m_invalidIcon;
 <a name="l00233"></a>00233        QIcon m_warningIcon;
 <a name="l00234"></a>00234        QIcon m_exportIcon;
-<a name="l00235"></a>00235 
-<a name="l00236"></a>00236        <span class="keyword">typedef</span> std::map&lt;icomp::CComponentAddress, istd::TOptDelPtr&lt;const icomp::IComponentStaticInfo&gt; &gt; AddressToInfoMap;
-<a name="l00237"></a>00237        AddressToInfoMap m_adressToMetaInfoMap;
-<a name="l00238"></a>00238 };
-<a name="l00239"></a>00239 
+<a name="l00235"></a>00235        QIcon m_importIcon;
+<a name="l00236"></a>00236 
+<a name="l00237"></a>00237        <span class="keyword">typedef</span> std::map&lt;icomp::CComponentAddress, istd::TOptDelPtr&lt;const icomp::IComponentStaticInfo&gt; &gt; AddressToInfoMap;
+<a name="l00238"></a>00238        AddressToInfoMap m_adressToMetaInfoMap;
+<a name="l00239"></a>00239 };
 <a name="l00240"></a>00240 
-<a name="l00241"></a>00241 } <span class="comment">// namespace icmpstr</span>
-<a name="l00242"></a>00242 
+<a name="l00241"></a>00241 
+<a name="l00242"></a>00242 } <span class="comment">// namespace icmpstr</span>
 <a name="l00243"></a>00243 
-<a name="l00244"></a>00244 <span class="preprocessor">#endif // !icmpstr_CAttributeEditorComp_included</span>
-<a name="l00245"></a>00245 <span class="preprocessor"></span>
+<a name="l00244"></a>00244 
+<a name="l00245"></a>00245 <span class="preprocessor">#endif // !icmpstr_CAttributeEditorComp_included</span>
+<a name="l00246"></a>00246 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

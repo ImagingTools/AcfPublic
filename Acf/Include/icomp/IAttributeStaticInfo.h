@@ -55,13 +55,25 @@ public:
 		*/
 		AF_NULLABLE	= 1 << 1,
 		/**
+			Attribute is single type.
+		*/
+		AF_SINGLE = 1 << 2,
+		/**
+			Attribute is multiple type.
+		*/
+		AF_MULTIPLE = 1 << 3,
+		/**
+			Attribute is simple value type.
+		*/
+		AF_VALUE = 1 << 4,
+		/**
 			Attribute is reference to another component.
 		*/
-		AF_REFERENCE = 1 << 2,
+		AF_REFERENCE = 1 << 5,
 		/**
 			Attribute is factory of another component.
 		*/
-		AF_FACTORY = 1 << 2
+		AF_FACTORY = 1 << 6
 	};
 
 	/**
@@ -84,7 +96,7 @@ public:
 		Get related meta information.
 		This information in normally used by references and factories to provide information about related interfaces.
 	*/
-	virtual IComponentStaticInfo::Ids GetRelatedMetaIds(int metaGroupId, int flags, int flagsMask) const = 0;
+	virtual IElementStaticInfo::Ids GetRelatedMetaIds(int metaGroupId, int flags, int flagsMask) const = 0;
 
 	/**
 		Get flags of this attribute.

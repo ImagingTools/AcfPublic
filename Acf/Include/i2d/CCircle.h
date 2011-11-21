@@ -48,7 +48,7 @@ public:
 
 	virtual CRectangle GetBoundingBox() const;
 
-	// reimplemented (IObject2d)
+	// reimplemented (i2d::IObject2d)
 	virtual bool Transform(
 				const ITransformation2d& transformation,
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,

@@ -67,7 +67,7 @@ CRectangle CCircle::GetBoundingBox() const
 }
 
 
-// reimplemented (IObject2d)
+// reimplemented (i2d::IObject2d)
 
 bool CCircle::Transform(
 			const ITransformation2d& /*transformation*/,

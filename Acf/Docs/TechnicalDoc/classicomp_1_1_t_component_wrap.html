@@ -52,7 +52,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_component_wrap.html#a7e8a830fdebaa5a60bcc44ed4b4c98e5">TComponentWrap</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_component_wrap.html#a153194a150cef64d735de3dad648466a">~TComponentWrap</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_component_wrap.html#a849edde086bd96a1750f654301ba66df">SetComponentContext</a> (const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *contextPtr, const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *parentPtr, bool isParentOwner)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_component_wrap.html#afa82ca73ed858f96d9bc882976254c58">SetComponentContext</a> (const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *contextPtr, const <a class="el" href="classicomp_1_1_i_composite_component.html">ICompositeComponent</a> *parentPtr, bool isParentOwner)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class Component&gt;<br/>
@@ -120,12 +120,12 @@ template&lt;class Component &gt; </div>
 
 <p>Definition at line <a class="el" href="_t_component_wrap_8h_source.html#l00043">43</a> of file <a class="el" href="_t_component_wrap_8h_source.html">TComponentWrap.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00183">NULL</a>, and <a class="el" href="classicomp_1_1_i_component.html#a852ef0c360d326ac726fa31b80f2d306">icomp::IComponent::OnSubcomponentDeleted()</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00183">NULL</a>, and <a class="el" href="classicomp_1_1_i_composite_component.html#a64d98464d961b225d9b438263224b349">icomp::ICompositeComponent::OnSubcomponentDeleted()</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a849edde086bd96a1750f654301ba66df"></a><!-- doxytag: member="icomp::TComponentWrap::SetComponentContext" ref="a849edde086bd96a1750f654301ba66df" args="(const IComponentContext *contextPtr, const IComponent *parentPtr, bool isParentOwner)" -->
+<a class="anchor" id="afa82ca73ed858f96d9bc882976254c58"></a><!-- doxytag: member="icomp::TComponentWrap::SetComponentContext" ref="afa82ca73ed858f96d9bc882976254c58" args="(const IComponentContext *contextPtr, const ICompositeComponent *parentPtr, bool isParentOwner)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -140,7 +140,7 @@ template&lt;class Component &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_composite_component.html">ICompositeComponent</a> *&#160;</td>
           <td class="paramname"><em>parentPtr</em>, </td>
         </tr>
         <tr>

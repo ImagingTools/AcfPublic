@@ -17,7 +17,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -45,17 +44,17 @@
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 
 <a name="l00023"></a>00023 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00024"></a><a class="code" href="classiprop_1_1_t_property.html">00024</a> <span class="keyword">class </span><a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty</a>: <span class="keyword">public</span> iprop::<a class="code" href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property.">CPropertyBase</a>
+<a name="l00024"></a><a class="code" href="classiprop_1_1_t_property.html">00024</a> <span class="keyword">class </span><a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty</a>: <span class="keyword">public</span> <a class="code" href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property.">CPropertyBase</a>
 <a name="l00025"></a>00025 {
 <a name="l00026"></a>00026 <span class="keyword">public</span>:
 <a name="l00027"></a><a class="code" href="classiprop_1_1_t_property.html#ad72c4993f337587ae5ca1edd4b503da8">00027</a>        <span class="keyword">typedef</span> Value <a class="code" href="classiprop_1_1_t_property.html#ad72c4993f337587ae5ca1edd4b503da8">ValueType</a>;
 <a name="l00028"></a><a class="code" href="classiprop_1_1_t_property.html#a7c94d23d1dfc476e5ae93972874e63fd">00028</a>        <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;Value&gt;</a> <a class="code" href="classiprop_1_1_t_property.html#a7c94d23d1dfc476e5ae93972874e63fd">PropertyType</a>;
-<a name="l00029"></a><a class="code" href="classiprop_1_1_t_property.html#acc0d5dd8ba1b1cd18d675b39729829dc">00029</a>        <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property.">iprop::CPropertyBase</a> <a class="code" href="classiprop_1_1_t_property.html#acc0d5dd8ba1b1cd18d675b39729829dc">BaseClass</a>;
+<a name="l00029"></a><a class="code" href="classiprop_1_1_t_property.html#a2203196c843f91807c05257d13fbe960">00029</a>        <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property.">CPropertyBase</a> <a class="code" href="classiprop_1_1_t_property.html#a2203196c843f91807c05257d13fbe960">BaseClass</a>;
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        <a class="code" href="classiprop_1_1_t_property.html#a4c56d6ff5047870bfd8992f248c87902">TProperty</a>();
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <a class="code" href="classiprop_1_1_t_property.html#a4c56d6ff5047870bfd8992f248c87902">TProperty</a>(
-<a name="l00034"></a>00034                             <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">iprop::IPropertiesManager</a>* propertyOwnerPtr,
+<a name="l00034"></a>00034                             <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>* propertyOwnerPtr,
 <a name="l00035"></a>00035                             <span class="keyword">const</span> std::string&amp; propertyName,
 <a name="l00036"></a>00036                             <span class="keyword">const</span> std::string&amp; propertyDescription,
 <a name="l00037"></a>00037                             <span class="keywordtype">int</span> propertyFlags,
@@ -67,7 +66,7 @@
 <a name="l00043"></a>00043        <span class="keywordtype">void</span> <a class="code" href="classiprop_1_1_t_property.html#a0904f16c11e7c363200be61df4a65706">ResetValue</a>();
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045        <span class="comment">// reimplemented (iser::IProperty)</span>
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_t_property.html#a6d8017bf3eac1fd950281d200cd01336">GetDefaultAttributePtr</a>() <span class="keyword">const</span>;
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_t_property.html#a89970a478012c640032b657d41c89f66">GetDefaultPropertyPtr</a>() <span class="keyword">const</span>;
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048        <span class="comment">// reimplemented (iser::IObject)</span>
 <a name="l00049"></a>00049        <span class="keyword">virtual</span> std::string <a class="code" href="classiprop_1_1_t_property.html#a800b050ed8ae99b2750eb645c0beec95">GetFactoryId</a>() <span class="keyword">const</span>;
@@ -98,8 +97,8 @@
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075 
 <a name="l00076"></a>00076 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00077"></a><a class="code" href="classiprop_1_1_t_property.html#a6d1d8cb1e5065cb36ab485f844d26597">00077</a> <a class="code" href="classiprop_1_1_t_property.html#a4c56d6ff5047870bfd8992f248c87902">TProperty&lt;Value&gt;::TProperty</a>(
-<a name="l00078"></a>00078                             <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">iprop::IPropertiesManager</a>* propertyOwnerPtr,
+<a name="l00077"></a><a class="code" href="classiprop_1_1_t_property.html#afabbcaadb5afd24fe864e30a73a13139">00077</a> <a class="code" href="classiprop_1_1_t_property.html#a4c56d6ff5047870bfd8992f248c87902">TProperty&lt;Value&gt;::TProperty</a>(
+<a name="l00078"></a>00078                             <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>* propertyOwnerPtr,
 <a name="l00079"></a>00079                             <span class="keyword">const</span> std::string&amp; propertyName,
 <a name="l00080"></a>00080                             <span class="keyword">const</span> std::string&amp; propertyDescription,
 <a name="l00081"></a>00081                             <span class="keywordtype">int</span> propertyFlags,
@@ -146,7 +145,7 @@
 <a name="l00122"></a>00122 <span class="comment">// reimplemented (iser::IProperty)</span>
 <a name="l00123"></a>00123 
 <a name="l00124"></a>00124 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00125"></a><a class="code" href="classiprop_1_1_t_property.html#a6d8017bf3eac1fd950281d200cd01336">00125</a> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_t_property.html#a6d8017bf3eac1fd950281d200cd01336">TProperty&lt;Value&gt;::GetDefaultAttributePtr</a>()<span class="keyword"> const</span>
+<a name="l00125"></a><a class="code" href="classiprop_1_1_t_property.html#a89970a478012c640032b657d41c89f66">00125</a> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_t_property.html#a89970a478012c640032b657d41c89f66">TProperty&lt;Value&gt;::GetDefaultPropertyPtr</a>()<span class="keyword"> const</span>
 <a name="l00126"></a>00126 <span class="keyword"></span>{
 <a name="l00127"></a>00127        <span class="keywordflow">return</span> m_defaultPropertyValuePtr.GetPtr();
 <a name="l00128"></a>00128 }
@@ -161,7 +160,7 @@
 <a name="l00137"></a>00137 }
 <a name="l00138"></a>00138 
 <a name="l00139"></a>00139 
-<a name="l00140"></a>00140 <span class="comment">// reimplemented (ISerializable)</span>
+<a name="l00140"></a>00140 <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00141"></a>00141 
 <a name="l00142"></a>00142 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
 <a name="l00143"></a><a class="code" href="classiprop_1_1_t_property.html#a035a722c8060bd11d04883aebf697be4">00143</a> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_t_property.html#a035a722c8060bd11d04883aebf697be4">TProperty&lt;Value&gt;::Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive)
@@ -188,7 +187,7 @@
 <a name="l00164"></a>00164 }
 <a name="l00165"></a>00165 
 <a name="l00166"></a>00166 
-<a name="l00167"></a>00167 <span class="comment">// private static attributes</span>
+<a name="l00167"></a>00167 <span class="comment">// private static properties</span>
 <a name="l00168"></a>00168 
 <a name="l00169"></a>00169 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
 <a name="l00170"></a>00170 <span class="keyword">const</span> std::string <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;Value&gt;::s_typeName</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_class_info.html#aa933e42f37d56bdd4236e0833b1adb14">istd::CClassInfo::GetName</a>&lt;<a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;Value&gt;</a> &gt;());
@@ -196,18 +195,19 @@
 <a name="l00172"></a>00172 
 <a name="l00173"></a>00173 <span class="comment">// typedefs</span>
 <a name="l00174"></a>00174 
-<a name="l00175"></a><a class="code" href="namespaceiprop.html#a51c17074805d3dc3e6c6454d29889d9e">00175</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;double&gt;</a> <a class="code" href="namespaceiprop.html#a51c17074805d3dc3e6c6454d29889d9e">CDoubleAttribute</a>;
-<a name="l00176"></a><a class="code" href="namespaceiprop.html#ae6e12f69ae337ee36046ac3e79b3c948">00176</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;bool&gt;</a> <a class="code" href="namespaceiprop.html#ae6e12f69ae337ee36046ac3e79b3c948">CBoolAttribute</a>;
-<a name="l00177"></a><a class="code" href="namespaceiprop.html#a46fdbfff78c8ea3f6759781ebbc01dae">00177</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;int&gt;</a> <a class="code" href="namespaceiprop.html#a46fdbfff78c8ea3f6759781ebbc01dae">CIntAttribute</a>;
-<a name="l00178"></a><a class="code" href="namespaceiprop.html#a6302d28e82c49d4a6c67d37785e3ff4c">00178</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;istd::CString&gt;</a> <a class="code" href="namespaceiprop.html#a6302d28e82c49d4a6c67d37785e3ff4c">CStringAttribute</a>;
-<a name="l00179"></a>00179 
+<a name="l00175"></a><a class="code" href="namespaceiprop.html#a54d537cb09aa22ef7adf4e615ef727bc">00175</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;double&gt;</a> <a class="code" href="namespaceiprop.html#a54d537cb09aa22ef7adf4e615ef727bc">CDoubleProperty</a>;
+<a name="l00176"></a><a class="code" href="namespaceiprop.html#a969ef46e521547d501738d17f4eefabc">00176</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;bool&gt;</a> <a class="code" href="namespaceiprop.html#a969ef46e521547d501738d17f4eefabc">CBoolProperty</a>;
+<a name="l00177"></a><a class="code" href="namespaceiprop.html#a5c82b613d33aa43f16ee106a1190755b">00177</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;int&gt;</a> <a class="code" href="namespaceiprop.html#a5c82b613d33aa43f16ee106a1190755b">CIntProperty</a>;
+<a name="l00178"></a><a class="code" href="namespaceiprop.html#a9d1e2c0600db704c2856ee8ea6a0c12a">00178</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;istd::CString&gt;</a> <a class="code" href="namespaceiprop.html#a9d1e2c0600db704c2856ee8ea6a0c12a">CStringProperty</a>;
+<a name="l00179"></a><a class="code" href="namespaceiprop.html#a76ebd1cb146656b08028463f4eeac6bd">00179</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;std::string&gt;</a> <a class="code" href="namespaceiprop.html#a76ebd1cb146656b08028463f4eeac6bd">CStdStringProperty</a>;
 <a name="l00180"></a>00180 
-<a name="l00181"></a>00181 } <span class="comment">// namespace iprop</span>
-<a name="l00182"></a>00182 
+<a name="l00181"></a>00181 
+<a name="l00182"></a>00182 } <span class="comment">// namespace iprop</span>
 <a name="l00183"></a>00183 
-<a name="l00184"></a>00184 <span class="preprocessor">#endif // !iprop_TProperty_included</span>
-<a name="l00185"></a>00185 <span class="preprocessor"></span>
-<a name="l00186"></a>00186 
+<a name="l00184"></a>00184 
+<a name="l00185"></a>00185 <span class="preprocessor">#endif // !iprop_TProperty_included</span>
+<a name="l00186"></a>00186 <span class="preprocessor"></span>
+<a name="l00187"></a>00187 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

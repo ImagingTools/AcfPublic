@@ -50,37 +50,44 @@
 <a name="l00027"></a>00027 
 <a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_base_component_static_info.html#abe5f8bd996285e144cca0db5ae035a33" title="Register interface ID for this static component info.">RegisterInterfaceExtractor</a>(<span class="keyword">const</span> std::string&amp; interfaceName, <a class="code" href="classicomp_1_1_c_base_component_static_info.html#ac330f05573ae98e98cdc860980afbafd">InterfaceExtractorPtr</a> extractorPtr);
 <a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_base_component_static_info.html#aea5446f0f0360a369d4d629605864240" title="Register static attribute info.">RegisterAttributeInfo</a>(<span class="keyword">const</span> std::string&amp; attributeId, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_attribute_static_info.html">IAttributeStaticInfo</a>* attributeInfoPtr);
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_base_component_static_info.html#a588dcbab10b5ada319b133cb9154593b" title="Register static subcomponent info.">RegisterSubcomponentInfo</a>(<span class="keyword">const</span> std::string&amp; subcomponentId, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">IComponentStaticInfo</a>* componentInfoPtr);
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_base_component_static_info.html#a7a81013c4d322d00f4bd8505e63bf9da" title="Register static subcomponent info.">RegisterSubelementInfo</a>(<span class="keyword">const</span> std::string&amp; subcomponentId, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">IElementStaticInfo</a>* staticInfoPtr);
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049        <span class="comment">//     reimplemented (icomp::IRealComponentStaticInfo)</span>
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* <a class="code" href="classicomp_1_1_c_base_component_static_info.html#a88d6137204c454aba4affd413805eab8" title="Create component instance.">CreateComponent</a>() <span class="keyword">const</span>;
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code" href="classicomp_1_1_c_base_component_static_info.html#a7ff0e8164d4edaadd7c8f09a2485fffc" title="Extract instance implemented specified interface from some component.">GetComponentInterface</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a>&amp; interfaceType, <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>&amp; component) <span class="keyword">const</span>;
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053        <span class="comment">//     reimplemented (icomp::IComponentStaticInfo)</span>
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_attribute_static_info.html">IAttributeStaticInfo</a>* <a class="code" href="classicomp_1_1_c_base_component_static_info.html#aec976e0a49319d8f48eafa216cec211e" title="Get set of attributes.">GetAttributeInfo</a>(<span class="keyword">const</span> std::string&amp; attributeId) <span class="keyword">const</span>;
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">IComponentStaticInfo</a>* <a class="code" href="classicomp_1_1_c_base_component_static_info.html#a37223f6002c0fae82b55e1760e594860" title="Return number of interfaces for specific slot.">GetSubcomponentInfo</a>(<span class="keyword">const</span> std::string&amp; subcomponentId) <span class="keyword">const</span>;
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">Ids</a> <a class="code" href="classicomp_1_1_c_base_component_static_info.html#a10ae26844c9f939b7ea229bfd99acbb7" title="Get list of meta IDs associated with some meta key.">GetMetaIds</a>(<span class="keywordtype">int</span> metaGroupId) <span class="keyword">const</span>;
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052        <span class="comment">//     reimplemented (icomp::IComponentInterfaceExtractor)</span>
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code" href="classicomp_1_1_c_base_component_static_info.html#af4f6c552932600e60737319351c3dc6a" title="Extract instance implemented specified interface from some component.">GetComponentInterface</a>(
+<a name="l00054"></a>00054                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a>&amp; interfaceType,
+<a name="l00055"></a>00055                             <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>&amp; component,
+<a name="l00056"></a>00056                             <span class="keyword">const</span> std::string&amp; subId) <span class="keyword">const</span>;
 <a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="keyword">private</span>:
-<a name="l00059"></a>00059        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_real_component_static_info.html" title="Interface adding to component static info functionality existing only for real components.">IRealComponentStaticInfo</a>* m_baseComponentPtr;
+<a name="l00058"></a>00058        <span class="comment">//     reimplemented (icomp::IComponentStaticInfo)</span>
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_attribute_static_info.html">IAttributeStaticInfo</a>* <a class="code" href="classicomp_1_1_c_base_component_static_info.html#aec976e0a49319d8f48eafa216cec211e" title="Get set of attributes.">GetAttributeInfo</a>(<span class="keyword">const</span> std::string&amp; attributeId) <span class="keyword">const</span>;
 <a name="l00060"></a>00060 
-<a name="l00061"></a>00061        <span class="keyword">typedef</span> std::map&lt;std::string, InterfaceExtractorPtr&gt; InterfaceExtractors;
-<a name="l00062"></a>00062        InterfaceExtractors m_interfaceExtractors;
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064        <span class="keyword">typedef</span> std::map&lt;std::string, const IComponentStaticInfo*&gt; SubcomponentInfos;
-<a name="l00065"></a>00065        SubcomponentInfos m_subcomponentInfos;
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067        <span class="keyword">typedef</span> std::map&lt;std::string, const IAttributeStaticInfo*&gt; AttributeInfos;
-<a name="l00068"></a>00068        AttributeInfos m_attributeInfos;
-<a name="l00069"></a>00069 };
+<a name="l00061"></a>00061        <span class="comment">//     reimplemented (icomp::IElementStaticInfo)</span>
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">IElementStaticInfo</a>* <a class="code" href="classicomp_1_1_c_base_component_static_info.html#ad5f6112769956287cdf7186a8c3d0c61" title="Return number of interfaces for specific slot.">GetSubelementInfo</a>(<span class="keyword">const</span> std::string&amp; subcomponentId) <span class="keyword">const</span>;
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a> <a class="code" href="classicomp_1_1_c_base_component_static_info.html#a10ae26844c9f939b7ea229bfd99acbb7" title="Get list of meta IDs associated with some meta key.">GetMetaIds</a>(<span class="keywordtype">int</span> metaGroupId) <span class="keyword">const</span>;
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 <span class="keyword">private</span>:
+<a name="l00066"></a>00066        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_real_component_static_info.html" title="Interface adding to component static info functionality existing only for real components.">IRealComponentStaticInfo</a>* m_baseComponentPtr;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068        <span class="keyword">typedef</span> std::map&lt;std::string, InterfaceExtractorPtr&gt; InterfaceExtractors;
+<a name="l00069"></a>00069        InterfaceExtractors m_interfaceExtractors;
 <a name="l00070"></a>00070 
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072 } <span class="comment">// namespace icomp</span>
+<a name="l00071"></a>00071        <span class="keyword">typedef</span> std::map&lt;std::string, const IElementStaticInfo*&gt; SubelementInfos;
+<a name="l00072"></a>00072        SubelementInfos m_subelementInfos;
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075 <span class="preprocessor">#endif // !icomp_CBaseComponentStaticInfo_included</span>
-<a name="l00076"></a>00076 <span class="preprocessor"></span>
+<a name="l00074"></a>00074        <span class="keyword">typedef</span> std::map&lt;std::string, const IAttributeStaticInfo*&gt; AttributeInfos;
+<a name="l00075"></a>00075        AttributeInfos m_attributeInfos;
+<a name="l00076"></a>00076 };
 <a name="l00077"></a>00077 
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079 } <span class="comment">// namespace icomp</span>
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 <span class="preprocessor">#endif // !icomp_CBaseComponentStaticInfo_included</span>
+<a name="l00083"></a>00083 <span class="preprocessor"></span>
+<a name="l00084"></a>00084 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

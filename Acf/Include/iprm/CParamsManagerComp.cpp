@@ -333,6 +333,12 @@ bool CParamsManagerComp::Serialize(iser::IArchive& archive)
 
 // reimplemented (iprm::ISelectionConstraints)
 
+int CParamsManagerComp::GetConstraintsFlags() const
+{
+	return SCF_NONE;
+}
+
+
 int CParamsManagerComp::GetOptionsCount() const
 {
 	return GetParamsSetsCount();
@@ -349,6 +355,11 @@ istd::CString CParamsManagerComp::GetOptionDescription(int /*index*/) const
 	return istd::CString();
 }
 
+
+std::string CParamsManagerComp::GetOptionId(int /*index*/) const
+{
+	return std::string();
+}
 
 
 // protected methods

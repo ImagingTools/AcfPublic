@@ -179,7 +179,7 @@ protected:
 	void CreateExportedComponentsTree(
 				const std::string& elementId,
 				const std::string& globalElementId,
-				const icomp::IComponentStaticInfo* elementMetaInfoPtr,
+				const icomp::IElementStaticInfo* elementMetaInfoPtr,
 				QTreeWidgetItem& item,
 				bool* hasWarningPtr = NULL,
 				bool* hasExportPtr = NULL) const;
@@ -254,6 +254,7 @@ private:
 	QIcon m_invalidIcon;
 	QIcon m_warningIcon;
 	QIcon m_exportIcon;
+	QIcon m_importIcon;
 
 	typedef std::map<icomp::CComponentAddress, istd::TOptDelPtr<const icomp::IComponentStaticInfo> > AddressToInfoMap;
 	AddressToInfoMap m_adressToMetaInfoMap;

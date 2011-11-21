@@ -36,7 +36,7 @@
 <div class="title">iwiz::IWizardNavigationController Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iwiz::IWizardNavigationController" --><!-- doxytag: inherits="istd::IPolymorphic" -->
+<!-- doxytag: class="iwiz::IWizardNavigationController" --><!-- doxytag: inherits="istd::IChangeable" -->
 <p>Interface for wizard navigation.  
  <a href="classiwiz_1_1_i_wizard_navigation_controller.html#details">More...</a></p>
 
@@ -47,9 +47,10 @@ Inheritance diagram for iwiz::IWizardNavigationController:</div>
  <div class="center">
   <img src="classiwiz_1_1_i_wizard_navigation_controller.png" usemap="#iwiz::IWizardNavigationController_map" alt=""/>
   <map id="iwiz::IWizardNavigationController_map" name="iwiz::IWizardNavigationController_map">
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="122,0,356,24"/>
-<area href="classiwiz_1_1_c_linear_wizard_controller_comp.html" title="Component implementation of a wizard controller." alt="iwiz::CLinearWizardControllerComp" shape="rect" coords="0,112,234,136"/>
-<area href="classiwiz_1_1_c_non_linear_wizard_controller_comp.html" title="Component implementation of a wizard controller." alt="iwiz::CNonLinearWizardControllerComp" shape="rect" coords="244,112,478,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,197,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,197,24"/>
+<area href="classiwiz_1_1_i_params_manager_wizard.html" title="Interface for wizard implementation based on parameter manager." alt="iwiz::IParamsManagerWizard" shape="rect" coords="0,168,197,192"/>
+<area href="classiwiz_1_1_c_wizard_document_comp.html" title="Component implementation of a wizard controller." alt="iwiz::CWizardDocumentComp" shape="rect" coords="0,224,197,248"/>
 </map>
  </div></div>
 
@@ -57,38 +58,97 @@ Inheritance diagram for iwiz::IWizardNavigationController:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_i_wizard_navigation_controller.html#a8828732ec1d59f99b36f080290e03f07">GetNextPageId</a> (int currentPageId)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ID of the next wizard page for the current page.  <a href="#a8828732ec1d59f99b36f080290e03f07"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_i_wizard_navigation_controller.html#aea789412f5e3d249c22a488500ef4b6c">IsFinishAllowed</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if finish is allowed for this wizard.  <a href="#aea789412f5e3d249c22a488500ef4b6c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_i_wizard_navigation_controller.html#aeb80543298870964c10c142496b74d4e">GetPrevPageIndex</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ID of the previous wizard page.  <a href="#aeb80543298870964c10c142496b74d4e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_i_wizard_navigation_controller.html#ac92a6df54b9c09499477be2136bf7596">GetNextPageIndex</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ID of the next wizard page.  <a href="#ac92a6df54b9c09499477be2136bf7596"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_i_wizard_navigation_controller.html#a8085bb7e78105404c42c803ab498c34f">DoWizardFinish</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do finish action by wizard.  <a href="#a8085bb7e78105404c42c803ab498c34f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface for wizard navigation. </p>
 
 <p>Definition at line <a class="el" href="_i_wizard_navigation_controller_8h_source.html#l00015">15</a> of file <a class="el" href="_i_wizard_navigation_controller_8h_source.html">IWizardNavigationController.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a8828732ec1d59f99b36f080290e03f07"></a><!-- doxytag: member="iwiz::IWizardNavigationController::GetNextPageId" ref="a8828732ec1d59f99b36f080290e03f07" args="(int currentPageId)=0" -->
+<a class="anchor" id="a8085bb7e78105404c42c803ab498c34f"></a><!-- doxytag: member="iwiz::IWizardNavigationController::DoWizardFinish" ref="a8085bb7e78105404c42c803ab498c34f" args="()=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int iwiz::IWizardNavigationController::GetNextPageId </td>
+          <td class="memname">virtual bool iwiz::IWizardNavigationController::DoWizardFinish </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>currentPageId</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Get the ID of the next wizard page for the current page. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">currentPageId</td><td>ID of the current wizard page. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Do finish action by wizard. </p>
 
-<p>Implemented in <a class="el" href="classiwiz_1_1_c_non_linear_wizard_controller_comp.html#a5f37f66d8a83db029ff1be58196f6776">iwiz::CNonLinearWizardControllerComp</a>, and <a class="el" href="classiwiz_1_1_c_linear_wizard_controller_comp.html#a70e1cd8b3f96d9e910babc5fd427b305">iwiz::CLinearWizardControllerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiwiz_1_1_c_wizard_document_comp.html#a502e1bd483103bd6e75e94ab6d18c041">iwiz::CWizardDocumentComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac92a6df54b9c09499477be2136bf7596"></a><!-- doxytag: member="iwiz::IWizardNavigationController::GetNextPageIndex" ref="ac92a6df54b9c09499477be2136bf7596" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iwiz::IWizardNavigationController::GetNextPageIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the ID of the next wizard page. </p>
+
+<p>Implemented in <a class="el" href="classiwiz_1_1_c_wizard_document_comp.html#af0d35cfe9b84fee6a4428bf4314fb7ac">iwiz::CWizardDocumentComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb80543298870964c10c142496b74d4e"></a><!-- doxytag: member="iwiz::IWizardNavigationController::GetPrevPageIndex" ref="aeb80543298870964c10c142496b74d4e" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iwiz::IWizardNavigationController::GetPrevPageIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the ID of the previous wizard page. </p>
+
+<p>Implemented in <a class="el" href="classiwiz_1_1_c_wizard_document_comp.html#aa568b04659070a28e19bf24cca123bd1">iwiz::CWizardDocumentComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aea789412f5e3d249c22a488500ef4b6c"></a><!-- doxytag: member="iwiz::IWizardNavigationController::IsFinishAllowed" ref="aea789412f5e3d249c22a488500ef4b6c" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iwiz::IWizardNavigationController::IsFinishAllowed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check, if finish is allowed for this wizard. </p>
+
+<p>Implemented in <a class="el" href="classiwiz_1_1_c_wizard_document_comp.html#a0b1da6f1efbd0990141c4c8004e10d0a">iwiz::CWizardDocumentComp</a>.</p>
 
 </div>
 </div>

@@ -32,14 +32,13 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ibase::CUuidComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ibase::CUuidComp" --><!-- doxytag: inherits="icomp::CComponentBase,ibase::TNamedWrap,iser::ISerializable" -->
-<p>Component for automatic creation of the Universally Unique Identifier (UUID)  
+<!-- doxytag: class="ibase::CUuidComp" --><!-- doxytag: inherits="icomp::CComponentBase,iprm::CNameParam" -->
+<p>Component for automatic creation of the Universally Unique Identifier (UUID).  
  <a href="classibase_1_1_c_uuid_comp.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_uuid_comp_8h_source.html">CUuidComp.h</a>&gt;</code></p>
@@ -49,13 +48,14 @@ Inheritance diagram for ibase::CUuidComp:</div>
  <div class="center">
   <img src="classibase_1_1_c_uuid_comp.png" usemap="#ibase::CUuidComp_map" alt=""/>
   <map id="ibase::CUuidComp_map" name="ibase::CUuidComp_map">
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,112,207,136"/>
-<area href="classibase_1_1_t_named_wrap.html" title="Template based implementation of a named object." alt="ibase::TNamedWrap&lt; BaseClass &gt;" shape="rect" coords="217,112,424,136"/>
-<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="434,112,641,136"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,207,80"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="434,56,641,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,207,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="434,0,641,24"/>
+<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,224,151,248"/>
+<area href="classiprm_1_1_c_name_param.html" title="Template based implementation of a named object." alt="iprm::CNameParam" shape="rect" coords="161,224,312,248"/>
+<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,168,151,192"/>
+<area href="classiprm_1_1_i_name_param.html" title="Interface for a object containing its name." alt="iprm::INameParam" shape="rect" coords="161,168,312,192"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,112,151,136"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="161,112,312,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="161,56,312,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="161,0,312,24"/>
 </map>
  </div></div>
 
@@ -64,18 +64,15 @@ Inheritance diagram for ibase::CUuidComp:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_uuid_comp.html#a1ea3f6b62da99333ff84415ac023e519">BaseClass</a></td></tr>
-<tr><td colspan="2"><h2><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_uuid_comp.html#a6702aebe9f028b2f58079ed537af794a">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a6702aebe9f028b2f58079ed537af794a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_uuid_comp.html#a002b2a9b7c3e73daa1b7d144170a7ef5">OnComponentCreated</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Component for automatic creation of the Universally Unique Identifier (UUID) </p>
+<div class="textblock"><p>Component for automatic creation of the Universally Unique Identifier (UUID). </p>
+<p>You can access this UUID using <code>GetName</code> method defined in interface <code><a class="el" href="classiprm_1_1_i_name_param.html" title="Interface for a object containing its name.">iprm::INameParam</a></code>. </p>
 
-<p>Definition at line <a class="el" href="_c_uuid_comp_8h_source.html#l00017">17</a> of file <a class="el" href="_c_uuid_comp_8h_source.html">CUuidComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_uuid_comp_8h_source.html#l00018">18</a> of file <a class="el" href="_c_uuid_comp_8h_source.html">CUuidComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a1ea3f6b62da99333ff84415ac023e519"></a><!-- doxytag: member="ibase::CUuidComp::BaseClass" ref="a1ea3f6b62da99333ff84415ac023e519" args="" -->
 <div class="memitem">
@@ -108,29 +105,6 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_base.html#a8a79eed0233a1ff69972975180f5210a">icomp::CComponentBase</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6702aebe9f028b2f58079ed537af794a"></a><!-- doxytag: member="ibase::CUuidComp::Serialize" ref="a6702aebe9f028b2f58079ed537af794a" args="(iser::IArchive &amp;archive)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool ibase::CUuidComp::Serialize </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
-          <td class="paramname"><em>archive</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Load or store state of this object as a archive stream. </p>
-<p>Type of operation is depending on archive type. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a> </dd></dl>
-
-<p>Implements <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
 
 </div>
 </div>

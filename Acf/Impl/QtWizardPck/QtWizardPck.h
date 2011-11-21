@@ -28,7 +28,6 @@
 #include "icomp/TMakeComponentWrap.h"
 
 
-#include "iqtwiz/CWizardGuiComp.h"
 #include "iqtwiz/CWizardOptionsListGuiComp.h"
 
 
@@ -39,7 +38,6 @@ namespace QtWizardPck
 {
 
 
-typedef iqtwiz::CWizardGuiComp WizardGui;
 typedef iqtwiz::CWizardOptionsListGuiComp WizardOptionsListGui;
 
 

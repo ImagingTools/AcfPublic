@@ -57,7 +57,7 @@ void CPosition2d::SetPosition(const CVector2d& position)
 }
 
 
-// reimplemented (IObject2d)
+// reimplemented (i2d::IObject2d)
 
 CVector2d CPosition2d::GetCenter() const
 {

@@ -65,8 +65,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get default attribute value.  <a href="#a4abf142659317c25b01f440ede0ab00a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_static_info.html#acec70912a52b02668e28593b8c294ef3">GetAttributeTypeName</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute type description.  <a href="#acec70912a52b02668e28593b8c294ef3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">IComponentStaticInfo::Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_static_info.html#a3f34086a16c0ce029de592f6a3fd07f1">GetRelatedMetaIds</a> (int metaGroupId, int flags, int flagsMask) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get related meta information.  <a href="#a3f34086a16c0ce029de592f6a3fd07f1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">IElementStaticInfo::Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_static_info.html#a36b454830417ebad8cab0b70cad1bac7">GetRelatedMetaIds</a> (int metaGroupId, int flags, int flagsMask) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get related meta information.  <a href="#a36b454830417ebad8cab0b70cad1bac7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_static_info.html#aadd27979065fd88cac5725391b8d7747">GetAttributeFlags</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of this attribute.  <a href="#aadd27979065fd88cac5725391b8d7747"></a><br/></td></tr>
 </table>
@@ -130,7 +130,7 @@ template&lt;class Attribute &gt; </div>
 
 <p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00058">58</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
 
-<p>References <a class="el" href="_c_class_info_8h_source.html#l00145">istd::CClassInfo::GetName()</a>, <a class="el" href="_c_class_info_8h_source.html#l00139">istd::CClassInfo::IsValid()</a>, <a class="el" href="_c_class_info_8h_source.html#l00151">istd::CClassInfo::IsVoid()</a>, <a class="el" href="_i_component_static_info_8h_source.html#l00059">icomp::IComponentStaticInfo::MGI_INTERFACES</a>, and <a class="el" href="classicomp_1_1_c_base_component_static_info.html#aea5446f0f0360a369d4d629605864240">icomp::CBaseComponentStaticInfo::RegisterAttributeInfo()</a>.</p>
+<p>References <a class="el" href="_c_class_info_8h_source.html#l00145">istd::CClassInfo::GetName()</a>, <a class="el" href="_c_class_info_8h_source.html#l00139">istd::CClassInfo::IsValid()</a>, <a class="el" href="_c_class_info_8h_source.html#l00151">istd::CClassInfo::IsVoid()</a>, <a class="el" href="_i_element_static_info_8h_source.html#l00032">icomp::IElementStaticInfo::MGI_INTERFACES</a>, and <a class="el" href="classicomp_1_1_c_base_component_static_info.html#aea5446f0f0360a369d4d629605864240">icomp::CBaseComponentStaticInfo::RegisterAttributeInfo()</a>.</p>
 
 </div>
 </div>
@@ -181,7 +181,7 @@ template&lt;class Attribute &gt; </div>
 
 <p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00088">88</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_i_component_static_info_8h_source.html#l00059">icomp::IComponentStaticInfo::MGI_INTERFACES</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_i_element_static_info_8h_source.html#l00032">icomp::IElementStaticInfo::MGI_INTERFACES</a>.</p>
 
 </div>
 </div>
@@ -306,14 +306,14 @@ template&lt;class Attribute &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a3f34086a16c0ce029de592f6a3fd07f1"></a><!-- doxytag: member="icomp::TAttributeStaticInfo::GetRelatedMetaIds" ref="a3f34086a16c0ce029de592f6a3fd07f1" args="(int metaGroupId, int flags, int flagsMask) const " -->
+<a class="anchor" id="a36b454830417ebad8cab0b70cad1bac7"></a><!-- doxytag: member="icomp::TAttributeStaticInfo::GetRelatedMetaIds" ref="a36b454830417ebad8cab0b70cad1bac7" args="(int metaGroupId, int flags, int flagsMask) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Attribute &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">IComponentStaticInfo::Ids</a> <a class="el" href="classicomp_1_1_t_attribute_static_info.html">icomp::TAttributeStaticInfo</a>&lt; Attribute &gt;::GetRelatedMetaIds </td>
+          <td class="memname"><a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">IElementStaticInfo::Ids</a> <a class="el" href="classicomp_1_1_t_attribute_static_info.html">icomp::TAttributeStaticInfo</a>&lt; Attribute &gt;::GetRelatedMetaIds </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>metaGroupId</em>, </td>
@@ -342,7 +342,7 @@ template&lt;class Attribute &gt; </div>
 <p>Get related meta information. </p>
 <p>This information in normally used by references and factories to provide information about related interfaces. </p>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_attribute_static_info.html#a32d44931a8f911bf543d2e2cdfde9a8f">icomp::IAttributeStaticInfo</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_attribute_static_info.html#abb4080e2c50bca861f76b9270c278f51">icomp::IAttributeStaticInfo</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_attribute_static_info_8h_source.html#l00134">134</a> of file <a class="el" href="_t_attribute_static_info_8h_source.html">TAttributeStaticInfo.h</a>.</p>
 

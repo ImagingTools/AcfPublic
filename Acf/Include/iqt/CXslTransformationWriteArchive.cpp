@@ -30,6 +30,8 @@
 // Qt includes
 #include <QDomNodeList>
 #include <QTextStream>
+#include <QXmlQuery>
+#include <QAbstractMessageHandler>
 
 
 // ACF includes
@@ -39,6 +41,40 @@
 namespace iqt
 {
 
+class WriteArchiveMessageHandler: public QAbstractMessageHandler
+{
+	I_DECLARE_TR_FUNCTION(WriteArchiveMessageHandler);
+public:
+	WriteArchiveMessageHandler(CXslTransformationWriteArchive* logger);
+
+protected:
+	void handleMessage(QtMsgType type, const QString &description, const QUrl &identifier, const QSourceLocation &sourceLocation);
+
+	CXslTransformationWriteArchive* m_loggerPtr;
+};
+
+
+WriteArchiveMessageHandler::WriteArchiveMessageHandler(CXslTransformationWriteArchive* logger)
+{
+	m_loggerPtr = logger;
+}
+
+
+void WriteArchiveMessageHandler::handleMessage(
+			QtMsgType /*type*/,
+			const QString& description,
+			const QUrl& /*identifier*/,
+			const QSourceLocation& /*sourceLocation*/)
+{
+	m_loggerPtr->SendLogMessage(
+					istd::ILogger::MC_WARNING,
+					0,
+					tr("Transformation message: ").append(iqt::GetCString(description)),
+					"XslTransformationWriteArchive");
+}
+
+
+// public methods
 
 CXslTransformationWriteArchive::CXslTransformationWriteArchive(
 			const istd::CString& filePath,
@@ -73,7 +109,7 @@ bool CXslTransformationWriteArchive::Flush()
 				return false;
 			}
 			QXmlQuery query(QXmlQuery::XSLT20);
-			query.setMessageHandler(new MessageHandler(this));
+			query.setMessageHandler(new WriteArchiveMessageHandler(this));
 			QByteArray byteArray = m_document.toByteArray();
 			QBuffer buffer(&byteArray);
 			if (!buffer.open(QBuffer::WriteOnly)){
@@ -276,26 +312,6 @@ bool CXslTransformationWriteArchive::PushTextNode(const QString& text)
 	m_isSeparatorNeeded = true;
 
 	return true;
-}
-
-
-CXslTransformationWriteArchive::MessageHandler::MessageHandler(CXslTransformationWriteArchive* logger)
-{
-	m_loggerPtr = logger;
-}
-
-
-void CXslTransformationWriteArchive::MessageHandler::handleMessage(
-			QtMsgType /*type*/,
-			const QString& description,
-			const QUrl& /*identifier*/,
-			const QSourceLocation& /*sourceLocation*/)
-{
-	m_loggerPtr->SendLogMessage(
-					istd::ILogger::MC_WARNING,
-					0,
-					tr("Transformation message: ").append(iqt::GetCString(description)),
-					"XslTransformationWriteArchive");
 }
 
 

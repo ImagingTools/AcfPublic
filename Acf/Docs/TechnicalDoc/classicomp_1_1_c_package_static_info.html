@@ -47,13 +47,14 @@ Inheritance diagram for icomp::CPackageStaticInfo:</div>
  <div class="center">
   <img src="classicomp_1_1_c_package_static_info.png" usemap="#icomp::CPackageStaticInfo_map" alt=""/>
   <map id="icomp::CPackageStaticInfo_map" name="icomp::CPackageStaticInfo_map">
-<area href="classicomp_1_1_c_component_static_info_base.html" alt="icomp::CComponentStaticInfoBase" shape="rect" coords="114,112,333,136"/>
-<area href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info." alt="icomp::IComponentStaticInfo" shape="rect" coords="114,56,333,80"/>
+<area href="classicomp_1_1_c_component_static_info_base.html" alt="icomp::CComponentStaticInfoBase" shape="rect" coords="114,168,333,192"/>
+<area href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info." alt="icomp::IComponentStaticInfo" shape="rect" coords="114,112,333,136"/>
+<area href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info." alt="icomp::IElementStaticInfo" shape="rect" coords="114,56,333,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="114,0,333,24"/>
-<area href="classicomp_1_1_c_composite_package_static_info.html" title="Implementation of package static info designing to provide composite component information &#39;on demand..." alt="icomp::CCompositePackageStaticInfo" shape="rect" coords="0,224,219,248"/>
-<area href="classicomp_1_1_c_environment_manager_base.html" alt="icomp::CEnvironmentManagerBase" shape="rect" coords="229,224,448,248"/>
-<area href="classiqt_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries." alt="iqt::CPackagesLoaderComp" shape="rect" coords="229,280,448,304"/>
-<area href="classicmpstr_1_1_c_packages_loader_ext_comp.html" alt="icmpstr::CPackagesLoaderExtComp" shape="rect" coords="229,336,448,360"/>
+<area href="classicomp_1_1_c_composite_package_static_info.html" title="Implementation of package static info designing to provide composite component information &#39;on demand..." alt="icomp::CCompositePackageStaticInfo" shape="rect" coords="0,280,219,304"/>
+<area href="classicomp_1_1_c_environment_manager_base.html" alt="icomp::CEnvironmentManagerBase" shape="rect" coords="229,280,448,304"/>
+<area href="classiqt_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries." alt="iqt::CPackagesLoaderComp" shape="rect" coords="229,336,448,360"/>
+<area href="classicmpstr_1_1_c_packages_loader_ext_comp.html" alt="icmpstr::CPackagesLoaderExtComp" shape="rect" coords="229,392,448,416"/>
 </map>
  </div></div>
 
@@ -70,7 +71,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_package_static_info.html#add2266fbf497723c99d4f17229c543af">GetEmbeddedComponentInfo</a> (const std::string &amp;embeddedId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of interfaces for specific slot.  <a href="#add2266fbf497723c99d4f17229c543af"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_package_static_info.html#a3fc6a8ebc16ac9af0e1b8fd699da626d">GetMetaIds</a> (int metaGroupId) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_package_static_info.html#a3fc6a8ebc16ac9af0e1b8fd699da626d">GetMetaIds</a> (int metaGroupId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of meta IDs associated with some meta key.  <a href="#a3fc6a8ebc16ac9af0e1b8fd699da626d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_package_static_info.html#a0ee9c5839b3a6d680628128ce78cd0e4">GetDescription</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description of this component.  <a href="#a0ee9c5839b3a6d680628128ce78cd0e4"></a><br/></td></tr>
@@ -204,7 +205,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_component_static_info.html#ac3d7d82c828b7130ab73e1e04da2a523">Ids</a> icomp::CPackageStaticInfo::GetMetaIds </td>
+          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a> icomp::CPackageStaticInfo::GetMetaIds </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>metaGroupId</em></td><td>)</td>

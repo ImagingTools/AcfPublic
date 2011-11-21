@@ -107,6 +107,12 @@ iprm::ISelectionParam* CChannelSelectionNode::GetActiveSubselection() const
 	
 // reimplemented (iprm::ISelectionConstraints)
 
+int CChannelSelectionNode::GetConstraintsFlags() const
+{
+	return SCF_NONE;
+}
+
+
 int CChannelSelectionNode::GetOptionsCount() const
 {
 	return m_subselections.GetCount();
@@ -128,6 +134,12 @@ istd::CString CChannelSelectionNode::GetOptionName(int index) const
 istd::CString CChannelSelectionNode::GetOptionDescription(int /*index*/) const
 {
 	return istd::CString();
+}
+
+
+std::string CChannelSelectionNode::GetOptionId(int /*index*/) const
+{
+	return std::string();
 }
 
 

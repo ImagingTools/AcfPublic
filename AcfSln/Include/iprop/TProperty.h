@@ -43,17 +43,17 @@ namespace iprop
 	Template implementation of an atomic property.
 */
 template <typename Value>
-class TProperty: public iprop::CPropertyBase
+class TProperty: public CPropertyBase
 {
 public:
 	typedef Value ValueType;
 	typedef TProperty<Value> PropertyType;
-	typedef iprop::CPropertyBase BaseClass;
+	typedef CPropertyBase BaseClass;
 
 	TProperty();
 
 	TProperty(
-				iprop::IPropertiesManager* propertyOwnerPtr,
+				IPropertiesManager* propertyOwnerPtr,
 				const std::string& propertyName,
 				const std::string& propertyDescription,
 				int propertyFlags,
@@ -65,7 +65,7 @@ public:
 	void ResetValue();
 
 	// reimplemented (iser::IProperty)
-	virtual const iser::IObject* GetDefaultAttributePtr() const;
+	virtual const iser::IObject* GetDefaultPropertyPtr() const;
 
 	// reimplemented (iser::IObject)
 	virtual std::string GetFactoryId() const;
@@ -97,7 +97,7 @@ TProperty<Value>::TProperty()
 
 template <typename Value>
 TProperty<Value>::TProperty(
-				iprop::IPropertiesManager* propertyOwnerPtr,
+				IPropertiesManager* propertyOwnerPtr,
 				const std::string& propertyName,
 				const std::string& propertyDescription,
 				int propertyFlags,
@@ -144,7 +144,7 @@ void  TProperty<Value>::ResetValue()
 // reimplemented (iser::IProperty)
 
 template <typename Value>
-const iser::IObject* TProperty<Value>::GetDefaultAttributePtr() const
+const iser::IObject* TProperty<Value>::GetDefaultPropertyPtr() const
 {
 	return m_defaultPropertyValuePtr.GetPtr();
 }
@@ -159,7 +159,7 @@ std::string TProperty<Value>::GetFactoryId() const
 }
 
 
-// reimplemented (ISerializable)
+// reimplemented (iser::ISerializable)
 
 template <typename Value>
 bool TProperty<Value>::Serialize(iser::IArchive& archive)
@@ -186,7 +186,7 @@ const std::string& TProperty<Value>::GetTypeName()
 }
 
 
-// private static attributes
+// private static properties
 
 template <typename Value>
 const std::string TProperty<Value>::s_typeName(istd::CClassInfo::GetName<TProperty<Value> >());
@@ -194,10 +194,11 @@ const std::string TProperty<Value>::s_typeName(istd::CClassInfo::GetName<TProper
 
 // typedefs
 
-typedef TProperty<double> CDoubleAttribute;
-typedef TProperty<bool> CBoolAttribute;
-typedef TProperty<int> CIntAttribute;
-typedef TProperty<istd::CString> CStringAttribute;
+typedef TProperty<double> CDoubleProperty;
+typedef TProperty<bool> CBoolProperty;
+typedef TProperty<int> CIntProperty;
+typedef TProperty<istd::CString> CStringProperty;
+typedef TProperty<std::string> CStdStringProperty;
 
 
 } // namespace iprop

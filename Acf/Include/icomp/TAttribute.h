@@ -51,8 +51,8 @@ public:
 
 	enum DefaultAttributeFlags
 	{
-		DAF_OBLIGATORY = IAttributeStaticInfo::AF_OBLIGATORY | IAttributeStaticInfo::AF_NULLABLE,
-		DAF_OPTIONAL = IAttributeStaticInfo::AF_NULLABLE
+		DAF_OBLIGATORY = IAttributeStaticInfo::AF_OBLIGATORY | IAttributeStaticInfo::AF_NULLABLE | IAttributeStaticInfo::AF_SINGLE | IAttributeStaticInfo::AF_VALUE,
+		DAF_OPTIONAL = IAttributeStaticInfo::AF_NULLABLE | IAttributeStaticInfo::AF_SINGLE | IAttributeStaticInfo::AF_VALUE
 	};
 
 	TAttribute();
@@ -122,7 +122,7 @@ std::string TAttribute<Value>::GetFactoryId() const
 }
 
 
-// reimplemented (ISerializable)
+// reimplemented (iser::ISerializable)
 
 template <typename Value>
 bool TAttribute<Value>::Serialize(iser::IArchive& archive)
@@ -155,11 +155,11 @@ std::string TAttribute<Value>::GetTypeName()
 
 // typedefs
 
+typedef TAttribute<int> CIntAttribute;
 typedef TAttribute<double> CDoubleAttribute;
 typedef TAttribute<bool> CBoolAttribute;
-typedef TAttribute<int> CIntAttribute;
-typedef TAttribute<std::string> CStdStringAttribute;
 typedef TAttribute<istd::CString> CStringAttribute;
+typedef TAttribute<std::string> CStdStringAttribute;
 
 
 } // namespace icomp

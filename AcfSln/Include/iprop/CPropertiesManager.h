@@ -44,7 +44,7 @@ namespace iprop
 /**
 	Basic implementation of an property container.
 */
-class CPropertiesManager: virtual public iprop::IPropertiesManager
+class CPropertiesManager: virtual public IPropertiesManager
 {
 public:
 	/*
@@ -90,13 +90,13 @@ public:
 protected:
 	bool ReadProperties(
 				iser::IArchive& archive,
-				const iser::CArchiveTag& attributesTag,
-				const iser::CArchiveTag& attributeTag);
+				const iser::CArchiveTag& propertiesTag,
+				const iser::CArchiveTag& propertyTag);
 
 	bool WriteProperties(
 				iser::IArchive& archive,
-				const iser::CArchiveTag& attributesTag,
-				const iser::CArchiveTag& attributeTag) const;
+				const iser::CArchiveTag& propertiesTag,
+				const iser::CArchiveTag& propertyTag) const;
 
 private:
 	typedef istd::TComposedFactory<iser::IObject> PropertyFactory;
@@ -109,10 +109,10 @@ private:
 
 // public static methods
 
-template <typename AttributeImpl>
+template <typename PropertyImpl>
 bool CPropertiesManager::RegisterPropertyType()
 {
-	return s_propertyFactory.RegisterFactory(new istd::TSingleFactory<iser::IObject, AttributeImpl>(AttributeImpl::GetTypeName()), true);
+	return s_propertyFactory.RegisterFactory(new istd::TSingleFactory<iser::IObject, PropertyImpl>(PropertyImpl::GetTypeName()), true);
 }
 
 

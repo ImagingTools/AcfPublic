@@ -75,6 +75,7 @@ public:
 		I_REGISTER_INTERFACE(icomp::IRegistryLoader);
 		I_REGISTER_INTERFACE(icomp::IComponentEnvironmentManager);
 		I_REGISTER_INTERFACE(icomp::IComponentStaticInfo);
+		I_REGISTER_INTERFACE(icomp::IPackagesManager);
 		I_REGISTER_INTERFACE(icomp::IRegistriesManager);
 		I_REGISTER_INTERFACE(icomp::IMetaInfoManager);
 		I_ASSIGN(m_registryLoaderCompPtr, "RegistryLoader", "Loader used to read registry", true, "RegistryLoader");

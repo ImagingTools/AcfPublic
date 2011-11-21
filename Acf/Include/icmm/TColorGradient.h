@@ -54,7 +54,7 @@ public:
 
 	TColorGradient(const GradientColor& startColor, const GradientColor& endColor);
 
-	// reimplemented (IColorTransformation)
+	// reimplemented (icmm::IColorTransformation)
 	virtual bool GetValueAt(const ArgumentType& argument, ResultType& result) const;
 	virtual ResultType GetValueAt(const ArgumentType& argument) const;
 
@@ -72,7 +72,7 @@ TColorGradient<GradientFunction>::TColorGradient(const GradientColor& startColor
 }
 
 
-// reimplemented (IColorTransformation)
+// reimplemented (icmm::IColorTransformation)
 
 template <class GradientFunction>
 bool TColorGradient<GradientFunction>::GetValueAt(const ArgumentType& argument, ResultType& result) const

@@ -54,7 +54,7 @@ void CSingleModelObserverBase::EnsureModelDetached()
 }
 
 
-// reimplemented (IObserver)
+// reimplemented (imod::IObserver)
 
 bool CSingleModelObserverBase::OnAttached(imod::IModel* modelPtr)
 {

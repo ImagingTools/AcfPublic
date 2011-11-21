@@ -1,0 +1,116 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the IACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the IACF.
+**
+********************************************************************************/
+
+
+#ifndef iqsci_CTextEditor_included
+#define iqsci_CTextEditor_included
+
+
+// ACF includes
+#include "istd/TDelPtr.h"
+
+#include "ibase/ICommandsProvider.h"
+
+#include "iqtgui/CHierarchicalCommand.h"
+
+
+// Project includes
+#include "iqsci/Generated/ui_CTextEditor.h"
+
+
+class QsciScintilla;
+class QsciLexer;
+
+
+namespace iqsci
+{
+
+
+class CTextEditor: public QWidget, public Ui::CTextEditor, virtual public ibase::ICommandsProvider
+{
+	Q_OBJECT
+
+public:
+	typedef QWidget BaseClass;
+
+	CTextEditor(QWidget* parentWidget = NULL);
+
+	virtual QString GetText() const;
+	virtual void SetText(const QString& text);
+
+	virtual void OnRetranslate();
+
+	// reimplemented (ibase::ICommandsProvider)
+	virtual const ibase::IHierarchicalCommand* GetCommands() const;
+
+public Q_SLOTS:
+	void SetFoldingEnabled(bool useFoldingEnabled);
+	void SetLineNumberEnabled(bool useFoldingEnabled);
+	void SetLanguage(const QString& language);
+	void SetReadOnly(bool readOnly = true);
+
+protected Q_SLOTS:
+	virtual void OnSelectionChanged();
+	virtual void OnTextChanged();
+	virtual void OnToLowercase();
+	virtual void OnToUppercase();
+
+Q_SIGNALS:
+	void DataChanged();
+
+private:
+	typedef std::map<QString, QsciLexer*> LexerMap;
+
+	LexerMap m_languages;
+
+private:
+	void RegisterLexers();
+
+private:
+	enum MenuFlags
+	{
+		MF_VIEW = 0x9977,
+		MF_EDIT
+	};
+
+	iqtgui::CHierarchicalCommand m_rootCommand;
+	iqtgui::CHierarchicalCommand m_editorCommand;
+	iqtgui::CHierarchicalCommand m_viewCommand;
+	iqtgui::CHierarchicalCommand m_languageCommand;
+	iqtgui::CHierarchicalCommand m_lowercaseCommand;
+	iqtgui::CHierarchicalCommand m_uppercaseCommand;
+
+	// view commands
+	iqtgui::CHierarchicalCommand m_useIdentGuideCommand;
+	iqtgui::CHierarchicalCommand m_useFoldingCommand;
+	iqtgui::CHierarchicalCommand m_showLineNumberCommand;
+
+	QsciScintilla* m_scintilla;
+};
+
+
+} // namespace iqsci
+
+
+#endif // !iqsci_CTextEditor_included
+
+
+

@@ -48,7 +48,7 @@ public:
 	// pseudo-reimplemented (icomp::IComponent)
 	virtual void SetComponentContext(
 				const IComponentContext* contextPtr,
-				const IComponent* parentPtr,
+				const ICompositeComponent* parentPtr,
 				bool isParentOwner);
 };
 
@@ -64,7 +64,7 @@ TComponentWrap<Component>::TComponentWrap()
 template <class Component>
 TComponentWrap<Component>::~TComponentWrap()
 {
-	IComponent* parentPtr = const_cast<IComponent*>(BaseClass::GetParentComponent(true));
+	ICompositeComponent* parentPtr = const_cast<ICompositeComponent*>(BaseClass::GetParentComponent(true));
 	if (parentPtr != NULL){
 		parentPtr->OnSubcomponentDeleted(this);
 	}
@@ -78,7 +78,7 @@ TComponentWrap<Component>::~TComponentWrap()
 template <class Component>
 void TComponentWrap<Component>::SetComponentContext(
 			const IComponentContext* contextPtr,
-			const IComponent* parentPtr,
+			const ICompositeComponent* parentPtr,
 			bool isParentOwner)
 {
 	if (BaseClass::GetComponentContext() != NULL){

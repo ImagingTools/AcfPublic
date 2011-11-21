@@ -30,6 +30,8 @@
 
 // Qt includes
 #include <QDomNodeList>
+#include <QXmlQuery>
+#include <QAbstractMessageHandler>
 #include <QFile>
 
 
@@ -39,6 +41,38 @@
 
 namespace iqt
 {
+
+
+class ReadArchiveMessageHandler: public QAbstractMessageHandler
+{
+	I_DECLARE_TR_FUNCTION(ReadArchiveMessageHandler);
+public:
+	ReadArchiveMessageHandler(CXslTransformationReadArchive* logger);
+protected:
+	void handleMessage(QtMsgType type, const QString &description, const QUrl &identifier, const QSourceLocation &sourceLocation);
+
+	CXslTransformationReadArchive* m_loggerPtr;
+};
+
+
+ReadArchiveMessageHandler::ReadArchiveMessageHandler(CXslTransformationReadArchive* logger)
+{
+	m_loggerPtr = logger;
+}
+
+
+void ReadArchiveMessageHandler::handleMessage(
+				QtMsgType /*type*/,
+				const QString& description,
+				const QUrl& /*identifier*/,
+				const QSourceLocation& /*sourceLocation*/)
+{
+	m_loggerPtr->SendLogMessage(
+					istd::ILogger::MC_WARNING,
+					0,
+					tr("Transformation message: ").append(iqt::GetCString(description)),
+					"XslTransformationWriteArchive");
+}
 
 
 CXslTransformationReadArchive::CXslTransformationReadArchive(
@@ -79,7 +113,7 @@ bool CXslTransformationReadArchive::OpenDocument(const istd::CString& filePath, 
 		QString content;
 
 		QXmlQuery query(QXmlQuery::XSLT20);
-		MessageHandler handler(this);
+		ReadArchiveMessageHandler handler(this);
 		query.setMessageHandler(&handler);
 		query.setFocus(&xmlFile);
 		query.setQuery(&xslfile);
@@ -363,26 +397,6 @@ QString CXslTransformationReadArchive::PullTextNode()
 	m_currentNode.removeChild(node);
 
 	return text;
-}
-
-
-CXslTransformationReadArchive::MessageHandler::MessageHandler(CXslTransformationReadArchive* logger)
-{
-	m_loggerPtr = logger;
-}
-
-
-void CXslTransformationReadArchive::MessageHandler::handleMessage(
-				QtMsgType /*type*/,
-				const QString& description,
-				const QUrl& /*identifier*/,
-				const QSourceLocation& /*sourceLocation*/)
-{
-	m_loggerPtr->SendLogMessage(
-					istd::ILogger::MC_WARNING,
-					0,
-					tr("Transformation message: ").append(iqt::GetCString(description)),
-					"XslTransformationWriteArchive");
 }
 
 

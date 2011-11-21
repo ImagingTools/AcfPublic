@@ -28,8 +28,6 @@
 
 #include "icomp/CComponentBase.h"
 
-#include "imod/CMultiModelDispatcherBase.h"
-
 #include "iprm/ISelectionParam.h"
 #include "iprm/ISelectionConstraints.h"
 
@@ -43,8 +41,7 @@ namespace iprm
 */
 class CSelectionParamComp:
 			public icomp::CComponentBase,
-			virtual public ISelectionParam,
-			virtual protected imod::CMultiModelDispatcherBase
+			virtual public ISelectionParam
 {
 public:
 	typedef icomp::CComponentBase BaseClass;
@@ -70,12 +67,13 @@ public:
 	virtual bool Serialize(iser::IArchive& archive);
 
 protected:
-	// reimplemented (imod::CMultiModelDispatcherBase)
-	virtual void OnModelChanged(int modelId, int changeFlags, istd::IPolymorphic* updateParamsPtr);
+	/**
+		Set selection index according to a given option ID.
+	*/
+	bool SetSelectedOptionIndexById(const std::string& selectedOptionId);
 
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
-	virtual void OnComponentDestroyed();
 
 private:
 	I_REF(ISelectionConstraints, m_constraintsCompPtr);

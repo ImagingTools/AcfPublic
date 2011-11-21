@@ -88,12 +88,11 @@ bool CApplicationComp::InitializeApplication(int argc, char** argv)
 		}
 		else{	
 			icon.addFile(":/Icons/AcfLogo.svg");
-			icon.addFile(":/Icons/acfLogo3d");
 		}
 
 		m_applicationPtr->setWindowIcon(icon);
 
-		icomp::IComponent* parentPtr = const_cast<icomp::IComponent*>(GetParentComponent(true));
+		icomp::ICompositeComponent* parentPtr = const_cast<icomp::ICompositeComponent*>(GetParentComponent(true));
 		icomp::CCompositeComponent* compositePtr = dynamic_cast<icomp::CCompositeComponent*>(parentPtr);
 
 		if (compositePtr != NULL){
@@ -220,7 +219,7 @@ istd::CString CApplicationComp::GetHelpText() const
 
 void CApplicationComp::OnComponentCreated()
 {
-	icomp::IComponent* parentPtr = const_cast<icomp::IComponent*>(GetParentComponent(true));
+	icomp::ICompositeComponent* parentPtr = const_cast<icomp::ICompositeComponent*>(GetParentComponent(true));
 	icomp::CCompositeComponent* compositePtr = dynamic_cast<icomp::CCompositeComponent*>(parentPtr);
 
 	if (compositePtr != NULL){

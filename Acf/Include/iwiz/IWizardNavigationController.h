@@ -24,7 +24,7 @@
 #define iwiz_IWizardNavigationController_included
 
 
-#include "istd/IPolymorphic.h"
+#include "istd/IChangeable.h"
 
 
 namespace iwiz
@@ -34,15 +34,25 @@ namespace iwiz
 /**
 	Interface for wizard navigation.
 */
-class IWizardNavigationController: virtual public istd::IPolymorphic
+class IWizardNavigationController: virtual public istd::IChangeable
 {
 public:
-
 	/**
-		Get the ID of the next wizard page for the current page.
-		\param currentPageId	ID of the current wizard page.
+		Check, if finish is allowed for this wizard.
 	*/
-	virtual int GetNextPageId(int currentPageId) = 0;
+	virtual bool IsFinishAllowed() const = 0;
+	/**
+		Get the ID of the previous wizard page.
+	*/
+	virtual int GetPrevPageIndex() const = 0;
+	/**
+		Get the ID of the next wizard page.
+	*/
+	virtual int GetNextPageIndex() const = 0;
+	/**
+		Do finish action by wizard.
+	*/
+	virtual bool DoWizardFinish() = 0;
 };
 
 

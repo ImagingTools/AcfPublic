@@ -55,22 +55,24 @@
 <a name="l00031"></a>00031        I_END_COMPONENT;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#a9bad2d8c5ed6f399ca3b273212c5bcaa" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#ac5dee2700d01dd8a9e1424a43833df62" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#a9e9f96a98b5af5deb90ab2f0208cd432" title="Get description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="keyword">private</span>:
-<a name="l00039"></a>00039        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_optionNamesAttrPtr);
-<a name="l00040"></a>00040        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_optionDescriptionsAttrPtr);
-<a name="l00041"></a>00041 };
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 } <span class="comment">// namespace iprm</span>
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#a0a2897ab796f470021d92540d0bf6772" title="Get constraints flags.">GetConstraintsFlags</a>() <span class="keyword">const</span>;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#a9bad2d8c5ed6f399ca3b273212c5bcaa" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#ac5dee2700d01dd8a9e1424a43833df62" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#a9e9f96a98b5af5deb90ab2f0208cd432" title="Get description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> std::string <a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#a593f4006e0e6f7daade9d6942299e007" title="Get option ID.">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="keyword">private</span>:
+<a name="l00041"></a>00041        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_optionNamesAttrPtr);
+<a name="l00042"></a>00042        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_optionDescriptionsAttrPtr);
+<a name="l00043"></a>00043 };
+<a name="l00044"></a>00044 
 <a name="l00045"></a>00045 
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="preprocessor">#endif // !iprm_CSelectionConstraintsComp_included</span>
-<a name="l00048"></a>00048 <span class="preprocessor"></span>
-<a name="l00049"></a>00049 
+<a name="l00046"></a>00046 } <span class="comment">// namespace iprm</span>
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 <span class="preprocessor">#endif // !iprm_CSelectionConstraintsComp_included</span>
+<a name="l00050"></a>00050 <span class="preprocessor"></span>
+<a name="l00051"></a>00051 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -17,7 +17,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -41,12 +40,12 @@
 <a name="l00014"></a>00014 <span class="keyword">class </span>IPropertiesManager;
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
-<a name="l00020"></a><a class="code" href="classiprop_1_1_c_property_base.html">00020</a> <span class="keyword">class </span><a class="code" href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property.">CPropertyBase</a>: <span class="keyword">public</span> iser::TCopySerializedWrap&lt;iprop::IProperty&gt;
+<a name="l00020"></a><a class="code" href="classiprop_1_1_c_property_base.html">00020</a> <span class="keyword">class </span><a class="code" href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property.">CPropertyBase</a>: <span class="keyword">public</span> iser::TCopySerializedWrap&lt;IProperty&gt;
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
 <a name="l00023"></a>00023        <a class="code" href="classiprop_1_1_c_property_base.html#a764e7d80d22aeb6b014fc40e43697449">CPropertyBase</a>();
 <a name="l00024"></a>00024        <a class="code" href="classiprop_1_1_c_property_base.html#a764e7d80d22aeb6b014fc40e43697449">CPropertyBase</a>(
-<a name="l00025"></a>00025                             <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">iprop::IPropertiesManager</a>* propertyOwnerPtr,
+<a name="l00025"></a>00025                             <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>* propertyOwnerPtr,
 <a name="l00026"></a>00026                             <span class="keyword">const</span> std::string&amp; propertyId,
 <a name="l00027"></a>00027                             <span class="keyword">const</span> std::string&amp; propertyDescription,
 <a name="l00028"></a>00028                             <span class="keywordtype">int</span> propertyFlags,
@@ -56,7 +55,7 @@
 <a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_c_property_base.html#aa987a946b7dc18f56dab4d79a0d84945">GetDefaultPropertyValue</a>() <span class="keyword">const</span>;
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 <span class="keyword">protected</span>:
-<a name="l00035"></a><a class="code" href="classiprop_1_1_c_property_base.html#afe293936f18ac1a5427bcdbd2ed19989">00035</a>        <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">iprop::IPropertiesManager</a>* <a class="code" href="classiprop_1_1_c_property_base.html#afe293936f18ac1a5427bcdbd2ed19989">m_propertyOwnerPtr</a>;
+<a name="l00035"></a><a class="code" href="classiprop_1_1_c_property_base.html#ab7cb34faeb513d0ad0b3d3bc472c3fd6">00035</a>        <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>* <a class="code" href="classiprop_1_1_c_property_base.html#ab7cb34faeb513d0ad0b3d3bc472c3fd6">m_propertyOwnerPtr</a>;
 <a name="l00036"></a><a class="code" href="classiprop_1_1_c_property_base.html#ae34a533b9856610d0bcc8eb7314c25d5">00036</a>        <span class="keywordtype">int</span> <a class="code" href="classiprop_1_1_c_property_base.html#ae34a533b9856610d0bcc8eb7314c25d5">m_changeFlags</a>;
 <a name="l00037"></a>00037 };
 <a name="l00038"></a>00038 

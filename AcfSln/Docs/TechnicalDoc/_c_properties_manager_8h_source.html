@@ -17,7 +17,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -46,7 +45,7 @@
 <a name="l00019"></a>00019 {
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021 
-<a name="l00025"></a><a class="code" href="classiprop_1_1_c_properties_manager.html">00025</a> <span class="keyword">class </span><a class="code" href="classiprop_1_1_c_properties_manager.html" title="Basic implementation of an property container.">CPropertiesManager</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iprop::<a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>
+<a name="l00025"></a><a class="code" href="classiprop_1_1_c_properties_manager.html">00025</a> <span class="keyword">class </span><a class="code" href="classiprop_1_1_c_properties_manager.html" title="Basic implementation of an property container.">CPropertiesManager</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>
 <a name="l00026"></a>00026 {
 <a name="l00027"></a>00027 <span class="keyword">public</span>:
 <a name="l00028"></a>00028        <span class="comment">/*</span>
@@ -84,15 +83,15 @@
 <a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a34b0f875ef53c24aeb5e3524291cb2fb">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068 <span class="keyword">protected</span>:
-<a name="l00069"></a>00069        <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#ad027d92d135101a1fba68651d71339a2">ReadProperties</a>(
+<a name="l00069"></a>00069        <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a1eb5a3fcddc8a1978c2061dad52aee4f">ReadProperties</a>(
 <a name="l00070"></a>00070                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive,
-<a name="l00071"></a>00071                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; attributesTag,
-<a name="l00072"></a>00072                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; attributeTag);
+<a name="l00071"></a>00071                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; propertiesTag,
+<a name="l00072"></a>00072                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; propertyTag);
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074        <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a7d402dd804701670f58354ee41d50e2f">WriteProperties</a>(
+<a name="l00074"></a>00074        <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#ab2ee6b37a6e929edf8a37a082c409aee">WriteProperties</a>(
 <a name="l00075"></a>00075                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive,
-<a name="l00076"></a>00076                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; attributesTag,
-<a name="l00077"></a>00077                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; attributeTag) <span class="keyword">const</span>;
+<a name="l00076"></a>00076                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; propertiesTag,
+<a name="l00077"></a>00077                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; propertyTag) <span class="keyword">const</span>;
 <a name="l00078"></a>00078 
 <a name="l00079"></a>00079 <span class="keyword">private</span>:
 <a name="l00080"></a>00080        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_composed_factory.html">istd::TComposedFactory&lt;iser::IObject&gt;</a> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_composed_factory.html">PropertyFactory</a>;
@@ -105,10 +104,10 @@
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088 <span class="comment">// public static methods</span>
 <a name="l00089"></a>00089 
-<a name="l00090"></a>00090 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> AttributeImpl&gt;
+<a name="l00090"></a>00090 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PropertyImpl&gt;
 <a name="l00091"></a><a class="code" href="classiprop_1_1_c_properties_manager.html#a3a5afd3f335fbe328c5f30d589826c04">00091</a> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a3a5afd3f335fbe328c5f30d589826c04" title="Register a new property type.">CPropertiesManager::RegisterPropertyType</a>()
 <a name="l00092"></a>00092 {
-<a name="l00093"></a>00093        <span class="keywordflow">return</span> s_propertyFactory.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_composed_factory.html#ac7983de55ffa7ee52fb802052f36fd03">RegisterFactory</a>(<span class="keyword">new</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_single_factory.html">istd::TSingleFactory&lt;iser::IObject, AttributeImpl&gt;</a>(AttributeImpl::GetTypeName()), <span class="keyword">true</span>);
+<a name="l00093"></a>00093        <span class="keywordflow">return</span> s_propertyFactory.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_composed_factory.html#ac7983de55ffa7ee52fb802052f36fd03">RegisterFactory</a>(<span class="keyword">new</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_single_factory.html">istd::TSingleFactory&lt;iser::IObject, PropertyImpl&gt;</a>(PropertyImpl::GetTypeName()), <span class="keyword">true</span>);
 <a name="l00094"></a>00094 }
 <a name="l00095"></a>00095 
 <a name="l00096"></a>00096 

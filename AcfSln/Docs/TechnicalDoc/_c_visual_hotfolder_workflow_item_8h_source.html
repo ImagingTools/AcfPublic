@@ -17,7 +17,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -41,19 +40,24 @@
 <a name="l00014"></a>00014 {
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
-<a name="l00020"></a><a class="code" href="classifpf_1_1_c_visual_hotfolder_workflow_item.html">00020</a> <span class="keyword">class </span><a class="code" href="classifpf_1_1_c_visual_hotfolder_workflow_item.html" title="Implementation of the dynamic data model of the hotfolder.">CVisualHotfolderWorkflowItem</a>: <span class="keyword">public</span> ifpf::<a class="code" href="classifpf_1_1_c_hotfolder_workflow_item.html" title="Implementation of the dynamic data model of the hotfolder.">CHotfolderWorkflowItem</a>, <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::CPosition2d
-<a name="l00021"></a>00021 {
-<a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00023"></a><a class="code" href="classifpf_1_1_c_visual_hotfolder_workflow_item.html#a51d5ac08fa30918c33fbf2ae30b11a15">00023</a>        <span class="keyword">typedef</span> <a class="code" href="classifpf_1_1_c_hotfolder_workflow_item.html" title="Implementation of the dynamic data model of the hotfolder.">ifpf::CHotfolderWorkflowItem</a> <a class="code" href="classifpf_1_1_c_visual_hotfolder_workflow_item.html#a51d5ac08fa30918c33fbf2ae30b11a15">BaseClass</a>;
-<a name="l00024"></a><a class="code" href="classifpf_1_1_c_visual_hotfolder_workflow_item.html#a968a1a5141adf0f8842c5e417e891b91">00024</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_position2d.html">i2d::CPosition2d</a> <a class="code" href="classifpf_1_1_c_visual_hotfolder_workflow_item.html#a968a1a5141adf0f8842c5e417e891b91">BaseClass2</a>;
-<a name="l00025"></a>00025 };
-<a name="l00026"></a>00026 
+<a name="l00020"></a><a class="code" href="classifpf_1_1_c_visual_hotfolder_workflow_item.html">00020</a> <span class="keyword">class </span><a class="code" href="classifpf_1_1_c_visual_hotfolder_workflow_item.html" title="Implementation of the dynamic data model of the hotfolder.">CVisualHotfolderWorkflowItem</a>:
+<a name="l00021"></a>00021                      <span class="keyword">public</span> ifpf::<a class="code" href="classifpf_1_1_c_hotfolder_workflow_item.html" title="Implementation of the dynamic data model of the hotfolder.">CHotfolderWorkflowItem</a>,
+<a name="l00022"></a>00022                      <span class="keyword">public</span> i2d::CPosition2d
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024 <span class="keyword">public</span>:
+<a name="l00025"></a><a class="code" href="classifpf_1_1_c_visual_hotfolder_workflow_item.html#a51d5ac08fa30918c33fbf2ae30b11a15">00025</a>        <span class="keyword">typedef</span> <a class="code" href="classifpf_1_1_c_hotfolder_workflow_item.html" title="Implementation of the dynamic data model of the hotfolder.">ifpf::CHotfolderWorkflowItem</a> <a class="code" href="classifpf_1_1_c_visual_hotfolder_workflow_item.html#a51d5ac08fa30918c33fbf2ae30b11a15">BaseClass</a>;
+<a name="l00026"></a><a class="code" href="classifpf_1_1_c_visual_hotfolder_workflow_item.html#a968a1a5141adf0f8842c5e417e891b91">00026</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_position2d.html">i2d::CPosition2d</a> <a class="code" href="classifpf_1_1_c_visual_hotfolder_workflow_item.html#a968a1a5141adf0f8842c5e417e891b91">BaseClass2</a>;
 <a name="l00027"></a>00027 
-<a name="l00028"></a>00028 } <span class="comment">// namespace ifpf</span>
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031 <span class="preprocessor">#endif // !ifpf_CVisualHotfolderWorkflowItem_included</span>
-<a name="l00032"></a>00032 <span class="preprocessor"></span>
+<a name="l00028"></a>00028        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifpf_1_1_c_visual_hotfolder_workflow_item.html#a1a9205e1651c7cca682cd204283c85c2">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
+<a name="l00030"></a>00030 };
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033 } <span class="comment">// namespace ifpf</span>
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 <span class="preprocessor">#endif // !ifpf_CVisualHotfolderWorkflowItem_included</span>
+<a name="l00037"></a>00037 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

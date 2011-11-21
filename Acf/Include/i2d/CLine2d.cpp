@@ -317,7 +317,7 @@ CRectangle CLine2d::GetBoundingBox() const
 }
 
 
-// reimplemented (IObject2d)
+// reimplemented (i2d::IObject2d)
 
 CVector2d CLine2d::GetCenter() const
 {
