@@ -3829,7 +3829,6 @@
     <includes id="_i_drop_consumer_8h" name="IDropConsumer.h" local="yes" imported="no">iqtgui/IDropConsumer.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
-    <includes id="_i_printable_8h" name="IPrintable.h" local="yes" imported="no">iqtdoc/IPrintable.h</includes>
     <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">iqt2d/ISceneProvider.h</includes>
     <class kind="class">iqt2d::CSceneProviderGuiComp</class>
     <class kind="class">iqt2d::CSceneProviderGuiComp::CScene</class>
@@ -4031,15 +4030,6 @@
     <namespace>iqtdoc</namespace>
   </compound>
   <compound kind="file">
-    <name>IPrintable.h</name>
-    <path>C:/Temp/Acf/Include/iqtdoc/</path>
-    <filename>_i_printable_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="iqtdoc_8h" name="iqtdoc.h" local="yes" imported="no">iqtdoc/iqtdoc.h</includes>
-    <class kind="class">iqtdoc::IPrintable</class>
-    <namespace>iqtdoc</namespace>
-  </compound>
-  <compound kind="file">
     <name>iqtdoc.h</name>
     <path>C:/Temp/Acf/Include/iqtdoc/</path>
     <filename>iqtdoc_8h</filename>
@@ -4053,7 +4043,6 @@
     <filename>_t_qt_document_manager_wrap_8h</filename>
     <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
     <includes id="_c_file_dialog_loader_comp_8h" name="CFileDialogLoaderComp.h" local="yes" imported="no">iqtgui/CFileDialogLoaderComp.h</includes>
-    <includes id="_i_printable_8h" name="IPrintable.h" local="yes" imported="no">iqtdoc/IPrintable.h</includes>
     <class kind="class">iqtdoc::TQtDocumentManagerWrap</class>
     <namespace>iqtdoc</namespace>
   </compound>
@@ -4064,19 +4053,6 @@
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
     <class kind="class">iqtgui::CAboutWidgetGuiComp</class>
-    <namespace>iqtgui</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CApplicationComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtgui/</path>
-    <filename>_c_application_comp_8h</filename>
-    <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
-    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_translation_manager_8h" name="ITranslationManager.h" local="yes" imported="no">iqt/ITranslationManager.h</includes>
-    <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
-    <includes id="_i_gui_application_8h" name="IGuiApplication.h" local="yes" imported="no">iqtgui/IGuiApplication.h</includes>
-    <class kind="class">iqtgui::CApplicationComp</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -4178,6 +4154,19 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
     <class kind="class">iqtgui::CFreeWidgetGuiComp</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CGuiApplicationComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_gui_application_comp_8h</filename>
+    <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_translation_manager_8h" name="ITranslationManager.h" local="yes" imported="no">iqt/ITranslationManager.h</includes>
+    <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
+    <includes id="_i_gui_application_8h" name="IGuiApplication.h" local="yes" imported="no">iqtgui/IGuiApplication.h</includes>
+    <class kind="class">iqtgui::CGuiApplicationComp</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -19984,12 +19973,6 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>OF_FILE_PRINT</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a89e647a0fda1965099fc82077d3be520aaf3754afb9198f8ea0195193652d63bf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
       <name>OF_KNOWN_PATH</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
       <anchor>a89e647a0fda1965099fc82077d3be520a5d307d6b8ba9b3081073db71ef8c6d6b</anchor>
@@ -20106,13 +20089,6 @@
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
       <anchor>a333b6a7c4cc31479099a1f35de46b777</anchor>
       <arglist>(int documentIndex=-1, bool *ignoredPtr=NULL)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>FilePrint</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a94fb172927b9edbb6611d8397f97e795</anchor>
-      <arglist>(int documentIndex=-1) const =0</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -31661,7 +31637,6 @@
     <name>iqt2d::CSceneProviderGuiComp</name>
     <filename>classiqt2d_1_1_c_scene_provider_gui_comp.html</filename>
     <base>TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;</base>
-    <base virtualness="virtual">iqtdoc::IPrintable</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <base virtualness="virtual">iqt2d::ISceneProvider</base>
     <base virtualness="virtual">i2d::ISceneController</base>
@@ -31715,55 +31690,6 @@
       <anchor>ac598d435b94b6f15664b487a2e5cef92</anchor>
       <arglist></arglist>
     </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>OnZoomIncrement</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a275863b1832d6c507af9eff06e803fe0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>OnZoomDecrement</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ab625497dd9b136f24cb5d9a7ee7d747e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>OnFitToView</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a6f61ecbff3dcfde78a29fc18469af3d8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>OnFitToShapes</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ad54b13a0c3a6191372bfcab32baee31a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>OnResetScale</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ae73dca04b8c2b4009921a8696b80de82</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>OnAutoFit</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ae4f969eab9e7db42fb143844135e31a6</anchor>
-      <arglist>(bool isAutoScale)</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>OnSelectAllShapes</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>af2cd4cb23110dfa7ac738c9c54e9486b</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="signal">
       <type>void</type>
       <name>zoomChanged</name>
@@ -31791,13 +31717,6 @@
       <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>a9fb8b66f2f662ea6fc948f9246dc207b</anchor>
       <arglist>(double factor)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Print</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ab3b7a573d6ae91f70bb54430fc6dbccc</anchor>
-      <arglist>(QPrinter *printerPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>
@@ -31882,6 +31801,62 @@
       <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>a2af0d2d8d2730fe4af7bee6e8a7ca343</anchor>
       <arglist>(int scaleMode=SM_SET, double value=1.0)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnPrint</name>
+      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>ab43cae7d4a4e2ac2693ec5f0e9ae097b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnZoomIncrement</name>
+      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a275863b1832d6c507af9eff06e803fe0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnZoomDecrement</name>
+      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>ab625497dd9b136f24cb5d9a7ee7d747e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnFitToView</name>
+      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a6f61ecbff3dcfde78a29fc18469af3d8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnFitToShapes</name>
+      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>ad54b13a0c3a6191372bfcab32baee31a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnResetScale</name>
+      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>ae73dca04b8c2b4009921a8696b80de82</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnAutoFit</name>
+      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>ae4f969eab9e7db42fb143844135e31a6</anchor>
+      <arglist>(bool isAutoScale)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnSelectAllShapes</name>
+      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>af2cd4cb23110dfa7ac738c9c54e9486b</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -32753,7 +32728,6 @@
     <class kind="class">iqtdoc::CMultiDocumentWorkspaceGuiComp</class>
     <class kind="class">iqtdoc::CSingleDocumentWorkspaceGuiComp</class>
     <class kind="class">iqtdoc::CStaticHelpFileProviderComp</class>
-    <class kind="class">iqtdoc::IPrintable</class>
     <class kind="class">iqtdoc::TQtDocumentManagerWrap</class>
   </compound>
   <compound kind="class">
@@ -33024,13 +32998,6 @@
       <name>OnSaveAs</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
       <anchor>a76ef7dcbcf396a0a35540d488ac7ae4e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnPrint</name>
-      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>a90a0c13bdf8ac60d3d215b423346c8e9</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -33632,18 +33599,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqtdoc::IPrintable</name>
-    <filename>classiqtdoc_1_1_i_printable.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>Print</name>
-      <anchorfile>classiqtdoc_1_1_i_printable.html</anchorfile>
-      <anchor>ac8d7ba881ce126f8938642c0d3e1b9fb</anchor>
-      <arglist>(QPrinter *printerPtr) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqtdoc::TQtDocumentManagerWrap</name>
     <filename>classiqtdoc_1_1_t_qt_document_manager_wrap.html</filename>
     <templarg>Base</templarg>
@@ -33669,20 +33624,6 @@
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
       <anchor>af5a2a46082ba3bf9e24b7fc67f117f42</anchor>
       <arglist>(QSettings &amp;settings) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetAllowedOperationFlags</name>
-      <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>a9133e8a156bf7fe625a466cd06ed7ca1</anchor>
-      <arglist>(const istd::IPolymorphic *viewPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>FilePrint</name>
-      <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>a4347d386cb4214b60ce5037d8748a357</anchor>
-      <arglist>(int documentIndex=-1) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
@@ -33717,7 +33658,6 @@
     <name>iqtgui</name>
     <filename>namespaceiqtgui.html</filename>
     <class kind="class">iqtgui::CAboutWidgetGuiComp</class>
-    <class kind="class">iqtgui::CApplicationComp</class>
     <class kind="class">iqtgui::CCheckableComboBox</class>
     <class kind="class">iqtgui::CCommandsBinderComp</class>
     <class kind="class">iqtgui::CComposedGuiComp</class>
@@ -33728,6 +33668,7 @@
     <class kind="class">iqtgui::CFilePersistenceGuiComp</class>
     <class kind="class">iqtgui::CFileSystemExplorerGuiComp</class>
     <class kind="class">iqtgui::CFreeWidgetGuiComp</class>
+    <class kind="class">iqtgui::CGuiApplicationComp</class>
     <class kind="class">iqtgui::CGuiComponentBase</class>
     <class kind="class">iqtgui::CGuiComponentDialog</class>
     <class kind="class">iqtgui::CHierarchicalCommand</class>
@@ -33784,54 +33725,6 @@
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqtgui_1_1_c_about_widget_gui_comp.html</anchorfile>
       <anchor>a0c33657f979f6d3d3094cdf4733aaee5</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtgui::CApplicationComp</name>
-    <filename>classiqtgui_1_1_c_application_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>iqtgui::IGuiApplication</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_c_application_comp.html</anchorfile>
-      <anchor>aafb36bec083bbf5676d2b311467dd783</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const iqtgui::IGuiObject *</type>
-      <name>GetApplicationGui</name>
-      <anchorfile>classiqtgui_1_1_c_application_comp.html</anchorfile>
-      <anchor>a4bef5c1d684623604de8dd1811eeb691</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>InitializeApplication</name>
-      <anchorfile>classiqtgui_1_1_c_application_comp.html</anchorfile>
-      <anchor>a3a6ce06b13b2524afc4d4315e92becc5</anchor>
-      <arglist>(int argc, char **argv)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>Execute</name>
-      <anchorfile>classiqtgui_1_1_c_application_comp.html</anchorfile>
-      <anchor>ade97c98bc69e7bc276e3fefd0be0b048</anchor>
-      <arglist>(int argc, char **argv)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetHelpText</name>
-      <anchorfile>classiqtgui_1_1_c_application_comp.html</anchorfile>
-      <anchor>a52e7545d8ceaeaf3ab9593128ca62323</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqtgui_1_1_c_application_comp.html</anchorfile>
-      <anchor>a2d17f8f607d89bef45ba4fc85e32c31a</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -34298,6 +34191,54 @@
       <anchorfile>classiqtgui_1_1_c_free_widget_gui_comp.html</anchorfile>
       <anchor>afc12978171447fbe462c82fcb924daee</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CGuiApplicationComp</name>
+    <filename>classiqtgui_1_1_c_gui_application_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>iqtgui::IGuiApplication</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a31f176ad5f52def907a4899820e591ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iqtgui::IGuiObject *</type>
+      <name>GetApplicationGui</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>af1cac41b0945e458e9bf0c2ca242eac7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeApplication</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a5ee29b876e104b3cda86f6b6a7faf209</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>Execute</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>ac5da37f7603e57c88e2827b86e98af5a</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetHelpText</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a7a1625139d7a1f6becb8a3a11ce26fc8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a133d9160498f9d2a4cdcec3dbdb2232e</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

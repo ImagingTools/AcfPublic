@@ -84,8 +84,7 @@ Public Types</h2></td></tr>
 <a class="el" href="classidoc_1_1_i_document_manager.html#a89e647a0fda1965099fc82077d3be520a936499a686a015daa845b6b337714598">OF_FILE_SAVE</a> =  0x0004, 
 <a class="el" href="classidoc_1_1_i_document_manager.html#a89e647a0fda1965099fc82077d3be520ae68bfccd0e99d69ec77731797f994cc5">OF_FILE_SAVE_AS</a> =  0x0008, 
 <br/>
-&#160;&#160;<a class="el" href="classidoc_1_1_i_document_manager.html#a89e647a0fda1965099fc82077d3be520aaf3754afb9198f8ea0195193652d63bf">OF_FILE_PRINT</a> =  0x0010, 
-<a class="el" href="classidoc_1_1_i_document_manager.html#a89e647a0fda1965099fc82077d3be520a5d307d6b8ba9b3081073db71ef8c6d6b">OF_KNOWN_PATH</a> =  0x0020
+&#160;&#160;<a class="el" href="classidoc_1_1_i_document_manager.html#a89e647a0fda1965099fc82077d3be520a5d307d6b8ba9b3081073db71ef8c6d6b">OF_KNOWN_PATH</a> =  0x0010
 <br/>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags describing possible operations.  <a href="classidoc_1_1_i_document_manager.html#a89e647a0fda1965099fc82077d3be520">More...</a><br/></td></tr>
@@ -125,8 +124,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Save active document.  <a href="#a404be3aa6734a8a787b764d76fb94250"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a333b6a7c4cc31479099a1f35de46b777">FileClose</a> (int documentIndex=-1, bool *ignoredPtr=NULL)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Close current view.  <a href="#a333b6a7c4cc31479099a1f35de46b777"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a94fb172927b9edbb6611d8397f97e795">FilePrint</a> (int documentIndex=-1) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Print current document.  <a href="#a94fb172927b9edbb6611d8397f97e795"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Provide set of user actions needed to manage documents in MVC (Model View Controller) concept. </p>
@@ -146,7 +143,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Map from file path to ducument type ID's. </p>
 
-<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00062">62</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00061">61</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
 
 </div>
 </div>
@@ -204,8 +201,6 @@ Public Member Functions</h2></td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a89e647a0fda1965099fc82077d3be520a936499a686a015daa845b6b337714598"></a><!-- doxytag: member="OF_FILE_SAVE" ref="a89e647a0fda1965099fc82077d3be520a936499a686a015daa845b6b337714598" args="" -->OF_FILE_SAVE</em>&nbsp;</td><td>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a89e647a0fda1965099fc82077d3be520ae68bfccd0e99d69ec77731797f994cc5"></a><!-- doxytag: member="OF_FILE_SAVE_AS" ref="a89e647a0fda1965099fc82077d3be520ae68bfccd0e99d69ec77731797f994cc5" args="" -->OF_FILE_SAVE_AS</em>&nbsp;</td><td>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a89e647a0fda1965099fc82077d3be520aaf3754afb9198f8ea0195193652d63bf"></a><!-- doxytag: member="OF_FILE_PRINT" ref="a89e647a0fda1965099fc82077d3be520aaf3754afb9198f8ea0195193652d63bf" args="" -->OF_FILE_PRINT</em>&nbsp;</td><td>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a89e647a0fda1965099fc82077d3be520a5d307d6b8ba9b3081073db71ef8c6d6b"></a><!-- doxytag: member="OF_KNOWN_PATH" ref="a89e647a0fda1965099fc82077d3be520a5d307d6b8ba9b3081073db71ef8c6d6b" args="" -->OF_KNOWN_PATH</em>&nbsp;</td><td>
 </td></tr>
@@ -407,33 +402,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a94fb172927b9edbb6611d8397f97e795"></a><!-- doxytag: member="idoc::IDocumentManager::FilePrint" ref="a94fb172927b9edbb6611d8397f97e795" args="(int documentIndex=&#45;1) const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void idoc::IDocumentManager::FilePrint </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>documentIndex</em> = <code>-1</code></td><td>)</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Print current document. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">documentIndex</td><td>optional index of document to print. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implemented in <a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a4347d386cb4214b60ce5037d8748a357">iqtdoc::TQtDocumentManagerWrap&lt; idoc::CMultiDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMdiArea &gt; &gt; &gt;</a>, and <a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a4347d386cb4214b60ce5037d8748a357">iqtdoc::TQtDocumentManagerWrap&lt; idoc::CSingleDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt; &gt; &gt;</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a404be3aa6734a8a787b764d76fb94250"></a><!-- doxytag: member="idoc::IDocumentManager::FileSave" ref="a404be3aa6734a8a787b764d76fb94250" args="(int documentIndex=&#45;1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
@@ -516,7 +484,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get flags of allowed operations. </p>
 
-<p>Implemented in <a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a9133e8a156bf7fe625a466cd06ed7ca1">iqtdoc::TQtDocumentManagerWrap&lt; idoc::CMultiDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMdiArea &gt; &gt; &gt;</a>, <a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a9133e8a156bf7fe625a466cd06ed7ca1">iqtdoc::TQtDocumentManagerWrap&lt; idoc::CSingleDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt; &gt; &gt;</a>, and <a class="el" href="classidoc_1_1_c_document_manager_base.html#a19d7defcf30bd8287749524bc4d99580">idoc::CDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_document_manager_base.html#a19d7defcf30bd8287749524bc4d99580">idoc::CDocumentManagerBase</a>.</p>
 
 </div>
 </div>

@@ -42,8 +42,6 @@
 
 #include "iqtgui/CFileDialogLoaderComp.h"
 
-#include "iqtdoc/IPrintable.h"
-
 
 namespace iqtdoc
 {

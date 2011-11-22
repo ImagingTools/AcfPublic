@@ -27,7 +27,7 @@
 #include "icomp/TModelCompWrap.h"
 #include "icomp/TMakeComponentWrap.h"
 
-#include "iqtgui/CApplicationComp.h"
+#include "iqtgui/CGuiApplicationComp.h"
 #include "iqtgui/CSplashScreenGuiComp.h"
 #include "iqtgui/CComposedGuiComp.h"
 #include "iqtgui/CLogGuiComp.h"
@@ -81,7 +81,7 @@ namespace QtGuiPck
 {
 
 
-typedef iqtgui::CApplicationComp GuiApplication;
+typedef iqtgui::CGuiApplicationComp GuiApplication;
 typedef iqtgui::CSplashScreenGuiComp SplashScreen;
 typedef iqtgui::CLogGuiComp LogGui;
 typedef iqtgui::CComposedGuiComp ComposedGui;

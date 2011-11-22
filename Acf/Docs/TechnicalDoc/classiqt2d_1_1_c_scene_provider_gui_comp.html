@@ -33,15 +33,15 @@
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-slots">Protected Slots</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iqt2d::CSceneProviderGuiComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt2d::CSceneProviderGuiComp" --><!-- doxytag: inherits="TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;,iqtdoc::IPrintable,ibase::ICommandsProvider,iqt2d::ISceneProvider,i2d::ISceneController" -->
+<!-- doxytag: class="iqt2d::CSceneProviderGuiComp" --><!-- doxytag: inherits="TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;,ibase::ICommandsProvider,iqt2d::ISceneProvider,i2d::ISceneController" -->
 <p><code>#include &lt;<a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqt2d::CSceneProviderGuiComp:</div>
@@ -50,15 +50,13 @@ Inheritance diagram for iqt2d::CSceneProviderGuiComp:</div>
   <img src="classiqt2d_1_1_c_scene_provider_gui_comp.png" usemap="#iqt2d::CSceneProviderGuiComp_map" alt=""/>
   <map id="iqt2d::CSceneProviderGuiComp_map" name="iqt2d::CSceneProviderGuiComp_map">
 <area href="classiqtgui_1_1_t_designer_gui_comp_base.html" alt="iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;" shape="rect" coords="570,280,940,304"/>
-<area href="classiqtdoc_1_1_i_printable.html" title="Common interface for printable objects." alt="iqtdoc::IPrintable" shape="rect" coords="1140,280,1510,304"/>
-<area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="1520,280,1890,304"/>
-<area href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene." alt="iqt2d::ISceneProvider" shape="rect" coords="1900,280,2270,304"/>
-<area href="classi2d_1_1_i_scene_controller.html" title="Interface for scene manipulation and query the restrictions." alt="i2d::ISceneController" shape="rect" coords="2280,280,2650,304"/>
+<area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="1140,280,1510,304"/>
+<area href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene." alt="iqt2d::ISceneProvider" shape="rect" coords="1520,280,1890,304"/>
+<area href="classi2d_1_1_i_scene_controller.html" title="Interface for scene manipulation and query the restrictions." alt="i2d::ISceneController" shape="rect" coords="1900,280,2270,304"/>
 <area href="classiqtgui_1_1_t_gui_component_base.html" alt="iqtgui::TGuiComponentBase&lt; QWidget &gt;" shape="rect" coords="380,224,750,248"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1140,224,1510,248"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1520,224,1890,248"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1900,224,2270,248"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="2280,224,2650,248"/>
 <area href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject." alt="iqtgui::CGuiComponentBase" shape="rect" coords="380,168,750,192"/>
 <area href="class_q_object.html" alt="QObject" shape="rect" coords="0,112,370,136"/>
 <area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="380,112,750,136"/>
@@ -90,15 +88,6 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 <a class="el" href="classiqtgui_1_1_t_designer_gui_comp_base.html">iqtgui::TDesignerGuiCompBase</a><br class="typebreak"/>
 &lt; Ui::CSceneProviderGuiComp &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ac598d435b94b6f15664b487a2e5cef92">BaseClass</a></td></tr>
-<tr><td colspan="2"><h2><a name="pub-slots"></a>
-Public Slots</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a275863b1832d6c507af9eff06e803fe0">OnZoomIncrement</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ab625497dd9b136f24cb5d9a7ee7d747e">OnZoomDecrement</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a6f61ecbff3dcfde78a29fc18469af3d8">OnFitToView</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ad54b13a0c3a6191372bfcab32baee31a">OnFitToShapes</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ae73dca04b8c2b4009921a8696b80de82">OnResetScale</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ae4f969eab9e7db42fb143844135e31a6">OnAutoFit</a> (bool isAutoScale)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#af2cd4cb23110dfa7ac738c9c54e9486b">OnSelectAllShapes</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="signals"></a>
 Signals</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#add6a64efd2299ac542c266bf42e7f6ae">zoomChanged</a> (double)</td></tr>
@@ -107,8 +96,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a90514ef2d427353cf9e5340c2e2a81f3">CSceneProviderGuiComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a4798d380e1077674a6de42f122c8821c">GetIsotropyFactor</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a9fb8b66f2f662ea6fc948f9246dc207b">SetIsotropyFactor</a> (double factor)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ab3b7a573d6ae91f70bb54430fc6dbccc">Print</a> (QPrinter *printerPtr) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Print some contents to the printer <code>printer</code>.  <a href="#ab3b7a573d6ae91f70bb54430fc6dbccc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#af0bc538aa444d9a8ec0af09f5811dd8c">GetCommands</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of menu commands.  <a href="#af0bc538aa444d9a8ec0af09f5811dd8c"></a><br/></td></tr>
@@ -133,6 +120,16 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get actual scale factor.  <a href="#a80846249422b3a0ad81d497f4f1b7fe1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a2af0d2d8d2730fe4af7bee6e8a7ca343">SetScale</a> (int scaleMode=SM_SET, double value=1.0)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set or modify scale factor.  <a href="#a2af0d2d8d2730fe4af7bee6e8a7ca343"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-slots"></a>
+Protected Slots</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ab43cae7d4a4e2ac2693ec5f0e9ae097b">OnPrint</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a275863b1832d6c507af9eff06e803fe0">OnZoomIncrement</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ab625497dd9b136f24cb5d9a7ee7d747e">OnZoomDecrement</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a6f61ecbff3dcfde78a29fc18469af3d8">OnFitToView</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ad54b13a0c3a6191372bfcab32baee31a">OnFitToShapes</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ae73dca04b8c2b4009921a8696b80de82">OnResetScale</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ae4f969eab9e7db42fb143844135e31a6">OnAutoFit</a> (bool isAutoScale)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#af2cd4cb23110dfa7ac738c9c54e9486b">OnSelectAllShapes</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a6f4a3e39bb4ab12dc65395c1320bd382">OnResize</a> (QResizeEvent *eventPtr)</td></tr>
@@ -157,7 +154,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="ac598d435b94b6f15664b487a2e5cef92"></a><!-- doxytag: member="iqt2d::CSceneProviderGuiComp::BaseClass" ref="ac598d435b94b6f15664b487a2e5cef92" args="" -->
 <div class="memitem">
@@ -172,7 +169,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_designer_gui_comp_base.html#a46da9fc3ba988136e325956bb7aaa220">iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00040">40</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00037">37</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -210,7 +207,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00042">42</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00039">39</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -323,7 +320,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00221">221</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00217">217</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -541,7 +538,7 @@ Protected Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>isAutoScale</em></td><td>)</td>
-          <td><code> [slot]</code></td>
+          <td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -593,7 +590,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">void iqt2d::CSceneProviderGuiComp::OnFitToShapes </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [slot]</code></td>
+          <td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -609,7 +606,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">void iqt2d::CSceneProviderGuiComp::OnFitToView </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [slot]</code></td>
+          <td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -691,6 +688,22 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab43cae7d4a4e2ac2693ec5f0e9ae097b"></a><!-- doxytag: member="iqt2d::CSceneProviderGuiComp::OnPrint" ref="ab43cae7d4a4e2ac2693ec5f0e9ae097b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqt2d::CSceneProviderGuiComp::OnPrint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ae73dca04b8c2b4009921a8696b80de82"></a><!-- doxytag: member="iqt2d::CSceneProviderGuiComp::OnResetScale" ref="ae73dca04b8c2b4009921a8696b80de82" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -699,7 +712,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">void iqt2d::CSceneProviderGuiComp::OnResetScale </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [slot]</code></td>
+          <td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -752,7 +765,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">void iqt2d::CSceneProviderGuiComp::OnSelectAllShapes </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [slot]</code></td>
+          <td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -785,7 +798,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">void iqt2d::CSceneProviderGuiComp::OnZoomDecrement </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [slot]</code></td>
+          <td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -801,33 +814,11 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">void iqt2d::CSceneProviderGuiComp::OnZoomIncrement </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [slot]</code></td>
+          <td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab3b7a573d6ae91f70bb54430fc6dbccc"></a><!-- doxytag: member="iqt2d::CSceneProviderGuiComp::Print" ref="ab3b7a573d6ae91f70bb54430fc6dbccc" args="(QPrinter *printerPtr) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqt2d::CSceneProviderGuiComp::Print </td>
-          <td>(</td>
-          <td class="paramtype">QPrinter *&#160;</td>
-          <td class="paramname"><em>printerPtr</em></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Print some contents to the printer <code>printer</code>. </p>
-<p>Printer object is already initialized from framework. </p>
-
-<p>Implements <a class="el" href="classiqtdoc_1_1_i_printable.html#ac8d7ba881ce126f8938642c0d3e1b9fb">iqtdoc::IPrintable</a>.</p>
 
 </div>
 </div>
