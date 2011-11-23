@@ -39,7 +39,7 @@
 <div class="title">iqtgui::CHierarchicalCommand Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtgui::CHierarchicalCommand" --><!-- doxytag: inherits="TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt; &gt;,iprm::CNameParam" -->
+<!-- doxytag: class="iqtgui::CHierarchicalCommand" --><!-- doxytag: inherits="iprm::CEnableableParam,iprm::CNameParam,THierarchicalBase&lt; ibase::IHierarchicalCommand &gt;" -->
 <p>Implementation of hierarchical command based on <code>QAction</code> from Qt.  
  <a href="classiqtgui_1_1_c_hierarchical_command.html#details">More...</a></p>
 
@@ -50,20 +50,24 @@ Inheritance diagram for iqtgui::CHierarchicalCommand:</div>
  <div class="center">
   <img src="classiqtgui_1_1_c_hierarchical_command.png" usemap="#iqtgui::CHierarchicalCommand_map" alt=""/>
   <map id="iqtgui::CHierarchicalCommand_map" name="iqtgui::CHierarchicalCommand_map">
-<area href="classibase_1_1_t_enableable_wrap.html" alt="ibase::TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt; &gt;" shape="rect" coords="255,392,756,416"/>
-<area href="classiprm_1_1_c_name_param.html" title="Template based implementation of a named object." alt="iprm::CNameParam" shape="rect" coords="1022,392,1523,416"/>
-<area href="classibase_1_1_t_hierarchical_base.html" alt="ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt;" shape="rect" coords="255,336,756,360"/>
-<area href="classiprm_1_1_i_name_param.html" title="Interface for a object containing its name." alt="iprm::INameParam" shape="rect" coords="1022,336,1523,360"/>
-<area href="classistd_1_1_t_change_delegator.html" alt="istd::TChangeDelegator&lt; ibase::IHierarchicalCommand &gt;" shape="rect" coords="255,280,756,304"/>
-<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="1022,280,1523,304"/>
-<area href="classistd_1_1_t_change_binder.html" alt="istd::TChangeBinder&lt; ibase::IHierarchicalCommand, CChangeDelegator &gt;" shape="rect" coords="255,224,756,248"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="1022,224,1523,248"/>
-<area href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures." alt="istd::TIHierarchical&lt; Interface &gt;" shape="rect" coords="0,168,501,192"/>
-<area href="classistd_1_1_c_change_delegator.html" title="Delegates calls of IChangeable methods to the given slave." alt="istd::CChangeDelegator" shape="rect" coords="511,168,1012,192"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1022,168,1523,192"/>
-<area href="classistd_1_1_i_change_delegator.html" title="Common interface for all classes that supports delegation of their updates to another class..." alt="istd::IChangeDelegator" shape="rect" coords="511,112,1012,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="511,56,1012,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="511,0,1012,24"/>
+<area href="classiprm_1_1_c_enableable_param.html" title="Basic implementation of IEnableableParam interface." alt="iprm::CEnableableParam" shape="rect" coords="0,336,430,360"/>
+<area href="classiprm_1_1_c_name_param.html" title="Template based implementation of a named object." alt="iprm::CNameParam" shape="rect" coords="440,336,870,360"/>
+<area href="classibase_1_1_t_hierarchical_base.html" alt="ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt;" shape="rect" coords="1100,336,1530,360"/>
+<area href="classiprm_1_1_i_enableable_param.html" title="Interface for objects which can be enabled/disabled." alt="iprm::IEnableableParam" shape="rect" coords="0,280,430,304"/>
+<area href="classiprm_1_1_i_name_param.html" title="Interface for a object containing its name." alt="iprm::INameParam" shape="rect" coords="440,280,870,304"/>
+<area href="classistd_1_1_t_change_delegator.html" alt="istd::TChangeDelegator&lt; ibase::IHierarchicalCommand &gt;" shape="rect" coords="1100,280,1530,304"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="0,224,430,248"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="440,224,870,248"/>
+<area href="classistd_1_1_t_change_binder.html" alt="istd::TChangeBinder&lt; ibase::IHierarchicalCommand, CChangeDelegator &gt;" shape="rect" coords="1100,224,1530,248"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,168,430,192"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="440,168,870,192"/>
+<area href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures." alt="istd::TIHierarchical&lt; Interface &gt;" shape="rect" coords="880,168,1310,192"/>
+<area href="classistd_1_1_c_change_delegator.html" title="Delegates calls of IChangeable methods to the given slave." alt="istd::CChangeDelegator" shape="rect" coords="1320,168,1750,192"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,112,430,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="440,112,870,136"/>
+<area href="classistd_1_1_i_change_delegator.html" title="Common interface for all classes that supports delegation of their updates to another class..." alt="istd::IChangeDelegator" shape="rect" coords="1320,112,1750,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="1320,56,1750,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1320,0,1750,24"/>
 </map>
  </div></div>
 
@@ -72,9 +76,7 @@ Inheritance diagram for iqtgui::CHierarchicalCommand:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef QAction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#af502bbcf3de815f3944f26da2cdb0ac7">BaseClass</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classibase_1_1_t_enableable_wrap.html">ibase::TEnableableWrap</a><br class="typebreak"/>
-&lt; <a class="el" href="classibase_1_1_t_hierarchical_base.html">ibase::THierarchicalBase</a><br class="typebreak"/>
-&lt; <a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a3885c17e976e1e6f0c038c5562a0e44c">BaseClass2</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiprm_1_1_c_enableable_param.html">iprm::CEnableableParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#ac5fd62c659faa11c16fb4829eb66ed28">BaseClass2</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiprm_1_1_c_name_param.html">iprm::CNameParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a746852630fba2c048cb2de454ff53d2a">BaseClass3</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -103,6 +105,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#abd1f5b84054cf987e5950de54f49dc06">SetName</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;name)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the object name.  <a href="#abd1f5b84054cf987e5950de54f49dc06"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a056d90b0c4e74eb40809becb4d9e8c9d">SetEnabled</a> (bool isEnabled=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set something to <code>isEnabled</code> state.  <a href="#a056d90b0c4e74eb40809becb4d9e8c9d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a7fa01faf2be21e32cebf99c9cf19a61b">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a7fa01faf2be21e32cebf99c9cf19a61b"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a0158c746f30cb5b9d298a618c272b542">OnTriggered</a> ()</td></tr>
@@ -129,18 +134,18 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classibase_1_1_t_enableable_wrap.html#a3efd69617c8b4679e889822e63f03bde">ibase::TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_hierarchical_base.html#a42e03941ea05bc756eab49d96bf658e4">ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_hierarchical_command_8h_source.html#l00037">37</a> of file <a class="el" href="_c_hierarchical_command_8h_source.html">CHierarchicalCommand.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_hierarchical_command_8h_source.html#l00038">38</a> of file <a class="el" href="_c_hierarchical_command_8h_source.html">CHierarchicalCommand.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3885c17e976e1e6f0c038c5562a0e44c"></a><!-- doxytag: member="iqtgui::CHierarchicalCommand::BaseClass2" ref="a3885c17e976e1e6f0c038c5562a0e44c" args="" -->
+<a class="anchor" id="ac5fd62c659faa11c16fb4829eb66ed28"></a><!-- doxytag: member="iqtgui::CHierarchicalCommand::BaseClass2" ref="ac5fd62c659faa11c16fb4829eb66ed28" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classibase_1_1_t_enableable_wrap.html">ibase::TEnableableWrap</a>&lt;<a class="el" href="classibase_1_1_t_hierarchical_base.html">ibase::THierarchicalBase</a>&lt;<a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a>&gt; &gt; <a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a3885c17e976e1e6f0c038c5562a0e44c">iqtgui::CHierarchicalCommand::BaseClass2</a></td>
+          <td class="memname">typedef <a class="el" href="classiprm_1_1_c_enableable_param.html">iprm::CEnableableParam</a> <a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#ac5fd62c659faa11c16fb4829eb66ed28">iqtgui::CHierarchicalCommand::BaseClass2</a></td>
         </tr>
       </table>
 </div>
@@ -148,7 +153,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_t_change_binder.html#a13fca783bae6e7251bfb0420f1986860">istd::TChangeBinder&lt; ibase::IHierarchicalCommand, CChangeDelegator &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_hierarchical_command_8h_source.html#l00038">38</a> of file <a class="el" href="_c_hierarchical_command_8h_source.html">CHierarchicalCommand.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_hierarchical_command_8h_source.html#l00039">39</a> of file <a class="el" href="_c_hierarchical_command_8h_source.html">CHierarchicalCommand.h</a>.</p>
 
 </div>
 </div>
@@ -163,7 +168,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_hierarchical_command_8h_source.html#l00039">39</a> of file <a class="el" href="_c_hierarchical_command_8h_source.html">CHierarchicalCommand.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_hierarchical_command_8h_source.html#l00040">40</a> of file <a class="el" href="_c_hierarchical_command_8h_source.html">CHierarchicalCommand.h</a>.</p>
 
 </div>
 </div>
@@ -490,6 +495,29 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7fa01faf2be21e32cebf99c9cf19a61b"></a><!-- doxytag: member="iqtgui::CHierarchicalCommand::Serialize" ref="a7fa01faf2be21e32cebf99c9cf19a61b" args="(iser::IArchive &amp;archive)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iqtgui::CHierarchicalCommand::Serialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
+          <td class="paramname"><em>archive</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Load or store state of this object as a archive stream. </p>
+<p>Type of operation is depending on archive type. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classiprm_1_1_c_enableable_param.html#af16e9c98e4133dae8b5342a00e677016">iprm::CEnableableParam</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a056d90b0c4e74eb40809becb4d9e8c9d"></a><!-- doxytag: member="iqtgui::CHierarchicalCommand::SetEnabled" ref="a056d90b0c4e74eb40809becb4d9e8c9d" args="(bool isEnabled=true)" -->
 <div class="memitem">
 <div class="memproto">
@@ -505,7 +533,9 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classibase_1_1_t_enableable_wrap.html#a583d81f2e6ab6397451516d14a5bb2f8">ibase::TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt; &gt;</a>.</p>
+<p>Set something to <code>isEnabled</code> state. </p>
+
+<p>Reimplemented from <a class="el" href="classiprm_1_1_c_enableable_param.html#ae336cebc654b98d573a628571a17c2f2">iprm::CEnableableParam</a>.</p>
 
 </div>
 </div>

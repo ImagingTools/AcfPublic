@@ -23,6 +23,10 @@
 #include "iqtproc/CDocumentProcessingManagerComp.h"
 
 
+// ACF includes
+#include "istd/TChangeNotifier.h"
+
+
 namespace iqtproc
 {
 

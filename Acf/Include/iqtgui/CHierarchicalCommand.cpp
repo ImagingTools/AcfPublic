@@ -192,12 +192,20 @@ void CHierarchicalCommand::SetName(const istd::CString& name)
 }
 
 
-// reimplemented (istd::IEnableable)
+// reimplemented (iprm::IEnableableParam)
 
 void CHierarchicalCommand::SetEnabled(bool isEnabled)
 {
 	BaseClass::setEnabled(isEnabled);
 	BaseClass2::SetEnabled(isEnabled);
+}
+
+
+// reimplemented (iser::ISerializable)
+
+bool CHierarchicalCommand::Serialize(iser::IArchive& /*archive*/)
+{
+	return false;
 }
 
 

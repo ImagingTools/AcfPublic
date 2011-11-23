@@ -32,13 +32,12 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iprm::CEnableableParamComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iprm::CEnableableParamComp" --><!-- doxytag: inherits="icomp::CComponentBase,istd::IEnableable,iser::ISerializable" -->
+<!-- doxytag: class="iprm::CEnableableParamComp" --><!-- doxytag: inherits="icomp::CComponentBase,iprm::CEnableableParam" -->
 <p><code>#include &lt;<a class="el" href="_c_enableable_param_comp_8h_source.html">CEnableableParamComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iprm::CEnableableParamComp:</div>
@@ -46,15 +45,14 @@ Inheritance diagram for iprm::CEnableableParamComp:</div>
  <div class="center">
   <img src="classiprm_1_1_c_enableable_param_comp.png" usemap="#iprm::CEnableableParamComp_map" alt=""/>
   <map id="iprm::CEnableableParamComp_map" name="iprm::CEnableableParamComp_map">
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,112,182,136"/>
-<area href="classistd_1_1_i_enableable.html" title="Interface for objects which can be enabled/disabled." alt="istd::IEnableable" shape="rect" coords="192,112,374,136"/>
-<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="384,112,566,136"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,182,80"/>
+<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,224,182,248"/>
+<area href="classiprm_1_1_c_enableable_param.html" title="Basic implementation of IEnableableParam interface." alt="iprm::CEnableableParam" shape="rect" coords="192,224,374,248"/>
+<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,168,182,192"/>
+<area href="classiprm_1_1_i_enableable_param.html" title="Interface for objects which can be enabled/disabled." alt="iprm::IEnableableParam" shape="rect" coords="192,168,374,192"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,112,182,136"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="192,112,374,136"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="192,56,374,80"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="384,56,566,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,182,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="192,0,374,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="384,0,566,24"/>
 </map>
  </div></div>
 
@@ -63,23 +61,13 @@ Inheritance diagram for iprm::CEnableableParamComp:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_enableable_param_comp.html#a3930e57e1586d75a1f444bff085d22b1">BaseClass</a></td></tr>
-<tr><td colspan="2"><h2><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_enableable_param_comp.html#a03a7333aef5093ad07333755d8d9ea88">IsEnabled</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a <code>true</code>, if something is enabled.  <a href="#a03a7333aef5093ad07333755d8d9ea88"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_enableable_param_comp.html#af7c57ed4f920eb3977fae05a4c3f99f8">IsEnablingAllowed</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a <code>true</code>, if something can be enabled.  <a href="#af7c57ed4f920eb3977fae05a4c3f99f8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_enableable_param_comp.html#afb1dc86a0ab4c0f4ea97c87e17a7dfa6">SetEnabled</a> (bool isEnabled=true)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set something to <code>isEnabled</code> state.  <a href="#afb1dc86a0ab4c0f4ea97c87e17a7dfa6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_enableable_param_comp.html#a13fc1b273eac190b034ec60e0c74743c">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a13fc1b273eac190b034ec60e0c74743c"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_enableable_param_comp.html#aa54b431d01c863a04c20c8b81ab501b6">OnComponentCreated</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_enableable_param_comp_8h_source.html#l00016">16</a> of file <a class="el" href="_c_enableable_param_comp_8h_source.html">CEnableableParamComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_enableable_param_comp_8h_source.html#l00015">15</a> of file <a class="el" href="_c_enableable_param_comp_8h_source.html">CEnableableParamComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a3930e57e1586d75a1f444bff085d22b1"></a><!-- doxytag: member="iprm::CEnableableParamComp::BaseClass" ref="a3930e57e1586d75a1f444bff085d22b1" args="" -->
 <div class="memitem">
@@ -92,51 +80,11 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_enableable_param_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_enableable_param_comp_8h_source.html">CEnableableParamComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_enableable_param_comp_8h_source.html#l00020">20</a> of file <a class="el" href="_c_enableable_param_comp_8h_source.html">CEnableableParamComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a03a7333aef5093ad07333755d8d9ea88"></a><!-- doxytag: member="iprm::CEnableableParamComp::IsEnabled" ref="a03a7333aef5093ad07333755d8d9ea88" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iprm::CEnableableParamComp::IsEnabled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Return a <code>true</code>, if something is enabled. </p>
-
-<p>Implements <a class="el" href="classistd_1_1_i_enableable.html#ad89d0e9c2c55029e6fdd1176ff67c5b5">istd::IEnableable</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af7c57ed4f920eb3977fae05a4c3f99f8"></a><!-- doxytag: member="iprm::CEnableableParamComp::IsEnablingAllowed" ref="af7c57ed4f920eb3977fae05a4c3f99f8" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iprm::CEnableableParamComp::IsEnablingAllowed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Return a <code>true</code>, if something can be enabled. </p>
-
-<p>Implements <a class="el" href="classistd_1_1_i_enableable.html#a79f97f270ecb37555fe6ad8cc786c444">istd::IEnableable</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="aa54b431d01c863a04c20c8b81ab501b6"></a><!-- doxytag: member="iprm::CEnableableParamComp::OnComponentCreated" ref="aa54b431d01c863a04c20c8b81ab501b6" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -152,50 +100,6 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_base.html#a8a79eed0233a1ff69972975180f5210a">icomp::CComponentBase</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a13fc1b273eac190b034ec60e0c74743c"></a><!-- doxytag: member="iprm::CEnableableParamComp::Serialize" ref="a13fc1b273eac190b034ec60e0c74743c" args="(iser::IArchive &amp;archive)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iprm::CEnableableParamComp::Serialize </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
-          <td class="paramname"><em>archive</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Load or store state of this object as a archive stream. </p>
-<p>Type of operation is depending on archive type. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a> </dd></dl>
-
-<p>Implements <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="afb1dc86a0ab4c0f4ea97c87e17a7dfa6"></a><!-- doxytag: member="iprm::CEnableableParamComp::SetEnabled" ref="afb1dc86a0ab4c0f4ea97c87e17a7dfa6" args="(bool isEnabled=true)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iprm::CEnableableParamComp::SetEnabled </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isEnabled</em> = <code>true</code></td><td>)</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Set something to <code>isEnabled</code> state. </p>
-
-<p>Implements <a class="el" href="classistd_1_1_i_enableable.html#aa267b989660fac975aeb4fb60583b0d7">istd::IEnableable</a>.</p>
 
 </div>
 </div>

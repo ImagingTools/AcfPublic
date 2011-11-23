@@ -20,25 +20,44 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef iprm_IEnableableParam_included
+#define iprm_IEnableableParam_included
 
 
-namespace istd
+#include "iser/ISerializable.h"
+
+
+namespace iprm
 {
 
 
-enum RepositoryState
+/**
+	Interface for objects which can be enabled/disabled.	
+*/
+class IEnableableParam: virtual public iser::ISerializable
 {
-	RS_ORIGINAL_VERSION =  2074,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	/**
+		Return a \c true, if something is enabled.
+	*/
+	virtual bool IsEnabled() const = 0;
+
+	/**
+		Return a \c true, if something can be enabled.
+	*/
+	virtual bool IsEnablingAllowed() const = 0;
+
+	/**
+		Set something to \c isEnabled state.
+	*/
+	virtual void SetEnabled(bool isEnabled = true) = 0;
+
 };
 
 
-} // namespace istd
+} // namespace iprm
 
 
-#endif // !istd_AcfVersion_included
+#endif // !iprm_IEnableableParam_included
 
 

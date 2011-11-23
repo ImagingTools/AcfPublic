@@ -507,9 +507,9 @@
     <name>ICommand.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_i_command_8h</filename>
-    <includes id="_i_enableable_8h" name="IEnableable.h" local="yes" imported="no">istd/IEnableable.h</includes>
     <includes id="_t_i_hierarchical_8h" name="TIHierarchical.h" local="yes" imported="no">istd/TIHierarchical.h</includes>
     <includes id="_i_name_param_8h" name="INameParam.h" local="yes" imported="no">iprm/INameParam.h</includes>
+    <includes id="_i_enableable_param_8h" name="IEnableableParam.h" local="yes" imported="no">iprm/IEnableableParam.h</includes>
     <class kind="class">ibase::ICommand</class>
     <namespace>ibase</namespace>
     <member kind="typedef">
@@ -651,17 +651,6 @@
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <class kind="class">ibase::TContainer</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TEnableableWrap.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_t_enableable_wrap_8h</filename>
-    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
-    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="ibase_8h" name="ibase.h" local="yes" imported="no">ibase/ibase.h</includes>
-    <class kind="class">ibase::TEnableableWrap</class>
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
@@ -2586,12 +2575,19 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CEnableableParam.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_c_enableable_param_8h</filename>
+    <includes id="_i_enableable_param_8h" name="IEnableableParam.h" local="yes" imported="no">iprm/IEnableableParam.h</includes>
+    <class kind="class">iprm::CEnableableParam</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CEnableableParamComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_enableable_param_comp_8h</filename>
-    <includes id="_i_enableable_8h" name="IEnableable.h" local="yes" imported="no">istd/IEnableable.h</includes>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_enableable_param_8h" name="CEnableableParam.h" local="yes" imported="no">iprm/CEnableableParam.h</includes>
     <class kind="class">iprm::CEnableableParamComp</class>
     <namespace>iprm</namespace>
   </compound>
@@ -2714,6 +2710,14 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_variable_param_8h" name="IVariableParam.h" local="yes" imported="no">iprm/IVariableParam.h</includes>
     <class kind="class">iprm::CVariableParamComp</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IEnableableParam.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_i_enableable_param_8h</filename>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <class kind="class">iprm::IEnableableParam</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -4193,9 +4197,9 @@
     <filename>_c_hierarchical_command_8h</filename>
     <includes id="_t_opt_pointer_vector_8h" name="TOptPointerVector.h" local="yes" imported="no">istd/TOptPointerVector.h</includes>
     <includes id="_c_name_param_8h" name="CNameParam.h" local="yes" imported="no">iprm/CNameParam.h</includes>
-    <includes id="_t_hierarchical_base_8h" name="THierarchicalBase.h" local="yes" imported="no">ibase/THierarchicalBase.h</includes>
-    <includes id="_t_enableable_wrap_8h" name="TEnableableWrap.h" local="yes" imported="no">ibase/TEnableableWrap.h</includes>
+    <includes id="_c_enableable_param_8h" name="CEnableableParam.h" local="yes" imported="no">iprm/CEnableableParam.h</includes>
     <includes id="_i_command_8h" name="ICommand.h" local="yes" imported="no">ibase/ICommand.h</includes>
+    <includes id="_t_hierarchical_base_8h" name="THierarchicalBase.h" local="yes" imported="no">ibase/THierarchicalBase.h</includes>
     <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
     <class kind="class">iqtgui::CHierarchicalCommand</class>
     <namespace>iqtgui</namespace>
@@ -5216,14 +5220,6 @@
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
-    <name>IEnableable.h</name>
-    <path>C:/Temp/Acf/Include/istd/</path>
-    <filename>_i_enableable_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <class kind="class">istd::IEnableable</class>
-    <namespace>istd</namespace>
-  </compound>
-  <compound kind="file">
     <name>IFactoryInfo.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_i_factory_info_8h</filename>
@@ -5970,12 +5966,12 @@
     <name>Helpers</name>
     <title>Set of helper classes.</title>
     <filename>group___helpers.html</filename>
-    <class kind="class">ibase::TEnableableWrap</class>
     <class kind="class">ibase::TLoggerCompWrap</class>
     <class kind="class">ibase::TLoggerWrap</class>
     <class kind="class">icomp::TMakeComponentWrap</class>
     <class kind="class">icomp::TModelCompWrap</class>
     <class kind="class">imod::TModelWrap</class>
+    <class kind="class">iprm::CEnableableParam</class>
     <class kind="class">iprm::CNameParam</class>
     <class kind="class">iqtgui::TGuiObserverWrap</class>
     <class kind="class">iqtgui::TRestorableGuiWrap</class>
@@ -8786,7 +8782,6 @@
     <class kind="class">ibase::ITextDocument</class>
     <class kind="class">ibase::TComposedFactoryComp</class>
     <class kind="class">ibase::TContainer</class>
-    <class kind="class">ibase::TEnableableWrap</class>
     <class kind="class">ibase::TFactorisableContainer</class>
     <class kind="class">ibase::TFileSerializerComp</class>
     <class kind="class">ibase::THierarchicalBase</class>
@@ -10301,7 +10296,7 @@
     <name>ibase::ICommand</name>
     <filename>classibase_1_1_i_command.html</filename>
     <base virtualness="virtual">iprm::INameParam</base>
-    <base virtualness="virtual">istd::IEnableable</base>
+    <base virtualness="virtual">iprm::IEnableableParam</base>
     <member kind="enumeration">
       <name>StaticFlags</name>
       <anchorfile>classibase_1_1_i_command.html</anchorfile>
@@ -10890,54 +10885,6 @@
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
       <anchor>a2d9c0bbfa2c7155e13a410586a2d1c66</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::TEnableableWrap</name>
-    <filename>classibase_1_1_t_enableable_wrap.html</filename>
-    <templarg>Base</templarg>
-    <base virtualness="virtual">Base</base>
-    <member kind="typedef">
-      <type>Base</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_enableable_wrap.html</anchorfile>
-      <anchor>a3efd69617c8b4679e889822e63f03bde</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TEnableableWrap</name>
-      <anchorfile>classibase_1_1_t_enableable_wrap.html</anchorfile>
-      <anchor>a8a084f91d51a71c3a74d66108fc5df8b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsEnabled</name>
-      <anchorfile>classibase_1_1_t_enableable_wrap.html</anchorfile>
-      <anchor>a37f17f72959831c0eb5c180efbc6d818</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsEnablingAllowed</name>
-      <anchorfile>classibase_1_1_t_enableable_wrap.html</anchorfile>
-      <anchor>ac0f4019105cc3b16ed759ad800cf1b01</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetEnabled</name>
-      <anchorfile>classibase_1_1_t_enableable_wrap.html</anchorfile>
-      <anchor>a583d81f2e6ab6397451516d14a5bb2f8</anchor>
-      <arglist>(bool isEnabled=true)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SerializeEnabled</name>
-      <anchorfile>classibase_1_1_t_enableable_wrap.html</anchorfile>
-      <anchor>afac302ae9551e9c0b51cd70ff9f4837f</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24851,6 +24798,7 @@
     <name>iprm</name>
     <filename>namespaceiprm.html</filename>
     <class kind="class">iprm::CComposedParamsSetComp</class>
+    <class kind="class">iprm::CEnableableParam</class>
     <class kind="class">iprm::CEnableableParamComp</class>
     <class kind="class">iprm::CFileNameParamComp</class>
     <class kind="class">iprm::CLinearAdjustParamsComp</class>
@@ -24863,6 +24811,7 @@
     <class kind="class">iprm::CSelectionConstraintsComp</class>
     <class kind="class">iprm::CSelectionParamComp</class>
     <class kind="class">iprm::CVariableParamComp</class>
+    <class kind="class">iprm::IEnableableParam</class>
     <class kind="class">iprm::IFileNameParam</class>
     <class kind="class">iprm::ILinearAdjustConstraints</class>
     <class kind="class">iprm::ILinearAdjustParams</class>
@@ -24965,45 +24914,56 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iprm::CEnableableParam</name>
+    <filename>classiprm_1_1_c_enableable_param.html</filename>
+    <base virtualness="virtual">iprm::IEnableableParam</base>
+    <member kind="function">
+      <type></type>
+      <name>CEnableableParam</name>
+      <anchorfile>classiprm_1_1_c_enableable_param.html</anchorfile>
+      <anchor>a34033732537390681097e741842e6384</anchor>
+      <arglist>(bool isEnabled=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEnabled</name>
+      <anchorfile>classiprm_1_1_c_enableable_param.html</anchorfile>
+      <anchor>aef3643cf5123c2cac4b74ca1ee6744d3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEnablingAllowed</name>
+      <anchorfile>classiprm_1_1_c_enableable_param.html</anchorfile>
+      <anchor>a6195e06279d088ae3a229983495bfcd2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetEnabled</name>
+      <anchorfile>classiprm_1_1_c_enableable_param.html</anchorfile>
+      <anchor>ae336cebc654b98d573a628571a17c2f2</anchor>
+      <arglist>(bool isEnabled=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprm_1_1_c_enableable_param.html</anchorfile>
+      <anchor>af16e9c98e4133dae8b5342a00e677016</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iprm::CEnableableParamComp</name>
     <filename>classiprm_1_1_c_enableable_param_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">istd::IEnableable</base>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <base>iprm::CEnableableParam</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiprm_1_1_c_enableable_param_comp.html</anchorfile>
       <anchor>a3930e57e1586d75a1f444bff085d22b1</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsEnabled</name>
-      <anchorfile>classiprm_1_1_c_enableable_param_comp.html</anchorfile>
-      <anchor>a03a7333aef5093ad07333755d8d9ea88</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsEnablingAllowed</name>
-      <anchorfile>classiprm_1_1_c_enableable_param_comp.html</anchorfile>
-      <anchor>af7c57ed4f920eb3977fae05a4c3f99f8</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetEnabled</name>
-      <anchorfile>classiprm_1_1_c_enableable_param_comp.html</anchorfile>
-      <anchor>afb1dc86a0ab4c0f4ea97c87e17a7dfa6</anchor>
-      <arglist>(bool isEnabled=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiprm_1_1_c_enableable_param_comp.html</anchorfile>
-      <anchor>a13fc1b273eac190b034ec60e0c74743c</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -25813,6 +25773,32 @@
       <anchorfile>classiprm_1_1_c_variable_param_comp.html</anchorfile>
       <anchor>ae6fbd05365a9962f9b1c0a6d345fa521</anchor>
       <arglist>(int versionId) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::IEnableableParam</name>
+    <filename>classiprm_1_1_i_enableable_param.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsEnabled</name>
+      <anchorfile>classiprm_1_1_i_enableable_param.html</anchorfile>
+      <anchor>a8898283df95dae4a8478f192000b0d60</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsEnablingAllowed</name>
+      <anchorfile>classiprm_1_1_i_enableable_param.html</anchorfile>
+      <anchor>a7f6bbd77c980f9a7afbada9174077e9e</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetEnabled</name>
+      <anchorfile>classiprm_1_1_i_enableable_param.html</anchorfile>
+      <anchor>a73999d835aea7e904dc84f11bbc5b1bf</anchor>
+      <arglist>(bool isEnabled=true)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34416,8 +34402,9 @@
   <compound kind="class">
     <name>iqtgui::CHierarchicalCommand</name>
     <filename>classiqtgui_1_1_c_hierarchical_command.html</filename>
-    <base>TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt; &gt;</base>
+    <base>iprm::CEnableableParam</base>
     <base>iprm::CNameParam</base>
+    <base>THierarchicalBase&lt; ibase::IHierarchicalCommand &gt;</base>
     <member kind="typedef">
       <type>QAction</type>
       <name>BaseClass</name>
@@ -34426,10 +34413,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::TEnableableWrap&lt; ibase::THierarchicalBase&lt; ibase::IHierarchicalCommand &gt; &gt;</type>
+      <type>iprm::CEnableableParam</type>
       <name>BaseClass2</name>
       <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
-      <anchor>a3885c17e976e1e6f0c038c5562a0e44c</anchor>
+      <anchor>ac5fd62c659faa11c16fb4829eb66ed28</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -34557,6 +34544,13 @@
       <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
       <anchor>a056d90b0c4e74eb40809becb4d9e8c9d</anchor>
       <arglist>(bool isEnabled=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
+      <anchor>a7fa01faf2be21e32cebf99c9cf19a61b</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -39803,7 +39797,6 @@
     <class kind="class">istd::IChangeable</class>
     <class kind="class">istd::IChangeDelegator</class>
     <class kind="class">istd::IContainerInfo</class>
-    <class kind="class">istd::IEnableable</class>
     <class kind="class">istd::IFactoryInfo</class>
     <class kind="class">istd::ILocalizer</class>
     <class kind="class">istd::ILogger</class>
@@ -41750,32 +41743,6 @@
       <anchorfile>classistd_1_1_i_container_info.html</anchorfile>
       <anchor>a901b3dfe9c01e9681e4042f2aa4a9ff2</anchor>
       <arglist>(int index) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>istd::IEnableable</name>
-    <filename>classistd_1_1_i_enableable.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsEnabled</name>
-      <anchorfile>classistd_1_1_i_enableable.html</anchorfile>
-      <anchor>ad89d0e9c2c55029e6fdd1176ff67c5b5</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsEnablingAllowed</name>
-      <anchorfile>classistd_1_1_i_enableable.html</anchorfile>
-      <anchor>a79f97f270ecb37555fe6ad8cc786c444</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetEnabled</name>
-      <anchorfile>classistd_1_1_i_enableable.html</anchorfile>
-      <anchor>aa267b989660fac975aeb4fb60583b0d7</anchor>
-      <arglist>(bool isEnabled=true)=0</arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -20,24 +20,66 @@
 ********************************************************************************/
 
 
-#include "iprm/CEnableableParamComp.h"
+#include "iprm/CEnableableParam.h"
+
+
+#include "istd/TChangeNotifier.h"
+
+#include "iser/IArchive.h"
+#include "iser/CArchiveTag.h"
 
 
 namespace iprm
 {
 
 
-// protected methods
-
-// reimplemented (icomp::CComponentBase)
-
-void CEnableableParamComp::OnComponentCreated()
+CEnableableParam::CEnableableParam(bool isEnabled)
+:	m_isEnabled(isEnabled)
 {
-	BaseClass::OnComponentCreated();
+}
 
-	if (m_defaultIsEnabledAttrPtr.IsValid()){
-		SetEnabled(*m_defaultIsEnabledAttrPtr);
+
+// pseudo-reimplemented (iprm::IEnableableParam)
+
+bool CEnableableParam::IsEnabled() const
+{
+	return m_isEnabled;
+}
+
+
+bool CEnableableParam::IsEnablingAllowed() const
+{
+	return true;
+}
+
+
+void CEnableableParam::SetEnabled(bool isEnabled)
+{
+	if (IsEnablingAllowed() && (isEnabled != m_isEnabled)){
+		istd::CChangeNotifier changePtr(this);
+	
+		m_isEnabled = isEnabled;
 	}
+}
+
+
+// reimplemented (iser::ISerializable)
+
+bool CEnableableParam::Serialize(iser::IArchive& archive)
+{
+	static iser::CArchiveTag enabledTag("IsEnabled", "Object enabled state");
+
+	bool isEnabled = m_isEnabled;
+
+	bool retVal = archive.BeginTag(enabledTag);
+	retVal = retVal && archive.Process(isEnabled);
+	retVal = retVal && archive.EndTag(enabledTag);
+
+	if (!archive.IsStoring()){
+		SetEnabled(isEnabled);
+	}
+
+	return retVal;
 }
 
 

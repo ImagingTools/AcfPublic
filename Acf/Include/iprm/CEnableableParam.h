@@ -20,25 +20,44 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef iprm_CEnableableParam_included
+#define iprm_CEnableableParam_included
 
 
-namespace istd
+// ACF includes
+#include "iprm/IEnableableParam.h"
+
+
+namespace iprm
 {
 
 
-enum RepositoryState
+/**
+	Basic implementation of IEnableableParam interface.
+
+	\ingroup Helpers
+*/
+class CEnableableParam: virtual public iprm::IEnableableParam
 {
-	RS_ORIGINAL_VERSION =  2074,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	CEnableableParam(bool isEnabled = true);
+
+	// pseudo-reimplemented (iprm::IEnableableParam)
+	virtual bool IsEnabled() const;
+	virtual bool IsEnablingAllowed() const;
+	virtual void SetEnabled(bool isEnabled = true);
+
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive);
+
+private:
+	bool m_isEnabled;
 };
 
 
-} // namespace istd
+} // namespace iprm
 
 
-#endif // !istd_AcfVersion_included
+#endif // iprm_CEnableableParam_included
 
 
