@@ -36473,6 +36473,13 @@
       <anchor>a511f88ed3d578924f8fa8392db3e15e6</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
+      <anchor>a8cb34b0612e80b7edc6e988c790f465c</anchor>
+      <arglist>(m_selectorObserverCompPtr, m_selectorGuiCompPtr, false)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
@@ -36499,6 +36506,13 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
       <anchor>a8fc467b4153ba752ef11fe98b525f76b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
+      <anchor>a458f8e8d6f1f73a9a3c8f24bfaea6d88</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

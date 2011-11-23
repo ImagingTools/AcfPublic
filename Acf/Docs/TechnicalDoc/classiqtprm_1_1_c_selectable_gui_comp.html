@@ -32,6 +32,7 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iqtprm::CSelectableGuiComp Class Reference</div>  </div>
@@ -78,6 +79,9 @@ Public Types</h2></td></tr>
 <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a><br class="typebreak"/>
 &lt; Ui::CSelectableGuiComp, <br class="typebreak"/>
 <a class="el" href="classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selectable_gui_comp.html#a511f88ed3d578924f8fa8392db3e15e6">BaseClass</a></td></tr>
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selectable_gui_comp.html#a8cb34b0612e80b7edc6e988c790f465c">I_ASSIGN_TO</a> (m_selectorObserverCompPtr, m_selectorGuiCompPtr, false)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selectable_gui_comp.html#af41f3b103f8fbd6cbd2ccbec433199b3">OnGuiModelAttached</a> ()</td></tr>
@@ -88,6 +92,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do update of the model GUI.  <a href="#aea7c24117354c372b886e3b5a91d75bd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selectable_gui_comp.html#a8fc467b4153ba752ef11fe98b525f76b">OnGuiCreated</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a8fc467b4153ba752ef11fe98b525f76b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_selectable_gui_comp.html#a458f8e8d6f1f73a9a3c8f24bfaea6d88">OnGuiDestroyed</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just before GUI is released.  <a href="#a458f8e8d6f1f73a9a3c8f24bfaea6d88"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Component to show any selected GUI, implemented as observer of <a class="el" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>. </p>
@@ -115,6 +121,39 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a8cb34b0612e80b7edc6e988c790f465c"></a><!-- doxytag: member="iqtprm::CSelectableGuiComp::I_ASSIGN_TO" ref="a8cb34b0612e80b7edc6e988c790f465c" args="(m_selectorObserverCompPtr, m_selectorGuiCompPtr, false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtprm::CSelectableGuiComp::I_ASSIGN_TO </td>
+          <td>(</td>
+          <td class="paramtype">m_selectorObserverCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_selectorGuiCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a8fc467b4153ba752ef11fe98b525f76b"></a><!-- doxytag: member="iqtprm::CSelectableGuiComp::OnGuiCreated" ref="a8fc467b4153ba752ef11fe98b525f76b" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -132,6 +171,26 @@ Protected Member Functions</h2></td></tr>
 <p>Called just after GUI is initialized. </p>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#ad9c99838dff86b005fc5cf32198c332d">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSelectableGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt; &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a458f8e8d6f1f73a9a3c8f24bfaea6d88"></a><!-- doxytag: member="iqtprm::CSelectableGuiComp::OnGuiDestroyed" ref="a458f8e8d6f1f73a9a3c8f24bfaea6d88" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtprm::CSelectableGuiComp::OnGuiDestroyed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Called just before GUI is released. </p>
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#ae6d3a0820a47c572289ddd3d07a7da51">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSelectableGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt; &gt;</a>.</p>
 
 </div>
 </div>
