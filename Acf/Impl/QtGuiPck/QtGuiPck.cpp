@@ -264,6 +264,11 @@ I_EXPORT_COMPONENT(
 			"Component to show a name parameter",
 			"Name Parameter");
 
+I_EXPORT_COMPONENT(
+			OptionsManagerGui,
+			"Options parameter manager editor",
+			"Parameter Manager Selection");
+
 
 } // namespace QtGuiPck
 

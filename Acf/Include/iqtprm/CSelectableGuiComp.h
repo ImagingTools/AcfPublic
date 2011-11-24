@@ -40,7 +40,6 @@ namespace iqtprm
 
 /**
 	Component to show any selected GUI, implemented as observer of iprm::ISelectionParam.
-	The view for no selection
 */
 class CSelectableGuiComp: public iqtgui::TDesignerGuiObserverCompBase<
 			Ui::CSelectableGuiComp,

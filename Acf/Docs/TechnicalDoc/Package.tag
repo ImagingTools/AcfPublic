@@ -2643,6 +2643,16 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
+    <name>COptionsManagerComp.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_c_options_manager_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
+    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <class kind="class">iprm::COptionsManagerComp</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CParamsManagerComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_params_manager_comp_8h</filename>
@@ -2755,6 +2765,14 @@
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <class kind="class">iprm::INameParam</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IOptionsManager.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_i_options_manager_8h</filename>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <class kind="class">iprm::IOptionsManager</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -4536,6 +4554,18 @@
     <includes id="_i_name_param_8h" name="INameParam.h" local="yes" imported="no">iprm/INameParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtprm::CNameParamGuiComp</class>
+    <namespace>iqtprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>COptionsManagerGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtprm/</path>
+    <filename>_c_options_manager_gui_comp_8h</filename>
+    <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">iqtprm::COptionsManagerGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
@@ -24841,6 +24871,7 @@
     <class kind="class">iprm::CManagerParamsSetShadowerComp</class>
     <class kind="class">iprm::CNameParam</class>
     <class kind="class">iprm::CNameParamComp</class>
+    <class kind="class">iprm::COptionsManagerComp</class>
     <class kind="class">iprm::CParamsManagerComp</class>
     <class kind="class">iprm::CParamsSet</class>
     <class kind="class">iprm::CSelectableParamsSetComp</class>
@@ -24852,6 +24883,7 @@
     <class kind="class">iprm::ILinearAdjustConstraints</class>
     <class kind="class">iprm::ILinearAdjustParams</class>
     <class kind="class">iprm::INameParam</class>
+    <class kind="class">iprm::IOptionsManager</class>
     <class kind="class">iprm::IParamsManager</class>
     <class kind="class">iprm::IParamsSet</class>
     <class kind="class">iprm::ISelectionConstraints</class>
@@ -25238,6 +25270,84 @@
       <name>OnComponentCreated</name>
       <anchorfile>classiprm_1_1_c_name_param_comp.html</anchorfile>
       <anchor>ad9b9df82d98897f2348e79e68274b511</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::COptionsManagerComp</name>
+    <filename>classiprm_1_1_c_options_manager_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iprm::IOptionsManager</base>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <base virtualness="virtual">iprm::ISelectionConstraints</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
+      <anchor>a4ae1971ab0b47e5d2be69ca8201ecbd3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetConstraintsFlags</name>
+      <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
+      <anchor>a441905be36c39ca2161f27104e20ce61</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
+      <anchor>aa229f5434f7a8b3ef39d71a4c76b41b0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
+      <anchor>aac4fb662fa75cdf7ba347144fbf77e53</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
+      <anchor>a5c7d63904cb1662409d5f258610b8cdc</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
+      <anchor>a874f8498e372b68542c0e2f407936685</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveOption</name>
+      <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
+      <anchor>a0d6f3e60aebc039a47e3caa8ef4a39f4</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertOption</name>
+      <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
+      <anchor>a33bf04fa94a0d42709096fd15dc1cb3f</anchor>
+      <arglist>(istd::CString &amp;optionName, const std::string &amp;optionId, const istd::CString &amp;optionDescription=istd::CString(), int index=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
+      <anchor>a7db7074ab688ee4dc76c1a6b6919dabd</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
+      <anchor>a4d2570c8fde1f0ff0365c683a9a47c1a</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -25976,6 +26086,43 @@
       <anchorfile>classiprm_1_1_i_name_param.html</anchorfile>
       <anchor>a9f7a0c12bd00e62578d602ba271b3c15</anchor>
       <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::IOptionsManager</name>
+    <filename>classiprm_1_1_i_options_manager.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>a8e1c581835bcc37db3e25212902013cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_OPTION_ADDED</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>a8e1c581835bcc37db3e25212902013cca5c68b57e904cec3a564ce90b2eb7dd94</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_OPTION_REMOVED</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>a8e1c581835bcc37db3e25212902013ccaa89e24c84d49356fdead922551e903dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>RemoveOption</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>a264d6c67e287329971fda82993f8c4fc</anchor>
+      <arglist>(int index)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>InsertOption</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>adbfcda44f0429c3e9e5e5037463e7741</anchor>
+      <arglist>(istd::CString &amp;optionName, const std::string &amp;optionId, const istd::CString &amp;optionDescription=istd::CString(), int index=-1)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -36186,6 +36333,7 @@
     <class kind="class">iqtprm::CComposedParamsSetGuiComp</class>
     <class kind="class">iqtprm::CFileNameParamGuiComp</class>
     <class kind="class">iqtprm::CNameParamGuiComp</class>
+    <class kind="class">iqtprm::COptionsManagerGuiComp</class>
     <class kind="class">iqtprm::CParamsManagerGuiComp</class>
     <class kind="class">iqtprm::CRelativeFileNameParamComp</class>
     <class kind="class">iqtprm::CSelectableGuiComp</class>
@@ -36436,6 +36584,107 @@
       <anchorfile>classiqtprm_1_1_c_name_param_gui_comp.html</anchorfile>
       <anchor>a6ba097e6db6101e45035f62ebbd5e9b4</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtprm::COptionsManagerGuiComp</name>
+    <filename>classiqtprm_1_1_c_options_manager_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::COptionsManagerGuiComp, iprm::ISelectionParam &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <member kind="enumeration">
+      <name>LabelPosition</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a3afef9ace68f71974c7b98dc2b6cb43d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LP_LEFT</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a3afef9ace68f71974c7b98dc2b6cb43da46a7da9c21614fa5ac88f07e7a2a56d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LP_TOP</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a3afef9ace68f71974c7b98dc2b6cb43daadd3d88e4112d47ec859ad88bbac47c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::COptionsManagerGuiComp, iprm::ISelectionParam &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>ab56765c1e3207cdcc6cabefc014c5ef4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>af0b2bd17d7bc6b94b615f120d1948a62</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnSelectionChanged</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a8320c41542d8eb749b80776d41f54d0c</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_EditEnableButton_toggled</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>aba7a2c6b1ede052463ca0f55d2c21c0a</anchor>
+      <arglist>(bool toggled)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a2a20a0ee507d8c1224199b56b5c77767</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a5a013f32482a9b5eb3150ab46538d1c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a3c093cce2df827df105d308476675ea0</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a431ce611466edaf18c930cb03e9261ae</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a42235f7502fe352c84f43c1911c97a7e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiShown</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a5369b96b14dc0c0979339a1037e46e25</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a1926015dfa0d2db57c62ab7489c0465b</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">

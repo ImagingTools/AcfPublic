@@ -43,54 +43,54 @@
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
-<a name="l00023"></a><a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html">00023</a> <span class="keyword">class </span><a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html" title="Component to show any selected GUI, implemented as observer of iprm::ISelectionParam.">CSelectableGuiComp</a>: <span class="keyword">public</span> iqtgui::TDesignerGuiObserverCompBase&lt;
-<a name="l00024"></a>00024                      Ui::CSelectableGuiComp,
-<a name="l00025"></a>00025                      iprm::ISelectionParam&gt;
-<a name="l00026"></a>00026 {
-<a name="l00027"></a>00027        Q_OBJECT
-<a name="l00028"></a>00028 <span class="keyword">public</span>:
-<a name="l00029"></a>00029        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI componentes.">iqtgui::TDesignerGuiObserverCompBase</a>&lt;
-<a name="l00030"></a>00030                             Ui::CSelectableGuiComp,
-<a name="l00031"></a><a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#a511f88ed3d578924f8fa8392db3e15e6">00031</a>                             <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>&gt; <a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#a511f88ed3d578924f8fa8392db3e15e6">BaseClass</a>;
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033        I_BEGIN_COMPONENT(<a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html" title="Component to show any selected GUI, implemented as observer of iprm::ISelectionParam.">CSelectableGuiComp</a>);
-<a name="l00034"></a>00034               I_ASSIGN_MULTI_0(m_slaveGuisCompPtr, <span class="stringliteral">&quot;SlaveGuis&quot;</span>, <span class="stringliteral">&quot;List of the slave GUI&#39;s&quot;</span>, <span class="keyword">true</span>);
-<a name="l00035"></a>00035               I_ASSIGN(m_noSelectionLabelAttrPtr, <span class="stringliteral">&quot;NoSelectionLabel&quot;</span>, <span class="stringliteral">&quot;Text to be shown for empty selection&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Nothing selected&quot;</span>);
-<a name="l00036"></a>00036               I_ASSIGN(m_noSelectionIconAttrPtr, <span class="stringliteral">&quot;NoSelectionIcon&quot;</span>, <span class="stringliteral">&quot;File path to the image to be shown for empty selection&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>);
-<a name="l00037"></a>00037               I_ASSIGN(m_selectorGuiCompPtr, <span class="stringliteral">&quot;SelectorGui&quot;</span>, <span class="stringliteral">&quot;UI for selection change&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;SelectorGui&quot;</span>);
-<a name="l00038"></a>00038               <a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#a8cb34b0612e80b7edc6e988c790f465c">I_ASSIGN_TO</a>(m_selectorObserverCompPtr, m_selectorGuiCompPtr, <span class="keyword">false</span>);
-<a name="l00039"></a>00039        I_END_COMPONENT;
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="keyword">protected</span>:
-<a name="l00042"></a>00042        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#af41f3b103f8fbd6cbd2ccbec433199b3" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#a38f677a7fcd8d4d3633a792f0100be62" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#aea7c24117354c372b886e3b5a91d75bd" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#a8fc467b4153ba752ef11fe98b525f76b" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#a458f8e8d6f1f73a9a3c8f24bfaea6d88" title="Called just before GUI is released.">OnGuiDestroyed</a>();
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="keyword">protected</span>:
-<a name="l00052"></a>00052        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_slaveGuisCompPtr);
-<a name="l00053"></a>00053        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_noSelectionLabelAttrPtr);
-<a name="l00054"></a>00054        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_noSelectionIconAttrPtr);
-<a name="l00055"></a>00055        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_selectorGuiCompPtr);
-<a name="l00056"></a>00056        I_REF(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>, m_selectorObserverCompPtr);
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="keyword">private</span>:
-<a name="l00059"></a>00059        <span class="keyword">typedef</span> std::map&lt;QWidget*, iqtgui::IGuiObject*&gt; WidgetGuiMap;
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061        WidgetGuiMap m_widgetToGuiMap;
-<a name="l00062"></a>00062 };
+<a name="l00022"></a><a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html">00022</a> <span class="keyword">class </span><a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html" title="Component to show any selected GUI, implemented as observer of iprm::ISelectionParam.">CSelectableGuiComp</a>: <span class="keyword">public</span> iqtgui::TDesignerGuiObserverCompBase&lt;
+<a name="l00023"></a>00023                      Ui::CSelectableGuiComp,
+<a name="l00024"></a>00024                      iprm::ISelectionParam&gt;
+<a name="l00025"></a>00025 {
+<a name="l00026"></a>00026        Q_OBJECT
+<a name="l00027"></a>00027 <span class="keyword">public</span>:
+<a name="l00028"></a>00028        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI componentes.">iqtgui::TDesignerGuiObserverCompBase</a>&lt;
+<a name="l00029"></a>00029                             Ui::CSelectableGuiComp,
+<a name="l00030"></a><a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#a511f88ed3d578924f8fa8392db3e15e6">00030</a>                             <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>&gt; <a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#a511f88ed3d578924f8fa8392db3e15e6">BaseClass</a>;
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032        I_BEGIN_COMPONENT(<a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html" title="Component to show any selected GUI, implemented as observer of iprm::ISelectionParam.">CSelectableGuiComp</a>);
+<a name="l00033"></a>00033               I_ASSIGN_MULTI_0(m_slaveGuisCompPtr, <span class="stringliteral">&quot;SlaveGuis&quot;</span>, <span class="stringliteral">&quot;List of the slave GUI&#39;s&quot;</span>, <span class="keyword">true</span>);
+<a name="l00034"></a>00034               I_ASSIGN(m_noSelectionLabelAttrPtr, <span class="stringliteral">&quot;NoSelectionLabel&quot;</span>, <span class="stringliteral">&quot;Text to be shown for empty selection&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Nothing selected&quot;</span>);
+<a name="l00035"></a>00035               I_ASSIGN(m_noSelectionIconAttrPtr, <span class="stringliteral">&quot;NoSelectionIcon&quot;</span>, <span class="stringliteral">&quot;File path to the image to be shown for empty selection&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>);
+<a name="l00036"></a>00036               I_ASSIGN(m_selectorGuiCompPtr, <span class="stringliteral">&quot;SelectorGui&quot;</span>, <span class="stringliteral">&quot;UI for selection change&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;SelectorGui&quot;</span>);
+<a name="l00037"></a>00037               <a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#a8cb34b0612e80b7edc6e988c790f465c">I_ASSIGN_TO</a>(m_selectorObserverCompPtr, m_selectorGuiCompPtr, <span class="keyword">false</span>);
+<a name="l00038"></a>00038        I_END_COMPONENT;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="keyword">protected</span>:
+<a name="l00041"></a>00041        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#af41f3b103f8fbd6cbd2ccbec433199b3" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#a38f677a7fcd8d4d3633a792f0100be62" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#aea7c24117354c372b886e3b5a91d75bd" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#a8fc467b4153ba752ef11fe98b525f76b" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selectable_gui_comp.html#a458f8e8d6f1f73a9a3c8f24bfaea6d88" title="Called just before GUI is released.">OnGuiDestroyed</a>();
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="keyword">protected</span>:
+<a name="l00051"></a>00051        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_slaveGuisCompPtr);
+<a name="l00052"></a>00052        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_noSelectionLabelAttrPtr);
+<a name="l00053"></a>00053        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_noSelectionIconAttrPtr);
+<a name="l00054"></a>00054        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_selectorGuiCompPtr);
+<a name="l00055"></a>00055        I_REF(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>, m_selectorObserverCompPtr);
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 <span class="keyword">private</span>:
+<a name="l00058"></a>00058        <span class="keyword">typedef</span> std::map&lt;QWidget*, iqtgui::IGuiObject*&gt; WidgetGuiMap;
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060        WidgetGuiMap m_widgetToGuiMap;
+<a name="l00061"></a>00061 };
+<a name="l00062"></a>00062 
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 } <span class="comment">// namespace iqtprm</span>
+<a name="l00064"></a>00064 } <span class="comment">// namespace iqtprm</span>
+<a name="l00065"></a>00065 
 <a name="l00066"></a>00066 
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="preprocessor">#endif // !iqtprm_CSelectableGuiComp_included</span>
-<a name="l00069"></a>00069 <span class="preprocessor"></span>
-<a name="l00070"></a>00070 
+<a name="l00067"></a>00067 <span class="preprocessor">#endif // !iqtprm_CSelectableGuiComp_included</span>
+<a name="l00068"></a>00068 <span class="preprocessor"></span>
+<a name="l00069"></a>00069 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

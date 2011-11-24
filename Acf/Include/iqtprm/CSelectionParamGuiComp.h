@@ -96,7 +96,6 @@ public:
 		LP_TOP
 	};
 
-
 	I_BEGIN_COMPONENT(CSelectionParamGuiComp);
 		I_ASSIGN(m_optionsLabelAttrPtr, "OptionsLabel", "Command label for the options selector", false, "Select");
 		I_ASSIGN(m_infoLabelAttrPtr, "InfoLabel", "Information label for the options selector", false, "Info");
