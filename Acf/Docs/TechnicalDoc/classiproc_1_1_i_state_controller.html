@@ -48,9 +48,10 @@ Inheritance diagram for iproc::IStateController:</div>
  <div class="center">
   <img src="classiproc_1_1_i_state_controller.png" usemap="#iproc::IStateController_map" alt=""/>
   <map id="iproc::IStateController_map" name="iproc::IStateController_map">
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,148,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,148,24"/>
-<area href="classiwiz_1_1_c_wizard_page_comp.html" title="Component implementation of a wizard page." alt="iwiz::CWizardPageComp" shape="rect" coords="0,168,148,192"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="133,56,390,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="133,0,390,24"/>
+<area href="classiwiz_1_1_c_selection_consistency_controller_comp.html" title="Component implementation of a wizard controller." alt="iwiz::CSelectionConsistencyControllerComp" shape="rect" coords="0,168,257,192"/>
+<area href="classiwiz_1_1_c_wizard_page_comp.html" title="Component implementation of a wizard page." alt="iwiz::CWizardPageComp" shape="rect" coords="267,168,524,192"/>
 </map>
  </div></div>
 
@@ -74,8 +75,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this state can be leaved.  <a href="#af60162b22c686240e70e37eb5643bf52"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_state_controller.html#a206ddfb8927d571047516503ca243b3d">TryEnterState</a> (bool isActionAllowed=true, const <a class="el" href="classiproc_1_1_i_state_controller.html">IStateController</a> *prevStatePtr=NULL)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Try enter this state.  <a href="#a206ddfb8927d571047516503ca243b3d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_state_controller.html#ad56553811d5eed13d37c5d6b0a40846d">TryLeaveState</a> (bool isActionAllowed=true, const <a class="el" href="classiproc_1_1_i_state_controller.html">IStateController</a> *prevStatePtr=NULL)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Try leave this state.  <a href="#ad56553811d5eed13d37c5d6b0a40846d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_state_controller.html#adec23e99e03a45c23beef49b5e56e264">TryLeaveState</a> (bool isActionAllowed=true, const <a class="el" href="classiproc_1_1_i_state_controller.html">IStateController</a> *nextStatePtr=NULL)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Try leave this state.  <a href="#adec23e99e03a45c23beef49b5e56e264"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface for a wizard page status info. </p>
@@ -198,9 +199,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Check if this state is active. </p>
 <p>State is active, if it was succesfully entered and becomes inactive if it was succesfully leaved. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><code><a class="el" href="classiproc_1_1_i_state_controller.html#a206ddfb8927d571047516503ca243b3d" title="Try enter this state.">TryEnterState</a></code> and <code><a class="el" href="classiproc_1_1_i_state_controller.html#ad56553811d5eed13d37c5d6b0a40846d" title="Try leave this state.">TryLeaveState</a></code>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><code><a class="el" href="classiproc_1_1_i_state_controller.html#a206ddfb8927d571047516503ca243b3d" title="Try enter this state.">TryEnterState</a></code> and <code><a class="el" href="classiproc_1_1_i_state_controller.html#adec23e99e03a45c23beef49b5e56e264" title="Try leave this state.">TryLeaveState</a></code>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a4941fa899736f5e93b2d07d75c7c63fa">iwiz::CWizardPageComp</a>.</p>
+<p>Implemented in <a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a6fc8965a21eeeffe4b159a88890a30aa">iwiz::CSelectionConsistencyControllerComp</a>, and <a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a4941fa899736f5e93b2d07d75c7c63fa">iwiz::CWizardPageComp</a>.</p>
 
 </div>
 </div>
@@ -221,7 +222,7 @@ Public Member Functions</h2></td></tr>
 <p>Check if state is enabled. </p>
 <p>If state is disabled it will be not considered as a element of transition graph. State is disabled e.g. if some preselection turns it off. </p>
 
-<p>Implemented in <a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#ac488241ae6b25ca912cd2411d6850910">iwiz::CWizardPageComp</a>.</p>
+<p>Implemented in <a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#af70ee1565400bfef9844a8b124fecd7d">iwiz::CSelectionConsistencyControllerComp</a>, and <a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#ac488241ae6b25ca912cd2411d6850910">iwiz::CWizardPageComp</a>.</p>
 
 </div>
 </div>
@@ -262,7 +263,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad56553811d5eed13d37c5d6b0a40846d"></a><!-- doxytag: member="iproc::IStateController::TryLeaveState" ref="ad56553811d5eed13d37c5d6b0a40846d" args="(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)=0" -->
+<a class="anchor" id="adec23e99e03a45c23beef49b5e56e264"></a><!-- doxytag: member="iproc::IStateController::TryLeaveState" ref="adec23e99e03a45c23beef49b5e56e264" args="(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -276,7 +277,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classiproc_1_1_i_state_controller.html">IStateController</a> *&#160;</td>
-          <td class="paramname"><em>prevStatePtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>nextStatePtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

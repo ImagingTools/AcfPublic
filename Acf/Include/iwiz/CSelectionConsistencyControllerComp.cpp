@@ -1,0 +1,252 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#include "iwiz/CSelectionConsistencyControllerComp.h"
+
+
+// ACF includes
+#include "istd/TChangeNotifier.h"
+
+#include "iprm/ISelectionConstraints.h"
+
+
+namespace iwiz
+{
+
+
+// reimplemented (iproc::IStateController)
+
+bool CSelectionConsistencyControllerComp::IsStateEnabled() const
+{
+	EnsureCacheValid();
+
+	return m_isStateEnabled;
+}
+
+
+bool CSelectionConsistencyControllerComp::IsStateActive() const
+{
+	return m_isStateActive;
+}
+
+
+bool CSelectionConsistencyControllerComp::IsEnterAllowed(bool /*isActionAllowed*/, const IStateController* /*prevStatePtr*/) const
+{
+	EnsureCacheValid();
+
+	return m_isEnterAllowed;
+}
+
+
+bool CSelectionConsistencyControllerComp::IsLeaveAllowed(bool /*isActionAllowed*/, const IStateController* /*nextStatePtr*/) const
+{
+	EnsureCacheValid();
+
+	return m_isLeaveAllowed;
+}
+
+
+bool CSelectionConsistencyControllerComp::TryEnterState(bool /*isActionAllowed*/, const IStateController* /*prevStatePtr*/)
+{
+	if (IsEnterAllowed()){
+		if (!m_isStateActive){
+			istd::CChangeNotifier notifier(this);
+			m_isStateActive = true;
+		}
+
+		return true;
+	}
+
+	return false;
+}
+
+
+bool CSelectionConsistencyControllerComp::TryLeaveState(bool /*isActionAllowed*/, const IStateController* /*nextStatePtr*/)
+{
+	if (IsLeaveAllowed()){
+		if (m_isStateActive){
+			istd::CChangeNotifier notifier(this);
+			m_isStateActive = false;
+		}
+
+		return true;
+	}
+
+	return false;
+}
+
+
+// reimplemented (icomp::CComponentBase)
+
+void CSelectionConsistencyControllerComp::OnComponentCreated()
+{
+	m_isStateActive = false;
+
+	m_isCacheValid = false;
+
+	m_isStateEnabled = false;
+	m_isEnterAllowed = false;
+	m_isLeaveAllowed = false;
+
+	BaseClass::OnComponentCreated();
+
+	int enablingParamModelsCount = m_enablingParamModelsCompPtr.GetCount();
+	for (int i = 0; i < enablingParamModelsCount; ++i){
+		imod::IModel* modelPtr = m_enablingParamModelsCompPtr[i];
+		if (modelPtr != NULL){
+			modelPtr->AttachObserver(this);
+		}
+	}
+
+	int enterCondParamModelsCount = m_enterCondParamModelsCompPtr.GetCount();
+	for (int i = 0; i < enterCondParamModelsCount; ++i){
+		imod::IModel* modelPtr = m_enterCondParamModelsCompPtr[i];
+		if (modelPtr != NULL){
+			modelPtr->AttachObserver(this);
+		}
+	}
+
+	int leaveCondParamModelsCount = m_leaveCondParamModelsCompPtr.GetCount();
+	for (int i = 0; i < leaveCondParamModelsCount; ++i){
+		imod::IModel* modelPtr = m_leaveCondParamModelsCompPtr[i];
+		if (modelPtr != NULL){
+			modelPtr->AttachObserver(this);
+		}
+	}
+
+	int enablingParamsCount = m_enablingParamsCompPtr.GetCount();
+	for (int i = 0; i < enablingParamsCount; ++i){
+		const iprm::ISelectionParam* paramPtr = m_enablingParamsCompPtr[i];
+		if (paramPtr != NULL){
+			imod::IModel* contraintsModelPtr =
+						const_cast<imod::IModel*>(dynamic_cast<const imod::IModel*>(paramPtr->GetSelectionConstraints()));
+			if (contraintsModelPtr != NULL){
+				contraintsModelPtr->AttachObserver(this);
+			}
+		}
+	}
+
+	int enterCondParamsCount = m_enterCondParamsCompPtr.GetCount();
+	for (int i = 0; i < enterCondParamsCount; ++i){
+		const iprm::ISelectionParam* paramPtr = m_enterCondParamsCompPtr[i];
+		if (paramPtr != NULL){
+			imod::IModel* contraintsModelPtr =
+						const_cast<imod::IModel*>(dynamic_cast<const imod::IModel*>(paramPtr->GetSelectionConstraints()));
+			if (contraintsModelPtr != NULL){
+				contraintsModelPtr->AttachObserver(this);
+			}
+		}
+	}
+
+	int leaveCondParamsCount = m_leaveCondParamsCompPtr.GetCount();
+	for (int i = 0; i < leaveCondParamsCount; ++i){
+		const iprm::ISelectionParam* paramPtr = m_leaveCondParamsCompPtr[i];
+		if (paramPtr != NULL){
+			imod::IModel* contraintsModelPtr =
+						const_cast<imod::IModel*>(dynamic_cast<const imod::IModel*>(paramPtr->GetSelectionConstraints()));
+			if (contraintsModelPtr != NULL){
+				contraintsModelPtr->AttachObserver(this);
+			}
+		}
+	}
+}
+
+
+void CSelectionConsistencyControllerComp::OnComponentDestroyed()
+{
+	EnsureModelsDetached();
+
+	BaseClass::OnComponentDestroyed();
+}
+
+
+// protected methods
+
+void CSelectionConsistencyControllerComp::EnsureCacheValid() const
+{
+	if (!m_isCacheValid){
+		m_isStateEnabled = true;
+		m_isEnterAllowed = true;
+		m_isLeaveAllowed = true;
+
+		int enablingParamsCount = m_enablingParamsCompPtr.GetCount();
+		for (int i = 0; i < enablingParamsCount; ++i){
+			const iprm::ISelectionParam* paramPtr = m_enablingParamsCompPtr[i];
+			if ((paramPtr != NULL) && !CheckParamConsistency(*paramPtr)){
+				m_isStateEnabled = false;
+				break;
+			}
+		}
+
+		int enterCondParamsCount = m_enterCondParamsCompPtr.GetCount();
+		for (int i = 0; i < enterCondParamsCount; ++i){
+			const iprm::ISelectionParam* paramPtr = m_enterCondParamsCompPtr[i];
+			if ((paramPtr != NULL) && !CheckParamConsistency(*paramPtr)){
+				m_isEnterAllowed = false;
+				break;
+			}
+		}
+
+		int leaveCondParamsCount = m_leaveCondParamsCompPtr.GetCount();
+		for (int i = 0; i < leaveCondParamsCount; ++i){
+			const iprm::ISelectionParam* paramPtr = m_leaveCondParamsCompPtr[i];
+			if ((paramPtr != NULL) && !CheckParamConsistency(*paramPtr)){
+				m_isLeaveAllowed = false;
+				break;
+			}
+		}
+
+		m_isCacheValid = true;
+	}
+}
+
+
+bool CSelectionConsistencyControllerComp::CheckParamConsistency(const iprm::ISelectionParam& param) const
+{
+	int index = param.GetSelectedOptionIndex();
+
+	if (index < 0){
+		return false;
+	}
+
+	const iprm::ISelectionConstraints* constraintsPtr = param.GetSelectionConstraints();
+	if (constraintsPtr != NULL){
+		if (index >= constraintsPtr->GetOptionsCount()){
+			return false;
+		}
+	}
+
+	return true;
+}
+
+
+// reimplemented (imod::CMultiModelObserverBase)
+
+void CSelectionConsistencyControllerComp::OnUpdate(imod::IModel* /*modelPtr*/, int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+{
+	m_isCacheValid = false;
+}
+
+
+} // namespace iwiz
+
+

@@ -32,7 +32,7 @@
 // ACF includes
 #include "istd/TPointerVector.h"
 
-#include "iprm/IParamsManager.h"
+#include "iwiz/IParamsManagerWizard.h"
 
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
 
@@ -48,17 +48,17 @@ namespace iqtwiz
 */
 class CWizardOptionsListGuiComp:
 			public iqtgui::TDesignerGuiObserverCompBase<
-						Ui::CWizardOptionsListGuiComp, iprm::IParamsManager>
+						Ui::CWizardOptionsListGuiComp, iwiz::IParamsManagerWizard>
 {
 	Q_OBJECT
 
 public:
 	typedef iqtgui::TDesignerGuiObserverCompBase<
-				Ui::CWizardOptionsListGuiComp, iprm::IParamsManager> BaseClass;
+				Ui::CWizardOptionsListGuiComp, iwiz::IParamsManagerWizard> BaseClass;
 
 	enum DataRole
 	{
-		DR_SELECTION_INDEX = Qt::UserRole + 1,
+		DR_PAGE_INDEX = Qt::UserRole + 1,
 	};
 
 	I_BEGIN_COMPONENT(CWizardOptionsListGuiComp);
@@ -71,11 +71,14 @@ protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void UpdateGui(int updateFlags = 0);
 
+	// reimplemented (CGuiComponentBase)
+	void OnGuiCreated();
+
 protected Q_SLOTS:
 	void on_OptionsList_itemSelectionChanged();
 
 private:
-	void CreateOptionsTree(const iprm::IParamsManager* paramsManagerPtr, QTreeWidgetItem* parentItemPtr = NULL);
+	void CreateOptionsTree(const iwiz::IParamsManagerWizard* paramsManagerPtr, QTreeWidgetItem* parentItemPtr = NULL);
 };
 
 

@@ -91,7 +91,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a92c3abb7f53d1aa4bd11ae4529a23603">IsEnterAllowed</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#ace15ff5d04e40e19c65ab32e87936497">IsLeaveAllowed</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#af3908a49d2483688c1f83cf6cbc348fe">TryEnterState</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a64602e567ebe3fb269bd8825030f0fbc">TryLeaveState</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#ab35ac75dec92bf35ca075b310a2810a9">TryLeaveState</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#afba27785a24a87cdf3e3d32923150a4e">UpdateAllMembers</a> ()</td></tr>
@@ -259,7 +259,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Check if this state is active. </p>
 <p>State is active, if it was succesfully entered and becomes inactive if it was succesfully leaved. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><code><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#af3908a49d2483688c1f83cf6cbc348fe">TryEnterState</a></code> and <code><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#a64602e567ebe3fb269bd8825030f0fbc">TryLeaveState</a></code>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><code><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#af3908a49d2483688c1f83cf6cbc348fe">TryEnterState</a></code> and <code><a class="el" href="classiwiz_1_1_c_wizard_page_comp.html#ab35ac75dec92bf35ca075b310a2810a9">TryLeaveState</a></code>. </dd></dl>
 
 <p>Implements <a class="el" href="classiproc_1_1_i_state_controller.html#a0d6e37fa8bdf58d51168db93855707a8">iproc::IStateController</a>.</p>
 
@@ -384,7 +384,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a64602e567ebe3fb269bd8825030f0fbc"></a><!-- doxytag: member="iwiz::CWizardPageComp::TryLeaveState" ref="a64602e567ebe3fb269bd8825030f0fbc" args="(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)" -->
+<a class="anchor" id="ab35ac75dec92bf35ca075b310a2810a9"></a><!-- doxytag: member="iwiz::CWizardPageComp::TryLeaveState" ref="ab35ac75dec92bf35ca075b310a2810a9" args="(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -398,7 +398,7 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const IStateController *&#160;</td>
-          <td class="paramname"><em>prevStatePtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>nextStatePtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
