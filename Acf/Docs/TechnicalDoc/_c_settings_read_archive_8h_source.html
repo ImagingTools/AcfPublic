@@ -44,23 +44,25 @@
 <a name="l00017"></a><a class="code" href="classiqt_1_1_c_settings_read_archive.html#a263e85b128ba6b338b6d29b343737ddf">00017</a>        <span class="keyword">typedef</span> <a class="code" href="classiser_1_1_c_text_read_archive_base.html" title="Common archive implementation of text-based reading archives.">iser::CTextReadArchiveBase</a> <a class="code" href="classiqt_1_1_c_settings_read_archive.html#a263e85b128ba6b338b6d29b343737ddf">BaseClass</a>;
 <a name="l00018"></a><a class="code" href="classiqt_1_1_c_settings_read_archive.html#a53bcd75a56b7d025fbaac43f43ee76e6">00018</a>        <span class="keyword">typedef</span> <a class="code" href="classiqt_1_1_c_settings_archive_base.html">CSettingsArchiveBase</a> <a class="code" href="classiqt_1_1_c_settings_read_archive.html#a53bcd75a56b7d025fbaac43f43ee76e6">BaseClass2</a>;
 <a name="l00019"></a>00019 
-<a name="l00020"></a>00020        <a class="code" href="classiqt_1_1_c_settings_read_archive.html#a679c320d84aa71859793b9dcaaac77d4">CSettingsReadArchive</a>(       <span class="keyword">const</span> QString&amp; organizationName,
-<a name="l00021"></a>00021                                                  <span class="keyword">const</span> QString&amp; applicationName);
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023        <span class="comment">// reimplemented (iser::IArchive)</span>
-<a name="l00024"></a>00024        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_read_archive.html#a560e7054e474388cecdc995880d828e9" title="Begin of archive tag.">BeginTag</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a>&amp; tag);
-<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_read_archive.html#ad165bbc201f0d39a87017cdfceae73f1" title="Begin of archive tag containing set of subelements of the same type.">BeginMultiTag</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a>&amp; tag, <span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a>&amp; subTag, <span class="keywordtype">int</span>&amp; count);
-<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_read_archive.html#a874460aad27846ae5bde637846e73af8" title="End of archive tag.">EndTag</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a>&amp; tag);
-<a name="l00027"></a>00027        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_read_archive.html#a712545a8b1069e910051efd4d3bd0d35" title="Process primitive type.">Process</a>(std::string&amp; value);
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_read_archive.html#a712545a8b1069e910051efd4d3bd0d35" title="Process primitive type.">Process</a>(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; value);
-<a name="l00029"></a>00029 };
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 } <span class="comment">// namespace iqt</span>
+<a name="l00020"></a>00020        <a class="code" href="classiqt_1_1_c_settings_read_archive.html#a83e5f1117fa5e21e3b96eeb21b16a6b9">CSettingsReadArchive</a>(
+<a name="l00021"></a>00021                             <span class="keyword">const</span> QString&amp; organizationName,
+<a name="l00022"></a>00022                             <span class="keyword">const</span> QString&amp; applicationName,
+<a name="l00023"></a>00023                             <span class="keyword">const</span> QString&amp; rootKey);
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025        <span class="comment">// reimplemented (iser::IArchive)</span>
+<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_read_archive.html#a560e7054e474388cecdc995880d828e9" title="Begin of archive tag.">BeginTag</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a>&amp; tag);
+<a name="l00027"></a>00027        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_read_archive.html#ad165bbc201f0d39a87017cdfceae73f1" title="Begin of archive tag containing set of subelements of the same type.">BeginMultiTag</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a>&amp; tag, <span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a>&amp; subTag, <span class="keywordtype">int</span>&amp; count);
+<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_read_archive.html#a874460aad27846ae5bde637846e73af8" title="End of archive tag.">EndTag</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a>&amp; tag);
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_read_archive.html#a712545a8b1069e910051efd4d3bd0d35" title="Process primitive type.">Process</a>(std::string&amp; value);
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_read_archive.html#a712545a8b1069e910051efd4d3bd0d35" title="Process primitive type.">Process</a>(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; value);
+<a name="l00031"></a>00031 };
+<a name="l00032"></a>00032 
 <a name="l00033"></a>00033 
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035 <span class="preprocessor">#endif // !iqt_CSettingsReadArchive_included</span>
-<a name="l00036"></a>00036 <span class="preprocessor"></span>
+<a name="l00034"></a>00034 } <span class="comment">// namespace iqt</span>
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 <span class="preprocessor">#endif // !iqt_CSettingsReadArchive_included</span>
+<a name="l00038"></a>00038 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

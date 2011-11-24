@@ -43,37 +43,44 @@
 <a name="l00016"></a>00016 <span class="keyword">public</span>:
 <a name="l00017"></a><a class="code" href="classiqt_1_1_c_settings_archive_base.html#a4a61061dd13d4d89441a64df9f9a2be5">00017</a>        <span class="keyword">typedef</span> QSettings <a class="code" href="classiqt_1_1_c_settings_archive_base.html#a4a61061dd13d4d89441a64df9f9a2be5">BaseClass</a>;
 <a name="l00018"></a>00018 
-<a name="l00019"></a>00019        <a class="code" href="classiqt_1_1_c_settings_archive_base.html#a57aadd6fcd190efbeb5c2cb77f0b4cba">CSettingsArchiveBase</a>(       <span class="keyword">const</span> QString&amp; organizationName,
-<a name="l00020"></a>00020                                                  <span class="keyword">const</span> QString&amp; applicationName);
-<a name="l00021"></a>00021 
-<a name="l00022"></a>00022 <span class="keyword">protected</span>:
-<a name="l00023"></a>00023        QString <a class="code" href="classiqt_1_1_c_settings_archive_base.html#a378e838dc4b08431d1cee5ef0db4615d">CreateKey</a>(<span class="keywordtype">bool</span> replaceMultiple = <span class="keyword">true</span>) <span class="keyword">const</span>;
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="keyword">protected</span>:
-<a name="l00026"></a><a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html">00026</a>        <span class="keyword">struct </span><a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html">TagInfo</a>
-<a name="l00027"></a>00027        {
-<a name="l00028"></a><a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#af102f49d300794d0c62f257bbdfe33e3">00028</a>               <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#af102f49d300794d0c62f257bbdfe33e3">TagInfo</a>(<span class="keyword">const</span> std::string&amp; <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a19d42eaa30a8b22e3612e75f35ef50f2">tagId</a>, <span class="keywordtype">int</span> <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a545dfd05069056d2380bd88897c17dea">count</a> = 0, <span class="keyword">const</span> std::string&amp; <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a1d6d4042f8ef3bf2c2ec57333a661615">subTagId</a> = std::string())
-<a name="l00029"></a>00029               {
-<a name="l00030"></a>00030                      this-&gt;tagId = <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a19d42eaa30a8b22e3612e75f35ef50f2">tagId</a>;
-<a name="l00031"></a>00031                      this-&gt;<a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a545dfd05069056d2380bd88897c17dea">count</a> = <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a545dfd05069056d2380bd88897c17dea">count</a>;
-<a name="l00032"></a>00032                      this-&gt;<a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a1d6d4042f8ef3bf2c2ec57333a661615">subTagId</a> = <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a1d6d4042f8ef3bf2c2ec57333a661615">subTagId</a>;
-<a name="l00033"></a>00033               }
-<a name="l00034"></a>00034        
-<a name="l00035"></a><a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a19d42eaa30a8b22e3612e75f35ef50f2">00035</a>               std::string <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a19d42eaa30a8b22e3612e75f35ef50f2">tagId</a>;
-<a name="l00036"></a><a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a1d6d4042f8ef3bf2c2ec57333a661615">00036</a>               std::string <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a1d6d4042f8ef3bf2c2ec57333a661615">subTagId</a>;
-<a name="l00037"></a><a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a545dfd05069056d2380bd88897c17dea">00037</a>               <span class="keywordtype">int</span> <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a545dfd05069056d2380bd88897c17dea">count</a>;
-<a name="l00038"></a>00038        };
-<a name="l00039"></a>00039 
-<a name="l00040"></a><a class="code" href="classiqt_1_1_c_settings_archive_base.html#af3d4bdbf29a574da2bfd9b07d2f6ce7a">00040</a>        <span class="keyword">typedef</span> std::vector&lt;TagInfo&gt; <a class="code" href="classiqt_1_1_c_settings_archive_base.html#af3d4bdbf29a574da2bfd9b07d2f6ce7a">OpenTagsList</a>;
-<a name="l00041"></a><a class="code" href="classiqt_1_1_c_settings_archive_base.html#ab9a2072062b886c87d92023bc141a85c">00041</a>        <span class="keyword">mutable</span> <a class="code" href="classiqt_1_1_c_settings_archive_base.html#af3d4bdbf29a574da2bfd9b07d2f6ce7a">OpenTagsList</a> <a class="code" href="classiqt_1_1_c_settings_archive_base.html#ab9a2072062b886c87d92023bc141a85c">m_openTagsList</a>;
-<a name="l00042"></a>00042 };
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 } <span class="comment">// namespace iqt</span>
-<a name="l00046"></a>00046 
+<a name="l00019"></a>00019        <a class="code" href="classiqt_1_1_c_settings_archive_base.html#abb4ba80282c44fd015e732b460fcb247">CSettingsArchiveBase</a>(
+<a name="l00020"></a>00020                             <span class="keyword">const</span> QString&amp; organizationName,
+<a name="l00021"></a>00021                             <span class="keyword">const</span> QString&amp; applicationName,
+<a name="l00022"></a>00022                             <span class="keyword">const</span> QString&amp; rootKey);
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="keyword">protected</span>:
+<a name="l00025"></a>00025        <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_archive_base.html#abc20283b30a8d5111ce018b67e157f24">EnterTag</a>(<span class="keyword">const</span> std::string&amp; tagId);
+<a name="l00026"></a>00026        <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_settings_archive_base.html#a94621c6a9944a655b148ad2abbbb124a">LeaveTag</a>(<span class="keyword">const</span> std::string&amp; tagId);
+<a name="l00027"></a>00027        QString <a class="code" href="classiqt_1_1_c_settings_archive_base.html#a1a85617a2eff3d02e66599b486dfd8dd">GetCurrentCountKey</a>() <span class="keyword">const</span>;
+<a name="l00028"></a>00028        QString <a class="code" href="classiqt_1_1_c_settings_archive_base.html#a971d07d2d6959cda130b209453206209">CreateNextValueKey</a>();
+<a name="l00029"></a>00029        QString <a class="code" href="classiqt_1_1_c_settings_archive_base.html#ad240769b1a4e2e66d29d928611b3ac50">CSettingsArchiveBase::GetBaseKey</a>() <span class="keyword">const</span>;
+<a name="l00030"></a>00030 
+<a name="l00031"></a><a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html">00031</a>        <span class="keyword">struct </span><a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html">TagInfo</a>
+<a name="l00032"></a>00032        {
+<a name="l00033"></a><a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a4fcadf44274774da355aff4f184bbdb0">00033</a>               <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a4fcadf44274774da355aff4f184bbdb0">TagInfo</a>(<span class="keyword">const</span> std::string&amp; <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a19d42eaa30a8b22e3612e75f35ef50f2">tagId</a>, <span class="keywordtype">int</span> <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a9cb4f061cef66a67575d16f452bf6c69">siblingsCount</a>)
+<a name="l00034"></a>00034               {
+<a name="l00035"></a>00035                      this-&gt;tagId = <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a19d42eaa30a8b22e3612e75f35ef50f2">tagId</a>;
+<a name="l00036"></a>00036                      this-&gt;siblingsCount = <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a9cb4f061cef66a67575d16f452bf6c69">siblingsCount</a>;
+<a name="l00037"></a>00037               }
+<a name="l00038"></a>00038        
+<a name="l00039"></a><a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a19d42eaa30a8b22e3612e75f35ef50f2">00039</a>               std::string <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a19d42eaa30a8b22e3612e75f35ef50f2">tagId</a>;
+<a name="l00040"></a><a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a9cb4f061cef66a67575d16f452bf6c69">00040</a>               <span class="keywordtype">int</span> <a class="code" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html#a9cb4f061cef66a67575d16f452bf6c69">siblingsCount</a>;
+<a name="l00041"></a>00041        };
+<a name="l00042"></a>00042 
+<a name="l00043"></a><a class="code" href="classiqt_1_1_c_settings_archive_base.html#af3d4bdbf29a574da2bfd9b07d2f6ce7a">00043</a>        <span class="keyword">typedef</span> std::vector&lt;TagInfo&gt; <a class="code" href="classiqt_1_1_c_settings_archive_base.html#af3d4bdbf29a574da2bfd9b07d2f6ce7a">OpenTagsList</a>;
+<a name="l00044"></a><a class="code" href="classiqt_1_1_c_settings_archive_base.html#ab9a2072062b886c87d92023bc141a85c">00044</a>        <a class="code" href="classiqt_1_1_c_settings_archive_base.html#af3d4bdbf29a574da2bfd9b07d2f6ce7a">OpenTagsList</a> <a class="code" href="classiqt_1_1_c_settings_archive_base.html#ab9a2072062b886c87d92023bc141a85c">m_openTagsList</a>;
+<a name="l00045"></a>00045 
+<a name="l00046"></a><a class="code" href="classiqt_1_1_c_settings_archive_base.html#ac733c8a3583671c4ac7cf275127d940e">00046</a>        QString <a class="code" href="classiqt_1_1_c_settings_archive_base.html#ac733c8a3583671c4ac7cf275127d940e">m_rootKey</a>;
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 <span class="preprocessor">#endif // !iqt_CSettingsArchiveBase_included</span>
-<a name="l00049"></a>00049 <span class="preprocessor"></span>
+<a name="l00048"></a><a class="code" href="classiqt_1_1_c_settings_archive_base.html#a29a36c4f45406bd8ef71c76ed919b70a">00048</a>        <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_c_settings_archive_base.html#a29a36c4f45406bd8ef71c76ed919b70a">m_valuesCount</a>;
+<a name="l00049"></a>00049 };
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 } <span class="comment">// namespace iqt</span>
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="preprocessor">#endif // !iqt_CSettingsArchiveBase_included</span>
+<a name="l00056"></a>00056 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

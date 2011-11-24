@@ -246,7 +246,7 @@ void CGraphicsConnectorItem::paint(QPainter *painter, const QStyleOptionGraphics
 		referenceColor = ((m_connectFlags & CF_FACTORY) != 0)? QColor(0, 255, 155, 255): QColor(0, 150, 50, 255);
 	}
 
-	painter->setPen(QPen(referenceColor, 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+	painter->setPen(QPen(referenceColor, 1, Qt::SolidLine));
 	painter->drawLine(m_touchPoint, m_touchPoint + iqt::GetQPointF(circleDirection));
 	
 	QRectF circleRect2(circlePoint.x() - GP_RADIUS2, circlePoint.y() - GP_RADIUS2, GP_RADIUS2 * 2, GP_RADIUS2 * 2);
@@ -258,13 +258,13 @@ void CGraphicsConnectorItem::paint(QPainter *painter, const QStyleOptionGraphics
 		interfaceColor = ((m_connectFlags & CF_FACTORY) != 0)? QColor(0, 255, 155, 255): QColor(0, 150, 50, 255);
 	}
 
-	painter->setPen(QPen(interfaceColor, 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+	painter->setPen(QPen(interfaceColor, 1, Qt::SolidLine));
 	painter->setBrush(interfaceColor);
 	QRectF circleRect(circlePoint.x() - GP_RADIUS, circlePoint.y() - GP_RADIUS, GP_RADIUS * 2, GP_RADIUS * 2);
 	painter->drawEllipse(circleRect);
 
 	if ((m_connectFlags & CF_EMBEDDED) != 0){
-		painter->setPen(QPen(interfaceColor, 1, Qt::DashDotLine, Qt::RoundCap, Qt::RoundJoin));
+		painter->setPen(QPen(interfaceColor, 1, Qt::DashLine));
 	}
 
 	painter->drawPolyline(m_connectionLine);
@@ -296,6 +296,8 @@ void CGraphicsConnectorItem::OnSourceSelected(bool state)
 	prepareGeometryChange();
 
 	m_isSourceSelected = state;
+
+	setZValue((m_isSourceSelected || m_isDestSelected)? 2: 1);
 }
 
 
@@ -304,6 +306,8 @@ void CGraphicsConnectorItem::OnDestSelected(bool state)
 	prepareGeometryChange();
 
 	m_isDestSelected = state;
+
+	setZValue((m_isSourceSelected || m_isDestSelected)? 2: 1);
 }
 
 

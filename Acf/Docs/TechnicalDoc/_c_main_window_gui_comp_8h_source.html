@@ -105,170 +105,147 @@
 <a name="l00081"></a>00081        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#af632bfbdaffa3ee16b6beefecf32f0ee">UpdateRecentFileList</a>(<span class="keyword">const</span> <a class="code" href="classidoc_1_1_i_document_manager.html#a2e8e6a35d954d4434c4d8a8bec1f3c47" title="Map from file path to ducument type ID&#39;s.">idoc::IDocumentManager::FileToTypeMap</a>&amp; fileToTypeMap);
 <a name="l00082"></a>00082        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a594cb7960caef9acf68c4f4749a28b50">RemoveFromRecentFileList</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath);
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084        <span class="comment">// protected template methods</span>
-<a name="l00085"></a>00085        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt; 
-<a name="l00086"></a>00086        <span class="keywordtype">bool</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a9dd94b73f045943800943dc89812ed2d">SerializeRecentFiles</a>();
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088        <span class="comment">// reimplemented (iqtgui::CSimpleMainWindowGuiComp)</span>
-<a name="l00089"></a>00089        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aaf4283360bfbf112011c5fbad7bea239">UpdateFixedCommands</a>(<a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a>&amp; fixedCommands);
-<a name="l00090"></a>00090        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aa8f531018d02718ae4b0c89fd65b3da2">UpdateViewCommands</a>(<a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a>&amp; viewCommand);
-<a name="l00091"></a>00091        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a88e7730a908da53d17f9322cf5127678">UpdateToolsCommands</a>(<a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a>&amp; toolsCommand);
-<a name="l00092"></a>00092        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#ad8926b933173beed1d45f04b0a1dcad6">UpdateMenuActions</a>(<a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a>&amp; menuCommands);
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00095"></a>00095        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aedfd809588364a895120243984adf2e4" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a845cfdf0201639524f85eef67b7c2226" title="Called just before GUI is released.">OnGuiDestroyed</a>();
-<a name="l00097"></a>00097        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a1f0cc857873dadccccd5415e0139aae2" title="Called when non-GUI elements (like commands) should be retranslated.">OnRetranslate</a>();
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099        <span class="comment">// reimplemented (imod::TSingleModelObserverBase)</span>
-<a name="l00100"></a>00100        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#ac2e5dba44d606c7ee00e8c10a84e53f3">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102        <span class="comment">// reimplemented (QObject)</span>
-<a name="l00103"></a>00103        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aa8fe69479358817729eb1112e7b2cdf0">eventFilter</a>(<a class="code" href="class_q_object.html">QObject</a>* sourcePtr, QEvent* eventPtr);
+<a name="l00084"></a>00084        <span class="comment">// reimplemented (iqtgui::CSimpleMainWindowGuiComp)</span>
+<a name="l00085"></a>00085        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aaf4283360bfbf112011c5fbad7bea239">UpdateFixedCommands</a>(<a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a>&amp; fixedCommands);
+<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aa8f531018d02718ae4b0c89fd65b3da2">UpdateViewCommands</a>(<a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a>&amp; viewCommand);
+<a name="l00087"></a>00087        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a88e7730a908da53d17f9322cf5127678">UpdateToolsCommands</a>(<a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a>&amp; toolsCommand);
+<a name="l00088"></a>00088        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#ad8926b933173beed1d45f04b0a1dcad6">UpdateMenuActions</a>(<a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a>&amp; menuCommands);
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00091"></a>00091        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aedfd809588364a895120243984adf2e4" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00092"></a>00092        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a845cfdf0201639524f85eef67b7c2226" title="Called just before GUI is released.">OnGuiDestroyed</a>();
+<a name="l00093"></a>00093        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a1f0cc857873dadccccd5415e0139aae2" title="Called when non-GUI elements (like commands) should be retranslated.">OnRetranslate</a>();
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095        <span class="comment">// reimplemented (imod::TSingleModelObserverBase)</span>
+<a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#ac2e5dba44d606c7ee00e8c10a84e53f3">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098        <span class="comment">// reimplemented (QObject)</span>
+<a name="l00099"></a>00099        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aa8fe69479358817729eb1112e7b2cdf0">eventFilter</a>(<a class="code" href="class_q_object.html">QObject</a>* sourcePtr, QEvent* eventPtr);
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aa4c08680ba47610cdcf552c2a2dd56bd">OnComponentCreated</a>();
+<a name="l00103"></a>00103        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#ab4bb233368b482a0974f874a180a9ab6">OnComponentDestroyed</a>();
 <a name="l00104"></a>00104 
-<a name="l00105"></a>00105        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00106"></a>00106        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aa4c08680ba47610cdcf552c2a2dd56bd">OnComponentCreated</a>();
-<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#ab4bb233368b482a0974f874a180a9ab6">OnComponentDestroyed</a>();
-<a name="l00108"></a>00108 
-<a name="l00109"></a>00109 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00110"></a>00110        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a097bf1fbb3c67df5dc3ac046d71c7590">OnNew</a>();
-<a name="l00111"></a>00111        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a694835e4558b7879b6c37b87403318dd">OnOpen</a>();
-<a name="l00112"></a>00112        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#ad6bc628c7cdabb23608b44e5fb7a1b8b">OnSave</a>();
-<a name="l00113"></a>00113        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a76ef7dcbcf396a0a35540d488ac7ae4e">OnSaveAs</a>();
-<a name="l00114"></a>00114        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#af50dfa3ac91828e47005738594eab88f">OnOpenDocument</a>(<span class="keyword">const</span> std::string* documentTypeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00115"></a>00115        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a9bc132d90eb92bfd20e297fa35faef51">OnQuit</a>();
-<a name="l00116"></a>00116        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aceabd9ce1469c83e689d1b53bc6ef1cb">OnUndo</a>();
-<a name="l00117"></a>00117        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a4f282a04ffb886917b1a2d8b247f9675">OnRedo</a>();
-<a name="l00118"></a>00118        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#ab11a02ea9be567c7f5f601af11012722">OnFullScreen</a>();
-<a name="l00119"></a>00119        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a5ed32908c3a7e0930c0d7228a3a107e5">OnCopyPathToClippboard</a>();
-<a name="l00120"></a>00120        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#ae0e356b86ca4d5822b86f1fa32eeb7ac">OnOpenDocumentFolder</a>();
-<a name="l00121"></a>00121 
-<a name="l00122"></a>00122 <span class="keyword">private</span>:
-<a name="l00123"></a>00123        <span class="keyword">class </span>NewDocumentCommand: <span class="keyword">public</span> iqtgui::CHierarchicalCommand
-<a name="l00124"></a>00124        {
-<a name="l00125"></a>00125        <span class="keyword">public</span>:
-<a name="l00126"></a>00126               <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aecf2f458ff3df45054a225b864e383a0">BaseClass</a>;
-<a name="l00127"></a>00127 
-<a name="l00128"></a>00128               NewDocumentCommand(<a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html" title="Standard main window component for any document based application.">CMainWindowGuiComp</a>* parentPtr, <span class="keyword">const</span> std::string&amp; documentTypeId): m_parent(*parentPtr), m_documentTypeId(documentTypeId){}
-<a name="l00129"></a>00129 
-<a name="l00130"></a>00130               <span class="comment">// reimplemented (ibase::ICommand)</span>
-<a name="l00131"></a>00131               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Execute(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <span class="comment">/*contextPtr*/</span>)
-<a name="l00132"></a>00132               {
-<a name="l00133"></a>00133                      m_parent.OnNewDocument(m_documentTypeId);
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135                      <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00136"></a>00136               }
-<a name="l00137"></a>00137 
-<a name="l00138"></a>00138        <span class="keyword">private</span>:
-<a name="l00139"></a>00139               <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a8b2dc9e130d2d76dd837ba0dd5fc5773">CMainWindowGuiComp</a>&amp; m_parent;
-<a name="l00140"></a>00140               std::string m_documentTypeId;
-<a name="l00141"></a>00141        };
-<a name="l00142"></a>00142 
-<a name="l00143"></a>00143        <span class="keyword">class </span>RecentFileCommand: <span class="keyword">public</span> iqtgui::CHierarchicalCommand
-<a name="l00144"></a>00144        {
-<a name="l00145"></a>00145        <span class="keyword">public</span>:
-<a name="l00146"></a>00146               <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aecf2f458ff3df45054a225b864e383a0">BaseClass</a>;
-<a name="l00147"></a>00147 
-<a name="l00148"></a>00148               RecentFileCommand(
-<a name="l00149"></a>00149                                    <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a8b2dc9e130d2d76dd837ba0dd5fc5773">CMainWindowGuiComp</a>* parentPtr,
-<a name="l00150"></a>00150                                    <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; name,
-<a name="l00151"></a>00151                                    <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; actionString,
-<a name="l00152"></a>00152                                    <span class="keywordtype">bool</span> isOpenCommand);
-<a name="l00153"></a>00153 
-<a name="l00154"></a>00154               <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; GetActionString() <span class="keyword">const</span>;
-<a name="l00155"></a>00155               <span class="keywordtype">bool</span> IsOpenCommand() <span class="keyword">const</span>;
-<a name="l00156"></a>00156 
-<a name="l00157"></a>00157               <span class="comment">// reimplemented (ibase::ICommand)</span>
-<a name="l00158"></a>00158               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Execute(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <span class="comment">/*contextPtr*/</span>);
-<a name="l00159"></a>00159 
-<a name="l00160"></a>00160        <span class="keyword">private</span>:
-<a name="l00161"></a>00161               <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a8b2dc9e130d2d76dd837ba0dd5fc5773">CMainWindowGuiComp</a>&amp; m_parent;
-<a name="l00162"></a>00162               <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_actionString;
-<a name="l00163"></a>00163               <span class="keywordtype">bool</span> m_isOpenCommand;
-<a name="l00164"></a>00164        };
-<a name="l00165"></a>00165 
-<a name="l00166"></a>00166        <span class="keyword">class </span>ActiveUndoManager: <span class="keyword">public</span> imod::<a class="code" href="classimod_1_1_t_single_model_observer_base.html#a203370facc9a8df2ddbcff099afb9f20">TSingleModelObserverBase</a>&lt;imod::IUndoManager&gt;
-<a name="l00167"></a>00167        {
-<a name="l00168"></a>00168        <span class="keyword">public</span>:
-<a name="l00169"></a>00169               <span class="keyword">typedef</span> <a class="code" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;imod::IUndoManager&gt;</a> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aecf2f458ff3df45054a225b864e383a0">BaseClass</a>;
-<a name="l00170"></a>00170 
-<a name="l00171"></a>00171               ActiveUndoManager(<a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a8b2dc9e130d2d76dd837ba0dd5fc5773">CMainWindowGuiComp</a>&amp; parent);
-<a name="l00172"></a>00172               
-<a name="l00173"></a>00173               <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00174"></a>00174               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aed0379fa969918fc971130ffac35c60d" title="This call back function will be called, if an observable object is about to be attached.">OnAttached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
+<a name="l00105"></a>00105 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00106"></a>00106        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a097bf1fbb3c67df5dc3ac046d71c7590">OnNew</a>();
+<a name="l00107"></a>00107        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a694835e4558b7879b6c37b87403318dd">OnOpen</a>();
+<a name="l00108"></a>00108        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#ad6bc628c7cdabb23608b44e5fb7a1b8b">OnSave</a>();
+<a name="l00109"></a>00109        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a76ef7dcbcf396a0a35540d488ac7ae4e">OnSaveAs</a>();
+<a name="l00110"></a>00110        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#af50dfa3ac91828e47005738594eab88f">OnOpenDocument</a>(<span class="keyword">const</span> std::string* documentTypeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00111"></a>00111        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a9bc132d90eb92bfd20e297fa35faef51">OnQuit</a>();
+<a name="l00112"></a>00112        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aceabd9ce1469c83e689d1b53bc6ef1cb">OnUndo</a>();
+<a name="l00113"></a>00113        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a4f282a04ffb886917b1a2d8b247f9675">OnRedo</a>();
+<a name="l00114"></a>00114        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#ab11a02ea9be567c7f5f601af11012722">OnFullScreen</a>();
+<a name="l00115"></a>00115        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a5ed32908c3a7e0930c0d7228a3a107e5">OnCopyPathToClippboard</a>();
+<a name="l00116"></a>00116        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#ae0e356b86ca4d5822b86f1fa32eeb7ac">OnOpenDocumentFolder</a>();
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118 <span class="keyword">private</span>:
+<a name="l00119"></a>00119        <span class="keyword">class </span>NewDocumentCommand: <span class="keyword">public</span> iqtgui::CHierarchicalCommand
+<a name="l00120"></a>00120        {
+<a name="l00121"></a>00121        <span class="keyword">public</span>:
+<a name="l00122"></a>00122               <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aecf2f458ff3df45054a225b864e383a0">BaseClass</a>;
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124               NewDocumentCommand(<a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html" title="Standard main window component for any document based application.">CMainWindowGuiComp</a>* parentPtr, <span class="keyword">const</span> std::string&amp; documentTypeId): m_parent(*parentPtr), m_documentTypeId(documentTypeId){}
+<a name="l00125"></a>00125 
+<a name="l00126"></a>00126               <span class="comment">// reimplemented (ibase::ICommand)</span>
+<a name="l00127"></a>00127               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Execute(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <span class="comment">/*contextPtr*/</span>)
+<a name="l00128"></a>00128               {
+<a name="l00129"></a>00129                      m_parent.OnNewDocument(m_documentTypeId);
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131                      <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00132"></a>00132               }
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134        <span class="keyword">private</span>:
+<a name="l00135"></a>00135               <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a8b2dc9e130d2d76dd837ba0dd5fc5773">CMainWindowGuiComp</a>&amp; m_parent;
+<a name="l00136"></a>00136               std::string m_documentTypeId;
+<a name="l00137"></a>00137        };
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139        <span class="keyword">class </span>RecentFileCommand: <span class="keyword">public</span> iqtgui::CHierarchicalCommand
+<a name="l00140"></a>00140        {
+<a name="l00141"></a>00141        <span class="keyword">public</span>:
+<a name="l00142"></a>00142               <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aecf2f458ff3df45054a225b864e383a0">BaseClass</a>;
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144               RecentFileCommand(
+<a name="l00145"></a>00145                                    <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a8b2dc9e130d2d76dd837ba0dd5fc5773">CMainWindowGuiComp</a>* parentPtr,
+<a name="l00146"></a>00146                                    <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; name,
+<a name="l00147"></a>00147                                    <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; actionString,
+<a name="l00148"></a>00148                                    <span class="keywordtype">bool</span> isOpenCommand);
+<a name="l00149"></a>00149 
+<a name="l00150"></a>00150               <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; GetActionString() <span class="keyword">const</span>;
+<a name="l00151"></a>00151               <span class="keywordtype">bool</span> IsOpenCommand() <span class="keyword">const</span>;
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153               <span class="comment">// reimplemented (ibase::ICommand)</span>
+<a name="l00154"></a>00154               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Execute(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <span class="comment">/*contextPtr*/</span>);
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156        <span class="keyword">private</span>:
+<a name="l00157"></a>00157               <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a8b2dc9e130d2d76dd837ba0dd5fc5773">CMainWindowGuiComp</a>&amp; m_parent;
+<a name="l00158"></a>00158               <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_actionString;
+<a name="l00159"></a>00159               <span class="keywordtype">bool</span> m_isOpenCommand;
+<a name="l00160"></a>00160        };
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162        <span class="keyword">class </span>ActiveUndoManager: <span class="keyword">public</span> imod::<a class="code" href="classimod_1_1_t_single_model_observer_base.html#a203370facc9a8df2ddbcff099afb9f20">TSingleModelObserverBase</a>&lt;imod::IUndoManager&gt;
+<a name="l00163"></a>00163        {
+<a name="l00164"></a>00164        <span class="keyword">public</span>:
+<a name="l00165"></a>00165               <span class="keyword">typedef</span> <a class="code" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;imod::IUndoManager&gt;</a> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aecf2f458ff3df45054a225b864e383a0">BaseClass</a>;
+<a name="l00166"></a>00166 
+<a name="l00167"></a>00167               ActiveUndoManager(<a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a8b2dc9e130d2d76dd837ba0dd5fc5773">CMainWindowGuiComp</a>&amp; parent);
+<a name="l00168"></a>00168               
+<a name="l00169"></a>00169               <span class="comment">// reimplemented (imod::IObserver)</span>
+<a name="l00170"></a>00170               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aed0379fa969918fc971130ffac35c60d" title="This call back function will be called, if an observable object is about to be attached.">OnAttached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
+<a name="l00171"></a>00171 
+<a name="l00172"></a>00172        <span class="keyword">protected</span>:
+<a name="l00173"></a>00173               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00174"></a>00174               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#ac2e5dba44d606c7ee00e8c10a84e53f3">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00175"></a>00175 
-<a name="l00176"></a>00176        <span class="keyword">protected</span>:
-<a name="l00177"></a>00177               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00178"></a>00178               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#ac2e5dba44d606c7ee00e8c10a84e53f3">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00176"></a>00176        <span class="keyword">private</span>:
+<a name="l00177"></a>00177               <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a8b2dc9e130d2d76dd837ba0dd5fc5773">CMainWindowGuiComp</a>&amp; m_parent;
+<a name="l00178"></a>00178        };
 <a name="l00179"></a>00179 
-<a name="l00180"></a>00180        <span class="keyword">private</span>:
-<a name="l00181"></a>00181               <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a8b2dc9e130d2d76dd837ba0dd5fc5773">CMainWindowGuiComp</a>&amp; m_parent;
-<a name="l00182"></a>00182        };
-<a name="l00183"></a>00183 
-<a name="l00184"></a>00184        ActiveUndoManager m_activeUndoManager;
-<a name="l00185"></a>00185 
-<a name="l00186"></a>00186        <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* m_activeViewPtr;
-<a name="l00187"></a>00187        <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* m_activeDocumentPtr;
-<a name="l00188"></a>00188 
-<a name="l00189"></a>00189        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_fileCommand;
-<a name="l00190"></a>00190        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_editCommand;
-<a name="l00191"></a>00191 
-<a name="l00192"></a>00192        <span class="comment">// file menu group</span>
-<a name="l00193"></a>00193        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_newCommand;
-<a name="l00194"></a>00194        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_openCommand;
-<a name="l00195"></a>00195        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_saveCommand;
-<a name="l00196"></a>00196        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_saveAsCommand;
-<a name="l00197"></a>00197        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_quitCommand;
-<a name="l00198"></a>00198        <span class="comment">// edit menu group</span>
-<a name="l00199"></a>00199        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_undoCommand;
-<a name="l00200"></a>00200        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_redoCommand;
-<a name="l00201"></a>00201        <span class="comment">// view menu group</span>
-<a name="l00202"></a>00202        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_fullScreenCommand;
-<a name="l00203"></a>00203        <span class="comment">// tools menu group</span>
-<a name="l00204"></a>00204        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_copyPathToClippboardCommand;
-<a name="l00205"></a>00205        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_openDocumentFolderCommand;
+<a name="l00180"></a>00180        ActiveUndoManager m_activeUndoManager;
+<a name="l00181"></a>00181 
+<a name="l00182"></a>00182        <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* m_activeViewPtr;
+<a name="l00183"></a>00183        <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* m_activeDocumentPtr;
+<a name="l00184"></a>00184 
+<a name="l00185"></a>00185        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_fileCommand;
+<a name="l00186"></a>00186        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_editCommand;
+<a name="l00187"></a>00187 
+<a name="l00188"></a>00188        <span class="comment">// file menu group</span>
+<a name="l00189"></a>00189        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_newCommand;
+<a name="l00190"></a>00190        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_openCommand;
+<a name="l00191"></a>00191        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_saveCommand;
+<a name="l00192"></a>00192        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_saveAsCommand;
+<a name="l00193"></a>00193        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_quitCommand;
+<a name="l00194"></a>00194        <span class="comment">// edit menu group</span>
+<a name="l00195"></a>00195        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_undoCommand;
+<a name="l00196"></a>00196        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_redoCommand;
+<a name="l00197"></a>00197        <span class="comment">// view menu group</span>
+<a name="l00198"></a>00198        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_fullScreenCommand;
+<a name="l00199"></a>00199        <span class="comment">// tools menu group</span>
+<a name="l00200"></a>00200        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_copyPathToClippboardCommand;
+<a name="l00201"></a>00201        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_openDocumentFolderCommand;
+<a name="l00202"></a>00202 
+<a name="l00203"></a>00203        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;iqtgui::CHierarchicalCommand&gt;</a> RecentGroupCommandPtr;
+<a name="l00204"></a>00204        <span class="keyword">typedef</span> std::map&lt;std::string, RecentGroupCommandPtr&gt; RecentFilesMap;
+<a name="l00205"></a>00205        RecentFilesMap m_recentFilesMap;
 <a name="l00206"></a>00206 
-<a name="l00207"></a>00207        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;iqtgui::CHierarchicalCommand&gt;</a> RecentGroupCommandPtr;
-<a name="l00208"></a>00208        <span class="keyword">typedef</span> std::map&lt;std::string, RecentGroupCommandPtr&gt; RecentFilesMap;
-<a name="l00209"></a>00209        RecentFilesMap m_recentFilesMap;
-<a name="l00210"></a>00210 
-<a name="l00211"></a>00211        I_REF(<a class="code" href="classibase_1_1_i_application_info.html" title="This interface provides some information about the application.">ibase::IApplicationInfo</a>, m_applicationInfoCompPtr);
-<a name="l00212"></a>00212        I_REF(<a class="code" href="classidoc_1_1_i_document_manager.html" title="Provide set of user actions needed to manage documents in MVC (Model View Controller) concept...">idoc::IDocumentManager</a>, m_documentManagerCompPtr);
-<a name="l00213"></a>00213        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_documentManagerModelCompPtr);
-<a name="l00214"></a>00214        I_REF(<a class="code" href="classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>, m_documentManagerCommandsCompPtr);
-<a name="l00215"></a>00215        I_ATTR(<span class="keywordtype">bool</span>, m_isCopyPathVisibleAttrPtr);
-<a name="l00216"></a>00216        I_ATTR(<span class="keywordtype">bool</span>, m_isOpenContainingFolderVisibleAttrPtr);
-<a name="l00217"></a>00217        I_ATTR(<span class="keywordtype">int</span>, m_maxRecentFilesCountAttrPtr);
+<a name="l00207"></a>00207        I_REF(<a class="code" href="classibase_1_1_i_application_info.html" title="This interface provides some information about the application.">ibase::IApplicationInfo</a>, m_applicationInfoCompPtr);
+<a name="l00208"></a>00208        I_REF(<a class="code" href="classidoc_1_1_i_document_manager.html" title="Provide set of user actions needed to manage documents in MVC (Model View Controller) concept...">idoc::IDocumentManager</a>, m_documentManagerCompPtr);
+<a name="l00209"></a>00209        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_documentManagerModelCompPtr);
+<a name="l00210"></a>00210        I_REF(<a class="code" href="classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>, m_documentManagerCommandsCompPtr);
+<a name="l00211"></a>00211        I_ATTR(<span class="keywordtype">bool</span>, m_isCopyPathVisibleAttrPtr);
+<a name="l00212"></a>00212        I_ATTR(<span class="keywordtype">bool</span>, m_isOpenContainingFolderVisibleAttrPtr);
+<a name="l00213"></a>00213        I_ATTR(<span class="keywordtype">int</span>, m_maxRecentFilesCountAttrPtr);
+<a name="l00214"></a>00214 
+<a name="l00215"></a>00215        QByteArray m_beforeFullScreenGeometry;
+<a name="l00216"></a>00216        QByteArray m_beforeFullScreenState;
+<a name="l00217"></a>00217 };
 <a name="l00218"></a>00218 
-<a name="l00219"></a>00219        QByteArray m_beforeFullScreenGeometry;
-<a name="l00220"></a>00220        QByteArray m_beforeFullScreenState;
-<a name="l00221"></a>00221 };
+<a name="l00219"></a>00219 
+<a name="l00220"></a>00220 } <span class="comment">// namespace iqtdoc</span>
+<a name="l00221"></a>00221 
 <a name="l00222"></a>00222 
-<a name="l00223"></a>00223 
-<a name="l00224"></a>00224 <span class="comment">// protected template methods</span>
-<a name="l00225"></a>00225 
-<a name="l00226"></a>00226 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt; 
-<a name="l00227"></a><a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a9dd94b73f045943800943dc89812ed2d">00227</a> <span class="keywordtype">bool</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a9dd94b73f045943800943dc89812ed2d">CMainWindowGuiComp::SerializeRecentFiles</a>()
-<a name="l00228"></a>00228 {
-<a name="l00229"></a>00229        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> applicationName = <span class="stringliteral">&quot;ACF Application&quot;</span>;
-<a name="l00230"></a>00230        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> companyName = <span class="stringliteral">&quot;ImagingTools&quot;</span>;
-<a name="l00231"></a>00231 
-<a name="l00232"></a>00232        <span class="keywordflow">if</span> (m_applicationInfoCompPtr.IsValid()){ 
-<a name="l00233"></a>00233               applicationName = m_applicationInfoCompPtr-&gt;GetApplicationAttribute(<a class="code" href="classibase_1_1_i_application_info.html#a1a490cdd7997e1c6546dec7a9a3ccccda2a3a1f514099f3284f04c66ebdba4497">ibase::IApplicationInfo::AA_APPLICATION_NAME</a>);
-<a name="l00234"></a>00234               companyName = m_applicationInfoCompPtr-&gt;GetApplicationAttribute(<a class="code" href="classibase_1_1_i_application_info.html#a1a490cdd7997e1c6546dec7a9a3ccccda6ad8695a8a4569360fdcb5948aaaa389">ibase::IApplicationInfo::AA_COMPANY_NAME</a>);
-<a name="l00235"></a>00235        }
-<a name="l00236"></a>00236 
-<a name="l00237"></a>00237        Archive archive(<a class="code" href="namespaceiqt.html#afe051c87a6d26394e220bbfe80f17118">iqt::GetQString</a>(companyName), <a class="code" href="namespaceiqt.html#afe051c87a6d26394e220bbfe80f17118">iqt::GetQString</a>(applicationName));
-<a name="l00238"></a>00238 
-<a name="l00239"></a>00239        <span class="keywordflow">return</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a7c304a1c1ca137a258362013f3ac4149">SerializeRecentFileList</a>(archive);
-<a name="l00240"></a>00240 }
-<a name="l00241"></a>00241 
-<a name="l00242"></a>00242 
-<a name="l00243"></a>00243 } <span class="comment">// namespace iqtdoc</span>
-<a name="l00244"></a>00244 
-<a name="l00245"></a>00245 
-<a name="l00246"></a>00246 <span class="preprocessor">#endif // !iqtdoc_CMainWindowComp_included</span>
-<a name="l00247"></a>00247 <span class="preprocessor"></span>
+<a name="l00223"></a>00223 <span class="preprocessor">#endif // !iqtdoc_CMainWindowComp_included</span>
+<a name="l00224"></a>00224 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

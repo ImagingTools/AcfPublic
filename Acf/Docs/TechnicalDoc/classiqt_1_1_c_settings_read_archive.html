@@ -64,7 +64,7 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiqt_1_1_c_settings_archive_base.html">CSettingsArchiveBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_read_archive.html#a53bcd75a56b7d025fbaac43f43ee76e6">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_read_archive.html#a679c320d84aa71859793b9dcaaac77d4">CSettingsReadArchive</a> (const QString &amp;organizationName, const QString &amp;applicationName)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_read_archive.html#a83e5f1117fa5e21e3b96eeb21b16a6b9">CSettingsReadArchive</a> (const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_read_archive.html#a560e7054e474388cecdc995880d828e9">BeginTag</a> (const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;tag)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin of archive tag.  <a href="#a560e7054e474388cecdc995880d828e9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_read_archive.html#ad165bbc201f0d39a87017cdfceae73f1">BeginMultiTag</a> (const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;tag, const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;subTag, int &amp;count)</td></tr>
@@ -113,7 +113,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a679c320d84aa71859793b9dcaaac77d4"></a><!-- doxytag: member="iqt::CSettingsReadArchive::CSettingsReadArchive" ref="a679c320d84aa71859793b9dcaaac77d4" args="(const QString &amp;organizationName, const QString &amp;applicationName)" -->
+<a class="anchor" id="a83e5f1117fa5e21e3b96eeb21b16a6b9"></a><!-- doxytag: member="iqt::CSettingsReadArchive::CSettingsReadArchive" ref="a83e5f1117fa5e21e3b96eeb21b16a6b9" args="(const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -127,7 +127,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>applicationName</em>&#160;</td>
+          <td class="paramname"><em>applicationName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>rootKey</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

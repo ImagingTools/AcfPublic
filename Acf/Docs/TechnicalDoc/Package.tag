@@ -4060,6 +4060,19 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CApplicationCompBase.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_application_comp_base_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_application_8h" name="IApplication.h" local="yes" imported="no">ibase/IApplication.h</includes>
+    <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
+    <includes id="_i_translation_manager_8h" name="ITranslationManager.h" local="yes" imported="no">iqt/ITranslationManager.h</includes>
+    <includes id="_c_timer_8h" name="CTimer.h" local="yes" imported="no">iqt/CTimer.h</includes>
+    <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
+    <class kind="class">iqtgui::CApplicationCompBase</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCheckableComboBox.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_checkable_combo_box_8h</filename>
@@ -4088,6 +4101,15 @@
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_restorable_gui_wrap_8h" name="TRestorableGuiWrap.h" local="yes" imported="no">iqtgui/TRestorableGuiWrap.h</includes>
     <class kind="class">iqtgui::CComposedGuiComp</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CDialogApplicationComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_dialog_application_comp_8h</filename>
+    <includes id="_i_dialog_8h" name="IDialog.h" local="yes" imported="no">iqtgui/IDialog.h</includes>
+    <includes id="_c_application_comp_base_8h" name="CApplicationCompBase.h" local="yes" imported="no">iqtgui/CApplicationCompBase.h</includes>
+    <class kind="class">iqtgui::CDialogApplicationComp</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -4164,12 +4186,9 @@
     <name>CGuiApplicationComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_gui_application_comp_8h</filename>
-    <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
-    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_translation_manager_8h" name="ITranslationManager.h" local="yes" imported="no">iqt/ITranslationManager.h</includes>
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
     <includes id="_i_gui_application_8h" name="IGuiApplication.h" local="yes" imported="no">iqtgui/IGuiApplication.h</includes>
+    <includes id="_c_application_comp_base_8h" name="CApplicationCompBase.h" local="yes" imported="no">iqtgui/CApplicationCompBase.h</includes>
     <class kind="class">iqtgui::CGuiApplicationComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -10269,6 +10288,12 @@
       <name>AA_LEGAL_COPYRIGHT</name>
       <anchorfile>classibase_1_1_i_application_info.html</anchorfile>
       <anchor>a1a490cdd7997e1c6546dec7a9a3ccccda5409e17dcbbba89ffafe2ad227ca1d0c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>AA_MAIN_VERSION</name>
+      <anchorfile>classibase_1_1_i_application_info.html</anchorfile>
+      <anchor>a1a490cdd7997e1c6546dec7a9a3ccccdafd3da59b93d16474d7a2857154c4f79e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -29217,8 +29242,8 @@
       <type></type>
       <name>CSettingsArchiveBase</name>
       <anchorfile>classiqt_1_1_c_settings_archive_base.html</anchorfile>
-      <anchor>a57aadd6fcd190efbeb5c2cb77f0b4cba</anchor>
-      <arglist>(const QString &amp;organizationName, const QString &amp;applicationName)</arglist>
+      <anchor>abb4ba80282c44fd015e732b460fcb247</anchor>
+      <arglist>(const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>std::vector&lt; TagInfo &gt;</type>
@@ -29228,17 +29253,59 @@
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>QString</type>
-      <name>CreateKey</name>
+      <type>bool</type>
+      <name>EnterTag</name>
       <anchorfile>classiqt_1_1_c_settings_archive_base.html</anchorfile>
-      <anchor>a378e838dc4b08431d1cee5ef0db4615d</anchor>
-      <arglist>(bool replaceMultiple=true) const </arglist>
+      <anchor>abc20283b30a8d5111ce018b67e157f24</anchor>
+      <arglist>(const std::string &amp;tagId)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>LeaveTag</name>
+      <anchorfile>classiqt_1_1_c_settings_archive_base.html</anchorfile>
+      <anchor>a94621c6a9944a655b148ad2abbbb124a</anchor>
+      <arglist>(const std::string &amp;tagId)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>GetCurrentCountKey</name>
+      <anchorfile>classiqt_1_1_c_settings_archive_base.html</anchorfile>
+      <anchor>a1a85617a2eff3d02e66599b486dfd8dd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>CreateNextValueKey</name>
+      <anchorfile>classiqt_1_1_c_settings_archive_base.html</anchorfile>
+      <anchor>a971d07d2d6959cda130b209453206209</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>CSettingsArchiveBase::GetBaseKey</name>
+      <anchorfile>classiqt_1_1_c_settings_archive_base.html</anchorfile>
+      <anchor>ad240769b1a4e2e66d29d928611b3ac50</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>OpenTagsList</type>
       <name>m_openTagsList</name>
       <anchorfile>classiqt_1_1_c_settings_archive_base.html</anchorfile>
       <anchor>ab9a2072062b886c87d92023bc141a85c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_rootKey</name>
+      <anchorfile>classiqt_1_1_c_settings_archive_base.html</anchorfile>
+      <anchor>ac733c8a3583671c4ac7cf275127d940e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_valuesCount</name>
+      <anchorfile>classiqt_1_1_c_settings_archive_base.html</anchorfile>
+      <anchor>a29a36c4f45406bd8ef71c76ed919b70a</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -29249,8 +29316,8 @@
       <type></type>
       <name>TagInfo</name>
       <anchorfile>structiqt_1_1_c_settings_archive_base_1_1_tag_info.html</anchorfile>
-      <anchor>af102f49d300794d0c62f257bbdfe33e3</anchor>
-      <arglist>(const std::string &amp;tagId, int count=0, const std::string &amp;subTagId=std::string())</arglist>
+      <anchor>a4fcadf44274774da355aff4f184bbdb0</anchor>
+      <arglist>(const std::string &amp;tagId, int siblingsCount)</arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
@@ -29260,17 +29327,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>std::string</type>
-      <name>subTagId</name>
-      <anchorfile>structiqt_1_1_c_settings_archive_base_1_1_tag_info.html</anchorfile>
-      <anchor>a1d6d4042f8ef3bf2c2ec57333a661615</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
       <type>int</type>
-      <name>count</name>
+      <name>siblingsCount</name>
       <anchorfile>structiqt_1_1_c_settings_archive_base_1_1_tag_info.html</anchorfile>
-      <anchor>a545dfd05069056d2380bd88897c17dea</anchor>
+      <anchor>a9cb4f061cef66a67575d16f452bf6c69</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -29297,8 +29357,8 @@
       <type></type>
       <name>CSettingsReadArchive</name>
       <anchorfile>classiqt_1_1_c_settings_read_archive.html</anchorfile>
-      <anchor>a679c320d84aa71859793b9dcaaac77d4</anchor>
-      <arglist>(const QString &amp;organizationName, const QString &amp;applicationName)</arglist>
+      <anchor>a83e5f1117fa5e21e3b96eeb21b16a6b9</anchor>
+      <arglist>(const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -29407,8 +29467,8 @@
       <type></type>
       <name>CSettingsWriteArchive</name>
       <anchorfile>classiqt_1_1_c_settings_write_archive.html</anchorfile>
-      <anchor>a66f1d61ebbe11b13a94a94de236136ab</anchor>
-      <arglist>(const QString &amp;organizationName, const QString &amp;applicationName, const iser::IVersionInfo *versionInfoPtr=NULL)</arglist>
+      <anchor>ad9008f082f4ccec02e9811641768ff6e</anchor>
+      <arglist>(const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey, const iser::IVersionInfo *versionInfoPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -33119,13 +33179,6 @@
       <anchor>a594cb7960caef9acf68c4f4749a28b50</anchor>
       <arglist>(const istd::CString &amp;filePath)</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SerializeRecentFiles</name>
-      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>a9dd94b73f045943800943dc89812ed2d</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateFixedCommands</name>
@@ -33644,9 +33697,11 @@
     <name>iqtgui</name>
     <filename>namespaceiqtgui.html</filename>
     <class kind="class">iqtgui::CAboutWidgetGuiComp</class>
+    <class kind="class">iqtgui::CApplicationCompBase</class>
     <class kind="class">iqtgui::CCheckableComboBox</class>
     <class kind="class">iqtgui::CCommandsBinderComp</class>
     <class kind="class">iqtgui::CComposedGuiComp</class>
+    <class kind="class">iqtgui::CDialogApplicationComp</class>
     <class kind="class">iqtgui::CDialogGuiComp</class>
     <class kind="class">iqtgui::CDockWidgetGuiComp</class>
     <class kind="class">iqtgui::CExtLineEdit</class>
@@ -33711,6 +33766,54 @@
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqtgui_1_1_c_about_widget_gui_comp.html</anchorfile>
       <anchor>a0c33657f979f6d3d3094cdf4733aaee5</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CApplicationCompBase</name>
+    <filename>classiqtgui_1_1_c_application_comp_base.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ibase::IApplication</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
+      <anchor>a79f597bef8787deed5eb451bf2ec76f0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeApplication</name>
+      <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
+      <anchor>a84c4c944544a25c77fa4fa16c13599f1</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QApplication *</type>
+      <name>GetQtApplication</name>
+      <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
+      <anchor>adecd091af7d03682c9996e64b29f301c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>TryShowSplashScreen</name>
+      <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
+      <anchor>acb809bb740a3221a7f72c78f435816ae</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>HideSplashScreen</name>
+      <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
+      <anchor>acfcaf67ecd1e90711f3a868bad6de0f9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
+      <anchor>ab236d74fd25f21bd155906efb25b80d7</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -33832,6 +33935,32 @@
       <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
       <anchor>a39e95e68c62e662ff39a9ce3311dd9cf</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CDialogApplicationComp</name>
+    <filename>classiqtgui_1_1_c_dialog_application_comp.html</filename>
+    <base>iqtgui::CApplicationCompBase</base>
+    <member kind="typedef">
+      <type>CApplicationCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_dialog_application_comp.html</anchorfile>
+      <anchor>aca95f063e19ab9946cf32740351818ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>Execute</name>
+      <anchorfile>classiqtgui_1_1_c_dialog_application_comp.html</anchorfile>
+      <anchor>af020846485ce5b0cb6cb114d70e87c93</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetHelpText</name>
+      <anchorfile>classiqtgui_1_1_c_dialog_application_comp.html</anchorfile>
+      <anchor>a13f14288d6056b9a172b491831eb6d83</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34182,13 +34311,13 @@
   <compound kind="class">
     <name>iqtgui::CGuiApplicationComp</name>
     <filename>classiqtgui_1_1_c_gui_application_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>iqtgui::IGuiApplication</base>
+    <base>iqtgui::CApplicationCompBase</base>
+    <base virtualness="virtual">iqtgui::IGuiApplication</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>CApplicationCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
-      <anchor>a31f176ad5f52def907a4899820e591ed</anchor>
+      <anchor>ad128044423e2b4c8f62a5252c864369f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -34197,13 +34326,6 @@
       <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
       <anchor>af1cac41b0945e458e9bf0c2ca242eac7</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>InitializeApplication</name>
-      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
-      <anchor>a5ee29b876e104b3cda86f6b6a7faf209</anchor>
-      <arglist>(int argc, char **argv)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -34218,13 +34340,6 @@
       <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
       <anchor>a7a1625139d7a1f6becb8a3a11ce26fc8</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
-      <anchor>a133d9160498f9d2a4cdcec3dbdb2232e</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -64,16 +64,22 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef QSettings&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#a4a61061dd13d4d89441a64df9f9a2be5">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#a57aadd6fcd190efbeb5c2cb77f0b4cba">CSettingsArchiveBase</a> (const QString &amp;organizationName, const QString &amp;applicationName)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#abb4ba80282c44fd015e732b460fcb247">CSettingsArchiveBase</a> (const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="structiqt_1_1_c_settings_archive_base_1_1_tag_info.html">TagInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#af3d4bdbf29a574da2bfd9b07d2f6ce7a">OpenTagsList</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#a378e838dc4b08431d1cee5ef0db4615d">CreateKey</a> (bool replaceMultiple=true) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#abc20283b30a8d5111ce018b67e157f24">EnterTag</a> (const std::string &amp;tagId)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#a94621c6a9944a655b148ad2abbbb124a">LeaveTag</a> (const std::string &amp;tagId)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#a1a85617a2eff3d02e66599b486dfd8dd">GetCurrentCountKey</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#a971d07d2d6959cda130b209453206209">CreateNextValueKey</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#ad240769b1a4e2e66d29d928611b3ac50">CSettingsArchiveBase::GetBaseKey</a> () const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#af3d4bdbf29a574da2bfd9b07d2f6ce7a">OpenTagsList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#ab9a2072062b886c87d92023bc141a85c">m_openTagsList</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#ac733c8a3583671c4ac7cf275127d940e">m_rootKey</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#a29a36c4f45406bd8ef71c76ed919b70a">m_valuesCount</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -107,12 +113,12 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00040">40</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00043">43</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a57aadd6fcd190efbeb5c2cb77f0b4cba"></a><!-- doxytag: member="iqt::CSettingsArchiveBase::CSettingsArchiveBase" ref="a57aadd6fcd190efbeb5c2cb77f0b4cba" args="(const QString &amp;organizationName, const QString &amp;applicationName)" -->
+<a class="anchor" id="abb4ba80282c44fd015e732b460fcb247"></a><!-- doxytag: member="iqt::CSettingsArchiveBase::CSettingsArchiveBase" ref="abb4ba80282c44fd015e732b460fcb247" args="(const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -126,7 +132,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>applicationName</em>&#160;</td>
+          <td class="paramname"><em>applicationName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>rootKey</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -140,16 +152,81 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a378e838dc4b08431d1cee5ef0db4615d"></a><!-- doxytag: member="iqt::CSettingsArchiveBase::CreateKey" ref="a378e838dc4b08431d1cee5ef0db4615d" args="(bool replaceMultiple=true) const " -->
+<a class="anchor" id="a971d07d2d6959cda130b209453206209"></a><!-- doxytag: member="iqt::CSettingsArchiveBase::CreateNextValueKey" ref="a971d07d2d6959cda130b209453206209" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QString iqt::CSettingsArchiveBase::CreateKey </td>
+          <td class="memname">QString iqt::CSettingsArchiveBase::CreateNextValueKey </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>replaceMultiple</em> = <code>true</code></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad240769b1a4e2e66d29d928611b3ac50"></a><!-- doxytag: member="iqt::CSettingsArchiveBase::CSettingsArchiveBase::GetBaseKey" ref="ad240769b1a4e2e66d29d928611b3ac50" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString iqt::CSettingsArchiveBase::CSettingsArchiveBase::GetBaseKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abc20283b30a8d5111ce018b67e157f24"></a><!-- doxytag: member="iqt::CSettingsArchiveBase::EnterTag" ref="abc20283b30a8d5111ce018b67e157f24" args="(const std::string &amp;tagId)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool iqt::CSettingsArchiveBase::EnterTag </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tagId</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1a85617a2eff3d02e66599b486dfd8dd"></a><!-- doxytag: member="iqt::CSettingsArchiveBase::GetCurrentCountKey" ref="a1a85617a2eff3d02e66599b486dfd8dd" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString iqt::CSettingsArchiveBase::GetCurrentCountKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a94621c6a9944a655b148ad2abbbb124a"></a><!-- doxytag: member="iqt::CSettingsArchiveBase::LeaveTag" ref="a94621c6a9944a655b148ad2abbbb124a" args="(const std::string &amp;tagId)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool iqt::CSettingsArchiveBase::LeaveTag </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tagId</em></td><td>)</td>
+          <td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -163,13 +240,43 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#af3d4bdbf29a574da2bfd9b07d2f6ce7a">OpenTagsList</a> <a class="el" href="classiqt_1_1_c_settings_archive_base.html#ab9a2072062b886c87d92023bc141a85c">iqt::CSettingsArchiveBase::m_openTagsList</a><code> [mutable, protected]</code></td>
+          <td class="memname"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#af3d4bdbf29a574da2bfd9b07d2f6ce7a">OpenTagsList</a> <a class="el" href="classiqt_1_1_c_settings_archive_base.html#ab9a2072062b886c87d92023bc141a85c">iqt::CSettingsArchiveBase::m_openTagsList</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00041">41</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00044">44</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac733c8a3583671c4ac7cf275127d940e"></a><!-- doxytag: member="iqt::CSettingsArchiveBase::m_rootKey" ref="ac733c8a3583671c4ac7cf275127d940e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString <a class="el" href="classiqt_1_1_c_settings_archive_base.html#ac733c8a3583671c4ac7cf275127d940e">iqt::CSettingsArchiveBase::m_rootKey</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00046">46</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a29a36c4f45406bd8ef71c76ed919b70a"></a><!-- doxytag: member="iqt::CSettingsArchiveBase::m_valuesCount" ref="a29a36c4f45406bd8ef71c76ed919b70a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classiqt_1_1_c_settings_archive_base.html#a29a36c4f45406bd8ef71c76ed919b70a">iqt::CSettingsArchiveBase::m_valuesCount</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00048">48</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
 
 </div>
 </div>
