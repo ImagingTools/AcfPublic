@@ -1271,7 +1271,7 @@ bool CAttributeEditorComp::DecodeAttribute(
 			text += EncodeToEdit(componentId);
 		}
 
-		if (dynamic_cast<const icomp::CMultiReferenceAttribute*>(idPtr) != NULL){
+		if (dynamic_cast<const icomp::CMultiReferenceAttribute*>(multiIdPtr) != NULL){
 			meaning = AM_MULTI_REFERENCE;
 		}
 		else{
