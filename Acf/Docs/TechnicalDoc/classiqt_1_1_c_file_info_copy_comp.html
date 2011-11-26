@@ -86,8 +86,23 @@ Protected Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Copy of text files with some tags substitution and optional license attachment. </p>
+<p>Tags parameter must be separated using <code></code>: character. Tags (inclusive parameter) must be enclosed in <code>$</code> character, for example $AcfCompanyName$ or </p>
+<dl class="rcs"><dt><b>AcfVersion:</b></dt><dd></dd></dl>
+<p>. Known tasks: </p>
+<ul>
+<li><code>AcfCompanyName</code> - gets name of company </li>
+<li><code>AcfProductName</code> - gets name of product </li>
+<li><code>AcfApplicationName</code> - gets name of application </li>
+<li><code>AcfApplicationSubname</code> - gets sub-name of product </li>
+<li><code>AcfApplicationType</code> - gets type information text </li>
+<li><code>AcfLegalCopyright</code> - gets legal copyright information text </li>
+<li><code>AcfVersion</code> - gets version of application, or its module, if parameter with module ID is specified </li>
+<li><code>AcfRawVersion</code> - gets internal version number of application, or its module, if parameter with module ID is specified </li>
+<li><code>AcfRcVersion</code> - gets version number (in RC compiler compatible format) of application, or its module, if parameter with module ID is specified </li>
+<li><code>AcfTimestamp</code> - gets current time </li>
+</ul>
 
-<p>Definition at line <a class="el" href="_c_file_info_copy_comp_8h_source.html#l00026">26</a> of file <a class="el" href="_c_file_info_copy_comp_8h_source.html">CFileInfoCopyComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_file_info_copy_comp_8h_source.html#l00039">39</a> of file <a class="el" href="_c_file_info_copy_comp_8h_source.html">CFileInfoCopyComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="aff713baa73e1d26fbb5d8c4658fa0610"></a><!-- doxytag: member="iqt::CFileInfoCopyComp::BaseClass" ref="aff713baa73e1d26fbb5d8c4658fa0610" args="" -->
 <div class="memitem">
@@ -102,7 +117,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_file_info_copy_comp_8h_source.html#l00032">32</a> of file <a class="el" href="_c_file_info_copy_comp_8h_source.html">CFileInfoCopyComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_file_info_copy_comp_8h_source.html#l00045">45</a> of file <a class="el" href="_c_file_info_copy_comp_8h_source.html">CFileInfoCopyComp.h</a>.</p>
 
 </div>
 </div>
@@ -132,7 +147,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_file_info_copy_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_file_info_copy_comp_8h_source.html">CFileInfoCopyComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_file_info_copy_comp_8h_source.html#l00047">47</a> of file <a class="el" href="_c_file_info_copy_comp_8h_source.html">CFileInfoCopyComp.h</a>.</p>
 
 </div>
 </div>

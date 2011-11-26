@@ -8915,6 +8915,13 @@
       <arglist>(int attributeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetMainVersionId</name>
+      <anchorfile>classibase_1_1_c_application_info_comp.html</anchorfile>
+      <anchor>a3135d691aed415947288601ca8d25f51</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const iser::IVersionInfo &amp;</type>
       <name>GetVersionInfo</name>
       <anchorfile>classibase_1_1_c_application_info_comp.html</anchorfile>
@@ -10349,6 +10356,13 @@
       <anchorfile>classibase_1_1_i_application_info.html</anchorfile>
       <anchor>a2661a124bc7fc1dd174a598b6193f73d</anchor>
       <arglist>(int attributeId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetMainVersionId</name>
+      <anchorfile>classibase_1_1_i_application_info.html</anchorfile>
+      <anchor>a33f53c389a86618ea6476bf8fa872476</anchor>
+      <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iser::IVersionInfo &amp;</type>
