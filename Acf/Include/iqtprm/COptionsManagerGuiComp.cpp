@@ -130,11 +130,10 @@ void COptionsManagerGuiComp::OnGuiCreated()
 	}
 
 	QObject::connect(Selector, SIGNAL(currentIndexChanged(int)), this, SLOT(OnSelectionChanged(int)));
-/*
+
 	if (!m_optionsManagerCompPtr.IsValid()){
 		EditEnableButton->hide();
 	}
-	*/
 }
 
 
@@ -228,12 +227,8 @@ void COptionsManagerGuiComp::OnEditingFinished()
 			}
 		}
 
-		if (!m_optionsManagerCompPtr.IsValid() && addNewOption){
-
-		}
-		else
-		{
-
+		if (m_optionsManagerCompPtr.IsValid() && addNewOption){
+			m_optionsManagerCompPtr->InsertOption(newOptionName, newOptionName.ToString());
 		}
 	}
 
