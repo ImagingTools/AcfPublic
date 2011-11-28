@@ -339,41 +339,43 @@
 <a name="l00345"></a>00345 {
 <a name="l00346"></a>00346        <span class="keywordtype">bool</span> skipUpdate = <span class="keyword">false</span>;
 <a name="l00347"></a>00347        <span class="keywordflow">if</span> ((m_updateFilter != 0) &amp;&amp; (updateFlags != 0)){
-<a name="l00348"></a>00348               skipUpdate = ((m_updateFilter &amp; updateFlags) == 0);
-<a name="l00349"></a>00349        }
-<a name="l00350"></a>00350 
-<a name="l00351"></a>00351        <span class="keywordflow">if</span> (!skipUpdate){
-<a name="l00352"></a>00352               UpdateEditor(updateFlags);
-<a name="l00353"></a>00353        }
-<a name="l00354"></a>00354 
-<a name="l00355"></a>00355        m_updateOnShow = <span class="keyword">false</span>;
-<a name="l00356"></a>00356        m_updateOnShowFlags = 0;
-<a name="l00357"></a>00357 }
-<a name="l00358"></a>00358 
-<a name="l00359"></a>00359 
-<a name="l00360"></a>00360 <span class="comment">// public methods of embedded class UpdateBlocker</span>
+<a name="l00348"></a>00348               <span class="keywordflow">if</span> ((updateFlags &amp; CF_INIT_EDITOR) == 0){
+<a name="l00349"></a>00349                      skipUpdate = ((m_updateFilter &amp; updateFlags) == 0);
+<a name="l00350"></a>00350               }
+<a name="l00351"></a>00351        }
+<a name="l00352"></a>00352 
+<a name="l00353"></a>00353        <span class="keywordflow">if</span> (!skipUpdate){
+<a name="l00354"></a>00354               UpdateEditor(updateFlags);
+<a name="l00355"></a>00355        }
+<a name="l00356"></a>00356 
+<a name="l00357"></a>00357        m_updateOnShow = <span class="keyword">false</span>;
+<a name="l00358"></a>00358        m_updateOnShowFlags = 0;
+<a name="l00359"></a>00359 }
+<a name="l00360"></a>00360 
 <a name="l00361"></a>00361 
-<a name="l00362"></a>00362 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
-<a name="l00363"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap_1_1_update_blocker.html#afb1da401ad23166dbed19f7fd43ff1a0">00363</a> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap_1_1_update_blocker.html#afb1da401ad23166dbed19f7fd43ff1a0">TGuiObserverWrap&lt;Gui, Observer&gt;::UpdateBlocker::UpdateBlocker</a>(<a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html" title="Join functionality of iqtgui::IGuiObject interface and imod::IObserver.">TGuiObserverWrap&lt;Gui, Observer&gt;</a>* parentPtr)
-<a name="l00364"></a>00364 :      m_parent(*parentPtr)
-<a name="l00365"></a>00365 {
-<a name="l00366"></a>00366        ++m_parent.m_ignoreUpdatesCounter;
-<a name="l00367"></a>00367 }
-<a name="l00368"></a>00368 
-<a name="l00369"></a>00369 
-<a name="l00370"></a>00370 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
-<a name="l00371"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap_1_1_update_blocker.html#a4dac705658a82e4552c54977ec947ba9">00371</a> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html" title="Join functionality of iqtgui::IGuiObject interface and imod::IObserver.">TGuiObserverWrap&lt;Gui, Observer&gt;::UpdateBlocker::~UpdateBlocker</a>()
-<a name="l00372"></a>00372 {
-<a name="l00373"></a>00373        --m_parent.m_ignoreUpdatesCounter;
-<a name="l00374"></a>00374 }
-<a name="l00375"></a>00375 
-<a name="l00376"></a>00376 
-<a name="l00377"></a>00377 } <span class="comment">// namespace iqtgui</span>
+<a name="l00362"></a>00362 <span class="comment">// public methods of embedded class UpdateBlocker</span>
+<a name="l00363"></a>00363 
+<a name="l00364"></a>00364 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
+<a name="l00365"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap_1_1_update_blocker.html#afb1da401ad23166dbed19f7fd43ff1a0">00365</a> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap_1_1_update_blocker.html#afb1da401ad23166dbed19f7fd43ff1a0">TGuiObserverWrap&lt;Gui, Observer&gt;::UpdateBlocker::UpdateBlocker</a>(<a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html" title="Join functionality of iqtgui::IGuiObject interface and imod::IObserver.">TGuiObserverWrap&lt;Gui, Observer&gt;</a>* parentPtr)
+<a name="l00366"></a>00366 :      m_parent(*parentPtr)
+<a name="l00367"></a>00367 {
+<a name="l00368"></a>00368        ++m_parent.m_ignoreUpdatesCounter;
+<a name="l00369"></a>00369 }
+<a name="l00370"></a>00370 
+<a name="l00371"></a>00371 
+<a name="l00372"></a>00372 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
+<a name="l00373"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap_1_1_update_blocker.html#a4dac705658a82e4552c54977ec947ba9">00373</a> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html" title="Join functionality of iqtgui::IGuiObject interface and imod::IObserver.">TGuiObserverWrap&lt;Gui, Observer&gt;::UpdateBlocker::~UpdateBlocker</a>()
+<a name="l00374"></a>00374 {
+<a name="l00375"></a>00375        --m_parent.m_ignoreUpdatesCounter;
+<a name="l00376"></a>00376 }
+<a name="l00377"></a>00377 
 <a name="l00378"></a>00378 
-<a name="l00379"></a>00379 
-<a name="l00380"></a>00380 <span class="preprocessor">#endif // !iqtgui_TGuiObserverWrap_included</span>
-<a name="l00381"></a>00381 <span class="preprocessor"></span>
-<a name="l00382"></a>00382 
+<a name="l00379"></a>00379 } <span class="comment">// namespace iqtgui</span>
+<a name="l00380"></a>00380 
+<a name="l00381"></a>00381 
+<a name="l00382"></a>00382 <span class="preprocessor">#endif // !iqtgui_TGuiObserverWrap_included</span>
+<a name="l00383"></a>00383 <span class="preprocessor"></span>
+<a name="l00384"></a>00384 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

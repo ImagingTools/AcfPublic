@@ -62,6 +62,9 @@ public:
 
 	// reimplemented (iprm::ISelectionParam)
 	virtual bool SetSelectedOptionIndex(int index);
+
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive);
 };
 
 

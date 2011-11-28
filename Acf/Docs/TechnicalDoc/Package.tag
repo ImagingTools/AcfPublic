@@ -5922,6 +5922,17 @@
     <namespace>isys</namespace>
   </compound>
   <compound kind="file">
+    <name>CComposedStateControllerComp.h</name>
+    <path>C:/Temp/Acf/Include/iwiz/</path>
+    <filename>_c_composed_state_controller_comp_8h</filename>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
+    <includes id="_c_composed_params_set_comp_8h" name="CComposedParamsSetComp.h" local="yes" imported="no">iprm/CComposedParamsSetComp.h</includes>
+    <includes id="_i_state_controller_8h" name="IStateController.h" local="yes" imported="no">iproc/IStateController.h</includes>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <class kind="class">iwiz::CComposedStateControllerComp</class>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectionConsistencyControllerComp.h</name>
     <path>C:/Temp/Acf/Include/iwiz/</path>
     <filename>_c_selection_consistency_controller_comp_8h</filename>
@@ -5941,17 +5952,6 @@
     <includes id="_i_wizard_navigation_controller_8h" name="IWizardNavigationController.h" local="yes" imported="no">iwiz/IWizardNavigationController.h</includes>
     <includes id="_i_params_manager_wizard_8h" name="IParamsManagerWizard.h" local="yes" imported="no">iwiz/IParamsManagerWizard.h</includes>
     <class kind="class">iwiz::CWizardDocumentComp</class>
-    <namespace>iwiz</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CWizardPageComp.h</name>
-    <path>C:/Temp/Acf/Include/iwiz/</path>
-    <filename>_c_wizard_page_comp_8h</filename>
-    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
-    <includes id="_c_composed_params_set_comp_8h" name="CComposedParamsSetComp.h" local="yes" imported="no">iprm/CComposedParamsSetComp.h</includes>
-    <includes id="_i_state_controller_8h" name="IStateController.h" local="yes" imported="no">iproc/IStateController.h</includes>
-    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <class kind="class">iwiz::CWizardPageComp</class>
     <namespace>iwiz</namespace>
   </compound>
   <compound kind="file">
@@ -45589,11 +45589,116 @@
   <compound kind="namespace">
     <name>iwiz</name>
     <filename>namespaceiwiz.html</filename>
+    <class kind="class">iwiz::CComposedStateControllerComp</class>
     <class kind="class">iwiz::CSelectionConsistencyControllerComp</class>
     <class kind="class">iwiz::CWizardDocumentComp</class>
-    <class kind="class">iwiz::CWizardPageComp</class>
     <class kind="class">iwiz::IParamsManagerWizard</class>
     <class kind="class">iwiz::IWizardNavigationController</class>
+  </compound>
+  <compound kind="class">
+    <name>iwiz::CComposedStateControllerComp</name>
+    <filename>classiwiz_1_1_c_composed_state_controller_comp.html</filename>
+    <base>iprm::CComposedParamsSetComp</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <base virtualness="virtual">iproc::IStateController</base>
+    <member kind="typedef">
+      <type>iprm::CComposedParamsSetComp</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>a9701c3f253aba37ed8f7a91fa4970334</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelDispatcherBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>aa26b373f9acfa70981a7d5f862839ea0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>a926b0156ac06d97197f270449b276e91</anchor>
+      <arglist>(m_slaveControllerModelsCompPtr, m_slaveControllersCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CComposedStateControllerComp</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>ad07975defb35047a748bb9d4001dd961</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsStateEnabled</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>aa34fbe4558ea6542a3ae23b67683de76</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsStateActive</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>a650c5e65a65b502b300a379742ca964a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEnterAllowed</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>aa0a8ebb959d3cafee0b45764b064e011</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsLeaveAllowed</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>ae638535b53382e2fa04ef074cb531ae0</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TryEnterState</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>ad56897db51ee3cebb9e46b532df03e28</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TryLeaveState</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>a93ebbcf68555bd222ea01adba7876d5b</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateAllMembers</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>ad5ea9167db0aac87eb1be226ecaea79e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>aa059cd59fabdcd78ae888eba79471e28</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>a37d705e28c88a392b07891d34ad8e244</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>a827a61ac6618631142f8c3e1901a2d51</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iwiz::CSelectionConsistencyControllerComp</name>
@@ -45612,15 +45717,8 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
-      <anchor>a92e51646839972075dee04938e7f8656</anchor>
-      <arglist>(m_enablingParamModelsCompPtr, m_enablingParamsCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
-      <anchor>ab46e52e3bba64a662bf70cc4d06c90db</anchor>
-      <arglist>(m_enterCondParamModelsCompPtr, m_enterCondParamsCompPtr, false)</arglist>
+      <anchor>aad41bd5d46c17e6425ce689d961b52c4</anchor>
+      <arglist>(m_enterDependenciesModelCompPtr, m_enterDependenciesCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -45761,110 +45859,12 @@
       <anchor>acc18747a73e7f9fa0fab06550de423e3</anchor>
       <arglist>(int index)</arglist>
     </member>
-  </compound>
-  <compound kind="class">
-    <name>iwiz::CWizardPageComp</name>
-    <filename>classiwiz_1_1_c_wizard_page_comp.html</filename>
-    <base>iprm::CComposedParamsSetComp</base>
-    <base protection="protected">imod::CMultiModelDispatcherBase</base>
-    <base virtualness="virtual">iproc::IStateController</base>
-    <member kind="typedef">
-      <type>iprm::CComposedParamsSetComp</type>
-      <name>BaseClass</name>
-      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>acf5d50b6a0d4a586918078fb14a6c838</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::CMultiModelDispatcherBase</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>a0ad5f3011dd8267af14143182b8c0729</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>ae1479dee3f3d9b720ee5a27b7a1aa717</anchor>
-      <arglist>(m_slaveControllerModelsCompPtr, m_slaveControllersCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CWizardPageComp</name>
-      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>a1d9edab636ec19c19d40f8518b5c224b</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>IsStateEnabled</name>
-      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>ac488241ae6b25ca912cd2411d6850910</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsStateActive</name>
-      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>a4941fa899736f5e93b2d07d75c7c63fa</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsEnterAllowed</name>
-      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>a92c3abb7f53d1aa4bd11ae4529a23603</anchor>
-      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsLeaveAllowed</name>
-      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>ace15ff5d04e40e19c65ab32e87936497</anchor>
-      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>TryEnterState</name>
-      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>af3908a49d2483688c1f83cf6cbc348fe</anchor>
-      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>TryLeaveState</name>
-      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>ab35ac75dec92bf35ca075b310a2810a9</anchor>
-      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateAllMembers</name>
-      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>afba27785a24a87cdf3e3d32923150a4e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnModelChanged</name>
-      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>a932a26e1e1a9131787d7d1265edc652a</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>ad15f1553b83ed39f2e9383481ed32308</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiwiz_1_1_c_wizard_page_comp.html</anchorfile>
-      <anchor>a7b8bfb47535db07b098e0283d5c3797f</anchor>
-      <arglist>()</arglist>
+      <name>Serialize</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>a9871dd469285f426c81601352598d18c</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
