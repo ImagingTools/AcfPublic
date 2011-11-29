@@ -1,0 +1,77 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the IACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the IACF.
+**
+********************************************************************************/
+
+
+#include "iwin/CTimeStampCacheComp.h"
+
+
+// ACF includes
+#include "icomp/CComponentBase.h"
+
+// ACF-Solutions includes
+#include "iinsp/ITimeStampProvider.h"
+
+
+namespace iwin
+{
+
+
+// reimplemented (iinsp::ITimeStampProvider)
+
+const isys::ITimer* CTimeStampCacheComp::GetCurrentTimeStamp() const
+{
+	if (m_isTimerValid){
+		return &m_timer;
+	}
+
+	return NULL;
+}
+
+
+// reimplemented (istd::IChangeable)
+
+bool CTimeStampCacheComp::CopyFrom(const IChangeable& object)
+{
+	const iinsp::ITimeStampProvider* providerPtr = dynamic_cast<const iinsp::ITimeStampProvider*>(&object);
+	if (providerPtr != NULL){
+		const isys::ITimer* timerPtr = providerPtr->GetCurrentTimeStamp();
+		if (timerPtr != NULL){
+			const CTimer* nativeTimerPtr = dynamic_cast<const CTimer*>(timerPtr);
+			if (nativeTimerPtr != NULL){
+				m_timer.SetNativeRepresentation(nativeTimerPtr->GetNativeRepresentation());
+			}
+			else{
+				m_timer.SetElapsed(timerPtr->GetElapsed());
+			}
+		}
+		else{
+			m_isTimerValid = false;
+		}
+		return true;
+	}
+
+	return false;
+}
+
+
+} // namespace iwin
+
+

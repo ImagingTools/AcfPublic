@@ -81,6 +81,7 @@
     <path>C:/Temp/Iacf/Include/imil/</path>
     <filename>_c_mil_engine_8h</filename>
     <includes id="imil_8h" name="imil.h" local="yes" imported="no">imil/imil.h</includes>
+    <includes id="inat_2_c_critical_section_8h" name="CCriticalSection.h" local="yes" imported="no">inat/CCriticalSection.h</includes>
     <class kind="class">imil::CMilEngine</class>
     <namespace>imil</namespace>
   </compound>
@@ -123,6 +124,66 @@
     <path>C:/Temp/Iacf/Include/imil/</path>
     <filename>imil_8h</filename>
     <namespace>imil</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CCriticalSection.h</name>
+    <path>C:/Temp/Iacf/Include/inat/</path>
+    <filename>inat_2_c_critical_section_8h</filename>
+    <includes id="inat_8h" name="inat.h" local="yes" imported="no">inat/inat.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>CCriticalSection.h</name>
+    <path>C:/Temp/Iacf/Include/iwin/</path>
+    <filename>iwin_2_c_critical_section_8h</filename>
+    <includes id="iwin_8h" name="iwin.h" local="yes" imported="no">iwin/iwin.h</includes>
+    <class kind="class">iwin::CCriticalSection</class>
+    <namespace>iwin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CDllFunctionsProvider.h</name>
+    <path>C:/Temp/Iacf/Include/inat/</path>
+    <filename>inat_2_c_dll_functions_provider_8h</filename>
+    <includes id="inat_8h" name="inat.h" local="yes" imported="no">inat/inat.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>CDllFunctionsProvider.h</name>
+    <path>C:/Temp/Iacf/Include/iwin/</path>
+    <filename>iwin_2_c_dll_functions_provider_8h</filename>
+    <includes id="iwin_8h" name="iwin.h" local="yes" imported="no">iwin/iwin.h</includes>
+    <class kind="class">iwin::CDllFunctionsProvider</class>
+    <namespace>iwin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTimer.h</name>
+    <path>C:/Temp/Iacf/Include/inat/</path>
+    <filename>inat_2_c_timer_8h</filename>
+    <includes id="inat_8h" name="inat.h" local="yes" imported="no">inat/inat.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>CTimer.h</name>
+    <path>C:/Temp/Iacf/Include/iwin/</path>
+    <filename>iwin_2_c_timer_8h</filename>
+    <class kind="class">iwin::CTimer</class>
+    <namespace>iwin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>inat.h</name>
+    <path>C:/Temp/Iacf/Include/inat/</path>
+    <filename>inat_8h</filename>
+    <namespace>inat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TComPtr.h</name>
+    <path>C:/Temp/Iacf/Include/inat/</path>
+    <filename>inat_2_t_com_ptr_8h</filename>
+    <includes id="inat_8h" name="inat.h" local="yes" imported="no">inat/inat.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>TComPtr.h</name>
+    <path>C:/Temp/Iacf/Include/iwin/</path>
+    <filename>iwin_2_t_com_ptr_8h</filename>
+    <class kind="class">iwin::TComPtr</class>
+    <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
     <name>COcvAcquisitionComp.h</name>
@@ -292,6 +353,58 @@
     <path>C:/Temp/Iacf/Include/isgige/</path>
     <filename>isgige_8h</filename>
     <namespace>isgige</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CDefaultServicesProvider.h</name>
+    <path>C:/Temp/Iacf/Include/iwin/</path>
+    <filename>_c_default_services_provider_8h</filename>
+    <includes id="iwin_8h" name="iwin.h" local="yes" imported="no">iwin/iwin.h</includes>
+    <class kind="class">iwin::CDefaultServicesProvider</class>
+    <namespace>iwin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileSystem.h</name>
+    <path>C:/Temp/Iacf/Include/iwin/</path>
+    <filename>_c_file_system_8h</filename>
+    <includes id="iwin_8h" name="iwin.h" local="yes" imported="no">iwin/iwin.h</includes>
+    <class kind="class">iwin::CFileSystem</class>
+    <namespace>iwin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CProcessEnvironment.h</name>
+    <path>C:/Temp/Iacf/Include/iwin/</path>
+    <filename>_c_process_environment_8h</filename>
+    <class kind="class">iwin::CProcessEnvironment</class>
+    <namespace>iwin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSystemEnvironment.h</name>
+    <path>C:/Temp/Iacf/Include/iwin/</path>
+    <filename>_c_system_environment_8h</filename>
+    <class kind="class">iwin::CSystemEnvironment</class>
+    <namespace>iwin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSystemInfo.h</name>
+    <path>C:/Temp/Iacf/Include/iwin/</path>
+    <filename>_c_system_info_8h</filename>
+    <includes id="iwin_8h" name="iwin.h" local="yes" imported="no">iwin/iwin.h</includes>
+    <class kind="class">iwin::CSystemInfo</class>
+    <namespace>iwin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTimeStampCacheComp.h</name>
+    <path>C:/Temp/Iacf/Include/iwin/</path>
+    <filename>_c_time_stamp_cache_comp_8h</filename>
+    <includes id="iwin_2_c_timer_8h" name="CTimer.h" local="yes" imported="no">iwin/CTimer.h</includes>
+    <class kind="class">iwin::CTimeStampCacheComp</class>
+    <namespace>iwin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>iwin.h</name>
+    <path>C:/Temp/Iacf/Include/iwin/</path>
+    <filename>iwin_8h</filename>
+    <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
     <name>CGzXmlReadArchive.h</name>
@@ -1725,6 +1838,10 @@
       <anchor>a1fcd8f4c23bd7c08f17b5574f4816aab</anchor>
       <arglist>(const CMilSearchParams &amp;params, const iimg::IBitmap &amp;bitmap, const i2d::CRectangle *aoiPtr, iipr::IFeaturesConsumer &amp;result)</arglist>
     </member>
+  </compound>
+  <compound kind="namespace">
+    <name>inat</name>
+    <filename>namespaceinat.html</filename>
   </compound>
   <compound kind="namespace">
     <name>iocv</name>
@@ -3261,6 +3378,477 @@
       <anchorfile>classisgige_1_1_c_genicam_camera_singleton.html</anchorfile>
       <anchor>ac4b63a2515401989f6b6bff22fe25309</anchor>
       <arglist>(gige::IDevice devicePtr, gige::EventMessage eMessage)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iwin</name>
+    <filename>namespaceiwin.html</filename>
+    <class kind="class">iwin::CCriticalSection</class>
+    <class kind="class">iwin::CDefaultServicesProvider</class>
+    <class kind="class">iwin::CDllFunctionsProvider</class>
+    <class kind="class">iwin::CFileSystem</class>
+    <class kind="class">iwin::CProcessEnvironment</class>
+    <class kind="class">iwin::CSystemEnvironment</class>
+    <class kind="class">iwin::CSystemInfo</class>
+    <class kind="class">iwin::CTimer</class>
+    <class kind="class">iwin::CTimeStampCacheComp</class>
+    <class kind="class">iwin::TComPtr</class>
+  </compound>
+  <compound kind="class">
+    <name>iwin::CCriticalSection</name>
+    <filename>classiwin_1_1_c_critical_section.html</filename>
+    <base virtualness="virtual">isys::ICriticalSection</base>
+    <member kind="function">
+      <type></type>
+      <name>CCriticalSection</name>
+      <anchorfile>classiwin_1_1_c_critical_section.html</anchorfile>
+      <anchor>ab99617677e23448cb7f16bd6e30bede6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~CCriticalSection</name>
+      <anchorfile>classiwin_1_1_c_critical_section.html</anchorfile>
+      <anchor>a1a7a05f2d778420d7bb8d0d7b6cddd89</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Enter</name>
+      <anchorfile>classiwin_1_1_c_critical_section.html</anchorfile>
+      <anchor>ab094091864cc890e712b7158c89efc93</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>EnterIfFree</name>
+      <anchorfile>classiwin_1_1_c_critical_section.html</anchorfile>
+      <anchor>a4f76cf9c2e009d8beb9f8d9493d48437</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Leave</name>
+      <anchorfile>classiwin_1_1_c_critical_section.html</anchorfile>
+      <anchor>abdc566ac799ca6c4b126263862942b98</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwin::CDefaultServicesProvider</name>
+    <filename>classiwin_1_1_c_default_services_provider.html</filename>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>RegisterServices</name>
+      <anchorfile>classiwin_1_1_c_default_services_provider.html</anchorfile>
+      <anchor>a1e06c229438b118e22927f30bb9ca9a7</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwin::CDllFunctionsProvider</name>
+    <filename>classiwin_1_1_c_dll_functions_provider.html</filename>
+    <base virtualness="virtual">isys::IFunctionsProvider</base>
+    <member kind="function">
+      <type></type>
+      <name>CDllFunctionsProvider</name>
+      <anchorfile>classiwin_1_1_c_dll_functions_provider.html</anchorfile>
+      <anchor>a4ab11bf6dffd5480981f03970ff52af6</anchor>
+      <arglist>(const istd::CString &amp;dllPath=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~CDllFunctionsProvider</name>
+      <anchorfile>classiwin_1_1_c_dll_functions_provider.html</anchorfile>
+      <anchor>a0a882282d4d9a085e201075369aef4f4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>OpenDll</name>
+      <anchorfile>classiwin_1_1_c_dll_functions_provider.html</anchorfile>
+      <anchor>a4ff0f42d82a8850e683e22a83751c875</anchor>
+      <arglist>(const istd::CString &amp;dllPath)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classiwin_1_1_c_dll_functions_provider.html</anchorfile>
+      <anchor>a5a0ea872f7db1f8658d5cce9720c7ef5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsValid</name>
+      <anchorfile>classiwin_1_1_c_dll_functions_provider.html</anchorfile>
+      <anchor>a1708cdf707125690ba2abaac855153c5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void *</type>
+      <name>GetFunction</name>
+      <anchorfile>classiwin_1_1_c_dll_functions_provider.html</anchorfile>
+      <anchor>a397b1858800f6853e82f68cc53488fb5</anchor>
+      <arglist>(const std::string &amp;id) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwin::CFileSystem</name>
+    <filename>classiwin_1_1_c_file_system.html</filename>
+    <base virtualness="virtual">isys::CFileSystemBase</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPresent</name>
+      <anchorfile>classiwin_1_1_c_file_system.html</anchorfile>
+      <anchor>a9d4d54b90eb02e1932aa001bdfbd0965</anchor>
+      <arglist>(const istd::CString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateFileCopy</name>
+      <anchorfile>classiwin_1_1_c_file_system.html</anchorfile>
+      <anchor>ad9c3798ea83458bd6379dc7f4f359399</anchor>
+      <arglist>(const istd::CString &amp;inputFile, const istd::CString &amp;outputFile, bool overwriteExisting=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveFile</name>
+      <anchorfile>classiwin_1_1_c_file_system.html</anchorfile>
+      <anchor>a4885cf592bd9de31ff7a842e871a9713</anchor>
+      <arglist>(const istd::CString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveFolder</name>
+      <anchorfile>classiwin_1_1_c_file_system.html</anchorfile>
+      <anchor>a2804491a1e9ee8d869c6cefc402112b3</anchor>
+      <arglist>(const istd::CString &amp;directoryPath, bool ignoreNonEmpty=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateFolder</name>
+      <anchorfile>classiwin_1_1_c_file_system.html</anchorfile>
+      <anchor>aea036ef11a67dbac5feb479e7dcce08d</anchor>
+      <arglist>(const istd::CString &amp;directoryPath) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwin::CProcessEnvironment</name>
+    <filename>classiwin_1_1_c_process_environment.html</filename>
+    <base virtualness="virtual">isys::IProcessEnvironment</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetMainThreadId</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>a558962f636f2bff47176543a249d0583</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Sleep</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>ab65fc64a9bc3d13b86beb29438ea5499</anchor>
+      <arglist>(double seconds)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetTempDirPath</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>afdd6c78a695db0a4ad327b64f44bfb19</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetWorkingDirectory</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>a51896426e191a08d648e687d9368ce14</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CStringList</type>
+      <name>GetApplicationArguments</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>a1bcbce7dafd246e6b93593e0b2a659f4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetModulePath</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>af98c086e528427a6ea1e7e48eb76017c</anchor>
+      <arglist>(bool useApplicationModule=false, bool onlyDirectory=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual EnvironmentVariables</type>
+      <name>GetEnvironmentVariables</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>a8e826ba4f050c47e7849e152a8196031</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetEnvironmentVariableValue</name>
+      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
+      <anchor>a2911c49b4eff2cbba2c0685124dad136</anchor>
+      <arglist>(const istd::CString &amp;variableName, const istd::CString &amp;value)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwin::CSystemEnvironment</name>
+    <filename>classiwin_1_1_c_system_environment.html</filename>
+    <base virtualness="virtual">isys::CSystemEnvironmentBase</base>
+    <member kind="typedef">
+      <type>isys::CSystemEnvironmentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwin_1_1_c_system_environment.html</anchorfile>
+      <anchor>a5e3b18ada0ceeb09e0ad797867f9d761</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetUser</name>
+      <anchorfile>classiwin_1_1_c_system_environment.html</anchorfile>
+      <anchor>a068d8d67b0acaa74c3d3f6bd5e36fe96</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetTempDirPath</name>
+      <anchorfile>classiwin_1_1_c_system_environment.html</anchorfile>
+      <anchor>a96b798c4274ae62b1da81a4fd161fcd6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetUniqueIdentifier</name>
+      <anchorfile>classiwin_1_1_c_system_environment.html</anchorfile>
+      <anchor>a56d6284788ee58b80c52fe5947cc5bf4</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwin::CSystemInfo</name>
+    <filename>classiwin_1_1_c_system_info.html</filename>
+    <base>isys::CSystemInfoBase</base>
+    <member kind="function">
+      <type></type>
+      <name>CSystemInfo</name>
+      <anchorfile>classiwin_1_1_c_system_info.html</anchorfile>
+      <anchor>a482afa91bb0eb2cdbec325c4955155c4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>GetSystemInfo</name>
+      <anchorfile>classiwin_1_1_c_system_info.html</anchorfile>
+      <anchor>adabd09c2bb7b26bf189a8bd068963053</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwin::CTimer</name>
+    <filename>classiwin_1_1_c_timer.html</filename>
+    <base virtualness="virtual">isys::ITimer</base>
+    <member kind="function">
+      <type></type>
+      <name>CTimer</name>
+      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
+      <anchor>a5876fa5d9f6d57fd01c204318e9b23a3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsVaild</name>
+      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
+      <anchor>a4c542bfcfe5bb1eabcebb7e2234df465</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetTimeTo</name>
+      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
+      <anchor>ab9e95463c4d8c53ce5bf69f1e5056997</anchor>
+      <arglist>(const CTimer &amp;timer) const </arglist>
+    </member>
+    <member kind="function">
+      <type>I_QWORD</type>
+      <name>GetNativeRepresentation</name>
+      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
+      <anchor>a54d0475575bcd6e63fdb4d8303114349</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetNativeRepresentation</name>
+      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
+      <anchor>a3d6657b0055f0faa149fe3290b628c27</anchor>
+      <arglist>(I_QWORD value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetElapsed</name>
+      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
+      <anchor>ac98f220877f79c15b488d6dd7055c972</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Start</name>
+      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
+      <anchor>a63076636f9456e42a268d26eee746e97</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetElapsed</name>
+      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
+      <anchor>a118f16d76c9027f61139171e974f1ed5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetTimeTo</name>
+      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
+      <anchor>ae290f53a9a68679da1cbd23d4f6d57ba</anchor>
+      <arglist>(const ITimer &amp;timer) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>WaitTo</name>
+      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
+      <anchor>a9da9739f8da92d76bcd3e42a6b971910</anchor>
+      <arglist>(double time) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetTimerResolution</name>
+      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
+      <anchor>ab57a2c8efbf8bd01bc41e16e58ed4176</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwin::CTimeStampCacheComp</name>
+    <filename>classiwin_1_1_c_time_stamp_cache_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iinsp::ITimeStampProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwin_1_1_c_time_stamp_cache_comp.html</anchorfile>
+      <anchor>a1488feef0643accb9cf2d0c2c7c74336</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const isys::ITimer *</type>
+      <name>GetCurrentTimeStamp</name>
+      <anchorfile>classiwin_1_1_c_time_stamp_cache_comp.html</anchorfile>
+      <anchor>a0709da9de2abd6bb7b7313f0ec8e2799</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiwin_1_1_c_time_stamp_cache_comp.html</anchorfile>
+      <anchor>a8f6b3cbaa60448fa0d24e3d9b1b4051f</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwin::TComPtr</name>
+    <filename>classiwin_1_1_t_com_ptr.html</filename>
+    <templarg>Type</templarg>
+    <base>istd::TPointerBase</base>
+    <member kind="typedef">
+      <type>istd::TPointerBase&lt; Type &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwin_1_1_t_com_ptr.html</anchorfile>
+      <anchor>abcf07685d61aac23fe29fd9bbf127bed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TComPtr</name>
+      <anchorfile>classiwin_1_1_t_com_ptr.html</anchorfile>
+      <anchor>a9dcbf2441958ea970056e5dde597a3b7</anchor>
+      <arglist>(Type *ptr=NULL, bool addRef=true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TComPtr</name>
+      <anchorfile>classiwin_1_1_t_com_ptr.html</anchorfile>
+      <anchor>afbdbca76d72e1589529249e6120b0159</anchor>
+      <arglist>(const TComPtr &amp;ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~TComPtr</name>
+      <anchorfile>classiwin_1_1_t_com_ptr.html</anchorfile>
+      <anchor>a23bd8eddf738d5b373e3ebbee09ee0a3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>CoCreateInstance</name>
+      <anchorfile>classiwin_1_1_t_com_ptr.html</anchorfile>
+      <anchor>a65a9fc28017791dc9a985924ce2807a6</anchor>
+      <arglist>(REFCLSID rclsid, IUnknown *outerPtr=NULL, I_DWORD clsContext=CLSCTX_ALL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classiwin_1_1_t_com_ptr.html</anchorfile>
+      <anchor>a338f3fc146bc2591e233d8bc837e2a67</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPtr</name>
+      <anchorfile>classiwin_1_1_t_com_ptr.html</anchorfile>
+      <anchor>a72f0d701a841e15c86a4041606ce95ef</anchor>
+      <arglist>(Type *ptr, bool addRef=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>Type *</type>
+      <name>PopPtr</name>
+      <anchorfile>classiwin_1_1_t_com_ptr.html</anchorfile>
+      <anchor>a1763f036774989ba3a7a46348588c028</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>TakeOver</name>
+      <anchorfile>classiwin_1_1_t_com_ptr.html</anchorfile>
+      <anchor>a2f44dbced7323a9e874f55891f37589c</anchor>
+      <arglist>(TComPtr &amp;sourcePtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>IncRef</name>
+      <anchorfile>classiwin_1_1_t_com_ptr.html</anchorfile>
+      <anchor>a2af360fa6351b88f8f4b8f4de77d05e0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>DecRef</name>
+      <anchorfile>classiwin_1_1_t_com_ptr.html</anchorfile>
+      <anchor>a6c64cb42fe689162fccf67e11f4c629d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>TComPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classiwin_1_1_t_com_ptr.html</anchorfile>
+      <anchor>ac19055435702bb97cbae22a20cfbaa84</anchor>
+      <arglist>(const TComPtr &amp;ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>Type **</type>
+      <name>operator&amp;</name>
+      <anchorfile>classiwin_1_1_t_com_ptr.html</anchorfile>
+      <anchor>a7c2535219bb52ae5aa8dfbbc90a96ab0</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="namespace">
