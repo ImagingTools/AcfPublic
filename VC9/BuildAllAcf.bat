@@ -10,13 +10,13 @@ echo Building ACF in %ACFDIR%
 echo Building ACF-Solutions in %ACFSLNDIR%
 echo Building IACF in %IACFDIR%
 
-cd ..\Acf\Impl\VC9
+cd %ACFDIR%\Impl\VC9
 msbuild AcfAll.sln
 
-cd ..\..\..\AcfSln\Impl\VC9
+cd %ACFSLNDIR%\Impl\VC9
 msbuild AcfSlnAll.sln
 
-cd ..\..\..\Iacf\Impl\VC9
+cd %IACFDIR%\Impl\VC9
 msbuild IacfAll.sln
 
 pause
