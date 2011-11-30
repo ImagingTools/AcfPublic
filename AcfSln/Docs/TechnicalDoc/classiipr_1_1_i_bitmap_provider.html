@@ -47,11 +47,12 @@ Inheritance diagram for iipr::IBitmapProvider:</div>
  <div class="center">
   <img src="classiipr_1_1_i_bitmap_provider.png" usemap="#iipr::IBitmapProvider_map" alt=""/>
   <map id="iipr::IBitmapProvider_map" name="iipr::IBitmapProvider_map">
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="231,56,452,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="231,0,452,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="346,56,567,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="346,0,567,24"/>
 <area href="classicam_1_1_c_snap_bitmap_supplier_comp.html" title="Implementation of bitmap supplier based on image acquisition." alt="icam::CSnapBitmapSupplierComp" shape="rect" coords="0,168,221,192"/>
-<area href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html" title="Image supplier delegating the calls to another one or accessing some bitmap object directly..." alt="iipr::CDelegatedBitmapSupplierComp" shape="rect" coords="231,168,452,192"/>
-<area href="classiipr_1_1_c_processed_bitmap_supplier_comp.html" title="Image supplier providing processed image from some other input image supplier." alt="iipr::CProcessedBitmapSupplierComp" shape="rect" coords="462,168,683,192"/>
+<area href="classiipr_1_1_c_bitmap_cache_comp.html" alt="iipr::CBitmapCacheComp" shape="rect" coords="231,168,452,192"/>
+<area href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html" title="Image supplier delegating the calls to another one or accessing some bitmap object directly..." alt="iipr::CDelegatedBitmapSupplierComp" shape="rect" coords="462,168,683,192"/>
+<area href="classiipr_1_1_c_processed_bitmap_supplier_comp.html" title="Image supplier providing processed image from some other input image supplier." alt="iipr::CProcessedBitmapSupplierComp" shape="rect" coords="693,168,914,192"/>
 </map>
  </div></div>
 
@@ -87,7 +88,7 @@ Public Member Functions</h2></td></tr>
 <p>Get access to produced bitmap object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to bitmap instance if this bitmap is accessible, or NULL. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a45c7c3568ba2c8cb44a1a35e1fb9a74e">iipr::CDelegatedBitmapSupplierComp</a>, <a class="el" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a4688ddf6927eaf785b7297c8acadaf9e">iipr::CProcessedBitmapSupplierComp</a>, and <a class="el" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#a75c695192e6efec5d1cf378b5da900a6">icam::CSnapBitmapSupplierComp</a>.</p>
+<p>Implemented in <a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a45c7c3568ba2c8cb44a1a35e1fb9a74e">iipr::CDelegatedBitmapSupplierComp</a>, <a class="el" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a4688ddf6927eaf785b7297c8acadaf9e">iipr::CProcessedBitmapSupplierComp</a>, <a class="el" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#a75c695192e6efec5d1cf378b5da900a6">icam::CSnapBitmapSupplierComp</a>, and <a class="el" href="classiipr_1_1_c_bitmap_cache_comp.html#a4da8959c644ebe297ea8b60dded19fc0">iipr::CBitmapCacheComp</a>.</p>
 
 </div>
 </div>
@@ -109,7 +110,7 @@ Public Member Functions</h2></td></tr>
 <p>Please note, not all implementations must support this information. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to transformation if it is accessible, or NULL. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#aef74ba8867f5f77e8160bf0cf9f50583">iipr::CDelegatedBitmapSupplierComp</a>, <a class="el" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a2a75ac1fbf2d1cc128882ce0f941c2ba">iipr::CProcessedBitmapSupplierComp</a>, and <a class="el" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#a60bdc80744617cef36960048f06e6b65">icam::CSnapBitmapSupplierComp</a>.</p>
+<p>Implemented in <a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#aef74ba8867f5f77e8160bf0cf9f50583">iipr::CDelegatedBitmapSupplierComp</a>, <a class="el" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a2a75ac1fbf2d1cc128882ce0f941c2ba">iipr::CProcessedBitmapSupplierComp</a>, <a class="el" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#a60bdc80744617cef36960048f06e6b65">icam::CSnapBitmapSupplierComp</a>, and <a class="el" href="classiipr_1_1_c_bitmap_cache_comp.html#ae873c3d13829db204e6a410945ab9fbd">iipr::CBitmapCacheComp</a>.</p>
 
 </div>
 </div>

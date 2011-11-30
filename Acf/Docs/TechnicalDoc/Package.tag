@@ -15140,8 +15140,8 @@
       <type>icomp::IRegistryElement *</type>
       <name>TryCreateComponent</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>ae4a782c274e2c28f6f6ddadd8d218bc8</anchor>
-      <arglist>(const std::string elementId, const icomp::CComponentAddress &amp;address, const i2d::CVector2d &amp;position)</arglist>
+      <anchor>aa42d946fa400c88063332ac0c3200865</anchor>
+      <arglist>(const std::string &amp;elementId, const icomp::CComponentAddress &amp;address, const i2d::CVector2d &amp;position)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>

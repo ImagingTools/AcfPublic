@@ -315,6 +315,22 @@
     <namespace>ifpf</namespace>
   </compound>
   <compound kind="file">
+    <name>CGeneralResultCacheComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
+    <filename>_c_general_result_cache_comp_8h</filename>
+    <includes id="_i_general_result_provider_8h" name="IGeneralResultProvider.h" local="yes" imported="no">iinsp/IGeneralResultProvider.h</includes>
+    <class kind="class">iinsp::CGeneralResultCacheComp</class>
+    <namespace>iinsp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CIdCacheComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
+    <filename>_c_id_cache_comp_8h</filename>
+    <includes id="_i_id_provider_8h" name="IIdProvider.h" local="yes" imported="no">iinsp/IIdProvider.h</includes>
+    <class kind="class">iinsp::CIdCacheComp</class>
+    <namespace>iinsp</namespace>
+  </compound>
+  <compound kind="file">
     <name>CInspectionComp.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_c_inspection_comp_8h</filename>
@@ -371,6 +387,14 @@
     <filename>_i_time_stamp_provider_8h</filename>
     <class kind="class">iinsp::ITimeStampProvider</class>
     <namespace>iinsp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CBitmapCacheComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_bitmap_cache_comp_8h</filename>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
+    <class kind="class">iipr::CBitmapCacheComp</class>
+    <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>CCaliperFeature.h</name>
@@ -554,6 +578,14 @@
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">iipr/IDataSequenceProvider.h</includes>
     <includes id="_i_line_projection_processor_8h" name="ILineProjectionProcessor.h" local="yes" imported="no">iipr/ILineProjectionProcessor.h</includes>
     <class kind="class">iipr::CLineProjectionSupplierComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CMultiBitmapCacheComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_multi_bitmap_cache_comp_8h</filename>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
+    <class kind="class">iipr::CMultiBitmapCacheComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -3802,6 +3834,8 @@
   <compound kind="namespace">
     <name>iinsp</name>
     <filename>namespaceiinsp.html</filename>
+    <class kind="class">iinsp::CGeneralResultCacheComp</class>
+    <class kind="class">iinsp::CIdCacheComp</class>
     <class kind="class">iinsp::CInspectionComp</class>
     <class kind="class">iinsp::CInspectionTaskComp</class>
     <class kind="class">iinsp::IGeneralResultProvider</class>
@@ -3809,6 +3843,74 @@
     <class kind="class">iinsp::IInspection</class>
     <class kind="class">iinsp::IInspectionTask</class>
     <class kind="class">iinsp::ITimeStampProvider</class>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::CGeneralResultCacheComp</name>
+    <filename>classiinsp_1_1_c_general_result_cache_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iinsp::IGeneralResultProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiinsp_1_1_c_general_result_cache_comp.html</anchorfile>
+      <anchor>af5c155e75c3a6e425e9b0464d6e2d0ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CGeneralResultCacheComp</name>
+      <anchorfile>classiinsp_1_1_c_general_result_cache_comp.html</anchorfile>
+      <anchor>a42e98971021585f734c1584f7d72755b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual GeneralResult</type>
+      <name>GetGeneralResult</name>
+      <anchorfile>classiinsp_1_1_c_general_result_cache_comp.html</anchorfile>
+      <anchor>a95215b7f9c33ad9a7a6bfbcffff3ad34</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiinsp_1_1_c_general_result_cache_comp.html</anchorfile>
+      <anchor>a561727cea34554057803af99e84158ba</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::CIdCacheComp</name>
+    <filename>classiinsp_1_1_c_id_cache_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iinsp::IIdProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiinsp_1_1_c_id_cache_comp.html</anchorfile>
+      <anchor>ab04df91a474ab4afe3c7bdd71a961343</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CIdCacheComp</name>
+      <anchorfile>classiinsp_1_1_c_id_cache_comp.html</anchorfile>
+      <anchor>a9c2085f385ddb3ff76abf5fb36e7a470</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual I_DWORD</type>
+      <name>GetCurrentId</name>
+      <anchorfile>classiinsp_1_1_c_id_cache_comp.html</anchorfile>
+      <anchor>a52dddd437677a6ab1948546a4d7d97cc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiinsp_1_1_c_id_cache_comp.html</anchorfile>
+      <anchor>a88b71e8c1ff73bb34d1ba3c1de6df8d3</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iinsp::CInspectionComp</name>
@@ -4040,13 +4142,6 @@
       <anchor>a278a0d0ce1fdf7437bd71fb9f4a2e0d6</anchor>
       <arglist>() const =0</arglist>
     </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>SetCurrentId</name>
-      <anchorfile>classiinsp_1_1_i_id_provider.html</anchorfile>
-      <anchor>abdc3057670b0f6eca66db91b65cb25c1</anchor>
-      <arglist>(I_DWORD id)=0</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iinsp::IInspection</name>
@@ -4115,6 +4210,7 @@
   <compound kind="namespace">
     <name>iipr</name>
     <filename>namespaceiipr.html</filename>
+    <class kind="class">iipr::CBitmapCacheComp</class>
     <class kind="class">iipr::CCaliperFeature</class>
     <class kind="class">iipr::CCaliperParams</class>
     <class kind="class">iipr::CCaliperParamsComp</class>
@@ -4136,6 +4232,7 @@
     <class kind="class">iipr::CImageProcessorCompBase</class>
     <class kind="class">iipr::CLineProjectionProcessorComp</class>
     <class kind="class">iipr::CLineProjectionSupplierComp</class>
+    <class kind="class">iipr::CMultiBitmapCacheComp</class>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <class kind="class">iipr::CProcessedAcquisitionComp</class>
     <class kind="class">iipr::CProcessedBitmapSupplierComp</class>
@@ -4193,6 +4290,40 @@
       <anchorfile>namespaceiipr.html</anchorfile>
       <anchor>a310caaf2e3e829aef8247d0eb1e37aada28eae46bbb14021d34f46b02f4ecc45f</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CBitmapCacheComp</name>
+    <filename>classiipr_1_1_c_bitmap_cache_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iipr::IBitmapProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_bitmap_cache_comp.html</anchorfile>
+      <anchor>afbabd1198a48658b5ec39f495e5f89e8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiipr_1_1_c_bitmap_cache_comp.html</anchorfile>
+      <anchor>a4da8959c644ebe297ea8b60dded19fc0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetLogTransform</name>
+      <anchorfile>classiipr_1_1_c_bitmap_cache_comp.html</anchorfile>
+      <anchor>ae873c3d13829db204e6a410945ab9fbd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiipr_1_1_c_bitmap_cache_comp.html</anchorfile>
+      <anchor>aa490db973848794068662e42f35e9397</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5095,6 +5226,54 @@
       <anchorfile>classiipr_1_1_c_line_projection_supplier_comp.html</anchorfile>
       <anchor>a949009c368a09afc4275e4257471251f</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CMultiBitmapCacheComp</name>
+    <filename>classiipr_1_1_c_multi_bitmap_cache_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iipr::IMultiBitmapProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
+      <anchor>a05cb5521e849eaadc9f271aae3b953a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMultiBitmapCacheComp</name>
+      <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
+      <anchor>a25f81226b1873d3e06cc5de300ac7f92</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetBitmapsCount</name>
+      <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
+      <anchor>a03025bb4473f7b1f9073102b37ba9e70</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
+      <anchor>a54007d2545576446ef50be04cfe42a0a</anchor>
+      <arglist>(int bitmapIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetLogTransform</name>
+      <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
+      <anchor>a1d98671a18b010063e14109b7f02103f</anchor>
+      <arglist>(int bitmapIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
+      <anchor>a5a9b3e28451dd73d780f51d82958ce7b</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
     </member>
   </compound>
   <compound kind="class">
