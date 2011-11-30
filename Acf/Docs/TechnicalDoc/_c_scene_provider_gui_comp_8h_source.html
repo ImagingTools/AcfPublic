@@ -188,50 +188,51 @@
 <a name="l00182"></a>00182        <span class="keywordtype">bool</span> m_isZoomIgnored;
 <a name="l00183"></a>00183 
 <a name="l00184"></a>00184        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_commands;
-<a name="l00185"></a>00185        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_fileCommand;
+<a name="l00185"></a>00185        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_fileMenu;
 <a name="l00186"></a>00186        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_printCommand;
-<a name="l00187"></a>00187        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_viewCommand;
-<a name="l00188"></a>00188        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_autoFitToViewCommand;
-<a name="l00189"></a>00189        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_fitToViewCommand;
-<a name="l00190"></a>00190        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_fitToImageCommand;
-<a name="l00191"></a>00191        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_resetZoomCommand;
-<a name="l00192"></a>00192        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_selectAllCommand;
-<a name="l00193"></a>00193 
-<a name="l00194"></a>00194        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_sceneControllerGuiCompPtr);
-<a name="l00195"></a>00195        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_drop_consumer.html" title="Interface for objects which can receive dragged objects.">iqtgui::IDropConsumer</a>, m_dropConsumersCompPtr);
-<a name="l00196"></a>00196 
-<a name="l00197"></a>00197        I_ATTR(<span class="keywordtype">bool</span>, m_allowWidgetResizeAttrPtr);
-<a name="l00198"></a>00198        I_ATTR(<span class="keywordtype">int</span>, m_sceneIdAttrPtr);
-<a name="l00199"></a>00199        I_ATTR(<span class="keywordtype">bool</span>, m_useAntialiasingAttrPtr);
-<a name="l00200"></a>00200        I_ATTR(<span class="keywordtype">int</span>, m_fitModeAttrPtr);
-<a name="l00201"></a>00201        I_ATTR(<span class="keywordtype">double</span>, m_isotropyFactorAttrPtr);
-<a name="l00202"></a>00202        I_ATTR(<span class="keywordtype">int</span>, m_backgroundModeAttrPtr);
-<a name="l00203"></a>00203        I_ATTR(<span class="keywordtype">double</span>, m_gridSizeAttrPtr);
-<a name="l00204"></a>00204        I_ATTR(<span class="keywordtype">bool</span>, m_isAlignmentEnabledAttrPtr);
-<a name="l00205"></a>00205        I_ATTR(<span class="keywordtype">double</span>, m_sceneWidthAttrPtr);
-<a name="l00206"></a>00206        I_ATTR(<span class="keywordtype">double</span>, m_sceneHeightAttrPtr);
-<a name="l00207"></a>00207 
-<a name="l00208"></a>00208        QWidget* m_savedParentWidgetPtr;
-<a name="l00209"></a>00209        QMatrix m_savedViewTransform;
-<a name="l00210"></a>00210 
-<a name="l00211"></a>00211        <span class="keywordtype">double</span> m_isotropyFactor;
-<a name="l00212"></a>00212 };
-<a name="l00213"></a>00213 
+<a name="l00187"></a>00187        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_editMenu;
+<a name="l00188"></a>00188        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_selectAllCommand;
+<a name="l00189"></a>00189        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_viewMenu;
+<a name="l00190"></a>00190        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_autoFitToViewCommand;
+<a name="l00191"></a>00191        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_fitToViewCommand;
+<a name="l00192"></a>00192        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_fitToImageCommand;
+<a name="l00193"></a>00193        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_resetZoomCommand;
+<a name="l00194"></a>00194 
+<a name="l00195"></a>00195        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_sceneControllerGuiCompPtr);
+<a name="l00196"></a>00196        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_drop_consumer.html" title="Interface for objects which can receive dragged objects.">iqtgui::IDropConsumer</a>, m_dropConsumersCompPtr);
+<a name="l00197"></a>00197 
+<a name="l00198"></a>00198        I_ATTR(<span class="keywordtype">bool</span>, m_allowWidgetResizeAttrPtr);
+<a name="l00199"></a>00199        I_ATTR(<span class="keywordtype">int</span>, m_sceneIdAttrPtr);
+<a name="l00200"></a>00200        I_ATTR(<span class="keywordtype">bool</span>, m_useAntialiasingAttrPtr);
+<a name="l00201"></a>00201        I_ATTR(<span class="keywordtype">int</span>, m_fitModeAttrPtr);
+<a name="l00202"></a>00202        I_ATTR(<span class="keywordtype">double</span>, m_isotropyFactorAttrPtr);
+<a name="l00203"></a>00203        I_ATTR(<span class="keywordtype">int</span>, m_backgroundModeAttrPtr);
+<a name="l00204"></a>00204        I_ATTR(<span class="keywordtype">double</span>, m_gridSizeAttrPtr);
+<a name="l00205"></a>00205        I_ATTR(<span class="keywordtype">bool</span>, m_isAlignmentEnabledAttrPtr);
+<a name="l00206"></a>00206        I_ATTR(<span class="keywordtype">double</span>, m_sceneWidthAttrPtr);
+<a name="l00207"></a>00207        I_ATTR(<span class="keywordtype">double</span>, m_sceneHeightAttrPtr);
+<a name="l00208"></a>00208 
+<a name="l00209"></a>00209        QWidget* m_savedParentWidgetPtr;
+<a name="l00210"></a>00210        QMatrix m_savedViewTransform;
+<a name="l00211"></a>00211 
+<a name="l00212"></a>00212        <span class="keywordtype">double</span> m_isotropyFactor;
+<a name="l00213"></a>00213 };
 <a name="l00214"></a>00214 
-<a name="l00215"></a>00215 <span class="comment">// inline protected methods</span>
-<a name="l00216"></a>00216 
-<a name="l00217"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a0d2dcc8dbd5b6204877312123c4dda86">00217</a> <span class="keyword">inline</span> <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a>&amp; <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a0d2dcc8dbd5b6204877312123c4dda86">CSceneProviderGuiComp::GetCommandsRootRef</a>()
-<a name="l00218"></a>00218 {
-<a name="l00219"></a>00219        <span class="keywordflow">return</span> m_commands;
-<a name="l00220"></a>00220 }
-<a name="l00221"></a>00221 
+<a name="l00215"></a>00215 
+<a name="l00216"></a>00216 <span class="comment">// inline protected methods</span>
+<a name="l00217"></a>00217 
+<a name="l00218"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a0d2dcc8dbd5b6204877312123c4dda86">00218</a> <span class="keyword">inline</span> <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a>&amp; <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a0d2dcc8dbd5b6204877312123c4dda86">CSceneProviderGuiComp::GetCommandsRootRef</a>()
+<a name="l00219"></a>00219 {
+<a name="l00220"></a>00220        <span class="keywordflow">return</span> m_commands;
+<a name="l00221"></a>00221 }
 <a name="l00222"></a>00222 
-<a name="l00223"></a>00223 } <span class="comment">// namespace iqt2d</span>
-<a name="l00224"></a>00224 
+<a name="l00223"></a>00223 
+<a name="l00224"></a>00224 } <span class="comment">// namespace iqt2d</span>
 <a name="l00225"></a>00225 
-<a name="l00226"></a>00226 <span class="preprocessor">#endif // !iqt2d_CSceneProviderGuiComp_included</span>
-<a name="l00227"></a>00227 <span class="preprocessor"></span>
-<a name="l00228"></a>00228 
+<a name="l00226"></a>00226 
+<a name="l00227"></a>00227 <span class="preprocessor">#endif // !iqt2d_CSceneProviderGuiComp_included</span>
+<a name="l00228"></a>00228 <span class="preprocessor"></span>
+<a name="l00229"></a>00229 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -36,19 +36,19 @@
 
 // ACF includes
 #include "iser/IFileLoader.h"
+#include "iser/CArchiveTag.h"
 
 #include "imod/TSingleModelObserverBase.h"
 #include "imod/TModelWrap.h"
 
 #include "icomp/IRegistry.h"
 #include "icomp/IComponentEnvironmentManager.h"
-#include "icomp/CComponentBase.h"
 
 #include "ibase/ICommandsProvider.h"
+
 #include "idoc/IHelpViewer.h"
 #include "idoc/IDocumentManager.h"
 
-#include "iqtgui/IDropConsumer.h"
 #include "iqtgui/TGuiComponentBase.h"
 #include "iqtgui/TGuiObserverWrap.h"
 #include "iqtgui/CHierarchicalCommand.h"
@@ -119,7 +119,8 @@ protected:
 		GI_COMPONENT = 0x5430,
 		GI_EMBEDDED_REGISTRY,
 		GI_CODEGEN,
-		GI_PREVIEW
+		GI_PREVIEW,
+		GI_EDIT
 	};
 
 	class EnvironmentObserver: public imod::TSingleModelObserverBase<icomp::IComponentEnvironmentManager>
@@ -147,8 +148,11 @@ protected:
 				const std::string& referenceComponentId,
 				const std::string& attributeId,
 				bool isFactory = false);
-	bool TryCreateComponent(const icomp::CComponentAddress& address, const i2d::CVector2d& position);
-	void ConnectReferences(const QString& componentRole);
+	icomp::IRegistryElement* TryCreateComponent(
+				const std::string elementId,
+				const icomp::CComponentAddress& address,
+				const i2d::CVector2d& position);
+	void ConnectReferences(const std::string& componentRole);
 	void UpdateComponentSelection();
 
 	void DoRetranslate();
@@ -168,6 +172,10 @@ protected:
 
 protected Q_SLOTS:
 	void OnSelectionChanged();
+
+	void OnCutCommand();
+	void OnCopyCommand();
+	void OnPasteCommand();
 	void OnRemoveComponent();
 	void OnRenameComponent();
 	void InsertEmbeddedComponent();
@@ -204,8 +212,12 @@ private:
 	I_REF(IRegistryConsistInfo, m_consistInfoCompPtr);
 	
 	iqtgui::CHierarchicalCommand m_registryCommand;
-	iqtgui::CHierarchicalCommand m_registryMenu;
+	iqtgui::CHierarchicalCommand m_editMenu;
+	iqtgui::CHierarchicalCommand m_cutCommand;
+	iqtgui::CHierarchicalCommand m_copyCommand;
+	iqtgui::CHierarchicalCommand m_pasteCommand;
 	iqtgui::CHierarchicalCommand m_removeComponentCommand;
+	iqtgui::CHierarchicalCommand m_registryMenu;
 	iqtgui::CHierarchicalCommand m_renameComponentCommand;
 	iqtgui::CHierarchicalCommand m_insertEmbeddedRegistryCommand;
 	iqtgui::CHierarchicalCommand m_toEmbeddedRegistryCommand;
@@ -226,6 +238,13 @@ private:
 	EnvironmentObserver m_environmentObserver;
 
 	imod::TModelWrap<SelectionInfoImpl> m_selectionInfo;
+
+	// static attributes
+	static iser::CArchiveTag s_elementsListTag;
+	static iser::CArchiveTag s_elementTag;
+	static iser::CArchiveTag s_elementIdTag;
+	static iser::CArchiveTag s_elementAddressTag;
+	static iser::CArchiveTag s_elementCenterTag;
 };
 
 

@@ -98,14 +98,21 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of menu commands.  <a href="#a9e361089e77284e5efa91e7dae124ec5"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0dbdaa790bcf7386eeea82c16e89bd0d">GroupId</a> { <a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0dbdaa790bcf7386eeea82c16e89bd0dac2c586c6cff797537e9a274943eaca0d">GI_COMPONENT</a> =  0x5430, 
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0dbdaa790bcf7386eeea82c16e89bd0d">GroupId</a> { <br/>
+&#160;&#160;<a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0dbdaa790bcf7386eeea82c16e89bd0dac2c586c6cff797537e9a274943eaca0d">GI_COMPONENT</a> =  0x5430, 
 <a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0dbdaa790bcf7386eeea82c16e89bd0da164b1555a4133735e31d7ca93fc639e0">GI_EMBEDDED_REGISTRY</a>, 
 <a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0dbdaa790bcf7386eeea82c16e89bd0da2aef7ef5bc2ca4315af5303a231d1a50">GI_CODEGEN</a>, 
-<a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0dbdaa790bcf7386eeea82c16e89bd0dabaf3c62c9df98c822308107b2327d690">GI_PREVIEW</a>
+<a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0dbdaa790bcf7386eeea82c16e89bd0dabaf3c62c9df98c822308107b2327d690">GI_PREVIEW</a>, 
+<br/>
+&#160;&#160;<a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0dbdaa790bcf7386eeea82c16e89bd0da4e69b951417366114dbe49cd02093805">GI_EDIT</a>
+<br/>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a08767078053ee954a18678aa179b0582">OnSelectionChanged</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a3a8f3d4a519786731c8d5865ac50f6cc">OnCutCommand</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a454b1220d3f0ceb71b46d541d96eaf41">OnCopyCommand</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a49e6598a03ba7993b3c4f4aa014a8888">OnPasteCommand</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#abfdcf87e3bd82a40b2cad1cda06cff02">OnRemoveComponent</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0bb1ff11bea86b456f324735084643ff">OnRenameComponent</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0115eac451648a356bf256047a1cb65b">InsertEmbeddedComponent</a> ()</td></tr>
@@ -122,8 +129,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of shape representing some element.  <a href="#ab4983960912bb930939ece9112da0416"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#ad856af3c00a1fcf929106fead92704fa">AddConnectorsToScene</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#aec38c8b1a50e3d7c496e9c24218d6936">AddConnector</a> (<a class="el" href="classicmpstr_1_1_c_registry_element_shape.html">CRegistryElementShape</a> &amp;sourceShape, const std::string &amp;referenceComponentId, const std::string &amp;attributeId, bool isFactory=false)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a29b97ca341c25f3b6ad4416f92e87478">TryCreateComponent</a> (const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address, const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#acb3b0c9fd9ca327c3cd0a0d5a539ec79">ConnectReferences</a> (const QString &amp;componentRole)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classicomp_1_1_i_registry_element.html">icomp::IRegistryElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#ae4a782c274e2c28f6f6ddadd8d218bc8">TryCreateComponent</a> (const std::string elementId, const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address, const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a191044044f99962ee7394bd0857f1545">ConnectReferences</a> (const std::string &amp;componentRole)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a5a5fa5717d66268ddff72cb4f07ba067">UpdateComponentSelection</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#afe83e2d92ab9da4d0704940b321bec2f">DoRetranslate</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a3c7fe27cca21ea3e8fc47bdbf355fb3a">OnDropObject</a> (const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)</td></tr>
@@ -181,6 +188,8 @@ Friends</h2></td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a0dbdaa790bcf7386eeea82c16e89bd0da2aef7ef5bc2ca4315af5303a231d1a50"></a><!-- doxytag: member="GI_CODEGEN" ref="a0dbdaa790bcf7386eeea82c16e89bd0da2aef7ef5bc2ca4315af5303a231d1a50" args="" -->GI_CODEGEN</em>&nbsp;</td><td>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a0dbdaa790bcf7386eeea82c16e89bd0dabaf3c62c9df98c822308107b2327d690"></a><!-- doxytag: member="GI_PREVIEW" ref="a0dbdaa790bcf7386eeea82c16e89bd0dabaf3c62c9df98c822308107b2327d690" args="" -->GI_PREVIEW</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a0dbdaa790bcf7386eeea82c16e89bd0da4e69b951417366114dbe49cd02093805"></a><!-- doxytag: member="GI_EDIT" ref="a0dbdaa790bcf7386eeea82c16e89bd0da4e69b951417366114dbe49cd02093805" args="" -->GI_EDIT</em>&nbsp;</td><td>
 </td></tr>
 </table>
 </dd>
@@ -284,14 +293,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acb3b0c9fd9ca327c3cd0a0d5a539ec79"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::ConnectReferences" ref="acb3b0c9fd9ca327c3cd0a0d5a539ec79" args="(const QString &amp;componentRole)" -->
+<a class="anchor" id="a191044044f99962ee7394bd0857f1545"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::ConnectReferences" ref="a191044044f99962ee7394bd0857f1545" args="(const std::string &amp;componentRole)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void icmpstr::CVisualRegistryScenographerComp::ConnectReferences </td>
           <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>componentRole</em></td><td>)</td>
           <td><code> [protected]</code></td>
         </tr>
@@ -435,7 +444,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00212">212</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00231">231</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>
@@ -453,7 +462,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00218">218</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00237">237</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>
@@ -690,6 +699,38 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a454b1220d3f0ceb71b46d541d96eaf41"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::OnCopyCommand" ref="a454b1220d3f0ceb71b46d541d96eaf41" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void icmpstr::CVisualRegistryScenographerComp::OnCopyCommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3a8f3d4a519786731c8d5865ac50f6cc"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::OnCutCommand" ref="a3a8f3d4a519786731c8d5865ac50f6cc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void icmpstr::CVisualRegistryScenographerComp::OnCutCommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a3c7fe27cca21ea3e8fc47bdbf355fb3a"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::OnDropObject" ref="a3c7fe27cca21ea3e8fc47bdbf355fb3a" args="(const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)" -->
 <div class="memitem">
 <div class="memproto">
@@ -760,6 +801,22 @@ Friends</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">void icmpstr::CVisualRegistryScenographerComp::OnExportToCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a49e6598a03ba7993b3c4f4aa014a8888"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::OnPasteCommand" ref="a49e6598a03ba7993b3c4f4aa014a8888" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void icmpstr::CVisualRegistryScenographerComp::OnPasteCommand </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [protected, slot]</code></td>
@@ -850,13 +907,19 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a29b97ca341c25f3b6ad4416f92e87478"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::TryCreateComponent" ref="a29b97ca341c25f3b6ad4416f92e87478" args="(const icomp::CComponentAddress &amp;address, const i2d::CVector2d &amp;position)" -->
+<a class="anchor" id="ae4a782c274e2c28f6f6ddadd8d218bc8"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::TryCreateComponent" ref="ae4a782c274e2c28f6f6ddadd8d218bc8" args="(const std::string elementId, const icomp::CComponentAddress &amp;address, const i2d::CVector2d &amp;position)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool icmpstr::CVisualRegistryScenographerComp::TryCreateComponent </td>
+          <td class="memname"><a class="el" href="classicomp_1_1_i_registry_element.html">icomp::IRegistryElement</a>* icmpstr::CVisualRegistryScenographerComp::TryCreateComponent </td>
           <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>elementId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;&#160;</td>
           <td class="paramname"><em>address</em>, </td>
         </tr>
@@ -947,7 +1010,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00174">174</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00182">182</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>

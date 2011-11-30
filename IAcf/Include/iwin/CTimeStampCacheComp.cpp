@@ -23,13 +23,6 @@
 #include "iwin/CTimeStampCacheComp.h"
 
 
-// ACF includes
-#include "icomp/CComponentBase.h"
-
-// ACF-Solutions includes
-#include "iinsp/ITimeStampProvider.h"
-
-
 namespace iwin
 {
 

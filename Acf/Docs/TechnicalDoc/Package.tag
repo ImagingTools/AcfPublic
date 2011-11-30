@@ -1101,15 +1101,14 @@
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_c_visual_registry_scenographer_comp_8h</filename>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
     <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
     <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
     <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
-    <includes id="_i_drop_consumer_8h" name="IDropConsumer.h" local="yes" imported="no">iqtgui/IDropConsumer.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
@@ -15012,11 +15011,38 @@
       <anchor>a0dbdaa790bcf7386eeea82c16e89bd0dabaf3c62c9df98c822308107b2327d690</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>GI_EDIT</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a0dbdaa790bcf7386eeea82c16e89bd0da4e69b951417366114dbe49cd02093805</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnSelectionChanged</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
       <anchor>a08767078053ee954a18678aa179b0582</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnCutCommand</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a3a8f3d4a519786731c8d5865ac50f6cc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnCopyCommand</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a454b1220d3f0ceb71b46d541d96eaf41</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnPasteCommand</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a49e6598a03ba7993b3c4f4aa014a8888</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -15111,18 +15137,18 @@
       <arglist>(CRegistryElementShape &amp;sourceShape, const std::string &amp;referenceComponentId, const std::string &amp;attributeId, bool isFactory=false)</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>bool</type>
+      <type>icomp::IRegistryElement *</type>
       <name>TryCreateComponent</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a29b97ca341c25f3b6ad4416f92e87478</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address, const i2d::CVector2d &amp;position)</arglist>
+      <anchor>ae4a782c274e2c28f6f6ddadd8d218bc8</anchor>
+      <arglist>(const std::string elementId, const icomp::CComponentAddress &amp;address, const i2d::CVector2d &amp;position)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>ConnectReferences</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>acb3b0c9fd9ca327c3cd0a0d5a539ec79</anchor>
-      <arglist>(const QString &amp;componentRole)</arglist>
+      <anchor>a191044044f99962ee7394bd0857f1545</anchor>
+      <arglist>(const std::string &amp;componentRole)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -33265,9 +33291,9 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>OnCopyPathToClippboard</name>
+      <name>OnCopyPathToClipboard</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>a5ed32908c3a7e0930c0d7228a3a107e5</anchor>
+      <anchor>ab0f5c2098090c1f610cd38a2c98cd1a8</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
