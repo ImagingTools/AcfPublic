@@ -31,8 +31,7 @@
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">imod::CMultiModelBridgeBase Class Reference</div>  </div>
 </div>
@@ -70,6 +69,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to connected model with the index <code>index</code>.  <a href="#a7cabcb3d27b3596194e4d62529e3d51d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#a67784894e922842a303965bf500a15d6">GetModelCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of connected models.  <a href="#a67784894e922842a303965bf500a15d6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#aab36864c19a5855839ebc1d5a3f749cf">EnsureModelsDetached</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all observed models from this bridge.  <a href="#aab36864c19a5855839ebc1d5a3f749cf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#ac67ff92f141874ee0afa9574ef3a55ad">IsModelAttached</a> (const <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if specified model is attached.  <a href="#ac67ff92f141874ee0afa9574ef3a55ad"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#afd3ea384afd89957e618d44dd23d7d67">OnAttached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
@@ -80,9 +81,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called before update of the observer contents occures.  <a href="#a9b7e27e61bd22e7777c719fb5300291e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#ad466317234597651d04fdd782d4c073c">AfterUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called after update of the observer contents occures.  <a href="#ad466317234597651d04fdd782d4c073c"></a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#aab36864c19a5855839ebc1d5a3f749cf">EnsureModelsDetached</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Allow to connect as observer to multiple models and call BeginChanges and EndChanges on some its changes. </p>
@@ -189,11 +187,13 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">void imod::CMultiModelBridgeBase::EnsureModelsDetached </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [protected]</code></td>
+          <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Remove all observed models from this bridge. </p>
 
 </div>
 </div>

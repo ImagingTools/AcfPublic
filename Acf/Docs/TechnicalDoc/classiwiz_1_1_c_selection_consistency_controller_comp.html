@@ -84,7 +84,10 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a979b007e2905abaa789607dba38d358a">CheckParamConsistency</a> (const <a class="el" href="classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a> &amp;param) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a7c7d6006ef1988fb41c237713321cce6">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#abb0fff8770aca84fe9173540ab72db0e">OnComponentDestroyed</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a2b4e37c4b870cebcfd739bd340b54129">OnUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a850e765b710a67ade3d79d2579653b05">BeforeUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called before update of the observer contents occures.  <a href="#a850e765b710a67ade3d79d2579653b05"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#af96287d76a58b6a6d2a9d5af136a995c">AfterUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called after update of the observer contents occures.  <a href="#af96287d76a58b6a6d2a9d5af136a995c"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Component implementation of a wizard controller. </p>
@@ -107,6 +110,81 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="af96287d76a58b6a6d2a9d5af136a995c"></a><!-- doxytag: member="iwiz::CSelectionConsistencyControllerComp::AfterUpdate" ref="af96287d76a58b6a6d2a9d5af136a995c" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iwiz::CSelectionConsistencyControllerComp::AfterUpdate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
+          <td class="paramname"><em>modelPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>updateFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This function will be called after update of the observer contents occures. </p>
+
+<p>Reimplemented from <a class="el" href="classimod_1_1_c_multi_model_observer_base.html#a52d553e4c021cd3022ca5beac156df1f">imod::CMultiModelObserverBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a850e765b710a67ade3d79d2579653b05"></a><!-- doxytag: member="iwiz::CSelectionConsistencyControllerComp::BeforeUpdate" ref="a850e765b710a67ade3d79d2579653b05" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iwiz::CSelectionConsistencyControllerComp::BeforeUpdate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
+          <td class="paramname"><em>modelPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>updateFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This function will be called before update of the observer contents occures. </p>
+<p>Please note, that in some cases no following AfterUpdate can be called. </p>
+
+<p>Reimplemented from <a class="el" href="classimod_1_1_c_multi_model_observer_base.html#a22234401b6906764d85a3a9b86f21686">imod::CMultiModelObserverBase</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a979b007e2905abaa789607dba38d358a"></a><!-- doxytag: member="iwiz::CSelectionConsistencyControllerComp::CheckParamConsistency" ref="a979b007e2905abaa789607dba38d358a" args="(const iprm::ISelectionParam &amp;param) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -336,41 +414,6 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_base.html#a007550438603368acd5133e97547d73f">icomp::CComponentBase</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2b4e37c4b870cebcfd739bd340b54129"></a><!-- doxytag: member="iwiz::CSelectionConsistencyControllerComp::OnUpdate" ref="a2b4e37c4b870cebcfd739bd340b54129" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iwiz::CSelectionConsistencyControllerComp::OnUpdate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
-          <td class="paramname"><em>modelPtr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>updateFlags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
-          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classimod_1_1_c_multi_model_observer_base.html#a4fedb2ca9c97485f0688e99d072610df">imod::CMultiModelObserverBase</a>.</p>
 
 </div>
 </div>

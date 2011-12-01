@@ -221,6 +221,7 @@
 , <a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#abdb9cdbe1c6f0e14ba5be543000a1c64">iqtgui::CLogGuiComp</a>
 , <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a0414b4fb5a17cea42400a88d0df13d5a">iqtgui::TGuiObserverWrap&lt; Gui, Observer &gt;</a>
 , <a class="el" href="classiqtprm_1_1_c_selectable_params_set_gui_comp.html#a8a943978a19001474d6c1d1de6714e55">iqtprm::CSelectableParamsSetGuiComp</a>
+, <a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#af96287d76a58b6a6d2a9d5af136a995c">iwiz::CSelectionConsistencyControllerComp</a>
 , <a class="el" href="classidoc_1_1_c_selected_doc_model_binder_comp.html#ad5e708d6e137dae73b069a158d59729f">idoc::CSelectedDocModelBinderComp</a>
 , <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#ad466317234597651d04fdd782d4c073c">imod::CMultiModelBridgeBase</a>
 </li>
@@ -267,14 +268,14 @@
 : <a class="el" href="classi2d_1_1_c_affine2d.html#a26ebb4aefa81fdf787ec1ccddfbc36ec">i2d::CAffine2d</a>
 </li>
 <li>AreParamsAccepted()
-: <a class="el" href="classiproc_1_1_c_cascaded_processor_comp.html#a835018bd3713fe9708d509c7ba8c1ce9">iproc::CCascadedProcessorComp</a>
+: <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#ae97572f44492b12a88117a22db51483d">iproc::TSyncProcessorWrap&lt; Base &gt;</a>
+, <a class="el" href="classiproc_1_1_c_cascaded_processor_comp.html#a835018bd3713fe9708d509c7ba8c1ce9">iproc::CCascadedProcessorComp</a>
 , <a class="el" href="classiproc_1_1_i_processor.html#a18d945c422d423fa69be5c2a136e1258">iproc::IProcessor</a>
-, <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#ae97572f44492b12a88117a22db51483d">iproc::TSyncProcessorWrap&lt; Base &gt;</a>
 </li>
 <li>ArgumentType
-: <a class="el" href="classimath_1_1_t_i_sampled_function.html#a635b1cce21e7750f3fa765fac2dbc59d">imath::TISampledFunction&lt; ArgumentDimensions, ResultDimensions &gt;</a>
+: <a class="el" href="classimath_1_1_t_i_math_function.html#a841cc046852e3530a344e4a13e81a746">imath::TIMathFunction&lt; Argument, Result &gt;</a>
 , <a class="el" href="classimath_1_1_t_fulcrum_grid_function_base.html#af258eb86f07f9abc969d2b99556a31d0">imath::TFulcrumGridFunctionBase&lt; Argument, Result, Fulcrums &gt;</a>
-, <a class="el" href="classimath_1_1_t_i_math_function.html#a841cc046852e3530a344e4a13e81a746">imath::TIMathFunction&lt; Argument, Result &gt;</a>
+, <a class="el" href="classimath_1_1_t_i_sampled_function.html#a635b1cce21e7750f3fa765fac2dbc59d">imath::TISampledFunction&lt; ArgumentDimensions, ResultDimensions &gt;</a>
 </li>
 <li>AssignTypeId()
 : <a class="el" href="classiprm_1_1_c_variable_param_comp.html#a56e411d74670c22b8405878b3f5465d0">iprm::CVariableParamComp</a>
@@ -287,9 +288,9 @@
 : <a class="el" href="classiqtprm_1_1_c_variable_param_gui_comp.html#a8f3d9f2e4436f53996c408959ae4a313">iqtprm::CVariableParamGuiComp</a>
 </li>
 <li>AttachObserver()
-: <a class="el" href="classimod_1_1_i_model.html#ac6c63f2699bce472fc0b7e556604c5cd">imod::IModel</a>
+: <a class="el" href="classimod_1_1_c_model_proxy.html#af53eca2c218ffed1fd8191e96f419202">imod::CModelProxy</a>
+, <a class="el" href="classimod_1_1_i_model.html#ac6c63f2699bce472fc0b7e556604c5cd">imod::IModel</a>
 , <a class="el" href="classimod_1_1_c_model_base.html#a828e9b08fb20fa4938433b501ac9e8f3">imod::CModelBase</a>
-, <a class="el" href="classimod_1_1_c_model_proxy.html#af53eca2c218ffed1fd8191e96f419202">imod::CModelProxy</a>
 </li>
 <li>AttachToScene()
 : <a class="el" href="classiqtprm_1_1_c_composed_params_set_gui_comp.html#a4c047e3c1e04bd7e55a1069833808a72">iqtprm::CComposedParamsSetGuiComp</a>
@@ -309,18 +310,18 @@
 <li>AttributeMining
 : <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a1a4a9e9cbf809497cf176f751f9f5648a23130885ba3e0afe66dcf40e11b671bd">icmpstr::CAttributeEditorComp</a>
 </li>
-<li>attributePtr
-: <a class="el" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html#aa843663d1e14cf48eec03d6f89909599">icomp::IRegistryElement::AttributeInfo</a>
-</li>
 <li>AttributePtr
 : <a class="el" href="classicomp_1_1_i_registry_element.html#a84b9d1ca8a1ccbdf3f9306a74ae56b17">icomp::IRegistryElement</a>
+</li>
+<li>attributePtr
+: <a class="el" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html#aa843663d1e14cf48eec03d6f89909599">icomp::IRegistryElement::AttributeInfo</a>
 </li>
 <li>AttributeRole
 : <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a1a4a9e9cbf809497cf176f751f9f5648">icmpstr::CAttributeEditorComp</a>
 </li>
 <li>AttributeType
-: <a class="el" href="classicomp_1_1_t_attribute_member.html#a2ad0f7feafb9ac0fea4ac73ef5b9a96f">icomp::TAttributeMember&lt; Attribute &gt;</a>
-, <a class="el" href="classicomp_1_1_t_multi_attribute_member.html#ac48fb6319b7e58d65aec46d97b616c68">icomp::TMultiAttributeMember&lt; Attribute &gt;</a>
+: <a class="el" href="classicomp_1_1_t_multi_attribute_member.html#ac48fb6319b7e58d65aec46d97b616c68">icomp::TMultiAttributeMember&lt; Attribute &gt;</a>
+, <a class="el" href="classicomp_1_1_t_attribute_member.html#a2ad0f7feafb9ac0fea4ac73ef5b9a96f">icomp::TAttributeMember&lt; Attribute &gt;</a>
 </li>
 <li>AttributeTypeId
 : <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a1a4a9e9cbf809497cf176f751f9f5648a056649771f29361711e45eed782cc345">icmpstr::CAttributeEditorComp</a>
@@ -368,23 +369,23 @@
 : <a class="el" href="classiqt_1_1_c_bitmap.html#ac3cfdae5ebbafd4d943c7481af9fea1a">iqt::CBitmap</a>
 </li>
 <li>CalculateCache()
-: <a class="el" href="classiqt_1_1_c_reflected_bitmap_base.html#a164fdb7c77c03cebcd7a37af78c8f83f">iqt::CReflectedBitmapBase</a>
-, <a class="el" href="classimath_1_1_t_fulcrum_grid_function_base.html#ada48f7c94f0c9eeace68d5630f8b64b5">imath::TFulcrumGridFunctionBase&lt; Argument, Result, Fulcrums &gt;</a>
+: <a class="el" href="classimath_1_1_t_fulcrum_grid_function_base.html#ada48f7c94f0c9eeace68d5630f8b64b5">imath::TFulcrumGridFunctionBase&lt; Argument, Result, Fulcrums &gt;</a>
+, <a class="el" href="classiqt_1_1_c_reflected_bitmap_base.html#a164fdb7c77c03cebcd7a37af78c8f83f">iqt::CReflectedBitmapBase</a>
 , <a class="el" href="classistd_1_1_t_cached_update_manager_wrap.html#a50c578d83e24435ffc5f53c681bf1a0e">istd::TCachedUpdateManagerWrap&lt; Base &gt;</a>
 </li>
 <li>CalcVisualization()
-: <a class="el" href="classiqt2d_1_1_c_annulus_segment_shape.html#a07ed171b121bb9d0c58f3d37b889eb33">iqt2d::CAnnulusSegmentShape</a>
-, <a class="el" href="classiqt2d_1_1_c_annulus_shape.html#af7cc2b49331b74ade5330a04441c4041">iqt2d::CAnnulusShape</a>
+: <a class="el" href="classiqt2d_1_1_c_annulus_shape.html#af7cc2b49331b74ade5330a04441c4041">iqt2d::CAnnulusShape</a>
+, <a class="el" href="classiqt2d_1_1_c_annulus_segment_shape.html#a07ed171b121bb9d0c58f3d37b889eb33">iqt2d::CAnnulusSegmentShape</a>
 </li>
 <li>CancelTask()
-: <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#a0a5cd08f5800f4d01eeae041dd5a5aa7">iproc::TSyncProcessorWrap&lt; Base &gt;</a>
-, <a class="el" href="classiproc_1_1_i_processor.html#aa73693c6c682f31cf5bb344c6e816d6f">iproc::IProcessor</a>
+: <a class="el" href="classiproc_1_1_i_processor.html#aa73693c6c682f31cf5bb344c6e816d6f">iproc::IProcessor</a>
+, <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#a0a5cd08f5800f4d01eeae041dd5a5aa7">iproc::TSyncProcessorWrap&lt; Base &gt;</a>
 </li>
 <li>CAnnulus()
 : <a class="el" href="classi2d_1_1_c_annulus.html#a09e6185368adb086ab5612b8f8a954ee">i2d::CAnnulus</a>
 </li>
 <li>CAnnulusSegment()
-: <a class="el" href="classi2d_1_1_c_annulus_segment.html#ab689973bda99b3aa72e8fbca5539441a">i2d::CAnnulusSegment</a>
+: <a class="el" href="classi2d_1_1_c_annulus_segment.html#ab16b3c1a5c2e87e48eca35c70b149d8f">i2d::CAnnulusSegment</a>
 </li>
 <li>CAnnulusSegmentShape()
 : <a class="el" href="classiqt2d_1_1_c_annulus_segment_shape.html#a8937f2136987d121896f1d173373913a">iqt2d::CAnnulusSegmentShape</a>

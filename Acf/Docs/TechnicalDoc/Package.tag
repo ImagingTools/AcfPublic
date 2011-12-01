@@ -24254,6 +24254,13 @@
       <anchor>a67784894e922842a303965bf500a15d6</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>EnsureModelsDetached</name>
+      <anchorfile>classimod_1_1_c_multi_model_bridge_base.html</anchorfile>
+      <anchor>aab36864c19a5855839ebc1d5a3f749cf</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsModelAttached</name>
@@ -24288,13 +24295,6 @@
       <anchorfile>classimod_1_1_c_multi_model_bridge_base.html</anchorfile>
       <anchor>ad466317234597651d04fdd782d4c073c</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>EnsureModelsDetached</name>
-      <anchorfile>classimod_1_1_c_multi_model_bridge_base.html</anchorfile>
-      <anchor>aab36864c19a5855839ebc1d5a3f749cf</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45825,9 +45825,16 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnUpdate</name>
+      <name>BeforeUpdate</name>
       <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
-      <anchor>a2b4e37c4b870cebcfd739bd340b54129</anchor>
+      <anchor>a850e765b710a67ade3d79d2579653b05</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>af96287d76a58b6a6d2a9d5af136a995c</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
