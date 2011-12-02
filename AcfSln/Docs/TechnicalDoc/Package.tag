@@ -1230,6 +1230,14 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>TObjectProperty.h</name>
+    <path>C:/Temp/AcfSln/Include/iprop/</path>
+    <filename>_t_object_property_8h</filename>
+    <includes id="_c_property_base_8h" name="CPropertyBase.h" local="yes" imported="no">iprop/CPropertyBase.h</includes>
+    <class kind="class">iprop::TObjectProperty</class>
+    <namespace>iprop</namespace>
+  </compound>
+  <compound kind="file">
     <name>TProperty.h</name>
     <path>C:/Temp/AcfSln/Include/iprop/</path>
     <filename>_t_property_8h</filename>
@@ -8395,6 +8403,7 @@
     <class kind="class">iprop::IPropertiesManager</class>
     <class kind="class">iprop::IProperty</class>
     <class kind="class">iprop::TMultiProperty</class>
+    <class kind="class">iprop::TObjectProperty</class>
     <class kind="class">iprop::TProperty</class>
     <member kind="typedef">
       <type>TMultiProperty&lt; double &gt;</type>
@@ -8906,6 +8915,110 @@
       <name>m_values</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
       <anchor>a3131148dfd0676d7ba02d462ac8f60ba</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprop::TObjectProperty</name>
+    <filename>classiprop_1_1_t_object_property.html</filename>
+    <templarg></templarg>
+    <base>iprop::CPropertyBase</base>
+    <member kind="typedef">
+      <type>Value</type>
+      <name>ValueType</name>
+      <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
+      <anchor>a7639b27ea56c2a15884503717703165e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TObjectProperty&lt; Value &gt;</type>
+      <name>PropertyType</name>
+      <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
+      <anchor>aa951669404aff63e99ab3e5e33261dc8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CPropertyBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
+      <anchor>a3760f095de6a849d994655bc93913363</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TObjectProperty</name>
+      <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
+      <anchor>aa71701d0e2b738435005410c470ec688</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TObjectProperty</name>
+      <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
+      <anchor>ae153b95d99e7f095151e80ab0a6ce6f2</anchor>
+      <arglist>(IPropertiesManager *propertyOwnerPtr, const std::string &amp;propertyName, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())</arglist>
+    </member>
+    <member kind="function">
+      <type>const Value &amp;</type>
+      <name>GetValue</name>
+      <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
+      <anchor>a14b5baa1904aae07d29a0d34bf86451b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetValue</name>
+      <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
+      <anchor>ae6f505072bd937deba1604d8a6dce889</anchor>
+      <arglist>(const Value &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ResetValue</name>
+      <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
+      <anchor>a825e9cfcb5487f2ffb230037f94109e5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::IObject *</type>
+      <name>GetDefaultPropertyPtr</name>
+      <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
+      <anchor>aad3f882ae384e43d03ee13ee4f174f5d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
+      <anchor>a34d3ab534550d8eda0bdc68d253b6bda</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
+      <anchor>ae1e0ca489ffde2cd6f59feeded6ede98</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const std::string &amp;</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
+      <anchor>a7e4f756334e5757e22f40b210b56b5bd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iser::TCopySerializedWrap&lt; Value &gt;</type>
+      <name>m_value</name>
+      <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
+      <anchor>af58684533d196c2f7b87d5f55d647ee2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; PropertyType &gt;</type>
+      <name>m_defaultPropertyValuePtr</name>
+      <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
+      <anchor>a8838b2ef16aa163c78f874cebb3fae17</anchor>
       <arglist></arglist>
     </member>
   </compound>
