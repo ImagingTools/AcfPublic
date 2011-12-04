@@ -63,7 +63,7 @@ public:
 				const QStringList& nameFilters = QStringList(),  
 				QDir::SortFlags sortSpec = QDir::Name | QDir::IgnoreCase);	
 
-signals:
+Q_SIGNALS:
 	/**
 		This signal is emitted whenever the file \c file has been processed.
 	*/

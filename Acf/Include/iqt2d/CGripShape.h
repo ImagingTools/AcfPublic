@@ -58,7 +58,7 @@ public:
 	*/
 	void SetLabelPosition(int labelArea);
 
-signals:
+Q_SIGNALS:
 	void PositionChanged(const i2d::CVector2d& position);
 
 protected:

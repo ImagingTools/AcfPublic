@@ -29,8 +29,6 @@
 #include <QFontMetrics>
 #include <QStyleOptionGraphicsItem>
 #include <QGraphicsScene>
-#include <QApplication>
-#include <QDir>
 
 
 // ACF includes
