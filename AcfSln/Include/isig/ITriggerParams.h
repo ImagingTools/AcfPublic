@@ -37,7 +37,7 @@ class ITriggerConstraints;
 
 
 /**
-	Interface for AVT camera parameters.
+	Interface for hardware trigger parameters.
 */
 class ITriggerParams: virtual public iser::ISerializable
 {

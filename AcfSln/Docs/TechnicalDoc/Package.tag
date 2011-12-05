@@ -3995,10 +3995,38 @@
       <arglist>(int subtaskIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual iprm::IParamsSet *</type>
-      <name>GetTaskParams</name>
+      <type>virtual void</type>
+      <name>InvalidateSupplier</name>
       <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a2492ac673a484d3f34d81a5bd76d22d3</anchor>
+      <anchor>a1f0724b5b4685c43f1fcdb609d9bacbc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
+      <anchor>aeaaff19c8d946e15f538ea01428c2757</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
+      <anchor>a6acb41875e2210a1689183d8e0b5de4a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWorkStatus</name>
+      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
+      <anchor>a2e00e13f42ba8987b7692394aa4f0290</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iprm::IParamsSet *</type>
+      <name>GetModelParametersSet</name>
+      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
+      <anchor>ad1962fd6c851ac865c546ed41ba7ed9b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4069,10 +4097,38 @@
       <arglist>(int subtaskIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual iprm::IParamsSet *</type>
-      <name>GetTaskParams</name>
+      <type>virtual void</type>
+      <name>InvalidateSupplier</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a928a165af72421e37482c604d5b61cc2</anchor>
+      <anchor>a2fde7c7a52fb8ec9f30ac1c9cf7f3570</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>ab83d6a7be784858e191434b33fb4e648</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a883d18ce626088c874c58b4eee7e47de</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWorkStatus</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a159ce5ef379a6b99ab53177179023468</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iprm::IParamsSet *</type>
+      <name>GetModelParametersSet</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>ae17f09b830020cb2017119e8a57b262a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4180,6 +4236,7 @@
   <compound kind="class">
     <name>iinsp::IInspectionTask</name>
     <filename>classiinsp_1_1_i_inspection_task.html</filename>
+    <base virtualness="virtual">iproc::ISupplier</base>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -4194,13 +4251,6 @@
       <anchorfile>classiinsp_1_1_i_inspection_task.html</anchorfile>
       <anchor>ab712f2316f4406c10d17b0e505a3dc25</anchor>
       <arglist>(int subtaskIndex) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual iprm::IParamsSet *</type>
-      <name>GetTaskParams</name>
-      <anchorfile>classiinsp_1_1_i_inspection_task.html</anchorfile>
-      <anchor>ae0697133fd449c46b1bc4c745f056cec</anchor>
-      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
