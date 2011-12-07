@@ -92,7 +92,6 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_manager_gui_comp.html#a8320c41542d8eb749b80776d41f54d0c">OnSelectionChanged</a> (int index)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_manager_gui_comp.html#aba7a2c6b1ede052463ca0f55d2c21c0a">on_EditEnableButton_toggled</a> (bool toggled)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_manager_gui_comp.html#af917255cd67bbd0e9953abee2b598c5c">OnEditingFinished</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -104,8 +103,6 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do update of the model GUI.  <a href="#a3c093cce2df827df105d308476675ea0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_manager_gui_comp.html#a431ce611466edaf18c930cb03e9261ae">OnGuiCreated</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a431ce611466edaf18c930cb03e9261ae"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_manager_gui_comp.html#a42235f7502fe352c84f43c1911c97a7e">OnGuiDestroyed</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just before GUI is released.  <a href="#a42235f7502fe352c84f43c1911c97a7e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_manager_gui_comp.html#a5369b96b14dc0c0979339a1037e46e25">OnGuiShown</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called from widget event filter when slave widget is shown.  <a href="#a5369b96b14dc0c0979339a1037e46e25"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_manager_gui_comp.html#a1926015dfa0d2db57c62ab7489c0465b">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
@@ -161,23 +158,6 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aba7a2c6b1ede052463ca0f55d2c21c0a"></a><!-- doxytag: member="iqtprm::COptionsManagerGuiComp::on_EditEnableButton_toggled" ref="aba7a2c6b1ede052463ca0f55d2c21c0a" args="(bool toggled)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void iqtprm::COptionsManagerGuiComp::on_EditEnableButton_toggled </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>toggled</em></td><td>)</td>
-          <td><code> [protected, slot]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="af917255cd67bbd0e9953abee2b598c5c"></a><!-- doxytag: member="iqtprm::COptionsManagerGuiComp::OnEditingFinished" ref="af917255cd67bbd0e9953abee2b598c5c" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -211,26 +191,6 @@ Protected Member Functions</h2></td></tr>
 <p>Called just after GUI is initialized. </p>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#ad9c99838dff86b005fc5cf32198c332d">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::COptionsManagerGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt; &gt;</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a42235f7502fe352c84f43c1911c97a7e"></a><!-- doxytag: member="iqtprm::COptionsManagerGuiComp::OnGuiDestroyed" ref="a42235f7502fe352c84f43c1911c97a7e" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqtprm::COptionsManagerGuiComp::OnGuiDestroyed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Called just before GUI is released. </p>
-
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#ae6d3a0820a47c572289ddd3d07a7da51">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::COptionsManagerGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt; &gt;</a>.</p>
 
 </div>
 </div>

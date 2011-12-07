@@ -36758,13 +36758,6 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_EditEnableButton_toggled</name>
-      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
-      <anchor>aba7a2c6b1ede052463ca0f55d2c21c0a</anchor>
-      <arglist>(bool toggled)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
       <name>OnEditingFinished</name>
       <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
       <anchor>af917255cd67bbd0e9953abee2b598c5c</anchor>
@@ -36796,13 +36789,6 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
       <anchor>a431ce611466edaf18c930cb03e9261ae</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
-      <anchor>a42235f7502fe352c84f43c1911c97a7e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

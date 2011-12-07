@@ -93,7 +93,6 @@ protected:
 
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();
-	virtual void OnGuiDestroyed();
 	virtual void OnGuiShown();
 
 	// reimplemented (imod::CMultiModelDispatcherBase)
@@ -101,11 +100,10 @@ protected:
 
 protected Q_SLOTS:
 	void OnSelectionChanged(int index);
-	void on_EditEnableButton_toggled(bool toggled);
 	void OnEditingFinished();
 
 private:
-	void UpdateComboBoxesView();
+	void UpdateComboBox();
 	void UpdateDescriptionFrame();
 
 private:
