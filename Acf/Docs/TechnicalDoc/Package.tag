@@ -5915,8 +5915,8 @@
     <name>ITimer.h</name>
     <path>C:/Temp/Acf/Include/isys/</path>
     <filename>_i_timer_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="isys_8h" name="isys.h" local="yes" imported="no">isys/isys.h</includes>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <class kind="class">isys::ITimer</class>
     <namespace>isys</namespace>
   </compound>
@@ -45561,7 +45561,7 @@
   <compound kind="class">
     <name>isys::ITimer</name>
     <filename>classisys_1_1_i_timer.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>Start</name>

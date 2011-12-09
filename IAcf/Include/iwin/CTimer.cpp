@@ -23,7 +23,11 @@
 #include "iwin/CTimer.h"
 
 
+// Windows includes
 #include <windows.h>
+
+// ACF includes
+#include "istd/TChangeNotifier.h"
 
 
 namespace iwin
@@ -52,8 +56,24 @@ double CTimer::GetTimeTo(const CTimer& timer) const
 }
 
 
+I_QWORD CTimer::GetNativeRepresentation() const
+{
+	return m_startCounter;
+}
+
+
+void CTimer::SetNativeRepresentation(I_QWORD value)
+{
+	istd::CChangeNotifier notifier(this);
+
+	m_startCounter = value;
+}
+
+
 void CTimer::SetElapsed(double value)
 {
+	istd::CChangeNotifier notifier(this);
+
 	I_ASSERT(sizeof(unsigned long long) == sizeof(LARGE_INTEGER));
 
 	unsigned long long endCounter;
@@ -67,6 +87,8 @@ void CTimer::SetElapsed(double value)
 
 void CTimer::Start()
 {
+	istd::CChangeNotifier notifier(this);
+
 	::QueryPerformanceCounter((LARGE_INTEGER*)&m_startCounter);
 }
 

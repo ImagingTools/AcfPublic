@@ -69,18 +69,6 @@ private:
 
 // inline methods
 
-inline I_QWORD CTimer::GetNativeRepresentation() const
-{
-	return m_startCounter;
-}
-
-
-inline void CTimer::SetNativeRepresentation(I_QWORD value)
-{
-	m_startCounter = value;
-}
-
-
 } // namespace iwin
 
 

@@ -65,7 +65,7 @@ public:
 		I_ASSIGN(m_maxEenDelayAttrPtr, "MaxEenDelay", "Maximal EEN-delay for this device", true, 0.0);
 	I_END_COMPONENT;
 
-	// reimplemented (isig::ITriggerConstraints)
+	// reimplemented (icam::IExposureConstraints)
 	virtual bool IsTriggerModeSupported(int triggerMode) const;
 
 	// reimplemented (icam::IExposureConstraints)

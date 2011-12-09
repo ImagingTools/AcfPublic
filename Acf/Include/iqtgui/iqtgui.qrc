@@ -1,13 +1,5 @@
 <RCC>
   <qresource prefix="/Icons">
-    <file alias="AddRow">Resources/Icons/AddRow_128.png</file>
-    <file alias="AddColumn">Resources/Icons/AddColumn_128.png</file>
-    <file alias="RemoveRow">Resources/Icons/RemoveRow_128.png</file>
-    <file alias="RemoveColumn">Resources/Icons/RemoveColumn_128.png</file>
-    <file alias="Right">Resources/Icons/Right_128.png</file>
-    <file alias="Left">Resources/Icons/Left_128.png</file>
-    <file alias="Up">Resources/Icons/up_128.png</file>
-    <file alias="Down">Resources/Icons/down_128.png</file>
     <file alias="UpDir.svg">Resources/Icons/UpDir.svg</file>
     <file alias="ZoomReset">Resources/Icons/hand_128.png</file>
     <file alias="ZoomIn.svg">Resources/Icons/ZoomIn.svg</file>
@@ -41,6 +33,8 @@
     <file alias="Pause.svg">Resources/Icons/Pause.svg</file>
     <file alias="Sandglass">Resources/Icons/sandglass_128.png</file>
     <file alias="TrashEmpty">Resources/Icons/trash_128.png</file>
+    <file alias="Up">Resources/Icons/up_128.png</file>
+    <file alias="Down">Resources/Icons/down_128.png</file>
     <file alias="User">Resources/Icons/user_128.png</file>
     <file alias="Document">Resources/Icons/window_128.png</file>
     <file alias="Wizard">Resources/Icons/wizard_128.png</file>
@@ -50,9 +44,9 @@
     <file alias="StateOk.svg">Resources/Icons/StateOk.svg</file>
     <file alias="StateWarning.svg">Resources/Icons/StateWarning.svg</file>
     <file alias="StateInvalid.svg">Resources/Icons/StateInvalid.svg</file>
-    <file alias="AutoUpdate.svg">Resources/Icons/AutoUpdate.svg</file>
-    <file alias="Reload.svg">Resources/Icons/Reload.svg</file>
-  </qresource>
+		<file alias="AutoUpdate.svg">Resources/Icons/AutoUpdate.svg</file>
+		<file alias="Reload.svg">Resources/Icons/Reload.svg</file>
+	</qresource>
   <qresource prefix="Style">
     <file>Resources/Style/AcfStyle.ass</file>
   </qresource>

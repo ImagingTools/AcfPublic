@@ -26,6 +26,9 @@
 // Qt includes
 #include <QThread>
 
+// ACF includes
+#include "istd/TChangeNotifier.h"
+
 
 class ThreadBrute: public QThread
 {
@@ -66,6 +69,8 @@ void CTimer::SetNativeRepresentation(unsigned long long/* value*/)
 
 void CTimer::Start()
 {
+	istd::CChangeNotifier notifier(this);
+
 	m_time.start();
 }
 
