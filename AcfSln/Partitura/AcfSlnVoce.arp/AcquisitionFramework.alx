@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          2100
+          1426
         </Number>
         <Description>
           ACF
@@ -16,6 +16,17 @@
     </VersionInfos>
   </AcfHeader>
   <PositionMap count="9">
+    <Element>
+      <ComponentName>
+        AcquisitionProcessorGui
+      </ComponentName>
+      <X>
+        650
+      </X>
+      <X>
+        600
+      </X>
+    </Element>
     <Element>
       <ComponentName>
         Application
@@ -32,10 +43,10 @@
         BitmapLoader
       </ComponentName>
       <X>
-        1075
+        1100
       </X>
       <X>
-        250
+        275
       </X>
     </Element>
     <Element>
@@ -54,10 +65,10 @@
         ImageDialogLoader
       </ComponentName>
       <X>
-        775
+        1050
       </X>
       <X>
-        375
+        475
       </X>
     </Element>
     <Element>
@@ -76,7 +87,7 @@
         LogTab
       </ComponentName>
       <X>
-        750
+        800
       </X>
       <X>
         250
@@ -84,21 +95,10 @@
     </Element>
     <Element>
       <ComponentName>
-        ProcessorControlGui
-      </ComponentName>
-      <X>
-        625
-      </X>
-      <X>
-        575
-      </X>
-    </Element>
-    <Element>
-      <ComponentName>
         SnapTab
       </ComponentName>
       <X>
-        475
+        550
       </X>
       <X>
         375
@@ -109,7 +109,7 @@
         Tabs
       </ComponentName>
       <X>
-        475
+        450
       </X>
       <X>
         250

@@ -61,7 +61,6 @@ public:
 		I_ASSIGN(m_inputDataCompPtr, "InputData", "Input data that will be processed", false, "InputData");
 		I_ASSIGN(m_outputDataCompPtr, "OutputData", "Output data object", true, "OutputData");
 		I_ASSIGN(m_outputDataLoaderCompPtr, "OutputDataLoader", "Saves processing data to file", false, "OutputDataLoader");
-		I_ASSIGN(m_liveDataLoaderCompPtr, "LiveDataLoader", "Saves live processing data to file", false, "LiveDataLoader");
 		I_ASSIGN(m_processorCompPtr, "Processor", "Processor object used to convert input to output data", true, "Processor");
 		I_ASSIGN(m_paramsSetCompPtr, "ParamsSet", "Parameters set", false, "ParamsSet");
 		I_ASSIGN(m_paramsSetModelCompPtr, "ParamsSet", "Parameters set", false, "ParamsSet");
@@ -81,7 +80,6 @@ protected Q_SLOTS:
 	void on_DataAcquisitionButton_clicked();
 	void on_LiveDataAcquisitionButton_toggled(bool checked);
 	void on_SaveDataButton_clicked();
-	void on_LiveDataStoreButton_toggled(bool checked);
 	void on_LoadParamsButton_clicked();
 	void on_SaveParamsButton_clicked();
 	void OnTimerReady();
@@ -97,7 +95,6 @@ private:
 	I_REF(istd::IChangeable, m_inputDataCompPtr);
 	I_REF(istd::IChangeable, m_outputDataCompPtr);
 	I_REF(iser::IFileLoader, m_outputDataLoaderCompPtr);
-	I_REF(iser::IFileLoader, m_liveDataLoaderCompPtr);
 
 	I_REF(iproc::IProcessor, m_processorCompPtr);
 
@@ -111,9 +108,6 @@ private:
 	I_ATTR(double, m_liveIntervalAttrPtr);
 
 	QTimer m_timer;
-
-	QString m_liveStoringPath;
-	bool m_liveStoring;
 };
 
 

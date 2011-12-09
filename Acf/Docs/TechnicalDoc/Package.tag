@@ -1282,6 +1282,13 @@
       <anchor>a07c8bc559dbc0c8403f6c24cf374fcb7</anchor>
       <arglist>(member, baseAttribute, isObligatory)</arglist>
     </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_TASSIGN_TO</name>
+      <anchorfile>_c_component_base_8h.html</anchorfile>
+      <anchor>a9a604c509249dd2ff3e24581366cc0e7</anchor>
+      <arglist>(member, baseAttribute, isObligatory)</arglist>
+    </member>
     <member kind="function">
       <type>Dest *</type>
       <name>CompCastPtr</name>
@@ -1703,6 +1710,7 @@
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_t_component_clone_wrap_8h</filename>
     <includes id="_i_component_8h" name="IComponent.h" local="yes" imported="no">icomp/IComponent.h</includes>
+    <includes id="_i_composite_component_8h" name="ICompositeComponent.h" local="yes" imported="no">icomp/ICompositeComponent.h</includes>
     <includes id="_c_interface_manip_base_8h" name="CInterfaceManipBase.h" local="yes" imported="no">icomp/CInterfaceManipBase.h</includes>
     <includes id="_c_component_context_8h" name="CComponentContext.h" local="yes" imported="no">icomp/CComponentContext.h</includes>
     <class kind="class">icomp::TComponentCloneWrap</class>
@@ -1731,6 +1739,7 @@
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_t_component_wrap_8h</filename>
     <includes id="_i_component_8h" name="IComponent.h" local="yes" imported="no">icomp/IComponent.h</includes>
+    <includes id="_i_composite_component_8h" name="ICompositeComponent.h" local="yes" imported="no">icomp/ICompositeComponent.h</includes>
     <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
     <class kind="class">icomp::TComponentWrap</class>
     <namespace>icomp</namespace>
@@ -11541,9 +11550,9 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
+      <name>I_TASSIGN_TO</name>
       <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>a00f64a4c2f8b4b762fa946dafc6f0e55</anchor>
+      <anchor>ab672696dd1d69d5c990ff6ab1bf845f6</anchor>
       <arglist>(m_defaultObjectCompPtr, m_defaultModelCompPtr, false)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -29490,9 +29499,9 @@
     </member>
     <member kind="function" protection="protected">
       <type>QString</type>
-      <name>CSettingsArchiveBase::GetBaseKey</name>
+      <name>GetBaseKey</name>
       <anchorfile>classiqt_1_1_c_settings_archive_base.html</anchorfile>
-      <anchor>ad240769b1a4e2e66d29d928611b3ac50</anchor>
+      <anchor>af0f54559471ffbc6296ba2a6bcc87297</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="variable" protection="protected">

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>180</width>
-    <height>196</height>
+    <width>221</width>
+    <height>200</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -76,44 +76,17 @@
        </layout>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <property name="spacing">
-         <number>0</number>
+       <widget class="QPushButton" name="SaveDataButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
-        <item>
-         <widget class="QPushButton" name="SaveDataButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>Save Result...</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QToolButton" name="LiveDataStoreButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="toolTip">
-           <string>Enable/disable continuous storing</string>
-          </property>
-          <property name="icon">
-           <iconset resource="../iqtgui/iqtgui.qrc">
-            <normaloff>:/Icons/AutoUpdate.svg</normaloff>:/Icons/AutoUpdate.svg</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-       </layout>
+        <property name="text">
+         <string>Save Result...</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>

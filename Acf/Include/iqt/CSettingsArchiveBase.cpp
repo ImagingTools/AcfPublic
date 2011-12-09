@@ -78,8 +78,6 @@ bool CSettingsArchiveBase::LeaveTag(const std::string& tagId)
 QString CSettingsArchiveBase::GetCurrentCountKey() const
 {
 	return GetBaseKey() + "count";
-
-	return true;
 }
 
 

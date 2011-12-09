@@ -116,7 +116,7 @@
 <a name="l00097"></a>00097        <a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a> retVal;
 <a name="l00098"></a>00098 
 <a name="l00099"></a>00099        <span class="keywordflow">if</span> (metaGroupId == MGI_INTERFACES){
-<a name="l00100"></a>00100               <span class="keywordflow">for</span> (         InterfaceExtractors::const_iterator iter = m_interfaceExtractors.begin();
+<a name="l00100"></a>00100               <span class="keywordflow">for</span> (         <span class="keyword">typename</span> InterfaceExtractors::const_iterator iter = m_interfaceExtractors.begin();
 <a name="l00101"></a>00101                                    iter != m_interfaceExtractors.end();
 <a name="l00102"></a>00102                                    ++iter){
 <a name="l00103"></a>00103                      retVal.insert(iter-&gt;first);
@@ -143,7 +143,7 @@
 <a name="l00124"></a>00124                      <span class="keywordflow">return</span> &amp;component;
 <a name="l00125"></a>00125               }
 <a name="l00126"></a>00126 
-<a name="l00127"></a>00127               InterfaceExtractors::const_iterator foundIter = m_interfaceExtractors.find(interfaceType.<a class="code" href="classistd_1_1_c_class_info.html#aa933e42f37d56bdd4236e0833b1adb14" title="Get undecorated and platform undependent class name.">GetName</a>());
+<a name="l00127"></a>00127               <span class="keyword">typename</span> InterfaceExtractors::const_iterator foundIter = m_interfaceExtractors.find(interfaceType.<a class="code" href="classistd_1_1_c_class_info.html#aa933e42f37d56bdd4236e0833b1adb14" title="Get undecorated and platform undependent class name.">GetName</a>());
 <a name="l00128"></a>00128               <span class="keywordflow">if</span> (foundIter != m_interfaceExtractors.end()){
 <a name="l00129"></a>00129                      InterfaceExtractorPtr extractorPtr = foundIter-&gt;second;
 <a name="l00130"></a>00130 
@@ -153,7 +153,7 @@
 <a name="l00134"></a>00134               <span class="keywordflow">if</span> (interfaceType.<a class="code" href="classistd_1_1_c_class_info.html#adf934af254454700be4cc5d94ed8fd42" title="Check if this class information represents const class.">IsConst</a>()){
 <a name="l00135"></a>00135                      <a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a> nonConstType = interfaceType.<a class="code" href="classistd_1_1_c_class_info.html#a021429dedcb0fcbd47eebd4b5957c3b8" title="Get class with enabled or disabled const attribute.">GetConstCasted</a>(<span class="keyword">false</span>);
 <a name="l00136"></a>00136 
-<a name="l00137"></a>00137                      InterfaceExtractors::const_iterator foundIter = m_interfaceExtractors.find(nonConstType.<a class="code" href="classistd_1_1_c_class_info.html#aa933e42f37d56bdd4236e0833b1adb14" title="Get undecorated and platform undependent class name.">GetName</a>());
+<a name="l00137"></a>00137                      <span class="keyword">typename</span> InterfaceExtractors::const_iterator foundIter = m_interfaceExtractors.find(nonConstType.<a class="code" href="classistd_1_1_c_class_info.html#aa933e42f37d56bdd4236e0833b1adb14" title="Get undecorated and platform undependent class name.">GetName</a>());
 <a name="l00138"></a>00138                      <span class="keywordflow">if</span> (foundIter != m_interfaceExtractors.end()){
 <a name="l00139"></a>00139                             InterfaceExtractorPtr extractorPtr = foundIter-&gt;second;
 <a name="l00140"></a>00140 

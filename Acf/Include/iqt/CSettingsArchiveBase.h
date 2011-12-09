@@ -48,7 +48,7 @@ protected:
 	bool LeaveTag(const std::string& tagId);
 	QString GetCurrentCountKey() const;
 	QString CreateNextValueKey();
-	QString CSettingsArchiveBase::GetBaseKey() const;
+	QString GetBaseKey() const;
 
 	struct TagInfo
 	{

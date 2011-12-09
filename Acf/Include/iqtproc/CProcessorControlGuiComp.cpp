@@ -25,7 +25,6 @@
 
 // Qt includes
 #include <QMessageBox>
-#include <QFileDialog>
 
 
 // ACF includes
@@ -89,27 +88,6 @@ void CProcessorControlGuiComp::on_SaveDataButton_clicked()
 }
 
 
-void CProcessorControlGuiComp::on_LiveDataStoreButton_toggled(bool checked)
-{
-	m_liveStoring = false;
-
-	if (!checked){
-		return;
-	}
-
-	if (m_liveDataLoaderCompPtr.IsValid()){
-		QString storingPath = QFileDialog::getExistingDirectory(NULL,
-					tr("Path to store live data to"),
-					m_liveStoringPath);
-
-		if (!storingPath.isEmpty()){
-			m_liveStoringPath = storingPath;
-			m_liveStoring = true;
-		}
-	}
-}
-
-
 void CProcessorControlGuiComp::on_LoadParamsButton_clicked()
 {
 	if (m_paramsLoaderCompPtr.IsValid() && m_paramsSetCompPtr.IsValid()){
@@ -152,16 +130,7 @@ bool CProcessorControlGuiComp::DoDataAcquisition()
 					m_inputDataCompPtr.GetPtr(),
 					m_outputDataCompPtr.GetPtr());
 		if (taskId >= 0){
-			bool result = (m_processorCompPtr->WaitTaskFinished(-1, 1) != iproc::IProcessor::TS_INVALID);
-
-			if (result && m_liveStoring){
-				QString fileName = QDateTime::currentDateTime().toString("yyyyMMdd_hhmmsszzz");
-				QString filePath = m_liveStoringPath + "/" + fileName + ".bmp";
-				m_liveDataLoaderCompPtr->SaveToFile(*m_outputDataCompPtr.GetPtr(), 
-							iqt::GetCString(filePath));
-			}
-
-			return result;
+			return m_processorCompPtr->WaitTaskFinished(-1, 1) != iproc::IProcessor::TS_INVALID;
 		}
 	}
 
@@ -194,10 +163,6 @@ void CProcessorControlGuiComp::OnGuiCreated()
 	LoadParamsButton->setVisible(m_paramsLoaderCompPtr.IsValid());
 	SaveParamsButton->setVisible(m_paramsLoaderCompPtr.IsValid());
 	ParamsFrame->setVisible(m_paramsSetCompPtr.IsValid() && areParamsEditable);
-
-	if (!m_liveDataLoaderCompPtr.IsValid()){
-		LiveDataStoreButton->hide();
-	}
 }
 
 
