@@ -14,6 +14,90 @@
     <filename>_acf_sln_8h</filename>
   </compound>
   <compound kind="file">
+    <name>CSimpleLoginComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
+    <filename>_c_simple_login_comp_8h</filename>
+    <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
+    <includes id="_i_rights_provider_8h" name="IRightsProvider.h" local="yes" imported="no">iauth/IRightsProvider.h</includes>
+    <class kind="class">iauth::CSimpleLoginComp</class>
+    <class kind="struct">iauth::CSimpleLoginComp::User</class>
+    <namespace>iauth</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CStaticRightsProviderComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
+    <filename>_c_static_rights_provider_comp_8h</filename>
+    <includes id="_i_rights_provider_8h" name="IRightsProvider.h" local="yes" imported="no">iauth/IRightsProvider.h</includes>
+    <class kind="class">iauth::CStaticRightsProviderComp</class>
+    <namespace>iauth</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CUser.h</name>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
+    <filename>_c_user_8h</filename>
+    <class kind="class">iauth::CUser</class>
+    <namespace>iauth</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CUserLoginComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
+    <filename>_c_user_login_comp_8h</filename>
+    <includes id="_i_rights_provider_8h" name="IRightsProvider.h" local="yes" imported="no">iauth/IRightsProvider.h</includes>
+    <includes id="_i_user_login_8h" name="IUserLogin.h" local="yes" imported="no">iauth/IUserLogin.h</includes>
+    <includes id="_i_users_manager_8h" name="IUsersManager.h" local="yes" imported="no">iauth/IUsersManager.h</includes>
+    <includes id="_i_password_changer_8h" name="IPasswordChanger.h" local="yes" imported="no">iauth/IPasswordChanger.h</includes>
+    <class kind="class">iauth::CUserLoginComp</class>
+    <namespace>iauth</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CUsersManagerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
+    <filename>_c_users_manager_comp_8h</filename>
+    <includes id="_i_users_manager_8h" name="IUsersManager.h" local="yes" imported="no">iauth/IUsersManager.h</includes>
+    <includes id="_c_user_8h" name="CUser.h" local="yes" imported="no">iauth/CUser.h</includes>
+    <class kind="class">iauth::CUsersManagerComp</class>
+    <namespace>iauth</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ILogin.h</name>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
+    <filename>_i_login_8h</filename>
+    <class kind="class">iauth::ILogin</class>
+    <namespace>iauth</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IPasswordChanger.h</name>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
+    <filename>_i_password_changer_8h</filename>
+    <includes id="_c_user_8h" name="CUser.h" local="yes" imported="no">iauth/CUser.h</includes>
+    <class kind="class">iauth::IPasswordChanger</class>
+    <namespace>iauth</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IRightsProvider.h</name>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
+    <filename>_i_rights_provider_8h</filename>
+    <class kind="class">iauth::IRightsProvider</class>
+    <namespace>iauth</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IUserLogin.h</name>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
+    <filename>_i_user_login_8h</filename>
+    <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
+    <includes id="_c_user_8h" name="CUser.h" local="yes" imported="no">iauth/CUser.h</includes>
+    <class kind="class">iauth::IUserLogin</class>
+    <namespace>iauth</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IUsersManager.h</name>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
+    <filename>_i_users_manager_8h</filename>
+    <includes id="_c_user_8h" name="CUser.h" local="yes" imported="no">iauth/CUser.h</includes>
+    <class kind="class">iauth::IUsersManager</class>
+    <namespace>iauth</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAcquisitionConstraintsComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_acquisition_constraints_comp_8h</filename>
@@ -1281,6 +1365,43 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>CChangePasswordDialog.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtauth/</path>
+    <filename>_c_change_password_dialog_8h</filename>
+    <includes id="_i_users_manager_8h" name="IUsersManager.h" local="yes" imported="no">iauth/IUsersManager.h</includes>
+    <includes id="_c_user_8h" name="CUser.h" local="yes" imported="no">iauth/CUser.h</includes>
+    <class kind="class">iqtauth::CChangePasswordDialog</class>
+    <namespace>iqtauth</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CLoginBarGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtauth/</path>
+    <filename>_c_login_bar_gui_comp_8h</filename>
+    <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
+    <class kind="class">iqtauth::CLoginBarGuiComp</class>
+    <namespace>iqtauth</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CUserGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtauth/</path>
+    <filename>_c_user_gui_comp_8h</filename>
+    <includes id="_i_rights_provider_8h" name="IRightsProvider.h" local="yes" imported="no">iauth/IRightsProvider.h</includes>
+    <includes id="_i_user_login_8h" name="IUserLogin.h" local="yes" imported="no">iauth/IUserLogin.h</includes>
+    <includes id="_i_users_manager_8h" name="IUsersManager.h" local="yes" imported="no">iauth/IUsersManager.h</includes>
+    <includes id="_i_password_changer_8h" name="IPasswordChanger.h" local="yes" imported="no">iauth/IPasswordChanger.h</includes>
+    <class kind="class">iqtauth::CUserGuiComp</class>
+    <namespace>iqtauth</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CUserManagerDialog.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtauth/</path>
+    <filename>_c_user_manager_dialog_8h</filename>
+    <includes id="_i_user_login_8h" name="IUserLogin.h" local="yes" imported="no">iauth/IUserLogin.h</includes>
+    <includes id="_i_users_manager_8h" name="IUsersManager.h" local="yes" imported="no">iauth/IUsersManager.h</includes>
+    <class kind="class">iqtauth::CUserManagerDialog</class>
+    <namespace>iqtauth</namespace>
+  </compound>
+  <compound kind="file">
     <name>CBitmapSupplierGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_bitmap_supplier_gui_comp_8h</filename>
@@ -1767,6 +1888,522 @@
   <compound kind="class">
     <name>TVector</name>
     <filename>class_t_vector.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>iauth</name>
+    <filename>namespaceiauth.html</filename>
+    <class kind="class">iauth::CSimpleLoginComp</class>
+    <class kind="class">iauth::CStaticRightsProviderComp</class>
+    <class kind="class">iauth::CUser</class>
+    <class kind="class">iauth::CUserLoginComp</class>
+    <class kind="class">iauth::CUsersManagerComp</class>
+    <class kind="class">iauth::ILogin</class>
+    <class kind="class">iauth::IPasswordChanger</class>
+    <class kind="class">iauth::IRightsProvider</class>
+    <class kind="class">iauth::IUserLogin</class>
+    <class kind="class">iauth::IUsersManager</class>
+  </compound>
+  <compound kind="class">
+    <name>iauth::CSimpleLoginComp</name>
+    <filename>classiauth_1_1_c_simple_login_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>iauth::ILogin</base>
+    <base>iauth::IRightsProvider</base>
+    <base>iser::ISerializable</base>
+    <class kind="struct">iauth::CSimpleLoginComp::User</class>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
+      <anchor>aa2654dbbafa3f209b3f3cea4bdb19b20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSimpleLoginComp</name>
+      <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
+      <anchor>a8ad38000697b1fff36c30bb79554cd99</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetUsersCount</name>
+      <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
+      <anchor>a957c2b1113e7d6b4123ae83b46bc5ffc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual User &amp;</type>
+      <name>GetUser</name>
+      <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
+      <anchor>a16ee77134921068a558eaedb99ce6b45</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>FindUserIndex</name>
+      <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
+      <anchor>ae360365738c0e87ecb5d4ac2b2fcbee0</anchor>
+      <arglist>(const istd::CString &amp;name) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AddUser</name>
+      <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
+      <anchor>a7aa094373880a4da0ebd1e879b8d37a4</anchor>
+      <arglist>(const User &amp;user)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsUserLogged</name>
+      <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
+      <anchor>a304f4e31703feb3967534095de467eab</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Login</name>
+      <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
+      <anchor>abdffff7cae3a4b4f2b21fe99910e5d31</anchor>
+      <arglist>(const istd::CString &amp;userName, const istd::CString &amp;password)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Logout</name>
+      <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
+      <anchor>a85d9360ee1810a4d501613904851c914</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>HasRight</name>
+      <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
+      <anchor>a22414a04cb66c3edfea7aba79634ecfb</anchor>
+      <arglist>(const std::string &amp;operationId, bool beQuiet=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
+      <anchor>a4554d9ec1a327e8a6f126dbf5c663ce1</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
+      <anchor>a7e03972da09e439000435d3b7e950237</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iauth::CSimpleLoginComp::User</name>
+    <filename>structiauth_1_1_c_simple_login_comp_1_1_user.html</filename>
+    <member kind="variable">
+      <type>istd::CString</type>
+      <name>name</name>
+      <anchorfile>structiauth_1_1_c_simple_login_comp_1_1_user.html</anchorfile>
+      <anchor>a4db48be26b14111b21f6805ee66ecfcc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::CString</type>
+      <name>password</name>
+      <anchorfile>structiauth_1_1_c_simple_login_comp_1_1_user.html</anchorfile>
+      <anchor>adefe5150851748db4351e8207921da94</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>group</name>
+      <anchorfile>structiauth_1_1_c_simple_login_comp_1_1_user.html</anchorfile>
+      <anchor>a8d47b37e021f556011aa00549d8eab80</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iauth::CStaticRightsProviderComp</name>
+    <filename>classiauth_1_1_c_static_rights_provider_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>iauth::IRightsProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiauth_1_1_c_static_rights_provider_comp.html</anchorfile>
+      <anchor>a08284e58f11544841dc7bca4d384b2b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>HasRight</name>
+      <anchorfile>classiauth_1_1_c_static_rights_provider_comp.html</anchorfile>
+      <anchor>a13568df730012f0248054dd9a86aa266</anchor>
+      <arglist>(const std::string &amp;operationId, bool beQuiet=false) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiauth_1_1_c_static_rights_provider_comp.html</anchorfile>
+      <anchor>ac06c3e7bbe6ea28f73ad5f2fda136a30</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iauth::CUser</name>
+    <filename>classiauth_1_1_c_user.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CUser</name>
+      <anchorfile>classiauth_1_1_c_user.html</anchorfile>
+      <anchor>a6f144dc5f4dca38684442318d7377093</anchor>
+      <arglist>(const istd::CString &amp;userName=&quot;&quot;, const istd::CString &amp;password=&quot;&quot;, int userGroup=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CUser</name>
+      <anchorfile>classiauth_1_1_c_user.html</anchorfile>
+      <anchor>aa7e91882779f52f00b08d2e2bfdb77c4</anchor>
+      <arglist>(const CUser &amp;user)</arglist>
+    </member>
+    <member kind="function">
+      <type>const istd::CString &amp;</type>
+      <name>GetUserName</name>
+      <anchorfile>classiauth_1_1_c_user.html</anchorfile>
+      <anchor>aa57baf06f83871cee80b3fdec44a7779</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetUserName</name>
+      <anchorfile>classiauth_1_1_c_user.html</anchorfile>
+      <anchor>afe76408a6870b467c10fa229f71c15d3</anchor>
+      <arglist>(const istd::CString &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetUserGroup</name>
+      <anchorfile>classiauth_1_1_c_user.html</anchorfile>
+      <anchor>ac5649d12a44026d6f4515ff2ab4d1e8a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetUserGroup</name>
+      <anchorfile>classiauth_1_1_c_user.html</anchorfile>
+      <anchor>a763bd4ff582a7915bbfea868d18b979b</anchor>
+      <arglist>(int group)</arglist>
+    </member>
+    <member kind="function">
+      <type>const istd::CString &amp;</type>
+      <name>GetPassword</name>
+      <anchorfile>classiauth_1_1_c_user.html</anchorfile>
+      <anchor>afdaf4cd37540ac388eb332d50e771ced</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetPassword</name>
+      <anchorfile>classiauth_1_1_c_user.html</anchorfile>
+      <anchor>aa840becbbdc55af40bb1c2c407168150</anchor>
+      <arglist>(const istd::CString &amp;password)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>CheckPassword</name>
+      <anchorfile>classiauth_1_1_c_user.html</anchorfile>
+      <anchor>a489001af9a9ab17afdff179f2caad42b</anchor>
+      <arglist>(const istd::CString &amp;password) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ResetPassword</name>
+      <anchorfile>classiauth_1_1_c_user.html</anchorfile>
+      <anchor>a21be7bf74a1bdad9988f5e8c031c6641</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiauth_1_1_c_user.html</anchorfile>
+      <anchor>a9ec2abee1d9b4c2bdc0b34fbf1aa9606</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iauth::CUserLoginComp</name>
+    <filename>classiauth_1_1_c_user_login_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iauth::IUserLogin</base>
+    <base virtualness="virtual">iauth::IRightsProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiauth_1_1_c_user_login_comp.html</anchorfile>
+      <anchor>afeb2372e02cdae568795480b6c46e59e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CUser *</type>
+      <name>GetLoggedUser</name>
+      <anchorfile>classiauth_1_1_c_user_login_comp.html</anchorfile>
+      <anchor>a4030ef5f4b901b1025c82e220eb7f297</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsUserLogged</name>
+      <anchorfile>classiauth_1_1_c_user_login_comp.html</anchorfile>
+      <anchor>a8c00b056862034a21300126e6a5b88a2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Login</name>
+      <anchorfile>classiauth_1_1_c_user_login_comp.html</anchorfile>
+      <anchor>ab5da2623a57a1104b2d728022f133341</anchor>
+      <arglist>(const istd::CString &amp;userName, const istd::CString &amp;password)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Logout</name>
+      <anchorfile>classiauth_1_1_c_user_login_comp.html</anchorfile>
+      <anchor>a80da84bf96cfb08adf1c1e823d5ccf5e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>HasRight</name>
+      <anchorfile>classiauth_1_1_c_user_login_comp.html</anchorfile>
+      <anchor>a48800a1d7fbffbee165054f84d81cd5a</anchor>
+      <arglist>(const std::string &amp;operationId, bool beQuiet=false) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iauth::CUsersManagerComp</name>
+    <filename>classiauth_1_1_c_users_manager_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iauth::IUsersManager</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
+      <anchor>a1d639066585289763839bc5dd10a7825</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
+      <anchor>a36df064c429b81bd1a30f9f5ffb9076b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetUsersCount</name>
+      <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
+      <anchor>a35fa52e31edd9ec45f665ed771a71a11</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>FindUserIndex</name>
+      <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
+      <anchor>a9ca3702217ad6d676f545a813123b142</anchor>
+      <arglist>(const istd::CString &amp;name) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const CUser &amp;</type>
+      <name>GetUser</name>
+      <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
+      <anchor>a260bc4f2c0921d016a08f43a1a6390c5</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CUser &amp;</type>
+      <name>GetUserRef</name>
+      <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
+      <anchor>add1c5cbd5f2ca4c8ddf8715b5dde5a09</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CUser *</type>
+      <name>AddUser</name>
+      <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
+      <anchor>ac83c72c1234e82b2d063833906bc9f95</anchor>
+      <arglist>(const istd::CString &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>DeleteUser</name>
+      <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
+      <anchor>a861f831677f5e588e269b2201a6286a2</anchor>
+      <arglist>(const istd::CString &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RenameUser</name>
+      <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
+      <anchor>aa475983cdd4b5d544e20c80ded342039</anchor>
+      <arglist>(int userIndex, const istd::CString &amp;userName)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetUserGroupsCount</name>
+      <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
+      <anchor>ac574beec874eae9a307f8fa8e74f93bd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::CString &amp;</type>
+      <name>GetUserGroupName</name>
+      <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
+      <anchor>ae7d339347398810221f754c0c8861756</anchor>
+      <arglist>(int groupIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
+      <anchor>adc390fdf842cb6b92a819cfdbaf5bc03</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
+      <anchor>a8ea23e2841582851de4692731e7deec7</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iauth::ILogin</name>
+    <filename>classiauth_1_1_i_login.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsUserLogged</name>
+      <anchorfile>classiauth_1_1_i_login.html</anchorfile>
+      <anchor>ac2f88f7f6267a03af47cb2ac850b373d</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>Login</name>
+      <anchorfile>classiauth_1_1_i_login.html</anchorfile>
+      <anchor>ab0fc19b0f1f71432c2730e99519d6956</anchor>
+      <arglist>(const istd::CString &amp;userName, const istd::CString &amp;password)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>Logout</name>
+      <anchorfile>classiauth_1_1_i_login.html</anchorfile>
+      <anchor>ad2a63aa20e923ae5b495e1e3b6d9dd0c</anchor>
+      <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iauth::IPasswordChanger</name>
+    <filename>classiauth_1_1_i_password_changer.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>TryChangePassword</name>
+      <anchorfile>classiauth_1_1_i_password_changer.html</anchorfile>
+      <anchor>aa3d13ade6a4b27cf16341e2b1aba5cb2</anchor>
+      <arglist>(CUser &amp;user) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iauth::IRightsProvider</name>
+    <filename>classiauth_1_1_i_rights_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>HasRight</name>
+      <anchorfile>classiauth_1_1_i_rights_provider.html</anchorfile>
+      <anchor>a71b48e0f11e625e3a55f0a1ea294d43c</anchor>
+      <arglist>(const std::string &amp;operationId, bool beQuiet=false) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iauth::IUserLogin</name>
+    <filename>classiauth_1_1_i_user_login.html</filename>
+    <base>iauth::ILogin</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual CUser *</type>
+      <name>GetLoggedUser</name>
+      <anchorfile>classiauth_1_1_i_user_login.html</anchorfile>
+      <anchor>a1944c75348037e8abd18d41638f189ff</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iauth::IUsersManager</name>
+    <filename>classiauth_1_1_i_users_manager.html</filename>
+    <base>iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetUsersCount</name>
+      <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
+      <anchor>a6652e1f9bb2c02eef7092fa6331fda24</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>FindUserIndex</name>
+      <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
+      <anchor>a8f872e61551574eebc4448ea15a61fba</anchor>
+      <arglist>(const istd::CString &amp;name) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const CUser &amp;</type>
+      <name>GetUser</name>
+      <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
+      <anchor>abb90c87960cdef89ced1f239a48967d1</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual CUser &amp;</type>
+      <name>GetUserRef</name>
+      <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
+      <anchor>a813626fb4d23a7f25bbd7c44e25dc228</anchor>
+      <arglist>(int index)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual CUser *</type>
+      <name>AddUser</name>
+      <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
+      <anchor>adb72e0534dfa7e5cb8e369a4a1e047bb</anchor>
+      <arglist>(const istd::CString &amp;userName)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>DeleteUser</name>
+      <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
+      <anchor>a9903d898fcf04a5f50d8c48051d46297</anchor>
+      <arglist>(const istd::CString &amp;userName)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>RenameUser</name>
+      <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
+      <anchor>aa4a7a4c2ca0ddc07c6fc01b209adb1d0</anchor>
+      <arglist>(int userIndex, const istd::CString &amp;userName)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetUserGroupsCount</name>
+      <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
+      <anchor>afea0cd4a2ab6b8fe047e8a934a9201fd</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const istd::CString &amp;</type>
+      <name>GetUserGroupName</name>
+      <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
+      <anchor>aa0d76cc30b4c6db2c85184dfc9d28342</anchor>
+      <arglist>(int groupIndex) const =0</arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>icam</name>
@@ -9174,6 +9811,223 @@
       <anchorfile>classiprop_1_1_t_property.html</anchorfile>
       <anchor>a83bda4b555a7767f6d9ccac142c1ed54</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iqtauth</name>
+    <filename>namespaceiqtauth.html</filename>
+    <class kind="class">iqtauth::CChangePasswordDialog</class>
+    <class kind="class">iqtauth::CLoginBarGuiComp</class>
+    <class kind="class">iqtauth::CUserGuiComp</class>
+    <class kind="class">iqtauth::CUserManagerDialog</class>
+  </compound>
+  <compound kind="class">
+    <name>iqtauth::CChangePasswordDialog</name>
+    <filename>classiqtauth_1_1_c_change_password_dialog.html</filename>
+    <member kind="typedef">
+      <type>QDialog</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtauth_1_1_c_change_password_dialog.html</anchorfile>
+      <anchor>acc922128eaeff9adc5099a2b241090dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CChangePasswordDialog</name>
+      <anchorfile>classiqtauth_1_1_c_change_password_dialog.html</anchorfile>
+      <anchor>af0e522f96dbff5f791864ff90702d175</anchor>
+      <arglist>(iauth::IUsersManager &amp;manager, iauth::CUser &amp;loggedUser)</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>on_ButtonBox_accepted</name>
+      <anchorfile>classiqtauth_1_1_c_change_password_dialog.html</anchorfile>
+      <anchor>a387a40def6608256f6ded65d9a9af9e3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>ResetGui</name>
+      <anchorfile>classiqtauth_1_1_c_change_password_dialog.html</anchorfile>
+      <anchor>abe9de8f71f219f3ae84e36caab5ad5e2</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtauth::CLoginBarGuiComp</name>
+    <filename>classiqtauth_1_1_c_login_bar_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CLoginBarGuiComp &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CLoginBarGuiComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtauth_1_1_c_login_bar_gui_comp.html</anchorfile>
+      <anchor>a6ebeb8454c30da4af1868d616ad0f8ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CLoginBarGuiComp</name>
+      <anchorfile>classiqtauth_1_1_c_login_bar_gui_comp.html</anchorfile>
+      <anchor>a1a9df367e3a9614ef355dec75d0adbab</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>on_LoginButton_clicked</name>
+      <anchorfile>classiqtauth_1_1_c_login_bar_gui_comp.html</anchorfile>
+      <anchor>a19f76c09b388f0c76d952f0f911d7c2f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>on_LogoutButton_clicked</name>
+      <anchorfile>classiqtauth_1_1_c_login_bar_gui_comp.html</anchorfile>
+      <anchor>ad9b49ab5b8f0dadbfc610eb7abe6e635</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateButtonsState</name>
+      <anchorfile>classiqtauth_1_1_c_login_bar_gui_comp.html</anchorfile>
+      <anchor>adb2804f8e5fc36821c0877e5db5ec38c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>eventFilter</name>
+      <anchorfile>classiqtauth_1_1_c_login_bar_gui_comp.html</anchorfile>
+      <anchor>a890ec65c930ee611584bac82ea7e25b0</anchor>
+      <arglist>(QObject *obj, QEvent *event)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtauth_1_1_c_login_bar_gui_comp.html</anchorfile>
+      <anchor>a10193f000ad799005f2282740485af84</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtauth::CUserGuiComp</name>
+    <filename>classiqtauth_1_1_c_user_gui_comp.html</filename>
+    <base>TLoggerCompWrap&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CUserGuiComp, iauth::IUsersManager &gt; &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <base virtualness="virtual">iauth::IPasswordChanger</base>
+    <member kind="typedef">
+      <type>ibase::TLoggerCompWrap&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CUserGuiComp, iauth::IUsersManager &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
+      <anchor>a8e89718522fc89641ca92342c18a4f55</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TryChangePassword</name>
+      <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
+      <anchor>a1e6c05d56b80a57a2cd2d7301b7fb723</anchor>
+      <arglist>(iauth::CUser &amp;user) const </arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>on_PushChangePassword_clicked</name>
+      <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
+      <anchor>a079f09513e3cf8214f31ae87b76d8835</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>on_PushOpenUserManager_clicked</name>
+      <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
+      <anchor>ab735c6f9bdd530da33d6bc94ea134877</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateButtonsState</name>
+      <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
+      <anchor>a493447ea13cf573a2125c246880daed4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiShown</name>
+      <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
+      <anchor>aa994800fe82461743d6e26ea848d3226</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
+      <anchor>a096c279671bc65608981cd8dbdf8eb66</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
+      <anchor>a1a0140d116ba3ff4115136cebbb00884</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
+      <anchor>ae0310e4ba23a0306d0b309a281aa1ae9</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtauth::CUserManagerDialog</name>
+    <filename>classiqtauth_1_1_c_user_manager_dialog.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CUserManagerDialog</name>
+      <anchorfile>classiqtauth_1_1_c_user_manager_dialog.html</anchorfile>
+      <anchor>abf3431dd521e54ecfa9cf9c6b84695f8</anchor>
+      <arglist>(const iauth::IUserLogin &amp;login, iauth::IUsersManager &amp;manager)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SaveCurUsername</name>
+      <anchorfile>classiqtauth_1_1_c_user_manager_dialog.html</anchorfile>
+      <anchor>a2fc76b8a321ab600612a5c0218199f61</anchor>
+      <arglist>(const istd::CString &amp;Username)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetUserGroupSize</name>
+      <anchorfile>classiqtauth_1_1_c_user_manager_dialog.html</anchorfile>
+      <anchor>a4bc5ed4b143e61a5896177d8e9ef8466</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_AddUserButton_clicked</name>
+      <anchorfile>classiqtauth_1_1_c_user_manager_dialog.html</anchorfile>
+      <anchor>a39faf6a9254ce4056a9c1c1d7b26148c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ResetPasswordButton_clicked</name>
+      <anchorfile>classiqtauth_1_1_c_user_manager_dialog.html</anchorfile>
+      <anchor>a8326543b3424c369c4da61f7b5c8da5b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RemoveUserButton_clicked</name>
+      <anchorfile>classiqtauth_1_1_c_user_manager_dialog.html</anchorfile>
+      <anchor>a46cce9ccd61e9972d20281119ba77c60</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnCancel</name>
+      <anchorfile>classiqtauth_1_1_c_user_manager_dialog.html</anchorfile>
+      <anchor>ab3ca60a9998adae52ee6b4ab29e1c7e1</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="namespace">

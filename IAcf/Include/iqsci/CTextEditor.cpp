@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "CTextEditor.h"
+#include "iqsci/CTextEditor.h"
 
 
 // QScinitlla includes
@@ -173,6 +173,26 @@ void CTextEditor::SetReadOnly(bool readOnly)
 }
 
 
+// protected methods
+
+void CTextEditor::RegisterLexers()
+{
+	QsciLexerCPP* cppLexerPtr = new QsciLexerCPP(this);
+	cppLexerPtr->setDefaultFont(QFont("Courier", 10));
+	cppLexerPtr->setFoldCompact(true);
+	m_languages[QString(cppLexerPtr->language()).toUpper()] = cppLexerPtr;
+
+	QsciLexerPostScript* psLexerPtr = new QsciLexerPostScript(this);
+	m_languages[QString(psLexerPtr->language()).toUpper()] = psLexerPtr;
+
+	QsciLexerXML* xmlLexerPtr = new QsciLexerXML(this);
+	m_languages[QString(xmlLexerPtr->language()).toUpper()] = xmlLexerPtr;
+
+	QsciLexerHTML* htmlLexerPtr = new QsciLexerHTML(this);
+	m_languages[QString(htmlLexerPtr->language()).toUpper()] = htmlLexerPtr;
+}
+
+
 // protected slots
 
 void CTextEditor::OnSelectionChanged()
@@ -238,26 +258,6 @@ void CTextEditor::OnToUppercase()
 	OnSelectionChanged();
 
 	OnTextChanged();
-}
-
-
-// private methods
-
-void CTextEditor::RegisterLexers()
-{
-	QsciLexerCPP* cppLexerPtr = new QsciLexerCPP(this);
-	cppLexerPtr->setDefaultFont(QFont("Courier", 10));
-	cppLexerPtr->setFoldCompact(true);
-	m_languages[QString(cppLexerPtr->language()).toUpper()] = cppLexerPtr;
-
-	QsciLexerPostScript* psLexerPtr = new QsciLexerPostScript(this);
-	m_languages[QString(psLexerPtr->language()).toUpper()] = psLexerPtr;
-
-	QsciLexerXML* xmlLexerPtr = new QsciLexerXML(this);
-	m_languages[QString(xmlLexerPtr->language()).toUpper()] = xmlLexerPtr;
-
-	QsciLexerHTML* htmlLexerPtr = new QsciLexerHTML(this);
-	m_languages[QString(htmlLexerPtr->language()).toUpper()] = htmlLexerPtr;
 }
 
 

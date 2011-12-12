@@ -4296,15 +4296,6 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
-    <name>CLoginGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtgui/</path>
-    <filename>_c_login_gui_comp_8h</filename>
-    <includes id="_i_user_login_8h" name="IUserLogin.h" local="yes" imported="no">isec/IUserLogin.h</includes>
-    <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
-    <class kind="class">iqtgui::CLoginGuiComp</class>
-    <namespace>iqtgui</namespace>
-  </compound>
-  <compound kind="file">
     <name>CModelDialogGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_model_dialog_gui_comp_8h</filename>
@@ -4735,58 +4726,6 @@
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtwiz::CWizardOptionsListGuiComp</class>
     <namespace>iqtwiz</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CComposedAuthorizationVerifierComp.h</name>
-    <path>C:/Temp/Acf/Include/isec/</path>
-    <filename>_c_composed_authorization_verifier_comp_8h</filename>
-    <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_authorization_verifier_8h" name="IAuthorizationVerifier.h" local="yes" imported="no">isec/IAuthorizationVerifier.h</includes>
-    <class kind="class">isec::CComposedAuthorizationVerifierComp</class>
-    <namespace>isec</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFixedAuthorisationVerifierComp.h</name>
-    <path>C:/Temp/Acf/Include/isec/</path>
-    <filename>_c_fixed_authorisation_verifier_comp_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_authorization_verifier_8h" name="IAuthorizationVerifier.h" local="yes" imported="no">isec/IAuthorizationVerifier.h</includes>
-    <class kind="class">isec::CFixedAuthorisationVerifierComp</class>
-    <namespace>isec</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CStaticUserLoginComp.h</name>
-    <path>C:/Temp/Acf/Include/isec/</path>
-    <filename>_c_static_user_login_comp_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_authorization_verifier_8h" name="IAuthorizationVerifier.h" local="yes" imported="no">isec/IAuthorizationVerifier.h</includes>
-    <includes id="_i_user_login_8h" name="IUserLogin.h" local="yes" imported="no">isec/IUserLogin.h</includes>
-    <class kind="class">isec::CStaticUserLoginComp</class>
-    <namespace>isec</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IAuthorizationVerifier.h</name>
-    <path>C:/Temp/Acf/Include/isec/</path>
-    <filename>_i_authorization_verifier_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <class kind="class">isec::IAuthorizationVerifier</class>
-    <namespace>isec</namespace>
-  </compound>
-  <compound kind="file">
-    <name>isec.h</name>
-    <path>C:/Temp/Acf/Include/isec/</path>
-    <filename>isec_8h</filename>
-    <namespace>isec</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IUserLogin.h</name>
-    <path>C:/Temp/Acf/Include/isec/</path>
-    <filename>_i_user_login_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
-    <class kind="class">isec::IUserLogin</class>
-    <namespace>isec</namespace>
   </compound>
   <compound kind="file">
     <name>CArchiveBase.h</name>
@@ -33935,7 +33874,6 @@
     <class kind="class">iqtgui::CImagePropertyGuiComp</class>
     <class kind="class">iqtgui::CItemDelegate</class>
     <class kind="class">iqtgui::CLogGuiComp</class>
-    <class kind="class">iqtgui::CLoginGuiComp</class>
     <class kind="class">iqtgui::CModelDialogGuiComp</class>
     <class kind="class">iqtgui::CModelEditorGuiComp</class>
     <class kind="class">iqtgui::CObjectPreviewGuiComp</class>
@@ -35259,46 +35197,6 @@
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
       <anchor>a562431876996d842a9168ef1ed1b0a1d</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtgui::CLoginGuiComp</name>
-    <filename>classiqtgui_1_1_c_login_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CLoginGuiComp, QWidget &gt;</base>
-    <member kind="typedef">
-      <type>TDesignerGuiCompBase&lt; Ui::CLoginGuiComp, QWidget &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_c_login_gui_comp.html</anchorfile>
-      <anchor>a8eadd92c066435f21e0c7a434daa3c54</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_LoginButton_clicked</name>
-      <anchorfile>classiqtgui_1_1_c_login_gui_comp.html</anchorfile>
-      <anchor>a035985dc8d62d539e50332d70605ac44</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_LogoutButton_clicked</name>
-      <anchorfile>classiqtgui_1_1_c_login_gui_comp.html</anchorfile>
-      <anchor>a572aeeb269180c44bc754dd74676192f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateGuiElements</name>
-      <anchorfile>classiqtgui_1_1_c_login_gui_comp.html</anchorfile>
-      <anchor>adbf2276ce890544700ef23e7f6e91bd9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtgui_1_1_c_login_gui_comp.html</anchorfile>
-      <anchor>ac89bad29f522d2a45961b7af750d6fde</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -37708,206 +37606,6 @@
       <anchorfile>classiqtwiz_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
       <anchor>afab1a97d1da4bee5040125ca6538edbc</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
-    <name>isec</name>
-    <filename>namespaceisec.html</filename>
-    <class kind="class">isec::CComposedAuthorizationVerifierComp</class>
-    <class kind="class">isec::CFixedAuthorisationVerifierComp</class>
-    <class kind="class">isec::CStaticUserLoginComp</class>
-    <class kind="class">isec::IAuthorizationVerifier</class>
-    <class kind="class">isec::IUserLogin</class>
-  </compound>
-  <compound kind="class">
-    <name>isec::CComposedAuthorizationVerifierComp</name>
-    <filename>classisec_1_1_c_composed_authorization_verifier_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">isec::IAuthorizationVerifier</base>
-    <base protection="protected">imod::CMultiModelBridgeBase</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classisec_1_1_c_composed_authorization_verifier_comp.html</anchorfile>
-      <anchor>a271081d3395148d217a452dc6933a02f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classisec_1_1_c_composed_authorization_verifier_comp.html</anchorfile>
-      <anchor>aa5f3f7d493af00d3830c805e9f384227</anchor>
-      <arglist>(m_slaveVerifiersModelCompPtr, m_slaveVerifiersCompPtr, true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsAuthorized</name>
-      <anchorfile>classisec_1_1_c_composed_authorization_verifier_comp.html</anchorfile>
-      <anchor>a2f3ccced2080fe43c10cdbdb9110c73a</anchor>
-      <arglist>(const std::string &amp;featureId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual Ids</type>
-      <name>GetKnownFeatureIds</name>
-      <anchorfile>classisec_1_1_c_composed_authorization_verifier_comp.html</anchorfile>
-      <anchor>a8300e50f497dcce329e7a2cd9e85fb2d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classisec_1_1_c_composed_authorization_verifier_comp.html</anchorfile>
-      <anchor>ade466b8c46f74134bfe3d4fb513d6057</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classisec_1_1_c_composed_authorization_verifier_comp.html</anchorfile>
-      <anchor>acb4f4e7c19cbd2b2b2a2974d31703b94</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isec::CFixedAuthorisationVerifierComp</name>
-    <filename>classisec_1_1_c_fixed_authorisation_verifier_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">isec::IAuthorizationVerifier</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classisec_1_1_c_fixed_authorisation_verifier_comp.html</anchorfile>
-      <anchor>ad34113703f9345fa0397bd0a14257ec4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsAuthorized</name>
-      <anchorfile>classisec_1_1_c_fixed_authorisation_verifier_comp.html</anchorfile>
-      <anchor>aacb123877fdc672235cfd8b5778fa970</anchor>
-      <arglist>(const std::string &amp;featureId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual Ids</type>
-      <name>GetKnownFeatureIds</name>
-      <anchorfile>classisec_1_1_c_fixed_authorisation_verifier_comp.html</anchorfile>
-      <anchor>a619662fedad2300cc7aefe8b6434b37b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classisec_1_1_c_fixed_authorisation_verifier_comp.html</anchorfile>
-      <anchor>ac80dc7f9ea0503d91b496a7f021cdc10</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isec::CStaticUserLoginComp</name>
-    <filename>classisec_1_1_c_static_user_login_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">isec::IAuthorizationVerifier</base>
-    <base virtualness="virtual">isec::IUserLogin</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classisec_1_1_c_static_user_login_comp.html</anchorfile>
-      <anchor>a6218c2ab22c56866a0990ae9acd0d31d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CStaticUserLoginComp</name>
-      <anchorfile>classisec_1_1_c_static_user_login_comp.html</anchorfile>
-      <anchor>a9543749d0fe9307173363c6b463f2646</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsAuthorized</name>
-      <anchorfile>classisec_1_1_c_static_user_login_comp.html</anchorfile>
-      <anchor>a74a43deb40c9475d80bd806b6e9c628f</anchor>
-      <arglist>(const std::string &amp;featureId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual Ids</type>
-      <name>GetKnownFeatureIds</name>
-      <anchorfile>classisec_1_1_c_static_user_login_comp.html</anchorfile>
-      <anchor>abe1319770bb9731febd15289b7e8a379</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>LoginUser</name>
-      <anchorfile>classisec_1_1_c_static_user_login_comp.html</anchorfile>
-      <anchor>a797cff5cb8aa96884a6cd4a6fc5fe718</anchor>
-      <arglist>(const std::string &amp;userId, const istd::CString &amp;password)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>LogoutUser</name>
-      <anchorfile>classisec_1_1_c_static_user_login_comp.html</anchorfile>
-      <anchor>a6a54f425f0166dec508b60f221d6fdac</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
-      <name>GetLoggedUser</name>
-      <anchorfile>classisec_1_1_c_static_user_login_comp.html</anchorfile>
-      <anchor>ae264faa304899beaa9e1c698e8382357</anchor>
-      <arglist>() const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isec::IAuthorizationVerifier</name>
-    <filename>classisec_1_1_i_authorization_verifier.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="typedef">
-      <type>std::set&lt; std::string &gt;</type>
-      <name>Ids</name>
-      <anchorfile>classisec_1_1_i_authorization_verifier.html</anchorfile>
-      <anchor>a673a44d3ac10495088a95378080827f8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsAuthorized</name>
-      <anchorfile>classisec_1_1_i_authorization_verifier.html</anchorfile>
-      <anchor>a54b07e9893a53b9d6570c1c6f32e6945</anchor>
-      <arglist>(const std::string &amp;featureId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual Ids</type>
-      <name>GetKnownFeatureIds</name>
-      <anchorfile>classisec_1_1_i_authorization_verifier.html</anchorfile>
-      <anchor>affc3e030a69f5352e86967e7129b988a</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isec::IUserLogin</name>
-    <filename>classisec_1_1_i_user_login.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>LoginUser</name>
-      <anchorfile>classisec_1_1_i_user_login.html</anchorfile>
-      <anchor>a21a16e84a0073fa29eec2edbff19695e</anchor>
-      <arglist>(const std::string &amp;userId, const istd::CString &amp;password)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>LogoutUser</name>
-      <anchorfile>classisec_1_1_i_user_login.html</anchorfile>
-      <anchor>aa1948df3460cc713ed93a03821299e16</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual std::string</type>
-      <name>GetLoggedUser</name>
-      <anchorfile>classisec_1_1_i_user_login.html</anchorfile>
-      <anchor>a4fdf8e8ddc181868c0ac9439ae165534</anchor>
-      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="namespace">

@@ -2753,6 +2753,13 @@
       <anchor>a131bc0aca1a06cc35c5869bf567a3f0b</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>RegisterLexers</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>aa1294d447f7e661e00199d11ea3a5c4f</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqsci::CTextEditorGuiComp</name>

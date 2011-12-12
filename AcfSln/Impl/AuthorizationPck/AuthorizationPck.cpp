@@ -1,0 +1,59 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
+#include "AuthorizationPck.h"
+
+
+#include "icomp/export.h"
+
+
+namespace AuthorizationPck
+{
+
+
+I_EXPORT_DEFAULT_SERVICES
+
+I_EXPORT_PACKAGE(
+			"AuthorizationPck",
+			"Package for security and authorization components",
+			IM_PROJECT("ACF-Solutions") IM_COMPANY("ImagingTools") IM_TAG("Authorization") IM_AUTHOR("\"Witold Gantzke\" \"Kirill Lepskiy\""));
+
+
+I_EXPORT_COMPONENT(
+			StaticRightsProvider,
+			"Static rights provider",
+			"User Rights" IM_TAG("\"User Management\""));
+
+I_EXPORT_COMPONENT(
+			UserLogin,
+			"User login and authotization mechanism using user manager",
+			"Authentication User Rights User Manager" IM_TAG("\"User Management\""));
+
+I_EXPORT_COMPONENT(
+			SimpleLogin,
+			"Simple static login logic without any user manager",
+			"Basic Simple Static Authentication User Rights" IM_TAG("\"User Management\""));
+
+
+} // namespace AuthorizationPck
+
+
