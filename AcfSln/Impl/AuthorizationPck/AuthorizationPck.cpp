@@ -54,6 +54,12 @@ I_EXPORT_COMPONENT(
 			"Basic Simple Static Authentication User Rights" IM_TAG("\"User Management\""));
 
 
+I_EXPORT_COMPONENT(
+			UsersManager,
+			"Allows manage of list of users",
+			"Authentication Manager User Rights" IM_TAG("\"User Management\""));
+
+
 } // namespace AuthorizationPck
 
 
