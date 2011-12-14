@@ -1463,12 +1463,13 @@
     <filename>_c_sim_component_context_base_8h</filename>
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
     <includes id="_t_i_factory_8h" name="TIFactory.h" local="yes" imported="no">istd/TIFactory.h</includes>
+    <includes id="_c_id_manip_base_8h" name="CIdManipBase.h" local="yes" imported="no">istd/CIdManipBase.h</includes>
     <includes id="_i_component_8h" name="IComponent.h" local="yes" imported="no">icomp/IComponent.h</includes>
     <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
     <includes id="_i_component_static_info_8h" name="IComponentStaticInfo.h" local="yes" imported="no">icomp/IComponentStaticInfo.h</includes>
-    <includes id="_c_registry_element_8h" name="CRegistryElement.h" local="yes" imported="no">icomp/CRegistryElement.h</includes>
     <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
     <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
+    <includes id="_c_registry_element_8h" name="CRegistryElement.h" local="yes" imported="no">icomp/CRegistryElement.h</includes>
     <class kind="class">icomp::CSimComponentContextBase</class>
     <namespace>icomp</namespace>
   </compound>
@@ -16870,6 +16871,7 @@
     <name>icomp::CSimComponentContextBase</name>
     <filename>classicomp_1_1_c_sim_component_context_base.html</filename>
     <base>icomp::IComponentContext</base>
+    <base protection="protected">istd::CIdManipBase</base>
     <member kind="typedef">
       <type>istd::TIFactory&lt; icomp::IComponent &gt;</type>
       <name>ComponentsFactory</name>
@@ -16895,15 +16897,15 @@
       <type>bool</type>
       <name>SetRef</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a6722029053031afc991c9f7dc03bbca8</anchor>
-      <arglist>(const std::string &amp;referenceId, IComponent *componentPtr)</arglist>
+      <anchor>aeb796e52120f997b4251c4cdc0a7f84f</anchor>
+      <arglist>(const std::string &amp;referenceId, IComponent *componentPtr, const std::string &amp;subelementId=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>InsertMultiRef</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>ad5183ccae0fdcb0166faaf282a63274c</anchor>
-      <arglist>(const std::string &amp;referenceId, IComponent *componentPtr)</arglist>
+      <anchor>a9bdb9bc0e6fc8e9ac727877b79094fdf</anchor>
+      <arglist>(const std::string &amp;referenceId, IComponent *componentPtr, const std::string &amp;subelementId=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -16913,31 +16915,31 @@
       <arglist>(const std::string &amp;factoryId, const ComponentsFactory *factoryPtr)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>bool</type>
       <name>SetBoolAttr</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a9fc11820b62438c12a1887bd9627d636</anchor>
+      <anchor>a1aef81ba1b5aa07787c69694bf67aa53</anchor>
       <arglist>(const std::string &amp;attributeId, bool value)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>bool</type>
       <name>SetIntAttr</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a779c5487e16cc2fe8c0e08f041171db8</anchor>
+      <anchor>a3a81bf78189b158dfea47dbe0af5c673</anchor>
       <arglist>(const std::string &amp;attributeId, int value)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>bool</type>
       <name>SetDoubleAttr</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>ae432d0e0a6ad19859306ade0642a0f82</anchor>
+      <anchor>abe37f75a37eb79a84866410469020306</anchor>
       <arglist>(const std::string &amp;attributeId, double value)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>bool</type>
       <name>SetStringAttr</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a7a6fa00212092e66cad57cfdbd5dda44</anchor>
+      <anchor>a491715f6aaab0a935c42dd02f0ebec80</anchor>
       <arglist>(const std::string &amp;attributeId, const istd::CString &amp;value)</arglist>
     </member>
     <member kind="function">
@@ -18708,7 +18710,7 @@
     <filename>classicomp_1_1_t_reference_member.html</filename>
     <templarg>Interface</templarg>
     <base>TAttributeMember&lt; CReferenceAttribute &gt;</base>
-    <base>icomp::CInterfaceManipBase</base>
+    <base protection="protected">icomp::CInterfaceManipBase</base>
     <member kind="typedef">
       <type>TAttributeMember&lt; CReferenceAttribute &gt;</type>
       <name>BaseClass</name>

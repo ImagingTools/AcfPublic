@@ -40,7 +40,7 @@
 <div class="title">icomp::CSimComponentContextBase Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="icomp::CSimComponentContextBase" --><!-- doxytag: inherits="icomp::IComponentContext" -->
+<!-- doxytag: class="icomp::CSimComponentContextBase" --><!-- doxytag: inherits="icomp::IComponentContext,istd::CIdManipBase" -->
 <p><code>#include &lt;<a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for icomp::CSimComponentContextBase:</div>
@@ -49,9 +49,10 @@ Inheritance diagram for icomp::CSimComponentContextBase:</div>
   <img src="classicomp_1_1_c_sim_component_context_base.png" usemap="#icomp::CSimComponentContextBase_map" alt=""/>
   <map id="icomp::CSimComponentContextBase_map" name="icomp::CSimComponentContextBase_map">
 <area href="classicomp_1_1_i_component_context.html" title="Provide session context of component." alt="icomp::IComponentContext" shape="rect" coords="0,56,243,80"/>
+<area href="classistd_1_1_c_id_manip_base.html" alt="istd::CIdManipBase" shape="rect" coords="253,56,496,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,243,24"/>
-<area href="classicomp_1_1_t_sim_component_wrap.html" title="Simulation wrapper of component." alt="icomp::TSimComponentWrap&lt; Base &gt;" shape="rect" coords="0,168,243,192"/>
-<area href="classicomp_1_1_t_sim_components_factory.html" title="Simulation wrapper of component." alt="icomp::TSimComponentsFactory&lt; Base &gt;" shape="rect" coords="0,224,243,248"/>
+<area href="classicomp_1_1_t_sim_component_wrap.html" title="Simulation wrapper of component." alt="icomp::TSimComponentWrap&lt; Base &gt;" shape="rect" coords="126,168,369,192"/>
+<area href="classicomp_1_1_t_sim_components_factory.html" title="Simulation wrapper of component." alt="icomp::TSimComponentsFactory&lt; Base &gt;" shape="rect" coords="126,224,369,248"/>
 </map>
  </div></div>
 
@@ -66,20 +67,20 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#a1baca7c376486afc4a122409df3aa314">CSimComponentContextBase</a> (const <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *infoPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#ae47c201b5a3de5747a2966fa48eb5292">SetAttr</a> (const std::string &amp;attributeId, const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> *attributePtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set named attribute.  <a href="#ae47c201b5a3de5747a2966fa48eb5292"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#a6722029053031afc991c9f7dc03bbca8">SetRef</a> (const std::string &amp;referenceId, <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *componentPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set named reference to some component.  <a href="#a6722029053031afc991c9f7dc03bbca8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#ad5183ccae0fdcb0166faaf282a63274c">InsertMultiRef</a> (const std::string &amp;referenceId, <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *componentPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set named reference to some component.  <a href="#ad5183ccae0fdcb0166faaf282a63274c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#aeb796e52120f997b4251c4cdc0a7f84f">SetRef</a> (const std::string &amp;referenceId, <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *componentPtr, const std::string &amp;subelementId=&quot;&quot;)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set named reference to some component.  <a href="#aeb796e52120f997b4251c4cdc0a7f84f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#a9bdb9bc0e6fc8e9ac727877b79094fdf">InsertMultiRef</a> (const std::string &amp;referenceId, <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *componentPtr, const std::string &amp;subelementId=&quot;&quot;)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set named reference to some component.  <a href="#a9bdb9bc0e6fc8e9ac727877b79094fdf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#a53ee813969d8229e31ca73dcdd3cadbc">SetFactory</a> (const std::string &amp;factoryId, const <a class="el" href="classicomp_1_1_c_sim_component_context_base.html#aec9bd2edd6af0b19efe3863ce3fdef59">ComponentsFactory</a> *factoryPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set factory of component instance.  <a href="#a53ee813969d8229e31ca73dcdd3cadbc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#a9fc11820b62438c12a1887bd9627d636">SetBoolAttr</a> (const std::string &amp;attributeId, bool value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set instance of <code>bool</code> attribute.  <a href="#a9fc11820b62438c12a1887bd9627d636"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#a779c5487e16cc2fe8c0e08f041171db8">SetIntAttr</a> (const std::string &amp;attributeId, int value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set instance of <code>int</code> attribute.  <a href="#a779c5487e16cc2fe8c0e08f041171db8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#ae432d0e0a6ad19859306ade0642a0f82">SetDoubleAttr</a> (const std::string &amp;attributeId, double value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set instance of <code>double</code> attribute.  <a href="#ae432d0e0a6ad19859306ade0642a0f82"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#a7a6fa00212092e66cad57cfdbd5dda44">SetStringAttr</a> (const std::string &amp;attributeId, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set instance of <code><a class="el" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a></code> attribute.  <a href="#a7a6fa00212092e66cad57cfdbd5dda44"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#a1aef81ba1b5aa07787c69694bf67aa53">SetBoolAttr</a> (const std::string &amp;attributeId, bool value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set instance of <code>bool</code> attribute.  <a href="#a1aef81ba1b5aa07787c69694bf67aa53"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#a3a81bf78189b158dfea47dbe0af5c673">SetIntAttr</a> (const std::string &amp;attributeId, int value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set instance of <code>int</code> attribute.  <a href="#a3a81bf78189b158dfea47dbe0af5c673"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#abe37f75a37eb79a84866410469020306">SetDoubleAttr</a> (const std::string &amp;attributeId, double value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set instance of <code>double</code> attribute.  <a href="#abe37f75a37eb79a84866410469020306"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#a491715f6aaab0a935c42dd02f0ebec80">SetStringAttr</a> (const std::string &amp;attributeId, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set instance of <code><a class="el" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a></code> attribute.  <a href="#a491715f6aaab0a935c42dd02f0ebec80"></a><br/></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;class Attribute &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_sim_component_context_base.html#add58ad14f3e7c227bf99b866ac5656e8">SetSingleAttr</a> (const std::string &amp;attributeId, const Attribute &amp;attribute)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set instance of simple attribute.  <a href="#add58ad14f3e7c227bf99b866ac5656e8"></a><br/></td></tr>
@@ -113,7 +114,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00024">24</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00025">25</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="aec9bd2edd6af0b19efe3863ce3fdef59"></a><!-- doxytag: member="icomp::CSimComponentContextBase::ComponentsFactory" ref="aec9bd2edd6af0b19efe3863ce3fdef59" args="" -->
 <div class="memitem">
@@ -126,7 +127,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00027">27</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00030">30</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
 
 </div>
 </div>
@@ -141,7 +142,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00134">134</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00137">137</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
 
 </div>
 </div>
@@ -156,7 +157,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00137">137</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00140">140</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
 
 </div>
 </div>
@@ -314,13 +315,13 @@ template&lt;class Attribute &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00090">90</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00093">93</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
 
-<p>References <a class="el" href="_i_registry_element_8h_source.html#l00059">icomp::IRegistryElement::AttributeInfo::attributePtr</a>, <a class="el" href="classicomp_1_1_c_registry_element.html#a43d3fb94ed602ddf69774eefd5278bdc">icomp::CRegistryElement::GetAttributeInfo()</a>, <a class="el" href="_c_class_info_8h_source.html#l00145">istd::CClassInfo::GetName()</a>, <a class="el" href="_t_pointer_base_8h_source.html#l00126">istd::TPointerBase&lt; Type &gt;::GetPtr()</a>, <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, <a class="el" href="classicomp_1_1_c_registry_element.html#a9deb70e720ba3bcc7209e73c6a7e9474">icomp::CRegistryElement::InsertAttributeInfo()</a>, <a class="el" href="_t_multi_attribute_8h_source.html#l00130">icomp::TMultiAttribute&lt; Value &gt;::InsertValue()</a>, <a class="el" href="_c_sim_component_context_base_8h_source.html#l00149">IsAttributeTypeCorrect()</a>, <a class="el" href="_t_pointer_base_8h_source.html#l00133">istd::TPointerBase&lt; Type &gt;::IsValid()</a>, <a class="el" href="istd_8h_source.html#l00183">NULL</a>, and <a class="el" href="_t_del_ptr_8h_source.html#l00138">istd::TDelPtr&lt; Type, Accessor &gt;::SetPtr()</a>.</p>
+<p>References <a class="el" href="_i_registry_element_8h_source.html#l00059">icomp::IRegistryElement::AttributeInfo::attributePtr</a>, <a class="el" href="classicomp_1_1_c_registry_element.html#a43d3fb94ed602ddf69774eefd5278bdc">icomp::CRegistryElement::GetAttributeInfo()</a>, <a class="el" href="_c_class_info_8h_source.html#l00145">istd::CClassInfo::GetName()</a>, <a class="el" href="_t_pointer_base_8h_source.html#l00126">istd::TPointerBase&lt; Type &gt;::GetPtr()</a>, <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, <a class="el" href="classicomp_1_1_c_registry_element.html#a9deb70e720ba3bcc7209e73c6a7e9474">icomp::CRegistryElement::InsertAttributeInfo()</a>, <a class="el" href="_t_multi_attribute_8h_source.html#l00130">icomp::TMultiAttribute&lt; Value &gt;::InsertValue()</a>, <a class="el" href="_c_sim_component_context_base_8h_source.html#l00152">IsAttributeTypeCorrect()</a>, <a class="el" href="_t_pointer_base_8h_source.html#l00133">istd::TPointerBase&lt; Type &gt;::IsValid()</a>, <a class="el" href="istd_8h_source.html#l00183">NULL</a>, and <a class="el" href="_t_del_ptr_8h_source.html#l00138">istd::TDelPtr&lt; Type, Accessor &gt;::SetPtr()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad5183ccae0fdcb0166faaf282a63274c"></a><!-- doxytag: member="icomp::CSimComponentContextBase::InsertMultiRef" ref="ad5183ccae0fdcb0166faaf282a63274c" args="(const std::string &amp;referenceId, IComponent *componentPtr)" -->
+<a class="anchor" id="a9bdb9bc0e6fc8e9ac727877b79094fdf"></a><!-- doxytag: member="icomp::CSimComponentContextBase::InsertMultiRef" ref="a9bdb9bc0e6fc8e9ac727877b79094fdf" args="(const std::string &amp;referenceId, IComponent *componentPtr, const std::string &amp;subelementId=&quot;&quot;)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -334,7 +335,13 @@ template&lt;class Attribute &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td>
-          <td class="paramname"><em>componentPtr</em>&#160;</td>
+          <td class="paramname"><em>componentPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>subelementId</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -368,11 +375,11 @@ template&lt;class AttrType &gt; </div>
 
 <p>Check if attribute type is corrected. </p>
 
-<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00149">149</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00152">152</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
 
 <p>References <a class="el" href="classicomp_1_1_i_component_static_info.html#a995ab05a5bcb225da773a4fe2830c496">icomp::IComponentStaticInfo::GetAttributeInfo()</a>, <a class="el" href="classicomp_1_1_i_attribute_static_info.html#ace2fcb22fe103d605039c2f2dba30ae0">icomp::IAttributeStaticInfo::GetAttributeTypeName()</a>, and <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_sim_component_context_base_8h_source.html#l00090">InsertMultiAttr()</a>, and <a class="el" href="_c_sim_component_context_base_8h_source.html#l00077">SetSingleAttr()</a>.</p>
+<p>Referenced by <a class="el" href="_c_sim_component_context_base_8h_source.html#l00093">InsertMultiAttr()</a>, and <a class="el" href="_c_sim_component_context_base_8h_source.html#l00080">SetSingleAttr()</a>.</p>
 
 </div>
 </div>
@@ -410,16 +417,16 @@ template&lt;class AttrType &gt; </div>
   </dd>
 </dl>
 
-<p>Referenced by <a class="el" href="_c_sim_component_context_base_8h_source.html#l00077">SetSingleAttr()</a>.</p>
+<p>Referenced by <a class="el" href="_c_sim_component_context_base_8h_source.html#l00080">SetSingleAttr()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9fc11820b62438c12a1887bd9627d636"></a><!-- doxytag: member="icomp::CSimComponentContextBase::SetBoolAttr" ref="a9fc11820b62438c12a1887bd9627d636" args="(const std::string &amp;attributeId, bool value)" -->
+<a class="anchor" id="a1aef81ba1b5aa07787c69694bf67aa53"></a><!-- doxytag: member="icomp::CSimComponentContextBase::SetBoolAttr" ref="a1aef81ba1b5aa07787c69694bf67aa53" args="(const std::string &amp;attributeId, bool value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void icomp::CSimComponentContextBase::SetBoolAttr </td>
+          <td class="memname">bool icomp::CSimComponentContextBase::SetBoolAttr </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em>, </td>
@@ -443,12 +450,12 @@ template&lt;class AttrType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ae432d0e0a6ad19859306ade0642a0f82"></a><!-- doxytag: member="icomp::CSimComponentContextBase::SetDoubleAttr" ref="ae432d0e0a6ad19859306ade0642a0f82" args="(const std::string &amp;attributeId, double value)" -->
+<a class="anchor" id="abe37f75a37eb79a84866410469020306"></a><!-- doxytag: member="icomp::CSimComponentContextBase::SetDoubleAttr" ref="abe37f75a37eb79a84866410469020306" args="(const std::string &amp;attributeId, double value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void icomp::CSimComponentContextBase::SetDoubleAttr </td>
+          <td class="memname">bool icomp::CSimComponentContextBase::SetDoubleAttr </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em>, </td>
@@ -501,12 +508,12 @@ template&lt;class AttrType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a779c5487e16cc2fe8c0e08f041171db8"></a><!-- doxytag: member="icomp::CSimComponentContextBase::SetIntAttr" ref="a779c5487e16cc2fe8c0e08f041171db8" args="(const std::string &amp;attributeId, int value)" -->
+<a class="anchor" id="a3a81bf78189b158dfea47dbe0af5c673"></a><!-- doxytag: member="icomp::CSimComponentContextBase::SetIntAttr" ref="a3a81bf78189b158dfea47dbe0af5c673" args="(const std::string &amp;attributeId, int value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void icomp::CSimComponentContextBase::SetIntAttr </td>
+          <td class="memname">bool icomp::CSimComponentContextBase::SetIntAttr </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em>, </td>
@@ -530,7 +537,7 @@ template&lt;class AttrType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a6722029053031afc991c9f7dc03bbca8"></a><!-- doxytag: member="icomp::CSimComponentContextBase::SetRef" ref="a6722029053031afc991c9f7dc03bbca8" args="(const std::string &amp;referenceId, IComponent *componentPtr)" -->
+<a class="anchor" id="aeb796e52120f997b4251c4cdc0a7f84f"></a><!-- doxytag: member="icomp::CSimComponentContextBase::SetRef" ref="aeb796e52120f997b4251c4cdc0a7f84f" args="(const std::string &amp;referenceId, IComponent *componentPtr, const std::string &amp;subelementId=&quot;&quot;)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -544,7 +551,13 @@ template&lt;class AttrType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td>
-          <td class="paramname"><em>componentPtr</em>&#160;</td>
+          <td class="paramname"><em>componentPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>subelementId</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -588,18 +601,18 @@ template&lt;class Attribute &gt; </div>
 
 <p>Set instance of simple attribute. </p>
 
-<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00077">77</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00080">80</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, <a class="el" href="_c_sim_component_context_base_8h_source.html#l00149">IsAttributeTypeCorrect()</a>, and <a class="el" href="classicomp_1_1_c_sim_component_context_base.html#ae47c201b5a3de5747a2966fa48eb5292">SetAttr()</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, <a class="el" href="_c_sim_component_context_base_8h_source.html#l00152">IsAttributeTypeCorrect()</a>, and <a class="el" href="classicomp_1_1_c_sim_component_context_base.html#ae47c201b5a3de5747a2966fa48eb5292">SetAttr()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a7a6fa00212092e66cad57cfdbd5dda44"></a><!-- doxytag: member="icomp::CSimComponentContextBase::SetStringAttr" ref="a7a6fa00212092e66cad57cfdbd5dda44" args="(const std::string &amp;attributeId, const istd::CString &amp;value)" -->
+<a class="anchor" id="a491715f6aaab0a935c42dd02f0ebec80"></a><!-- doxytag: member="icomp::CSimComponentContextBase::SetStringAttr" ref="a491715f6aaab0a935c42dd02f0ebec80" args="(const std::string &amp;attributeId, const istd::CString &amp;value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void icomp::CSimComponentContextBase::SetStringAttr </td>
+          <td class="memname">bool icomp::CSimComponentContextBase::SetStringAttr </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em>, </td>
@@ -635,7 +648,7 @@ template&lt;class Attribute &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00135">135</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00138">138</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
 
 </div>
 </div>
@@ -650,7 +663,7 @@ template&lt;class Attribute &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00138">138</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_sim_component_context_base_8h_source.html#l00141">141</a> of file <a class="el" href="_c_sim_component_context_base_8h_source.html">CSimComponentContextBase.h</a>.</p>
 
 </div>
 </div>

@@ -46,7 +46,7 @@ static icomp::IComponent* consistInfoPtr = NULL;
 static icomp::TSimComponentWrap<CompositorPck::AttributeEditor>* modelObserverPtr = NULL;
 
 
-// dirty wor-around to simulate composed components
+// dirty work-around to simulate composed components
 class RegistryView: public icomp::CComponentBase
 {
 	icomp::TSimComponentWrap<QtViewPck::SceneProvider>* sceneProviderPtr;
@@ -71,7 +71,7 @@ public:
 			lastModelPtr->DetachObserver(modelObserverPtr);
 		}
 
-		binder.SetRef("Model", &scenographer);
+		binder.SetRef("Model", &scenographer, "SelectionInfo");
 		binder.InsertMultiRef("Observers", modelObserverPtr);
 
 		sceneProviderPtr->SetIntAttr("BackgroundMode", 2);
