@@ -68,110 +68,111 @@
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045        I_BEGIN_COMPONENT(<a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html" title="This class is a Qt-based workspace implementation of a document manager.">CMultiDocumentWorkspaceGuiComp</a>);
 <a name="l00046"></a>00046               I_REGISTER_INTERFACE(<a class="code" href="classidoc_1_1_i_document_manager.html" title="Provide set of user actions needed to manage documents in MVC (Model View Controller) concept...">idoc::IDocumentManager</a>);
-<a name="l00047"></a>00047               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>);
-<a name="l00048"></a>00048               I_ASSIGN(m_documentTemplateCompPtr, <span class="stringliteral">&quot;DocumentTemplate&quot;</span>, <span class="stringliteral">&quot;Document template&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DocumentTemplate&quot;</span>);
-<a name="l00049"></a>00049               I_ASSIGN(m_showMaximizedAttrPtr, <span class="stringliteral">&quot;ShowViewMaximized&quot;</span>, <span class="stringliteral">&quot;At start shows the document view maximized&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
-<a name="l00050"></a>00050               I_ASSIGN(m_allowViewRepeatingAttrPtr, <span class="stringliteral">&quot;AllowViewRepeating&quot;</span>, <span class="stringliteral">&quot;If enabled, multiple views for the same document are allowed&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
-<a name="l00051"></a>00051        I_END_COMPONENT;
-<a name="l00052"></a>00052 
-<a name="l00053"></a><a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99">00053</a>        <span class="keyword">enum</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99">GroupId</a>
-<a name="l00054"></a>00054        {
-<a name="l00055"></a><a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99a13febe6893dbcd2c6f518a1c571a3cd9">00055</a>               <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99a13febe6893dbcd2c6f518a1c571a3cd9">GI_WINDOW</a> = 0x300,
-<a name="l00056"></a><a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99a5b589ecda39f304de4ff86d84e463137">00056</a>               <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99a5b589ecda39f304de4ff86d84e463137">GI_DOCUMENT</a>,
-<a name="l00057"></a><a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99ade49a000c45598024f18bdaaf3a8e185">00057</a>               <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99ade49a000c45598024f18bdaaf3a8e185">GI_VIEW</a>
-<a name="l00058"></a>00058        };
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060        <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a6519aec08bc7f2a0fef9ffe0fd47e5e9">CMultiDocumentWorkspaceGuiComp</a>();
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062        <span class="comment">// reimplemented (ibase::ICommandsProvider)</span>
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures.">ibase::IHierarchicalCommand</a>* <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a871fd0b855d57687831d1323102d6e11" title="Get list of menu commands.">GetCommands</a>() <span class="keyword">const</span>;
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065        <span class="comment">// reimplemented (iqtgui::IGuiObject)</span>
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#ae079d6babcdb0c53964d21bec7d7cf40" title="Called on trying to close application.">OnTryClose</a>(<span class="keywordtype">bool</span>* ignoredPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="keyword">protected</span>:
-<a name="l00069"></a>00069 
-<a name="l00074"></a>00074        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a91d562edb64c6268c2b800d9e395eb14" title="Update titles of views or all views of specified document.">UpdateAllTitles</a>();
-<a name="l00075"></a>00075 
-<a name="l00081"></a>00081        <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>* <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a63cbe408485a2192532c60e110a1bcd9" title="Find view object associated with specified Qt widget.">GetViewFromWidget</a>(<span class="keyword">const</span> QWidget&amp; widget) <span class="keyword">const</span>;
-<a name="l00082"></a>00082 
-<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a29113bbf2ec258d89b2048d2462c96e9" title="Creates signal/slot connnections for the implementation.">CreateConnections</a>();
-<a name="l00087"></a>00087 
-<a name="l00091"></a>00091        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#aa4860f69ec88183b22c195c5df860161" title="Called when number of windows changed.">OnViewsCountChanged</a>();
-<a name="l00092"></a>00092 
-<a name="l00093"></a>00093        <span class="comment">// reimplemented (idoc::CMultiDocumentManagerBase)</span>
-<a name="l00094"></a>00094        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a2cc8e749fa85f0200bb04fc1a421fa44" title="Open single document using its file path.">OpenDocument</a>(
-<a name="l00095"></a>00095                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath,
-<a name="l00096"></a>00096                             <span class="keywordtype">bool</span> createView,
-<a name="l00097"></a>00097                             <span class="keyword">const</span> std::string&amp; viewTypeId,
-<a name="l00098"></a>00098                             std::string&amp; documentTypeId);
-<a name="l00099"></a>00099        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a3dc37b89d22078bc13bd2c51be10e2cc" title="Indicate that some view is active now.">SetActiveView</a>(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* viewPtr);
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101        <span class="comment">// reimplemented (QObject)</span>
-<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a4a93ddf0897a72a4614b376f0e85216e">eventFilter</a>(<a class="code" href="class_q_object.html">QObject</a>* sourcePtr, QEvent* eventPtr);
-<a name="l00103"></a>00103 
-<a name="l00104"></a>00104        <span class="comment">// reimplemented (TRestorableGuiWrap)</span>
-<a name="l00105"></a>00105        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#adcde0bb0f99debe54e1fa7e0c3772dea">OnRestoreSettings</a>(<span class="keyword">const</span> QSettings&amp; settings);
-<a name="l00106"></a>00106        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a011803529d55f2da60b2a12cd11e49e2">OnSaveSettings</a>(QSettings&amp; settings) <span class="keyword">const</span>;
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108        <span class="comment">// reimplemented (idoc::CMultiDocumentManagerBase)</span>
-<a name="l00109"></a>00109        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a80ae2ccd161eb6165365120d399568db">CloseAllDocuments</a>();
-<a name="l00110"></a>00110        <span class="keyword">virtual</span> <a class="code" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a4f20d30549df99f5973289407fa513a0" title="Gets open file names.">GetOpenFilePaths</a>(<span class="keyword">const</span> std::string* documentTypeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
-<a name="l00111"></a>00111        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a903124d67c39939cc1030e1b09edaf1b" title="Called after view is registered.">OnViewRegistered</a>(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* viewPtr);
-<a name="l00112"></a>00112        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#ada320e04b54d2643207ec49f42fb59b3" title="Called before view is removed.">OnViewRemoved</a>(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* viewPtr);
-<a name="l00113"></a>00113        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a5344342f2ea5097196611999a60763d0" title="Query user if this document can be closed.">QueryDocumentClose</a>(<span class="keyword">const</span> SingleDocumentData&amp; info, <span class="keywordtype">bool</span>* ignoredPtr);
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115        <span class="comment">// reimplemented (iqt:CGuiComponentBase)</span>
-<a name="l00116"></a>00116        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a5c9420509bf5281e2e7b6a6cd0044987" title="Called just after GUI is initialized.">OnGuiCreated</a>();       
-<a name="l00117"></a>00117        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a8305c96220199c63102571d512f112f1" title="Called just before GUI is released.">OnGuiDestroyed</a>();
-<a name="l00118"></a>00118        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#adcf6b5c3fc6195386fe8307f0c91b690" title="Called when non-GUI elements (like commands) should be retranslated.">OnRetranslate</a>();
-<a name="l00119"></a>00119        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a55f35caeaef529733737bf0761ecaee2" title="Called from widget event filter when GUI should be retranslated.">OnGuiRetranslate</a>();
-<a name="l00120"></a>00120 
-<a name="l00121"></a>00121        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00122"></a>00122        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a8ef6732602a37df26dfbd5b7d68f9686">OnComponentCreated</a>();
-<a name="l00123"></a>00123 
-<a name="l00124"></a>00124        <span class="comment">// reimplemented (istd:IChangeable)</span>
-<a name="l00125"></a>00125        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a4f0ad658f66df2426edac723df87e9ab" title="Callback function for end change event.">OnEndChanges</a>(<span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* changeParamsPtr);
-<a name="l00126"></a>00126 
-<a name="l00127"></a>00127 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00128"></a>00128        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#aec7508a587af5e3183662ba850ec9377">OnWindowActivated</a>(QMdiSubWindow* window);
-<a name="l00129"></a>00129        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a90e03432d7b2d26b79da1b26ce66a1d2">OnTileHorizontally</a>();
-<a name="l00130"></a>00130        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a43d383600bb6b8c1500aed0e281a3a7a">OnTile</a>();
-<a name="l00131"></a>00131        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a4f206fc0ff03c125776254c232a5b1b8">OnCascade</a>();
-<a name="l00132"></a>00132        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a19965e5f490dff6f06879690bede95d9">OnCloseAllViews</a>();
-<a name="l00133"></a>00133        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#aec1958a3296b7e9f0517c348dfb6ea72">OnWorkspaceModeChanged</a>();
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135 <span class="keyword">private</span>:
-<a name="l00136"></a>00136        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_commands;
-<a name="l00137"></a>00137 
-<a name="l00138"></a>00138        <span class="comment">// global commands</span>
-<a name="l00139"></a>00139        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_windowCommand;
-<a name="l00140"></a>00140 
-<a name="l00141"></a>00141        <span class="comment">// window menu group</span>
-<a name="l00142"></a>00142        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_cascadeCommand;
-<a name="l00143"></a>00143        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_tileHorizontallyCommand;
-<a name="l00144"></a>00144        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_tileVerticallyCommand;
-<a name="l00145"></a>00145        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_closeAllDocumentsCommand;
-<a name="l00146"></a>00146        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_workspaceModeCommand;
-<a name="l00147"></a>00147        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_subWindowCommand;
-<a name="l00148"></a>00148        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_tabbedCommand;
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150        I_REF(<a class="code" href="classidoc_1_1_i_document_template.html" title="Document template creating and controling views and models.">idoc::IDocumentTemplate</a>, m_documentTemplateCompPtr);
-<a name="l00151"></a>00151        I_ATTR(<span class="keywordtype">bool</span>, m_showMaximizedAttrPtr);
-<a name="l00152"></a>00152        I_ATTR(<span class="keywordtype">bool</span>, m_allowViewRepeatingAttrPtr);
-<a name="l00153"></a>00153        
-<a name="l00154"></a>00154        <span class="keyword">mutable</span> QString m_lastDirectory;
-<a name="l00155"></a>00155 
-<a name="l00156"></a>00156        <span class="keywordtype">int</span> m_viewsCount;
-<a name="l00157"></a>00157 };
-<a name="l00158"></a>00158 
+<a name="l00047"></a>00047               I_REGISTER_INTERFACE(<a class="code" href="classidoc_1_1_i_document_types_info.html" title="Provide information about different document types.">idoc::IDocumentTypesInfo</a>);
+<a name="l00048"></a>00048               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>);
+<a name="l00049"></a>00049               I_ASSIGN(m_documentTemplateCompPtr, <span class="stringliteral">&quot;DocumentTemplate&quot;</span>, <span class="stringliteral">&quot;Document template&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DocumentTemplate&quot;</span>);
+<a name="l00050"></a>00050               I_ASSIGN(m_showMaximizedAttrPtr, <span class="stringliteral">&quot;ShowViewMaximized&quot;</span>, <span class="stringliteral">&quot;At start shows the document view maximized&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
+<a name="l00051"></a>00051               I_ASSIGN(m_allowViewRepeatingAttrPtr, <span class="stringliteral">&quot;AllowViewRepeating&quot;</span>, <span class="stringliteral">&quot;If enabled, multiple views for the same document are allowed&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
+<a name="l00052"></a>00052        I_END_COMPONENT;
+<a name="l00053"></a>00053 
+<a name="l00054"></a><a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99">00054</a>        <span class="keyword">enum</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99">GroupId</a>
+<a name="l00055"></a>00055        {
+<a name="l00056"></a><a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99a13febe6893dbcd2c6f518a1c571a3cd9">00056</a>               <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99a13febe6893dbcd2c6f518a1c571a3cd9">GI_WINDOW</a> = 0x300,
+<a name="l00057"></a><a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99a5b589ecda39f304de4ff86d84e463137">00057</a>               <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99a5b589ecda39f304de4ff86d84e463137">GI_DOCUMENT</a>,
+<a name="l00058"></a><a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99ade49a000c45598024f18bdaaf3a8e185">00058</a>               <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99ade49a000c45598024f18bdaaf3a8e185">GI_VIEW</a>
+<a name="l00059"></a>00059        };
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061        <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a6519aec08bc7f2a0fef9ffe0fd47e5e9">CMultiDocumentWorkspaceGuiComp</a>();
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063        <span class="comment">// reimplemented (ibase::ICommandsProvider)</span>
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures.">ibase::IHierarchicalCommand</a>* <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a871fd0b855d57687831d1323102d6e11" title="Get list of menu commands.">GetCommands</a>() <span class="keyword">const</span>;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066        <span class="comment">// reimplemented (iqtgui::IGuiObject)</span>
+<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#ae079d6babcdb0c53964d21bec7d7cf40" title="Called on trying to close application.">OnTryClose</a>(<span class="keywordtype">bool</span>* ignoredPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 <span class="keyword">protected</span>:
+<a name="l00070"></a>00070 
+<a name="l00075"></a>00075        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a91d562edb64c6268c2b800d9e395eb14" title="Update titles of views or all views of specified document.">UpdateAllTitles</a>();
+<a name="l00076"></a>00076 
+<a name="l00082"></a>00082        <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>* <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a63cbe408485a2192532c60e110a1bcd9" title="Find view object associated with specified Qt widget.">GetViewFromWidget</a>(<span class="keyword">const</span> QWidget&amp; widget) <span class="keyword">const</span>;
+<a name="l00083"></a>00083 
+<a name="l00087"></a>00087        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a29113bbf2ec258d89b2048d2462c96e9" title="Creates signal/slot connnections for the implementation.">CreateConnections</a>();
+<a name="l00088"></a>00088 
+<a name="l00092"></a>00092        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#aa4860f69ec88183b22c195c5df860161" title="Called when number of windows changed.">OnViewsCountChanged</a>();
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094        <span class="comment">// reimplemented (idoc::CMultiDocumentManagerBase)</span>
+<a name="l00095"></a>00095        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a2cc8e749fa85f0200bb04fc1a421fa44" title="Open single document using its file path.">OpenDocument</a>(
+<a name="l00096"></a>00096                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath,
+<a name="l00097"></a>00097                             <span class="keywordtype">bool</span> createView,
+<a name="l00098"></a>00098                             <span class="keyword">const</span> std::string&amp; viewTypeId,
+<a name="l00099"></a>00099                             std::string&amp; documentTypeId);
+<a name="l00100"></a>00100        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a3dc37b89d22078bc13bd2c51be10e2cc" title="Indicate that some view is active now.">SetActiveView</a>(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* viewPtr);
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102        <span class="comment">// reimplemented (QObject)</span>
+<a name="l00103"></a>00103        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a4a93ddf0897a72a4614b376f0e85216e">eventFilter</a>(<a class="code" href="class_q_object.html">QObject</a>* sourcePtr, QEvent* eventPtr);
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105        <span class="comment">// reimplemented (TRestorableGuiWrap)</span>
+<a name="l00106"></a>00106        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#adcde0bb0f99debe54e1fa7e0c3772dea">OnRestoreSettings</a>(<span class="keyword">const</span> QSettings&amp; settings);
+<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a011803529d55f2da60b2a12cd11e49e2">OnSaveSettings</a>(QSettings&amp; settings) <span class="keyword">const</span>;
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109        <span class="comment">// reimplemented (idoc::CMultiDocumentManagerBase)</span>
+<a name="l00110"></a>00110        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a80ae2ccd161eb6165365120d399568db">CloseAllDocuments</a>();
+<a name="l00111"></a>00111        <span class="keyword">virtual</span> <a class="code" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a4f20d30549df99f5973289407fa513a0" title="Gets open file names.">GetOpenFilePaths</a>(<span class="keyword">const</span> std::string* documentTypeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
+<a name="l00112"></a>00112        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a903124d67c39939cc1030e1b09edaf1b" title="Called after view is registered.">OnViewRegistered</a>(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* viewPtr);
+<a name="l00113"></a>00113        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#ada320e04b54d2643207ec49f42fb59b3" title="Called before view is removed.">OnViewRemoved</a>(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* viewPtr);
+<a name="l00114"></a>00114        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a5344342f2ea5097196611999a60763d0" title="Query user if this document can be closed.">QueryDocumentClose</a>(<span class="keyword">const</span> SingleDocumentData&amp; info, <span class="keywordtype">bool</span>* ignoredPtr);
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116        <span class="comment">// reimplemented (iqt:CGuiComponentBase)</span>
+<a name="l00117"></a>00117        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a5c9420509bf5281e2e7b6a6cd0044987" title="Called just after GUI is initialized.">OnGuiCreated</a>();       
+<a name="l00118"></a>00118        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a8305c96220199c63102571d512f112f1" title="Called just before GUI is released.">OnGuiDestroyed</a>();
+<a name="l00119"></a>00119        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#adcf6b5c3fc6195386fe8307f0c91b690" title="Called when non-GUI elements (like commands) should be retranslated.">OnRetranslate</a>();
+<a name="l00120"></a>00120        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a55f35caeaef529733737bf0761ecaee2" title="Called from widget event filter when GUI should be retranslated.">OnGuiRetranslate</a>();
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00123"></a>00123        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a8ef6732602a37df26dfbd5b7d68f9686">OnComponentCreated</a>();
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125        <span class="comment">// reimplemented (istd:IChangeable)</span>
+<a name="l00126"></a>00126        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a4f0ad658f66df2426edac723df87e9ab" title="Callback function for end change event.">OnEndChanges</a>(<span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* changeParamsPtr);
+<a name="l00127"></a>00127 
+<a name="l00128"></a>00128 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00129"></a>00129        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#aec7508a587af5e3183662ba850ec9377">OnWindowActivated</a>(QMdiSubWindow* window);
+<a name="l00130"></a>00130        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a90e03432d7b2d26b79da1b26ce66a1d2">OnTileHorizontally</a>();
+<a name="l00131"></a>00131        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a43d383600bb6b8c1500aed0e281a3a7a">OnTile</a>();
+<a name="l00132"></a>00132        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a4f206fc0ff03c125776254c232a5b1b8">OnCascade</a>();
+<a name="l00133"></a>00133        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a19965e5f490dff6f06879690bede95d9">OnCloseAllViews</a>();
+<a name="l00134"></a>00134        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#aec1958a3296b7e9f0517c348dfb6ea72">OnWorkspaceModeChanged</a>();
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136 <span class="keyword">private</span>:
+<a name="l00137"></a>00137        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_commands;
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139        <span class="comment">// global commands</span>
+<a name="l00140"></a>00140        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_windowCommand;
+<a name="l00141"></a>00141 
+<a name="l00142"></a>00142        <span class="comment">// window menu group</span>
+<a name="l00143"></a>00143        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_cascadeCommand;
+<a name="l00144"></a>00144        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_tileHorizontallyCommand;
+<a name="l00145"></a>00145        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_tileVerticallyCommand;
+<a name="l00146"></a>00146        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_closeAllDocumentsCommand;
+<a name="l00147"></a>00147        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_workspaceModeCommand;
+<a name="l00148"></a>00148        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_subWindowCommand;
+<a name="l00149"></a>00149        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_tabbedCommand;
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151        I_REF(<a class="code" href="classidoc_1_1_i_document_template.html" title="Document template creating and controling views and models.">idoc::IDocumentTemplate</a>, m_documentTemplateCompPtr);
+<a name="l00152"></a>00152        I_ATTR(<span class="keywordtype">bool</span>, m_showMaximizedAttrPtr);
+<a name="l00153"></a>00153        I_ATTR(<span class="keywordtype">bool</span>, m_allowViewRepeatingAttrPtr);
+<a name="l00154"></a>00154        
+<a name="l00155"></a>00155        <span class="keyword">mutable</span> QString m_lastDirectory;
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157        <span class="keywordtype">int</span> m_viewsCount;
+<a name="l00158"></a>00158 };
 <a name="l00159"></a>00159 
-<a name="l00160"></a>00160 } <span class="comment">// namespace iqtdoc</span>
-<a name="l00161"></a>00161 
+<a name="l00160"></a>00160 
+<a name="l00161"></a>00161 } <span class="comment">// namespace iqtdoc</span>
 <a name="l00162"></a>00162 
-<a name="l00163"></a>00163 <span class="preprocessor">#endif // !iqtdoc_CMultiDocumentWorkspaceGuiComp_included</span>
-<a name="l00164"></a>00164 <span class="preprocessor"></span>
-<a name="l00165"></a>00165 
+<a name="l00163"></a>00163 
+<a name="l00164"></a>00164 <span class="preprocessor">#endif // !iqtdoc_CMultiDocumentWorkspaceGuiComp_included</span>
+<a name="l00165"></a>00165 <span class="preprocessor"></span>
+<a name="l00166"></a>00166 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

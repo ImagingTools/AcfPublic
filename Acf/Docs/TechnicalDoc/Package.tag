@@ -1987,6 +1987,7 @@
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
     <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <includes id="_i_document_state_comparator_8h" name="IDocumentStateComparator.h" local="yes" imported="no">idoc/IDocumentStateComparator.h</includes>
     <includes id="_c_document_manager_base_8h" name="CDocumentManagerBase.h" local="yes" imported="no">idoc/CDocumentManagerBase.h</includes>
     <class kind="class">idoc::CSingleDocumentManagerBase</class>
     <namespace>idoc</namespace>
@@ -2023,7 +2024,8 @@
     <filename>_i_document_manager_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
-    <includes id="_i_document_template_8h" name="IDocumentTemplate.h" local="yes" imported="no">idoc/IDocumentTemplate.h</includes>
+    <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="yes" imported="no">imod/IUndoManager.h</includes>
+    <includes id="_i_document_types_info_8h" name="IDocumentTypesInfo.h" local="yes" imported="no">idoc/IDocumentTypesInfo.h</includes>
     <class kind="class">idoc::IDocumentManager</class>
     <class kind="struct">idoc::IDocumentManager::DocumentInfo</class>
     <namespace>idoc</namespace>
@@ -2041,14 +2043,24 @@
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_i_document_template_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_t_i_factory_8h" name="TIFactory.h" local="yes" imported="no">istd/TIFactory.h</includes>
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
     <includes id="_i_observer_8h" name="IObserver.h" local="yes" imported="no">imod/IObserver.h</includes>
     <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="yes" imported="no">imod/IUndoManager.h</includes>
     <includes id="_i_command_8h" name="ICommand.h" local="yes" imported="no">ibase/ICommand.h</includes>
+    <includes id="_i_document_types_info_8h" name="IDocumentTypesInfo.h" local="yes" imported="no">idoc/IDocumentTypesInfo.h</includes>
     <includes id="_i_document_state_comparator_8h" name="IDocumentStateComparator.h" local="yes" imported="no">idoc/IDocumentStateComparator.h</includes>
     <class kind="class">idoc::IDocumentTemplate</class>
+    <namespace>idoc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IDocumentTypesInfo.h</name>
+    <path>C:/Temp/Acf/Include/idoc/</path>
+    <filename>_i_document_types_info_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
+    <class kind="class">idoc::IDocumentTypesInfo</class>
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
@@ -3980,10 +3992,7 @@
     <path>C:/Temp/Acf/Include/iqtdoc/</path>
     <filename>_c_extended_document_template_comp_8h</filename>
     <includes id="_c_single_document_template_comp_8h" name="CSingleDocumentTemplateComp.h" local="yes" imported="no">idoc/CSingleDocumentTemplateComp.h</includes>
-    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
-    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
-    <includes id="iqtdoc_8h" name="iqtdoc.h" local="yes" imported="no">iqtdoc/iqtdoc.h</includes>
     <class kind="class">iqtdoc::CExtendedDocumentTemplateComp</class>
     <namespace>iqtdoc</namespace>
   </compound>
@@ -18972,6 +18981,7 @@
     <class kind="class">idoc::IDocumentManager</class>
     <class kind="class">idoc::IDocumentStateComparator</class>
     <class kind="class">idoc::IDocumentTemplate</class>
+    <class kind="class">idoc::IDocumentTypesInfo</class>
     <class kind="class">idoc::IHelpFileProvider</class>
     <class kind="class">idoc::IHelpInfoProvider</class>
     <class kind="class">idoc::IHelpViewer</class>
@@ -19010,6 +19020,27 @@
       <arglist>(const std::string &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual iser::IFileTypeInfo *</type>
+      <name>GetDocumentFileTypeInfo</name>
+      <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
+      <anchor>a40bc84914e319a0e650df4feeb7ba82e</anchor>
+      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Ids</type>
+      <name>GetDocumentTypeIdsForFile</name>
+      <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
+      <anchor>ab8b5708a2ce84adfbce1ee9efcf6bbb8</anchor>
+      <arglist>(const istd::CString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetDefaultDirectory</name>
+      <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
+      <anchor>afedb15566abdb6fb2a996b76efdccc3a</anchor>
+      <arglist>(const istd::CString &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetViewTypeIds</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
@@ -19022,13 +19053,6 @@
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
       <anchor>ae37b869c37ba90091b556b10ddf50138</anchor>
       <arglist>(const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual Ids</type>
-      <name>GetDocumentTypeIdsForFile</name>
-      <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>ab8b5708a2ce84adfbce1ee9efcf6bbb8</anchor>
-      <arglist>(const istd::CString &amp;filePath) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::IFileLoader *</type>
@@ -19065,13 +19089,6 @@
       <anchor>a15e297359ac98c67b47d6a94ccf0ab95</anchor>
       <arglist>(const std::string &amp;documentTypeId) const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetDefaultDirectory</name>
-      <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>afedb15566abdb6fb2a996b76efdccc3a</anchor>
-      <arglist>(const istd::CString &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const </arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -19098,13 +19115,6 @@
       <anchor>ac3c947d34d8aa613b934d947d2bcb8c8</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetDocumentTemplate</name>
-      <anchorfile>classidoc_1_1_c_document_manager_base.html</anchorfile>
-      <anchor>af691c99af4c41740b9cf3e87b8878d03</anchor>
-      <arglist>(const idoc::IDocumentTemplate *documentTemplatePtr)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetAllowedOperationFlags</name>
@@ -19113,11 +19123,60 @@
       <arglist>(const istd::IPolymorphic *viewPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsFeatureSupported</name>
+      <anchorfile>classidoc_1_1_c_document_manager_base.html</anchorfile>
+      <anchor>a09618608310436c2a3f6eb7dcf7b80a3</anchor>
+      <arglist>(int featureFlags, const std::string &amp;documentTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Ids</type>
+      <name>GetDocumentTypeIds</name>
+      <anchorfile>classidoc_1_1_c_document_manager_base.html</anchorfile>
+      <anchor>a195ce194a5f2a858692fe0e86438b8c1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetDocumentTypeName</name>
+      <anchorfile>classidoc_1_1_c_document_manager_base.html</anchorfile>
+      <anchor>a9bf44b636d1543e5b42e92c413d7fe5a</anchor>
+      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iser::IFileTypeInfo *</type>
+      <name>GetDocumentFileTypeInfo</name>
+      <anchorfile>classidoc_1_1_c_document_manager_base.html</anchorfile>
+      <anchor>a8fee9893c2b8cb073f5b0d50f7854c6d</anchor>
+      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Ids</type>
+      <name>GetDocumentTypeIdsForFile</name>
+      <anchorfile>classidoc_1_1_c_document_manager_base.html</anchorfile>
+      <anchor>a715f64948b91e2078201766bb2d44807</anchor>
+      <arglist>(const istd::CString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetDefaultDirectory</name>
+      <anchorfile>classidoc_1_1_c_document_manager_base.html</anchorfile>
+      <anchor>a6be244afa5c4ebfc01bbdb5c3ac785ad</anchor>
+      <arglist>(const istd::CString &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const idoc::IDocumentTemplate *</type>
       <name>GetDocumentTemplate</name>
       <anchorfile>classidoc_1_1_c_document_manager_base.html</anchorfile>
       <anchor>a01fb77d06fd2e4b109b2936df505d70a</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetDocumentTemplate</name>
+      <anchorfile>classidoc_1_1_c_document_manager_base.html</anchorfile>
+      <anchor>af691c99af4c41740b9cf3e87b8878d03</anchor>
+      <arglist>(const idoc::IDocumentTemplate *documentTemplatePtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19796,6 +19855,27 @@
       <arglist>(const std::string &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual iser::IFileTypeInfo *</type>
+      <name>GetDocumentFileTypeInfo</name>
+      <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
+      <anchor>a2c186899b0066e465ff0c860c052c49b</anchor>
+      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Ids</type>
+      <name>GetDocumentTypeIdsForFile</name>
+      <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
+      <anchor>a404948e8f8a169a4f18a5e83aa5ed988</anchor>
+      <arglist>(const istd::CString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetDefaultDirectory</name>
+      <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
+      <anchor>a20eb209780e9a07e8c75176820ed21ff</anchor>
+      <arglist>(const istd::CString &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetViewTypeIds</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
@@ -19810,25 +19890,11 @@
       <arglist>(const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual Ids</type>
-      <name>GetDocumentTypeIdsForFile</name>
-      <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>a404948e8f8a169a4f18a5e83aa5ed988</anchor>
-      <arglist>(const istd::CString &amp;filePath) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual IDocumentStateComparator *</type>
       <name>CreateStateComparator</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
       <anchor>a12c0a1f3478d159b420f63a03466b10c</anchor>
       <arglist>(const std::string &amp;documentTypeId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetDefaultDirectory</name>
-      <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>a20eb209780e9a07e8c75176820ed21ff</anchor>
-      <arglist>(const istd::CString &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -19918,6 +19984,7 @@
     <name>idoc::IDocumentManager</name>
     <filename>classidoc_1_1_i_document_manager.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
+    <base virtualness="virtual">idoc::IDocumentTypesInfo</base>
     <class kind="struct">idoc::IDocumentManager::DocumentInfo</class>
     <member kind="enumeration">
       <name>ChangeFlags</name>
@@ -20004,13 +20071,6 @@
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
       <anchor>a7519e0784c64f6ae6c51df23faf70321</anchor>
       <arglist>(const istd::IPolymorphic *viewPtr=NULL) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const idoc::IDocumentTemplate *</type>
-      <name>GetDocumentTemplate</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>adec6f4fbce527afe247a1d97c5651bff</anchor>
-      <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual imod::IUndoManager *</type>
@@ -20151,59 +20211,7 @@
   <compound kind="class">
     <name>idoc::IDocumentTemplate</name>
     <filename>classidoc_1_1_i_document_template.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>SupportedFeatures</name>
-      <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>a7ce6e520f7562fb7080a0dfa5c844e6c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SF_NEW_DOCUMENT</name>
-      <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>a7ce6e520f7562fb7080a0dfa5c844e6caf7cd240f266618e2698754856e6c195e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SF_EDIT_DOCUMENT</name>
-      <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>a7ce6e520f7562fb7080a0dfa5c844e6caf611de29204e546e86fa00d802582a0e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SF_DEFAULT</name>
-      <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>a7ce6e520f7562fb7080a0dfa5c844e6ca0cc2a93caac73de087881019216698f7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::vector&lt; std::string &gt;</type>
-      <name>Ids</name>
-      <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>a9e58b349d2858e198f46b24dfc43b43b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsFeatureSupported</name>
-      <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>a8fc0f8fb1bdcb61cf4f39f230c048efd</anchor>
-      <arglist>(int featureFlags, const std::string &amp;documentTypeId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual Ids</type>
-      <name>GetDocumentTypeIds</name>
-      <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>a2d8f24efbd48c2042415c52cb227d7f2</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
-      <name>GetDocumentTypeName</name>
-      <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>aba51259b2e8f243d17443c9d51a3c992</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const =0</arglist>
-    </member>
+    <base virtualness="virtual">idoc::IDocumentTypesInfo</base>
     <member kind="function" virtualness="pure">
       <type>virtual Ids</type>
       <name>GetViewTypeIds</name>
@@ -20217,13 +20225,6 @@
       <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
       <anchor>ada7284c75d4ab77df6fc5f6e980cd7d2</anchor>
       <arglist>(const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual Ids</type>
-      <name>GetDocumentTypeIdsForFile</name>
-      <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>a321383fa3c9b552bb1918910ed32ee7d</anchor>
-      <arglist>(const istd::CString &amp;filePath) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual iser::IFileLoader *</type>
@@ -20260,11 +20261,82 @@
       <anchor>a9f05a5dd90dccd082594df5821727a58</anchor>
       <arglist>(const std::string &amp;documentTypeId) const =0</arglist>
     </member>
+  </compound>
+  <compound kind="class">
+    <name>idoc::IDocumentTypesInfo</name>
+    <filename>classidoc_1_1_i_document_types_info.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="enumeration">
+      <name>SupportedFeatures</name>
+      <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
+      <anchor>ae8b0ff0e5ccdac21fc231fd0173fcb2c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SF_NEW_DOCUMENT</name>
+      <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
+      <anchor>ae8b0ff0e5ccdac21fc231fd0173fcb2cacdaf6b74737eb63bcc40102f9827088e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SF_EDIT_DOCUMENT</name>
+      <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
+      <anchor>ae8b0ff0e5ccdac21fc231fd0173fcb2ca680f06e5e22319e934e7aa4038cfd963</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SF_DEFAULT</name>
+      <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
+      <anchor>ae8b0ff0e5ccdac21fc231fd0173fcb2cabcb82105454c0b0080ce1a0a7e7f72f8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>Ids</name>
+      <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
+      <anchor>a6860664a39d08fc7f4c061a65754303b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsFeatureSupported</name>
+      <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
+      <anchor>acb66d5689b7476281d062b66568a063a</anchor>
+      <arglist>(int featureFlags, const std::string &amp;documentTypeId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual Ids</type>
+      <name>GetDocumentTypeIds</name>
+      <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
+      <anchor>a3b488790b3e7c62c13abf5d502e496bb</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::CString</type>
+      <name>GetDocumentTypeName</name>
+      <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
+      <anchor>a8e6e564e770ef36d2e15969a7ad05046</anchor>
+      <arglist>(const std::string &amp;documentTypeId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual iser::IFileTypeInfo *</type>
+      <name>GetDocumentFileTypeInfo</name>
+      <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
+      <anchor>a4e7f972d10d706a5efe11b184601d0d2</anchor>
+      <arglist>(const std::string &amp;documentTypeId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual Ids</type>
+      <name>GetDocumentTypeIdsForFile</name>
+      <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
+      <anchor>a94225d84b95f6487ee9f2678f5a314ed</anchor>
+      <arglist>(const istd::CString &amp;filePath) const =0</arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CString</type>
       <name>GetDefaultDirectory</name>
-      <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>a83338a699b564dd483376ed7a2b180ec</anchor>
+      <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
+      <anchor>ad6c87bba1b89aca533636067664a1464</anchor>
       <arglist>(const istd::CString &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const =0</arglist>
     </member>
   </compound>
@@ -32978,9 +33050,7 @@
   <compound kind="class">
     <name>iqtdoc::CExtendedDocumentTemplateComp</name>
     <filename>classiqtdoc_1_1_c_extended_document_template_comp.html</filename>
-    <base>QObject</base>
     <base>idoc::CSingleDocumentTemplateComp</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
       <type>idoc::CSingleDocumentTemplateComp</type>
       <name>BaseClass</name>
@@ -32988,40 +33058,12 @@
       <anchor>a473dea8fa2c1504161350ea3266daa3c</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>CExtendedDocumentTemplateComp</name>
-      <anchorfile>classiqtdoc_1_1_c_extended_document_template_comp.html</anchorfile>
-      <anchor>af06d324a54d2d219dec474c00b691aa2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IHierarchicalCommand *</type>
-      <name>GetCommands</name>
-      <anchorfile>classiqtdoc_1_1_c_extended_document_template_comp.html</anchorfile>
-      <anchor>a6efcf1e335a0bc04bd9c57c394a2aa5a</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetDocumentTypeIdsForFile</name>
       <anchorfile>classiqtdoc_1_1_c_extended_document_template_comp.html</anchorfile>
       <anchor>a55be0f7c45cc25ce4de4549b33e65ac7</anchor>
       <arglist>(const istd::CString &amp;filePath) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqtdoc_1_1_c_extended_document_template_comp.html</anchorfile>
-      <anchor>a19e27f6edb58d09562447c1b7b11d300</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnAboutCommand</name>
-      <anchorfile>classiqtdoc_1_1_c_extended_document_template_comp.html</anchorfile>
-      <anchor>a4c6f7defab48ec7ed0af37af87d79a70</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual istd::IPolymorphic *</type>

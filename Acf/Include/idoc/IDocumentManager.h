@@ -33,7 +33,9 @@
 #include "istd/IChangeable.h"
 #include "istd/CString.h"
 
-#include "idoc/IDocumentTemplate.h"
+#include "imod/IUndoManager.h"
+
+#include "idoc/IDocumentTypesInfo.h"
 
 
 namespace idoc
@@ -43,7 +45,9 @@ namespace idoc
 /**
 	Provide set of user actions needed to manage documents in MVC (Model View Controller) concept.
 */
-class IDocumentManager: virtual public istd::IChangeable
+class IDocumentManager:
+			virtual public istd::IChangeable,
+			virtual public IDocumentTypesInfo
 {
 public:
 	/**
@@ -86,11 +90,6 @@ public:
 		Get flags of allowed operations.
 	*/
 	virtual int GetAllowedOperationFlags(const istd::IPolymorphic* viewPtr = NULL) const = 0;
-
-	/**
-		Return main document template used by this manager.
-	*/
-	virtual const idoc::IDocumentTemplate* GetDocumentTemplate() const = 0;
 
 	/**
 		Return undo mananger for document \c documenPtr.

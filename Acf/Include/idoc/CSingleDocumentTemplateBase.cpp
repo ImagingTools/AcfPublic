@@ -78,7 +78,7 @@ void CSingleDocumentTemplateBase::SetDefaultDirectory(const istd::CString& defau
 }
 
 
-// reimplemented (idoc::IDocumentTemplate)
+// reimplemented (idoc::IDocumentTypesInfo)
 
 bool CSingleDocumentTemplateBase::IsFeatureSupported(int featureFlags, const std::string& documentId) const
 {
@@ -116,6 +116,49 @@ istd::CString CSingleDocumentTemplateBase::GetDocumentTypeName(const std::string
 }
 
 
+iser::IFileTypeInfo* CSingleDocumentTemplateBase::GetDocumentFileTypeInfo(const std::string& documentTypeId) const
+{
+	return GetFileLoader(documentTypeId);
+}
+
+
+IDocumentTemplate::Ids CSingleDocumentTemplateBase::GetDocumentTypeIdsForFile(const istd::CString& filePath) const
+{
+	IDocumentTemplate::Ids retVal;
+
+	Ids docTypeIds = GetDocumentTypeIds();
+	for (		Ids::const_iterator iter = docTypeIds.begin();
+				iter != docTypeIds.end();
+				++iter){
+		const std::string& id = *iter;
+
+		iser::IFileLoader* loaderPtr = GetFileLoader(*iter);
+		if (loaderPtr->IsOperationSupported(NULL, &filePath)){
+			retVal.push_back(id);
+		}
+	}
+
+	return retVal;
+}
+
+
+istd::CString CSingleDocumentTemplateBase::GetDefaultDirectory(const istd::CString& sugestedDir, const std::string* documentTypeIdPtr) const
+{
+	if (sugestedDir.IsEmpty()){
+		if ((documentTypeIdPtr == NULL) || IsDocumentTypeSupported(*documentTypeIdPtr)){
+			return m_defaultDirectory;
+		}
+		else{
+			return istd::CString();
+		}
+	}
+
+	return sugestedDir;
+}
+
+
+// reimplemented (idoc::IDocumentTemplate)
+
 IDocumentTemplate::Ids CSingleDocumentTemplateBase::GetViewTypeIds(const std::string& documentTypeId) const
 {
 	IDocumentTemplate::Ids retVal;
@@ -146,26 +189,6 @@ istd::CString CSingleDocumentTemplateBase::GetViewTypeName(
 }
 
 
-IDocumentTemplate::Ids CSingleDocumentTemplateBase::GetDocumentTypeIdsForFile(const istd::CString& filePath) const
-{
-	IDocumentTemplate::Ids retVal;
-
-	Ids docTypeIds = GetDocumentTypeIds();
-	for (		Ids::const_iterator iter = docTypeIds.begin();
-				iter != docTypeIds.end();
-				++iter){
-		const std::string& id = *iter;
-
-		iser::IFileLoader* loaderPtr = GetFileLoader(*iter);
-		if (loaderPtr->IsOperationSupported(NULL, &filePath)){
-			retVal.push_back(id);
-		}
-	}
-
-	return retVal;
-}
-
-
 IDocumentStateComparator* CSingleDocumentTemplateBase::CreateStateComparator(const std::string& documentTypeId) const
 {
 	if (IsDocumentTypeSupported(documentTypeId)){
@@ -173,21 +196,6 @@ IDocumentStateComparator* CSingleDocumentTemplateBase::CreateStateComparator(con
 	}
 
 	return NULL;
-}
-
-
-istd::CString CSingleDocumentTemplateBase::GetDefaultDirectory(const istd::CString& sugestedDir, const std::string* documentTypeIdPtr) const
-{
-	if (sugestedDir.IsEmpty()){
-		if ((documentTypeIdPtr == NULL) || IsDocumentTypeSupported(*documentTypeIdPtr)){
-			return m_defaultDirectory;
-		}
-		else{
-			return istd::CString();
-		}
-	}
-
-	return sugestedDir;
 }
 
 

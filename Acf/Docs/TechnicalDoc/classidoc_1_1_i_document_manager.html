@@ -38,7 +38,7 @@
 <div class="title">idoc::IDocumentManager Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="idoc::IDocumentManager" --><!-- doxytag: inherits="istd::IChangeable" -->
+<!-- doxytag: class="idoc::IDocumentManager" --><!-- doxytag: inherits="istd::IChangeable,idoc::IDocumentTypesInfo" -->
 <p>Provide set of user actions needed to manage documents in MVC (Model View Controller) concept.  
  <a href="classidoc_1_1_i_document_manager.html#details">More...</a></p>
 
@@ -49,8 +49,10 @@ Inheritance diagram for idoc::IDocumentManager:</div>
  <div class="center">
   <img src="classidoc_1_1_i_document_manager.png" usemap="#idoc::IDocumentManager_map" alt=""/>
   <map id="idoc::IDocumentManager_map" name="idoc::IDocumentManager_map">
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="431,56,1283,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="431,0,1283,24"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,852,80"/>
+<area href="classidoc_1_1_i_document_types_info.html" title="Provide information about different document types." alt="idoc::IDocumentTypesInfo" shape="rect" coords="862,56,1714,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,852,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="862,0,1714,24"/>
 <area href="classidoc_1_1_c_document_manager_base.html" alt="idoc::CDocumentManagerBase" shape="rect" coords="431,168,1283,192"/>
 <area href="classidoc_1_1_c_multi_document_manager_base.html" alt="idoc::CMultiDocumentManagerBase" shape="rect" coords="0,224,852,248"/>
 <area href="classidoc_1_1_c_single_document_manager_base.html" alt="idoc::CSingleDocumentManagerBase" shape="rect" coords="862,224,1714,248"/>
@@ -95,9 +97,6 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a7519e0784c64f6ae6c51df23faf70321">GetAllowedOperationFlags</a> (const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *viewPtr=NULL) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of allowed operations.  <a href="#a7519e0784c64f6ae6c51df23faf70321"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classidoc_1_1_i_document_template.html">idoc::IDocumentTemplate</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#adec6f4fbce527afe247a1d97c5651bff">GetDocumentTemplate</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return main document template used by this manager.  <a href="#adec6f4fbce527afe247a1d97c5651bff"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classimod_1_1_i_undo_manager.html">imod::IUndoManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#af2c2a3d41345392f1239adf475252e5b">GetUndoManagerForDocument</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return undo mananger for document <code>documenPtr</code>.  <a href="#af2c2a3d41345392f1239adf475252e5b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#afd34f9812c513635f1edce6cac29f31c">GetDocumentsCount</a> () const =0</td></tr>
@@ -128,7 +127,7 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Provide set of user actions needed to manage documents in MVC (Model View Controller) concept. </p>
 
-<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00024">24</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00026">26</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a2e8e6a35d954d4434c4d8a8bec1f3c47"></a><!-- doxytag: member="idoc::IDocumentManager::FileToTypeMap" ref="a2e8e6a35d954d4434c4d8a8bec1f3c47" args="" -->
 <div class="memitem">
@@ -143,7 +142,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Map from file path to ducument type ID's. </p>
 
-<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00061">61</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00065">65</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
 
 </div>
 </div>
@@ -177,7 +176,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9">istd::IChangeable</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00030">30</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00034">34</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
 
 </div>
 </div>
@@ -208,7 +207,7 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00049">49</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00053">53</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
 
 </div>
 </div>
@@ -582,26 +581,6 @@ Public Member Functions</h2></td></tr>
 <p>Get number of opened documents. </p>
 
 <p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a811b5b030cebefbd9fc632de6790d3a6">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#afb9db1665a85266bbbbc1f28a7dacc0d">idoc::CSingleDocumentManagerBase</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="adec6f4fbce527afe247a1d97c5651bff"></a><!-- doxytag: member="idoc::IDocumentManager::GetDocumentTemplate" ref="adec6f4fbce527afe247a1d97c5651bff" args="() const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classidoc_1_1_i_document_template.html">idoc::IDocumentTemplate</a>* idoc::IDocumentManager::GetDocumentTemplate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Return main document template used by this manager. </p>
-
-<p>Implemented in <a class="el" href="classidoc_1_1_c_document_manager_base.html#a01fb77d06fd2e4b109b2936df505d70a">idoc::CDocumentManagerBase</a>.</p>
 
 </div>
 </div>

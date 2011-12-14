@@ -52,8 +52,9 @@ Inheritance diagram for idoc::CCompositeDocumentTemplateComp:</div>
 <area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,112,247,136"/>
 <area href="classidoc_1_1_i_document_template.html" title="Document template creating and controling views and models." alt="idoc::IDocumentTemplate" shape="rect" coords="257,112,504,136"/>
 <area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,247,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="257,56,504,80"/>
+<area href="classidoc_1_1_i_document_types_info.html" title="Provide information about different document types." alt="idoc::IDocumentTypesInfo" shape="rect" coords="257,56,504,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,247,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="257,0,504,24"/>
 </map>
  </div></div>
 
@@ -66,16 +67,20 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#add86c3cc0946b7357a80bfafaceead28">IsFeatureSupported</a> (int featureFlags, const std::string &amp;documentTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code>, if the feature(s) is supported by this document template.  <a href="#add86c3cc0946b7357a80bfafaceead28"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a36a49944186f968922c25eea76dd10e3">GetDocumentTypeIds</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a36a49944186f968922c25eea76dd10e3">GetDocumentTypeIds</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported document ID's can be created for specified file.  <a href="#a36a49944186f968922c25eea76dd10e3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a475f18106a9ef142cd49ad4ddf3bbffd">GetDocumentTypeName</a> (const std::string &amp;documentTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some document type ID.  <a href="#a475f18106a9ef142cd49ad4ddf3bbffd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#af416b4338e0042f350e65f8b4eb30c5b">GetViewTypeIds</a> (const std::string &amp;documentTypeId) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a40bc84914e319a0e650df4feeb7ba82e">GetDocumentFileTypeInfo</a> (const std::string &amp;documentTypeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file type information object for some selected document type.  <a href="#a40bc84914e319a0e650df4feeb7ba82e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#ab8b5708a2ce84adfbce1ee9efcf6bbb8">GetDocumentTypeIdsForFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported document ID's can be created for specified file.  <a href="#ab8b5708a2ce84adfbce1ee9efcf6bbb8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#afedb15566abdb6fb2a996b76efdccc3a">GetDefaultDirectory</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return default directory for specified document type.  <a href="#afedb15566abdb6fb2a996b76efdccc3a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#af416b4338e0042f350e65f8b4eb30c5b">GetViewTypeIds</a> (const std::string &amp;documentTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return supported view type IDs for specified document type.  <a href="#af416b4338e0042f350e65f8b4eb30c5b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#ae37b869c37ba90091b556b10ddf50138">GetViewTypeName</a> (const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some view type ID.  <a href="#ae37b869c37ba90091b556b10ddf50138"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#ab8b5708a2ce84adfbce1ee9efcf6bbb8">GetDocumentTypeIdsForFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported document ID's can be created for specified file.  <a href="#ab8b5708a2ce84adfbce1ee9efcf6bbb8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_file_loader.html">iser::IFileLoader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a91792fbef4bf82c0ae28566fb39b748c">GetFileLoader</a> (const std::string &amp;documentTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file loader/saver for spacified document ID.  <a href="#a91792fbef4bf82c0ae28566fb39b748c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a02e706dd44b350c57a5a8edfe1d4cf55">CreateDocument</a> (const std::string &amp;documentTypeId) const </td></tr>
@@ -86,8 +91,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an undo manger for a given document <code>documentPtr</code>.  <a href="#ab3bcd37dde5758b0abfaee9c4530b214"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_state_comparator.html">IDocumentStateComparator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a15e297359ac98c67b47d6a94ccf0ab95">CreateStateComparator</a> (const std::string &amp;documentTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a document state comparator.  <a href="#a15e297359ac98c67b47d6a94ccf0ab95"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#afedb15566abdb6fb2a996b76efdccc3a">GetDefaultDirectory</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return default directory for specified document type.  <a href="#afedb15566abdb6fb2a996b76efdccc3a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a59bd95731c44b7bd3702a9e6d699e6d6">OnComponentCreated</a> ()</td></tr>
@@ -280,7 +283,34 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#a83338a699b564dd483376ed7a2b180ec">idoc::IDocumentTemplate</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#ad6c87bba1b89aca533636067664a1464">idoc::IDocumentTypesInfo</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a40bc84914e319a0e650df4feeb7ba82e"></a><!-- doxytag: member="idoc::CCompositeDocumentTemplateComp::GetDocumentFileTypeInfo" ref="a40bc84914e319a0e650df4feeb7ba82e" args="(const std::string &amp;documentTypeId) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a>* idoc::CCompositeDocumentTemplateComp::GetDocumentFileTypeInfo </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>documentTypeId</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get file type information object for some selected document type. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">documentTypeId</td><td>ID of document type as returned by <code><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a36a49944186f968922c25eea76dd10e3" title="Get list of supported document ID&#39;s can be created for specified file.">GetDocumentTypeIds()</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#a4e7f972d10d706a5efe11b184601d0d2">idoc::IDocumentTypesInfo</a>.</p>
 
 </div>
 </div>
@@ -289,7 +319,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">Ids</a> idoc::CCompositeDocumentTemplateComp::GetDocumentTypeIds </td>
+          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a> idoc::CCompositeDocumentTemplateComp::GetDocumentTypeIds </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -300,7 +330,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get list of supported document ID's can be created for specified file. </p>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#a2d8f24efbd48c2042415c52cb227d7f2">idoc::IDocumentTemplate</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#a3b488790b3e7c62c13abf5d502e496bb">idoc::IDocumentTypesInfo</a>.</p>
 
 </div>
 </div>
@@ -309,7 +339,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">Ids</a> idoc::CCompositeDocumentTemplateComp::GetDocumentTypeIdsForFile </td>
+          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a> idoc::CCompositeDocumentTemplateComp::GetDocumentTypeIdsForFile </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
           <td class="paramname"><em>filePath</em></td><td>)</td>
@@ -321,7 +351,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get list of supported document ID's can be created for specified file. </p>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#a321383fa3c9b552bb1918910ed32ee7d">idoc::IDocumentTemplate</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#a94225d84b95f6487ee9f2678f5a314ed">idoc::IDocumentTypesInfo</a>.</p>
 
 </div>
 </div>
@@ -341,8 +371,14 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get human readable name of some document type ID. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">documentTypeId</td><td>ID of document type as returned by <code><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a36a49944186f968922c25eea76dd10e3" title="Get list of supported document ID&#39;s can be created for specified file.">GetDocumentTypeIds()</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#aba51259b2e8f243d17443c9d51a3c992">idoc::IDocumentTemplate</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#a8e6e564e770ef36d2e15969a7ad05046">idoc::IDocumentTypesInfo</a>.</p>
 
 </div>
 </div>
@@ -378,7 +414,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_template.html#a9e58b349d2858e198f46b24dfc43b43b">Ids</a> idoc::CCompositeDocumentTemplateComp::GetViewTypeIds </td>
+          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a> idoc::CCompositeDocumentTemplateComp::GetViewTypeIds </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em></td><td>)</td>
@@ -458,7 +494,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Return <code>true</code>, if the feature(s) is supported by this document template. </p>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#a8fc0f8fb1bdcb61cf4f39f230c048efd">idoc::IDocumentTemplate</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#acb66d5689b7476281d062b66568a063a">idoc::IDocumentTypesInfo</a>.</p>
 
 </div>
 </div>

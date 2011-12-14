@@ -39,89 +39,90 @@
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_c_single_model_observer_base_8h.html">imod/CSingleModelObserverBase.h</a>&quot;</span>
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_c_document_manager_base_8h.html">idoc/CDocumentManagerBase.h</a>&quot;</span>
-<a name="l00016"></a>00016 
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_i_document_state_comparator_8h.html">idoc/IDocumentStateComparator.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_c_document_manager_base_8h.html">idoc/CDocumentManagerBase.h</a>&quot;</span>
 <a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="keyword">namespace </span>idoc
-<a name="l00019"></a>00019 {
-<a name="l00020"></a>00020 
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="keyword">namespace </span>idoc
+<a name="l00020"></a>00020 {
 <a name="l00021"></a>00021 
-<a name="l00022"></a><a class="code" href="classidoc_1_1_c_single_document_manager_base.html">00022</a> <span class="keyword">class </span><a class="code" href="classidoc_1_1_c_single_document_manager_base.html">CSingleDocumentManagerBase</a>:
-<a name="l00023"></a>00023                      <span class="keyword">public</span> idoc::<a class="code" href="classidoc_1_1_c_document_manager_base.html">CDocumentManagerBase</a>,
-<a name="l00024"></a>00024                      <span class="keyword">protected</span> imod::CSingleModelObserverBase
-<a name="l00025"></a>00025 {
-<a name="l00026"></a>00026 <span class="keyword">public</span>:
-<a name="l00027"></a>00027        <span class="comment">// reimplemented (idoc::IDocumentManager)</span>
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> <a class="code" href="classimod_1_1_i_undo_manager.html" title="Interface providing UNDO/REDO functionality.">imod::IUndoManager</a>* <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a5ebab9267bd8b2a1d40e2d72a92f0188" title="Return undo mananger for document documenPtr.">GetUndoManagerForDocument</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* documentPtr) <span class="keyword">const</span>;
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#afb9db1665a85266bbbbc1f28a7dacc0d" title="Get number of opened documents.">GetDocumentsCount</a>() <span class="keyword">const</span>;
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#aea463deee4c47bbc0d3b2d4d7427d362" title="Get document at specified index.">GetDocumentFromIndex</a>(<span class="keywordtype">int</span> index, <a class="code" href="structidoc_1_1_i_document_manager_1_1_document_info.html">DocumentInfo</a>* documentInfoPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a1fa2be3890315f2753296df7ba179097" title="Get number of view for specified document.">GetViewsCount</a>(<span class="keywordtype">int</span> documentIndex) <span class="keyword">const</span>;
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#af089a1445b4716642297b6b8a90d7819" title="Get single view using its and document indices.">GetViewFromIndex</a>(<span class="keywordtype">int</span> documentIndex, <span class="keywordtype">int</span> viewIndex) <span class="keyword">const</span>;
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a03e17b3904ffe9ded0a3d890cff906ae" title="Return the active document.">GetActiveView</a>() <span class="keyword">const</span>;
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a0350d61de1dadb7359a7a38116cff428" title="Return the document assigned to view.">GetDocumentFromView</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>&amp; view, <a class="code" href="structidoc_1_1_i_document_manager_1_1_document_info.html">DocumentInfo</a>* documentInfoPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a25eaa73f10819e9bf514878cea340b34" title="Add a new view to the document.">AddViewToDocument</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; document, <span class="keyword">const</span> std::string&amp; viewTypeId = std::string());
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> std::string <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a67fc53f78d3f1af7baaf92dd3eec204c" title="Get ID of document type managed by this object.">GetDocumentTypeId</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; document) <span class="keyword">const</span>;
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#ae1f534dcfe6bf1a882348294a6229efa" title="Creates a new document with the document ID documentTypeId.">FileNew</a>(
-<a name="l00038"></a>00038                             <span class="keyword">const</span> std::string&amp; documentTypeId, 
-<a name="l00039"></a>00039                             <span class="keywordtype">bool</span> createView = <span class="keyword">true</span>, 
-<a name="l00040"></a>00040                             <span class="keyword">const</span> std::string&amp; viewTypeId = <span class="stringliteral">&quot;&quot;</span>,
-<a name="l00041"></a>00041                             <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>** newDocumentPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#ace7b0f40906022153e6fb5e5bedcc3fe" title="Opens document(s) from the file list.">FileOpen</a>(
-<a name="l00043"></a>00043                             <span class="keyword">const</span> std::string* documentTypeIdPtr,
-<a name="l00044"></a>00044                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>* fileNamePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
-<a name="l00045"></a>00045                             <span class="keywordtype">bool</span> createView = <span class="keyword">true</span>,
-<a name="l00046"></a>00046                             <span class="keyword">const</span> std::string&amp; viewTypeId = <span class="stringliteral">&quot;&quot;</span>,
-<a name="l00047"></a>00047                             <a class="code" href="classidoc_1_1_i_document_manager.html#a2e8e6a35d954d4434c4d8a8bec1f3c47" title="Map from file path to ducument type ID&#39;s.">FileToTypeMap</a>* loadedMapPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a796ff18e1f4a3339776748cf6f202d77" title="Save active document.">FileSave</a>(
-<a name="l00049"></a>00049                             <span class="keywordtype">int</span> documentIndex = -1,
-<a name="l00050"></a>00050                             <span class="keywordtype">bool</span> requestFileName = <span class="keyword">false</span>,
-<a name="l00051"></a>00051                             <a class="code" href="classidoc_1_1_i_document_manager.html#a2e8e6a35d954d4434c4d8a8bec1f3c47" title="Map from file path to ducument type ID&#39;s.">FileToTypeMap</a>* savedMapPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a24bf55bef8ff4e7e70cdfc18fc70032f" title="Close current view.">FileClose</a>(<span class="keywordtype">int</span> documentIndex = -1, <span class="keywordtype">bool</span>* ignoredPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="keyword">protected</span>:
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#ab4a032797b911430b63c0cf3737f64bc" title="Open single document using its file path.">OpenDocument</a>(
-<a name="l00064"></a>00064                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath,
-<a name="l00065"></a>00065                             <span class="keywordtype">bool</span> createView,
-<a name="l00066"></a>00066                             <span class="keyword">const</span> std::string&amp; viewTypeId,
-<a name="l00067"></a>00067                             std::string&amp; documentTypeId);
-<a name="l00068"></a>00068 
-<a name="l00072"></a>00072        <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a5a3fdd948c3fb552650ed9b08e4fe1af" title="Create instance of specified document without attaching to this manager.">NewDocument</a>(<span class="keyword">const</span> std::string&amp; documentTypeId, <span class="keywordtype">bool</span> createView, <span class="keyword">const</span> std::string&amp; viewTypeId);
-<a name="l00073"></a>00073        <span class="keywordtype">void</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a51ca1777268799a35e0e0a706126c906">EnsureViewRemoved</a>();
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075        <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00076"></a>00076        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#ae3f2382f5255be45088dc19d6b32b5af">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00077"></a>00077 
-<a name="l00078"></a>00078        <span class="comment">// abstract methods</span>
-<a name="l00079"></a>00079 
-<a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a76091450d6234c2c670b83e007da4ee6" title="Called after view is registered.">OnViewRegistered</a>(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* viewPtr) = 0;
-<a name="l00084"></a>00084 
-<a name="l00088"></a>00088        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a1e268534bb17fd510e7df431501d3cd7" title="Called before view is removed.">OnViewRemoved</a>(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* viewPtr) = 0;
-<a name="l00089"></a>00089 
-<a name="l00093"></a>00093        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#ae63e2ecf70949e617e0e18371ce92c4f" title="Gets open file names.">GetOpenFilePath</a>(<span class="keyword">const</span> std::string* documentTypeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>  = 0;
-<a name="l00094"></a>00094 
-<a name="l00098"></a>00098        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#aff326dc87430980d3073468a7c4c00a7" title="Gets save file name.">GetSaveFilePath</a>(<span class="keyword">const</span> std::string&amp; documentTypeId) <span class="keyword">const</span> = 0;
-<a name="l00099"></a>00099 
-<a name="l00104"></a>00104        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a449da5685bf4c85013b6fb6cc78ea47c" title="Query user if this document can be closed.">QueryDocumentClose</a>(<span class="keywordtype">bool</span>* ignoredPtr) = 0;
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106 <span class="keyword">private</span>:
-<a name="l00107"></a>00107        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_filePath;
-<a name="l00108"></a>00108        std::string m_documentTypeId;
-<a name="l00109"></a>00109        std::string m_viewTypeId;
-<a name="l00110"></a>00110        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;istd::IChangeable&gt;</a> m_documentPtr;
-<a name="l00111"></a>00111        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;imod::IUndoManager&gt;</a> m_undoManagerPtr;
-<a name="l00112"></a>00112        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;IDocumentStateComparator&gt;</a> m_stateComparatorPtr;
-<a name="l00113"></a>00113        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;istd::IPolymorphic&gt;</a> m_viewPtr;
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115        <span class="keywordtype">bool</span> m_isDirty;
-<a name="l00116"></a>00116 };
-<a name="l00117"></a>00117 
+<a name="l00022"></a>00022 
+<a name="l00023"></a><a class="code" href="classidoc_1_1_c_single_document_manager_base.html">00023</a> <span class="keyword">class </span><a class="code" href="classidoc_1_1_c_single_document_manager_base.html">CSingleDocumentManagerBase</a>:
+<a name="l00024"></a>00024                      <span class="keyword">public</span> idoc::<a class="code" href="classidoc_1_1_c_document_manager_base.html">CDocumentManagerBase</a>,
+<a name="l00025"></a>00025                      <span class="keyword">protected</span> imod::CSingleModelObserverBase
+<a name="l00026"></a>00026 {
+<a name="l00027"></a>00027 <span class="keyword">public</span>:
+<a name="l00028"></a>00028        <span class="comment">// reimplemented (idoc::IDocumentManager)</span>
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <a class="code" href="classimod_1_1_i_undo_manager.html" title="Interface providing UNDO/REDO functionality.">imod::IUndoManager</a>* <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a5ebab9267bd8b2a1d40e2d72a92f0188" title="Return undo mananger for document documenPtr.">GetUndoManagerForDocument</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* documentPtr) <span class="keyword">const</span>;
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#afb9db1665a85266bbbbc1f28a7dacc0d" title="Get number of opened documents.">GetDocumentsCount</a>() <span class="keyword">const</span>;
+<a name="l00031"></a>00031        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#aea463deee4c47bbc0d3b2d4d7427d362" title="Get document at specified index.">GetDocumentFromIndex</a>(<span class="keywordtype">int</span> index, <a class="code" href="structidoc_1_1_i_document_manager_1_1_document_info.html">DocumentInfo</a>* documentInfoPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a1fa2be3890315f2753296df7ba179097" title="Get number of view for specified document.">GetViewsCount</a>(<span class="keywordtype">int</span> documentIndex) <span class="keyword">const</span>;
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#af089a1445b4716642297b6b8a90d7819" title="Get single view using its and document indices.">GetViewFromIndex</a>(<span class="keywordtype">int</span> documentIndex, <span class="keywordtype">int</span> viewIndex) <span class="keyword">const</span>;
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a03e17b3904ffe9ded0a3d890cff906ae" title="Return the active document.">GetActiveView</a>() <span class="keyword">const</span>;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a0350d61de1dadb7359a7a38116cff428" title="Return the document assigned to view.">GetDocumentFromView</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>&amp; view, <a class="code" href="structidoc_1_1_i_document_manager_1_1_document_info.html">DocumentInfo</a>* documentInfoPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a25eaa73f10819e9bf514878cea340b34" title="Add a new view to the document.">AddViewToDocument</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; document, <span class="keyword">const</span> std::string&amp; viewTypeId = std::string());
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> std::string <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a67fc53f78d3f1af7baaf92dd3eec204c" title="Get ID of document type managed by this object.">GetDocumentTypeId</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; document) <span class="keyword">const</span>;
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#ae1f534dcfe6bf1a882348294a6229efa" title="Creates a new document with the document ID documentTypeId.">FileNew</a>(
+<a name="l00039"></a>00039                             <span class="keyword">const</span> std::string&amp; documentTypeId, 
+<a name="l00040"></a>00040                             <span class="keywordtype">bool</span> createView = <span class="keyword">true</span>, 
+<a name="l00041"></a>00041                             <span class="keyword">const</span> std::string&amp; viewTypeId = <span class="stringliteral">&quot;&quot;</span>,
+<a name="l00042"></a>00042                             <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>** newDocumentPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#ace7b0f40906022153e6fb5e5bedcc3fe" title="Opens document(s) from the file list.">FileOpen</a>(
+<a name="l00044"></a>00044                             <span class="keyword">const</span> std::string* documentTypeIdPtr,
+<a name="l00045"></a>00045                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>* fileNamePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
+<a name="l00046"></a>00046                             <span class="keywordtype">bool</span> createView = <span class="keyword">true</span>,
+<a name="l00047"></a>00047                             <span class="keyword">const</span> std::string&amp; viewTypeId = <span class="stringliteral">&quot;&quot;</span>,
+<a name="l00048"></a>00048                             <a class="code" href="classidoc_1_1_i_document_manager.html#a2e8e6a35d954d4434c4d8a8bec1f3c47" title="Map from file path to ducument type ID&#39;s.">FileToTypeMap</a>* loadedMapPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a796ff18e1f4a3339776748cf6f202d77" title="Save active document.">FileSave</a>(
+<a name="l00050"></a>00050                             <span class="keywordtype">int</span> documentIndex = -1,
+<a name="l00051"></a>00051                             <span class="keywordtype">bool</span> requestFileName = <span class="keyword">false</span>,
+<a name="l00052"></a>00052                             <a class="code" href="classidoc_1_1_i_document_manager.html#a2e8e6a35d954d4434c4d8a8bec1f3c47" title="Map from file path to ducument type ID&#39;s.">FileToTypeMap</a>* savedMapPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a24bf55bef8ff4e7e70cdfc18fc70032f" title="Close current view.">FileClose</a>(<span class="keywordtype">int</span> documentIndex = -1, <span class="keywordtype">bool</span>* ignoredPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="keyword">protected</span>:
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#ab4a032797b911430b63c0cf3737f64bc" title="Open single document using its file path.">OpenDocument</a>(
+<a name="l00065"></a>00065                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath,
+<a name="l00066"></a>00066                             <span class="keywordtype">bool</span> createView,
+<a name="l00067"></a>00067                             <span class="keyword">const</span> std::string&amp; viewTypeId,
+<a name="l00068"></a>00068                             std::string&amp; documentTypeId);
+<a name="l00069"></a>00069 
+<a name="l00073"></a>00073        <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a5a3fdd948c3fb552650ed9b08e4fe1af" title="Create instance of specified document without attaching to this manager.">NewDocument</a>(<span class="keyword">const</span> std::string&amp; documentTypeId, <span class="keywordtype">bool</span> createView, <span class="keyword">const</span> std::string&amp; viewTypeId);
+<a name="l00074"></a>00074        <span class="keywordtype">void</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a51ca1777268799a35e0e0a706126c906">EnsureViewRemoved</a>();
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076        <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00077"></a>00077        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#ae3f2382f5255be45088dc19d6b32b5af">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079        <span class="comment">// abstract methods</span>
+<a name="l00080"></a>00080 
+<a name="l00084"></a>00084        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a76091450d6234c2c670b83e007da4ee6" title="Called after view is registered.">OnViewRegistered</a>(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* viewPtr) = 0;
+<a name="l00085"></a>00085 
+<a name="l00089"></a>00089        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a1e268534bb17fd510e7df431501d3cd7" title="Called before view is removed.">OnViewRemoved</a>(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* viewPtr) = 0;
+<a name="l00090"></a>00090 
+<a name="l00094"></a>00094        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#ae63e2ecf70949e617e0e18371ce92c4f" title="Gets open file names.">GetOpenFilePath</a>(<span class="keyword">const</span> std::string* documentTypeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>  = 0;
+<a name="l00095"></a>00095 
+<a name="l00099"></a>00099        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#aff326dc87430980d3073468a7c4c00a7" title="Gets save file name.">GetSaveFilePath</a>(<span class="keyword">const</span> std::string&amp; documentTypeId) <span class="keyword">const</span> = 0;
+<a name="l00100"></a>00100 
+<a name="l00105"></a>00105        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a449da5685bf4c85013b6fb6cc78ea47c" title="Query user if this document can be closed.">QueryDocumentClose</a>(<span class="keywordtype">bool</span>* ignoredPtr) = 0;
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107 <span class="keyword">private</span>:
+<a name="l00108"></a>00108        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_filePath;
+<a name="l00109"></a>00109        std::string m_documentTypeId;
+<a name="l00110"></a>00110        std::string m_viewTypeId;
+<a name="l00111"></a>00111        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;istd::IChangeable&gt;</a> m_documentPtr;
+<a name="l00112"></a>00112        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;imod::IUndoManager&gt;</a> m_undoManagerPtr;
+<a name="l00113"></a>00113        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;IDocumentStateComparator&gt;</a> m_stateComparatorPtr;
+<a name="l00114"></a>00114        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;istd::IPolymorphic&gt;</a> m_viewPtr;
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116        <span class="keywordtype">bool</span> m_isDirty;
+<a name="l00117"></a>00117 };
 <a name="l00118"></a>00118 
-<a name="l00119"></a>00119 } <span class="comment">// namespace idoc</span>
-<a name="l00120"></a>00120 
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120 } <span class="comment">// namespace idoc</span>
 <a name="l00121"></a>00121 
-<a name="l00122"></a>00122 <span class="preprocessor">#endif // idoc_CSingleDocumentManagerBase_included</span>
-<a name="l00123"></a>00123 <span class="preprocessor"></span>
-<a name="l00124"></a>00124 
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123 <span class="preprocessor">#endif // idoc_CSingleDocumentManagerBase_included</span>
+<a name="l00124"></a>00124 <span class="preprocessor"></span>
+<a name="l00125"></a>00125 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

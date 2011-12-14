@@ -27,7 +27,7 @@ namespace idoc
 {
 
 
-// reimplemented (idoc::IDocumentTemplate)
+// reimplemented (idoc::IDocumentTypesInfo)
 
 bool CCompositeDocumentTemplateComp::IsFeatureSupported(int featureFlags, const std::string& documentTypeId) const
 {
@@ -71,6 +71,69 @@ istd::CString CCompositeDocumentTemplateComp::GetDocumentTypeName(const std::str
 }
 
 
+iser::IFileTypeInfo* CCompositeDocumentTemplateComp::GetDocumentFileTypeInfo(const std::string& documentTypeId) const
+{
+	IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(documentTypeId);
+	if (iter != m_idToTemplateMap.end()){
+		I_ASSERT(iter->second != NULL);
+
+		return iter->second->GetDocumentFileTypeInfo(documentTypeId);
+	}
+	else{
+		return NULL;
+	}
+}
+
+
+IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetDocumentTypeIdsForFile(const istd::CString& filePath) const
+{
+	Ids retVal;
+
+	int slavesCount = m_slaveTemplatesCompPtr.GetCount();
+	for (int i = 0; i < slavesCount; ++i){
+		const IDocumentTemplate* slavePtr = m_slaveTemplatesCompPtr[i];
+		if (slavePtr != NULL){
+			Ids slaveIds = slavePtr->GetDocumentTypeIdsForFile(filePath);
+
+			retVal.insert(retVal.end(), slaveIds.begin(), slaveIds.end());
+		}
+	}
+
+	return retVal;
+}
+
+
+istd::CString CCompositeDocumentTemplateComp::GetDefaultDirectory(const istd::CString& sugestedDir, const std::string* documentTypeIdPtr) const
+{
+	if (documentTypeIdPtr != NULL){
+		IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(*documentTypeIdPtr);
+		if (iter != m_idToTemplateMap.end()){
+			I_ASSERT(iter->second != NULL);
+
+			return iter->second->GetDefaultDirectory(sugestedDir, documentTypeIdPtr);
+		}
+		else{
+			return sugestedDir;
+		}
+	}
+
+	int slavesCount = m_slaveTemplatesCompPtr.GetCount();
+	for (int i = 0; i < slavesCount; ++i){
+		const IDocumentTemplate* slavePtr = m_slaveTemplatesCompPtr[i];
+		if (slavePtr != NULL){
+			istd::CString retVal = slavePtr->GetDefaultDirectory(sugestedDir);
+			if (retVal.IsEmpty()){
+				return retVal;
+			}
+		}
+	}
+
+	return "";
+}
+
+
+// reimplemented (idoc::IDocumentTemplate)
+
 IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetViewTypeIds(const std::string& documentTypeId) const
 {
 	IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(documentTypeId);
@@ -98,24 +161,6 @@ istd::CString CCompositeDocumentTemplateComp::GetViewTypeName(
 	else{
 		return "";
 	}
-}
-
-
-IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetDocumentTypeIdsForFile(const istd::CString& filePath) const
-{
-	Ids retVal;
-
-	int slavesCount = m_slaveTemplatesCompPtr.GetCount();
-	for (int i = 0; i < slavesCount; ++i){
-		const IDocumentTemplate* slavePtr = m_slaveTemplatesCompPtr[i];
-		if (slavePtr != NULL){
-			Ids slaveIds = slavePtr->GetDocumentTypeIdsForFile(filePath);
-
-			retVal.insert(retVal.end(), slaveIds.begin(), slaveIds.end());
-		}
-	}
-
-	return retVal;
 }
 
 
@@ -189,35 +234,6 @@ IDocumentStateComparator* CCompositeDocumentTemplateComp::CreateStateComparator(
 	else{
 		return NULL;
 	}
-}
-
-
-istd::CString CCompositeDocumentTemplateComp::GetDefaultDirectory(const istd::CString& sugestedDir, const std::string* documentTypeIdPtr) const
-{
-	if (documentTypeIdPtr != NULL){
-		IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(*documentTypeIdPtr);
-		if (iter != m_idToTemplateMap.end()){
-			I_ASSERT(iter->second != NULL);
-
-			return iter->second->GetDefaultDirectory(sugestedDir, documentTypeIdPtr);
-		}
-		else{
-			return sugestedDir;
-		}
-	}
-
-	int slavesCount = m_slaveTemplatesCompPtr.GetCount();
-	for (int i = 0; i < slavesCount; ++i){
-		const IDocumentTemplate* slavePtr = m_slaveTemplatesCompPtr[i];
-		if (slavePtr != NULL){
-			istd::CString retVal = slavePtr->GetDefaultDirectory(sugestedDir);
-			if (retVal.IsEmpty()){
-				return retVal;
-			}
-		}
-	}
-
-	return "";
 }
 
 
