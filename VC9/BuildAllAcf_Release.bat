@@ -13,6 +13,9 @@ echo Building IACF in %IACFDIR%
 cd %ACFDIR%\Impl\VC9
 msbuild AcfAll.sln /p:Configuration=Release
 
+cd %ACFDIR%\Docs\Tutorial\Impl\VC9
+msbuild TutorialAcf.sln /p:Configuration=Release
+
 cd %ACFSLNDIR%\Impl\VC9
 msbuild AcfSlnAll.sln /p:Configuration=Release
 
