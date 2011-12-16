@@ -35,7 +35,7 @@
 #include "imod/CSingleModelObserverBase.h"
 
 #include "idoc/IDocumentStateComparator.h"
-#include "idoc/CDocumentManagerBase.h"
+#include "idoc/CTmplBasedDocumentManagerBase.h"
 
 
 namespace idoc
@@ -43,7 +43,7 @@ namespace idoc
 
 
 class CSingleDocumentManagerBase:
-			public idoc::CDocumentManagerBase,
+			public idoc::CTmplBasedDocumentManagerBase,
 			protected imod::CSingleModelObserverBase
 {
 public:

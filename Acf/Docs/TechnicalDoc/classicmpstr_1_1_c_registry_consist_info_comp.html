@@ -88,7 +88,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get icon of component.  <a href="#a5e2a5e46247018d56513fc0f419405f8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">icomp::IRegistry::Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#aa10df24fe11f3d4ec7034e06f195a1c5">GetCompatibleSubcomponents</a> (const std::string &amp;elementId, const <a class="el" href="classicomp_1_1_i_element_static_info.html">icomp::IElementStaticInfo</a> &amp;elementStaticInfo, const <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a> &amp;interfaceNames) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">icomp::IRegistry::Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#a8c2e1dc24b5abdfeab4d8d3239a435f7">GetCompatibleIds</a> (const std::string &amp;elementId, const <a class="el" href="classicomp_1_1_i_element_static_info.html">icomp::IElementStaticInfo</a> &amp;elementStaticInfo, const <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a> &amp;interfaceNames, bool subcomponentsFlag) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of compatible element ID's.  <a href="#a8c2e1dc24b5abdfeab4d8d3239a435f7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#abba5bf44fb90ebd55aa4e07ee1a4201e">CheckAttributeCompatibility</a> (const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> &amp;attribute, const <a class="el" href="classicomp_1_1_i_attribute_static_info.html">icomp::IAttributeStaticInfo</a> &amp;attributeMetaInfo, const std::string &amp;attributeName, const std::string &amp;elementName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, bool ignoreUndef, bool allReasons, <a class="el" href="classibase_1_1_i_message_consumer.html">ibase::IMessageConsumer</a> *reasonConsumerPtr) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#a3a9c6aeed0f2467c93fcadb4b1c17783">CheckPointedElementCompatibility</a> (const std::string &amp;pointedElementName, const <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a> &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, bool ignoreUndef, <a class="el" href="classibase_1_1_i_message_consumer.html">ibase::IMessageConsumer</a> *reasonConsumerPtr) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#af55f0203180a6d281286570bdfb2fb32">CheckPointedElementInfoCompatibility</a> (const std::string &amp;pointedElementName, const <a class="el" href="classicomp_1_1_i_element_static_info.html">icomp::IElementStaticInfo</a> *pointedMetaInfoPtr, const <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a> &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, bool ignoreUndef, <a class="el" href="classibase_1_1_i_message_consumer.html">ibase::IMessageConsumer</a> *reasonConsumerPtr) const </td></tr>
@@ -370,12 +371,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa10df24fe11f3d4ec7034e06f195a1c5"></a><!-- doxytag: member="icmpstr::CRegistryConsistInfoComp::GetCompatibleSubcomponents" ref="aa10df24fe11f3d4ec7034e06f195a1c5" args="(const std::string &amp;elementId, const icomp::IElementStaticInfo &amp;elementStaticInfo, const icomp::IElementStaticInfo::Ids &amp;interfaceNames) const " -->
+<a class="anchor" id="a8c2e1dc24b5abdfeab4d8d3239a435f7"></a><!-- doxytag: member="icmpstr::CRegistryConsistInfoComp::GetCompatibleIds" ref="a8c2e1dc24b5abdfeab4d8d3239a435f7" args="(const std::string &amp;elementId, const icomp::IElementStaticInfo &amp;elementStaticInfo, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, bool subcomponentsFlag) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">icomp::IRegistry::Ids</a> icmpstr::CRegistryConsistInfoComp::GetCompatibleSubcomponents </td>
+          <td class="memname"><a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">icomp::IRegistry::Ids</a> icmpstr::CRegistryConsistInfoComp::GetCompatibleIds </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>elementId</em>, </td>
@@ -390,7 +391,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a> &amp;&#160;</td>
-          <td class="paramname"><em>interfaceNames</em>&#160;</td>
+          <td class="paramname"><em>interfaceNames</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>subcomponentsFlag</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -400,6 +407,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Get list of compatible element ID's. </p>
+<p>It include also pointed element. </p>
 
 </div>
 </div>

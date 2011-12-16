@@ -104,51 +104,52 @@
 <a name="l00077"></a>00077        <span class="keyword">virtual</span> QIcon <a class="code" href="classicmpstr_1_1_c_registry_consist_info_comp.html#a5e2a5e46247018d56513fc0f419405f8" title="Get icon of component.">GetComponentIcon</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address) <span class="keyword">const</span>;
 <a name="l00078"></a>00078 
 <a name="l00079"></a>00079 <span class="keyword">protected</span>:
-<a name="l00080"></a>00080        <a class="code" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">icomp::IRegistry::Ids</a> <a class="code" href="classicmpstr_1_1_c_registry_consist_info_comp.html#aa10df24fe11f3d4ec7034e06f195a1c5">GetCompatibleSubcomponents</a>(
-<a name="l00081"></a>00081                             <span class="keyword">const</span> std::string&amp; elementId,
-<a name="l00082"></a>00082                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">icomp::IElementStaticInfo</a>&amp; elementStaticInfo,
-<a name="l00083"></a>00083                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a>&amp; interfaceNames) <span class="keyword">const</span>;
-<a name="l00084"></a>00084        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_registry_consist_info_comp.html#abba5bf44fb90ebd55aa4e07ee1a4201e">CheckAttributeCompatibility</a>(
-<a name="l00085"></a>00085                             <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects.">iser::IObject</a>&amp; attribute,
-<a name="l00086"></a>00086                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_attribute_static_info.html">icomp::IAttributeStaticInfo</a>&amp; attributeMetaInfo,
-<a name="l00087"></a>00087                             <span class="keyword">const</span> std::string&amp; attributeName,
-<a name="l00088"></a>00088                             <span class="keyword">const</span> std::string&amp; elementName,
-<a name="l00089"></a>00089                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
-<a name="l00090"></a>00090                             <span class="keywordtype">bool</span> ignoreUndef,
-<a name="l00091"></a>00091                             <span class="keywordtype">bool</span> allReasons,
-<a name="l00092"></a>00092                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span>;
-<a name="l00093"></a>00093        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_registry_consist_info_comp.html#a3a9c6aeed0f2467c93fcadb4b1c17783">CheckPointedElementCompatibility</a>(
-<a name="l00094"></a>00094                             <span class="keyword">const</span> std::string&amp; pointedElementName,
-<a name="l00095"></a>00095                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a>&amp; interfaceNames,
-<a name="l00096"></a>00096                             <span class="keyword">const</span> std::string&amp; attributeName,
-<a name="l00097"></a>00097                             <span class="keyword">const</span> std::string&amp; elementName,
-<a name="l00098"></a>00098                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
-<a name="l00099"></a>00099                             <span class="keywordtype">bool</span> ignoreUndef,
-<a name="l00100"></a>00100                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span>;
-<a name="l00101"></a>00101        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_registry_consist_info_comp.html#af55f0203180a6d281286570bdfb2fb32">CheckPointedElementInfoCompatibility</a>(
-<a name="l00102"></a>00102                             <span class="keyword">const</span> std::string&amp; pointedElementName,
-<a name="l00103"></a>00103                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">icomp::IElementStaticInfo</a>* pointedMetaInfoPtr,
-<a name="l00104"></a>00104                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a>&amp; interfaceNames,
-<a name="l00105"></a>00105                             <span class="keyword">const</span> std::string&amp; attributeName,
-<a name="l00106"></a>00106                             <span class="keyword">const</span> std::string&amp; elementName,
-<a name="l00107"></a>00107                             <span class="keywordtype">bool</span> ignoreUndef,
-<a name="l00108"></a>00108                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span>;
-<a name="l00109"></a>00109 
-<a name="l00110"></a>00110 <span class="keyword">private</span>:
-<a name="l00111"></a>00111        I_REF(<a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>, m_envManagerCompPtr);
-<a name="l00112"></a>00112        I_REF(<a class="code" href="classicmpstr_1_1_i_external_meta_info_manager.html">IExternalMetaInfoManager</a>, m_externalMetaInfoManagerCompPtr);
-<a name="l00113"></a>00113 
-<a name="l00114"></a>00114        <span class="keyword">typedef</span> std::map&lt;icomp::CComponentAddress, QIcon&gt; IconCache;
-<a name="l00115"></a>00115        <span class="keyword">mutable</span> IconCache m_iconCache;
-<a name="l00116"></a>00116 };
-<a name="l00117"></a>00117 
+<a name="l00084"></a>00084        <a class="code" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">icomp::IRegistry::Ids</a> <a class="code" href="classicmpstr_1_1_c_registry_consist_info_comp.html#a8c2e1dc24b5abdfeab4d8d3239a435f7" title="Get list of compatible element ID&#39;s.">GetCompatibleIds</a>(
+<a name="l00085"></a>00085                             <span class="keyword">const</span> std::string&amp; elementId,
+<a name="l00086"></a>00086                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">icomp::IElementStaticInfo</a>&amp; elementStaticInfo,
+<a name="l00087"></a>00087                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a>&amp; interfaceNames,
+<a name="l00088"></a>00088                             <span class="keywordtype">bool</span> subcomponentsFlag) <span class="keyword">const</span>;
+<a name="l00089"></a>00089        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_registry_consist_info_comp.html#abba5bf44fb90ebd55aa4e07ee1a4201e">CheckAttributeCompatibility</a>(
+<a name="l00090"></a>00090                             <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects.">iser::IObject</a>&amp; attribute,
+<a name="l00091"></a>00091                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_attribute_static_info.html">icomp::IAttributeStaticInfo</a>&amp; attributeMetaInfo,
+<a name="l00092"></a>00092                             <span class="keyword">const</span> std::string&amp; attributeName,
+<a name="l00093"></a>00093                             <span class="keyword">const</span> std::string&amp; elementName,
+<a name="l00094"></a>00094                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
+<a name="l00095"></a>00095                             <span class="keywordtype">bool</span> ignoreUndef,
+<a name="l00096"></a>00096                             <span class="keywordtype">bool</span> allReasons,
+<a name="l00097"></a>00097                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span>;
+<a name="l00098"></a>00098        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_registry_consist_info_comp.html#a3a9c6aeed0f2467c93fcadb4b1c17783">CheckPointedElementCompatibility</a>(
+<a name="l00099"></a>00099                             <span class="keyword">const</span> std::string&amp; pointedElementName,
+<a name="l00100"></a>00100                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a>&amp; interfaceNames,
+<a name="l00101"></a>00101                             <span class="keyword">const</span> std::string&amp; attributeName,
+<a name="l00102"></a>00102                             <span class="keyword">const</span> std::string&amp; elementName,
+<a name="l00103"></a>00103                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
+<a name="l00104"></a>00104                             <span class="keywordtype">bool</span> ignoreUndef,
+<a name="l00105"></a>00105                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span>;
+<a name="l00106"></a>00106        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_registry_consist_info_comp.html#af55f0203180a6d281286570bdfb2fb32">CheckPointedElementInfoCompatibility</a>(
+<a name="l00107"></a>00107                             <span class="keyword">const</span> std::string&amp; pointedElementName,
+<a name="l00108"></a>00108                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">icomp::IElementStaticInfo</a>* pointedMetaInfoPtr,
+<a name="l00109"></a>00109                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a>&amp; interfaceNames,
+<a name="l00110"></a>00110                             <span class="keyword">const</span> std::string&amp; attributeName,
+<a name="l00111"></a>00111                             <span class="keyword">const</span> std::string&amp; elementName,
+<a name="l00112"></a>00112                             <span class="keywordtype">bool</span> ignoreUndef,
+<a name="l00113"></a>00113                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span>;
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115 <span class="keyword">private</span>:
+<a name="l00116"></a>00116        I_REF(<a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>, m_envManagerCompPtr);
+<a name="l00117"></a>00117        I_REF(<a class="code" href="classicmpstr_1_1_i_external_meta_info_manager.html">IExternalMetaInfoManager</a>, m_externalMetaInfoManagerCompPtr);
 <a name="l00118"></a>00118 
-<a name="l00119"></a>00119 } <span class="comment">// namespace icmpstr</span>
-<a name="l00120"></a>00120 
-<a name="l00121"></a>00121 
-<a name="l00122"></a>00122 <span class="preprocessor">#endif // !icmpstr_CRegistryConsistInfoComp_included</span>
-<a name="l00123"></a>00123 <span class="preprocessor"></span>
-<a name="l00124"></a>00124 
+<a name="l00119"></a>00119        <span class="keyword">typedef</span> std::map&lt;icomp::CComponentAddress, QIcon&gt; IconCache;
+<a name="l00120"></a>00120        <span class="keyword">mutable</span> IconCache m_iconCache;
+<a name="l00121"></a>00121 };
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 } <span class="comment">// namespace icmpstr</span>
+<a name="l00125"></a>00125 
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127 <span class="preprocessor">#endif // !icmpstr_CRegistryConsistInfoComp_included</span>
+<a name="l00128"></a>00128 <span class="preprocessor"></span>
+<a name="l00129"></a>00129 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
