@@ -38,7 +38,7 @@
 <div class="title">iqt::CRegistriesManagerComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt::CRegistriesManagerComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,icomp::IPackagesManager,icomp::IRegistriesManager,icomp::IRegistryLoader" -->
+<!-- doxytag: class="iqt::CRegistriesManagerComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,icomp::IExtPackagesManager,icomp::IRegistriesManager,icomp::IRegistryLoader" -->
 <p>Loads component packages from dynamic link libraries.  
  <a href="classiqt_1_1_c_registries_manager_comp.html#details">More...</a></p>
 
@@ -50,20 +50,21 @@ Inheritance diagram for iqt::CRegistriesManagerComp:</div>
   <img src="classiqt_1_1_c_registries_manager_comp.png" usemap="#iqt::CRegistriesManagerComp_map" alt=""/>
   <map id="iqt::CRegistriesManagerComp_map" name="iqt::CRegistriesManagerComp_map">
 <area href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations." alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="219,168,428,192"/>
-<area href="classicomp_1_1_i_packages_manager.html" alt="icomp::IPackagesManager" shape="rect" coords="657,168,866,192"/>
+<area href="classicomp_1_1_i_ext_packages_manager.html" alt="icomp::IExtPackagesManager" shape="rect" coords="657,168,866,192"/>
 <area href="classicomp_1_1_i_registries_manager.html" alt="icomp::IRegistriesManager" shape="rect" coords="876,168,1085,192"/>
 <area href="classicomp_1_1_i_registry_loader.html" title="Interface for a ACF registry loader." alt="icomp::IRegistryLoader" shape="rect" coords="1095,168,1304,192"/>
 <area href="classibase_1_1_t_logger_wrap.html" title="Class wrapper implementing interface istd::ILogger sending log messages over ibase::IMessageConsumer..." alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="219,112,428,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="657,112,866,136"/>
+<area href="classicomp_1_1_i_packages_manager.html" alt="icomp::IPackagesManager" shape="rect" coords="657,112,866,136"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="876,112,1085,136"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1095,112,1304,136"/>
 <area href="class_base.html" alt="Base" shape="rect" coords="0,56,209,80"/>
 <area href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the." alt="ibase::ILoggable" shape="rect" coords="219,56,428,80"/>
 <area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="438,56,647,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="657,56,866,80"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="657,56,866,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="876,56,1085,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="219,0,428,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="438,0,647,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="657,0,866,24"/>
 </map>
  </div></div>
 
@@ -83,6 +84,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type of package as defined in <code>PackageType</code>.  <a href="#acf1483bb1a89349d88dd8774cd2e3528"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registries_manager_comp.html#a839cb33673795259230273a714e764e3">GetPackagePath</a> (const std::string &amp;packageId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get directory path of specified component package.  <a href="#a839cb33673795259230273a714e764e3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_ext_packages_manager.html#aed72c326b756b403ddc86a629ee54744">PathList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registries_manager_comp.html#a7201a54792335c651d4503dbd6d7fe29">GetConfigurationPathList</a> (<a class="el" href="classicomp_1_1_i_ext_packages_manager.html#a5e9291f32b62467a998bb9f5ccb62a9d">PathType</a> pathType) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of files used for configuration.  <a href="#a7201a54792335c651d4503dbd6d7fe29"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registries_manager_comp.html#a78a09926a6df389d254e718595148d6b">GetRegistry</a> (const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> *contextRegistryPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to stored registry.  <a href="#a78a09926a6df389d254e718595148d6b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registries_manager_comp.html#a688d6512683bb85c4727e2fef9610abc">GetRegistryFromFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;path) const </td></tr>
@@ -92,7 +95,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registries_manager_comp.html#adb5accaeae12aa431446470eaca94444">RegisterPackageFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;file)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registries_manager_comp.html#a530bc894e31e52863acc7287bbf4cadf">RegisterPackagesDir</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;subDir)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registries_manager_comp.html#a092db1203e0e3191f1ffe6fde498b3c6">LoadConfigFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;configFile)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registries_manager_comp.html#a63eaf1b5bbae8f47da58b31e6e79e97d">CheckAndMarkPath</a> (const QDir &amp;directory, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;path, <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;resultPath) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registries_manager_comp.html#a6991f5ae51a2d4d137bf7928d3ad7e17">CheckAndMarkPath</a> (<a class="el" href="classicomp_1_1_i_ext_packages_manager.html#aed72c326b756b403ddc86a629ee54744">PathList</a> &amp;pathList, const QDir &amp;directory, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;path, <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;resultPath) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registries_manager_comp.html#ac189f878c77be3a6e7db62f8d905f800">OnComponentCreated</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -142,13 +145,19 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a63eaf1b5bbae8f47da58b31e6e79e97d"></a><!-- doxytag: member="iqt::CRegistriesManagerComp::CheckAndMarkPath" ref="a63eaf1b5bbae8f47da58b31e6e79e97d" args="(const QDir &amp;directory, const istd::CString &amp;path, istd::CString &amp;resultPath) const " -->
+<a class="anchor" id="a6991f5ae51a2d4d137bf7928d3ad7e17"></a><!-- doxytag: member="iqt::CRegistriesManagerComp::CheckAndMarkPath" ref="a6991f5ae51a2d4d137bf7928d3ad7e17" args="(PathList &amp;pathList, const QDir &amp;directory, const istd::CString &amp;path, istd::CString &amp;resultPath) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CRegistriesManagerComp::CheckAndMarkPath </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="classicomp_1_1_i_ext_packages_manager.html#aed72c326b756b403ddc86a629ee54744">PathList</a> &amp;&#160;</td>
+          <td class="paramname"><em>pathList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const QDir &amp;&#160;</td>
           <td class="paramname"><em>directory</em>, </td>
         </tr>
@@ -172,6 +181,27 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7201a54792335c651d4503dbd6d7fe29"></a><!-- doxytag: member="iqt::CRegistriesManagerComp::GetConfigurationPathList" ref="a7201a54792335c651d4503dbd6d7fe29" args="(PathType pathType) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_ext_packages_manager.html#aed72c326b756b403ddc86a629ee54744">PathList</a> iqt::CRegistriesManagerComp::GetConfigurationPathList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classicomp_1_1_i_ext_packages_manager.html#a5e9291f32b62467a998bb9f5ccb62a9d">PathType</a>&#160;</td>
+          <td class="paramname"><em>pathType</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get list of files used for configuration. </p>
+
+<p>Implements <a class="el" href="classicomp_1_1_i_ext_packages_manager.html#a92e6c507f7ba102e75b4b9cda6ccc354">icomp::IExtPackagesManager</a>.</p>
 
 </div>
 </div>

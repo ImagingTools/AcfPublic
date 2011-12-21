@@ -387,19 +387,6 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
-    <name>CRegistryCodeSaverComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_registry_code_saver_comp_8h</filename>
-    <includes id="itr_8h" name="itr.h" local="yes" imported="no">istd/itr.h</includes>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
-    <includes id="_i_packages_manager_8h" name="IPackagesManager.h" local="yes" imported="no">icomp/IPackagesManager.h</includes>
-    <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <class kind="class">ibase::CRegistryCodeSaverComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
     <name>CSelectableFileConverterComp.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_selectable_file_converter_comp_8h</filename>
@@ -1550,6 +1537,15 @@
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
     <class kind="class">icomp::IElementStaticInfo</class>
+    <namespace>icomp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IExtPackagesManager.h</name>
+    <path>C:/Temp/Acf/Include/icomp/</path>
+    <filename>_i_ext_packages_manager_8h</filename>
+    <includes id="_i_packages_manager_8h" name="IPackagesManager.h" local="yes" imported="no">icomp/IPackagesManager.h</includes>
+    <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
+    <class kind="class">icomp::IExtPackagesManager</class>
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
@@ -3291,13 +3287,28 @@
     <filename>_c_registries_manager_comp_8h</filename>
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_i_packages_manager_8h" name="IPackagesManager.h" local="yes" imported="no">icomp/IPackagesManager.h</includes>
+    <includes id="_i_ext_packages_manager_8h" name="IExtPackagesManager.h" local="yes" imported="no">icomp/IExtPackagesManager.h</includes>
     <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
     <includes id="_i_registry_loader_8h" name="IRegistryLoader.h" local="yes" imported="no">icomp/IRegistryLoader.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
     <class kind="class">iqt::CRegistriesManagerComp</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CRegistryCodeSaverComp.h</name>
+    <path>C:/Temp/Acf/Include/iqt/</path>
+    <filename>_c_registry_code_saver_comp_8h</filename>
+    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
+    <includes id="_i_ext_packages_manager_8h" name="IExtPackagesManager.h" local="yes" imported="no">icomp/IExtPackagesManager.h</includes>
+    <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <class kind="class">iqt::CRegistryCodeSaverComp</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -8785,7 +8796,6 @@
     <class kind="class">ibase::CModelBinderComp</class>
     <class kind="class">ibase::CModelProxyComp</class>
     <class kind="class">ibase::CObjectQueueComp</class>
-    <class kind="class">ibase::CRegistryCodeSaverComp</class>
     <class kind="class">ibase::CSelectableFileConverterComp</class>
     <class kind="class">ibase::CSize</class>
     <class kind="class">ibase::CStreamLogCompBase</class>
@@ -9546,232 +9556,6 @@
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
       <anchor>a9a514d1597d09a363c7856b2e870e2a9</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CRegistryCodeSaverComp</name>
-    <filename>classibase_1_1_c_registry_code_saver_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
-    <base>iser::IFileLoader</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ae3857f169f1da68738683035b455f0b0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_UNDEFINED_PACKAGE</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ae3857f169f1da68738683035b455f0b0a35c7f04910af8999ad71ac8c682301bb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_UNDEFINED_COMPONENT</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ae3857f169f1da68738683035b455f0b0a92982ebfe07cc5b89484e963749dba0d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_UNDEFINED_ATTR_TYPE</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ae3857f169f1da68738683035b455f0b0ac7b563f70cfe3a465924ada1e5a3e261</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ac97212409e87526ac2eac440373e81b2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CRegistryCodeSaverComp</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a6ff8beb9bb41b8af4b9b120d880cd3ff</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOperationSupported</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ac0ece656e7d080b9fa98f76f58b3563a</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>LoadFromFile</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a52f2344306609be790a4d31707d93869</anchor>
-      <arglist>(istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>SaveToFile</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a91412f04b1527803348254520e53d195</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ab02ff8fb4a25d44f30ba62d35c83f8ba</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ae1e0fe4de3119132660aebf94690f685</anchor>
-      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>std::set&lt; icomp::CComponentAddress &gt;</type>
-      <name>Addresses</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ad4c7993f4197a69ad9f2dc0e12a2eb26</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>std::set&lt; std::string &gt;</type>
-      <name>Ids</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>af5936ae69026b3a05ff4132444979f17</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>AppendAddresses</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>aa87330c14e1db8eae391def03e43f002</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, Addresses &amp;realAddresses, Addresses &amp;composedAddresses) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Ids</type>
-      <name>ExtractPackageIds</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ad306c457ba9f6be76aa6491a63eb3396</anchor>
-      <arglist>(const Addresses &amp;addresses) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Ids</type>
-      <name>ExtractComponentIds</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a634fe9903d376f5aa4d193958f496593</anchor>
-      <arglist>(const Addresses &amp;addresses, const std::string &amp;packageId) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteHeader</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a17b33fa106f8d77ea4c7a0d62e3b0373</anchor>
-      <arglist>(const std::string &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, std::ofstream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteIncludes</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ac1c7d0277ab8513f4aea2d1464568e40</anchor>
-      <arglist>(const std::string &amp;className, const Addresses &amp;addresses, std::ofstream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteClassDefinitions</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a27748d4f27e1fb5cbf364391bebbc693</anchor>
-      <arglist>(const std::string &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, std::ofstream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteRegistryInfo</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ab9fe601cb6681081db3883c35bcf613c</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, const std::string &amp;registryCallPrefix, std::ofstream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteComponentInfo</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a64b16eda794d87f096e2c91d76f0f184</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, const std::string &amp;registryCallPrefix, const std::string &amp;componentId, const icomp::IRegistry::ElementInfo &amp;componentInfo, std::ofstream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteAttribute</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ad864914520245d08c328134b7e4a32a1</anchor>
-      <arglist>(const std::string &amp;attributeId, const std::string &amp;componentId, const std::string &amp;attributeName, const iser::IObject &amp;attribute, std::ofstream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteRegistryClassDeclaration</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a47c046ce3422ceea5aeb48ef37e65209</anchor>
-      <arglist>(const std::string &amp;baseClassName, const std::string &amp;registryClassName, const icomp::IRegistry &amp;registry, std::ofstream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteRegistryClassBody</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ad6af1d49dc9e5fc8b1ccb465fcd5075e</anchor>
-      <arglist>(const std::string &amp;baseClassName, const std::string &amp;registryClassName, const icomp::IRegistry &amp;registry, std::ofstream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>GetAttributeValue</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a9c087b9988a0afe5c2ac274b86273a32</anchor>
-      <arglist>(const std::string &amp;attributeId, const std::string &amp;componentId, const iser::ISerializable &amp;attribute, std::string &amp;valueString, std::string &amp;typeName) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>GetMultiAttributeValue</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a21bb7c8daa30baedb4b10fe48ad01ced</anchor>
-      <arglist>(const std::string &amp;attributeId, const std::string &amp;componentId, const iser::ISerializable &amp;attribute, std::list&lt; std::string &gt; &amp;valueStrings, std::string &amp;typeName) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>NextLine</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a9e132b39d847189a55b89f8b9932b6de</anchor>
-      <arglist>(std::ofstream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>ChangeIndent</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ad9d8961e903504b48cfae796e4f0daba</anchor>
-      <arglist>(int difference) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>ExtractInfoFromFile</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>af5ab7ea65540ee2e334a0edcf43afdcc</anchor>
-      <arglist>(const istd::CString &amp;filePath, std::string &amp;className, istd::CString &amp;headerFilePath) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>std::string</type>
-      <name>GetPackageName</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a93ca2cdf87347f2e44b3a4c126b28182</anchor>
-      <arglist>(const std::string &amp;packageId) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>std::string</type>
-      <name>GetStringLiteral</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a04bae1ca7773ccafc01b4bad2380d315</anchor>
-      <arglist>(const istd::CString &amp;text) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>std::string</type>
-      <name>GetStdStringLiteral</name>
-      <anchorfile>classibase_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a4afd9cfddb3132f625d03f7fec5768b4</anchor>
-      <arglist>(const std::string &amp;text) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15423,6 +15207,7 @@
     <class kind="class">icomp::IComponentStaticInfo</class>
     <class kind="class">icomp::ICompositeComponent</class>
     <class kind="class">icomp::IElementStaticInfo</class>
+    <class kind="class">icomp::IExtPackagesManager</class>
     <class kind="class">icomp::IMetaInfoManager</class>
     <class kind="class">icomp::IPackagesManager</class>
     <class kind="class">icomp::IRealAttributeStaticInfo</class>
@@ -17373,6 +17158,61 @@
       <anchorfile>classicomp_1_1_i_element_static_info.html</anchorfile>
       <anchor>a989651fb00da877c874e9ddad6d204d5</anchor>
       <arglist>(int metaGroupId) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomp::IExtPackagesManager</name>
+    <filename>classicomp_1_1_i_ext_packages_manager.html</filename>
+    <base virtualness="virtual">icomp::IPackagesManager</base>
+    <member kind="enumeration">
+      <name>PathType</name>
+      <anchorfile>classicomp_1_1_i_ext_packages_manager.html</anchorfile>
+      <anchor>a5e9291f32b62467a998bb9f5ccb62a9d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_ALL</name>
+      <anchorfile>classicomp_1_1_i_ext_packages_manager.html</anchorfile>
+      <anchor>a5e9291f32b62467a998bb9f5ccb62a9da920a5f6d1b5da92af8bbc1aab5724a36</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_CONFIG</name>
+      <anchorfile>classicomp_1_1_i_ext_packages_manager.html</anchorfile>
+      <anchor>a5e9291f32b62467a998bb9f5ccb62a9da16168623b6b6cccf8b45c2b0fc220632</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_PACKAGES_DIR</name>
+      <anchorfile>classicomp_1_1_i_ext_packages_manager.html</anchorfile>
+      <anchor>a5e9291f32b62467a998bb9f5ccb62a9dac8b50b3d8485b3423cff1ad21583edfa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_PACKAGE</name>
+      <anchorfile>classicomp_1_1_i_ext_packages_manager.html</anchorfile>
+      <anchor>a5e9291f32b62467a998bb9f5ccb62a9da7ef883709e2260f6238bad134c8f8ccd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_REGISTRY</name>
+      <anchorfile>classicomp_1_1_i_ext_packages_manager.html</anchorfile>
+      <anchor>a5e9291f32b62467a998bb9f5ccb62a9daf59d4de3ac9401df078a1baccab340ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::set&lt; istd::CString &gt;</type>
+      <name>PathList</name>
+      <anchorfile>classicomp_1_1_i_ext_packages_manager.html</anchorfile>
+      <anchor>aed72c326b756b403ddc86a629ee54744</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual PathList</type>
+      <name>GetConfigurationPathList</name>
+      <anchorfile>classicomp_1_1_i_ext_packages_manager.html</anchorfile>
+      <anchor>a92e6c507f7ba102e75b4b9cda6ccc354</anchor>
+      <arglist>(PathType pathType) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -27737,6 +27577,7 @@
     <class kind="class">iqt::CProcessExecutorComp</class>
     <class kind="class">iqt::CReflectedBitmapBase</class>
     <class kind="class">iqt::CRegistriesManagerComp</class>
+    <class kind="class">iqt::CRegistryCodeSaverComp</class>
     <class kind="class">iqt::CRenderedObjectFileLoaderComp</class>
     <class kind="class">iqt::CSafeNotifier</class>
     <class kind="class">iqt::NotificationTarget</class>
@@ -29238,7 +29079,7 @@
     <name>iqt::CRegistriesManagerComp</name>
     <filename>classiqt_1_1_c_registries_manager_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">icomp::IPackagesManager</base>
+    <base virtualness="virtual">icomp::IExtPackagesManager</base>
     <base virtualness="virtual">icomp::IRegistriesManager</base>
     <base virtualness="virtual">icomp::IRegistryLoader</base>
     <member kind="enumeration">
@@ -29288,6 +29129,13 @@
       <arglist>(const std::string &amp;packageId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual PathList</type>
+      <name>GetConfigurationPathList</name>
+      <anchorfile>classiqt_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>a7201a54792335c651d4503dbd6d7fe29</anchor>
+      <arglist>(PathType pathType) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const icomp::IRegistry *</type>
       <name>GetRegistry</name>
       <anchorfile>classiqt_1_1_c_registries_manager_comp.html</anchorfile>
@@ -29326,8 +29174,8 @@
       <type>bool</type>
       <name>CheckAndMarkPath</name>
       <anchorfile>classiqt_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a63eaf1b5bbae8f47da58b31e6e79e97d</anchor>
-      <arglist>(const QDir &amp;directory, const istd::CString &amp;path, istd::CString &amp;resultPath) const </arglist>
+      <anchor>a6991f5ae51a2d4d137bf7928d3ad7e17</anchor>
+      <arglist>(PathList &amp;pathList, const QDir &amp;directory, const istd::CString &amp;path, istd::CString &amp;resultPath) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -29335,6 +29183,312 @@
       <anchorfile>classiqt_1_1_c_registries_manager_comp.html</anchorfile>
       <anchor>ac189f878c77be3a6e7db62f8d905f800</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt::CRegistryCodeSaverComp</name>
+    <filename>classiqt_1_1_c_registry_code_saver_comp.html</filename>
+    <base>ibase::TLoggerCompWrap</base>
+    <base>iser::IFileLoader</base>
+    <base>iprm::ISelectionConstraints</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a26da1d11efac1ef7f233f7a924984b16</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNDEFINED_PACKAGE</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a26da1d11efac1ef7f233f7a924984b16a7f740158368e5bc7b02b6d88f1f48bf5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNDEFINED_COMPONENT</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a26da1d11efac1ef7f233f7a924984b16a050cda331827381f0bf9638ef3a6826a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNDEFINED_ATTR_TYPE</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a26da1d11efac1ef7f233f7a924984b16ad797c1ca49e3ca3a38f2af9c7715c9ad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNKNOWN_PACKAGE</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a26da1d11efac1ef7f233f7a924984b16a6dc3aef12084b48a7c2937af94aff813</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>WorkingMode</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a8f0501b099cd16550cc5832d8abe58b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WM_SOURCES</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a8f0501b099cd16550cc5832d8abe58b9a4a4716d9fafc863eb69dc5507e0650ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WM_DEPENDENCIES</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a8f0501b099cd16550cc5832d8abe58b9a0a79040602351874bc1e4552c6761a22</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WM_SOURCES_AND_WM_DEPENDENCIES</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a8f0501b099cd16550cc5832d8abe58b9a1e2bf764ac2019bdd802f437b0a4177a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>ad9a85c8c64db374d35c4108083942f84</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a18be65f9beed42d81f3fe38423783292</anchor>
+      <arglist>(m_extPackagesManagerCompPtr, m_packagesManagerCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRegistryCodeSaverComp</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a3eefbad6778cfc306b077315ec3e2e70</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a6e5c48b7a405b539ff566e46540a8b02</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a729f5fa45a8bef1e809832b7095ef7e4</anchor>
+      <arglist>(istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a1de5e15064d25449f06b0d0728e3565b</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a6e7a2b7b4dde985ef613b61de1ce89ae</anchor>
+      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>acee2b230e7a51879fe2940453193c9c1</anchor>
+      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetConstraintsFlags</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a78660d2684c4a685481f65af4b67506d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a8abe9e6c04caaccc588a228a7f2f0421</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>aa4a5ff5e93889d5c19977e57868566c0</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a9ab804c5390846b3f29477c472c43f8a</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>acee9d8e97705b5be838d47180fdb6f68</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>std::set&lt; icomp::CComponentAddress &gt;</type>
+      <name>Addresses</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>aaee15d81763f4eb9e228a7061d2ae97a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>std::set&lt; std::string &gt;</type>
+      <name>Ids</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a0f21ed2944c1cb76d1b2a8bfc9c1171d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>AppendAddresses</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a9c6b505aa6a67bf5101cc4c7167c7b0a</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, Addresses &amp;realAddresses, Addresses &amp;composedAddresses) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Ids</type>
+      <name>ExtractPackageIds</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>acd3576b40b87c57ee19924ec7c185818</anchor>
+      <arglist>(const Addresses &amp;addresses) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Ids</type>
+      <name>ExtractComponentIds</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a7d0e37631cfab81bca7ea8cb170b47f8</anchor>
+      <arglist>(const Addresses &amp;addresses, const std::string &amp;packageId) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteHeader</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a65f4bf6ac3ff21f4e46403a65177adf2</anchor>
+      <arglist>(const std::string &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, std::ofstream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteIncludes</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>acfaf19220043ccbb4ba1bbc9b1644dda</anchor>
+      <arglist>(const std::string &amp;className, const Addresses &amp;addresses, std::ofstream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteClassDefinitions</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a70c8e82047a263333a3472c8b8ad5bae</anchor>
+      <arglist>(const std::string &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, std::ofstream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteDependencies</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>adbd50ff871c020f41fb243cdafad440b</anchor>
+      <arglist>(const std::string &amp;className, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, std::ofstream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteRegistryInfo</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a66c015a9e5836fa478e29157d0c88815</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, const std::string &amp;registryCallPrefix, std::ofstream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteComponentInfo</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a3a9df1b6d9e3c24dc33afed045ef3634</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, const std::string &amp;registryCallPrefix, const std::string &amp;componentId, const icomp::IRegistry::ElementInfo &amp;componentInfo, std::ofstream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteAttribute</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a524cbc528954ecf4dfa9186191514a62</anchor>
+      <arglist>(const std::string &amp;attributeId, const std::string &amp;componentId, const std::string &amp;attributeName, const iser::IObject &amp;attribute, std::ofstream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteRegistryClassDeclaration</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a76a02f7785de7a567c0afa28abb394ef</anchor>
+      <arglist>(const std::string &amp;baseClassName, const std::string &amp;registryClassName, const icomp::IRegistry &amp;registry, std::ofstream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteRegistryClassBody</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>aea3ca9a0a8ee7bbdf0f0370d0ee7c0ff</anchor>
+      <arglist>(const std::string &amp;baseClassName, const std::string &amp;registryClassName, const icomp::IRegistry &amp;registry, std::ofstream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>GetAttributeValue</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a3af00e07834462736ccb341398b9e461</anchor>
+      <arglist>(const std::string &amp;attributeId, const std::string &amp;componentId, const iser::ISerializable &amp;attribute, std::string &amp;valueString, std::string &amp;typeName) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>GetMultiAttributeValue</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>ab0e563f22e9c7d2c93298a59d537f7d2</anchor>
+      <arglist>(const std::string &amp;attributeId, const std::string &amp;componentId, const iser::ISerializable &amp;attribute, std::list&lt; std::string &gt; &amp;valueStrings, std::string &amp;typeName) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>NextLine</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>abc3f67fe2aea4221e43609ba0c796f79</anchor>
+      <arglist>(std::ofstream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>ChangeIndent</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a54b58cce3dcc8f83ed7b62ab59d79181</anchor>
+      <arglist>(int difference) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>ExtractInfoFromFile</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a4599fb06f26b30bf27bbc7e6f97d03ff</anchor>
+      <arglist>(const istd::CString &amp;filePath, std::string &amp;className, istd::CString &amp;baseFilePath) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>std::string</type>
+      <name>GetPackageName</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a9d1e307b8f803a7cd3499765e34ca1a1</anchor>
+      <arglist>(const std::string &amp;packageId) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>std::string</type>
+      <name>GetStringLiteral</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a8c53c47c95d73b269d9de27e0e94c15e</anchor>
+      <arglist>(const istd::CString &amp;text) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>std::string</type>
+      <name>GetStdStringLiteral</name>
+      <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a41afc3520d3b52a6ec01c0a8ac568148</anchor>
+      <arglist>(const std::string &amp;text) const </arglist>
     </member>
   </compound>
   <compound kind="class">

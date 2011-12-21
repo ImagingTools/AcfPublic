@@ -37,7 +37,6 @@
 <li><a class="el" href="classibase_1_1_t_logger_comp_wrap.html">ibase::TLoggerCompWrap&lt; Base &gt;</a><ul>
 <li><a class="el" href="classibase_1_1_c_external_file_converter_comp.html">ibase::CExternalFileConverterComp</a></li>
 <li><a class="el" href="classibase_1_1_c_file_convert_over_processor_comp.html">ibase::CFileConvertOverProcessorComp</a></li>
-<li><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html">ibase::CRegistryCodeSaverComp</a></li>
 <li><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html">icmpstr::CVisualRegistryComp</a></li>
 <li><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html">iproc::CIterativeProcessorComp</a></li>
 <li><a class="el" href="classiproc_1_1_c_model_based_processing_trigger_comp.html">iproc::CModelBasedProcessingTriggerComp</a></li>
@@ -53,6 +52,7 @@
 </li>
 <li><a class="el" href="classiqt_1_1_c_process_executor_comp.html">iqt::CProcessExecutorComp</a></li>
 <li><a class="el" href="classiqt_1_1_c_registries_manager_comp.html">iqt::CRegistriesManagerComp</a></li>
+<li><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html">iqt::CRegistryCodeSaverComp</a></li>
 <li><a class="el" href="classiqt_1_1_c_settings_serializer_comp.html">iqt::CSettingsSerializerComp</a></li>
 <li><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html">iqtgui::CFileDialogLoaderComp</a></li>
 <li><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html">iqtproc::CDocumentProcessingManagerCompBase</a><ul>
@@ -433,15 +433,15 @@
 </li>
 </ul>
 </li>
-<li><a class="el" href="class_c_scene_provider_gui_comp.html">CSceneProviderGuiComp</a><ul>
-<li><a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html">iqtgui::TGuiObserverWrap&lt; CSceneProviderGuiComp, CImageShape &gt;</a></li>
-</ul>
-</li>
 <li><b>CSceneProviderGuiComp</b><ul>
 <li><a class="el" href="classiqtgui_1_1_t_designer_gui_comp_base.html">iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;</a><ul>
 <li><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html">iqt2d::CSceneProviderGuiComp</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a class="el" href="class_c_scene_provider_gui_comp.html">CSceneProviderGuiComp</a><ul>
+<li><a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html">iqtgui::TGuiObserverWrap&lt; CSceneProviderGuiComp, CImageShape &gt;</a></li>
 </ul>
 </li>
 <li><a class="el" href="classisys_1_1_c_section_blocker.html">isys::CSectionBlocker</a></li>
@@ -1485,11 +1485,11 @@
 <li><a class="el" href="classibase_1_1_c_file_type_info_comp.html">ibase::CFileTypeInfoComp</a></li>
 <li><a class="el" href="classiser_1_1_i_file_loader.html">iser::IFileLoader</a><ul>
 <li><a class="el" href="classibase_1_1_c_composed_loader_comp.html">ibase::CComposedLoaderComp</a></li>
-<li><a class="el" href="classibase_1_1_c_registry_code_saver_comp.html">ibase::CRegistryCodeSaverComp</a></li>
 <li><a class="el" href="classibase_1_1_c_text_file_loader_comp.html">ibase::CTextFileLoaderComp</a></li>
 <li><a class="el" href="classibase_1_1_t_file_serializer_comp.html">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;</a></li>
 <li><a class="el" href="classiqt_1_1_c_bitmap_loader_comp.html">iqt::CBitmapLoaderComp</a></li>
 <li><a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html">iqt::CClipboardSerializerComp</a></li>
+<li><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html">iqt::CRegistryCodeSaverComp</a></li>
 <li><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html">iqt::CRenderedObjectFileLoaderComp</a></li>
 <li><a class="el" href="classiqt_1_1_c_settings_serializer_comp.html">iqt::CSettingsSerializerComp</a></li>
 <li><a class="el" href="classiqt_1_1_c_xsl_serializer_comp.html">iqt::CXslSerializerComp</a></li>
@@ -1531,7 +1531,10 @@
 </li>
 <li><a class="el" href="classicomp_1_1_i_packages_manager.html">icomp::IPackagesManager</a><ul>
 <li><a class="el" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a></li>
+<li><a class="el" href="classicomp_1_1_i_ext_packages_manager.html">icomp::IExtPackagesManager</a><ul>
 <li><a class="el" href="classiqt_1_1_c_registries_manager_comp.html">iqt::CRegistriesManagerComp</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="el" href="classicomp_1_1_i_registries_manager.html">icomp::IRegistriesManager</a><ul>
@@ -1568,6 +1571,7 @@
 <li><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html">iprm::CSelectableParamsSetComp</a></li>
 <li><a class="el" href="classiprm_1_1_c_selection_constraints_comp.html">iprm::CSelectionConstraintsComp</a></li>
 <li><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html">iproc::CIterativeProcessorComp</a></li>
+<li><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html">iqt::CRegistryCodeSaverComp</a></li>
 <li><a class="el" href="classiqt_1_1_c_translation_manager_comp.html">iqt::CTranslationManagerComp</a></li>
 </ul>
 </li>
