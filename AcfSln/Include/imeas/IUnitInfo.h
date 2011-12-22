@@ -28,7 +28,7 @@
 #include "istd/IPolymorphic.h"
 #include "istd/CRange.h"
 #include "istd/CString.h"
-#include "imath/TIValueManip.h"
+#include "imath/IDoubleManip.h"
 
 
 namespace imeas

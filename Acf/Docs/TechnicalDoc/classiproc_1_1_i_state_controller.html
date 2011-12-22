@@ -48,10 +48,11 @@ Inheritance diagram for iproc::IStateController:</div>
  <div class="center">
   <img src="classiproc_1_1_i_state_controller.png" usemap="#iproc::IStateController_map" alt=""/>
   <map id="iproc::IStateController_map" name="iproc::IStateController_map">
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="133,56,390,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="133,0,390,24"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="267,56,524,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="267,0,524,24"/>
 <area href="classiwiz_1_1_c_composed_state_controller_comp.html" title="Component implementation of a wizard page." alt="iwiz::CComposedStateControllerComp" shape="rect" coords="0,168,257,192"/>
 <area href="classiwiz_1_1_c_selection_consistency_controller_comp.html" title="Component implementation of a wizard controller." alt="iwiz::CSelectionConsistencyControllerComp" shape="rect" coords="267,168,524,192"/>
+<area href="classiwiz_1_1_c_state_controller_comp_base.html" alt="iwiz::CStateControllerCompBase" shape="rect" coords="534,168,791,192"/>
 </map>
  </div></div>
 
@@ -61,7 +62,8 @@ Inheritance diagram for iproc::IStateController:</div>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_state_controller.html#a689c37ae7122c3dcf699bd8d0f721a2e">ChangeFlags</a> { <a class="el" href="classiproc_1_1_i_state_controller.html#a689c37ae7122c3dcf699bd8d0f721a2eac4e9320a483212dc73c200dcce456e8c">CF_STATE_ENTERED</a> =  0x100000, 
 <a class="el" href="classiproc_1_1_i_state_controller.html#a689c37ae7122c3dcf699bd8d0f721a2ea99855149be815e58d177b0986ace78fe">CF_STATE_LEAVED</a> =  0x200000, 
-<a class="el" href="classiproc_1_1_i_state_controller.html#a689c37ae7122c3dcf699bd8d0f721a2eaf1c410d785c523a7bc0f7dcbb40bdec5">CF_GRAPH_CHANGED</a> =  0x400000
+<a class="el" href="classiproc_1_1_i_state_controller.html#a689c37ae7122c3dcf699bd8d0f721a2eaf1c410d785c523a7bc0f7dcbb40bdec5">CF_GRAPH_CHANGED</a> =  0x400000, 
+<a class="el" href="classiproc_1_1_i_state_controller.html#a689c37ae7122c3dcf699bd8d0f721a2ea15711255a2b455bd2c63d245d2fd68aa">CF_STATE_ENABLED</a> =  0x800000
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -99,6 +101,8 @@ Public Member Functions</h2></td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a689c37ae7122c3dcf699bd8d0f721a2ea99855149be815e58d177b0986ace78fe"></a><!-- doxytag: member="CF_STATE_LEAVED" ref="a689c37ae7122c3dcf699bd8d0f721a2ea99855149be815e58d177b0986ace78fe" args="" -->CF_STATE_LEAVED</em>&nbsp;</td><td>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a689c37ae7122c3dcf699bd8d0f721a2eaf1c410d785c523a7bc0f7dcbb40bdec5"></a><!-- doxytag: member="CF_GRAPH_CHANGED" ref="a689c37ae7122c3dcf699bd8d0f721a2eaf1c410d785c523a7bc0f7dcbb40bdec5" args="" -->CF_GRAPH_CHANGED</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a689c37ae7122c3dcf699bd8d0f721a2ea15711255a2b455bd2c63d245d2fd68aa"></a><!-- doxytag: member="CF_STATE_ENABLED" ref="a689c37ae7122c3dcf699bd8d0f721a2ea15711255a2b455bd2c63d245d2fd68aa" args="" -->CF_STATE_ENABLED</em>&nbsp;</td><td>
 </td></tr>
 </table>
 </dd>
@@ -203,7 +207,7 @@ Public Member Functions</h2></td></tr>
 <p>State is active, if it was succesfully entered and becomes inactive if it was succesfully leaved. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><code><a class="el" href="classiproc_1_1_i_state_controller.html#a206ddfb8927d571047516503ca243b3d" title="Try enter this state.">TryEnterState</a></code> and <code><a class="el" href="classiproc_1_1_i_state_controller.html#adec23e99e03a45c23beef49b5e56e264" title="Try leave this state.">TryLeaveState</a></code>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a6fc8965a21eeeffe4b159a88890a30aa">iwiz::CSelectionConsistencyControllerComp</a>, and <a class="el" href="classiwiz_1_1_c_composed_state_controller_comp.html#a650c5e65a65b502b300a379742ca964a">iwiz::CComposedStateControllerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a6fc8965a21eeeffe4b159a88890a30aa">iwiz::CSelectionConsistencyControllerComp</a>, <a class="el" href="classiwiz_1_1_c_composed_state_controller_comp.html#a650c5e65a65b502b300a379742ca964a">iwiz::CComposedStateControllerComp</a>, and <a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a3145d5629097dabf40500202eaab40f3">iwiz::CStateControllerCompBase</a>.</p>
 
 </div>
 </div>
@@ -224,7 +228,7 @@ Public Member Functions</h2></td></tr>
 <p>Check if state is enabled. </p>
 <p>If state is disabled it will be not considered as a element of transition graph. State is disabled e.g. if some preselection turns it off. </p>
 
-<p>Implemented in <a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#af70ee1565400bfef9844a8b124fecd7d">iwiz::CSelectionConsistencyControllerComp</a>, and <a class="el" href="classiwiz_1_1_c_composed_state_controller_comp.html#aa34fbe4558ea6542a3ae23b67683de76">iwiz::CComposedStateControllerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#af70ee1565400bfef9844a8b124fecd7d">iwiz::CSelectionConsistencyControllerComp</a>, <a class="el" href="classiwiz_1_1_c_composed_state_controller_comp.html#aa34fbe4558ea6542a3ae23b67683de76">iwiz::CComposedStateControllerComp</a>, and <a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#ac13124fbb50151b993623a940026257f">iwiz::CStateControllerCompBase</a>.</p>
 
 </div>
 </div>

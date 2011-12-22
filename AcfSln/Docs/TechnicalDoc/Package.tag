@@ -945,14 +945,6 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
-    <name>ISearchModel.h</name>
-    <path>C:/Temp/AcfSln/Include/iipr/</path>
-    <filename>_i_search_model_8h</filename>
-    <includes id="_i_search_params_8h" name="ISearchParams.h" local="yes" imported="no">iipr/ISearchParams.h</includes>
-    <class kind="class">iipr::ISearchModel</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
     <name>ISearchParams.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_search_params_8h</filename>
@@ -1690,7 +1682,16 @@
     <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>_c_numeric_params_gui_comp_8h</filename>
     <includes id="_i_numeric_params_8h" name="INumericParams.h" local="yes" imported="no">imeas/INumericParams.h</includes>
+    <includes id="_c_numeric_value_widget_8h" name="CNumericValueWidget.h" local="yes" imported="no">iqtmeas/CNumericValueWidget.h</includes>
     <class kind="class">iqtmeas::CNumericParamsGuiComp</class>
+    <namespace>iqtmeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CNumericValueWidget.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
+    <filename>_c_numeric_value_widget_8h</filename>
+    <includes id="_i_unit_info_8h" name="IUnitInfo.h" local="yes" imported="no">imeas/IUnitInfo.h</includes>
+    <class kind="class">iqtmeas::CNumericValueWidget</class>
     <namespace>iqtmeas</namespace>
   </compound>
   <compound kind="file">
@@ -4960,7 +4961,6 @@
     <class kind="class">iipr::IProjectionConstraints</class>
     <class kind="class">iipr::IProjectionParams</class>
     <class kind="class">iipr::IRingPatternGeneratorParams</class>
-    <class kind="class">iipr::ISearchModel</class>
     <class kind="class">iipr::ISearchParams</class>
     <class kind="class">iipr::TFeatureWrap</class>
     <class kind="class">iipr::TImageParamProcessorCompBase</class>
@@ -7327,39 +7327,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iipr::ISearchModel</name>
-    <filename>classiipr_1_1_i_search_model.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>CreateFromImage</name>
-      <anchorfile>classiipr_1_1_i_search_model.html</anchorfile>
-      <anchor>a7ffededff9e23a87b32e6b1eba93ba52</anchor>
-      <arglist>(const iimg::IBitmap &amp;modelImage, const iipr::ISearchParams *params)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsModelValid</name>
-      <anchorfile>classiipr_1_1_i_search_model.html</anchorfile>
-      <anchor>abb90773395777017e5e42f267578eb9d</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>ResetModel</name>
-      <anchorfile>classiipr_1_1_i_search_model.html</anchorfile>
-      <anchor>afad8eaa7c4f7446b979c3d7705e9992f</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const iimg::IBitmap &amp;</type>
-      <name>GetImage</name>
-      <anchorfile>classiipr_1_1_i_search_model.html</anchorfile>
-      <anchor>a8dd5a2bc7d7038906342641cdf340293</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iipr::ISearchParams</name>
     <filename>classiipr_1_1_i_search_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
@@ -7432,34 +7399,6 @@
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
       <anchor>aa8ed7557cfd27fcf7d282a5729c0043c</anchor>
       <arglist>(int nominalModelsCount)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsRotationEnabled</name>
-      <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>afa42937c461f19e3feba4c18723c02ce</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetRotationEnabled</name>
-      <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>ab9abc678eb004570141dec6bf03979a2</anchor>
-      <arglist>(bool isRotationEnabled)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsScaleEnabled</name>
-      <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>a4f4576ab8e434068cd1ca726382d7838</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetScaleEnabled</name>
-      <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>a13348f23926f948935266780709018dc</anchor>
-      <arglist>(bool isScaleEnabled)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12120,6 +12059,7 @@
     <class kind="class">iqtmeas::CDataSequenceViewComp</class>
     <class kind="class">iqtmeas::CDataStatisticsGuiComp</class>
     <class kind="class">iqtmeas::CNumericParamsGuiComp</class>
+    <class kind="class">iqtmeas::CNumericValueWidget</class>
   </compound>
   <compound kind="class">
     <name>iqtmeas::CDataSequenceViewComp</name>
@@ -12272,19 +12212,19 @@
   <compound kind="class">
     <name>iqtmeas::CNumericParamsGuiComp</name>
     <filename>classiqtmeas_1_1_c_numeric_params_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CNumericParamsGuiComp, imeas::INumericParams &gt;</base>
+    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::INumericParams &gt; &gt; &gt;</base>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CNumericParamsGuiComp, imeas::INumericParams &gt;</type>
+      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::INumericParams &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
-      <anchor>a418987080191c4aa536a1b61716ec89c</anchor>
+      <anchor>ac4980ec49e2d6d095e1218763194bfa7</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>CNumericParamsGuiComp</name>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnValueChanged</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
-      <anchor>ab6aa965aac9c4047f11d513fc7ff14b0</anchor>
+      <anchor>acef378fdfa0f680884dc098cb4110519</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -12294,40 +12234,72 @@
       <anchor>a940f409ec2d5182ebc44d18d676ad8f7</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_FilterWidthSlider_valueChanged</name>
-      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
-      <anchor>a21fd97c918436177805c1d8338f3cd0a</anchor>
-      <arglist>(int value)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_FilterHeightSlider_valueChanged</name>
-      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
-      <anchor>ad167b1def302e4b66b552720952d2ffb</anchor>
-      <arglist>(int value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateLabel</name>
-      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
-      <anchor>a4c4cb9d7d0e467420407eb34a67bc1b0</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
+      <name>OnGuiDestroyed</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
-      <anchor>a47b1bfaea54e4c6c902bebb624c75d03</anchor>
+      <anchor>a4f438f3020d29784b1221a7fc09357e1</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
-      <anchor>ade46846b596bf5f4495c788e1248e3d3</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a63dc4b15868a9b8127ed99b95c71d04d</anchor>
+      <arglist>(int changeFlags)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtmeas::CNumericValueWidget</name>
+    <filename>classiqtmeas_1_1_c_numeric_value_widget.html</filename>
+    <member kind="signal">
+      <type>void</type>
+      <name>ValueChanged</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>ad8f924063a52a88d21792445b7903148</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CNumericValueWidget</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>acff996dd4c710168d1e091689bb71cdb</anchor>
+      <arglist>(QWidget *parentPtr=NULL, bool showSlilder=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetUnitInfo</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>a9514b6ffc75d3b944e2f1ad7ba618173</anchor>
+      <arglist>(const istd::CString &amp;description, const imeas::IUnitInfo &amp;unitInfo)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetValue</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>a8e1fa3954a5f93c9d4b408ea9af61e60</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetValue</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>a65082783af4ceab4e60bc7621bf2c924</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ValueSB_valueChanged</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>a1b7b26eed28a80b173cab9193807d4c8</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ValueSlider_valueChanged</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>a02af3b5f5b151fda2ebbe7321a126a9a</anchor>
+      <arglist>(int value)</arglist>
     </member>
   </compound>
   <compound kind="namespace">

@@ -27,6 +27,7 @@
 #include "icomp/CComponentBase.h"
 
 #include "imod/CSingleModelObserverBase.h"
+#include "imod/CMultiModelBridgeBase.h"
 
 #include "iprm/ISelectionConstraints.h"
 #include "iprm/IParamsSet.h"
@@ -43,6 +44,7 @@ namespace iprm
 */
 class CSelectableParamsSetComp:
 			public icomp::CComponentBase,
+			protected imod::CMultiModelBridgeBase,
 			virtual public iprm::IParamsSet,
 			virtual public iprm::ISelectionParam,
 			virtual protected iprm::ISelectionConstraints
@@ -91,6 +93,7 @@ protected:
 
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
 
 private:
 	/**

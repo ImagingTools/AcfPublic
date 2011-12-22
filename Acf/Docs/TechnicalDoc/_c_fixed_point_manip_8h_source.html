@@ -51,118 +51,113 @@
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037        <a class="code" href="classimath_1_1_c_fixed_point_manip.html#ad68e94db3c10935c46714e119930d1dc">CFixedPointManip</a>(<span class="keywordtype">int</span> precision = 1, <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523">RoundingType</a> roundingType = <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523aef969bdad266dc77ec143d5f8fc871ea" title="Normal mathematical rounding to the nearest value.">RT_NORMAL</a>);
 <a name="l00038"></a>00038 
-<a name="l00043"></a>00043        <span class="keywordtype">int</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a88eaec1f326aa163781415a8fd51b8c5" title="Get fixed point precision.">GetPrecision</a>() <span class="keyword">const</span>;
-<a name="l00044"></a>00044 
-<a name="l00048"></a>00048        <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a93c4e43e25b5c2e621d874017877197a" title="Set fixed point precision.">SetPrecision</a>(<span class="keywordtype">int</span> precision);
-<a name="l00049"></a>00049 
-<a name="l00052"></a>00052        <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523">RoundingType</a> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a91069dacc1251b3ce4376e5b33860302" title="Get type of rounding.">GetRoundingType</a>() <span class="keyword">const</span>;
-<a name="l00053"></a>00053 
-<a name="l00056"></a>00056        <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a54608eb2f983c80dd6d12548ff304f97" title="Set type of rounding.">SetRoundingType</a>(<a class="code" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523">RoundingType</a> roundingType);
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058        <span class="comment">// reimplemented (imath::TIValueManip)</span>
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#ac9a38108293f6f495031a468c3ce8096">GetRounded</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value) <span class="keyword">const</span>;
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a87cc7a2553f010bcd2840865c6d030a7">IsEqual</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value1, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value2) <span class="keyword">const</span>;
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a2581f983cf39e8a5f21ec6bde15ea457">IsSmaller</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value1, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value2) <span class="keyword">const</span>;
-<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#ac7db35c940ae2851814040b4f54bd91d">IsSmallerEqual</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value1, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value2) <span class="keyword">const</span>;
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a66b9491742bb61fa2e4534c088059c90">GetSmallerValue</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value) <span class="keyword">const</span>;
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a932b2a864d7f7770cd4b2eec66738e17">GetBiggerValue</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value) <span class="keyword">const</span>;
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> std::string <a class="code" href="classimath_1_1_c_fixed_point_manip.html#ae8a590d231d1ef0b221e307f5ac7f573">GetString</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value) <span class="keyword">const</span>;
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1ed6a20d8ed43ef7089958500362224d">GetParsed</a>(<span class="keyword">const</span> std::string&amp; text, <span class="keywordtype">double</span>&amp; result) <span class="keyword">const</span>;
+<a name="l00042"></a>00042        <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a93c4e43e25b5c2e621d874017877197a" title="Set fixed point precision.">SetPrecision</a>(<span class="keywordtype">int</span> precision);
+<a name="l00043"></a>00043 
+<a name="l00046"></a>00046        <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523">RoundingType</a> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a91069dacc1251b3ce4376e5b33860302" title="Get type of rounding.">GetRoundingType</a>() <span class="keyword">const</span>;
+<a name="l00047"></a>00047 
+<a name="l00050"></a>00050        <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a54608eb2f983c80dd6d12548ff304f97" title="Set type of rounding.">SetRoundingType</a>(<a class="code" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523">RoundingType</a> roundingType);
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052        <span class="comment">// reimplemented (imath::IDoubleManip)</span>
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a602f3900dcbfdcab750fee3e95cbffbb" title="Get number of digits after point.">GetPrecision</a>() <span class="keyword">const</span>;
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055        <span class="comment">// reimplemented (imath::TIValueManip)</span>
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#ac9a38108293f6f495031a468c3ce8096" title="Get the nearest value rounded used this arithmetik.">GetRounded</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value) <span class="keyword">const</span>;
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a87cc7a2553f010bcd2840865c6d030a7" title="Compare two values and check, if there are equal.">IsEqual</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value1, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value2) <span class="keyword">const</span>;
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a2581f983cf39e8a5f21ec6bde15ea457" title="Compare two values and check, if first one is smaller as the second.">IsSmaller</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value1, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value2) <span class="keyword">const</span>;
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#ac7db35c940ae2851814040b4f54bd91d" title="Compare two values and check, if first one is smaller or equal as the second.">IsSmallerEqual</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value1, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value2) <span class="keyword">const</span>;
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a66b9491742bb61fa2e4534c088059c90" title="Return biggest value smaller that specified one.">GetSmallerValue</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value) <span class="keyword">const</span>;
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a932b2a864d7f7770cd4b2eec66738e17" title="Return smallest value bigger that specified one.">GetBiggerValue</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value) <span class="keyword">const</span>;
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> std::string <a class="code" href="classimath_1_1_c_fixed_point_manip.html#ae8a590d231d1ef0b221e307f5ac7f573" title="Get this value as string.">GetString</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value) <span class="keyword">const</span>;
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1ed6a20d8ed43ef7089958500362224d" title="Get value converted from string.">GetParsed</a>(<span class="keyword">const</span> std::string&amp; text, <span class="keywordtype">double</span>&amp; result) <span class="keyword">const</span>;
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 <span class="keyword">protected</span>:
+<a name="l00066"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1ce4e3155cb2cd1881c0cd9edcaa379c">00066</a>        <span class="keyword">typedef</span> double (*<a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1ce4e3155cb2cd1881c0cd9edcaa379c">RoundingFuntionPtr</a>)(<span class="keywordtype">double</span> value);
 <a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="keyword">protected</span>:
-<a name="l00069"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1ce4e3155cb2cd1881c0cd9edcaa379c">00069</a>        <span class="keyword">typedef</span> double (*<a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1ce4e3155cb2cd1881c0cd9edcaa379c">RoundingFuntionPtr</a>)(<span class="keywordtype">double</span> value);
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <a class="code" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(<span class="keywordtype">double</span> value) <span class="keyword">const</span>;
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a4be74d3c00abd16fbc14daca1a87f61d">GetNormalValue</a>(<a class="code" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a> intValue) <span class="keyword">const</span>;
 <a name="l00070"></a>00070 
-<a name="l00071"></a>00071        <span class="keyword">virtual</span> <a class="code" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(<span class="keywordtype">double</span> value) <span class="keyword">const</span>;
-<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a4be74d3c00abd16fbc14daca1a87f61d">GetNormalValue</a>(<a class="code" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a> intValue) <span class="keyword">const</span>;
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074        std::string <a class="code" href="classimath_1_1_c_fixed_point_manip.html#ae8a590d231d1ef0b221e307f5ac7f573">GetString</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value, <span class="keywordtype">int</span> precision) <span class="keyword">const</span>;
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076        <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a8f4b537ed998948edf0ff5eae4fb0bd8">NormalRoundFuntion</a>(<span class="keywordtype">double</span> value);
-<a name="l00077"></a>00077 
-<a name="l00078"></a>00078 <span class="keyword">private</span>:
-<a name="l00079"></a>00079        <span class="keywordtype">int</span> m_precision;
-<a name="l00080"></a>00080        <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523">RoundingType</a> m_roundingType;
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082        <span class="keyword">static</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1ce4e3155cb2cd1881c0cd9edcaa379c">RoundingFuntionPtr</a> m_roundingFuntionsPtr[<a class="code" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523a805598988e3b876ef48d97e9927785ba">RT_LAST</a> + 1];
+<a name="l00071"></a>00071        std::string <a class="code" href="classimath_1_1_c_fixed_point_manip.html#ae8a590d231d1ef0b221e307f5ac7f573" title="Get this value as string.">GetString</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value, <span class="keywordtype">int</span> precision) <span class="keyword">const</span>;
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073        <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a8f4b537ed998948edf0ff5eae4fb0bd8">NormalRoundFuntion</a>(<span class="keywordtype">double</span> value);
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075 <span class="keyword">private</span>:
+<a name="l00076"></a>00076        <span class="keywordtype">int</span> m_precision;
+<a name="l00077"></a>00077        <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523">RoundingType</a> m_roundingType;
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079        <span class="keyword">static</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1ce4e3155cb2cd1881c0cd9edcaa379c">RoundingFuntionPtr</a> m_roundingFuntionsPtr[<a class="code" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523a805598988e3b876ef48d97e9927785ba">RT_LAST</a> + 1];
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081        <span class="keywordtype">double</span> m_scaleToIntFactor;
+<a name="l00082"></a>00082 };
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084        <span class="keywordtype">double</span> m_scaleToIntFactor;
-<a name="l00085"></a>00085 };
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 <span class="comment">// inline methods</span>
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088 <span class="comment">// inline methods</span>
-<a name="l00089"></a>00089 
-<a name="l00090"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a88eaec1f326aa163781415a8fd51b8c5">00090</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a88eaec1f326aa163781415a8fd51b8c5" title="Get fixed point precision.">CFixedPointManip::GetPrecision</a>()<span class="keyword"> const</span>
-<a name="l00091"></a>00091 <span class="keyword"></span>{
-<a name="l00092"></a>00092        <span class="keywordflow">return</span> m_precision;
-<a name="l00093"></a>00093 }
+<a name="l00087"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a91069dacc1251b3ce4376e5b33860302">00087</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523">CFixedPointManip::RoundingType</a> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a91069dacc1251b3ce4376e5b33860302" title="Get type of rounding.">CFixedPointManip::GetRoundingType</a>()<span class="keyword"> const</span>
+<a name="l00088"></a>00088 <span class="keyword"></span>{
+<a name="l00089"></a>00089        <span class="keywordflow">return</span> m_roundingType;
+<a name="l00090"></a>00090 }
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093 <span class="comment">// reimplemented (imath::TIValueManip)</span>
 <a name="l00094"></a>00094 
-<a name="l00095"></a>00095 
-<a name="l00096"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a91069dacc1251b3ce4376e5b33860302">00096</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523">CFixedPointManip::RoundingType</a> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a91069dacc1251b3ce4376e5b33860302" title="Get type of rounding.">CFixedPointManip::GetRoundingType</a>()<span class="keyword"> const</span>
-<a name="l00097"></a>00097 <span class="keyword"></span>{
-<a name="l00098"></a>00098        <span class="keywordflow">return</span> m_roundingType;
-<a name="l00099"></a>00099 }
+<a name="l00095"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#ac9a38108293f6f495031a468c3ce8096">00095</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#ac9a38108293f6f495031a468c3ce8096" title="Get the nearest value rounded used this arithmetik.">CFixedPointManip::GetRounded</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value)<span class="keyword"> const</span>
+<a name="l00096"></a>00096 <span class="keyword"></span>{
+<a name="l00097"></a>00097        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a4be74d3c00abd16fbc14daca1a87f61d">GetNormalValue</a>(<a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value));
+<a name="l00098"></a>00098 }
+<a name="l00099"></a>00099 
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="comment">// reimplemented (imath::TIValueManip)</span>
-<a name="l00103"></a>00103 
-<a name="l00104"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#ac9a38108293f6f495031a468c3ce8096">00104</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#ac9a38108293f6f495031a468c3ce8096">CFixedPointManip::GetRounded</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value)<span class="keyword"> const</span>
-<a name="l00105"></a>00105 <span class="keyword"></span>{
-<a name="l00106"></a>00106        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a4be74d3c00abd16fbc14daca1a87f61d">GetNormalValue</a>(<a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value));
-<a name="l00107"></a>00107 }
-<a name="l00108"></a>00108 
-<a name="l00109"></a>00109 
-<a name="l00110"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a87cc7a2553f010bcd2840865c6d030a7">00110</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a87cc7a2553f010bcd2840865c6d030a7">CFixedPointManip::IsEqual</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value1, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value2)<span class="keyword"> const</span>
-<a name="l00111"></a>00111 <span class="keyword"></span>{
-<a name="l00112"></a>00112        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value1) == <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value2);
-<a name="l00113"></a>00113 }
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115 
-<a name="l00116"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a2581f983cf39e8a5f21ec6bde15ea457">00116</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a2581f983cf39e8a5f21ec6bde15ea457">CFixedPointManip::IsSmaller</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value1, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value2)<span class="keyword"> const</span>
-<a name="l00117"></a>00117 <span class="keyword"></span>{
-<a name="l00118"></a>00118        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value1) &lt; <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value2);
-<a name="l00119"></a>00119 }
-<a name="l00120"></a>00120 
-<a name="l00121"></a>00121 
-<a name="l00122"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#ac7db35c940ae2851814040b4f54bd91d">00122</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#ac7db35c940ae2851814040b4f54bd91d">CFixedPointManip::IsSmallerEqual</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value1, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value2)<span class="keyword"> const</span>
-<a name="l00123"></a>00123 <span class="keyword"></span>{
-<a name="l00124"></a>00124        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value1) &lt;= <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value2);
-<a name="l00125"></a>00125 }
-<a name="l00126"></a>00126 
-<a name="l00127"></a>00127 
-<a name="l00128"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a66b9491742bb61fa2e4534c088059c90">00128</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a66b9491742bb61fa2e4534c088059c90">CFixedPointManip::GetSmallerValue</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value)<span class="keyword"> const</span>
-<a name="l00129"></a>00129 <span class="keyword"></span>{
-<a name="l00130"></a>00130        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a4be74d3c00abd16fbc14daca1a87f61d">GetNormalValue</a>(<a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value) - 1);
-<a name="l00131"></a>00131 }
+<a name="l00101"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a87cc7a2553f010bcd2840865c6d030a7">00101</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a87cc7a2553f010bcd2840865c6d030a7" title="Compare two values and check, if there are equal.">CFixedPointManip::IsEqual</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value1, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value2)<span class="keyword"> const</span>
+<a name="l00102"></a>00102 <span class="keyword"></span>{
+<a name="l00103"></a>00103        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value1) == <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value2);
+<a name="l00104"></a>00104 }
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106 
+<a name="l00107"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a2581f983cf39e8a5f21ec6bde15ea457">00107</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a2581f983cf39e8a5f21ec6bde15ea457" title="Compare two values and check, if first one is smaller as the second.">CFixedPointManip::IsSmaller</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value1, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value2)<span class="keyword"> const</span>
+<a name="l00108"></a>00108 <span class="keyword"></span>{
+<a name="l00109"></a>00109        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value1) &lt; <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value2);
+<a name="l00110"></a>00110 }
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112 
+<a name="l00113"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#ac7db35c940ae2851814040b4f54bd91d">00113</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#ac7db35c940ae2851814040b4f54bd91d" title="Compare two values and check, if first one is smaller or equal as the second.">CFixedPointManip::IsSmallerEqual</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value1, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value2)<span class="keyword"> const</span>
+<a name="l00114"></a>00114 <span class="keyword"></span>{
+<a name="l00115"></a>00115        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value1) &lt;= <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value2);
+<a name="l00116"></a>00116 }
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118 
+<a name="l00119"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a66b9491742bb61fa2e4534c088059c90">00119</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a66b9491742bb61fa2e4534c088059c90" title="Return biggest value smaller that specified one.">CFixedPointManip::GetSmallerValue</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value)<span class="keyword"> const</span>
+<a name="l00120"></a>00120 <span class="keyword"></span>{
+<a name="l00121"></a>00121        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a4be74d3c00abd16fbc14daca1a87f61d">GetNormalValue</a>(<a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value) - 1);
+<a name="l00122"></a>00122 }
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 
+<a name="l00125"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a932b2a864d7f7770cd4b2eec66738e17">00125</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a932b2a864d7f7770cd4b2eec66738e17" title="Return smallest value bigger that specified one.">CFixedPointManip::GetBiggerValue</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value)<span class="keyword"> const</span>
+<a name="l00126"></a>00126 <span class="keyword"></span>{
+<a name="l00127"></a>00127        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a4be74d3c00abd16fbc14daca1a87f61d">GetNormalValue</a>(<a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value) + 1);
+<a name="l00128"></a>00128 }
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131 <span class="comment">// protected methods</span>
 <a name="l00132"></a>00132 
-<a name="l00133"></a>00133 
-<a name="l00134"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a932b2a864d7f7770cd4b2eec66738e17">00134</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a932b2a864d7f7770cd4b2eec66738e17">CFixedPointManip::GetBiggerValue</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; value)<span class="keyword"> const</span>
-<a name="l00135"></a>00135 <span class="keyword"></span>{
-<a name="l00136"></a>00136        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a4be74d3c00abd16fbc14daca1a87f61d">GetNormalValue</a>(<a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a>(value) + 1);
-<a name="l00137"></a>00137 }
-<a name="l00138"></a>00138 
+<a name="l00133"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">00133</a> <span class="keyword">inline</span> <a class="code" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">CFixedPointManip::GetInternalValue</a>(<span class="keywordtype">double</span> value)<span class="keyword"> const</span>
+<a name="l00134"></a>00134 <span class="keyword"></span>{
+<a name="l00135"></a>00135        <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1ce4e3155cb2cd1881c0cd9edcaa379c">RoundingFuntionPtr</a> <span class="keyword">function</span> = m_roundingFuntionsPtr[m_roundingType];
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a>(<span class="keyword">function</span>(value * m_scaleToIntFactor + 0.5));
+<a name="l00138"></a>00138 }
 <a name="l00139"></a>00139 
-<a name="l00140"></a>00140 <span class="comment">// protected methods</span>
-<a name="l00141"></a>00141 
-<a name="l00142"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">00142</a> <span class="keyword">inline</span> <a class="code" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">CFixedPointManip::GetInternalValue</a>(<span class="keywordtype">double</span> value)<span class="keyword"> const</span>
-<a name="l00143"></a>00143 <span class="keyword"></span>{
-<a name="l00144"></a>00144        <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a1ce4e3155cb2cd1881c0cd9edcaa379c">RoundingFuntionPtr</a> <span class="keyword">function</span> = m_roundingFuntionsPtr[m_roundingType];
+<a name="l00140"></a>00140 
+<a name="l00141"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a4be74d3c00abd16fbc14daca1a87f61d">00141</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a4be74d3c00abd16fbc14daca1a87f61d">CFixedPointManip::GetNormalValue</a>(<a class="code" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a> intValue)<span class="keyword"> const</span>
+<a name="l00142"></a>00142 <span class="keyword"></span>{
+<a name="l00143"></a>00143        <span class="keywordflow">return</span> intValue / m_scaleToIntFactor;
+<a name="l00144"></a>00144 }
 <a name="l00145"></a>00145 
-<a name="l00146"></a>00146        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a>(<span class="keyword">function</span>(value * m_scaleToIntFactor + 0.5));
-<a name="l00147"></a>00147 }
+<a name="l00146"></a>00146 
+<a name="l00147"></a>00147 } <span class="comment">// namespace imath</span>
 <a name="l00148"></a>00148 
 <a name="l00149"></a>00149 
-<a name="l00150"></a><a class="code" href="classimath_1_1_c_fixed_point_manip.html#a4be74d3c00abd16fbc14daca1a87f61d">00150</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a4be74d3c00abd16fbc14daca1a87f61d">CFixedPointManip::GetNormalValue</a>(<a class="code" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a> intValue)<span class="keyword"> const</span>
-<a name="l00151"></a>00151 <span class="keyword"></span>{
-<a name="l00152"></a>00152        <span class="keywordflow">return</span> intValue / m_scaleToIntFactor;
-<a name="l00153"></a>00153 }
-<a name="l00154"></a>00154 
-<a name="l00155"></a>00155 
-<a name="l00156"></a>00156 } <span class="comment">// namespace imath</span>
-<a name="l00157"></a>00157 
-<a name="l00158"></a>00158 
-<a name="l00159"></a>00159 <span class="preprocessor">#endif // !imath_CFixedPointManip_included</span>
-<a name="l00160"></a>00160 <span class="preprocessor"></span>
-<a name="l00161"></a>00161 
+<a name="l00150"></a>00150 <span class="preprocessor">#endif // !imath_CFixedPointManip_included</span>
+<a name="l00151"></a>00151 <span class="preprocessor"></span>
+<a name="l00152"></a>00152 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

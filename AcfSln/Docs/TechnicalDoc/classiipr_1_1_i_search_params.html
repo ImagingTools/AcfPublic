@@ -67,7 +67,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a8bbb7f79fb3e93ffbff78990c47c8538">SetMinScore</a> (double minScore)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set minimum score for a succefull search.  <a href="#a8bbb7f79fb3e93ffbff78990c47c8538"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a388a2b254d790f8ba3db86befb178ed6">GetRotationRange</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set minimum score for a succefull search.  <a href="#a388a2b254d790f8ba3db86befb178ed6"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get rotation range for the model search.  <a href="#a388a2b254d790f8ba3db86befb178ed6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a2345bbd541b1753e28e7a024ad994b4e">SetRotationRange</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a> &amp;angleRange)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rotation range for the model search.  <a href="#a2345bbd541b1753e28e7a024ad994b4e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#aca78512a786767871db8575871fd6f6c">GetScaleRange</a> () const =0</td></tr>
@@ -78,14 +78,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of models that should be found for a successfull search result.  <a href="#ae551a172057a394d39d5274ea00f0561"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#aa8ed7557cfd27fcf7d282a5729c0043c">SetNominalModelsCount</a> (int nominalModelsCount)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of models that should be found for a successfull search result.  <a href="#aa8ed7557cfd27fcf7d282a5729c0043c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#afa42937c461f19e3feba4c18723c02ce">IsRotationEnabled</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <code>true</code> if the rotation invariance is enabled.  <a href="#afa42937c461f19e3feba4c18723c02ce"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#ab9abc678eb004570141dec6bf03979a2">SetRotationEnabled</a> (bool isRotationEnabled)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the rotation invariance.  <a href="#ab9abc678eb004570141dec6bf03979a2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a4f4576ab8e434068cd1ca726382d7838">IsScaleEnabled</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <code>true</code> if the scale invariance is enabled.  <a href="#a4f4576ab8e434068cd1ca726382d7838"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a13348f23926f948935266780709018dc">SetScaleEnabled</a> (bool isScaleEnabled)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the scale invariance.  <a href="#a13348f23926f948935266780709018dc"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for a set of parameters for a model search. </p>
@@ -164,7 +156,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Set minimum score for a succefull search. </p>
+<p>Get rotation range for the model search. </p>
 
 <p>Implemented in <a class="el" href="classiipr_1_1_c_search_params.html#ae781c61124782820a4d3ef1d29e9ceb8">iipr::CSearchParams</a>.</p>
 
@@ -211,46 +203,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afa42937c461f19e3feba4c18723c02ce"></a><!-- doxytag: member="iipr::ISearchParams::IsRotationEnabled" ref="afa42937c461f19e3feba4c18723c02ce" args="() const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iipr::ISearchParams::IsRotationEnabled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get <code>true</code> if the rotation invariance is enabled. </p>
-
-<p>Implemented in <a class="el" href="classiipr_1_1_c_search_params.html#a33134a6c224f9764a26e1c8afb2b7339">iipr::CSearchParams</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4f4576ab8e434068cd1ca726382d7838"></a><!-- doxytag: member="iipr::ISearchParams::IsScaleEnabled" ref="a4f4576ab8e434068cd1ca726382d7838" args="() const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iipr::ISearchParams::IsScaleEnabled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get <code>true</code> if the scale invariance is enabled. </p>
-
-<p>Implemented in <a class="el" href="classiipr_1_1_c_search_params.html#a2e2672d55c106790d6df938e1aff7410">iipr::CSearchParams</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a8bbb7f79fb3e93ffbff78990c47c8538"></a><!-- doxytag: member="iipr::ISearchParams::SetMinScore" ref="a8bbb7f79fb3e93ffbff78990c47c8538" args="(double minScore)=0" -->
 <div class="memitem">
 <div class="memproto">
@@ -290,34 +242,12 @@ Public Member Functions</h2></td></tr>
 <p>Set the number of models that should be found for a successfull search result. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">nominalModelsCount</td><td>number of models. </td></tr>
+    <tr><td class="paramname">nominalModelsCount</td><td>number of models. The negative value means any number of models can be found. </td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Implemented in <a class="el" href="classiipr_1_1_c_search_params.html#a00970b5ff197d26f84a2f7eb020a9e50">iipr::CSearchParams</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab9abc678eb004570141dec6bf03979a2"></a><!-- doxytag: member="iipr::ISearchParams::SetRotationEnabled" ref="ab9abc678eb004570141dec6bf03979a2" args="(bool isRotationEnabled)=0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iipr::ISearchParams::SetRotationEnabled </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isRotationEnabled</em></td><td>)</td>
-          <td><code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Enable the rotation invariance. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiipr_1_1_i_search_params.html#a2345bbd541b1753e28e7a024ad994b4e" title="Set rotation range for the model search.">SetRotationRange()</a>, <a class="el" href="classiipr_1_1_i_search_params.html#a388a2b254d790f8ba3db86befb178ed6" title="Set minimum score for a succefull search.">GetRotationRange()</a> </dd></dl>
-
-<p>Implemented in <a class="el" href="classiipr_1_1_c_search_params.html#a886d7fe683183de0af923c6518ca9dd9">iipr::CSearchParams</a>.</p>
 
 </div>
 </div>
@@ -337,30 +267,9 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Set rotation range for the model search. </p>
+<p>Range [0, 0] means the rotation invariance is off. </p>
 
 <p>Implemented in <a class="el" href="classiipr_1_1_c_search_params.html#a84205c2bf81c43336de057d394cd7f71">iipr::CSearchParams</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a13348f23926f948935266780709018dc"></a><!-- doxytag: member="iipr::ISearchParams::SetScaleEnabled" ref="a13348f23926f948935266780709018dc" args="(bool isScaleEnabled)=0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iipr::ISearchParams::SetScaleEnabled </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isScaleEnabled</em></td><td>)</td>
-          <td><code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Enable the scale invariance. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiipr_1_1_i_search_params.html#a9251dec5c19467110f464b13dd5445e1" title="Set scale range for the model search.">SetScaleRange()</a>, <a class="el" href="classiipr_1_1_i_search_params.html#aca78512a786767871db8575871fd6f6c" title="Get scale range for the model search.">GetScaleRange()</a> </dd></dl>
-
-<p>Implemented in <a class="el" href="classiipr_1_1_c_search_params.html#a402109f50afb7f830245c32df54c6dce">iipr::CSearchParams</a>.</p>
 
 </div>
 </div>
@@ -380,7 +289,7 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Set scale range for the model search. </p>
-<p>Range [0, 0] means the scaling is off. </p>
+<p>Range [0, 0] means the scaling invariance is off. </p>
 
 <p>Implemented in <a class="el" href="classiipr_1_1_c_search_params.html#ab66b54ff6069eab89d8cdbac3b7b9a1b">iipr::CSearchParams</a>.</p>
 

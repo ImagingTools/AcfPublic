@@ -41,7 +41,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="imath::CFixedPointManip" --><!-- doxytag: inherits="imath::CDoubleManip" -->
-<p>Implementation of <code><a class="el" href="namespaceimath.html#a93930c034c20dc15edb9ce42f6f3d0af">imath::IDoubleManip</a></code> interface for fixed point arithmentic.  
+<p>Implementation of <code><a class="el" href="classimath_1_1_i_double_manip.html" title="Interface for all manipulation using values represent as double.">imath::IDoubleManip</a></code> interface for fixed point arithmentic.  
  <a href="classimath_1_1_c_fixed_point_manip.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>&gt;</code></p>
@@ -51,10 +51,11 @@ Inheritance diagram for imath::CFixedPointManip:</div>
  <div class="center">
   <img src="classimath_1_1_c_fixed_point_manip.png" usemap="#imath::CFixedPointManip_map" alt=""/>
   <map id="imath::CFixedPointManip_map" name="imath::CFixedPointManip_map">
-<area href="classimath_1_1_c_double_manip.html" title="Simple implementation of imath::IDoubleManip interface for double values without rounding." alt="imath::CDoubleManip" shape="rect" coords="0,112,187,136"/>
-<area href="classimath_1_1_t_i_value_manip.html" title="Interface for all classes providing simply arithmetic functions on predefined data type..." alt="imath::TIValueManip&lt; ValueType &gt;" shape="rect" coords="0,56,187,80"/>
+<area href="classimath_1_1_c_double_manip.html" title="Simple implementation of imath::IDoubleManip interface for double values without rounding." alt="imath::CDoubleManip" shape="rect" coords="0,168,187,192"/>
+<area href="classimath_1_1_i_double_manip.html" title="Interface for all manipulation using values represent as double." alt="imath::IDoubleManip" shape="rect" coords="0,112,187,136"/>
+<area href="classimath_1_1_t_i_value_manip.html" alt="imath::TIValueManip&lt; double &gt;" shape="rect" coords="0,56,187,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,187,24"/>
-<area href="classimath_1_1_c_complex_double_manip.html" alt="imath::CComplexDoubleManip" shape="rect" coords="0,224,187,248"/>
+<area href="classimath_1_1_c_complex_double_manip.html" alt="imath::CComplexDoubleManip" shape="rect" coords="0,280,187,304"/>
 </map>
  </div></div>
 
@@ -71,22 +72,30 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#ad68e94db3c10935c46714e119930d1dc">CFixedPointManip</a> (int precision=1, <a class="el" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523">RoundingType</a> roundingType=RT_NORMAL)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a88eaec1f326aa163781415a8fd51b8c5">GetPrecision</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get fixed point precision.  <a href="#a88eaec1f326aa163781415a8fd51b8c5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a93c4e43e25b5c2e621d874017877197a">SetPrecision</a> (int precision)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set fixed point precision.  <a href="#a93c4e43e25b5c2e621d874017877197a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523">RoundingType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a91069dacc1251b3ce4376e5b33860302">GetRoundingType</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type of rounding.  <a href="#a91069dacc1251b3ce4376e5b33860302"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a54608eb2f983c80dd6d12548ff304f97">SetRoundingType</a> (<a class="el" href="classimath_1_1_c_fixed_point_manip.html#a5bb834632a757d3da6dec813aafad523">RoundingType</a> roundingType)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set type of rounding.  <a href="#a54608eb2f983c80dd6d12548ff304f97"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a602f3900dcbfdcab750fee3e95cbffbb">GetPrecision</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of digits after point.  <a href="#a602f3900dcbfdcab750fee3e95cbffbb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#ac9a38108293f6f495031a468c3ce8096">GetRounded</a> (const double &amp;value) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the nearest value rounded used this arithmetik.  <a href="#ac9a38108293f6f495031a468c3ce8096"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a87cc7a2553f010bcd2840865c6d030a7">IsEqual</a> (const double &amp;value1, const double &amp;value2) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two values and check, if there are equal.  <a href="#a87cc7a2553f010bcd2840865c6d030a7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a2581f983cf39e8a5f21ec6bde15ea457">IsSmaller</a> (const double &amp;value1, const double &amp;value2) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two values and check, if first one is smaller as the second.  <a href="#a2581f983cf39e8a5f21ec6bde15ea457"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#ac7db35c940ae2851814040b4f54bd91d">IsSmallerEqual</a> (const double &amp;value1, const double &amp;value2) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two values and check, if first one is smaller or equal as the second.  <a href="#ac7db35c940ae2851814040b4f54bd91d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a66b9491742bb61fa2e4534c088059c90">GetSmallerValue</a> (const double &amp;value) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return biggest value smaller that specified one.  <a href="#a66b9491742bb61fa2e4534c088059c90"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a932b2a864d7f7770cd4b2eec66738e17">GetBiggerValue</a> (const double &amp;value) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return smallest value bigger that specified one.  <a href="#a932b2a864d7f7770cd4b2eec66738e17"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#ae8a590d231d1ef0b221e307f5ac7f573">GetString</a> (const double &amp;value) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this value as string.  <a href="#ae8a590d231d1ef0b221e307f5ac7f573"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a1ed6a20d8ed43ef7089958500362224d">GetParsed</a> (const std::string &amp;text, double &amp;result) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value converted from string.  <a href="#a1ed6a20d8ed43ef7089958500362224d"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef double(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a1ce4e3155cb2cd1881c0cd9edcaa379c">RoundingFuntionPtr</a> )(double value)</td></tr>
@@ -100,7 +109,7 @@ Static Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a8f4b537ed998948edf0ff5eae4fb0bd8">NormalRoundFuntion</a> (double value)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Implementation of <code><a class="el" href="namespaceimath.html#a93930c034c20dc15edb9ce42f6f3d0af">imath::IDoubleManip</a></code> interface for fixed point arithmentic. </p>
+<div class="textblock"><p>Implementation of <code><a class="el" href="classimath_1_1_i_double_manip.html" title="Interface for all manipulation using values represent as double.">imath::IDoubleManip</a></code> interface for fixed point arithmentic. </p>
 
 <p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00015">15</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
@@ -132,7 +141,7 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00069">69</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00066">66</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
 
 </div>
 </div>
@@ -211,11 +220,13 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Return smallest value bigger that specified one. </p>
+
 <p>Reimplemented from <a class="el" href="classimath_1_1_c_double_manip.html#a16f91366f4f06ca2d45b6d83eecbc175">imath::CDoubleManip</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00134">134</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00125">125</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
 
-<p>References <a class="el" href="_c_fixed_point_manip_8h_source.html#l00142">GetInternalValue()</a>, and <a class="el" href="_c_fixed_point_manip_8h_source.html#l00150">GetNormalValue()</a>.</p>
+<p>References <a class="el" href="_c_fixed_point_manip_8h_source.html#l00133">GetInternalValue()</a>, and <a class="el" href="_c_fixed_point_manip_8h_source.html#l00141">GetNormalValue()</a>.</p>
 
 </div>
 </div>
@@ -236,9 +247,9 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classimath_1_1_c_complex_double_manip.html#a51bd0ab7c15b2d15dbb5a0fab707434c">imath::CComplexDoubleManip</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00142">142</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00133">133</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_fixed_point_manip_8h_source.html#l00134">GetBiggerValue()</a>, <a class="el" href="_c_fixed_point_manip_8h_source.html#l00104">GetRounded()</a>, <a class="el" href="_c_fixed_point_manip_8h_source.html#l00128">GetSmallerValue()</a>, <a class="el" href="_c_fixed_point_manip_8h_source.html#l00110">IsEqual()</a>, <a class="el" href="_c_fixed_point_manip_8h_source.html#l00116">IsSmaller()</a>, and <a class="el" href="_c_fixed_point_manip_8h_source.html#l00122">IsSmallerEqual()</a>.</p>
+<p>Referenced by <a class="el" href="_c_fixed_point_manip_8h_source.html#l00125">GetBiggerValue()</a>, <a class="el" href="_c_fixed_point_manip_8h_source.html#l00095">GetRounded()</a>, <a class="el" href="_c_fixed_point_manip_8h_source.html#l00119">GetSmallerValue()</a>, <a class="el" href="_c_fixed_point_manip_8h_source.html#l00101">IsEqual()</a>, <a class="el" href="_c_fixed_point_manip_8h_source.html#l00107">IsSmaller()</a>, and <a class="el" href="_c_fixed_point_manip_8h_source.html#l00113">IsSmallerEqual()</a>.</p>
 
 </div>
 </div>
@@ -257,9 +268,9 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00150">150</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00141">141</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_fixed_point_manip_8h_source.html#l00134">GetBiggerValue()</a>, <a class="el" href="_c_fixed_point_manip_8h_source.html#l00104">GetRounded()</a>, and <a class="el" href="_c_fixed_point_manip_8h_source.html#l00128">GetSmallerValue()</a>.</p>
+<p>Referenced by <a class="el" href="_c_fixed_point_manip_8h_source.html#l00125">GetBiggerValue()</a>, <a class="el" href="_c_fixed_point_manip_8h_source.html#l00095">GetRounded()</a>, and <a class="el" href="_c_fixed_point_manip_8h_source.html#l00119">GetSmallerValue()</a>.</p>
 
 </div>
 </div>
@@ -288,30 +299,39 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Get value converted from string. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>input string. </td></tr>
+    <tr><td class="paramname">result</td><td>result value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if success. </dd></dl>
+
 <p>Reimplemented from <a class="el" href="classimath_1_1_c_double_manip.html#a0a3560c738e90f981a91537a5776812b">imath::CDoubleManip</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classimath_1_1_c_complex_double_manip.html#a28c93ea167fd235df899b403a73831ed">imath::CComplexDoubleManip</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a88eaec1f326aa163781415a8fd51b8c5"></a><!-- doxytag: member="imath::CFixedPointManip::GetPrecision" ref="a88eaec1f326aa163781415a8fd51b8c5" args="() const " -->
+<a class="anchor" id="a602f3900dcbfdcab750fee3e95cbffbb"></a><!-- doxytag: member="imath::CFixedPointManip::GetPrecision" ref="a602f3900dcbfdcab750fee3e95cbffbb" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int imath::CFixedPointManip::GetPrecision </td>
+          <td class="memname">virtual int imath::CFixedPointManip::GetPrecision </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [inline]</code></td>
+          <td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Get fixed point precision. </p>
-<p>Please note, that also negative values are allowed. </p>
+<p>Get number of digits after point. </p>
 
-<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00090">90</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
+<p>Reimplemented from <a class="el" href="classimath_1_1_c_double_manip.html#a2fd8c0a9557871238aa483d11c0de790">imath::CDoubleManip</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_complex_double_manip_8h_source.html#l00101">imath::CComplexDoubleManip::SetPrecision()</a>, and <a class="el" href="_c_complex_double_manip_8h_source.html#l00079">imath::CComplexDoubleManip::SetScaleFactor()</a>.</p>
 
@@ -332,11 +352,13 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Get the nearest value rounded used this arithmetik. </p>
+
 <p>Reimplemented from <a class="el" href="classimath_1_1_c_double_manip.html#adea86f491c07a186aa46b2c3ebd157e4">imath::CDoubleManip</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00104">104</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00095">95</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
 
-<p>References <a class="el" href="_c_fixed_point_manip_8h_source.html#l00142">GetInternalValue()</a>, and <a class="el" href="_c_fixed_point_manip_8h_source.html#l00150">GetNormalValue()</a>.</p>
+<p>References <a class="el" href="_c_fixed_point_manip_8h_source.html#l00133">GetInternalValue()</a>, and <a class="el" href="_c_fixed_point_manip_8h_source.html#l00141">GetNormalValue()</a>.</p>
 
 </div>
 </div>
@@ -356,7 +378,7 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Get type of rounding. </p>
 
-<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00096">96</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00087">87</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
 
 </div>
 </div>
@@ -375,11 +397,13 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Return biggest value smaller that specified one. </p>
+
 <p>Reimplemented from <a class="el" href="classimath_1_1_c_double_manip.html#afd9fe1c289b95cfd87d7af44d69fe404">imath::CDoubleManip</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00128">128</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00119">119</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
 
-<p>References <a class="el" href="_c_fixed_point_manip_8h_source.html#l00142">GetInternalValue()</a>, and <a class="el" href="_c_fixed_point_manip_8h_source.html#l00150">GetNormalValue()</a>.</p>
+<p>References <a class="el" href="_c_fixed_point_manip_8h_source.html#l00133">GetInternalValue()</a>, and <a class="el" href="_c_fixed_point_manip_8h_source.html#l00141">GetNormalValue()</a>.</p>
 
 </div>
 </div>
@@ -397,6 +421,14 @@ Static Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Get this value as string. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>value will be converted. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Reimplemented from <a class="el" href="classimath_1_1_c_double_manip.html#a89b4ebea47293e7fa7a64b3911372473">imath::CDoubleManip</a>.</p>
 
@@ -456,11 +488,20 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Compare two values and check, if there are equal. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value1</td><td>first value. </td></tr>
+    <tr><td class="paramname">value2</td><td>second value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="classimath_1_1_c_double_manip.html#a74aa726fa8b1be59397dae62a0ee7ccb">imath::CDoubleManip</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00110">110</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00101">101</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
 
-<p>References <a class="el" href="_c_fixed_point_manip_8h_source.html#l00142">GetInternalValue()</a>.</p>
+<p>References <a class="el" href="_c_fixed_point_manip_8h_source.html#l00133">GetInternalValue()</a>.</p>
 
 </div>
 </div>
@@ -489,11 +530,20 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Compare two values and check, if first one is smaller as the second. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value1</td><td>first value. </td></tr>
+    <tr><td class="paramname">value2</td><td>second value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="classimath_1_1_c_double_manip.html#ad7e02af3cb95438715dd01364f0d45ad">imath::CDoubleManip</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00116">116</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00107">107</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
 
-<p>References <a class="el" href="_c_fixed_point_manip_8h_source.html#l00142">GetInternalValue()</a>.</p>
+<p>References <a class="el" href="_c_fixed_point_manip_8h_source.html#l00133">GetInternalValue()</a>.</p>
 
 </div>
 </div>
@@ -522,11 +572,20 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Compare two values and check, if first one is smaller or equal as the second. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value1</td><td>first value. </td></tr>
+    <tr><td class="paramname">value2</td><td>second value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="classimath_1_1_c_double_manip.html#a731df3f796f2c658d4aab8c31026bf4e">imath::CDoubleManip</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00122">122</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00113">113</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
 
-<p>References <a class="el" href="_c_fixed_point_manip_8h_source.html#l00142">GetInternalValue()</a>.</p>
+<p>References <a class="el" href="_c_fixed_point_manip_8h_source.html#l00133">GetInternalValue()</a>.</p>
 
 </div>
 </div>

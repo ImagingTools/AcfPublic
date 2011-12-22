@@ -50,33 +50,25 @@
 <a name="l00036"></a>00036 
 <a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#a8bbb7f79fb3e93ffbff78990c47c8538" title="Set minimum score for a succefull search.">SetMinScore</a>(<span class="keywordtype">double</span> minScore) = 0;
 <a name="l00041"></a>00041 
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a>&amp; <a class="code" href="classiipr_1_1_i_search_params.html#a388a2b254d790f8ba3db86befb178ed6" title="Set minimum score for a succefull search.">GetRotationRange</a>() <span class="keyword">const</span> = 0;
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a>&amp; <a class="code" href="classiipr_1_1_i_search_params.html#a388a2b254d790f8ba3db86befb178ed6" title="Get rotation range for the model search.">GetRotationRange</a>() <span class="keyword">const</span> = 0;
 <a name="l00046"></a>00046 
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#a2345bbd541b1753e28e7a024ad994b4e" title="Set rotation range for the model search.">SetRotationRange</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a>&amp; angleRange) = 0;
-<a name="l00051"></a>00051 
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a>&amp; <a class="code" href="classiipr_1_1_i_search_params.html#aca78512a786767871db8575871fd6f6c" title="Get scale range for the model search.">GetScaleRange</a>() <span class="keyword">const</span> = 0;
-<a name="l00057"></a>00057 
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#a9251dec5c19467110f464b13dd5445e1" title="Set scale range for the model search.">SetScaleRange</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a>&amp; scaleRange) = 0;
-<a name="l00062"></a>00062 
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_i_search_params.html#ae551a172057a394d39d5274ea00f0561" title="Get the number of models that should be found for a successfull search result.">GetNominalModelsCount</a>() <span class="keyword">const</span> = 0;
-<a name="l00067"></a>00067 
-<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#aa8ed7557cfd27fcf7d282a5729c0043c" title="Set the number of models that should be found for a successfull search result.">SetNominalModelsCount</a>(<span class="keywordtype">int</span> nominalModelsCount) = 0;
-<a name="l00073"></a>00073 
-<a name="l00077"></a>00077        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_i_search_params.html#afa42937c461f19e3feba4c18723c02ce" title="Get true if the rotation invariance is enabled.">IsRotationEnabled</a>() <span class="keyword">const</span> = 0; 
-<a name="l00078"></a>00078        
-<a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#ab9abc678eb004570141dec6bf03979a2" title="Enable the rotation invariance.">SetRotationEnabled</a>(<span class="keywordtype">bool</span> isRotationEnabled) = 0;
-<a name="l00084"></a>00084        
-<a name="l00088"></a>00088        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_i_search_params.html#a4f4576ab8e434068cd1ca726382d7838" title="Get true if the scale invariance is enabled.">IsScaleEnabled</a>() <span class="keyword">const</span> = 0;
-<a name="l00089"></a>00089        
-<a name="l00094"></a>00094        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#a13348f23926f948935266780709018dc" title="Enable the scale invariance.">SetScaleEnabled</a>(<span class="keywordtype">bool</span> isScaleEnabled) = 0;
-<a name="l00095"></a>00095 };
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098 } <span class="comment">// namespace iipr</span>
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101 <span class="preprocessor">#endif // !iipr_IISearchParams_included</span>
-<a name="l00102"></a>00102 <span class="preprocessor"></span>
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#a2345bbd541b1753e28e7a024ad994b4e" title="Set rotation range for the model search.">SetRotationRange</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a>&amp; angleRange) = 0;
+<a name="l00052"></a>00052 
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a>&amp; <a class="code" href="classiipr_1_1_i_search_params.html#aca78512a786767871db8575871fd6f6c" title="Get scale range for the model search.">GetScaleRange</a>() <span class="keyword">const</span> = 0;
+<a name="l00058"></a>00058 
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#a9251dec5c19467110f464b13dd5445e1" title="Set scale range for the model search.">SetScaleRange</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_range.html">istd::CRange</a>&amp; scaleRange) = 0;
+<a name="l00063"></a>00063 
+<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_i_search_params.html#ae551a172057a394d39d5274ea00f0561" title="Get the number of models that should be found for a successfull search result.">GetNominalModelsCount</a>() <span class="keyword">const</span> = 0;
+<a name="l00068"></a>00068 
+<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#aa8ed7557cfd27fcf7d282a5729c0043c" title="Set the number of models that should be found for a successfull search result.">SetNominalModelsCount</a>(<span class="keywordtype">int</span> nominalModelsCount) = 0;
+<a name="l00074"></a>00074 };
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 } <span class="comment">// namespace iipr</span>
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080 <span class="preprocessor">#endif // !iipr_IISearchParams_included</span>
+<a name="l00081"></a>00081 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

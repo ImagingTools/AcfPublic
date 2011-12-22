@@ -46,9 +46,10 @@ Inheritance diagram for imath::CComplexDoubleManip:</div>
  <div class="center">
   <img src="classimath_1_1_c_complex_double_manip.png" usemap="#imath::CComplexDoubleManip_map" alt=""/>
   <map id="imath::CComplexDoubleManip_map" name="imath::CComplexDoubleManip_map">
-<area href="classimath_1_1_c_fixed_point_manip.html" title="Implementation of imath::IDoubleManip interface for fixed point arithmentic." alt="imath::CFixedPointManip" shape="rect" coords="0,168,187,192"/>
-<area href="classimath_1_1_c_double_manip.html" title="Simple implementation of imath::IDoubleManip interface for double values without rounding." alt="imath::CDoubleManip" shape="rect" coords="0,112,187,136"/>
-<area href="classimath_1_1_t_i_value_manip.html" title="Interface for all classes providing simply arithmetic functions on predefined data type..." alt="imath::TIValueManip&lt; ValueType &gt;" shape="rect" coords="0,56,187,80"/>
+<area href="classimath_1_1_c_fixed_point_manip.html" title="Implementation of imath::IDoubleManip interface for fixed point arithmentic." alt="imath::CFixedPointManip" shape="rect" coords="0,224,187,248"/>
+<area href="classimath_1_1_c_double_manip.html" title="Simple implementation of imath::IDoubleManip interface for double values without rounding." alt="imath::CDoubleManip" shape="rect" coords="0,168,187,192"/>
+<area href="classimath_1_1_i_double_manip.html" title="Interface for all manipulation using values represent as double." alt="imath::IDoubleManip" shape="rect" coords="0,112,187,136"/>
+<area href="classimath_1_1_t_i_value_manip.html" alt="imath::TIValueManip&lt; double &gt;" shape="rect" coords="0,56,187,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,187,24"/>
 </map>
  </div></div>
@@ -70,7 +71,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_complex_double_manip.html#a650de340a62af05615109e8b837b6b1e">SetPrecision</a> (int precision)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set fixed point precision.  <a href="#a650de340a62af05615109e8b837b6b1e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_complex_double_manip.html#a26c5c03096179155aa864cbcf3c4b917">GetString</a> (const double &amp;value) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this value as string.  <a href="#a26c5c03096179155aa864cbcf3c4b917"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_complex_double_manip.html#a28c93ea167fd235df899b403a73831ed">GetParsed</a> (const std::string &amp;text, double &amp;result) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value converted from string.  <a href="#a28c93ea167fd235df899b403a73831ed"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_complex_double_manip.html#a51bd0ab7c15b2d15dbb5a0fab707434c">GetInternalValue</a> (double value) const </td></tr>
@@ -205,6 +208,16 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Get value converted from string. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>input string. </td></tr>
+    <tr><td class="paramname">result</td><td>result value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if success. </dd></dl>
+
 <p>Reimplemented from <a class="el" href="classimath_1_1_c_fixed_point_manip.html#a1ed6a20d8ed43ef7089958500362224d">imath::CFixedPointManip</a>.</p>
 
 </div>
@@ -260,6 +273,14 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Get this value as string. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>value will be converted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="classimath_1_1_c_fixed_point_manip.html#ae8a590d231d1ef0b221e307f5ac7f573">imath::CFixedPointManip</a>.</p>
 
 </div>
@@ -304,7 +325,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_complex_double_manip_8h_source.html#l00101">101</a> of file <a class="el" href="_c_complex_double_manip_8h_source.html">CComplexDoubleManip.h</a>.</p>
 
-<p>References <a class="el" href="_c_fixed_point_manip_8h_source.html#l00090">imath::CFixedPointManip::GetPrecision()</a>, and <a class="el" href="classimath_1_1_c_fixed_point_manip.html#a93c4e43e25b5c2e621d874017877197a">imath::CFixedPointManip::SetPrecision()</a>.</p>
+<p>References <a class="el" href="classimath_1_1_c_fixed_point_manip.html#a602f3900dcbfdcab750fee3e95cbffbb">imath::CFixedPointManip::GetPrecision()</a>, and <a class="el" href="classimath_1_1_c_fixed_point_manip.html#a93c4e43e25b5c2e621d874017877197a">imath::CFixedPointManip::SetPrecision()</a>.</p>
 
 </div>
 </div>
@@ -344,7 +365,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_complex_double_manip_8h_source.html#l00079">79</a> of file <a class="el" href="_c_complex_double_manip_8h_source.html">CComplexDoubleManip.h</a>.</p>
 
-<p>References <a class="el" href="_c_fixed_point_manip_8h_source.html#l00090">imath::CFixedPointManip::GetPrecision()</a>.</p>
+<p>References <a class="el" href="classimath_1_1_c_fixed_point_manip.html#a602f3900dcbfdcab750fee3e95cbffbb">imath::CFixedPointManip::GetPrecision()</a>.</p>
 
 </div>
 </div>

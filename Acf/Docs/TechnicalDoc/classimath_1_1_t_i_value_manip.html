@@ -48,9 +48,6 @@ Inheritance diagram for imath::TIValueManip&lt; ValueType &gt;:</div>
   <img src="classimath_1_1_t_i_value_manip.png" usemap="#imath::TIValueManip&lt; ValueType &gt;_map" alt=""/>
   <map id="imath::TIValueManip&lt; ValueType &gt;_map" name="imath::TIValueManip&lt; ValueType &gt;_map">
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,210,24"/>
-<area href="classimath_1_1_c_double_manip.html" title="Simple implementation of imath::IDoubleManip interface for double values without rounding." alt="imath::CDoubleManip" shape="rect" coords="0,112,210,136"/>
-<area href="classimath_1_1_c_fixed_point_manip.html" title="Implementation of imath::IDoubleManip interface for fixed point arithmentic." alt="imath::CFixedPointManip" shape="rect" coords="0,168,210,192"/>
-<area href="classimath_1_1_c_complex_double_manip.html" alt="imath::CComplexDoubleManip" shape="rect" coords="0,224,210,248"/>
 </map>
  </div></div>
 
@@ -87,7 +84,7 @@ class imath::TIValueManip&lt; ValueType &gt;</h3>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ValueType &gt; </div>
+template&lt;class ValueType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">virtual ValueType <a class="el" href="classimath_1_1_t_i_value_manip.html">imath::TIValueManip</a>&lt; ValueType &gt;::GetBiggerValue </td>
@@ -102,13 +99,15 @@ template&lt;class ValueType &gt; </div>
 
 <p>Return smallest value bigger that specified one. </p>
 
+<p>Implemented in <a class="el" href="classimath_1_1_c_fixed_point_manip.html#a932b2a864d7f7770cd4b2eec66738e17">imath::CFixedPointManip</a>, and <a class="el" href="classimath_1_1_c_double_manip.html#a16f91366f4f06ca2d45b6d83eecbc175">imath::CDoubleManip</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aeaaaf87fef034c8d533038212a8ccb72"></a><!-- doxytag: member="imath::TIValueManip::GetParsed" ref="aeaaaf87fef034c8d533038212a8ccb72" args="(const std::string &amp;text, ValueType &amp;result) const =0" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ValueType &gt; </div>
+template&lt;class ValueType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">virtual bool <a class="el" href="classimath_1_1_t_i_value_manip.html">imath::TIValueManip</a>&lt; ValueType &gt;::GetParsed </td>
@@ -141,13 +140,15 @@ template&lt;class ValueType &gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if success. </dd></dl>
 
+<p>Implemented in <a class="el" href="classimath_1_1_c_fixed_point_manip.html#a1ed6a20d8ed43ef7089958500362224d">imath::CFixedPointManip</a>, <a class="el" href="classimath_1_1_c_complex_double_manip.html#a28c93ea167fd235df899b403a73831ed">imath::CComplexDoubleManip</a>, and <a class="el" href="classimath_1_1_c_double_manip.html#a0a3560c738e90f981a91537a5776812b">imath::CDoubleManip</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab5bbe9c4e2734dbdcc8a00a911842f7a"></a><!-- doxytag: member="imath::TIValueManip::GetRounded" ref="ab5bbe9c4e2734dbdcc8a00a911842f7a" args="(const ValueType &amp;value) const =0" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ValueType &gt; </div>
+template&lt;class ValueType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">virtual ValueType <a class="el" href="classimath_1_1_t_i_value_manip.html">imath::TIValueManip</a>&lt; ValueType &gt;::GetRounded </td>
@@ -162,6 +163,8 @@ template&lt;class ValueType &gt; </div>
 
 <p>Get the nearest value rounded used this arithmetik. </p>
 
+<p>Implemented in <a class="el" href="classimath_1_1_c_fixed_point_manip.html#ac9a38108293f6f495031a468c3ce8096">imath::CFixedPointManip</a>, and <a class="el" href="classimath_1_1_c_double_manip.html#adea86f491c07a186aa46b2c3ebd157e4">imath::CDoubleManip</a>.</p>
+
 <p>Referenced by <a class="el" href="_t_composed_color_8h_source.html#l00317">icmm::TComposedColor&lt; Size &gt;::GetRounded()</a>.</p>
 
 </div>
@@ -170,7 +173,7 @@ template&lt;class ValueType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ValueType &gt; </div>
+template&lt;class ValueType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">virtual ValueType <a class="el" href="classimath_1_1_t_i_value_manip.html">imath::TIValueManip</a>&lt; ValueType &gt;::GetSmallerValue </td>
@@ -185,13 +188,15 @@ template&lt;class ValueType &gt; </div>
 
 <p>Return biggest value smaller that specified one. </p>
 
+<p>Implemented in <a class="el" href="classimath_1_1_c_fixed_point_manip.html#a66b9491742bb61fa2e4534c088059c90">imath::CFixedPointManip</a>, and <a class="el" href="classimath_1_1_c_double_manip.html#afd9fe1c289b95cfd87d7af44d69fe404">imath::CDoubleManip</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a794f350398ad0255201a3556ea4d5843"></a><!-- doxytag: member="imath::TIValueManip::GetString" ref="a794f350398ad0255201a3556ea4d5843" args="(const ValueType &amp;value) const =0" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ValueType &gt; </div>
+template&lt;class ValueType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">virtual std::string <a class="el" href="classimath_1_1_t_i_value_manip.html">imath::TIValueManip</a>&lt; ValueType &gt;::GetString </td>
@@ -212,13 +217,15 @@ template&lt;class ValueType &gt; </div>
   </dd>
 </dl>
 
+<p>Implemented in <a class="el" href="classimath_1_1_c_fixed_point_manip.html#ae8a590d231d1ef0b221e307f5ac7f573">imath::CFixedPointManip</a>, <a class="el" href="classimath_1_1_c_complex_double_manip.html#a26c5c03096179155aa864cbcf3c4b917">imath::CComplexDoubleManip</a>, and <a class="el" href="classimath_1_1_c_double_manip.html#a89b4ebea47293e7fa7a64b3911372473">imath::CDoubleManip</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a1df21a3d447ee0e2258d2813fa629aa4"></a><!-- doxytag: member="imath::TIValueManip::IsEqual" ref="a1df21a3d447ee0e2258d2813fa629aa4" args="(const ValueType &amp;value1, const ValueType &amp;value2) const =0" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ValueType &gt; </div>
+template&lt;class ValueType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">virtual bool <a class="el" href="classimath_1_1_t_i_value_manip.html">imath::TIValueManip</a>&lt; ValueType &gt;::IsEqual </td>
@@ -250,6 +257,8 @@ template&lt;class ValueType &gt; </div>
   </dd>
 </dl>
 
+<p>Implemented in <a class="el" href="classimath_1_1_c_fixed_point_manip.html#a87cc7a2553f010bcd2840865c6d030a7">imath::CFixedPointManip</a>, and <a class="el" href="classimath_1_1_c_double_manip.html#a74aa726fa8b1be59397dae62a0ee7ccb">imath::CDoubleManip</a>.</p>
+
 <p>Referenced by <a class="el" href="_t_composed_color_8h_source.html#l00326">icmm::TComposedColor&lt; Size &gt;::IsRoundedEqual()</a>.</p>
 
 </div>
@@ -258,7 +267,7 @@ template&lt;class ValueType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ValueType &gt; </div>
+template&lt;class ValueType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">virtual bool <a class="el" href="classimath_1_1_t_i_value_manip.html">imath::TIValueManip</a>&lt; ValueType &gt;::IsSmaller </td>
@@ -290,13 +299,15 @@ template&lt;class ValueType &gt; </div>
   </dd>
 </dl>
 
+<p>Implemented in <a class="el" href="classimath_1_1_c_fixed_point_manip.html#a2581f983cf39e8a5f21ec6bde15ea457">imath::CFixedPointManip</a>, and <a class="el" href="classimath_1_1_c_double_manip.html#ad7e02af3cb95438715dd01364f0d45ad">imath::CDoubleManip</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a789885b383007df5416c74ce432928ae"></a><!-- doxytag: member="imath::TIValueManip::IsSmallerEqual" ref="a789885b383007df5416c74ce432928ae" args="(const ValueType &amp;value1, const ValueType &amp;value2) const =0" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ValueType &gt; </div>
+template&lt;class ValueType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">virtual bool <a class="el" href="classimath_1_1_t_i_value_manip.html">imath::TIValueManip</a>&lt; ValueType &gt;::IsSmallerEqual </td>
@@ -327,6 +338,8 @@ template&lt;class ValueType &gt; </div>
   </table>
   </dd>
 </dl>
+
+<p>Implemented in <a class="el" href="classimath_1_1_c_fixed_point_manip.html#ac7db35c940ae2851814040b4f54bd91d">imath::CFixedPointManip</a>, and <a class="el" href="classimath_1_1_c_double_manip.html#a731df3f796f2c658d4aab8c31026bf4e">imath::CDoubleManip</a>.</p>
 
 </div>
 </div>

@@ -853,7 +853,7 @@
     <path>C:/Temp/Acf/Include/icmm/</path>
     <filename>_c_var_color_8h</filename>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <includes id="_t_i_value_manip_8h" name="TIValueManip.h" local="yes" imported="no">imath/TIValueManip.h</includes>
+    <includes id="_i_double_manip_8h" name="IDoubleManip.h" local="yes" imported="no">imath/IDoubleManip.h</includes>
     <includes id="_c_var_vector_8h" name="CVarVector.h" local="yes" imported="no">imath/CVarVector.h</includes>
     <includes id="icmm_8h" name="icmm.h" local="yes" imported="no">icmm/icmm.h</includes>
     <class kind="class">icmm::CVarColor</class>
@@ -898,7 +898,7 @@
     <filename>_t_composed_color_8h</filename>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_t_i_value_manip_8h" name="TIValueManip.h" local="yes" imported="no">imath/TIValueManip.h</includes>
+    <includes id="_i_double_manip_8h" name="IDoubleManip.h" local="yes" imported="no">imath/IDoubleManip.h</includes>
     <includes id="_t_vector_8h" name="TVector.h" local="yes" imported="no">imath/TVector.h</includes>
     <includes id="_c_var_vector_8h" name="CVarVector.h" local="yes" imported="no">imath/CVarVector.h</includes>
     <includes id="icmm_8h" name="icmm.h" local="yes" imported="no">icmm/icmm.h</includes>
@@ -2201,7 +2201,7 @@
     <name>CDoubleManip.h</name>
     <path>C:/Temp/Acf/Include/imath/</path>
     <filename>_c_double_manip_8h</filename>
-    <includes id="_t_i_value_manip_8h" name="TIValueManip.h" local="yes" imported="no">imath/TIValueManip.h</includes>
+    <includes id="_i_double_manip_8h" name="IDoubleManip.h" local="yes" imported="no">imath/IDoubleManip.h</includes>
     <class kind="class">imath::CDoubleManip</class>
     <namespace>imath</namespace>
   </compound>
@@ -2247,6 +2247,15 @@
     <includes id="_t_vector_8h" name="TVector.h" local="yes" imported="no">imath/TVector.h</includes>
     <class kind="class">imath::CVarVector</class>
     <namespace>iser</namespace>
+    <namespace>imath</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IDoubleManip.h</name>
+    <path>C:/Temp/Acf/Include/imath/</path>
+    <filename>_i_double_manip_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_t_i_value_manip_8h" name="TIValueManip.h" local="yes" imported="no">imath/TIValueManip.h</includes>
+    <class kind="class">imath::IDoubleManip</class>
     <namespace>imath</namespace>
   </compound>
   <compound kind="file">
@@ -2370,20 +2379,6 @@
     <includes id="imath_8h" name="imath.h" local="yes" imported="no">imath/imath.h</includes>
     <class kind="class">imath::TIValueManip</class>
     <namespace>imath</namespace>
-    <member kind="typedef">
-      <type>TIValueManip&lt; float &gt;</type>
-      <name>IFloatManip</name>
-      <anchorfile>namespaceimath.html</anchorfile>
-      <anchor>a630146b93e7f8430737303f2851de363</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TIValueManip&lt; double &gt;</type>
-      <name>IDoubleManip</name>
-      <anchorfile>namespaceimath.html</anchorfile>
-      <anchor>a93930c034c20dc15edb9ce42f6f3d0af</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="file">
     <name>TMathVectorWrap.h</name>
@@ -2703,6 +2698,7 @@
     <filename>_c_selectable_params_set_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
     <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
@@ -4595,6 +4591,7 @@
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
+    <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="yes" imported="no">iqtgui/IIconProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtprm::COptionsManagerGuiComp</class>
     <namespace>iqtprm</namespace>
@@ -4643,6 +4640,7 @@
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="yes" imported="no">iqtgui/IIconProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtprm::CSelectionParamGuiComp</class>
     <namespace>iqtprm</namespace>
@@ -5910,6 +5908,15 @@
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_state_controller_8h" name="IStateController.h" local="yes" imported="no">iproc/IStateController.h</includes>
     <class kind="class">iwiz::CSelectionConsistencyControllerComp</class>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CStateControllerCompBase.h</name>
+    <path>C:/Temp/Acf/Include/iwiz/</path>
+    <filename>_c_state_controller_comp_base_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_state_controller_8h" name="IStateController.h" local="yes" imported="no">iproc/IStateController.h</includes>
+    <class kind="class">iwiz::CStateControllerCompBase</class>
     <namespace>iwiz</namespace>
   </compound>
   <compound kind="file">
@@ -20812,6 +20819,7 @@
     <class kind="class">imath::CSampledFunction2d</class>
     <class kind="class">imath::CVarMatrix</class>
     <class kind="class">imath::CVarVector</class>
+    <class kind="class">imath::IDoubleManip</class>
     <class kind="class">imath::TFastVector</class>
     <class kind="class">imath::TFulcrumGridFunctionBase</class>
     <class kind="class">imath::TIMathFunction</class>
@@ -20848,20 +20856,6 @@
       <name>ISurjectDoubleFunction</name>
       <anchorfile>namespaceimath.html</anchorfile>
       <anchor>ae25a8ebd149d6086a532a99407a22a9d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TIValueManip&lt; float &gt;</type>
-      <name>IFloatManip</name>
-      <anchorfile>namespaceimath.html</anchorfile>
-      <anchor>a630146b93e7f8430737303f2851de363</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TIValueManip&lt; double &gt;</type>
-      <name>IDoubleManip</name>
-      <anchorfile>namespaceimath.html</anchorfile>
-      <anchor>a93930c034c20dc15edb9ce42f6f3d0af</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -21221,7 +21215,7 @@
   <compound kind="class">
     <name>imath::CDoubleManip</name>
     <filename>classimath_1_1_c_double_manip.html</filename>
-    <base virtualness="virtual">imath::TIValueManip</base>
+    <base virtualness="virtual">imath::IDoubleManip</base>
     <member kind="function">
       <type></type>
       <name>CDoubleManip</name>
@@ -21242,6 +21236,13 @@
       <anchorfile>classimath_1_1_c_double_manip.html</anchorfile>
       <anchor>aa3479dd273b0162d3612471dbc116a22</anchor>
       <arglist>(char pointChar)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPrecision</name>
+      <anchorfile>classimath_1_1_c_double_manip.html</anchorfile>
+      <anchor>a2fd8c0a9557871238aa483d11c0de790</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
@@ -21355,13 +21356,6 @@
       <arglist>(int precision=1, RoundingType roundingType=RT_NORMAL)</arglist>
     </member>
     <member kind="function">
-      <type>int</type>
-      <name>GetPrecision</name>
-      <anchorfile>classimath_1_1_c_fixed_point_manip.html</anchorfile>
-      <anchor>a88eaec1f326aa163781415a8fd51b8c5</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
       <name>SetPrecision</name>
       <anchorfile>classimath_1_1_c_fixed_point_manip.html</anchorfile>
@@ -21381,6 +21375,13 @@
       <anchorfile>classimath_1_1_c_fixed_point_manip.html</anchorfile>
       <anchor>a54608eb2f983c80dd6d12548ff304f97</anchor>
       <arglist>(RoundingType roundingType)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPrecision</name>
+      <anchorfile>classimath_1_1_c_fixed_point_manip.html</anchorfile>
+      <anchor>a602f3900dcbfdcab750fee3e95cbffbb</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
@@ -22182,6 +22183,18 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>imath::IDoubleManip</name>
+    <filename>classimath_1_1_i_double_manip.html</filename>
+    <base virtualness="virtual">TIValueManip&lt; double &gt;</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetPrecision</name>
+      <anchorfile>classimath_1_1_i_double_manip.html</anchorfile>
+      <anchor>af923ccbb224fe30aa0385c7e88a07278</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>imath::TFastVector</name>
     <filename>classimath_1_1_t_fast_vector.html</filename>
     <templarg>MaxSize</templarg>
@@ -22855,7 +22868,7 @@
   <compound kind="class">
     <name>imath::TIValueManip</name>
     <filename>classimath_1_1_t_i_value_manip.html</filename>
-    <templarg></templarg>
+    <templarg>ValueType</templarg>
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual ValueType</type>
@@ -25554,6 +25567,7 @@
     <name>iprm::CSelectableParamsSetComp</name>
     <filename>classiprm_1_1_c_selectable_params_set_comp.html</filename>
     <base>icomp::CComponentBase</base>
+    <base protection="protected">imod::CMultiModelBridgeBase</base>
     <base virtualness="virtual">iprm::IParamsSet</base>
     <base virtualness="virtual">iprm::ISelectionParam</base>
     <base protection="protected" virtualness="virtual">iprm::ISelectionConstraints</base>
@@ -25667,6 +25681,13 @@
       <name>OnComponentCreated</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
       <anchor>a0e31b9e305ff327511f8fd4eb2e8458b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
+      <anchor>aa9ffbc562af98f798c912a7bb7b53447</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -26884,6 +26905,12 @@
       <name>CF_GRAPH_CHANGED</name>
       <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
       <anchor>a689c37ae7122c3dcf699bd8d0f721a2eaf1c410d785c523a7bc0f7dcbb40bdec5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_STATE_ENABLED</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a689c37ae7122c3dcf699bd8d0f721a2ea15711255a2b455bd2c63d245d2fd68aa</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -45517,6 +45544,7 @@
     <filename>namespaceiwiz.html</filename>
     <class kind="class">iwiz::CComposedStateControllerComp</class>
     <class kind="class">iwiz::CSelectionConsistencyControllerComp</class>
+    <class kind="class">iwiz::CStateControllerCompBase</class>
     <class kind="class">iwiz::CWizardDocumentComp</class>
     <class kind="class">iwiz::IParamsManagerWizard</class>
     <class kind="class">iwiz::IWizardNavigationController</class>
@@ -45736,6 +45764,96 @@
       <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
       <anchor>af96287d76a58b6a6d2a9d5af136a995c</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwiz::CStateControllerCompBase</name>
+    <filename>classiwiz_1_1_c_state_controller_comp_base.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iproc::IStateController</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a9880da565b667dc07575726ec3659037</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CStateControllerCompBase</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a99ba33a45bba7da8802a98b02196cea7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsStateEnabled</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>ac13124fbb50151b993623a940026257f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsStateActive</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a3145d5629097dabf40500202eaab40f3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEnterAllowed</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a506d51ef30b7e46193435ae37eebaa94</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsLeaveAllowed</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>aad776f793e4411937efd0e28b5844c22</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TryEnterState</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>ae4a9d09e2338f1e9ecbd8b10aecb13f0</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TryLeaveState</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a968f83a78d97ae83d947f3e01f565182</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isStateActive</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>af88f2e5ad552056e01d1d08371c9617a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isStateEnabled</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a1552f05cbd09bee34d1be0ab868dd514</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isEnterAllowed</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a8c12d1e21cf7af8dbf3d6ac5148c1d02</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isLeaveAllowed</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a83cd677255434b57480c73330c15ab29</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
