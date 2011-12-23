@@ -8189,6 +8189,13 @@
       <anchor>a682c632074696e4c64885cd440af03b8</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>a848d93f798bc9037c7889b56964d846c</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -8582,7 +8589,7 @@
   <compound kind="class">
     <name>imeas::INumericConstraints</name>
     <filename>classimeas_1_1_i_numeric_constraints.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetNumericValuesCount</name>

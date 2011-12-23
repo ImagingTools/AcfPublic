@@ -173,6 +173,7 @@
     <name>CVector2d.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_vector2d_8h</filename>
+    <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
     <includes id="_t_vector_8h" name="TVector.h" local="yes" imported="no">imath/TVector.h</includes>
     <includes id="i2d_8h" name="i2d.h" local="yes" imported="no">i2d/i2d.h</includes>
     <class kind="class">i2d::CVector2d</class>
@@ -8092,6 +8093,13 @@
       <type></type>
       <name>CVector2d</name>
       <anchorfile>classi2d_1_1_c_vector2d.html</anchorfile>
+      <anchor>ad8d9f2bf99d85cf9b0da8fba32cc8b5b</anchor>
+      <arglist>(const istd::CIndex2d &amp;index)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CVector2d</name>
+      <anchorfile>classi2d_1_1_c_vector2d.html</anchorfile>
       <anchor>a3569dbe183b908170039ad812ac69896</anchor>
       <arglist>(const imath::TVector&lt; 2 &gt; &amp;vector)</arglist>
     </member>
@@ -8170,6 +8178,13 @@
       <name>GetOrthogonal</name>
       <anchorfile>classi2d_1_1_c_vector2d.html</anchorfile>
       <anchor>a06cae9430efb4686fdc96af9e02b2607</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>istd::CIndex2d</type>
+      <name>ToIndex2d</name>
+      <anchorfile>classi2d_1_1_c_vector2d.html</anchorfile>
+      <anchor>ac7c7d39b9684f25cf62cbb1c817266cf</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">

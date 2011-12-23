@@ -63,6 +63,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a56c4233386265226dea3ac6d676439a8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_vector2d.html#a7b99d474d9afde96592b6c2b1f828ad8">CVector2d</a> (double x, double y)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct initializing elements to specified values.  <a href="#a7b99d474d9afde96592b6c2b1f828ad8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_vector2d.html#ad8d9f2bf99d85cf9b0da8fba32cc8b5b">CVector2d</a> (const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;index)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_vector2d.html#a3569dbe183b908170039ad812ac69896">CVector2d</a> (const <a class="el" href="classimath_1_1_t_vector.html">imath::TVector</a>&lt; 2 &gt; &amp;vector)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#a3569dbe183b908170039ad812ac69896"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_vector2d.html#a1d0d6125aff440bbac7138047baf2cbe">GetX</a> () const </td></tr>
@@ -87,6 +88,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get angle of this vector.  <a href="#a47b96dc110036d6cc05d9dfa40825177"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_vector2d.html#a06cae9430efb4686fdc96af9e02b2607">GetOrthogonal</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get orthogonal vector.  <a href="#a06cae9430efb4686fdc96af9e02b2607"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_vector2d.html#ac7c7d39b9684f25cf62cbb1c817266cf">ToIndex2d</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get vector converted to 2D index.  <a href="#ac7c7d39b9684f25cf62cbb1c817266cf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_vector2d.html#adc836f65c1da7ded86cde964859f1213">GetNormalized</a> (double length=1.0) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return normalized vector with the same direction and specified length.  <a href="#adc836f65c1da7ded86cde964859f1213"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_vector2d.html#ae3e6d2298b6018a0d3ff53cc7787cfb4">operator-</a> () const </td></tr>
@@ -102,7 +105,7 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Definition of position or mathematical vector on 2D plane. </p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00020">20</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00023">23</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="aa4bd75f5b22d46e24a420959d994d24f"></a><!-- doxytag: member="i2d::CVector2d::BaseClass" ref="aa4bd75f5b22d46e24a420959d994d24f" args="" -->
 <div class="memitem">
@@ -115,7 +118,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00023">23</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00026">26</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
 </div>
 </div>
@@ -137,9 +140,9 @@ Public Member Functions</h2></td></tr>
 <p>Default constructor. </p>
 <p>Please note, elements will be not initilized. </p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00110">110</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00122">122</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_vector2d_8h_source.html#l00158">GetHorizontalTranslated()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00164">GetVerticalTranslated()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00203">operator*()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00189">operator+()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00182">operator-()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00210">operator/()</a>.</p>
+<p>Referenced by <a class="el" href="_c_vector2d_8h_source.html#l00177">GetHorizontalTranslated()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00183">GetVerticalTranslated()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00222">operator*()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00208">operator+()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00201">operator-()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00229">operator/()</a>.</p>
 
 </div>
 </div>
@@ -170,9 +173,30 @@ Public Member Functions</h2></td></tr>
 
 <p>Construct initializing elements to specified values. </p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00115">115</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00127">127</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_vector.html#a251f63ce2a3f176f102839c1da5f9893">imath::TVector&lt; 2 &gt;::operator[]()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad8d9f2bf99d85cf9b0da8fba32cc8b5b"></a><!-- doxytag: member="i2d::CVector2d::CVector2d" ref="ad8d9f2bf99d85cf9b0da8fba32cc8b5b" args="(const istd::CIndex2d &amp;index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">i2d::CVector2d::CVector2d </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00140">140</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+
+<p>References <a class="el" href="_c_index2d_8h_source.html#l00055">istd::CIndex2d::GetX()</a>, <a class="el" href="_c_index2d_8h_source.html#l00067">istd::CIndex2d::GetY()</a>, and <a class="el" href="classimath_1_1_t_vector.html#a251f63ce2a3f176f102839c1da5f9893">imath::TVector&lt; 2 &gt;::operator[]()</a>.</p>
 
 </div>
 </div>
@@ -193,7 +217,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Copy constructor. </p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00122">122</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00134">134</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
 </div>
 </div>
@@ -214,9 +238,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Get angle of this vector. </p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00176">176</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00195">195</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_vector2d_8h_source.html#l00128">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">GetY()</a>.</p>
+<p>References <a class="el" href="_c_vector2d_8h_source.html#l00147">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00159">GetY()</a>.</p>
 
 </div>
 </div>
@@ -237,9 +261,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Return Z coordinate of two vectors cross product. </p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00170">170</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00189">189</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_vector2d_8h_source.html#l00128">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">GetY()</a>.</p>
+<p>References <a class="el" href="_c_vector2d_8h_source.html#l00147">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00159">GetY()</a>.</p>
 
 </div>
 </div>
@@ -260,9 +284,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Get horizontal translated point. </p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00158">158</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00177">177</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_vector2d_8h_source.html#l00110">CVector2d()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">GetY()</a>.</p>
+<p>References <a class="el" href="_c_vector2d_8h_source.html#l00122">CVector2d()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00147">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00159">GetY()</a>.</p>
 
 </div>
 </div>
@@ -320,7 +344,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get translated point. </p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00152">152</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00171">171</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
 </div>
 </div>
@@ -341,9 +365,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Get vertical translated point. </p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00164">164</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00183">183</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_vector2d_8h_source.html#l00110">CVector2d()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">GetY()</a>.</p>
+<p>References <a class="el" href="_c_vector2d_8h_source.html#l00122">CVector2d()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00147">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00159">GetY()</a>.</p>
 
 </div>
 </div>
@@ -363,11 +387,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Get X position of this vector. </p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00128">128</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00147">147</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_vector.html#a251f63ce2a3f176f102839c1da5f9893">imath::TVector&lt; 2 &gt;::operator[]()</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_vector2d_8h_source.html#l00176">GetAngle()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00170">GetCrossProductZ()</a>, <a class="el" href="_c_line2d_8h_source.html#l00240">i2d::CLine2d::GetCutXPos()</a>, <a class="el" href="_c_line2d_8h_source.html#l00249">i2d::CLine2d::GetCutYPos()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00158">GetHorizontalTranslated()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00164">GetVerticalTranslated()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00203">operator*()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00189">operator+()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00182">operator-()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00210">operator/()</a>.</p>
+<p>Referenced by <a class="el" href="_c_vector2d_8h_source.html#l00195">GetAngle()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00189">GetCrossProductZ()</a>, <a class="el" href="_c_line2d_8h_source.html#l00240">i2d::CLine2d::GetCutXPos()</a>, <a class="el" href="_c_line2d_8h_source.html#l00249">i2d::CLine2d::GetCutYPos()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00177">GetHorizontalTranslated()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00183">GetVerticalTranslated()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00222">operator*()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00208">operator+()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00201">operator-()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00229">operator/()</a>.</p>
 
 </div>
 </div>
@@ -387,11 +411,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Get Y position of this vector. </p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00140">140</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00159">159</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_vector.html#a251f63ce2a3f176f102839c1da5f9893">imath::TVector&lt; 2 &gt;::operator[]()</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_vector2d_8h_source.html#l00176">GetAngle()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00170">GetCrossProductZ()</a>, <a class="el" href="_c_line2d_8h_source.html#l00240">i2d::CLine2d::GetCutXPos()</a>, <a class="el" href="_c_line2d_8h_source.html#l00249">i2d::CLine2d::GetCutYPos()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00158">GetHorizontalTranslated()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00164">GetVerticalTranslated()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00203">operator*()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00189">operator+()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00182">operator-()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00210">operator/()</a>.</p>
+<p>Referenced by <a class="el" href="_c_vector2d_8h_source.html#l00195">GetAngle()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00189">GetCrossProductZ()</a>, <a class="el" href="_c_line2d_8h_source.html#l00240">i2d::CLine2d::GetCutXPos()</a>, <a class="el" href="_c_line2d_8h_source.html#l00249">i2d::CLine2d::GetCutYPos()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00177">GetHorizontalTranslated()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00183">GetVerticalTranslated()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00222">operator*()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00208">operator+()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00201">operator-()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00229">operator/()</a>.</p>
 
 </div>
 </div>
@@ -441,9 +465,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classimath_1_1_t_vector.html#af98e89229f35a0e187d9df8704ff765a">imath::TVector&lt; 2 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00203">203</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00222">222</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_vector2d_8h_source.html#l00110">CVector2d()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">GetY()</a>.</p>
+<p>References <a class="el" href="_c_vector2d_8h_source.html#l00122">CVector2d()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00147">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00159">GetY()</a>.</p>
 
 </div>
 </div>
@@ -464,7 +488,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classimath_1_1_t_vector.html#a6bcb08b7dfb88c6c509ec048867e6fe8">imath::TVector&lt; 2 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00238">238</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00257">257</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_vector.html#a6bcb08b7dfb88c6c509ec048867e6fe8">imath::TVector&lt; 2 &gt;::operator*=()</a>.</p>
 
@@ -485,9 +509,9 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00189">189</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00208">208</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_vector2d_8h_source.html#l00110">CVector2d()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">GetY()</a>.</p>
+<p>References <a class="el" href="_c_vector2d_8h_source.html#l00122">CVector2d()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00147">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00159">GetY()</a>.</p>
 
 </div>
 </div>
@@ -506,7 +530,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00221">221</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00240">240</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_vector.html#a32fddc0440dcfdf1b5f702cdf7f9fe9b">imath::TVector&lt; 2 &gt;::operator+=()</a>.</p>
 
@@ -528,9 +552,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classimath_1_1_t_vector.html#a84e2162bde0f9ba1feb52ac2cd9d387f">imath::TVector&lt; 2 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00182">182</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00201">201</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_vector2d_8h_source.html#l00110">CVector2d()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">GetY()</a>.</p>
+<p>References <a class="el" href="_c_vector2d_8h_source.html#l00122">CVector2d()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00147">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00159">GetY()</a>.</p>
 
 </div>
 </div>
@@ -549,9 +573,9 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00196">196</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00215">215</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_vector2d_8h_source.html#l00110">CVector2d()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00140">GetY()</a>.</p>
+<p>References <a class="el" href="_c_vector2d_8h_source.html#l00122">CVector2d()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00147">GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00159">GetY()</a>.</p>
 
 </div>
 </div>
@@ -570,7 +594,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00230">230</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00249">249</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_vector.html#a67483f72d08768c88cc6dad9c4abb02f">imath::TVector&lt; 2 &gt;::operator-=()</a>.</p>
 
@@ -593,9 +617,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classimath_1_1_t_vector.html#a1c87e7a2c21378072978d82e381efafa">imath::TVector&lt; 2 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00210">210</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00229">229</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_vector2d_8h_source.html#l00110">CVector2d()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00128">GetX()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00140">GetY()</a>, and <a class="el" href="istd_8h_source.html#l00113">I_BIG_EPSILON</a>.</p>
+<p>References <a class="el" href="_c_vector2d_8h_source.html#l00122">CVector2d()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00147">GetX()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00159">GetY()</a>, and <a class="el" href="istd_8h_source.html#l00113">I_BIG_EPSILON</a>.</p>
 
 </div>
 </div>
@@ -616,7 +640,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classimath_1_1_t_vector.html#a6178d4e26b0c5474c30db228180f29ce">imath::TVector&lt; 2 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00246">246</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00265">265</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_vector.html#a6178d4e26b0c5474c30db228180f29ce">imath::TVector&lt; 2 &gt;::operator/=()</a>.</p>
 
@@ -639,7 +663,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Set X position of this vector. </p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00134">134</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00153">153</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_vector.html#a251f63ce2a3f176f102839c1da5f9893">imath::TVector&lt; 2 &gt;::operator[]()</a>.</p>
 
@@ -664,11 +688,29 @@ Public Member Functions</h2></td></tr>
 
 <p>Set Y position of this vector. </p>
 
-<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00146">146</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_vector2d_8h_source.html#l00165">165</a> of file <a class="el" href="_c_vector2d_8h_source.html">CVector2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_vector.html#a251f63ce2a3f176f102839c1da5f9893">imath::TVector&lt; 2 &gt;::operator[]()</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_matrix2d_8h_source.html#l00211">i2d::CMatrix2d::GetAxesLengths()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac7c7d39b9684f25cf62cbb1c817266cf"></a><!-- doxytag: member="i2d::CVector2d::ToIndex2d" ref="ac7c7d39b9684f25cf62cbb1c817266cf" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> i2d::CVector2d::ToIndex2d </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get vector converted to 2D index. </p>
 
 </div>
 </div>

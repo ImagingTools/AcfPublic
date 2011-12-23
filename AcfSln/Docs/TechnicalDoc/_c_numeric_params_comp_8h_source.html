@@ -83,27 +83,30 @@
 <a name="l00061"></a>00061        <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a682c632074696e4c64885cd440af03b8">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="keyword">protected</span>:
-<a name="l00065"></a>00065        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a66df79f5747b3d2bbb39be65805502e9">OnComponentCreated</a>();
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="keyword">private</span>:
-<a name="l00069"></a>00069        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> m_values;
+<a name="l00064"></a>00064        <span class="comment">// reimplemented (istd::IChangeable)</span>
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a848d93f798bc9037c7889b56964d846c">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="keyword">protected</span>:
+<a name="l00068"></a>00068        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a66df79f5747b3d2bbb39be65805502e9">OnComponentCreated</a>();
 <a name="l00070"></a>00070 
-<a name="l00071"></a>00071        I_ATTR(<span class="keywordtype">int</span>, m_dimensionsCountAttrPtr);
-<a name="l00072"></a>00072        I_ATTR(<span class="keywordtype">double</span>, m_minFilterLengthAttrPtr);
-<a name="l00073"></a>00073        I_ATTR(<span class="keywordtype">double</span>, m_maxFilterLengthAttrPtr);
-<a name="l00074"></a>00074        I_MULTIATTR(<span class="keywordtype">double</span>, m_filterLengthsAttrPtr);
-<a name="l00075"></a>00075        I_REF(<a class="code" href="classimeas_1_1_i_numeric_constraints.html">INumericConstraints</a>, m_constraintsCompPtr);
-<a name="l00076"></a>00076 };
-<a name="l00077"></a>00077 
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 } <span class="comment">// namespace imeas</span>
+<a name="l00071"></a>00071 <span class="keyword">private</span>:
+<a name="l00072"></a>00072        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> m_values;
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074        I_ATTR(<span class="keywordtype">int</span>, m_dimensionsCountAttrPtr);
+<a name="l00075"></a>00075        I_ATTR(<span class="keywordtype">double</span>, m_minFilterLengthAttrPtr);
+<a name="l00076"></a>00076        I_ATTR(<span class="keywordtype">double</span>, m_maxFilterLengthAttrPtr);
+<a name="l00077"></a>00077        I_MULTIATTR(<span class="keywordtype">double</span>, m_filterLengthsAttrPtr);
+<a name="l00078"></a>00078        I_REF(<a class="code" href="classimeas_1_1_i_numeric_constraints.html">INumericConstraints</a>, m_constraintsCompPtr);
+<a name="l00079"></a>00079 };
 <a name="l00080"></a>00080 
 <a name="l00081"></a>00081 
-<a name="l00082"></a>00082 <span class="preprocessor">#endif // !imeas_CNumericParamsComp_included</span>
-<a name="l00083"></a>00083 <span class="preprocessor"></span>
+<a name="l00082"></a>00082 } <span class="comment">// namespace imeas</span>
+<a name="l00083"></a>00083 
 <a name="l00084"></a>00084 
+<a name="l00085"></a>00085 <span class="preprocessor">#endif // !imeas_CNumericParamsComp_included</span>
+<a name="l00086"></a>00086 <span class="preprocessor"></span>
+<a name="l00087"></a>00087 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
