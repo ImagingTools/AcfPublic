@@ -42,23 +42,23 @@
 <a name="l00020"></a><a class="code" href="classisys_1_1_i_timer.html">00020</a> <span class="keyword">class </span><a class="code" href="classisys_1_1_i_timer.html" title="Common interface for timer implementations.">ITimer</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IChangeable
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisys_1_1_i_timer.html#aad2d661bcb3c678cae883a057533affa" title="Start the timer.">Start</a>() = 0;
-<a name="l00027"></a>00027 
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classisys_1_1_i_timer.html#ae41f285c4cd8503fe134693e0ee8c21a" title="Return the time in seconds from start until this call.">GetElapsed</a>() <span class="keyword">const</span> = 0;
-<a name="l00032"></a>00032 
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classisys_1_1_i_timer.html#a71c28b6ebca724edd004fe9e71afe69f" title="Get time difference to second timer.">GetTimeTo</a>(<span class="keyword">const</span> <a class="code" href="classisys_1_1_i_timer.html" title="Common interface for timer implementations.">ITimer</a>&amp; timer) <span class="keyword">const</span> = 0;
-<a name="l00037"></a>00037 
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisys_1_1_i_timer.html#a6c1808f1745ae5bb6f61342f2e8aa170" title="Wait for specific timer elapsed value is reached.">WaitTo</a>(<span class="keywordtype">double</span> time) <span class="keyword">const</span> = 0;
-<a name="l00042"></a>00042 
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classisys_1_1_i_timer.html#a1e9f1a87e32077210ee2208668148ea4" title="Return the timer resolution in seconds.">GetTimerResolution</a>() <span class="keyword">const</span> = 0;
-<a name="l00047"></a>00047 };
-<a name="l00048"></a>00048 
+<a name="l00027"></a>00027        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisys_1_1_i_timer.html#acc298cc215cf7a5332c0a1375bfcabc5" title="Start the timer.">Start</a>(<span class="keywordtype">double</span> elapsedTime = 0) = 0;
+<a name="l00028"></a>00028 
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classisys_1_1_i_timer.html#ae41f285c4cd8503fe134693e0ee8c21a" title="Return the time in seconds from start until this call.">GetElapsed</a>() <span class="keyword">const</span> = 0;
+<a name="l00033"></a>00033 
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classisys_1_1_i_timer.html#a71c28b6ebca724edd004fe9e71afe69f" title="Get time difference to second timer.">GetTimeTo</a>(<span class="keyword">const</span> <a class="code" href="classisys_1_1_i_timer.html" title="Common interface for timer implementations.">ITimer</a>&amp; timer) <span class="keyword">const</span> = 0;
+<a name="l00038"></a>00038 
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisys_1_1_i_timer.html#a6c1808f1745ae5bb6f61342f2e8aa170" title="Wait for specific timer elapsed value is reached.">WaitTo</a>(<span class="keywordtype">double</span> time) <span class="keyword">const</span> = 0;
+<a name="l00043"></a>00043 
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classisys_1_1_i_timer.html#a1e9f1a87e32077210ee2208668148ea4" title="Return the timer resolution in seconds.">GetTimerResolution</a>() <span class="keyword">const</span> = 0;
+<a name="l00048"></a>00048 };
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050 } <span class="comment">// namespace isys</span>
-<a name="l00051"></a>00051 
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 } <span class="comment">// namespace isys</span>
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="preprocessor">#endif // !isys_ITimer_included</span>
-<a name="l00054"></a>00054 <span class="preprocessor"></span>
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="preprocessor">#endif // !isys_ITimer_included</span>
+<a name="l00055"></a>00055 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

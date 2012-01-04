@@ -11076,6 +11076,13 @@
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>IsVerboseEnabled</name>
+      <anchorfile>classibase_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a96af7047c6398cedff347122412de28d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
       <type>void</type>
       <name>SendVerboseMessage</name>
       <anchorfile>classibase_1_1_t_logger_comp_wrap.html</anchorfile>
@@ -30028,8 +30035,8 @@
       <type>virtual void</type>
       <name>Start</name>
       <anchorfile>classiqt_1_1_c_timer.html</anchorfile>
-      <anchor>aa524b6d8e484603f1f19a5839adbd1b7</anchor>
-      <arglist>()</arglist>
+      <anchor>ae0620e031893c792e324d85ca36228f9</anchor>
+      <arglist>(double elapsedTime=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
@@ -45522,8 +45529,8 @@
       <type>virtual void</type>
       <name>Start</name>
       <anchorfile>classisys_1_1_i_timer.html</anchorfile>
-      <anchor>aad2d661bcb3c678cae883a057533affa</anchor>
-      <arglist>()=0</arglist>
+      <anchor>acc298cc215cf7a5332c0a1375bfcabc5</anchor>
+      <arglist>(double elapsedTime=0)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>

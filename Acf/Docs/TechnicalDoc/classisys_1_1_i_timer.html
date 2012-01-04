@@ -57,8 +57,8 @@ Inheritance diagram for isys::ITimer:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_timer.html#aad2d661bcb3c678cae883a057533affa">Start</a> ()=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the timer.  <a href="#aad2d661bcb3c678cae883a057533affa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_timer.html#acc298cc215cf7a5332c0a1375bfcabc5">Start</a> (double elapsedTime=0)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the timer.  <a href="#acc298cc215cf7a5332c0a1375bfcabc5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_timer.html#ae41f285c4cd8503fe134693e0ee8c21a">GetElapsed</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the time in seconds from start until this call.  <a href="#ae41f285c4cd8503fe134693e0ee8c21a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_timer.html#a71c28b6ebca724edd004fe9e71afe69f">GetTimeTo</a> (const <a class="el" href="classisys_1_1_i_timer.html">ITimer</a> &amp;timer) const =0</td></tr>
@@ -132,14 +132,15 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aad2d661bcb3c678cae883a057533affa"></a><!-- doxytag: member="isys::ITimer::Start" ref="aad2d661bcb3c678cae883a057533affa" args="()=0" -->
+<a class="anchor" id="acc298cc215cf7a5332c0a1375bfcabc5"></a><!-- doxytag: member="isys::ITimer::Start" ref="acc298cc215cf7a5332c0a1375bfcabc5" args="(double elapsedTime=0)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void isys::ITimer::Start </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>elapsedTime</em> = <code>0</code></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
       </table>
@@ -147,8 +148,14 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Start the timer. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elapsed</td><td>optional current elapsed time. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_timer.html#aa524b6d8e484603f1f19a5839adbd1b7">iqt::CTimer</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_timer.html#ae0620e031893c792e324d85ca36228f9">iqt::CTimer</a>.</p>
 
 </div>
 </div>

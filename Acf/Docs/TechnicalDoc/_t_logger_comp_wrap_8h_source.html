@@ -49,86 +49,95 @@
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028        I_BEGIN_BASE_COMPONENT(<a class="code" href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">TLoggerCompWrap</a>);
 <a name="l00029"></a>00029               I_ASSIGN(m_logCompPtr, <span class="stringliteral">&quot;Log&quot;</span>, <span class="stringliteral">&quot;Consumer log messages&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Log&quot;</span>);
-<a name="l00030"></a>00030               I_ASSIGN(m_verboseEnabledAttrPtr, <span class="stringliteral">&quot;EnableVerbose&quot;</span>, <span class="stringliteral">&quot;If enabled, verbose messages can be produced&quot;</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);
+<a name="l00030"></a>00030               I_ASSIGN(m_verboseEnabledAttrPtr, <span class="stringliteral">&quot;EnableVerbose&quot;</span>, <span class="stringliteral">&quot;If enabled, verbose messages can be produced&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
 <a name="l00031"></a>00031        I_END_COMPONENT;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033 <span class="keyword">protected</span>:
-<a name="l00037"></a>00037        <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a39587000b2300dfaf8101e3dde41deed" title="Send verbose message.">SendVerboseMessage</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; message, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; messageSource = <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>()) <span class="keyword">const</span>;
+<a name="l00037"></a>00037        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a96af7047c6398cedff347122412de28d" title="Check if verbose messages are eneabled.">IsVerboseEnabled</a>() <span class="keyword">const</span>;
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039        <span class="comment">// reimplemented (istd::ILogger)</span>
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a9ec30e06390bb58f95e4acbc3c5954f9" title="Decorate message parts before outputting.">DecorateMessage</a>(
-<a name="l00041"></a>00041                             <a class="code" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343" title="Category of message.">istd::ILogger::MessageCategory</a> category,
-<a name="l00042"></a>00042                             <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
-<a name="l00043"></a>00043                             <span class="keywordtype">int</span> flags,
-<a name="l00044"></a>00044                             <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; message,
-<a name="l00045"></a>00045                             <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; messageSource) <span class="keyword">const</span>;
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a58f942fa48f8f32af7886a036306b04e">OnComponentCreated</a>();
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="keyword">private</span>:
-<a name="l00051"></a>00051        I_REF(<a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>, m_logCompPtr);
-<a name="l00052"></a>00052        I_ATTR(<span class="keywordtype">bool</span>, m_verboseEnabledAttrPtr);
-<a name="l00053"></a>00053 };
+<a name="l00042"></a>00042        <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a39587000b2300dfaf8101e3dde41deed" title="Send verbose message.">SendVerboseMessage</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; message, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; messageSource = <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>()) <span class="keyword">const</span>;
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044        <span class="comment">// reimplemented (istd::ILogger)</span>
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a9ec30e06390bb58f95e4acbc3c5954f9" title="Decorate message parts before outputting.">DecorateMessage</a>(
+<a name="l00046"></a>00046                             <a class="code" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343" title="Category of message.">istd::ILogger::MessageCategory</a> category,
+<a name="l00047"></a>00047                             <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
+<a name="l00048"></a>00048                             <span class="keywordtype">int</span> flags,
+<a name="l00049"></a>00049                             <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; message,
+<a name="l00050"></a>00050                             <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; messageSource) <span class="keyword">const</span>;
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a58f942fa48f8f32af7886a036306b04e">OnComponentCreated</a>();
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056 <span class="comment">// protected methods</span>
-<a name="l00057"></a>00057        
-<a name="l00058"></a>00058 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00059"></a><a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a39587000b2300dfaf8101e3dde41deed">00059</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a39587000b2300dfaf8101e3dde41deed" title="Send verbose message.">TLoggerCompWrap&lt;Base&gt;::SendVerboseMessage</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; message, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; messageSource)<span class="keyword"> const</span>
-<a name="l00060"></a>00060 <span class="keyword"></span>{
-<a name="l00061"></a>00061        <span class="keywordflow">if</span> (m_verboseEnabledAttrPtr.IsValid() &amp;&amp; *m_verboseEnabledAttrPtr){
-<a name="l00062"></a>00062               BaseClass::SendInfoMessage(0, message, messageSource);
-<a name="l00063"></a>00063        }
-<a name="l00064"></a>00064 }
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 <span class="comment">// reimplemented (istd::ILogger)</span>
+<a name="l00055"></a>00055 <span class="keyword">private</span>:
+<a name="l00056"></a>00056        I_REF(<a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>, m_logCompPtr);
+<a name="l00057"></a>00057        I_ATTR(<span class="keywordtype">bool</span>, m_verboseEnabledAttrPtr);
+<a name="l00058"></a>00058 };
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="comment">// protected methods</span>
+<a name="l00062"></a>00062        
+<a name="l00063"></a>00063 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00064"></a><a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a96af7047c6398cedff347122412de28d">00064</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a96af7047c6398cedff347122412de28d" title="Check if verbose messages are eneabled.">TLoggerCompWrap&lt;Base&gt;::IsVerboseEnabled</a>()<span class="keyword"> const</span>
+<a name="l00065"></a>00065 <span class="keyword"></span>{
+<a name="l00066"></a>00066        <span class="keywordflow">return</span> *m_verboseEnabledAttrPtr;
+<a name="l00067"></a>00067 }
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00070"></a><a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a9ec30e06390bb58f95e4acbc3c5954f9">00070</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a9ec30e06390bb58f95e4acbc3c5954f9" title="Decorate message parts before outputting.">TLoggerCompWrap&lt;Base&gt;::DecorateMessage</a>(
-<a name="l00071"></a>00071                      <a class="code" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343" title="Category of message.">istd::ILogger::MessageCategory</a> category,
-<a name="l00072"></a>00072                      <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
-<a name="l00073"></a>00073                      <span class="keywordtype">int</span> flags,
-<a name="l00074"></a>00074                      <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; message,
-<a name="l00075"></a>00075                      <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; messageSource)<span class="keyword"> const</span>
-<a name="l00076"></a>00076 <span class="keyword"></span>{
-<a name="l00077"></a>00077        BaseClass::DecorateMessage(category, <span class="keywordtype">id</span>, flags, message, messageSource);
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00071"></a><a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a39587000b2300dfaf8101e3dde41deed">00071</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a39587000b2300dfaf8101e3dde41deed" title="Send verbose message.">TLoggerCompWrap&lt;Base&gt;::SendVerboseMessage</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; message, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; messageSource)<span class="keyword"> const</span>
+<a name="l00072"></a>00072 <span class="keyword"></span>{
+<a name="l00073"></a>00073        <span class="keywordflow">if</span> (*m_verboseEnabledAttrPtr){
+<a name="l00074"></a>00074               BaseClass::SendInfoMessage(0, message, messageSource);
+<a name="l00075"></a>00075        }
+<a name="l00076"></a>00076 }
+<a name="l00077"></a>00077 
 <a name="l00078"></a>00078 
-<a name="l00079"></a>00079        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_context.html" title="Base implementation of component session context.">icomp::CComponentContext</a>* contextPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classicomp_1_1_c_component_context.html" title="Base implementation of component session context.">icomp::CComponentContext</a>*<span class="keyword">&gt;</span>(BaseClass::GetComponentContext());
-<a name="l00080"></a>00080        <span class="keywordflow">if</span> (contextPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00081"></a>00081               <span class="keywordflow">if</span> (messageSource.empty()){
-<a name="l00082"></a>00082                      messageSource = contextPtr-&gt;<a class="code" href="classicomp_1_1_c_component_context.html#ac706a76999b6e4b10523159d72938bdb">GetContextId</a>();
-<a name="l00083"></a>00083               }
-<a name="l00084"></a>00084               <span class="keywordflow">else</span>{
-<a name="l00085"></a>00085                      messageSource = <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>(contextPtr-&gt;<a class="code" href="classicomp_1_1_c_component_context.html#ac706a76999b6e4b10523159d72938bdb">GetContextId</a>()) + <span class="stringliteral">&quot; (&quot;</span> + messageSource + <span class="stringliteral">&quot;)&quot;</span>;
-<a name="l00086"></a>00086               }
-<a name="l00087"></a>00087        }
-<a name="l00088"></a>00088 }
-<a name="l00089"></a>00089 
+<a name="l00079"></a>00079 <span class="comment">// reimplemented (istd::ILogger)</span>
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00082"></a><a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a9ec30e06390bb58f95e4acbc3c5954f9">00082</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a9ec30e06390bb58f95e4acbc3c5954f9" title="Decorate message parts before outputting.">TLoggerCompWrap&lt;Base&gt;::DecorateMessage</a>(
+<a name="l00083"></a>00083                      <a class="code" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343" title="Category of message.">istd::ILogger::MessageCategory</a> category,
+<a name="l00084"></a>00084                      <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
+<a name="l00085"></a>00085                      <span class="keywordtype">int</span> flags,
+<a name="l00086"></a>00086                      <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; message,
+<a name="l00087"></a>00087                      <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; messageSource)<span class="keyword"> const</span>
+<a name="l00088"></a>00088 <span class="keyword"></span>{
+<a name="l00089"></a>00089        BaseClass::DecorateMessage(category, <span class="keywordtype">id</span>, flags, message, messageSource);
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091 <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00092"></a>00092 
-<a name="l00093"></a>00093 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00094"></a><a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a58f942fa48f8f32af7886a036306b04e">00094</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a58f942fa48f8f32af7886a036306b04e">TLoggerCompWrap&lt;Base&gt;::OnComponentCreated</a>()
-<a name="l00095"></a>00095 {
-<a name="l00096"></a>00096        <span class="keywordflow">if</span> (m_logCompPtr.IsValid()){
-<a name="l00097"></a>00097               this-&gt;SetLogPtr(m_logCompPtr.GetPtr());
-<a name="l00098"></a>00098        }
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100        BaseClass::OnComponentCreated();
-<a name="l00101"></a>00101 }
+<a name="l00091"></a>00091        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_context.html" title="Base implementation of component session context.">icomp::CComponentContext</a>* contextPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classicomp_1_1_c_component_context.html" title="Base implementation of component session context.">icomp::CComponentContext</a>*<span class="keyword">&gt;</span>(BaseClass::GetComponentContext());
+<a name="l00092"></a>00092        <span class="keywordflow">if</span> (contextPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00093"></a>00093               <span class="keywordflow">if</span> (messageSource.empty()){
+<a name="l00094"></a>00094                      messageSource = contextPtr-&gt;<a class="code" href="classicomp_1_1_c_component_context.html#ac706a76999b6e4b10523159d72938bdb">GetContextId</a>();
+<a name="l00095"></a>00095               }
+<a name="l00096"></a>00096               <span class="keywordflow">else</span>{
+<a name="l00097"></a>00097                      messageSource = <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>(contextPtr-&gt;<a class="code" href="classicomp_1_1_c_component_context.html#ac706a76999b6e4b10523159d72938bdb">GetContextId</a>()) + <span class="stringliteral">&quot; (&quot;</span> + messageSource + <span class="stringliteral">&quot;)&quot;</span>;
+<a name="l00098"></a>00098               }
+<a name="l00099"></a>00099        }
+<a name="l00100"></a>00100 }
+<a name="l00101"></a>00101 
 <a name="l00102"></a>00102 
-<a name="l00103"></a>00103 
-<a name="l00109"></a><a class="code" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">00109</a> <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">TLoggerCompWrap&lt;icomp::CComponentBase&gt;</a> <a class="code" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93" title="Type defininig base class for simple components outputing log messages.">CLoggerComponentBase</a>;
-<a name="l00110"></a>00110 
+<a name="l00103"></a>00103 <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00106"></a><a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a58f942fa48f8f32af7886a036306b04e">00106</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a58f942fa48f8f32af7886a036306b04e">TLoggerCompWrap&lt;Base&gt;::OnComponentCreated</a>()
+<a name="l00107"></a>00107 {
+<a name="l00108"></a>00108        <span class="keywordflow">if</span> (m_logCompPtr.IsValid()){
+<a name="l00109"></a>00109               this-&gt;SetLogPtr(m_logCompPtr.GetPtr());
+<a name="l00110"></a>00110        }
 <a name="l00111"></a>00111 
-<a name="l00112"></a>00112 } <span class="comment">// namespace ibase</span>
-<a name="l00113"></a>00113 
+<a name="l00112"></a>00112        BaseClass::OnComponentCreated();
+<a name="l00113"></a>00113 }
 <a name="l00114"></a>00114 
-<a name="l00115"></a>00115 <span class="preprocessor">#endif // !ibase_TLoggerCompWrap_included</span>
-<a name="l00116"></a>00116 <span class="preprocessor"></span>
-<a name="l00117"></a>00117 
+<a name="l00115"></a>00115 
+<a name="l00121"></a><a class="code" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">00121</a> <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">TLoggerCompWrap&lt;icomp::CComponentBase&gt;</a> <a class="code" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93" title="Type defininig base class for simple components outputing log messages.">CLoggerComponentBase</a>;
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 } <span class="comment">// namespace ibase</span>
+<a name="l00125"></a>00125 
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127 <span class="preprocessor">#endif // !ibase_TLoggerCompWrap_included</span>
+<a name="l00128"></a>00128 <span class="preprocessor"></span>
+<a name="l00129"></a>00129 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -63,8 +63,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dummie implementation, provided only for compatibility with iwin::CTimer.  <a href="#a4c3d3f34715d5c4d7808b60c7a920c09"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_timer.html#ad550be80f168f914169a6959baf2414f">SetNativeRepresentation</a> (unsigned long long value)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dummie implementation, provided only for compatibility with iwin::CTimer.  <a href="#ad550be80f168f914169a6959baf2414f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_timer.html#aa524b6d8e484603f1f19a5839adbd1b7">Start</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the timer.  <a href="#aa524b6d8e484603f1f19a5839adbd1b7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_timer.html#ae0620e031893c792e324d85ca36228f9">Start</a> (double elapsedTime=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the timer.  <a href="#ae0620e031893c792e324d85ca36228f9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_timer.html#aa8de6ba6f62c1db0363cc9778cd64e94">GetElapsed</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the time in seconds from start until this call.  <a href="#aa8de6ba6f62c1db0363cc9778cd64e94"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_timer.html#a80c5c59531f297e658ecbef37daee2ba">GetTimeTo</a> (const ITimer &amp;timer) const </td></tr>
@@ -208,14 +208,15 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa524b6d8e484603f1f19a5839adbd1b7"></a><!-- doxytag: member="iqt::CTimer::Start" ref="aa524b6d8e484603f1f19a5839adbd1b7" args="()" -->
+<a class="anchor" id="ae0620e031893c792e324d85ca36228f9"></a><!-- doxytag: member="iqt::CTimer::Start" ref="ae0620e031893c792e324d85ca36228f9" args="(double elapsedTime=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iqt::CTimer::Start </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>elapsedTime</em> = <code>0</code></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>
@@ -223,8 +224,14 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Start the timer. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elapsed</td><td>optional current elapsed time. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implements <a class="el" href="classisys_1_1_i_timer.html#aad2d661bcb3c678cae883a057533affa">isys::ITimer</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_timer.html#acc298cc215cf7a5332c0a1375bfcabc5">isys::ITimer</a>.</p>
 
 </div>
 </div>

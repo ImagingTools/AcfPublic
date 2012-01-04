@@ -29,7 +29,7 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iqt_CTimer_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;QTime&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;QElapsedTimer&gt;</span>
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_i_timer_8h.html">isys/ITimer.h</a>&quot;</span>
 <a name="l00008"></a>00008 
@@ -51,21 +51,22 @@
 <a name="l00035"></a>00035        <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_c_timer.html#ad550be80f168f914169a6959baf2414f" title="Dummie implementation, provided only for compatibility with iwin::CTimer.">SetNativeRepresentation</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> value);
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037        <span class="comment">// reimplemented (isys::ITimer)</span>
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_c_timer.html#aa524b6d8e484603f1f19a5839adbd1b7" title="Start the timer.">Start</a>();
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_c_timer.html#ae0620e031893c792e324d85ca36228f9" title="Start the timer.">Start</a>(<span class="keywordtype">double</span> elapsedTime = 0);
 <a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiqt_1_1_c_timer.html#aa8de6ba6f62c1db0363cc9778cd64e94" title="Return the time in seconds from start until this call.">GetElapsed</a>() <span class="keyword">const</span>;
 <a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiqt_1_1_c_timer.html#aa63739c496413ea7370f073015cc102d">GetTimeTo</a>(<span class="keyword">const</span> ITimer&amp; timer) <span class="keyword">const</span>;
 <a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_c_timer.html#a032c93da6150323795e527e4a0b5eecf" title="Wait for specific timer elapsed value is reached.">WaitTo</a>(<span class="keywordtype">double</span> time) <span class="keyword">const</span>;
 <a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiqt_1_1_c_timer.html#a3f55a91a89ab5402697764146cf2469e" title="Return the timer resolution in seconds.">GetTimerResolution</a>() <span class="keyword">const</span>;
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044 <span class="keyword">private</span>:
-<a name="l00045"></a>00045        QTime m_time;
-<a name="l00046"></a>00046 };
-<a name="l00047"></a>00047 
+<a name="l00045"></a>00045        QElapsedTimer m_time;
+<a name="l00046"></a>00046        <span class="keywordtype">double</span> m_timeShift;
+<a name="l00047"></a>00047 };
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049 } <span class="comment">// namespace iqt</span>
-<a name="l00050"></a>00050 
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 } <span class="comment">// namespace iqt</span>
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="preprocessor">#endif // !iqt_CTimer_included</span>
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="preprocessor">#endif // !iqt_CTimer_included</span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -61,12 +61,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_c_timer.html#ab9e95463c4d8c53ce5bf69f1e5056997">GetTimeTo</a> (const <a class="el" href="classiwin_1_1_c_timer.html">CTimer</a> &amp;timer) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a49d02a5be51a966cfebeabc79b53b27a">I_QWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_c_timer.html#a54d0475575bcd6e63fdb4d8303114349">GetNativeRepresentation</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_c_timer.html#a3d6657b0055f0faa149fe3290b628c27">SetNativeRepresentation</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a49d02a5be51a966cfebeabc79b53b27a">I_QWORD</a> value)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_c_timer.html#ac98f220877f79c15b488d6dd7055c972">SetElapsed</a> (double value)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_c_timer.html#a63076636f9456e42a268d26eee746e97">Start</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_c_timer.html#ae032396202c2ada5efe3c88ad7b0b488">Start</a> (double elapsedTime=0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_c_timer.html#a118f16d76c9027f61139171e974f1ed5">GetElapsed</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_c_timer.html#ae290f53a9a68679da1cbd23d4f6d57ba">GetTimeTo</a> (const ITimer &amp;timer) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_c_timer.html#a9da9739f8da92d76bcd3e42a6b971910">WaitTo</a> (double time) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_c_timer.html#ab57a2c8efbf8bd01bc41e16e58ed4176">GetTimerResolution</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_c_timer.html#ab818c68dc4bb537c5465da3eb21bb8ad">GetSupportedOperations</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_c_timer.html#ab2031809d3bdabe870cd676ce9a223d2">CopyFrom</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>An timer implementation for the Windows plattform. </p>
@@ -90,6 +91,25 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ab2031809d3bdabe870cd676ce9a223d2"></a><!-- doxytag: member="iwin::CTimer::CopyFrom" ref="ab2031809d3bdabe870cd676ce9a223d2" args="(const istd::IChangeable &amp;object)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iwin::CTimer::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a48106c79905f877b7bcca41755bbde49">istd::IChangeable</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a118f16d76c9027f61139171e974f1ed5"></a><!-- doxytag: member="iwin::CTimer::GetElapsed" ref="a118f16d76c9027f61139171e974f1ed5" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -121,6 +141,24 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab818c68dc4bb537c5465da3eb21bb8ad"></a><!-- doxytag: member="iwin::CTimer::GetSupportedOperations" ref="ab818c68dc4bb537c5465da3eb21bb8ad" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iwin::CTimer::GetSupportedOperations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a9577d4917a5131637c35ef6b6e9fc42a">istd::IChangeable</a>.</p>
 
 </div>
 </div>
@@ -192,23 +230,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac98f220877f79c15b488d6dd7055c972"></a><!-- doxytag: member="iwin::CTimer::SetElapsed" ref="ac98f220877f79c15b488d6dd7055c972" args="(double value)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void iwin::CTimer::SetElapsed </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a3d6657b0055f0faa149fe3290b628c27"></a><!-- doxytag: member="iwin::CTimer::SetNativeRepresentation" ref="a3d6657b0055f0faa149fe3290b628c27" args="(I_QWORD value)" -->
 <div class="memitem">
 <div class="memproto">
@@ -226,21 +247,22 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a63076636f9456e42a268d26eee746e97"></a><!-- doxytag: member="iwin::CTimer::Start" ref="a63076636f9456e42a268d26eee746e97" args="()" -->
+<a class="anchor" id="ae032396202c2ada5efe3c88ad7b0b488"></a><!-- doxytag: member="iwin::CTimer::Start" ref="ae032396202c2ada5efe3c88ad7b0b488" args="(double elapsedTime=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iwin::CTimer::Start </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>elapsedTime</em> = <code>0</code></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_i_timer.html#aad2d661bcb3c678cae883a057533affa">isys::ITimer</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_i_timer.html#acc298cc215cf7a5332c0a1375bfcabc5">isys::ITimer</a>.</p>
 
 </div>
 </div>

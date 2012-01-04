@@ -24,7 +24,7 @@
 #define iqt_CTimer_included
 
 
-#include <QTime>
+#include <QElapsedTimer>
 
 #include "isys/ITimer.h"
 
@@ -57,14 +57,15 @@ public:
 	void SetNativeRepresentation(unsigned long long value);
 
 	// reimplemented (isys::ITimer)
-	virtual void Start();
+	virtual void Start(double elapsedTime = 0);
 	virtual double GetElapsed() const;
 	virtual double GetTimeTo(const ITimer& timer) const;
 	virtual void WaitTo(double time) const;
 	virtual double GetTimerResolution() const;
 
 private:
-	QTime m_time;
+	QElapsedTimer m_time;
+	double m_timeShift;
 };
 
 

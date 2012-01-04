@@ -48,30 +48,33 @@
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a49d02a5be51a966cfebeabc79b53b27a">I_QWORD</a> <a class="code" href="classiwin_1_1_c_timer.html#a54d0475575bcd6e63fdb4d8303114349">GetNativeRepresentation</a>() <span class="keyword">const</span>;
 <a name="l00029"></a>00029        <span class="keywordtype">void</span> <a class="code" href="classiwin_1_1_c_timer.html#a3d6657b0055f0faa149fe3290b628c27">SetNativeRepresentation</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a49d02a5be51a966cfebeabc79b53b27a">I_QWORD</a> value);
-<a name="l00030"></a>00030        <span class="keywordtype">void</span> <a class="code" href="classiwin_1_1_c_timer.html#ac98f220877f79c15b488d6dd7055c972">SetElapsed</a>(<span class="keywordtype">double</span> value);
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032        <span class="comment">// reimplemented (isys::ITimer)</span>
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwin_1_1_c_timer.html#a63076636f9456e42a268d26eee746e97">Start</a>();
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiwin_1_1_c_timer.html#a118f16d76c9027f61139171e974f1ed5">GetElapsed</a>() <span class="keyword">const</span>;
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiwin_1_1_c_timer.html#ab9e95463c4d8c53ce5bf69f1e5056997">GetTimeTo</a>(<span class="keyword">const</span> ITimer&amp; timer) <span class="keyword">const</span>;
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwin_1_1_c_timer.html#a9da9739f8da92d76bcd3e42a6b971910">WaitTo</a>(<span class="keywordtype">double</span> time) <span class="keyword">const</span>;
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiwin_1_1_c_timer.html#ab57a2c8efbf8bd01bc41e16e58ed4176">GetTimerResolution</a>() <span class="keyword">const</span>;
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039 <span class="keyword">private</span>:
-<a name="l00040"></a>00040        <span class="keywordtype">long</span> <span class="keywordtype">long</span> m_startCounter;
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031        <span class="comment">// reimplemented (isys::ITimer)</span>
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwin_1_1_c_timer.html#ae032396202c2ada5efe3c88ad7b0b488">Start</a>(<span class="keywordtype">double</span> elapsedTime = 0);
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiwin_1_1_c_timer.html#a118f16d76c9027f61139171e974f1ed5">GetElapsed</a>() <span class="keyword">const</span>;
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiwin_1_1_c_timer.html#ab9e95463c4d8c53ce5bf69f1e5056997">GetTimeTo</a>(<span class="keyword">const</span> ITimer&amp; timer) <span class="keyword">const</span>;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwin_1_1_c_timer.html#a9da9739f8da92d76bcd3e42a6b971910">WaitTo</a>(<span class="keywordtype">double</span> time) <span class="keyword">const</span>;
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiwin_1_1_c_timer.html#ab57a2c8efbf8bd01bc41e16e58ed4176">GetTimerResolution</a>() <span class="keyword">const</span>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038        <span class="comment">// reimplemented (istd::IChangeable)</span>
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiwin_1_1_c_timer.html#ab818c68dc4bb537c5465da3eb21bb8ad">GetSupportedOperations</a>() <span class="keyword">const</span>;
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_c_timer.html#ab2031809d3bdabe870cd676ce9a223d2">CopyFrom</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>);
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042        <span class="comment">// static attributes</span>
-<a name="l00043"></a>00043        <span class="keyword">static</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a49d02a5be51a966cfebeabc79b53b27a">I_QWORD</a> s_timerFrequence;
-<a name="l00044"></a>00044        <span class="keyword">static</span> <span class="keywordtype">bool</span> s_isTimerFrequenceValid;
-<a name="l00045"></a>00045 };
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048 <span class="comment">// inline methods</span>
+<a name="l00042"></a>00042 <span class="keyword">private</span>:
+<a name="l00043"></a>00043        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#acc21c955baf6cc528081b9fa4470e109">I_SQWORD</a> m_startCounter;
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045        <span class="comment">// static attributes</span>
+<a name="l00046"></a>00046        <span class="keyword">static</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#acc21c955baf6cc528081b9fa4470e109">I_SQWORD</a> s_timerFrequence;
+<a name="l00047"></a>00047        <span class="keyword">static</span> <span class="keywordtype">bool</span> s_isTimerFrequenceValid;
+<a name="l00048"></a>00048 };
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050 } <span class="comment">// namespace iwin</span>
-<a name="l00051"></a>00051 
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="comment">// inline methods</span>
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="preprocessor">#endif // !iwin_CTimer_included</span>
+<a name="l00053"></a>00053 } <span class="comment">// namespace iwin</span>
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 <span class="preprocessor">#endif // !iwin_CTimer_included</span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

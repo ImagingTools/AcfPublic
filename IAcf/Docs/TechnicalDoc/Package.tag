@@ -3024,19 +3024,12 @@
       <anchor>a3d6657b0055f0faa149fe3290b628c27</anchor>
       <arglist>(I_QWORD value)</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetElapsed</name>
-      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
-      <anchor>ac98f220877f79c15b488d6dd7055c972</anchor>
-      <arglist>(double value)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Start</name>
       <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
-      <anchor>a63076636f9456e42a268d26eee746e97</anchor>
-      <arglist>()</arglist>
+      <anchor>ae032396202c2ada5efe3c88ad7b0b488</anchor>
+      <arglist>(double elapsedTime=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
@@ -3065,6 +3058,20 @@
       <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
       <anchor>ab57a2c8efbf8bd01bc41e16e58ed4176</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
+      <anchor>ab818c68dc4bb537c5465da3eb21bb8ad</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
+      <anchor>ab2031809d3bdabe870cd676ce9a223d2</anchor>
+      <arglist>(const istd::IChangeable &amp;object)</arglist>
     </member>
   </compound>
   <compound kind="class">
