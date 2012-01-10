@@ -1442,6 +1442,31 @@
     <namespace>iqtex</namespace>
   </compound>
   <compound kind="file">
+    <name>CXslSerializerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtex/</path>
+    <filename>_c_xsl_serializer_comp_8h</filename>
+    <includes id="_c_xsl_transformation_read_archive_8h" name="CXslTransformationReadArchive.h" local="yes" imported="no">iqtex/CXslTransformationReadArchive.h</includes>
+    <includes id="_c_xsl_transformation_write_archive_8h" name="CXslTransformationWriteArchive.h" local="yes" imported="no">iqtex/CXslTransformationWriteArchive.h</includes>
+    <class kind="class">iqtex::CXslSerializerComp</class>
+    <namespace>iqtex</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CXslTransformationReadArchive.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtex/</path>
+    <filename>_c_xsl_transformation_read_archive_8h</filename>
+    <includes id="iqtex_8h" name="iqtex.h" local="yes" imported="no">iqtex/iqtex.h</includes>
+    <class kind="class">iqtex::CXslTransformationReadArchive</class>
+    <namespace>iqtex</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CXslTransformationWriteArchive.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtex/</path>
+    <filename>_c_xsl_transformation_write_archive_8h</filename>
+    <includes id="iqtex_8h" name="iqtex.h" local="yes" imported="no">iqtex/iqtex.h</includes>
+    <class kind="class">iqtex::CXslTransformationWriteArchive</class>
+    <namespace>iqtex</namespace>
+  </compound>
+  <compound kind="file">
     <name>iqtex.h</name>
     <path>C:/Temp/AcfSln/Include/iqtex/</path>
     <filename>iqtex_8h</filename>
@@ -10322,6 +10347,9 @@
     <name>iqtex</name>
     <filename>namespaceiqtex.html</filename>
     <class kind="class">iqtex::CTcpTerminalGuiComp</class>
+    <class kind="class">iqtex::CXslSerializerComp</class>
+    <class kind="class">iqtex::CXslTransformationReadArchive</class>
+    <class kind="class">iqtex::CXslTransformationWriteArchive</class>
   </compound>
   <compound kind="class">
     <name>iqtex::CTcpTerminalGuiComp</name>
@@ -10425,6 +10453,463 @@
       <anchorfile>classiqtex_1_1_c_tcp_terminal_gui_comp.html</anchorfile>
       <anchor>a9e5d26d0d202f7f93d6e0a5abe89bd61</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtex::CXslSerializerComp</name>
+    <filename>classiqtex_1_1_c_xsl_serializer_comp.html</filename>
+    <base>TLoggerCompWrap&lt; ibase::CFileTypeInfoComp &gt;</base>
+    <base virtualness="virtual">iser::IFileLoader</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>a2651cb70f658699e5dce6b84ded5c278</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_BAD_EXTENSION</name>
+      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>a2651cb70f658699e5dce6b84ded5c278abd1872a625bb67a7b8b02af6a30ec8e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNSUPPORTED_VERSION</name>
+      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>a2651cb70f658699e5dce6b84ded5c278ad102ee43d3b92ef832eb9bddcd0d5805</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::TLoggerCompWrap&lt; ibase::CFileTypeInfoComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>a2c12cf114b9ea9fe900265c791b4a551</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>afebea6c2a3744c827ff3b1887259b060</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>a7d5a908b93962506e2b128cd27ab92b3</anchor>
+      <arglist>(istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>a0963be0e5cfebd26cc9e0b6f0bde3dcd</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const iser::IVersionInfo *</type>
+      <name>GetVersionInfo</name>
+      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>ac7e5d1b6dca8b0d3e3f9b0cdef3e6583</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnReadError</name>
+      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>ad747d4c2a8968698733eafd2e19fef79</anchor>
+      <arglist>(const iser::IArchive &amp;archive, const istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckMinimalVersion</name>
+      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>aff950958781cc1a921c01d2cbcc8c8a8</anchor>
+      <arglist>(const iser::ISerializable &amp;object, const iser::IVersionInfo &amp;versionInfo) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckInputFilePath</name>
+      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>a4892e0d9da66b3f85c4cf8476f9bf781</anchor>
+      <arglist>(const istd::CString filePath) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckTargetDirectory</name>
+      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>a259a3428c1be4b5a45ca62994b25abd5</anchor>
+      <arglist>(const istd::CString dirPath) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtex::CXslTransformationReadArchive</name>
+    <filename>classiqtex_1_1_c_xsl_transformation_read_archive.html</filename>
+    <base>iser::CReadArchiveBase</base>
+    <base>iser::CXmlDocumentInfoBase</base>
+    <member kind="function">
+      <type></type>
+      <name>CXslTransformationReadArchive</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a56124b8315c04647c4761abf031c78ed</anchor>
+      <arglist>(const istd::CString &amp;filePath=&quot;&quot;, const istd::CString &amp;xslFilePath=&quot;&quot;, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>OpenDocument</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a4328d63bbebdb11743873e896c42842c</anchor>
+      <arglist>(const istd::CString &amp;filePath, const istd::CString &amp;xslFilePath)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsTagSkippingSupported</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a89a654c9f812cf6f39cd1a46e3e20dd1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>BeginTag</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>ac87ac491cef8661fd70636f32e4d5dd3</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>BeginMultiTag</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a32baf7cc79546d58be05d59a0342b26d</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag, const iser::CArchiveTag &amp;subTag, int &amp;count)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>EndTag</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>aedda2935a1440eeb1ec84b0e8d88f7f3</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>ad33b0a8b2533a541722c34845146e0ac</anchor>
+      <arglist>(bool &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>aeaf9fd8d1ebb382b5189ff0bc8dc394b</anchor>
+      <arglist>(char &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a7f313ebf4dc82e3ace4a74dde1e8867a</anchor>
+      <arglist>(I_BYTE &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a2d9175262ff002d8f88ead6b3c365017</anchor>
+      <arglist>(I_SBYTE &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a0b6285f1e8f9a9dd0257c0efb394874b</anchor>
+      <arglist>(I_WORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a5b1923e531d0587b566d35053bb092d6</anchor>
+      <arglist>(I_SWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>aaa44dd7202dd67c999ae9a634e4703f7</anchor>
+      <arglist>(I_DWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a598df4f8e709076f4af1f826c1216cb8</anchor>
+      <arglist>(I_SDWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a44489a0860a437723b3fee6a7a9b72a3</anchor>
+      <arglist>(I_QWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>aeb80b4c3d2d110de8ce5e2de91c618b9</anchor>
+      <arglist>(I_SQWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>ad09b868a0d57527d8466b7b614a95771</anchor>
+      <arglist>(float &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a6c20716f6491053b413d2a1f3b6da3a4</anchor>
+      <arglist>(double &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>ad867ce018527190b84e7f55523c98fb5</anchor>
+      <arglist>(std::string &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a23178081b1264559b7d72648f2e8e9f6</anchor>
+      <arglist>(istd::CString &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessData</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a067566bb630c798aa0191d09ce21f825</anchor>
+      <arglist>(void *dataPtr, int size)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>PullTextNode</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>a8f610be8cdfe33e12472d375a99227dc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>ReadArchiveMessageHandler</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>af738ff8f140a1170f2c4cc3fddb6d39f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtex::CXslTransformationWriteArchive</name>
+    <filename>classiqtex_1_1_c_xsl_transformation_write_archive.html</filename>
+    <base>iser::CWriteArchiveBase</base>
+    <base>iser::CFileArchiveInfo</base>
+    <base>iser::CXmlDocumentInfoBase</base>
+    <member kind="typedef">
+      <type>iser::CWriteArchiveBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a289408cba8ed1ac3dd73d916b371bae2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iser::CFileArchiveInfo</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a12046396899079d5c8c0d7c38486ec98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CXslTransformationWriteArchive</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a1e0a70d97008f837843784f84a06229a</anchor>
+      <arglist>(const istd::CString &amp;filePath=&quot;&quot;, const istd::CString &amp;xslFilePath=&quot;&quot;, const iser::IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~CXslTransformationWriteArchive</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a33ff96c9f1fd889f1ccfa85a21d37124</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Flush</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>acbc10eb97a95615c75f0fd10fa3fc092</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>OpenDocument</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>ac0c5ffaf1e8638f25f718f81f07e47ec</anchor>
+      <arglist>(const istd::CString &amp;filePath, const istd::CString &amp;xslFilePath)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsTagSkippingSupported</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>aea781f4c33a9ff198b4c621dc0e44f28</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>BeginTag</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a2d05341ed699c3af622676bc7239569f</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>BeginMultiTag</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a61f05839cab8d360149eaddfba91d9e9</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag, const iser::CArchiveTag &amp;subTag, int &amp;count)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>EndTag</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a497c0c14282024332eda466aae8ab1de</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a63f13254668529fc458c0041bad656fb</anchor>
+      <arglist>(bool &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>ad2f345b41c202587e14073ef56b2e2bc</anchor>
+      <arglist>(char &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a8e4cc39e4b873ffc6a6509876df6e1ee</anchor>
+      <arglist>(I_BYTE &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a1ed42f4b146ccd8836b5f535e190adf0</anchor>
+      <arglist>(I_SBYTE &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>afc053f74b7e79ab01fad1bd396247c34</anchor>
+      <arglist>(I_WORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a5088fa6a2536b39c3224a41c5271f144</anchor>
+      <arglist>(I_SWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a9975df265314b7ff4f42b3776f8796e0</anchor>
+      <arglist>(I_DWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>ad8f19a2173afce26b534e4c224dfef00</anchor>
+      <arglist>(I_SDWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>af003685364178d397699087b24d4af41</anchor>
+      <arglist>(I_QWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a9fbe3aaca2b8b14568de5032ef4c677f</anchor>
+      <arglist>(I_SQWORD &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>ad91ffce7ace5633d3eebb5b255bb5d88</anchor>
+      <arglist>(float &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a815ac4565b5aa5da65142e1eeeaf39c5</anchor>
+      <arglist>(double &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a820455041d4ef5c4553c1bb049d3f13c</anchor>
+      <arglist>(std::string &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a47b479ca9fa6c41c7fee61c7076754bd</anchor>
+      <arglist>(istd::CString &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessData</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>ae600d1bf8e84af919e4f2fff8d863c5f</anchor>
+      <arglist>(void *dataPtr, int size)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>PushTextNode</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a27f397d19dfc159862f00e93a8a3fbe0</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SendLogMessage</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a9207958943d7c48de66100af618c4cf2</anchor>
+      <arglist>(MessageCategory category, int id, const istd::CString &amp;message, const istd::CString &amp;messageSource, int flags=0) const </arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>WriteArchiveMessageHandler</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
+      <anchor>a7fd677761e10234f7e5b9e03363ce1a3</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="namespace">

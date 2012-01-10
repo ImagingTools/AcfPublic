@@ -44,7 +44,6 @@
 #include "iqt/CTranslationManagerComp.h"
 #include "iqt/CXmlFileReadArchive.h"
 #include "iqt/CXmlFileWriteArchive.h"
-#include "iqt/CXslSerializerComp.h"
 #include "iqt/CRegistryCodeSaverComp.h"
 
 #include "iqtdoc/CExtendedDocumentTemplateComp.h"
@@ -91,7 +90,6 @@ typedef iqt::CProcessExecutorComp ProcessorExecutor;
 typedef iqt::CRenderedObjectFileLoaderComp RenderedObjectFileLoader;
 typedef icomp::TModelCompWrap<iqt::CTranslationManagerComp> TranslationManager;
 typedef ibase::TFileSerializerComp<iqt::CXmlFileReadArchive, iqt::CXmlFileWriteArchive> QtXmlFileSerializer;
-typedef iqt::CXslSerializerComp XslFileSerializer;
 typedef iqt::CRegistryCodeSaverComp RegistryCodeSaver;
 
 typedef iqtdoc::CExtendedDocumentTemplateComp ExtendedDocumentTemplate;
