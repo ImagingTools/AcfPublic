@@ -378,6 +378,17 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiObserverBinderComp.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_c_multi_observer_binder_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_model_editor_8h" name="IModelEditor.h" local="yes" imported="no">imod/IModelEditor.h</includes>
+    <includes id="_i_observer_8h" name="IObserver.h" local="yes" imported="no">imod/IObserver.h</includes>
+    <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
+    <class kind="class">ibase::CMultiObserverBinderComp</class>
+    <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
     <name>CObjectQueueComp.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_object_queue_comp_8h</filename>
@@ -8771,6 +8782,7 @@
     <class kind="class">ibase::CMessage</class>
     <class kind="class">ibase::CModelBinderComp</class>
     <class kind="class">ibase::CModelProxyComp</class>
+    <class kind="class">ibase::CMultiObserverBinderComp</class>
     <class kind="class">ibase::CObjectQueueComp</class>
     <class kind="class">ibase::CSelectableFileConverterComp</class>
     <class kind="class">ibase::CSize</class>
@@ -9413,6 +9425,97 @@
       <anchorfile>classibase_1_1_c_model_proxy_comp.html</anchorfile>
       <anchor>a41351f38c6494814937c5cdd55099e6d</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::CMultiObserverBinderComp</name>
+    <filename>classibase_1_1_c_multi_observer_binder_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">imod::IModelEditor</base>
+    <base virtualness="virtual">imod::IObserver</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
+      <anchor>a0e3bce962a221d4375be5902b66426a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
+      <anchor>a2974027f344ef4a2f06718b0f3afa9de</anchor>
+      <arglist>(m_modelEditorsCompPtr, m_observersCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMultiObserverBinderComp</name>
+      <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
+      <anchor>a8acbfa299281d1f8fafd7175fc465549</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsModelAttached</name>
+      <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
+      <anchor>a8e0800ae70a59bdd6ea7b43c68f1fe43</anchor>
+      <arglist>(const imod::IModel *modelPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
+      <anchor>a35e39cbafb56e6caed3d869393db3763</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnDetached</name>
+      <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
+      <anchor>a73e92b6f4a2f2c33fabcc0df1393356e</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeforeUpdate</name>
+      <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
+      <anchor>a7b1b8d30bd44c2ef234e09c9cff5d6ae</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
+      <anchor>a92cc4f748a82b73c672ed93ad5fb64f9</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateEditor</name>
+      <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
+      <anchor>a6ce5484ac89695dd768697fc4a50a6d0</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
+      <anchor>a1bb986c89b774c386efd374145aef134</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsReadOnly</name>
+      <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
+      <anchor>a3fd9854a42e82e2af217057933bed623</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetReadOnly</name>
+      <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
+      <anchor>a36b8198e72c1e5a4a94f599c749858da</anchor>
+      <arglist>(bool state)</arglist>
     </member>
   </compound>
   <compound kind="class">
