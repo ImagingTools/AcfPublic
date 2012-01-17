@@ -51,9 +51,10 @@ public:
 
 	virtual CRectangle GetBoundingBox() const;
 
+	bool Contains(const i2d::CVector2d& point) const; 
+
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
-
 private:
 	istd::CRange m_angleRange;
 };
