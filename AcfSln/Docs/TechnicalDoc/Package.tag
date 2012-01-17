@@ -596,6 +596,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CImageBinarizeProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_image_binarize_processor_comp_8h</filename>
+    <includes id="_i_numeric_params_8h" name="INumericParams.h" local="yes" imported="no">imeas/INumericParams.h</includes>
+    <class kind="class">iipr::CImageBinarizeProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CImageCropProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_crop_processor_comp_8h</filename>
@@ -1779,6 +1787,15 @@
     <path>C:/Temp/AcfSln/Include/iqtmm/</path>
     <filename>iqtmm_8h</filename>
     <namespace>iqtmm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPulseParamsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtsig/</path>
+    <filename>_c_pulse_params_gui_comp_8h</filename>
+    <includes id="_i_pulse_params_8h" name="IPulseParams.h" local="yes" imported="no">isig/IPulseParams.h</includes>
+    <includes id="iqtsig_8h" name="iqtsig.h" local="yes" imported="no">iqtsig/iqtsig.h</includes>
+    <class kind="class">iqtsig::CPulseParamsGuiComp</class>
+    <namespace>iqtsig</namespace>
   </compound>
   <compound kind="file">
     <name>CSampleAcquisitionGuiComp.h</name>
@@ -4945,6 +4962,7 @@
     <class kind="class">iipr::CFeatureBase</class>
     <class kind="class">iipr::CFeaturesContainer</class>
     <class kind="class">iipr::CFeatureToImageMapperProcessorComp</class>
+    <class kind="class">iipr::CImageBinarizeProcessorComp</class>
     <class kind="class">iipr::CImageCropProcessorComp</class>
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
     <class kind="class">iipr::CImageInterpolationParams</class>
@@ -5685,6 +5703,25 @@
       <anchorfile>classiipr_1_1_c_feature_to_image_mapper_processor_comp.html</anchorfile>
       <anchor>ab391e3374f5f8242b199d7351103e89d</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CImageBinarizeProcessorComp</name>
+    <filename>classiipr_1_1_c_image_binarize_processor_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_image_binarize_processor_comp.html</anchorfile>
+      <anchor>a9532d5882c242898ac8013849d17b7a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_image_binarize_processor_comp.html</anchorfile>
+      <anchor>af52e8023cd49e462eb8efd4d8329fb11</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13376,10 +13413,65 @@
   <compound kind="namespace">
     <name>iqtsig</name>
     <filename>namespaceiqtsig.html</filename>
+    <class kind="class">iqtsig::CPulseParamsGuiComp</class>
     <class kind="class">iqtsig::CSampleAcquisitionGuiComp</class>
     <class kind="class">iqtsig::CSampleContainerView</class>
     <class kind="class">iqtsig::CSamplingParamsGuiComp</class>
     <class kind="class">iqtsig::CScriptDataProcessorComp</class>
+  </compound>
+  <compound kind="class">
+    <name>iqtsig::CPulseParamsGuiComp</name>
+    <filename>classiqtsig_1_1_c_pulse_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CPulseParamsGuiComp, isig::IPulseParams &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPulseParamsGuiComp, isig::IPulseParams &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtsig_1_1_c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>ae8fff1099d54e962287cada3feeb5d0a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtsig_1_1_c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>a43d3bc3c9c5be222fe304fd162c17a51</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_DelayTimeSB_valueChanged</name>
+      <anchorfile>classiqtsig_1_1_c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>a8c20d1b31610259696c487a509c65cca</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_PulseTimeSB_valueChanged</name>
+      <anchorfile>classiqtsig_1_1_c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>aa1b79403c4b88639fec377db7f0d55bb</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RelaxingTimeSB_valueChanged</name>
+      <anchorfile>classiqtsig_1_1_c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>a6b51b258b2f7eeb60039a1cae668fc11</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtsig_1_1_c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>ab8a678a79285ef016afee932b1fcaeff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtsig_1_1_c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>aa86660f6e3ae2ddce6e98b3923e313be</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtsig::CSampleAcquisitionGuiComp</name>

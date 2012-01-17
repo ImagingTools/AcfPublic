@@ -36008,6 +36008,13 @@
       <anchor>a4f4368d3ca716cc5c05b495be1b5a1ea</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>DoUpdateModel</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>a683527b484df73ed72386338530d2fce</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>

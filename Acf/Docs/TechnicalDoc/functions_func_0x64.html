@@ -145,9 +145,9 @@
 , <a class="el" href="classistd_1_1_t_trans_ptr.html#afacf60454ad11ebcc52ecde7d7ab58be">istd::TTransPtr&lt; Type &gt;</a>
 </li>
 <li>DetachAllObservers()
-: <a class="el" href="classimod_1_1_c_model_proxy.html#af2f98f5f056f3c1d711046326c1caba6">imod::CModelProxy</a>
-, <a class="el" href="classimod_1_1_c_model_base.html#acdb901523fe0629132c28df2471d5985">imod::CModelBase</a>
+: <a class="el" href="classimod_1_1_c_model_base.html#acdb901523fe0629132c28df2471d5985">imod::CModelBase</a>
 , <a class="el" href="classimod_1_1_i_model.html#a434fbb67c60cc7dca3ad34ae99a39692">imod::IModel</a>
+, <a class="el" href="classimod_1_1_c_model_proxy.html#af2f98f5f056f3c1d711046326c1caba6">imod::CModelProxy</a>
 </li>
 <li>DetachCurrent()
 : <a class="el" href="classiqt2d_1_1_c_selectable_scene_extender_comp.html#a18b58f3bf92f73eed44fde8275a7f308">iqt2d::CSelectableSceneExtenderComp</a>
@@ -168,20 +168,20 @@
 </li>
 <li>DoDocumentProcessing()
 : <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#ad153c1bfe80cd1c712353efe3f1271f8">iqtproc::CDocumentProcessingManagerCompBase</a>
-, <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp.html#afb35da4c479edec2f299240fe86ccd94">iqtproc::CDocumentProcessingManagerComp</a>
 , <a class="el" href="classiqtproc_1_1_c_document_processing_command_comp.html#aa3809e965912e40cb7be7fffb84444b3">iqtproc::CDocumentProcessingCommandComp</a>
+, <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp.html#afb35da4c479edec2f299240fe86ccd94">iqtproc::CDocumentProcessingManagerComp</a>
 </li>
 <li>DoEndChanges()
 : <a class="el" href="classiqt_1_1_notification_target.html#a0abd566e0fd8b68af230a7bb15dd60e3">iqt::NotificationTarget</a>
 </li>
 <li>DoProcessing()
-: <a class="el" href="classiproc_1_1_c_cascaded_processor_comp.html#a40595c1260ceddded699badba096ce9d">iproc::CCascadedProcessorComp</a>
+: <a class="el" href="classiproc_1_1_i_processor.html#a84a1b6340724f7c0ae01376a64bfe916">iproc::IProcessor</a>
+, <a class="el" href="classiproc_1_1_c_cascaded_processor_comp.html#a40595c1260ceddded699badba096ce9d">iproc::CCascadedProcessorComp</a>
 , <a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#afb9a2da4b7f8b06b06f5799a90ef3d2d">iproc::CIterativeProcessorComp</a>
-, <a class="el" href="classiproc_1_1_i_processor.html#a84a1b6340724f7c0ae01376a64bfe916">iproc::IProcessor</a>
 </li>
 <li>DoRedo()
-: <a class="el" href="classimod_1_1_i_undo_manager.html#aecce84541bedf141dd7d5cb9719cc559">imod::IUndoManager</a>
-, <a class="el" href="classimod_1_1_c_serialized_undo_manager.html#ad897cf7a826c41594ccca5e4a1716fab">imod::CSerializedUndoManager</a>
+: <a class="el" href="classimod_1_1_c_serialized_undo_manager.html#ad897cf7a826c41594ccca5e4a1716fab">imod::CSerializedUndoManager</a>
+, <a class="el" href="classimod_1_1_i_undo_manager.html#aecce84541bedf141dd7d5cb9719cc559">imod::IUndoManager</a>
 </li>
 <li>DoRetranslate()
 : <a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#afe83e2d92ab9da4d0704940b321bec2f">icmpstr::CVisualRegistryScenographerComp</a>
@@ -192,6 +192,9 @@
 <li>DoUndo()
 : <a class="el" href="classimod_1_1_i_undo_manager.html#a9f14a3d1fb50fdc6c0deb668c4ff2007">imod::IUndoManager</a>
 , <a class="el" href="classimod_1_1_c_serialized_undo_manager.html#a92db2dce4f36f06922ae7691d9c2b74e">imod::CSerializedUndoManager</a>
+</li>
+<li>DoUpdateModel()
+: <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a683527b484df73ed72386338530d2fce">iqtgui::TGuiObserverWrap&lt; Gui, Observer &gt;</a>
 </li>
 <li>DoWizardFinish()
 : <a class="el" href="classiwiz_1_1_i_wizard_navigation_controller.html#a8085bb7e78105404c42c803ab498c34f">iwiz::IWizardNavigationController</a>
@@ -213,7 +216,7 @@
 : <a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp_1_1_c_scene.html#ac114474c6e08fe13eb31ef109810e19e">iqt2d::CSceneProviderGuiComp::CScene</a>
 </li>
 <li>TDelPtr()
-: <a class="el" href="classistd_1_1_t_del_ptr.html#a896ce8c6bef0468cb803e1c701d39ad5">istd::TDelPtr&lt; Type, Accessor &gt;</a>
+: <a class="el" href="classistd_1_1_t_del_ptr.html#a0a1b4b4044e72a40eff06aae3b7ee2cc">istd::TDelPtr&lt; Type, Accessor &gt;</a>
 </li>
 <li>TDesignerBasicGui()
 : <a class="el" href="classiqtgui_1_1_t_designer_basic_gui.html#a94a128b00714261f4ec3568d31b9e6be">iqtgui::TDesignerBasicGui&lt; UI, WidgetType &gt;</a>

@@ -25,6 +25,9 @@
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
+
+#include "iqt/CTimer.h"
+
 #include "iqtgui/CGuiComponentDialog.h"
 
 
@@ -46,6 +49,8 @@ void CDocumentProcessingCommandComp::DoDocumentProcessing(const istd::IChangeabl
 
 	istd::CChangeNotifier changePtr(m_outputDataCompPtr.GetPtr());
 
+	iqt::CTimer timer;
+
 	int retVal = m_processorCompPtr->DoProcessing(
 				m_paramsSetCompPtr.GetPtr(),
 				inputDocumentPtr,
@@ -57,6 +62,10 @@ void CDocumentProcessingCommandComp::DoDocumentProcessing(const istd::IChangeabl
 
 		return;
 	}
+
+	double processingTime = timer.GetElapsed();
+
+	SendInfoMessage(0, istd::CString("Processing time: ") + istd::CString::FromNumber(processingTime * 1000) + " ms", "Document processing manager");
 
 	changePtr.Reset();
 

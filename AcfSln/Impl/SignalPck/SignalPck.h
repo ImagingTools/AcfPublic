@@ -30,6 +30,7 @@
 
 #include "isig/CSamplingParamsComp.h"
 #include "isig/CTriggerParamsComp.h"
+#include "isig/CPulseParamsComp.h"
 
 
 /**
@@ -41,6 +42,7 @@ namespace SignalPck
 
 typedef icomp::TModelCompWrap<isig::CSamplingParamsComp> SamplingParams;
 typedef icomp::TModelCompWrap<isig::CTriggerParamsComp> TriggerParams;
+typedef icomp::TModelCompWrap<isig::CPulseParamsComp> PulseParams;
 
 
 } // namespace SignalPck
