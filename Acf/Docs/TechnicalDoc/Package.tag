@@ -20471,6 +20471,13 @@
       <anchor>afe9b6912ee6dfda4f00457a53ec33cfc</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function">
+      <type>const IBitmap *</type>
+      <name>GetBitmapPtr</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>a1ff9bc9726da47253d1bfaf355531442</anchor>
+      <arglist>() const </arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>iimg::CBitmapRegion::PixelRange</name>
@@ -20507,6 +20514,13 @@
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
       <anchor>a4f8e944b92b4708f0e9a5e7beff00a18</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsFormatSupported</name>
+      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
+      <anchor>a0ca2ee76a73842e90ea3e31234042e03</anchor>
+      <arglist>(PixelFormat pixelFormat) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -20685,6 +20699,13 @@
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
       <anchor>aa183038c573dd5e980f4bacd727121ed</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsFormatSupported</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a9dc2f1235fad74bda57fc62fa9bd878d</anchor>
+      <arglist>(PixelFormat pixelFormat) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -27958,6 +27979,13 @@
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
       <anchor>acd10f15b8f3e7fd0ba71905053450dac</anchor>
       <arglist>(const istd::IChangeable &amp;data, iimg::IBitmap &amp;objectSnap, const istd::CIndex2d &amp;size) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsFormatSupported</name>
+      <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
+      <anchor>a865905d7dc02a2fdc5a65f2c6ff182e9</anchor>
+      <arglist>(PixelFormat pixelFormat) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>

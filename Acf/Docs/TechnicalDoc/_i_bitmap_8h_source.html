@@ -50,40 +50,45 @@
 <a name="l00041"></a><a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10eae1e0393b1a6897adbf4f73afe1c6a93d">00041</a>               <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10eae1e0393b1a6897adbf4f73afe1c6a93d" title="32-bit RGB-bitmap, alpha channel can be ignored.">PF_RGB</a>,
 <a name="l00042"></a>00042 
 <a name="l00046"></a><a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10ea941311bdd09e1a76a60d1993929f3738">00046</a>               <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10ea941311bdd09e1a76a60d1993929f3738" title="32-bit RGB bitmap with alpha channel.">PF_RGBA</a>,
-<a name="l00050"></a><a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10eac36906405ccdf273418e45b6d9711e39">00050</a>               <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10eac36906405ccdf273418e45b6d9711e39" title="16-bit grayscale bitmap.">PF_GRAY16</a>,
-<a name="l00054"></a><a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10ea0e484bc2610a25401c4164ebce16a475">00054</a>               <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10ea0e484bc2610a25401c4164ebce16a475" title="32-bit grayscale bitmap.">PF_GRAY32</a>,
-<a name="l00058"></a><a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10ea2d2cb16572347303c10cbe08359ad67b">00058</a>               <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10ea2d2cb16572347303c10cbe08359ad67b" title="First user defined pixel format.">PF_USER</a> = 256
-<a name="l00059"></a>00059        };
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_i_bitmap.html#aa183038c573dd5e980f4bacd727121ed" title="Get the bitmap&#39;s pixel format.">GetPixelFormat</a>() <span class="keyword">const</span> = 0;
-<a name="l00067"></a>00067 
-<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a2e432a3dbffea1c93c07cc5521b69297" title="Create bitmap with specified size and format.">CreateBitmap</a>(<span class="keywordtype">int</span> pixelFormat, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; size) = 0;
-<a name="l00074"></a>00074 
-<a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a2e432a3dbffea1c93c07cc5521b69297" title="Create bitmap with specified size and format.">CreateBitmap</a>(<span class="keywordtype">int</span> pixelFormat, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; size, <span class="keywordtype">void</span>* dataPtr, <span class="keywordtype">bool</span> releaseFlag, <span class="keywordtype">int</span> linesDifference = 0) = 0;
-<a name="l00084"></a>00084 
-<a name="l00088"></a>00088        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a174b8c2c7fdbb47cdcb245fbadb27b97" title="Number of bytes per single line.">GetLineBytesCount</a>() <span class="keyword">const</span> = 0;
-<a name="l00089"></a>00089 
-<a name="l00093"></a>00093        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a617e61e4de45b35f513c169b41a0c0fb" title="Get address difference between next and previous line.">GetLinesDifference</a>() <span class="keyword">const</span> = 0;
-<a name="l00094"></a>00094 
-<a name="l00098"></a>00098        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a8e095ac801a690ca2c281e80af2ebbf1" title="Get address difference between next and previous pixel.">GetPixelsDifference</a>() <span class="keyword">const</span> = 0;
-<a name="l00099"></a>00099 
-<a name="l00103"></a>00103        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a05a83ac6071758a891a429ff9f703f84" title="Get number of bits per single pixel component.">GetComponentBitsCount</a>(<span class="keywordtype">int</span> componentIndex = 0) <span class="keyword">const</span> = 0;
-<a name="l00104"></a>00104 
-<a name="l00108"></a>00108        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a14b90a702aeadc90850669f4ef81d611" title="Get total number of bits per single pixel.">GetPixelBitsCount</a>() <span class="keyword">const</span> = 0;
-<a name="l00109"></a>00109 
-<a name="l00114"></a>00114        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code" href="classiimg_1_1_i_bitmap.html#a2bcff0f9b40b1128dbb4a382206d442f" title="Get pointer to buffer for single line.">GetLinePtr</a>(<span class="keywordtype">int</span> positionY) <span class="keyword">const</span> = 0;
-<a name="l00115"></a>00115 
-<a name="l00120"></a>00120        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code" href="classiimg_1_1_i_bitmap.html#a2bcff0f9b40b1128dbb4a382206d442f" title="Get pointer to buffer for single line.">GetLinePtr</a>(<span class="keywordtype">int</span> positionY) = 0;
-<a name="l00121"></a>00121 };
-<a name="l00122"></a>00122 
-<a name="l00123"></a>00123 
-<a name="l00124"></a>00124 } <span class="comment">// namespace iimg</span>
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126 
-<a name="l00127"></a>00127 <span class="preprocessor">#endif // !iimg_IBitmap_included</span>
-<a name="l00128"></a>00128 <span class="preprocessor"></span>
-<a name="l00129"></a>00129 
+<a name="l00047"></a>00047 
+<a name="l00051"></a><a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10eac36906405ccdf273418e45b6d9711e39">00051</a>               <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10eac36906405ccdf273418e45b6d9711e39" title="16-bit grayscale bitmap.">PF_GRAY16</a>,
+<a name="l00052"></a>00052 
+<a name="l00056"></a><a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10ea0e484bc2610a25401c4164ebce16a475">00056</a>               <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10ea0e484bc2610a25401c4164ebce16a475" title="32-bit grayscale bitmap.">PF_GRAY32</a>,
+<a name="l00057"></a>00057 
+<a name="l00061"></a><a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10ea2d2cb16572347303c10cbe08359ad67b">00061</a>               <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10ea2d2cb16572347303c10cbe08359ad67b" title="First user defined pixel format.">PF_USER</a> = 256
+<a name="l00062"></a>00062        };
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_i_bitmap.html#aa183038c573dd5e980f4bacd727121ed" title="Get the bitmap&#39;s pixel format.">GetPixelFormat</a>() <span class="keyword">const</span> = 0;
+<a name="l00070"></a>00070 
+<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a9dc2f1235fad74bda57fc62fa9bd878d" title="Get true if the pixel format is supported by the bitmap implementation.">IsFormatSupported</a>(<a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> pixelFormat) <span class="keyword">const</span> = 0;
+<a name="l00076"></a>00076 
+<a name="l00082"></a>00082        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a2e432a3dbffea1c93c07cc5521b69297" title="Create bitmap with specified size and format.">CreateBitmap</a>(<span class="keywordtype">int</span> pixelFormat, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; size) = 0;
+<a name="l00083"></a>00083 
+<a name="l00092"></a>00092        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a2e432a3dbffea1c93c07cc5521b69297" title="Create bitmap with specified size and format.">CreateBitmap</a>(<span class="keywordtype">int</span> pixelFormat, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; size, <span class="keywordtype">void</span>* dataPtr, <span class="keywordtype">bool</span> releaseFlag, <span class="keywordtype">int</span> linesDifference = 0) = 0;
+<a name="l00093"></a>00093 
+<a name="l00097"></a>00097        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a174b8c2c7fdbb47cdcb245fbadb27b97" title="Number of bytes per single line.">GetLineBytesCount</a>() <span class="keyword">const</span> = 0;
+<a name="l00098"></a>00098 
+<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a617e61e4de45b35f513c169b41a0c0fb" title="Get address difference between next and previous line.">GetLinesDifference</a>() <span class="keyword">const</span> = 0;
+<a name="l00103"></a>00103 
+<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a8e095ac801a690ca2c281e80af2ebbf1" title="Get address difference between next and previous pixel.">GetPixelsDifference</a>() <span class="keyword">const</span> = 0;
+<a name="l00108"></a>00108 
+<a name="l00112"></a>00112        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a05a83ac6071758a891a429ff9f703f84" title="Get number of bits per single pixel component.">GetComponentBitsCount</a>(<span class="keywordtype">int</span> componentIndex = 0) <span class="keyword">const</span> = 0;
+<a name="l00113"></a>00113 
+<a name="l00117"></a>00117        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a14b90a702aeadc90850669f4ef81d611" title="Get total number of bits per single pixel.">GetPixelBitsCount</a>() <span class="keyword">const</span> = 0;
+<a name="l00118"></a>00118 
+<a name="l00123"></a>00123        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code" href="classiimg_1_1_i_bitmap.html#a2bcff0f9b40b1128dbb4a382206d442f" title="Get pointer to buffer for single line.">GetLinePtr</a>(<span class="keywordtype">int</span> positionY) <span class="keyword">const</span> = 0;
+<a name="l00124"></a>00124 
+<a name="l00129"></a>00129        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code" href="classiimg_1_1_i_bitmap.html#a2bcff0f9b40b1128dbb4a382206d442f" title="Get pointer to buffer for single line.">GetLinePtr</a>(<span class="keywordtype">int</span> positionY) = 0;
+<a name="l00130"></a>00130 };
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133 } <span class="comment">// namespace iimg</span>
+<a name="l00134"></a>00134 
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136 <span class="preprocessor">#endif // !iimg_IBitmap_included</span>
+<a name="l00137"></a>00137 <span class="preprocessor"></span>
+<a name="l00138"></a>00138 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

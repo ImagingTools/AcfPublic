@@ -75,6 +75,8 @@ public:
 	void ResetBitmapRegion();
 	bool IsBitmapRegionEmpty() const;
 
+	const IBitmap* GetBitmapPtr() const;
+
 private:
 	void CalculateRegionBoundingBox(const i2d::CRectangle& objectBoundingBox);
 	void CreateFromCircle(const i2d::CCircle& circle);
@@ -88,6 +90,14 @@ private:
 	i2d::CRectangle m_boundingBox;
 	bool m_isEmpty;
 };
+
+
+// public inline methods
+
+inline const IBitmap* CBitmapRegion::GetBitmapPtr() const
+{
+	return m_bitmapPtr;
+}
 
 
 } // namespace iimg

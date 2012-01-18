@@ -65,6 +65,8 @@ Inheritance diagram for iimg::CGeneralBitmap:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_general_bitmap.html#a4f8e944b92b4708f0e9a5e7beff00a18">CGeneralBitmap</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_general_bitmap.html#a0ca2ee76a73842e90ea3e31234042e03">IsFormatSupported</a> (<a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a> pixelFormat) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <code>true</code> if the pixel format is supported by the bitmap implementation.  <a href="#a0ca2ee76a73842e90ea3e31234042e03"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_general_bitmap.html#a2f2ca969467aa5d7f4bb9cf6adff520a">GetPixelFormat</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bitmap's pixel format.  <a href="#a2f2ca969467aa5d7f4bb9cf6adff520a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_general_bitmap.html#a9802b8cb43517aa05f5793e70d8a3a0f">CreateBitmap</a> (int pixelFormat, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;size)</td></tr>
@@ -588,6 +590,34 @@ Protected Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_changeable.html#adfacdea73eb745825f6797b4b8986eac" title="Flags for supported operations.">SupportedOperations</a> </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a9577d4917a5131637c35ef6b6e9fc42a">istd::IChangeable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ca2ee76a73842e90ea3e31234042e03"></a><!-- doxytag: member="iimg::CGeneralBitmap::IsFormatSupported" ref="a0ca2ee76a73842e90ea3e31234042e03" args="(PixelFormat pixelFormat) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iimg::CGeneralBitmap::IsFormatSupported </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a>&#160;</td>
+          <td class="paramname"><em>pixelFormat</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get <code>true</code> if the pixel format is supported by the bitmap implementation. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixelFormat</td><td>bitmap format. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> </dd></dl>
+
+<p>Implements <a class="el" href="classiimg_1_1_i_bitmap.html#a9dc2f1235fad74bda57fc62fa9bd878d">iimg::IBitmap</a>.</p>
 
 </div>
 </div>

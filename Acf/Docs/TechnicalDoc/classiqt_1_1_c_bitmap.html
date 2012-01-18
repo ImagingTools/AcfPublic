@@ -78,6 +78,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#a6e72080f6696e10f4472574690b0f94b">CopyImageFrom</a> (const QImage &amp;image)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#acd10f15b8f3e7fd0ba71905053450dac">GetSnap</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, <a class="el" href="classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;objectSnap, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;size) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bitmap snap for the data object <code>data</code>.  <a href="#acd10f15b8f3e7fd0ba71905053450dac"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#a865905d7dc02a2fdc5a65f2c6ff182e9">IsFormatSupported</a> (<a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a> pixelFormat) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <code>true</code> if the pixel format is supported by the bitmap implementation.  <a href="#a865905d7dc02a2fdc5a65f2c6ff182e9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#af6a2dac6dd9c0f25388fe81875a6efbd">GetPixelFormat</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bitmap's pixel format.  <a href="#af6a2dac6dd9c0f25388fe81875a6efbd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#a7f3140bda97ee8bd0463c46f816105c6">CreateBitmap</a> (int pixelFormat, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;size)</td></tr>
@@ -598,7 +600,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00075">75</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00076">76</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
 
 </div>
 </div>
@@ -657,6 +659,34 @@ Protected Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_changeable.html#adfacdea73eb745825f6797b4b8986eac" title="Flags for supported operations.">SupportedOperations</a> </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a9577d4917a5131637c35ef6b6e9fc42a">istd::IChangeable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a865905d7dc02a2fdc5a65f2c6ff182e9"></a><!-- doxytag: member="iqt::CBitmap::IsFormatSupported" ref="a865905d7dc02a2fdc5a65f2c6ff182e9" args="(PixelFormat pixelFormat) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iqt::CBitmap::IsFormatSupported </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a>&#160;</td>
+          <td class="paramname"><em>pixelFormat</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get <code>true</code> if the pixel format is supported by the bitmap implementation. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixelFormat</td><td>bitmap format. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> </dd></dl>
+
+<p>Implements <a class="el" href="classiimg_1_1_i_bitmap.html#a9dc2f1235fad74bda57fc62fa9bd878d">iimg::IBitmap</a>.</p>
 
 </div>
 </div>

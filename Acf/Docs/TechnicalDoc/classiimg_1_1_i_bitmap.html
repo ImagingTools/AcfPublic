@@ -83,6 +83,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#aa183038c573dd5e980f4bacd727121ed">GetPixelFormat</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bitmap's pixel format.  <a href="#aa183038c573dd5e980f4bacd727121ed"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#a9dc2f1235fad74bda57fc62fa9bd878d">IsFormatSupported</a> (<a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a> pixelFormat) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <code>true</code> if the pixel format is supported by the bitmap implementation.  <a href="#a9dc2f1235fad74bda57fc62fa9bd878d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#a2e432a3dbffea1c93c07cc5521b69297">CreateBitmap</a> (int pixelFormat, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;size)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create bitmap with specified size and format.  <a href="#a2e432a3dbffea1c93c07cc5521b69297"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#aeb6fb5c1ef469793975b34468307d2ef">CreateBitmap</a> (int pixelFormat, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)=0</td></tr>
@@ -435,6 +437,34 @@ Public Member Functions</h2></td></tr>
 <p>Get address difference between next and previous pixel. </p>
 
 <p>Implemented in <a class="el" href="classiqt_1_1_c_bitmap.html#a9fa7d525ea9164d9694cc78a6bdf76a6">iqt::CBitmap</a>, and <a class="el" href="classiimg_1_1_c_general_bitmap.html#a79c7d2e1c546f36265eefd12e38d18cf">iimg::CGeneralBitmap</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9dc2f1235fad74bda57fc62fa9bd878d"></a><!-- doxytag: member="iimg::IBitmap::IsFormatSupported" ref="a9dc2f1235fad74bda57fc62fa9bd878d" args="(PixelFormat pixelFormat) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iimg::IBitmap::IsFormatSupported </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a>&#160;</td>
+          <td class="paramname"><em>pixelFormat</em></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get <code>true</code> if the pixel format is supported by the bitmap implementation. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixelFormat</td><td>bitmap format. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> </dd></dl>
+
+<p>Implemented in <a class="el" href="classiqt_1_1_c_bitmap.html#a865905d7dc02a2fdc5a65f2c6ff182e9">iqt::CBitmap</a>, and <a class="el" href="classiimg_1_1_c_general_bitmap.html#a0ca2ee76a73842e90ea3e31234042e03">iimg::CGeneralBitmap</a>.</p>
 
 </div>
 </div>
