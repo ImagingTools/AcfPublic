@@ -68,6 +68,9 @@ public:
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
 				double* errorFactorPtr = NULL) const;
 
+	bool operator == (const CCircle & ref) const;
+	bool operator != (const CCircle & ref) const;
+
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 

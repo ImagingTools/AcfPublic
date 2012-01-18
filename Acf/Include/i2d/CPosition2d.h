@@ -66,6 +66,8 @@ public:
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
 				double* errorFactorPtr = NULL) const;
 
+	void Translate(const i2d::CVector2d& vector); 
+
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
@@ -79,6 +81,12 @@ protected:
 inline const CVector2d& CPosition2d::GetPosition() const
 {
 	return m_position;
+}
+
+
+inline void CPosition2d::Translate(const i2d::CVector2d& vector)
+{
+	m_position += vector;
 }
 
 

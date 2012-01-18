@@ -117,6 +117,8 @@ public:
 	*/
 	CRectangle GetIntersection(const CRectangle& rect) const;
 
+	void Intersection(const CRectangle& rect);
+
 	/**
 		Get resulting line of the intersection of this rectangle with the line \c line.
 	*/
@@ -141,6 +143,9 @@ public:
 		Get the nearest point in the rectangle for the some given point.
 	*/
 	CVector2d GetNearestPointTo(const CVector2d& point) const;
+
+	void Translate(const i2d::CVector2d& delta); 
+	CRectangle GetTranslated(const i2d::CVector2d& delta) const;
 	
 	// reimplemented (i2d::IObject2d)
 	virtual CVector2d GetCenter() const;
@@ -220,6 +225,15 @@ inline const istd::CRange& CRectangle::GetVerticalRange() const
 inline istd::CRange& CRectangle::GetVerticalRangeRef()
 {
 	return m_verticalRange;
+}
+
+
+inline void CRectangle::Translate(const i2d::CVector2d& delta)
+{
+	m_horizontalRange.SetMinValue(m_horizontalRange.GetMinValue() + delta.GetX());
+	m_verticalRange.SetMinValue(m_verticalRange.GetMinValue() + delta.GetY());
+	m_horizontalRange.SetMaxValue(m_horizontalRange.GetMaxValue() + delta.GetX());
+	m_verticalRange.SetMaxValue(m_verticalRange.GetMaxValue() + delta.GetY());
 }
 
 

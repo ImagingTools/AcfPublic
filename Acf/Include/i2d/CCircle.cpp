@@ -111,6 +111,19 @@ bool CCircle::GetInvTransformed(
 }
 
 
+bool CCircle::operator == (const CCircle & ref) const
+{
+	return (ref.GetRadius() == GetRadius() && ref.GetPosition() == GetPosition()) ? true : false;
+}
+
+
+bool CCircle::operator != (const CCircle & ref) const
+{
+	return !operator ==(ref);
+}
+
+
+
 // reimplemented (iser::ISerializable)
 
 bool CCircle::Serialize(iser::IArchive& archive)

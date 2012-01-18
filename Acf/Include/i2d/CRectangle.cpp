@@ -286,6 +286,12 @@ CRectangle CRectangle::GetIntersection(const CRectangle& rect) const
 }
 
 
+void CRectangle::Intersection(const CRectangle& rect)
+{
+	*this = GetIntersection(rect);
+}
+
+
 CLine2d CRectangle::GetIntersection(const CLine2d& line) const
 {
 	return line;
@@ -311,7 +317,6 @@ void CRectangle::Unite(const CRectangle& rect)
 	double outputTop = istd::Min(rect.GetTop(), GetTop());
 	double outputRight = istd::Max(rect.GetRight(), GetRight());
 	double outputBottom = istd::Max(rect.GetBottom(), GetBottom());
-
 
 	m_horizontalRange = istd::CRange(outputLeft, outputRight);
 	m_verticalRange = istd::CRange(outputTop, outputBottom);
@@ -397,6 +402,14 @@ CRectangle CRectangle::GetBoundingBox() const
 CVector2d CRectangle::GetNearestPointTo(const CVector2d& point) const
 {
 	return CVector2d(m_horizontalRange.GetNearestInside(point.GetX()), m_verticalRange.GetNearestInside(point.GetY()));
+}
+
+
+CRectangle CRectangle::GetTranslated(const i2d::CVector2d& delta) const
+{
+	CRectangle copy(*this);
+	copy.Translate(delta);
+	return copy;
 }
 
 
