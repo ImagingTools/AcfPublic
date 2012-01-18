@@ -43,6 +43,8 @@ public:
 
 	const CVector2d& GetPosition() const;
 	void SetPosition(const CVector2d& position);
+	void Translate(const i2d::CVector2d& vector); 
+	CPosition2d GetTranslated(const i2d::CVector2d& vector) const; 
 
 	// reimplemented (i2d::IObject2d)
 	virtual CVector2d GetCenter() const;
@@ -66,8 +68,6 @@ public:
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
 				double* errorFactorPtr = NULL) const;
 
-	void Translate(const i2d::CVector2d& vector); 
-
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
@@ -87,6 +87,16 @@ inline const CVector2d& CPosition2d::GetPosition() const
 inline void CPosition2d::Translate(const i2d::CVector2d& vector)
 {
 	m_position += vector;
+}
+
+
+inline CPosition2d CPosition2d::GetTranslated(const i2d::CVector2d& vector) const
+{
+	CPosition2d translatedPosition = *this;
+
+	translatedPosition.Translate(vector);
+
+	return translatedPosition;
 }
 
 

@@ -286,15 +286,15 @@ CRectangle CRectangle::GetIntersection(const CRectangle& rect) const
 }
 
 
-void CRectangle::Intersection(const CRectangle& rect)
-{
-	*this = GetIntersection(rect);
-}
-
-
 CLine2d CRectangle::GetIntersection(const CLine2d& line) const
 {
 	return line;
+}
+
+
+void CRectangle::Intersect(const CRectangle& rectangle)
+{
+	*this = GetIntersection(rectangle);
 }
 
 

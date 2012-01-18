@@ -6790,6 +6790,20 @@
       <anchor>a78aee945e2a7ae1dd717604b4657e309</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a0ab8bf18687abf4ef70fed3787836d24</anchor>
+      <arglist>(const CCircle &amp;circle) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a6d1242b3528e7742d741661f17d9c3d8</anchor>
+      <arglist>(const CCircle &amp;circle) const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
@@ -7033,6 +7047,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>double</type>
+      <name>GetLength2</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a6826bc40273a46c8a4be8e6b46020c4d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>CLine2d</type>
       <name>GetClipped</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
@@ -7044,6 +7065,13 @@
       <name>GetSwapped</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
       <anchor>a127e8bf9cdfc5cba30e92cf735c4158a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a7f8070893a03fc8a7cbca5038b309339</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -7060,12 +7088,89 @@
       <anchor>ae156853c83ac918fff32b9b22311da6e</anchor>
       <arglist>(double linePosX) const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual CRectangle</type>
-      <name>GetBoundingBox</name>
+    <member kind="function">
+      <type>void</type>
+      <name>PushBeginPoint</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>a7f8070893a03fc8a7cbca5038b309339</anchor>
-      <arglist>() const </arglist>
+      <anchor>a9646d187bf72e1bfe36f70c536b73003</anchor>
+      <arglist>(const i2d::CVector2d &amp;newBeginPoint)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>PushEndPoint</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a886ead014d7c87da035397a7b8ef69bf</anchor>
+      <arglist>(const i2d::CVector2d &amp;newEndPoint)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetCutAlpha</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a7b70d14b0b9316ec3f22422eb08eb9f2</anchor>
+      <arglist>(const CLine2d &amp;line) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetCastAlpha</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a046be8d4925d0528d259f6eff68d42a8</anchor>
+      <arglist>(const i2d::CVector2d &amp;point) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>CutDisk</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a75190bd4783bb5f5d73c1933c9ef1661</anchor>
+      <arglist>(const i2d::CVector2d &amp;center, double radius) const </arglist>
+    </member>
+    <member kind="function">
+      <type>::std::pair&lt; double, double &gt;</type>
+      <name>GetAlphaAndCastDistance</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a34121df4f85eef30b8b9c921618bc392</anchor>
+      <arglist>(const i2d::CVector2d &amp;point) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetCutPoint</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a758ae8516b60063132c915bdc4f07f47</anchor>
+      <arglist>(const CLine2d &amp;otherLine, i2d::CVector2d &amp;cutPoint) const </arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CVector2d</type>
+      <name>GetNearestPoint</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>aad982a2ea92b919e10f1d1fb52452bd5</anchor>
+      <arglist>(const i2d::CVector2d &amp;point) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CLine2d</type>
+      <name>GetShortestEndConnection</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a4266c0c0b498f0daf6e64f30fa574b45</anchor>
+      <arglist>(const CLine2d &amp;line) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CLine2d</type>
+      <name>GetShortestConnectionToNext</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a7d31a382f05e8ff5d966cf075b8f741c</anchor>
+      <arglist>(const CLine2d &amp;line) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CLine2d</type>
+      <name>GetShortestConnection</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a6be56f4fc70bf47e00930f0fe588b495</anchor>
+      <arglist>(const i2d::CVector2d &amp;point) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CLine2d</type>
+      <name>GetShortestConnection</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a0ea5b4bfde89eb7fb2015c351e5093b1</anchor>
+      <arglist>(const CLine2d &amp;line) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CVector2d</type>
@@ -7369,6 +7474,20 @@
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
       <anchor>a4a463e5c77bd411c70504c560c0cee23</anchor>
       <arglist>(const CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Translate</name>
+      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
+      <anchor>ad26757c891ce91d4a63efcf4b83ddb9c</anchor>
+      <arglist>(const i2d::CVector2d &amp;vector)</arglist>
+    </member>
+    <member kind="function">
+      <type>CPosition2d</type>
+      <name>GetTranslated</name>
+      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
+      <anchor>a7da2c6cadd8274f507c7b4aa8948efc4</anchor>
+      <arglist>(const i2d::CVector2d &amp;vector) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CVector2d</type>
@@ -7904,6 +8023,13 @@
       <arglist>(const CLine2d &amp;line) const </arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>Intersect</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>a228f4f84b52b43007d80bfda68f43606</anchor>
+      <arglist>(const CRectangle &amp;rectangle)</arglist>
+    </member>
+    <member kind="function">
       <type>CRectangle</type>
       <name>GetUnion</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
@@ -7979,6 +8105,20 @@
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
       <anchor>aa8e82c89b272ba97f33db0dcee23dfb2</anchor>
       <arglist>(const CVector2d &amp;point) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Translate</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>a2e2185d12a0c9745751f27c0ea1e79db</anchor>
+      <arglist>(const i2d::CVector2d &amp;delta)</arglist>
+    </member>
+    <member kind="function">
+      <type>CRectangle</type>
+      <name>GetTranslated</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>a96d8c38ce6c89bb40c0794d9a964e40d</anchor>
+      <arglist>(const i2d::CVector2d &amp;delta) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CVector2d</type>

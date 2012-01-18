@@ -89,9 +89,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a62d18a5b544aa7d049c62eeafea9d91b">IsIntersectedBy</a> (const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;line) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two lines intersect.  <a href="#a62d18a5b544aa7d049c62eeafea9d91b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#add9c2ddcbdbf6a49be412ac04264b4e2">GetIntersection</a> (const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;line, <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;result) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get intersecition position of two lines.  <a href="#add9c2ddcbdbf6a49be412ac04264b4e2"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get intersection position of two lines.  <a href="#add9c2ddcbdbf6a49be412ac04264b4e2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a73ceb40794cf15154b14443ec0e22f2b">GetExtendedIntersection</a> (const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;line, <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;result) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get intersecition position of extended lines.  <a href="#a73ceb40794cf15154b14443ec0e22f2b"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get intersection position of extended lines.  <a href="#a73ceb40794cf15154b14443ec0e22f2b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a82cd3ce32bea1c497c49898883c03187">GetDistance</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;position) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get distance from nearest point of this line to specified position.  <a href="#a82cd3ce32bea1c497c49898883c03187"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#ae098728d0bf2b267d354031ea2cf1379">GetExtendedDistance</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;position) const </td></tr>
@@ -102,15 +102,38 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get difference vector from point 1 to point 2.  <a href="#a3595f44318fbc6a3561642c36d8e4b9d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a3066cdefd32b69f924505b792af3cd53">GetLength</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get distance between line points.  <a href="#a3066cdefd32b69f924505b792af3cd53"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a6826bc40273a46c8a4be8e6b46020c4d">GetLength2</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get quadratic distance between line points.  <a href="#a6826bc40273a46c8a4be8e6b46020c4d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#acc982e5ebef4ea9e9f61602e84e2a2db">GetClipped</a> (const <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a> &amp;rect) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get part of line intersecting specified rectangle.  <a href="#acc982e5ebef4ea9e9f61602e84e2a2db"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a127e8bf9cdfc5cba30e92cf735c4158a">GetSwapped</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the line with replaced points (p1 = p2 and p2 = p1)  <a href="#a127e8bf9cdfc5cba30e92cf735c4158a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a7f8070893a03fc8a7cbca5038b309339">GetBoundingBox</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bounding box of this line.  <a href="#a7f8070893a03fc8a7cbca5038b309339"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a690af5cf5e64c3b2aea7cd36249fac7d">GetCutXPos</a> (double linePosY) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Y position of cutting this line by specified horizontal line.  <a href="#a690af5cf5e64c3b2aea7cd36249fac7d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#ae156853c83ac918fff32b9b22311da6e">GetCutYPos</a> (double linePosX) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get X position of cutting this line by specified vertical line.  <a href="#ae156853c83ac918fff32b9b22311da6e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a7f8070893a03fc8a7cbca5038b309339">GetBoundingBox</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a9646d187bf72e1bfe36f70c536b73003">PushBeginPoint</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;newBeginPoint)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy begin point to end point and set new begin point.  <a href="#a9646d187bf72e1bfe36f70c536b73003"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a886ead014d7c87da035397a7b8ef69bf">PushEndPoint</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;newEndPoint)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy end point to begin point and set new end point.  <a href="#a886ead014d7c87da035397a7b8ef69bf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a7b70d14b0b9316ec3f22422eb08eb9f2">GetCutAlpha</a> (const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;line) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a proportion of lines cut point to line length.  <a href="#a7b70d14b0b9316ec3f22422eb08eb9f2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a046be8d4925d0528d259f6eff68d42a8">GetCastAlpha</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;point) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a75190bd4783bb5f5d73c1933c9ef1661">CutDisk</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;center, double radius) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a34121df4f85eef30b8b9c921618bc392">GetAlphaAndCastDistance</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;point) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a758ae8516b60063132c915bdc4f07f47">GetCutPoint</a> (const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;otherLine, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;cutPoint) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#aad982a2ea92b919e10f1d1fb52452bd5">GetNearestPoint</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;point) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a line point, which is the nearest to the specified point.  <a href="#aad982a2ea92b919e10f1d1fb52452bd5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a4266c0c0b498f0daf6e64f30fa574b45">GetShortestEndConnection</a> (const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;line) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a line, which connects the nearest end points of two lines.  <a href="#a4266c0c0b498f0daf6e64f30fa574b45"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a7d31a382f05e8ff5d966cf075b8f741c">GetShortestConnectionToNext</a> (const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;line) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a line, which connects the nearest points of two lines.  <a href="#a7d31a382f05e8ff5d966cf075b8f741c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a6be56f4fc70bf47e00930f0fe588b495">GetShortestConnection</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;point) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a line, which connects the nearest point of line and specified point.  <a href="#a6be56f4fc70bf47e00930f0fe588b495"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a0ea5b4bfde89eb7fb2015c351e5093b1">GetShortestConnection</a> (const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;line) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a line, which connects the nearest points of two lines.  <a href="#a0ea5b4bfde89eb7fb2015c351e5093b1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#a59b51ed287c4ccdfa21f5836b16c1243">GetCenter</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns center of this 2D-object.  <a href="#a59b51ed287c4ccdfa21f5836b16c1243"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_line2d.html#adc52d2ade237a9765830c7a3d67b38c5">MoveCenterTo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;position)</td></tr>
@@ -232,6 +255,58 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a75190bd4783bb5f5d73c1933c9ef1661"></a><!-- doxytag: member="i2d::CLine2d::CutDisk" ref="a75190bd4783bb5f5d73c1933c9ef1661" args="(const i2d::CVector2d &amp;center, double radius) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool i2d::CLine2d::CutDisk </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00339">339</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+
+<p>References <a class="el" href="_c_line2d_8h_source.html#l00269">GetDiffVector()</a>, <a class="el" href="_t_vector_8h_source.html#l00335">imath::TVector&lt; Size, Element &gt;::GetDistance2()</a>, <a class="el" href="_t_vector_8h_source.html#l00308">imath::TVector&lt; Size, Element &gt;::GetDotProduct()</a>, <a class="el" href="_t_vector_8h_source.html#l00321">imath::TVector&lt; Size, Element &gt;::GetLength2()</a>, and <a class="el" href="istd_8h_source.html#l00113">I_BIG_EPSILON</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a34121df4f85eef30b8b9c921618bc392"></a><!-- doxytag: member="i2d::CLine2d::GetAlphaAndCastDistance" ref="a34121df4f85eef30b8b9c921618bc392" args="(const i2d::CVector2d &amp;point) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; double, double &gt; i2d::CLine2d::GetAlphaAndCastDistance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00365">365</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+
+<p>References <a class="el" href="_c_vector2d_8h_source.html#l00189">i2d::CVector2d::GetCrossProductZ()</a>, <a class="el" href="_t_vector_8h_source.html#l00308">imath::TVector&lt; Size, Element &gt;::GetDotProduct()</a>, and <a class="el" href="_t_vector_8h_source.html#l00321">imath::TVector&lt; Size, Element &gt;::GetLength2()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7f8070893a03fc8a7cbca5038b309339"></a><!-- doxytag: member="i2d::CLine2d::GetBoundingBox" ref="a7f8070893a03fc8a7cbca5038b309339" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -245,6 +320,29 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Get bounding box of this line. </p>
+
+</div>
+</div>
+<a class="anchor" id="a046be8d4925d0528d259f6eff68d42a8"></a><!-- doxytag: member="i2d::CLine2d::GetCastAlpha" ref="a046be8d4925d0528d259f6eff68d42a8" args="(const i2d::CVector2d &amp;point) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double i2d::CLine2d::GetCastAlpha </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00329">329</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+
+<p>References <a class="el" href="_c_line2d_8h_source.html#l00269">GetDiffVector()</a>, <a class="el" href="_t_vector_8h_source.html#l00308">imath::TVector&lt; Size, Element &gt;::GetDotProduct()</a>, and <a class="el" href="_t_vector_8h_source.html#l00321">imath::TVector&lt; Size, Element &gt;::GetLength2()</a>.</p>
 
 </div>
 </div>
@@ -287,6 +385,56 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7b70d14b0b9316ec3f22422eb08eb9f2"></a><!-- doxytag: member="i2d::CLine2d::GetCutAlpha" ref="a7b70d14b0b9316ec3f22422eb08eb9f2" args="(const CLine2d &amp;line) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double i2d::CLine2d::GetCutAlpha </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get a proportion of lines cut point to line length. </p>
+
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00316">316</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+
+<p>References <a class="el" href="_c_vector2d_8h_source.html#l00189">i2d::CVector2d::GetCrossProductZ()</a>, <a class="el" href="_c_line2d_8h_source.html#l00269">GetDiffVector()</a>, and <a class="el" href="_c_line2d_8h_source.html#l00275">GetPoint1()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a758ae8516b60063132c915bdc4f07f47"></a><!-- doxytag: member="i2d::CLine2d::GetCutPoint" ref="a758ae8516b60063132c915bdc4f07f47" args="(const CLine2d &amp;otherLine, i2d::CVector2d &amp;cutPoint) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool i2d::CLine2d::GetCutPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>otherLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>cutPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a690af5cf5e64c3b2aea7cd36249fac7d"></a><!-- doxytag: member="i2d::CLine2d::GetCutXPos" ref="a690af5cf5e64c3b2aea7cd36249fac7d" args="(double linePosY) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -304,9 +452,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Get Y position of cutting this line by specified horizontal line. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00240">240</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00299">299</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_line2d_8h_source.html#l00210">GetDiffVector()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00147">i2d::CVector2d::GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00159">i2d::CVector2d::GetY()</a>.</p>
+<p>References <a class="el" href="_c_line2d_8h_source.html#l00269">GetDiffVector()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00147">i2d::CVector2d::GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00159">i2d::CVector2d::GetY()</a>.</p>
 
 </div>
 </div>
@@ -327,9 +475,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Get X position of cutting this line by specified vertical line. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00249">249</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00308">308</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_line2d_8h_source.html#l00210">GetDiffVector()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00147">i2d::CVector2d::GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00159">i2d::CVector2d::GetY()</a>.</p>
+<p>References <a class="el" href="_c_line2d_8h_source.html#l00269">GetDiffVector()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00147">i2d::CVector2d::GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00159">i2d::CVector2d::GetY()</a>.</p>
 
 </div>
 </div>
@@ -349,9 +497,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Get difference vector from point 1 to point 2. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00210">210</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00269">269</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_line2d_8h_source.html#l00240">GetCutXPos()</a>, and <a class="el" href="_c_line2d_8h_source.html#l00249">GetCutYPos()</a>.</p>
+<p>Referenced by <a class="el" href="_c_line2d_8h_source.html#l00339">CutDisk()</a>, <a class="el" href="_c_line2d_8h_source.html#l00329">GetCastAlpha()</a>, <a class="el" href="_c_line2d_8h_source.html#l00316">GetCutAlpha()</a>, <a class="el" href="_c_line2d_8h_source.html#l00299">GetCutXPos()</a>, and <a class="el" href="_c_line2d_8h_source.html#l00308">GetCutYPos()</a>.</p>
 
 </div>
 </div>
@@ -419,7 +567,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get intersecition position of extended lines. </p>
+<p>Get intersection position of extended lines. </p>
 <p>As extended line are mean mathematical lines going over specified line points. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -476,7 +624,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get intersecition position of two lines. </p>
+<p>Get intersection position of two lines. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">line</td><td>second line. </td></tr>
@@ -558,6 +706,43 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6826bc40273a46c8a4be8e6b46020c4d"></a><!-- doxytag: member="i2d::CLine2d::GetLength2" ref="a6826bc40273a46c8a4be8e6b46020c4d" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double i2d::CLine2d::GetLength2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get quadratic distance between line points. </p>
+
+</div>
+</div>
+<a class="anchor" id="aad982a2ea92b919e10f1d1fb52452bd5"></a><!-- doxytag: member="i2d::CLine2d::GetNearestPoint" ref="aad982a2ea92b919e10f1d1fb52452bd5" args="(const i2d::CVector2d &amp;point) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> i2d::CLine2d::GetNearestPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return a line point, which is the nearest to the specified point. </p>
+
+</div>
+</div>
 <a class="anchor" id="a408923bfb0255d8d0c120e2345f22920"></a><!-- doxytag: member="i2d::CLine2d::GetPoint1" ref="a408923bfb0255d8d0c120e2345f22920" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -574,7 +759,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Get value of first line point. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00216">216</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00275">275</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_c_line2d_8h_source.html#l00316">GetCutAlpha()</a>.</p>
 
 </div>
 </div>
@@ -595,7 +782,7 @@ Public Member Functions</h2></td></tr>
 <p>Get reference to first line point. </p>
 <p>Please avoid to use this function, becouse of eventuel update problems. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00222">222</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00281">281</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
 </div>
 </div>
@@ -615,7 +802,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get value of second line point. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00228">228</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00287">287</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
 </div>
 </div>
@@ -636,7 +823,7 @@ Public Member Functions</h2></td></tr>
 <p>Get reference to second line point. </p>
 <p>Please avoid to use this function, becouse of eventuel update problems. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00234">234</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00293">293</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
 </div>
 </div>
@@ -657,6 +844,83 @@ Public Member Functions</h2></td></tr>
 
 <p>Get position of point using normed 'alpha' value. </p>
 <p>Value 0 will be mapped to point 1 and value 1 wil be mapped to point 2. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6be56f4fc70bf47e00930f0fe588b495"></a><!-- doxytag: member="i2d::CLine2d::GetShortestConnection" ref="a6be56f4fc70bf47e00930f0fe588b495" args="(const i2d::CVector2d &amp;point) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> i2d::CLine2d::GetShortestConnection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return a line, which connects the nearest point of line and specified point. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0ea5b4bfde89eb7fb2015c351e5093b1"></a><!-- doxytag: member="i2d::CLine2d::GetShortestConnection" ref="a0ea5b4bfde89eb7fb2015c351e5093b1" args="(const CLine2d &amp;line) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> i2d::CLine2d::GetShortestConnection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return a line, which connects the nearest points of two lines. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7d31a382f05e8ff5d966cf075b8f741c"></a><!-- doxytag: member="i2d::CLine2d::GetShortestConnectionToNext" ref="a7d31a382f05e8ff5d966cf075b8f741c" args="(const CLine2d &amp;line) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> i2d::CLine2d::GetShortestConnectionToNext </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return a line, which connects the nearest points of two lines. </p>
+<p>Only connection between end point of first line and second line or connection between first line and begin point of second line will be checked. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4266c0c0b498f0daf6e64f30fa574b45"></a><!-- doxytag: member="i2d::CLine2d::GetShortestEndConnection" ref="a4266c0c0b498f0daf6e64f30fa574b45" args="(const CLine2d &amp;line) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> i2d::CLine2d::GetShortestEndConnection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return a line, which connects the nearest end points of two lines. </p>
 
 </div>
 </div>
@@ -836,7 +1100,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns <code>true</code>, if the line has a length equal 0. </p>
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00204">204</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00263">263</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
 </div>
 </div>
@@ -895,9 +1159,9 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00198">198</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00257">257</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_line2d_8h_source.html#l00192">operator==()</a>.</p>
+<p>References <a class="el" href="_c_line2d_8h_source.html#l00251">operator==()</a>.</p>
 
 </div>
 </div>
@@ -933,9 +1197,47 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00192">192</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_line2d_8h_source.html#l00251">251</a> of file <a class="el" href="_c_line2d_8h_source.html">CLine2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_line2d_8h_source.html#l00198">operator!=()</a>.</p>
+<p>Referenced by <a class="el" href="_c_line2d_8h_source.html#l00257">operator!=()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9646d187bf72e1bfe36f70c536b73003"></a><!-- doxytag: member="i2d::CLine2d::PushBeginPoint" ref="a9646d187bf72e1bfe36f70c536b73003" args="(const i2d::CVector2d &amp;newBeginPoint)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2d::CLine2d::PushBeginPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>newBeginPoint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Copy begin point to end point and set new begin point. </p>
+
+</div>
+</div>
+<a class="anchor" id="a886ead014d7c87da035397a7b8ef69bf"></a><!-- doxytag: member="i2d::CLine2d::PushEndPoint" ref="a886ead014d7c87da035397a7b8ef69bf" args="(const i2d::CVector2d &amp;newEndPoint)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2d::CLine2d::PushEndPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>newEndPoint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Copy end point to begin point and set new end point. </p>
 
 </div>
 </div>

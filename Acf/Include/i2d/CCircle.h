@@ -48,6 +48,9 @@ public:
 
 	virtual CRectangle GetBoundingBox() const;
 
+	bool operator ==(const CCircle& circle) const;
+	bool operator !=(const CCircle& circle) const;
+
 	// reimplemented (i2d::IObject2d)
 	virtual bool Transform(
 				const ITransformation2d& transformation,
@@ -67,9 +70,6 @@ public:
 				IObject2d& result,
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
 				double* errorFactorPtr = NULL) const;
-
-	bool operator == (const CCircle & ref) const;
-	bool operator != (const CCircle & ref) const;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);

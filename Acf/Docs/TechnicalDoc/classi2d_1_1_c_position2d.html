@@ -70,6 +70,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#ad2a327a3f0d70d05f6869a791e9635a5">CPosition2d</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;center)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#a2f74248c140f5372f740883e6c42d97f">GetPosition</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#a4a463e5c77bd411c70504c560c0cee23">SetPosition</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;position)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#ad26757c891ce91d4a63efcf4b83ddb9c">Translate</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;vector)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_position2d.html">CPosition2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#a7da2c6cadd8274f507c7b4aa8948efc4">GetTranslated</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;vector) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#ac38b5b4a23ee335a559dfef24b88e036">GetCenter</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns center of this 2D-object.  <a href="#ac38b5b4a23ee335a559dfef24b88e036"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#a3b631be9d32febc81393130ca835cc9c">MoveCenterTo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;position)</td></tr>
@@ -215,9 +217,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_position2d_8h_source.html#l00057">57</a> of file <a class="el" href="_c_position2d_8h_source.html">CPosition2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_position2d_8h_source.html#l00059">59</a> of file <a class="el" href="_c_position2d_8h_source.html">CPosition2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_position2d_8h_source.html#l00051">m_position</a>.</p>
+<p>References <a class="el" href="_c_position2d_8h_source.html#l00053">m_position</a>.</p>
 
 </div>
 </div>
@@ -272,6 +274,27 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#a8013559af5f052dc7eda938f56cf9cf1">i2d::IObject2d</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_circle.html#addbba93c936513fddd40c2978d5055ee">i2d::CCircle</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7da2c6cadd8274f507c7b4aa8948efc4"></a><!-- doxytag: member="i2d::CPosition2d::GetTranslated" ref="a7da2c6cadd8274f507c7b4aa8948efc4" args="(const i2d::CVector2d &amp;vector) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_position2d.html">CPosition2d</a> i2d::CPosition2d::GetTranslated </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>vector</em></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_position2d_8h_source.html#l00071">71</a> of file <a class="el" href="_c_position2d_8h_source.html">CPosition2d.h</a>.</p>
+
+<p>References <a class="el" href="_c_position2d_8h_source.html#l00065">Translate()</a>.</p>
 
 </div>
 </div>
@@ -432,6 +455,29 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad26757c891ce91d4a63efcf4b83ddb9c"></a><!-- doxytag: member="i2d::CPosition2d::Translate" ref="ad26757c891ce91d4a63efcf4b83ddb9c" args="(const i2d::CVector2d &amp;vector)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2d::CPosition2d::Translate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>vector</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_position2d_8h_source.html#l00065">65</a> of file <a class="el" href="_c_position2d_8h_source.html">CPosition2d.h</a>.</p>
+
+<p>References <a class="el" href="_c_position2d_8h_source.html#l00053">m_position</a>.</p>
+
+<p>Referenced by <a class="el" href="_c_position2d_8h_source.html#l00071">GetTranslated()</a>.</p>
+
+</div>
+</div>
 <hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="ac52dc2bacd2db9e64c8f164987e29ba2"></a><!-- doxytag: member="i2d::CPosition2d::m_position" ref="ac52dc2bacd2db9e64c8f164987e29ba2" args="" -->
 <div class="memitem">
@@ -444,9 +490,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_position2d_8h_source.html#l00051">51</a> of file <a class="el" href="_c_position2d_8h_source.html">CPosition2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_position2d_8h_source.html#l00053">53</a> of file <a class="el" href="_c_position2d_8h_source.html">CPosition2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_position2d_8h_source.html#l00057">GetPosition()</a>.</p>
+<p>Referenced by <a class="el" href="_c_position2d_8h_source.html#l00059">GetPosition()</a>, and <a class="el" href="_c_position2d_8h_source.html#l00065">Translate()</a>.</p>
 
 </div>
 </div>

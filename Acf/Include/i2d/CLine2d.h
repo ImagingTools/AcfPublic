@@ -157,6 +157,9 @@ public:
 	*/
 	double GetLength() const;
 
+	/**
+		Get quadratic distance between line points.
+	*/
 	double GetLength2() const;
 
 	/**
@@ -168,6 +171,11 @@ public:
 		Get the line with replaced points (p1 = p2 and p2 = p1)
 	*/
 	CLine2d GetSwapped() const;
+
+	/**
+		Get bounding box of this line.
+	*/
+	virtual CRectangle GetBoundingBox() const;
 
 	/**
 		Get Y position of cutting this line by specified horizontal line.
@@ -188,11 +196,8 @@ public:
 	*/
 	void PushEndPoint(const i2d::CVector2d& newEndPoint);
 
-	virtual CRectangle GetBoundingBox() const;
-
-	/**	Get a proportion of lines cut point to line length.
-	*		@image html CLine2.gif
-	*		Returned value is equal @f$\frac{p}{l}@f$.
+	/**
+		Get a proportion of lines cut point to line length.
 	*/
 	double GetCutAlpha(const CLine2d& line) const;
 
@@ -204,25 +209,32 @@ public:
 
 	bool GetCutPoint(const CLine2d& otherLine, i2d::CVector2d& cutPoint) const;
 
-	/**	Return a line point, which is the nearest to the specified point.
-	*		@image html CLine4.gif
+	/**
+		Return a line point, which is the nearest to the specified point.
 	*/
 	i2d::CVector2d GetNearestPoint(const i2d::CVector2d& point) const;
-	/**	Return a line, which connects the nearest end points of two lines.
+	
+	/**
+		Return a line, which connects the nearest end points of two lines.
 	*/
 	CLine2d GetShortestEndConnection(const CLine2d& line) const;
-	/**	Return a line, which connects the nearest points of two lines.
-	*		Only connection between end point of first line and second line
-	*		or connection between first line and begin point of second line will be checked.
+	
+	/**	
+		Return a line, which connects the nearest points of two lines.
+		Only connection between end point of first line and second line
+		or connection between first line and begin point of second line will be checked.
 	*/
 	CLine2d GetShortestConnectionToNext(const CLine2d& line) const;
-	/**	Return a line, which connects the nearest point of line and specified point.
+	
+	/**
+		Return a line, which connects the nearest point of line and specified point.
 	*/
 	CLine2d GetShortestConnection(const i2d::CVector2d& point) const;
-	/**	Return a line, which connects the nearest points of two lines.
+	
+	/**
+		Return a line, which connects the nearest points of two lines.
 	*/
 	CLine2d GetShortestConnection(const CLine2d& line) const;
-
 
 	// reimplemented (i2d::IObject2d)
 	virtual CVector2d GetCenter() const;

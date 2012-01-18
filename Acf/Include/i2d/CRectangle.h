@@ -117,12 +117,15 @@ public:
 	*/
 	CRectangle GetIntersection(const CRectangle& rect) const;
 
-	void Intersection(const CRectangle& rect);
-
 	/**
 		Get resulting line of the intersection of this rectangle with the line \c line.
 	*/
 	CLine2d GetIntersection(const CLine2d& line) const;
+
+	/**
+		Set new rectangle as intersection of the current rectangle with a given one.
+	*/
+	void Intersect(const CRectangle& rectangle);
 
 	CRectangle GetUnion(const CRectangle& rect) const;
 	void Unite(const CRectangle& rect);
