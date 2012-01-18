@@ -113,7 +113,7 @@ double CNumericParamsComp::GetDisplayMultiplicationFactor() const
 
 istd::CRange CNumericParamsComp::GetValueRange() const
 {
-	return istd::CRange(*m_minFilterLengthAttrPtr, *m_maxFilterLengthAttrPtr);
+	return istd::CRange(*m_minValuesAttrPtr, *m_maxValuesAttrPtr);
 }
 
 
@@ -131,9 +131,16 @@ bool CNumericParamsComp::Serialize(iser::IArchive& archive)
 {
 	static iser::CArchiveTag valuesTag("Values", "List of numeric values");
 
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this);
+
 	bool retVal = archive.BeginTag(valuesTag);
 	retVal = retVal && m_values.Serialize(archive);
 	retVal = retVal && archive.EndTag(valuesTag);
+
+	const INumericConstraints* constraintsPtr = GetNumericConstraints();
+	I_ASSERT(constraintsPtr != NULL);
+
+	m_values.SetElementsCount(constraintsPtr->GetNumericValuesCount());
 
 	return retVal;
 }
@@ -145,7 +152,18 @@ bool CNumericParamsComp::CopyFrom(const IChangeable& object)
 {
 	const INumericParams* nativeParamsPtr = dynamic_cast<const INumericParams*>(&object);
 	if (nativeParamsPtr != NULL){
-		m_values = nativeParamsPtr->GetValues();
+		imath::CVarVector values = nativeParamsPtr->GetValues();
+
+		const INumericConstraints* constraintsPtr = GetNumericConstraints();
+		if (constraintsPtr != NULL){
+			values.SetElementsCount(constraintsPtr->GetNumericValuesCount(), 0);
+		}
+
+		if (values != m_values){
+			istd::CChangeNotifier notifier(this);
+
+			m_values = nativeParamsPtr->GetValues();
+		}
 
 		return true;
 	}
@@ -166,13 +184,17 @@ void CNumericParamsComp::OnComponentCreated()
 	I_ASSERT(constraintsPtr != NULL);
 
 	int count = constraintsPtr->GetNumericValuesCount();
-	m_values.SetElementsCount(count, 1);
+	m_values.SetElementsCount(count);
 
-	if (m_filterLengthsAttrPtr.IsValid()){
-		int commonCount = istd::Min(count, m_filterLengthsAttrPtr.GetCount());
-		for (int i = 0; i < commonCount; ++i){
-			m_values[i] = m_filterLengthsAttrPtr[i];
+	int defaultValuesCount = m_defaultValuesAttrPtr.GetCount();
+
+	double lastValue = 0;
+	for (int i = 0; i < count; ++i){
+		if (i < defaultValuesCount){
+			lastValue = m_defaultValuesAttrPtr[i];
 		}
+
+		m_values[i] = lastValue;
 	}
 }
 

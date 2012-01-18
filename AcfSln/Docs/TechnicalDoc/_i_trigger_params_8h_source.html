@@ -51,23 +51,24 @@
 <a name="l00043"></a><a class="code" href="classisig_1_1_i_trigger_params.html#a283940d30e3c2ac921ff3d7976ddb124a058e033dc8b13ea678ec231784dae8d4">00043</a>               <a class="code" href="classisig_1_1_i_trigger_params.html#a283940d30e3c2ac921ff3d7976ddb124a058e033dc8b13ea678ec231784dae8d4" title="There external trigger with falling edge.">TM_FALLING_EDGE</a>,
 <a name="l00047"></a><a class="code" href="classisig_1_1_i_trigger_params.html#a283940d30e3c2ac921ff3d7976ddb124a56371f2edfe1d8d0ea2d968fac8c6ad5">00047</a>               <a class="code" href="classisig_1_1_i_trigger_params.html#a283940d30e3c2ac921ff3d7976ddb124a56371f2edfe1d8d0ea2d968fac8c6ad5" title="There external trigger with positive edge control.">TM_POSITIVE_LEVEL</a>,
 <a name="l00051"></a><a class="code" href="classisig_1_1_i_trigger_params.html#a283940d30e3c2ac921ff3d7976ddb124a9588d9376705b9578c1a434ac19baff1">00051</a>               <a class="code" href="classisig_1_1_i_trigger_params.html#a283940d30e3c2ac921ff3d7976ddb124a9588d9376705b9578c1a434ac19baff1" title="There external trigger with negative edge control.">TM_NEGATIVE_LEVEL</a>,
-<a name="l00052"></a><a class="code" href="classisig_1_1_i_trigger_params.html#a283940d30e3c2ac921ff3d7976ddb124a948567cdf845741a89ba68394a29128c">00052</a>               <a class="code" href="classisig_1_1_i_trigger_params.html#a283940d30e3c2ac921ff3d7976ddb124a948567cdf845741a89ba68394a29128c">TM_SOFTWARE</a>
-<a name="l00053"></a>00053        };
-<a name="l00054"></a>00054 
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classisig_1_1_i_trigger_constraints.html" title="Interface for AVT camera parameters.">ITriggerConstraints</a>* <a class="code" href="classisig_1_1_i_trigger_params.html#a93ea697ceb89129a7a41943a70544e60" title="Get constrints describing supported parameter states.">GetTriggerConstraints</a>() <span class="keyword">const</span> = 0;
-<a name="l00059"></a>00059 
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classisig_1_1_i_trigger_params.html#adda9d7ea9c4d729be3b6581eee07fc54" title="Get trigger mode.">GetTriggerMode</a>() <span class="keyword">const</span> = 0;
-<a name="l00065"></a>00065 
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisig_1_1_i_trigger_params.html#a66ebe1c5c3511d7fbe95d5e8124d3887" title="Set trigger mode.">SetTriggerMode</a>(<span class="keywordtype">int</span> triggerMode) = 0;
-<a name="l00071"></a>00071 };
+<a name="l00055"></a><a class="code" href="classisig_1_1_i_trigger_params.html#a283940d30e3c2ac921ff3d7976ddb124a948567cdf845741a89ba68394a29128c">00055</a>               <a class="code" href="classisig_1_1_i_trigger_params.html#a283940d30e3c2ac921ff3d7976ddb124a948567cdf845741a89ba68394a29128c" title="Software trigger mode.">TM_SOFTWARE</a>,
+<a name="l00059"></a><a class="code" href="classisig_1_1_i_trigger_params.html#a283940d30e3c2ac921ff3d7976ddb124ad1972346830602a219fea2d78944d878">00059</a>               <a class="code" href="classisig_1_1_i_trigger_params.html#a283940d30e3c2ac921ff3d7976ddb124ad1972346830602a219fea2d78944d878" title="Last available trigger mode index.">TM_LAST</a> = <a class="code" href="classisig_1_1_i_trigger_params.html#a283940d30e3c2ac921ff3d7976ddb124a948567cdf845741a89ba68394a29128c" title="Software trigger mode.">TM_SOFTWARE</a>
+<a name="l00060"></a>00060        };
+<a name="l00061"></a>00061 
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classisig_1_1_i_trigger_constraints.html" title="Interface for AVT camera parameters.">ITriggerConstraints</a>* <a class="code" href="classisig_1_1_i_trigger_params.html#a93ea697ceb89129a7a41943a70544e60" title="Get constraints describing supported parameter states.">GetTriggerConstraints</a>() <span class="keyword">const</span> = 0;
+<a name="l00066"></a>00066 
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classisig_1_1_i_trigger_params.html#adda9d7ea9c4d729be3b6581eee07fc54" title="Get trigger mode.">GetTriggerMode</a>() <span class="keyword">const</span> = 0;
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074 } <span class="comment">// namespace isig</span>
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 <span class="preprocessor">#endif // !isig_ITriggerParams_included</span>
-<a name="l00078"></a>00078 <span class="preprocessor"></span>
+<a name="l00077"></a>00077        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisig_1_1_i_trigger_params.html#a66ebe1c5c3511d7fbe95d5e8124d3887" title="Set trigger mode.">SetTriggerMode</a>(<span class="keywordtype">int</span> triggerMode) = 0;
+<a name="l00078"></a>00078 };
 <a name="l00079"></a>00079 
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 } <span class="comment">// namespace isig</span>
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 <span class="preprocessor">#endif // !isig_ITriggerParams_included</span>
+<a name="l00085"></a>00085 <span class="preprocessor"></span>
+<a name="l00086"></a>00086 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -27,7 +27,8 @@
 #include <vector>
 
 
-namespace imath{
+namespace imath
+{
 
 
 CFixedPointManip::CFixedPointManip(int precision, RoundingType roundingType)

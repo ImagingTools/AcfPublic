@@ -23,6 +23,7 @@
 #include "iqtsig/CSampleContainerView.h"
 
 
+// Qt includes
 #include <QPainter>
 
 

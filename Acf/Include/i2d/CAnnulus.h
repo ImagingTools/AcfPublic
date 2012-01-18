@@ -59,8 +59,8 @@ public:
 
 	virtual CRectangle GetBoundingBox() const;
 
-	bool operator == (const CAnnulus & ref) const;
-	bool operator != (const CAnnulus & ref) const;
+	bool operator == (const CAnnulus & annulus) const;
+	bool operator != (const CAnnulus & annulus) const;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);

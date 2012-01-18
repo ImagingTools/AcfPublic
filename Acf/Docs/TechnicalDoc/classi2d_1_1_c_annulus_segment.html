@@ -69,6 +69,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus_segment.html#a0e2ff53ae5d0e1c863ec5391cb6fed14">GetEndAngle</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus_segment.html#a99fd2f31860f6b8088cf7ac19ba46d32">SetEndAngle</a> (double angle)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus_segment.html#a86a8fc2bce1be65640919f73090296f6">GetBoundingBox</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bounding box of the annulus segment object.  <a href="#a86a8fc2bce1be65640919f73090296f6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus_segment.html#a1da68bae004a00805c316751609417c9">Contains</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;point) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if a given point is inside of annulus segment area.  <a href="#a1da68bae004a00805c316751609417c9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus_segment.html#a48de034e5cffa9239a48dc46b3e7c700">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a48de034e5cffa9239a48dc46b3e7c700"></a><br/></td></tr>
 </table>
@@ -158,6 +161,25 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a1da68bae004a00805c316751609417c9"></a><!-- doxytag: member="i2d::CAnnulusSegment::Contains" ref="a1da68bae004a00805c316751609417c9" args="(const i2d::CVector2d &amp;point) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool i2d::CAnnulusSegment::Contains </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return <code>true</code> if a given point is inside of annulus segment area. </p>
+
+</div>
+</div>
 <a class="anchor" id="aff018a3da26a5a92ae26001d8a934007"></a><!-- doxytag: member="i2d::CAnnulusSegment::GetBeginAngle" ref="aff018a3da26a5a92ae26001d8a934007" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -187,6 +209,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Get bounding box of the annulus segment object. </p>
 
 <p>Reimplemented from <a class="el" href="classi2d_1_1_c_annulus.html#a14075121660042631e65d078a1607349">i2d::CAnnulus</a>.</p>
 

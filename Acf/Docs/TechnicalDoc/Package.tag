@@ -6600,6 +6600,20 @@
       <anchor>a14075121660042631e65d078a1607349</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
+      <anchor>ae4af62f6dbdaa1bb08d7a28ab7c1e20d</anchor>
+      <arglist>(const CAnnulus &amp;annulus) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
+      <anchor>a396c24871c18b3c44379e0634e92e453</anchor>
+      <arglist>(const CAnnulus &amp;annulus) const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
@@ -6694,6 +6708,13 @@
       <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
       <anchor>a86a8fc2bce1be65640919f73090296f6</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Contains</name>
+      <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
+      <anchor>a1da68bae004a00805c316751609417c9</anchor>
+      <arglist>(const i2d::CVector2d &amp;point) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

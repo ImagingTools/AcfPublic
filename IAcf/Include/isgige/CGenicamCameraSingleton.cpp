@@ -27,7 +27,8 @@
 #include <QHostAddress>
 
 
-namespace isgige{
+namespace isgige
+{
 
 
 CGenicamCameraSingleton::CGenicamCameraSingleton()

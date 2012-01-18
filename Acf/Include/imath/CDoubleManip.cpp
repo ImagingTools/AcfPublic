@@ -28,7 +28,8 @@
 #include <sstream>
 
 
-namespace imath{
+namespace imath
+{
 
 
 CDoubleManip::CDoubleManip()

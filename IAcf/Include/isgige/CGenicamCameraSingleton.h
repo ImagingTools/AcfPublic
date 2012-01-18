@@ -32,7 +32,8 @@
 #include "gige_cpp/ICallbackEvent.h"
 
 
-namespace isgige{
+namespace isgige
+{
 
 
 class CGenicamCameraComp;

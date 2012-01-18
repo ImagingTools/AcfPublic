@@ -1832,6 +1832,15 @@
     <namespace>iqtsig</namespace>
   </compound>
   <compound kind="file">
+    <name>CTriggerParamsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtsig/</path>
+    <filename>_c_trigger_params_gui_comp_8h</filename>
+    <includes id="_i_trigger_params_8h" name="ITriggerParams.h" local="yes" imported="no">isig/ITriggerParams.h</includes>
+    <includes id="iqtsig_8h" name="iqtsig.h" local="yes" imported="no">iqtsig/iqtsig.h</includes>
+    <class kind="class">iqtsig::CTriggerParamsGuiComp</class>
+    <namespace>iqtsig</namespace>
+  </compound>
+  <compound kind="file">
     <name>iqtsig.h</name>
     <path>C:/Temp/AcfSln/Include/iqtsig/</path>
     <filename>iqtsig_8h</filename>
@@ -13418,6 +13427,7 @@
     <class kind="class">iqtsig::CSampleContainerView</class>
     <class kind="class">iqtsig::CSamplingParamsGuiComp</class>
     <class kind="class">iqtsig::CScriptDataProcessorComp</class>
+    <class kind="class">iqtsig::CTriggerParamsGuiComp</class>
   </compound>
   <compound kind="class">
     <name>iqtsig::CPulseParamsGuiComp</name>
@@ -13718,6 +13728,88 @@
       <arglist>()</arglist>
     </member>
   </compound>
+  <compound kind="class">
+    <name>iqtsig::CTriggerParamsGuiComp</name>
+    <filename>classiqtsig_1_1_c_trigger_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CTriggerParamsGuiComp, isig::ITriggerParams &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CTriggerParamsGuiComp, isig::ITriggerParams &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>a550985c96eb93d1e586f4b753d65803d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>af5362448b52ea04403a71905262ce911</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_NoTriggerRB_toggled</name>
+      <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>a31baa75772db9ea0c38f11ddd978665c</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ContinuousRB_toggled</name>
+      <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>a2438102756eaaf6224d204a5623fc873</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RisingEdgeRB_toggled</name>
+      <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>a9d702af0002e697f563c49b8007b2b53</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_FallingEdgeRB_toggled</name>
+      <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>a4da27a19394b63bd351c3c6c6e48c7f8</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_PositiveLevelRB_toggled</name>
+      <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>a8a431b2f6ce4e16451a65fa4f317dfac</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_NegativeLevelRB_toggled</name>
+      <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>acb94cd4f29d0f5cda3442a83ee4f5f38</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_SoftwareTriggerRB_toggled</name>
+      <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>ac0fcdc34c89e523ff0c43223c98014fa</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>ac2f7bf66d60e925792fee35f8be7d14e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>a39d71be5c2777aecdf47f6faa0fb4c06</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+  </compound>
   <compound kind="namespace">
     <name>isig</name>
     <filename>namespaceisig.html</filename>
@@ -13888,6 +13980,8 @@
     <filename>classisig_1_1_c_trigger_params_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">isig::ITriggerParams</base>
+    <base virtualness="virtual">iprm::ISelectionParam</base>
+    <base protection="protected" virtualness="virtual">iprm::ISelectionConstraints</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -13924,11 +14018,81 @@
       <arglist>(int triggerMode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::ISelectionConstraints *</type>
+      <name>GetSelectionConstraints</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>a419b028561f12b0d90a7009c6d111391</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSelectedOptionIndex</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>a3a756a7e7b63b071836701cd9218ed79</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetSelectedOptionIndex</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>af448b8ed00283d61b8b0085ec27f9042</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iprm::ISelectionParam *</type>
+      <name>GetActiveSubselection</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>a119dd721625d290b7ee6cee31ca24e59</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
       <anchor>ac2ac5146f3ccba17864e9a53d4e00852</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>InitializeSelectionList</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>a8e715bbb6bbdd3a6cc1554bac9e911fa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetConstraintsFlags</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>a09f6d348e4a5b9a46af826c641dd11f6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>a57cd3472f1992f6b7b3a5ee7d23b9076</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>abd80b99785b48debf3ce27237f358c09</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>aa45cd67a716852f49a06d12e5ceb0503</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>GetOptionId</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>a4e59c44bd85d683ceb2126ab66fa547f</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -14220,6 +14384,12 @@
       <name>TM_SOFTWARE</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
       <anchor>a283940d30e3c2ac921ff3d7976ddb124a948567cdf845741a89ba68394a29128c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TM_LAST</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124ad1972346830602a219fea2d78944d878</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
