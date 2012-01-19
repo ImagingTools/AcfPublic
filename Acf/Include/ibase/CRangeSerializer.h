@@ -20,25 +20,38 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef ibase_CRangeSerializer_included
+#define ibase_CRangeSerializer_included
 
 
-namespace istd
+#include "istd/CRange.h"
+
+#include "ibase/ibase.h"
+
+
+namespace iser
+{
+	class IArchive;
+}
+
+
+namespace ibase
 {
 
 
-enum RepositoryState
+/**
+	Implementation range serializer.
+
+	\ingroup Main
+*/
+class CRangeSerializer
 {
-	RS_ORIGINAL_VERSION =  2143,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	static bool SerializeRange(iser::IArchive& archive, istd::CRange& range);
 };
 
+} // namespace ibase
 
-} // namespace istd
 
-
-#endif // !istd_AcfVersion_included
-
+#endif // !ibase_CRangeSerializer_included
 

@@ -20,25 +20,37 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#include "ibase/CRangeSerializer.h"
 
 
-namespace istd
+#include "iser/IArchive.h"
+#include "iser/CArchiveTag.h"
+
+
+namespace ibase
 {
 
 
-enum RepositoryState
+// public static methods
+
+bool CRangeSerializer::SerializeRange(iser::IArchive& archive, istd::CRange& range)
 {
-	RS_ORIGINAL_VERSION =  2143,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
+	bool retVal = true;
+
+	static iser::CArchiveTag minValueTag("MinValue", "Minimal range value");
+	retVal = retVal && archive.BeginTag(minValueTag);
+	retVal = retVal && archive.Process(range.GetMinValueRef());
+	retVal = retVal && archive.EndTag(minValueTag);
+
+	static iser::CArchiveTag maxValueTag("MaxValue", "Maximal range value");
+	retVal = retVal && archive.BeginTag(maxValueTag);
+	retVal = retVal && archive.Process(range.GetMaxValueRef());
+	retVal = retVal && archive.EndTag(maxValueTag);
+
+	return retVal;
+}
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+} // namespace ibase
 
 

@@ -399,6 +399,16 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
+    <name>CRangeSerializer.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_c_range_serializer_8h</filename>
+    <includes id="_c_range_8h" name="CRange.h" local="yes" imported="no">istd/CRange.h</includes>
+    <includes id="ibase_8h" name="ibase.h" local="yes" imported="no">ibase/ibase.h</includes>
+    <class kind="class">ibase::CRangeSerializer</class>
+    <namespace>iser</namespace>
+    <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectableFileConverterComp.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_selectable_file_converter_comp_8h</filename>
@@ -6000,6 +6010,7 @@
     <name>Main</name>
     <title>Main concepts and implementations</title>
     <filename>group___main.html</filename>
+    <class kind="class">ibase::CRangeSerializer</class>
     <class kind="class">ibase::CSize</class>
     <class kind="class">ibase::IApplication</class>
     <class kind="class">ibase::IApplicationInfo</class>
@@ -8945,6 +8956,7 @@
     <class kind="class">ibase::CModelProxyComp</class>
     <class kind="class">ibase::CMultiObserverBinderComp</class>
     <class kind="class">ibase::CObjectQueueComp</class>
+    <class kind="class">ibase::CRangeSerializer</class>
     <class kind="class">ibase::CSelectableFileConverterComp</class>
     <class kind="class">ibase::CSize</class>
     <class kind="class">ibase::CStreamLogCompBase</class>
@@ -9796,6 +9808,17 @@
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
       <anchor>a9a514d1597d09a363c7856b2e870e2a9</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::CRangeSerializer</name>
+    <filename>classibase_1_1_c_range_serializer.html</filename>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SerializeRange</name>
+      <anchorfile>classibase_1_1_c_range_serializer.html</anchorfile>
+      <anchor>a916bb605d9d73ff3deace9fb3ee774cd</anchor>
+      <arglist>(iser::IArchive &amp;archive, istd::CRange &amp;range)</arglist>
     </member>
   </compound>
   <compound kind="class">
