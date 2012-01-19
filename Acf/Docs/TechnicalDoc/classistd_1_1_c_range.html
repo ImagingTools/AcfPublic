@@ -113,9 +113,17 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value based on 'alpha' factor.  <a href="#a8034e41fa4449eb4ce959b41cf8107a1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#a49b1a2d3ce0f458c9288f249c650c8c1">GetMappedTo</a> (double value, const <a class="el" href="classistd_1_1_c_range.html">istd::CRange</a> &amp;range) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value, that corresponds the input value <code>inputValue</code> in the other range <code>range</code>.  <a href="#a49b1a2d3ce0f458c9288f249c650c8c1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_range.html">CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#aab762e4149a9d776d4b1e4cb2f2622df">GetApply</a> (const <a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;range) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a combined range.  <a href="#aab762e4149a9d776d4b1e4cb2f2622df"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_range.html">CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#ad09a95c7794979e29f5669953d2d2af7">GetInvertApply</a> (const <a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;range) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_range.html">CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#a05251f96f21284cbaeef5c6393c9b915">GetInverted</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#af04a3c4766f7338903950efaa10fafe2">SetInterpolated</a> (const <a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;first, const <a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;second, double alpha)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this range to be linear interpolated using two other ranges and adjast alpha value.  <a href="#af04a3c4766f7338903950efaa10fafe2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#aa17a041edfac4153d0804ba430a1c182">operator=</a> (const <a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;range)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#a095dd7c7b344d3969c22154c1f21a47d">operator==</a> (const <a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;range) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#a2b69f91fbb89617ac6bfbd4a7a0cd570">operator!=</a> (const <a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;range) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_range.html">CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#aa215569bd2615296290b6080d980a459">operator*</a> (double value) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_range.html">CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#aad11839cac831acbbc495762c9d6fc15">operator/</a> (double value) const </td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_range.html#a6f4ec658c3196612b65b7497ec902ff6">GetNull</a> ()</td></tr>
@@ -216,9 +224,9 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns <code>true</code>, if value is in range between <code>top</code> and <code>bottom</code>. </p>
 <p>This range must be valid. </p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00275">275</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00298">298</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_c_range_8h_source.html#l00233">IsValid()</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_c_range_8h_source.html#l00256">IsValid()</a>.</p>
 
 </div>
 </div>
@@ -239,9 +247,9 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Returns <code>true</code>, if this range is inside of the <code>range</code>. </p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00283">283</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00306">306</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_c_range_8h_source.html#l00233">IsValid()</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="_c_range_8h_source.html#l00256">IsValid()</a>.</p>
 
 </div>
 </div>
@@ -288,9 +296,29 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00298">298</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00321">321</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
-<p>References <a class="el" href="_c_range_8h_source.html#l00269">GetLength()</a>, and <a class="el" href="_c_range_8h_source.html#l00245">GetMinValue()</a>.</p>
+<p>References <a class="el" href="_c_range_8h_source.html#l00292">GetLength()</a>, and <a class="el" href="_c_range_8h_source.html#l00268">GetMinValue()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aab762e4149a9d776d4b1e4cb2f2622df"></a><!-- doxytag: member="istd::CRange::GetApply" ref="aab762e4149a9d776d4b1e4cb2f2622df" args="(const CRange &amp;range) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_c_range.html">CRange</a> istd::CRange::GetApply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;&#160;</td>
+          <td class="paramname"><em>range</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get a combined range. </p>
+<p>It calculates combined range. Range [0, 1] is neutral element of this operation. </p>
 
 </div>
 </div>
@@ -387,7 +415,40 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Return invalid range. </p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00324">324</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00347">347</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad09a95c7794979e29f5669953d2d2af7"></a><!-- doxytag: member="istd::CRange::GetInvertApply" ref="ad09a95c7794979e29f5669953d2d2af7" args="(const CRange &amp;range) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_c_range.html">CRange</a> istd::CRange::GetInvertApply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;&#160;</td>
+          <td class="paramname"><em>range</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a05251f96f21284cbaeef5c6393c9b915"></a><!-- doxytag: member="istd::CRange::GetInverted" ref="a05251f96f21284cbaeef5c6393c9b915" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_c_range.html">CRange</a> istd::CRange::GetInverted </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -408,11 +469,11 @@ Static Public Member Functions</h2></td></tr>
 <p>Get length of this range. </p>
 <p>Length is difference between top and bottom values. </p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00269">269</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00292">292</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
-<p>References <a class="el" href="_c_range_8h_source.html#l00233">IsValid()</a>.</p>
+<p>References <a class="el" href="_c_range_8h_source.html#l00256">IsValid()</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_range_8h_source.html#l00298">GetAlphaFromValue()</a>, and <a class="el" href="_c_range_8h_source.html#l00292">GetValueFromAlpha()</a>.</p>
+<p>Referenced by <a class="el" href="_c_range_8h_source.html#l00321">GetAlphaFromValue()</a>, and <a class="el" href="_c_range_8h_source.html#l00315">GetValueFromAlpha()</a>.</p>
 
 </div>
 </div>
@@ -469,7 +530,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get the top value. </p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00257">257</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00280">280</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_rectangle_8h_source.html#l00182">i2d::CRectangle::GetBottom()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00176">i2d::CRectangle::GetRight()</a>, and <a class="el" href="_c_rectangle_8h_source.html#l00212">i2d::CRectangle::Translate()</a>.</p>
 
@@ -491,7 +552,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get reference to the top value. </p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00263">263</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00286">286</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
 </div>
 </div>
@@ -511,9 +572,9 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get the bottom value. </p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00245">245</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00268">268</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_range_8h_source.html#l00298">GetAlphaFromValue()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00164">i2d::CRectangle::GetLeft()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00170">i2d::CRectangle::GetTop()</a>, <a class="el" href="_c_range_8h_source.html#l00292">GetValueFromAlpha()</a>, and <a class="el" href="_c_rectangle_8h_source.html#l00212">i2d::CRectangle::Translate()</a>.</p>
+<p>Referenced by <a class="el" href="_c_range_8h_source.html#l00321">GetAlphaFromValue()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00164">i2d::CRectangle::GetLeft()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00170">i2d::CRectangle::GetTop()</a>, <a class="el" href="_c_range_8h_source.html#l00315">GetValueFromAlpha()</a>, and <a class="el" href="_c_rectangle_8h_source.html#l00212">i2d::CRectangle::Translate()</a>.</p>
 
 </div>
 </div>
@@ -533,7 +594,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get reference to the bottom value. </p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00251">251</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00274">274</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
 </div>
 </div>
@@ -572,7 +633,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Return null range. </p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00318">318</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00341">341</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
 </div>
 </div>
@@ -705,9 +766,9 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00292">292</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00315">315</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
-<p>References <a class="el" href="_c_range_8h_source.html#l00269">GetLength()</a>, and <a class="el" href="_c_range_8h_source.html#l00245">GetMinValue()</a>.</p>
+<p>References <a class="el" href="_c_range_8h_source.html#l00292">GetLength()</a>, and <a class="el" href="_c_range_8h_source.html#l00268">GetMinValue()</a>.</p>
 
 </div>
 </div>
@@ -746,7 +807,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Return <code>true</code> if the bottom value is equal to the top value. </p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00239">239</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00262">262</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
 </div>
 </div>
@@ -786,9 +847,9 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Return <code>true</code> if the bottom value is smaller or equal then the top value. </p>
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00233">233</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00256">256</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_range_8h_source.html#l00275">Contains()</a>, and <a class="el" href="_c_range_8h_source.html#l00269">GetLength()</a>.</p>
+<p>Referenced by <a class="el" href="_c_range_8h_source.html#l00298">Contains()</a>, and <a class="el" href="_c_range_8h_source.html#l00292">GetLength()</a>.</p>
 
 </div>
 </div>
@@ -807,7 +868,41 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00310">310</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00333">333</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa215569bd2615296290b6080d980a459"></a><!-- doxytag: member="istd::CRange::operator*" ref="aa215569bd2615296290b6080d980a459" args="(double value) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_c_range.html">CRange</a> istd::CRange::operator* </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aad11839cac831acbbc495762c9d6fc15"></a><!-- doxytag: member="istd::CRange::operator/" ref="aad11839cac831acbbc495762c9d6fc15" args="(double value) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_c_range.html">CRange</a> istd::CRange::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -843,7 +938,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00304">304</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_range_8h_source.html#l00327">327</a> of file <a class="el" href="_c_range_8h_source.html">CRange.h</a>.</p>
 
 </div>
 </div>
@@ -862,6 +957,41 @@ Static Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Set this range to be empty. </p>
+
+</div>
+</div>
+<a class="anchor" id="af04a3c4766f7338903950efaa10fafe2"></a><!-- doxytag: member="istd::CRange::SetInterpolated" ref="af04a3c4766f7338903950efaa10fafe2" args="(const CRange &amp;first, const CRange &amp;second, double alpha)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void istd::CRange::SetInterpolated </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_range.html">CRange</a> &amp;&#160;</td>
+          <td class="paramname"><em>second</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set this range to be linear interpolated using two other ranges and adjast alpha value. </p>
 
 </div>
 </div>

@@ -41254,6 +41254,34 @@
       <arglist>(double value, const istd::CRange &amp;range) const </arglist>
     </member>
     <member kind="function">
+      <type>CRange</type>
+      <name>GetApply</name>
+      <anchorfile>classistd_1_1_c_range.html</anchorfile>
+      <anchor>aab762e4149a9d776d4b1e4cb2f2622df</anchor>
+      <arglist>(const CRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CRange</type>
+      <name>GetInvertApply</name>
+      <anchorfile>classistd_1_1_c_range.html</anchorfile>
+      <anchor>ad09a95c7794979e29f5669953d2d2af7</anchor>
+      <arglist>(const CRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CRange</type>
+      <name>GetInverted</name>
+      <anchorfile>classistd_1_1_c_range.html</anchorfile>
+      <anchor>a05251f96f21284cbaeef5c6393c9b915</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetInterpolated</name>
+      <anchorfile>classistd_1_1_c_range.html</anchorfile>
+      <anchor>af04a3c4766f7338903950efaa10fafe2</anchor>
+      <arglist>(const CRange &amp;first, const CRange &amp;second, double alpha)</arglist>
+    </member>
+    <member kind="function">
       <type>CRange &amp;</type>
       <name>operator=</name>
       <anchorfile>classistd_1_1_c_range.html</anchorfile>
@@ -41273,6 +41301,20 @@
       <anchorfile>classistd_1_1_c_range.html</anchorfile>
       <anchor>a2b69f91fbb89617ac6bfbd4a7a0cd570</anchor>
       <arglist>(const CRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CRange</type>
+      <name>operator*</name>
+      <anchorfile>classistd_1_1_c_range.html</anchorfile>
+      <anchor>aa215569bd2615296290b6080d980a459</anchor>
+      <arglist>(double value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CRange</type>
+      <name>operator/</name>
+      <anchorfile>classistd_1_1_c_range.html</anchorfile>
+      <anchor>aad11839cac831acbbc495762c9d6fc15</anchor>
+      <arglist>(double value) const </arglist>
     </member>
     <member kind="function" static="yes">
       <type>static const CRange &amp;</type>
