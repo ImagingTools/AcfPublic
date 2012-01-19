@@ -2145,6 +2145,7 @@
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_i_bitmap_8h</filename>
     <includes id="_i_raster_image_8h" name="IRasterImage.h" local="yes" imported="no">iimg/IRasterImage.h</includes>
+    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
     <class kind="class">iimg::IBitmap</class>
     <namespace>iimg</namespace>
   </compound>
@@ -20538,6 +20539,13 @@
     <filename>classiimg_1_1_c_bitmap_base.html</filename>
     <base virtualness="virtual">iimg::IBitmap</base>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyBitmapRegion</name>
+      <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
+      <anchor>a80d3335e447acb7db3bae57ed63eaec1</anchor>
+      <arglist>(const iimg::IBitmap &amp;sourceBitmap, const i2d::CRectangle &amp;area)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetLineBytesCount</name>
       <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
@@ -20855,6 +20863,13 @@
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
       <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea2d2cb16572347303c10cbe08359ad67b</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>CopyBitmapRegion</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a5c85a5da56ebf5e681416f434ecab2d2</anchor>
+      <arglist>(const iimg::IBitmap &amp;sourceBitmap, const i2d::CRectangle &amp;area)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>

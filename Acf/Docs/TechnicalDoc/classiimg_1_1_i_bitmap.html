@@ -81,6 +81,8 @@ Public Types</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitmap pixel format description.  <a href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#a5c85a5da56ebf5e681416f434ecab2d2">CopyBitmapRegion</a> (const <a class="el" href="classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;sourceBitmap, const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;area)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and copy bitmap region to the bitmap.  <a href="#a5c85a5da56ebf5e681416f434ecab2d2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#aa183038c573dd5e980f4bacd727121ed">GetPixelFormat</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bitmap's pixel format.  <a href="#aa183038c573dd5e980f4bacd727121ed"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#a9dc2f1235fad74bda57fc62fa9bd878d">IsFormatSupported</a> (<a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a> pixelFormat) const =0</td></tr>
@@ -107,7 +109,7 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Definition of single plane bitmap. </p>
 
-<p>Definition at line <a class="el" href="_i_bitmap_8h_source.html#l00015">15</a> of file <a class="el" href="_i_bitmap_8h_source.html">IBitmap.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_bitmap_8h_source.html#l00017">17</a> of file <a class="el" href="_i_bitmap_8h_source.html">IBitmap.h</a>.</p>
 </div><hr/><h2>Member Enumeration Documentation</h2>
 <a class="anchor" id="a0c4e5f4e61840ce1e0330048cfa5f10e"></a><!-- doxytag: member="iimg::IBitmap::PixelFormat" ref="a0c4e5f4e61840ce1e0330048cfa5f10e" args="" -->
 <div class="memitem">
@@ -150,11 +152,42 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_bitmap_8h_source.html#l00021">21</a> of file <a class="el" href="_i_bitmap_8h_source.html">IBitmap.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_bitmap_8h_source.html#l00023">23</a> of file <a class="el" href="_i_bitmap_8h_source.html">IBitmap.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a5c85a5da56ebf5e681416f434ecab2d2"></a><!-- doxytag: member="iimg::IBitmap::CopyBitmapRegion" ref="a5c85a5da56ebf5e681416f434ecab2d2" args="(const iimg::IBitmap &amp;sourceBitmap, const i2d::CRectangle &amp;area)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iimg::IBitmap::CopyBitmapRegion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;&#160;</td>
+          <td class="paramname"><em>sourceBitmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;&#160;</td>
+          <td class="paramname"><em>area</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Create and copy bitmap region to the bitmap. </p>
+
+<p>Implemented in <a class="el" href="classiimg_1_1_c_bitmap_base.html#a80d3335e447acb7db3bae57ed63eaec1">iimg::CBitmapBase</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a2e432a3dbffea1c93c07cc5521b69297"></a><!-- doxytag: member="iimg::IBitmap::CreateBitmap" ref="a2e432a3dbffea1c93c07cc5521b69297" args="(int pixelFormat, const istd::CIndex2d &amp;size)=0" -->
 <div class="memitem">
 <div class="memproto">
