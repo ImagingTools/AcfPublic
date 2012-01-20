@@ -132,7 +132,6 @@ CVector2d CAffineTransformation2d::GetValueAt(const CVector2d& argument) const
 }
 
 
-
 // reimplemented (iser::ISerializable)
 
 bool CAffineTransformation2d::Serialize(iser::IArchive& archive)

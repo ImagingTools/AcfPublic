@@ -186,7 +186,6 @@ private:
 };
 
 
-
 // inline methods
 
 inline CAffine2d::CAffine2d()
