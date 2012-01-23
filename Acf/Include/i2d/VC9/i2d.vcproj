@@ -198,6 +198,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CLabel.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CLine2d.cpp"
 				>
 			</File>
@@ -262,6 +266,14 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CSpline.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\CSplineSegment.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CVector2d.cpp"
 				>
 			</File>
@@ -300,6 +312,10 @@
 			</File>
 			<File
 				RelativePath="..\CCircleComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CLabel.h"
 				>
 			</File>
 			<File
@@ -364,6 +380,14 @@
 			</File>
 			<File
 				RelativePath="..\CRectangleComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CSpline.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CSplineSegment.h"
 				>
 			</File>
 			<File
