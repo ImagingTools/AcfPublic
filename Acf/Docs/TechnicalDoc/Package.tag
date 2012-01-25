@@ -85,6 +85,16 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CLabel.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_label_8h</filename>
+    <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_c_position2d_8h" name="CPosition2d.h" local="yes" imported="no">i2d/CPosition2d.h</includes>
+    <class kind="class">i2d::CLabel</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CLine2d.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_line2d_8h</filename>
@@ -109,6 +119,73 @@
     <includes id="_t_matrix_8h" name="TMatrix.h" local="yes" imported="no">imath/TMatrix.h</includes>
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <class kind="class">i2d::CMatrix2d</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CMultiPolylineBase.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_multi_polyline_base_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
+    <includes id="_c_polyline_8h" name="CPolyline.h" local="yes" imported="no">i2d/CPolyline.h</includes>
+    <class kind="class">i2d::CMultiPolylineBase</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPolygon.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_polygon_8h</filename>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
+    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
+    <class kind="class">i2d::CPolygon</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPolygonExtractor.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_polygon_extractor_8h</filename>
+    <includes id="_c_polygon_8h" name="CPolygon.h" local="yes" imported="no">i2d/CPolygon.h</includes>
+    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
+    <includes id="_c_annulus_8h" name="CAnnulus.h" local="yes" imported="no">i2d/CAnnulus.h</includes>
+    <class kind="class">i2d::CPolygonExtractor</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPolyline.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_polyline_8h</filename>
+    <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
+    <includes id="_c_polygon_8h" name="CPolygon.h" local="yes" imported="no">i2d/CPolygon.h</includes>
+    <class kind="class">i2d::CPolyline</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPolylineExNodeBase.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_polyline_ex_node_base_8h</filename>
+    <includes id="_c_polyline_8h" name="CPolyline.h" local="yes" imported="no">i2d/CPolyline.h</includes>
+    <class kind="class">i2d::CPolylineExNodeBase</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPolylineExtractor.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_polyline_extractor_8h</filename>
+    <includes id="_c_polyline_8h" name="CPolyline.h" local="yes" imported="no">i2d/CPolyline.h</includes>
+    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
+    <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
+    <class kind="class">i2d::CPolylineExtractor</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPolypoint.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_polypoint_8h</filename>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
+    <class kind="class">i2d::CPolypoint</class>
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
@@ -170,6 +247,24 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CSpline.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_spline_8h</filename>
+    <includes id="_c_polyline_8h" name="CPolyline.h" local="yes" imported="no">i2d/CPolyline.h</includes>
+    <includes id="_c_spline_segment_8h" name="CSplineSegment.h" local="yes" imported="no">i2d/CSplineSegment.h</includes>
+    <class kind="class">i2d::CSpline</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSplineSegment.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_spline_segment_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
+    <class kind="class">i2d::CSplineSegment</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CVector2d.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_vector2d_8h</filename>
@@ -212,6 +307,40 @@
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <includes id="_c_matrix2d_8h" name="CMatrix2d.h" local="yes" imported="no">i2d/CMatrix2d.h</includes>
     <class kind="class">i2d::ITransformation2d</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TMultiPolyline.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_t_multi_polyline_8h</filename>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_c_multi_polyline_base_8h" name="CMultiPolylineBase.h" local="yes" imported="no">i2d/CMultiPolylineBase.h</includes>
+    <class kind="class">i2d::TMultiPolyline</class>
+    <class kind="class">i2d::TMultiPolyline::CSegment</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TPolylineEx.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_t_polyline_ex_8h</filename>
+    <includes id="_c_polyline_8h" name="CPolyline.h" local="yes" imported="no">i2d/CPolyline.h</includes>
+    <class kind="class">i2d::TPolylineEx</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TPolylineExNode.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_t_polyline_ex_node_8h</filename>
+    <includes id="_c_polyline_ex_node_base_8h" name="CPolylineExNodeBase.h" local="yes" imported="no">i2d/CPolylineExNodeBase.h</includes>
+    <class kind="class">i2d::TPolylineExNode</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TPolylineExPrimitive.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_t_polyline_ex_primitive_8h</filename>
+    <includes id="_c_polyline_8h" name="CPolyline.h" local="yes" imported="no">i2d/CPolyline.h</includes>
+    <class kind="class">i2d::TPolylineExPrimitive</class>
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
@@ -6178,19 +6307,33 @@
     <class kind="class">i2d::CAnnulusSegmentComp</class>
     <class kind="class">i2d::CCircle</class>
     <class kind="class">i2d::CCircleComp</class>
+    <class kind="class">i2d::CLabel</class>
     <class kind="class">i2d::CLine2d</class>
     <class kind="class">i2d::CLine2dComp</class>
     <class kind="class">i2d::CMatrix2d</class>
+    <class kind="class">i2d::CMultiPolylineBase</class>
+    <class kind="class">i2d::CPolygon</class>
+    <class kind="class">i2d::CPolygonExtractor</class>
+    <class kind="class">i2d::CPolyline</class>
+    <class kind="class">i2d::CPolylineExNodeBase</class>
+    <class kind="class">i2d::CPolylineExtractor</class>
+    <class kind="class">i2d::CPolypoint</class>
     <class kind="class">i2d::CPosition2d</class>
     <class kind="class">i2d::CPosition2dComp</class>
     <class kind="class">i2d::CQuadrangle</class>
     <class kind="class">i2d::CQuadrangleComp</class>
     <class kind="class">i2d::CRectangle</class>
     <class kind="class">i2d::CRectangleComp</class>
+    <class kind="class">i2d::CSpline</class>
+    <class kind="class">i2d::CSplineSegment</class>
     <class kind="class">i2d::CVector2d</class>
     <class kind="class">i2d::IObject2d</class>
     <class kind="class">i2d::ISceneController</class>
     <class kind="class">i2d::ITransformation2d</class>
+    <class kind="class">i2d::TMultiPolyline</class>
+    <class kind="class">i2d::TPolylineEx</class>
+    <class kind="class">i2d::TPolylineExNode</class>
+    <class kind="class">i2d::TPolylineExPrimitive</class>
   </compound>
   <compound kind="class">
     <name>i2d::CAffine2d</name>
@@ -6880,6 +7023,46 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>i2d::CLabel</name>
+    <filename>classi2d_1_1_c_label.html</filename>
+    <base>i2d::CPosition2d</base>
+    <member kind="typedef">
+      <type>i2d::CPosition2d</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_label.html</anchorfile>
+      <anchor>aba01ad4cbc064ac8ce3f08ad3512c02e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CLabel</name>
+      <anchorfile>classi2d_1_1_c_label.html</anchorfile>
+      <anchor>a2d07b15ab7d3c5078984a0eea607bfa0</anchor>
+      <arglist>(const i2d::CVector2d &amp;position=i2d::CVector2d(0, 0), const istd::CString &amp;labelText=&quot;Label&quot;)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::CString &amp;</type>
+      <name>GetText</name>
+      <anchorfile>classi2d_1_1_c_label.html</anchorfile>
+      <anchor>a5bb26d48fe0b3c3e234423ad8ae4a0e0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetText</name>
+      <anchorfile>classi2d_1_1_c_label.html</anchorfile>
+      <anchor>af7a7857fbd50e59eadd7dcb74d5bec8f</anchor>
+      <arglist>(const istd::CString &amp;labelText)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_label.html</anchorfile>
+      <anchor>a9014bf003fa9b9b0b5c3a207d7af0e17</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>i2d::CLine2d</name>
     <filename>classi2d_1_1_c_line2d.html</filename>
     <base virtualness="virtual">i2d::IObject2d</base>
@@ -7453,6 +7636,347 @@
       <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
       <anchor>a8b02a1a657ce42ec4034e16f3520893a</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CMultiPolylineBase</name>
+    <filename>classi2d_1_1_c_multi_polyline_base.html</filename>
+    <base>i2d::CPolyline</base>
+    <member kind="typedef">
+      <type>CPolyline</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_multi_polyline_base.html</anchorfile>
+      <anchor>a5293d4005d8b1c8e1441937b169ad33f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SelectAllSegments</name>
+      <anchorfile>classi2d_1_1_c_multi_polyline_base.html</anchorfile>
+      <anchor>a7a42283bb6e5a92ad1bd7db7a1063c0b</anchor>
+      <arglist>(bool selected=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetMaxParallel</name>
+      <anchorfile>classi2d_1_1_c_multi_polyline_base.html</anchorfile>
+      <anchor>a04cd1cc7a77ac5ce3cd178b92943b8da</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetParallelsCount</name>
+      <anchorfile>classi2d_1_1_c_multi_polyline_base.html</anchorfile>
+      <anchor>a0ca8b233e9e690a9c89380fdfa4233d9</anchor>
+      <arglist>(int count)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetParallelsCount</name>
+      <anchorfile>classi2d_1_1_c_multi_polyline_base.html</anchorfile>
+      <anchor>a9b0129700b493b6c6f0faafb707d37dd</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetParallel</name>
+      <anchorfile>classi2d_1_1_c_multi_polyline_base.html</anchorfile>
+      <anchor>a4d9d382e2fe43db26309f317cdc3f9f6</anchor>
+      <arglist>(int segmentIndex, int parallelIndex, double width)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetParallel</name>
+      <anchorfile>classi2d_1_1_c_multi_polyline_base.html</anchorfile>
+      <anchor>abf40dff4b09d816214f56474624059cf</anchor>
+      <arglist>(int segmentIndex, int parallelIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iser::ISerializable &amp;</type>
+      <name>GetSegmentData</name>
+      <anchorfile>classi2d_1_1_c_multi_polyline_base.html</anchorfile>
+      <anchor>ad92a54e8bec3c4365a78d1aaf0ccdfd7</anchor>
+      <arglist>(int segmentIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>RemoveSegment</name>
+      <anchorfile>classi2d_1_1_c_multi_polyline_base.html</anchorfile>
+      <anchor>a689281c8bc7bcd2d103eb2cf174c8ca5</anchor>
+      <arglist>(int node, int segment)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SelectSegment</name>
+      <anchorfile>classi2d_1_1_c_multi_polyline_base.html</anchorfile>
+      <anchor>a39873b161d1bb7f301880b06dc8f2b83</anchor>
+      <arglist>(int segmentIndex, bool selected=true)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsSegmentSelected</name>
+      <anchorfile>classi2d_1_1_c_multi_polyline_base.html</anchorfile>
+      <anchor>a529fc7c75cda8e586cf514aaf11ac6a4</anchor>
+      <arglist>(int segmentIndex) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CPolygon</name>
+    <filename>classi2d_1_1_c_polygon.html</filename>
+    <base>iser::ISerializable</base>
+    <member kind="function">
+      <type></type>
+      <name>CPolygon</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>ab4ea42338c6ef2d89deb95fa4881963f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CVector2d &amp;</type>
+      <name>GetNode</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a717767fd1adf1b08bfa185ee666a572d</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetNode</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a2b4fe8ecf2eb3e51ace24ec83772b726</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>ae60e65f1c5cc18ba3ddb67fc8d9c55fb</anchor>
+      <arglist>(const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a0840d7e2e1c49dda6b7a1f4b336c5d8c</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Clear</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a85f6f7462c442efdb6b94e61ea5e4170</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveNode</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a9ae30d587ee316efdc1bd8ed5ab73ad1</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNodesCount</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a0e9474de5b18f742068ac948bc517d07</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetOutlineLength</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a72c2492397c3e1b6c2c3b3bc702e9d7d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CalcBoundingBox</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a49d056b1cb74eb4111b46a1d5944188a</anchor>
+      <arglist>(i2d::CRectangle &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const CPolygon &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a9e1dde0d9fb0012232676d84aabea088</anchor>
+      <arglist>(const CPolygon &amp;polygon)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>aee96368e13548faa82bd3c2cf7aad01a</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetNodesCount</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a855c33b5809933c0c29ffc945b304b60</anchor>
+      <arglist>(int nodesCount)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetInconsistent</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>aadd0997e62740fd4afb8477b2187f06d</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CPolygonExtractor</name>
+    <filename>classi2d_1_1_c_polygon_extractor.html</filename>
+    <member kind="function" static="yes">
+      <type>static i2d::CPolygon</type>
+      <name>CreatePolygon</name>
+      <anchorfile>classi2d_1_1_c_polygon_extractor.html</anchorfile>
+      <anchor>a1cca142e35429a1d66a6c9012632ed69</anchor>
+      <arglist>(const i2d::CAnnulus &amp;annulus, int innerNodesCount, int outerNodesCount)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CPolyline</name>
+    <filename>classi2d_1_1_c_polyline.html</filename>
+    <base>i2d::CPolygon</base>
+    <member kind="typedef">
+      <type>CPolygon</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>ad3e0aad860b268c266c055ca3ad661dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CPolyline</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>a5f7fa1af14198a5bd9f0f2b44781ee93</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsClosed</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>afe39b68b46059f45d65cf28cdc7fe38f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetClosed</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>abd50220236d074a0285f517062309528</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSegmentsCount</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>a08d9bcc7cd12a96069e2f8981e6d1e0c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CLine2d</type>
+      <name>GetSegmentLine</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>a2d27eacecba9b1d8adfa847784d12b05</anchor>
+      <arglist>(int segmentIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetLength</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>ac5d5c6ea4c6cb984dc92313be7c400f8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetKneeVector</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>a466e90b8ab72643c744604a75eb5c696</anchor>
+      <arglist>(int nodeIndex) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CPolylineExNodeBase</name>
+    <filename>classi2d_1_1_c_polyline_ex_node_base.html</filename>
+    <base>i2d::CPolyline</base>
+    <member kind="typedef">
+      <type>CPolyline</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_polyline_ex_node_base.html</anchorfile>
+      <anchor>a988d3e4f95fd7500d321976af690973d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iser::ISerializable &amp;</type>
+      <name>GetNodeData</name>
+      <anchorfile>classi2d_1_1_c_polyline_ex_node_base.html</anchorfile>
+      <anchor>a8c98cd1b17e25e3d51829a1e62fd0ff3</anchor>
+      <arglist>(int nodeIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual iser::ISerializable &amp;</type>
+      <name>GetNodeDataRef</name>
+      <anchorfile>classi2d_1_1_c_polyline_ex_node_base.html</anchorfile>
+      <anchor>a82501a805517478a20164f49ed9fb123</anchor>
+      <arglist>(int nodeIndex)=0</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_polyline_ex_node_base.html</anchorfile>
+      <anchor>a2b91352237ed0eb8daa68ba8d6be713f</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CPolylineExtractor</name>
+    <filename>classi2d_1_1_c_polyline_extractor.html</filename>
+    <member kind="function" static="yes">
+      <type>static i2d::CPolyline</type>
+      <name>CreatePolyline</name>
+      <anchorfile>classi2d_1_1_c_polyline_extractor.html</anchorfile>
+      <anchor>a937da31c3ec786d3bfd350a1fe30c2ce</anchor>
+      <arglist>(const i2d::CCircle &amp;circle, int pointCount, bool clockwiseFlag=false)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CPolypoint</name>
+    <filename>classi2d_1_1_c_polypoint.html</filename>
+    <base>iser::ISerializable</base>
+    <member kind="function">
+      <type></type>
+      <name>CPolypoint</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a83746e7ebacb4ce16704be5834ef6339</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Insert</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>abfeee7b9c0530bfb9edd99a3e6bae04b</anchor>
+      <arglist>(const i2d::CVector2d &amp;vector)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Clear</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a2b45306c9da492925b14ad72be054d40</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const ::std::vector&lt; i2d::CVector2d &gt; &amp;</type>
+      <name>GetPoints</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a78e16736c4764b548bd051f1d71909e2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a403658023d97353d4720ab74899ba2c4</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8203,6 +8727,198 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>i2d::CSpline</name>
+    <filename>classi2d_1_1_c_spline.html</filename>
+    <base>i2d::CPolyline</base>
+    <member kind="typedef">
+      <type>i2d::CPolyline</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
+      <anchor>af9effa1d23b9741c8a39f034c054b6c8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSpline</name>
+      <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
+      <anchor>ab81a177d2737e0de07741a8d6c29e957</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSegmentCount</name>
+      <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
+      <anchor>a89d69bcebf6a93a064be6636566c10f2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const CSplineSegment &amp;</type>
+      <name>GetSplineSegment</name>
+      <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
+      <anchor>ae34f2fc39860d36c207de8c806f41b27</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>CalcAllSegments</name>
+      <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
+      <anchor>ad124d826016fef5f441975b0908d839e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetInconsistent</name>
+      <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
+      <anchor>ac9c8be1c4d5d0d5011ee9fb2349dd3d1</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CSplineSegment</name>
+    <filename>classi2d_1_1_c_spline_segment.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="typedef">
+      <type>istd::IPolymorphic</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>a5da3c499ae782a8a1cea13108af36805</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetPointInSegment</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>a5bea4c5c7f738a4a609a46ff077702ad</anchor>
+      <arglist>(double position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetDerivationInSegment</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>affdcd3f8b60bdb76fa11e5bd2ac2ab55</anchor>
+      <arglist>(double position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetDerivationBegin</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>a232dfc52283792a570f812311c8c6e2d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetDerivationEnd</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>a9b45930dc3f66a16fb438a81b08b6320</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetPointBegin</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>a211a3d91954fcc08c48ba8c376a1e11a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetPointEnd</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>a43207ac1db42e30eb37ebaaecd4564fc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetBezierPointBegin</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>ae5996ade8f6fe62cf2711284d0e01bc3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetBezierPointEnd</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>addb6867375f998a328feca3bc383e127</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsCloserThan</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>ac7ff1d1e8434cb184f943f605ab64921</anchor>
+      <arglist>(const i2d::CVector2d position, double distance) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>GetHalfSegmentFirst</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>ad33ba0d0ba09002d998d87c3c095c9ea</anchor>
+      <arglist>(CSplineSegment &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>GetHalfSegmentSecond</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>aeb1f27e946bfd5e1fbc6a83c3701deb8</anchor>
+      <arglist>(CSplineSegment &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::CVector2d &amp;</type>
+      <name>A</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>af38d144c61f471dcadd142e4bfc3a55d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>A</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>a9e3f7f3511ad5b56b733ea84d4c3a928</anchor>
+      <arglist>(const i2d::CVector2d &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::CVector2d &amp;</type>
+      <name>B</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>a94ba1120c225469db0f5fe597b3e466b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>B</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>ac49182ff7922b0495cd4525af1430bb0</anchor>
+      <arglist>(const i2d::CVector2d &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::CVector2d &amp;</type>
+      <name>C</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>ab2d98055e06c281e6e4019913fc31642</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>C</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>ad5ad72ca08b5f87ef240d36603579e0a</anchor>
+      <arglist>(const i2d::CVector2d &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::CVector2d &amp;</type>
+      <name>D</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>a9762d4a4c9479a6111713cd98e613cc8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>D</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>a59f47d7dc8e50744f9e4129d59778828</anchor>
+      <arglist>(const i2d::CVector2d &amp;value)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>i2d::CVector2d</name>
     <filename>classi2d_1_1_c_vector2d.html</filename>
     <base>TVector&lt; 2 &gt;</base>
@@ -8772,6 +9488,420 @@
       <anchorfile>classi2d_1_1_i_transformation2d.html</anchorfile>
       <anchor>a8fc470864ca01db179322443f52ffcb8</anchor>
       <arglist>(const ITransformation2d &amp;transform) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::TMultiPolyline</name>
+    <filename>classi2d_1_1_t_multi_polyline.html</filename>
+    <templarg></templarg>
+    <base>i2d::CMultiPolylineBase</base>
+    <class kind="class">i2d::TMultiPolyline::CSegment</class>
+    <member kind="typedef">
+      <type>CPolyline</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a87f6da59fe85ead299a42ce158d0e624</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TMultiPolyline</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a6e1c91f04eb7f485ac90b52e5e98da4a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetParallelsCount</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a4871f89b3d1c81a4d21bdd37d548d479</anchor>
+      <arglist>(int count)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetParallelsCount</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>ac6e355e1e30e3e8854863c9bdda18991</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetParallel</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a7a97ef0a17890a2c2caf5c49b793b148</anchor>
+      <arglist>(int segmentIndex, int parallelIndex, double width)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetParallel</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a786836f1966d320ee42df37ead240784</anchor>
+      <arglist>(int segmentIndex, int parallelIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetMaxParallel</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>ad034aef621dfcd5b979edbdc8a627f18</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetMinParallel</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a466d9bed3f3e523bcb100d8d199b1948</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetSegmentData</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>ac193242c390c0fdf4e53650898c85bba</anchor>
+      <arglist>(int segmentIndex, const SegmentData &amp;data)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::ISerializable &amp;</type>
+      <name>GetSegmentData</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a12b6c60014f221d6bcb9f32c52064595</anchor>
+      <arglist>(int segmentIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveSegment</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a218c382fbbd2bfddebb098a61b236526</anchor>
+      <arglist>(int node, int segment)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SelectAllSegments</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a63671571ac0fb56f73c92197c95c6486</anchor>
+      <arglist>(bool selected=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SelectSegment</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a3ac595f8a92bd58fd928134ea4131a84</anchor>
+      <arglist>(int segmentIndex, bool selected=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsSegmentSelected</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a57031bfddfa15cc5ddeee1d962a2bd5d</anchor>
+      <arglist>(int segmentIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>af743ec90cfdd855ebe7981bf3d80791d</anchor>
+      <arglist>(const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a6a7e542a96e6cadf3f497f68669f3478</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Clear</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a98c32626088655a2ece1e743c35ab7f6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetClosed</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a1185584cf1587b21ef85d173fab7d8f4</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a05fb7033b4b57479b5aa2642d670cd92</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="variable">
+      <type>::std::vector&lt; double &gt;</type>
+      <name>m_widthList</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a64fbfc125e3409a6b73ef914cf74e3eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>m_selected</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a88ecfe02f205f22bcd7f6a930fe99dea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>SegmentData</type>
+      <name>m_data</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>a325f1850289f0c86b2a937ccfe9cf100</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>CSegment</type>
+      <name>CalculateAverage</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline.html</anchorfile>
+      <anchor>ad022cb73171a207427c7f51b372843cc</anchor>
+      <arglist>(const CSegment &amp;first, const CSegment &amp;second) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::TMultiPolyline::CSegment</name>
+    <filename>classi2d_1_1_t_multi_polyline_1_1_c_segment.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline_1_1_c_segment.html</anchorfile>
+      <anchor>abe083f5f348a9f71402c74f3e99324b2</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type>CSegment</type>
+      <name>operator+</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline_1_1_c_segment.html</anchorfile>
+      <anchor>a9b2dfb6fe605e4de7b4ebb47cc4383ae</anchor>
+      <arglist>(const CSegment &amp;x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CSegment</type>
+      <name>operator/</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline_1_1_c_segment.html</anchorfile>
+      <anchor>a807cec47857a43ed70c10fe98d0d1391</anchor>
+      <arglist>(double x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CSegment &amp;</type>
+      <name>operator/=</name>
+      <anchorfile>classi2d_1_1_t_multi_polyline_1_1_c_segment.html</anchorfile>
+      <anchor>a9f353f6e3d947fbcfad06bb91d5a0d3a</anchor>
+      <arglist>(double x)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::TPolylineEx</name>
+    <filename>classi2d_1_1_t_polyline_ex.html</filename>
+    <templarg></templarg>
+    <base>i2d::CPolyline</base>
+    <member kind="typedef">
+      <type>CPolyline</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex.html</anchorfile>
+      <anchor>a67904fa88ed623d2e21faf1009a742e3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::ISerializable &amp;</type>
+      <name>GetSegmentData</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex.html</anchorfile>
+      <anchor>aee75b56939bac98abeb35015857752b0</anchor>
+      <arglist>(int segmentIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetSegmentData</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex.html</anchorfile>
+      <anchor>adba959c663c1ee14da4b37dacd617c3b</anchor>
+      <arglist>(int segmentIndex, const SegmentData &amp;data)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveSegment</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex.html</anchorfile>
+      <anchor>af625eb09882574e4758a170117a67ffc</anchor>
+      <arglist>(int node, int segment)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex.html</anchorfile>
+      <anchor>a065f02b445223675f486710bf9277c6a</anchor>
+      <arglist>(const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex.html</anchorfile>
+      <anchor>a49f06c1b1f032526f4d40aa707c29f7c</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Clear</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex.html</anchorfile>
+      <anchor>af9b914d75b56514790f7f4776578e43a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetClosed</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex.html</anchorfile>
+      <anchor>a6a2695086c23cb5183382bda6f2e9bfc</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex.html</anchorfile>
+      <anchor>a7abf784769786998d268cbfcfec315bd</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::TPolylineExNode</name>
+    <filename>classi2d_1_1_t_polyline_ex_node.html</filename>
+    <templarg></templarg>
+    <base>i2d::CPolylineExNodeBase</base>
+    <member kind="typedef">
+      <type>CPolyline</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
+      <anchor>adeccb7d4e6c9056aa1711b0dcc7503ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>const NodeData &amp;</type>
+      <name>GetTNodeData</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
+      <anchor>af26668ff37281d8e3cbb5fc6696e63a6</anchor>
+      <arglist>(int nodeIndex) const </arglist>
+    </member>
+    <member kind="function">
+      <type>NodeData &amp;</type>
+      <name>GetTNodeDataRef</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
+      <anchor>ab00efccb8fdb4ddf2af99acb2e0e8aab</anchor>
+      <arglist>(int nodeIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::ISerializable &amp;</type>
+      <name>GetNodeData</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
+      <anchor>af36898677defddcd99e2b1dbebcfde39</anchor>
+      <arglist>(int nodeIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iser::ISerializable &amp;</type>
+      <name>GetNodeDataRef</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
+      <anchor>a9e2c30b63d0eaac9834f9961ee952244</anchor>
+      <arglist>(int nodeIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
+      <anchor>a7d1815057e7b551b4def29114205bc02</anchor>
+      <arglist>(const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
+      <anchor>a6962c49e4acbed86899e113be2c30d0d</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Clear</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
+      <anchor>ad9892f1de2670452f05707b31de634c4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveNode</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
+      <anchor>a0730b0122a64540ae09f102d9a09441d</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetNodesCount</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
+      <anchor>a9cbf9bf7832131b8a612c2bb028b7e98</anchor>
+      <arglist>(int count)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::TPolylineExPrimitive</name>
+    <filename>classi2d_1_1_t_polyline_ex_primitive.html</filename>
+    <templarg></templarg>
+    <base>i2d::CPolyline</base>
+    <member kind="typedef">
+      <type>CPolyline</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_primitive.html</anchorfile>
+      <anchor>abcc2d35fa849cf89b1d02814e1357d63</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const SegmentData &amp;</type>
+      <name>GetSegmentData</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_primitive.html</anchorfile>
+      <anchor>a07b698feea2b07bae0b397293ee53a5a</anchor>
+      <arglist>(int segmentIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetSegmentData</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_primitive.html</anchorfile>
+      <anchor>a768280fae079d70374c2c66c29c3685e</anchor>
+      <arglist>(int segmentIndex, const SegmentData &amp;data)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveSegment</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_primitive.html</anchorfile>
+      <anchor>a47cd72e56e2d4c5c0b4b64f5e284ab26</anchor>
+      <arglist>(int node, int segment)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_primitive.html</anchorfile>
+      <anchor>a9cae743613511b27116775f56672db1b</anchor>
+      <arglist>(const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_primitive.html</anchorfile>
+      <anchor>a903ab2c839ccc0a99bd3e8f4d537497e</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Clear</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_primitive.html</anchorfile>
+      <anchor>ac07029455b452f0850faccd4a02d6731</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetClosed</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_primitive.html</anchorfile>
+      <anchor>a9efe30528cc259dd10d4ae65977c7659</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_primitive.html</anchorfile>
+      <anchor>a92f46b0f6476edd3514c0b9133715dd1</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
