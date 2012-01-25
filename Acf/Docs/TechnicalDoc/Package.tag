@@ -132,6 +132,16 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CParallelogram.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_parallelogram_8h</filename>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
+    <includes id="_c_affine_transformation2d_8h" name="CAffineTransformation2d.h" local="yes" imported="no">i2d/CAffineTransformation2d.h</includes>
+    <class kind="class">i2d::CParallelogram</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CPolygon.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_polygon_8h</filename>
@@ -5258,6 +5268,20 @@
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
+    <name>CIntRange.h</name>
+    <path>C:/Temp/Acf/Include/istd/</path>
+    <filename>_c_int_range_8h</filename>
+    <includes id="_t_range_8h" name="TRange.h" local="yes" imported="no">istd/TRange.h</includes>
+    <namespace>istd</namespace>
+    <member kind="typedef">
+      <type>istd::TRange&lt; int &gt;</type>
+      <name>CIntRange</name>
+      <anchorfile>namespaceistd.html</anchorfile>
+      <anchor>a00297e6d21a1ecbb94c7c66bf61cc4f6</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>CRandomNumber.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_c_random_number_8h</filename>
@@ -5268,9 +5292,15 @@
     <name>CRange.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_c_range_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
-    <class kind="class">istd::CRange</class>
+    <includes id="_t_range_8h" name="TRange.h" local="yes" imported="no">istd/TRange.h</includes>
     <namespace>istd</namespace>
+    <member kind="typedef">
+      <type>istd::TRange&lt; double &gt;</type>
+      <name>CRange</name>
+      <anchorfile>namespaceistd.html</anchorfile>
+      <anchor>afdd381b0ad57baa197378147ab9e98e2</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>CStaticServicesProvider.h</name>
@@ -5796,6 +5826,14 @@
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
+    <name>TRange.h</name>
+    <path>C:/Temp/Acf/Include/istd/</path>
+    <filename>_t_range_8h</filename>
+    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
+    <class kind="class">istd::TRange</class>
+    <namespace>istd</namespace>
+  </compound>
+  <compound kind="file">
     <name>TSingleFactory.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_t_single_factory_8h</filename>
@@ -6150,12 +6188,12 @@
     <class kind="class">iser::IArchive</class>
     <class kind="class">iser::ISerializable</class>
     <class kind="class">istd::CClassInfo</class>
-    <class kind="class">istd::CRange</class>
     <class kind="class">istd::CString</class>
     <class kind="class">istd::IPolymorphic</class>
     <class kind="class">istd::TArray</class>
     <class kind="class">istd::TChangeNotifier</class>
     <class kind="class">istd::TDelPtr</class>
+    <class kind="class">istd::TRange</class>
     <class kind="class">istd::TSmartPtr</class>
     <namespace>icomp</namespace>
     <namespace>imath</namespace>
@@ -6312,6 +6350,7 @@
     <class kind="class">i2d::CLine2dComp</class>
     <class kind="class">i2d::CMatrix2d</class>
     <class kind="class">i2d::CMultiPolylineBase</class>
+    <class kind="class">i2d::CParallelogram</class>
     <class kind="class">i2d::CPolygon</class>
     <class kind="class">i2d::CPolygonExtractor</class>
     <class kind="class">i2d::CPolyline</class>
@@ -7718,6 +7757,88 @@
       <anchorfile>classi2d_1_1_c_multi_polyline_base.html</anchorfile>
       <anchor>a529fc7c75cda8e586cf514aaf11ac6a4</anchor>
       <arglist>(int segmentIndex) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CParallelogram</name>
+    <filename>classi2d_1_1_c_parallelogram.html</filename>
+    <base virtualness="virtual">i2d::IObject2d</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CAffine2d &amp;</type>
+      <name>GetTransform</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a5148f92edd0232d823aef4a4e56faa40</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetTransform</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a9e3f1096c89d8049c7b3ac314b1abf85</anchor>
+      <arglist>(const i2d::CAffine2d &amp;transform)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CMatrix2d &amp;</type>
+      <name>GetDeformMatrix</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a72e174c32d2f6afdee4e1bce7379ff9d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetDeform</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>aa8618c5993107c4adf3ed1f6f5863d3d</anchor>
+      <arglist>(const i2d::CMatrix2d &amp;deform)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetCenter</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a868998542b3f9e27a2591b98dbb98f26</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>MoveCenterTo</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a50274a89ccaeebd3259cca25c17a8c52</anchor>
+      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>ae27897353c7f9386e779be26f6702fa8</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>ae0c4cdbcd9026fd201edcfe31b47089d</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetTransformed</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a07e1e64616155bcb38ec0c81b79065d2</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvTransformed</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a85941fbd50c465b73b94ed8720526bf2</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a6cffb8f3bd3d584cb868d6899c499a7f</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -41229,7 +41350,6 @@
     <class kind="class">istd::CIdManipBase</class>
     <class kind="class">istd::CIndex2d</class>
     <class kind="class">istd::CRandomNumber</class>
-    <class kind="class">istd::CRange</class>
     <class kind="class">istd::CStaticServicesProvider</class>
     <class kind="class">istd::CString</class>
     <class kind="class">istd::CVarIndex</class>
@@ -41263,11 +41383,26 @@
     <class kind="class">istd::TPointerBase</class>
     <class kind="class">istd::TDeleteAdapter</class>
     <class kind="class">istd::TPointerVector</class>
+    <class kind="class">istd::TRange</class>
     <class kind="class">istd::TSingleFactory</class>
     <class kind="class">istd::TSmartPtr</class>
     <class kind="class">istd::TTransPtr</class>
     <class kind="class">istd::TUpdateManagerWrap</class>
     <class kind="class">istd::TVarArray</class>
+    <member kind="typedef">
+      <type>istd::TRange&lt; int &gt;</type>
+      <name>CIntRange</name>
+      <anchorfile>namespaceistd.html</anchorfile>
+      <anchor>a00297e6d21a1ecbb94c7c66bf61cc4f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::TRange&lt; double &gt;</type>
+      <name>CRange</name>
+      <anchorfile>namespaceistd.html</anchorfile>
+      <anchor>afdd381b0ad57baa197378147ab9e98e2</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>std::vector&lt; CString &gt;</type>
       <name>CStringList</name>
@@ -42162,325 +42297,6 @@
       <anchorfile>classistd_1_1_c_random_number.html</anchorfile>
       <anchor>afe48cbe61e49fbd77dc7c80350143907</anchor>
       <arglist>() const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>istd::CRange</name>
-    <filename>classistd_1_1_c_range.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>CRange</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>afb1f78691eb5d7f8be94dda4f38237b7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CRange</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>ad94835d0f6a040c4ec4261a5d11dd2d5</anchor>
-      <arglist>(const CRange &amp;range)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CRange</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>ac11d569a71a55c0286569b300fcec74c</anchor>
-      <arglist>(double minValue, double topValue)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsValid</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a09077867e0b69faeac500bc0ec94fa4e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsEmpty</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a4d97e0c5972862fc8e130223fe69361a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetMinValue</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a149643141eb4e9b716770ddb14745887</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>double &amp;</type>
-      <name>GetMinValueRef</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a07b6d5c58346895352546fec78a8c768</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetMinValue</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>af8cdc0f7172c870e3916bc87a98e2666</anchor>
-      <arglist>(double minValue)</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetMaxValue</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a4c6a1610a4be7eb5e009dc05edb5a23e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>double &amp;</type>
-      <name>GetMaxValueRef</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a7a374065a20ffdb9dc17ac71f0207424</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetMaxValue</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>adf826ccc100a8febd6d7c1d7c8b7a2ed</anchor>
-      <arglist>(double topValue)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Reset</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a5c0bd2e314c11e8a8214a3b494ea28fe</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetLength</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a80d4452947e2001acbd1938e32271fed</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>CRange</type>
-      <name>GetValidated</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a2239f7d382a9b14ead345b583e705233</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>GetValidated</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>ab821da1aa4d6265d81912cc84b14bebb</anchor>
-      <arglist>(CRange &amp;result) const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Validate</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>ac34b950752bb366d81defa66321bcb0d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>Contains</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>abd0073d829d61b694dcd88e7101d28d9</anchor>
-      <arglist>(double value) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>Contains</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a56b9e709ab866584b7fc3cf9ffc203f4</anchor>
-      <arglist>(const CRange &amp;range) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsIntersectedBy</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>aa12327baca5aea05033798227faaaa86</anchor>
-      <arglist>(const CRange &amp;range) const </arglist>
-    </member>
-    <member kind="function">
-      <type>CRange</type>
-      <name>GetIntersection</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a0d74b9b08b4ddbe6caf16f61a533aa53</anchor>
-      <arglist>(const CRange &amp;range) const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Intersection</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a58abb6ad05dc1c3d36c201850fb2d543</anchor>
-      <arglist>(const CRange &amp;range)</arglist>
-    </member>
-    <member kind="function">
-      <type>CRange</type>
-      <name>GetUnion</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a8f0c96a4cf1271b00a362b58864e16fd</anchor>
-      <arglist>(const CRange &amp;range) const </arglist>
-    </member>
-    <member kind="function">
-      <type>CRange</type>
-      <name>GetUnion</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a8d1ff831da8c5795528423110b9bc86b</anchor>
-      <arglist>(double value) const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Unite</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>ad9678a7ba508ec6270cfcea1e5f3bfa8</anchor>
-      <arglist>(const CRange &amp;range)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Unite</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>ab815ede625e92abfc8b89134031ee92c</anchor>
-      <arglist>(double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>CRange</type>
-      <name>GetExpanded</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a386d5e5281774bca585b16cde4755c75</anchor>
-      <arglist>(const CRange &amp;range) const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Expand</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>af516d4f1e3cdd54e56fedad38d0c7975</anchor>
-      <arglist>(const CRange &amp;range)</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetNearestInside</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>afbb5cc782501a976963d1cb445f78675</anchor>
-      <arglist>(double value) const </arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetClipped</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a0e40b9ac10653ec3af91a7cbfddd795a</anchor>
-      <arglist>(double value) const </arglist>
-    </member>
-    <member kind="function">
-      <type>istd::CRange</type>
-      <name>GetClipped</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>ad30dcc4b4201eff41a851e361df95800</anchor>
-      <arglist>(const istd::CRange &amp;range) const </arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetValueFromAlpha</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a76bac6b8d842122dba0c13870fb715cc</anchor>
-      <arglist>(double alpha) const </arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetAlphaFromValue</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a8034e41fa4449eb4ce959b41cf8107a1</anchor>
-      <arglist>(double value) const </arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetMappedTo</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a49b1a2d3ce0f458c9288f249c650c8c1</anchor>
-      <arglist>(double value, const istd::CRange &amp;range) const </arglist>
-    </member>
-    <member kind="function">
-      <type>CRange</type>
-      <name>GetApply</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>aab762e4149a9d776d4b1e4cb2f2622df</anchor>
-      <arglist>(const CRange &amp;range) const </arglist>
-    </member>
-    <member kind="function">
-      <type>CRange</type>
-      <name>GetInvertApply</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>ad09a95c7794979e29f5669953d2d2af7</anchor>
-      <arglist>(const CRange &amp;range) const </arglist>
-    </member>
-    <member kind="function">
-      <type>CRange</type>
-      <name>GetInverted</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a05251f96f21284cbaeef5c6393c9b915</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetInterpolated</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>af04a3c4766f7338903950efaa10fafe2</anchor>
-      <arglist>(const CRange &amp;first, const CRange &amp;second, double alpha)</arglist>
-    </member>
-    <member kind="function">
-      <type>CRange &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>aa17a041edfac4153d0804ba430a1c182</anchor>
-      <arglist>(const CRange &amp;range)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a095dd7c7b344d3969c22154c1f21a47d</anchor>
-      <arglist>(const CRange &amp;range) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator!=</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a2b69f91fbb89617ac6bfbd4a7a0cd570</anchor>
-      <arglist>(const CRange &amp;range) const </arglist>
-    </member>
-    <member kind="function">
-      <type>CRange</type>
-      <name>operator*</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>aa215569bd2615296290b6080d980a459</anchor>
-      <arglist>(double value) const </arglist>
-    </member>
-    <member kind="function">
-      <type>CRange</type>
-      <name>operator/</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>aad11839cac831acbbc495762c9d6fc15</anchor>
-      <arglist>(double value) const </arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static const CRange &amp;</type>
-      <name>GetNull</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a6f4ec658c3196612b65b7497ec902ff6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static const CRange &amp;</type>
-      <name>GetInvalid</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>abff8ecae727e6bc940f7e029c9a2bf65</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static CRange</type>
-      <name>GetValid</name>
-      <anchorfile>classistd_1_1_c_range.html</anchorfile>
-      <anchor>a7c6bbaec8c78bbe0266f624d9e0651f2</anchor>
-      <arglist>(double value1, double value2)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45136,6 +44952,333 @@
       <anchorfile>classistd_1_1_t_pointer_vector.html</anchorfile>
       <anchor>ad2f6719f910021a8c9df158ec3a6a526</anchor>
       <arglist>(int index, const ElementType &amp;element)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>istd::TRange</name>
+    <filename>classistd_1_1_t_range.html</filename>
+    <templarg>ValueType</templarg>
+    <member kind="function">
+      <type></type>
+      <name>TRange</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a7f9157f2986bfbf630c6709de7936b9a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TRange</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a21aebf7bad17c76e38f135826a129e3b</anchor>
+      <arglist>(const TRange &amp;range)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TRange</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a4eb7730e68f4753ba4c76565580e3ea1</anchor>
+      <arglist>(ValueType minValue, ValueType maxValue)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsValid</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a26a383dad01a17298fa1ab3d4db2cbb0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsEmpty</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a42721dba39f159b7872df292308b059f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>ValueType</type>
+      <name>GetMinValue</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>af0d94456ae2efd66fc7c7848e0be8024</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>ValueType &amp;</type>
+      <name>GetMinValueRef</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>abf4ef7c4d3845c896ec52eb05ac77407</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMinValue</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a64619392b313212e01a5fbeb1b6449f7</anchor>
+      <arglist>(ValueType minValue)</arglist>
+    </member>
+    <member kind="function">
+      <type>ValueType</type>
+      <name>GetMaxValue</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a138f4e110681ed9aa90ed1971271bc67</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>ValueType &amp;</type>
+      <name>GetMaxValueRef</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>ad844cada7e4b4b81e7d53029ee596826</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMaxValue</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>af8e558b7ae646d6eac480649769d9818</anchor>
+      <arglist>(ValueType maxValue)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a4e2434009af86efaccb59f145bebd4db</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ValueType</type>
+      <name>GetLength</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a0fa407fd45df07787a5f0fa869bfc069</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>TRange</type>
+      <name>GetValidated</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a155594e58a59eb679f180fef2de3d354</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetValidated</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a4db3b1e8ec9cfc125bf5fadc87b052ef</anchor>
+      <arglist>(TRange &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Validate</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a2947ea25f37b79e2dfd4cf3c42d68032</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Contains</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a479b0c055a0e7453b9df7bf4a02c7ad5</anchor>
+      <arglist>(ValueType value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Contains</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>abbfdfb053d5b40055800707c08e3336d</anchor>
+      <arglist>(const TRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsIntersectedBy</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a782b910b7b5370dd13c025f3ae207bfc</anchor>
+      <arglist>(const TRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsOutsideOf</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>af317ee7291dd0a07e1e5863f628d5bdb</anchor>
+      <arglist>(const TRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TRange</type>
+      <name>GetIntersection</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>ac1f5d563fd50eca3e15577106735a26e</anchor>
+      <arglist>(const TRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Intersection</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a8948ed1f42ebac5706cdf729d42ad8e4</anchor>
+      <arglist>(const TRange &amp;range)</arglist>
+    </member>
+    <member kind="function">
+      <type>TRange</type>
+      <name>GetUnion</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a2097eaecea08f5284ce57fab97791c95</anchor>
+      <arglist>(const TRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TRange</type>
+      <name>GetUnion</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a07b481fd80186ac93a1df7bab4411daa</anchor>
+      <arglist>(double value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Unite</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a4d0e18de42d0f5f6f6195758e774c7d5</anchor>
+      <arglist>(const TRange &amp;range)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Unite</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a4f9d7fa09674bce076ee422806d56208</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>TRange</type>
+      <name>GetExpanded</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a234f4ee580991bcb36a022057f0b1408</anchor>
+      <arglist>(const TRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Expand</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a8822cbd0ff2f7bc00c8c839148b8f9f8</anchor>
+      <arglist>(const TRange &amp;range)</arglist>
+    </member>
+    <member kind="function">
+      <type>ValueType</type>
+      <name>GetNearestInside</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>acf1401b50e655c0a2d28d716030b7266</anchor>
+      <arglist>(ValueType value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>ValueType</type>
+      <name>GetClipped</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>ae470c37910f5d1251222856f6656885c</anchor>
+      <arglist>(ValueType value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TRange</type>
+      <name>GetClipped</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>abcf65f48ecc3385dbf690b4cf380dcb5</anchor>
+      <arglist>(const TRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>ValueType</type>
+      <name>GetValueFromAlpha</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a327c5463117d7a0047385e801653fa3c</anchor>
+      <arglist>(double alpha) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetAlphaFromValue</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a89bd4b552c5996750ec169a3975d6818</anchor>
+      <arglist>(ValueType value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>ValueType</type>
+      <name>GetMappedTo</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>acf5b6035a50fafc4c48d03cd5e84ce3d</anchor>
+      <arglist>(ValueType value, const TRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TRange</type>
+      <name>GetApply</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a9cfd52191a58266c3ca2328555722e2c</anchor>
+      <arglist>(const TRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TRange</type>
+      <name>GetInvertApply</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a110b40efa7b40df91bb26a49bafcfbf3</anchor>
+      <arglist>(const TRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TRange</type>
+      <name>GetInverted</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>aafeffe74b72beff4daeef879991b07c0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetInterpolated</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a8e888d8504d571cef876cda73383ac4a</anchor>
+      <arglist>(const TRange &amp;first, const TRange &amp;second, double alpha)</arglist>
+    </member>
+    <member kind="function">
+      <type>TRange &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>adf0dfca46bb1b56a23c1a49a3dcf8d30</anchor>
+      <arglist>(const TRange &amp;range)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a003f6a04349c4dec5e70e06303365d06</anchor>
+      <arglist>(const TRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a78dbef733d1e1740864bc83e3520295b</anchor>
+      <arglist>(const TRange &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TRange</type>
+      <name>operator*</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>ab6ff26371ec0c72a702317f677d37175</anchor>
+      <arglist>(double value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TRange</type>
+      <name>operator/</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>aea1097d943904ddd5d89be7e7d0d0a3b</anchor>
+      <arglist>(double value) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const TRange &amp;</type>
+      <name>GetNull</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>ab822a81ae1c6aefae6fcb023e87c7942</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const TRange &amp;</type>
+      <name>GetInvalid</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a594568dc8932e671cbb94cf0538ed249</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static TRange</type>
+      <name>GetValid</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a8f0da6a2bff843dd5c35950d6ab48e39</anchor>
+      <arglist>(ValueType value1, ValueType value2)</arglist>
     </member>
   </compound>
   <compound kind="class">
