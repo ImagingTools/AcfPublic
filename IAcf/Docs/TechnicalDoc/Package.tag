@@ -2383,10 +2383,10 @@
     <filename>classisgige_1_1_c_genicam_camera_comp.html</filename>
     <base>QObject</base>
     <base>ibase::TLoggerCompWrap</base>
+    <base>TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</base>
     <base virtualness="virtual">icam::IExposureConstraints</base>
     <base virtualness="virtual">isig::ITriggerConstraints</base>
     <base virtualness="virtual">iprm::ISelectionConstraints</base>
-    <base virtualness="virtual">TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</base>
     <class kind="struct">isgige::CGenicamCameraComp::DeviceInfo</class>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -2452,18 +2452,18 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
-      <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>a3bc9da2b7fa7bb0915786bda4524984c</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
       <anchor>a4c18ec417df00333e03c4005da5617e4</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
+      <anchor>a3bc9da2b7fa7bb0915786bda4524984c</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>

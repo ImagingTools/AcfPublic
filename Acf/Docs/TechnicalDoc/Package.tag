@@ -3160,10 +3160,10 @@
     <class kind="class">iproc::TSyncProcessorCompBase</class>
     <namespace>iproc</namespace>
     <member kind="typedef">
-      <type>TSyncProcessorCompBase&lt; iproc::IProcessor &gt;</type>
+      <type>TSyncProcessorCompBase&lt; IProcessor &gt;</type>
       <name>CSyncProcessorCompBase</name>
       <anchorfile>namespaceiproc.html</anchorfile>
-      <anchor>ae4e50b4ac8fab9a33b89f56b5dadccc5</anchor>
+      <anchor>a65c76f6b4ad2de54dfdcfb737b246473</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -27811,10 +27811,10 @@
     <class kind="class">iproc::TSyncProcessorCompBase</class>
     <class kind="class">iproc::TSyncProcessorWrap</class>
     <member kind="typedef">
-      <type>TSyncProcessorCompBase&lt; iproc::IProcessor &gt;</type>
+      <type>TSyncProcessorCompBase&lt; IProcessor &gt;</type>
       <name>CSyncProcessorCompBase</name>
       <anchorfile>namespaceiproc.html</anchorfile>
-      <anchor>ae4e50b4ac8fab9a33b89f56b5dadccc5</anchor>
+      <anchor>a65c76f6b4ad2de54dfdcfb737b246473</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
