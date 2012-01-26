@@ -27,6 +27,12 @@ namespace i2d
 {
 
 
+void CMatrix2d::Reset()
+{
+	*this = GetIdentity();
+}
+
+
 void CMatrix2d::Reset(double angle, double scale)
 {
 	double scaledSinus = std::sin(angle) * scale;
@@ -119,8 +125,8 @@ bool CMatrix2d::GetInverted(CMatrix2d& result) const
 	}
 
 	result.SetAt(0, 0, GetAt(1, 1) / det);
-	result.SetAt(0, 1, GetAt(0, 1) / det);
-	result.SetAt(1, 0, GetAt(1, 0) / det);
+	result.SetAt(0, 1, -GetAt(0, 1) / det);
+	result.SetAt(1, 0, -GetAt(1, 0) / det);
 	result.SetAt(1, 1, GetAt(0, 0) / det);
 
 	return true;
