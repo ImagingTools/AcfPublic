@@ -198,6 +198,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CDirection2d.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CLabel.cpp"
 				>
 			</File>
@@ -251,6 +255,10 @@
 			</File>
 			<File
 				RelativePath="..\CQuadrangleComp.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\CRect.cpp"
 				>
 			</File>
 			<File
@@ -311,6 +319,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CDirection2d.h"
+				>
+			</File>
+			<File
 				RelativePath="..\CLabel.h"
 				>
 			</File>
@@ -364,6 +376,10 @@
 			</File>
 			<File
 				RelativePath="..\CQuadrangleComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CRect.h"
 				>
 			</File>
 			<File
