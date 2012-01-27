@@ -64,9 +64,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with no member initialization.  <a href="#aa3c6614af549fd015e8d3018a0967c59"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#a8adf40efbd7125e8e379873a85308247">CMatrix2d</a> (const <a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a> &amp;transform)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#a9d25950de8a95dc0ecf9b80e2ebd11b8">CMatrix2d</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;axisX, const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;axisY)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Contructor using 2 vectors to span the transformation space.  <a href="#a9d25950de8a95dc0ecf9b80e2ebd11b8"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor using 2 vectors to span the transformation space.  <a href="#a9d25950de8a95dc0ecf9b80e2ebd11b8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#a728630b8032cacd272f7cda0a5e08fd0">CMatrix2d</a> (double m11, double m12, double m21, double m22)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor using matrix members.  <a href="#a728630b8032cacd272f7cda0a5e08fd0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#a2f78501ec134d1d9ff7e975b36af6626">Reset</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Default reset to identity.  <a href="#a2f78501ec134d1d9ff7e975b36af6626"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#a04a6c113e09c7b91f4e8db16ae3458fd">Reset</a> (double angle, double scale=1.0)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the matrix using specified angle (in radians) and uniform scale.  <a href="#a04a6c113e09c7b91f4e8db16ae3458fd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#aa531600b8d955b7060e4b9fa6d008a0f">Reset</a> (double angle, const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;scale)</td></tr>
@@ -92,13 +94,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#ad7d1e1d2d752a7fe7b360da4de2abe82">GetInvMultiplied</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;result) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverted operation to GetApply().  <a href="#ad7d1e1d2d752a7fe7b360da4de2abe82"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#aacfaafd9151995496ace7cdd4410e93a">GetInverted</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculte inverted matrix.  <a href="#aacfaafd9151995496ace7cdd4410e93a"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate inverted matrix.  <a href="#aacfaafd9151995496ace7cdd4410e93a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#a244850520a59b4176010fee2eee9dbb6">GetInverted</a> (<a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a> &amp;result) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculte inverted matrix.  <a href="#a244850520a59b4176010fee2eee9dbb6"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate inverted matrix.  <a href="#a244850520a59b4176010fee2eee9dbb6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#abb7c8d69ed1b3bf0a979367562452851">GetTransposed</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate transposed matrix.  <a href="#abb7c8d69ed1b3bf0a979367562452851"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#a0dd5c7ad94342c53fa02de8ce996abca">GetDecompositionQDQ</a> (<a class="el" href="classi2d_1_1_c_matrix2d.html">i2d::CMatrix2d</a> &amp;matrixQ, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;diagonalD)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate decomposition in form of QDQ where <code>Q</code> is ortogonal matrix and <code>D</code> is diagonal one.  <a href="#a0dd5c7ad94342c53fa02de8ce996abca"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate decomposition in form of QDQ where <code>Q</code> is orthogonal matrix and <code>D</code> is diagonal one.  <a href="#a0dd5c7ad94342c53fa02de8ce996abca"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#a90697e65a6c715e6bbfee71bdcef8069">GetDet</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate determinant of deformation matrix.  <a href="#a90697e65a6c715e6bbfee71bdcef8069"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#ad38a6a726b94789d128297d292bc7399">operator=</a> (const <a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a> &amp;matrix)</td></tr>
@@ -106,7 +108,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#aad730e1191cca2a9157f4c04e58aa4a8">operator*</a> (double scale) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplication by scalar number.  <a href="#aad730e1191cca2a9157f4c04e58aa4a8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#abd951d7c493e9a14c951bbd168d54ba6">operator/</a> (double scale) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dividition by scalar number.  <a href="#abd951d7c493e9a14c951bbd168d54ba6"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Division by scalar number.  <a href="#abd951d7c493e9a14c951bbd168d54ba6"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_matrix2d.html#a8b02a1a657ce42ec4034e16f3520893a">GetIdentity</a> ()</td></tr>
@@ -148,9 +150,9 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Constructor with no member initialization. </p>
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00140">140</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00143">143</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_matrix2d_8h_source.html#l00228">GetTransposed()</a>, and <a class="el" href="_c_matrix2d_8h_source.html#l00260">operator/()</a>.</p>
+<p>Referenced by <a class="el" href="_c_matrix2d_8h_source.html#l00231">GetTransposed()</a>, and <a class="el" href="_c_matrix2d_8h_source.html#l00263">operator/()</a>.</p>
 
 </div>
 </div>
@@ -169,7 +171,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00145">145</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00148">148</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
 </div>
 </div>
@@ -198,9 +200,9 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Contructor using 2 vectors to span the transformation space. </p>
+<p>Constructor using 2 vectors to span the transformation space. </p>
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00151">151</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00154">154</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_matrix.html#aab6296d9751f47dd0a92643dc233e171">imath::TMatrix&lt; 2, 2 &gt;::SetAt()</a>.</p>
 
@@ -245,7 +247,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Constructor using matrix members. </p>
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00160">160</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00163">163</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_matrix.html#aab6296d9751f47dd0a92643dc233e171">imath::TMatrix&lt; 2, 2 &gt;::SetAt()</a>.</p>
 
@@ -305,7 +307,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get lengths of axes vectors. </p>
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00201">201</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00204">204</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
 </div>
 </div>
@@ -326,9 +328,9 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get lengths of axes vectors. </p>
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00211">211</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00214">214</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_matrix2d_8h_source.html#l00189">GetAxisX()</a>, <a class="el" href="_c_matrix2d_8h_source.html#l00195">GetAxisY()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00153">i2d::CVector2d::SetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00165">i2d::CVector2d::SetY()</a>.</p>
+<p>References <a class="el" href="_c_matrix2d_8h_source.html#l00192">GetAxisX()</a>, <a class="el" href="_c_matrix2d_8h_source.html#l00198">GetAxisY()</a>, <a class="el" href="_c_vector2d_8h_source.html#l00153">i2d::CVector2d::SetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00165">i2d::CVector2d::SetY()</a>.</p>
 
 </div>
 </div>
@@ -348,11 +350,11 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get axis X vector. </p>
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00189">189</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00192">192</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_matrix.html#ae52105d58c85c406a987afa8a5bcd165">imath::TMatrix&lt; 2, 2 &gt;::GetAt()</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_matrix2d_8h_source.html#l00211">GetAxesLengths()</a>.</p>
+<p>Referenced by <a class="el" href="_c_matrix2d_8h_source.html#l00214">GetAxesLengths()</a>.</p>
 
 </div>
 </div>
@@ -372,11 +374,11 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get axis Y vector. </p>
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00195">195</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00198">198</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_matrix.html#ae52105d58c85c406a987afa8a5bcd165">imath::TMatrix&lt; 2, 2 &gt;::GetAt()</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_matrix2d_8h_source.html#l00211">GetAxesLengths()</a>.</p>
+<p>Referenced by <a class="el" href="_c_matrix2d_8h_source.html#l00214">GetAxesLengths()</a>.</p>
 
 </div>
 </div>
@@ -405,7 +407,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Calculate decomposition in form of QDQ where <code>Q</code> is ortogonal matrix and <code>D</code> is diagonal one. </p>
+<p>Calculate decomposition in form of QDQ where <code>Q</code> is orthogonal matrix and <code>D</code> is diagonal one. </p>
 
 </div>
 </div>
@@ -425,7 +427,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Calculate determinant of deformation matrix. </p>
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00234">234</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00237">237</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_matrix.html#ae52105d58c85c406a987afa8a5bcd165">imath::TMatrix&lt; 2, 2 &gt;::GetAt()</a>.</p>
 
@@ -445,7 +447,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00268">268</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00271">271</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
 </div>
 </div>
@@ -463,9 +465,9 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Calculte inverted matrix. </p>
+<p>Calculate inverted matrix. </p>
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00218">218</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00221">221</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
 </div>
 </div>
@@ -484,7 +486,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Calculte inverted matrix. </p>
+<p>Calculate inverted matrix. </p>
 
 </div>
 </div>
@@ -551,9 +553,9 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00169">169</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00172">172</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_affine2d_8h_source.html#l00223">i2d::CAffine2d::GetApply()</a>, <a class="el" href="_c_affine2d_8h_source.html#l00239">i2d::CAffine2d::GetApplyToDelta()</a>, and <a class="el" href="_c_matrix2d_8h_source.html#l00179">GetMultiplied()</a>.</p>
+<p>Referenced by <a class="el" href="_c_affine2d_8h_source.html#l00223">i2d::CAffine2d::GetApply()</a>, <a class="el" href="_c_affine2d_8h_source.html#l00239">i2d::CAffine2d::GetApplyToDelta()</a>, and <a class="el" href="_c_matrix2d_8h_source.html#l00182">GetMultiplied()</a>.</p>
 
 </div>
 </div>
@@ -572,9 +574,9 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00179">179</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00182">182</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_matrix2d_8h_source.html#l00169">GetMultiplied()</a>.</p>
+<p>References <a class="el" href="_c_matrix2d_8h_source.html#l00172">GetMultiplied()</a>.</p>
 
 </div>
 </div>
@@ -596,9 +598,9 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classimath_1_1_t_matrix.html#a8dfc35b4bb6e41d950c3abeed744ea72">imath::TMatrix&lt; 2, 2 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00228">228</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00231">231</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_matrix2d_8h_source.html#l00140">CMatrix2d()</a>, and <a class="el" href="classimath_1_1_t_matrix.html#ae52105d58c85c406a987afa8a5bcd165">imath::TMatrix&lt; 2, 2 &gt;::GetAt()</a>.</p>
+<p>References <a class="el" href="_c_matrix2d_8h_source.html#l00143">CMatrix2d()</a>, and <a class="el" href="classimath_1_1_t_matrix.html#ae52105d58c85c406a987afa8a5bcd165">imath::TMatrix&lt; 2, 2 &gt;::GetAt()</a>.</p>
 
 </div>
 </div>
@@ -655,7 +657,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classimath_1_1_t_matrix.html#a2bb5b7ed96c113150e5644309a99bc04">imath::TMatrix&lt; 2, 2 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00250">250</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00253">253</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
 <p>References <a class="el" href="classimath_1_1_t_matrix.html#aad0a32830fed50f4b440d58dd0ea6f59">imath::TMatrix&lt; 2, 2 &gt;::GetScaled()</a>.</p>
 
@@ -676,11 +678,11 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Dividition by scalar number. </p>
+<p>Division by scalar number. </p>
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00260">260</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00263">263</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_matrix2d_8h_source.html#l00140">CMatrix2d()</a>, and <a class="el" href="classimath_1_1_t_matrix.html#ae52105d58c85c406a987afa8a5bcd165">imath::TMatrix&lt; 2, 2 &gt;::GetAt()</a>.</p>
+<p>References <a class="el" href="_c_matrix2d_8h_source.html#l00143">CMatrix2d()</a>, and <a class="el" href="classimath_1_1_t_matrix.html#ae52105d58c85c406a987afa8a5bcd165">imath::TMatrix&lt; 2, 2 &gt;::GetAt()</a>.</p>
 
 </div>
 </div>
@@ -701,7 +703,27 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Copy operator. </p>
 
-<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00242">242</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_matrix2d_8h_source.html#l00245">245</a> of file <a class="el" href="_c_matrix2d_8h_source.html">CMatrix2d.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f78501ec134d1d9ff7e975b36af6626"></a><!-- doxytag: member="i2d::CMatrix2d::Reset" ref="a2f78501ec134d1d9ff7e975b36af6626" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2d::CMatrix2d::Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Default reset to identity. </p>
+
+<p>Reimplemented from <a class="el" href="classimath_1_1_t_matrix.html#abfd210c21e80ab30b3c2c840f4e55f2f">imath::TMatrix&lt; 2, 2 &gt;</a>.</p>
 
 </div>
 </div>

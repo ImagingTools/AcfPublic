@@ -7519,6 +7519,13 @@
       <type>void</type>
       <name>Reset</name>
       <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>a2f78501ec134d1d9ff7e975b36af6626</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
       <anchor>a04a6c113e09c7b91f4e8db16ae3458fd</anchor>
       <arglist>(double angle, double scale=1.0)</arglist>
     </member>
@@ -19623,6 +19630,13 @@
       <anchor>ab7d3ef2a75d4c655b66648efeaa6c43a</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>istd::IFactoryInfo::KeyList</type>
+      <name>KeyList</name>
+      <anchorfile>classicomp_1_1_t_factory_member.html</anchorfile>
+      <anchor>a744384330c55a7c2cd16a0783206479a</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>TFactoryMember</name>
@@ -24777,6 +24791,20 @@
       <anchor>a1f8b68173d99e94efaa68eed08f725a0</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>imath::TVector&lt; Height, Element &gt;</type>
+      <name>ColumnVector</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>aeb33f1bef0f2ad432a89d7ea5b3011af</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imath::TVector&lt; Width, Element &gt;</type>
+      <name>RowVector</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a97593f9dac2d9a887dd0decccb7ac0ca</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>TMatrix</name>
@@ -25028,6 +25056,13 @@
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
       <anchor>acbe04611eddc9ab71e058d2843d41b1d</anchor>
       <arglist>(int columnIndex, TVector&lt; Height, Element &gt; &amp;result)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetColumnVector</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>ac616c810e8a41e7952aff5abc1877529</anchor>
+      <arglist>(int columnIndex, const TVector&lt; Height, Element &gt; &amp;columnVector)</arglist>
     </member>
     <member kind="function">
       <type>void</type>

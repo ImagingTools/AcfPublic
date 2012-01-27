@@ -67,6 +67,7 @@ Public Types</h2></td></tr>
 &lt; <a class="el" href="classicomp_1_1_c_factory_attribute.html">CFactoryAttribute</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#a2973f309ebaddd7104fec3f33424004b">BaseClass</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_interface_manip_base.html">CInterfaceManipBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#aaa2d2c5f16be710978699d376c87a99b">BaseClass2</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef Interface&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#ab7d3ef2a75d4c655b66648efeaa6c43a">InterfaceType</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_i_factory_info.html#aab83351df8d41d74fc28c49f2bf77b49">istd::IFactoryInfo::KeyList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#a744384330c55a7c2cd16a0783206479a">KeyList</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#ad8d3fe1f76788458c4efe9bb6e095823">TFactoryMember</a> ()</td></tr>
@@ -77,7 +78,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create component without extracting any interface.  <a href="#a4ff275e88eac06a043a85c6d8e385a0a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual Interface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#ae6fa3aa559628c5fc08692ad6ba09970">CreateInstance</a> (const std::string &amp;keyId=&quot;&quot;) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance of the object, mapped to the keyId <code>keyId</code>.  <a href="#ae6fa3aa559628c5fc08692ad6ba09970"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_factory_info.html#aab83351df8d41d74fc28c49f2bf77b49">KeyList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#a789587d514aaa8e329bb3c53129f7cea">GetFactoryKeys</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_t_factory_member.html#a744384330c55a7c2cd16a0783206479a">KeyList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#a789587d514aaa8e329bb3c53129f7cea">GetFactoryKeys</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all posible keys for this factory.  <a href="#a789587d514aaa8e329bb3c53129f7cea"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -149,6 +150,25 @@ template&lt;class Interface &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a744384330c55a7c2cd16a0783206479a"></a><!-- doxytag: member="icomp::TFactoryMember::KeyList" ref="a744384330c55a7c2cd16a0783206479a" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Interface &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classistd_1_1_i_factory_info.html#aab83351df8d41d74fc28c49f2bf77b49">istd::IFactoryInfo::KeyList</a> <a class="el" href="classicomp_1_1_t_factory_member.html">icomp::TFactoryMember</a>&lt; Interface &gt;::<a class="el" href="classicomp_1_1_t_factory_member.html#a744384330c55a7c2cd16a0783206479a">KeyList</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_factory_info.html#aab83351df8d41d74fc28c49f2bf77b49">istd::IFactoryInfo</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00032">32</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
+
+</div>
+</div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad8d3fe1f76788458c4efe9bb6e095823"></a><!-- doxytag: member="icomp::TFactoryMember::TFactoryMember" ref="ad8d3fe1f76788458c4efe9bb6e095823" args="()" -->
 <div class="memitem">
@@ -166,7 +186,7 @@ template&lt;class Interface &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00078">78</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00079">79</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
 
 </div>
 </div>
@@ -187,7 +207,7 @@ template&lt;class Interface &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00169">169</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00170">170</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
 
 </div>
 </div>
@@ -210,7 +230,7 @@ template&lt;class Interface &gt; </div>
 
 <p>Create component without extracting any interface. </p>
 
-<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00100">100</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00101">101</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
 
 <p>References <a class="el" href="classicomp_1_1_i_composite_component.html#a483b17de55177634c9563977773e829d">icomp::ICompositeComponent::CreateSubcomponent()</a>, <a class="el" href="classicomp_1_1_i_component.html#adca938957e64be16768c0cf32c4bf1e1">icomp::IComponent::GetParentComponent()</a>, <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, <a class="el" href="istd_8h_source.html#l00183">NULL</a>, and <a class="el" href="_t_reference_member_8h_source.html#l00145">operator*()</a>.</p>
 
@@ -244,7 +264,7 @@ template&lt;class Interface &gt; </div>
 
 <p>Implements <a class="el" href="classistd_1_1_t_i_factory.html#a400950fe4afc558f397d73c0dbdee4e1">istd::TIFactory&lt; Interface &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00121">121</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00122">122</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
 
 <p>References <a class="el" href="_t_pointer_base_8h_source.html#l00126">istd::TPointerBase&lt; Type &gt;::GetPtr()</a>, <a class="el" href="_t_pointer_base_8h_source.html#l00133">istd::TPointerBase&lt; Type &gt;::IsValid()</a>, <a class="el" href="istd_8h_source.html#l00183">NULL</a>, and <a class="el" href="_t_del_ptr_8h_source.html#l00147">istd::TDelPtr&lt; Type, Accessor &gt;::PopPtr()</a>.</p>
 
@@ -288,7 +308,7 @@ template&lt;class Interface &gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to interface or NULL, if such interface could not be extracted. </dd></dl>
 
-<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00151">151</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00152">152</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00138">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
 
@@ -314,7 +334,7 @@ template&lt;class Interface &gt; </div>
 
 <p>Implements <a class="el" href="classistd_1_1_i_factory_info.html#abbebd5ef1ef5acf2ce6ab20dee51e902">istd::IFactoryInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00140">140</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00141">141</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
 
 </div>
 </div>
@@ -345,7 +365,7 @@ template&lt;class Interface &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00085">85</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00086">86</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
 
 </div>
 </div>
@@ -370,7 +390,7 @@ template&lt;class Interface &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classicomp_1_1_t_attribute_member.html#a58249a76e8379fe8ec2a4a7920da95c8">icomp::TAttributeMember&lt; CFactoryAttribute &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00092">92</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00093">93</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
 

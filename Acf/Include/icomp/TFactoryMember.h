@@ -51,6 +51,7 @@ public:
 	typedef TAttributeMember<CFactoryAttribute> BaseClass;
 	typedef CInterfaceManipBase BaseClass2;
 	typedef Interface InterfaceType;
+	typedef istd::IFactoryInfo::KeyList KeyList;
 
 	TFactoryMember();
 

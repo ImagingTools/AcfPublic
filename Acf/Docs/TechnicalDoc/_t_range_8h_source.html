@@ -436,7 +436,7 @@
 <a name="l00557"></a>00557 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
 <a name="l00558"></a><a class="code" href="classistd_1_1_t_range.html#abcf65f48ecc3385dbf690b4cf380dcb5">00558</a> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange&lt;ValueType&gt;</a> <a class="code" href="classistd_1_1_t_range.html#ae470c37910f5d1251222856f6656885c" title="Get value clipped to the range.">TRange&lt;ValueType&gt;::GetClipped</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>&amp; range)<span class="keyword"> const</span>
 <a name="l00559"></a>00559 <span class="keyword"></span>{
-<a name="l00560"></a>00560        <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">istd::TRange</a> clippedRange = range;
+<a name="l00560"></a>00560        <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">istd::TRange&lt;ValueType&gt;</a> clippedRange = range;
 <a name="l00561"></a>00561 
 <a name="l00562"></a>00562        <span class="keywordflow">if</span> (!Contains(range.<a class="code" href="classistd_1_1_t_range.html#af0d94456ae2efd66fc7c7848e0be8024" title="Get the bottom value.">GetMinValue</a>())){
 <a name="l00563"></a>00563               clippedRange.<a class="code" href="classistd_1_1_t_range.html#a64619392b313212e01a5fbeb1b6449f7" title="Set the bottom value.">SetMinValue</a>(m_minValue);
