@@ -1,3 +1,25 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
 #include "i2d/CDirection2d.h"
 
 
@@ -28,8 +50,8 @@ CDirection2d::CDirection2d(const CDirection2d& direction)
 CDirection2d::CDirection2d(double radian)
 	:	m_direction(radian)
 {
-	I_ASSERT(radian >= -I_PI - I_EPSILON);
-	I_ASSERT(radian <= I_PI + I_EPSILON);
+	I_ASSERT(radian >= -I_PI - I_BIG_EPSILON);
+	I_ASSERT(radian <= I_PI + I_BIG_EPSILON);
 
 	I_ASSERT(Invariant());
 }
@@ -150,7 +172,7 @@ CDirection2d CDirection2d::Avg(double weight, const CDirection2d& dir2) const
 		const double a(res.DistInRadian(*this));
 		const double b(res.DistInRadian(dir2));
 		const double c(DistInRadian(dir2));
-		I_ASSERT((a + b < c + I_EPSILON) && (a + b > c - I_EPSILON));
+		I_ASSERT((a + b < c + I_BIG_EPSILON) && (a + b > c - I_BIG_EPSILON));
 	);
 	
 	I_ASSERT(res.Invariant());

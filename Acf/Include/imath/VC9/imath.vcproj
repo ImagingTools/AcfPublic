@@ -270,10 +270,6 @@
 				RelativePath="..\TVector.h"
 				>
 			</File>
-			<File
-				RelativePath="..\TWeightedNumber.h"
-				>
-			</File>
 		</Filter>
 	</Files>
 	<Globals>

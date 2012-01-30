@@ -61,7 +61,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_parallelogram.html#a5148f92edd0232d823aef4a4e56faa40">GetTransform</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_parallelogram.html#a9e3f1096c89d8049c7b3ac314b1abf85">SetTransform</a> (const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;transform)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_c_matrix2d.html">i2d::CMatrix2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_parallelogram.html#a72e174c32d2f6afdee4e1bce7379ff9d">GetDeformMatrix</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_parallelogram.html#aa8618c5993107c4adf3ed1f6f5863d3d">SetDeform</a> (const <a class="el" href="classi2d_1_1_c_matrix2d.html">i2d::CMatrix2d</a> &amp;deform)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_parallelogram.html#aa71979c553fc26b5e1d233f742032081">SetDeformMatrix</a> (const <a class="el" href="classi2d_1_1_c_matrix2d.html">i2d::CMatrix2d</a> &amp;deform)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_parallelogram.html#a868998542b3f9e27a2591b98dbb98f26">GetCenter</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns center of this 2D-object.  <a href="#a868998542b3f9e27a2591b98dbb98f26"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_parallelogram.html#a50274a89ccaeebd3259cca25c17a8c52">MoveCenterTo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)</td></tr>
@@ -79,7 +79,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This class defines parallelogram. </p>
-<p>Internal is this parallelogram represents as 2D linear transformation (<a class="el" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>), but it is interpreted as a geometrical shape which is done, if you transform unity quadrat [0, 1]X[0, 1] using this transformation. </p>
+<p>Internal is this parallelogram represents as 2D linear transformation (<a class="el" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>), but it is interpreted as a geometrical shape which is done, if you transform unity quadrant [0, 1]X[0, 1] using this transformation. </p>
 
 <p>Definition at line <a class="el" href="_c_parallelogram_8h_source.html#l00024">24</a> of file <a class="el" href="_c_parallelogram_8h_source.html">CParallelogram.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
@@ -334,12 +334,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa8618c5993107c4adf3ed1f6f5863d3d"></a><!-- doxytag: member="i2d::CParallelogram::SetDeform" ref="aa8618c5993107c4adf3ed1f6f5863d3d" args="(const i2d::CMatrix2d &amp;deform)" -->
+<a class="anchor" id="aa71979c553fc26b5e1d233f742032081"></a><!-- doxytag: member="i2d::CParallelogram::SetDeformMatrix" ref="aa71979c553fc26b5e1d233f742032081" args="(const i2d::CMatrix2d &amp;deform)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void i2d::CParallelogram::SetDeform </td>
+          <td class="memname">void i2d::CParallelogram::SetDeformMatrix </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classi2d_1_1_c_matrix2d.html">i2d::CMatrix2d</a> &amp;&#160;</td>
           <td class="paramname"><em>deform</em></td><td>)</td>

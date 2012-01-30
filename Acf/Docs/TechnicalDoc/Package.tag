@@ -85,6 +85,20 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CDirection2d.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_direction2d_8h</filename>
+    <class kind="class">i2d::CDirection2d</class>
+    <namespace>i2d</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>i2d_CDirection2d_included</name>
+      <anchorfile>_c_direction2d_8h.html</anchorfile>
+      <anchor>af50d8e74f59433afcea218af5889bf55</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>CLabel.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_label_8h</filename>
@@ -233,6 +247,17 @@
     <includes id="_c_quadrangle_8h" name="CQuadrangle.h" local="yes" imported="no">i2d/CQuadrangle.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">i2d::CQuadrangleComp</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CRect.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_rect_8h</filename>
+    <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
+    <includes id="_c_int_range_8h" name="CIntRange.h" local="yes" imported="no">istd/CIntRange.h</includes>
+    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
+    <includes id="_c_size_8h" name="CSize.h" local="yes" imported="no">ibase/CSize.h</includes>
+    <class kind="class">i2d::CRect</class>
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
@@ -6345,6 +6370,7 @@
     <class kind="class">i2d::CAnnulusSegmentComp</class>
     <class kind="class">i2d::CCircle</class>
     <class kind="class">i2d::CCircleComp</class>
+    <class kind="class">i2d::CDirection2d</class>
     <class kind="class">i2d::CLabel</class>
     <class kind="class">i2d::CLine2d</class>
     <class kind="class">i2d::CLine2dComp</class>
@@ -6361,6 +6387,7 @@
     <class kind="class">i2d::CPosition2dComp</class>
     <class kind="class">i2d::CQuadrangle</class>
     <class kind="class">i2d::CQuadrangleComp</class>
+    <class kind="class">i2d::CRect</class>
     <class kind="class">i2d::CRectangle</class>
     <class kind="class">i2d::CRectangleComp</class>
     <class kind="class">i2d::CSpline</class>
@@ -7059,6 +7086,101 @@
       <anchorfile>classi2d_1_1_c_circle_comp.html</anchorfile>
       <anchor>a1bbacd11a54daecbfb247fdd890d88aa</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CDirection2d</name>
+    <filename>classi2d_1_1_c_direction2d.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CDirection2d</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>a4e13613a271474a5a5849aa6be1ecd8b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CDirection2d</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>a35494cf2c5c49451541d6c1217713753</anchor>
+      <arglist>(const CDirection2d &amp;direction)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>ToDegree</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>ad0f82e88f3db338077ea5a4bb49a5f2b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>ToRadian</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>afbba5c365beab28c2b76c4d1f546b646</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>DistInRadian</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>af8afe15e27efda58e864b9c40d1b6fbf</anchor>
+      <arglist>(const CDirection2d &amp;dir2) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>DistInDegree</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>aef2f018dba3148eb94cec801276f21ad</anchor>
+      <arglist>(const CDirection2d &amp;dir2) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CDirection2d</type>
+      <name>Avg</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>a3380fc1c2832ce3f2318fbda3e9c531d</anchor>
+      <arglist>(const CDirection2d &amp;dir2) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CDirection2d</type>
+      <name>Avg</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>aeb28a0b4801e14f0d303557807ce217d</anchor>
+      <arglist>(double weight, const CDirection2d &amp;dir2) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CDirection2d</type>
+      <name>TurnByRadian</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>a928e37857612e3b43affe7bff6d415c3</anchor>
+      <arglist>(double turn) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>afa65c69c8c977b85da9b7b7dac41f47c</anchor>
+      <arglist>(const CDirection2d &amp;dir2) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsInRange</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>ac11f62b67d2dc4f8a62d6bbb2cacfa4c</anchor>
+      <arglist>(const CDirection2d &amp;leftDirectionLimit, const CDirection2d &amp;rightDirectionLimit) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static CDirection2d</type>
+      <name>FromRadian</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>a540c92941d8b5809b9039cab036689c6</anchor>
+      <arglist>(double radian)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static CDirection2d</type>
+      <name>FromDegree</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>ad74295caf20ccfe8448a493e170081f7</anchor>
+      <arglist>(double degree)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7793,9 +7915,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>SetDeform</name>
+      <name>SetDeformMatrix</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>aa8618c5993107c4adf3ed1f6f5863d3d</anchor>
+      <anchor>aa71979c553fc26b5e1d233f742032081</anchor>
       <arglist>(const i2d::CMatrix2d &amp;deform)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -8392,6 +8514,374 @@
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_quadrangle_comp.html</anchorfile>
       <anchor>a3833c589a6d174f24a7655791b8d9525</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CRect</name>
+    <filename>classi2d_1_1_c_rect.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CRect</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a06b042589985ea07c6d2a589164b51d0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRect</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>aecf2b5f9f842369cb574ebc4c77184d2</anchor>
+      <arglist>(const CRect &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRect</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>afcfc23b1895f5e327ff2ebb475c642f0</anchor>
+      <arglist>(int left, int top, int right, int bottom)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRect</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a8f86557756ba0c9a118783a058a64bab</anchor>
+      <arglist>(const istd::CIndex2d &amp;leftTop, const istd::CIndex2d &amp;rightBottom)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRect</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a320ca41c6b6ed7e43b27c4026a4a9dcb</anchor>
+      <arglist>(const istd::CIndex2d &amp;leftTop, const ibase::CSize &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRect</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a4f11612e0959e3932083d06737be0517</anchor>
+      <arglist>(const i2d::CRectangle &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRect</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>ad6f743d300cfc44b7fb66412aa1a9d78</anchor>
+      <arglist>(const ibase::CSize &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CRectangle</type>
+      <name>GetRectangle</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>af23f9c51bff42343fbf7a0776ae0e306</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>istd::CIndex2d</type>
+      <name>GetLeftTop</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a9e3e57e1b914484e8b27c2ef81cd59e3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetLeftTop</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a295e024d83a8b058405f87b33a70fae0</anchor>
+      <arglist>(istd::CIndex2d position)</arglist>
+    </member>
+    <member kind="function">
+      <type>istd::CIndex2d</type>
+      <name>GetRightTop</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a53fa0955939d487d79877349afbedeb1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetRightTop</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a4154cbf6200d32d0b4bd50d1d43b2e21</anchor>
+      <arglist>(istd::CIndex2d position)</arglist>
+    </member>
+    <member kind="function">
+      <type>istd::CIndex2d</type>
+      <name>GetLeftBottom</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a79a62f478ee807c3cd7a7edf5a61992c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetLeftBottom</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a6a230bc3dbb9b2be5814041f4b11f2a9</anchor>
+      <arglist>(istd::CIndex2d position)</arglist>
+    </member>
+    <member kind="function">
+      <type>istd::CIndex2d</type>
+      <name>GetRightBottom</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a7a13d7f54a48b5a5c228a30370bcbedb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetRightBottom</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a6228b1abd94386e31ebc8d63d12071a8</anchor>
+      <arglist>(istd::CIndex2d position)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetLeft</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>aebeef876b590b4a50d1bc60622a11a72</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetLeft</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a13ec9a42571b3ba27e9b64b653822525</anchor>
+      <arglist>(int left)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetTop</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>aa6691d31dc11f456e1861df8df7aadff</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetTop</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a281ff9a64227f4363176c22f65116ec2</anchor>
+      <arglist>(int top)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetRight</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>ac9d1434fd87675f0faf51733bc6931b2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetRight</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a78627c93cacf9c3aa06f72aed30bcba6</anchor>
+      <arglist>(int right)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetBottom</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a75da4cf644f64180b02ec8a816cae12e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetBottom</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a6b7978eb897f48384310bf22b323899a</anchor>
+      <arglist>(int bottom)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetWidth</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a060d40c5a93ef44d5850b10ee69b7503</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetHeight</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a1096395aa7af6485dbccd386d37bcc3e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>istd::CIntRange</type>
+      <name>GetHorizontalRange</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a10a89a6c1d2489c1854dc832d81948be</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>istd::CIntRange</type>
+      <name>GetVerticalRange</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a4bce788e9de4660d09c3059ad2d466aa</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>istd::CIndex2d</type>
+      <name>GetCenter</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a1aece36147ecf1eb2f84da6234ad5962</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsValid</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>abb38e68265c8f95df79ffe4551b4197b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsEmpty</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a18d6a0922c3fa40a70bac30d3bea35fb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsNull</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a3996781b71b3ed53e9a1772c650bb751</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>ibase::CSize</type>
+      <name>GetSize</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a141f8e8cc0cd99b4e1519dd6f1ed020b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsInside</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>aab769ca930f2c1da6976bbbef6ff2339</anchor>
+      <arglist>(const istd::CIndex2d &amp;point) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsInside</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a6287f9a20b5fb457d68d0864d6dad476</anchor>
+      <arglist>(const CRect &amp;rect) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsOutside</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a5f158ef186d3e653091bc5d1f1cd1d98</anchor>
+      <arglist>(const CRect &amp;rect) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>af481f8a8deb4260a5f8857f758eb66bd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Union</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a640e67a0ed8d71f8891fd37968f7446d</anchor>
+      <arglist>(const CRect &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetUnion</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a18c3be0d711e4c0bcb8fcdd0d1593412</anchor>
+      <arglist>(const CRect &amp;rect, CRect &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CRect</type>
+      <name>GetUnion</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>ab7d16f5feae1db5178caf3fcd59dd0a5</anchor>
+      <arglist>(const CRect &amp;rect) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Union</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a342008c9fa1ef07c2765f0dcac43c833</anchor>
+      <arglist>(istd::CIndex2d point)</arglist>
+    </member>
+    <member kind="function">
+      <type>CRect</type>
+      <name>GetUnion</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>acb9e094275e6ab249377796d8b799301</anchor>
+      <arglist>(istd::CIndex2d point) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Expand</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a371486083e12b517c888b6502f3bcfb3</anchor>
+      <arglist>(const CRect &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type>CRect</type>
+      <name>GetExpanded</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a82a8dca2be915622d24235b27663c9a9</anchor>
+      <arglist>(const CRect &amp;rect) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Intersection</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a51342bbd73c570ea9c9068149f1fa0ad</anchor>
+      <arglist>(const CRect &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type>CRect</type>
+      <name>GetIntersection</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a28c397da891e3d35ab5be48a375021d7</anchor>
+      <arglist>(const CRect &amp;rect) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Translate</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a5e89e3e220a540dfeaf810d64d84344c</anchor>
+      <arglist>(istd::CIndex2d point)</arglist>
+    </member>
+    <member kind="function">
+      <type>CRect</type>
+      <name>GetTranslated</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>aa72af924a18c07d5b0ae809ca5be90ab</anchor>
+      <arglist>(istd::CIndex2d point) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CRect &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>aa44a60d4dc940ce9b00e2226fe8c390e</anchor>
+      <arglist>(const CRect &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>af4b274853580767232ba6a257728e38f</anchor>
+      <arglist>(const CRect &amp;rect) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a7f2d02c07f60d22f09e2cc88773d83a6</anchor>
+      <arglist>(const CRect &amp;rect) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const i2d::CRect &amp;</type>
+      <name>GetEmpty</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a4f7e1fdf84150ad6c35fca991754d6df</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -12179,6 +12669,13 @@
     </member>
     <member kind="function">
       <type>void</type>
+      <name>InsertAt</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a7eeb08910a558ecf73ac43703073db75</anchor>
+      <arglist>(const ItemClass &amp;item, int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
       <name>PopBack</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
       <anchor>abec6a1fbdc86dd8274989b59e13d2d7b</anchor>
@@ -12273,6 +12770,13 @@
       <anchorfile>classibase_1_1_t_factorisable_container.html</anchorfile>
       <anchor>a6d320404d5941ed2142dce13836ac6e0</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>InterfaceClass *</type>
+      <name>InsertElement</name>
+      <anchorfile>classibase_1_1_t_factorisable_container.html</anchorfile>
+      <anchor>a3678c368502c8a297e829dcab838379c</anchor>
+      <arglist>(int index, const std::string &amp;elementFactoryKey)</arglist>
     </member>
     <member kind="function">
       <type>InterfaceClass *</type>

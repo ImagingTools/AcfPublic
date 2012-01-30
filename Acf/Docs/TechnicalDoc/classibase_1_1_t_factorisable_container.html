@@ -76,8 +76,10 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_factorisable_container.html#a691e13dadb4eaabc0ccff32e30ca75a6">TFactorisableContainer</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_factorisable_container.html#a6d320404d5941ed2142dce13836ac6e0">~TFactorisableContainer</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">InterfaceClass *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_factorisable_container.html#a3678c368502c8a297e829dcab838379c">InsertElement</a> (int index, const std::string &amp;elementFactoryKey)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert the element to the container at the given index.  <a href="#a3678c368502c8a297e829dcab838379c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">InterfaceClass *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_factorisable_container.html#a23507ea776c9e4d5c29ade81c6737e3d">AddElement</a> (const std::string &amp;elementFactoryKey)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the element to container.  <a href="#a23507ea776c9e4d5c29ade81c6737e3d"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the element to container.  <a href="#a23507ea776c9e4d5c29ade81c6737e3d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">InterfaceClass *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_factorisable_container.html#ad2adfac2abb7e929880cd46fd23144f3">GetElement</a> (int elementIndex) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the element with the index <code>elementIndex</code> from container.  <a href="#ad2adfac2abb7e929880cd46fd23144f3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_factorisable_container.html#a0708771b8bb4827332162bd0e2c10a27">GetElementIndex</a> (const InterfaceClass &amp;elementRef) const </td></tr>
@@ -163,7 +165,7 @@ template&lt;class InterfaceClass &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00078">78</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00083">83</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
 
@@ -185,7 +187,7 @@ template&lt;class InterfaceClass &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00085">85</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00090">90</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
 
 </div>
 </div>
@@ -207,9 +209,9 @@ template&lt;class InterfaceClass &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Adds the element to container. </p>
+<p>Add the element to container. </p>
 
-<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00092">92</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00097">97</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
 
@@ -232,7 +234,7 @@ template&lt;class InterfaceClass &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00208">208</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00225">225</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
 
@@ -258,7 +260,7 @@ template&lt;class InterfaceClass &gt; </div>
 <p>Gets the element with the index <code>elementIndex</code> from container. </p>
 <p>You will need this function, because the <a class="el" href="classibase_1_1_t_container.html#aab88db5a7ef8ed6e32e3a6c5cf050cf4">GetAt()</a> returns the ItemClass instance, what is not usable. </p>
 
-<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00104">104</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00121">121</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
 
@@ -283,7 +285,7 @@ template&lt;class InterfaceClass &gt; </div>
 
 <p>Gets the element index from container. </p>
 
-<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00115">115</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00132">132</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
 
 </div>
 </div>
@@ -306,7 +308,42 @@ template&lt;class InterfaceClass &gt; </div>
 
 <p>Gets the element key associated with the element the index <code>elementIndex</code> from container. </p>
 
-<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00129">129</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00146">146</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3678c368502c8a297e829dcab838379c"></a><!-- doxytag: member="ibase::TFactorisableContainer::InsertElement" ref="a3678c368502c8a297e829dcab838379c" args="(int index, const std::string &amp;elementFactoryKey)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class InterfaceClass &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">InterfaceClass * <a class="el" href="classibase_1_1_t_factorisable_container.html">ibase::TFactorisableContainer</a>&lt; InterfaceClass &gt;::InsertElement </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>elementFactoryKey</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Insert the element to the container at the given index. </p>
+
+<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00109">109</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
+
+<p>References <a class="el" href="istd_8h_source.html#l00183">NULL</a>.</p>
 
 </div>
 </div>
@@ -327,7 +364,7 @@ template&lt;class InterfaceClass &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00232">232</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00249">249</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
 
 </div>
 </div>
@@ -348,7 +385,7 @@ template&lt;class InterfaceClass &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00140">140</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00157">157</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
 
 </div>
 </div>
@@ -375,7 +412,7 @@ template&lt;class InterfaceClass &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classibase_1_1_t_serializable_container.html#a27fde418de8e6e4ad2a45a18f7d4348f">ibase::TSerializableContainer&lt; std::pair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, std::string &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00149">149</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00166">166</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
 
 <p>References <a class="el" href="classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">iser::IArchive::BeginMultiTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive::BeginTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">iser::IArchive::EndTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">iser::IArchive::IsStoring()</a>, <a class="el" href="istd_8h_source.html#l00183">NULL</a>, and <a class="el" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">iser::IArchive::Process()</a>.</p>
 
@@ -412,7 +449,7 @@ template&lt;class InterfaceClass &gt; </div>
 
 <p>Implements <a class="el" href="classibase_1_1_t_serializable_container.html#a6045b0b9f7de8d45e7a1cca722a7d483">ibase::TSerializableContainer&lt; std::pair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, std::string &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00240">240</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00257">257</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00183">NULL</a>, and <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable::Serialize()</a>.</p>
 
@@ -432,7 +469,7 @@ template&lt;class InterfaceClass &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00073">73</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_factorisable_container_8h_source.html#l00078">78</a> of file <a class="el" href="_t_factorisable_container_8h_source.html">TFactorisableContainer.h</a>.</p>
 
 </div>
 </div>
