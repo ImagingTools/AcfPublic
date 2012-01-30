@@ -31,9 +31,6 @@ namespace i2d
 {	
 
 
-class CRectangle;
-
-
 /**
 	Definition of graphical circle object.
 	This object is stored using center position and radius.
