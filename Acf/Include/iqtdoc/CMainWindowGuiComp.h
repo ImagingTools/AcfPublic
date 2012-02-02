@@ -39,8 +39,6 @@
 
 #include "idoc/IDocumentManager.h"
 
-#include "iqt/ITranslationManager.h"
-
 #include "iqtgui/CSimpleMainWindowGuiComp.h"
 
 
