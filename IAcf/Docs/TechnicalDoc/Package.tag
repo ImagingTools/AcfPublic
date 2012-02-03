@@ -1154,8 +1154,8 @@
       <type>bool</type>
       <name>TryTracePosition</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a2f4281baeb014f7583d4622fb89bf92e</anchor>
-      <arglist>()</arglist>
+      <anchor>a938d4a18b32cb89880fde3fe63e79f2c</anchor>
+      <arglist>(int minimalImageFrame=-1, int minimalAudioFrame=-1)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
