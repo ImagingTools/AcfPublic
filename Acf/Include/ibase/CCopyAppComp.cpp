@@ -38,6 +38,8 @@ bool CCopyAppComp::InitializeApplication(int /*argc*/, char** /*argv*/)
 int CCopyAppComp::Execute(int argc, char** argv)
 {
 	if (!m_fileCopyCompPtr.IsValid()){
+		SendErrorMessage(0, "File copy component not defined", "CopyApp");
+
 		return 1;
 	}
 
@@ -66,6 +68,8 @@ int CCopyAppComp::Execute(int argc, char** argv)
 	}
 
 	if (!m_fileCopyCompPtr->ConvertFile(inputFilePath, outputFilePath)){
+		SendErrorMessage(0, istd::CString("Copy of ") + inputFilePath + istd::CString(" to ") + outputFilePath + " failed", "CopyApp");
+
 		return 20;
 	}
 

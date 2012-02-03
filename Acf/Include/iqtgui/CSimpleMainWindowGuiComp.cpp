@@ -181,6 +181,8 @@ int CSimpleMainWindowGuiComp::SetupToolbar(const iqtgui::CHierarchicalCommand& c
 {
 	int childsCount = command.GetChildsCount();
 
+	std::map<int, QActionGroup*> groups;
+
 	for (int i = 0; i < childsCount; ++i){
 		iqtgui::CHierarchicalCommand* hierarchicalPtr = const_cast<iqtgui::CHierarchicalCommand*>(
 					dynamic_cast<const iqtgui::CHierarchicalCommand*>(command.GetChild(i)));
@@ -207,6 +209,17 @@ int CSimpleMainWindowGuiComp::SetupToolbar(const iqtgui::CHierarchicalCommand& c
 					}
 
 					result.addAction(hierarchicalPtr);
+
+					if ((flags & ibase::ICommand::CF_EXCLUSIVE) != 0){
+						QActionGroup*& groupPtr = groups[hierarchicalPtr->GetGroupId()];
+						if (groupPtr == NULL){
+							groupPtr = new QActionGroup(&result);
+							groupPtr->setExclusive(true);
+						}
+
+						groupPtr->addAction(hierarchicalPtr);
+						hierarchicalPtr->setCheckable(true);
+					}
 				}
 
 				if (groupId != ibase::ICommand::GI_NONE){

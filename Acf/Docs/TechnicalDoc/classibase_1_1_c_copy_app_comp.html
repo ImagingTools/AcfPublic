@@ -37,7 +37,7 @@
 <div class="title">ibase::CCopyAppComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ibase::CCopyAppComp" --><!-- doxytag: inherits="icomp::CComponentBase,ibase::IApplication" -->
+<!-- doxytag: class="ibase::CCopyAppComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,ibase::IApplication" -->
 <p>General file transformation application.  
  <a href="classibase_1_1_c_copy_app_comp.html#details">More...</a></p>
 
@@ -48,11 +48,15 @@ Inheritance diagram for ibase::CCopyAppComp:</div>
  <div class="center">
   <img src="classibase_1_1_c_copy_app_comp.png" usemap="#ibase::CCopyAppComp_map" alt=""/>
   <map id="ibase::CCopyAppComp_map" name="ibase::CCopyAppComp_map">
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,112,151,136"/>
-<area href="classibase_1_1_i_application.html" title="Main entry point of component-based application." alt="ibase::IApplication" shape="rect" coords="161,112,312,136"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,151,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="161,56,312,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,151,24"/>
+<area href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations." alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="219,168,428,192"/>
+<area href="classibase_1_1_i_application.html" title="Main entry point of component-based application." alt="ibase::IApplication" shape="rect" coords="438,168,647,192"/>
+<area href="classibase_1_1_t_logger_wrap.html" title="Class wrapper implementing interface istd::ILogger sending log messages over ibase::IMessageConsumer..." alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="219,112,428,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="438,112,647,136"/>
+<area href="class_base.html" alt="Base" shape="rect" coords="0,56,209,80"/>
+<area href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the." alt="ibase::ILoggable" shape="rect" coords="219,56,428,80"/>
+<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="438,56,647,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="219,0,428,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="438,0,647,24"/>
 </map>
  </div></div>
 
@@ -60,7 +64,7 @@ Inheritance diagram for ibase::CCopyAppComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_copy_app_comp.html#afa30ba9329c512677be1bd9a3d1d4b22">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_copy_app_comp.html#a780eaa070a2c09c5b15ab40e6be08390">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_copy_app_comp.html#a7b4727c7e23093c68e70f1a8f723f113">InitializeApplication</a> (int argc, char **argv)</td></tr>
@@ -74,20 +78,22 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>General file transformation application. </p>
 <p>This implementation uses some slave <a class="el" href="classibase_1_1_i_file_convert_copy.html" title="Common interface for copy a file.">ibase::IFileConvertCopy</a> implementation to provide copy operation. It implements <a class="el" href="classibase_1_1_i_application.html" title="Main entry point of component-based application.">ibase::IApplication</a> and can be used as standalone application. </p>
 
-<p>Definition at line <a class="el" href="_c_copy_app_comp_8h_source.html#l00024">24</a> of file <a class="el" href="_c_copy_app_comp_8h_source.html">CCopyAppComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_copy_app_comp_8h_source.html#l00023">23</a> of file <a class="el" href="_c_copy_app_comp_8h_source.html">CCopyAppComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="afa30ba9329c512677be1bd9a3d1d4b22"></a><!-- doxytag: member="ibase::CCopyAppComp::BaseClass" ref="afa30ba9329c512677be1bd9a3d1d4b22" args="" -->
+<a class="anchor" id="a780eaa070a2c09c5b15ab40e6be08390"></a><!-- doxytag: member="ibase::CCopyAppComp::BaseClass" ref="a780eaa070a2c09c5b15ab40e6be08390" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="el" href="classibase_1_1_c_copy_app_comp.html#afa30ba9329c512677be1bd9a3d1d4b22">ibase::CCopyAppComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a> <a class="el" href="classibase_1_1_c_copy_app_comp.html#a780eaa070a2c09c5b15ab40e6be08390">ibase::CCopyAppComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_copy_app_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_copy_app_comp_8h_source.html">CCopyAppComp.h</a>.</p>
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="_c_copy_app_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_copy_app_comp_8h_source.html">CCopyAppComp.h</a>.</p>
 
 </div>
 </div>

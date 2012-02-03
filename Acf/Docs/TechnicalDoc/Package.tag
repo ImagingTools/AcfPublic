@@ -438,9 +438,9 @@
     <filename>_c_copy_app_comp_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_application_8h" name="IApplication.h" local="yes" imported="no">ibase/IApplication.h</includes>
     <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ibase/IFileConvertCopy.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <class kind="class">ibase::CCopyAppComp</class>
     <namespace>ibase</namespace>
   </compound>
@@ -475,8 +475,8 @@
     <filename>_c_file_copy_over_loader_comp_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ibase/IFileConvertCopy.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <class kind="class">ibase::CFileCopyOverLoaderComp</class>
     <namespace>ibase</namespace>
   </compound>
@@ -10976,13 +10976,13 @@
   <compound kind="class">
     <name>ibase::CCopyAppComp</name>
     <filename>classibase_1_1_c_copy_app_comp.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">ibase::IApplication</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classibase_1_1_c_copy_app_comp.html</anchorfile>
-      <anchor>afa30ba9329c512677be1bd9a3d1d4b22</anchor>
+      <anchor>a780eaa070a2c09c5b15ab40e6be08390</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11057,13 +11057,13 @@
   <compound kind="class">
     <name>ibase::CFileCopyOverLoaderComp</name>
     <filename>classibase_1_1_c_file_copy_over_loader_comp.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">ibase::IFileConvertCopy</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classibase_1_1_c_file_copy_over_loader_comp.html</anchorfile>
-      <anchor>ac9405d94d6613bc27ac7afa85320d5c4</anchor>
+      <anchor>a01af731da47b4ecada2d7bf117387842</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
