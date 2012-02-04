@@ -31,6 +31,9 @@ namespace imeas
 {
 
 
+/**
+	General implementation of the IDataStatistics interface.
+*/
 class CDataStatistics: virtual public imeas::IDataStatistics
 {
 public:

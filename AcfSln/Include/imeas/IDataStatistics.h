@@ -33,6 +33,10 @@ namespace imeas
 {
 
 
+/**
+	Common interace for simple data statistics.
+	\TODO: think about moving it to imath.
+*/
 class IDataStatistics: virtual public iser::ISerializable
 {
 public:

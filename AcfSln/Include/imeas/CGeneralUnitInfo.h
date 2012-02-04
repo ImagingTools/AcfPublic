@@ -32,6 +32,9 @@ namespace imeas
 {
 
 
+/**
+	General implementation of the IUnitInfo interface.
+*/
 class CGeneralUnitInfo: virtual public IUnitInfo
 {
 public:
