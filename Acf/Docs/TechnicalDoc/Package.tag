@@ -3053,6 +3053,14 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
+    <name>TParamsPtr.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_t_params_ptr_8h</filename>
+    <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
+    <class kind="class">iprm::TParamsPtr</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCascadedProcessorComp.h</name>
     <path>C:/Temp/Acf/Include/iproc/</path>
     <filename>_c_cascaded_processor_comp_8h</filename>
@@ -27304,6 +27312,7 @@
     <class kind="class">iprm::ISelectionConstraints</class>
     <class kind="class">iprm::ISelectionParam</class>
     <class kind="class">iprm::IVariableParam</class>
+    <class kind="class">iprm::TParamsPtr</class>
   </compound>
   <compound kind="class">
     <name>iprm::CComposedParamsSetComp</name>
@@ -28840,6 +28849,40 @@
       <anchorfile>classiprm_1_1_i_variable_param.html</anchorfile>
       <anchor>a09d03ec12c861f2d7c3ad8a1b28e38d0</anchor>
       <arglist>(const std::string &amp;typeId)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::TParamsPtr</name>
+    <filename>classiprm_1_1_t_params_ptr.html</filename>
+    <templarg></templarg>
+    <base>TPointerBase&lt; ParameterInterace &gt;</base>
+    <member kind="typedef">
+      <type>istd::TPointerBase&lt; ParameterInterace &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
+      <anchor>a9725dd4552f42705afb87b4d4fa841f8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TParamsPtr</name>
+      <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
+      <anchor>a69c5a48c381617251c08e2e32263fadb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TParamsPtr</name>
+      <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
+      <anchor>a3c35bfc4a19630ab2ff6418c953f9b76</anchor>
+      <arglist>(const IParamsSet *parameterSetPtr, const std::string &amp;parameterId)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Init</name>
+      <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
+      <anchor>a6554de12e0cfaac45ff4827866ecf53a</anchor>
+      <arglist>(const IParamsSet *parameterSetPtrPtr, const std::string &amp;parameterId)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
