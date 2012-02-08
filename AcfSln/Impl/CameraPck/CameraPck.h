@@ -32,6 +32,7 @@
 #include "icam/CSnapBitmapSupplierComp.h"
 #include "icam/CMemoryAcquisitionComp.h"
 #include "icam/CAcquisitionConstraintsComp.h"
+#include "icam/CSelectionParamCameraComp.h"
 
 
 /**
@@ -45,6 +46,7 @@ typedef icomp::TModelCompWrap<icam::CExposureParamsComp> ExposureParams;
 typedef icomp::TModelCompWrap<icam::CSnapBitmapSupplierComp> SnapBitmapSupplier;
 typedef icam::CMemoryAcquisitionComp MemoryAcquisition;
 typedef icam::CAcquisitionConstraintsComp AcquisitionConstraints;
+typedef icam::CSelectionParamCameraComp SelectionParamCamera;
 
 
 } // namespace CameraPck

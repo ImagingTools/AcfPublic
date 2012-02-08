@@ -131,6 +131,15 @@
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
+    <name>CSelectionParamCameraComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
+    <filename>_c_selection_param_camera_comp_8h</filename>
+    <includes id="_c_camera_delegator_base_8h" name="CCameraDelegatorBase.h" local="yes" imported="no">icam/CCameraDelegatorBase.h</includes>
+    <class kind="class">icam::CSelectionParamCameraComp</class>
+    <class kind="class">icam::CSelectionParamCameraComp::JoinParamsSet</class>
+    <namespace>icam</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSnapBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_snap_bitmap_supplier_comp_8h</filename>
@@ -1917,6 +1926,13 @@
     <namespace>isig</namespace>
   </compound>
   <compound kind="file">
+    <name>ITriggerController.h</name>
+    <path>C:/Temp/AcfSln/Include/isig/</path>
+    <filename>_i_trigger_controller_8h</filename>
+    <class kind="class">isig::ITriggerController</class>
+    <namespace>isig</namespace>
+  </compound>
+  <compound kind="file">
     <name>ITriggerParams.h</name>
     <path>C:/Temp/AcfSln/Include/isig/</path>
     <filename>_i_trigger_params_8h</filename>
@@ -2464,6 +2480,7 @@
     <class kind="class">icam::CCameraDelegatorBase</class>
     <class kind="class">icam::CExposureParamsComp</class>
     <class kind="class">icam::CMemoryAcquisitionComp</class>
+    <class kind="class">icam::CSelectionParamCameraComp</class>
     <class kind="class">icam::CSnapBitmapSupplierComp</class>
     <class kind="class">icam::IExposureConstraints</class>
     <class kind="class">icam::IExposureParams</class>
@@ -2709,6 +2726,115 @@
       <anchorfile>classicam_1_1_c_memory_acquisition_comp.html</anchorfile>
       <anchor>a394e0c7c42c4be073bb754043d0ade71</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icam::CSelectionParamCameraComp</name>
+    <filename>classicam_1_1_c_selection_param_camera_comp.html</filename>
+    <base>icam::CCameraDelegatorBase</base>
+    <class kind="class">icam::CSelectionParamCameraComp::JoinParamsSet</class>
+    <member kind="typedef">
+      <type>CCameraDelegatorBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp.html</anchorfile>
+      <anchor>aa160ff1248a9548e5a5f8f47c8263cbe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetBitmapSize</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp.html</anchorfile>
+      <anchor>ae61961851e1620f8e901e18cc33d3664</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp.html</anchorfile>
+      <anchor>a91124974d2d95435d6bee8a4cf5aa49b</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp.html</anchorfile>
+      <anchor>a98af8a29b2a42561b7b1935b2fe57ffc</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp.html</anchorfile>
+      <anchor>aac988b742826f1a775525b7e63634772</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp.html</anchorfile>
+      <anchor>aa7d8ed18f8d62e7c88c4e73d680eb515</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp.html</anchorfile>
+      <anchor>ab5a45573868ef92f3217a381bbf57254</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp.html</anchorfile>
+      <anchor>ad95f7ed0576fc781ba6b9222b7c78495</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp.html</anchorfile>
+      <anchor>a7e77247cd6993175bc9225499b0ae2cd</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const iprm::IParamsSet *</type>
+      <name>CreateParamsSet</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp.html</anchorfile>
+      <anchor>a272335b59aee257a8f0e5babdf95d181</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icam::CSelectionParamCameraComp::JoinParamsSet</name>
+    <filename>classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html</filename>
+    <base virtualness="virtual">iprm::IParamsSet</base>
+    <member kind="function">
+      <type></type>
+      <name>JoinParamsSet</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html</anchorfile>
+      <anchor>a7384e0a73cb825875442be5673a4959e</anchor>
+      <arglist>(const iprm::IParamsSet *origParamsPtr, const iprm::IParamsSet *selectedParamsPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::ISerializable *</type>
+      <name>GetParameter</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html</anchorfile>
+      <anchor>a7c33a9f09183491068814c98714914b7</anchor>
+      <arglist>(const std::string &amp;id) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iser::ISerializable *</type>
+      <name>GetEditableParameter</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html</anchorfile>
+      <anchor>afa0ef8b8eeca848144c35076f3964b49</anchor>
+      <arglist>(const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html</anchorfile>
+      <anchor>aabab34973c711f33087145e8aa8a81f7</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13821,6 +13947,7 @@
     <class kind="class">isig::ISamplingConstraints</class>
     <class kind="class">isig::ISamplingParams</class>
     <class kind="class">isig::ITriggerConstraints</class>
+    <class kind="class">isig::ITriggerController</class>
     <class kind="class">isig::ITriggerParams</class>
   </compound>
   <compound kind="class">
@@ -14332,6 +14459,25 @@
       <anchorfile>classisig_1_1_i_trigger_constraints.html</anchorfile>
       <anchor>ac3e65147f53a4110240add5d288bb668</anchor>
       <arglist>(int triggerMode) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>isig::ITriggerController</name>
+    <filename>classisig_1_1_i_trigger_controller.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsSoftwareTriggerActive</name>
+      <anchorfile>classisig_1_1_i_trigger_controller.html</anchorfile>
+      <anchor>a3b1c38fad790ed47e7f045c91d7f84ba</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SendSoftwareTrigger</name>
+      <anchorfile>classisig_1_1_i_trigger_controller.html</anchorfile>
+      <anchor>ac70438f0963ca6ba53ca2f759bb5ac61</anchor>
+      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
