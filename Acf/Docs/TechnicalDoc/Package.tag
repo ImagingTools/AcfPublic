@@ -3693,6 +3693,7 @@
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
     <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
+    <includes id="_c_rect_8h" name="CRect.h" local="yes" imported="no">i2d/CRect.h</includes>
     <namespace>iqt</namespace>
     <member kind="function">
       <type>QString</type>
@@ -3833,6 +3834,20 @@
       <anchorfile>namespaceiqt.html</anchorfile>
       <anchor>ae36880c4f1ca011484ac14f02bf5a10a</anchor>
       <arglist>(const QDateTime &amp;dateTime)</arglist>
+    </member>
+    <member kind="function">
+      <type>QRect</type>
+      <name>GetQRect</name>
+      <anchorfile>namespaceiqt.html</anchorfile>
+      <anchor>a69428c4351445965cfc7bed0a0d9b76c</anchor>
+      <arglist>(const i2d::CRect &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CRect</type>
+      <name>GetCRect</name>
+      <anchorfile>namespaceiqt.html</anchorfile>
+      <anchor>ad635ba81a0d67a239cbafd11fcf7d13b</anchor>
+      <arglist>(const QRect &amp;rect)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -30285,6 +30300,20 @@
       <anchorfile>namespaceiqt.html</anchorfile>
       <anchor>ae36880c4f1ca011484ac14f02bf5a10a</anchor>
       <arglist>(const QDateTime &amp;dateTime)</arglist>
+    </member>
+    <member kind="function">
+      <type>QRect</type>
+      <name>GetQRect</name>
+      <anchorfile>namespaceiqt.html</anchorfile>
+      <anchor>a69428c4351445965cfc7bed0a0d9b76c</anchor>
+      <arglist>(const i2d::CRect &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CRect</type>
+      <name>GetCRect</name>
+      <anchorfile>namespaceiqt.html</anchorfile>
+      <anchor>ad635ba81a0d67a239cbafd11fcf7d13b</anchor>
+      <arglist>(const QRect &amp;rect)</arglist>
     </member>
   </compound>
   <compound kind="class">
