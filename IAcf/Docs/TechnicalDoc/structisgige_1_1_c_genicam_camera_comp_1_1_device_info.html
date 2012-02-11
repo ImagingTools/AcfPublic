@@ -44,7 +44,11 @@
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html#a711886dbe9075215055e743de3492097">DeviceInfo</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html#a206eaf76940f7ecb740c82a8ac0e8f3a">DeviceInfo</a> (<a class="el" href="classisgige_1_1_c_genicam_camera_comp.html">CGenicamCameraComp</a> *parentPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html#ab1cd26bf315e4a9b1ebf3cf09c8f2682">~DeviceInfo</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html#a064cab91f2fd0d69255ec019af33f7dd">EnsureConnected</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html#a2d4349bf378709fb4173cf7af17fe70e">EnsureStarted</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html#a1650fda9ea18acf78c8f12a7baadad87">EnsureStopped</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html#add16f6265426bde4e791c604dcae7ac5">exposureTime</a></td></tr>
@@ -54,29 +58,91 @@ Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rectangle.html">i2d::CRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html#a4f808cd196204472f2ad21bfe6aff32a">roi</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">gige::IDevice&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html#a7ed6da3d2ad709ec7946753f8b284594">devicePtr</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html#acdbfd3070ae8e203a8f8c00887b8977e">cameraId</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html#a942cd5e5fa6467fa4b541fbcff4f28c5">isInitialized</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html#a62ad19b6ba6c269da698ad0e085d32ca">isStarted</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00114">114</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00134">134</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a711886dbe9075215055e743de3492097"></a><!-- doxytag: member="isgige::CGenicamCameraComp::DeviceInfo::DeviceInfo" ref="a711886dbe9075215055e743de3492097" args="()" -->
+<a class="anchor" id="a206eaf76940f7ecb740c82a8ac0e8f3a"></a><!-- doxytag: member="isgige::CGenicamCameraComp::DeviceInfo::DeviceInfo" ref="a206eaf76940f7ecb740c82a8ac0e8f3a" args="(CGenicamCameraComp *parentPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">isgige::CGenicamCameraComp::DeviceInfo::DeviceInfo </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [inline]</code></td>
+          <td class="paramtype"><a class="el" href="classisgige_1_1_c_genicam_camera_comp.html">CGenicamCameraComp</a> *&#160;</td>
+          <td class="paramname"><em>parentPtr</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00116">116</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
+</div>
+</div>
+<a class="anchor" id="ab1cd26bf315e4a9b1ebf3cf09c8f2682"></a><!-- doxytag: member="isgige::CGenicamCameraComp::DeviceInfo::~DeviceInfo" ref="ab1cd26bf315e4a9b1ebf3cf09c8f2682" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">isgige::CGenicamCameraComp::DeviceInfo::~DeviceInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
-<p>References <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00127">brightness</a>, <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00128">contrast</a>, <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00126">exposureTime</a>, <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00136">isInitialized</a>, and <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00129">triggerMode</a>.</p>
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a064cab91f2fd0d69255ec019af33f7dd"></a><!-- doxytag: member="isgige::CGenicamCameraComp::DeviceInfo::EnsureConnected" ref="a064cab91f2fd0d69255ec019af33f7dd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isgige::CGenicamCameraComp::DeviceInfo::EnsureConnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2d4349bf378709fb4173cf7af17fe70e"></a><!-- doxytag: member="isgige::CGenicamCameraComp::DeviceInfo::EnsureStarted" ref="a2d4349bf378709fb4173cf7af17fe70e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isgige::CGenicamCameraComp::DeviceInfo::EnsureStarted </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1650fda9ea18acf78c8f12a7baadad87"></a><!-- doxytag: member="isgige::CGenicamCameraComp::DeviceInfo::EnsureStopped" ref="a1650fda9ea18acf78c8f12a7baadad87" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isgige::CGenicamCameraComp::DeviceInfo::EnsureStopped </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -92,9 +158,7 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00127">127</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
-
-<p>Referenced by <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00116">DeviceInfo()</a>.</p>
+<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00145">145</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
 
 </div>
 </div>
@@ -109,7 +173,7 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00134">134</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00152">152</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
 
 </div>
 </div>
@@ -124,9 +188,7 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00128">128</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
-
-<p>Referenced by <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00116">DeviceInfo()</a>.</p>
+<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00146">146</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
 
 </div>
 </div>
@@ -141,7 +203,7 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00132">132</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00150">150</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
 
 </div>
 </div>
@@ -156,26 +218,22 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00126">126</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
-
-<p>Referenced by <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00116">DeviceInfo()</a>.</p>
+<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00144">144</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a942cd5e5fa6467fa4b541fbcff4f28c5"></a><!-- doxytag: member="isgige::CGenicamCameraComp::DeviceInfo::isInitialized" ref="a942cd5e5fa6467fa4b541fbcff4f28c5" args="" -->
+<a class="anchor" id="a62ad19b6ba6c269da698ad0e085d32ca"></a><!-- doxytag: member="isgige::CGenicamCameraComp::DeviceInfo::isStarted" ref="a62ad19b6ba6c269da698ad0e085d32ca" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html#a942cd5e5fa6467fa4b541fbcff4f28c5">isgige::CGenicamCameraComp::DeviceInfo::isInitialized</a></td>
+          <td class="memname">bool <a class="el" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html#a62ad19b6ba6c269da698ad0e085d32ca">isgige::CGenicamCameraComp::DeviceInfo::isStarted</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00136">136</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
-
-<p>Referenced by <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00116">DeviceInfo()</a>.</p>
+<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00154">154</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
 
 </div>
 </div>
@@ -190,7 +248,7 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00130">130</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00148">148</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
 
 </div>
 </div>
@@ -205,9 +263,7 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00129">129</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
-
-<p>Referenced by <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00116">DeviceInfo()</a>.</p>
+<p>Definition at line <a class="el" href="_c_genicam_camera_comp_8h_source.html#l00147">147</a> of file <a class="el" href="_c_genicam_camera_comp_8h_source.html">CGenicamCameraComp.h</a>.</p>
 
 </div>
 </div>

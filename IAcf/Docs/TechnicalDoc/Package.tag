@@ -288,6 +288,7 @@
     <path>C:/Temp/Iacf/Include/isgige/</path>
     <filename>_c_genicam_camera_comp_8h</filename>
     <includes id="_c_genicam_camera_singleton_8h" name="CGenicamCameraSingleton.h" local="yes" imported="no">isgige/CGenicamCameraSingleton.h</includes>
+    <class kind="class">isgige::CGenicamCameraCompBase</class>
     <class kind="class">isgige::CGenicamCameraComp</class>
     <class kind="struct">isgige::CGenicamCameraComp::DeviceInfo</class>
     <namespace>isgige</namespace>
@@ -2375,14 +2376,27 @@
   <compound kind="namespace">
     <name>isgige</name>
     <filename>namespaceisgige.html</filename>
+    <class kind="class">isgige::CGenicamCameraCompBase</class>
     <class kind="class">isgige::CGenicamCameraComp</class>
     <class kind="class">isgige::CGenicamCameraSingleton</class>
+  </compound>
+  <compound kind="class">
+    <name>isgige::CGenicamCameraCompBase</name>
+    <filename>classisgige_1_1_c_genicam_camera_comp_base.html</filename>
+    <base>ibase::TLoggerCompWrap</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classisgige_1_1_c_genicam_camera_comp_base.html</anchorfile>
+      <anchor>a2cf598ba0ecb26923bda9c7d5a60b2fd</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>isgige::CGenicamCameraComp</name>
     <filename>classisgige_1_1_c_genicam_camera_comp.html</filename>
     <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>isgige::CGenicamCameraCompBase</base>
     <base>TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</base>
     <base virtualness="virtual">icam::IExposureConstraints</base>
     <base virtualness="virtual">isig::ITriggerConstraints</base>
@@ -2431,10 +2445,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>CGenicamCameraCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>aa5db57cf1d0a1337b75c79618a8b5271</anchor>
+      <anchor>aec78ee388c9955c7f52f262b47c26dd6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -2564,6 +2578,13 @@
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
+      <type>const iprm::ILinearAdjustParams *</type>
+      <name>GetAdjustFromParams</name>
+      <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
+      <anchor>a2a78a87c07ae0230d7e3b5d883262506</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
       <type>const i2d::CRectangle *</type>
       <name>GetRoiFromParams</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
@@ -2598,6 +2619,13 @@
       <anchor>a562cfb945ccb1164ed19546647c98377</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
+      <anchor>a246262fd2523d4d37ae5c47ddc0c4921</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>isgige::CGenicamCameraComp::DeviceInfo</name>
@@ -2606,7 +2634,35 @@
       <type></type>
       <name>DeviceInfo</name>
       <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
-      <anchor>a711886dbe9075215055e743de3492097</anchor>
+      <anchor>a206eaf76940f7ecb740c82a8ac0e8f3a</anchor>
+      <arglist>(CGenicamCameraComp *parentPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~DeviceInfo</name>
+      <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
+      <anchor>ab1cd26bf315e4a9b1ebf3cf09c8f2682</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>EnsureConnected</name>
+      <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
+      <anchor>a064cab91f2fd0d69255ec019af33f7dd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>EnsureStarted</name>
+      <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
+      <anchor>a2d4349bf378709fb4173cf7af17fe70e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>EnsureStopped</name>
+      <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
+      <anchor>a1650fda9ea18acf78c8f12a7baadad87</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable">
@@ -2660,9 +2716,9 @@
     </member>
     <member kind="variable">
       <type>bool</type>
-      <name>isInitialized</name>
+      <name>isStarted</name>
       <anchorfile>structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html</anchorfile>
-      <anchor>a942cd5e5fa6467fa4b541fbcff4f28c5</anchor>
+      <anchor>a62ad19b6ba6c269da698ad0e085d32ca</anchor>
       <arglist></arglist>
     </member>
   </compound>
