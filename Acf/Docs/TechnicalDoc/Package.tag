@@ -4613,6 +4613,13 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CWidgetUpdateBlocker.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_widget_update_blocker_8h</filename>
+    <class kind="class">iqtgui::CWidgetUpdateBlocker</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>IDialog.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_i_dialog_8h</filename>
@@ -36219,6 +36226,7 @@
     <class kind="class">iqtgui::CTextElider</class>
     <class kind="class">iqtgui::CToolBarWidgetGuiComp</class>
     <class kind="class">iqtgui::CTreeWidgetFilter</class>
+    <class kind="class">iqtgui::CWidgetUpdateBlocker</class>
     <class kind="class">iqtgui::IDialog</class>
     <class kind="class">iqtgui::IDropConsumer</class>
     <class kind="class">iqtgui::IGuiApplication</class>
@@ -38199,6 +38207,24 @@
       <anchorfile>classiqtgui_1_1_c_tree_widget_filter.html</anchorfile>
       <anchor>a856e1ef1c2db44fbcfbc1e94a6796250</anchor>
       <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CWidgetUpdateBlocker</name>
+    <filename>classiqtgui_1_1_c_widget_update_blocker.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CWidgetUpdateBlocker</name>
+      <anchorfile>classiqtgui_1_1_c_widget_update_blocker.html</anchorfile>
+      <anchor>affa280a58d1c4da76754e4f46dc9094b</anchor>
+      <arglist>(QWidget *widgetPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~CWidgetUpdateBlocker</name>
+      <anchorfile>classiqtgui_1_1_c_widget_update_blocker.html</anchorfile>
+      <anchor>ad546275fb36858a3f6b2059909348c60</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

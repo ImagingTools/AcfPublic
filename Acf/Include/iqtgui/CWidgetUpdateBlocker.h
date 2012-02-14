@@ -20,25 +20,49 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef iqtgui_CWidgetUpdateBlocker_included
+#define iqtgui_CWidgetUpdateBlocker_included
 
 
-namespace istd
+
+namespace iqtgui
 {
 
 
-enum RepositoryState
+/**
+	Help class used to block widget update till it is destructed.
+*/
+class CWidgetUpdateBlocker
 {
-	RS_ORIGINAL_VERSION =  2179,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	CWidgetUpdateBlocker(QWidget* widgetPtr);
+	~CWidgetUpdateBlocker();
+
+private:
+	QWidget* m_widgetPtr;
 };
 
 
-} // namespace istd
+// inline methods
+
+inline CWidgetUpdateBlocker::CWidgetUpdateBlocker(QWidget* widgetPtr)
+	:m_widgetPtr(widgetPtr)
+{
+	I_ASSERT(widgetPtr != NULL);
+
+	m_widgetPtr->setUpdatesEnabled(false);
+}
 
 
-#endif // !istd_AcfVersion_included
+inline CWidgetUpdateBlocker::~CWidgetUpdateBlocker()
+{
+	m_widgetPtr->setUpdatesEnabled(true);
+}
+
+
+} // namespace iqtgui
+
+
+#endif // !iqtgui_CWidgetUpdateBlocker_included
 
 
