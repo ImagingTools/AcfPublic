@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef imeas_CNumericParamsComp_included
-#define imeas_CNumericParamsComp_included
+#ifndef imeas_CNumericConstraintsComp_included
+#define imeas_CNumericConstraintsComp_included
 
 
 // ACF includes
@@ -40,49 +40,34 @@ namespace imeas
 
 
 /**
-	Component implementating imeas::INumericParams interface.
-	All parameter constraints can be defined directly or can use external implementation.
+	Simple implementation of imeas::INumericConstraints interface.
+	All values use the same units, ranges and descriptions.
 */
-class CNumericParamsComp:
+class CNumericConstraintsComp:
 			public icomp::CComponentBase,
-			virtual public INumericParams,
-			virtual protected INumericConstraints,
+			virtual public INumericConstraints,
 			virtual protected imeas::IUnitInfo
 {
 public:
 	typedef icomp::CComponentBase BaseClass;
 
-	I_BEGIN_COMPONENT(CNumericParamsComp);
-		I_REGISTER_INTERFACE(istd::IChangeable);
-		I_REGISTER_INTERFACE(iser::ISerializable);
-		I_REGISTER_INTERFACE(INumericParams);
-		I_ASSIGN(m_dimensionsCountAttrPtr, "ValuesCount", "Default number of numeric values (will be used if no constraints set)", true, 1);
-		I_ASSIGN(m_minValueAttrPtr, "MinValues", "Minimal value (will be used if no constraints set)", true, 1);
-		I_ASSIGN(m_maxValueAttrPtr, "MaxValues", "Maximal value (will be used if no constraints set)", true, 10);
-		I_ASSIGN_MULTI_0(m_defaultValuesAttrPtr, "Values", "Default values", false);
-		I_ASSIGN(m_constraintsCompPtr, "Constraints", "Constraints object describing possible parameter values", false, "Constraints");
+	I_BEGIN_COMPONENT(CNumericConstraintsComp);
+		I_REGISTER_INTERFACE(INumericConstraints);
+		I_ASSIGN(m_dimensionsCountAttrPtr, "ValuesCount", "Default number of numeric values", true, 1);
+		I_ASSIGN(m_elementDescriptionAttrPtr, "ValueDescription", "Description of single value", true, "Value");
+		I_ASSIGN(m_unitTypeAttrPtr, "UnitType", "Type of unit\n\t0 - unknown,\n\t1 - physical,\n\t2 - technical,\n\t3 - relative", true, 0);
+		I_ASSIGN(m_unitNameAttrPtr, "UnitName", "Name of unit", true, "");
+		I_ASSIGN(m_displayMultFactorAttrPtr, "DisplayMultFactor", "Scale factor used for display, e.g for unit name '%' it will be 100", true, 1);
+		I_ASSIGN(m_minValueAttrPtr, "MinValue", "Minimal value", true, 0);
+		I_ASSIGN(m_maxValueAttrPtr, "MaxValue", "Maximal value", true, 1);
 	I_END_COMPONENT;
-
-	// reimplemented (imeas::INumericParams)
-	virtual const INumericConstraints* GetNumericConstraints() const;
-	virtual imath::CVarVector GetValues() const;
-	virtual bool SetValues(const imath::CVarVector& lengths);
-
-	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive);
-
-	// reimplemented (istd::IChangeable)
-	virtual bool CopyFrom(const IChangeable& object);
-
-protected:
-	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated();
 
 	// reimplemented (imeas::INumericConstraints)
 	virtual int GetNumericValuesCount() const;
 	virtual istd::CString GetNumericValueDescription(int index) const;
 	virtual const imeas::IUnitInfo& GetNumericValueUnitInfo(int index) const;
 
+protected:
 	// reimplemented (imeas::IUnitInfo)
 	virtual int GetUnitType() const;
 	virtual istd::CString GetUnitName() const;
@@ -91,19 +76,19 @@ protected:
 	virtual const imath::IDoubleManip& GetValueManip() const;
 
 private:
-	imath::CVarVector m_values;
-
 	I_ATTR(int, m_dimensionsCountAttrPtr);
+	I_ATTR(istd::CString, m_elementDescriptionAttrPtr);
+	I_ATTR(int, m_unitTypeAttrPtr);
+	I_ATTR(istd::CString, m_unitNameAttrPtr);
+	I_ATTR(double, m_displayMultFactorAttrPtr);
 	I_ATTR(double, m_minValueAttrPtr);
 	I_ATTR(double, m_maxValueAttrPtr);
-	I_MULTIATTR(double, m_defaultValuesAttrPtr);
-	I_REF(INumericConstraints, m_constraintsCompPtr);
 };
 
 
 } // namespace imeas
 
 
-#endif // !imeas_CNumericParamsComp_included
+#endif // !imeas_CNumericConstraintsComp_included
 
 

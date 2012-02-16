@@ -44,12 +44,12 @@
 <a name="l00020"></a><a class="code" href="classiprm_1_1_i_params_manager.html">00020</a> <span class="keyword">class </span><a class="code" href="classiprm_1_1_i_params_manager.html" title="Manager of parameters set.">IParamsManager</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iprm::<a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00026"></a><a class="code" href="classiprm_1_1_i_params_manager.html#a828fad5fe35ddd65d23b2e7e49af7bb3">00026</a>        <span class="keyword">enum</span> <a class="code" href="classiprm_1_1_i_params_manager.html#a828fad5fe35ddd65d23b2e7e49af7bb3" title="Bitwise coded flags used to find out supported features.">ManagerFlags</a>
+<a name="l00026"></a><a class="code" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6">00026</a>        <span class="keyword">enum</span> <a class="code" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6" title="Bitwise coded flags used to find out supported features.">ParamsOperationFlags</a>
 <a name="l00027"></a>00027        {
-<a name="l00028"></a><a class="code" href="classiprm_1_1_i_params_manager.html#a828fad5fe35ddd65d23b2e7e49af7bb3a7dbf8fddc794870a1d20ddc7586356a8">00028</a>               <a class="code" href="classiprm_1_1_i_params_manager.html#a828fad5fe35ddd65d23b2e7e49af7bb3a7dbf8fddc794870a1d20ddc7586356a8">MF_COUNT_FIXED</a> = 1,
-<a name="l00029"></a><a class="code" href="classiprm_1_1_i_params_manager.html#a828fad5fe35ddd65d23b2e7e49af7bb3a9b9fa31364a072b2e8c6524cf12e7257">00029</a>               <a class="code" href="classiprm_1_1_i_params_manager.html#a828fad5fe35ddd65d23b2e7e49af7bb3a9b9fa31364a072b2e8c6524cf12e7257">MF_NAME_FIXED</a> = 2,
-<a name="l00030"></a><a class="code" href="classiprm_1_1_i_params_manager.html#a828fad5fe35ddd65d23b2e7e49af7bb3af219625f5f5e4a1d5125c3ecd6353c31">00030</a>               <a class="code" href="classiprm_1_1_i_params_manager.html#a828fad5fe35ddd65d23b2e7e49af7bb3af219625f5f5e4a1d5125c3ecd6353c31">MF_NO_INSERT</a> = 4,
-<a name="l00031"></a><a class="code" href="classiprm_1_1_i_params_manager.html#a828fad5fe35ddd65d23b2e7e49af7bb3a40f040a1c9c77e0ae859f3df1cfeae7f">00031</a>               <a class="code" href="classiprm_1_1_i_params_manager.html#a828fad5fe35ddd65d23b2e7e49af7bb3a40f040a1c9c77e0ae859f3df1cfeae7f">MF_NO_DELETE</a> = 8
+<a name="l00028"></a><a class="code" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6a7dbf8fddc794870a1d20ddc7586356a8">00028</a>               <a class="code" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6a7dbf8fddc794870a1d20ddc7586356a8">MF_COUNT_FIXED</a> = 1,
+<a name="l00029"></a><a class="code" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6a9b9fa31364a072b2e8c6524cf12e7257">00029</a>               <a class="code" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6a9b9fa31364a072b2e8c6524cf12e7257">MF_NAME_FIXED</a> = 2,
+<a name="l00030"></a><a class="code" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6af219625f5f5e4a1d5125c3ecd6353c31">00030</a>               <a class="code" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6af219625f5f5e4a1d5125c3ecd6353c31">MF_NO_INSERT</a> = 4,
+<a name="l00031"></a><a class="code" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6a40f040a1c9c77e0ae859f3df1cfeae7f">00031</a>               <a class="code" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6a40f040a1c9c77e0ae859f3df1cfeae7f">MF_NO_DELETE</a> = 8
 <a name="l00032"></a>00032        };
 <a name="l00033"></a>00033 
 <a name="l00037"></a><a class="code" href="classiprm_1_1_i_params_manager.html#a46124baa6dd501af2dd542770efe4b0b">00037</a>        <span class="keyword">enum</span> <a class="code" href="classiprm_1_1_i_params_manager.html#a46124baa6dd501af2dd542770efe4b0b" title="Possible changes of the manager&#39;s data model.">ChangeFlags</a>
@@ -59,28 +59,28 @@
 <a name="l00041"></a><a class="code" href="classiprm_1_1_i_params_manager.html#a46124baa6dd501af2dd542770efe4b0bac101d999e270c31d7fb7bf4dee03ddb7">00041</a>               <a class="code" href="classiprm_1_1_i_params_manager.html#a46124baa6dd501af2dd542770efe4b0bac101d999e270c31d7fb7bf4dee03ddb7">CF_SET_NAME_CHANGED</a> = 1 &lt;&lt; 16
 <a name="l00042"></a>00042        };
 <a name="l00043"></a>00043 
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_i_params_manager.html#a211e4d73b43018d3fafb57cb06c07d6e" title="Get control flags of this manager.">GetManagerFlags</a>() <span class="keyword">const</span> = 0;
-<a name="l00049"></a>00049 
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_i_params_manager.html#a5d210a6109d010b5bc4057db9b089f9c" title="Get number of managed set.">GetParamsSetsCount</a>() <span class="keyword">const</span> = 0;
-<a name="l00054"></a>00054 
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_params_manager.html#ad36b0b3dddf7585c1c47cf9458307350" title="Insert new parameters set at selected position or at the and of the list.">InsertParamsSet</a>(<span class="keywordtype">int</span> index = -1) = 0;
-<a name="l00059"></a>00059 
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_params_manager.html#ac8e5810d12adbb2a28a2a6419caf27d8" title="Remove parameters set at selected position.">RemoveParamsSet</a>(<span class="keywordtype">int</span> index) = 0;
-<a name="l00064"></a>00064 
-<a name="l00068"></a>00068        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>* <a class="code" href="classiprm_1_1_i_params_manager.html#a6adca790d307f482019f49ad5d36e594" title="Get selected parameter set.">GetParamsSet</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
-<a name="l00069"></a>00069 
-<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classiprm_1_1_i_params_manager.html#ab7fc55d46add78e67ab18a3cabc68180" title="Get name of specified parameter set.">GetParamsSetName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
-<a name="l00074"></a>00074 
-<a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_params_manager.html#afa8720f778cd85c06adc546c8be84fa2" title="Set name of specified parameter set.">SetParamsSetName</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; name) = 0;
-<a name="l00079"></a>00079 };
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082 } <span class="comment">// namespace iprm</span>
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_i_params_manager.html#a0508f9eee4a8527a026a69b39e6e0216" title="Get operation control flags of some paramter set or whole manager.">GetIndexOperationFlags</a>(<span class="keywordtype">int</span> index = -1) <span class="keyword">const</span> = 0;
+<a name="l00055"></a>00055 
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_i_params_manager.html#a5d210a6109d010b5bc4057db9b089f9c" title="Get number of managed set.">GetParamsSetsCount</a>() <span class="keyword">const</span> = 0;
+<a name="l00060"></a>00060 
+<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_i_params_manager.html#a17e34751966ff799f1d1b0202bad65ad" title="Insert new parameters set at selected position.">InsertParamsSet</a>(<span class="keywordtype">int</span> index = -1) = 0;
+<a name="l00068"></a>00068 
+<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_params_manager.html#ac8e5810d12adbb2a28a2a6419caf27d8" title="Remove parameters set at selected position.">RemoveParamsSet</a>(<span class="keywordtype">int</span> index) = 0;
+<a name="l00073"></a>00073 
+<a name="l00077"></a>00077        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>* <a class="code" href="classiprm_1_1_i_params_manager.html#a6adca790d307f482019f49ad5d36e594" title="Get selected parameter set.">GetParamsSet</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
+<a name="l00078"></a>00078 
+<a name="l00082"></a>00082        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classiprm_1_1_i_params_manager.html#ab7fc55d46add78e67ab18a3cabc68180" title="Get name of specified parameter set.">GetParamsSetName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085 <span class="preprocessor">#endif // !iprm_IParamsManager_included</span>
-<a name="l00086"></a>00086 <span class="preprocessor"></span>
-<a name="l00087"></a>00087 
+<a name="l00087"></a>00087        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_params_manager.html#afa8720f778cd85c06adc546c8be84fa2" title="Set name of specified parameter set.">SetParamsSetName</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; name) = 0;
+<a name="l00088"></a>00088 };
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 } <span class="comment">// namespace iprm</span>
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 <span class="preprocessor">#endif // !iprm_IParamsManager_included</span>
+<a name="l00095"></a>00095 <span class="preprocessor"></span>
+<a name="l00096"></a>00096 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

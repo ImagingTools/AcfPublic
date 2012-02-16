@@ -989,6 +989,10 @@
 , <a class="el" href="classiimg_1_1_i_raster_image.html#aa85b38b917a050808e72ee497c2c0f01">iimg::IRasterImage</a>
 , <a class="el" href="classiqt_1_1_c_bitmap.html#aa742c88df939191041351a7299858974">iqt::CBitmap</a>
 </li>
+<li>GetIndexOperationFlags()
+: <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a6c6a8deb0948740fe4558d220a3c893c">iprm::CParamsManagerComp</a>
+, <a class="el" href="classiprm_1_1_i_params_manager.html#a0508f9eee4a8527a026a69b39e6e0216">iprm::IParamsManager</a>
+</li>
 <li>GetInfo()
 : <a class="el" href="classistd_1_1_c_class_info.html#a46bdcff7600b3b3ed435662e3503bf53">istd::CClassInfo</a>
 </li>
@@ -1020,10 +1024,11 @@
 , <a class="el" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">imath::CFixedPointManip</a>
 </li>
 <li>GetIntersection()
-: <a class="el" href="classi2d_1_1_c_line2d.html#add9c2ddcbdbf6a49be412ac04264b4e2">i2d::CLine2d</a>
+: <a class="el" href="classi2d_1_1_c_rectangle.html#a9bcc0e25e6d4345b5980c756239cea37">i2d::CRectangle</a>
+, <a class="el" href="classistd_1_1_t_range.html#ac1f5d563fd50eca3e15577106735a26e">istd::TRange&lt; ValueType &gt;</a>
+, <a class="el" href="classi2d_1_1_c_line2d.html#add9c2ddcbdbf6a49be412ac04264b4e2">i2d::CLine2d</a>
 , <a class="el" href="classi2d_1_1_c_rect.html#a28c397da891e3d35ab5be48a375021d7">i2d::CRect</a>
 , <a class="el" href="classi2d_1_1_c_rectangle.html#a9a8f156a3135b70ae6924ae289e14ea5">i2d::CRectangle</a>
-, <a class="el" href="classistd_1_1_t_range.html#ac1f5d563fd50eca3e15577106735a26e">istd::TRange&lt; ValueType &gt;</a>
 </li>
 <li>GetInvalid()
 : <a class="el" href="classistd_1_1_t_index.html#ac966ddf05e5739448e6a61fd03aa2df9">istd::TIndex&lt; Dimensions &gt;</a>
@@ -1217,10 +1222,6 @@
 <li>GetMainVersionId()
 : <a class="el" href="classibase_1_1_c_application_info_comp.html#a3135d691aed415947288601ca8d25f51">ibase::CApplicationInfoComp</a>
 , <a class="el" href="classibase_1_1_i_application_info.html#a33f53c389a86618ea6476bf8fa872476">ibase::IApplicationInfo</a>
-</li>
-<li>GetManagerFlags()
-: <a class="el" href="classiprm_1_1_c_params_manager_comp.html#acfc8b214fc7f9d5f14e297404f8c746c">iprm::CParamsManagerComp</a>
-, <a class="el" href="classiprm_1_1_i_params_manager.html#a211e4d73b43018d3fafb57cb06c07d6e">iprm::IParamsManager</a>
 </li>
 <li>GetMappedTo()
 : <a class="el" href="classistd_1_1_t_range.html#acf5b6035a50fafc4c48d03cd5e84ce3d">istd::TRange&lt; ValueType &gt;</a>
@@ -1923,7 +1924,7 @@
 : <a class="el" href="classi2d_1_1_c_line2d.html#a4266c0c0b498f0daf6e64f30fa574b45">i2d::CLine2d</a>
 </li>
 <li>GetSimpleAdd()
-: <a class="el" href="classimath_1_1_t_weighted_number.html#af31dd11245cf34e185360c6d3f12bd32">imath::TWeightedNumber&lt; ValueT, WeightT &gt;</a>
+: <a class="el" href="classimath_1_1_t_weighted_number.html#a0aafe178d584ccdc4d4400eae6a65831">imath::TWeightedNumber&lt; ValueT, WeightT &gt;</a>
 </li>
 <li>GetSimpleSub()
 : <a class="el" href="classimath_1_1_t_weighted_number.html#a2dbcbb554d494270a86bd25bb0c22e0b">imath::TWeightedNumber&lt; ValueT, WeightT &gt;</a>
@@ -2164,17 +2165,17 @@
 , <a class="el" href="classimath_1_1_t_matrix.html#a85dd8c54824770a9492eb398d37ff5a9">imath::TMatrix&lt; Width, Height, Element &gt;</a>
 </li>
 <li>GetTypeDescription()
-: <a class="el" href="classibase_1_1_c_file_type_info_comp.html#ae0f6b59142b232ef0dcb82f8c7460ab5">ibase::CFileTypeInfoComp</a>
-, <a class="el" href="classiser_1_1_i_file_type_info.html#a744c6451505c91c0abf6177b9f693a35">iser::IFileTypeInfo</a>
+: <a class="el" href="classiser_1_1_i_file_type_info.html#a744c6451505c91c0abf6177b9f693a35">iser::IFileTypeInfo</a>
 , <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#ace738599a6b10ed15101dd0db3177a47">icmpstr::CRegistryLoaderComp</a>
 , <a class="el" href="classiqt_1_1_c_bitmap_loader_comp.html#acd6d8a9f69a3ebcf0d6e9f62e3c03898">iqt::CBitmapLoaderComp</a>
 , <a class="el" href="classibase_1_1_c_composed_loader_comp.html#a184d425c177c27867ee56813a9c1d44b">ibase::CComposedLoaderComp</a>
 , <a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a2075b019de2dfcef81848b419df0c589">iqt::CRenderedObjectFileLoaderComp</a>
 , <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#acee2b230e7a51879fe2940453193c9c1">iqt::CRegistryCodeSaverComp</a>
+, <a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#a76fedb8d9ca6e5b481dd678d3df68fb6">iqt::CSettingsSerializerComp</a>
 , <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a138c2714c27008edd1a8a08752dfde01">iqtgui::CFileDialogLoaderComp</a>
 , <a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#a9e0e81c32bfee59b85f821a850af8706">iqt::CClipboardSerializerComp</a>
-, <a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#a76fedb8d9ca6e5b481dd678d3df68fb6">iqt::CSettingsSerializerComp</a>
 , <a class="el" href="classibase_1_1_c_text_file_loader_comp.html#a7f1c1fe26f16334196d8b731b2efceda">ibase::CTextFileLoaderComp</a>
+, <a class="el" href="classibase_1_1_c_file_type_info_comp.html#ae0f6b59142b232ef0dcb82f8c7460ab5">ibase::CFileTypeInfoComp</a>
 </li>
 <li>GetTypeName()
 : <a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#ac156160e13b068b5c90c555eef2ff6e7">icomp::CMultiReferenceAttribute</a>
@@ -2198,10 +2199,10 @@
 <li>GetUnion()
 : <a class="el" href="classi2d_1_1_c_rect.html#ab7d16f5feae1db5178caf3fcd59dd0a5">i2d::CRect</a>
 , <a class="el" href="classi2d_1_1_c_rectangle.html#ade1d6d5b026bf094731163a0cda88c6c">i2d::CRectangle</a>
-, <a class="el" href="classistd_1_1_t_range.html#a2097eaecea08f5284ce57fab97791c95">istd::TRange&lt; ValueType &gt;</a>
-, <a class="el" href="classi2d_1_1_c_rect.html#a18c3be0d711e4c0bcb8fcdd0d1593412">i2d::CRect</a>
-, <a class="el" href="classistd_1_1_t_range.html#a07b481fd80186ac93a1df7bab4411daa">istd::TRange&lt; ValueType &gt;</a>
 , <a class="el" href="classi2d_1_1_c_rect.html#acb9e094275e6ab249377796d8b799301">i2d::CRect</a>
+, <a class="el" href="classi2d_1_1_c_rectangle.html#ac794f3be40d8a5b02f5382e709b7a0c7">i2d::CRectangle</a>
+, <a class="el" href="classistd_1_1_t_range.html#a07b481fd80186ac93a1df7bab4411daa">istd::TRange&lt; ValueType &gt;</a>
+, <a class="el" href="classi2d_1_1_c_rect.html#a18c3be0d711e4c0bcb8fcdd0d1593412">i2d::CRect</a>
 </li>
 <li>GetUniqueIdentifier()
 : <a class="el" href="classiqt_1_1_c_system_environment.html#acea8691e3324ba5a9fccf80b5fba3f57">iqt::CSystemEnvironment</a>
@@ -2221,12 +2222,12 @@
 : <a class="el" href="classimath_1_1_t_weighted_number.html#a866b2e88fe9fd3ed65a74b6f0e68dbb6">imath::TWeightedNumber&lt; ValueT, WeightT &gt;</a>
 , <a class="el" href="classiproc_1_1_i_value_provider.html#ae9166958dfafd199fde41d7795761e04">iproc::IValueProvider</a>
 , <a class="el" href="classicomp_1_1_t_attribute.html#a4b8313c84bb9d6f30091c1e0094503d0">icomp::TAttribute&lt; Value &gt;</a>
-, <a class="el" href="classicmm_1_1_linear_gradient_function.html#aefd369d1b97ec2e14291563023760631">icmm::LinearGradientFunction</a>
 , <a class="el" href="classicmm_1_1_c_hsv.html#a1b5fc2ca418702ca1ea8d95ca2970553">icmm::CHsv</a>
+, <a class="el" href="classicmm_1_1_linear_gradient_function.html#aefd369d1b97ec2e14291563023760631">icmm::LinearGradientFunction</a>
 </li>
 <li>GetValueAt()
 : <a class="el" href="classistd_1_1_t_i_map.html#a8f7ab4ddc4bf34c0a872d58a672cdb34">istd::TIMap&lt; Key, Value &gt;</a>
-, <a class="el" href="classicmm_1_1_c_cmyk_to_rgb_transformation.html#abfff420a3e0abf7190e26725bd226f0c">icmm::CCmykToRgbTransformation</a>
+, <a class="el" href="classicmm_1_1_c_cmyk_to_rgb_transformation.html#ad68b93a947e61314d9f237259f9d5121">icmm::CCmykToRgbTransformation</a>
 , <a class="el" href="classimath_1_1_c_sampled_function2d.html#ad299b08ca2864d6c111caf31c01c6459">imath::CSampledFunction2d</a>
 , <a class="el" href="classimath_1_1_t_spline_grid_function_base.html#a0737d91ae871f976c71f414c594602a7">imath::TSplineGridFunctionBase&lt; Argument, Result, Fulcrums, Degree &gt;</a>
 , <a class="el" href="classicomp_1_1_t_multi_attribute.html#a5840e42476ebb0a560bcdd1580b30b2d">icomp::TMultiAttribute&lt; Value &gt;</a>
@@ -2237,13 +2238,13 @@
 , <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a467f0c9f2120d8ab74a75700575a9c1c">i2d::CAffineTransformation2d</a>
 , <a class="el" href="classistd_1_1_t_cascaded_map.html#a4c9b549f95bf8cb7004e8a67a6b16457">istd::TCascadedMap&lt; Key, Value &gt;</a>
 , <a class="el" href="classicmm_1_1_t_color_gradient.html#ae4fa78aee7745b9cce536f0a48b7465c">icmm::TColorGradient&lt; GradientFunction &gt;</a>
-, <a class="el" href="classicmm_1_1_c_rgb_to_cmyk_transformation.html#afbb65c06bb9072e05d91e5dc7adcab07">icmm::CRgbToCmykTransformation</a>
 , <a class="el" href="classimath_1_1_t_spline_grid_function_base.html#a324062cb39c01795830464d5d025ec76">imath::TSplineGridFunctionBase&lt; Argument, Result, Fulcrums, Degree &gt;</a>
 , <a class="el" href="classicmm_1_1_c_hsv_to_rgb_transformation.html#ab58b6c61d06b4fed5167ac1fe663d2c8">icmm::CHsvToRgbTransformation</a>
-, <a class="el" href="classicmm_1_1_c_cmyk_to_rgb_transformation.html#ad68b93a947e61314d9f237259f9d5121">icmm::CCmykToRgbTransformation</a>
+, <a class="el" href="classicmm_1_1_c_cmyk_to_rgb_transformation.html#abfff420a3e0abf7190e26725bd226f0c">icmm::CCmykToRgbTransformation</a>
+, <a class="el" href="classicmm_1_1_t_color_gradient.html#aee7a7e5719051dc1edbba27afc550c43">icmm::TColorGradient&lt; GradientFunction &gt;</a>
 , <a class="el" href="classicmm_1_1_c_rgb_to_cmyk_transformation.html#ac3cb981992fa4d78064b8ee0203e1ea7">icmm::CRgbToCmykTransformation</a>
 , <a class="el" href="classicmm_1_1_t_composed_color_gradient.html#a31ad7fbada5f95a8d4aebdd8482e5c2f">icmm::TComposedColorGradient&lt; Gradient &gt;</a>
-, <a class="el" href="classicmm_1_1_c_hsv_to_rgb_transformation.html#a545ef1e4243d79f9f91487f2d90135e4">icmm::CHsvToRgbTransformation</a>
+, <a class="el" href="classicmm_1_1_c_rgb_to_cmyk_transformation.html#afbb65c06bb9072e05d91e5dc7adcab07">icmm::CRgbToCmykTransformation</a>
 </li>
 <li>GetValueFromAlpha()
 : <a class="el" href="classistd_1_1_t_range.html#a327c5463117d7a0047385e801653fa3c">istd::TRange&lt; ValueType &gt;</a>
@@ -2259,42 +2260,42 @@
 </li>
 <li>GetVersionIdDescription()
 : <a class="el" href="classiser_1_1_c_minimal_version_info.html#ac05421c1d48aa5778bcb19f7a45c88d8">iser::CMinimalVersionInfo</a>
-, <a class="el" href="classiser_1_1_c_reader_version_info.html#aa812926a18f5e4004a51fbc94fe50c28">iser::CReaderVersionInfo</a>
 , <a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#aea125bbd36554d967ba378566089d579">iser::CWriteArchiveBase::EmptyVersionInfo</a>
-, <a class="el" href="classiser_1_1_i_version_info.html#acce1207f69cff08151854a4e8b22b53b">iser::IVersionInfo</a>
 , <a class="el" href="classibase_1_1_c_version_info_comp.html#a7c5e640af70285de2960d77e8005f3a6">ibase::CVersionInfoComp</a>
+, <a class="el" href="classiser_1_1_c_reader_version_info.html#aa812926a18f5e4004a51fbc94fe50c28">iser::CReaderVersionInfo</a>
+, <a class="el" href="classiser_1_1_i_version_info.html#acce1207f69cff08151854a4e8b22b53b">iser::IVersionInfo</a>
 , <a class="el" href="classibase_1_1_c_application_info_comp.html#a99f8a5f7fde6757af414df2655ab8110">ibase::CApplicationInfoComp</a>
 </li>
 <li>GetVersionIdElement()
 : <a class="el" href="classiser_1_1_c_reader_version_info.html#afdf0469871a50891c7bacd84c19d1b7b">iser::CReaderVersionInfo</a>
 </li>
 <li>GetVersionIds()
-: <a class="el" href="classiser_1_1_i_version_info.html#a5d91838bdf51104a85ee4ca251646a4b">iser::IVersionInfo</a>
+: <a class="el" href="classiser_1_1_c_reader_version_info.html#a14a76654dbaefb66125c96979a8ec507">iser::CReaderVersionInfo</a>
+, <a class="el" href="classiser_1_1_i_version_info.html#a5d91838bdf51104a85ee4ca251646a4b">iser::IVersionInfo</a>
 , <a class="el" href="classiser_1_1_c_minimal_version_info.html#acf4915ec5ecd57e49e5d7d66c5ad6d69">iser::CMinimalVersionInfo</a>
 , <a class="el" href="classibase_1_1_c_application_info_comp.html#a58249ff1c295226f27c1c89aaa9ad236">ibase::CApplicationInfoComp</a>
-, <a class="el" href="classiser_1_1_c_reader_version_info.html#a14a76654dbaefb66125c96979a8ec507">iser::CReaderVersionInfo</a>
-, <a class="el" href="classibase_1_1_c_version_info_comp.html#a4896a13d75a4f06c0ae3532e010c6ca6">ibase::CVersionInfoComp</a>
 , <a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#aa9c629080b525bbd9f19e0de0d2aed12">iser::CWriteArchiveBase::EmptyVersionInfo</a>
+, <a class="el" href="classibase_1_1_c_version_info_comp.html#a4896a13d75a4f06c0ae3532e010c6ca6">ibase::CVersionInfoComp</a>
 </li>
 <li>GetVersionInfo()
-: <a class="el" href="classibase_1_1_c_application_info_comp.html#afd57c1efe4e03f9bc0bb05f59bdfad80">ibase::CApplicationInfoComp</a>
-, <a class="el" href="classiser_1_1_i_archive.html#aa16e17aca2dbc94c25427dccdcb93f20">iser::IArchive</a>
+: <a class="el" href="classiser_1_1_i_archive.html#aa16e17aca2dbc94c25427dccdcb93f20">iser::IArchive</a>
 , <a class="el" href="classiser_1_1_c_read_archive_base.html#ad9b57a92c665614227bab0b307a1d096">iser::CReadArchiveBase</a>
 , <a class="el" href="classibase_1_1_t_file_serializer_comp.html#adf321d27bf2c73e37928e019ee51bbb4">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;</a>
+, <a class="el" href="classibase_1_1_c_application_info_comp.html#afd57c1efe4e03f9bc0bb05f59bdfad80">ibase::CApplicationInfoComp</a>
 , <a class="el" href="classibase_1_1_i_application_info.html#a585dc0a35456edd28a777085d70eeb28">ibase::IApplicationInfo</a>
 , <a class="el" href="classiser_1_1_c_write_archive_base.html#af25625d8ea36250e6cfa6f2a4f84c0ed">iser::CWriteArchiveBase</a>
 </li>
 <li>GetVersionNumber()
-: <a class="el" href="classiser_1_1_c_reader_version_info.html#a71070b440ca061d2eaf93b5b3639873c">iser::CReaderVersionInfo</a>
-, <a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#a338c809831f3544de1c2bd85cf5b6175">iser::CWriteArchiveBase::EmptyVersionInfo</a>
+: <a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#a338c809831f3544de1c2bd85cf5b6175">iser::CWriteArchiveBase::EmptyVersionInfo</a>
 , <a class="el" href="classiser_1_1_c_minimal_version_info.html#a96b77026908fd1a336675409eed39cd5">iser::CMinimalVersionInfo</a>
+, <a class="el" href="classiser_1_1_i_version_info.html#a9f44355a435b5ebfbfe0ea73ae399ec0">iser::IVersionInfo</a>
+, <a class="el" href="classiser_1_1_c_reader_version_info.html#a71070b440ca061d2eaf93b5b3639873c">iser::CReaderVersionInfo</a>
 , <a class="el" href="classibase_1_1_c_version_info_comp.html#a9d9abf7007eabf5efe5f373f57364c34">ibase::CVersionInfoComp</a>
 , <a class="el" href="classibase_1_1_c_application_info_comp.html#ac8ae49f6cbbdc6664325c77a15c1f3c1">ibase::CApplicationInfoComp</a>
-, <a class="el" href="classiser_1_1_i_version_info.html#a9f44355a435b5ebfbfe0ea73ae399ec0">iser::IVersionInfo</a>
 </li>
 <li>GetVerticalRange()
-: <a class="el" href="classi2d_1_1_c_rectangle.html#afbba6073e1c5a8c4c12b1ab2e0aeb89f">i2d::CRectangle</a>
-, <a class="el" href="classi2d_1_1_c_rect.html#a4bce788e9de4660d09c3059ad2d466aa">i2d::CRect</a>
+: <a class="el" href="classi2d_1_1_c_rect.html#a4bce788e9de4660d09c3059ad2d466aa">i2d::CRect</a>
+, <a class="el" href="classi2d_1_1_c_rectangle.html#afbba6073e1c5a8c4c12b1ab2e0aeb89f">i2d::CRectangle</a>
 </li>
 <li>GetVerticalRangeRef()
 : <a class="el" href="classi2d_1_1_c_rectangle.html#a8b33b8efce83e4e5c381b92613711ebc">i2d::CRectangle</a>
@@ -2303,9 +2304,9 @@
 : <a class="el" href="classi2d_1_1_c_vector2d.html#a00bd0b7ddc96da9b9b381e64c04102bd">i2d::CVector2d</a>
 </li>
 <li>GetViewFromIndex()
-: <a class="el" href="classidoc_1_1_i_document_manager.html#a208cea4ec7238f45addce3be927bf118">idoc::IDocumentManager</a>
+: <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#af089a1445b4716642297b6b8a90d7819">idoc::CSingleDocumentManagerBase</a>
+, <a class="el" href="classidoc_1_1_i_document_manager.html#a208cea4ec7238f45addce3be927bf118">idoc::IDocumentManager</a>
 , <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#ae4ae3ca1bce6fbc623b8d7e935898d9e">idoc::CMultiDocumentManagerBase</a>
-, <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#af089a1445b4716642297b6b8a90d7819">idoc::CSingleDocumentManagerBase</a>
 </li>
 <li>GetViewFromWidget()
 : <a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a63cbe408485a2192532c60e110a1bcd9">iqtdoc::CMultiDocumentWorkspaceGuiComp</a>
@@ -2319,27 +2320,27 @@
 , <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#ab28d9dbe4b45272255f2b3f20acef9be">idoc::CMultiDocumentManagerBase</a>
 </li>
 <li>GetViewTypeIds()
-: <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#af416b4338e0042f350e65f8b4eb30c5b">idoc::CCompositeDocumentTemplateComp</a>
-, <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a2c81c1791751fde5ead7d0a73b3c2ea2">idoc::CSingleDocumentTemplateBase</a>
+: <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a2c81c1791751fde5ead7d0a73b3c2ea2">idoc::CSingleDocumentTemplateBase</a>
 , <a class="el" href="classidoc_1_1_i_document_template.html#a0343f3438b62ab79a59c94d32dcb83cc">idoc::IDocumentTemplate</a>
+, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#af416b4338e0042f350e65f8b4eb30c5b">idoc::CCompositeDocumentTemplateComp</a>
 </li>
 <li>GetViewTypeName()
-: <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#ae37b869c37ba90091b556b10ddf50138">idoc::CCompositeDocumentTemplateComp</a>
+: <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a6ce9a195025063853c783820ff189e30">idoc::CSingleDocumentTemplateBase</a>
+, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#ae37b869c37ba90091b556b10ddf50138">idoc::CCompositeDocumentTemplateComp</a>
 , <a class="el" href="classidoc_1_1_i_document_template.html#ada7284c75d4ab77df6fc5f6e980cd7d2">idoc::IDocumentTemplate</a>
-, <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a6ce9a195025063853c783820ff189e30">idoc::CSingleDocumentTemplateBase</a>
 </li>
 <li>GetWeight()
 : <a class="el" href="classiimg_1_1_t_pixel_conversion.html#a97b7476bf5224dbe5a5663cd7579c3ce">iimg::TPixelConversion&lt; SourcePixel, DestPixel, CalcPixel &gt;</a>
 , <a class="el" href="classimath_1_1_t_weighted_number.html#ab4101539302def5e05b9642b2ebe363c">imath::TWeightedNumber&lt; ValueT, WeightT &gt;</a>
 </li>
 <li>GetWidget()
-: <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a7cf2a60e208b2cd00d88f274935485c4">iqtgui::CGuiComponentBase</a>
-, <a class="el" href="classiqtgui_1_1_i_gui_object.html#a37b7afd5239f093501f303176f59eb4a">iqtgui::IGuiObject</a>
+: <a class="el" href="classiqtgui_1_1_i_gui_object.html#a37b7afd5239f093501f303176f59eb4a">iqtgui::IGuiObject</a>
 , <a class="el" href="classiqtgui_1_1_c_model_editor_gui_comp.html#a4a38e54975372439e4e118c2f392fd94">iqtgui::CModelEditorGuiComp</a>
+, <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a7cf2a60e208b2cd00d88f274935485c4">iqtgui::CGuiComponentBase</a>
 </li>
 <li>GetWidth()
-: <a class="el" href="classi2d_1_1_c_rectangle.html#a0a2466cc322ce70b2e4c1d3b26af4b86">i2d::CRectangle</a>
-, <a class="el" href="classi2d_1_1_c_rect.html#a060d40c5a93ef44d5850b10ee69b7503">i2d::CRect</a>
+: <a class="el" href="classi2d_1_1_c_rect.html#a060d40c5a93ef44d5850b10ee69b7503">i2d::CRect</a>
+, <a class="el" href="classi2d_1_1_c_rectangle.html#a0a2466cc322ce70b2e4c1d3b26af4b86">i2d::CRectangle</a>
 </li>
 <li>GetWorkingDirectory()
 : <a class="el" href="classisys_1_1_i_process_environment.html#a5fa9d125e9db95f7385bf56d68c501fa">isys::IProcessEnvironment</a>
@@ -2349,24 +2350,24 @@
 : <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a9afc17fb076daf8bd801d1fa979fd2f3">iproc::TSupplierCompWrap&lt; Product &gt;</a>
 </li>
 <li>GetWorkStatus()
-: <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#aae3ac83c656d4b0de834372fdca85ee2">iproc::TSupplierCompWrap&lt; Product &gt;</a>
-, <a class="el" href="classiproc_1_1_i_supplier.html#afcc7cf98a07ad365e35635eab32d8bcb">iproc::ISupplier</a>
+: <a class="el" href="classiproc_1_1_i_supplier.html#afcc7cf98a07ad365e35635eab32d8bcb">iproc::ISupplier</a>
+, <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#aae3ac83c656d4b0de834372fdca85ee2">iproc::TSupplierCompWrap&lt; Product &gt;</a>
 </li>
 <li>GetWorstCategory()
-: <a class="el" href="classibase_1_1_t_message_container_wrap.html#aaa613df1d9dcdbcc621e9badc899fe46">ibase::TMessageContainerWrap&lt; Base &gt;</a>
-, <a class="el" href="classibase_1_1_i_message_container.html#adaec1546c8caaeac32971c96ea73e2eb">ibase::IMessageContainer</a>
+: <a class="el" href="classibase_1_1_i_message_container.html#adaec1546c8caaeac32971c96ea73e2eb">ibase::IMessageContainer</a>
+, <a class="el" href="classibase_1_1_t_message_container_wrap.html#aaa613df1d9dcdbcc621e9badc899fe46">ibase::TMessageContainerWrap&lt; Base &gt;</a>
 </li>
 <li>GetX()
 : <a class="el" href="classi3d_1_1_c_vector3d.html#a4ae137621a8f39aa754c54129b7d9cd0">i3d::CVector3d</a>
-, <a class="el" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">istd::CIndex2d</a>
 , <a class="el" href="classi2d_1_1_c_vector2d.html#a1d0d6125aff440bbac7138047baf2cbe">i2d::CVector2d</a>
+, <a class="el" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">istd::CIndex2d</a>
 </li>
 <li>GetY()
-: <a class="el" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">istd::CIndex2d</a>
-, <a class="el" href="classi3d_1_1_c_vector3d.html#a86282edb24fca70f57aeda305a6f45ef">i3d::CVector3d</a>
-, <a class="el" href="classi2d_1_1_c_vector2d.html#ac83c909b1cd1969707da31779a8fdf3a">i2d::CVector2d</a>
+: <a class="el" href="classi2d_1_1_c_vector2d.html#ac83c909b1cd1969707da31779a8fdf3a">i2d::CVector2d</a>
+, <a class="el" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">istd::CIndex2d</a>
 , <a class="el" href="classicmm_1_1_c_cmyk.html#ae38ca8fb9d829b9ec949411d36bc2d44">icmm::CCmyk</a>
 , <a class="el" href="classicmm_1_1_c_cmy.html#af650209fee9185c63a1f6b09b36af7a9">icmm::CCmy</a>
+, <a class="el" href="classi3d_1_1_c_vector3d.html#a86282edb24fca70f57aeda305a6f45ef">i3d::CVector3d</a>
 </li>
 <li>GetZ()
 : <a class="el" href="classi3d_1_1_c_vector3d.html#a4e02f07023b4225751c3785e51efce13">i3d::CVector3d</a>

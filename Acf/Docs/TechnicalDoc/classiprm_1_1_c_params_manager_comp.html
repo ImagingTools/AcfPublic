@@ -78,12 +78,12 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a013168e66fc171c37d0eff1db2681112">CParamsManagerComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#acf101f14468c4eee3e2d7e4cf25eba16">SetSetsCount</a> (int count)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#acfc8b214fc7f9d5f14e297404f8c746c">GetManagerFlags</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get control flags of this manager.  <a href="#acfc8b214fc7f9d5f14e297404f8c746c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a6c6a8deb0948740fe4558d220a3c893c">GetIndexOperationFlags</a> (int index=-1) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get operation control flags of some paramter set or whole manager.  <a href="#a6c6a8deb0948740fe4558d220a3c893c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#abc52794b2ed4df7cb6a872bd208ca638">GetParamsSetsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of managed set.  <a href="#abc52794b2ed4df7cb6a872bd208ca638"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#af9238a70b043a9297682f4c7ca1e911f">InsertParamsSet</a> (int index=-1)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new parameters set at selected position or at the and of the list.  <a href="#af9238a70b043a9297682f4c7ca1e911f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a78c5340c8c01e19a5a3ffee53b55b881">InsertParamsSet</a> (int index=-1)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new parameters set at selected position.  <a href="#a78c5340c8c01e19a5a3ffee53b55b881"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a50f8d419f57ae6f5f06cee02da4f66e1">RemoveParamsSet</a> (int index)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove parameters set at selected position.  <a href="#a50f8d419f57ae6f5f06cee02da4f66e1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_params_set.html">IParamsSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#ae19b3efcc16c19eb07df3a3bef7f8f36">GetParamsSet</a> (int index) const </td></tr>
@@ -200,24 +200,31 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acfc8b214fc7f9d5f14e297404f8c746c"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetManagerFlags" ref="acfc8b214fc7f9d5f14e297404f8c746c" args="() const " -->
+<a class="anchor" id="a6c6a8deb0948740fe4558d220a3c893c"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetIndexOperationFlags" ref="a6c6a8deb0948740fe4558d220a3c893c" args="(int index=&#45;1) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int iprm::CParamsManagerComp::GetManagerFlags </td>
+          <td class="memname">virtual int iprm::CParamsManagerComp::GetIndexOperationFlags </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>-1</code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Get control flags of this manager. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_i_params_manager.html#a828fad5fe35ddd65d23b2e7e49af7bb3" title="Bitwise coded flags used to find out supported features.">ManagerFlags</a>. </dd></dl>
+<p>Get operation control flags of some paramter set or whole manager. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd>ManagerFlags. </dd></dl>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index addressing position in parameter set list. For negative value general flags are returned. For example if you want to check if there is any renameable element you should call it with negative index value. To check if first element can be renamed call it with index value 0. To check if you can insert at the last position please use index value equal to current number of parameter set. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_params_manager.html#a211e4d73b43018d3fafb57cb06c07d6e">iprm::IParamsManager</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_params_manager.html#a0508f9eee4a8527a026a69b39e6e0216">iprm::IParamsManager</a>.</p>
 
 </div>
 </div>
@@ -409,12 +416,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af9238a70b043a9297682f4c7ca1e911f"></a><!-- doxytag: member="iprm::CParamsManagerComp::InsertParamsSet" ref="af9238a70b043a9297682f4c7ca1e911f" args="(int index=&#45;1)" -->
+<a class="anchor" id="a78c5340c8c01e19a5a3ffee53b55b881"></a><!-- doxytag: member="iprm::CParamsManagerComp::InsertParamsSet" ref="a78c5340c8c01e19a5a3ffee53b55b881" args="(int index=&#45;1)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool iprm::CParamsManagerComp::InsertParamsSet </td>
+          <td class="memname">virtual int iprm::CParamsManagerComp::InsertParamsSet </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em> = <code>-1</code></td><td>)</td>
@@ -424,9 +431,16 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Insert new parameters set at selected position or at the and of the list. </p>
+<p>Insert new parameters set at selected position. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>position in list of parameters or negative value to use default position. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>position of inserted new entry or negative value if no insert was possible. For specified index positions (positive <code>index</code> value) it will return the same index or negative value. </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_params_manager.html#ad36b0b3dddf7585c1c47cf9458307350">iprm::IParamsManager</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_params_manager.html#a17e34751966ff799f1d1b0202bad65ad">iprm::IParamsManager</a>.</p>
 
 </div>
 </div>

@@ -27827,10 +27827,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetManagerFlags</name>
+      <name>GetIndexOperationFlags</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>acfc8b214fc7f9d5f14e297404f8c746c</anchor>
-      <arglist>() const </arglist>
+      <anchor>a6c6a8deb0948740fe4558d220a3c893c</anchor>
+      <arglist>(int index=-1) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -27840,10 +27840,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual int</type>
       <name>InsertParamsSet</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>af9238a70b043a9297682f4c7ca1e911f</anchor>
+      <anchor>a78c5340c8c01e19a5a3ffee53b55b881</anchor>
       <arglist>(int index=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -28584,33 +28584,33 @@
     <filename>classiprm_1_1_i_params_manager.html</filename>
     <base virtualness="virtual">iprm::ISelectionParam</base>
     <member kind="enumeration">
-      <name>ManagerFlags</name>
+      <name>ParamsOperationFlags</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>a828fad5fe35ddd65d23b2e7e49af7bb3</anchor>
+      <anchor>af0f7891ab3e905463489162a441f32e6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MF_COUNT_FIXED</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>a828fad5fe35ddd65d23b2e7e49af7bb3a7dbf8fddc794870a1d20ddc7586356a8</anchor>
+      <anchor>af0f7891ab3e905463489162a441f32e6a7dbf8fddc794870a1d20ddc7586356a8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MF_NAME_FIXED</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>a828fad5fe35ddd65d23b2e7e49af7bb3a9b9fa31364a072b2e8c6524cf12e7257</anchor>
+      <anchor>af0f7891ab3e905463489162a441f32e6a9b9fa31364a072b2e8c6524cf12e7257</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MF_NO_INSERT</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>a828fad5fe35ddd65d23b2e7e49af7bb3af219625f5f5e4a1d5125c3ecd6353c31</anchor>
+      <anchor>af0f7891ab3e905463489162a441f32e6af219625f5f5e4a1d5125c3ecd6353c31</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MF_NO_DELETE</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>a828fad5fe35ddd65d23b2e7e49af7bb3a40f040a1c9c77e0ae859f3df1cfeae7f</anchor>
+      <anchor>af0f7891ab3e905463489162a441f32e6a40f040a1c9c77e0ae859f3df1cfeae7f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -28639,10 +28639,10 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
-      <name>GetManagerFlags</name>
+      <name>GetIndexOperationFlags</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>a211e4d73b43018d3fafb57cb06c07d6e</anchor>
-      <arglist>() const =0</arglist>
+      <anchor>a0508f9eee4a8527a026a69b39e6e0216</anchor>
+      <arglist>(int index=-1) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -28652,10 +28652,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
+      <type>virtual int</type>
       <name>InsertParamsSet</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>ad36b0b3dddf7585c1c47cf9458307350</anchor>
+      <anchor>a17e34751966ff799f1d1b0202bad65ad</anchor>
       <arglist>(int index=-1)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -39110,6 +39110,20 @@
       <name>on_RemoveButton_clicked</name>
       <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
       <anchor>a6158f9a035da14233ed20cc989ac1639</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_UpButton_clicked</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
+      <anchor>ad3052fdfe77122a127d40cb013231026</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_DownButton_clicked</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
+      <anchor>a5c5e6622aa64892927e56ebffaef9087</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">

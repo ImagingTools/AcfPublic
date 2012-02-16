@@ -1065,6 +1065,16 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
+    <name>CNumericConstraintsComp.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_c_numeric_constraints_comp_8h</filename>
+    <includes id="_i_unit_info_8h" name="IUnitInfo.h" local="yes" imported="no">imeas/IUnitInfo.h</includes>
+    <includes id="_i_numeric_params_8h" name="INumericParams.h" local="yes" imported="no">imeas/INumericParams.h</includes>
+    <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
+    <class kind="class">imeas::CNumericConstraintsComp</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>CNumericParamsComp.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_numeric_params_comp_8h</filename>
@@ -7735,6 +7745,7 @@
     <class kind="class">imeas::CGeneralUnitInfo</class>
     <class kind="class">imeas::CHistogramStatisticsProcessorComp</class>
     <class kind="class">imeas::CMeasurementRange</class>
+    <class kind="class">imeas::CNumericConstraintsComp</class>
     <class kind="class">imeas::CNumericParamsComp</class>
     <class kind="class">imeas::CSamplesInfo</class>
     <class kind="class">imeas::CWavSamplesLoaderComp</class>
@@ -8289,6 +8300,76 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>imeas::CNumericConstraintsComp</name>
+    <filename>classimeas_1_1_c_numeric_constraints_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">imeas::INumericConstraints</base>
+    <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>a039838ce734e896c780ac5a2e0a6f986</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNumericValuesCount</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>a46ea8f969fb991dab11f48747eb64dea</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetNumericValueDescription</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>a065b98ea5cb53be95eee9ded41becb36</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <name>GetNumericValueUnitInfo</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>ad0069c9bdc0c0901e6edb2b84fefa3ff</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetUnitType</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>af5961bae317564dfc272f74f0f691d1a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetUnitName</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>a306eb804b9750cf4f11f8b8d553f320d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetDisplayMultiplicationFactor</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>a795fb67cc15a119c3b66ed315f57d64e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual istd::CRange</type>
+      <name>GetValueRange</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>ad3d07ac8efbd610fb0303fefaa8c162e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const imath::IDoubleManip &amp;</type>
+      <name>GetValueManip</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>ac61407fc545cb06f6ba226eb296112b2</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>imeas::CNumericParamsComp</name>
     <filename>classimeas_1_1_c_numeric_params_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -8324,62 +8405,6 @@
       <arglist>(const imath::CVarVector &amp;lengths)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>ac8da5149c791906ce64c7d58a86a73fb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>af6fca8bbee853935770080ce674f086e</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const imeas::IUnitInfo &amp;</type>
-      <name>GetNumericValueUnitInfo</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>ab68e7942771ae4172f14b7fc66778549</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetUnitType</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>afc86be53b80f6d8d2d67790f37f65b94</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
-      <name>GetUnitName</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>a0242431b0ab662e64ad7de1661432e9c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetDisplayMultiplicationFactor</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>ac45c462ca6aa584848e8a72b8467e30d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CRange</type>
-      <name>GetValueRange</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>aca365623bf951247a03fb39e4fa2bfd7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IDoubleManip &amp;</type>
-      <name>GetValueManip</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>a67272c6b08219c5211075a7475954365</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
@@ -8399,6 +8424,62 @@
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
       <anchor>a66df79f5747b3d2bbb39be65805502e9</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNumericValuesCount</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>ac8da5149c791906ce64c7d58a86a73fb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetNumericValueDescription</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>af6fca8bbee853935770080ce674f086e</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <name>GetNumericValueUnitInfo</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>ab68e7942771ae4172f14b7fc66778549</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetUnitType</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>afc86be53b80f6d8d2d67790f37f65b94</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetUnitName</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>a0242431b0ab662e64ad7de1661432e9c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetDisplayMultiplicationFactor</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>ac45c462ca6aa584848e8a72b8467e30d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual istd::CRange</type>
+      <name>GetValueRange</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>aca365623bf951247a03fb39e4fa2bfd7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const imath::IDoubleManip &amp;</type>
+      <name>GetValueManip</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>a67272c6b08219c5211075a7475954365</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
