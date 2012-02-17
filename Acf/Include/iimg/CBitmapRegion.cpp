@@ -23,10 +23,6 @@
 #include "iimg/CBitmapRegion.h"
 
 
-// STD includes
-#include <math.h>
-
-
 namespace iimg
 {
 
@@ -34,7 +30,7 @@ namespace iimg
 // public methods
 
 CBitmapRegion::CBitmapRegion(const iimg::IBitmap* bitmapPtr)
-	:m_bitmapPtr(bitmapPtr),
+:	m_bitmapPtr(bitmapPtr),
 	m_isEmpty(true)
 {
 }

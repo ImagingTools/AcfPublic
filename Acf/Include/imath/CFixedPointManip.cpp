@@ -23,7 +23,8 @@
 #include "imath/CFixedPointManip.h"
 
 
-#include "math.h"
+// STL includes
+#include <cmath>
 #include <vector>
 
 
@@ -41,7 +42,7 @@ CFixedPointManip::CFixedPointManip(int precision, RoundingType roundingType)
 void CFixedPointManip::SetPrecision(int precision)
 {
 	m_precision = precision;
-	m_scaleToIntFactor = ::pow(10.0, m_precision);
+	m_scaleToIntFactor = std::pow(10.0, m_precision);
 }
 
 
@@ -127,7 +128,7 @@ std::string CFixedPointManip::GetString(const double& value, int /*precision*/) 
 
 double CFixedPointManip::NormalRoundFuntion(double value)
 {
-	return ::floor(value + 0.5);
+	return std::floor(value + 0.5);
 }
 
 
@@ -135,8 +136,8 @@ double CFixedPointManip::NormalRoundFuntion(double value)
 
 CFixedPointManip::RoundingFuntionPtr CFixedPointManip::m_roundingFuntionsPtr[RT_LAST + 1] = {
 			CFixedPointManip::NormalRoundFuntion,
-			::floor,
-			::ceil};
+			std::floor,
+			std::ceil};
 
 
 } // namespace imath

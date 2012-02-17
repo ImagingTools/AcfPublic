@@ -49,7 +49,7 @@ public:
 	struct PixelRange
 	{
 		PixelRange()
-			:pixelBufferPtr(NULL)
+		:	pixelBufferPtr(NULL)
 		{
 		}
 
