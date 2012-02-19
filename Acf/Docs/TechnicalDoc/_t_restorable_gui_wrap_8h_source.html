@@ -55,7 +55,7 @@
 <a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#af2c77312dacc51064f1a99946c01338d">OnSaveSettings</a>(QSettings&amp; settings) <span class="keyword">const</span> = 0;
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035        <span class="comment">// pseudo-reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a438afd8dfe3cc4c89ac85a727761acab">CreateGui</a>(QWidget* parentPtr);
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a438afd8dfe3cc4c89ac85a727761acab">CreateGui</a>(<a class="code" href="class_q_widget.html">QWidget</a>* parentPtr);
 <a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a95493638d02221c6e0d14ffe5e5037c0">DestroyGui</a>();
 <a name="l00038"></a>00038 
 <a name="l00039"></a>00039 <span class="keyword">private</span>:
@@ -66,7 +66,7 @@
 <a name="l00044"></a>00044 <span class="comment">// protected methods</span>
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui&gt;
-<a name="l00047"></a><a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a438afd8dfe3cc4c89ac85a727761acab">00047</a> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a438afd8dfe3cc4c89ac85a727761acab">TRestorableGuiWrap&lt;Gui&gt;::CreateGui</a>(QWidget* parentPtr)
+<a name="l00047"></a><a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a438afd8dfe3cc4c89ac85a727761acab">00047</a> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a438afd8dfe3cc4c89ac85a727761acab">TRestorableGuiWrap&lt;Gui&gt;::CreateGui</a>(<a class="code" href="class_q_widget.html">QWidget</a>* parentPtr)
 <a name="l00048"></a>00048 {
 <a name="l00049"></a>00049        <span class="keywordtype">bool</span> retVal = BaseClass::CreateGui(parentPtr);
 <a name="l00050"></a>00050 

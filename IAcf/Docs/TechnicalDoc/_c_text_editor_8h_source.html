@@ -48,14 +48,14 @@
 <a name="l00022"></a>00022 {
 <a name="l00023"></a>00023 
 <a name="l00024"></a>00024 
-<a name="l00025"></a><a class="code" href="classiqsci_1_1_c_text_editor.html">00025</a> <span class="keyword">class </span><a class="code" href="classiqsci_1_1_c_text_editor.html">CTextEditor</a>: <span class="keyword">public</span> QWidget, <span class="keyword">public</span> Ui::<a class="code" href="classiqsci_1_1_c_text_editor.html">CTextEditor</a>, <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::ICommandsProvider
+<a name="l00025"></a><a class="code" href="classiqsci_1_1_c_text_editor.html">00025</a> <span class="keyword">class </span><a class="code" href="classiqsci_1_1_c_text_editor.html">CTextEditor</a>: <span class="keyword">public</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_q_widget.html">QWidget</a>, <span class="keyword">public</span> Ui::<a class="code" href="classiqsci_1_1_c_text_editor.html">CTextEditor</a>, <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::ICommandsProvider
 <a name="l00026"></a>00026 {
 <a name="l00027"></a>00027        Q_OBJECT
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029 <span class="keyword">public</span>:
-<a name="l00030"></a><a class="code" href="classiqsci_1_1_c_text_editor.html#a18123cae0937062bd9330565c2e5b799">00030</a>        <span class="keyword">typedef</span> QWidget <a class="code" href="classiqsci_1_1_c_text_editor.html#a18123cae0937062bd9330565c2e5b799">BaseClass</a>;
+<a name="l00030"></a><a class="code" href="classiqsci_1_1_c_text_editor.html#a18123cae0937062bd9330565c2e5b799">00030</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_q_widget.html">QWidget</a> <a class="code" href="classiqsci_1_1_c_text_editor.html#a18123cae0937062bd9330565c2e5b799">BaseClass</a>;
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032        <a class="code" href="classiqsci_1_1_c_text_editor.html#a5a1d7f4697325e1c7f25bb85bd7b3a7d">CTextEditor</a>(QWidget* parentWidget = NULL);
+<a name="l00032"></a>00032        <a class="code" href="classiqsci_1_1_c_text_editor.html#a5a1d7f4697325e1c7f25bb85bd7b3a7d">CTextEditor</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_q_widget.html">QWidget</a>* parentWidget = NULL);
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        <span class="keyword">virtual</span> QString <a class="code" href="classiqsci_1_1_c_text_editor.html#a86042ddcdc0345343a2aaf53fb92d7ff">GetText</a>() <span class="keyword">const</span>;
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqsci_1_1_c_text_editor.html#a64878a2a12bca277a16e519e66161b0d">SetText</a>(<span class="keyword">const</span> QString&amp; text);

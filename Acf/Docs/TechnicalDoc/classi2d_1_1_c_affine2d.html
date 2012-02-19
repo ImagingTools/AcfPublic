@@ -49,6 +49,7 @@ Inheritance diagram for i2d::CAffine2d:</div>
   <img src="classi2d_1_1_c_affine2d.png" usemap="#i2d::CAffine2d_map" alt=""/>
   <map id="i2d::CAffine2d_map" name="i2d::CAffine2d_map">
 <area href="classi2d_1_1_c_affine_transformation2d.html" title="Affine transformation for 2D spaces." alt="i2d::CAffineTransformation2d" shape="rect" coords="0,56,176,80"/>
+<area href="classiview_1_1_c_screen_transform.html" alt="iview::CScreenTransform" shape="rect" coords="186,56,362,80"/>
 </map>
  </div></div>
 
@@ -237,6 +238,10 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_screen_transform.html#a71a937c297b6f42b099ca86be7b2a85f">iview::CScreenTransform</a>.</p>
+
+<p>Referenced by <a class="el" href="_c_screen_transform_8h_source.html#l00140">iview::CScreenTransform::Apply()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a26ebb4aefa81fdf787ec1ccddfbc36ec"></a><!-- doxytag: member="i2d::CAffine2d::ApplyLeft" ref="a26ebb4aefa81fdf787ec1ccddfbc36ec" args="(const CAffine2d &amp;transform)" -->
@@ -262,6 +267,8 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_screen_transform.html#ab00811c5c3e2553d2cd82f62b92f83b0">iview::CScreenTransform</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a0ec1ca37f5246375310f8187fba6624e"></a><!-- doxytag: member="i2d::CAffine2d::GetApply" ref="a0ec1ca37f5246375310f8187fba6624e" args="(const CVector2d &amp;position) const " -->
@@ -284,6 +291,8 @@ Static Public Member Functions</h2></td></tr>
 <p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00236">236</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 <p>References <a class="el" href="_c_matrix2d_8h_source.html#l00172">i2d::CMatrix2d::GetMultiplied()</a>.</p>
+
+<p>Referenced by <a class="el" href="_c_interactive_shape_base_8h_source.html#l00110">iview::CInteractiveShapeBase::BeginDrag()</a>, <a class="el" href="_t_interactive_multi_polyline_shape_8h_source.html#l00641">iview::TInteractiveMultiPolylineShape&lt; SegmentData &gt;::EnsureValidNodes()</a>, <a class="el" href="_c_screen_transform_8h_source.html#l00086">iview::CScreenTransform::GetClientPosition()</a>, and <a class="el" href="_c_interactive_shape_base_8h_source.html#l00118">iview::CInteractiveShapeBase::SetDragPosition()</a>.</p>
 
 </div>
 </div>
@@ -458,7 +467,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00208">208</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_parallelogram_8h_source.html#l00077">i2d::CParallelogram::GetDeformMatrix()</a>.</p>
+<p>Referenced by <a class="el" href="_c_parallelogram_8h_source.html#l00077">i2d::CParallelogram::GetDeformMatrix()</a>, <a class="el" href="_t_interactive_multi_polyline_shape_8h_source.html#l00509">iview::TInteractiveMultiPolylineShape&lt; SegmentData &gt;::IsCurveTouched()</a>, <a class="el" href="_t_multi_polyline_calibration_shape_8h_source.html#l00466">iview::TMultiPolylineCalibrationShape&lt; SegmentData &gt;::IsCurveTouched()</a>, <a class="el" href="_t_interactive_multi_polyline_shape_8h_source.html#l00558">iview::TInteractiveMultiPolylineShape&lt; SegmentData &gt;::TrySelectSegments()</a>, and <a class="el" href="_t_multi_polyline_calibration_shape_8h_source.html#l00518">iview::TMultiPolylineCalibrationShape&lt; SegmentData &gt;::TrySelectSegments()</a>.</p>
 
 </div>
 </div>
@@ -478,7 +487,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00228">228</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_affine2d_8h_source.html#l00274">GetTranslated()</a>.</p>
+<p>Referenced by <a class="el" href="_t_interactive_multi_polyline_shape_8h_source.html#l00641">iview::TInteractiveMultiPolylineShape&lt; SegmentData &gt;::EnsureValidNodes()</a>, and <a class="el" href="_c_affine2d_8h_source.html#l00274">GetTranslated()</a>.</p>
 
 </div>
 </div>
@@ -516,7 +525,11 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get inverted transformation. </p>
 
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_screen_transform.html#a908956c00ee0ffc2e46801d308266528">iview::CScreenTransform</a>.</p>
+
 <p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00297">297</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_c_interactive_shape_base_8h_source.html#l00110">iview::CInteractiveShapeBase::BeginDrag()</a>, <a class="el" href="_c_screen_transform_8h_source.html#l00158">iview::CScreenTransform::CalculateInvert()</a>, and <a class="el" href="_c_interactive_shape_base_8h_source.html#l00118">iview::CInteractiveShapeBase::SetDragPosition()</a>.</p>
 
 </div>
 </div>
@@ -719,6 +732,10 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_screen_transform.html#a63e2c01fd6ec6865e76fab79c6a333f2">iview::CScreenTransform</a>.</p>
+
+<p>Referenced by <a class="el" href="_c_screen_transform_8h_source.html#l00148">iview::CScreenTransform::operator=()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="abc801eee10e03ad319cfe5acc856da5c"></a><!-- doxytag: member="i2d::CAffine2d::operator==" ref="abc801eee10e03ad319cfe5acc856da5c" args="(const CAffine2d &amp;transform) const " -->
@@ -756,6 +773,10 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Set to identity transformation. </p>
 
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_screen_transform.html#a0d6843b8bc358078cfe7608a1c536f0b">iview::CScreenTransform</a>.</p>
+
+<p>Referenced by <a class="el" href="_c_screen_transform_8h_source.html#l00108">iview::CScreenTransform::Reset()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a978a125c72959d8afcb77e71ad28f32a"></a><!-- doxytag: member="i2d::CAffine2d::Reset" ref="a978a125c72959d8afcb77e71ad28f32a" args="(const CVector2d &amp;translation)" -->
@@ -774,6 +795,8 @@ Static Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Set this transformation to translation. </p>
+
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_screen_transform.html#a1196516a8730ae024d418bb41e897eac">iview::CScreenTransform</a>.</p>
 
 </div>
 </div>
@@ -810,6 +833,8 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Set this transformation to translation, rotation and scaling. </p>
 
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_screen_transform.html#a092aabed3b0e1e90fa28dbc52c4c572b">iview::CScreenTransform</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a96d12ded5d552dd7cb0775b31dc11199"></a><!-- doxytag: member="i2d::CAffine2d::Reset" ref="a96d12ded5d552dd7cb0775b31dc11199" args="(const CVector2d &amp;translation, double angle, const CVector2d &amp;scale)" -->
@@ -844,6 +869,8 @@ Static Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Set this transformation to translation, rotation and both axis scaling. </p>
+
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_screen_transform.html#adc58f4673514aaf28c93166017a666ad">iview::CScreenTransform</a>.</p>
 
 </div>
 </div>
