@@ -37,17 +37,17 @@
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_vector2d_8h.html">i2d/CVector2d.h</a>&quot;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_c_interactive_transformable_rectangle_8h.html">iview/CInteractiveTransformableRectangle.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_c_interactive_transformable_rectangle_shape_8h.html">iview/CInteractiveTransformableRectangleShape.h</a>&quot;</span>
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 <span class="keyword">namespace </span>iview
 <a name="l00017"></a>00017 {
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 
-<a name="l00020"></a><a class="code" href="classiview_1_1_c_interactive_polygon_shape.html">00020</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_interactive_polygon_shape.html">CInteractivePolygonShape</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_c_interactive_transformable_rectangle.html">CInteractiveTransformableRectangle</a>
+<a name="l00020"></a><a class="code" href="classiview_1_1_c_interactive_polygon_shape.html">00020</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_interactive_polygon_shape.html">CInteractivePolygonShape</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_c_interactive_transformable_rectangle_shape.html">CInteractiveTransformableRectangleShape</a>
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00023"></a><a class="code" href="classiview_1_1_c_interactive_polygon_shape.html#aa2b6149cfa99d7b58cffa8c08de1fb37">00023</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_interactive_transformable_rectangle.html">CInteractiveTransformableRectangle</a> <a class="code" href="classiview_1_1_c_interactive_polygon_shape.html#aa2b6149cfa99d7b58cffa8c08de1fb37">BaseClass</a>;
+<a name="l00023"></a><a class="code" href="classiview_1_1_c_interactive_polygon_shape.html#a6f4f7dec58fb4f81021b3f64a2dd175e">00023</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_interactive_transformable_rectangle_shape.html">CInteractiveTransformableRectangleShape</a> <a class="code" href="classiview_1_1_c_interactive_polygon_shape.html#a6f4f7dec58fb4f81021b3f64a2dd175e">BaseClass</a>;
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025        <a class="code" href="classiview_1_1_c_interactive_polygon_shape.html#a27ad1ce326d79a58fa75548d1352abb1">CInteractivePolygonShape</a>();
 <a name="l00026"></a>00026 
@@ -81,7 +81,7 @@
 <a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_polygon_shape.html#a47526651ae5c8986c1a8b665c49631ef">DrawSelectionElements</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
 <a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_polygon_shape.html#a287660888db43e9b314a01eaf82274fe">IsCurveTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069        <span class="comment">// reimplemented (iview::CInteractiveTransformableRectangle)</span>
+<a name="l00069"></a>00069        <span class="comment">// reimplemented (iview::CInteractiveTransformableRectangleShape)</span>
 <a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_polygon_shape.html#a08005666bf2b36d5fa4bca815e44ee57">EnsureValidNodes</a>() <span class="keyword">const</span>;
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>

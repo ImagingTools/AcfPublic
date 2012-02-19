@@ -72,7 +72,7 @@ protected:
 					iview::TMultiPolyline<SegmentData>& polyline,
 					istd::CIndex2d position);
 	
-	// reimplemented (iview::CInteractiveTransformableRectangle)
+	// reimplemented (iview::CInteractiveTransformableRectangleShape)
 	virtual void EnsureValidNodes() const;
     
 	void CalculateRemovePoints(const iview::TMultiPolyline<SegmentData>& polyline, int segment, i2d::CVector2d& first, i2d::CVector2d& second) const;
@@ -131,7 +131,7 @@ bool TInteractiveMultiPolylineShape<SegmentData>::OnMouseButton(istd::CIndex2d p
 
 			switch (editMode){
 			case ISelectable::EM_NONE:
-				if (IsSelected() && CInteractiveTransformableRectangle::OnMouseButton(position, buttonType, downFlag)){
+				if (IsSelected() && CInteractiveTransformableRectangleShape::OnMouseButton(position, buttonType, downFlag)){
 					return true;
 				}
 				if (TrySelectSegments(*polylinePtr, position)){
@@ -298,12 +298,12 @@ ITouchable::TouchState TInteractiveMultiPolylineShape<SegmentData>::IsTouched(is
 		case ISelectable::EM_NONE:
 			if (IsSelected()){
 				if (colorShemaPtr != NULL){
-					CInteractiveTransformableRectangle::EnsureValidNodes();
-					if (CInteractiveTransformableRectangle::IsTickerTouched(position)){
+					CInteractiveTransformableRectangleShape::EnsureValidNodes();
+					if (CInteractiveTransformableRectangleShape::IsTickerTouched(position)){
 						return TS_TICKER;
 					}
 
-					if (CInteractiveTransformableRectangle::IsParallTouched(m_castTransform, position)){
+					if (CInteractiveTransformableRectangleShape::IsParallTouched(m_castTransform, position)){
 						bool isEditablePosition = IsEditablePosition();
 						return isEditablePosition? TS_DRAGGABLE: TS_INACTIVE;
 					}
@@ -657,7 +657,7 @@ bool TInteractiveMultiPolylineShape<SegmentData>::TrySelectSegments(
 
 
 
-// reimplemented (iview::CInteractiveTransformableRectangle)
+// reimplemented (iview::CInteractiveTransformableRectangleShape)
 
 template<class SegmentData>
 void TInteractiveMultiPolylineShape<SegmentData>::EnsureValidNodes() const

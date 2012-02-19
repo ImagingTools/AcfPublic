@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iview/CInteractiveTransformableRectangle.h"
+#include "iview/CInteractiveTransformableRectangleShape.h"
 
 
 // Qt includes
@@ -29,10 +29,10 @@
 
 // ACF includes
 #include "i2d/CLine2d.h"
+
 #include "imod/IModel.h"
+
 #include "iqt/iqt.h"
-
-
 
 #include "iview/CScreenTransform.h"
 
@@ -41,7 +41,7 @@ namespace iview
 {
 
 
-CInteractiveTransformableRectangle::CInteractiveTransformableRectangle()
+CInteractiveTransformableRectangleShape::CInteractiveTransformableRectangleShape()
 {
 	m_isEditableRotation = true;
 	m_isEditableWidth = true;
@@ -52,9 +52,9 @@ CInteractiveTransformableRectangle::CInteractiveTransformableRectangle()
 }
 
 
-// reimplemented (iview::CInteractiveShapeBase, see iview::TShapeBase)
+// reimplemented (iview::CInteractiveShapeBase)
 
-void CInteractiveTransformableRectangle::InvalidateBoundingBox()
+void CInteractiveTransformableRectangleShape::InvalidateBoundingBox()
 {
 	m_areNodesValid = false;
 	BaseClass::InvalidateBoundingBox();
@@ -63,7 +63,7 @@ void CInteractiveTransformableRectangle::InvalidateBoundingBox()
 
 // reimplemented (iview::ITouchable)
 
-ITouchable::TouchState CInteractiveTransformableRectangle::IsTouched(istd::CIndex2d position) const
+ITouchable::TouchState CInteractiveTransformableRectangleShape::IsTouched(istd::CIndex2d position) const
 {
 	if (IsSelected() && IsTickerTouched(position)){
 		return TS_TICKER;
@@ -80,7 +80,7 @@ ITouchable::TouchState CInteractiveTransformableRectangle::IsTouched(istd::CInde
 
 // reimplemented (iview::IShape)
 
-void CInteractiveTransformableRectangle::Draw(QPainter& drawContext) const
+void CInteractiveTransformableRectangleShape::Draw(QPainter& drawContext) const
 {
 	DrawFigure(drawContext);
 	DrawTickers(drawContext);
@@ -89,7 +89,7 @@ void CInteractiveTransformableRectangle::Draw(QPainter& drawContext) const
 
 // reimplemented (imod::IObserver)
 
-bool CInteractiveTransformableRectangle::OnAttached(imod::IModel* modelPtr)
+bool CInteractiveTransformableRectangleShape::OnAttached(imod::IModel* modelPtr)
 {
 	I_ASSERT(dynamic_cast<i2d::CParallelogram*>(modelPtr) != NULL);
 
@@ -99,7 +99,7 @@ bool CInteractiveTransformableRectangle::OnAttached(imod::IModel* modelPtr)
 
 // reimplemented (iview::IMouseActionObserver)
 
-bool CInteractiveTransformableRectangle::OnMouseButton(istd::CIndex2d position, Qt::MouseButton /*buttonType*/, bool downFlag)
+bool CInteractiveTransformableRectangleShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton /*buttonType*/, bool downFlag)
 {
 	if (IsDisplayConnected()){
 		m_mouseMode = MM_NONE;
@@ -167,7 +167,7 @@ bool CInteractiveTransformableRectangle::OnMouseButton(istd::CIndex2d position, 
 }
 
 
-bool CInteractiveTransformableRectangle::OnMouseMove(istd::CIndex2d position)
+bool CInteractiveTransformableRectangleShape::OnMouseMove(istd::CIndex2d position)
 {
 	imod::IModel* modelPtr = GetModelPtr();
 	i2d::CParallelogram* parallelogramPtr = dynamic_cast<i2d::CParallelogram*>(modelPtr);
@@ -190,7 +190,7 @@ bool CInteractiveTransformableRectangle::OnMouseMove(istd::CIndex2d position)
 
 // protected methods
 
-void CInteractiveTransformableRectangle::CalcNodes(const i2d::CAffine2d& parallTransform) const
+void CInteractiveTransformableRectangleShape::CalcNodes(const i2d::CAffine2d& parallTransform) const
 {
 	const i2d::CMatrix2d& parallDeform = parallTransform.GetDeformMatrix();
 	const i2d::CVector2d& axisX = parallDeform.GetAxisX();
@@ -223,7 +223,7 @@ void CInteractiveTransformableRectangle::CalcNodes(const i2d::CAffine2d& parallT
 }
 
 
-void CInteractiveTransformableRectangle::ResetNodes() const
+void CInteractiveTransformableRectangleShape::ResetNodes() const
 {
 	for (int i = 0; i < EN_LAST; ++i){
 		m_nodes[i].Reset();
@@ -232,7 +232,7 @@ void CInteractiveTransformableRectangle::ResetNodes() const
 }
 
 
-void CInteractiveTransformableRectangle::EnsureValidNodes() const
+void CInteractiveTransformableRectangleShape::EnsureValidNodes() const
 {
 	if (!AreNodesValid()){
 		const imod::IModel* modelPtr = GetModelPtr();
@@ -249,7 +249,7 @@ void CInteractiveTransformableRectangle::EnsureValidNodes() const
 }
 
 
-i2d::CAffine2d CInteractiveTransformableRectangle::CalcMoveTransform(i2d::CVector2d position, const i2d::CAffine2d& transform)
+i2d::CAffine2d CInteractiveTransformableRectangleShape::CalcMoveTransform(i2d::CVector2d position, const i2d::CAffine2d& transform)
 {
 	const i2d::CMatrix2d& parallDeform= transform.GetDeformMatrix();
 	const i2d::CVector2d& parallPos = transform.GetTranslation();
@@ -295,7 +295,7 @@ i2d::CAffine2d CInteractiveTransformableRectangle::CalcMoveTransform(i2d::CVecto
 }
 
 
-bool CInteractiveTransformableRectangle::IsTickerTouched(istd::CIndex2d position) const
+bool CInteractiveTransformableRectangleShape::IsTickerTouched(istd::CIndex2d position) const
 {
 	if (IsDisplayConnected()){
 		const IColorShema& colorShema = GetColorShema();
@@ -340,7 +340,7 @@ bool CInteractiveTransformableRectangle::IsTickerTouched(istd::CIndex2d position
 }
 
 
-bool CInteractiveTransformableRectangle::IsFigureTouched(istd::CIndex2d position) const
+bool CInteractiveTransformableRectangleShape::IsFigureTouched(istd::CIndex2d position) const
 {
 	const i2d::CParallelogram* parallelogramPtr = dynamic_cast<const i2d::CParallelogram*>(GetModelPtr());
 	if (parallelogramPtr != NULL){
@@ -351,7 +351,7 @@ bool CInteractiveTransformableRectangle::IsFigureTouched(istd::CIndex2d position
 }
 
 
-void CInteractiveTransformableRectangle::DrawTickers(QPainter& drawContext) const
+void CInteractiveTransformableRectangleShape::DrawTickers(QPainter& drawContext) const
 {
 	if (IsDisplayConnected()){
 		const IColorShema& colorShema = GetColorShema();
@@ -394,7 +394,7 @@ void CInteractiveTransformableRectangle::DrawTickers(QPainter& drawContext) cons
 }
 
 
-void CInteractiveTransformableRectangle::DrawFigure(QPainter& drawContext) const
+void CInteractiveTransformableRectangleShape::DrawFigure(QPainter& drawContext) const
 {
 	if (IsDisplayConnected()){
 		const IColorShema& colorShema = GetColorShema();
@@ -421,7 +421,7 @@ void CInteractiveTransformableRectangle::DrawFigure(QPainter& drawContext) const
 }
 
 
-bool CInteractiveTransformableRectangle::IsParallTouched(
+bool CInteractiveTransformableRectangleShape::IsParallTouched(
 				const i2d::CAffine2d& parallTransform,
 				istd::CIndex2d position) const
 {
@@ -476,7 +476,7 @@ bool CInteractiveTransformableRectangle::IsParallTouched(
 }
 
 
-i2d::CAffine2d CInteractiveTransformableRectangle::CalcScaleTransform(
+i2d::CAffine2d CInteractiveTransformableRectangleShape::CalcScaleTransform(
 				const i2d::CVector2d& center,
 				const i2d::CVector2d& isPos,
 				const i2d::CVector2d& shouldPos)
@@ -501,7 +501,7 @@ i2d::CAffine2d CInteractiveTransformableRectangle::CalcScaleTransform(
 }
 
 
-i2d::CAffine2d CInteractiveTransformableRectangle::CalcSizeTransform(
+i2d::CAffine2d CInteractiveTransformableRectangleShape::CalcSizeTransform(
 				const i2d::CVector2d& center,
 				const i2d::CVector2d& isPos,
 				const i2d::CVector2d& shouldPos)
@@ -523,7 +523,7 @@ i2d::CAffine2d CInteractiveTransformableRectangle::CalcSizeTransform(
 }
 
 
-i2d::CAffine2d CInteractiveTransformableRectangle::CalcRotatedTransform(
+i2d::CAffine2d CInteractiveTransformableRectangleShape::CalcRotatedTransform(
 				const i2d::CVector2d& center,
 				const i2d::CVector2d& isPos,
 				const i2d::CVector2d& shouldPos)
@@ -546,7 +546,7 @@ i2d::CAffine2d CInteractiveTransformableRectangle::CalcRotatedTransform(
 
 // reimplemented (iview::CInteractiveShapeBase)
 
-void CInteractiveTransformableRectangle::CalcBoundingBox(i2d::CRect& result) const
+void CInteractiveTransformableRectangleShape::CalcBoundingBox(i2d::CRect& result) const
 {
 	I_ASSERT(IsDisplayConnected());
 
@@ -567,7 +567,7 @@ void CInteractiveTransformableRectangle::CalcBoundingBox(i2d::CRect& result) con
 }
 
 
-void CInteractiveTransformableRectangle::BeginLogDrag(const i2d::CVector2d& reference)
+void CInteractiveTransformableRectangleShape::BeginLogDrag(const i2d::CVector2d& reference)
 {
 	const imod::IModel* modelPtr = GetModelPtr();
 	const i2d::CParallelogram* parallelogramPtr = dynamic_cast<const i2d::CParallelogram*>(modelPtr);
@@ -577,7 +577,7 @@ void CInteractiveTransformableRectangle::BeginLogDrag(const i2d::CVector2d& refe
 }
 
 
-void CInteractiveTransformableRectangle::SetLogDragPosition(const i2d::CVector2d& position)
+void CInteractiveTransformableRectangleShape::SetLogDragPosition(const i2d::CVector2d& position)
 {
 	imod::IModel* modelPtr = GetModelPtr();
 	i2d::CParallelogram* parallelogramPtr = dynamic_cast<i2d::CParallelogram*>(modelPtr);

@@ -79,7 +79,7 @@ void CCalibratedViewBase::InsertDefaultLayers()
 	BaseClass::InsertDefaultLayers();
 
 	int layerIndex = InsertLayer(&m_calibrationLayer, 1, LT_CALIBRATION);
-	SetLastBkLayerIndex(layerIndex);
+	SetLastBackgroundLayerIndex(layerIndex);
 }
 
 

@@ -82,7 +82,7 @@ public:
 	virtual bool AreAxesOrthogonal() const;
 	virtual void SetAxesOrthogonal(bool state = true);
 
-	// reimplemented (iview::CInteractiveShapeBase, see iview::TShapeBase)
+	// reimplemented (iview::CInteractiveShapeBase)
 	virtual void InvalidateBoundingBox();
 
 	// reimplemented (iview::IInteractiveShape)

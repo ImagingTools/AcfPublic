@@ -211,6 +211,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CImageViewComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CInteractiveAnnulusSegmentShape.cpp"
 				>
 			</File>
@@ -271,7 +275,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CInteractiveTransformableRectangle.cpp"
+				RelativePath="..\CInteractiveTransformableRectangleShape.cpp"
 				>
 			</File>
 			<File
@@ -393,6 +397,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CImageViewComp.h"
+				>
+			</File>
+			<File
 				RelativePath="..\CInteractiveAnnulusSegmentShape.h"
 				>
 			</File>
@@ -453,7 +461,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CInteractiveTransformableRectangle.h"
+				RelativePath="..\CInteractiveTransformableRectangleShape.h"
 				>
 			</File>
 			<File

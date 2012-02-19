@@ -43,7 +43,7 @@ CInteractiveRectangleShape::CInteractiveRectangleShape()
 }
 
 
-// reimplemented (iview::CInteractiveShapeBase, see iview::TShapeBase)
+// reimplemented (iview::CInteractiveShapeBase)
 
 void CInteractiveRectangleShape::InvalidateBoundingBox()
 {

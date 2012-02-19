@@ -52,7 +52,7 @@ CTransformableRectangleCalibrationShape::CTransformableRectangleCalibrationShape
 }
 
 
-// reimplemented (iview::CInteractiveShapeBase, see iview::TShapeBase)
+// reimplemented (iview::CInteractiveShapeBase)
 
 void CTransformableRectangleCalibrationShape::InvalidateBoundingBox()
 {

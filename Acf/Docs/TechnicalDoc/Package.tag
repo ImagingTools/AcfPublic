@@ -3959,12 +3959,26 @@
   <compound kind="file">
     <name>CImageViewComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_c_image_view_comp_8h</filename>
+    <filename>iqt2d_2_c_image_view_comp_8h</filename>
     <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
     <includes id="iqt2d_2_c_image_shape_8h" name="CImageShape.h" local="yes" imported="no">iqt2d/CImageShape.h</includes>
     <includes id="_c_scene_provider_gui_comp_8h" name="CSceneProviderGuiComp.h" local="yes" imported="no">iqt2d/CSceneProviderGuiComp.h</includes>
     <class kind="class">iqt2d::CImageViewComp</class>
     <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CImageViewComp.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>iview_2_c_image_view_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
+    <includes id="iview_2_c_image_shape_8h" name="CImageShape.h" local="yes" imported="no">iview/CImageShape.h</includes>
+    <includes id="_c_none_calibration_8h" name="CNoneCalibration.h" local="yes" imported="no">iview/CNoneCalibration.h</includes>
+    <includes id="_c_none_calibration_shape_8h" name="CNoneCalibrationShape.h" local="yes" imported="no">iview/CNoneCalibrationShape.h</includes>
+    <includes id="_c_console_gui_8h" name="CConsoleGui.h" local="yes" imported="no">iview/CConsoleGui.h</includes>
+    <class kind="class">iview::CImageViewComp</class>
+    <namespace>iview</namespace>
   </compound>
   <compound kind="file">
     <name>CLine2dParamsGuiComp.h</name>
@@ -6317,7 +6331,7 @@
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_interactive_polygon_shape_8h</filename>
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
-    <includes id="_c_interactive_transformable_rectangle_8h" name="CInteractiveTransformableRectangle.h" local="yes" imported="no">iview/CInteractiveTransformableRectangle.h</includes>
+    <includes id="_c_interactive_transformable_rectangle_shape_8h" name="CInteractiveTransformableRectangleShape.h" local="yes" imported="no">iview/CInteractiveTransformableRectangleShape.h</includes>
     <class kind="class">iview::CInteractivePolygonShape</class>
     <namespace>iview</namespace>
   </compound>
@@ -6367,12 +6381,12 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
-    <name>CInteractiveTransformableRectangle.h</name>
+    <name>CInteractiveTransformableRectangleShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_c_interactive_transformable_rectangle_8h</filename>
+    <filename>_c_interactive_transformable_rectangle_shape_8h</filename>
     <includes id="_c_parallelogram_8h" name="CParallelogram.h" local="yes" imported="no">i2d/CParallelogram.h</includes>
     <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="yes" imported="no">iview/CInteractiveShapeBase.h</includes>
-    <class kind="class">iview::CInteractiveTransformableRectangle</class>
+    <class kind="class">iview::CInteractiveTransformableRectangleShape</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -48543,6 +48557,7 @@
     <class kind="class">iview::CConsoleWidget</class>
     <class kind="class">iview::CDrawBuffer</class>
     <class kind="class">iview::CImageShape</class>
+    <class kind="class">iview::CImageViewComp</class>
     <class kind="class">iview::CInteractiveAnnulusSegmentShape</class>
     <class kind="class">iview::CInteractiveAnnulusShape</class>
     <class kind="class">iview::CInteractiveArrowShape</class>
@@ -48558,7 +48573,7 @@
     <class kind="class">iview::CInteractiveRectangleShape</class>
     <class kind="class">iview::CInteractiveShapeBase</class>
     <class kind="class">iview::CInteractiveSplineShape</class>
-    <class kind="class">iview::CInteractiveTransformableRectangle</class>
+    <class kind="class">iview::CInteractiveTransformableRectangleShape</class>
     <class kind="class">iview::CLayerBase</class>
     <class kind="class">iview::CNoneCalibration</class>
     <class kind="class">iview::CNoneCalibrationShape</class>
@@ -49839,6 +49854,40 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iview::CImageViewComp</name>
+    <filename>classiview_1_1_c_image_view_comp.html</filename>
+    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;, iview::CImageShape &gt;</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <member kind="typedef">
+      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;, iview::CImageShape &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiview_1_1_c_image_view_comp.html</anchorfile>
+      <anchor>a11a73598551af0551d1f860427870049</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classiview_1_1_c_image_view_comp.html</anchorfile>
+      <anchor>a523bb32dd19114b1a5fe2bcd1d85325c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiview_1_1_c_image_view_comp.html</anchorfile>
+      <anchor>a38f3b45c39a7cd4ac707a70736058f98</anchor>
+      <arglist>(int updateFlags)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiview_1_1_c_image_view_comp.html</anchorfile>
+      <anchor>a20fcfa3cd18c7ee38a934dec0ff23232</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iview::CInteractiveAnnulusSegmentShape</name>
     <filename>classiview_1_1_c_interactive_annulus_segment_shape.html</filename>
     <base>iview::CInteractiveAnnulusShape</base>
@@ -51078,12 +51127,12 @@
   <compound kind="class">
     <name>iview::CInteractivePolygonShape</name>
     <filename>classiview_1_1_c_interactive_polygon_shape.html</filename>
-    <base>iview::CInteractiveTransformableRectangle</base>
+    <base>iview::CInteractiveTransformableRectangleShape</base>
     <member kind="typedef">
-      <type>CInteractiveTransformableRectangle</type>
+      <type>CInteractiveTransformableRectangleShape</type>
       <name>BaseClass</name>
       <anchorfile>classiview_1_1_c_interactive_polygon_shape.html</anchorfile>
-      <anchor>aa2b6149cfa99d7b58cffa8c08de1fb37</anchor>
+      <anchor>a6f4f7dec58fb4f81021b3f64a2dd175e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -51799,402 +51848,402 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iview::CInteractiveTransformableRectangle</name>
-    <filename>classiview_1_1_c_interactive_transformable_rectangle.html</filename>
+    <name>iview::CInteractiveTransformableRectangleShape</name>
+    <filename>classiview_1_1_c_interactive_transformable_rectangle_shape.html</filename>
     <base>iview::CInteractiveShapeBase</base>
     <member kind="typedef">
       <type>CInteractiveShapeBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>ac82a989ae08010773abc22b88a60717a</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>af238c4be52379c70e94143d15f1991e6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
-      <name>CInteractiveTransformableRectangle</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>ac2174dfae6dd9b4bcd88bcc2bc1ae021</anchor>
+      <name>CInteractiveTransformableRectangleShape</name>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a27fae7385c83ffbe08efcaa81d7a9145</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEditableRotation</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a4fae434a04a2061724d23cd25f25e4b9</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a8c7bdc587eda751a0271455cefca84bf</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetEditableRotation</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>abcad3e168d6831cbddba2618c4d71c68</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ab01acb0af0b06eee94dd2e0ad86b1e2c</anchor>
       <arglist>(bool state=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEditableWidth</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a0fe6a62b81202b21949f8f90f4530112</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ac3aa3cd5ce5d61f431f9f7001c021f57</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetEditableWidth</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>aa6d16856da2228ccea44c117716af1e7</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>abc0ac1c7f6e25ad2adbe2274ea5cc82d</anchor>
       <arglist>(bool state=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEditableHeight</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>af98832a73cd19684f68d409244636ebc</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a814ce83e08b640d11c18e642a6a48a2a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetEditableHeight</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>ace10c5cb8b508b9e13cd04e448dca6a9</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a7e27cd89a7daced2c69dd817eac5b28d</anchor>
       <arglist>(bool state=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsProportionalScaled</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a99ad35f91516e10ab9ae564efae0e377</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>abb4430c3aacaa551aee3315bdb869f38</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetProportionalScaled</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>ae0fc808a48cbf41f7b4715461ce88fae</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a3f911e3703add44db920deb8ed996f3b</anchor>
       <arglist>(bool state=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InvalidateBoundingBox</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a76953c70ff815002b896b3c3ebe9fca8</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a751e7abb1e04d12996dacff2ed1579af</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual TouchState</type>
       <name>IsTouched</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a749745abd4d672a2bf48c73cf807be2c</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>aadb83c16bf1627d9a6112ee0e1e1b54b</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Draw</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>ae18444b79eab6188ff0773a7ca431cd5</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>af365e0c3d87d5b71c0dd8f50b089e6e2</anchor>
       <arglist>(QPainter &amp;drawContext) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnAttached</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a60120b83be29f0336b593698a531fb44</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ad70e8fb61e48f0d3c2342c496b73946c</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnMouseButton</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a7ddabbc05656117104605ae6a102d331</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a32c0166ed898d44a56400bc7e7f34a70</anchor>
       <arglist>(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnMouseMove</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a55b37b7af752d968cc89587d7bea8668</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a5dbee72cfe04077f83586fa5d136e37e</anchor>
       <arglist>(istd::CIndex2d position)</arglist>
     </member>
     <member kind="enumeration">
       <name>EditNode</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a8f0941a69c2efd87428334548a27be7e</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ae9f0077e0321a70a067d7a72a6a7a094</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>EN_NODE1</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a8f0941a69c2efd87428334548a27be7ea8a175ab8d3cc8442e29ea1b9ff43784e</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ae9f0077e0321a70a067d7a72a6a7a094a69f4c9f2d7ffd597df8123b1c4d1ecf6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>EN_NODE2</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a8f0941a69c2efd87428334548a27be7ea9536d2098f62d95732352485d1d04139</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ae9f0077e0321a70a067d7a72a6a7a094aa7527fe83799c07efc2275b92c7de709</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>EN_NODE3</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a8f0941a69c2efd87428334548a27be7ea947e477dce0fb78b0c005f625c3be8f5</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ae9f0077e0321a70a067d7a72a6a7a094ae612babc9c98ff056f0658357b5d64ad</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>EN_NODE4</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a8f0941a69c2efd87428334548a27be7ea048e2ddd99113066c343949d44111a17</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ae9f0077e0321a70a067d7a72a6a7a094a9168485f1006c52cf9179d0d5f509c7c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>EN_CENTER</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a8f0941a69c2efd87428334548a27be7eab1f45c60fc5a3f8bd71198bf66beeaf1</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ae9f0077e0321a70a067d7a72a6a7a094ab87427913dcf4417b9c604d9070bf8ba</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>EN_MIDDLE12</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a8f0941a69c2efd87428334548a27be7eab4d4ebdbceaed5a066e9c4c04a8750e3</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ae9f0077e0321a70a067d7a72a6a7a094ae2e8b2acb482f041f46e7ef02666ebf3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>EN_MIDDLE23</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a8f0941a69c2efd87428334548a27be7ea3e2cbf691567034749ca6a1dd2e1bc3d</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ae9f0077e0321a70a067d7a72a6a7a094a472ed864e186beda097ce5f31c835280</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>EN_MIDDLE34</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a8f0941a69c2efd87428334548a27be7ea754b38586e045942609f6efd752634fc</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ae9f0077e0321a70a067d7a72a6a7a094af3e958543dd7ceaa5b12af7e8336cd13</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>EN_MIDDLE41</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a8f0941a69c2efd87428334548a27be7ea56118e3b31fec11af147e1b0902d6d10</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ae9f0077e0321a70a067d7a72a6a7a094a51b76a45476dbdc5d57de94c3d5776c9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>EN_ROTATION1</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a8f0941a69c2efd87428334548a27be7ea29af89f267cfb38bf8d4311d1fedd7ca</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ae9f0077e0321a70a067d7a72a6a7a094ad28e763bf8025a946cc2c9c159c34902</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>EN_ROTATION2</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a8f0941a69c2efd87428334548a27be7ea6bd8ede159373ea0b981f3ae3962e817</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ae9f0077e0321a70a067d7a72a6a7a094a920a1c9797a65b7f905c0fbabae65106</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>EN_LAST</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a8f0941a69c2efd87428334548a27be7ea75fe0d2c17926de9ec9513618f972edd</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ae9f0077e0321a70a067d7a72a6a7a094a60da2ffe86dab4ee31b904be2b7eee5a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>MouseMode</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a3dbf62e37874900b75260d8bb6beabe6</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a21f078ce0342544f70b8cc1543be6175</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MM_NONE</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a3dbf62e37874900b75260d8bb6beabe6ad1de4e94c6923c558e112deea29a0829</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a21f078ce0342544f70b8cc1543be6175afc4c1ec18a4c39103e0047411ce69be7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MM_ROTATION1</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a3dbf62e37874900b75260d8bb6beabe6a1f67d8c822d2345af348eb5552ad470a</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a21f078ce0342544f70b8cc1543be6175a99de45481905c326831ba8ebae2e72b7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MM_ROTATION2</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a3dbf62e37874900b75260d8bb6beabe6a71c5ccbe77d2f9424ad86439513b7bb7</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a21f078ce0342544f70b8cc1543be6175a7c774966c0cdaeec9284e2585e5e80dc</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MM_WIDTH1</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a3dbf62e37874900b75260d8bb6beabe6a7bc51ac652f99a9c267d89572d65abb5</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a21f078ce0342544f70b8cc1543be6175a86cbd31c1deb14ab34ec224cd64c124c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MM_WIDTH2</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a3dbf62e37874900b75260d8bb6beabe6a1ad14a0f2fe3dbf013c84c3073a30a4e</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a21f078ce0342544f70b8cc1543be6175a85ee34475b46b916085cee19e61f0907</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MM_HEIGHT1</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a3dbf62e37874900b75260d8bb6beabe6a3bbe6d8a06e6736d0a527b507b57a9aa</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a21f078ce0342544f70b8cc1543be6175a28eb7330dd6f90db1928f4a6f0248900</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MM_HEIGHT2</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a3dbf62e37874900b75260d8bb6beabe6a81a58dd9c73963d883e477e9473838cb</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a21f078ce0342544f70b8cc1543be6175a3469d5bfed8c687295dbc037233658b9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MM_SIZE1</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a3dbf62e37874900b75260d8bb6beabe6afdc41a88446a5af443afc2b95ee3eee7</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a21f078ce0342544f70b8cc1543be6175a415616331feb6147bd9ed764892ec1bd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MM_SIZE2</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a3dbf62e37874900b75260d8bb6beabe6a1b76bb1b09e852d67b474ea4e1a3b7b1</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a21f078ce0342544f70b8cc1543be6175adf6914f06e0cd82aa267525b6af82b26</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MM_SIZE3</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a3dbf62e37874900b75260d8bb6beabe6ae8230790ff59574be1f0ea6c342be0dd</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a21f078ce0342544f70b8cc1543be6175a2b21062f4a084e3a518e1cd8476bf6ea</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MM_SIZE4</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a3dbf62e37874900b75260d8bb6beabe6a101e66cb72b3e30992197970c8e794c2</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a21f078ce0342544f70b8cc1543be6175aeaabeaed8490d7b287be6e6f6b63d7f3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>CalcNodes</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a972d445e9cb72f1d98b29ba51be0db2b</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>af1e259300cd3e7e5381c35b2dda17761</anchor>
       <arglist>(const i2d::CAffine2d &amp;parallTransform) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>ResetNodes</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>abc3fbecdad5829550afefd0b78d88af4</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a8337b9a3399eeb4cfa6f93bf8474d220</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>AreNodesValid</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>af3490a8aab44364ceb3245426a96a179</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>adf39e835a56b4f1305ac2f5868131b4b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>const istd::CIndex2d *</type>
       <name>GetNodes</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a0edd0918a2bc894ea6bf449426475e6e</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>aa382bbf8286f987ce26762c0f751abc0</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureValidNodes</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a7be0c57ba57ad92e6399f0d720953f5b</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a26eafd2ba6cf12604bdb15279520e483</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>i2d::CAffine2d</type>
       <name>CalcMoveTransform</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a4f3f17319bb429bd06dbfe1a878860c0</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a171a6585978caa5d6661e35a3ffc1dab</anchor>
       <arglist>(i2d::CVector2d position, const i2d::CAffine2d &amp;transform)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsTickerTouched</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>ad03b068e7e395e90af9e116d5e985214</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>ae3ee68326f21a3e5e11d4b43837f0134</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsFigureTouched</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a66c2c3463fd17ae3b3997ae2d076a62a</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a68f0628f4019ad0ac361214ae7a81fa9</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>DrawTickers</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a084195bf3ae1deb0ece73e7649cbf842</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a1353ad98f951d87873b05966585a7bb0</anchor>
       <arglist>(QPainter &amp;drawContext) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>DrawFigure</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a705b8b89fff286ab0be486d36c82f7a8</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a2aff75de4499db59a3fe58ab7a8a6e78</anchor>
       <arglist>(QPainter &amp;drawContext) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>IsParallTouched</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a05dafbaff9b9be2ab7aafc5877dc1391</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a2dbd24c9a95801b6d205234cb64c7c62</anchor>
       <arglist>(const i2d::CAffine2d &amp;parallTransform, istd::CIndex2d position) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>i2d::CAffine2d</type>
       <name>CalcScaleTransform</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>aabcc80d5947e30bc55e88582c42e5695</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a7f993c31b5c0f29282ed0668474b85cd</anchor>
       <arglist>(const i2d::CVector2d &amp;center, const i2d::CVector2d &amp;isPos, const i2d::CVector2d &amp;shouldPos)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>i2d::CAffine2d</type>
       <name>CalcSizeTransform</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>ad3b8209dcb6f5838c074b8b7698ff21d</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a00b609241419430a2dca66b8abf0ab07</anchor>
       <arglist>(const i2d::CVector2d &amp;center, const i2d::CVector2d &amp;isPos, const i2d::CVector2d &amp;shouldPos)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>i2d::CAffine2d</type>
       <name>CalcRotatedTransform</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>ae78152287d15537595a9aa51e0155f7c</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a0e25178d62b9b9032d41d1e7bdb6836f</anchor>
       <arglist>(const i2d::CVector2d &amp;center, const i2d::CVector2d &amp;isPos, const i2d::CVector2d &amp;shouldPos)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CalcBoundingBox</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a7a8496e6343ccd81d0c212ed932f545a</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a454598dbbd3896c9699b7fb978565e7e</anchor>
       <arglist>(i2d::CRect &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginLogDrag</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a440122d49221f157d28eca6d59a15456</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a2dfeacaf16e8e8e072f066cb371be60b</anchor>
       <arglist>(const i2d::CVector2d &amp;reference)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetLogDragPosition</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>ae8a14d2b6265ed9f577cc2fe11866bcc</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a7d5be8ba8bc960f9cd8d37e2fccceec0</anchor>
       <arglist>(const i2d::CVector2d &amp;position)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>MouseMode</type>
       <name>m_mouseMode</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a8d55049414c9dd467c9f9c7e1a817581</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>aa45c329d886b896ee13c66fe633d66c3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>i2d::CVector2d</type>
       <name>m_referencePosition</name>
-      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle.html</anchorfile>
-      <anchor>a69f5987f5d2af8b516ede95356d1b54f</anchor>
+      <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
+      <anchor>a24f84228cfecb38edc18a7b45abcef90</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -54394,16 +54443,16 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>AddViewListener</name>
+      <name>AddViewEventObserver</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>abd8d6775e34d2cde701ba379565699ca</anchor>
+      <anchor>afa0b5c3bd28c248ca1a206211e28e4f1</anchor>
       <arglist>(iview::IViewEventObserver *listenerPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>RemoveViewListener</name>
+      <name>RemoveViewEventObserver</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>a3d5b3fe8e3525e28b08b11e5c1c14f23</anchor>
+      <anchor>a63ae1c909ae51a9f7a8c940ecf56e48d</anchor>
       <arglist>(iview::IViewEventObserver *listenerPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -54730,16 +54779,16 @@
     </member>
     <member kind="function" protection="protected">
       <type>int</type>
-      <name>GetLastBkLayerIndex</name>
+      <name>GetLastBackgroundLayerIndex</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>a9d20c69d18e1b3aa028c3abaed2b8a73</anchor>
+      <anchor>ab91db86fee4f28b9220573e0fc4ca3c7</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>SetLastBkLayerIndex</name>
+      <name>SetLastBackgroundLayerIndex</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>a5a91b2035e878644bf671626a66e2ab5</anchor>
+      <anchor>ac3898de8ddb97346ccad70050e0306ed</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="function" protection="protected">

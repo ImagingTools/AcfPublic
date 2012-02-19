@@ -28,11 +28,10 @@
 
 
 // ACF includes
-#include "i2d/CPosition2d.h"
 #include "imod/IModel.h"
+#include "i2d/CPosition2d.h"
+
 #include "iqt/iqt.h"
-
-
 
 #include "iview/CScreenTransform.h"
 
@@ -50,7 +49,7 @@ CInteractiveArrowShape::CInteractiveArrowShape()
 }
 
 
-// reimplemented (iview::CInteractiveShapeBase, see iview::TShapeBase)
+// reimplemented (iview::CInteractiveShapeBase)
 
 void CInteractiveArrowShape::InvalidateBoundingBox()
 {

@@ -96,9 +96,9 @@
 <a name="l00095"></a>00095        
 <a name="l00099"></a>00099        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#af0b7c7c8e44198640fba6b7b13c0721f" title="Turn on/off possibility to move more selected shapes, when one is moved.">SetDraggable</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
 <a name="l00100"></a>00100        
-<a name="l00104"></a>00104        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#abd8d6775e34d2cde701ba379565699ca" title="Adds handler to catch view events.">AddViewListener</a>(<a class="code" href="classiview_1_1_i_view_event_observer.html" title="Interface for external view event observer.">iview::IViewEventObserver</a>* listenerPtr);
+<a name="l00104"></a>00104        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#afa0b5c3bd28c248ca1a206211e28e4f1" title="Adds handler to catch view events.">AddViewEventObserver</a>(<a class="code" href="classiview_1_1_i_view_event_observer.html" title="Interface for external view event observer.">iview::IViewEventObserver</a>* listenerPtr);
 <a name="l00105"></a>00105        
-<a name="l00109"></a>00109        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#a3d5b3fe8e3525e28b08b11e5c1c14f23" title="Removes handler to catch view events.">RemoveViewListener</a>(<a class="code" href="classiview_1_1_i_view_event_observer.html" title="Interface for external view event observer.">iview::IViewEventObserver</a>* listenerPtr);
+<a name="l00109"></a>00109        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#a63ae1c909ae51a9f7a8c940ecf56e48d" title="Removes handler to catch view events.">RemoveViewEventObserver</a>(<a class="code" href="classiview_1_1_i_view_event_observer.html" title="Interface for external view event observer.">iview::IViewEventObserver</a>* listenerPtr);
 <a name="l00110"></a>00110        
 <a name="l00114"></a>00114        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#ab9d45fa723b732f05c5b5e16bcc64cf7" title="Insert default layers, when there is no one user layer.">InsertDefaultLayers</a>();
 <a name="l00115"></a>00115 
@@ -173,8 +173,8 @@
 <a name="l00188"></a>00188 
 <a name="l00195"></a>00195        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#aff05357e24e5b452deb06371a7e44ef8" title="Draw Background layer.">DrawLayers</a>(QPainter&amp; drawContext, <span class="keywordtype">int</span> firstLayer, <span class="keywordtype">int</span> lastLayer);
 <a name="l00196"></a>00196        
-<a name="l00200"></a>00200        <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_view_base.html#a9d20c69d18e1b3aa028c3abaed2b8a73" title="Get last background layer index.">GetLastBkLayerIndex</a>();
-<a name="l00201"></a>00201        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#a5a91b2035e878644bf671626a66e2ab5">SetLastBkLayerIndex</a>(<span class="keywordtype">int</span> index);
+<a name="l00200"></a>00200        <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_view_base.html#ab91db86fee4f28b9220573e0fc4ca3c7" title="Get last background layer index.">GetLastBackgroundLayerIndex</a>();
+<a name="l00201"></a>00201        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#ac3898de8ddb97346ccad70050e0306ed">SetLastBackgroundLayerIndex</a>(<span class="keywordtype">int</span> index);
 <a name="l00202"></a>00202        
 <a name="l00206"></a>00206        <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_view_base.html#af94d74a291af6176dd342d90c8c3b70e" title="Get index of default background layer.">GetBackgroundLayerIndex</a>() <span class="keyword">const</span>;
 <a name="l00207"></a>00207        
@@ -254,7 +254,7 @@
 <a name="l00339"></a>00339 
 <a name="l00340"></a>00340        <a class="code" href="classiview_1_1_c_view_base.html#afada7c436ffbc6ea9a1c911bb341b9a7">Layers</a> m_layers;
 <a name="l00341"></a>00341 
-<a name="l00342"></a>00342        <span class="keywordtype">int</span> m_lastBkLayerIndex;
+<a name="l00342"></a>00342        <span class="keywordtype">int</span> m_lastBackgroundLayerIndex;
 <a name="l00343"></a>00343 
 <a name="l00344"></a>00344        <span class="comment">// default layers</span>
 <a name="l00345"></a>00345        <a class="code" href="classiview_1_1_c_single_layer.html">iview::CSingleLayer</a> m_backgroundLayer;
@@ -415,15 +415,15 @@
 <a name="l00500"></a>00500 
 <a name="l00501"></a>00501 <span class="comment">// protected methods</span>
 <a name="l00502"></a>00502 
-<a name="l00503"></a><a class="code" href="classiview_1_1_c_view_base.html#a9d20c69d18e1b3aa028c3abaed2b8a73">00503</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_view_base.html#a9d20c69d18e1b3aa028c3abaed2b8a73" title="Get last background layer index.">CViewBase::GetLastBkLayerIndex</a>()
+<a name="l00503"></a><a class="code" href="classiview_1_1_c_view_base.html#ab91db86fee4f28b9220573e0fc4ca3c7">00503</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_view_base.html#ab91db86fee4f28b9220573e0fc4ca3c7" title="Get last background layer index.">CViewBase::GetLastBackgroundLayerIndex</a>()
 <a name="l00504"></a>00504 {
-<a name="l00505"></a>00505        <span class="keywordflow">return</span> m_lastBkLayerIndex;
+<a name="l00505"></a>00505        <span class="keywordflow">return</span> m_lastBackgroundLayerIndex;
 <a name="l00506"></a>00506 }
 <a name="l00507"></a>00507 
 <a name="l00508"></a>00508 
-<a name="l00509"></a><a class="code" href="classiview_1_1_c_view_base.html#a5a91b2035e878644bf671626a66e2ab5">00509</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#a5a91b2035e878644bf671626a66e2ab5">CViewBase::SetLastBkLayerIndex</a>(<span class="keywordtype">int</span> index)
+<a name="l00509"></a><a class="code" href="classiview_1_1_c_view_base.html#ac3898de8ddb97346ccad70050e0306ed">00509</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#ac3898de8ddb97346ccad70050e0306ed">CViewBase::SetLastBackgroundLayerIndex</a>(<span class="keywordtype">int</span> index)
 <a name="l00510"></a>00510 {
-<a name="l00511"></a>00511        m_lastBkLayerIndex = index;
+<a name="l00511"></a>00511        m_lastBackgroundLayerIndex = index;
 <a name="l00512"></a>00512 }
 <a name="l00513"></a>00513 
 <a name="l00514"></a>00514 

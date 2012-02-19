@@ -46,19 +46,21 @@ Inheritance diagram for iview::CImageShape:</div>
  <div class="center">
   <img src="classiview_1_1_c_image_shape.png" usemap="#iview::CImageShape_map" alt=""/>
   <map id="iview::CImageShape_map" name="iview::CImageShape_map">
-<area href="classiview_1_1_c_shape_base.html" alt="iview::CShapeBase" shape="rect" coords="430,224,635,248"/>
-<area href="classiview_1_1_t_shape_base.html" alt="iview::TShapeBase&lt; IShape &gt;" shape="rect" coords="430,168,635,192"/>
-<area href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes." alt="iview::IShape" shape="rect" coords="107,112,312,136"/>
-<area href="classiview_1_1_c_shape_control.html" alt="iview::CShapeControl" shape="rect" coords="430,112,635,136"/>
-<area href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer." alt="imod::CSingleModelObserverBase" shape="rect" coords="645,112,850,136"/>
-<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="0,56,205,80"/>
-<area href="classiview_1_1_i_visualizable.html" alt="iview::IVisualizable" shape="rect" coords="215,56,420,80"/>
-<area href="classiview_1_1_i_logical_coords.html" alt="iview::ILogicalCoords" shape="rect" coords="430,56,635,80"/>
-<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="645,56,850,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,205,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="215,0,420,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="430,0,635,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="645,0,850,24"/>
+<area href="classiview_1_1_c_shape_base.html" alt="iview::CShapeBase" shape="rect" coords="1196,224,1784,248"/>
+<area href="classiview_1_1_t_shape_base.html" alt="iview::TShapeBase&lt; IShape &gt;" shape="rect" coords="1196,168,1784,192"/>
+<area href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes." alt="iview::IShape" shape="rect" coords="299,112,887,136"/>
+<area href="classiview_1_1_c_shape_control.html" alt="iview::CShapeControl" shape="rect" coords="1196,112,1784,136"/>
+<area href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer." alt="imod::CSingleModelObserverBase" shape="rect" coords="1794,112,2382,136"/>
+<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="0,56,588,80"/>
+<area href="classiview_1_1_i_visualizable.html" alt="iview::IVisualizable" shape="rect" coords="598,56,1186,80"/>
+<area href="classiview_1_1_i_logical_coords.html" alt="iview::ILogicalCoords" shape="rect" coords="1196,56,1784,80"/>
+<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="1794,56,2382,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,588,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="598,0,1186,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1196,0,1784,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1794,0,2382,24"/>
+<area href="classiqtgui_1_1_t_gui_observer_wrap.html" alt="iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;, iview::CImageShape &gt;" shape="rect" coords="1196,336,1784,360"/>
+<area href="classiview_1_1_c_image_view_comp.html" title="Show observed bitmap on the 2D-console." alt="iview::CImageViewComp" shape="rect" coords="1196,392,1784,416"/>
 </map>
  </div></div>
 
@@ -95,6 +97,8 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_shape_base.html#a7224e6c066cc0235be3c5fae2da28a87">iview::CShapeBase</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_image_view_comp.html#a11a73598551af0551d1f860427870049">iview::CImageViewComp</a>.</p>
 
 <p>Definition at line <a class="el" href="iview_2_c_image_shape_8h_source.html#l00020">20</a> of file <a class="el" href="iview_2_c_image_shape_8h_source.html">CImageShape.h</a>.</p>
 
@@ -202,6 +206,8 @@ Protected Member Functions</h2></td></tr>
 <p>This function returns a <code>true</code>, if observable object is accepted by the implementation logic of the observer, otherwise the function returns a <code>false</code>. </p>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_shape_base.html#a67615b4f1490b9817638da7c1af18496">iview::CShapeBase</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a1e5ea143e01a0798090e8989ded7fb94">iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;, iview::CImageShape &gt;</a>.</p>
 
 </div>
 </div>

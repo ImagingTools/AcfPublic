@@ -108,10 +108,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on/off possibility to select more shapes using control keys.  <a href="#af784458dcc4fa1af1343df1606df5ca2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#af0b7c7c8e44198640fba6b7b13c0721f">SetDraggable</a> (bool state=true)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on/off possibility to move more selected shapes, when one is moved.  <a href="#af0b7c7c8e44198640fba6b7b13c0721f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#abd8d6775e34d2cde701ba379565699ca">AddViewListener</a> (<a class="el" href="classiview_1_1_i_view_event_observer.html">iview::IViewEventObserver</a> *listenerPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds handler to catch view events.  <a href="#abd8d6775e34d2cde701ba379565699ca"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a3d5b3fe8e3525e28b08b11e5c1c14f23">RemoveViewListener</a> (<a class="el" href="classiview_1_1_i_view_event_observer.html">iview::IViewEventObserver</a> *listenerPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes handler to catch view events.  <a href="#a3d5b3fe8e3525e28b08b11e5c1c14f23"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#afa0b5c3bd28c248ca1a206211e28e4f1">AddViewEventObserver</a> (<a class="el" href="classiview_1_1_i_view_event_observer.html">iview::IViewEventObserver</a> *listenerPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds handler to catch view events.  <a href="#afa0b5c3bd28c248ca1a206211e28e4f1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a63ae1c909ae51a9f7a8c940ecf56e48d">RemoveViewEventObserver</a> (<a class="el" href="classiview_1_1_i_view_event_observer.html">iview::IViewEventObserver</a> *listenerPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes handler to catch view events.  <a href="#a63ae1c909ae51a9f7a8c940ecf56e48d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#ab9d45fa723b732f05c5b5e16bcc64cf7">InsertDefaultLayers</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert default layers, when there is no one user layer.  <a href="#ab9d45fa723b732f05c5b5e16bcc64cf7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiview_1_1_i_interactive_shape.html">IInteractiveShape</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#ad0bb83b68ad5bb3e82dda53963f97078">GetMouseShapePtr</a> () const </td></tr>
@@ -208,9 +208,9 @@ Protected Types</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#aff05357e24e5b452deb06371a7e44ef8">DrawLayers</a> (QPainter &amp;drawContext, int firstLayer, int lastLayer)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw Background layer.  <a href="#aff05357e24e5b452deb06371a7e44ef8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a9d20c69d18e1b3aa028c3abaed2b8a73">GetLastBkLayerIndex</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get last background layer index.  <a href="#a9d20c69d18e1b3aa028c3abaed2b8a73"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a5a91b2035e878644bf671626a66e2ab5">SetLastBkLayerIndex</a> (int index)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#ab91db86fee4f28b9220573e0fc4ca3c7">GetLastBackgroundLayerIndex</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get last background layer index.  <a href="#ab91db86fee4f28b9220573e0fc4ca3c7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#ac3898de8ddb97346ccad70050e0306ed">SetLastBackgroundLayerIndex</a> (int index)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#af94d74a291af6176dd342d90c8c3b70e">GetBackgroundLayerIndex</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of default background layer.  <a href="#af94d74a291af6176dd342d90c8c3b70e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a03d2a46686db7bdda71ae6355145ff58">GetInactiveLayerIndex</a> () const </td></tr>
@@ -363,12 +363,12 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="abd8d6775e34d2cde701ba379565699ca"></a><!-- doxytag: member="iview::CViewBase::AddViewListener" ref="abd8d6775e34d2cde701ba379565699ca" args="(iview::IViewEventObserver *listenerPtr)" -->
+<a class="anchor" id="afa0b5c3bd28c248ca1a206211e28e4f1"></a><!-- doxytag: member="iview::CViewBase::AddViewEventObserver" ref="afa0b5c3bd28c248ca1a206211e28e4f1" args="(iview::IViewEventObserver *listenerPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iview::CViewBase::AddViewListener </td>
+          <td class="memname">virtual void iview::CViewBase::AddViewEventObserver </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiview_1_1_i_view_event_observer.html">iview::IViewEventObserver</a> *&#160;</td>
           <td class="paramname"><em>listenerPtr</em></td><td>)</td>
@@ -948,12 +948,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9d20c69d18e1b3aa028c3abaed2b8a73"></a><!-- doxytag: member="iview::CViewBase::GetLastBkLayerIndex" ref="a9d20c69d18e1b3aa028c3abaed2b8a73" args="()" -->
+<a class="anchor" id="ab91db86fee4f28b9220573e0fc4ca3c7"></a><!-- doxytag: member="iview::CViewBase::GetLastBackgroundLayerIndex" ref="ab91db86fee4f28b9220573e0fc4ca3c7" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int iview::CViewBase::GetLastBkLayerIndex </td>
+          <td class="memname">int iview::CViewBase::GetLastBackgroundLayerIndex </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [inline, protected]</code></td>
@@ -1783,12 +1783,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3d5b3fe8e3525e28b08b11e5c1c14f23"></a><!-- doxytag: member="iview::CViewBase::RemoveViewListener" ref="a3d5b3fe8e3525e28b08b11e5c1c14f23" args="(iview::IViewEventObserver *listenerPtr)" -->
+<a class="anchor" id="a63ae1c909ae51a9f7a8c940ecf56e48d"></a><!-- doxytag: member="iview::CViewBase::RemoveViewEventObserver" ref="a63ae1c909ae51a9f7a8c940ecf56e48d" args="(iview::IViewEventObserver *listenerPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iview::CViewBase::RemoveViewListener </td>
+          <td class="memname">virtual void iview::CViewBase::RemoveViewEventObserver </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiview_1_1_i_view_event_observer.html">iview::IViewEventObserver</a> *&#160;</td>
           <td class="paramname"><em>listenerPtr</em></td><td>)</td>
@@ -1956,12 +1956,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5a91b2035e878644bf671626a66e2ab5"></a><!-- doxytag: member="iview::CViewBase::SetLastBkLayerIndex" ref="a5a91b2035e878644bf671626a66e2ab5" args="(int index)" -->
+<a class="anchor" id="ac3898de8ddb97346ccad70050e0306ed"></a><!-- doxytag: member="iview::CViewBase::SetLastBackgroundLayerIndex" ref="ac3898de8ddb97346ccad70050e0306ed" args="(int index)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iview::CViewBase::SetLastBkLayerIndex </td>
+          <td class="memname">void iview::CViewBase::SetLastBackgroundLayerIndex </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>

@@ -72,7 +72,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_affinite_calibration.html#a922c54a02cce7f236488ab35b2ef12b2">Reset</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset this calibration, set to be identity transform.  <a href="#a922c54a02cce7f236488ab35b2ef12b2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_affinite_calibration.html#a9fd7f8a9bba7fc773abe78020cb20182">Reset</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position, double angle, double scale=1.0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset this calibration using position, rotation angle, and scale.  <a href="#a9fd7f8a9bba7fc773abe78020cb20182"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_affinite_calibration.html#aa0c161f5078c88660f446eb5b5d33002">SetTransform</a> (const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;transform)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the transform object.  <a href="#aa0c161f5078c88660f446eb5b5d33002"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_affinite_calibration.html#ac8f3753a8f8d39ba67658cd7de6f45c4">GetCenter</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_affinite_calibration.html#ad41171bb6295f0e6b55ed5a69831899a">GetAngle</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_affinite_calibration.html#a674ec1fb1e714f735ce8d274a481ed46">GetScaleFactor</a> () const </td></tr>
@@ -98,9 +100,10 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Affinite calibration. </p>
-<p>This class describe a calibration where the coordination system is moved and rotated. You need this calibration when your logical coordination system is flat, but not orthogonal to camera axis. Please note, that logical coordination system represents only finite rectangle area, you can set using SetBounds(const i2d::CRectangle&amp;) method. </p>
+<p>This class describe a calibration where the coordination system is moved and rotated. You need this calibration when your logical coordination system is flat, but not orthogonal to camera axis.</p>
+<dl class="note"><dt><b>Note:</b></dt><dd>Please note, that logical coordination system represents only finite rectangle area, you can set using SetBounds(const i2d::CRectangle&amp;) method. </dd></dl>
 
-<p>Definition at line <a class="el" href="_c_affinite_calibration_8h_source.html#l00022">22</a> of file <a class="el" href="_c_affinite_calibration_8h_source.html">CAffiniteCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affinite_calibration_8h_source.html#l00025">25</a> of file <a class="el" href="_c_affinite_calibration_8h_source.html">CAffiniteCalibration.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3cc46772adc07ecc01635b3351fcae1b"></a><!-- doxytag: member="iview::CAffiniteCalibration::CAffiniteCalibration" ref="a3cc46772adc07ecc01635b3351fcae1b" args="()" -->
 <div class="memitem">
@@ -579,6 +582,8 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Reset this calibration using position, rotation angle, and scale. </p>
+
 </div>
 </div>
 <a class="anchor" id="a4705ec627239c8ac43128c60efde134f"></a><!-- doxytag: member="iview::CAffiniteCalibration::Serialize" ref="a4705ec627239c8ac43128c60efde134f" args="(iser::IArchive &amp;archive)" -->
@@ -618,6 +623,8 @@ Static Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Set the transform object. </p>
 
 </div>
 </div>
