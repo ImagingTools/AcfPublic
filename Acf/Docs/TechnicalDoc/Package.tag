@@ -3950,7 +3950,7 @@
     <name>CImageShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>iview_2_c_image_shape_8h</filename>
-    <includes id="_c_affine2d_8h" name="CAffine2d.h" local="yes" imported="no">i2d/CAffine2d.h</includes>
+    <includes id="_i_color_transformation_8h" name="IColorTransformation.h" local="yes" imported="no">icmm/IColorTransformation.h</includes>
     <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
     <includes id="_c_shape_base_8h" name="CShapeBase.h" local="yes" imported="no">iview/CShapeBase.h</includes>
     <class kind="class">iview::CImageShape</class>
@@ -49824,6 +49824,13 @@
       <anchor>abf404c7385429d2ad708d53682bd52d4</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CImageShape</name>
+      <anchorfile>classiview_1_1_c_image_shape.html</anchorfile>
+      <anchor>a689966b00370d67e7fc3d830a08c9e2e</anchor>
+      <arglist>(const icmm::IColorTransformation *colorTransformationPtr=NULL)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Draw</name>
@@ -49832,11 +49839,11 @@
       <arglist>(QPainter &amp;drawContext) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
       <anchorfile>classiview_1_1_c_image_shape.html</anchorfile>
-      <anchor>a247f542b3c199450fd1ad7d7cb77bfd2</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>a6cd31521e0ff784b6777ea0f42c1e780</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>

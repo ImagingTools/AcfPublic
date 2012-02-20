@@ -27,7 +27,7 @@
 // Qt includes
 #include <QWidget>
 
-// QSF includes
+
 #include "imeas/IUnitInfo.h"
 
 #include "generated/ui_CNumericValueWidget.h"

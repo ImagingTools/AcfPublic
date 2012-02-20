@@ -71,10 +71,11 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiview_1_1_c_shape_base.html">CShapeBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_image_shape.html#abf404c7385429d2ad708d53682bd52d4">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_image_shape.html#a689966b00370d67e7fc3d830a08c9e2e">CImageShape</a> (const <a class="el" href="classicmm_1_1_i_color_transformation.html">icmm::IColorTransformation</a> *colorTransformationPtr=NULL)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_image_shape.html#ac3005ab75fba425d6d704f68da879990">Draw</a> (QPainter &amp;drawContext) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw this shape using draw context.  <a href="#ac3005ab75fba425d6d704f68da879990"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_image_shape.html#a247f542b3c199450fd1ad7d7cb77bfd2">OnAttached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#a247f542b3c199450fd1ad7d7cb77bfd2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_image_shape.html#a6cd31521e0ff784b6777ea0f42c1e780">AfterUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called after update of the observer contents occures.  <a href="#a6cd31521e0ff784b6777ea0f42c1e780"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_image_shape.html#a8077338f7267ce9b28d9689db1b4f930">CalcBoundingBox</a> (<a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;result) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box.  <a href="#a8077338f7267ce9b28d9689db1b4f930"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -104,7 +105,64 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a689966b00370d67e7fc3d830a08c9e2e"></a><!-- doxytag: member="iview::CImageShape::CImageShape" ref="a689966b00370d67e7fc3d830a08c9e2e" args="(const icmm::IColorTransformation *colorTransformationPtr=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iview::CImageShape::CImageShape </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classicmm_1_1_i_color_transformation.html">icmm::IColorTransformation</a> *&#160;</td>
+          <td class="paramname"><em>colorTransformationPtr</em> = <code>NULL</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a6cd31521e0ff784b6777ea0f42c1e780"></a><!-- doxytag: member="iview::CImageShape::AfterUpdate" ref="a6cd31521e0ff784b6777ea0f42c1e780" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iview::CImageShape::AfterUpdate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
+          <td class="paramname"><em>modelPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>updateFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This function will be called after update of the observer contents occures. </p>
+
+<p>Reimplemented from <a class="el" href="classimod_1_1_c_single_model_observer_base.html#a3bca1011478d03c5a4f99f6d158c9191">imod::CSingleModelObserverBase</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a0414b4fb5a17cea42400a88d0df13d5a">iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;, iview::CImageShape &gt;</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a8077338f7267ce9b28d9689db1b4f930"></a><!-- doxytag: member="iview::CImageShape::CalcBoundingBox" ref="a8077338f7267ce9b28d9689db1b4f930" args="(i2d::CRect &amp;result) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -184,30 +242,6 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a247f542b3c199450fd1ad7d7cb77bfd2"></a><!-- doxytag: member="iview::CImageShape::OnAttached" ref="a247f542b3c199450fd1ad7d7cb77bfd2" args="(imod::IModel *modelPtr)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iview::CImageShape::OnAttached </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
-          <td class="paramname"><em>modelPtr</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>This call back function will be called, if an observable object is about to be attached. </p>
-<p>This function returns a <code>true</code>, if observable object is accepted by the implementation logic of the observer, otherwise the function returns a <code>false</code>. </p>
-
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_shape_base.html#a67615b4f1490b9817638da7c1af18496">iview::CShapeBase</a>.</p>
-
-<p>Reimplemented in <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a1e5ea143e01a0798090e8989ded7fb94">iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;, iview::CImageShape &gt;</a>.</p>
 
 </div>
 </div>
