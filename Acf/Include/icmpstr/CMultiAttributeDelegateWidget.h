@@ -20,35 +20,57 @@
 ********************************************************************************/
 
 
-#ifndef icmpstr_IComponentNote_included
-#define icmpstr_IComponentNote_included
+#ifndef icmpstr_CMultiAttributeDelegateWidget_included
+#define icmpstr_CMultiAttributeDelegateWidget_included
 
 
-#include "iser/IObject.h"
+// Qt includes
+#include <QWidget>
+#include <QIcon>
+#include <QItemDelegate>
 
-#include "i2d/CVector2d.h"
 
-#include "istd/CString.h"
-
-#include "icmpstr/icmpstr.h"
+// ACF includes
+#include "icmpstr/CElementSelectionInfoManagerBase.h"
 
 
 namespace icmpstr
 {
 
 
-class IComponentNote: virtual public iser::IObject
+class CMultiAttributeDelegateWidget: public QWidget
 {
+    Q_OBJECT
 public:
-	virtual istd::CString GetText() const = 0;
-	virtual void SetText(const istd::CString& noteText) = 0;
-	virtual i2d::CVector2d GetPosition() const = 0;
-	virtual void SetPosition(const i2d::CVector2d& position) = 0;
+	typedef QWidget BaseClass;
+
+public:
+	CMultiAttributeDelegateWidget(
+				QItemDelegate& itemDelegate,
+				const CElementSelectionInfoManagerBase& elementSelectionInfoManager,
+				QWidget* parentWidget,
+				const std::string& attributeId,
+				int attributeFlags);
+
+	QString GetText() const;
+	void SetText(const QString& text);
+
+protected Q_SLOTS:
+	void OnShowDialog();
+
+private:
+	const CElementSelectionInfoManagerBase& m_elementSelectionInfoManager;
+
+	QLineEdit* m_textEditor;
+	std::string m_attributeId;
+	int m_attributeFlags;
+
+	QItemDelegate& m_itemDelegate;
 };
 
 
 } // namespace icmpstr
 
 
-#endif // !IComponentNote_included
+#endif // !icmpstr_CMultiAttributeDelegateWidget_included
 

@@ -49,69 +49,71 @@
 <a name="l00022"></a>00022 <span class="keyword">class </span>ISelectableLayer;
 <a name="l00023"></a>00023 
 <a name="l00024"></a>00024 
-<a name="l00028"></a><a class="code" href="classiview_1_1_i_shape_view.html">00028</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">IShapeView</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiview_1_1_i_display.html">IDisplay</a>, <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiview_1_1_i_selectable.html">ISelectable</a>
-<a name="l00029"></a>00029 {
-<a name="l00030"></a>00030 <span class="keyword">public</span>:
-<a name="l00031"></a><a class="code" href="classiview_1_1_i_shape_view.html#aff6357f12d41ab7a7dfbf7562aee4e38">00031</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_i_shape_observer.html" title="Common interface for all objects informed about shapes state changes.">IShapeObserver</a> <a class="code" href="classiview_1_1_i_shape_view.html#aff6357f12d41ab7a7dfbf7562aee4e38">BaseClass</a>;
-<a name="l00032"></a>00032 
-<a name="l00033"></a><a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5">00033</a>        <span class="keyword">enum</span> <a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5">LayerType</a>
-<a name="l00034"></a>00034        {
-<a name="l00035"></a><a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5ae9a2a72e914b3c65f9ab842e48818ef0">00035</a>               <a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5ae9a2a72e914b3c65f9ab842e48818ef0">LT_NONE</a> = 0,
-<a name="l00036"></a><a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5a70839324b8dcc9e78a7b6f329e81403a">00036</a>               <a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5a70839324b8dcc9e78a7b6f329e81403a">LT_BACKGROUND</a> = 1,
-<a name="l00037"></a><a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5acb17ecfbcaa5cffc226dc3cb21ae640c">00037</a>               <a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5acb17ecfbcaa5cffc226dc3cb21ae640c">LT_INACTIVE</a> = 2,
-<a name="l00038"></a><a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5aec30ce16be38309e062cc9b3b8467bd6">00038</a>               <a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5aec30ce16be38309e062cc9b3b8467bd6">LT_ACTIVE</a> = 4
-<a name="l00039"></a>00039        };
-<a name="l00040"></a>00040 
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a302a1b9f3a53b96d5b7501760e9cdfcf" title="Set a screen transformation.">SetTransform</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; transform) = 0;
-<a name="l00046"></a>00046        
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#ae8c68ecae45c174e4cd1714763e75585" title="Updates all invalidates shapes.">Update</a>() = 0;
-<a name="l00051"></a>00051        
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a53314b03961ca7224e947357977b5ec9" title="Changes the edit mode.">SetEditMode</a>(<span class="keywordtype">int</span> mode) = 0;
-<a name="l00056"></a>00056        
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_i_shape_view.html#a84bb42ffd80b769d38073b9c79182336" title="Check if is draggable mode.">IsViewDraggable</a>() <span class="keyword">const</span> = 0;
-<a name="l00062"></a>00062        
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_i_shape_view.html#aff4da09be4287455b59dfa0f2cd95d3f" title="Check, if it is possible to select more than one shape.">IsMultiselectable</a>() <span class="keyword">const</span> = 0;
-<a name="l00067"></a>00067 
-<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a5a59116f0f9b419bb2b83fdf7fa7cd74" title="Update mouse pointer.">UpdateMousePointer</a>() = 0;
-<a name="l00072"></a>00072        
-<a name="l00081"></a>00081        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_i_shape_view.html#abf0acb4d460341d4a5a930a64a22393f" title="Insert layer to view.">InsertLayer</a>(<a class="code" href="classiview_1_1_i_layer.html">ILayer</a>* layerPtr, <span class="keywordtype">int</span> index = -1, <span class="keywordtype">int</span> layerType = <a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5ae9a2a72e914b3c65f9ab842e48818ef0">LT_NONE</a>) = 0;
-<a name="l00082"></a>00082        
-<a name="l00087"></a>00087        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_i_shape_view.html#a8ac937cab35aa328d1a7f26fbb97f137" title="Get index of layer.">GetLayerIndex</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_layer.html">ILayer</a>&amp; layer) <span class="keyword">const</span> = 0;
-<a name="l00088"></a>00088        
-<a name="l00092"></a>00092        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#ac13671f88e24dc128779b3f429fe3b59" title="Remove layer from view.">RemoveLayer</a>(<span class="keywordtype">int</span> index) = 0;
-<a name="l00093"></a>00093        
-<a name="l00097"></a>00097        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_i_shape_view.html#add7e356c3dd7fa8f629d6a95d1fa8560" title="Get count of layer in this view.">GetLayersCount</a>() <span class="keyword">const</span> = 0;
-<a name="l00098"></a>00098        
-<a name="l00102"></a>00102        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_layer.html">ILayer</a>&amp; <a class="code" href="classiview_1_1_i_shape_view.html#a3b458e339d1165e866a13e2dd678d000" title="Get layer with the given index.">GetLayer</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
-<a name="l00103"></a>00103 
-<a name="l00110"></a>00110        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a318b841f0315f4ea1e995ea6eb6fc4ae" title="Connect shape object to view.">ConnectShape</a>(<a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">IShape</a>* shapePtr, <span class="keywordtype">int</span> layerIndex = -1) = 0;
-<a name="l00111"></a>00111        
-<a name="l00115"></a>00115        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#adcc1951da539d42c5d21cafa5b539590" title="Connect shape to default background layer.">ConnectBackgroundShape</a>(<a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">iview::IShape</a>* shapePtr) = 0;
-<a name="l00116"></a>00116        
-<a name="l00120"></a>00120        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a5cbf16f85287fad70b8090721b2976c4" title="Connect shape to default inactive layer.">ConnectInactiveShape</a>(<a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">iview::IShape</a>* shapePtr) = 0;
-<a name="l00121"></a>00121        
-<a name="l00125"></a>00125        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a7729a1551abf5870cd34a90a6526c642" title="Connect shape to default active layer.">ConnectActiveShape</a>(<a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>* shapePtr) = 0;
-<a name="l00126"></a>00126        
-<a name="l00130"></a>00130        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_selectable_layer.html">ISelectableLayer</a>* <a class="code" href="classiview_1_1_i_shape_view.html#a0c988d5298ad58647db28a586ec81151" title="Get focused layer.">GetFocusedLayerPtr</a>() <span class="keyword">const</span> = 0;
-<a name="l00131"></a>00131        
-<a name="l00135"></a>00135        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a329bebfa42f0b4d7201632e3c2a54c67" title="Called when shape in layer get focus.">OnShapeFocused</a>(<a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">IInteractiveShape</a>* shapePtr, <a class="code" href="classiview_1_1_i_selectable_layer.html">ISelectableLayer</a>* layerPtr) = 0;
-<a name="l00136"></a>00136 
-<a name="l00140"></a>00140        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#af278069adc967ce1aef04c98e088f00d" title="Called when shape in layer loose focus.">OnShapeDefocused</a>(<a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">IInteractiveShape</a>* shapePtr, <a class="code" href="classiview_1_1_i_selectable_layer.html">ISelectableLayer</a>* layerPtr) = 0;
-<a name="l00141"></a>00141        
-<a name="l00145"></a>00145        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#ad8d863f36862559379b757624fccda69" title="Inform that layer was invalidated.">OnLayerInvalidated</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_layer.html">ILayer</a>&amp; layer, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; prevArea, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; newArea) = 0;
-<a name="l00146"></a>00146 
-<a name="l00147"></a>00147        <span class="comment">// reimplemented (iview::ISelectable)</span>
-<a name="l00148"></a><a class="code" href="classiview_1_1_i_shape_view.html#a3e61f1e93c37166330d125e28980ac01">00148</a>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a3e61f1e93c37166330d125e28980ac01" title="Called when shape get focus.">OnShapeFocused</a>(<a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">IInteractiveShape</a>* <span class="comment">/*shapePtr*/</span>){}
-<a name="l00149"></a><a class="code" href="classiview_1_1_i_shape_view.html#aa289ce25d63c67d4a6ebec3438e94a78">00149</a>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#aa289ce25d63c67d4a6ebec3438e94a78" title="Called when shape loose focus.">OnShapeDefocused</a>(<a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">IInteractiveShape</a>* <span class="comment">/*shapePtr*/</span>){}
-<a name="l00150"></a>00150 };
-<a name="l00151"></a>00151 
-<a name="l00152"></a>00152 
-<a name="l00153"></a>00153 } <span class="comment">// namespace iview</span>
+<a name="l00028"></a><a class="code" href="classiview_1_1_i_shape_view.html">00028</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">IShapeView</a>:
+<a name="l00029"></a>00029                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiview_1_1_i_display.html">IDisplay</a>,
+<a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiview_1_1_i_selectable.html">ISelectable</a>
+<a name="l00031"></a>00031 {
+<a name="l00032"></a>00032 <span class="keyword">public</span>:
+<a name="l00033"></a><a class="code" href="classiview_1_1_i_shape_view.html#aff6357f12d41ab7a7dfbf7562aee4e38">00033</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_i_shape_observer.html" title="Common interface for all objects informed about shapes state changes.">IShapeObserver</a> <a class="code" href="classiview_1_1_i_shape_view.html#aff6357f12d41ab7a7dfbf7562aee4e38">BaseClass</a>;
+<a name="l00034"></a>00034 
+<a name="l00035"></a><a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5">00035</a>        <span class="keyword">enum</span> <a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5">LayerType</a>
+<a name="l00036"></a>00036        {
+<a name="l00037"></a><a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5ae9a2a72e914b3c65f9ab842e48818ef0">00037</a>               <a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5ae9a2a72e914b3c65f9ab842e48818ef0">LT_NONE</a> = 0,
+<a name="l00038"></a><a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5a70839324b8dcc9e78a7b6f329e81403a">00038</a>               <a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5a70839324b8dcc9e78a7b6f329e81403a">LT_BACKGROUND</a> = 1,
+<a name="l00039"></a><a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5acb17ecfbcaa5cffc226dc3cb21ae640c">00039</a>               <a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5acb17ecfbcaa5cffc226dc3cb21ae640c">LT_INACTIVE</a> = 2,
+<a name="l00040"></a><a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5aec30ce16be38309e062cc9b3b8467bd6">00040</a>               <a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5aec30ce16be38309e062cc9b3b8467bd6">LT_ACTIVE</a> = 4
+<a name="l00041"></a>00041        };
+<a name="l00042"></a>00042 
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a302a1b9f3a53b96d5b7501760e9cdfcf" title="Set a screen transformation.">SetTransform</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; transform) = 0;
+<a name="l00048"></a>00048        
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#ae8c68ecae45c174e4cd1714763e75585" title="Updates all invalidates shapes.">Update</a>() = 0;
+<a name="l00053"></a>00053        
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a53314b03961ca7224e947357977b5ec9" title="Changes the edit mode.">SetEditMode</a>(<span class="keywordtype">int</span> mode) = 0;
+<a name="l00058"></a>00058        
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_i_shape_view.html#a84bb42ffd80b769d38073b9c79182336" title="Check if is draggable mode.">IsViewDraggable</a>() <span class="keyword">const</span> = 0;
+<a name="l00064"></a>00064        
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_i_shape_view.html#aff4da09be4287455b59dfa0f2cd95d3f" title="Check, if it is possible to select more than one shape.">IsMultiselectable</a>() <span class="keyword">const</span> = 0;
+<a name="l00069"></a>00069 
+<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a5a59116f0f9b419bb2b83fdf7fa7cd74" title="Update mouse pointer.">UpdateMousePointer</a>() = 0;
+<a name="l00074"></a>00074        
+<a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_i_shape_view.html#abf0acb4d460341d4a5a930a64a22393f" title="Insert layer to view.">InsertLayer</a>(<a class="code" href="classiview_1_1_i_layer.html">ILayer</a>* layerPtr, <span class="keywordtype">int</span> index = -1, <span class="keywordtype">int</span> layerType = <a class="code" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5ae9a2a72e914b3c65f9ab842e48818ef0">LT_NONE</a>) = 0;
+<a name="l00084"></a>00084        
+<a name="l00089"></a>00089        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_i_shape_view.html#a8ac937cab35aa328d1a7f26fbb97f137" title="Get index of layer.">GetLayerIndex</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_layer.html">ILayer</a>&amp; layer) <span class="keyword">const</span> = 0;
+<a name="l00090"></a>00090        
+<a name="l00094"></a>00094        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#ac13671f88e24dc128779b3f429fe3b59" title="Remove layer from view.">RemoveLayer</a>(<span class="keywordtype">int</span> index) = 0;
+<a name="l00095"></a>00095        
+<a name="l00099"></a>00099        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_i_shape_view.html#add7e356c3dd7fa8f629d6a95d1fa8560" title="Get count of layer in this view.">GetLayersCount</a>() <span class="keyword">const</span> = 0;
+<a name="l00100"></a>00100        
+<a name="l00104"></a>00104        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_layer.html">ILayer</a>&amp; <a class="code" href="classiview_1_1_i_shape_view.html#a3b458e339d1165e866a13e2dd678d000" title="Get layer with the given index.">GetLayer</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
+<a name="l00105"></a>00105 
+<a name="l00112"></a>00112        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a318b841f0315f4ea1e995ea6eb6fc4ae" title="Connect shape object to view.">ConnectShape</a>(<a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">IShape</a>* shapePtr, <span class="keywordtype">int</span> layerIndex = -1) = 0;
+<a name="l00113"></a>00113        
+<a name="l00117"></a>00117        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#adcc1951da539d42c5d21cafa5b539590" title="Connect shape to default background layer.">ConnectBackgroundShape</a>(<a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">iview::IShape</a>* shapePtr) = 0;
+<a name="l00118"></a>00118        
+<a name="l00122"></a>00122        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a5cbf16f85287fad70b8090721b2976c4" title="Connect shape to default inactive layer.">ConnectInactiveShape</a>(<a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">iview::IShape</a>* shapePtr) = 0;
+<a name="l00123"></a>00123        
+<a name="l00127"></a>00127        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a7729a1551abf5870cd34a90a6526c642" title="Connect shape to default active layer.">ConnectActiveShape</a>(<a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>* shapePtr) = 0;
+<a name="l00128"></a>00128        
+<a name="l00132"></a>00132        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_selectable_layer.html">ISelectableLayer</a>* <a class="code" href="classiview_1_1_i_shape_view.html#a0c988d5298ad58647db28a586ec81151" title="Get focused layer.">GetFocusedLayerPtr</a>() <span class="keyword">const</span> = 0;
+<a name="l00133"></a>00133        
+<a name="l00137"></a>00137        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a329bebfa42f0b4d7201632e3c2a54c67" title="Called when shape in layer get focus.">OnShapeFocused</a>(<a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">IInteractiveShape</a>* shapePtr, <a class="code" href="classiview_1_1_i_selectable_layer.html">ISelectableLayer</a>* layerPtr) = 0;
+<a name="l00138"></a>00138 
+<a name="l00142"></a>00142        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#af278069adc967ce1aef04c98e088f00d" title="Called when shape in layer loose focus.">OnShapeDefocused</a>(<a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">IInteractiveShape</a>* shapePtr, <a class="code" href="classiview_1_1_i_selectable_layer.html">ISelectableLayer</a>* layerPtr) = 0;
+<a name="l00143"></a>00143        
+<a name="l00147"></a>00147        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#ad8d863f36862559379b757624fccda69" title="Inform that layer was invalidated.">OnLayerInvalidated</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_layer.html">ILayer</a>&amp; layer, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; prevArea, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; newArea) = 0;
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149        <span class="comment">// reimplemented (iview::ISelectable)</span>
+<a name="l00150"></a><a class="code" href="classiview_1_1_i_shape_view.html#a3e61f1e93c37166330d125e28980ac01">00150</a>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#a3e61f1e93c37166330d125e28980ac01" title="Called when shape get focus.">OnShapeFocused</a>(<a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">IInteractiveShape</a>* <span class="comment">/*shapePtr*/</span>){}
+<a name="l00151"></a><a class="code" href="classiview_1_1_i_shape_view.html#aa289ce25d63c67d4a6ebec3438e94a78">00151</a>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_i_shape_view.html#aa289ce25d63c67d4a6ebec3438e94a78" title="Called when shape loose focus.">OnShapeDefocused</a>(<a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">IInteractiveShape</a>* <span class="comment">/*shapePtr*/</span>){}
+<a name="l00152"></a>00152 };
+<a name="l00153"></a>00153 
 <a name="l00154"></a>00154 
-<a name="l00155"></a>00155 
-<a name="l00156"></a>00156 <span class="preprocessor">#endif // !iview_IShapeView_included</span>
-<a name="l00157"></a>00157 <span class="preprocessor"></span>
-<a name="l00158"></a>00158 
+<a name="l00155"></a>00155 } <span class="comment">// namespace iview</span>
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157 
+<a name="l00158"></a>00158 <span class="preprocessor">#endif // !iview_IShapeView_included</span>
+<a name="l00159"></a>00159 <span class="preprocessor"></span>
+<a name="l00160"></a>00160 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

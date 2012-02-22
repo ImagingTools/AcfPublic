@@ -72,21 +72,23 @@
 <a name="l00049"></a>00049 <span class="keyword">protected</span>:
 <a name="l00050"></a>00050        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
 <a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_image_view_comp.html#a38f3b45c39a7cd4ac707a70736058f98" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags);
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_image_view_comp.html#a20fcfa3cd18c7ee38a934dec0ff23232" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="keyword">private</span>:
-<a name="l00055"></a>00055        I_ATTR(<span class="keywordtype">bool</span>, m_showControlButtonsAttrPtr);
-<a name="l00056"></a>00056        <a class="code" href="classiview_1_1_c_none_calibration.html">iview::CNoneCalibration</a> m_calibration;
-<a name="l00057"></a>00057        <a class="code" href="classiview_1_1_c_none_calibration_shape.html" title="Shape object for none calibration.">iview::CNoneCalibrationShape</a> m_calibrationShape;
-<a name="l00058"></a>00058 };
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 } <span class="comment">// namespace iview</span>
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053        <span class="comment">// reimplemented (iqtui::CComponentBase)</span>
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_image_view_comp.html#ad4d98b6aca649788129e91d469f4cc6b" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 <span class="keyword">private</span>:
+<a name="l00057"></a>00057        I_ATTR(<span class="keywordtype">bool</span>, m_showControlButtonsAttrPtr);
+<a name="l00058"></a>00058        <a class="code" href="classiview_1_1_c_none_calibration.html">iview::CNoneCalibration</a> m_calibration;
+<a name="l00059"></a>00059        <a class="code" href="classiview_1_1_c_none_calibration_shape.html" title="Shape object for none calibration.">iview::CNoneCalibrationShape</a> m_calibrationShape;
+<a name="l00060"></a>00060 };
+<a name="l00061"></a>00061 
 <a name="l00062"></a>00062 
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="preprocessor">#endif // !iview_CImageViewComp_included</span>
-<a name="l00065"></a>00065 <span class="preprocessor"></span>
-<a name="l00066"></a>00066 
+<a name="l00063"></a>00063 } <span class="comment">// namespace iview</span>
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="preprocessor">#endif // !iview_CImageViewComp_included</span>
+<a name="l00067"></a>00067 <span class="preprocessor"></span>
+<a name="l00068"></a>00068 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

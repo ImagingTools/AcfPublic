@@ -1109,22 +1109,14 @@
     <name>CAttributeEditorComp.h</name>
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_c_attribute_editor_comp_8h</filename>
-    <includes id="_t_pointer_base_8h" name="TPointerBase.h" local="yes" imported="no">istd/TPointerBase.h</includes>
-    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
-    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
     <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
-    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
-    <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
-    <includes id="_i_registry_element_8h" name="IRegistryElement.h" local="yes" imported="no">icomp/IRegistryElement.h</includes>
     <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_c_tree_widget_filter_8h" name="CTreeWidgetFilter.h" local="yes" imported="no">iqtgui/CTreeWidgetFilter.h</includes>
     <includes id="_c_item_delegate_8h" name="CItemDelegate.h" local="yes" imported="no">iqtgui/CItemDelegate.h</includes>
-    <includes id="_i_attribute_selection_observer_8h" name="IAttributeSelectionObserver.h" local="yes" imported="no">icmpstr/IAttributeSelectionObserver.h</includes>
-    <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
-    <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
+    <includes id="_c_element_selection_info_manager_base_8h" name="CElementSelectionInfoManagerBase.h" local="yes" imported="no">icmpstr/CElementSelectionInfoManagerBase.h</includes>
+    <includes id="_c_multi_attribute_editor_8h" name="CMultiAttributeEditor.h" local="yes" imported="no">icmpstr/CMultiAttributeEditor.h</includes>
     <class kind="class">icmpstr::CAttributeEditorComp</class>
-    <class kind="struct">icmpstr::CAttributeEditorComp::AttrInfo</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
@@ -1142,11 +1134,56 @@
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
+    <name>CComponentNoteEditorComp.h</name>
+    <path>C:/Temp/Acf/Include/icmpstr/</path>
+    <filename>_c_component_note_editor_comp_8h</filename>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
+    <class kind="class">icmpstr::CComponentNoteEditorComp</class>
+    <namespace>icmpstr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CElementSelectionInfoManagerBase.h</name>
+    <path>C:/Temp/Acf/Include/icmpstr/</path>
+    <filename>_c_element_selection_info_manager_base_8h</filename>
+    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
+    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
+    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
+    <includes id="_i_registry_element_8h" name="IRegistryElement.h" local="yes" imported="no">icomp/IRegistryElement.h</includes>
+    <includes id="_i_attribute_selection_observer_8h" name="IAttributeSelectionObserver.h" local="yes" imported="no">icmpstr/IAttributeSelectionObserver.h</includes>
+    <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
+    <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
+    <class kind="class">icmpstr::CElementSelectionInfoManagerBase</class>
+    <class kind="struct">icmpstr::CElementSelectionInfoManagerBase::AttrInfo</class>
+    <namespace>icmpstr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CGraphicsConnectorItem.h</name>
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_c_graphics_connector_item_8h</filename>
     <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">iqt2d/ISceneProvider.h</includes>
     <class kind="class">icmpstr::CGraphicsConnectorItem</class>
+    <namespace>icmpstr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CMultiAttributeDelegateWidget.h</name>
+    <path>C:/Temp/Acf/Include/icmpstr/</path>
+    <filename>_c_multi_attribute_delegate_widget_8h</filename>
+    <includes id="_c_element_selection_info_manager_base_8h" name="CElementSelectionInfoManagerBase.h" local="yes" imported="no">icmpstr/CElementSelectionInfoManagerBase.h</includes>
+    <class kind="class">icmpstr::CMultiAttributeDelegateWidget</class>
+    <namespace>icmpstr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CMultiAttributeEditor.h</name>
+    <path>C:/Temp/Acf/Include/icmpstr/</path>
+    <filename>_c_multi_attribute_editor_8h</filename>
+    <includes id="_c_tree_widget_filter_8h" name="CTreeWidgetFilter.h" local="yes" imported="no">iqtgui/CTreeWidgetFilter.h</includes>
+    <includes id="_c_item_delegate_8h" name="CItemDelegate.h" local="yes" imported="no">iqtgui/CItemDelegate.h</includes>
+    <includes id="_c_element_selection_info_manager_base_8h" name="CElementSelectionInfoManagerBase.h" local="yes" imported="no">icmpstr/CElementSelectionInfoManagerBase.h</includes>
+    <class kind="class">icmpstr::CMultiAttributeEditor</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
@@ -1253,6 +1290,7 @@
     <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
     <includes id="_c_registry_8h" name="CRegistry.h" local="yes" imported="no">icomp/CRegistry.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_i_component_note_controller_8h" name="IComponentNoteController.h" local="yes" imported="no">icmpstr/IComponentNoteController.h</includes>
     <includes id="_c_visual_registry_element_8h" name="CVisualRegistryElement.h" local="yes" imported="no">icmpstr/CVisualRegistryElement.h</includes>
     <class kind="class">icmpstr::CVisualRegistryComp</class>
     <namespace>icmpstr</namespace>
@@ -1312,14 +1350,12 @@
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
-    <name>IComponentNote.h</name>
+    <name>IComponentNoteController.h</name>
     <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_i_component_note_8h</filename>
-    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
-    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
-    <includes id="_c_string_8h" name="CString.h" local="yes" imported="no">istd/CString.h</includes>
+    <filename>_i_component_note_controller_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
-    <class kind="class">icmpstr::IComponentNote</class>
+    <class kind="class">icmpstr::IComponentNoteController</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
@@ -7162,6 +7198,10 @@
   <compound kind="class">
     <name>Base</name>
     <filename>class_base.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>CElementSelectionInfoManagerBase</name>
+    <filename>class_c_element_selection_info_manager_base.html</filename>
   </compound>
   <compound kind="class">
     <name>CImageShape</name>
@@ -15850,7 +15890,11 @@
     <filename>namespaceicmpstr.html</filename>
     <class kind="class">icmpstr::CAttributeEditorComp</class>
     <class kind="class">icmpstr::CComponentHelpFileProviderComp</class>
+    <class kind="class">icmpstr::CComponentNoteEditorComp</class>
+    <class kind="class">icmpstr::CElementSelectionInfoManagerBase</class>
     <class kind="class">icmpstr::CGraphicsConnectorItem</class>
+    <class kind="class">icmpstr::CMultiAttributeDelegateWidget</class>
+    <class kind="class">icmpstr::CMultiAttributeEditor</class>
     <class kind="class">icmpstr::CPackageOverviewComp</class>
     <class kind="class">icmpstr::CPackagesLoaderExtComp</class>
     <class kind="class">icmpstr::CQuickHelpGuiComp</class>
@@ -15863,7 +15907,7 @@
     <class kind="class">icmpstr::CVisualRegistryElement</class>
     <class kind="class">icmpstr::CVisualRegistryScenographerComp</class>
     <class kind="class">icmpstr::IAttributeSelectionObserver</class>
-    <class kind="class">icmpstr::IComponentNote</class>
+    <class kind="class">icmpstr::IComponentNoteController</class>
     <class kind="class">icmpstr::IElementSelectionInfo</class>
     <class kind="class">icmpstr::IExternalMetaInfoManager</class>
     <class kind="class">icmpstr::IRegistryConsistInfo</class>
@@ -15872,8 +15916,7 @@
   <compound kind="class">
     <name>icmpstr::CAttributeEditorComp</name>
     <filename>classicmpstr_1_1_c_attribute_editor_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CAttributeEditorComp, IElementSelectionInfo &gt;</base>
-    <class kind="struct">icmpstr::CAttributeEditorComp::AttrInfo</class>
+    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp &gt;, CElementSelectionInfoManagerBase &gt; &gt;</base>
     <member kind="enumeration">
       <name>TabIndex</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
@@ -16031,10 +16074,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CAttributeEditorComp, IElementSelectionInfo &gt;</type>
+      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp &gt;, CElementSelectionInfoManagerBase &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a2acef561624602f2cb5d1f6c2fb2362a</anchor>
+      <anchor>a0c77ba80f9c0832dd5fb5eb8f1eefadd</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
@@ -16072,40 +16115,19 @@
       <anchor>a7080437833d523b1baad9011458c7a35</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>icomp::IRegistry *</type>
-      <name>GetRegistry</name>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const icomp::IComponentEnvironmentManager *</type>
+      <name>GetMetaInfoManagerPtr</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a4909ea5d16562a1351b7858bd750f8c9</anchor>
+      <anchor>ad466c87b2391669b99abb9a164b96869</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function">
-      <type>const icomp::IAttributeStaticInfo *</type>
-      <name>GetStaticAttributeInfo</name>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const icmpstr::IRegistryConsistInfo *</type>
+      <name>GetConsistencyInfoPtr</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ab934a6ca2619181c5b48710471491bf3</anchor>
-      <arglist>(const std::string &amp;id) const </arglist>
-    </member>
-    <member kind="function">
-      <type>QStringList</type>
-      <name>GetExportAliases</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>adc5e4e97e84b92710f8488dec26228fb</anchor>
-      <arglist>(const std::string &amp;attributeName) const </arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>std::map&lt; std::string, AttrInfo &gt;</type>
-      <name>ElementIdToAttrInfoMap</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ac62f1b793834b20c33327c630e88a374</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>std::map&lt; std::string, ElementIdToAttrInfoMap &gt;</type>
-      <name>AttrInfosMap</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a8efe58aa4eed91d206db61aa957bf10a</anchor>
-      <arglist></arglist>
+      <anchor>a2feaa0d0c73d8eabb21f906a45eeac83</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -16175,20 +16197,6 @@
       <name>UpdateSubcomponentsView</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a79e32636f76494b313a9775f57e58505</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>const icomp::IComponentStaticInfo *</type>
-      <name>GetComponentMetaInfo</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a69df8260313c8c60a05525329df12f50</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateAddressToMetaInfoMap</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>aee2fc4ab9f9366e4e666026f724e6707</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -16269,24 +16277,6 @@
       <arglist>(const QString &amp;text)</arglist>
     </member>
   </compound>
-  <compound kind="struct">
-    <name>icmpstr::CAttributeEditorComp::AttrInfo</name>
-    <filename>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</filename>
-    <member kind="variable">
-      <type>istd::TPointerBase&lt; const icomp::IRegistryElement::AttributeInfo &gt;</type>
-      <name>infoPtr</name>
-      <anchorfile>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</anchorfile>
-      <anchor>ad5bd50d651e29347afeef63647069a48</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>istd::TPointerBase&lt; const icomp::IAttributeStaticInfo &gt;</type>
-      <name>staticInfoPtr</name>
-      <anchorfile>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</anchorfile>
-      <anchor>a65738552e552f54762f2adefcb29f795</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
   <compound kind="class">
     <name>icmpstr::CComponentHelpFileProviderComp</name>
     <filename>classicmpstr_1_1_c_component_help_file_provider_comp.html</filename>
@@ -16340,6 +16330,211 @@
       <anchorfile>classicmpstr_1_1_c_component_help_file_provider_comp.html</anchorfile>
       <anchor>ad628ed016bbe9140c0a12d1bbdaf330c</anchor>
       <arglist>(const istd::CString &amp;contextText, const istd::IPolymorphic *contextObjectPtr, icomp::CComponentAddress &amp;result) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::CComponentNoteEditorComp</name>
+    <filename>classicmpstr_1_1_c_component_note_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CComponentNoteEditorComp, IElementSelectionInfo &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CComponentNoteEditorComp, IElementSelectionInfo &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
+      <anchor>aa4b94c71e4f8f581bc50bd80c9937059</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CComponentNoteEditorComp</name>
+      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
+      <anchor>a74a9d0ff1ff9c4abb3bf2e760f98ef08</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_NoteEditor_textChanged</name>
+      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
+      <anchor>ab1207a910f90d2a13addc32e6655756d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_CommitButton_clicked</name>
+      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
+      <anchor>ad0874468fa251844ed7202b731e4a18f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
+      <anchor>aa0d788190aa022ff2668ddfdd0480fd2</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
+      <anchor>a28ffe995f1ff52209ae77bb36f315af3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
+      <anchor>aadaa8d26bce2855be670b1f0b6f77571</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
+      <anchor>aafa11db8c8d63013ef440ad6b0751288</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
+      <anchor>a3bdf27150acb81eae40e01f21d41e74c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
+      <anchor>aeb2d73b45d65c9f9666746e44297cf79</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::CElementSelectionInfoManagerBase</name>
+    <filename>classicmpstr_1_1_c_element_selection_info_manager_base.html</filename>
+    <base>TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</base>
+    <class kind="struct">icmpstr::CElementSelectionInfoManagerBase::AttrInfo</class>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>a23ba8ff638532f6ea1249a35c0d05895</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CElementSelectionInfoManagerBase</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>a067a4c4f75d52db9a2a483cd7574451a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>icomp::IRegistry *</type>
+      <name>GetRegistry</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>ad98f051454dcf47073c373deb0f9991f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QStringList</type>
+      <name>GetExportAliases</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>a6810222934e125a1638e94e40a220bf4</anchor>
+      <arglist>(const std::string &amp;attributeName) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const icomp::IComponentStaticInfo *</type>
+      <name>GetComponentMetaInfo</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>afba3914c48939b71805ac721888fcc6d</anchor>
+      <arglist>(const icomp::CComponentAddress &amp;address) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const iser::IObject *</type>
+      <name>GetAttributeObject</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>a7e45846ddeb269c477d99c342aa78c93</anchor>
+      <arglist>(const std::string &amp;attributeId, const icomp::IRegistry::ElementInfo &amp;elementInfo) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const icomp::IAttributeStaticInfo *</type>
+      <name>GetAttributeStaticInfo</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>a8312e0769b2a7b98c78f29ede82716f8</anchor>
+      <arglist>(const std::string &amp;attributeId, const icomp::IRegistry::ElementInfo &amp;elementInfo) const </arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const icomp::IComponentEnvironmentManager *</type>
+      <name>GetMetaInfoManagerPtr</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>ad683a111edd593e83b5a1f855784f78e</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const icmpstr::IRegistryConsistInfo *</type>
+      <name>GetConsistencyInfoPtr</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>af115f5b82bd6d6781ba9a4430421099c</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>std::map&lt; std::string, AttrInfo &gt;</type>
+      <name>ElementIdToAttrInfoMap</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>a02ac9cadb7545ee8a1f971159f12a274</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>std::map&lt; std::string, ElementIdToAttrInfoMap &gt;</type>
+      <name>AttrInfosMap</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>ad90e30f05b078a0b1fdc355013d627a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>std::map&lt; icomp::CComponentAddress, istd::TOptDelPtr&lt; const icomp::IComponentStaticInfo &gt; &gt;</type>
+      <name>AddressToInfoMap</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>a5c12996c99fd9d5e0134fb6eb4a7b87b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateAddressToMetaInfoMap</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>a5312c1a21a331c4d6b107a33697edb58</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>a3ec91ab7a63798f542d47364226d3b6a</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>AddressToInfoMap</type>
+      <name>m_adressToMetaInfoMap</name>
+      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
+      <anchor>a9772d07e41ecc103d5d4fdf1b9737e2e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>icmpstr::CElementSelectionInfoManagerBase::AttrInfo</name>
+    <filename>structicmpstr_1_1_c_element_selection_info_manager_base_1_1_attr_info.html</filename>
+    <member kind="variable">
+      <type>istd::TPointerBase&lt; const icomp::IRegistryElement::AttributeInfo &gt;</type>
+      <name>infoPtr</name>
+      <anchorfile>structicmpstr_1_1_c_element_selection_info_manager_base_1_1_attr_info.html</anchorfile>
+      <anchor>a0b4e4987a605ce0b7293839f7e9ed7ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::TPointerBase&lt; const icomp::IAttributeStaticInfo &gt;</type>
+      <name>staticInfoPtr</name>
+      <anchorfile>structicmpstr_1_1_c_element_selection_info_manager_base_1_1_attr_info.html</anchorfile>
+      <anchor>affbeddf3db4717c371fdce7e955b5eb2</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16478,6 +16673,113 @@
       <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
       <anchor>a80a35b1acf6597fe5023dcf0ee31cd13</anchor>
       <arglist>(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::CMultiAttributeDelegateWidget</name>
+    <filename>classicmpstr_1_1_c_multi_attribute_delegate_widget.html</filename>
+    <base>QWidget</base>
+    <member kind="typedef">
+      <type>QWidget</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_delegate_widget.html</anchorfile>
+      <anchor>a3f872252151218561bc51ed574d40d30</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMultiAttributeDelegateWidget</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_delegate_widget.html</anchorfile>
+      <anchor>aca1ad13f7b6282d01593700f961fd054</anchor>
+      <arglist>(QItemDelegate &amp;itemDelegate, const CElementSelectionInfoManagerBase &amp;elementSelectionInfoManager, QWidget *parentWidget, const std::string &amp;attributeId, int attributeFlags)</arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>GetText</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_delegate_widget.html</anchorfile>
+      <anchor>a7fb4add51b500797d9ddf522404a76c3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetText</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_delegate_widget.html</anchorfile>
+      <anchor>a705aab83617fd778d25cfd3f1f049c28</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnShowDialog</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_delegate_widget.html</anchorfile>
+      <anchor>a8bcd62fc43c11fce223dedc820871cb6</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::CMultiAttributeEditor</name>
+    <filename>classicmpstr_1_1_c_multi_attribute_editor.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CMultiAttributeEditor</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
+      <anchor>acadc5608f2647c50e5931f488a34cecd</anchor>
+      <arglist>(const CElementSelectionInfoManagerBase &amp;elementSelectionInfoManager, const std::string &amp;attributeId, int attributeFlags)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetEditorText</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
+      <anchor>abf747a0d3cde386bb3d51efb843be82c</anchor>
+      <arglist>(const QString &amp;attributeValuesText)</arglist>
+    </member>
+    <member kind="function">
+      <type>QStringList</type>
+      <name>GetAttributeValues</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
+      <anchor>ab91e1b421f9ed4f052434b08370ffe24</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnItemAdd</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
+      <anchor>a4adc4a2fc332fc0e9503a432fc023b80</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnItemRemove</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
+      <anchor>a55697f75052670412d129e3f14795363</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnItemMoveUp</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
+      <anchor>a81cf672b847268c9bf1d239145e62da6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnItemMoveDown</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
+      <anchor>afec0eb7313b56883300fcc646808302c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>UpdateButtonStates</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
+      <anchor>afaed3552a9b5378b56375e46a9d36eb7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>CreateValuesTree</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
+      <anchor>aa32398214a3b67c8aed87e3bdf5eef02</anchor>
+      <arglist>(const QStringList &amp;values)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17317,6 +17619,7 @@
     <base>QObject</base>
     <base>ibase::TLoggerCompWrap</base>
     <base>icomp::CRegistry</base>
+    <base virtualness="virtual">icmpstr::IComponentNoteController</base>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
@@ -17345,6 +17648,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
+      <name>SerializeNotes</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
+      <anchor>aef91d1b7b2d578c2b9ff2b1ae91dc953</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>SerializeComponentsLayout</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
       <anchor>a8c37dea315a97051b35d420aca77dafb</anchor>
@@ -17356,6 +17666,34 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
       <anchor>a80f526e8ed3def36bf2e1fe918e7c6dd</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SerializeUserData</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
+      <anchor>acfcfcc44cf58e8e5835ee73e2825af38</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetComponentNote</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
+      <anchor>af4885f299b0179a390e3bab625b0e8f9</anchor>
+      <arglist>(const std::string &amp;componentName, const istd::CString &amp;componentNote)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveComponentNote</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
+      <anchor>a128d43197a3064eb8a070d0ab6ab16e9</anchor>
+      <arglist>(const std::string &amp;componentName)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CString</type>
+      <name>GetComponentNote</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
+      <anchor>af5eb5eb15c10b75e18cd97ecf81d909c</anchor>
+      <arglist>(const std::string &amp;componentName)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ElementInfo *</type>
@@ -17405,6 +17743,13 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
       <anchor>a35fa109c64397e55abd2f4b4de6faa98</anchor>
       <arglist>(iser::IArchive &amp;archive, std::string &amp;componentName, i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SerializeComponentNote</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
+      <anchor>a9e2e09274153db39a5a746c2260a1a59</anchor>
+      <arglist>(iser::IArchive &amp;archive, std::string &amp;componentName, istd::CString &amp;componentNote)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual icomp::IRegistryElement *</type>
@@ -17724,20 +18069,6 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>OnAddNote</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>abed3828358c8f6a0cd32466c06db5ba9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnRemoveNote</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>aede12b927ca8c74c065b81ee881d0ac3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
       <name>OnExecutionTimerTick</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
       <anchor>aae05a18743b19a5ec054c68fe180ad22</anchor>
@@ -17881,36 +18212,47 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>icmpstr::IComponentNote</name>
-    <filename>classicmpstr_1_1_i_component_note.html</filename>
-    <base virtualness="virtual">iser::IObject</base>
+    <name>icmpstr::IComponentNoteController</name>
+    <filename>classicmpstr_1_1_i_component_note_controller.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
+      <anchor>acdc9337112c091fe77639f15a5e93f17</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_NOTE_ADDED</name>
+      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
+      <anchor>acdc9337112c091fe77639f15a5e93f17a2cf5a0b98f2eff2d375d1f4fbe9e83a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_NOTE_REMOVED</name>
+      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
+      <anchor>acdc9337112c091fe77639f15a5e93f17aabe68fe2b02ff3b4364e33558b3a1553</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetComponentNote</name>
+      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
+      <anchor>a4b48032f04647a7f315e5b56d49a5341</anchor>
+      <arglist>(const std::string &amp;componentName, const istd::CString &amp;componentNote)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>RemoveComponentNote</name>
+      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
+      <anchor>af32964483671e326253675fcadd55d0f</anchor>
+      <arglist>(const std::string &amp;componentName)=0</arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CString</type>
-      <name>GetText</name>
-      <anchorfile>classicmpstr_1_1_i_component_note.html</anchorfile>
-      <anchor>a23b6e7063d822eb88b13ab9bb24435db</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetText</name>
-      <anchorfile>classicmpstr_1_1_i_component_note.html</anchorfile>
-      <anchor>af24a9dc74799173b58cb9616aaf99823</anchor>
-      <arglist>(const istd::CString &amp;noteText)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual i2d::CVector2d</type>
-      <name>GetPosition</name>
-      <anchorfile>classicmpstr_1_1_i_component_note.html</anchorfile>
-      <anchor>a54e18f69097228429fa60cc45988ed7b</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetPosition</name>
-      <anchorfile>classicmpstr_1_1_i_component_note.html</anchorfile>
-      <anchor>a8bd1e30f52e5b62038e4f4d6580cc857</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)=0</arglist>
+      <name>GetComponentNote</name>
+      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
+      <anchor>a77ecd5e43d402628129959d657ccbfc4</anchor>
+      <arglist>(const std::string &amp;componentName)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -49888,9 +50230,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
+      <name>OnGuiCreated</name>
       <anchorfile>classiview_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a20fcfa3cd18c7ee38a934dec0ff23232</anchor>
+      <anchor>ad4d98b6aca649788129e91d469f4cc6b</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

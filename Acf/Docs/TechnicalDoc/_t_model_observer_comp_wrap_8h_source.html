@@ -45,7 +45,7 @@
 <a name="l00021"></a>00021 <span class="keyword">public</span>:
 <a name="l00022"></a><a class="code" href="classibase_1_1_t_model_observer_comp_wrap.html#afa3fcab514bf33fbdb6ec2f83eb8f075">00022</a>        <span class="keyword">typedef</span> ObserverComponent <a class="code" href="classibase_1_1_t_model_observer_comp_wrap.html#afa3fcab514bf33fbdb6ec2f83eb8f075">BaseClass</a>;
 <a name="l00023"></a>00023 
-<a name="l00024"></a>00024        I_BEGIN_COMPONENT(<a class="code" href="classibase_1_1_t_model_observer_comp_wrap.html" title="Implementation of component wrapper for model observer classes.">TModelObserverCompWrap</a>);
+<a name="l00024"></a>00024        I_BEGIN_BASE_COMPONENT(<a class="code" href="classibase_1_1_t_model_observer_comp_wrap.html" title="Implementation of component wrapper for model observer classes.">TModelObserverCompWrap</a>);
 <a name="l00025"></a>00025               I_REGISTER_INTERFACE(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>);
 <a name="l00026"></a>00026               I_ASSIGN(m_defaultModelCompPtr, <span class="stringliteral">&quot;DefaultModel&quot;</span>, <span class="stringliteral">&quot;Data model to be connected to the observer&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;DefaultModel&quot;</span>);
 <a name="l00027"></a>00027               <a class="code" href="classibase_1_1_t_model_observer_comp_wrap.html#ab672696dd1d69d5c990ff6ab1bf845f6">I_TASSIGN_TO</a>(m_defaultObjectCompPtr, m_defaultModelCompPtr, <span class="keyword">false</span>);

@@ -38,6 +38,7 @@
 #include "icmpstr/CRegistryPropEditorComp.h"
 #include "icmpstr/CQuickHelpGuiComp.h"
 #include "icmpstr/CPackagesLoaderExtComp.h"
+#include "icmpstr/CComponentNoteEditorComp.h"
 
 
 /**
@@ -65,6 +66,7 @@ typedef icmpstr::CRegistryConsistInfoComp RegistryConsistInfo;
 typedef icmpstr::CRegistryPropEditorComp RegistryPropEditor;
 typedef icmpstr::CQuickHelpGuiComp QuickHelpGui;
 typedef icomp::TModelCompWrap<icmpstr::CPackagesLoaderExtComp> PackagesLoaderExt;
+typedef icmpstr::CComponentNoteEditorComp ComponentNoteEditor;
 
 
 } // namespace CompositorPck

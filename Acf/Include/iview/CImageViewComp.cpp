@@ -23,7 +23,6 @@
 #include "iview/CImageViewComp.h"
 
 
-
 namespace iview
 {
 
@@ -57,9 +56,11 @@ void CImageViewComp::UpdateGui(int /*updateFlags*/)
 }
 
 
-void CImageViewComp::OnGuiModelAttached()
+// reimplemented (iqtui::CComponentBase)
+
+void CImageViewComp::OnGuiCreated()
 {
-	BaseClass::OnGuiModelAttached();
+	BaseClass::OnGuiCreated();
 
 	iview::CConsoleGui* consolePtr = GetQtWidget();
 	I_ASSERT(consolePtr != NULL);
@@ -67,14 +68,9 @@ void CImageViewComp::OnGuiModelAttached()
 	iview::CConsoleGui::ViewImpl& view = consolePtr->GetViewRef();
 	view.SetViewDraggable();
 
-	imod::IModel* modelPtr = GetModelPtr();
-	I_ASSERT(modelPtr != NULL);
-	if (modelPtr->IsAttached(this)){
-		view.ConnectBackgroundShape(this);
-
-		view.ConnectCalibrationShape(&m_calibrationShape);
-		view.SetCalibrationPtr(&m_calibration);
-	}
+	view.ConnectBackgroundShape(this);
+	view.ConnectCalibrationShape(&m_calibrationShape);
+	view.SetCalibrationPtr(&m_calibration);
 }
 
 

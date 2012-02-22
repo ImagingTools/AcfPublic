@@ -34,6 +34,7 @@
 
 #include "ibase/TLoggerCompWrap.h"
 
+#include "icmpstr/IComponentNoteController.h"
 #include "icmpstr/CVisualRegistryElement.h"
 
 
@@ -44,7 +45,8 @@ namespace icmpstr
 class CVisualRegistryComp:
 			public QObject,
 			public ibase::CLoggerComponentBase,
-			public icomp::CRegistry
+			public icomp::CRegistry,
+			virtual public IComponentNoteController
 {
 public:
 	typedef ibase::CLoggerComponentBase BaseClass;
@@ -53,6 +55,7 @@ public:
 	I_BEGIN_COMPONENT(CVisualRegistryComp);
 		I_REGISTER_INTERFACE(istd::IChangeable);
 		I_REGISTER_INTERFACE(icomp::IRegistry);
+		I_REGISTER_INTERFACE(IComponentNoteController);
 		I_ASSIGN(m_envManagerCompPtr, "MetaInfoManager", "Allows access to component meta information", true, "MetaInfoManager");
 	I_END_COMPONENT;
 
@@ -61,8 +64,15 @@ public:
 		MI_CANNOT_CREATE_ELEMENT = 650
 	};
 
+	virtual bool SerializeNotes(iser::IArchive& archive);
 	virtual bool SerializeComponentsLayout(iser::IArchive& archive);
 	virtual bool SerializeRegistry(iser::IArchive& archive);
+	virtual bool SerializeUserData(iser::IArchive& archive);
+
+	// reimplemented (IComponentNoteController)
+	virtual void SetComponentNote(const std::string& componentName, const istd::CString& componentNote);
+	virtual void RemoveComponentNote(const std::string& componentName);
+	virtual istd::CString GetComponentNote(const std::string& componentName);
 
 	// reimplemented (icomp::IRegistry)
 	virtual ElementInfo* InsertElementInfo(
@@ -80,6 +90,7 @@ protected:
 	typedef std::map<icomp::CComponentAddress, IconPtr> IconMap;
 
 	bool SerializeComponentPosition(iser::IArchive& archive, std::string& componentName, i2d::CVector2d& position);
+	bool SerializeComponentNote(iser::IArchive& archive, std::string& componentName, istd::CString& componentNote);
 
 	// reimplemented (icomp::CRegistry)
 	virtual icomp::IRegistryElement* CreateRegistryElement(
@@ -88,6 +99,10 @@ protected:
 
 private:
 	I_REF(icomp::IComponentEnvironmentManager, m_envManagerCompPtr);
+
+	typedef std::map<std::string, istd::CString> NotesMap;
+
+	NotesMap m_notesMap;
 };
 
 
