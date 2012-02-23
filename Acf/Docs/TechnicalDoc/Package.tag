@@ -17675,25 +17675,18 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetComponentNote</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>af4885f299b0179a390e3bab625b0e8f9</anchor>
-      <arglist>(const std::string &amp;componentName, const istd::CString &amp;componentNote)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>RemoveComponentNote</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a128d43197a3064eb8a070d0ab6ab16e9</anchor>
-      <arglist>(const std::string &amp;componentName)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual istd::CString</type>
       <name>GetComponentNote</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
       <anchor>af5eb5eb15c10b75e18cd97ecf81d909c</anchor>
       <arglist>(const std::string &amp;componentName)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetComponentNote</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
+      <anchor>af4885f299b0179a390e3bab625b0e8f9</anchor>
+      <arglist>(const std::string &amp;componentName, const istd::CString &amp;componentNote)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ElementInfo *</type>
@@ -17805,6 +17798,20 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
       <anchor>ad0f6d1990b2d01b39796d46c79e8fa18</anchor>
       <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type>const istd::CString &amp;</type>
+      <name>GetNote</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
+      <anchor>ab564b108aca935d60fecfdf8209409c5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetNote</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
+      <anchor>a2daf0549de3fafe01081429a4503cd3f</anchor>
+      <arglist>(const istd::CString &amp;note)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -18222,30 +18229,10 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>CF_NOTE_ADDED</name>
+      <name>CF_NOTE_CHANGED</name>
       <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
-      <anchor>acdc9337112c091fe77639f15a5e93f17a2cf5a0b98f2eff2d375d1f4fbe9e83a4</anchor>
+      <anchor>acdc9337112c091fe77639f15a5e93f17a51d310e3bfd3ae1cd4bb970c2fc6ff63</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_NOTE_REMOVED</name>
-      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
-      <anchor>acdc9337112c091fe77639f15a5e93f17aabe68fe2b02ff3b4364e33558b3a1553</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetComponentNote</name>
-      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
-      <anchor>a4b48032f04647a7f315e5b56d49a5341</anchor>
-      <arglist>(const std::string &amp;componentName, const istd::CString &amp;componentNote)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>RemoveComponentNote</name>
-      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
-      <anchor>af32964483671e326253675fcadd55d0f</anchor>
-      <arglist>(const std::string &amp;componentName)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CString</type>
@@ -18253,6 +18240,13 @@
       <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
       <anchor>a77ecd5e43d402628129959d657ccbfc4</anchor>
       <arglist>(const std::string &amp;componentName)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetComponentNote</name>
+      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
+      <anchor>a4b48032f04647a7f315e5b56d49a5341</anchor>
+      <arglist>(const std::string &amp;componentName, const istd::CString &amp;componentNote)=0</arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -46,6 +46,9 @@ CRegistryElementShape::CRegistryElementShape(
 			const iqt2d::ISceneProvider* providerPtr)
 :	BaseClass(true, providerPtr),
 	m_registryView(*registryViewPtr),
+	m_exportIcon(":/Icons/Export.svg"),
+	m_noteAttachedIcon(":/Icons/NoteAttached.svg"),
+	m_autoInitIcon(":/Icons/AutoInit.svg"),
 	m_isConsistent(false),
 	m_componentType(0)
 {
@@ -184,7 +187,7 @@ void CRegistryElementShape::paint(QPainter* painterPtr, const QStyleOptionGraphi
 					mainRect.top(),
 					attributeIconSize,
 					attributeIconSize);
-		QIcon(":/Icons/Export.svg").paint(painterPtr, iconRect.toRect());
+		m_exportIcon.paint(painterPtr, iconRect.toRect());
 	}
 
 	// draw element flags icon:
@@ -196,7 +199,17 @@ void CRegistryElementShape::paint(QPainter* painterPtr, const QStyleOptionGraphi
 					attributeIconSize,
 					attributeIconSize);
 
-		QIcon(":/Icons/AutoInit.svg").paint(painterPtr, iconRect.toRect());
+		m_autoInitIcon.paint(painterPtr, iconRect.toRect());
+	}
+
+	// draw 'note attached' icon:
+	if (!objectPtr->GetNote().IsEmpty()){
+		QRectF iconRect(
+					mainRect.right() - (attributeIconSize + SIDE_OFFSET) * ++iconsCount,
+					mainRect.top(),
+					attributeIconSize,
+					attributeIconSize);
+		m_noteAttachedIcon.paint(painterPtr, iconRect.toRect());
 	}
 }
 
@@ -269,6 +282,8 @@ void CRegistryElementShape::UpdateGraphicsItem(const CVisualRegistryElement& ele
 
 	m_componentType = 0;
 
+	QString toolTip;
+
 	const icomp::CComponentAddress& address = element.GetAddress();
 	const std::string& packageId = address.GetPackageId();
 	if (!packageId.empty()){
@@ -283,7 +298,7 @@ void CRegistryElementShape::UpdateGraphicsItem(const CVisualRegistryElement& ele
 		if (managerPtr != NULL){
 			const icomp::IComponentStaticInfo* metaInfoPtr = managerPtr->GetComponentMetaInfo(element.GetAddress());
 			if (metaInfoPtr != NULL){
-				setToolTip(iqt::GetQString(metaInfoPtr->GetDescription()));
+				toolTip = iqt::GetQString(metaInfoPtr->GetDescription());
 
 				m_componentType = metaInfoPtr->GetComponentType();
 
@@ -291,25 +306,31 @@ void CRegistryElementShape::UpdateGraphicsItem(const CVisualRegistryElement& ele
 				m_backgroundSelectedColor = QColor(10, 242, 126, 255);
 			}
 			else{
-				setToolTip(tr("Package or component not found"));
+				toolTip = tr("Package or component not found");
 
 				m_backgroundColor = QColor(128, 128, 128, 255);
 				m_backgroundSelectedColor = QColor(69, 185, 127, 255);
 			}
 		}
-		else{
-			setToolTip("");
-		}
 	}
 	else{
-		setToolTip("");
-
 		m_addressString = tr("Embedded: %1").arg(address.GetComponentId().c_str());
 		m_icon = QIcon(":/Icons/EmbeddedComponent.svg");
 
 		m_backgroundColor = QColor(200, 220, 255, 255);
 		m_backgroundSelectedColor = QColor(10, 126, 242, 255);
 	}
+
+	const istd::CString& note = element.GetNote();
+	if (!note.IsEmpty()){
+		if (!toolTip.isEmpty()){
+			toolTip += "\n\nAttached note:\n";
+		}
+
+		toolTip += iqt::GetQString(note).simplified();
+	}
+
+	setToolTip(toolTip);
 
 	QFontMetrics nameFontInfo(m_registryView.GetElementNameFont());
 	QFontMetrics detailFontInfo(m_registryView.GetElementDetailFont());
@@ -327,6 +348,10 @@ void CRegistryElementShape::UpdateGraphicsItem(const CVisualRegistryElement& ele
 	}
 
 	if ((!m_exportedInterfacesList.empty())){
+		titleWidth += attributeIconSize + SIDE_OFFSET;
+	}
+
+	if ((!element.GetNote().IsEmpty())){
 		titleWidth += attributeIconSize + SIDE_OFFSET;
 	}
 

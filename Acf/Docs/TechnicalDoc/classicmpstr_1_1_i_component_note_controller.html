@@ -58,17 +58,14 @@ Inheritance diagram for icmpstr::IComponentNoteController:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_i_component_note_controller.html#acdc9337112c091fe77639f15a5e93f17">ChangeFlags</a> { <a class="el" href="classicmpstr_1_1_i_component_note_controller.html#acdc9337112c091fe77639f15a5e93f17a2cf5a0b98f2eff2d375d1f4fbe9e83a4">CF_NOTE_ADDED</a> =  1 &lt;&lt; 29, 
-<a class="el" href="classicmpstr_1_1_i_component_note_controller.html#acdc9337112c091fe77639f15a5e93f17aabe68fe2b02ff3b4364e33558b3a1553">CF_NOTE_REMOVED</a> =  1 &lt;&lt; 30
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_i_component_note_controller.html#acdc9337112c091fe77639f15a5e93f17">ChangeFlags</a> { <a class="el" href="classicmpstr_1_1_i_component_note_controller.html#acdc9337112c091fe77639f15a5e93f17a51d310e3bfd3ae1cd4bb970c2fc6ff63">CF_NOTE_CHANGED</a> =  1 &lt;&lt; 29
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_i_component_note_controller.html#a4b48032f04647a7f315e5b56d49a5341">SetComponentNote</a> (const std::string &amp;componentName, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;componentNote)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a note <code>componentNote</code> to the component with the given name <code>componentName</code>.  <a href="#a4b48032f04647a7f315e5b56d49a5341"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_i_component_note_controller.html#af32964483671e326253675fcadd55d0f">RemoveComponentNote</a> (const std::string &amp;componentName)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the note from the component with the given name <code>componentName</code>.  <a href="#af32964483671e326253675fcadd55d0f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_i_component_note_controller.html#a77ecd5e43d402628129959d657ccbfc4">GetComponentNote</a> (const std::string &amp;componentName)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the note text to the component with the given name <code>componentName</code>.  <a href="#a77ecd5e43d402628129959d657ccbfc4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_i_component_note_controller.html#a4b48032f04647a7f315e5b56d49a5341">SetComponentNote</a> (const std::string &amp;componentName, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;componentNote)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a note <code>componentNote</code> to the component with the given name <code>componentName</code>.  <a href="#a4b48032f04647a7f315e5b56d49a5341"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface for management of notes in the component registry. </p>
@@ -87,9 +84,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 <dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="acdc9337112c091fe77639f15a5e93f17a2cf5a0b98f2eff2d375d1f4fbe9e83a4"></a><!-- doxytag: member="CF_NOTE_ADDED" ref="acdc9337112c091fe77639f15a5e93f17a2cf5a0b98f2eff2d375d1f4fbe9e83a4" args="" -->CF_NOTE_ADDED</em>&nbsp;</td><td>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="acdc9337112c091fe77639f15a5e93f17aabe68fe2b02ff3b4364e33558b3a1553"></a><!-- doxytag: member="CF_NOTE_REMOVED" ref="acdc9337112c091fe77639f15a5e93f17aabe68fe2b02ff3b4364e33558b3a1553" args="" -->CF_NOTE_REMOVED</em>&nbsp;</td><td>
+<tr><td valign="top"><em><a class="anchor" id="acdc9337112c091fe77639f15a5e93f17a51d310e3bfd3ae1cd4bb970c2fc6ff63"></a><!-- doxytag: member="CF_NOTE_CHANGED" ref="acdc9337112c091fe77639f15a5e93f17a51d310e3bfd3ae1cd4bb970c2fc6ff63" args="" -->CF_NOTE_CHANGED</em>&nbsp;</td><td>
 </td></tr>
 </table>
 </dd>
@@ -120,27 +115,6 @@ Public Member Functions</h2></td></tr>
 <p>Get the note text to the component with the given name <code>componentName</code>. </p>
 
 <p>Implemented in <a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#af5eb5eb15c10b75e18cd97ecf81d909c">icmpstr::CVisualRegistryComp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af32964483671e326253675fcadd55d0f"></a><!-- doxytag: member="icmpstr::IComponentNoteController::RemoveComponentNote" ref="af32964483671e326253675fcadd55d0f" args="(const std::string &amp;componentName)=0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void icmpstr::IComponentNoteController::RemoveComponentNote </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>componentName</em></td><td>)</td>
-          <td><code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Remove the note from the component with the given name <code>componentName</code>. </p>
-
-<p>Implemented in <a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a128d43197a3064eb8a070d0ab6ab16e9">icmpstr::CVisualRegistryComp</a>.</p>
 
 </div>
 </div>
