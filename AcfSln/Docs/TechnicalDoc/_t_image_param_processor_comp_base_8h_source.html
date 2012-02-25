@@ -60,7 +60,7 @@
 <a name="l00043"></a>00043                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; outputImage) = 0;
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045 <span class="keyword">private</span>:
-<a name="l00046"></a>00046        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_paramsIdAttrPtr);
+<a name="l00046"></a>00046        I_ATTR(QString, m_paramsIdAttrPtr);
 <a name="l00047"></a>00047 };
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049 
@@ -76,7 +76,7 @@
 <a name="l00059"></a>00059 {
 <a name="l00060"></a>00060        <span class="keyword">const</span> ParameterType* processorParamsPtr = <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;  
 <a name="l00061"></a>00061        <span class="keywordflow">if</span> ((paramsPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; m_paramsIdAttrPtr.IsValid()){
-<a name="l00062"></a>00062               processorParamsPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>ParameterType*<span class="keyword">&gt;</span>(paramsPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html#a3db09637386433fd8da452a736234379">GetParameter</a>(m_paramsIdAttrPtr-&gt;GetValue().ToString()));
+<a name="l00062"></a>00062               processorParamsPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>ParameterType*<span class="keyword">&gt;</span>(paramsPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html#a3db09637386433fd8da452a736234379">GetParameter</a>(m_paramsIdAttrPtr-&gt;GetValue().toStdString()));
 <a name="l00063"></a>00063        }
 <a name="l00064"></a>00064        
 <a name="l00065"></a>00065        <span class="comment">// do image processing:</span>

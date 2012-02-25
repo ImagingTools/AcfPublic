@@ -63,8 +63,8 @@
 <a name="l00036"></a>00036        <span class="comment">//     reimplemented (icomp::IComponentStaticInfo)</span>
 <a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classicomp_1_1_c_composite_component_static_info.html#abd3e15d858a0f84ca0c3d0009ae12394" title="Get information about component type.">GetComponentType</a>() <span class="keyword">const</span>;
 <a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">IComponentStaticInfo</a>* <a class="code" href="classicomp_1_1_c_composite_component_static_info.html#ae47b8328c333b1fb5448ef4e8bb3e72f" title="Return number of interfaces for specific slot.">GetEmbeddedComponentInfo</a>(<span class="keyword">const</span> std::string&amp; embeddedId) <span class="keyword">const</span>;
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classicomp_1_1_c_composite_component_static_info.html#a19e7afaf13fb003cf635bb46d4f86e7b" title="Get human readable description of this component.">GetDescription</a>() <span class="keyword">const</span>;
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classicomp_1_1_c_composite_component_static_info.html#a1663c03df4dbbb20b567bf534064293d" title="Get keywords for this component.">GetKeywords</a>() <span class="keyword">const</span>;
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classicomp_1_1_c_composite_component_static_info.html#a6877f96ddbf9f35be2dae83b0f75550b" title="Get human readable description of this component.">GetDescription</a>() <span class="keyword">const</span>;
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classicomp_1_1_c_composite_component_static_info.html#a9b6f205ecce291e6a5a2521b7f2135f1" title="Get keywords for this component.">GetKeywords</a>() <span class="keyword">const</span>;
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042 <span class="keyword">protected</span>:
 <a name="l00046"></a>00046        <span class="keyword">const</span> <a class="code" href="structicomp_1_1_i_registry_1_1_element_info.html" title="Describe information stored with each element.">IRegistry::ElementInfo</a>* <a class="code" href="classicomp_1_1_c_composite_component_static_info.html#a38c4fbe58fa971cbe00793506e9bdf97" title="Get the element info for the given element ID.">GetElementInfoFromRegistry</a>(
@@ -95,12 +95,12 @@
 <a name="l00071"></a>00071        <span class="keyword">typedef</span> std::map&lt;const IAttributeStaticInfo*, AttrMetaInfoPtr&gt; AttrReplacers;
 <a name="l00072"></a>00072        AttrReplacers m_attrReplacers;
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;icomp::CCompositeComponentStaticInfo&gt;</a> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">ComponentInfoPtr</a>;
+<a name="l00074"></a>00074        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;icomp::CCompositeComponentStaticInfo&gt;</a> <a class="code" href="classistd_1_1_t_del_ptr.html">ComponentInfoPtr</a>;
 <a name="l00075"></a>00075        <span class="keyword">typedef</span> std::map&lt;std::string, ComponentInfoPtr&gt; EmbeddedComponentInfos;
 <a name="l00076"></a>00076        <span class="keyword">mutable</span> EmbeddedComponentInfos m_embeddedComponentInfos;
 <a name="l00077"></a>00077 
-<a name="l00078"></a>00078        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_description;
-<a name="l00079"></a>00079        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_keywords;
+<a name="l00078"></a>00078        QString m_description;
+<a name="l00079"></a>00079        QString m_keywords;
 <a name="l00080"></a>00080        <span class="keywordtype">int</span> m_category;
 <a name="l00081"></a>00081 };
 <a name="l00082"></a>00082 

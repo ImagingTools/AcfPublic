@@ -31,12 +31,11 @@
 #include "istd/istd.h"
 
 
+class QString;
+
+
 namespace istd
 {
-
-
-class CString;
-
 
 class CCrcCalculator
 {
@@ -45,7 +44,7 @@ public:
 
 	static I_DWORD GetCrcFromData(const I_BYTE* dataPtr, int dataSize);
 	static I_DWORD GetCrcFromStream(const ByteStream& byteStream);
-	static I_DWORD GetCrcFromFile(const istd::CString& fileName);
+	static I_DWORD GetCrcFromFile(const QString& fileName);
 
 	static void UpdateCrc(const I_BYTE& byte, I_DWORD& dwCrc32);
 

@@ -58,28 +58,28 @@ Inheritance diagram for isys::ISystemInfo:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_system_info.html#af514cbddee98b4debfb13dc46ca9342a">GetComputerName</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get computer/workstation name.  <a href="#af514cbddee98b4debfb13dc46ca9342a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_system_info.html#afb90c8378860b7d44ff428623c7141a9">GetComputerName</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get computer/workstation name.  <a href="#afb90c8378860b7d44ff428623c7141a9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_system_info.html#ad2e06b7bf7e429f490f50b150f56e139">GetProcessorsCount</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of processors installed.  <a href="#ad2e06b7bf7e429f490f50b150f56e139"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_system_info.html#a5486fbd8ae3615882da3229bad926d5b">GetProcessorId</a> (int processorIndex) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID of the processor with index <code>processorIndex</code>.  <a href="#a5486fbd8ae3615882da3229bad926d5b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_system_info.html#a8d2245671457891a8cbd28b22fe3283e">IsNetworkAdapterInstalled</a> (int *adapterCountPtr=NULL) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if there are network adapter(s) installed.  <a href="#a8d2245671457891a8cbd28b22fe3283e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_system_info.html#a172d59bc1ad4d89b24baa4c5ddc06b51">IsNetworkAdapterInstalled</a> (int *adapterCountPtr=0) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if there are network adapter(s) installed.  <a href="#a172d59bc1ad4d89b24baa4c5ddc06b51"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_system_info.html#aa86515a199017f957640c560e9fb2f31">GetMacAdress</a> (int adapterIndex) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MAC address of the network adapter.  <a href="#aa86515a199017f957640c560e9fb2f31"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface to get the information about the system resources. </p>
 
-<p>Definition at line <a class="el" href="_i_system_info_8h_source.html#l00023">23</a> of file <a class="el" href="_i_system_info_8h_source.html">ISystemInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_system_info_8h_source.html#l00024">24</a> of file <a class="el" href="_i_system_info_8h_source.html">ISystemInfo.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="af514cbddee98b4debfb13dc46ca9342a"></a><!-- doxytag: member="isys::ISystemInfo::GetComputerName" ref="af514cbddee98b4debfb13dc46ca9342a" args="() const =0" -->
+<a class="anchor" id="afb90c8378860b7d44ff428623c7141a9"></a><!-- doxytag: member="isys::ISystemInfo::GetComputerName" ref="afb90c8378860b7d44ff428623c7141a9" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> isys::ISystemInfo::GetComputerName </td>
+          <td class="memname">virtual QString isys::ISystemInfo::GetComputerName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -90,7 +90,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get computer/workstation name. </p>
 
-<p>Implemented in <a class="el" href="classisys_1_1_c_system_info_base.html#a826d0b0f1950164b655a5a14627fe65e">isys::CSystemInfoBase</a>.</p>
+<p>Implemented in <a class="el" href="classisys_1_1_c_system_info_base.html#a49ac08f5cb5baaee746bf7e69a65e3f2">isys::CSystemInfoBase</a>.</p>
 
 </div>
 </div>
@@ -156,7 +156,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8d2245671457891a8cbd28b22fe3283e"></a><!-- doxytag: member="isys::ISystemInfo::IsNetworkAdapterInstalled" ref="a8d2245671457891a8cbd28b22fe3283e" args="(int *adapterCountPtr=NULL) const =0" -->
+<a class="anchor" id="a172d59bc1ad4d89b24baa4c5ddc06b51"></a><!-- doxytag: member="isys::ISystemInfo::IsNetworkAdapterInstalled" ref="a172d59bc1ad4d89b24baa4c5ddc06b51" args="(int *adapterCountPtr=0) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -164,7 +164,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual bool isys::ISystemInfo::IsNetworkAdapterInstalled </td>
           <td>(</td>
           <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>adapterCountPtr</em> = <code>NULL</code></td><td>)</td>
+          <td class="paramname"><em>adapterCountPtr</em> = <code>0</code></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
       </table>

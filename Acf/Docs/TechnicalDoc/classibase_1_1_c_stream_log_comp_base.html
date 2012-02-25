@@ -75,10 +75,10 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a1e58023a198a0433e4e3e911839d241c">WriteMessageToStream</a> (const <a class="el" href="classibase_1_1_i_message.html">ibase::IMessage</a> &amp;message)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Write formatted the message to the output stream.  <a href="#a1e58023a198a0433e4e3e911839d241c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#aab133a573f1095a66b61f62f7df010c7">GenerateMessageText</a> (const <a class="el" href="classibase_1_1_i_message.html">ibase::IMessage</a> &amp;message) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate formatted message text for the output.  <a href="#aab133a573f1095a66b61f62f7df010c7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a21cfe7c1d5dff9fb1988454d3ddd3db7">WriteText</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;text)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a text line to the output stream.  <a href="#a21cfe7c1d5dff9fb1988454d3ddd3db7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a746111e7f737f5acd31578b0d58907fe">GenerateMessageText</a> (const <a class="el" href="classibase_1_1_i_message.html">ibase::IMessage</a> &amp;message) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate formatted message text for the output.  <a href="#a746111e7f737f5acd31578b0d58907fe"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#ab8abbb08ee84cff30316189ff03b8ddf">WriteText</a> (const QString &amp;text)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a text line to the output stream.  <a href="#ab8abbb08ee84cff30316189ff03b8ddf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a23fabb0113f9e6990eca7bd3967b2a5f">NewLine</a> ()=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make new line.  <a href="#a23fabb0113f9e6990eca7bd3967b2a5f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#acea6b8ea476102049991780341479b56">OnComponentDestroyed</a> ()</td></tr>
@@ -144,12 +144,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aab133a573f1095a66b61f62f7df010c7"></a><!-- doxytag: member="ibase::CStreamLogCompBase::GenerateMessageText" ref="aab133a573f1095a66b61f62f7df010c7" args="(const ibase::IMessage &amp;message) const " -->
+<a class="anchor" id="a746111e7f737f5acd31578b0d58907fe"></a><!-- doxytag: member="ibase::CStreamLogCompBase::GenerateMessageText" ref="a746111e7f737f5acd31578b0d58907fe" args="(const ibase::IMessage &amp;message) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> ibase::CStreamLogCompBase::GenerateMessageText </td>
+          <td class="memname">virtual QString ibase::CStreamLogCompBase::GenerateMessageText </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classibase_1_1_i_message.html">ibase::IMessage</a> &amp;&#160;</td>
           <td class="paramname"><em>message</em></td><td>)</td>
@@ -273,14 +273,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a21cfe7c1d5dff9fb1988454d3ddd3db7"></a><!-- doxytag: member="ibase::CStreamLogCompBase::WriteText" ref="a21cfe7c1d5dff9fb1988454d3ddd3db7" args="(const istd::CString &amp;text)=0" -->
+<a class="anchor" id="ab8abbb08ee84cff30316189ff03b8ddf"></a><!-- doxytag: member="ibase::CStreamLogCompBase::WriteText" ref="ab8abbb08ee84cff30316189ff03b8ddf" args="(const QString &amp;text)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void ibase::CStreamLogCompBase::WriteText </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>text</em></td><td>)</td>
           <td><code> [protected, pure virtual]</code></td>
         </tr>
@@ -290,7 +290,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Write a text line to the output stream. </p>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_text_file_log_comp.html#aa8e9143b2e823ef51735796df708ac9e">ibase::CTextFileLogComp</a>, and <a class="el" href="classibase_1_1_c_console_log_comp.html#a819919a6a1c5f0c97f21b3ffe7286e55">ibase::CConsoleLogComp</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_text_file_log_comp.html#aec31a46be89c78b0d412785d7e0410ec">ibase::CTextFileLogComp</a>, and <a class="el" href="classibase_1_1_c_console_log_comp.html#a728d1a7464d8fd8054165bb90c13cab0">ibase::CConsoleLogComp</a>.</p>
 
 </div>
 </div>

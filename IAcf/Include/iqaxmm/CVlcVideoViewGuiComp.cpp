@@ -80,13 +80,13 @@ void CVlcVideoViewGuiComp::OnGuiDestroyed()
 
 // reimplemented (imm::IMediaController)
 
-istd::CString CVlcVideoViewGuiComp::GetOpenedMediumUrl() const
+QString CVlcVideoViewGuiComp::GetOpenedMediumUrl() const
 {
 	return m_currentUrl;
 }
 
 
-bool CVlcVideoViewGuiComp::OpenMediumUrl(const istd::CString& url, bool autoPlay)
+bool CVlcVideoViewGuiComp::OpenMediumUrl(const QString& url, bool autoPlay)
 {
 	if (m_vlcWidgetPtr != NULL){
 		delete m_vlcWidgetPtr;
@@ -113,7 +113,7 @@ bool CVlcVideoViewGuiComp::OpenMediumUrl(const istd::CString& url, bool autoPlay
 			m_currentUrl = url;
 
 			m_playlistPtr->clear();
-			m_playlistPtr->add(iqt::GetQString(m_currentUrl));
+			m_playlistPtr->add(m_currentUrl);
 			m_playlistPtr->play();
 
 			iqt::CTimer timer;
@@ -249,7 +249,7 @@ bool CVlcVideoViewGuiComp::SetCurrentFrame(int frameIndex)
 
 // reimplemented (iser::IFileTypeInfo)
 
-bool CVlcVideoViewGuiComp::GetFileExtensions(istd::CStringList& result, int flags, bool doAppend) const
+bool CVlcVideoViewGuiComp::GetFileExtensions(QStringList& result, int flags, bool doAppend) const
 {
 	if (!doAppend){
 		result.clear();
@@ -264,7 +264,7 @@ bool CVlcVideoViewGuiComp::GetFileExtensions(istd::CStringList& result, int flag
 }
 
 
-istd::CString CVlcVideoViewGuiComp::GetTypeDescription(const istd::CString* /*extensionPtr*/) const
+QString CVlcVideoViewGuiComp::GetTypeDescription(const QString* /*extensionPtr*/) const
 {
 	return "Video files";
 }

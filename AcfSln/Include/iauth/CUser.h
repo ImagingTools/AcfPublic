@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "istd/CString.h"
+#include <QString>
 
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
@@ -38,18 +38,18 @@ namespace iauth
 class CUser
 {
 public:
-	CUser(const istd::CString& userName = "", const istd::CString& password = "", int userGroup = 0);
+	CUser(const QString& userName = "", const QString& password = "", int userGroup = 0);
 	CUser(const CUser& user);
 
 	/**
 		Get name of user.
 	*/
-	const istd::CString& GetUserName() const;
+	const QString& GetUserName() const;
 	/**
 		Set name of user.
 		\return	true, if user name was accepted, or false if it is uncompatible with the user name guide lines.
 	*/
-	bool SetUserName(const istd::CString& name);
+	bool SetUserName(const QString& name);
 	/**
 		Get group number this user belongs.
 		\return number of group, or -1 if this user is disabled.
@@ -63,17 +63,17 @@ public:
 	/**
 		Get password of this user.
 	*/
-	const istd::CString& GetPassword() const;
+	const QString& GetPassword() const;
 	/**
 		Set password of this user.
 		\return	true, if password was accepted, or false if it is uncompatible with the password guide lines.
 	*/
-	bool SetPassword(const istd::CString& password);
+	bool SetPassword(const QString& password);
 
 	/**
 		Check, if password is correct.
 	*/
-	bool CheckPassword(const istd::CString& password) const;
+	bool CheckPassword(const QString& password) const;
 	/**
 		Set password to be reset.
 	*/
@@ -82,8 +82,8 @@ public:
 	bool Serialize(iser::IArchive& archive);
 
 private:
-	istd::CString m_userName;
-	istd::CString m_password;
+	QString m_userName;
+	QString m_password;
 	int m_userGroup;
 };
 

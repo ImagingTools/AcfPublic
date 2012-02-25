@@ -58,16 +58,16 @@ Inheritance diagram for iser::CMinimalVersionInfo:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_minimal_version_info.html#a6d2da576fca06316b5796af88b7b9c4a">CMinimalVersionInfo</a> (const <a class="el" href="classiser_1_1_i_serializable.html">ISerializable</a> *serializablePtr, bool addStandardIds=true)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with initialization of reference to <a class="el" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a> and registring of standard ID's.  <a href="#a6d2da576fca06316b5796af88b7b9c4a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_minimal_version_info.html#aca8a0b793ac529df1a73fea6683098cf">AddId</a> (int versionId, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;description=&quot;&quot;)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new version ID.  <a href="#aca8a0b793ac529df1a73fea6683098cf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_minimal_version_info.html#a444d63661909a98187b266382343eff1">AddId</a> (int versionId, const QString &amp;description=&quot;&quot;)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new version ID.  <a href="#a444d63661909a98187b266382343eff1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_minimal_version_info.html#a96b77026908fd1a336675409eed39cd5">GetVersionNumber</a> (int versionId, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> &amp;result) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get version of archived stream for specific versioning type.  <a href="#a96b77026908fd1a336675409eed39cd5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_minimal_version_info.html#ac05421c1d48aa5778bcb19f7a45c88d8">GetVersionIdDescription</a> (int versionId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of version ID.  <a href="#ac05421c1d48aa5778bcb19f7a45c88d8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_minimal_version_info.html#a327b20658b04ce90db6104663d750e52">GetVersionIdDescription</a> (int versionId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of version ID.  <a href="#a327b20658b04ce90db6104663d750e52"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_version_info.html#a14c10439f5c53047c6b54b3a6168264c">VersionIds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_minimal_version_info.html#acf4915ec5ecd57e49e5d7d66c5ad6d69">GetVersionIds</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of version ID's.  <a href="#acf4915ec5ecd57e49e5d7d66c5ad6d69"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_minimal_version_info.html#ac3be7782b7bd13396eb2b665e04021f1">GetEncodedVersionName</a> (int versionId, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> versionNumber) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode version number to human readable form.  <a href="#ac3be7782b7bd13396eb2b665e04021f1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_minimal_version_info.html#a6deb50e2f0ffd3e6732bb5df09dae1a3">GetEncodedVersionName</a> (int versionId, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> versionNumber) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode version number to human readable form.  <a href="#a6deb50e2f0ffd3e6732bb5df09dae1a3"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implementation of interface <a class="el" href="classiser_1_1_i_version_info.html" title="Provides access to version information.">iser::IVersionInfo</a> using information about minimal needed version from interface <a class="el" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>. </p>
@@ -112,7 +112,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aca8a0b793ac529df1a73fea6683098cf"></a><!-- doxytag: member="iser::CMinimalVersionInfo::AddId" ref="aca8a0b793ac529df1a73fea6683098cf" args="(int versionId, const istd::CString &amp;description=&quot;&quot;)" -->
+<a class="anchor" id="a444d63661909a98187b266382343eff1"></a><!-- doxytag: member="iser::CMinimalVersionInfo::AddId" ref="a444d63661909a98187b266382343eff1" args="(int versionId, const QString &amp;description=&quot;&quot;)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -125,7 +125,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>description</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -149,12 +149,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac3be7782b7bd13396eb2b665e04021f1"></a><!-- doxytag: member="iser::CMinimalVersionInfo::GetEncodedVersionName" ref="ac3be7782b7bd13396eb2b665e04021f1" args="(int versionId, I_DWORD versionNumber) const " -->
+<a class="anchor" id="a6deb50e2f0ffd3e6732bb5df09dae1a3"></a><!-- doxytag: member="iser::CMinimalVersionInfo::GetEncodedVersionName" ref="a6deb50e2f0ffd3e6732bb5df09dae1a3" args="(int versionId, I_DWORD versionNumber) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iser::CMinimalVersionInfo::GetEncodedVersionName </td>
+          <td class="memname">virtual QString iser::CMinimalVersionInfo::GetEncodedVersionName </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>versionId</em>, </td>
@@ -176,16 +176,16 @@ Public Member Functions</h2></td></tr>
 
 <p>Encode version number to human readable form. </p>
 
-<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#ad839cf448acc494cbcf7ec0df06976fa">iser::IVersionInfo</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#aea7f3127caed1ee86040752d958482cc">iser::IVersionInfo</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac05421c1d48aa5778bcb19f7a45c88d8"></a><!-- doxytag: member="iser::CMinimalVersionInfo::GetVersionIdDescription" ref="ac05421c1d48aa5778bcb19f7a45c88d8" args="(int versionId) const " -->
+<a class="anchor" id="a327b20658b04ce90db6104663d750e52"></a><!-- doxytag: member="iser::CMinimalVersionInfo::GetVersionIdDescription" ref="a327b20658b04ce90db6104663d750e52" args="(int versionId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iser::CMinimalVersionInfo::GetVersionIdDescription </td>
+          <td class="memname">virtual QString iser::CMinimalVersionInfo::GetVersionIdDescription </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>versionId</em></td><td>)</td>
@@ -204,7 +204,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_version_info.html#a71f9c819b642773712cca9fed1407b80" title="Type of version.">VersionId</a>, <a class="el" href="classiser_1_1_c_minimal_version_info.html#a96b77026908fd1a336675409eed39cd5" title="Get version of archived stream for specific versioning type.">GetVersionNumber</a>. </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#acce1207f69cff08151854a4e8b22b53b">iser::IVersionInfo</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#abb7b458bc2e8bec8b5381d3abe8867d7">iser::IVersionInfo</a>.</p>
 
 </div>
 </div>

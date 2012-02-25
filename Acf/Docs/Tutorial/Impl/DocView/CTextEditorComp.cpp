@@ -54,7 +54,7 @@ void CTextEditorComp::UpdateModel() const
 	ibase::ITextDocument* objectPtr = GetObjectPtr();
 	I_ASSERT(objectPtr != NULL);
 
-	objectPtr->SetText(iqt::GetCString(textEditPtr->toPlainText()));
+	objectPtr->SetText(textEditPtr->toPlainText());
 }
 
 
@@ -70,7 +70,7 @@ void CTextEditorComp::UpdateGui(int /*updateFlags*/)
 	ibase::ITextDocument* objectPtr = GetObjectPtr();
 
 	if ((objectPtr != NULL) && !textEditPtr->signalsBlocked()){
-		textEditPtr->setText(iqt::GetQString(objectPtr->GetText()));
+		textEditPtr->setText(objectPtr->GetText()));
 	}
 }
 

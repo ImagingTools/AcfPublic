@@ -254,7 +254,7 @@ QString CAttributeEditorComp::AttributeItemDelegate::GetMultiAttributeValueAsStr
 			valuesString += ";";
 		}
 
-		valuesString += iqt::GetQString(attribute.GetValueAt(index));
+		valuesString += QString::fromStdString(attribute.GetValueAt(index));
 	}
 
 	return valuesString;

@@ -46,12 +46,12 @@
 <a name="l00024"></a><a class="code" href="classiqt_1_1_c_xml_file_read_archive.html">00024</a> <span class="keyword">class </span><a class="code" href="classiqt_1_1_c_xml_file_read_archive.html" title="Qt-based implementation of archive reading from XML file.">CXmlFileReadArchive</a>: <span class="keyword">public</span> iser::CReadArchiveBase, <span class="keyword">public</span> iser::CXmlDocumentInfoBase
 <a name="l00025"></a>00025 {
 <a name="l00026"></a>00026 <span class="keyword">public</span>:
-<a name="l00027"></a>00027        <a class="code" href="classiqt_1_1_c_xml_file_read_archive.html#a4751889f586c276c29e08495490bdc63">CXmlFileReadArchive</a>(
-<a name="l00028"></a>00028                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath = <span class="stringliteral">&quot;&quot;</span>,
+<a name="l00027"></a>00027        <a class="code" href="classiqt_1_1_c_xml_file_read_archive.html#a723b2fd2338bb307ad700e710fae415d">CXmlFileReadArchive</a>(
+<a name="l00028"></a>00028                             <span class="keyword">const</span> QString&amp; filePath = <span class="stringliteral">&quot;&quot;</span>,
 <a name="l00029"></a>00029                             <span class="keywordtype">bool</span> serializeHeader = <span class="keyword">true</span>,
 <a name="l00030"></a>00030                             <span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a>&amp; rootTag = <a class="code" href="classiser_1_1_c_archive_base.html#af37185cf961a49405088cd05130cbfef">s_acfRootTag</a>);
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032        <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_xml_file_read_archive.html#ad4c0992cc36660ca81f1a8a4744bd044">OpenDocument</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath);
+<a name="l00032"></a>00032        <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_xml_file_read_archive.html#ac81e77932cd2ff8853628242ed1a7360">OpenDocument</a>(<span class="keyword">const</span> QString&amp; filePath);
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        <span class="comment">// reimplemented (iser::IArchive)</span>
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_xml_file_read_archive.html#a90544c41c9a7e9c09e95470f952b336d" title="Check if skiping to the end of tag on EndTag is supported.">IsTagSkippingSupported</a>() <span class="keyword">const</span>;
@@ -71,7 +71,7 @@
 <a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_xml_file_read_archive.html#a65a235e597179e810b3c027ba3d7b9f9" title="Process primitive type.">Process</a>(<span class="keywordtype">float</span>&amp; value);
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_xml_file_read_archive.html#a65a235e597179e810b3c027ba3d7b9f9" title="Process primitive type.">Process</a>(<span class="keywordtype">double</span>&amp; value);
 <a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_xml_file_read_archive.html#a65a235e597179e810b3c027ba3d7b9f9" title="Process primitive type.">Process</a>(std::string&amp; value);
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_xml_file_read_archive.html#a65a235e597179e810b3c027ba3d7b9f9" title="Process primitive type.">Process</a>(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; value);
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_xml_file_read_archive.html#a65a235e597179e810b3c027ba3d7b9f9" title="Process primitive type.">Process</a>(QString&amp; value);
 <a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_xml_file_read_archive.html#a2402a2d76bb3846c544ec797f55f7886" title="Process binary data block.">ProcessData</a>(<span class="keywordtype">void</span>* dataPtr, <span class="keywordtype">int</span> size);
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055 <span class="keyword">protected</span>:

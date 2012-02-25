@@ -29,47 +29,51 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define isys_IFileSystem_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_i_polymorphic_8h.html">istd/IPolymorphic.h</a>&quot;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_c_string_8h.html">istd/CString.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QString&gt;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="isys_8h.html">isys/isys.h</a>&quot;</span>
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="keyword">namespace </span>isys
-<a name="l00012"></a>00012 {
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_polymorphic_8h.html">istd/IPolymorphic.h</a>&quot;</span>
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="isys_8h.html">isys/isys.h</a>&quot;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 
-<a name="l00020"></a><a class="code" href="classisys_1_1_i_file_system.html">00020</a> <span class="keyword">class </span><a class="code" href="classisys_1_1_i_file_system.html" title="Defines some file system dependent operations.">IFileSystem</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
-<a name="l00021"></a>00021 {
-<a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classisys_1_1_i_file_system.html#aa4ba0b56aa7a0494bfe5a827df625120" title="Get normalized file path.">GetNormalizedPath</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; path) <span class="keyword">const</span> = 0;
-<a name="l00029"></a>00029 
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classisys_1_1_i_file_system.html#af6aa5b1cd7a451ffc4933f2e7934840b" title="Get file name of specified file path.">GetFileName</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath) <span class="keyword">const</span> = 0;
-<a name="l00035"></a>00035 
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classisys_1_1_i_file_system.html#a9023ce6b72546125e679e8cca10df692" title="Get base file name (also without extension) of specified file path.">GetBaseFileName</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath) <span class="keyword">const</span> = 0;
-<a name="l00041"></a>00041 
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classisys_1_1_i_file_system.html#aedd2359672675b05f0b00cb147406789" title="Get directory path of specified file path.">GetDirPath</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath) <span class="keyword">const</span> = 0;
-<a name="l00047"></a>00047 
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#a9d2d3904d413c4a14592eef5f2244d34" title="Check if file path has specified extension.">HasExtension</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; extension) <span class="keyword">const</span> = 0;
-<a name="l00052"></a>00052 
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#aa2d5af72f8d7497d3ac2f1c5814faae6" title="Check if some file is present.">IsPresent</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath) <span class="keyword">const</span> = 0;
-<a name="l00057"></a>00057 
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#a1c2894ea376870e520ccd2f88d58ad0f" title="Copy any file to another.">CreateFileCopy</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; inputFile, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; outputFile, <span class="keywordtype">bool</span> overwriteExisting = <span class="keyword">false</span>) <span class="keyword">const</span> = 0;
-<a name="l00062"></a>00062 
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#aa09e10c6f07b5e7ec8170c8f8fe7f78d" title="Remove the file filePath from the file system.">RemoveFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath) <span class="keyword">const</span> = 0;
-<a name="l00067"></a>00067        
-<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#ad0959eee52bead72b584e44eef2840e5" title="Remove the directory directoryPath from the file system.">RemoveFolder</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; directoryPath, <span class="keywordtype">bool</span> ignoreNonEmpty = <span class="keyword">false</span>) <span class="keyword">const</span> = 0;
-<a name="l00074"></a>00074 
-<a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#a3fda9e2fdad8edcd35e1c93cb06c7b14" title="Create an empty directory.">CreateFolder</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; directoryPath) <span class="keyword">const</span> = 0;
-<a name="l00079"></a>00079 };
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082 } <span class="comment">// namespace isys</span>
-<a name="l00083"></a>00083 
+<a name="l00015"></a>00015 <span class="keyword">namespace </span>isys
+<a name="l00016"></a>00016 {
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 
+<a name="l00024"></a><a class="code" href="classisys_1_1_i_file_system.html">00024</a> <span class="keyword">class </span><a class="code" href="classisys_1_1_i_file_system.html" title="Defines some file system dependent operations.">IFileSystem</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
+<a name="l00025"></a>00025 {
+<a name="l00026"></a>00026 <span class="keyword">public</span>:
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> QString <a class="code" href="classisys_1_1_i_file_system.html#ad6995113ef9ffe3a54a4a98398f0ac05" title="Get normalized file path.">GetNormalizedPath</a>(<span class="keyword">const</span> QString&amp; path) <span class="keyword">const</span> = 0;
+<a name="l00033"></a>00033 
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> QString <a class="code" href="classisys_1_1_i_file_system.html#a6330698f20e6672b5bf8c7da0a628522" title="Get file name of specified file path.">GetFileName</a>(<span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span> = 0;
+<a name="l00039"></a>00039 
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> QString <a class="code" href="classisys_1_1_i_file_system.html#adc58e4c6ea34d3778ebc2fb8b4816e86" title="Get base file name (also without extension) of specified file path.">GetBaseFileName</a>(<span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span> = 0;
+<a name="l00045"></a>00045 
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> QString <a class="code" href="classisys_1_1_i_file_system.html#a158a724c21b8a7e322a9407895f146ee" title="Get directory path of specified file path.">GetDirPath</a>(<span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span> = 0;
+<a name="l00051"></a>00051 
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#a79d2027c0705617ee3a7de891a1a6644" title="Check if file path has specified extension.">HasExtension</a>(<span class="keyword">const</span> QString&amp; filePath, <span class="keyword">const</span> QString&amp; extension) <span class="keyword">const</span> = 0;
+<a name="l00056"></a>00056 
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#ae12703ed48b095956965995d719315d8" title="Check if some file is present.">IsPresent</a>(<span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span> = 0;
+<a name="l00061"></a>00061 
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#a21d8804705b527af16a9d5ec75b31341" title="Copy any file to another.">CreateFileCopy</a>(<span class="keyword">const</span> QString&amp; inputFile, <span class="keyword">const</span> QString&amp; outputFile, <span class="keywordtype">bool</span> overwriteExisting = <span class="keyword">false</span>) <span class="keyword">const</span> = 0;
+<a name="l00066"></a>00066 
+<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#a25cea2620e6d79ae860272bb08e430b9" title="Remove the file filePath from the file system.">RemoveFile</a>(<span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span> = 0;
+<a name="l00071"></a>00071        
+<a name="l00077"></a>00077        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#a99623b5d5782dabcd5d67951db9ca106" title="Remove the directory directoryPath from the file system.">RemoveFolder</a>(<span class="keyword">const</span> QString&amp; directoryPath, <span class="keywordtype">bool</span> ignoreNonEmpty = <span class="keyword">false</span>) <span class="keyword">const</span> = 0;
+<a name="l00078"></a>00078 
+<a name="l00082"></a>00082        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisys_1_1_i_file_system.html#a66cfe52b893ea799cf9121286ac50c69" title="Create an empty directory.">CreateFolder</a>(<span class="keyword">const</span> QString&amp; directoryPath) <span class="keyword">const</span> = 0;
+<a name="l00083"></a>00083 };
 <a name="l00084"></a>00084 
-<a name="l00085"></a>00085 <span class="preprocessor">#endif // !isys_IFileSystem_included</span>
-<a name="l00086"></a>00086 <span class="preprocessor"></span>
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 } <span class="comment">// namespace isys</span>
 <a name="l00087"></a>00087 
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 <span class="preprocessor">#endif // !isys_IFileSystem_included</span>
+<a name="l00090"></a>00090 <span class="preprocessor"></span>
+<a name="l00091"></a>00091 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

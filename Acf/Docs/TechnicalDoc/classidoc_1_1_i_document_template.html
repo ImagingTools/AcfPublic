@@ -62,8 +62,8 @@ Inheritance diagram for idoc::IDocumentTemplate:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#a0343f3438b62ab79a59c94d32dcb83cc">GetViewTypeIds</a> (const std::string &amp;documentTypeId) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return supported view type IDs for specified document type.  <a href="#a0343f3438b62ab79a59c94d32dcb83cc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#ada7284c75d4ab77df6fc5f6e980cd7d2">GetViewTypeName</a> (const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some view type ID.  <a href="#ada7284c75d4ab77df6fc5f6e980cd7d2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#ab4324c0b053058c289087d4446b3547a">GetViewTypeName</a> (const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some view type ID.  <a href="#ab4324c0b053058c289087d4446b3547a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_file_loader.html">iser::IFileLoader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#ad59ff45c30342761796803a89ad00b35">GetFileLoader</a> (const std::string &amp;documentTypeId) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file loader/saver for spacified document ID.  <a href="#ad59ff45c30342761796803a89ad00b35"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#af265b394f4399b7274b61597c4fca624">CreateDocument</a> (const std::string &amp;documentTypeId) const =0</td></tr>
@@ -266,12 +266,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ada7284c75d4ab77df6fc5f6e980cd7d2"></a><!-- doxytag: member="idoc::IDocumentTemplate::GetViewTypeName" ref="ada7284c75d4ab77df6fc5f6e980cd7d2" args="(const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const =0" -->
+<a class="anchor" id="ab4324c0b053058c289087d4446b3547a"></a><!-- doxytag: member="idoc::IDocumentTemplate::GetViewTypeName" ref="ab4324c0b053058c289087d4446b3547a" args="(const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> idoc::IDocumentTemplate::GetViewTypeName </td>
+          <td class="memname">virtual QString idoc::IDocumentTemplate::GetViewTypeName </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em>, </td>
@@ -293,7 +293,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get human readable name of some view type ID. </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a6ce9a195025063853c783820ff189e30">idoc::CSingleDocumentTemplateBase</a>, and <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#ae37b869c37ba90091b556b10ddf50138">idoc::CCompositeDocumentTemplateComp</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a8b9c14358dde37c4b1fd96163e06bec4">idoc::CSingleDocumentTemplateBase</a>, and <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a5e60c7ced74d95838232d86bf16dd0a3">idoc::CCompositeDocumentTemplateComp</a>.</p>
 
 </div>
 </div>

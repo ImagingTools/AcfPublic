@@ -69,10 +69,10 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimm_1_1_i_media_controller.html#aa49ff7eb11e67f2eef3ce919a855b1a6">GetOpenedMediumUrl</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get URL of the medium object.  <a href="#aa49ff7eb11e67f2eef3ce919a855b1a6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimm_1_1_i_media_controller.html#ae94917a1946992edb7f5fa35ae0d0f88">OpenMediumUrl</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;url, bool autoPlay=true)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open some media file.  <a href="#ae94917a1946992edb7f5fa35ae0d0f88"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimm_1_1_i_media_controller.html#a493ddecd4a6609733c43011cf5df7065">GetOpenedMediumUrl</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get URL of the medium object.  <a href="#a493ddecd4a6609733c43011cf5df7065"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimm_1_1_i_media_controller.html#a29e8ed79886ca5d5ad52373a184b873b">OpenMediumUrl</a> (const QString &amp;url, bool autoPlay=true)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open some media file.  <a href="#a29e8ed79886ca5d5ad52373a184b873b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimm_1_1_i_media_controller.html#ab9ff24390cfaca63b02248fff7561814">CloseMedium</a> ()=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Close this media player.  <a href="#ab9ff24390cfaca63b02248fff7561814"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimm_1_1_i_media_controller.html#ae80717fb919f51b794702fd00a7680d3">IsPlaying</a> () const =0</td></tr>
@@ -208,12 +208,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa49ff7eb11e67f2eef3ce919a855b1a6"></a><!-- doxytag: member="imm::IMediaController::GetOpenedMediumUrl" ref="aa49ff7eb11e67f2eef3ce919a855b1a6" args="() const =0" -->
+<a class="anchor" id="a493ddecd4a6609733c43011cf5df7065"></a><!-- doxytag: member="imm::IMediaController::GetOpenedMediumUrl" ref="a493ddecd4a6609733c43011cf5df7065" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> imm::IMediaController::GetOpenedMediumUrl </td>
+          <td class="memname">virtual QString imm::IMediaController::GetOpenedMediumUrl </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -224,7 +224,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get URL of the medium object. </p>
 
-<p>Implemented in <a class="el" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#a066a2b3296a69134a9b25f04cb638823">iqtmm::CFrameSeqVideoControllerComp</a>, and <a class="el" href="classiqtmm_1_1_c_phonon_video_view_gui_comp.html#ad0df3028d53b4cca643355937008f65e">iqtmm::CPhononVideoViewGuiComp</a>.</p>
+<p>Implemented in <a class="el" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#ae9fd0791d764cafe33e5eb0c6c902010">iqtmm::CFrameSeqVideoControllerComp</a>, and <a class="el" href="classiqtmm_1_1_c_phonon_video_view_gui_comp.html#ac88b96fbd15fc66b02a452f41e4c7994">iqtmm::CPhononVideoViewGuiComp</a>.</p>
 
 </div>
 </div>
@@ -269,14 +269,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae94917a1946992edb7f5fa35ae0d0f88"></a><!-- doxytag: member="imm::IMediaController::OpenMediumUrl" ref="ae94917a1946992edb7f5fa35ae0d0f88" args="(const istd::CString &amp;url, bool autoPlay=true)=0" -->
+<a class="anchor" id="a29e8ed79886ca5d5ad52373a184b873b"></a><!-- doxytag: member="imm::IMediaController::OpenMediumUrl" ref="a29e8ed79886ca5d5ad52373a184b873b" args="(const QString &amp;url, bool autoPlay=true)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool imm::IMediaController::OpenMediumUrl </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>url</em>, </td>
         </tr>
         <tr>
@@ -296,7 +296,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Open some media file. </p>
 
-<p>Implemented in <a class="el" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#aedb7bb4b1c39484d600e9a6a9a9dfc67">iqtmm::CFrameSeqVideoControllerComp</a>, and <a class="el" href="classiqtmm_1_1_c_phonon_video_view_gui_comp.html#a8950dce23b0b4483ae63695379653b5a">iqtmm::CPhononVideoViewGuiComp</a>.</p>
+<p>Implemented in <a class="el" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#ab0e68b8e9b31bff6dbc46da83827ea1e">iqtmm::CFrameSeqVideoControllerComp</a>, and <a class="el" href="classiqtmm_1_1_c_phonon_video_view_gui_comp.html#a95b63aefe32dc0a57a57b63efbcbe54a">iqtmm::CPhononVideoViewGuiComp</a>.</p>
 
 </div>
 </div>

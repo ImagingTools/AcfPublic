@@ -50,16 +50,16 @@
 <a name="l00032"></a><a class="code" href="classiser_1_1_c_xml_file_read_archive.html#acf96cd0875838798aa3db29037a56954">00032</a>        <span class="keyword">typedef</span> <a class="code" href="classiser_1_1_t_xml_stream_read_archive_base.html">TXmlStreamReadArchiveBase&lt;std::ifstream&gt;</a> <a class="code" href="classiser_1_1_c_xml_file_read_archive.html#acf96cd0875838798aa3db29037a56954">BaseClass</a>;
 <a name="l00033"></a><a class="code" href="classiser_1_1_c_xml_file_read_archive.html#a2660fd7a9f7b27d6cd3470655329c5f4">00033</a>        <span class="keyword">typedef</span> <a class="code" href="classiser_1_1_c_file_archive_info.html" title="Basic implementation of interface iser::IFileArchiveInfo.">CFileArchiveInfo</a> <a class="code" href="classiser_1_1_c_xml_file_read_archive.html#a2660fd7a9f7b27d6cd3470655329c5f4">BaseClass2</a>;
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035        <span class="keyword">explicit</span> <a class="code" href="classiser_1_1_c_xml_file_read_archive.html#a3137522f5a143566d5b0e604723da4cc">CXmlFileReadArchive</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath, <span class="keywordtype">bool</span> serializeHeader = <span class="keyword">true</span>, <span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">CArchiveTag</a>&amp; rootTag = <a class="code" href="classiser_1_1_c_archive_base.html#af37185cf961a49405088cd05130cbfef">s_acfRootTag</a>);
+<a name="l00035"></a>00035        <span class="keyword">explicit</span> <a class="code" href="classiser_1_1_c_xml_file_read_archive.html#a4f11eb02f5239f489ed0f3566a873efd">CXmlFileReadArchive</a>(<span class="keyword">const</span> QString&amp; filePath, <span class="keywordtype">bool</span> serializeHeader = <span class="keyword">true</span>, <span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">CArchiveTag</a>&amp; rootTag = <a class="code" href="classiser_1_1_c_archive_base.html#af37185cf961a49405088cd05130cbfef">s_acfRootTag</a>);
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037 <span class="keyword">protected</span>:
 <a name="l00038"></a>00038        <span class="comment">// reimplemented (istd::ILogger)</span>
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_xml_file_read_archive.html#a51302f1c2bb7824e5ee4ef09459241c9" title="Decorate message parts before outputting.">DecorateMessage</a>(
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_xml_file_read_archive.html#a563696933460fa16a84c8a0f60ff86bf" title="Decorate message parts before outputting.">DecorateMessage</a>(
 <a name="l00040"></a>00040                             <a class="code" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343" title="Category of message.">MessageCategory</a> category,
 <a name="l00041"></a>00041                             <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
 <a name="l00042"></a>00042                             <span class="keywordtype">int</span> flags,
-<a name="l00043"></a>00043                             <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; message,
-<a name="l00044"></a>00044                             <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; messageSource) <span class="keyword">const</span>;
+<a name="l00043"></a>00043                             QString&amp; message,
+<a name="l00044"></a>00044                             QString&amp; messageSource) <span class="keyword">const</span>;
 <a name="l00045"></a>00045 };
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 

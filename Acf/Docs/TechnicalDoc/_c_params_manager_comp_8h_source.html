@@ -80,8 +80,8 @@
 <a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a78c5340c8c01e19a5a3ffee53b55b881" title="Insert new parameters set at selected position.">InsertParamsSet</a>(<span class="keywordtype">int</span> index = -1);
 <a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a50f8d419f57ae6f5f06cee02da4f66e1" title="Remove parameters set at selected position.">RemoveParamsSet</a>(<span class="keywordtype">int</span> index);
 <a name="l00058"></a>00058        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>* <a class="code" href="classiprm_1_1_c_params_manager_comp.html#ae19b3efcc16c19eb07df3a3bef7f8f36" title="Get selected parameter set.">GetParamsSet</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classiprm_1_1_c_params_manager_comp.html#aeddce2cc8ae18bd990d98209a0c379d5" title="Get name of specified parameter set.">GetParamsSetName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#ac0ca6395ab8078f848e813a958882bac" title="Set name of specified parameter set.">SetParamsSetName</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; name);
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a3fc3eed18d7389e6e3ade8fa14c31fa5" title="Get name of specified parameter set.">GetParamsSetName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a25e7d50536b4d173e6263f3c96f16cda" title="Set name of specified parameter set.">SetParamsSetName</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> QString&amp; name);
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062        <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
 <a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>* <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a016bc3ca5660823acc36f19f48a266c7" title="Get constraints of this parameter.">GetSelectionConstraints</a>() <span class="keyword">const</span>;
@@ -95,8 +95,8 @@
 <a name="l00071"></a>00071        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
 <a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a47f8c206a42387c2dab9d53d0f414902" title="Get constraints flags.">GetConstraintsFlags</a>() <span class="keyword">const</span>;
 <a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#ac0839252bfb7cdb764554ac7a3887847" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
-<a name="l00074"></a>00074        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a5d2eb7ca76cc8efee6db14758ae564b0" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00075"></a>00075        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a0091658f3473778815ceea8c05e9aff8" title="Get description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00074"></a>00074        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_params_manager_comp.html#aefd514c92e09c35941681d03ed36cc60" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00075"></a>00075        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a7ea78cdcbcc6fc415d97c9ce1a3f2533" title="Get description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00076"></a>00076        <span class="keyword">virtual</span> std::string <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a2065a91e40ce46d7be2bfc7b386a5151" title="Get option ID.">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078 <span class="keyword">protected</span>:
@@ -106,14 +106,14 @@
 <a name="l00082"></a>00082 
 <a name="l00083"></a>00083 <span class="keyword">private</span>:
 <a name="l00084"></a>00084        I_MULTIREF(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>, m_fixedParamSetsCompPtr);
-<a name="l00085"></a>00085        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_fixedSetNamesCompPtr);
-<a name="l00086"></a>00086        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_defaultSetNameCompPtr);
+<a name="l00085"></a>00085        I_MULTIATTR(QString, m_fixedSetNamesCompPtr);
+<a name="l00086"></a>00086        I_ATTR(QString, m_defaultSetNameCompPtr);
 <a name="l00087"></a>00087        I_FACT(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>, m_paramSetsFactPtr);
 <a name="l00088"></a>00088 
 <a name="l00089"></a>00089        <span class="keyword">struct </span>ParamSet
 <a name="l00090"></a>00090        {
 <a name="l00091"></a>00091               <a class="code" href="classistd_1_1_t_smart_ptr.html">istd::TSmartPtr&lt;IParamsSet&gt;</a> paramSetPtr;
-<a name="l00092"></a>00092               <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> name;
+<a name="l00092"></a>00092               QString name;
 <a name="l00093"></a>00093        };
 <a name="l00094"></a>00094 
 <a name="l00095"></a>00095        <span class="keyword">typedef</span> std::vector&lt;ParamSet&gt; ParamSets;

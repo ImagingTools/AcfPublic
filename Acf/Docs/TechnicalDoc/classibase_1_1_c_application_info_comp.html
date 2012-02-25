@@ -66,8 +66,8 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_application_info_comp.html#a542890d3314072fca4cf8a603a999be7">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_application_info_comp.html#ad4db07d52ba6d590ace07dea81d6f3d7">GetApplicationAttribute</a> (int attributeId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value of application attribute.  <a href="#ad4db07d52ba6d590ace07dea81d6f3d7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_application_info_comp.html#a8002a00aca09e978bd59e05e535be6ed">GetApplicationAttribute</a> (int attributeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value of application attribute.  <a href="#a8002a00aca09e978bd59e05e535be6ed"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_application_info_comp.html#a3135d691aed415947288601ca8d25f51">GetMainVersionId</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID of main module version ID for <code><a class="el" href="classiser_1_1_i_version_info.html" title="Provides access to version information.">iser::IVersionInfo</a></code>.  <a href="#a3135d691aed415947288601ca8d25f51"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_version_info.html">iser::IVersionInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_application_info_comp.html#afd57c1efe4e03f9bc0bb05f59bdfad80">GetVersionInfo</a> () const </td></tr>
@@ -76,12 +76,12 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_application_info_comp.html#ac8ae49f6cbbdc6664325c77a15c1f3c1">GetVersionNumber</a> (int versionId, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> &amp;result) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get version of archived stream for specific versioning type.  <a href="#ac8ae49f6cbbdc6664325c77a15c1f3c1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_application_info_comp.html#a99f8a5f7fde6757af414df2655ab8110">GetVersionIdDescription</a> (int versionId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of version ID.  <a href="#a99f8a5f7fde6757af414df2655ab8110"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_application_info_comp.html#a9141aafcdfbe179f1783de08e00fc94b">GetVersionIdDescription</a> (int versionId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of version ID.  <a href="#a9141aafcdfbe179f1783de08e00fc94b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_version_info.html#a14c10439f5c53047c6b54b3a6168264c">VersionIds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_application_info_comp.html#a58249ff1c295226f27c1c89aaa9ad236">GetVersionIds</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of version ID's.  <a href="#a58249ff1c295226f27c1c89aaa9ad236"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_application_info_comp.html#a6e1ab59911148d962e97b7a28d939f80">GetEncodedVersionName</a> (int versionId, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> versionNumber) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode version number to human readable form.  <a href="#a6e1ab59911148d962e97b7a28d939f80"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_application_info_comp.html#a1cc371625da8474ffe34cd9af0de5b9d">GetEncodedVersionName</a> (int versionId, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> versionNumber) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode version number to human readable form.  <a href="#a1cc371625da8474ffe34cd9af0de5b9d"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Component for providing of application info such as program name, type, copyright text etc. </p>
@@ -104,12 +104,12 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ad4db07d52ba6d590ace07dea81d6f3d7"></a><!-- doxytag: member="ibase::CApplicationInfoComp::GetApplicationAttribute" ref="ad4db07d52ba6d590ace07dea81d6f3d7" args="(int attributeId) const " -->
+<a class="anchor" id="a8002a00aca09e978bd59e05e535be6ed"></a><!-- doxytag: member="ibase::CApplicationInfoComp::GetApplicationAttribute" ref="a8002a00aca09e978bd59e05e535be6ed" args="(int attributeId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> ibase::CApplicationInfoComp::GetApplicationAttribute </td>
+          <td class="memname">virtual QString ibase::CApplicationInfoComp::GetApplicationAttribute </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>attributeId</em></td><td>)</td>
@@ -128,16 +128,16 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classibase_1_1_i_application_info.html#a1a490cdd7997e1c6546dec7a9a3ccccd">ApplicationAttribute</a>. </dd></dl>
 
-<p>Implements <a class="el" href="classibase_1_1_i_application_info.html#a2661a124bc7fc1dd174a598b6193f73d">ibase::IApplicationInfo</a>.</p>
+<p>Implements <a class="el" href="classibase_1_1_i_application_info.html#a730ee27e910dc44994d93e05b8126d21">ibase::IApplicationInfo</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6e1ab59911148d962e97b7a28d939f80"></a><!-- doxytag: member="ibase::CApplicationInfoComp::GetEncodedVersionName" ref="a6e1ab59911148d962e97b7a28d939f80" args="(int versionId, I_DWORD versionNumber) const " -->
+<a class="anchor" id="a1cc371625da8474ffe34cd9af0de5b9d"></a><!-- doxytag: member="ibase::CApplicationInfoComp::GetEncodedVersionName" ref="a1cc371625da8474ffe34cd9af0de5b9d" args="(int versionId, I_DWORD versionNumber) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> ibase::CApplicationInfoComp::GetEncodedVersionName </td>
+          <td class="memname">virtual QString ibase::CApplicationInfoComp::GetEncodedVersionName </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>versionId</em>, </td>
@@ -159,7 +159,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Encode version number to human readable form. </p>
 
-<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#ad839cf448acc494cbcf7ec0df06976fa">iser::IVersionInfo</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#aea7f3127caed1ee86040752d958482cc">iser::IVersionInfo</a>.</p>
 
 </div>
 </div>
@@ -185,12 +185,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a99f8a5f7fde6757af414df2655ab8110"></a><!-- doxytag: member="ibase::CApplicationInfoComp::GetVersionIdDescription" ref="a99f8a5f7fde6757af414df2655ab8110" args="(int versionId) const " -->
+<a class="anchor" id="a9141aafcdfbe179f1783de08e00fc94b"></a><!-- doxytag: member="ibase::CApplicationInfoComp::GetVersionIdDescription" ref="a9141aafcdfbe179f1783de08e00fc94b" args="(int versionId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> ibase::CApplicationInfoComp::GetVersionIdDescription </td>
+          <td class="memname">virtual QString ibase::CApplicationInfoComp::GetVersionIdDescription </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>versionId</em></td><td>)</td>
@@ -209,7 +209,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_version_info.html#a71f9c819b642773712cca9fed1407b80" title="Type of version.">VersionId</a>, <a class="el" href="classibase_1_1_c_application_info_comp.html#ac8ae49f6cbbdc6664325c77a15c1f3c1" title="Get version of archived stream for specific versioning type.">GetVersionNumber</a>. </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#acce1207f69cff08151854a4e8b22b53b">iser::IVersionInfo</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#abb7b458bc2e8bec8b5381d3abe8867d7">iser::IVersionInfo</a>.</p>
 
 </div>
 </div>

@@ -39,7 +39,7 @@ void CTextEditorGuiComp::UpdateModel() const
 	CTextEditor* textEditPtr = GetQtWidget();
 	I_ASSERT(textEditPtr != NULL);
 
-	objectPtr->SetText(iqt::GetCString(textEditPtr->GetText()));
+	objectPtr->SetText(textEditPtr->GetText());
 }
 
 
@@ -52,7 +52,7 @@ void CTextEditorGuiComp::UpdateGui(int /*updateFlags*/)
 
 	ibase::ITextDocument* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
-		textEditPtr->SetText(iqt::GetQString(objectPtr->GetText()));
+		textEditPtr->SetText(objectPtr->GetText());
 	}
 }
 
@@ -101,7 +101,7 @@ void CTextEditorGuiComp::OnGuiCreated()
 		}
 
 		if (m_languageAttrPtr.IsValid()){
-			textEditorPtr->SetLanguage(iqt::GetQString(*m_languageAttrPtr));
+			textEditorPtr->SetLanguage(*m_languageAttrPtr);
 		}
 
 		if (m_readOnlyAttrPtr.IsValid() && *m_readOnlyAttrPtr){

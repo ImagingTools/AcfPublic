@@ -47,11 +47,11 @@ class CXmlFileReadArchive: public iser::CReadArchiveBase, public iser::CXmlDocum
 {
 public:
 	CXmlFileReadArchive(
-				const istd::CString& filePath = "",
+				const QString& filePath = "",
 				bool serializeHeader = true,
 				const iser::CArchiveTag& rootTag = s_acfRootTag);
 
-	bool OpenDocument(const istd::CString& filePath);
+	bool OpenDocument(const QString& filePath);
 
 	// reimplemented (iser::IArchive)
 	virtual bool IsTagSkippingSupported() const;
@@ -71,7 +71,7 @@ public:
 	virtual bool Process(float& value);
 	virtual bool Process(double& value);
 	virtual bool Process(std::string& value);
-	virtual bool Process(istd::CString& value);
+	virtual bool Process(QString& value);
 	virtual bool ProcessData(void* dataPtr, int size);
 
 protected:

@@ -88,7 +88,7 @@
 <a name="l00067"></a>00067                      retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575" title="Process primitive type.">Process</a>(version);
 <a name="l00068"></a>00068                      retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(s_versionNumberTag);
 <a name="l00069"></a>00069        
-<a name="l00070"></a>00070                      <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> description;
+<a name="l00070"></a>00070                      QString description;
 <a name="l00071"></a>00071                      retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(s_versionDescriptionTag);
 <a name="l00072"></a>00072                      retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575" title="Process primitive type.">Process</a>(description);
 <a name="l00073"></a>00073                      retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(s_versionDescriptionTag);
@@ -153,7 +153,7 @@
 <a name="l00132"></a>00132               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575" title="Process primitive type.">Process</a>(versionNumber);
 <a name="l00133"></a>00133               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(s_versionNumberTag);
 <a name="l00134"></a>00134 
-<a name="l00135"></a>00135               <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> description = versionInfoPtr-&gt;GetVersionIdDescription(<span class="keywordtype">id</span>);
+<a name="l00135"></a>00135               QString description = versionInfoPtr-&gt;GetVersionIdDescription(<span class="keywordtype">id</span>);
 <a name="l00136"></a>00136               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(s_versionDescriptionTag);
 <a name="l00137"></a>00137               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575" title="Process primitive type.">Process</a>(description);
 <a name="l00138"></a>00138               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(s_versionDescriptionTag);

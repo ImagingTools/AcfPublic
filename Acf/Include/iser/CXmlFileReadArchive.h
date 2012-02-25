@@ -54,7 +54,7 @@ public:
 	typedef TXmlStreamReadArchiveBase<std::ifstream> BaseClass;
 	typedef CFileArchiveInfo BaseClass2;
 
-	explicit CXmlFileReadArchive(const istd::CString& filePath, bool serializeHeader = true, const CArchiveTag& rootTag = s_acfRootTag);
+	explicit CXmlFileReadArchive(const QString& filePath, bool serializeHeader = true, const CArchiveTag& rootTag = s_acfRootTag);
 
 protected:
 	// reimplemented (istd::ILogger)
@@ -62,8 +62,8 @@ protected:
 				MessageCategory category,
 				int id,
 				int flags,
-				istd::CString& message,
-				istd::CString& messageSource) const;
+				QString& message,
+				QString& messageSource) const;
 };
 
 

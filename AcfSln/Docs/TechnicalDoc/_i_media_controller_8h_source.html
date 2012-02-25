@@ -30,7 +30,7 @@
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_changeable_8h.html">istd/IChangeable.h</a>&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_string_8h.html">istd/CString.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QString&gt;</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_type_info_8h.html">iser/IFileTypeInfo.h</a>&quot;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="imm_8h.html">imm/imm.h</a>&quot;</span>
@@ -59,9 +59,9 @@
 <a name="l00033"></a><a class="code" href="classimm_1_1_i_media_controller.html#a98e93bc476c1ce47e84b78937e885e19ad642806ddd9ed2bb3a5ba8202234c285">00033</a>               <a class="code" href="classimm_1_1_i_media_controller.html#a98e93bc476c1ce47e84b78937e885e19ad642806ddd9ed2bb3a5ba8202234c285">SF_AUTO_PLAY</a> = 0x8
 <a name="l00034"></a>00034        };
 <a name="l00035"></a>00035 
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> <a class="code" href="classimm_1_1_i_media_controller.html#aa49ff7eb11e67f2eef3ce919a855b1a6" title="Get URL of the medium object.">GetOpenedMediumUrl</a>() <span class="keyword">const</span> = 0;
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> QString <a class="code" href="classimm_1_1_i_media_controller.html#a493ddecd4a6609733c43011cf5df7065" title="Get URL of the medium object.">GetOpenedMediumUrl</a>() <span class="keyword">const</span> = 0;
 <a name="l00040"></a>00040 
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimm_1_1_i_media_controller.html#ae94917a1946992edb7f5fa35ae0d0f88" title="Open some media file.">OpenMediumUrl</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; url, <span class="keywordtype">bool</span> autoPlay = <span class="keyword">true</span>) = 0;
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimm_1_1_i_media_controller.html#a29e8ed79886ca5d5ad52373a184b873b" title="Open some media file.">OpenMediumUrl</a>(<span class="keyword">const</span> QString&amp; url, <span class="keywordtype">bool</span> autoPlay = <span class="keyword">true</span>) = 0;
 <a name="l00045"></a>00045 
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimm_1_1_i_media_controller.html#ab9ff24390cfaca63b02248fff7561814" title="Close this media player.">CloseMedium</a>() = 0;
 <a name="l00051"></a>00051 

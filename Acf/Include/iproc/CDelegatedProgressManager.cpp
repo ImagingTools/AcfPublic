@@ -44,7 +44,7 @@ CDelegatedProgressManager::CDelegatedProgressManager()
 CDelegatedProgressManager::CDelegatedProgressManager(
 			IProgressManager* slaveManagerPtr,
 			const std::string& progressId,
-			const istd::CString& description,
+			const QString& description,
 			bool isCancelable)
 :	m_slaveManagerPtr(slaveManagerPtr)
 {
@@ -76,7 +76,7 @@ double CDelegatedProgressManager::GetCumulatedProgress() const
 
 int CDelegatedProgressManager::BeginProgressSession(
 			const std::string& /*progressId*/,
-			const istd::CString& /*description*/,
+			const QString& /*description*/,
 			bool isCancelable)
 {
 	istd::CChangeNotifier notifier(this, CF_SESSIONS_NUMBER | CF_PROGRESS_CHANGED);

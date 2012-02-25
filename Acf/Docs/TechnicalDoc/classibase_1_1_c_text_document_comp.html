@@ -66,10 +66,10 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_text_document_comp.html#a1e0e136f16ae39b949e1ef8aeba2dbad">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_text_document_comp.html#a9d943296306c41bc5c379ed190918766">GetText</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get document text.  <a href="#a9d943296306c41bc5c379ed190918766"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_text_document_comp.html#a074bee6480a94af656150f4b5c9bcd24">SetText</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;text)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set document text.  <a href="#a074bee6480a94af656150f4b5c9bcd24"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_text_document_comp.html#a2e0063ea60d95adf42003f792d2ba202">GetText</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get document text.  <a href="#a2e0063ea60d95adf42003f792d2ba202"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_text_document_comp.html#adcbd9d9bd394b32ab4c5832215d33fab">SetText</a> (const QString &amp;text)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set document text.  <a href="#adcbd9d9bd394b32ab4c5832215d33fab"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_text_document_comp.html#a2af7f42738b1f68cc7f76eb66f733729">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a2af7f42738b1f68cc7f76eb66f733729"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -97,12 +97,12 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a9d943296306c41bc5c379ed190918766"></a><!-- doxytag: member="ibase::CTextDocumentComp::GetText" ref="a9d943296306c41bc5c379ed190918766" args="() const " -->
+<a class="anchor" id="a2e0063ea60d95adf42003f792d2ba202"></a><!-- doxytag: member="ibase::CTextDocumentComp::GetText" ref="a2e0063ea60d95adf42003f792d2ba202" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> ibase::CTextDocumentComp::GetText </td>
+          <td class="memname">virtual QString ibase::CTextDocumentComp::GetText </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -113,7 +113,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get document text. </p>
 
-<p>Implements <a class="el" href="classibase_1_1_i_text_document.html#a068f4d90b9b8eddbc99fdc1a33599b1c">ibase::ITextDocument</a>.</p>
+<p>Implements <a class="el" href="classibase_1_1_i_text_document.html#ae74f657dd0378054a2ef2cedb48ff4f6">ibase::ITextDocument</a>.</p>
 
 </div>
 </div>
@@ -158,14 +158,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a074bee6480a94af656150f4b5c9bcd24"></a><!-- doxytag: member="ibase::CTextDocumentComp::SetText" ref="a074bee6480a94af656150f4b5c9bcd24" args="(const istd::CString &amp;text)" -->
+<a class="anchor" id="adcbd9d9bd394b32ab4c5832215d33fab"></a><!-- doxytag: member="ibase::CTextDocumentComp::SetText" ref="adcbd9d9bd394b32ab4c5832215d33fab" args="(const QString &amp;text)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void ibase::CTextDocumentComp::SetText </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>text</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -175,7 +175,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set document text. </p>
 
-<p>Implements <a class="el" href="classibase_1_1_i_text_document.html#aff503950772735001f3e25236ced4c1b">ibase::ITextDocument</a>.</p>
+<p>Implements <a class="el" href="classibase_1_1_i_text_document.html#a84c4a5012dbb291c122be939a29e1473">ibase::ITextDocument</a>.</p>
 
 </div>
 </div>

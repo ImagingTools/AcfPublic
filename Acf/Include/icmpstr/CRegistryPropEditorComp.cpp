@@ -92,7 +92,7 @@ void CRegistryPropEditorComp::CreateOverview()
 		if (m_consistInfoCompPtr.IsValid()){
 			TextLog textLog;
 			if (!m_consistInfoCompPtr->IsRegistryValid(*registryPtr, false, true, &textLog)){
-				ErrorsLabel->setText(iqt::GetQString(textLog));
+				ErrorsLabel->setText(textLog);
 				ErrorsFrame->setVisible(true);
 			}
 			else{
@@ -144,16 +144,16 @@ void CRegistryPropEditorComp::UpdateGui(int /*updateFlags*/)
 		return;
 	}
 
-	DescriptionEdit->setText(iqt::GetQString(registryPtr->GetDescription()));
+	DescriptionEdit->setText(registryPtr->GetDescription());
 
 	icomp::CComponentMetaDescriptionEncoder metaDescriptionEncoder(registryPtr->GetKeywords());
 
-	QStringList companyList = iqt::GetQStringList(metaDescriptionEncoder.GetValues("Company"));
-	QStringList projectsList = iqt::GetQStringList(metaDescriptionEncoder.GetValues("Project"));
-	QStringList authorsList = iqt::GetQStringList(metaDescriptionEncoder.GetValues("Author"));
-	QStringList categoriesList = iqt::GetQStringList(metaDescriptionEncoder.GetValues("Category"));
-	QStringList tagsList = iqt::GetQStringList(metaDescriptionEncoder.GetValues("Tag"));
-	QStringList keywords = iqt::GetQStringList(metaDescriptionEncoder.GetUnassignedKeywords());
+	QStringList companyList = (metaDescriptionEncoder.GetValues("Company"));
+	QStringList projectsList = (metaDescriptionEncoder.GetValues("Project"));
+	QStringList authorsList = (metaDescriptionEncoder.GetValues("Author"));
+	QStringList categoriesList = (metaDescriptionEncoder.GetValues("Category"));
+	QStringList tagsList = (metaDescriptionEncoder.GetValues("Tag"));
+	QStringList keywords = (metaDescriptionEncoder.GetUnassignedKeywords());
 
 	CompanyEdit->setText(companyList.join(","));
 	CategoryEdit->setText(categoriesList.join(","));
@@ -190,7 +190,7 @@ void CRegistryPropEditorComp::on_DescriptionEdit_editingFinished()
 {
 	icomp::IRegistry* registryPtr = GetObjectPtr();
 	if (registryPtr != NULL){
-		istd::CString description = iqt::GetCString(DescriptionEdit->text());
+		QString description = DescriptionEdit->text();
 
 		if (description != registryPtr->GetDescription()){
 			istd::CChangeNotifier notifier(registryPtr);
@@ -220,7 +220,7 @@ void CRegistryPropEditorComp::OnUpdateKeywords()
 					category + QString(" ") + 
 					tags;
 		
-		istd::CString keywords = iqt::GetCString(allKeywords.simplified());
+		QString keywords = allKeywords.simplified();
 
 		if (keywords != registryPtr->GetKeywords()){
 			istd::CChangeNotifier notifier(registryPtr);
@@ -279,7 +279,7 @@ bool CRegistryPropEditorComp::TextLog::IsMessageSupported(
 void CRegistryPropEditorComp::TextLog::AddMessage(const MessagePtr& messagePtr)
 {
 	if (messagePtr.IsValid()){
-		if (!IsEmpty()){
+		if (!isEmpty()){
 			operator+=("\n");
 		}
 

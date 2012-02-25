@@ -28,7 +28,7 @@
 #include <string>
 
 #include "istd/TDelPtr.h"
-#include "istd/CString.h"
+#include <QString>
 
 #include "iser/IArchive.h"
 
@@ -64,7 +64,7 @@ public:
 				istd::IChangeable** newDocumentPtr = NULL);
 	virtual bool FileOpen(
 				const std::string* documentTypeIdPtr,
-				const istd::CString* fileNamePtr = NULL,
+				const QString* fileNamePtr = NULL,
 				bool createView = true,
 				const std::string& viewTypeId = "",
 				FileToTypeMap* loadedMapPtr = NULL);
@@ -84,7 +84,7 @@ protected:
 		\return	instance of created document or NULL if error is occured.
 	*/
 	virtual bool OpenDocument(
-				const istd::CString& filePath,
+				const QString& filePath,
 				bool createView,
 				const std::string& viewTypeId,
 				std::string& documentTypeId);
@@ -113,12 +113,12 @@ protected:
 	/**
 		Gets open file names.
 	*/
-	virtual istd::CString GetOpenFilePath(const std::string* documentTypeIdPtr = NULL) const  = 0;
+	virtual QString GetOpenFilePath(const std::string* documentTypeIdPtr = NULL) const  = 0;
 
 	/**
 		Gets save file name.
 	*/
-	virtual istd::CString GetSaveFilePath(const std::string& documentTypeId) const = 0;
+	virtual QString GetSaveFilePath(const std::string& documentTypeId) const = 0;
 
 	/**
 		Query user if this document can be closed.
@@ -127,7 +127,7 @@ protected:
 	virtual void QueryDocumentClose(bool* ignoredPtr) = 0;
 
 private:
-	istd::CString m_filePath;
+	QString m_filePath;
 	std::string m_documentTypeId;
 	std::string m_viewTypeId;
 	istd::TDelPtr<istd::IChangeable> m_documentPtr;

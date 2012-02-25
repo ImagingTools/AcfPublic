@@ -24,9 +24,12 @@
 #define iser_IFileLoaderInfo_included
 
 
+// Qt includes
+#include <QString>
+
+
 // ACF includes
 #include "istd/IPolymorphic.h"
-#include "istd/CString.h"
 
 
 namespace iser
@@ -58,7 +61,7 @@ public:
 	/**
 		Returns the last opened file name.
 	*/
-	virtual istd::CString GetLastFilePath(OperationType operationType = OT_UNKNOWN, PathType pathType = PT_COMPLETE) const = 0;
+	virtual QString GetLastFilePath(OperationType operationType = OT_UNKNOWN, PathType pathType = PT_COMPLETE) const = 0;
 };
 
 

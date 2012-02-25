@@ -54,8 +54,8 @@ public:
 
 	// reimplemented (iprm::IFileNameParam)
 	virtual int GetPathType() const;
-	virtual const istd::CString& GetPath() const;
-	virtual void SetPath(const istd::CString& path);
+	virtual const QString& GetPath() const;
+	virtual void SetPath(const QString& path);
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
@@ -65,9 +65,9 @@ protected:
 	virtual void OnComponentCreated();
 
 private:
-	istd::CString m_path;
+	QString m_path;
 
-	I_ATTR(istd::CString, m_defaultDirAttrPtr);
+	I_ATTR(QString, m_defaultDirAttrPtr);
 	I_ATTR(int, m_pathTypeAttrPtr);
 };
 

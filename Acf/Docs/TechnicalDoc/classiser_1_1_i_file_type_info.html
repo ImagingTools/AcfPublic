@@ -81,15 +81,15 @@ Public Types</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Describe detailed options of query.  <a href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_type_info.html#a580f9a5411ebeb6d5108613e01551fd6">GetFileExtensions</a> (<a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> &amp;result, int flags=-1, bool doAppend=false) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#a580f9a5411ebeb6d5108613e01551fd6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_type_info.html#a744c6451505c91c0abf6177b9f693a35">GetTypeDescription</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *extensionPtr=NULL) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of object type associated with single extension.  <a href="#a744c6451505c91c0abf6177b9f693a35"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_type_info.html#a2b1e53b1976bc7a962684a7f64577b70">GetFileExtensions</a> (QStringList &amp;result, int flags=-1, bool doAppend=false) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#a2b1e53b1976bc7a962684a7f64577b70"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_type_info.html#af40e91e01c4040e96b9ed978a67eada8">GetTypeDescription</a> (const QString *extensionPtr=NULL) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of object type associated with single extension.  <a href="#af40e91e01c4040e96b9ed978a67eada8"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Provide loading and saving of objects. </p>
 
-<p>Definition at line <a class="el" href="_i_file_type_info_8h_source.html#l00019">19</a> of file <a class="el" href="_i_file_type_info_8h_source.html">IFileTypeInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_file_type_info_8h_source.html#l00022">22</a> of file <a class="el" href="_i_file_type_info_8h_source.html">IFileTypeInfo.h</a>.</p>
 </div><hr/><h2>Member Enumeration Documentation</h2>
 <a class="anchor" id="a2d24774c415748d3c04a27608a6e05e8"></a><!-- doxytag: member="iser::IFileTypeInfo::QueryFlags" ref="a2d24774c415748d3c04a27608a6e05e8" args="" -->
 <div class="memitem">
@@ -123,19 +123,19 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_file_type_info_8h_source.html#l00025">25</a> of file <a class="el" href="_i_file_type_info_8h_source.html">IFileTypeInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_file_type_info_8h_source.html#l00028">28</a> of file <a class="el" href="_i_file_type_info_8h_source.html">IFileTypeInfo.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a580f9a5411ebeb6d5108613e01551fd6"></a><!-- doxytag: member="iser::IFileTypeInfo::GetFileExtensions" ref="a580f9a5411ebeb6d5108613e01551fd6" args="(istd::CStringList &amp;result, int flags=&#45;1, bool doAppend=false) const =0" -->
+<a class="anchor" id="a2b1e53b1976bc7a962684a7f64577b70"></a><!-- doxytag: member="iser::IFileTypeInfo::GetFileExtensions" ref="a2b1e53b1976bc7a962684a7f64577b70" args="(QStringList &amp;result, int flags=&#45;1, bool doAppend=false) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iser::IFileTypeInfo::GetFileExtensions </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> &amp;&#160;</td>
+          <td class="paramtype">QStringList &amp;&#160;</td>
           <td class="paramname"><em>result</em>, </td>
         </tr>
         <tr>
@@ -175,18 +175,18 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a6e7a2b7b4dde985ef613b61de1ce89ae">iqt::CRegistryCodeSaverComp</a>, <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a50cfd371a1b688150cea7ba70766a282">iqtgui::CFileDialogLoaderComp</a>, <a class="el" href="classiqt_1_1_c_bitmap_loader_comp.html#a785e3da102b8ebec697e522ecbf49c2e">iqt::CBitmapLoaderComp</a>, <a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#ae0e5e2d06aabb3fa73be0de118e3baf3">iqt::CRenderedObjectFileLoaderComp</a>, <a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#a97dcbbec504d5f3aa424fec0b757751d">iqt::CSettingsSerializerComp</a>, <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#a59648a5de4886a6ab0d8b4ca630c7f9f">icmpstr::CRegistryLoaderComp</a>, <a class="el" href="classibase_1_1_c_composed_loader_comp.html#abccc664270aaf6fda71d126c57f8bc7e">ibase::CComposedLoaderComp</a>, <a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#a4cf7e75063f2cf036ee39687eaf680ff">iqt::CClipboardSerializerComp</a>, <a class="el" href="classibase_1_1_c_file_type_info_comp.html#ad836e6d45b822135976913ff4dbc665f">ibase::CFileTypeInfoComp</a>, and <a class="el" href="classibase_1_1_c_text_file_loader_comp.html#a0e7bb080d3fcaa8f47f8d8d86c2d808f">ibase::CTextFileLoaderComp</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#ad655e9bd0adcc79c477cdb6e048155f0">iqt::CRegistryCodeSaverComp</a>, <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#aecb38bab5cf8650757cb0861c95cf565">iqtgui::CFileDialogLoaderComp</a>, <a class="el" href="classiqt_1_1_c_bitmap_loader_comp.html#afe3deb23caea15dba35963eeffc632c1">iqt::CBitmapLoaderComp</a>, <a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a86765ff2560087bd31275196da4eb960">iqt::CRenderedObjectFileLoaderComp</a>, <a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#a572acce33d1bda09a55187db1e1dcc05">iqt::CSettingsSerializerComp</a>, <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#a4c5e1a519d9385c197c3bb87ab4918b7">icmpstr::CRegistryLoaderComp</a>, <a class="el" href="classibase_1_1_c_composed_loader_comp.html#ac741044c3b5d156b222040a2d2726267">ibase::CComposedLoaderComp</a>, <a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#a482e3424edb3df25ae829a136aa2fbf5">iqt::CClipboardSerializerComp</a>, <a class="el" href="classibase_1_1_c_file_type_info_comp.html#ab67ef8c97fad1d2d0e77c40407ee1fa3">ibase::CFileTypeInfoComp</a>, and <a class="el" href="classibase_1_1_c_text_file_loader_comp.html#aad992e45b0e2f2a1cba6bdd32b5f0993">ibase::CTextFileLoaderComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a744c6451505c91c0abf6177b9f693a35"></a><!-- doxytag: member="iser::IFileTypeInfo::GetTypeDescription" ref="a744c6451505c91c0abf6177b9f693a35" args="(const istd::CString *extensionPtr=NULL) const =0" -->
+<a class="anchor" id="af40e91e01c4040e96b9ed978a67eada8"></a><!-- doxytag: member="iser::IFileTypeInfo::GetTypeDescription" ref="af40e91e01c4040e96b9ed978a67eada8" args="(const QString *extensionPtr=NULL) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iser::IFileTypeInfo::GetTypeDescription </td>
+          <td class="memname">virtual QString iser::IFileTypeInfo::GetTypeDescription </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *&#160;</td>
+          <td class="paramtype">const QString *&#160;</td>
           <td class="paramname"><em>extensionPtr</em> = <code>NULL</code></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -196,7 +196,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get description of object type associated with single extension. </p>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#acee2b230e7a51879fe2940453193c9c1">iqt::CRegistryCodeSaverComp</a>, <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a138c2714c27008edd1a8a08752dfde01">iqtgui::CFileDialogLoaderComp</a>, <a class="el" href="classiqt_1_1_c_bitmap_loader_comp.html#acd6d8a9f69a3ebcf0d6e9f62e3c03898">iqt::CBitmapLoaderComp</a>, <a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a2075b019de2dfcef81848b419df0c589">iqt::CRenderedObjectFileLoaderComp</a>, <a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#a76fedb8d9ca6e5b481dd678d3df68fb6">iqt::CSettingsSerializerComp</a>, <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#ace738599a6b10ed15101dd0db3177a47">icmpstr::CRegistryLoaderComp</a>, <a class="el" href="classibase_1_1_c_composed_loader_comp.html#a184d425c177c27867ee56813a9c1d44b">ibase::CComposedLoaderComp</a>, <a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#a9e0e81c32bfee59b85f821a850af8706">iqt::CClipboardSerializerComp</a>, <a class="el" href="classibase_1_1_c_file_type_info_comp.html#ae0f6b59142b232ef0dcb82f8c7460ab5">ibase::CFileTypeInfoComp</a>, and <a class="el" href="classibase_1_1_c_text_file_loader_comp.html#a7f1c1fe26f16334196d8b731b2efceda">ibase::CTextFileLoaderComp</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a75c00ac12b32364e7b8c744eeded4b2c">iqt::CRegistryCodeSaverComp</a>, <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#ab69a2cf14e84536647e19387d13eecbf">iqtgui::CFileDialogLoaderComp</a>, <a class="el" href="classiqt_1_1_c_bitmap_loader_comp.html#a447cfd24ce38c3971ced126d8d5e3743">iqt::CBitmapLoaderComp</a>, <a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#ac4bab7a0ae2f364dd36832567f30b5e8">iqt::CRenderedObjectFileLoaderComp</a>, <a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#a6935bf34bf6a60a53c5ab5fe739b41f6">iqt::CSettingsSerializerComp</a>, <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#abcf59f0485db608962f802069c5e0d7b">icmpstr::CRegistryLoaderComp</a>, <a class="el" href="classibase_1_1_c_composed_loader_comp.html#a05cfeb03c71d9d67ef213f1ffeb8d4e3">ibase::CComposedLoaderComp</a>, <a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#a3932f17d535cd3447e792292ff814ae6">iqt::CClipboardSerializerComp</a>, <a class="el" href="classibase_1_1_c_file_type_info_comp.html#ad9e95c6a4dfaa35177a99c829d337bc8">ibase::CFileTypeInfoComp</a>, and <a class="el" href="classibase_1_1_c_text_file_loader_comp.html#af6c1c88ab57a8e685093efca45591dde">ibase::CTextFileLoaderComp</a>.</p>
 
 </div>
 </div>

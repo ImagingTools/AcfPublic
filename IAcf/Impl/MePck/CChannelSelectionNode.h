@@ -50,7 +50,7 @@ public:
 		Insert new node at the end of selection list.
 		This node will be automatically deleted during destruction.
 	*/
-	void InsertNode(const istd::CString& name, int physicalAddress, CChannelSelectionNode* nodePtr);
+	void InsertNode(const QString& name, int physicalAddress, CChannelSelectionNode* nodePtr);
 	/**
 		Get physical address associated with active selection.
 	*/
@@ -70,8 +70,8 @@ public:
 	// reimplemented (iprm::ISelectionConstraints)
 	virtual int GetConstraintsFlags() const;
 	virtual int GetOptionsCount() const;
-	virtual istd::CString GetOptionName(int index) const;
-	virtual istd::CString GetOptionDescription(int index) const;
+	virtual QString GetOptionName(int index) const;
+	virtual QString GetOptionDescription(int index) const;
 	virtual std::string GetOptionId(int index) const;
 
 	// reimplemented (iser::ISerializable)
@@ -84,7 +84,7 @@ protected:
 private:
 	struct SelectionInfo
 	{
-		istd::CString name;
+		QString name;
 		istd::TDelPtr<ISelectionParam> selectionPtr;
 		int physicalIndex;
 	};

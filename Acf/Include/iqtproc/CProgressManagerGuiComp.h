@@ -65,7 +65,7 @@ protected:
 	// reimplemented (iproc::IProgressManager)
 	virtual int BeginProgressSession(
 				const std::string& progressId,
-				const istd::CString& description,
+				const QString& description,
 				bool isCancelable);
 	virtual bool IsCanceled(int sessionId) const;
 
@@ -81,7 +81,7 @@ protected Q_SLOTS:
 private:
 	I_ATTR(bool, m_showCancelAttrPtr);
 	I_ATTR(bool, m_automaticHideAttrPtr);
-	I_ATTR(istd::CString, m_descriptionAttrPtr);
+	I_ATTR(QString, m_descriptionAttrPtr);
 
 	bool m_isCanceled;
 

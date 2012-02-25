@@ -80,10 +80,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a8c37dea315a97051b35d420aca77dafb">SerializeComponentsLayout</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a80f526e8ed3def36bf2e1fe918e7c6dd">SerializeRegistry</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#acfcfcc44cf58e8e5835ee73e2825af38">SerializeUserData</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#af5eb5eb15c10b75e18cd97ecf81d909c">GetComponentNote</a> (const std::string &amp;componentName)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the note text to the component with the given name <code>componentName</code>.  <a href="#af5eb5eb15c10b75e18cd97ecf81d909c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#af4885f299b0179a390e3bab625b0e8f9">SetComponentNote</a> (const std::string &amp;componentName, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;componentNote)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a note <code>componentNote</code> to the component with the given name <code>componentName</code>.  <a href="#af4885f299b0179a390e3bab625b0e8f9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a680acbb03b1ccd9d46de5c77cfb7d101">GetComponentNote</a> (const std::string &amp;componentName)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the note text to the component with the given name <code>componentName</code>.  <a href="#a680acbb03b1ccd9d46de5c77cfb7d101"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a9ce15af1be0d0954f56053bcc3042a60">SetComponentNote</a> (const std::string &amp;componentName, const QString &amp;componentNote)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a note <code>componentNote</code> to the component with the given name <code>componentName</code>.  <a href="#a9ce15af1be0d0954f56053bcc3042a60"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">ElementInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#ad070b94556df11118a8fcaf3c6f13dc4">InsertElementInfo</a> (const std::string &amp;elementId, const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address, bool ensureElementCreated=true)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new attribute info object to collection of attributes.  <a href="#ad070b94556df11118a8fcaf3c6f13dc4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a280a90d3801dac98f0d9aada68fa5905">RenameElement</a> (const std::string &amp;oldElementId, const std::string &amp;newElementId)</td></tr>
@@ -102,7 +102,7 @@ Protected Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a35fa109c64397e55abd2f4b4de6faa98">SerializeComponentPosition</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, std::string &amp;componentName, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a9e2e09274153db39a5a746c2260a1a59">SerializeComponentNote</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, std::string &amp;componentName, <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;componentNote)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a0fc3d75778d815ef2e4629aae73c4d1f">SerializeComponentNote</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, std::string &amp;componentName, QString &amp;componentNote)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry_element.html">icomp::IRegistryElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#aa00d6811aa94b0e990bdca55470c7fab">CreateRegistryElement</a> (const std::string &amp;elementId, const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to create instance of registry element.  <a href="#aa00d6811aa94b0e990bdca55470c7fab"></a><br/></td></tr>
 </table>
@@ -243,12 +243,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af5eb5eb15c10b75e18cd97ecf81d909c"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::GetComponentNote" ref="af5eb5eb15c10b75e18cd97ecf81d909c" args="(const std::string &amp;componentName)" -->
+<a class="anchor" id="a680acbb03b1ccd9d46de5c77cfb7d101"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::GetComponentNote" ref="a680acbb03b1ccd9d46de5c77cfb7d101" args="(const std::string &amp;componentName)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> icmpstr::CVisualRegistryComp::GetComponentNote </td>
+          <td class="memname">virtual QString icmpstr::CVisualRegistryComp::GetComponentNote </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>componentName</em></td><td>)</td>
@@ -260,7 +260,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get the note text to the component with the given name <code>componentName</code>. </p>
 
-<p>Implements <a class="el" href="classicmpstr_1_1_i_component_note_controller.html#a77ecd5e43d402628129959d657ccbfc4">icmpstr::IComponentNoteController</a>.</p>
+<p>Implements <a class="el" href="classicmpstr_1_1_i_component_note_controller.html#a69f51967ccb7e7d6b4e48956a6c9816b">icmpstr::IComponentNoteController</a>.</p>
 
 </div>
 </div>
@@ -370,7 +370,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9e2e09274153db39a5a746c2260a1a59"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::SerializeComponentNote" ref="a9e2e09274153db39a5a746c2260a1a59" args="(iser::IArchive &amp;archive, std::string &amp;componentName, istd::CString &amp;componentNote)" -->
+<a class="anchor" id="a0fc3d75778d815ef2e4629aae73c4d1f"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::SerializeComponentNote" ref="a0fc3d75778d815ef2e4629aae73c4d1f" args="(iser::IArchive &amp;archive, std::string &amp;componentName, QString &amp;componentNote)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -389,7 +389,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">QString &amp;&#160;</td>
           <td class="paramname"><em>componentNote</em>&#160;</td>
         </tr>
         <tr>
@@ -504,7 +504,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af4885f299b0179a390e3bab625b0e8f9"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::SetComponentNote" ref="af4885f299b0179a390e3bab625b0e8f9" args="(const std::string &amp;componentName, const istd::CString &amp;componentNote)" -->
+<a class="anchor" id="a9ce15af1be0d0954f56053bcc3042a60"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::SetComponentNote" ref="a9ce15af1be0d0954f56053bcc3042a60" args="(const std::string &amp;componentName, const QString &amp;componentNote)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -517,7 +517,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>componentNote</em>&#160;</td>
         </tr>
         <tr>
@@ -531,7 +531,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Add a note <code>componentNote</code> to the component with the given name <code>componentName</code>. </p>
 
-<p>Implements <a class="el" href="classicmpstr_1_1_i_component_note_controller.html#a4b48032f04647a7f315e5b56d49a5341">icmpstr::IComponentNoteController</a>.</p>
+<p>Implements <a class="el" href="classicmpstr_1_1_i_component_note_controller.html#a8f80cf84e97e582ba45cd71993a05bc2">icmpstr::IComponentNoteController</a>.</p>
 
 </div>
 </div>

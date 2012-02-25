@@ -106,16 +106,16 @@ Public Types</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_logger.html#afa4a69c13c1765ce444ffaddca30df88">IsLogConsumed</a> (const <a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a> *categoryPtr=NULL, const int *flagsPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if any log message is consumed.  <a href="#afa4a69c13c1765ce444ffaddca30df88"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_logger.html#a3f950409806f7f26b892d6d904be7f26">SendLogMessage</a> (<a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a> category, int id, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;message, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;messageSource, int flags=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send any message to log.  <a href="#a3f950409806f7f26b892d6d904be7f26"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_logger.html#a7b50e678da2f925150deb58b94d16e7d">DecorateMessage</a> (<a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a> category, int id, int flags, <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;message, <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;messageSource) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Decorate message parts before outputting.  <a href="#a7b50e678da2f925150deb58b94d16e7d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_logger.html#a489ecfa55ba01bba6c648388651a8721">SendLogMessage</a> (<a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a> category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send any message to log.  <a href="#a489ecfa55ba01bba6c648388651a8721"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_logger.html#a58a320e5da108df1b481fb66948c8593">DecorateMessage</a> (<a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a> category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Decorate message parts before outputting.  <a href="#a58a320e5da108df1b481fb66948c8593"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for classes sending some log info. </p>
 <p>Default implementation is provided for convinience and it does nothing. </p>
 
-<p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00017">17</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00021">21</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
 </div><hr/><h2>Member Enumeration Documentation</h2>
 <a class="anchor" id="a59b8f966e065927a722418a20bc42343"></a><!-- doxytag: member="istd::ILogger::MessageCategory" ref="a59b8f966e065927a722418a20bc42343" args="" -->
 <div class="memitem">
@@ -142,7 +142,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00023">23</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00027">27</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
 
 </div>
 </div>
@@ -169,12 +169,12 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00034">34</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00038">38</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a7b50e678da2f925150deb58b94d16e7d"></a><!-- doxytag: member="istd::ILogger::DecorateMessage" ref="a7b50e678da2f925150deb58b94d16e7d" args="(MessageCategory category, int id, int flags, istd::CString &amp;message, istd::CString &amp;messageSource) const " -->
+<a class="anchor" id="a58a320e5da108df1b481fb66948c8593"></a><!-- doxytag: member="istd::ILogger::DecorateMessage" ref="a58a320e5da108df1b481fb66948c8593" args="(MessageCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -199,13 +199,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">QString &amp;&#160;</td>
           <td class="paramname"><em>message</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">QString &amp;&#160;</td>
           <td class="paramname"><em>messageSource</em>&#160;</td>
         </tr>
         <tr>
@@ -219,9 +219,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Decorate message parts before outputting. </p>
 
-<p>Reimplemented in <a class="el" href="classiser_1_1_c_file_read_archive.html#ad49d32c57be5e020ed0bbdf718a59db9">iser::CFileReadArchive</a>, <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a9ec30e06390bb58f95e4acbc3c5954f9">ibase::TLoggerCompWrap&lt; Base &gt;</a>, <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a9ec30e06390bb58f95e4acbc3c5954f9">ibase::TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</a>, <a class="el" href="classiser_1_1_c_xml_file_read_archive.html#a51302f1c2bb7824e5ee4ef09459241c9">iser::CXmlFileReadArchive</a>, <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a0e9e8617d2fc6b979cbd8c530ef23c93">iser::TXmlStreamReadArchiveBase&lt; StreamClass &gt;</a>, <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a0e9e8617d2fc6b979cbd8c530ef23c93">iser::TXmlStreamReadArchiveBase&lt; std::istringstream &gt;</a>, and <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a0e9e8617d2fc6b979cbd8c530ef23c93">iser::TXmlStreamReadArchiveBase&lt; std::ifstream &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classiser_1_1_c_file_read_archive.html#a11d0a69713f1c905a8d8732d66745684">iser::CFileReadArchive</a>, <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a944c2950ba2fc96c22648d8c250dd2be">ibase::TLoggerCompWrap&lt; Base &gt;</a>, <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a944c2950ba2fc96c22648d8c250dd2be">ibase::TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</a>, <a class="el" href="classiser_1_1_c_xml_file_read_archive.html#a563696933460fa16a84c8a0f60ff86bf">iser::CXmlFileReadArchive</a>, <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a174d911d0c1827ed531e3a00d75e5dac">iser::TXmlStreamReadArchiveBase&lt; StreamClass &gt;</a>, <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a174d911d0c1827ed531e3a00d75e5dac">iser::TXmlStreamReadArchiveBase&lt; std::istringstream &gt;</a>, and <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a174d911d0c1827ed531e3a00d75e5dac">iser::TXmlStreamReadArchiveBase&lt; std::ifstream &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00094">94</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00098">98</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
 
 </div>
 </div>
@@ -255,11 +255,11 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classibase_1_1_t_logger_wrap.html#ad70a95a9ee8ac499d3b17172017e9ada">ibase::TLoggerWrap&lt; Base &gt;</a>, and <a class="el" href="classibase_1_1_t_logger_wrap.html#ad70a95a9ee8ac499d3b17172017e9ada">ibase::TLoggerWrap&lt; CFileTypeInfoComp &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00080">80</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00084">84</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3f950409806f7f26b892d6d904be7f26"></a><!-- doxytag: member="istd::ILogger::SendLogMessage" ref="a3f950409806f7f26b892d6d904be7f26" args="(MessageCategory category, int id, const istd::CString &amp;message, const istd::CString &amp;messageSource, int flags=0) const " -->
+<a class="anchor" id="a489ecfa55ba01bba6c648388651a8721"></a><!-- doxytag: member="istd::ILogger::SendLogMessage" ref="a489ecfa55ba01bba6c648388651a8721" args="(MessageCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -278,13 +278,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>message</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>messageSource</em>, </td>
         </tr>
         <tr>
@@ -315,9 +315,9 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if it was possible to send this message and it is 'consumed'. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classibase_1_1_t_logger_wrap.html#aca21f4978b404ab4940002a83ea7cc98">ibase::TLoggerWrap&lt; Base &gt;</a>, and <a class="el" href="classibase_1_1_t_logger_wrap.html#aca21f4978b404ab4940002a83ea7cc98">ibase::TLoggerWrap&lt; CFileTypeInfoComp &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classibase_1_1_t_logger_wrap.html#a447257f9b266f3451efc4e187fb76e8c">ibase::TLoggerWrap&lt; Base &gt;</a>, and <a class="el" href="classibase_1_1_t_logger_wrap.html#a447257f9b266f3451efc4e187fb76e8c">ibase::TLoggerWrap&lt; CFileTypeInfoComp &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00088">88</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00092">92</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
 
 </div>
 </div>

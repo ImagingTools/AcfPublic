@@ -69,7 +69,7 @@ void WriteArchiveMessageHandler::handleMessage(
 	m_loggerPtr->SendLogMessage(
 					istd::ILogger::MC_WARNING,
 					0,
-					tr("Transformation message: ").append(iqt::GetCString(description)),
+					tr("Transformation message: ").append(description),
 					"XslTransformationWriteArchive");
 }
 
@@ -77,8 +77,8 @@ void WriteArchiveMessageHandler::handleMessage(
 // public methods
 
 CXslTransformationWriteArchive::CXslTransformationWriteArchive(
-			const istd::CString& filePath,
-			const istd::CString& xslFilePath,
+			const QString& filePath,
+			const QString& xslFilePath,
 			const iser::IVersionInfo* versionInfoPtr,
 			bool serializeHeader,
 			const iser::CArchiveTag& rootTag)
@@ -88,7 +88,7 @@ CXslTransformationWriteArchive::CXslTransformationWriteArchive(
 	m_rootTag(rootTag),
 	m_isSeparatorNeeded(false)
 {
-	if (!filePath.empty()){
+	if (!filePath.isEmpty()){
 		OpenDocument(filePath, xslFilePath);
 	}
 }
@@ -103,8 +103,8 @@ CXslTransformationWriteArchive::~CXslTransformationWriteArchive()
 bool CXslTransformationWriteArchive::Flush()
 {
 	if (m_file.isOpen()){
-		if (!m_xslFilePath.IsEmpty()){
-			QFile xslFile(iqt::GetQString(m_xslFilePath));
+		if (!m_xslFilePath.isEmpty()){
+			QFile xslFile(m_xslFilePath);
 			if (!xslFile.open(QFile::ReadOnly)){
 				return false;
 			}
@@ -136,18 +136,18 @@ bool CXslTransformationWriteArchive::Flush()
 }
 
 
-bool CXslTransformationWriteArchive::OpenDocument(const istd::CString& filePath, const istd::CString& xslFilePath)
+bool CXslTransformationWriteArchive::OpenDocument(const QString& filePath, const QString& xslFilePath)
 {
 	bool retVal = true;
 
-	m_file.setFileName(iqt::GetQString(filePath));
+	m_file.setFileName(filePath);
 	m_file.open(QIODevice::WriteOnly);
 
 	m_xslFilePath = xslFilePath;
 
 	m_document.clear();
 
-	m_currentParent = m_document.createElement(iqt::GetQString(m_rootTag.GetId()));
+	m_currentParent = m_document.createElement(m_rootTag.GetId().c_str());
 
 	m_document.appendChild(m_currentParent);
 
@@ -283,9 +283,9 @@ bool CXslTransformationWriteArchive::Process(std::string& value)
 }
 
 
-bool CXslTransformationWriteArchive::Process(istd::CString& value)
+bool CXslTransformationWriteArchive::Process(QString& value)
 {
-	return PushTextNode(iqt::GetQString(value));
+	return PushTextNode(value);
 }
 
 
@@ -302,7 +302,7 @@ bool CXslTransformationWriteArchive::ProcessData(void* dataPtr, int size)
 bool CXslTransformationWriteArchive::PushTextNode(const QString& text)
 {
 	if (m_isSeparatorNeeded){
-		QDomElement separator = m_document.createElement(iqt::GetQString(GetElementSeparator()));
+		QDomElement separator = m_document.createElement(GetElementSeparator());
 
 		m_currentParent.appendChild(separator);
 	}

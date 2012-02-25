@@ -26,7 +26,7 @@
 
 // ACF includes
 #include "istd/IPolymorphic.h"
-#include "istd/CString.h"
+#include <QString>
 
 
 namespace iauth
@@ -47,7 +47,7 @@ public:
 		Log in user.
 		\return	true, if user is accepted.
 	*/
-	virtual bool Login(const istd::CString& userName, const istd::CString& password) = 0;
+	virtual bool Login(const QString& userName, const QString& password) = 0;
 	/**
 		Log in user.
 		\return	true, if logout successful.

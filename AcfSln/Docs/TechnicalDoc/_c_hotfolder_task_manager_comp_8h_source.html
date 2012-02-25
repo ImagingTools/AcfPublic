@@ -90,33 +90,33 @@
 <a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a167da5c8a10b7f70fca738bcf79b8f36">OnComponentDestroyed</a>();
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072 <span class="keyword">private</span>:
-<a name="l00073"></a>00073        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> GetFilesFromStorage(<span class="keyword">const</span> <a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>&amp; storage, <span class="keywordtype">int</span> fileState) <span class="keyword">const</span>;
+<a name="l00073"></a>00073        QStringList GetFilesFromStorage(<span class="keyword">const</span> <a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>&amp; storage, <span class="keywordtype">int</span> fileState) <span class="keyword">const</span>;
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075        <span class="keywordtype">void</span> OnFilesAddedEvent(<span class="keyword">const</span> <a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>&amp; storage);
 <a name="l00076"></a>00076        <span class="keywordtype">void</span> OnFilesRemovedEvent(<span class="keyword">const</span> <a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>&amp; storage);
 <a name="l00077"></a>00077        <span class="keywordtype">void</span> OnFilesModifiedEvent(<span class="keyword">const</span> <a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>&amp; storage);
 <a name="l00078"></a>00078 
-<a name="l00079"></a>00079        <span class="keywordtype">void</span> AddFilesToProcessingQueue(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a>&amp; files);
-<a name="l00080"></a>00080        <span class="keywordtype">void</span> RemoveFilesFromProcessingQueue(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a>&amp; files);
-<a name="l00081"></a>00081        <span class="keywordtype">void</span> RestartProcessingQueueFiles(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a>&amp; files);
+<a name="l00079"></a>00079        <span class="keywordtype">void</span> AddFilesToProcessingQueue(<span class="keyword">const</span> QStringList&amp; files);
+<a name="l00080"></a>00080        <span class="keywordtype">void</span> RemoveFilesFromProcessingQueue(<span class="keyword">const</span> QStringList&amp; files);
+<a name="l00081"></a>00081        <span class="keywordtype">void</span> RestartProcessingQueueFiles(<span class="keyword">const</span> QStringList&amp; files);
 <a name="l00082"></a>00082 
 <a name="l00088"></a>00088        <span class="keywordtype">void</span> SynchronizeWithModel(<span class="keywordtype">bool</span> applyToPendingTasks = <span class="keyword">false</span>);
 <a name="l00089"></a>00089 
-<a name="l00093"></a>00093        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> GetInputDirectories() <span class="keyword">const</span>;
+<a name="l00093"></a>00093        QStringList GetInputDirectories() <span class="keyword">const</span>;
 <a name="l00094"></a>00094 
-<a name="l00098"></a>00098        <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* GetMonitoringParamsSet(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; directoryPath) <span class="keyword">const</span>;
+<a name="l00098"></a>00098        <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* GetMonitoringParamsSet(<span class="keyword">const</span> QString&amp; directoryPath) <span class="keyword">const</span>;
 <a name="l00099"></a>00099 
-<a name="l00103"></a>00103        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> GetAddedInputDirectories() <span class="keyword">const</span>;
+<a name="l00103"></a>00103        QStringList GetAddedInputDirectories() <span class="keyword">const</span>;
 <a name="l00104"></a>00104 
-<a name="l00108"></a>00108        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> GetRemovedInputDirectories() <span class="keyword">const</span>;
+<a name="l00108"></a>00108        QStringList GetRemovedInputDirectories() <span class="keyword">const</span>;
 <a name="l00109"></a>00109 
-<a name="l00113"></a>00113        <a class="code" href="classifpf_1_1_i_directory_monitor.html" title="Interface for a folder monitor.">ifpf::IDirectoryMonitor</a>* AddDirectoryMonitor(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; directoryPath, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* monitoringParamsPtr);
+<a name="l00113"></a>00113        <a class="code" href="classifpf_1_1_i_directory_monitor.html" title="Interface for a folder monitor.">ifpf::IDirectoryMonitor</a>* AddDirectoryMonitor(<span class="keyword">const</span> QString&amp; directoryPath, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* monitoringParamsPtr);
 <a name="l00114"></a>00114 
-<a name="l00118"></a>00118        <span class="keywordtype">void</span> RemoveDirectoryMonitor(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; directoryPath);
+<a name="l00118"></a>00118        <span class="keywordtype">void</span> RemoveDirectoryMonitor(<span class="keyword">const</span> QString&amp; directoryPath);
 <a name="l00119"></a>00119 
-<a name="l00123"></a>00123        <span class="keywordtype">void</span> RemoveDirectoryItems(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; directoryPath);
+<a name="l00123"></a>00123        <span class="keywordtype">void</span> RemoveDirectoryItems(<span class="keyword">const</span> QString&amp; directoryPath);
 <a name="l00124"></a>00124 
-<a name="l00128"></a>00128        <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">ifpf::IHotfolderProcessingItem</a>* FindProcessingItem(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; fileName) <span class="keyword">const</span>;
+<a name="l00128"></a>00128        <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">ifpf::IHotfolderProcessingItem</a>* FindProcessingItem(<span class="keyword">const</span> QString&amp; fileName) <span class="keyword">const</span>;
 <a name="l00129"></a>00129 
 <a name="l00133"></a>00133        <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">ifpf::IHotfolderProcessingItem</a>* GetItemFromId(<span class="keyword">const</span> std::string&amp; itemUuid) <span class="keyword">const</span>;
 <a name="l00134"></a>00134 
@@ -155,7 +155,7 @@
 <a name="l00173"></a>00173        I_REF(<a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>, m_fileSystemChangeStorageCompPtr);
 <a name="l00174"></a>00174        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_fileSystemChangeStorageModelCompPtr);
 <a name="l00175"></a>00175 
-<a name="l00176"></a>00176        <span class="keyword">typedef</span> std::map&lt;istd::CString, istd::TDelPtr&lt;ifpf::IDirectoryMonitor&gt; &gt; DirectoryMonitorsMap;
+<a name="l00176"></a>00176        <span class="keyword">typedef</span> std::map&lt;QString, istd::TDelPtr&lt;ifpf::IDirectoryMonitor&gt; &gt; DirectoryMonitorsMap;
 <a name="l00177"></a>00177        DirectoryMonitorsMap m_directoryMonitorsMap;
 <a name="l00178"></a>00178 
 <a name="l00179"></a>00179        FileSystemChangeStorageObserver m_fileSystemChangeStorageObserver;

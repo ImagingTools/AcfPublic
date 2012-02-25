@@ -53,21 +53,21 @@ Inheritance diagram for icmpstr::IExternalMetaInfoManager:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_i_external_meta_info_manager.html#a21463e422236623c146d73b26a043f67">GetPackageInfoPath</a> (const std::string &amp;packageId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get path of package info directory.  <a href="#a21463e422236623c146d73b26a043f67"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_i_external_meta_info_manager.html#ac8d86d84b027d31c7748d525befd2c7e">GetComponentInfoPath</a> (const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get path of component info directory.  <a href="#ac8d86d84b027d31c7748d525befd2c7e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_i_external_meta_info_manager.html#ac429cd4cb914d8a84f8f30a35f2f30f6">GetPackageInfoPath</a> (const std::string &amp;packageId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get path of package info directory.  <a href="#ac429cd4cb914d8a84f8f30a35f2f30f6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_i_external_meta_info_manager.html#a44ef238560ff30dda93affd2240442e8">GetComponentInfoPath</a> (const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get path of component info directory.  <a href="#a44ef238560ff30dda93affd2240442e8"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_i_external_meta_info_manager_8h_source.html#l00015">15</a> of file <a class="el" href="_i_external_meta_info_manager_8h_source.html">IExternalMetaInfoManager.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac8d86d84b027d31c7748d525befd2c7e"></a><!-- doxytag: member="icmpstr::IExternalMetaInfoManager::GetComponentInfoPath" ref="ac8d86d84b027d31c7748d525befd2c7e" args="(const icomp::CComponentAddress &amp;address) const =0" -->
+<a class="anchor" id="a44ef238560ff30dda93affd2240442e8"></a><!-- doxytag: member="icmpstr::IExternalMetaInfoManager::GetComponentInfoPath" ref="a44ef238560ff30dda93affd2240442e8" args="(const icomp::CComponentAddress &amp;address) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> icmpstr::IExternalMetaInfoManager::GetComponentInfoPath </td>
+          <td class="memname">virtual QString icmpstr::IExternalMetaInfoManager::GetComponentInfoPath </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;&#160;</td>
           <td class="paramname"><em>address</em></td><td>)</td>
@@ -79,16 +79,16 @@ Public Member Functions</h2></td></tr>
 
 <p>Get path of component info directory. </p>
 
-<p>Implemented in <a class="el" href="classicmpstr_1_1_c_packages_loader_ext_comp.html#aa17e2a97d9e91943b509d1f66560a211">icmpstr::CPackagesLoaderExtComp</a>.</p>
+<p>Implemented in <a class="el" href="classicmpstr_1_1_c_packages_loader_ext_comp.html#a9de09fcf0a4c1705c5e9ff37487252b5">icmpstr::CPackagesLoaderExtComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a21463e422236623c146d73b26a043f67"></a><!-- doxytag: member="icmpstr::IExternalMetaInfoManager::GetPackageInfoPath" ref="a21463e422236623c146d73b26a043f67" args="(const std::string &amp;packageId) const =0" -->
+<a class="anchor" id="ac429cd4cb914d8a84f8f30a35f2f30f6"></a><!-- doxytag: member="icmpstr::IExternalMetaInfoManager::GetPackageInfoPath" ref="ac429cd4cb914d8a84f8f30a35f2f30f6" args="(const std::string &amp;packageId) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> icmpstr::IExternalMetaInfoManager::GetPackageInfoPath </td>
+          <td class="memname">virtual QString icmpstr::IExternalMetaInfoManager::GetPackageInfoPath </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>packageId</em></td><td>)</td>
@@ -100,7 +100,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get path of package info directory. </p>
 
-<p>Implemented in <a class="el" href="classicmpstr_1_1_c_packages_loader_ext_comp.html#a50cf3d669c45470d7480ff86caf717df">icmpstr::CPackagesLoaderExtComp</a>.</p>
+<p>Implemented in <a class="el" href="classicmpstr_1_1_c_packages_loader_ext_comp.html#af45430cd25c2ce5ca015f27a7b26bc8a">icmpstr::CPackagesLoaderExtComp</a>.</p>
 
 </div>
 </div>

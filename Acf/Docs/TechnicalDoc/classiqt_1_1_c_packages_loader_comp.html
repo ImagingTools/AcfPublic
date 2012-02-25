@@ -95,16 +95,16 @@ Public Types</h2></td></tr>
 <a class="el" href="classicomp_1_1_c_environment_manager_base.html">icomp::CEnvironmentManagerBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a6626d1dd531cf23e6f967f88e2811536">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#abb3b3a67be1df099b4a77015a9b7c2ee">GetRegistryFromFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;path) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an ACF registry from a given file.  <a href="#abb3b3a67be1df099b4a77015a9b7c2ee"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a88a9c05abec2954e756cec98efc47a55">GetConfigFilePath</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file path of real used config file.  <a href="#a88a9c05abec2954e756cec98efc47a55"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#acb8a828a95f8c6aa3db52be6751f62b0">LoadPackages</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;configFilePath=istd::CString::GetEmpty())</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure environment for specified file path.  <a href="#acb8a828a95f8c6aa3db52be6751f62b0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a9bd78e61e5afa740d396e8a7c4c72143">GetRegistryFromFile</a> (const QString &amp;path) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an ACF registry from a given file.  <a href="#a9bd78e61e5afa740d396e8a7c4c72143"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a8161a972f2ed3f2400697a99ca9f5014">GetConfigFilePath</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file path of real used config file.  <a href="#a8161a972f2ed3f2400697a99ca9f5014"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a81a93113adf8f8c340c009586ae4f11d">LoadPackages</a> (const QString &amp;configFilePath=QString())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure environment for specified file path.  <a href="#a81a93113adf8f8c340c009586ae4f11d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a29fc5fb5ce684187f775775ac8879448">GetPackageType</a> (const std::string &amp;packageId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type of package as defined in <code>PackageType</code>.  <a href="#a29fc5fb5ce684187f775775ac8879448"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#ac401d67360e3c6bf299450f3a21576a0">GetPackagePath</a> (const std::string &amp;packageId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get directory path of specified component package.  <a href="#ac401d67360e3c6bf299450f3a21576a0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a020bdae6e4bfe597089251399ba5eac3">GetPackagePath</a> (const std::string &amp;packageId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get directory path of specified component package.  <a href="#a020bdae6e4bfe597089251399ba5eac3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#aa2daa7c05ad6c3ce70002d08ac8e8df7">GetRegistry</a> (const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> *contextRegistryPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to stored registry.  <a href="#aa2daa7c05ad6c3ce70002d08ac8e8df7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_meta_info_manager.html#a3910cc2d0502d41961d1c0560a94ddb2">ComponentAddresses</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a562448f22c083a5cd840fde095f39288">GetComponentAddresses</a> (int typeFlag=CTF_ALL) const </td></tr>
@@ -112,11 +112,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a0b5bcb075bb0966d0be1de557ee201b4">OnComponentCreated</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#aabaaa3ff5aeff5795c56d0146a608bbf">RegisterPackageFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;file)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#aaae7ca8b4f93e335aed3150834cc4df7">RegisterPackagesDir</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;subDir)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a7eaf3f98cea4f1516107a6d1a3d01c41">LoadConfigFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;configFile)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a1a8e94faafaaa263121eb0d09289ae1b">RegisterPackageFile</a> (const QString &amp;file)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#ae16fedaf6f730869f26d890dbb7e1e02">RegisterPackagesDir</a> (const QString &amp;subDir)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#ac77d10d1b31c1dac9f11e42a30fc543b">LoadConfigFile</a> (const QString &amp;configFile)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiqt_1_1_c_dll_functions_provider.html">CDllFunctionsProvider</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a9439be9178fd4c4a731a36658c174808">GetProviderRef</a> (const QFileInfo &amp;fileInfo)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#adec50d87f7968e418fd5827125a7685d">CheckAndMarkPath</a> (const QDir &amp;directory, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;path, <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;resultPath) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a8094c67450718c0a22e9be2cde371a5b">CheckAndMarkPath</a> (const QDir &amp;directory, const QString &amp;path, QString &amp;resultPath) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Loads component packages from dynamic link libraries. </p>
@@ -184,7 +184,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="adec50d87f7968e418fd5827125a7685d"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::CheckAndMarkPath" ref="adec50d87f7968e418fd5827125a7685d" args="(const QDir &amp;directory, const istd::CString &amp;path, istd::CString &amp;resultPath) const " -->
+<a class="anchor" id="a8094c67450718c0a22e9be2cde371a5b"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::CheckAndMarkPath" ref="a8094c67450718c0a22e9be2cde371a5b" args="(const QDir &amp;directory, const QString &amp;path, QString &amp;resultPath) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -197,13 +197,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">QString &amp;&#160;</td>
           <td class="paramname"><em>resultPath</em>&#160;</td>
         </tr>
         <tr>
@@ -238,12 +238,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a88a9c05abec2954e756cec98efc47a55"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::GetConfigFilePath" ref="a88a9c05abec2954e756cec98efc47a55" args="() const " -->
+<a class="anchor" id="a8161a972f2ed3f2400697a99ca9f5014"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::GetConfigFilePath" ref="a8161a972f2ed3f2400697a99ca9f5014" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iqt::CPackagesLoaderComp::GetConfigFilePath </td>
+          <td class="memname">virtual QString iqt::CPackagesLoaderComp::GetConfigFilePath </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -255,16 +255,16 @@ Protected Member Functions</h2></td></tr>
 <p>Get file path of real used config file. </p>
 <p>If no config file was used, it returns empty string. </p>
 
-<p>Reimplemented from <a class="el" href="classicomp_1_1_c_environment_manager_base.html#a5d53e5e2a6d1c85bafb49719c571c3bf">icomp::CEnvironmentManagerBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_environment_manager_base.html#ad02a817f38c15303c0e0bdabbede82fa">icomp::CEnvironmentManagerBase</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac401d67360e3c6bf299450f3a21576a0"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::GetPackagePath" ref="ac401d67360e3c6bf299450f3a21576a0" args="(const std::string &amp;packageId) const " -->
+<a class="anchor" id="a020bdae6e4bfe597089251399ba5eac3"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::GetPackagePath" ref="a020bdae6e4bfe597089251399ba5eac3" args="(const std::string &amp;packageId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iqt::CPackagesLoaderComp::GetPackagePath </td>
+          <td class="memname">virtual QString iqt::CPackagesLoaderComp::GetPackagePath </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>packageId</em></td><td>)</td>
@@ -283,7 +283,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>package path or empty string if specified package is not registered. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classicomp_1_1_c_environment_manager_base.html#a682802fed344eaddc42b07324c6734d3">icomp::CEnvironmentManagerBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_environment_manager_base.html#a1838811dbd79395a56fb41425a450761">icomp::CEnvironmentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -363,14 +363,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abb3b3a67be1df099b4a77015a9b7c2ee"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::GetRegistryFromFile" ref="abb3b3a67be1df099b4a77015a9b7c2ee" args="(const istd::CString &amp;path) const " -->
+<a class="anchor" id="a9bd78e61e5afa740d396e8a7c4c72143"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::GetRegistryFromFile" ref="a9bd78e61e5afa740d396e8a7c4c72143" args="(const QString &amp;path) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a>* iqt::CPackagesLoaderComp::GetRegistryFromFile </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -380,18 +380,18 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get an ACF registry from a given file. </p>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_registry_loader.html#adeedd419d835cdd73d42cdba8f147c96">icomp::IRegistryLoader</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_registry_loader.html#a08d89ee7bf1763891e119b0d2fb58148">icomp::IRegistryLoader</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a7eaf3f98cea4f1516107a6d1a3d01c41"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::LoadConfigFile" ref="a7eaf3f98cea4f1516107a6d1a3d01c41" args="(const istd::CString &amp;configFile)" -->
+<a class="anchor" id="ac77d10d1b31c1dac9f11e42a30fc543b"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::LoadConfigFile" ref="ac77d10d1b31c1dac9f11e42a30fc543b" args="(const QString &amp;configFile)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iqt::CPackagesLoaderComp::LoadConfigFile </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>configFile</em></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
@@ -401,15 +401,15 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acb8a828a95f8c6aa3db52be6751f62b0"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::LoadPackages" ref="acb8a828a95f8c6aa3db52be6751f62b0" args="(const istd::CString &amp;configFilePath=istd::CString::GetEmpty())" -->
+<a class="anchor" id="a81a93113adf8f8c340c009586ae4f11d"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::LoadPackages" ref="a81a93113adf8f8c340c009586ae4f11d" args="(const QString &amp;configFilePath=QString())" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iqt::CPackagesLoaderComp::LoadPackages </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
-          <td class="paramname"><em>configFilePath</em> = <code>istd::CString::GetEmpty()</code></td><td>)</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>configFilePath</em> = <code>QString()</code></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>
@@ -419,7 +419,7 @@ Protected Member Functions</h2></td></tr>
 <p>Configure environment for specified file path. </p>
 <p>If this file path is invalid or empty, standard configuration file will be used. </p>
 
-<p>Reimplemented from <a class="el" href="classicomp_1_1_c_environment_manager_base.html#a70dd5db3fdf569c368ee77f672797503">icomp::CEnvironmentManagerBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_environment_manager_base.html#ac2730fdd9e172608330070369e76cc42">icomp::CEnvironmentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -441,14 +441,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aabaaa3ff5aeff5795c56d0146a608bbf"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::RegisterPackageFile" ref="aabaaa3ff5aeff5795c56d0146a608bbf" args="(const istd::CString &amp;file)" -->
+<a class="anchor" id="a1a8e94faafaaa263121eb0d09289ae1b"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::RegisterPackageFile" ref="a1a8e94faafaaa263121eb0d09289ae1b" args="(const QString &amp;file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iqt::CPackagesLoaderComp::RegisterPackageFile </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>file</em></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
@@ -458,14 +458,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aaae7ca8b4f93e335aed3150834cc4df7"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::RegisterPackagesDir" ref="aaae7ca8b4f93e335aed3150834cc4df7" args="(const istd::CString &amp;subDir)" -->
+<a class="anchor" id="ae16fedaf6f730869f26d890dbb7e1e02"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::RegisterPackagesDir" ref="ae16fedaf6f730869f26d890dbb7e1e02" args="(const QString &amp;subDir)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iqt::CPackagesLoaderComp::RegisterPackagesDir </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>subDir</em></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
@@ -473,7 +473,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classicmpstr_1_1_c_packages_loader_ext_comp.html#aed999957e60e1a2db7840d1ad4307239">icmpstr::CPackagesLoaderExtComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classicmpstr_1_1_c_packages_loader_ext_comp.html#a3f4ae52aeb05ac8a34cfcd7318a25d49">icmpstr::CPackagesLoaderExtComp</a>.</p>
 
 </div>
 </div>

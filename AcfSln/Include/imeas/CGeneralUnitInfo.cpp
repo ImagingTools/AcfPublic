@@ -33,7 +33,7 @@ namespace imeas
 
 CGeneralUnitInfo::CGeneralUnitInfo(
 			int type,
-			const istd::CString& name,
+			const QString& name,
 			double displayMultFactor,
 			const istd::CRange& range)
 :	m_type(type),
@@ -50,7 +50,7 @@ void CGeneralUnitInfo::SetUnitType(int type)
 }
 
 
-void CGeneralUnitInfo::SetUnitName(const istd::CString& name)
+void CGeneralUnitInfo::SetUnitName(const QString& name)
 {
 	m_name = name;
 }
@@ -76,7 +76,7 @@ int CGeneralUnitInfo::GetUnitType() const
 }
 
 
-istd::CString CGeneralUnitInfo::GetUnitName() const
+QString CGeneralUnitInfo::GetUnitName() const
 {
 	return m_name;
 }

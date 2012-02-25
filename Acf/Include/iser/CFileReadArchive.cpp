@@ -23,9 +23,11 @@
 #include "iser/CFileReadArchive.h"
 
 
-// ACF includes
-#include "istd/CString.h"
+// Qt includes
+#include <QString>
 
+
+// ACF includes
 #include "iser/CArchiveTag.h"
 
 
@@ -33,11 +35,11 @@ namespace iser
 {
 
 
-CFileReadArchive::CFileReadArchive(const istd::CString& filePath, bool supportTagSkipping, bool serializeHeader)
+CFileReadArchive::CFileReadArchive(const QString& filePath, bool supportTagSkipping, bool serializeHeader)
 :	BaseClass2(filePath),
 	m_supportTagSkipping(supportTagSkipping)
 {
-	m_stream.open(m_filePath.ToString().c_str(), std::fstream::in | std::fstream::binary);
+	m_stream.open(m_filePath.toStdString().c_str(), std::fstream::in | std::fstream::binary);
 
 	if (serializeHeader){
 		SerializeAcfHeader();
@@ -117,8 +119,8 @@ void CFileReadArchive::DecorateMessage(
 			MessageCategory /*category*/,
 			int /*id*/,
 			int /*flags*/,
-			istd::CString& message,
-			istd::CString& /*messageSource*/) const
+			QString& message,
+			QString& /*messageSource*/) const
 {
 	message = m_filePath + " : " + message;
 }

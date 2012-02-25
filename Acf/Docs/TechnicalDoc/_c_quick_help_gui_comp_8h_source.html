@@ -71,13 +71,13 @@
 <a name="l00044"></a>00044        I_END_COMPONENT;
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046        <span class="comment">// reimplemented (idoc::IHelpInfoProvider)</span>
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classicmpstr_1_1_c_quick_help_gui_comp.html#a9645c09a4704de10e6fd586a980f6e16" title="Get quality of help information for specified context and/or object.">GetHelpQuality</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; contextText, <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* contextObjectPtr) <span class="keyword">const</span>;
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classicmpstr_1_1_c_quick_help_gui_comp.html#a55cbdc6161031345f9230936ef0eff7b" title="Get quality of help information for specified context and/or object.">GetHelpQuality</a>(<span class="keyword">const</span> QString&amp; contextText, <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* contextObjectPtr) <span class="keyword">const</span>;
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049        <span class="comment">// reimplemented (idoc::IHelpViewer)</span>
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_quick_help_gui_comp.html#a7053f8c79e7814189b3746f59b8b85aa" title="Show some help information for specified context.">ShowHelp</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; contextText, <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* contextObjectPtr);
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_quick_help_gui_comp.html#a60915caff805d7eefecc44d1e9011597" title="Show some help information for specified context.">ShowHelp</a>(<span class="keyword">const</span> QString&amp; contextText, <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* contextObjectPtr);
 <a name="l00051"></a>00051 
 <a name="l00052"></a>00052 <span class="keyword">protected</span>:
-<a name="l00053"></a>00053        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classicmpstr_1_1_c_quick_help_gui_comp.html#ae83219ee737b532d32120b3f73f9fb64">CalcDoxygenFileName</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a>&amp; classInfo) <span class="keyword">const</span>;
+<a name="l00053"></a>00053        QString <a class="code" href="classicmpstr_1_1_c_quick_help_gui_comp.html#adfb93c1d4cf2ca809faae985bdae1b45">CalcDoxygenFileName</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a>&amp; classInfo) <span class="keyword">const</span>;
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055        <span class="comment">// reimplemented (CGuiComponentBase)</span>
 <a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_quick_help_gui_comp.html#a2727cfda8e9845b3216202ec606bbbae" title="Called just after GUI is initialized.">OnGuiCreated</a>();
@@ -94,8 +94,8 @@
 <a name="l00067"></a>00067        I_REF(<a class="code" href="classicomp_1_1_i_meta_info_manager.html">icomp::IMetaInfoManager</a>, m_metaInfoManagerCompPtr);
 <a name="l00068"></a>00068        I_REF(<a class="code" href="classicmpstr_1_1_i_external_meta_info_manager.html">IExternalMetaInfoManager</a>, m_externalMetaInfoManagerCompPtr);
 <a name="l00069"></a>00069 
-<a name="l00070"></a>00070        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_descrFilePath;
-<a name="l00071"></a>00071        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_techFilePath;
+<a name="l00070"></a>00070        QString m_descrFilePath;
+<a name="l00071"></a>00071        QString m_techFilePath;
 <a name="l00072"></a>00072 };
 <a name="l00073"></a>00073 
 <a name="l00074"></a>00074 

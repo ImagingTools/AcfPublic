@@ -62,10 +62,10 @@ Inheritance diagram for iprm::INameParam:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_name_param.html#a0ce5527fad469832fcf58c3833a93282">GetName</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the object name.  <a href="#a0ce5527fad469832fcf58c3833a93282"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_name_param.html#adf174afa922dceceb687a6bbd84ede9d">SetName</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;name)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the object name.  <a href="#adf174afa922dceceb687a6bbd84ede9d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_name_param.html#ac46e5dccdb0912c94199397b33a5c4eb">GetName</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the object name.  <a href="#ac46e5dccdb0912c94199397b33a5c4eb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_name_param.html#adf17bf1276854fcac36172626b3deed0">SetName</a> (const QString &amp;name)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the object name.  <a href="#adf17bf1276854fcac36172626b3deed0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_name_param.html#a9f7a0c12bd00e62578d602ba271b3c15">IsNameFixed</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code>, if the name setting is enabled.  <a href="#a9f7a0c12bd00e62578d602ba271b3c15"></a><br/></td></tr>
 </table>
@@ -74,12 +74,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_i_name_param_8h_source.html#l00018">18</a> of file <a class="el" href="_i_name_param_8h_source.html">INameParam.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a0ce5527fad469832fcf58c3833a93282"></a><!-- doxytag: member="iprm::INameParam::GetName" ref="a0ce5527fad469832fcf58c3833a93282" args="() const =0" -->
+<a class="anchor" id="ac46e5dccdb0912c94199397b33a5c4eb"></a><!-- doxytag: member="iprm::INameParam::GetName" ref="ac46e5dccdb0912c94199397b33a5c4eb" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&amp; iprm::INameParam::GetName </td>
+          <td class="memname">virtual const QString&amp; iprm::INameParam::GetName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -90,7 +90,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the object name. </p>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_name_param.html#a67d711262525d4a7dff418f0efe1bb5f">iprm::CNameParam</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_name_param.html#a2a43b77332f91a27c2b41b03324e3921">iprm::CNameParam</a>.</p>
 
 </div>
 </div>
@@ -114,14 +114,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adf174afa922dceceb687a6bbd84ede9d"></a><!-- doxytag: member="iprm::INameParam::SetName" ref="adf174afa922dceceb687a6bbd84ede9d" args="(const istd::CString &amp;name)=0" -->
+<a class="anchor" id="adf17bf1276854fcac36172626b3deed0"></a><!-- doxytag: member="iprm::INameParam::SetName" ref="adf17bf1276854fcac36172626b3deed0" args="(const QString &amp;name)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iprm::INameParam::SetName </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -131,7 +131,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Set the object name. </p>
 
-<p>Implemented in <a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#abd1f5b84054cf987e5950de54f49dc06">iqtgui::CHierarchicalCommand</a>, and <a class="el" href="classiprm_1_1_c_name_param.html#a57262562645568adbedb49deb4a526a6">iprm::CNameParam</a>.</p>
+<p>Implemented in <a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a344474e2b4cd7113ac2dc087fdfe6a51">iqtgui::CHierarchicalCommand</a>, and <a class="el" href="classiprm_1_1_c_name_param.html#a2efc0ca157b9658762f02398975e823d">iprm::CNameParam</a>.</p>
 
 </div>
 </div>

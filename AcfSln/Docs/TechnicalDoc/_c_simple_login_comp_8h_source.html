@@ -66,8 +66,8 @@
 <a name="l00040"></a>00040 
 <a name="l00041"></a><a class="code" href="structiauth_1_1_c_simple_login_comp_1_1_user.html">00041</a>        <span class="keyword">struct </span><a class="code" href="structiauth_1_1_c_simple_login_comp_1_1_user.html">User</a>
 <a name="l00042"></a>00042        {
-<a name="l00043"></a><a class="code" href="structiauth_1_1_c_simple_login_comp_1_1_user.html#a4db48be26b14111b21f6805ee66ecfcc">00043</a>               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> <a class="code" href="structiauth_1_1_c_simple_login_comp_1_1_user.html#a4db48be26b14111b21f6805ee66ecfcc">name</a>;
-<a name="l00044"></a><a class="code" href="structiauth_1_1_c_simple_login_comp_1_1_user.html#adefe5150851748db4351e8207921da94">00044</a>               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> <a class="code" href="structiauth_1_1_c_simple_login_comp_1_1_user.html#adefe5150851748db4351e8207921da94">password</a>;
+<a name="l00043"></a><a class="code" href="structiauth_1_1_c_simple_login_comp_1_1_user.html#a8453a7423b237cade072f2950778096f">00043</a>               QString <a class="code" href="structiauth_1_1_c_simple_login_comp_1_1_user.html#a8453a7423b237cade072f2950778096f">name</a>;
+<a name="l00044"></a><a class="code" href="structiauth_1_1_c_simple_login_comp_1_1_user.html#aa9dd7f03e04ee209a26a07feed8c5add">00044</a>               QString <a class="code" href="structiauth_1_1_c_simple_login_comp_1_1_user.html#aa9dd7f03e04ee209a26a07feed8c5add">password</a>;
 <a name="l00045"></a><a class="code" href="structiauth_1_1_c_simple_login_comp_1_1_user.html#a8d47b37e021f556011aa00549d8eab80">00045</a>               <span class="keywordtype">int</span> <a class="code" href="structiauth_1_1_c_simple_login_comp_1_1_user.html#a8d47b37e021f556011aa00549d8eab80">group</a>;
 <a name="l00046"></a>00046        };
 <a name="l00047"></a>00047 
@@ -75,12 +75,12 @@
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiauth_1_1_c_simple_login_comp.html#a957c2b1113e7d6b4123ae83b46bc5ffc">GetUsersCount</a>() <span class="keyword">const</span>;
 <a name="l00051"></a>00051        <span class="keyword">virtual</span> <a class="code" href="structiauth_1_1_c_simple_login_comp_1_1_user.html">User</a>&amp; <a class="code" href="classiauth_1_1_c_simple_login_comp.html#a16ee77134921068a558eaedb99ce6b45">GetUser</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiauth_1_1_c_simple_login_comp.html#ae360365738c0e87ecb5d4ac2b2fcbee0">FindUserIndex</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; name) <span class="keyword">const</span>;
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiauth_1_1_c_simple_login_comp.html#a59265a8fdfd93da3c71d9443414104a5">FindUserIndex</a>(<span class="keyword">const</span> QString&amp; name) <span class="keyword">const</span>;
 <a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiauth_1_1_c_simple_login_comp.html#a7aa094373880a4da0ebd1e879b8d37a4">AddUser</a>(<span class="keyword">const</span> <a class="code" href="structiauth_1_1_c_simple_login_comp_1_1_user.html">User</a>&amp; user);
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055        <span class="comment">// reimplemented (iauth::ILogin)</span>
 <a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiauth_1_1_c_simple_login_comp.html#a304f4e31703feb3967534095de467eab" title="Check, if any user is logged to the system.">IsUserLogged</a>() <span class="keyword">const</span>;
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiauth_1_1_c_simple_login_comp.html#abdffff7cae3a4b4f2b21fe99910e5d31" title="Log in user.">Login</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; userName, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; password);
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiauth_1_1_c_simple_login_comp.html#a8d3cdd8e3c9ee2bd887870f363c58e7e" title="Log in user.">Login</a>(<span class="keyword">const</span> QString&amp; userName, <span class="keyword">const</span> QString&amp; password);
 <a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiauth_1_1_c_simple_login_comp.html#a85d9360ee1810a4d501613904851c914" title="Log in user.">Logout</a>();
 <a name="l00059"></a>00059 
 <a name="l00060"></a>00060        <span class="comment">// reimplemented (iauth::IRightsProvider)</span>
@@ -97,8 +97,8 @@
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072 <span class="keyword">private</span>:
 <a name="l00073"></a>00073        I_MULTIREF(<a class="code" href="classiauth_1_1_i_rights_provider.html">IRightsProvider</a>, m_userLevelsIfPtr);
-<a name="l00074"></a>00074        I_MULTIATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_defaultUsersAttrPtr);
-<a name="l00075"></a>00075        I_MULTIATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_defaultUserPasswordsAttrPtr);
+<a name="l00074"></a>00074        I_MULTIATTR(QString, m_defaultUsersAttrPtr);
+<a name="l00075"></a>00075        I_MULTIATTR(QString, m_defaultUserPasswordsAttrPtr);
 <a name="l00076"></a>00076        I_MULTIATTR(<span class="keywordtype">int</span>, m_defaultUserLevelsAttrPtr);
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078        <span class="keyword">typedef</span> std::vector&lt;User&gt; Users;

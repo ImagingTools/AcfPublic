@@ -32,7 +32,7 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;vector&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_string_8h.html">istd/CString.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;QString&gt;</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="comment">// ACF-Solutions includes</span>
@@ -48,21 +48,21 @@
 <a name="l00025"></a>00025 <span class="keyword">public</span>:
 <a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiauth_1_1_i_users_manager.html#a6652e1f9bb2c02eef7092fa6331fda24" title="Get number of users in this collection.">GetUsersCount</a>() <span class="keyword">const</span> = 0;
 <a name="l00030"></a>00030 
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiauth_1_1_i_users_manager.html#a8f872e61551574eebc4448ea15a61fba" title="Search for user with specified name.">FindUserIndex</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; name) <span class="keyword">const</span> = 0;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiauth_1_1_i_users_manager.html#aab6c0884586ec899486e68b07e49990e" title="Search for user with specified name.">FindUserIndex</a>(<span class="keyword">const</span> QString&amp; name) <span class="keyword">const</span> = 0;
 <a name="l00036"></a>00036 
 <a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiauth_1_1_c_user.html">CUser</a>&amp; <a class="code" href="classiauth_1_1_i_users_manager.html#abb90c87960cdef89ced1f239a48967d1" title="Get user using its index.">GetUser</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
 <a name="l00041"></a>00041 
 <a name="l00045"></a>00045        <span class="keyword">virtual</span> <a class="code" href="classiauth_1_1_c_user.html">CUser</a>&amp; <a class="code" href="classiauth_1_1_i_users_manager.html#a813626fb4d23a7f25bbd7c44e25dc228" title="Get reference to user object using its index.">GetUserRef</a>(<span class="keywordtype">int</span> index) = 0;
 <a name="l00046"></a>00046 
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <a class="code" href="classiauth_1_1_c_user.html">CUser</a>* <a class="code" href="classiauth_1_1_i_users_manager.html#adb72e0534dfa7e5cb8e369a4a1e047bb" title="Add a new user to the user list.">AddUser</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; userName) = 0;
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <a class="code" href="classiauth_1_1_c_user.html">CUser</a>* <a class="code" href="classiauth_1_1_i_users_manager.html#a1bbcbc43588f7059790c4e206c326667" title="Add a new user to the user list.">AddUser</a>(<span class="keyword">const</span> QString&amp; userName) = 0;
 <a name="l00053"></a>00053 
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiauth_1_1_i_users_manager.html#a9903d898fcf04a5f50d8c48051d46297" title="Delete the user with the user name.">DeleteUser</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; userName) = 0;
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiauth_1_1_i_users_manager.html#aa0c8e171cfbcb3eec74d64cd3a2101ce" title="Delete the user with the user name.">DeleteUser</a>(<span class="keyword">const</span> QString&amp; userName) = 0;
 <a name="l00060"></a>00060 
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiauth_1_1_i_users_manager.html#aa4a7a4c2ca0ddc07c6fc01b209adb1d0" title="The method renames the user.">RenameUser</a>(<span class="keywordtype">int</span> userIndex, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; userName) = 0;
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiauth_1_1_i_users_manager.html#ae4ac7950f6f3ae33383753bd6dace182" title="The method renames the user.">RenameUser</a>(<span class="keywordtype">int</span> userIndex, <span class="keyword">const</span> QString&amp; userName) = 0;
 <a name="l00070"></a>00070 
 <a name="l00074"></a>00074        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiauth_1_1_i_users_manager.html#afea0cd4a2ab6b8fe047e8a934a9201fd" title="Get number of user groups.">GetUserGroupsCount</a>() <span class="keyword">const</span> = 0;
 <a name="l00075"></a>00075 
-<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; <a class="code" href="classiauth_1_1_i_users_manager.html#aa0d76cc30b4c6db2c85184dfc9d28342" title="Get number of user groups.">GetUserGroupName</a>(<span class="keywordtype">int</span> groupIndex) <span class="keyword">const</span> = 0;
+<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classiauth_1_1_i_users_manager.html#ae35796766dd076c20eee154754deafed" title="Get number of user groups.">GetUserGroupName</a>(<span class="keywordtype">int</span> groupIndex) <span class="keyword">const</span> = 0;
 <a name="l00080"></a>00080 };
 <a name="l00081"></a>00081 
 <a name="l00082"></a>00082 

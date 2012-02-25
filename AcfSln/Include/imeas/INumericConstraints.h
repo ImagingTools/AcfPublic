@@ -48,7 +48,7 @@ public:
 	/**
 		Get description of numeric value for specified list index.
 	*/
-	virtual istd::CString GetNumericValueDescription(int index) const = 0;
+	virtual QString GetNumericValueDescription(int index) const = 0;
 
 	/**
 		Get range of possible numeric values for specified list index.

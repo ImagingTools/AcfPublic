@@ -58,9 +58,9 @@
 <a name="l00038"></a><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a289408cba8ed1ac3dd73d916b371bae2">00038</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_write_archive_base.html">iser::CWriteArchiveBase</a> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a289408cba8ed1ac3dd73d916b371bae2">BaseClass</a>;
 <a name="l00039"></a><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a12046396899079d5c8c0d7c38486ec98">00039</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_file_archive_info.html">iser::CFileArchiveInfo</a> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a12046396899079d5c8c0d7c38486ec98">BaseClass2</a>;
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041        <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a1e0a70d97008f837843784f84a06229a">CXslTransformationWriteArchive</a>(
-<a name="l00042"></a>00042                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; filePath = <span class="stringliteral">&quot;&quot;</span>,
-<a name="l00043"></a>00043                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; xslFilePath = <span class="stringliteral">&quot;&quot;</span>,
+<a name="l00041"></a>00041        <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#acbb2c8d10044c50b1dd1d00ee8303f74">CXslTransformationWriteArchive</a>(
+<a name="l00042"></a>00042                             <span class="keyword">const</span> QString&amp; filePath = <span class="stringliteral">&quot;&quot;</span>,
+<a name="l00043"></a>00043                             <span class="keyword">const</span> QString&amp; xslFilePath = <span class="stringliteral">&quot;&quot;</span>,
 <a name="l00044"></a>00044                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_version_info.html">iser::IVersionInfo</a>* versionInfoPtr = NULL,
 <a name="l00045"></a>00045                             <span class="keywordtype">bool</span> serializeHeader = <span class="keyword">true</span>,
 <a name="l00046"></a>00046                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; rootTag = <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_base.html#af37185cf961a49405088cd05130cbfef">s_acfRootTag</a>);
@@ -70,7 +70,7 @@
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051        <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#acbc10eb97a95615c75f0fd10fa3fc092">Flush</a>();
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053        <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#ac0c5ffaf1e8638f25f718f81f07e47ec">OpenDocument</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; filePath, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; xslFilePath);
+<a name="l00053"></a>00053        <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a318544fdc25e04fe31fb1fcff9d75dc7">OpenDocument</a>(<span class="keyword">const</span> QString&amp; filePath, <span class="keyword">const</span> QString&amp; xslFilePath);
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055        <span class="comment">// reimplemented (iser::IArchive)</span>
 <a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#aea781f4c33a9ff198b4c621dc0e44f28">IsTagSkippingSupported</a>() <span class="keyword">const</span>;
@@ -90,20 +90,20 @@
 <a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a63f13254668529fc458c0041bad656fb">Process</a>(<span class="keywordtype">float</span>&amp; value);
 <a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a63f13254668529fc458c0041bad656fb">Process</a>(<span class="keywordtype">double</span>&amp; value);
 <a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a63f13254668529fc458c0041bad656fb">Process</a>(std::string&amp; value);
-<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a63f13254668529fc458c0041bad656fb">Process</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; value);
+<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a63f13254668529fc458c0041bad656fb">Process</a>(QString&amp; value);
 <a name="l00074"></a>00074        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#ae600d1bf8e84af919e4f2fff8d863c5f">ProcessData</a>(<span class="keywordtype">void</span>* dataPtr, <span class="keywordtype">int</span> size);
 <a name="l00075"></a>00075 
 <a name="l00076"></a>00076 <span class="keyword">protected</span>:
 <a name="l00080"></a>00080        <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a27f397d19dfc159862f00e93a8a3fbe0" title="Find the next text node and move the current node to the next sibling.">PushTextNode</a>(<span class="keyword">const</span> QString&amp; text);
 <a name="l00081"></a>00081 
-<a name="l00082"></a><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a9207958943d7c48de66100af618c4cf2">00082</a>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a9207958943d7c48de66100af618c4cf2">SendLogMessage</a>(
+<a name="l00082"></a><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#ab4d9bee2108246c609b0fda3e3c65caa">00082</a>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#ab4d9bee2108246c609b0fda3e3c65caa">SendLogMessage</a>(
 <a name="l00083"></a>00083               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a> category,
 <a name="l00084"></a>00084               <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
-<a name="l00085"></a>00085               <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; message,
-<a name="l00086"></a>00086               <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; messageSource,
+<a name="l00085"></a>00085               <span class="keyword">const</span> QString&amp; message,
+<a name="l00086"></a>00086               <span class="keyword">const</span> QString&amp; messageSource,
 <a name="l00087"></a>00087               <span class="keywordtype">int</span> flags = 0)<span class="keyword"> const</span>
 <a name="l00088"></a>00088 <span class="keyword">       </span>{
-<a name="l00089"></a>00089               <span class="keywordflow">return</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a9207958943d7c48de66100af618c4cf2">iser::CWriteArchiveBase::SendLogMessage</a>(category, <span class="keywordtype">id</span>, message, messageSource, flags);
+<a name="l00089"></a>00089               <span class="keywordflow">return</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#ab4d9bee2108246c609b0fda3e3c65caa">iser::CWriteArchiveBase::SendLogMessage</a>(category, <span class="keywordtype">id</span>, message, messageSource, flags);
 <a name="l00090"></a>00090        }
 <a name="l00091"></a>00091 <span class="keyword">private</span>:
 <a name="l00092"></a><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a7fd677761e10234f7e5b9e03363ce1a3">00092</a>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a7fd677761e10234f7e5b9e03363ce1a3">WriteArchiveMessageHandler</a>;
@@ -112,7 +112,7 @@
 <a name="l00095"></a>00095        QDomElement m_currentParent;
 <a name="l00096"></a>00096 
 <a name="l00097"></a>00097        QFile m_file;
-<a name="l00098"></a>00098        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> m_xslFilePath;
+<a name="l00098"></a>00098        QString m_xslFilePath;
 <a name="l00099"></a>00099 
 <a name="l00100"></a>00100        <span class="keywordtype">bool</span> m_serializeHeader;
 <a name="l00101"></a>00101        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> m_rootTag;

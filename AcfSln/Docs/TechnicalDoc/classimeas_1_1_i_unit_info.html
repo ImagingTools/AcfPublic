@@ -72,8 +72,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_unit_info.html#a8994df8847910c86d7dec55ae3020f6f">GetUnitType</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type of unit.  <a href="#a8994df8847910c86d7dec55ae3020f6f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_unit_info.html#a24a78d5cac9a2246dd792ddc6f78ba29">GetUnitName</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of unit.  <a href="#a24a78d5cac9a2246dd792ddc6f78ba29"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_unit_info.html#a0a420f7c02d2181c87cffffb593fe4f0">GetUnitName</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of unit.  <a href="#a0a420f7c02d2181c87cffffb593fe4f0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_unit_info.html#ac436177409b9434bebfd5e6aaf584104">GetDisplayMultiplicationFactor</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get multiplication factor used to calculate user input values.  <a href="#ac436177409b9434bebfd5e6aaf584104"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_unit_info.html#a2af82f2fa9b39ec00daf544178eb4002">GetValueRange</a> () const =0</td></tr>
@@ -136,12 +136,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a24a78d5cac9a2246dd792ddc6f78ba29"></a><!-- doxytag: member="imeas::IUnitInfo::GetUnitName" ref="a24a78d5cac9a2246dd792ddc6f78ba29" args="() const =0" -->
+<a class="anchor" id="a0a420f7c02d2181c87cffffb593fe4f0"></a><!-- doxytag: member="imeas::IUnitInfo::GetUnitName" ref="a0a420f7c02d2181c87cffffb593fe4f0" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> imeas::IUnitInfo::GetUnitName </td>
+          <td class="memname">virtual QString imeas::IUnitInfo::GetUnitName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -152,7 +152,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get name of unit. </p>
 
-<p>Implemented in <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a0242431b0ab662e64ad7de1661432e9c">imeas::CNumericParamsComp</a>, <a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ae500ccd0c70eef269dccaf32bd768c4f">iipr::CRectImageSmoothProcessorComp</a>, <a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#ae5954d49eb1c02a0b7403c9fb0ce952e">iipr::CRectDerivativeProcessor</a>, <a class="el" href="classimeas_1_1_c_numeric_constraints_comp.html#a306eb804b9750cf4f11f8b8d553f320d">imeas::CNumericConstraintsComp</a>, and <a class="el" href="classimeas_1_1_c_general_unit_info.html#aead4cdc92697e4085e02abbad7eea5ea">imeas::CGeneralUnitInfo</a>.</p>
+<p>Implemented in <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a577c62f05575438eda291047f6166ab0">imeas::CNumericParamsComp</a>, <a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ad802414194a0d3513d4765ce1f366646">iipr::CRectImageSmoothProcessorComp</a>, <a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a14117132ffb3483b18a7e85088592326">iipr::CRectDerivativeProcessor</a>, <a class="el" href="classimeas_1_1_c_numeric_constraints_comp.html#a90c530a2f9d5af95a5a1e33dfeedcd68">imeas::CNumericConstraintsComp</a>, and <a class="el" href="classimeas_1_1_c_general_unit_info.html#a57dd5620f8e91326f8d98e8f90d5bb75">imeas::CGeneralUnitInfo</a>.</p>
 
 </div>
 </div>

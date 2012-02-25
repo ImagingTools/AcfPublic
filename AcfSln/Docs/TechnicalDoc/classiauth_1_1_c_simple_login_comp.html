@@ -74,12 +74,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_c_simple_login_comp.html#a8ad38000697b1fff36c30bb79554cd99">CSimpleLoginComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_c_simple_login_comp.html#a957c2b1113e7d6b4123ae83b46bc5ffc">GetUsersCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structiauth_1_1_c_simple_login_comp_1_1_user.html">User</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_c_simple_login_comp.html#a16ee77134921068a558eaedb99ce6b45">GetUser</a> (int index) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_c_simple_login_comp.html#ae360365738c0e87ecb5d4ac2b2fcbee0">FindUserIndex</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;name) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_c_simple_login_comp.html#a59265a8fdfd93da3c71d9443414104a5">FindUserIndex</a> (const QString &amp;name) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_c_simple_login_comp.html#a7aa094373880a4da0ebd1e879b8d37a4">AddUser</a> (const <a class="el" href="structiauth_1_1_c_simple_login_comp_1_1_user.html">User</a> &amp;user)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_c_simple_login_comp.html#a304f4e31703feb3967534095de467eab">IsUserLogged</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if any user is logged to the system.  <a href="#a304f4e31703feb3967534095de467eab"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_c_simple_login_comp.html#abdffff7cae3a4b4f2b21fe99910e5d31">Login</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;userName, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;password)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Log in user.  <a href="#abdffff7cae3a4b4f2b21fe99910e5d31"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_c_simple_login_comp.html#a8d3cdd8e3c9ee2bd887870f363c58e7e">Login</a> (const QString &amp;userName, const QString &amp;password)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Log in user.  <a href="#a8d3cdd8e3c9ee2bd887870f363c58e7e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_c_simple_login_comp.html#a85d9360ee1810a4d501613904851c914">Logout</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Log in user.  <a href="#a85d9360ee1810a4d501613904851c914"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_c_simple_login_comp.html#a22414a04cb66c3edfea7aba79634ecfb">HasRight</a> (const std::string &amp;operationId, bool beQuiet=false) const </td></tr>
@@ -143,14 +143,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae360365738c0e87ecb5d4ac2b2fcbee0"></a><!-- doxytag: member="iauth::CSimpleLoginComp::FindUserIndex" ref="ae360365738c0e87ecb5d4ac2b2fcbee0" args="(const istd::CString &amp;name) const " -->
+<a class="anchor" id="a59265a8fdfd93da3c71d9443414104a5"></a><!-- doxytag: member="iauth::CSimpleLoginComp::FindUserIndex" ref="a59265a8fdfd93da3c71d9443414104a5" args="(const QString &amp;name) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual int iauth::CSimpleLoginComp::FindUserIndex </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -251,20 +251,20 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abdffff7cae3a4b4f2b21fe99910e5d31"></a><!-- doxytag: member="iauth::CSimpleLoginComp::Login" ref="abdffff7cae3a4b4f2b21fe99910e5d31" args="(const istd::CString &amp;userName, const istd::CString &amp;password)" -->
+<a class="anchor" id="a8d3cdd8e3c9ee2bd887870f363c58e7e"></a><!-- doxytag: member="iauth::CSimpleLoginComp::Login" ref="a8d3cdd8e3c9ee2bd887870f363c58e7e" args="(const QString &amp;userName, const QString &amp;password)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iauth::CSimpleLoginComp::Login </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>userName</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>password</em>&#160;</td>
         </tr>
         <tr>
@@ -279,7 +279,7 @@ Protected Member Functions</h2></td></tr>
 <p>Log in user. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if user is accepted. </dd></dl>
 
-<p>Implements <a class="el" href="classiauth_1_1_i_login.html#ab0fc19b0f1f71432c2730e99519d6956">iauth::ILogin</a>.</p>
+<p>Implements <a class="el" href="classiauth_1_1_i_login.html#abba1e2551a1068d1cda70f8e17e4136b">iauth::ILogin</a>.</p>
 
 </div>
 </div>

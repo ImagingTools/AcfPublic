@@ -107,11 +107,11 @@ bool CComposedParamsSetGuiComp::OnAttached(imod::IModel* modelPtr)
 
 	int elementsCount = istd::Min(m_observersCompPtr.GetCount(), m_idsAttrPtr.GetCount());
 	for (int i = 0; i < elementsCount; ++i){
-		const istd::CString& paramId = m_idsAttrPtr[i];
+		const QString& paramId = m_idsAttrPtr[i];
 
 		imod::IModel* parameterModelPtr = GetModelPtr();
-		if (!paramId.IsEmpty() && (paramId != "*")){
-			parameterModelPtr = dynamic_cast<imod::IModel*>(paramsSetPtr->GetEditableParameter(paramId.ToString()));
+		if (!paramId.isEmpty() && (paramId != "*")){
+			parameterModelPtr = dynamic_cast<imod::IModel*>(paramsSetPtr->GetEditableParameter(paramId.toStdString()));
 		}
 
 		imod::IObserver* observerPtr = m_observersCompPtr[i];
@@ -137,9 +137,9 @@ bool CComposedParamsSetGuiComp::OnDetached(imod::IModel* modelPtr)
 
 	int elementsCount = istd::Min(m_observersCompPtr.GetCount(), m_idsAttrPtr.GetCount());
 	for (int i = 0; i < elementsCount; ++i){
-		const istd::CString& paramId = m_idsAttrPtr[i];
+		const QString& paramId = m_idsAttrPtr[i];
 
-		imod::IModel* parameterModelPtr = dynamic_cast<imod::IModel*>(paramsSetPtr->GetEditableParameter(paramId.ToString()));
+		imod::IModel* parameterModelPtr = dynamic_cast<imod::IModel*>(paramsSetPtr->GetEditableParameter(paramId.toStdString()));
 		imod::IObserver* observerPtr = m_observersCompPtr[i];
 
 		if ((parameterModelPtr != NULL) && (observerPtr != NULL) && parameterModelPtr->IsAttached(observerPtr)){
@@ -185,7 +185,7 @@ void CComposedParamsSetGuiComp::OnGuiCreated()
 				panelLayoutPtr->setContentsMargins(6, 0, 6, 0);
 				QString name;
 				if (i < m_namesAttrPtr.GetCount()){
-					name = iqt::GetQString(m_namesAttrPtr[i]);
+					name = m_namesAttrPtr[i];
 				}
 
 				guiPtr->CreateGui(panelPtr);
@@ -217,7 +217,7 @@ void CComposedParamsSetGuiComp::OnGuiCreated()
 				QLayout* panelLayoutPtr = new QVBoxLayout(panelPtr);
 				QString name;
 				if (i < m_namesAttrPtr.GetCount()){
-					name = iqt::GetQString(m_namesAttrPtr[i]);
+					name = m_namesAttrPtr[i];
 				}
 
 				guiPtr->CreateGui(panelPtr);
@@ -246,7 +246,7 @@ void CComposedParamsSetGuiComp::OnGuiCreated()
 			if (i < m_namesAttrPtr.GetCount()){
 				QLayout* parentLayoutPtr = elementParentPtr->layout();
 
-				elementParentPtr = new QGroupBox(iqt::GetQString(m_namesAttrPtr[i]), elementParentPtr);
+				elementParentPtr = new QGroupBox(m_namesAttrPtr[i], elementParentPtr);
 				new QVBoxLayout(elementParentPtr);
 
 				if (parentLayoutPtr != NULL){

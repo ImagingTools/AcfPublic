@@ -71,14 +71,14 @@
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049 <span class="keyword">private</span>:
 <a name="l00050"></a>00050        I_REF(<a class="code" href="classibase_1_1_i_application_info.html" title="This interface provides some information about the application.">ibase::IApplicationInfo</a>, m_applicationInfoCompPtr);
-<a name="l00051"></a>00051        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_imagePathAttrPtr);
+<a name="l00051"></a>00051        I_ATTR(QString, m_imagePathAttrPtr);
 <a name="l00052"></a>00052        I_ATTR(<span class="keywordtype">bool</span>, m_showProductNameAttrPtr);
 <a name="l00053"></a>00053        I_ATTR(<span class="keywordtype">bool</span>, m_showApplicationNameAttrPtr);
 <a name="l00054"></a>00054        I_ATTR(<span class="keywordtype">bool</span>, m_showApplicationSubnameAttrPtr);
 <a name="l00055"></a>00055        I_ATTR(<span class="keywordtype">bool</span>, m_showProductTypeAttrPtr);
 <a name="l00056"></a>00056        I_ATTR(<span class="keywordtype">bool</span>, m_showLegalCopyrightAttrPtr);
 <a name="l00057"></a>00057        I_MULTIATTR(<span class="keywordtype">int</span>, m_versionIdsAttrPtr);
-<a name="l00058"></a>00058        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_versionNamesAttrPtr);
+<a name="l00058"></a>00058        I_MULTIATTR(QString, m_versionNamesAttrPtr);
 <a name="l00059"></a>00059 
 <a name="l00060"></a>00060        <span class="keywordtype">int</span> m_mainVersionId;
 <a name="l00061"></a>00061 };

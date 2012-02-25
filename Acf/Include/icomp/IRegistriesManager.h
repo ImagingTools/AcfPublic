@@ -31,7 +31,6 @@
 // ACF includes
 #include "istd/istd.h"
 #include "istd/IChangeable.h"
-#include "istd/CString.h"
 
 
 namespace icomp

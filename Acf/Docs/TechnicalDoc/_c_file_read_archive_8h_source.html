@@ -50,7 +50,7 @@
 <a name="l00029"></a><a class="code" href="classiser_1_1_c_file_read_archive.html#a76c9cca76ca6abd048bf55a68a8d572c">00029</a>        <span class="keyword">typedef</span> <a class="code" href="classiser_1_1_c_binary_read_archive_base.html" title="Base class for archive implementations reading data based on its binary representation.">CBinaryReadArchiveBase</a> <a class="code" href="classiser_1_1_c_file_read_archive.html#a76c9cca76ca6abd048bf55a68a8d572c">BaseClass</a>;
 <a name="l00030"></a><a class="code" href="classiser_1_1_c_file_read_archive.html#a304eb98a21774dc6f50c26190367d369">00030</a>        <span class="keyword">typedef</span> <a class="code" href="classiser_1_1_c_file_archive_info.html" title="Basic implementation of interface iser::IFileArchiveInfo.">CFileArchiveInfo</a> <a class="code" href="classiser_1_1_c_file_read_archive.html#a304eb98a21774dc6f50c26190367d369">BaseClass2</a>;
 <a name="l00031"></a>00031 
-<a name="l00041"></a>00041        <a class="code" href="classiser_1_1_c_file_read_archive.html#acc53fd704e6e2c6cbbffdd885b685eba" title="Contructor.">CFileReadArchive</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath, <span class="keywordtype">bool</span> supportTagSkipping = <span class="keyword">true</span>, <span class="keywordtype">bool</span> serializeHeader = <span class="keyword">true</span>);
+<a name="l00041"></a>00041        <a class="code" href="classiser_1_1_c_file_read_archive.html#a5f32e5e008850497bac30e95766abf0e" title="Contructor.">CFileReadArchive</a>(<span class="keyword">const</span> QString&amp; filePath, <span class="keywordtype">bool</span> supportTagSkipping = <span class="keyword">true</span>, <span class="keywordtype">bool</span> serializeHeader = <span class="keyword">true</span>);
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043        <span class="comment">// reimplemented (iser::IArchive)</span>
 <a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_read_archive.html#ac6d305d5eb27c06a190e699706e151a1" title="Check if skiping to the end of tag on EndTag is supported.">IsTagSkippingSupported</a>() <span class="keyword">const</span>;
@@ -67,12 +67,12 @@
 <a name="l00055"></a>00055        };
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057        <span class="comment">// reimplemented (istd::ILogger)</span>
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_file_read_archive.html#ad49d32c57be5e020ed0bbdf718a59db9" title="Decorate message parts before outputting.">DecorateMessage</a>(
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_file_read_archive.html#a11d0a69713f1c905a8d8732d66745684" title="Decorate message parts before outputting.">DecorateMessage</a>(
 <a name="l00059"></a>00059                             <a class="code" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343" title="Category of message.">MessageCategory</a> category,
 <a name="l00060"></a>00060                             <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
 <a name="l00061"></a>00061                             <span class="keywordtype">int</span> flags,
-<a name="l00062"></a>00062                             <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; message,
-<a name="l00063"></a>00063                             <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; messageSource) <span class="keyword">const</span>;
+<a name="l00062"></a>00062                             QString&amp; message,
+<a name="l00063"></a>00063                             QString&amp; messageSource) <span class="keyword">const</span>;
 <a name="l00064"></a>00064 
 <a name="l00065"></a>00065 <span class="keyword">private</span>:
 <a name="l00066"></a>00066        std::ifstream m_stream;

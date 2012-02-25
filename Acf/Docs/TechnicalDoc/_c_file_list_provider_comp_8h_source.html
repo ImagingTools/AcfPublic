@@ -68,7 +68,7 @@
 <a name="l00044"></a>00044        I_END_COMPONENT;
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046        <span class="comment">// reimplemented (ibase::IFileListProvider)</span>
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <a class="code" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> <a class="code" href="classiqt_1_1_c_file_list_provider_comp.html#a88d0ea1a10bad5b529ca7fc3785c69bf" title="Get list of files.">GetFileList</a>() <span class="keyword">const</span>;
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> QStringList <a class="code" href="classiqt_1_1_c_file_list_provider_comp.html#a73f7c55fa8255badf1482f2d600e8376" title="Get list of files.">GetFileList</a>() <span class="keyword">const</span>;
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049 <span class="keyword">protected</span>:
 <a name="l00050"></a>00050        <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
@@ -82,11 +82,11 @@
 <a name="l00058"></a>00058        I_REF(<a class="code" href="classiprm_1_1_i_file_name_param.html" title="Common interface for a file system item settings.">iprm::IFileNameParam</a>, m_dirParamCompPtr);
 <a name="l00059"></a>00059        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_dirParamModelCompPtr);
 <a name="l00060"></a>00060        I_REF(<a class="code" href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects.">iser::IFileLoader</a>, m_fileLoaderCompPtr);
-<a name="l00061"></a>00061        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_filtersAttrPtr);
+<a name="l00061"></a>00061        I_MULTIATTR(QString, m_filtersAttrPtr);
 <a name="l00062"></a>00062        I_ATTR(<span class="keywordtype">int</span>, m_minRecurDepthAttrPtr);
 <a name="l00063"></a>00063        I_ATTR(<span class="keywordtype">int</span>, m_maxRecurDepthAttrPtr);
 <a name="l00064"></a>00064 
-<a name="l00065"></a>00065        <a class="code" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> m_fileList;
+<a name="l00065"></a>00065        QStringList m_fileList;
 <a name="l00066"></a>00066 };
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068 

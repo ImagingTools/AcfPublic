@@ -28,8 +28,8 @@
 <div class="title">Include/istd/itr.h File Reference</div>  </div>
 </div>
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="_i_localizer_8h_source.html">istd/ILocalizer.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="_c_string_8h_source.html">istd/CString.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &lt;QString&gt;</code><br/>
+<code>#include &quot;<a class="el" href="_i_localizer_8h_source.html">istd/ILocalizer.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="_c_static_services_provider_8h_source.html">istd/CStaticServicesProvider.h</a>&quot;</code><br/>
 </div>
 <p><a href="itr_8h_source.html">Go to the source code of this file.</a></p>
@@ -54,7 +54,7 @@ Defines</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<b>Value:</b><div class="fragment"><pre class="fragment"><span class="keyword">static</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> tr(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; text, <span class="keyword">const</span> std::string&amp; disambiguation = std::string())\
+<b>Value:</b><div class="fragment"><pre class="fragment"><span class="keyword">static</span> QString tr(<span class="keyword">const</span> QString&amp; text, <span class="keyword">const</span> std::string&amp; disambiguation = std::string())\
        {\
               istd::ILocalizer* translatorPtr = istd::GetService&lt;istd::ILocalizer&gt;();\
               if (translatorPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){\
@@ -65,7 +65,7 @@ Defines</h2></td></tr>
 </pre></div>
 <p>Macro for defining string localization function in Non-Qt context. </p>
 
-<p>Definition at line <a class="el" href="itr_8h_source.html#l00013">13</a> of file <a class="el" href="itr_8h_source.html">itr.h</a>.</p>
+<p>Definition at line <a class="el" href="itr_8h_source.html#l00016">16</a> of file <a class="el" href="itr_8h_source.html">itr.h</a>.</p>
 
 </div>
 </div>

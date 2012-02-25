@@ -60,36 +60,36 @@ Inheritance diagram for iauth::IUsersManager:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_users_manager.html#a6652e1f9bb2c02eef7092fa6331fda24">GetUsersCount</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of users in this collection.  <a href="#a6652e1f9bb2c02eef7092fa6331fda24"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_users_manager.html#a8f872e61551574eebc4448ea15a61fba">FindUserIndex</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;name) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for user with specified name.  <a href="#a8f872e61551574eebc4448ea15a61fba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_users_manager.html#aab6c0884586ec899486e68b07e49990e">FindUserIndex</a> (const QString &amp;name) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for user with specified name.  <a href="#aab6c0884586ec899486e68b07e49990e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiauth_1_1_c_user.html">CUser</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_users_manager.html#abb90c87960cdef89ced1f239a48967d1">GetUser</a> (int index) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get user using its index.  <a href="#abb90c87960cdef89ced1f239a48967d1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiauth_1_1_c_user.html">CUser</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_users_manager.html#a813626fb4d23a7f25bbd7c44e25dc228">GetUserRef</a> (int index)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get reference to user object using its index.  <a href="#a813626fb4d23a7f25bbd7c44e25dc228"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiauth_1_1_c_user.html">CUser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_users_manager.html#adb72e0534dfa7e5cb8e369a4a1e047bb">AddUser</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;userName)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new user to the user list.  <a href="#adb72e0534dfa7e5cb8e369a4a1e047bb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_users_manager.html#a9903d898fcf04a5f50d8c48051d46297">DeleteUser</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;userName)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the user with the user name.  <a href="#a9903d898fcf04a5f50d8c48051d46297"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_users_manager.html#aa4a7a4c2ca0ddc07c6fc01b209adb1d0">RenameUser</a> (int userIndex, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;userName)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The method renames the user.  <a href="#aa4a7a4c2ca0ddc07c6fc01b209adb1d0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiauth_1_1_c_user.html">CUser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_users_manager.html#a1bbcbc43588f7059790c4e206c326667">AddUser</a> (const QString &amp;userName)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new user to the user list.  <a href="#a1bbcbc43588f7059790c4e206c326667"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_users_manager.html#aa0c8e171cfbcb3eec74d64cd3a2101ce">DeleteUser</a> (const QString &amp;userName)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the user with the user name.  <a href="#aa0c8e171cfbcb3eec74d64cd3a2101ce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_users_manager.html#ae4ac7950f6f3ae33383753bd6dace182">RenameUser</a> (int userIndex, const QString &amp;userName)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The method renames the user.  <a href="#ae4ac7950f6f3ae33383753bd6dace182"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_users_manager.html#afea0cd4a2ab6b8fe047e8a934a9201fd">GetUserGroupsCount</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of user groups.  <a href="#afea0cd4a2ab6b8fe047e8a934a9201fd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_users_manager.html#aa0d76cc30b4c6db2c85184dfc9d28342">GetUserGroupName</a> (int groupIndex) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of user groups.  <a href="#aa0d76cc30b4c6db2c85184dfc9d28342"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_users_manager.html#ae35796766dd076c20eee154754deafed">GetUserGroupName</a> (int groupIndex) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of user groups.  <a href="#ae35796766dd076c20eee154754deafed"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Provide management of users. </p>
 
 <p>Definition at line <a class="el" href="_i_users_manager_8h_source.html#l00023">23</a> of file <a class="el" href="_i_users_manager_8h_source.html">IUsersManager.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="adb72e0534dfa7e5cb8e369a4a1e047bb"></a><!-- doxytag: member="iauth::IUsersManager::AddUser" ref="adb72e0534dfa7e5cb8e369a4a1e047bb" args="(const istd::CString &amp;userName)=0" -->
+<a class="anchor" id="a1bbcbc43588f7059790c4e206c326667"></a><!-- doxytag: member="iauth::IUsersManager::AddUser" ref="a1bbcbc43588f7059790c4e206c326667" args="(const QString &amp;userName)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classiauth_1_1_c_user.html">CUser</a>* iauth::IUsersManager::AddUser </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>userName</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -100,24 +100,24 @@ Public Member Functions</h2></td></tr>
 <p>Add a new user to the user list. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a></td><td>Username: The user name of the new user. There can be each user name only once. </td></tr>
+    <tr><td class="paramname">QString</td><td>Username: The user name of the new user. There can be each user name only once. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to user object, if user was added correctly, otherwise NULL. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiauth_1_1_c_users_manager_comp.html#ac83c72c1234e82b2d063833906bc9f95">iauth::CUsersManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiauth_1_1_c_users_manager_comp.html#a13b127246ee282bb661f3fe0a699cb60">iauth::CUsersManagerComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9903d898fcf04a5f50d8c48051d46297"></a><!-- doxytag: member="iauth::IUsersManager::DeleteUser" ref="a9903d898fcf04a5f50d8c48051d46297" args="(const istd::CString &amp;userName)=0" -->
+<a class="anchor" id="aa0c8e171cfbcb3eec74d64cd3a2101ce"></a><!-- doxytag: member="iauth::IUsersManager::DeleteUser" ref="aa0c8e171cfbcb3eec74d64cd3a2101ce" args="(const QString &amp;userName)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iauth::IUsersManager::DeleteUser </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>userName</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -128,24 +128,24 @@ Public Member Functions</h2></td></tr>
 <p>Delete the user with the user name. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a></td><td>Username: The user name of the user which shall be deleted. </td></tr>
+    <tr><td class="paramname">QString</td><td>Username: The user name of the user which shall be deleted. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if the user was successfully deleted, otherwise false </dd></dl>
 
-<p>Implemented in <a class="el" href="classiauth_1_1_c_users_manager_comp.html#a861f831677f5e588e269b2201a6286a2">iauth::CUsersManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiauth_1_1_c_users_manager_comp.html#a2848fa5702c1725314dce3ad670a1696">iauth::CUsersManagerComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8f872e61551574eebc4448ea15a61fba"></a><!-- doxytag: member="iauth::IUsersManager::FindUserIndex" ref="a8f872e61551574eebc4448ea15a61fba" args="(const istd::CString &amp;name) const =0" -->
+<a class="anchor" id="aab6c0884586ec899486e68b07e49990e"></a><!-- doxytag: member="iauth::IUsersManager::FindUserIndex" ref="aab6c0884586ec899486e68b07e49990e" args="(const QString &amp;name) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual int iauth::IUsersManager::FindUserIndex </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -156,7 +156,7 @@ Public Member Functions</h2></td></tr>
 <p>Search for user with specified name. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>index of user, or negative value, if no user found. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiauth_1_1_c_users_manager_comp.html#a9ca3702217ad6d676f545a813123b142">iauth::CUsersManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiauth_1_1_c_users_manager_comp.html#a94a01704ed806e45d7c05d57c77bb5cf">iauth::CUsersManagerComp</a>.</p>
 
 </div>
 </div>
@@ -181,12 +181,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa0d76cc30b4c6db2c85184dfc9d28342"></a><!-- doxytag: member="iauth::IUsersManager::GetUserGroupName" ref="aa0d76cc30b4c6db2c85184dfc9d28342" args="(int groupIndex) const =0" -->
+<a class="anchor" id="ae35796766dd076c20eee154754deafed"></a><!-- doxytag: member="iauth::IUsersManager::GetUserGroupName" ref="ae35796766dd076c20eee154754deafed" args="(int groupIndex) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; iauth::IUsersManager::GetUserGroupName </td>
+          <td class="memname">virtual const QString&amp; iauth::IUsersManager::GetUserGroupName </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>groupIndex</em></td><td>)</td>
@@ -198,7 +198,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get number of user groups. </p>
 
-<p>Implemented in <a class="el" href="classiauth_1_1_c_users_manager_comp.html#ae7d339347398810221f754c0c8861756">iauth::CUsersManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiauth_1_1_c_users_manager_comp.html#a669b6af4fdbed390bd4cb738bbaaf07d">iauth::CUsersManagerComp</a>.</p>
 
 </div>
 </div>
@@ -263,7 +263,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa4a7a4c2ca0ddc07c6fc01b209adb1d0"></a><!-- doxytag: member="iauth::IUsersManager::RenameUser" ref="aa4a7a4c2ca0ddc07c6fc01b209adb1d0" args="(int userIndex, const istd::CString &amp;userName)=0" -->
+<a class="anchor" id="ae4ac7950f6f3ae33383753bd6dace182"></a><!-- doxytag: member="iauth::IUsersManager::RenameUser" ref="ae4ac7950f6f3ae33383753bd6dace182" args="(int userIndex, const QString &amp;userName)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -276,7 +276,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>userName</em>&#160;</td>
         </tr>
         <tr>
@@ -289,17 +289,17 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>The method renames the user. </p>
-<p>You should not call method <a class="el" href="classiauth_1_1_c_user.html#afe76408a6870b467c10fa229f71c15d3" title="Set name of user.">CUser::SetUserName()</a> directly, becouse of user name is used as primary key of user list. </p>
+<p>You should not call method <a class="el" href="classiauth_1_1_c_user.html#a4fd652f2f61b787aececbb5947ac16c3" title="Set name of user.">CUser::SetUserName()</a> directly, becouse of user name is used as primary key of user list. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a></td><td>userIndex: user index. </td></tr>
-    <tr><td class="paramname"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a></td><td>userName: the new user name. </td></tr>
+    <tr><td class="paramname">QString</td><td>userIndex: user index. </td></tr>
+    <tr><td class="paramname">QString</td><td>userName: the new user name. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if the user name could be changed, otherwise false. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiauth_1_1_c_users_manager_comp.html#aa475983cdd4b5d544e20c80ded342039">iauth::CUsersManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiauth_1_1_c_users_manager_comp.html#ad2faae709f54d3fa93196a18d72db6b7">iauth::CUsersManagerComp</a>.</p>
 
 </div>
 </div>

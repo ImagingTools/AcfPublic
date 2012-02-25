@@ -62,10 +62,10 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_i_component_note_controller.html#a77ecd5e43d402628129959d657ccbfc4">GetComponentNote</a> (const std::string &amp;componentName)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the note text to the component with the given name <code>componentName</code>.  <a href="#a77ecd5e43d402628129959d657ccbfc4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_i_component_note_controller.html#a4b48032f04647a7f315e5b56d49a5341">SetComponentNote</a> (const std::string &amp;componentName, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;componentNote)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a note <code>componentNote</code> to the component with the given name <code>componentName</code>.  <a href="#a4b48032f04647a7f315e5b56d49a5341"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_i_component_note_controller.html#a69f51967ccb7e7d6b4e48956a6c9816b">GetComponentNote</a> (const std::string &amp;componentName)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the note text to the component with the given name <code>componentName</code>.  <a href="#a69f51967ccb7e7d6b4e48956a6c9816b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_i_component_note_controller.html#a8f80cf84e97e582ba45cd71993a05bc2">SetComponentNote</a> (const std::string &amp;componentName, const QString &amp;componentNote)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a note <code>componentNote</code> to the component with the given name <code>componentName</code>.  <a href="#a8f80cf84e97e582ba45cd71993a05bc2"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface for management of notes in the component registry. </p>
@@ -97,12 +97,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a77ecd5e43d402628129959d657ccbfc4"></a><!-- doxytag: member="icmpstr::IComponentNoteController::GetComponentNote" ref="a77ecd5e43d402628129959d657ccbfc4" args="(const std::string &amp;componentName)=0" -->
+<a class="anchor" id="a69f51967ccb7e7d6b4e48956a6c9816b"></a><!-- doxytag: member="icmpstr::IComponentNoteController::GetComponentNote" ref="a69f51967ccb7e7d6b4e48956a6c9816b" args="(const std::string &amp;componentName)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> icmpstr::IComponentNoteController::GetComponentNote </td>
+          <td class="memname">virtual QString icmpstr::IComponentNoteController::GetComponentNote </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>componentName</em></td><td>)</td>
@@ -114,11 +114,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the note text to the component with the given name <code>componentName</code>. </p>
 
-<p>Implemented in <a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#af5eb5eb15c10b75e18cd97ecf81d909c">icmpstr::CVisualRegistryComp</a>.</p>
+<p>Implemented in <a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a680acbb03b1ccd9d46de5c77cfb7d101">icmpstr::CVisualRegistryComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4b48032f04647a7f315e5b56d49a5341"></a><!-- doxytag: member="icmpstr::IComponentNoteController::SetComponentNote" ref="a4b48032f04647a7f315e5b56d49a5341" args="(const std::string &amp;componentName, const istd::CString &amp;componentNote)=0" -->
+<a class="anchor" id="a8f80cf84e97e582ba45cd71993a05bc2"></a><!-- doxytag: member="icmpstr::IComponentNoteController::SetComponentNote" ref="a8f80cf84e97e582ba45cd71993a05bc2" args="(const std::string &amp;componentName, const QString &amp;componentNote)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -131,7 +131,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>componentNote</em>&#160;</td>
         </tr>
         <tr>
@@ -145,7 +145,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a note <code>componentNote</code> to the component with the given name <code>componentName</code>. </p>
 
-<p>Implemented in <a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#af4885f299b0179a390e3bab625b0e8f9">icmpstr::CVisualRegistryComp</a>.</p>
+<p>Implemented in <a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a9ce15af1be0d0954f56053bcc3042a60">icmpstr::CVisualRegistryComp</a>.</p>
 
 </div>
 </div>

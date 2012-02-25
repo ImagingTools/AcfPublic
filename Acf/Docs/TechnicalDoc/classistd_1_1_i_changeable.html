@@ -95,10 +95,10 @@ Public Types</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags for supported operations.  <a href="classistd_1_1_i_changeable.html#adfacdea73eb745825f6797b4b8986eac">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_changeable.html#ae9b6d7665bb5c81fab25a16350c0da85">BeginChanges</a> (int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *changeParamsPtr=NULL)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the change transaction.  <a href="#ae9b6d7665bb5c81fab25a16350c0da85"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_changeable.html#a93c184672f907feae1f8093352139799">EndChanges</a> (int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *changeParamsPtr=NULL)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the change transaction.  <a href="#a93c184672f907feae1f8093352139799"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_changeable.html#a9a50e8838a5e11873e8d8c63a46efb8f">BeginChanges</a> (int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *changeParamsPtr=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the change transaction.  <a href="#a9a50e8838a5e11873e8d8c63a46efb8f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_changeable.html#aafec5866e1ac0f15e4bcd674d0a1f322">EndChanges</a> (int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *changeParamsPtr=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the change transaction.  <a href="#aafec5866e1ac0f15e4bcd674d0a1f322"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_changeable.html#a9577d4917a5131637c35ef6b6e9fc42a">GetSupportedOperations</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#a9577d4917a5131637c35ef6b6e9fc42a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_changeable.html#a48106c79905f877b7bcca41755bbde49">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">IChangeable</a> &amp;object)</td></tr>
@@ -146,7 +146,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classiproc_1_1_i_supplier.html#a493b9bac260cff15679441656b15f3ca">iproc::ISupplier</a>, <a class="el" href="classimath_1_1_t_fulcrum_grid_function_base.html#a67e88b1337d62a4b62cc2c69e7b5bd12">imath::TFulcrumGridFunctionBase&lt; Argument, Result, Fulcrums &gt;</a>, <a class="el" href="classicomp_1_1_i_registry.html#a8322a59df1735f4c7ff97cc66bc6e22a">icomp::IRegistry</a>, <a class="el" href="classicomp_1_1_i_registry_element.html#a64cf0ec70bca7d23aef303d98baedfba">icomp::IRegistryElement</a>, <a class="el" href="classiprm_1_1_i_params_manager.html#a46124baa6dd501af2dd542770efe4b0b">iprm::IParamsManager</a>, <a class="el" href="classidoc_1_1_i_document_manager.html#a107e005cba647e72b873771fc3f073f7">idoc::IDocumentManager</a>, <a class="el" href="classicmpstr_1_1_i_element_selection_info.html#a63c33646e2066bbeeef15c7f176c7429">icmpstr::IElementSelectionInfo</a>, <a class="el" href="classibase_1_1_t_container.html#a2e9013618def6a035172448c054db9ea">ibase::TContainer&lt; ItemClass, ContainerClass &gt;</a>, <a class="el" href="classibase_1_1_t_container.html#a2e9013618def6a035172448c054db9ea">ibase::TContainer&lt; std::pair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, std::string &gt;, std::vector&lt; std::pair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, std::string &gt; &gt; &gt;</a>, <a class="el" href="classibase_1_1_i_message_container.html#af2755abeca53284af38ccf73ba57d8a9">ibase::IMessageContainer</a>, <a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#a4f76b9eab77276b84152d121cbfe600e">iproc::CDelegatedProgressManager</a>, <a class="el" href="classiqt_1_1_c_reflected_bitmap_base.html#a4f7483499db2dfdcde2463f656a56ea6">iqt::CReflectedBitmapBase</a>, <a class="el" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1e">iprm::ISelectionConstraints</a>, <a class="el" href="classi2d_1_1_i_object2d.html#ad93b4b065f29fa85330055454c837aca">i2d::IObject2d</a>, <a class="el" href="classiprm_1_1_i_selection_param.html#a092f5d4176d748b596be4ec0464827b3">iprm::ISelectionParam</a>, <a class="el" href="classicmpstr_1_1_i_component_note_controller.html#acdc9337112c091fe77639f15a5e93f17">icmpstr::IComponentNoteController</a>, <a class="el" href="classiprm_1_1_i_options_manager.html#a8e1c581835bcc37db3e25212902013cc">iprm::IOptionsManager</a>, <a class="el" href="classiproc_1_1_i_state_controller.html#a689c37ae7122c3dcf699bd8d0f721a2e">iproc::IStateController</a>, and <a class="el" href="classimod_1_1_i_undo_manager.html#a2165061dd31a7c451b87c89dd83558b5">imod::IUndoManager</a>.</p>
+<p>Reimplemented in <a class="el" href="classiproc_1_1_i_supplier.html#a493b9bac260cff15679441656b15f3ca">iproc::ISupplier</a>, <a class="el" href="classimath_1_1_t_fulcrum_grid_function_base.html#a67e88b1337d62a4b62cc2c69e7b5bd12">imath::TFulcrumGridFunctionBase&lt; Argument, Result, Fulcrums &gt;</a>, <a class="el" href="classicomp_1_1_i_registry.html#a8322a59df1735f4c7ff97cc66bc6e22a">icomp::IRegistry</a>, <a class="el" href="classiprm_1_1_i_params_manager.html#a46124baa6dd501af2dd542770efe4b0b">iprm::IParamsManager</a>, <a class="el" href="classicomp_1_1_i_registry_element.html#a64cf0ec70bca7d23aef303d98baedfba">icomp::IRegistryElement</a>, <a class="el" href="classidoc_1_1_i_document_manager.html#a107e005cba647e72b873771fc3f073f7">idoc::IDocumentManager</a>, <a class="el" href="classicmpstr_1_1_i_element_selection_info.html#a63c33646e2066bbeeef15c7f176c7429">icmpstr::IElementSelectionInfo</a>, <a class="el" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1e">iprm::ISelectionConstraints</a>, <a class="el" href="classibase_1_1_t_container.html#a2e9013618def6a035172448c054db9ea">ibase::TContainer&lt; ItemClass, ContainerClass &gt;</a>, <a class="el" href="classibase_1_1_t_container.html#a2e9013618def6a035172448c054db9ea">ibase::TContainer&lt; std::pair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, std::string &gt;, std::vector&lt; std::pair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, std::string &gt; &gt; &gt;</a>, <a class="el" href="classiprm_1_1_i_selection_param.html#a092f5d4176d748b596be4ec0464827b3">iprm::ISelectionParam</a>, <a class="el" href="classibase_1_1_i_message_container.html#af2755abeca53284af38ccf73ba57d8a9">ibase::IMessageContainer</a>, <a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#a4f76b9eab77276b84152d121cbfe600e">iproc::CDelegatedProgressManager</a>, <a class="el" href="classiqt_1_1_c_reflected_bitmap_base.html#a4f7483499db2dfdcde2463f656a56ea6">iqt::CReflectedBitmapBase</a>, <a class="el" href="classi2d_1_1_i_object2d.html#ad93b4b065f29fa85330055454c837aca">i2d::IObject2d</a>, <a class="el" href="classicmpstr_1_1_i_component_note_controller.html#acdc9337112c091fe77639f15a5e93f17">icmpstr::IComponentNoteController</a>, <a class="el" href="classiprm_1_1_i_options_manager.html#a8e1c581835bcc37db3e25212902013cc">iprm::IOptionsManager</a>, <a class="el" href="classiproc_1_1_i_state_controller.html#a689c37ae7122c3dcf699bd8d0f721a2e">iproc::IStateController</a>, and <a class="el" href="classimod_1_1_i_undo_manager.html#a2165061dd31a7c451b87c89dd83558b5">imod::IUndoManager</a>.</p>
 
 <p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00021">21</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 
@@ -184,7 +184,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ae9b6d7665bb5c81fab25a16350c0da85"></a><!-- doxytag: member="istd::IChangeable::BeginChanges" ref="ae9b6d7665bb5c81fab25a16350c0da85" args="(int changeFlags, istd::IPolymorphic *changeParamsPtr=NULL)" -->
+<a class="anchor" id="a9a50e8838a5e11873e8d8c63a46efb8f"></a><!-- doxytag: member="istd::IChangeable::BeginChanges" ref="a9a50e8838a5e11873e8d8c63a46efb8f" args="(int changeFlags, istd::IPolymorphic *changeParamsPtr=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -198,7 +198,7 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
-          <td class="paramname"><em>changeParamsPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>changeParamsPtr</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -210,10 +210,10 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Starts the change transaction. </p>
-<dl class="note"><dt><b>Note:</b></dt><dd>Please note that the <code>changeFlags</code> and <code>changeParamsPtr</code> must not be identical with the corresponded parameters in <a class="el" href="classistd_1_1_i_changeable.html#a93c184672f907feae1f8093352139799" title="Ends the change transaction.">EndChanges()</a>. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_changeable.html#a93c184672f907feae1f8093352139799" title="Ends the change transaction.">EndChanges()</a> </dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>Please note that the <code>changeFlags</code> and <code>changeParamsPtr</code> must not be identical with the corresponded parameters in <a class="el" href="classistd_1_1_i_changeable.html#aafec5866e1ac0f15e4bcd674d0a1f322" title="Ends the change transaction.">EndChanges()</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_changeable.html#aafec5866e1ac0f15e4bcd674d0a1f322" title="Ends the change transaction.">EndChanges()</a> </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classistd_1_1_c_change_delegator.html#ab5bd9e015ddfa3f39760e4e52b622169">istd::CChangeDelegator</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a32992a115b93d87e64cbd956fb1938e4">istd::TUpdateManagerWrap&lt; iser::ISerializable &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a32992a115b93d87e64cbd956fb1938e4">istd::TUpdateManagerWrap&lt; iser::IObject &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a32992a115b93d87e64cbd956fb1938e4">istd::TUpdateManagerWrap&lt; iimg::CGeneralBitmap &gt;</a>, <a class="el" href="classistd_1_1_t_change_binder.html#a1e7618a528226aac5afcda4d0d98f60f">istd::TChangeBinder&lt; ibase::IHierarchicalCommand, CChangeDelegator &gt;</a>, and <a class="el" href="classistd_1_1_t_change_binder.html#a1e7618a528226aac5afcda4d0d98f60f">istd::TChangeBinder&lt; Base, CChangeDelegator &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classistd_1_1_c_change_delegator.html#ab5bd9e015ddfa3f39760e4e52b622169">istd::CChangeDelegator</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#aea4da8df4e767f245878617247d16aa9">istd::TUpdateManagerWrap&lt; iser::ISerializable &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#aea4da8df4e767f245878617247d16aa9">istd::TUpdateManagerWrap&lt; iser::IObject &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#aea4da8df4e767f245878617247d16aa9">istd::TUpdateManagerWrap&lt; iimg::CGeneralBitmap &gt;</a>, <a class="el" href="classistd_1_1_t_change_binder.html#a1e7618a528226aac5afcda4d0d98f60f">istd::TChangeBinder&lt; ibase::IHierarchicalCommand, CChangeDelegator &gt;</a>, and <a class="el" href="classistd_1_1_t_change_binder.html#a1e7618a528226aac5afcda4d0d98f60f">istd::TChangeBinder&lt; Base, CChangeDelegator &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00112">112</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 
@@ -270,7 +270,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a93c184672f907feae1f8093352139799"></a><!-- doxytag: member="istd::IChangeable::EndChanges" ref="a93c184672f907feae1f8093352139799" args="(int changeFlags, istd::IPolymorphic *changeParamsPtr=NULL)" -->
+<a class="anchor" id="aafec5866e1ac0f15e4bcd674d0a1f322"></a><!-- doxytag: member="istd::IChangeable::EndChanges" ref="aafec5866e1ac0f15e4bcd674d0a1f322" args="(int changeFlags, istd::IPolymorphic *changeParamsPtr=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -284,7 +284,7 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
-          <td class="paramname"><em>changeParamsPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>changeParamsPtr</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -296,10 +296,10 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Ends the change transaction. </p>
-<dl class="note"><dt><b>Note:</b></dt><dd>Please note that the <code>changeFlags</code> and <code>changeParamsPtr</code> must not be identical with the corresponded parameters in <a class="el" href="classistd_1_1_i_changeable.html#ae9b6d7665bb5c81fab25a16350c0da85" title="Starts the change transaction.">BeginChanges()</a>. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_changeable.html#ae9b6d7665bb5c81fab25a16350c0da85" title="Starts the change transaction.">BeginChanges()</a> </dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>Please note that the <code>changeFlags</code> and <code>changeParamsPtr</code> must not be identical with the corresponded parameters in <a class="el" href="classistd_1_1_i_changeable.html#a9a50e8838a5e11873e8d8c63a46efb8f" title="Starts the change transaction.">BeginChanges()</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_changeable.html#a9a50e8838a5e11873e8d8c63a46efb8f" title="Starts the change transaction.">BeginChanges()</a> </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classiqt_1_1_notification_target.html#af5197efcb42fe1c397d20bcdd6c9b147">iqt::NotificationTarget</a>, <a class="el" href="classistd_1_1_c_change_delegator.html#ab62c01f17c5c13b3f3b482bb16b181a9">istd::CChangeDelegator</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a0fa0301895011cbad08b00cee882e7bb">istd::TUpdateManagerWrap&lt; iser::ISerializable &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a0fa0301895011cbad08b00cee882e7bb">istd::TUpdateManagerWrap&lt; iser::IObject &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a0fa0301895011cbad08b00cee882e7bb">istd::TUpdateManagerWrap&lt; iimg::CGeneralBitmap &gt;</a>, <a class="el" href="classistd_1_1_t_change_binder.html#a1872440622c281fff3753320519ca873">istd::TChangeBinder&lt; ibase::IHierarchicalCommand, CChangeDelegator &gt;</a>, and <a class="el" href="classistd_1_1_t_change_binder.html#a1872440622c281fff3753320519ca873">istd::TChangeBinder&lt; Base, CChangeDelegator &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqt_1_1_notification_target.html#af5197efcb42fe1c397d20bcdd6c9b147">iqt::NotificationTarget</a>, <a class="el" href="classistd_1_1_c_change_delegator.html#ab62c01f17c5c13b3f3b482bb16b181a9">istd::CChangeDelegator</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a4156c05c498281ba0454fed9c446d697">istd::TUpdateManagerWrap&lt; iser::ISerializable &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a4156c05c498281ba0454fed9c446d697">istd::TUpdateManagerWrap&lt; iser::IObject &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a4156c05c498281ba0454fed9c446d697">istd::TUpdateManagerWrap&lt; iimg::CGeneralBitmap &gt;</a>, <a class="el" href="classistd_1_1_t_change_binder.html#a1872440622c281fff3753320519ca873">istd::TChangeBinder&lt; ibase::IHierarchicalCommand, CChangeDelegator &gt;</a>, and <a class="el" href="classistd_1_1_t_change_binder.html#a1872440622c281fff3753320519ca873">istd::TChangeBinder&lt; Base, CChangeDelegator &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00118">118</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 

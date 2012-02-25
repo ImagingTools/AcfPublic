@@ -84,11 +84,11 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiqt_1_1_c_packages_loader_comp.html">iqt::CPackagesLoaderComp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_packages_loader_ext_comp.html#ae241f35d5bc5a7af5eb00de4423d8ebb">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_packages_loader_ext_comp.html#aed999957e60e1a2db7840d1ad4307239">RegisterPackagesDir</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;subDir)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_packages_loader_ext_comp.html#a50cf3d669c45470d7480ff86caf717df">GetPackageInfoPath</a> (const std::string &amp;packageId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get path of package info directory.  <a href="#a50cf3d669c45470d7480ff86caf717df"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_packages_loader_ext_comp.html#aa17e2a97d9e91943b509d1f66560a211">GetComponentInfoPath</a> (const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get path of component info directory.  <a href="#aa17e2a97d9e91943b509d1f66560a211"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_packages_loader_ext_comp.html#a3f4ae52aeb05ac8a34cfcd7318a25d49">RegisterPackagesDir</a> (const QString &amp;subDir)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_packages_loader_ext_comp.html#af45430cd25c2ce5ca015f27a7b26bc8a">GetPackageInfoPath</a> (const std::string &amp;packageId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get path of package info directory.  <a href="#af45430cd25c2ce5ca015f27a7b26bc8a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_packages_loader_ext_comp.html#a9de09fcf0a4c1705c5e9ff37487252b5">GetComponentInfoPath</a> (const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get path of component info directory.  <a href="#a9de09fcf0a4c1705c5e9ff37487252b5"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -112,12 +112,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aa17e2a97d9e91943b509d1f66560a211"></a><!-- doxytag: member="icmpstr::CPackagesLoaderExtComp::GetComponentInfoPath" ref="aa17e2a97d9e91943b509d1f66560a211" args="(const icomp::CComponentAddress &amp;address) const " -->
+<a class="anchor" id="a9de09fcf0a4c1705c5e9ff37487252b5"></a><!-- doxytag: member="icmpstr::CPackagesLoaderExtComp::GetComponentInfoPath" ref="a9de09fcf0a4c1705c5e9ff37487252b5" args="(const icomp::CComponentAddress &amp;address) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> icmpstr::CPackagesLoaderExtComp::GetComponentInfoPath </td>
+          <td class="memname">virtual QString icmpstr::CPackagesLoaderExtComp::GetComponentInfoPath </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;&#160;</td>
           <td class="paramname"><em>address</em></td><td>)</td>
@@ -129,16 +129,16 @@ Public Member Functions</h2></td></tr>
 
 <p>Get path of component info directory. </p>
 
-<p>Implements <a class="el" href="classicmpstr_1_1_i_external_meta_info_manager.html#ac8d86d84b027d31c7748d525befd2c7e">icmpstr::IExternalMetaInfoManager</a>.</p>
+<p>Implements <a class="el" href="classicmpstr_1_1_i_external_meta_info_manager.html#a44ef238560ff30dda93affd2240442e8">icmpstr::IExternalMetaInfoManager</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a50cf3d669c45470d7480ff86caf717df"></a><!-- doxytag: member="icmpstr::CPackagesLoaderExtComp::GetPackageInfoPath" ref="a50cf3d669c45470d7480ff86caf717df" args="(const std::string &amp;packageId) const " -->
+<a class="anchor" id="af45430cd25c2ce5ca015f27a7b26bc8a"></a><!-- doxytag: member="icmpstr::CPackagesLoaderExtComp::GetPackageInfoPath" ref="af45430cd25c2ce5ca015f27a7b26bc8a" args="(const std::string &amp;packageId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> icmpstr::CPackagesLoaderExtComp::GetPackageInfoPath </td>
+          <td class="memname">virtual QString icmpstr::CPackagesLoaderExtComp::GetPackageInfoPath </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>packageId</em></td><td>)</td>
@@ -150,18 +150,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Get path of package info directory. </p>
 
-<p>Implements <a class="el" href="classicmpstr_1_1_i_external_meta_info_manager.html#a21463e422236623c146d73b26a043f67">icmpstr::IExternalMetaInfoManager</a>.</p>
+<p>Implements <a class="el" href="classicmpstr_1_1_i_external_meta_info_manager.html#ac429cd4cb914d8a84f8f30a35f2f30f6">icmpstr::IExternalMetaInfoManager</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aed999957e60e1a2db7840d1ad4307239"></a><!-- doxytag: member="icmpstr::CPackagesLoaderExtComp::RegisterPackagesDir" ref="aed999957e60e1a2db7840d1ad4307239" args="(const istd::CString &amp;subDir)" -->
+<a class="anchor" id="a3f4ae52aeb05ac8a34cfcd7318a25d49"></a><!-- doxytag: member="icmpstr::CPackagesLoaderExtComp::RegisterPackagesDir" ref="a3f4ae52aeb05ac8a34cfcd7318a25d49" args="(const QString &amp;subDir)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool icmpstr::CPackagesLoaderExtComp::RegisterPackagesDir </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>subDir</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -169,7 +169,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiqt_1_1_c_packages_loader_comp.html#aaae7ca8b4f93e335aed3150834cc4df7">iqt::CPackagesLoaderComp</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqt_1_1_c_packages_loader_comp.html#ae16fedaf6f730869f26d890dbb7e1e02">iqt::CPackagesLoaderComp</a>.</p>
 
 </div>
 </div>

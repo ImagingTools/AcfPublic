@@ -89,7 +89,7 @@ bool TVersionInfoSerializer<VersionInfo>::ReadVersion(VersionInfo* versionInfoPt
 			retVal = retVal && archive.Process(version);
 			retVal = retVal && archive.EndTag(s_versionNumberTag);
 	
-			istd::CString description;
+			QString description;
 			retVal = retVal && archive.BeginTag(s_versionDescriptionTag);
 			retVal = retVal && archive.Process(description);
 			retVal = retVal && archive.EndTag(s_versionDescriptionTag);
@@ -154,7 +154,7 @@ bool TVersionInfoSerializer<VersionInfo>::WriteVersion(const VersionInfo* versio
 		retVal = retVal && archive.Process(versionNumber);
 		retVal = retVal && archive.EndTag(s_versionNumberTag);
 
-		istd::CString description = versionInfoPtr->GetVersionIdDescription(id);
+		QString description = versionInfoPtr->GetVersionIdDescription(id);
 		retVal = retVal && archive.BeginTag(s_versionDescriptionTag);
 		retVal = retVal && archive.Process(description);
 		retVal = retVal && archive.EndTag(s_versionDescriptionTag);

@@ -55,14 +55,14 @@
 <a name="l00031"></a>00031        I_END_COMPONENT;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <span class="comment">// reimplemented (ibase::IFileConvertCopy)</span>
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_external_file_converter_comp.html#af64bae8788b74ea045ee59c083171425" title="Copy a file inputFilePath to destination outputFilePath.">ConvertFile</a>(
-<a name="l00035"></a>00035                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; inputFilePath,
-<a name="l00036"></a>00036                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; outputFilePath,
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_external_file_converter_comp.html#abc831890e908322c58f35b6ae9792d40" title="Copy a file inputFilePath to destination outputFilePath.">ConvertFile</a>(
+<a name="l00035"></a>00035                             <span class="keyword">const</span> QString&amp; inputFilePath,
+<a name="l00036"></a>00036                             <span class="keyword">const</span> QString&amp; outputFilePath,
 <a name="l00037"></a>00037                             <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">iprm::IParamsSet</a>* paramsPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
 <a name="l00038"></a>00038 
 <a name="l00039"></a>00039 <span class="keyword">private</span>:
 <a name="l00040"></a>00040        I_REF(<a class="code" href="classibase_1_1_i_process_executor.html" title="Main entry point of component-based application.">ibase::IProcessExecutor</a>, m_processExecuterCompPtr);
-<a name="l00041"></a>00041        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_processArgumentsAttrPtr);
+<a name="l00041"></a>00041        I_ATTR(QString, m_processArgumentsAttrPtr);
 <a name="l00042"></a>00042        I_REF(<a class="code" href="classiprm_1_1_i_file_name_param.html" title="Common interface for a file system item settings.">iprm::IFileNameParam</a>, m_executablePathCompPtr);
 <a name="l00043"></a>00043 };
 <a name="l00044"></a>00044 

@@ -23,6 +23,10 @@
 #include "iocv/COcvVideoControllerComp.h"
 
 
+// Qt includes
+#include <QStringList>
+
+
 // ACF includes
 #include "istd/TChangeNotifier.h"
 
@@ -75,18 +79,18 @@ int COcvVideoControllerComp::DoProcessing(
 
 // reimplemented (imm::IMediaController)
 
-istd::CString COcvVideoControllerComp::GetOpenedMediumUrl() const
+QString COcvVideoControllerComp::GetOpenedMediumUrl() const
 {
 	return m_mediumUrl;
 }
 
 
-bool COcvVideoControllerComp::OpenMediumUrl(const istd::CString& url, bool autoPlay)
+bool COcvVideoControllerComp::OpenMediumUrl(const QString& url, bool autoPlay)
 {
 	if (m_mediumUrl != url){
 		EnsureMediumClosed();
 
-		m_capturePtr.SetPtr(cvCreateFileCapture(url.ToString().c_str()));
+		m_capturePtr.SetPtr(cvCreateFileCapture(url.toStdString().c_str()));
 		if (!m_capturePtr.IsValid()){
 			return false;
 		}
@@ -228,7 +232,7 @@ bool COcvVideoControllerComp::SetCurrentFrame(int frameIndex)
 
 // reimplemented (iser::IFileTypeInfo)
 
-bool COcvVideoControllerComp::GetFileExtensions(istd::CStringList& result, int flags, bool doAppend) const
+bool COcvVideoControllerComp::GetFileExtensions(QStringList& result, int flags, bool doAppend) const
 {
 	if (!doAppend){
 		result.clear();
@@ -248,7 +252,7 @@ bool COcvVideoControllerComp::GetFileExtensions(istd::CStringList& result, int f
 }
 
 
-istd::CString COcvVideoControllerComp::GetTypeDescription(const istd::CString* /*extensionPtr*/) const
+QString COcvVideoControllerComp::GetTypeDescription(const QString* /*extensionPtr*/) const
 {
 	return "Video files";
 }

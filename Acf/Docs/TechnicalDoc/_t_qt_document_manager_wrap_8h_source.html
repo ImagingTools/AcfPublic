@@ -55,7 +55,7 @@
 <a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#af5a2a46082ba3bf9e24b7fc67f117f42">OnSaveSettings</a>(QSettings&amp; settings) <span class="keyword">const</span>;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <span class="comment">// pseudo-reimplemented (idoc::CSingleDocumentManagerBase)</span>
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#ae493519f02270679f872613a2ebcfb93">GetSaveFilePath</a>(<span class="keyword">const</span> std::string&amp; documentTypeId) <span class="keyword">const</span>;
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> QString <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a92ce6680824d350062e26a18072596fd">GetSaveFilePath</a>(<span class="keyword">const</span> std::string&amp; documentTypeId) <span class="keyword">const</span>;
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="keyword">protected</span>:
 <a name="l00041"></a>00041        QString <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a97667173992d64a70098adfcabeb1c95" title="Creates the filter for the file selection dialog.">CreateFileDialogFilter</a>(<span class="keyword">const</span> std::string* documentTypeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <span class="keywordtype">int</span> flags = 0) <span class="keyword">const</span>;
@@ -95,7 +95,7 @@
 <a name="l00075"></a>00075 <span class="comment">// pseudo-reimplemented (idoc::CSingleDocumentManagerBase)</span>
 <a name="l00076"></a>00076 
 <a name="l00077"></a>00077 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base, <span class="keyword">class</span> Gui&gt;
-<a name="l00078"></a><a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#ae493519f02270679f872613a2ebcfb93">00078</a> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#ae493519f02270679f872613a2ebcfb93">TQtDocumentManagerWrap&lt;Base, Gui&gt;::GetSaveFilePath</a>(<span class="keyword">const</span> std::string&amp; documentTypeId)<span class="keyword"> const</span>
+<a name="l00078"></a><a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a92ce6680824d350062e26a18072596fd">00078</a> QString <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a92ce6680824d350062e26a18072596fd">TQtDocumentManagerWrap&lt;Base, Gui&gt;::GetSaveFilePath</a>(<span class="keyword">const</span> std::string&amp; documentTypeId)<span class="keyword"> const</span>
 <a name="l00079"></a>00079 <span class="keyword"></span>{
 <a name="l00080"></a>00080        QString filter = CreateFileDialogFilter(&amp;documentTypeId, <a class="code" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8aa405328fad211e44b5a3eca44411accb" title="Operations with specified file name should be considered.">iser::IFileLoader::QF_FILE</a> | <a class="code" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a5ff3ec0ae476ca071cc761ed8cba3a81" title="No loading operation should be considered.">iser::IFileLoader::QF_SAVE</a>);
 <a name="l00081"></a>00081 
@@ -103,7 +103,7 @@
 <a name="l00083"></a>00083 
 <a name="l00084"></a>00084        UpdateLastDirectory(filePath);
 <a name="l00085"></a>00085 
-<a name="l00086"></a>00086        <span class="keywordflow">return</span> <a class="code" href="namespaceiqt.html#a1e4072bf6946fe77601821fc62a51d64">iqt::GetCString</a>(filePath);
+<a name="l00086"></a>00086        <span class="keywordflow">return</span> filePath;
 <a name="l00087"></a>00087 }
 <a name="l00088"></a>00088 
 <a name="l00089"></a>00089 

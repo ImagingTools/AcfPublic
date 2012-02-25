@@ -57,16 +57,16 @@
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        <span class="comment">// reimplemented (iser::IVersionInfo)</span>
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_version_info_comp.html#a9d9abf7007eabf5efe5f373f57364c34" title="Get version of archived stream for specific versioning type.">GetVersionNumber</a>(<span class="keywordtype">int</span> versionId, <a class="code" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classibase_1_1_c_version_info_comp.html#a7c5e640af70285de2960d77e8005f3a6" title="Get description of version ID.">GetVersionIdDescription</a>(<span class="keywordtype">int</span> versionId) <span class="keyword">const</span>;
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> QString <a class="code" href="classibase_1_1_c_version_info_comp.html#a24f8c2a37f12a665857fa66d65c52ea4" title="Get description of version ID.">GetVersionIdDescription</a>(<span class="keywordtype">int</span> versionId) <span class="keyword">const</span>;
 <a name="l00037"></a>00037        <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_i_version_info.html#a14c10439f5c53047c6b54b3a6168264c">VersionIds</a> <a class="code" href="classibase_1_1_c_version_info_comp.html#a4896a13d75a4f06c0ae3532e010c6ca6" title="Get list of version ID&#39;s.">GetVersionIds</a>() <span class="keyword">const</span>;
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classibase_1_1_c_version_info_comp.html#a51f5b2be4f96e5c71c196c9f882d597d" title="Encode version number to human readable form.">GetEncodedVersionName</a>(<span class="keywordtype">int</span> versionId, <a class="code" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> versionNumber) <span class="keyword">const</span>;
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> QString <a class="code" href="classibase_1_1_c_version_info_comp.html#a688ab02824b860d386eb4cf2a86d4e3b" title="Encode version number to human readable form.">GetEncodedVersionName</a>(<span class="keywordtype">int</span> versionId, <a class="code" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> versionNumber) <span class="keyword">const</span>;
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040 <span class="keyword">private</span>:
 <a name="l00041"></a>00041        I_ATTR(<span class="keywordtype">int</span>, m_versionIdAttrPtr);
 <a name="l00042"></a>00042        I_ATTR(<span class="keywordtype">int</span>, m_versionNumberAttrPtr);
-<a name="l00043"></a>00043        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_versionIdDescriptionAttrPtr);
+<a name="l00043"></a>00043        I_ATTR(QString, m_versionIdDescriptionAttrPtr);
 <a name="l00044"></a>00044        I_MULTIATTR(<span class="keywordtype">int</span>, m_knownVersionsAttrPtr);
-<a name="l00045"></a>00045        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_knownVersionNamesAttrPtr);
+<a name="l00045"></a>00045        I_MULTIATTR(QString, m_knownVersionNamesAttrPtr);
 <a name="l00046"></a>00046        I_ATTR(<span class="keywordtype">bool</span>, m_isExtensionUsedAttrPtr);
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048        I_REF(<a class="code" href="classiser_1_1_i_version_info.html" title="Provides access to version information.">iser::IVersionInfo</a>, m_slaveVersionInfoCompPtr);

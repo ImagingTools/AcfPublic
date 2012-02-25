@@ -24,7 +24,7 @@
 #define iipr_CRectDerivativeProcessorComp_included
 
 
-#include "istd/CString.h"
+#include <QString>
 
 #include "icomp/CComponentBase.h"
 
@@ -55,7 +55,7 @@ protected:
 	virtual void OnComponentCreated();
 
 private:
-	I_ATTR(istd::CString, m_filterParamsIdAttrPtr);
+	I_ATTR(QString, m_filterParamsIdAttrPtr);
 };
 
 

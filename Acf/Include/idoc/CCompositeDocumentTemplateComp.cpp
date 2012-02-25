@@ -57,7 +57,7 @@ IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetDocumentTypeIds() cons
 }
 
 
-istd::CString CCompositeDocumentTemplateComp::GetDocumentTypeName(const std::string& documentTypeId) const
+QString CCompositeDocumentTemplateComp::GetDocumentTypeName(const std::string& documentTypeId) const
 {
 	IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(documentTypeId);
 	if (iter != m_idToTemplateMap.end()){
@@ -85,7 +85,7 @@ iser::IFileTypeInfo* CCompositeDocumentTemplateComp::GetDocumentFileTypeInfo(con
 }
 
 
-IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetDocumentTypeIdsForFile(const istd::CString& filePath) const
+IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetDocumentTypeIdsForFile(const QString& filePath) const
 {
 	Ids retVal;
 
@@ -103,7 +103,7 @@ IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetDocumentTypeIdsForFile
 }
 
 
-istd::CString CCompositeDocumentTemplateComp::GetDefaultDirectory(const istd::CString& sugestedDir, const std::string* documentTypeIdPtr) const
+QString CCompositeDocumentTemplateComp::GetDefaultDirectory(const QString& sugestedDir, const std::string* documentTypeIdPtr) const
 {
 	if (documentTypeIdPtr != NULL){
 		IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(*documentTypeIdPtr);
@@ -121,8 +121,8 @@ istd::CString CCompositeDocumentTemplateComp::GetDefaultDirectory(const istd::CS
 	for (int i = 0; i < slavesCount; ++i){
 		const IDocumentTemplate* slavePtr = m_slaveTemplatesCompPtr[i];
 		if (slavePtr != NULL){
-			istd::CString retVal = slavePtr->GetDefaultDirectory(sugestedDir);
-			if (retVal.IsEmpty()){
+			QString retVal = slavePtr->GetDefaultDirectory(sugestedDir);
+			if (retVal.isEmpty()){
 				return retVal;
 			}
 		}
@@ -148,7 +148,7 @@ IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetViewTypeIds(const std:
 }
 
 
-istd::CString CCompositeDocumentTemplateComp::GetViewTypeName(
+QString CCompositeDocumentTemplateComp::GetViewTypeName(
 			const std::string& documentTypeId,
 			const std::string& viewTypeId) const
 {

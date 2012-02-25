@@ -45,7 +45,7 @@ namespace iqt
 
 bool CClipboardSerializerComp::IsOperationSupported(
 			const istd::IChangeable* dataObjectPtr,
-			const istd::CString* filePathPtr,
+			const QString* filePathPtr,
 			int flags,
 			bool beQuiet) const
 {
@@ -65,11 +65,11 @@ bool CClipboardSerializerComp::IsOperationSupported(
 		return false;
 	}
 
-	return (filePathPtr == NULL) || filePathPtr->IsEmpty();
+	return (filePathPtr == NULL) || filePathPtr->isEmpty();
 }
 
 
-int CClipboardSerializerComp::LoadFromFile(istd::IChangeable& data, const istd::CString& /*filePath*/) const
+int CClipboardSerializerComp::LoadFromFile(istd::IChangeable& data, const QString& /*filePath*/) const
 {
 	if (IsOperationSupported(&data, NULL, QF_LOAD | QF_ANONYMOUS, false)){
 		iser::ISerializable* serializablePtr = dynamic_cast<iser::ISerializable*>(const_cast<istd::IChangeable*>(&data));
@@ -78,7 +78,7 @@ int CClipboardSerializerComp::LoadFromFile(istd::IChangeable& data, const istd::
 		const QClipboard* clipboardPtr = QApplication::clipboard();
 		const QMimeData* mimeDataPtr = clipboardPtr->mimeData();
 
-		QString mimeType = iqt::GetQString(*m_mimeTypeAttrPtr);
+		QString mimeType = *m_mimeTypeAttrPtr;
 		if (mimeDataPtr->hasFormat(mimeType)){
 			QByteArray mimeData = mimeDataPtr->data(mimeType);
 			if (!mimeData.isEmpty()){
@@ -105,7 +105,7 @@ int CClipboardSerializerComp::LoadFromFile(istd::IChangeable& data, const istd::
 }
 
 
-int CClipboardSerializerComp::SaveToFile(const istd::IChangeable& data, const istd::CString& /*filePath*/) const
+int CClipboardSerializerComp::SaveToFile(const istd::IChangeable& data, const QString& /*filePath*/) const
 {
 	if (IsOperationSupported(&data, NULL, QF_SAVE | QF_ANONYMOUS, false)){
 		QClipboard* clipboardPtr = QApplication::clipboard();
@@ -120,7 +120,7 @@ int CClipboardSerializerComp::SaveToFile(const istd::IChangeable& data, const is
 
 			iser::CMemoryWriteArchive archive(m_versionInfoCompPtr.GetPtr());
 			if (serializablePtr->Serialize(archive)){
-				QString mimeType = iqt::GetQString(*m_mimeTypeAttrPtr);
+				QString mimeType = *m_mimeTypeAttrPtr;
 				mimeDataPtr->setData(mimeType, QByteArray((const char*)archive.GetBuffer(), archive.GetBufferSize()));
 
 				clipboardPtr->setMimeData(mimeDataPtr.PopPtr());
@@ -139,15 +139,15 @@ int CClipboardSerializerComp::SaveToFile(const istd::IChangeable& data, const is
 
 // reimplemented (iser::IFileTypeInfo)
 
-bool CClipboardSerializerComp::GetFileExtensions(istd::CStringList& /*result*/, int /*flags*/, bool /*doAppend*/) const
+bool CClipboardSerializerComp::GetFileExtensions(QStringList& /*result*/, int /*flags*/, bool /*doAppend*/) const
 {
 	return false;
 }
 
 
-istd::CString CClipboardSerializerComp::GetTypeDescription(const istd::CString* /*extensionPtr*/) const
+QString CClipboardSerializerComp::GetTypeDescription(const QString* /*extensionPtr*/) const
 {
-	return istd::CString();
+	return QString();
 }
 
 

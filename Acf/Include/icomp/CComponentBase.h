@@ -209,7 +209,7 @@ inline bool CComponentBase::IsComponentActive() const
 	\li \c int
 	\li \c double
 	\li \c std::string
-	\li \c istd::CString (will be compiled by ARX compiler using translation function 'tr')
+	\li \c QString (will be compiled by ARX compiler using translation function 'tr')
 	\ingroup Main
 	\ingroup ComponentConcept
 */
@@ -231,7 +231,7 @@ inline bool CComponentBase::IsComponentActive() const
 	\li \c int
 	\li \c double
 	\li \c std::string
-	\li \c istd::CString (will be compiled by ARX compiler using translation function 'tr')
+	\li \c QString (will be compiled by ARX compiler using translation function 'tr')
 	\ingroup ComponentConcept
 */
 #define I_MULTIATTR(attrType, member)\

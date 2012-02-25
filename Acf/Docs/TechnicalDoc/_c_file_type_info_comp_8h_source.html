@@ -58,12 +58,12 @@
 <a name="l00034"></a>00034        I_END_COMPONENT;
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036        <span class="comment">// reimplemented (iser::IFileTypeInfo)</span>
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_file_type_info_comp.html#ad836e6d45b822135976913ff4dbc665f" title="Get file extensions supported by this loader.">GetFileExtensions</a>(<a class="code" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a>&amp; result, <span class="keywordtype">int</span> flags = -1, <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>) <span class="keyword">const</span>;
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classibase_1_1_c_file_type_info_comp.html#ae0f6b59142b232ef0dcb82f8c7460ab5" title="Get description of object type associated with single extension.">GetTypeDescription</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>* extensionPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_file_type_info_comp.html#ab67ef8c97fad1d2d0e77c40407ee1fa3" title="Get file extensions supported by this loader.">GetFileExtensions</a>(QStringList&amp; result, <span class="keywordtype">int</span> flags = -1, <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>) <span class="keyword">const</span>;
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> QString <a class="code" href="classibase_1_1_c_file_type_info_comp.html#ad9e95c6a4dfaa35177a99c829d337bc8" title="Get description of object type associated with single extension.">GetTypeDescription</a>(<span class="keyword">const</span> QString* extensionPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040 <span class="keyword">private</span>:
-<a name="l00041"></a>00041        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_fileExtensionsAttrPtr);
-<a name="l00042"></a>00042        I_MULTIATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_typeDescriptionsAttrPtr);
+<a name="l00041"></a>00041        I_MULTIATTR(QString, m_fileExtensionsAttrPtr);
+<a name="l00042"></a>00042        I_MULTIATTR(QString, m_typeDescriptionsAttrPtr);
 <a name="l00043"></a>00043 };
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045 

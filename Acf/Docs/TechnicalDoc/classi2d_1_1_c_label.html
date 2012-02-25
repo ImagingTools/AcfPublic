@@ -60,9 +60,9 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classi2d_1_1_c_position2d.html">i2d::CPosition2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#aba01ad4cbc064ac8ce3f08ad3512c02e">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#a2d07b15ab7d3c5078984a0eea607bfa0">CLabel</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position=<a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>(0, 0), const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;labelText=&quot;Label&quot;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#a5bb26d48fe0b3c3e234423ad8ae4a0e0">GetText</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#af7a7857fbd50e59eadd7dcb74d5bec8f">SetText</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;labelText)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#a8e50e02b99526b2e23d163bd055cc08e">CLabel</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position=<a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>(0, 0), const QString &amp;labelText=&quot;Label&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#afba5278ae233b323f7020c1c217579e1">GetText</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#a37a3cf9cf3a1dedba74213fd16ebd946">SetText</a> (const QString &amp;labelText)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#a9014bf003fa9b9b0b5c3a207d7af0e17">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a9014bf003fa9b9b0b5c3a207d7af0e17"></a><br/></td></tr>
 </table>
@@ -86,7 +86,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2d07b15ab7d3c5078984a0eea607bfa0"></a><!-- doxytag: member="i2d::CLabel::CLabel" ref="a2d07b15ab7d3c5078984a0eea607bfa0" args="(const i2d::CVector2d &amp;position=i2d::CVector2d(0, 0), const istd::CString &amp;labelText=&quot;Label&quot;)" -->
+<a class="anchor" id="a8e50e02b99526b2e23d163bd055cc08e"></a><!-- doxytag: member="i2d::CLabel::CLabel" ref="a8e50e02b99526b2e23d163bd055cc08e" args="(const i2d::CVector2d &amp;position=i2d::CVector2d(0, 0), const QString &amp;labelText=&quot;Label&quot;)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -99,7 +99,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>labelText</em> = <code>&quot;Label&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -114,12 +114,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a5bb26d48fe0b3c3e234423ad8ae4a0e0"></a><!-- doxytag: member="i2d::CLabel::GetText" ref="a5bb26d48fe0b3c3e234423ad8ae4a0e0" args="() const " -->
+<a class="anchor" id="afba5278ae233b323f7020c1c217579e1"></a><!-- doxytag: member="i2d::CLabel::GetText" ref="afba5278ae233b323f7020c1c217579e1" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp; i2d::CLabel::GetText </td>
+          <td class="memname">const QString &amp; i2d::CLabel::GetText </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [inline, virtual]</code></td>
@@ -155,14 +155,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af7a7857fbd50e59eadd7dcb74d5bec8f"></a><!-- doxytag: member="i2d::CLabel::SetText" ref="af7a7857fbd50e59eadd7dcb74d5bec8f" args="(const istd::CString &amp;labelText)" -->
+<a class="anchor" id="a37a3cf9cf3a1dedba74213fd16ebd946"></a><!-- doxytag: member="i2d::CLabel::SetText" ref="a37a3cf9cf3a1dedba74213fd16ebd946" args="(const QString &amp;labelText)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void i2d::CLabel::SetText </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>labelText</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>

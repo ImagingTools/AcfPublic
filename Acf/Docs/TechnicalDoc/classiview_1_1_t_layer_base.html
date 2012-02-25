@@ -63,7 +63,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base.html#a298db0a5c6848d83d4748a789ae780d0">~TLayerBase</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">View *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base.html#afaa74e72e7c957b13132643f4e6b055e">GetTViewPtr</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base.html#aefa27d3789085d8a38be92d26f5f093f">OnConnectView</a> (<a class="el" href="classiview_1_1_i_shape_view.html">IShapeView</a> *viewPtr)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base.html#a00602f33dfe27042555c8bfb19744b00">OnDisconnectView</a> (<a class="el" href="classiview_1_1_i_shape_view.html">IShapeView</a> *viewPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base.html#a8ef6b1329fe6dc76eb78845eae06787f">OnDisconnectView</a> (<a class="el" href="classiview_1_1_i_shape_view.html">IShapeView</a> *viewPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_shape_view.html">IShapeView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base.html#a1be21d7e25e3620d375ebef0b7685a6c">GetViewPtr</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base.html#ab82ef96fbbc7dec763af65ab2774d934">IsVisible</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base.html#a9c1e62a36f15b48f5cd936953c03dafc">SetVisible</a> (bool state=true)</td></tr>
@@ -354,14 +354,14 @@ template&lt;class Layer , class View &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a00602f33dfe27042555c8bfb19744b00"></a><!-- doxytag: member="iview::TLayerBase::OnDisconnectView" ref="a00602f33dfe27042555c8bfb19744b00" args="(IShapeView *viewPtr)" -->
+<a class="anchor" id="a8ef6b1329fe6dc76eb78845eae06787f"></a><!-- doxytag: member="iview::TLayerBase::OnDisconnectView" ref="a8ef6b1329fe6dc76eb78845eae06787f" args="(IShapeView *viewPtr)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Layer, class View = IShapeView&gt; </div>
+template&lt;class Layer , class View &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="classiview_1_1_t_layer_base.html">iview::TLayerBase</a>&lt; Layer, View &gt;::OnDisconnectView </td>
+          <td class="memname">void <a class="el" href="classiview_1_1_t_layer_base.html">iview::TLayerBase</a>&lt; Layer, View &gt;::OnDisconnectView </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiview_1_1_i_shape_view.html">IShapeView</a> *&#160;</td>
           <td class="paramname"><em>viewPtr</em></td><td>)</td>
@@ -370,6 +370,10 @@ template&lt;class Layer, class View = IShapeView&gt; </div>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_layer_base_8h_source.html#l00118">118</a> of file <a class="el" href="_t_layer_base_8h_source.html">TLayerBase.h</a>.</p>
+
+<p>References <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
 
 </div>
 </div>

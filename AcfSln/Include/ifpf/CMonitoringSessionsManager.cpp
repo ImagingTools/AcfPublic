@@ -44,7 +44,7 @@ void CMonitoringSessionsManager::ResetSessions()
 }
 
 
-ifpf::IMonitoringSession* CMonitoringSessionsManager::GetSession(const istd::CString& directoryPath) const
+ifpf::IMonitoringSession* CMonitoringSessionsManager::GetSession(const QString& directoryPath) const
 {
 	MonitoringSessionsMap::const_iterator sessionIter = m_monitorSessionsMap.find(directoryPath);
 	if (sessionIter != m_monitorSessionsMap.end()){
@@ -73,7 +73,7 @@ bool CMonitoringSessionsManager::Serialize(iser::IArchive& archive)
 	retVal = retVal && archive.BeginMultiTag(monitoringSessionsTag, monitoringSessionTag, sessionsCount);
 	if (archive.IsStoring()){
 		for (MonitoringSessionsMap::iterator index = m_monitorSessionsMap.begin(); index != m_monitorSessionsMap.end(); index++){
-			istd::CString directoryPath = index->first;
+			QString directoryPath = index->first;
 
 			retVal = retVal && archive.BeginTag(monitoringSessionTag);
 		
@@ -94,7 +94,7 @@ bool CMonitoringSessionsManager::Serialize(iser::IArchive& archive)
 
 			retVal = retVal && archive.BeginTag(monitoringSessionTag);
 
-			istd::CString directoryPath;
+			QString directoryPath;
 			retVal = retVal && archive.BeginTag(directoryPathTag);
 			retVal = retVal && archive.Process(directoryPath);
 			retVal = retVal && archive.EndTag(directoryPathTag);

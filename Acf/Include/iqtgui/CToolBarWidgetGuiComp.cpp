@@ -105,8 +105,8 @@ void CToolBarWidgetGuiComp::OnGuiCreated()
 	}
 
 	if (m_titleAttrPtr.IsValid()){
-		widgetPtr->setWindowTitle(iqt::GetQString(m_titleAttrPtr->GetValue()));
-		widgetPtr->setObjectName(iqt::GetQString(m_titleAttrPtr->GetValue()));
+		widgetPtr->setWindowTitle(m_titleAttrPtr->GetValue());
+		widgetPtr->setObjectName(m_titleAttrPtr->GetValue());
 	}
 
 	if (m_toolbarWidgetCompPtr.IsValid()){

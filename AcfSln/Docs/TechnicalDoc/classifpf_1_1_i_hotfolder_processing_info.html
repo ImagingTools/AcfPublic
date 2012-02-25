@@ -67,8 +67,8 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classifpf_1_1_i_hotfolder_processing_item.html">ifpf::IHotfolderProcessingItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_hotfolder_processing_info.html#a692bf3716c291f8e02d9601c6f6666d5">AddProcessingItem</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;inputFilePath, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;outputFilePath=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>())=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new processing item to hotfolder's state model.  <a href="#a692bf3716c291f8e02d9601c6f6666d5"></a><br/></td></tr>
+<a class="el" href="classifpf_1_1_i_hotfolder_processing_item.html">ifpf::IHotfolderProcessingItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_hotfolder_processing_info.html#a56f2373511826129627a9d49fe8127c1">AddProcessingItem</a> (const QString &amp;inputFilePath, const QString &amp;outputFilePath=QString())=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new processing item to hotfolder's state model.  <a href="#a56f2373511826129627a9d49fe8127c1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_hotfolder_processing_info.html#a9a18921dbc941223931f42110ba43417">RemoveProcessingItem</a> (<a class="el" href="classifpf_1_1_i_hotfolder_processing_item.html">ifpf::IHotfolderProcessingItem</a> *fileItemPtr)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove existing processing item from the hotfolder's state model.  <a href="#a9a18921dbc941223931f42110ba43417"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_hotfolder_processing_info.html#a7ebb6894ed3681c06ea42dd392313f0b">GetProcessingItemsCount</a> () const =0</td></tr>
@@ -116,21 +116,21 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a692bf3716c291f8e02d9601c6f6666d5"></a><!-- doxytag: member="ifpf::IHotfolderProcessingInfo::AddProcessingItem" ref="a692bf3716c291f8e02d9601c6f6666d5" args="(const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath=istd::CString())=0" -->
+<a class="anchor" id="a56f2373511826129627a9d49fe8127c1"></a><!-- doxytag: member="ifpf::IHotfolderProcessingInfo::AddProcessingItem" ref="a56f2373511826129627a9d49fe8127c1" args="(const QString &amp;inputFilePath, const QString &amp;outputFilePath=QString())=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual const <a class="el" href="classifpf_1_1_i_hotfolder_processing_item.html">ifpf::IHotfolderProcessingItem</a>* ifpf::IHotfolderProcessingInfo::AddProcessingItem </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>inputFilePath</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
-          <td class="paramname"><em>outputFilePath</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>()</code>&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>outputFilePath</em> = <code>QString()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -144,7 +144,7 @@ Public Member Functions</h2></td></tr>
 <p>Add new processing item to hotfolder's state model. </p>
 <p>If the output file name is not set, the file name will be calculated automatically. </p>
 
-<p>Implemented in <a class="el" href="classifpf_1_1_c_hotfolder_processing_info.html#a206d5408c2ac64286cd25f5d0e39fbe0">ifpf::CHotfolderProcessingInfo</a>.</p>
+<p>Implemented in <a class="el" href="classifpf_1_1_c_hotfolder_processing_info.html#a25db4fb3769754ef466961e010d4f115">ifpf::CHotfolderProcessingInfo</a>.</p>
 
 </div>
 </div>

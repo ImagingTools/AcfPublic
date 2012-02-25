@@ -43,7 +43,7 @@ namespace ibase
 	\ingroup Helpers
 */
 template <class Base>
-class TLoggerWrap: virtual public Base, virtual public ILoggable, virtual public istd::ILogger
+class TLoggerWrap: public Base, virtual public ILoggable, virtual public istd::ILogger
 {
 public:
 	TLoggerWrap();
@@ -62,8 +62,8 @@ protected:
 	*/
 	bool SendInfoMessage(
 				int id,
-				const istd::CString& message,
-				const istd::CString& messageSource = istd::CString(),
+				const QString& message,
+				const QString& messageSource = QString(),
 				int flags = 0) const;
 
 	/**
@@ -75,8 +75,8 @@ protected:
 	*/
 	bool SendWarningMessage(
 				int id,
-				const istd::CString& message,
-				const istd::CString& messageSource = istd::CString(),
+				const QString& message,
+				const QString& messageSource = QString(),
 				int flags = 0) const;
 
 	/**
@@ -88,8 +88,8 @@ protected:
 	*/
 	bool SendErrorMessage(
 				int id,
-				const istd::CString& message,
-				const istd::CString& messageSource = istd::CString(),
+				const QString& message,
+				const QString& messageSource = QString(),
 				int flags = 0) const;
 
 	/**
@@ -101,8 +101,8 @@ protected:
 	*/
 	bool SendCriticalMessage(
 				int id,
-				const istd::CString& message,
-				const istd::CString& messageSource = istd::CString(),
+				const QString& message,
+				const QString& messageSource = QString(),
 				int flags = 0) const;
 
 	// reimplemented (istd::ILogger)
@@ -112,8 +112,8 @@ protected:
 	virtual bool SendLogMessage(
 				MessageCategory category,
 				int id,
-				const istd::CString& message,
-				const istd::CString& messageSource,
+				const QString& message,
+				const QString& messageSource,
 				int flags = 0) const;
 
 private:
@@ -149,28 +149,28 @@ inline ibase::IMessageConsumer* TLoggerWrap<Base>::GetLogPtr() const
 // protected methods
 
 template <class Base>
-bool TLoggerWrap<Base>::SendInfoMessage(int id, const istd::CString& message, const istd::CString& messageSource, int flags) const
+bool TLoggerWrap<Base>::SendInfoMessage(int id, const QString& message, const QString& messageSource, int flags) const
 {
 	return SendLogMessage(istd::ILogger::MC_INFO, id, message, messageSource, flags);
 }
 
 
 template <class Base>
-bool TLoggerWrap<Base>::SendWarningMessage(int id, const istd::CString& message, const istd::CString& messageSource, int flags) const
+bool TLoggerWrap<Base>::SendWarningMessage(int id, const QString& message, const QString& messageSource, int flags) const
 {
 	return SendLogMessage(istd::ILogger::MC_WARNING, id, message, messageSource, flags);
 }
 
 
 template <class Base>
-bool TLoggerWrap<Base>::SendErrorMessage(int id, const istd::CString& message, const istd::CString& messageSource, int flags) const
+bool TLoggerWrap<Base>::SendErrorMessage(int id, const QString& message, const QString& messageSource, int flags) const
 {
 	return SendLogMessage(istd::ILogger::MC_ERROR, id, message, messageSource, flags);
 }
 
 
 template <class Base>
-bool TLoggerWrap<Base>::SendCriticalMessage(int id, const istd::CString& message, const istd::CString& messageSource, int flags) const
+bool TLoggerWrap<Base>::SendCriticalMessage(int id, const QString& message, const QString& messageSource, int flags) const
 {
 	return SendLogMessage(istd::ILogger::MC_CRITICAL, id, message, messageSource, flags);
 }
@@ -191,13 +191,13 @@ template <class Base>
 bool TLoggerWrap<Base>::SendLogMessage(
 			istd::ILogger::MessageCategory category,
 			int id,
-			const istd::CString& message,
-			const istd::CString& messageSource,
+			const QString& message,
+			const QString& messageSource,
 			int flags) const
 {
 	if (m_logPtr != NULL){
-		istd::CString correctedMessage = message;
-		istd::CString correctedMessageSource = messageSource;
+		QString correctedMessage = message;
+		QString correctedMessageSource = messageSource;
 
 		DecorateMessage(category, id, flags, correctedMessage, correctedMessageSource);
 

@@ -49,7 +49,7 @@ CHotfolderStatistics::CHotfolderStatistics()
 
 // reimplemented (ifpf::IHotfolderStatistics)
 
-int CHotfolderStatistics::GetItemsCount(const istd::CString& directoryPath) const
+int CHotfolderStatistics::GetItemsCount(const QString& directoryPath) const
 {
 	CounterMap::const_iterator iter = m_itemsCount.find(directoryPath);
 	if (iter != m_itemsCount.end()){
@@ -60,7 +60,7 @@ int CHotfolderStatistics::GetItemsCount(const istd::CString& directoryPath) cons
 }
 
 
-int CHotfolderStatistics::GetSuccessCount(const istd::CString& directoryPath) const
+int CHotfolderStatistics::GetSuccessCount(const QString& directoryPath) const
 {
 	CounterMap::const_iterator iter = m_successCount.find(directoryPath);
 	if (iter != m_successCount.end()){
@@ -71,7 +71,7 @@ int CHotfolderStatistics::GetSuccessCount(const istd::CString& directoryPath) co
 }
 
 
-int CHotfolderStatistics::GetErrorsCount(const istd::CString& directoryPath) const
+int CHotfolderStatistics::GetErrorsCount(const QString& directoryPath) const
 {
 	CounterMap::const_iterator iter = m_errorsCount.find(directoryPath);
 	if (iter != m_errorsCount.end()){
@@ -82,7 +82,7 @@ int CHotfolderStatistics::GetErrorsCount(const istd::CString& directoryPath) con
 }
 
 
-int CHotfolderStatistics::GetAbortedCount(const istd::CString& directoryPath) const
+int CHotfolderStatistics::GetAbortedCount(const QString& directoryPath) const
 {
 	CounterMap::const_iterator iter = m_abortedCount.find(directoryPath);
 	if (iter != m_abortedCount.end()){
@@ -93,9 +93,9 @@ int CHotfolderStatistics::GetAbortedCount(const istd::CString& directoryPath) co
 }
 
 
-double CHotfolderStatistics::GetProcessingTime(const istd::CString& directoryPath) const
+double CHotfolderStatistics::GetProcessingTime(const QString& directoryPath) const
 {
-	if (directoryPath.IsEmpty()){
+	if (directoryPath.isEmpty()){
 		double processingTime = 0;
 		for (ProcessingTimeMap::const_iterator index = m_processingTimeMap.begin(); index != m_processingTimeMap.end(); index++){
 			processingTime += index->second;
@@ -173,7 +173,7 @@ void CHotfolderStatistics::RebuildStatistics()
 		I_ASSERT(itemPtr != NULL);
 
 		int itemState = itemPtr->GetProcessingState();
-		istd::CString directoryPath = GetDirectoryPath(*itemPtr);
+		QString directoryPath = GetDirectoryPath(*itemPtr);
 
 		++m_itemsCount[directoryPath];
 		UpdateStateMaps(itemState, directoryPath);
@@ -183,7 +183,7 @@ void CHotfolderStatistics::RebuildStatistics()
 }
 
 
-void CHotfolderStatistics::UpdateStateMaps(int itemState, const istd::CString& directoryPath)
+void CHotfolderStatistics::UpdateStateMaps(int itemState, const QString& directoryPath)
 {
 	switch (itemState){
 		case iproc::IProcessor::TS_OK:
@@ -202,16 +202,16 @@ void CHotfolderStatistics::UpdateStateMaps(int itemState, const istd::CString& d
 
 // protected static methods
 
-istd::CString CHotfolderStatistics::GetDirectoryPath(const ifpf::IHotfolderProcessingItem& item)
+QString CHotfolderStatistics::GetDirectoryPath(const ifpf::IHotfolderProcessingItem& item)
 {
-	istd::CString filePath = item.GetInputFile();
+	QString filePath = item.GetInputFile();
 
 	isys::IFileSystem* systemPtr = istd::GetService<isys::IFileSystem>();
 	if (systemPtr != NULL){
 		return systemPtr->GetDirPath(filePath);
 	}
 
-	return istd::CString();
+	return QString();
 }
 
 

@@ -64,16 +64,16 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a0f8989232abed2886fc3da546413340f">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#aa169995bfb541aae7063f72fe5604a1c">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#aa169995bfb541aae7063f72fe5604a1c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#af16758b35d1f543f3b9529d2d17fe69e">LoadFromFile</a> (<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function loads data <code>data</code> from file <code>filePath</code>.  <a href="#af16758b35d1f543f3b9529d2d17fe69e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a1a22725355d3b66db86078a8978b4895">SaveToFile</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function saves data <code>data</code> to file <code>filePath</code>.  <a href="#a1a22725355d3b66db86078a8978b4895"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#ae0e5e2d06aabb3fa73be0de118e3baf3">GetFileExtensions</a> (<a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> &amp;result, int flags=-1, bool doAppend=false) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#ae0e5e2d06aabb3fa73be0de118e3baf3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a2075b019de2dfcef81848b419df0c589">GetTypeDescription</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *extensionPtr=NULL) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of object type associated with single extension.  <a href="#a2075b019de2dfcef81848b419df0c589"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a5255324ffa68cc721b78ec5198b91bf1">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#a5255324ffa68cc721b78ec5198b91bf1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a3780952969ad6243beef39e890a0d7d7">LoadFromFile</a> (<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const QString &amp;filePath=QString()) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function loads data <code>data</code> from file <code>filePath</code>.  <a href="#a3780952969ad6243beef39e890a0d7d7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a96509b8fc9bdbb3afe8bb24e9ac59ede">SaveToFile</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const QString &amp;filePath=QString()) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function saves data <code>data</code> to file <code>filePath</code>.  <a href="#a96509b8fc9bdbb3afe8bb24e9ac59ede"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a86765ff2560087bd31275196da4eb960">GetFileExtensions</a> (QStringList &amp;result, int flags=-1, bool doAppend=false) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#a86765ff2560087bd31275196da4eb960"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#ac4bab7a0ae2f364dd36832567f30b5e8">GetTypeDescription</a> (const QString *extensionPtr=NULL) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of object type associated with single extension.  <a href="#ac4bab7a0ae2f364dd36832567f30b5e8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#ac515121b82b2b3964f6daf7b2ba1b770">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#ac515121b82b2b3964f6daf7b2ba1b770"></a><br/></td></tr>
 </table>
@@ -97,14 +97,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ae0e5e2d06aabb3fa73be0de118e3baf3"></a><!-- doxytag: member="iqt::CRenderedObjectFileLoaderComp::GetFileExtensions" ref="ae0e5e2d06aabb3fa73be0de118e3baf3" args="(istd::CStringList &amp;result, int flags=&#45;1, bool doAppend=false) const " -->
+<a class="anchor" id="a86765ff2560087bd31275196da4eb960"></a><!-- doxytag: member="iqt::CRenderedObjectFileLoaderComp::GetFileExtensions" ref="a86765ff2560087bd31275196da4eb960" args="(QStringList &amp;result, int flags=&#45;1, bool doAppend=false) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iqt::CRenderedObjectFileLoaderComp::GetFileExtensions </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> &amp;&#160;</td>
+          <td class="paramtype">QStringList &amp;&#160;</td>
           <td class="paramname"><em>result</em>, </td>
         </tr>
         <tr>
@@ -144,18 +144,18 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#a580f9a5411ebeb6d5108613e01551fd6">iser::IFileTypeInfo</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#a2b1e53b1976bc7a962684a7f64577b70">iser::IFileTypeInfo</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2075b019de2dfcef81848b419df0c589"></a><!-- doxytag: member="iqt::CRenderedObjectFileLoaderComp::GetTypeDescription" ref="a2075b019de2dfcef81848b419df0c589" args="(const istd::CString *extensionPtr=NULL) const " -->
+<a class="anchor" id="ac4bab7a0ae2f364dd36832567f30b5e8"></a><!-- doxytag: member="iqt::CRenderedObjectFileLoaderComp::GetTypeDescription" ref="ac4bab7a0ae2f364dd36832567f30b5e8" args="(const QString *extensionPtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iqt::CRenderedObjectFileLoaderComp::GetTypeDescription </td>
+          <td class="memname">virtual QString iqt::CRenderedObjectFileLoaderComp::GetTypeDescription </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *&#160;</td>
+          <td class="paramtype">const QString *&#160;</td>
           <td class="paramname"><em>extensionPtr</em> = <code>NULL</code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -165,11 +165,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Get description of object type associated with single extension. </p>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#a744c6451505c91c0abf6177b9f693a35">iser::IFileTypeInfo</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#af40e91e01c4040e96b9ed978a67eada8">iser::IFileTypeInfo</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa169995bfb541aae7063f72fe5604a1c"></a><!-- doxytag: member="iqt::CRenderedObjectFileLoaderComp::IsOperationSupported" ref="aa169995bfb541aae7063f72fe5604a1c" args="(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=&#45;1, bool beQuiet=true) const " -->
+<a class="anchor" id="a5255324ffa68cc721b78ec5198b91bf1"></a><!-- doxytag: member="iqt::CRenderedObjectFileLoaderComp::IsOperationSupported" ref="a5255324ffa68cc721b78ec5198b91bf1" args="(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=&#45;1, bool beQuiet=true) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -182,7 +182,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *&#160;</td>
+          <td class="paramtype">const QString *&#160;</td>
           <td class="paramname"><em>filePathPtr</em> = <code>NULL</code>, </td>
         </tr>
         <tr>
@@ -217,11 +217,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a7118893dbc48418fd3f6ebae054e883c">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a4e5d8cde47513d09de802aa28697249d">iser::IFileLoader</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af16758b35d1f543f3b9529d2d17fe69e"></a><!-- doxytag: member="iqt::CRenderedObjectFileLoaderComp::LoadFromFile" ref="af16758b35d1f543f3b9529d2d17fe69e" args="(istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const " -->
+<a class="anchor" id="a3780952969ad6243beef39e890a0d7d7"></a><!-- doxytag: member="iqt::CRenderedObjectFileLoaderComp::LoadFromFile" ref="a3780952969ad6243beef39e890a0d7d7" args="(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -234,8 +234,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
-          <td class="paramname"><em>filePath</em> = <code><a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()</code>&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em> = <code>QString()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -250,11 +250,11 @@ Public Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>serialization state. </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd>SerializationState </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a692b19c2e18506de95d02aed942890e6">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a1515f5bff4437903bb15dafe82b56755">iser::IFileLoader</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1a22725355d3b66db86078a8978b4895"></a><!-- doxytag: member="iqt::CRenderedObjectFileLoaderComp::SaveToFile" ref="a1a22725355d3b66db86078a8978b4895" args="(const istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const " -->
+<a class="anchor" id="a96509b8fc9bdbb3afe8bb24e9ac59ede"></a><!-- doxytag: member="iqt::CRenderedObjectFileLoaderComp::SaveToFile" ref="a96509b8fc9bdbb3afe8bb24e9ac59ede" args="(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -267,8 +267,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
-          <td class="paramname"><em>filePath</em> = <code><a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()</code>&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em> = <code>QString()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -283,7 +283,7 @@ Public Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>serialization state. </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd>SerializationState </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#aa9a5a8765a0c04900696029914ac9a26">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a600870dbf0fc5a833bfe747bf1a60c1c">iser::IFileLoader</a>.</p>
 
 </div>
 </div>

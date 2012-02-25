@@ -85,24 +85,24 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a18be65f9beed42d81f3fe38423783292">I_ASSIGN_TO</a> (m_extPackagesManagerCompPtr, m_packagesManagerCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a3eefbad6778cfc306b077315ec3e2e70">CRegistryCodeSaverComp</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a6e5c48b7a405b539ff566e46540a8b02">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#a6e5c48b7a405b539ff566e46540a8b02"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a729f5fa45a8bef1e809832b7095ef7e4">LoadFromFile</a> (<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function loads data <code>data</code> from file <code>filePath</code>.  <a href="#a729f5fa45a8bef1e809832b7095ef7e4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a1de5e15064d25449f06b0d0728e3565b">SaveToFile</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function saves data <code>data</code> to file <code>filePath</code>.  <a href="#a1de5e15064d25449f06b0d0728e3565b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a6e7a2b7b4dde985ef613b61de1ce89ae">GetFileExtensions</a> (<a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> &amp;result, int flags=-1, bool doAppend=false) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#a6e7a2b7b4dde985ef613b61de1ce89ae"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#acee2b230e7a51879fe2940453193c9c1">GetTypeDescription</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *extensionPtr=NULL) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of object type associated with single extension.  <a href="#acee2b230e7a51879fe2940453193c9c1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a6c65050e29861bd72957f49e9b342a78">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#a6c65050e29861bd72957f49e9b342a78"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aba24a5237d6d89acc1fc47500cceb780">LoadFromFile</a> (<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const QString &amp;filePath=QString()) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function loads data <code>data</code> from file <code>filePath</code>.  <a href="#aba24a5237d6d89acc1fc47500cceb780"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a3e6664581a9f2c7bc051dac01dfc754d">SaveToFile</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const QString &amp;filePath=QString()) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function saves data <code>data</code> to file <code>filePath</code>.  <a href="#a3e6664581a9f2c7bc051dac01dfc754d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#ad655e9bd0adcc79c477cdb6e048155f0">GetFileExtensions</a> (QStringList &amp;result, int flags=-1, bool doAppend=false) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#ad655e9bd0adcc79c477cdb6e048155f0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a75c00ac12b32364e7b8c744eeded4b2c">GetTypeDescription</a> (const QString *extensionPtr=NULL) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of object type associated with single extension.  <a href="#a75c00ac12b32364e7b8c744eeded4b2c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a78660d2684c4a685481f65af4b67506d">GetConstraintsFlags</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints flags.  <a href="#a78660d2684c4a685481f65af4b67506d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a8abe9e6c04caaccc588a228a7f2f0421">GetOptionsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of managed options.  <a href="#a8abe9e6c04caaccc588a228a7f2f0421"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aa4a5ff5e93889d5c19977e57868566c0">GetOptionName</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified option.  <a href="#aa4a5ff5e93889d5c19977e57868566c0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a9ab804c5390846b3f29477c472c43f8a">GetOptionDescription</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description for a option with the index <code>index</code>.  <a href="#a9ab804c5390846b3f29477c472c43f8a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a1182f7234db35c7f29ad5b2ab9dedfa6">GetOptionName</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified option.  <a href="#a1182f7234db35c7f29ad5b2ab9dedfa6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#af71759f290c7e5b1f16d8cff378a1dcd">GetOptionDescription</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description for a option with the index <code>index</code>.  <a href="#af71759f290c7e5b1f16d8cff378a1dcd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#acee9d8e97705b5be838d47180fdb6f68">GetOptionId</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option ID.  <a href="#acee9d8e97705b5be838d47180fdb6f68"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
@@ -129,10 +129,10 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#ab0e563f22e9c7d2c93298a59d537f7d2">GetMultiAttributeValue</a> (const std::string &amp;attributeId, const std::string &amp;componentId, const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, std::list&lt; std::string &gt; &amp;valueStrings, std::string &amp;typeName) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#abc3f67fe2aea4221e43609ba0c796f79">NextLine</a> (std::ofstream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a54b58cce3dcc8f83ed7b62ab59d79181">ChangeIndent</a> (int difference) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a4599fb06f26b30bf27bbc7e6f97d03ff">ExtractInfoFromFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath, std::string &amp;className, <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;baseFilePath) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a98e43b1aae2b6d542ad45c62d2dbf951">ExtractInfoFromFile</a> (const QString &amp;filePath, std::string &amp;className, QString &amp;baseFilePath) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a9d1e307b8f803a7cd3499765e34ca1a1">GetPackageName</a> (const std::string &amp;packageId) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a8c53c47c95d73b269d9de27e0e94c15e">GetStringLiteral</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;text) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get some wide string as C++ string literal.  <a href="#a8c53c47c95d73b269d9de27e0e94c15e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a1829081a8b5a56ff67d042a66c4fdb25">GetStringLiteral</a> (const QString &amp;text) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get some wide string as C++ string literal.  <a href="#a1829081a8b5a56ff67d042a66c4fdb25"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a41afc3520d3b52a6ec01c0a8ac568148">GetStdStringLiteral</a> (const std::string &amp;text) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get some string as C++ string literal.  <a href="#a41afc3520d3b52a6ec01c0a8ac568148"></a><br/></td></tr>
 </table>
@@ -342,14 +342,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4599fb06f26b30bf27bbc7e6f97d03ff"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::ExtractInfoFromFile" ref="a4599fb06f26b30bf27bbc7e6f97d03ff" args="(const istd::CString &amp;filePath, std::string &amp;className, istd::CString &amp;baseFilePath) const " -->
+<a class="anchor" id="a98e43b1aae2b6d542ad45c62d2dbf951"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::ExtractInfoFromFile" ref="a98e43b1aae2b6d542ad45c62d2dbf951" args="(const QString &amp;filePath, std::string &amp;className, QString &amp;baseFilePath) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CRegistryCodeSaverComp::ExtractInfoFromFile </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>filePath</em>, </td>
         </tr>
         <tr>
@@ -361,7 +361,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">QString &amp;&#160;</td>
           <td class="paramname"><em>baseFilePath</em>&#160;</td>
         </tr>
         <tr>
@@ -458,14 +458,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6e7a2b7b4dde985ef613b61de1ce89ae"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetFileExtensions" ref="a6e7a2b7b4dde985ef613b61de1ce89ae" args="(istd::CStringList &amp;result, int flags=&#45;1, bool doAppend=false) const " -->
+<a class="anchor" id="ad655e9bd0adcc79c477cdb6e048155f0"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetFileExtensions" ref="ad655e9bd0adcc79c477cdb6e048155f0" args="(QStringList &amp;result, int flags=&#45;1, bool doAppend=false) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iqt::CRegistryCodeSaverComp::GetFileExtensions </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> &amp;&#160;</td>
+          <td class="paramtype">QStringList &amp;&#160;</td>
           <td class="paramname"><em>result</em>, </td>
         </tr>
         <tr>
@@ -505,7 +505,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#a580f9a5411ebeb6d5108613e01551fd6">iser::IFileTypeInfo</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#a2b1e53b1976bc7a962684a7f64577b70">iser::IFileTypeInfo</a>.</p>
 
 </div>
 </div>
@@ -554,12 +554,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9ab804c5390846b3f29477c472c43f8a"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetOptionDescription" ref="a9ab804c5390846b3f29477c472c43f8a" args="(int index) const " -->
+<a class="anchor" id="af71759f290c7e5b1f16d8cff378a1dcd"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetOptionDescription" ref="af71759f290c7e5b1f16d8cff378a1dcd" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iqt::CRegistryCodeSaverComp::GetOptionDescription </td>
+          <td class="memname">virtual QString iqt::CRegistryCodeSaverComp::GetOptionDescription </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -571,7 +571,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get description for a option with the index <code>index</code>. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#aa134f7e8af11d478320121cee6228701">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a0a88f5abd55974d0fd943e9e338996bf">iprm::ISelectionConstraints</a>.</p>
 
 </div>
 </div>
@@ -598,12 +598,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa4a5ff5e93889d5c19977e57868566c0"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetOptionName" ref="aa4a5ff5e93889d5c19977e57868566c0" args="(int index) const " -->
+<a class="anchor" id="a1182f7234db35c7f29ad5b2ab9dedfa6"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetOptionName" ref="a1182f7234db35c7f29ad5b2ab9dedfa6" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iqt::CRegistryCodeSaverComp::GetOptionName </td>
+          <td class="memname">virtual QString iqt::CRegistryCodeSaverComp::GetOptionName </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -615,7 +615,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get name of specified option. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a62f01670db997af122efa4eeb20d89be">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a9d21be275c1d2d889b964971d52ec6e0">iprm::ISelectionConstraints</a>.</p>
 
 </div>
 </div>
@@ -675,14 +675,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8c53c47c95d73b269d9de27e0e94c15e"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetStringLiteral" ref="a8c53c47c95d73b269d9de27e0e94c15e" args="(const istd::CString &amp;text) const " -->
+<a class="anchor" id="a1829081a8b5a56ff67d042a66c4fdb25"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetStringLiteral" ref="a1829081a8b5a56ff67d042a66c4fdb25" args="(const QString &amp;text) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">std::string iqt::CRegistryCodeSaverComp::GetStringLiteral </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>text</em></td><td>)</td>
           <td> const<code> [protected]</code></td>
         </tr>
@@ -694,14 +694,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acee2b230e7a51879fe2940453193c9c1"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetTypeDescription" ref="acee2b230e7a51879fe2940453193c9c1" args="(const istd::CString *extensionPtr=NULL) const " -->
+<a class="anchor" id="a75c00ac12b32364e7b8c744eeded4b2c"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetTypeDescription" ref="a75c00ac12b32364e7b8c744eeded4b2c" args="(const QString *extensionPtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iqt::CRegistryCodeSaverComp::GetTypeDescription </td>
+          <td class="memname">virtual QString iqt::CRegistryCodeSaverComp::GetTypeDescription </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *&#160;</td>
+          <td class="paramtype">const QString *&#160;</td>
           <td class="paramname"><em>extensionPtr</em> = <code>NULL</code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -711,7 +711,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get description of object type associated with single extension. </p>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#a744c6451505c91c0abf6177b9f693a35">iser::IFileTypeInfo</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#af40e91e01c4040e96b9ed978a67eada8">iser::IFileTypeInfo</a>.</p>
 
 </div>
 </div>
@@ -748,7 +748,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6e5c48b7a405b539ff566e46540a8b02"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::IsOperationSupported" ref="a6e5c48b7a405b539ff566e46540a8b02" args="(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=&#45;1, bool beQuiet=true) const " -->
+<a class="anchor" id="a6c65050e29861bd72957f49e9b342a78"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::IsOperationSupported" ref="a6c65050e29861bd72957f49e9b342a78" args="(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=&#45;1, bool beQuiet=true) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -761,7 +761,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *&#160;</td>
+          <td class="paramtype">const QString *&#160;</td>
           <td class="paramname"><em>filePathPtr</em> = <code>NULL</code>, </td>
         </tr>
         <tr>
@@ -796,11 +796,11 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a7118893dbc48418fd3f6ebae054e883c">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a4e5d8cde47513d09de802aa28697249d">iser::IFileLoader</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a729f5fa45a8bef1e809832b7095ef7e4"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::LoadFromFile" ref="a729f5fa45a8bef1e809832b7095ef7e4" args="(istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const " -->
+<a class="anchor" id="aba24a5237d6d89acc1fc47500cceb780"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::LoadFromFile" ref="aba24a5237d6d89acc1fc47500cceb780" args="(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -813,8 +813,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
-          <td class="paramname"><em>filePath</em> = <code><a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()</code>&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em> = <code>QString()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -829,7 +829,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>serialization state. </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd>SerializationState </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a692b19c2e18506de95d02aed942890e6">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a1515f5bff4437903bb15dafe82b56755">iser::IFileLoader</a>.</p>
 
 </div>
 </div>
@@ -850,7 +850,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1de5e15064d25449f06b0d0728e3565b"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::SaveToFile" ref="a1de5e15064d25449f06b0d0728e3565b" args="(const istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const " -->
+<a class="anchor" id="a3e6664581a9f2c7bc051dac01dfc754d"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::SaveToFile" ref="a3e6664581a9f2c7bc051dac01dfc754d" args="(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -863,8 +863,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
-          <td class="paramname"><em>filePath</em> = <code><a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()</code>&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em> = <code>QString()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -879,7 +879,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>serialization state. </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd>SerializationState </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#aa9a5a8765a0c04900696029914ac9a26">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a600870dbf0fc5a833bfe747bf1a60c1c">iser::IFileLoader</a>.</p>
 
 </div>
 </div>

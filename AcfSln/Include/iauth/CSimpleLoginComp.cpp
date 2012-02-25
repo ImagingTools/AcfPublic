@@ -54,7 +54,7 @@ CSimpleLoginComp::User& CSimpleLoginComp::GetUser(int index) const
 }
 
 
-int CSimpleLoginComp::FindUserIndex(const istd::CString& name) const
+int CSimpleLoginComp::FindUserIndex(const QString& name) const
 {
 	int usersCount = GetUsersCount();
 
@@ -90,7 +90,7 @@ bool CSimpleLoginComp::IsUserLogged() const
 }
 
 
-bool CSimpleLoginComp::Login(const istd::CString& userName, const istd::CString& password)
+bool CSimpleLoginComp::Login(const QString& userName, const QString& password)
 {
 	int userIndex = FindUserIndex(userName);
 	if (userIndex >= 0){

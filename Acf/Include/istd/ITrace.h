@@ -24,10 +24,16 @@
 #define istd_ITrace_included
 
 
+// STL includes
 #include <string>
 
+
+// Qt includes
+#include <QString>
+
+
+// ACF includes
 #include "istd/IPolymorphic.h"
-#include "istd/CString.h"
 
 
 namespace istd
@@ -51,7 +57,7 @@ public:
 	virtual void LogMessage(
 				TraceLevel level,
 				const std::string& groupId,
-				const CString& message,
+				const QString& message,
 				const std::string& fileName = std::string(),
 				int line = -1) const = 0;
 	/**

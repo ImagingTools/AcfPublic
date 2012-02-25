@@ -106,7 +106,7 @@ void CComposedGuiComp::OnGuiCreated()
 				panelLayoutPtr->setContentsMargins(6, 0, 6, 0);
 				QString name;
 				if (i < m_namesAttrPtr.GetCount()){
-					name = iqt::GetQString(m_namesAttrPtr[i]);
+					name = m_namesAttrPtr[i];
 				}
 
 				guiPtr->CreateGui(panelPtr);
@@ -135,7 +135,7 @@ void CComposedGuiComp::OnGuiCreated()
 				QLayout* panelLayoutPtr = new QVBoxLayout(panelPtr);
 				QString name;
 				if (i < m_namesAttrPtr.GetCount()){
-					name = iqt::GetQString(m_namesAttrPtr[i]);
+					name = m_namesAttrPtr[i];
 				}
 
 				guiPtr->CreateGui(panelPtr);
@@ -183,7 +183,7 @@ void CComposedGuiComp::OnGuiCreated()
 			if (i < m_namesAttrPtr.GetCount()){
 				QLayout* parentLayoutPtr = elementParentPtr->layout();
 
-				elementParentPtr = new QGroupBox(iqt::GetQString(m_namesAttrPtr[i]), elementParentPtr);
+				elementParentPtr = new QGroupBox(m_namesAttrPtr[i], elementParentPtr);
 				new QVBoxLayout(elementParentPtr);
 
 				if (parentLayoutPtr != NULL){
@@ -207,7 +207,7 @@ QString CComposedGuiComp::GetSettingsKey() const
 {
 	QString settingsKey = "Splitter";
 	if (m_settingsKeyAttrPtr.IsValid()){
-		settingsKey = iqt::GetQString(*m_settingsKeyAttrPtr) + QString("/") + settingsKey;
+		settingsKey = *m_settingsKeyAttrPtr + QString("/") + settingsKey;
 	}
 
 	return settingsKey;

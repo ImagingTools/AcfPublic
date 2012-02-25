@@ -57,16 +57,16 @@
 <a name="l00033"></a>00033        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
 <a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_options_manager_comp.html#a441905be36c39ca2161f27104e20ce61" title="Get constraints flags.">GetConstraintsFlags</a>() <span class="keyword">const</span>;
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_options_manager_comp.html#aa229f5434f7a8b3ef39d71a4c76b41b0" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiprm_1_1_c_options_manager_comp.html#aac4fb662fa75cdf7ba347144fbf77e53" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiprm_1_1_c_options_manager_comp.html#a5c7d63904cb1662409d5f258610b8cdc" title="Get description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_options_manager_comp.html#a457a12ebb3ff0113d92e02f9311d856c" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_options_manager_comp.html#a3f50417a9ddd697534cd0419ed062fe4" title="Get description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00038"></a>00038        <span class="keyword">virtual</span> std::string <a class="code" href="classiprm_1_1_c_options_manager_comp.html#a874f8498e372b68542c0e2f407936685" title="Get option ID.">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040        <span class="comment">// reimplemented (iprm::IOptionsManager)</span>
 <a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_options_manager_comp.html#a0d6f3e60aebc039a47e3caa8ef4a39f4" title="Remove an option at the given index.">RemoveOption</a>(<span class="keywordtype">int</span> index);
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_options_manager_comp.html#a33bf04fa94a0d42709096fd15dc1cb3f" title="Insert an option with the at the given option name and ID.">InsertOption</a>(
-<a name="l00043"></a>00043                                    <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; optionName,
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_options_manager_comp.html#a22a82253c6a36f09a6f344205e77bb0c" title="Insert an option with the at the given option name and ID.">InsertOption</a>(
+<a name="l00043"></a>00043                                    QString&amp; optionName,
 <a name="l00044"></a>00044                                    <span class="keyword">const</span> std::string&amp; optionId,
-<a name="l00045"></a>00045                                    <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; optionDescription = <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>(), 
+<a name="l00045"></a>00045                                    <span class="keyword">const</span> QString&amp; optionDescription = QString(), 
 <a name="l00046"></a>00046                                    <span class="keywordtype">int</span> index = - 1);
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048        <span class="comment">// reimplemented (iser::ISerializable)</span>
@@ -83,16 +83,16 @@
 <a name="l00059"></a>00059               {
 <a name="l00060"></a>00060               }
 <a name="l00061"></a>00061 
-<a name="l00062"></a>00062               OptionInfo(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; optionName, std::string optionId, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; optionDescription)
+<a name="l00062"></a>00062               OptionInfo(<span class="keyword">const</span> QString&amp; optionName, std::string optionId, <span class="keyword">const</span> QString&amp; optionDescription)
 <a name="l00063"></a>00063                      :optionName(optionName),
 <a name="l00064"></a>00064                      optionId(optionId),
 <a name="l00065"></a>00065                      optionDescription(optionDescription)
 <a name="l00066"></a>00066               {
 <a name="l00067"></a>00067               }
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069               <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> optionName;
+<a name="l00069"></a>00069               QString optionName;
 <a name="l00070"></a>00070               std::string optionId;
-<a name="l00071"></a>00071               <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> optionDescription;
+<a name="l00071"></a>00071               QString optionDescription;
 <a name="l00072"></a>00072        };
 <a name="l00073"></a>00073 
 <a name="l00074"></a>00074        <span class="keyword">typedef</span> std::vector&lt;OptionInfo&gt; Options;

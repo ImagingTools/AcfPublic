@@ -70,18 +70,18 @@
 <a name="l00051"></a>00051        <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a0b9bbf383285d893bcd31168a167a3f8" title="Removes cache files if there is too many of them.">CleanFileList</a>();
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053        <span class="comment">// methods for optional ovelloading</span>
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#ab89d04ffbc73c731152d372597bec225">OnCacheFileSaved</a>(<span class="keyword">const</span> Key&amp; key, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; cacheFilePath);
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a391e5ac4848dfb1ed32ec92ce197c4c8">OnCacheFileRemoved</a>(<span class="keyword">const</span> Key&amp; key, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; cacheFilePath);
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a2394884de10642312c21d2180d046b0d">OnCacheFileSaved</a>(<span class="keyword">const</span> Key&amp; key, <span class="keyword">const</span> QString&amp; cacheFilePath);
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#adf4a23ed996fc2545d58176b57e2f084">OnCacheFileRemoved</a>(<span class="keyword">const</span> Key&amp; key, <span class="keyword">const</span> QString&amp; cacheFilePath);
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057        <span class="comment">// abstract methods</span>
-<a name="l00061"></a>00061 <span class="comment"></span>       <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a48536a21e6e0b7eec37e54476320ea62" title="Calculate unique file path of temporary file cache object.">CalcCacheFilePath</a>(<span class="keyword">const</span> Key&amp; key) <span class="keyword">const</span> = 0;
+<a name="l00061"></a>00061 <span class="comment"></span>       <span class="keyword">virtual</span> QString <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a130e2ea47c7ced7159c764b98dd63a55" title="Calculate unique file path of temporary file cache object.">CalcCacheFilePath</a>(<span class="keyword">const</span> Key&amp; key) <span class="keyword">const</span> = 0;
 <a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#aa3a79666d440d2204579865d39440f15" title="Get number of maximal cached files.">GetMaxCachedFilesCount</a>() <span class="keyword">const</span> = 0;
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067 <span class="keyword">private</span>:
 <a name="l00068"></a>00068        I_REF(<a class="code" href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects.">iser::IFileLoader</a>, m_cacheLoaderCompPtr);
 <a name="l00069"></a>00069        I_TREF(<a class="code" href="classiproc_1_1_t_i_locked_producer.html" title="Template interface for providers of cached data.">LockedProducerType</a>, m_slaveCacheEngineCompPtr);
 <a name="l00070"></a>00070 
-<a name="l00071"></a>00071        <span class="keyword">typedef</span> std::map&lt;Key, istd::CString&gt; KeyToFileNameMap;
+<a name="l00071"></a>00071        <span class="keyword">typedef</span> std::map&lt;Key, QString&gt; KeyToFileNameMap;
 <a name="l00072"></a>00072        <span class="keyword">typedef</span> std::list&lt;Key&gt; RecentlyUsedKeys;
 <a name="l00073"></a>00073        <span class="keyword">typedef</span> std::set&lt;const CacheObject*&gt; OwnedObjects;
 <a name="l00074"></a>00074 
@@ -99,17 +99,17 @@
 <a name="l00086"></a><a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a4aa3156c239594e3a9eb4f20623ea90c">00086</a> <span class="keyword">const</span> CacheObject* <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a4aa3156c239594e3a9eb4f20623ea90c" title="Begin of accessing to cached element.">TFileCachedProducerCompBase&lt;Key, CacheObject&gt;::ProduceLockedObject</a>(<span class="keyword">const</span> Key&amp; key)
 <a name="l00087"></a>00087 {
 <a name="l00088"></a>00088        <span class="keywordflow">if</span> (m_cacheLoaderCompPtr.IsValid()){
-<a name="l00089"></a>00089               <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> cacheFilePath;
+<a name="l00089"></a>00089               QString cacheFilePath;
 <a name="l00090"></a>00090               <span class="keyword">typename</span> KeyToFileNameMap::iterator foundIter = m_keyToFileNameMap.find(key);
 <a name="l00091"></a>00091               <span class="keywordflow">if</span> (foundIter != m_keyToFileNameMap.end()){
 <a name="l00092"></a>00092                      cacheFilePath = foundIter-&gt;second;
-<a name="l00093"></a>00093                      <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(!cacheFilePath.<a class="code" href="classistd_1_1_c_string.html#a71448bf5758726f6c3d8445675e78fbe" title="This function returns standard 8-bit string.">IsEmpty</a>());
+<a name="l00093"></a>00093                      <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(!cacheFilePath.IsEmpty());
 <a name="l00094"></a>00094               }
 <a name="l00095"></a>00095               <span class="keywordflow">else</span>{
 <a name="l00096"></a>00096                      cacheFilePath = CalcCacheFilePath(key);
 <a name="l00097"></a>00097               }
 <a name="l00098"></a>00098 
-<a name="l00099"></a>00099               <span class="keywordflow">if</span> (!cacheFilePath.<a class="code" href="classistd_1_1_c_string.html#a71448bf5758726f6c3d8445675e78fbe" title="This function returns standard 8-bit string.">IsEmpty</a>()){
+<a name="l00099"></a>00099               <span class="keywordflow">if</span> (!cacheFilePath.IsEmpty()){
 <a name="l00100"></a>00100                      <span class="keywordflow">if</span> (m_cacheLoaderCompPtr-&gt;IsOperationSupported(
 <a name="l00101"></a>00101                                           <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
 <a name="l00102"></a>00102                                           &amp;cacheFilePath,
@@ -134,8 +134,8 @@
 <a name="l00121"></a>00121        <span class="keywordflow">if</span> (m_slaveCacheEngineCompPtr.IsValid()){
 <a name="l00122"></a>00122               <span class="keyword">const</span> CacheObject* objectPtr = m_slaveCacheEngineCompPtr-&gt;ProduceLockedObject(key);
 <a name="l00123"></a>00123               <span class="keywordflow">if</span> (objectPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00124"></a>00124                      <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> cacheFilePath = CalcCacheFilePath(key);
-<a name="l00125"></a>00125                      <span class="keywordflow">if</span> (!cacheFilePath.<a class="code" href="classistd_1_1_c_string.html#a71448bf5758726f6c3d8445675e78fbe" title="This function returns standard 8-bit string.">IsEmpty</a>() &amp;&amp; m_cacheLoaderCompPtr.IsValid()){
+<a name="l00124"></a>00124                      QString cacheFilePath = CalcCacheFilePath(key);
+<a name="l00125"></a>00125                      <span class="keywordflow">if</span> (!cacheFilePath.IsEmpty() &amp;&amp; m_cacheLoaderCompPtr.IsValid()){
 <a name="l00126"></a>00126                             <span class="keywordflow">if</span> (m_cacheLoaderCompPtr-&gt;SaveToFile(*const_cast&lt;CacheObject*&gt;(objectPtr), cacheFilePath) == <a class="code" href="classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51a5a3b52788a1d74ae0252724e06ebe26d" title="Operation was successfull.">iser::IFileLoader::StateOk</a>){
 <a name="l00127"></a>00127                                    OnCacheFileSaved(key, cacheFilePath);
 <a name="l00128"></a>00128 
@@ -180,8 +180,8 @@
 <a name="l00167"></a><a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a9ca96ad5d4074112bf77a41512ff67a8">00167</a> <span class="keywordtype">bool</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a9ca96ad5d4074112bf77a41512ff67a8">TFileCachedProducerCompBase&lt;Key, CacheObject&gt;::PushKeyBack</a>(<span class="keyword">const</span> Key&amp; key)
 <a name="l00168"></a>00168 {
 <a name="l00169"></a>00169        <span class="keywordflow">if</span> (m_keyToFileNameMap.find(key) == m_keyToFileNameMap.end()){
-<a name="l00170"></a>00170               <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> cacheFilePath = CalcCacheFilePath(key);
-<a name="l00171"></a>00171               <span class="keywordflow">if</span> (!cacheFilePath.<a class="code" href="classistd_1_1_c_string.html#a71448bf5758726f6c3d8445675e78fbe" title="This function returns standard 8-bit string.">IsEmpty</a>()){
+<a name="l00170"></a>00170               QString cacheFilePath = CalcCacheFilePath(key);
+<a name="l00171"></a>00171               <span class="keywordflow">if</span> (!cacheFilePath.IsEmpty()){
 <a name="l00172"></a>00172                      m_keyToFileNameMap[key] = cacheFilePath;
 <a name="l00173"></a>00173                      m_recentlyUsedKeys.push_back(key);
 <a name="l00174"></a>00174 
@@ -200,13 +200,13 @@
 <a name="l00187"></a>00187        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(maxCachedFiles &gt;= 0);
 <a name="l00188"></a>00188 
 <a name="l00189"></a>00189        <span class="keywordflow">while</span> (<span class="keywordtype">int</span>(m_recentlyUsedKeys.size()) &gt; maxCachedFiles){
-<a name="l00190"></a>00190               <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; key = m_recentlyUsedKeys.front();
+<a name="l00190"></a>00190               <span class="keyword">const</span> QString&amp; key = m_recentlyUsedKeys.front();
 <a name="l00191"></a>00191 
 <a name="l00192"></a>00192               <span class="keyword">typename</span> KeyToFileNameMap::iterator foundIter = m_keyToFileNameMap.find(key);
 <a name="l00193"></a>00193               <span class="keywordflow">if</span> (foundIter != m_keyToFileNameMap.end()){
-<a name="l00194"></a>00194                      <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; cacheFilePath = foundIter-&gt;second;
+<a name="l00194"></a>00194                      <span class="keyword">const</span> QString&amp; cacheFilePath = foundIter-&gt;second;
 <a name="l00195"></a>00195 
-<a name="l00196"></a>00196                      <span class="keywordflow">if</span> (<span class="keyword">remove</span>(cacheFilePath.<a class="code" href="classistd_1_1_c_string.html#ab26e525f6bb077802fe4b04c2e8f8a63" title="This function returns standard 8-bit string.">ToString</a>().c_str()) != 0){
+<a name="l00196"></a>00196                      <span class="keywordflow">if</span> (<span class="keyword">remove</span>(cacheFilePath.toStdString().c_str()) != 0){
 <a name="l00197"></a>00197                             OnCacheFileRemoved(key, cacheFilePath);
 <a name="l00198"></a>00198                      }
 <a name="l00199"></a>00199 
@@ -219,13 +219,13 @@
 <a name="l00206"></a>00206 
 <a name="l00207"></a>00207 
 <a name="l00208"></a>00208 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Key, <span class="keyword">class</span> CacheObject&gt;
-<a name="l00209"></a><a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#ab89d04ffbc73c731152d372597bec225">00209</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#ab89d04ffbc73c731152d372597bec225">TFileCachedProducerCompBase&lt;Key, CacheObject&gt;::OnCacheFileSaved</a>(<span class="keyword">const</span> Key&amp; <span class="comment">/*key*/</span>, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <span class="comment">/*cacheFilePath*/</span>)
+<a name="l00209"></a><a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a2394884de10642312c21d2180d046b0d">00209</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a2394884de10642312c21d2180d046b0d">TFileCachedProducerCompBase&lt;Key, CacheObject&gt;::OnCacheFileSaved</a>(<span class="keyword">const</span> Key&amp; <span class="comment">/*key*/</span>, <span class="keyword">const</span> QString&amp; <span class="comment">/*cacheFilePath*/</span>)
 <a name="l00210"></a>00210 {
 <a name="l00211"></a>00211 }
 <a name="l00212"></a>00212 
 <a name="l00213"></a>00213 
 <a name="l00214"></a>00214 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Key, <span class="keyword">class</span> CacheObject&gt;
-<a name="l00215"></a><a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a391e5ac4848dfb1ed32ec92ce197c4c8">00215</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a391e5ac4848dfb1ed32ec92ce197c4c8">TFileCachedProducerCompBase&lt;Key, CacheObject&gt;::OnCacheFileRemoved</a>(<span class="keyword">const</span> Key&amp; <span class="comment">/*key*/</span>, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <span class="comment">/*cacheFilePath*/</span>)
+<a name="l00215"></a><a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#adf4a23ed996fc2545d58176b57e2f084">00215</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#adf4a23ed996fc2545d58176b57e2f084">TFileCachedProducerCompBase&lt;Key, CacheObject&gt;::OnCacheFileRemoved</a>(<span class="keyword">const</span> Key&amp; <span class="comment">/*key*/</span>, <span class="keyword">const</span> QString&amp; <span class="comment">/*cacheFilePath*/</span>)
 <a name="l00216"></a>00216 {
 <a name="l00217"></a>00217 }
 <a name="l00218"></a>00218 

@@ -60,8 +60,8 @@ Inheritance diagram for isys::CSystemInfoBase:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_system_info_base.html#a826d0b0f1950164b655a5a14627fe65e">GetComputerName</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get computer/workstation name.  <a href="#a826d0b0f1950164b655a5a14627fe65e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_system_info_base.html#a49ac08f5cb5baaee746bf7e69a65e3f2">GetComputerName</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get computer/workstation name.  <a href="#a49ac08f5cb5baaee746bf7e69a65e3f2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_system_info_base.html#a4fd7959d3c2636636b12db05dad36c74">GetProcessorsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of processors installed.  <a href="#a4fd7959d3c2636636b12db05dad36c74"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_system_info_base.html#abd94416a0274f485731a2975e6731922">GetProcessorId</a> (int processorIndex) const </td></tr>
@@ -78,14 +78,14 @@ Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_system_info_base.html#ab90c7067ebbdb77338feec18c73ae691">NetworkAdapters</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_system_info_base.html#ae2516cef560d9dc3d4d3ac2bf75f7819">m_computerName</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_system_info_base.html#a4ad8540ffe85c9aa0755fafd8c9f31e7">m_computerName</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classisys_1_1_c_system_info_base.html#af6bddaf7df10a22eaa124306765ba0e6">ProcessorIds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_system_info_base.html#ae90c3242f8a5fa5d7cb78b678fa6ea93">m_processorIds</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classisys_1_1_c_system_info_base.html#ab90c7067ebbdb77338feec18c73ae691">NetworkAdapters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_system_info_base.html#ad1c1a258773b67d6ca95e4ec0672e4d8">m_networkAdapters</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Basic implementation for system info interface. </p>
 
-<p>Definition at line <a class="el" href="_c_system_info_base_8h_source.html#l00016">16</a> of file <a class="el" href="_c_system_info_base_8h_source.html">CSystemInfoBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_system_info_base_8h_source.html#l00017">17</a> of file <a class="el" href="_c_system_info_base_8h_source.html">CSystemInfoBase.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="ab90c7067ebbdb77338feec18c73ae691"></a><!-- doxytag: member="isys::CSystemInfoBase::NetworkAdapters" ref="ab90c7067ebbdb77338feec18c73ae691" args="" -->
 <div class="memitem">
@@ -98,7 +98,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_system_info_base_8h_source.html#l00031">31</a> of file <a class="el" href="_c_system_info_base_8h_source.html">CSystemInfoBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_system_info_base_8h_source.html#l00032">32</a> of file <a class="el" href="_c_system_info_base_8h_source.html">CSystemInfoBase.h</a>.</p>
 
 </div>
 </div>
@@ -113,17 +113,17 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_system_info_base_8h_source.html#l00030">30</a> of file <a class="el" href="_c_system_info_base_8h_source.html">CSystemInfoBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_system_info_base_8h_source.html#l00031">31</a> of file <a class="el" href="_c_system_info_base_8h_source.html">CSystemInfoBase.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a826d0b0f1950164b655a5a14627fe65e"></a><!-- doxytag: member="isys::CSystemInfoBase::GetComputerName" ref="a826d0b0f1950164b655a5a14627fe65e" args="() const " -->
+<a class="anchor" id="a49ac08f5cb5baaee746bf7e69a65e3f2"></a><!-- doxytag: member="isys::CSystemInfoBase::GetComputerName" ref="a49ac08f5cb5baaee746bf7e69a65e3f2" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> isys::CSystemInfoBase::GetComputerName </td>
+          <td class="memname">virtual QString isys::CSystemInfoBase::GetComputerName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -134,7 +134,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Get computer/workstation name. </p>
 
-<p>Implements <a class="el" href="classisys_1_1_i_system_info.html#af514cbddee98b4debfb13dc46ca9342a">isys::ISystemInfo</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_system_info.html#afb90c8378860b7d44ff428623c7141a9">isys::ISystemInfo</a>.</p>
 
 </div>
 </div>
@@ -217,7 +217,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns <code>true</code> if there are network adapter(s) installed. </p>
 
-<p>Implements <a class="el" href="classisys_1_1_i_system_info.html#a8d2245671457891a8cbd28b22fe3283e">isys::ISystemInfo</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_system_info.html#a172d59bc1ad4d89b24baa4c5ddc06b51">isys::ISystemInfo</a>.</p>
 
 </div>
 </div>
@@ -245,18 +245,18 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="ae2516cef560d9dc3d4d3ac2bf75f7819"></a><!-- doxytag: member="isys::CSystemInfoBase::m_computerName" ref="ae2516cef560d9dc3d4d3ac2bf75f7819" args="" -->
+<a class="anchor" id="a4ad8540ffe85c9aa0755fafd8c9f31e7"></a><!-- doxytag: member="isys::CSystemInfoBase::m_computerName" ref="a4ad8540ffe85c9aa0755fafd8c9f31e7" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classistd_1_1_c_string.html">istd::CString</a> <a class="el" href="classisys_1_1_c_system_info_base.html#ae2516cef560d9dc3d4d3ac2bf75f7819">isys::CSystemInfoBase::m_computerName</a><code> [protected]</code></td>
+          <td class="memname">QString <a class="el" href="classisys_1_1_c_system_info_base.html#a4ad8540ffe85c9aa0755fafd8c9f31e7">isys::CSystemInfoBase::m_computerName</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_system_info_base_8h_source.html#l00033">33</a> of file <a class="el" href="_c_system_info_base_8h_source.html">CSystemInfoBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_system_info_base_8h_source.html#l00034">34</a> of file <a class="el" href="_c_system_info_base_8h_source.html">CSystemInfoBase.h</a>.</p>
 
 </div>
 </div>
@@ -271,7 +271,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_system_info_base_8h_source.html#l00035">35</a> of file <a class="el" href="_c_system_info_base_8h_source.html">CSystemInfoBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_system_info_base_8h_source.html#l00036">36</a> of file <a class="el" href="_c_system_info_base_8h_source.html">CSystemInfoBase.h</a>.</p>
 
 </div>
 </div>
@@ -286,7 +286,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_system_info_base_8h_source.html#l00034">34</a> of file <a class="el" href="_c_system_info_base_8h_source.html">CSystemInfoBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_system_info_base_8h_source.html#l00035">35</a> of file <a class="el" href="_c_system_info_base_8h_source.html">CSystemInfoBase.h</a>.</p>
 
 </div>
 </div>

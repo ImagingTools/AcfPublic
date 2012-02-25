@@ -189,7 +189,7 @@ void CSimpleMainWindowGuiComp::CreateMenu(const iqtgui::CHierarchicalCommand& co
 
 			if (hierarchicalPtr->GetChildsCount() > 0){
 				QMenu* newMenuPtr = new QMenu(&result);
-				newMenuPtr->setTitle(iqt::GetQString(hierarchicalPtr->GetName()));
+				newMenuPtr->setTitle(hierarchicalPtr->GetName());
 
 				CreateMenu<QMenu>(*hierarchicalPtr, *newMenuPtr);
 

@@ -68,12 +68,12 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#aeeb79465c6bfc726b9495f428804c0da">CDelegatedProgressManager</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create progress manager without slave manager.  <a href="#aeeb79465c6bfc726b9495f428804c0da"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#a2ea7b1d34bf8477dcdb509886fffbd82">CDelegatedProgressManager</a> (<a class="el" href="classiproc_1_1_i_progress_manager.html">IProgressManager</a> *slaveManagerPtr, const std::string &amp;progressId, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;description, bool isCancelable=false)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create progress manager with slave manager.  <a href="#a2ea7b1d34bf8477dcdb509886fffbd82"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#af130eee9fc13ce559f2c94c369b0f307">CDelegatedProgressManager</a> (<a class="el" href="classiproc_1_1_i_progress_manager.html">IProgressManager</a> *slaveManagerPtr, const std::string &amp;progressId, const QString &amp;description, bool isCancelable=false)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create progress manager with slave manager.  <a href="#af130eee9fc13ce559f2c94c369b0f307"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#a8a5ea37406db10416c31d802602beba9">~CDelegatedProgressManager</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#a1763a02d743ef3560382191328a43e68">GetCumulatedProgress</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#a48b2c508d23062a46121bc43f46687a4">BeginProgressSession</a> (const std::string &amp;progressId, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;description, bool isCancelable=false)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin progress report session.  <a href="#a48b2c508d23062a46121bc43f46687a4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#a084a06474f73d78a52e5ea7683b00fa6">BeginProgressSession</a> (const std::string &amp;progressId, const QString &amp;description, bool isCancelable=false)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin progress report session.  <a href="#a084a06474f73d78a52e5ea7683b00fa6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#a86d71f80bb55e7b8db231b5f8f59484c">EndProgressSession</a> (int sessionId)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Close progress report session.  <a href="#a86d71f80bb55e7b8db231b5f8f59484c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#a0534c499e70d65bfce3aad97eb7b6fac">OnProgress</a> (int sessionId, double currentProgress)</td></tr>
@@ -137,7 +137,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2ea7b1d34bf8477dcdb509886fffbd82"></a><!-- doxytag: member="iproc::CDelegatedProgressManager::CDelegatedProgressManager" ref="a2ea7b1d34bf8477dcdb509886fffbd82" args="(IProgressManager *slaveManagerPtr, const std::string &amp;progressId, const istd::CString &amp;description, bool isCancelable=false)" -->
+<a class="anchor" id="af130eee9fc13ce559f2c94c369b0f307"></a><!-- doxytag: member="iproc::CDelegatedProgressManager::CDelegatedProgressManager" ref="af130eee9fc13ce559f2c94c369b0f307" args="(IProgressManager *slaveManagerPtr, const std::string &amp;progressId, const QString &amp;description, bool isCancelable=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -156,7 +156,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>description</em>, </td>
         </tr>
         <tr>
@@ -203,7 +203,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a48b2c508d23062a46121bc43f46687a4"></a><!-- doxytag: member="iproc::CDelegatedProgressManager::BeginProgressSession" ref="a48b2c508d23062a46121bc43f46687a4" args="(const std::string &amp;progressId, const istd::CString &amp;description, bool isCancelable=false)" -->
+<a class="anchor" id="a084a06474f73d78a52e5ea7683b00fa6"></a><!-- doxytag: member="iproc::CDelegatedProgressManager::BeginProgressSession" ref="a084a06474f73d78a52e5ea7683b00fa6" args="(const std::string &amp;progressId, const QString &amp;description, bool isCancelable=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -216,7 +216,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>description</em>, </td>
         </tr>
         <tr>
@@ -237,9 +237,9 @@ Protected Member Functions</h2></td></tr>
 <p>Begin progress report session. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>session ID or negative value if failed. </dd></dl>
 
-<p>Implements <a class="el" href="classiproc_1_1_i_progress_manager.html#abac60b4e5839b7462805b65a16ac996f">iproc::IProgressManager</a>.</p>
+<p>Implements <a class="el" href="classiproc_1_1_i_progress_manager.html#a9dc83742bf9e811e9a32e006c16cf491">iproc::IProgressManager</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#a143483a6c95cb18bded1261c81bd338d">iqtproc::CProgressManagerGuiComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#aa60aab2e4d0083f4f76a027cc109c50c">iqtproc::CProgressManagerGuiComp</a>.</p>
 
 </div>
 </div>

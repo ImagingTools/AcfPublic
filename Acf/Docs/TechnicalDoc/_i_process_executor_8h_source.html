@@ -30,7 +30,7 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_i_polymorphic_8h.html">istd/IPolymorphic.h</a>&quot;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_c_string_8h.html">istd/CString.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QString&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_i_process_environment_8h.html">isys/IProcessEnvironment.h</a>&quot;</span>
 <a name="l00009"></a>00009 
@@ -44,7 +44,7 @@
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
 <a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_process_executor.html#ac34fbab12b75f42b9cad451c7f24dd3a" title="Define execution environment for the process.">SetEnvironment</a>(<span class="keyword">const</span> <a class="code" href="classisys_1_1_i_process_environment.html" title="Interface for access of some system dependent features and infos.">isys::IProcessEnvironment</a>&amp; processEnvironment) = 0;
 <a name="l00027"></a>00027 
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_i_process_executor.html#af7d2d2375f8294464e63b2746c186438" title="Execute external process.">ExecuteProcess</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; executablePath, <span class="keyword">const</span> <a class="code" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a>&amp; processArguments) = 0;
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_i_process_executor.html#abb013c895b51fd0112bbec8f01e6a0ae" title="Execute external process.">ExecuteProcess</a>(<span class="keyword">const</span> QString&amp; executablePath, <span class="keyword">const</span> QStringList&amp; processArguments) = 0;
 <a name="l00034"></a>00034 };
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 

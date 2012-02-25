@@ -69,10 +69,10 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_file_name_param_comp.html#a93c36286b28666ef00922eacbbcf22ad">GetPathType</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get intended type of the path.  <a href="#a93c36286b28666ef00922eacbbcf22ad"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_file_name_param_comp.html#a37911b25b7cdb3cd20aa6897b27d0f30">GetPath</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get path.  <a href="#a37911b25b7cdb3cd20aa6897b27d0f30"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_file_name_param_comp.html#a3afca756454c9395ff4abc83c7b0717e">SetPath</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;path)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set path.  <a href="#a3afca756454c9395ff4abc83c7b0717e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_file_name_param_comp.html#ab1a321a2c7b97f2d003034a73a1b883e">GetPath</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get path.  <a href="#ab1a321a2c7b97f2d003034a73a1b883e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_file_name_param_comp.html#a0cbd623fc84a08a9df56dc6960b8ea8b">SetPath</a> (const QString &amp;path)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set path.  <a href="#a0cbd623fc84a08a9df56dc6960b8ea8b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_file_name_param_comp.html#a46abcc9b9807e0da0704fc99adf0de54">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a46abcc9b9807e0da0704fc99adf0de54"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -102,12 +102,12 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a37911b25b7cdb3cd20aa6897b27d0f30"></a><!-- doxytag: member="iprm::CFileNameParamComp::GetPath" ref="a37911b25b7cdb3cd20aa6897b27d0f30" args="() const " -->
+<a class="anchor" id="ab1a321a2c7b97f2d003034a73a1b883e"></a><!-- doxytag: member="iprm::CFileNameParamComp::GetPath" ref="ab1a321a2c7b97f2d003034a73a1b883e" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&amp; iprm::CFileNameParamComp::GetPath </td>
+          <td class="memname">virtual const QString&amp; iprm::CFileNameParamComp::GetPath </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -118,9 +118,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get path. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_file_name_param.html#aad3fd4c8c7dcd345b862aa9705a4fa37">iprm::IFileNameParam</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_file_name_param.html#a6c2592466876ec0b6f8b0508316bebb4">iprm::IFileNameParam</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiqtprm_1_1_c_relative_file_name_param_comp.html#a961c99ef3bb18359e880f92d66f887e6">iqtprm::CRelativeFileNameParamComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqtprm_1_1_c_relative_file_name_param_comp.html#a301ae19d7258cfd23e79e0ddfdeda000">iqtprm::CRelativeFileNameParamComp</a>.</p>
 
 </div>
 </div>
@@ -188,14 +188,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3afca756454c9395ff4abc83c7b0717e"></a><!-- doxytag: member="iprm::CFileNameParamComp::SetPath" ref="a3afca756454c9395ff4abc83c7b0717e" args="(const istd::CString &amp;path)" -->
+<a class="anchor" id="a0cbd623fc84a08a9df56dc6960b8ea8b"></a><!-- doxytag: member="iprm::CFileNameParamComp::SetPath" ref="a0cbd623fc84a08a9df56dc6960b8ea8b" args="(const QString &amp;path)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iprm::CFileNameParamComp::SetPath </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -205,9 +205,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set path. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_file_name_param.html#ae8244c20f6dc9eed96d9221bad05cef4">iprm::IFileNameParam</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_file_name_param.html#adfa731d40e4ae3e840f634cdf768f942">iprm::IFileNameParam</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiqtprm_1_1_c_relative_file_name_param_comp.html#ae3f3a388ff72dbfc73ce1c3bf797c940">iqtprm::CRelativeFileNameParamComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqtprm_1_1_c_relative_file_name_param_comp.html#a898191a787c5aef074af9f48f7b38b7a">iqtprm::CRelativeFileNameParamComp</a>.</p>
 
 </div>
 </div>

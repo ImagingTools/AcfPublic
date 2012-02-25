@@ -47,9 +47,8 @@ Inheritance diagram for isys::IFileSystem:</div>
  <div class="center">
   <img src="classisys_1_1_i_file_system.png" usemap="#isys::IFileSystem_map" alt=""/>
   <map id="isys::IFileSystem_map" name="isys::IFileSystem_map">
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="74,0,212,24"/>
-<area href="classiqt_1_1_c_file_system.html" title="Implementation of file system information based on QT." alt="iqt::CFileSystem" shape="rect" coords="0,112,138,136"/>
-<area href="classisys_1_1_c_file_system_base.html" title="Basic plattform independent implementation of the file system information." alt="isys::CFileSystemBase" shape="rect" coords="148,112,286,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,110,24"/>
+<area href="classiqt_1_1_c_file_system.html" title="Implementation of file system information based on QT." alt="iqt::CFileSystem" shape="rect" coords="0,112,110,136"/>
 </map>
  </div></div>
 
@@ -57,46 +56,46 @@ Inheritance diagram for isys::IFileSystem:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#aa4ba0b56aa7a0494bfe5a827df625120">GetNormalizedPath</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;path) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get normalized file path.  <a href="#aa4ba0b56aa7a0494bfe5a827df625120"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#af6aa5b1cd7a451ffc4933f2e7934840b">GetFileName</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file name of specified file path.  <a href="#af6aa5b1cd7a451ffc4933f2e7934840b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#a9023ce6b72546125e679e8cca10df692">GetBaseFileName</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get base file name (also without extension) of specified file path.  <a href="#a9023ce6b72546125e679e8cca10df692"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#aedd2359672675b05f0b00cb147406789">GetDirPath</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get directory path of specified file path.  <a href="#aedd2359672675b05f0b00cb147406789"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#a9d2d3904d413c4a14592eef5f2244d34">HasExtension</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;extension) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if file path has specified extension.  <a href="#a9d2d3904d413c4a14592eef5f2244d34"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#aa2d5af72f8d7497d3ac2f1c5814faae6">IsPresent</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if some file is present.  <a href="#aa2d5af72f8d7497d3ac2f1c5814faae6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#a1c2894ea376870e520ccd2f88d58ad0f">CreateFileCopy</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;inputFile, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;outputFile, bool overwriteExisting=false) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy any file to another.  <a href="#a1c2894ea376870e520ccd2f88d58ad0f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#aa09e10c6f07b5e7ec8170c8f8fe7f78d">RemoveFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the file <code>filePath</code> from the file system.  <a href="#aa09e10c6f07b5e7ec8170c8f8fe7f78d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#ad0959eee52bead72b584e44eef2840e5">RemoveFolder</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;directoryPath, bool ignoreNonEmpty=false) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the directory <code>directoryPath</code> from the file system.  <a href="#ad0959eee52bead72b584e44eef2840e5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#a3fda9e2fdad8edcd35e1c93cb06c7b14">CreateFolder</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;directoryPath) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an empty directory.  <a href="#a3fda9e2fdad8edcd35e1c93cb06c7b14"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#ad6995113ef9ffe3a54a4a98398f0ac05">GetNormalizedPath</a> (const QString &amp;path) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get normalized file path.  <a href="#ad6995113ef9ffe3a54a4a98398f0ac05"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#a6330698f20e6672b5bf8c7da0a628522">GetFileName</a> (const QString &amp;filePath) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file name of specified file path.  <a href="#a6330698f20e6672b5bf8c7da0a628522"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#adc58e4c6ea34d3778ebc2fb8b4816e86">GetBaseFileName</a> (const QString &amp;filePath) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get base file name (also without extension) of specified file path.  <a href="#adc58e4c6ea34d3778ebc2fb8b4816e86"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#a158a724c21b8a7e322a9407895f146ee">GetDirPath</a> (const QString &amp;filePath) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get directory path of specified file path.  <a href="#a158a724c21b8a7e322a9407895f146ee"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#a79d2027c0705617ee3a7de891a1a6644">HasExtension</a> (const QString &amp;filePath, const QString &amp;extension) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if file path has specified extension.  <a href="#a79d2027c0705617ee3a7de891a1a6644"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#ae12703ed48b095956965995d719315d8">IsPresent</a> (const QString &amp;filePath) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if some file is present.  <a href="#ae12703ed48b095956965995d719315d8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#a21d8804705b527af16a9d5ec75b31341">CreateFileCopy</a> (const QString &amp;inputFile, const QString &amp;outputFile, bool overwriteExisting=false) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy any file to another.  <a href="#a21d8804705b527af16a9d5ec75b31341"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#a25cea2620e6d79ae860272bb08e430b9">RemoveFile</a> (const QString &amp;filePath) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the file <code>filePath</code> from the file system.  <a href="#a25cea2620e6d79ae860272bb08e430b9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#a99623b5d5782dabcd5d67951db9ca106">RemoveFolder</a> (const QString &amp;directoryPath, bool ignoreNonEmpty=false) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the directory <code>directoryPath</code> from the file system.  <a href="#a99623b5d5782dabcd5d67951db9ca106"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html#a66cfe52b893ea799cf9121286ac50c69">CreateFolder</a> (const QString &amp;directoryPath) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an empty directory.  <a href="#a66cfe52b893ea799cf9121286ac50c69"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Defines some file system dependent operations. </p>
 
-<p>Definition at line <a class="el" href="_i_file_system_8h_source.html#l00020">20</a> of file <a class="el" href="_i_file_system_8h_source.html">IFileSystem.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_file_system_8h_source.html#l00024">24</a> of file <a class="el" href="_i_file_system_8h_source.html">IFileSystem.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a1c2894ea376870e520ccd2f88d58ad0f"></a><!-- doxytag: member="isys::IFileSystem::CreateFileCopy" ref="a1c2894ea376870e520ccd2f88d58ad0f" args="(const istd::CString &amp;inputFile, const istd::CString &amp;outputFile, bool overwriteExisting=false) const =0" -->
+<a class="anchor" id="a21d8804705b527af16a9d5ec75b31341"></a><!-- doxytag: member="isys::IFileSystem::CreateFileCopy" ref="a21d8804705b527af16a9d5ec75b31341" args="(const QString &amp;inputFile, const QString &amp;outputFile, bool overwriteExisting=false) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool isys::IFileSystem::CreateFileCopy </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>inputFile</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>outputFile</em>, </td>
         </tr>
         <tr>
@@ -117,18 +116,18 @@ Public Member Functions</h2></td></tr>
 <p>Copy any file to another. </p>
 <p>If the <code>overwriteExisting</code> is set on, the existing file will be overwritten. </p>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#a5b1debb91b7addd64721bc4fa75e5f83">iqt::CFileSystem</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#ac38e6469f3f2a09f7665b640606bc614">iqt::CFileSystem</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3fda9e2fdad8edcd35e1c93cb06c7b14"></a><!-- doxytag: member="isys::IFileSystem::CreateFolder" ref="a3fda9e2fdad8edcd35e1c93cb06c7b14" args="(const istd::CString &amp;directoryPath) const =0" -->
+<a class="anchor" id="a66cfe52b893ea799cf9121286ac50c69"></a><!-- doxytag: member="isys::IFileSystem::CreateFolder" ref="a66cfe52b893ea799cf9121286ac50c69" args="(const QString &amp;directoryPath) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool isys::IFileSystem::CreateFolder </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>directoryPath</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -138,18 +137,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Create an empty directory. </p>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#ab08e26aa6df454b43a4be873b8b31dcd">iqt::CFileSystem</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#afefbd83e7898d847293736f9b6a09ff8">iqt::CFileSystem</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9023ce6b72546125e679e8cca10df692"></a><!-- doxytag: member="isys::IFileSystem::GetBaseFileName" ref="a9023ce6b72546125e679e8cca10df692" args="(const istd::CString &amp;filePath) const =0" -->
+<a class="anchor" id="adc58e4c6ea34d3778ebc2fb8b4816e86"></a><!-- doxytag: member="isys::IFileSystem::GetBaseFileName" ref="adc58e4c6ea34d3778ebc2fb8b4816e86" args="(const QString &amp;filePath) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> isys::IFileSystem::GetBaseFileName </td>
+          <td class="memname">virtual QString isys::IFileSystem::GetBaseFileName </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>filePath</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -160,18 +159,18 @@ Public Member Functions</h2></td></tr>
 <p>Get base file name (also without extension) of specified file path. </p>
 <p>For example for "C:\Test\blah.txt.gz" it should return "blah". </p>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#a5d2efe9e0fd10780bac8d59ce753dc81">iqt::CFileSystem</a>, and <a class="el" href="classisys_1_1_c_file_system_base.html#a9cd7b56c4f355f57f0b3f7936bda9e89">isys::CFileSystemBase</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#a71b69d093f185bff47ea9d0b86d5274f">iqt::CFileSystem</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aedd2359672675b05f0b00cb147406789"></a><!-- doxytag: member="isys::IFileSystem::GetDirPath" ref="aedd2359672675b05f0b00cb147406789" args="(const istd::CString &amp;filePath) const =0" -->
+<a class="anchor" id="a158a724c21b8a7e322a9407895f146ee"></a><!-- doxytag: member="isys::IFileSystem::GetDirPath" ref="a158a724c21b8a7e322a9407895f146ee" args="(const QString &amp;filePath) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> isys::IFileSystem::GetDirPath </td>
+          <td class="memname">virtual QString isys::IFileSystem::GetDirPath </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>filePath</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -182,20 +181,20 @@ Public Member Functions</h2></td></tr>
 <p>Get directory path of specified file path. </p>
 <p>For example for "C:\Test\blah.txt" it should return "C:\Test". </p>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#a3b6784dc9c762e6ba920e21a6859b952">iqt::CFileSystem</a>, and <a class="el" href="classisys_1_1_c_file_system_base.html#ac57a72127624c3a88c066142d951b601">isys::CFileSystemBase</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#aebafb17f6df7c7a887df7dd64d8a00cf">iqt::CFileSystem</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_file_serializer_comp_8h_source.html#l00336">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;::CheckTargetDirectory()</a>.</p>
+<p>Referenced by <a class="el" href="_t_file_serializer_comp_8h_source.html#l00345">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;::CheckTargetDirectory()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af6aa5b1cd7a451ffc4933f2e7934840b"></a><!-- doxytag: member="isys::IFileSystem::GetFileName" ref="af6aa5b1cd7a451ffc4933f2e7934840b" args="(const istd::CString &amp;filePath) const =0" -->
+<a class="anchor" id="a6330698f20e6672b5bf8c7da0a628522"></a><!-- doxytag: member="isys::IFileSystem::GetFileName" ref="a6330698f20e6672b5bf8c7da0a628522" args="(const QString &amp;filePath) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> isys::IFileSystem::GetFileName </td>
+          <td class="memname">virtual QString isys::IFileSystem::GetFileName </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>filePath</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -206,18 +205,18 @@ Public Member Functions</h2></td></tr>
 <p>Get file name of specified file path. </p>
 <p>For example for "C:\Test\blah.txt" it should return "blah.txt". </p>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#abf79a5dcd383d074db120e978a7ef45d">iqt::CFileSystem</a>, and <a class="el" href="classisys_1_1_c_file_system_base.html#a729ceafc20f8d157a741a914e2833a35">isys::CFileSystemBase</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#ad31f2e1407175d36836017822bb49141">iqt::CFileSystem</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa4ba0b56aa7a0494bfe5a827df625120"></a><!-- doxytag: member="isys::IFileSystem::GetNormalizedPath" ref="aa4ba0b56aa7a0494bfe5a827df625120" args="(const istd::CString &amp;path) const =0" -->
+<a class="anchor" id="ad6995113ef9ffe3a54a4a98398f0ac05"></a><!-- doxytag: member="isys::IFileSystem::GetNormalizedPath" ref="ad6995113ef9ffe3a54a4a98398f0ac05" args="(const QString &amp;path) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> isys::IFileSystem::GetNormalizedPath </td>
+          <td class="memname">virtual QString isys::IFileSystem::GetNormalizedPath </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -228,24 +227,24 @@ Public Member Functions</h2></td></tr>
 <p>Get normalized file path. </p>
 <p>For any path to the same file this function should return the same path. For example for "C:\Test\..\Test\blah.txt" it should return "C:\Test\blah.txt". </p>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#a918d002163fc707ae26267cd4e1e8d6f">iqt::CFileSystem</a>, and <a class="el" href="classisys_1_1_c_file_system_base.html#ac1bbaca543536edb68c69c26fb330376">isys::CFileSystemBase</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#ac9f4aca2e8e9bfa1b7f64f83b4529ad7">iqt::CFileSystem</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9d2d3904d413c4a14592eef5f2244d34"></a><!-- doxytag: member="isys::IFileSystem::HasExtension" ref="a9d2d3904d413c4a14592eef5f2244d34" args="(const istd::CString &amp;filePath, const istd::CString &amp;extension) const =0" -->
+<a class="anchor" id="a79d2027c0705617ee3a7de891a1a6644"></a><!-- doxytag: member="isys::IFileSystem::HasExtension" ref="a79d2027c0705617ee3a7de891a1a6644" args="(const QString &amp;filePath, const QString &amp;extension) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool isys::IFileSystem::HasExtension </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>filePath</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>extension</em>&#160;</td>
         </tr>
         <tr>
@@ -259,18 +258,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Check if file path has specified extension. </p>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#aa7e4e73c31a53d9b0fbe939894c6603d">iqt::CFileSystem</a>, and <a class="el" href="classisys_1_1_c_file_system_base.html#a748c9b8937f447fa80c8e34035a8747e">isys::CFileSystemBase</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#a1813a231255f14851dfecab9a1e29556">iqt::CFileSystem</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa2d5af72f8d7497d3ac2f1c5814faae6"></a><!-- doxytag: member="isys::IFileSystem::IsPresent" ref="aa2d5af72f8d7497d3ac2f1c5814faae6" args="(const istd::CString &amp;filePath) const =0" -->
+<a class="anchor" id="ae12703ed48b095956965995d719315d8"></a><!-- doxytag: member="isys::IFileSystem::IsPresent" ref="ae12703ed48b095956965995d719315d8" args="(const QString &amp;filePath) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool isys::IFileSystem::IsPresent </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>filePath</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -280,20 +279,20 @@ Public Member Functions</h2></td></tr>
 
 <p>Check if some file is present. </p>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#a113a59bf006a704a0ba819f8e3cd4c03">iqt::CFileSystem</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#ad7c06867c2515339486d8061d07fbb6e">iqt::CFileSystem</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_file_serializer_comp_8h_source.html#l00316">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;::CheckInputFilePath()</a>, <a class="el" href="_t_file_serializer_comp_8h_source.html#l00336">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;::CheckTargetDirectory()</a>, and <a class="el" href="_t_file_serializer_comp_8h_source.html#l00164">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;::IsOperationSupported()</a>.</p>
+<p>Referenced by <a class="el" href="_t_file_serializer_comp_8h_source.html#l00325">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;::CheckInputFilePath()</a>, <a class="el" href="_t_file_serializer_comp_8h_source.html#l00345">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;::CheckTargetDirectory()</a>, and <a class="el" href="_t_file_serializer_comp_8h_source.html#l00170">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;::IsOperationSupported()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa09e10c6f07b5e7ec8170c8f8fe7f78d"></a><!-- doxytag: member="isys::IFileSystem::RemoveFile" ref="aa09e10c6f07b5e7ec8170c8f8fe7f78d" args="(const istd::CString &amp;filePath) const =0" -->
+<a class="anchor" id="a25cea2620e6d79ae860272bb08e430b9"></a><!-- doxytag: member="isys::IFileSystem::RemoveFile" ref="a25cea2620e6d79ae860272bb08e430b9" args="(const QString &amp;filePath) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool isys::IFileSystem::RemoveFile </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>filePath</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -303,18 +302,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Remove the file <code>filePath</code> from the file system. </p>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#ab4c4db1221c1225ed8e73c090fb947f2">iqt::CFileSystem</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#a0af0bc97c32ae4553254d85ee4efa61a">iqt::CFileSystem</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad0959eee52bead72b584e44eef2840e5"></a><!-- doxytag: member="isys::IFileSystem::RemoveFolder" ref="ad0959eee52bead72b584e44eef2840e5" args="(const istd::CString &amp;directoryPath, bool ignoreNonEmpty=false) const =0" -->
+<a class="anchor" id="a99623b5d5782dabcd5d67951db9ca106"></a><!-- doxytag: member="isys::IFileSystem::RemoveFolder" ref="a99623b5d5782dabcd5d67951db9ca106" args="(const QString &amp;directoryPath, bool ignoreNonEmpty=false) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool isys::IFileSystem::RemoveFolder </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>directoryPath</em>, </td>
         </tr>
         <tr>
@@ -335,7 +334,7 @@ Public Member Functions</h2></td></tr>
 <p>Remove the directory <code>directoryPath</code> from the file system. </p>
 <p>If <code>ignoreNonEmpty</code> flag set, all files in the directory will be also deleted, otherwise operation will be canceled and the function returns <code>false</code>. </p>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#a163b42096e2877f343afc3fd4bcb9a8c">iqt::CFileSystem</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_file_system.html#a9fff87f73709ad4dbafce20dbf693f58">iqt::CFileSystem</a>.</p>
 
 </div>
 </div>

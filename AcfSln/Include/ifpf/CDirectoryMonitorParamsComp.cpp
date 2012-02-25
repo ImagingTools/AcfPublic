@@ -48,7 +48,7 @@ void CDirectoryMonitorParamsComp::OnComponentCreated()
 	}
 
 	if (m_acceptPatternsAttrPtr.IsValid()){
-		istd::CStringList acceptPatterns;
+		QStringList acceptPatterns;
 		for (int index = 0; index < m_acceptPatternsAttrPtr.GetCount(); index++){
 			acceptPatterns.push_back(m_acceptPatternsAttrPtr[index]);
 		}
@@ -57,7 +57,7 @@ void CDirectoryMonitorParamsComp::OnComponentCreated()
 	}
 
 	if (m_ignorePatternsAttrPtr.IsValid()){
-		istd::CStringList ignorePatterns;
+		QStringList ignorePatterns;
 		for (int index = 0; index < m_ignorePatternsAttrPtr.GetCount(); index++){
 			ignorePatterns.push_back(m_ignorePatternsAttrPtr[index]);
 		}

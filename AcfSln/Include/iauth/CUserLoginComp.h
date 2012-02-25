@@ -63,7 +63,7 @@ public:
 
 	// reimplemented (iauth::ILogin)
 	virtual bool IsUserLogged() const;
-	virtual bool Login(const istd::CString& userName, const istd::CString& password);
+	virtual bool Login(const QString& userName, const QString& password);
 	virtual bool Logout();
 
 	// reimplemented (iauth::IRightsProvider)
@@ -76,7 +76,7 @@ private:
 	I_REF(IUsersManager, m_usersManagerIfPtr);
 	I_REF(IPasswordChanger, m_passwordChangerIfPtr);
 
-	istd::CString m_loggedUserName;
+	QString m_loggedUserName;
 };
 
 

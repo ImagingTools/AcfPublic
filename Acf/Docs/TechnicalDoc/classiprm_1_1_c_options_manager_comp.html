@@ -75,16 +75,16 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints flags.  <a href="#a441905be36c39ca2161f27104e20ce61"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#aa229f5434f7a8b3ef39d71a4c76b41b0">GetOptionsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of managed options.  <a href="#aa229f5434f7a8b3ef39d71a4c76b41b0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#aac4fb662fa75cdf7ba347144fbf77e53">GetOptionName</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified option.  <a href="#aac4fb662fa75cdf7ba347144fbf77e53"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#a5c7d63904cb1662409d5f258610b8cdc">GetOptionDescription</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description for a option with the index <code>index</code>.  <a href="#a5c7d63904cb1662409d5f258610b8cdc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#a457a12ebb3ff0113d92e02f9311d856c">GetOptionName</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified option.  <a href="#a457a12ebb3ff0113d92e02f9311d856c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#a3f50417a9ddd697534cd0419ed062fe4">GetOptionDescription</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description for a option with the index <code>index</code>.  <a href="#a3f50417a9ddd697534cd0419ed062fe4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#a874f8498e372b68542c0e2f407936685">GetOptionId</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option ID.  <a href="#a874f8498e372b68542c0e2f407936685"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#a0d6f3e60aebc039a47e3caa8ef4a39f4">RemoveOption</a> (int index)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an option at the given index.  <a href="#a0d6f3e60aebc039a47e3caa8ef4a39f4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#a33bf04fa94a0d42709096fd15dc1cb3f">InsertOption</a> (<a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;optionName, const std::string &amp;optionId, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;optionDescription=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>(), int index=-1)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an option with the at the given option name and ID.  <a href="#a33bf04fa94a0d42709096fd15dc1cb3f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#a22a82253c6a36f09a6f344205e77bb0c">InsertOption</a> (QString &amp;optionName, const std::string &amp;optionId, const QString &amp;optionDescription=QString(), int index=-1)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an option with the at the given option name and ID.  <a href="#a22a82253c6a36f09a6f344205e77bb0c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#a7db7074ab688ee4dc76c1a6b6919dabd">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a7db7074ab688ee4dc76c1a6b6919dabd"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -133,12 +133,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5c7d63904cb1662409d5f258610b8cdc"></a><!-- doxytag: member="iprm::COptionsManagerComp::GetOptionDescription" ref="a5c7d63904cb1662409d5f258610b8cdc" args="(int index) const " -->
+<a class="anchor" id="a3f50417a9ddd697534cd0419ed062fe4"></a><!-- doxytag: member="iprm::COptionsManagerComp::GetOptionDescription" ref="a3f50417a9ddd697534cd0419ed062fe4" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iprm::COptionsManagerComp::GetOptionDescription </td>
+          <td class="memname">virtual QString iprm::COptionsManagerComp::GetOptionDescription </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -150,7 +150,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get description for a option with the index <code>index</code>. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#aa134f7e8af11d478320121cee6228701">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a0a88f5abd55974d0fd943e9e338996bf">iprm::ISelectionConstraints</a>.</p>
 
 </div>
 </div>
@@ -177,12 +177,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aac4fb662fa75cdf7ba347144fbf77e53"></a><!-- doxytag: member="iprm::COptionsManagerComp::GetOptionName" ref="aac4fb662fa75cdf7ba347144fbf77e53" args="(int index) const " -->
+<a class="anchor" id="a457a12ebb3ff0113d92e02f9311d856c"></a><!-- doxytag: member="iprm::COptionsManagerComp::GetOptionName" ref="a457a12ebb3ff0113d92e02f9311d856c" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iprm::COptionsManagerComp::GetOptionName </td>
+          <td class="memname">virtual QString iprm::COptionsManagerComp::GetOptionName </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -194,7 +194,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get name of specified option. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a62f01670db997af122efa4eeb20d89be">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a9d21be275c1d2d889b964971d52ec6e0">iprm::ISelectionConstraints</a>.</p>
 
 </div>
 </div>
@@ -218,14 +218,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a33bf04fa94a0d42709096fd15dc1cb3f"></a><!-- doxytag: member="iprm::COptionsManagerComp::InsertOption" ref="a33bf04fa94a0d42709096fd15dc1cb3f" args="(istd::CString &amp;optionName, const std::string &amp;optionId, const istd::CString &amp;optionDescription=istd::CString(), int index=&#45;1)" -->
+<a class="anchor" id="a22a82253c6a36f09a6f344205e77bb0c"></a><!-- doxytag: member="iprm::COptionsManagerComp::InsertOption" ref="a22a82253c6a36f09a6f344205e77bb0c" args="(QString &amp;optionName, const std::string &amp;optionId, const QString &amp;optionDescription=QString(), int index=&#45;1)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iprm::COptionsManagerComp::InsertOption </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">QString &amp;&#160;</td>
           <td class="paramname"><em>optionName</em>, </td>
         </tr>
         <tr>
@@ -237,8 +237,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
-          <td class="paramname"><em>optionDescription</em> = <code><a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()</code>, </td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>optionDescription</em> = <code>QString()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -257,7 +257,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Insert an option with the at the given option name and ID. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_options_manager.html#adbfcda44f0429c3e9e5e5037463e7741">iprm::IOptionsManager</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_manager.html#a4fda59f5bcb250e24232a0016a81ef28">iprm::IOptionsManager</a>.</p>
 
 </div>
 </div>

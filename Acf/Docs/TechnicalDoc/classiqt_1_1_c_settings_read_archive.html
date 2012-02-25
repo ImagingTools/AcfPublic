@@ -45,14 +45,15 @@ Inheritance diagram for iqt::CSettingsReadArchive:</div>
  <div class="center">
   <img src="classiqt_1_1_c_settings_read_archive.png" usemap="#iqt::CSettingsReadArchive_map" alt=""/>
   <map id="iqt::CSettingsReadArchive_map" name="iqt::CSettingsReadArchive_map">
-<area href="classiser_1_1_c_text_read_archive_base.html" title="Common archive implementation of text-based reading archives." alt="iser::CTextReadArchiveBase" shape="rect" coords="91,224,264,248"/>
-<area href="classiqt_1_1_c_settings_archive_base.html" alt="iqt::CSettingsArchiveBase" shape="rect" coords="274,224,447,248"/>
-<area href="classiser_1_1_c_read_archive_base.html" title="Basic implementation of an abstract archive for data reading." alt="iser::CReadArchiveBase" shape="rect" coords="91,168,264,192"/>
-<area href="classiser_1_1_c_archive_base.html" title="Base implementation of iser::IArchive interface." alt="iser::CArchiveBase" shape="rect" coords="91,112,264,136"/>
-<area href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive." alt="iser::IArchive" shape="rect" coords="0,56,173,80"/>
-<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="183,56,356,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,173,24"/>
+<area href="classiser_1_1_c_text_read_archive_base.html" title="Common archive implementation of text-based reading archives." alt="iser::CTextReadArchiveBase" shape="rect" coords="183,224,356,248"/>
+<area href="classiqt_1_1_c_settings_archive_base.html" alt="iqt::CSettingsArchiveBase" shape="rect" coords="366,224,539,248"/>
+<area href="classiser_1_1_c_read_archive_base.html" title="Basic implementation of an abstract archive for data reading." alt="iser::CReadArchiveBase" shape="rect" coords="183,168,356,192"/>
+<area href="classiser_1_1_c_archive_base.html" title="Base implementation of iser::IArchive interface." alt="iser::CArchiveBase" shape="rect" coords="183,112,356,136"/>
+<area href="class_q_object.html" alt="QObject" shape="rect" coords="0,56,173,80"/>
+<area href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive." alt="iser::IArchive" shape="rect" coords="183,56,356,80"/>
+<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="366,56,539,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="183,0,356,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="366,0,539,24"/>
 </map>
  </div></div>
 
@@ -73,8 +74,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">End of archive tag.  <a href="#a874460aad27846ae5bde637846e73af8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_read_archive.html#a712545a8b1069e910051efd4d3bd0d35">Process</a> (std::string &amp;value)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process primitive type.  <a href="#a712545a8b1069e910051efd4d3bd0d35"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_read_archive.html#a1cf1e212b372d078e122dafd151ef213">Process</a> (<a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process primitive type.  <a href="#a1cf1e212b372d078e122dafd151ef213"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_read_archive.html#a916c6a27c3f68635a27458a9e359f58f">Process</a> (QString &amp;value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process primitive type.  <a href="#a916c6a27c3f68635a27458a9e359f58f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -267,14 +268,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1cf1e212b372d078e122dafd151ef213"></a><!-- doxytag: member="iqt::CSettingsReadArchive::Process" ref="a1cf1e212b372d078e122dafd151ef213" args="(istd::CString &amp;value)" -->
+<a class="anchor" id="a916c6a27c3f68635a27458a9e359f58f"></a><!-- doxytag: member="iqt::CSettingsReadArchive::Process" ref="a916c6a27c3f68635a27458a9e359f58f" args="(QString &amp;value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iqt::CSettingsReadArchive::Process </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">QString &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -284,7 +285,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Process primitive type. </p>
 
-<p>Implements <a class="el" href="classiser_1_1_i_archive.html#ad7179c4799c3fee319f04bcdb26da334">iser::IArchive</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_archive.html#acd87fdc0a55410cdd8f3bec847cdc276">iser::IArchive</a>.</p>
 
 </div>
 </div>

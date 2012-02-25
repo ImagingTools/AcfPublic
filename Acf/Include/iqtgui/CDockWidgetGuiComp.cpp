@@ -102,8 +102,8 @@ void CDockWidgetGuiComp::OnGuiCreated()
 	I_ASSERT(dockWidgetPtr != NULL);
 
 	if (m_dockTitleAttrPtr.IsValid()){
-		dockWidgetPtr->setWindowTitle(iqt::GetQString(m_dockTitleAttrPtr->GetValue()));
-		dockWidgetPtr->setObjectName(iqt::GetQString(m_dockTitleAttrPtr->GetValue()));
+		dockWidgetPtr->setWindowTitle(*m_dockTitleAttrPtr);
+		dockWidgetPtr->setObjectName(*m_dockTitleAttrPtr);
 	}
 
 	istd::TDelPtr<QWidget> containerWidgetPtr(new QWidget(NULL));
@@ -149,7 +149,7 @@ void CDockWidgetGuiComp::OnGuiRetranslate()
 	I_ASSERT(dockWidgetPtr != NULL);
 
 	if (m_dockTitleAttrPtr.IsValid()){
-		QString title = iqt::GetQString(m_dockTitleAttrPtr->GetValue());
+		QString title = *m_dockTitleAttrPtr;
 		dockWidgetPtr->setWindowTitle(tr(title.toAscii()));
 	}
 }

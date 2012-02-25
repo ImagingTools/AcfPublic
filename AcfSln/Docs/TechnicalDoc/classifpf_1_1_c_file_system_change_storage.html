@@ -60,12 +60,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_file_system_change_storage.html#a0b109d6eec3d93df1cf1bd08cb4c993a">CFileSystemChangeStorage</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_file_system_change_storage.html#acf23937654cae9feebd4357b6cb3bdd9">GetStorageItemsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of items in the storage.  <a href="#acf23937654cae9feebd4357b6cb3bdd9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_file_system_change_storage.html#a2392df5580ea340c67b595d22424c57d">GetItemPath</a> (int fileIndex) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get item path with the given index from the storage.  <a href="#a2392df5580ea340c67b595d22424c57d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_file_system_change_storage.html#a078f80f40d7f4265b4d2e0188fcc63e8">GetItemPath</a> (int fileIndex) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get item path with the given index from the storage.  <a href="#a078f80f40d7f4265b4d2e0188fcc63e8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_file_system_change_storage.html#a17b79aeeb30f8cad8e300c4175e3db72">GetItemState</a> (int fileIndex) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get item state with the given index from the storage.  <a href="#a17b79aeeb30f8cad8e300c4175e3db72"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_file_system_change_storage.html#a05bcf04c53d8a1c692940337923b8a07">UpdateStorageItem</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;path, int itemFlags)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update storage item.  <a href="#a05bcf04c53d8a1c692940337923b8a07"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_file_system_change_storage.html#a66c8f125912f07bd94cb1552fed22c96">UpdateStorageItem</a> (const QString &amp;path, int itemFlags)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update storage item.  <a href="#a66c8f125912f07bd94cb1552fed22c96"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_file_system_change_storage.html#aca8050eb866a5699ed7f73c33a49d137">ResetStorage</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the storage.  <a href="#aca8050eb866a5699ed7f73c33a49d137"></a><br/></td></tr>
 </table>
@@ -92,12 +92,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a2392df5580ea340c67b595d22424c57d"></a><!-- doxytag: member="ifpf::CFileSystemChangeStorage::GetItemPath" ref="a2392df5580ea340c67b595d22424c57d" args="(int fileIndex) const " -->
+<a class="anchor" id="a078f80f40d7f4265b4d2e0188fcc63e8"></a><!-- doxytag: member="ifpf::CFileSystemChangeStorage::GetItemPath" ref="a078f80f40d7f4265b4d2e0188fcc63e8" args="(int fileIndex) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> ifpf::CFileSystemChangeStorage::GetItemPath </td>
+          <td class="memname">virtual QString ifpf::CFileSystemChangeStorage::GetItemPath </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>fileIndex</em></td><td>)</td>
@@ -109,7 +109,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get item path with the given index from the storage. </p>
 
-<p>Implements <a class="el" href="classifpf_1_1_i_file_system_change_storage.html#a540868c900b5912c14d6c4dc5a207b96">ifpf::IFileSystemChangeStorage</a>.</p>
+<p>Implements <a class="el" href="classifpf_1_1_i_file_system_change_storage.html#aec20468d7d5a38465b0642c4e46e46d4">ifpf::IFileSystemChangeStorage</a>.</p>
 
 </div>
 </div>
@@ -174,14 +174,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a05bcf04c53d8a1c692940337923b8a07"></a><!-- doxytag: member="ifpf::CFileSystemChangeStorage::UpdateStorageItem" ref="a05bcf04c53d8a1c692940337923b8a07" args="(const istd::CString &amp;path, int itemFlags)" -->
+<a class="anchor" id="a66c8f125912f07bd94cb1552fed22c96"></a><!-- doxytag: member="ifpf::CFileSystemChangeStorage::UpdateStorageItem" ref="a66c8f125912f07bd94cb1552fed22c96" args="(const QString &amp;path, int itemFlags)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void ifpf::CFileSystemChangeStorage::UpdateStorageItem </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
@@ -202,7 +202,7 @@ Public Member Functions</h2></td></tr>
 <p>Update storage item. </p>
 <p>If the item not exists, new one will be created and added to the storage. If the item is marked as "removed" it will not deleted from the storage. Use RemoveItemStorage, if you want permanently remove the item from the storage. </p>
 
-<p>Implements <a class="el" href="classifpf_1_1_i_file_system_change_storage.html#aa7fb4f47116fabbb6bc443031fe03d8d">ifpf::IFileSystemChangeStorage</a>.</p>
+<p>Implements <a class="el" href="classifpf_1_1_i_file_system_change_storage.html#a8bf3c8b6cce6a0bb86b6c7fb16406561">ifpf::IFileSystemChangeStorage</a>.</p>
 
 </div>
 </div>

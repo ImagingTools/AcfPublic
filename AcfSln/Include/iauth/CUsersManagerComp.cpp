@@ -40,7 +40,7 @@ int CUsersManagerComp::GetUsersCount() const
 }
 
 
-int CUsersManagerComp::FindUserIndex(const istd::CString& name) const
+int CUsersManagerComp::FindUserIndex(const QString& name) const
 {
 	int usersCount = int(m_users.size());
 
@@ -83,11 +83,11 @@ void CUsersManagerComp::Reset()
 
 	int usersCount = int(m_defaultUsersAttrPtr.GetCount());
 	for (int i = 0; i < usersCount; ++i){
-		istd::CString userName(m_defaultUsersAttrPtr[i]);
-		istd::CString password;
+		QString userName(m_defaultUsersAttrPtr[i]);
+		QString password;
 		if (			m_defaultUserPasswordsAttrPtr.IsValid() &&
 						(i < int(m_defaultUserPasswordsAttrPtr.GetCount()))){
-			password = istd::CString(m_defaultUserPasswordsAttrPtr[i]);
+			password = QString(m_defaultUserPasswordsAttrPtr[i]);
 		}
 
 		int userGroup = 0;
@@ -111,7 +111,7 @@ void CUsersManagerComp::Reset()
 
 // reimplemented (iauth::IUsersManager)
 
-CUser* CUsersManagerComp::AddUser(const istd::CString& userName)
+CUser* CUsersManagerComp::AddUser(const QString& userName)
 {
 	if (FindUserIndex(userName) >= 0){
 		return NULL;
@@ -123,7 +123,7 @@ CUser* CUsersManagerComp::AddUser(const istd::CString& userName)
 }
 
 
-bool CUsersManagerComp::DeleteUser(const istd::CString& userName)
+bool CUsersManagerComp::DeleteUser(const QString& userName)
 {
 	for (Users::iterator iter = m_users.begin(); iter != m_users.end(); iter++){
 		if (iter->GetUserName() == userName){
@@ -137,7 +137,7 @@ bool CUsersManagerComp::DeleteUser(const istd::CString& userName)
 }
 
 
-bool CUsersManagerComp::RenameUser(int userIndex, const istd::CString& userName)
+bool CUsersManagerComp::RenameUser(int userIndex, const QString& userName)
 {
 	I_ASSERT(userIndex >= 0);
 	I_ASSERT(userIndex < int(m_users.size()));
@@ -161,7 +161,7 @@ int CUsersManagerComp::GetUserGroupsCount() const
 }
 
 
-const istd::CString& CUsersManagerComp::GetUserGroupName(int groupIndex) const
+const QString& CUsersManagerComp::GetUserGroupName(int groupIndex) const
 {
 	I_ASSERT(groupIndex >= 0);
 	I_ASSERT(groupIndex < int(m_userLevels.size()));

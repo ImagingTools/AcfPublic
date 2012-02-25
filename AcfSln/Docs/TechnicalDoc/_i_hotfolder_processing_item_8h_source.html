@@ -29,7 +29,7 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_string_8h.html">istd/CString.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QString&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_date_time_8h.html">isys/IDateTime.h</a>&quot;</span>
 <a name="l00009"></a>00009 
@@ -55,13 +55,13 @@
 <a name="l00040"></a>00040 
 <a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#a312bd5554a3faa60d2c3b9c06b97f1b8" title="Set the processing state for the item.">SetProcessingState</a>(<span class="keywordtype">int</span> processingState) = 0;
 <a name="l00047"></a>00047        
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#a207000f40ffc876a3ac9d782ba517134" title="Get file path, of the file which must be processed.">GetInputFile</a>() <span class="keyword">const</span> = 0;
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> QString <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#ad2c142f71f518e9b695dedd265bae95e" title="Get file path, of the file which must be processed.">GetInputFile</a>() <span class="keyword">const</span> = 0;
 <a name="l00052"></a>00052 
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#ac0169e6c5dbafc2413cb2ad8e3bcaf9e" title="Set input file path.">SetInputFile</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; inputFile) = 0;
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#aaa3bb41eb5db992c249e368507dc5e58" title="Set input file path.">SetInputFile</a>(<span class="keyword">const</span> QString&amp; inputFile) = 0;
 <a name="l00057"></a>00057        
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#a519f8451536963c880fa961214f45da6" title="Get file path of the processing output.">GetOutputFile</a>() <span class="keyword">const</span> = 0;
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> QString <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#afa187d986168f0bcc1597f52d143163f" title="Get file path of the processing output.">GetOutputFile</a>() <span class="keyword">const</span> = 0;
 <a name="l00062"></a>00062 
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#a6a1ab5d53546119f93d9dbce4d961100" title="Set file path of the processing output.">SetOutputFile</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; outputFile) = 0;
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#af295a3987b459d03afc5c077293d0bde" title="Set file path of the processing output.">SetOutputFile</a>(<span class="keyword">const</span> QString&amp; outputFile) = 0;
 <a name="l00067"></a>00067 
 <a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#ad333f06c6f055aa13119e430d5176760" title="Get processing time.">GetProcessingTime</a>() <span class="keyword">const</span> = 0;
 <a name="l00072"></a>00072 

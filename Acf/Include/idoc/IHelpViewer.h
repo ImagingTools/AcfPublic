@@ -24,9 +24,13 @@
 #define idoc_IHelpViewer_included
 
 
+// Qt includes
+#include <QString>
+
+
 // ACF includes
 #include "istd/IPolymorphic.h"
-#include "istd/CString.h"
+
 
 #include "idoc/IHelpInfoProvider.h"
 
@@ -44,7 +48,7 @@ public:
 	/**
 		Show some help information for specified context.
 	*/
-	virtual void ShowHelp(const istd::CString& contextText, const istd::IPolymorphic* contextObjectPtr) = 0;
+	virtual void ShowHelp(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) = 0;
 };
 
 

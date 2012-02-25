@@ -35,7 +35,7 @@
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_functions_provider_8h.html">isys/IFunctionsProvider.h</a>&quot;</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_string_8h.html">istd/CString.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;QString&gt;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="keyword">namespace </span>iwin
@@ -45,10 +45,10 @@
 <a name="l00024"></a><a class="code" href="classiwin_1_1_c_dll_functions_provider.html">00024</a> <span class="keyword">class </span><a class="code" href="classiwin_1_1_c_dll_functions_provider.html" title="Provide access to public functions in DLL.">CDllFunctionsProvider</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> isys::IFunctionsProvider
 <a name="l00025"></a>00025 {
 <a name="l00026"></a>00026 <span class="keyword">public</span>:
-<a name="l00031"></a>00031        <a class="code" href="classiwin_1_1_c_dll_functions_provider.html#a4ab11bf6dffd5480981f03970ff52af6" title="Construct this object opening specified DLL.">CDllFunctionsProvider</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; dllPath = <span class="stringliteral">&quot;&quot;</span>);
+<a name="l00031"></a>00031        <a class="code" href="classiwin_1_1_c_dll_functions_provider.html#ae7b398dcabd4eb707cb84cb74badfb1a" title="Construct this object opening specified DLL.">CDllFunctionsProvider</a>(<span class="keyword">const</span> QString&amp; dllPath = <span class="stringliteral">&quot;&quot;</span>);
 <a name="l00032"></a>00032        <a class="code" href="classiwin_1_1_c_dll_functions_provider.html#a0a882282d4d9a085e201075369aef4f4">~CDllFunctionsProvider</a>();
 <a name="l00033"></a>00033 
-<a name="l00034"></a>00034        <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_c_dll_functions_provider.html#a4ff0f42d82a8850e683e22a83751c875">OpenDll</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; dllPath);
+<a name="l00034"></a>00034        <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_c_dll_functions_provider.html#a3875650d2324a3443213d6b7251ae566">OpenDll</a>(<span class="keyword">const</span> QString&amp; dllPath);
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036        <span class="keywordtype">void</span> <a class="code" href="classiwin_1_1_c_dll_functions_provider.html#a5a0ea872f7db1f8658d5cce9720c7ef5">Reset</a>();
 <a name="l00037"></a>00037 

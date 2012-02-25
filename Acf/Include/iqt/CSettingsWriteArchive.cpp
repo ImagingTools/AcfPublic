@@ -83,7 +83,7 @@ bool CSettingsWriteArchive::Process(std::string& value)
 }
 
 
-bool CSettingsWriteArchive::Process(istd::CString& value)
+bool CSettingsWriteArchive::Process(QString& value)
 {
 	QString registryKey = CreateNextValueKey();
 
@@ -91,7 +91,7 @@ bool CSettingsWriteArchive::Process(istd::CString& value)
 		return false;
 	}
 
-	BaseClass2::setValue(registryKey, iqt::GetQString(value));
+	BaseClass2::setValue(registryKey, value);
 
 	return true;
 }

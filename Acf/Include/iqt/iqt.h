@@ -38,7 +38,6 @@
 
 
 // ACF includes
-#include "istd/CString.h"
 #include "istd/CIndex2d.h"
 
 #include "isys/CFileInfo.h"
@@ -56,10 +55,6 @@ namespace iqt
 {
 
 
-extern QString GetQString(const istd::CString& string);
-extern istd::CString GetCString(const QString& string);
-extern QStringList GetQStringList(const istd::CStringList& stringList);
-extern istd::CStringList GetCStringList(const QStringList& stringList);
 extern QSize GetQSize(const istd::CIndex2d& size);
 extern istd::CIndex2d GetCIndex2d(const QSize& size);
 extern QPoint GetQPoint(const istd::CIndex2d& position);

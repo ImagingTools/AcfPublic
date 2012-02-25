@@ -60,30 +60,30 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current thread ID.  <a href="#a6a5ed130f50dce92fc4fa0b339055540"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_environment.html#a602cf25d704f149a73521659fc810087">Sleep</a> (double seconds)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend the current thread for <code>seconds</code>.  <a href="#a602cf25d704f149a73521659fc810087"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_environment.html#a7d67a7bff2699c0a46e5fed1460adc02">GetTempDirPath</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the standard temp path, that will be used by the application.  <a href="#a7d67a7bff2699c0a46e5fed1460adc02"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_environment.html#a92539f31d7b56c7940919854edfcc3f3">GetWorkingDirectory</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the working directory of application.  <a href="#a92539f31d7b56c7940919854edfcc3f3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_environment.html#af75541e8ca72259611d0e1a09ae1035a">GetApplicationArguments</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the arguments of command line for running application process.  <a href="#af75541e8ca72259611d0e1a09ae1035a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_environment.html#a035ad325f6ff7cab32ddd2ceecadda48">GetModulePath</a> (bool useApplicationModule=false, bool onlyDirectory=false) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the module file name.  <a href="#a035ad325f6ff7cab32ddd2ceecadda48"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classisys_1_1_i_process_environment.html#a94ffe73af4421dc5da3d11917fcf85c7">EnvironmentVariables</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_environment.html#a8918e350d02277088ccc6211c05cbbbe">GetEnvironmentVariables</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_environment.html#a7ea88b64d7c96bbb45c5a7aac8f89ae8">GetTempDirPath</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the standard temp path, that will be used by the application.  <a href="#a7ea88b64d7c96bbb45c5a7aac8f89ae8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_environment.html#a29f4c72c1a955afac920a072a5bf5dbb">GetWorkingDirectory</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the working directory of application.  <a href="#a29f4c72c1a955afac920a072a5bf5dbb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_environment.html#ab14c174a9dde96d286e7004c0665874f">GetApplicationArguments</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the arguments of command line for running application process.  <a href="#ab14c174a9dde96d286e7004c0665874f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_environment.html#a8c7b97ae9022cb02ca66d97cd051c23b">GetModulePath</a> (bool useApplicationModule=false, bool onlyDirectory=false) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the module file name.  <a href="#a8c7b97ae9022cb02ca66d97cd051c23b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classisys_1_1_i_process_environment.html#a99efec7ae33c3029ea731cbc8a740fce">EnvironmentVariables</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_environment.html#a8918e350d02277088ccc6211c05cbbbe">GetEnvironmentVariables</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the environment variables of the application process.  <a href="#a8918e350d02277088ccc6211c05cbbbe"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_environment.html#a26d2c604f8aded0e8373f2abb3af58ce">SetEnvironmentVariableValue</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;variableName, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set/Add the value of a system variable to the current process.  <a href="#a26d2c604f8aded0e8373f2abb3af58ce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_environment.html#aef99b8b4a5b918c83eddabccc542f077">SetEnvironmentVariableValue</a> (const QString &amp;variableName, const QString &amp;value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set/Add the value of a system variable to the current process.  <a href="#aef99b8b4a5b918c83eddabccc542f077"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Qt-based implementation of application environment information. </p>
 
 <p>Definition at line <a class="el" href="_c_process_environment_8h_source.html#l00017">17</a> of file <a class="el" href="_c_process_environment_8h_source.html">CProcessEnvironment.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="af75541e8ca72259611d0e1a09ae1035a"></a><!-- doxytag: member="iqt::CProcessEnvironment::GetApplicationArguments" ref="af75541e8ca72259611d0e1a09ae1035a" args="() const " -->
+<a class="anchor" id="ab14c174a9dde96d286e7004c0665874f"></a><!-- doxytag: member="iqt::CProcessEnvironment::GetApplicationArguments" ref="ab14c174a9dde96d286e7004c0665874f" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> iqt::CProcessEnvironment::GetApplicationArguments </td>
+          <td class="memname">virtual QStringList iqt::CProcessEnvironment::GetApplicationArguments </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -94,7 +94,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns the arguments of command line for running application process. </p>
 
-<p>Implements <a class="el" href="classisys_1_1_i_process_environment.html#a703e4dbe04a6910a398cce021c3d931a">isys::IProcessEnvironment</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_process_environment.html#a11985424a95d419d84f69e904318022a">isys::IProcessEnvironment</a>.</p>
 
 </div>
 </div>
@@ -103,7 +103,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classisys_1_1_i_process_environment.html#a94ffe73af4421dc5da3d11917fcf85c7">EnvironmentVariables</a> iqt::CProcessEnvironment::GetEnvironmentVariables </td>
+          <td class="memname">virtual <a class="el" href="classisys_1_1_i_process_environment.html#a99efec7ae33c3029ea731cbc8a740fce">EnvironmentVariables</a> iqt::CProcessEnvironment::GetEnvironmentVariables </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -139,12 +139,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a035ad325f6ff7cab32ddd2ceecadda48"></a><!-- doxytag: member="iqt::CProcessEnvironment::GetModulePath" ref="a035ad325f6ff7cab32ddd2ceecadda48" args="(bool useApplicationModule=false, bool onlyDirectory=false) const " -->
+<a class="anchor" id="a8c7b97ae9022cb02ca66d97cd051c23b"></a><!-- doxytag: member="iqt::CProcessEnvironment::GetModulePath" ref="a8c7b97ae9022cb02ca66d97cd051c23b" args="(bool useApplicationModule=false, bool onlyDirectory=false) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iqt::CProcessEnvironment::GetModulePath </td>
+          <td class="memname">virtual QString iqt::CProcessEnvironment::GetModulePath </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>useApplicationModule</em> = <code>false</code>, </td>
@@ -167,16 +167,16 @@ Public Member Functions</h2></td></tr>
 <p>Returns the module file name. </p>
 <p>If the <code>useApplicationModule</code> is <code>true</code> returns the name of application file/directory, otherwise the file name or (directory path) of module in which context this function was called. if <code>onlyDirectory</code> is <code>true</code> only directory path will be returned. </p>
 
-<p>Implements <a class="el" href="classisys_1_1_i_process_environment.html#a7112a9b8707381997819efed05e98db4">isys::IProcessEnvironment</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_process_environment.html#aa121cf28470ef661e2c2aed0f89def3e">isys::IProcessEnvironment</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a7d67a7bff2699c0a46e5fed1460adc02"></a><!-- doxytag: member="iqt::CProcessEnvironment::GetTempDirPath" ref="a7d67a7bff2699c0a46e5fed1460adc02" args="() const " -->
+<a class="anchor" id="a7ea88b64d7c96bbb45c5a7aac8f89ae8"></a><!-- doxytag: member="iqt::CProcessEnvironment::GetTempDirPath" ref="a7ea88b64d7c96bbb45c5a7aac8f89ae8" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iqt::CProcessEnvironment::GetTempDirPath </td>
+          <td class="memname">virtual QString iqt::CProcessEnvironment::GetTempDirPath </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -187,16 +187,16 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns the standard temp path, that will be used by the application. </p>
 
-<p>Implements <a class="el" href="classisys_1_1_i_process_environment.html#abf9c02e7e3f88a97eab1c9e9bc09f854">isys::IProcessEnvironment</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_process_environment.html#ac8e0e9e5c0d9976ac446757ec7ac82be">isys::IProcessEnvironment</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a92539f31d7b56c7940919854edfcc3f3"></a><!-- doxytag: member="iqt::CProcessEnvironment::GetWorkingDirectory" ref="a92539f31d7b56c7940919854edfcc3f3" args="() const " -->
+<a class="anchor" id="a29f4c72c1a955afac920a072a5bf5dbb"></a><!-- doxytag: member="iqt::CProcessEnvironment::GetWorkingDirectory" ref="a29f4c72c1a955afac920a072a5bf5dbb" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iqt::CProcessEnvironment::GetWorkingDirectory </td>
+          <td class="memname">virtual QString iqt::CProcessEnvironment::GetWorkingDirectory </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -207,24 +207,24 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns the working directory of application. </p>
 
-<p>Implements <a class="el" href="classisys_1_1_i_process_environment.html#a5fa9d125e9db95f7385bf56d68c501fa">isys::IProcessEnvironment</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_process_environment.html#a55ceb90cee2639168659e7e2a45fbd94">isys::IProcessEnvironment</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a26d2c604f8aded0e8373f2abb3af58ce"></a><!-- doxytag: member="iqt::CProcessEnvironment::SetEnvironmentVariableValue" ref="a26d2c604f8aded0e8373f2abb3af58ce" args="(const istd::CString &amp;variableName, const istd::CString &amp;value)" -->
+<a class="anchor" id="aef99b8b4a5b918c83eddabccc542f077"></a><!-- doxytag: member="iqt::CProcessEnvironment::SetEnvironmentVariableValue" ref="aef99b8b4a5b918c83eddabccc542f077" args="(const QString &amp;variableName, const QString &amp;value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iqt::CProcessEnvironment::SetEnvironmentVariableValue </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>variableName</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
@@ -245,7 +245,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classisys_1_1_i_process_environment.html#a847282282112788a5f9676bddbd26852">isys::IProcessEnvironment</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_process_environment.html#a68804b220c1a65eb2d03e441f5570f8d">isys::IProcessEnvironment</a>.</p>
 
 </div>
 </div>

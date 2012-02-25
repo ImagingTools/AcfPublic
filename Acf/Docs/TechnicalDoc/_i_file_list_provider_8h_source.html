@@ -31,7 +31,7 @@
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_i_changeable_8h.html">istd/IChangeable.h</a>&quot;</span>
 <a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_c_string_8h.html">istd/CString.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QString&gt;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="keyword">namespace </span>ibase
@@ -41,7 +41,7 @@
 <a name="l00017"></a><a class="code" href="classibase_1_1_i_file_list_provider.html">00017</a> <span class="keyword">class </span><a class="code" href="classibase_1_1_i_file_list_provider.html" title="Provide access to some parameter list.">IFileListProvider</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IChangeable
 <a name="l00018"></a>00018 {
 <a name="l00019"></a>00019 <span class="keyword">public</span>:
-<a name="l00023"></a>00023        <span class="keyword">virtual</span> <a class="code" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> <a class="code" href="classibase_1_1_i_file_list_provider.html#a5c78aa71e9db0e51bfb319afad948d49" title="Get list of files.">GetFileList</a>() <span class="keyword">const</span> = 0;
+<a name="l00023"></a>00023        <span class="keyword">virtual</span> QStringList <a class="code" href="classibase_1_1_i_file_list_provider.html#a59d74a61fe6de92ca97adde1b202c0f9" title="Get list of files.">GetFileList</a>() <span class="keyword">const</span> = 0;
 <a name="l00024"></a>00024 };
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026 

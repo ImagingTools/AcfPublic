@@ -56,23 +56,23 @@ Inheritance diagram for iser::CWriteArchiveBase::EmptyVersionInfo:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#a338c809831f3544de1c2bd85cf5b6175">GetVersionNumber</a> (int versionId, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> &amp;result) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get version of archived stream for specific versioning type.  <a href="#a338c809831f3544de1c2bd85cf5b6175"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#aea125bbd36554d967ba378566089d579">GetVersionIdDescription</a> (int versionId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of version ID.  <a href="#aea125bbd36554d967ba378566089d579"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#a6197460e372e20f15693e6cf9d4e9172">GetVersionIdDescription</a> (int versionId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of version ID.  <a href="#a6197460e372e20f15693e6cf9d4e9172"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_version_info.html#a14c10439f5c53047c6b54b3a6168264c">VersionIds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#aa9c629080b525bbd9f19e0de0d2aed12">GetVersionIds</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of version ID's.  <a href="#aa9c629080b525bbd9f19e0de0d2aed12"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#aeb5d6dd7574aa7e5aa2cca1f2bfc7d5e">GetEncodedVersionName</a> (int versionId, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> versionNumber) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode version number to human readable form.  <a href="#aeb5d6dd7574aa7e5aa2cca1f2bfc7d5e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#a755bb5c25873a98e7c21c4bb720fe6d6">GetEncodedVersionName</a> (int versionId, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> versionNumber) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode version number to human readable form.  <a href="#a755bb5c25873a98e7c21c4bb720fe6d6"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_c_write_archive_base_8h_source.html#l00041">41</a> of file <a class="el" href="_c_write_archive_base_8h_source.html">CWriteArchiveBase.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aeb5d6dd7574aa7e5aa2cca1f2bfc7d5e"></a><!-- doxytag: member="iser::CWriteArchiveBase::EmptyVersionInfo::GetEncodedVersionName" ref="aeb5d6dd7574aa7e5aa2cca1f2bfc7d5e" args="(int versionId, I_DWORD versionNumber) const " -->
+<a class="anchor" id="a755bb5c25873a98e7c21c4bb720fe6d6"></a><!-- doxytag: member="iser::CWriteArchiveBase::EmptyVersionInfo::GetEncodedVersionName" ref="a755bb5c25873a98e7c21c4bb720fe6d6" args="(int versionId, I_DWORD versionNumber) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iser::CWriteArchiveBase::EmptyVersionInfo::GetEncodedVersionName </td>
+          <td class="memname">virtual QString iser::CWriteArchiveBase::EmptyVersionInfo::GetEncodedVersionName </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>versionId</em>, </td>
@@ -94,16 +94,16 @@ Public Member Functions</h2></td></tr>
 
 <p>Encode version number to human readable form. </p>
 
-<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#ad839cf448acc494cbcf7ec0df06976fa">iser::IVersionInfo</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#aea7f3127caed1ee86040752d958482cc">iser::IVersionInfo</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aea125bbd36554d967ba378566089d579"></a><!-- doxytag: member="iser::CWriteArchiveBase::EmptyVersionInfo::GetVersionIdDescription" ref="aea125bbd36554d967ba378566089d579" args="(int versionId) const " -->
+<a class="anchor" id="a6197460e372e20f15693e6cf9d4e9172"></a><!-- doxytag: member="iser::CWriteArchiveBase::EmptyVersionInfo::GetVersionIdDescription" ref="a6197460e372e20f15693e6cf9d4e9172" args="(int versionId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iser::CWriteArchiveBase::EmptyVersionInfo::GetVersionIdDescription </td>
+          <td class="memname">virtual QString iser::CWriteArchiveBase::EmptyVersionInfo::GetVersionIdDescription </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>versionId</em></td><td>)</td>
@@ -122,7 +122,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_version_info.html#a71f9c819b642773712cca9fed1407b80" title="Type of version.">VersionId</a>, <a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#a338c809831f3544de1c2bd85cf5b6175" title="Get version of archived stream for specific versioning type.">GetVersionNumber</a>. </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#acce1207f69cff08151854a4e8b22b53b">iser::IVersionInfo</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#abb7b458bc2e8bec8b5381d3abe8867d7">iser::IVersionInfo</a>.</p>
 
 </div>
 </div>

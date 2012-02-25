@@ -83,16 +83,16 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID of document type managed by this object.  <a href="#a67fc53f78d3f1af7baaf92dd3eec204c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#ae1f534dcfe6bf1a882348294a6229efa">FileNew</a> (const std::string &amp;documentTypeId, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> **newDocumentPtr=NULL)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new document with the document ID <code>documentTypeId</code>.  <a href="#ae1f534dcfe6bf1a882348294a6229efa"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#ace7b0f40906022153e6fb5e5bedcc3fe">FileOpen</a> (const std::string *documentTypeIdPtr, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *fileNamePtr=NULL, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, <a class="el" href="classidoc_1_1_i_document_manager.html#a2e8e6a35d954d4434c4d8a8bec1f3c47">FileToTypeMap</a> *loadedMapPtr=NULL)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens document(s) from the file list.  <a href="#ace7b0f40906022153e6fb5e5bedcc3fe"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a796ff18e1f4a3339776748cf6f202d77">FileSave</a> (int documentIndex=-1, bool requestFileName=false, <a class="el" href="classidoc_1_1_i_document_manager.html#a2e8e6a35d954d4434c4d8a8bec1f3c47">FileToTypeMap</a> *savedMapPtr=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a9adc2a2410f1b3d208ad6de331e0e514">FileOpen</a> (const std::string *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, <a class="el" href="classidoc_1_1_i_document_manager.html#a1a34891bb0395d7f9483b3e6922e32b9">FileToTypeMap</a> *loadedMapPtr=NULL)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens document(s) from the file list.  <a href="#a9adc2a2410f1b3d208ad6de331e0e514"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a796ff18e1f4a3339776748cf6f202d77">FileSave</a> (int documentIndex=-1, bool requestFileName=false, <a class="el" href="classidoc_1_1_i_document_manager.html#a1a34891bb0395d7f9483b3e6922e32b9">FileToTypeMap</a> *savedMapPtr=NULL)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Save active document.  <a href="#a796ff18e1f4a3339776748cf6f202d77"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a24bf55bef8ff4e7e70cdfc18fc70032f">FileClose</a> (int documentIndex=-1, bool *ignoredPtr=NULL)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Close current view.  <a href="#a24bf55bef8ff4e7e70cdfc18fc70032f"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#ab4a032797b911430b63c0cf3737f64bc">OpenDocument</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath, bool createView, const std::string &amp;viewTypeId, std::string &amp;documentTypeId)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open single document using its file path.  <a href="#ab4a032797b911430b63c0cf3737f64bc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#aaf6f0600eb14cc95b5926a1069495e0a">OpenDocument</a> (const QString &amp;filePath, bool createView, const std::string &amp;viewTypeId, std::string &amp;documentTypeId)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open single document using its file path.  <a href="#aaf6f0600eb14cc95b5926a1069495e0a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a5a3fdd948c3fb552650ed9b08e4fe1af">NewDocument</a> (const std::string &amp;documentTypeId, bool createView, const std::string &amp;viewTypeId)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of specified document without attaching to this manager.  <a href="#a5a3fdd948c3fb552650ed9b08e4fe1af"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a51ca1777268799a35e0e0a706126c906">EnsureViewRemoved</a> ()</td></tr>
@@ -101,10 +101,10 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after view is registered.  <a href="#a76091450d6234c2c670b83e007da4ee6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a1e268534bb17fd510e7df431501d3cd7">OnViewRemoved</a> (<a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *viewPtr)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before view is removed.  <a href="#a1e268534bb17fd510e7df431501d3cd7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#ae63e2ecf70949e617e0e18371ce92c4f">GetOpenFilePath</a> (const std::string *documentTypeIdPtr=NULL) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets open file names.  <a href="#ae63e2ecf70949e617e0e18371ce92c4f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#aff326dc87430980d3073468a7c4c00a7">GetSaveFilePath</a> (const std::string &amp;documentTypeId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets save file name.  <a href="#aff326dc87430980d3073468a7c4c00a7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a279e79164ccee4f4b2351b4614f1b777">GetOpenFilePath</a> (const std::string *documentTypeIdPtr=NULL) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets open file names.  <a href="#a279e79164ccee4f4b2351b4614f1b777"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#ae95d5ffa911de72d42c552956f4006bb">GetSaveFilePath</a> (const std::string &amp;documentTypeId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets save file name.  <a href="#ae95d5ffa911de72d42c552956f4006bb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a449da5685bf4c85013b6fb6cc78ea47c">QueryDocumentClose</a> (bool *ignoredPtr)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Query user if this document can be closed.  <a href="#a449da5685bf4c85013b6fb6cc78ea47c"></a><br/></td></tr>
 </table>
@@ -258,7 +258,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ace7b0f40906022153e6fb5e5bedcc3fe"></a><!-- doxytag: member="idoc::CSingleDocumentManagerBase::FileOpen" ref="ace7b0f40906022153e6fb5e5bedcc3fe" args="(const std::string *documentTypeIdPtr, const istd::CString *fileNamePtr=NULL, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, FileToTypeMap *loadedMapPtr=NULL)" -->
+<a class="anchor" id="a9adc2a2410f1b3d208ad6de331e0e514"></a><!-- doxytag: member="idoc::CSingleDocumentManagerBase::FileOpen" ref="a9adc2a2410f1b3d208ad6de331e0e514" args="(const std::string *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, FileToTypeMap *loadedMapPtr=NULL)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -271,7 +271,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *&#160;</td>
+          <td class="paramtype">const QString *&#160;</td>
           <td class="paramname"><em>fileNamePtr</em> = <code>NULL</code>, </td>
         </tr>
         <tr>
@@ -289,7 +289,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_manager.html#a2e8e6a35d954d4434c4d8a8bec1f3c47">FileToTypeMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_manager.html#a1a34891bb0395d7f9483b3e6922e32b9">FileToTypeMap</a> *&#160;</td>
           <td class="paramname"><em>loadedMapPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -313,7 +313,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_manager.html#a84a2032dedb6d35851f0c65405bbc44c">idoc::IDocumentManager</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_manager.html#a310f01527df3677b0a64c38957437fd1">idoc::IDocumentManager</a>.</p>
 
 </div>
 </div>
@@ -336,7 +336,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_manager.html#a2e8e6a35d954d4434c4d8a8bec1f3c47">FileToTypeMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_manager.html#a1a34891bb0395d7f9483b3e6922e32b9">FileToTypeMap</a> *&#160;</td>
           <td class="paramname"><em>savedMapPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -501,12 +501,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae63e2ecf70949e617e0e18371ce92c4f"></a><!-- doxytag: member="idoc::CSingleDocumentManagerBase::GetOpenFilePath" ref="ae63e2ecf70949e617e0e18371ce92c4f" args="(const std::string *documentTypeIdPtr=NULL) const =0" -->
+<a class="anchor" id="a279e79164ccee4f4b2351b4614f1b777"></a><!-- doxytag: member="idoc::CSingleDocumentManagerBase::GetOpenFilePath" ref="a279e79164ccee4f4b2351b4614f1b777" args="(const std::string *documentTypeIdPtr=NULL) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> idoc::CSingleDocumentManagerBase::GetOpenFilePath </td>
+          <td class="memname">virtual QString idoc::CSingleDocumentManagerBase::GetOpenFilePath </td>
           <td>(</td>
           <td class="paramtype">const std::string *&#160;</td>
           <td class="paramname"><em>documentTypeIdPtr</em> = <code>NULL</code></td><td>)</td>
@@ -518,16 +518,16 @@ Protected Member Functions</h2></td></tr>
 
 <p>Gets open file names. </p>
 
-<p>Implemented in <a class="el" href="classiqtdoc_1_1_c_single_document_workspace_gui_comp.html#a05434337d39094d095c8363569140a6d">iqtdoc::CSingleDocumentWorkspaceGuiComp</a>.</p>
+<p>Implemented in <a class="el" href="classiqtdoc_1_1_c_single_document_workspace_gui_comp.html#a3f8a8556adf39d569aa8794963ebeb7a">iqtdoc::CSingleDocumentWorkspaceGuiComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aff326dc87430980d3073468a7c4c00a7"></a><!-- doxytag: member="idoc::CSingleDocumentManagerBase::GetSaveFilePath" ref="aff326dc87430980d3073468a7c4c00a7" args="(const std::string &amp;documentTypeId) const =0" -->
+<a class="anchor" id="ae95d5ffa911de72d42c552956f4006bb"></a><!-- doxytag: member="idoc::CSingleDocumentManagerBase::GetSaveFilePath" ref="ae95d5ffa911de72d42c552956f4006bb" args="(const std::string &amp;documentTypeId) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> idoc::CSingleDocumentManagerBase::GetSaveFilePath </td>
+          <td class="memname">virtual QString idoc::CSingleDocumentManagerBase::GetSaveFilePath </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em></td><td>)</td>
@@ -539,7 +539,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Gets save file name. </p>
 
-<p>Implemented in <a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#ae493519f02270679f872613a2ebcfb93">iqtdoc::TQtDocumentManagerWrap&lt; idoc::CSingleDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt; &gt; &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a92ce6680824d350062e26a18072596fd">iqtdoc::TQtDocumentManagerWrap&lt; idoc::CSingleDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt; &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -722,14 +722,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab4a032797b911430b63c0cf3737f64bc"></a><!-- doxytag: member="idoc::CSingleDocumentManagerBase::OpenDocument" ref="ab4a032797b911430b63c0cf3737f64bc" args="(const istd::CString &amp;filePath, bool createView, const std::string &amp;viewTypeId, std::string &amp;documentTypeId)" -->
+<a class="anchor" id="aaf6f0600eb14cc95b5926a1069495e0a"></a><!-- doxytag: member="idoc::CSingleDocumentManagerBase::OpenDocument" ref="aaf6f0600eb14cc95b5926a1069495e0a" args="(const QString &amp;filePath, bool createView, const std::string &amp;viewTypeId, std::string &amp;documentTypeId)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool idoc::CSingleDocumentManagerBase::OpenDocument </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>filePath</em>, </td>
         </tr>
         <tr>

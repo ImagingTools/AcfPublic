@@ -86,15 +86,15 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove parameters set at selected position.  <a href="#ac8e5810d12adbb2a28a2a6419caf27d8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_params_set.html">IParamsSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_params_manager.html#a6adca790d307f482019f49ad5d36e594">GetParamsSet</a> (int index) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get selected parameter set.  <a href="#a6adca790d307f482019f49ad5d36e594"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_params_manager.html#ab7fc55d46add78e67ab18a3cabc68180">GetParamsSetName</a> (int index) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified parameter set.  <a href="#ab7fc55d46add78e67ab18a3cabc68180"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_params_manager.html#afa8720f778cd85c06adc546c8be84fa2">SetParamsSetName</a> (int index, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;name)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set name of specified parameter set.  <a href="#afa8720f778cd85c06adc546c8be84fa2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_params_manager.html#a72d03319b94867427442cfb245b6cf51">GetParamsSetName</a> (int index) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified parameter set.  <a href="#a72d03319b94867427442cfb245b6cf51"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_params_manager.html#a02be7cef148d7993709296e4ab4740a7">SetParamsSetName</a> (int index, const QString &amp;name)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set name of specified parameter set.  <a href="#a02be7cef148d7993709296e4ab4740a7"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Manager of parameters set. </p>
 
-<p>Definition at line <a class="el" href="_i_params_manager_8h_source.html#l00020">20</a> of file <a class="el" href="_i_params_manager_8h_source.html">IParamsManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_params_manager_8h_source.html#l00023">23</a> of file <a class="el" href="_i_params_manager_8h_source.html">IParamsManager.h</a>.</p>
 </div><hr/><h2>Member Enumeration Documentation</h2>
 <a class="anchor" id="a46124baa6dd501af2dd542770efe4b0b"></a><!-- doxytag: member="iprm::IParamsManager::ChangeFlags" ref="a46124baa6dd501af2dd542770efe4b0b" args="" -->
 <div class="memitem">
@@ -121,7 +121,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiprm_1_1_i_selection_param.html#a092f5d4176d748b596be4ec0464827b3">iprm::ISelectionParam</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_params_manager_8h_source.html#l00037">37</a> of file <a class="el" href="_i_params_manager_8h_source.html">IParamsManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_params_manager_8h_source.html#l00040">40</a> of file <a class="el" href="_i_params_manager_8h_source.html">IParamsManager.h</a>.</p>
 
 </div>
 </div>
@@ -150,7 +150,7 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_params_manager_8h_source.html#l00026">26</a> of file <a class="el" href="_i_params_manager_8h_source.html">IParamsManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_params_manager_8h_source.html#l00029">29</a> of file <a class="el" href="_i_params_manager_8h_source.html">IParamsManager.h</a>.</p>
 
 </div>
 </div>
@@ -204,12 +204,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab7fc55d46add78e67ab18a3cabc68180"></a><!-- doxytag: member="iprm::IParamsManager::GetParamsSetName" ref="ab7fc55d46add78e67ab18a3cabc68180" args="(int index) const =0" -->
+<a class="anchor" id="a72d03319b94867427442cfb245b6cf51"></a><!-- doxytag: member="iprm::IParamsManager::GetParamsSetName" ref="a72d03319b94867427442cfb245b6cf51" args="(int index) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&amp; iprm::IParamsManager::GetParamsSetName </td>
+          <td class="memname">virtual const QString&amp; iprm::IParamsManager::GetParamsSetName </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -221,7 +221,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get name of specified parameter set. </p>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_params_manager_comp.html#aeddce2cc8ae18bd990d98209a0c379d5">iprm::CParamsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a3fc3eed18d7389e6e3ade8fa14c31fa5">iprm::CParamsManagerComp</a>.</p>
 
 </div>
 </div>
@@ -294,7 +294,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afa8720f778cd85c06adc546c8be84fa2"></a><!-- doxytag: member="iprm::IParamsManager::SetParamsSetName" ref="afa8720f778cd85c06adc546c8be84fa2" args="(int index, const istd::CString &amp;name)=0" -->
+<a class="anchor" id="a02be7cef148d7993709296e4ab4740a7"></a><!-- doxytag: member="iprm::IParamsManager::SetParamsSetName" ref="a02be7cef148d7993709296e4ab4740a7" args="(int index, const QString &amp;name)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -307,7 +307,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>name</em>&#160;</td>
         </tr>
         <tr>
@@ -321,7 +321,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Set name of specified parameter set. </p>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_params_manager_comp.html#ac0ca6395ab8078f848e813a958882bac">iprm::CParamsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a25e7d50536b4d173e6263f3c96f16cda">iprm::CParamsManagerComp</a>.</p>
 
 </div>
 </div>

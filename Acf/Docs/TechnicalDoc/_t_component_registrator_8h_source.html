@@ -48,31 +48,31 @@
 <a name="l00024"></a>00024 <span class="keyword">public</span>:
 <a name="l00025"></a><a class="code" href="classicomp_1_1_t_component_registrator.html#a7254e362b32ded2e4579a04d3a02b295">00025</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_t_component_static_info.html">icomp::TComponentStaticInfo&lt;Component&gt;</a> <a class="code" href="classicomp_1_1_t_component_registrator.html#a7254e362b32ded2e4579a04d3a02b295">BaseClass</a>;
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027        <a class="code" href="classicomp_1_1_t_component_registrator.html#a18e292642798ddbd978e2fd463ad7e8c">TComponentRegistrator</a>(
+<a name="l00027"></a>00027        <a class="code" href="classicomp_1_1_t_component_registrator.html#aba6dde835c3f0871eb5b6c654659f2f1">TComponentRegistrator</a>(
 <a name="l00028"></a>00028                             <span class="keyword">const</span> std::string&amp; componentId,
 <a name="l00029"></a>00029                             <a class="code" href="classicomp_1_1_c_package_static_info.html" title="Static info for component package.">icomp::CPackageStaticInfo</a>&amp; packageStaticInfo,
-<a name="l00030"></a>00030                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; description,
-<a name="l00031"></a>00031                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; keywords);
+<a name="l00030"></a>00030                             <span class="keyword">const</span> QString&amp; description,
+<a name="l00031"></a>00031                             <span class="keyword">const</span> QString&amp; keywords);
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <span class="comment">//     reimplemented (icomp::IComponentStaticInfo)</span>
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classicomp_1_1_t_component_registrator.html#a5ad8419eb1996893ca03b530d5d35c3d" title="Get human readable description of this component.">GetDescription</a>() <span class="keyword">const</span>;
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classicomp_1_1_t_component_registrator.html#a651b1226771a1fe340dfba8cc4fc1657" title="Get keywords for this component.">GetKeywords</a>() <span class="keyword">const</span>;
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classicomp_1_1_t_component_registrator.html#abaf5b99db216c952b770da97c6621a4b" title="Get human readable description of this component.">GetDescription</a>() <span class="keyword">const</span>;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classicomp_1_1_t_component_registrator.html#a8be9f12852054b32c90ab02d8520c9d0" title="Get keywords for this component.">GetKeywords</a>() <span class="keyword">const</span>;
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037 <span class="keyword">private</span>:
 <a name="l00038"></a>00038        std::string m_logicalName;
-<a name="l00039"></a>00039        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_description;
-<a name="l00040"></a>00040        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_keywords;
+<a name="l00039"></a>00039        QString m_description;
+<a name="l00040"></a>00040        QString m_keywords;
 <a name="l00041"></a>00041 };
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044 <span class="comment">// public methods</span>
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Component&gt;
-<a name="l00047"></a><a class="code" href="classicomp_1_1_t_component_registrator.html#a18e292642798ddbd978e2fd463ad7e8c">00047</a> <a class="code" href="classicomp_1_1_t_component_registrator.html#a18e292642798ddbd978e2fd463ad7e8c">TComponentRegistrator&lt;Component&gt;::TComponentRegistrator</a>(
+<a name="l00047"></a><a class="code" href="classicomp_1_1_t_component_registrator.html#aba6dde835c3f0871eb5b6c654659f2f1">00047</a> <a class="code" href="classicomp_1_1_t_component_registrator.html#aba6dde835c3f0871eb5b6c654659f2f1">TComponentRegistrator&lt;Component&gt;::TComponentRegistrator</a>(
 <a name="l00048"></a>00048                      <span class="keyword">const</span> std::string&amp; componentId,
 <a name="l00049"></a>00049                      <a class="code" href="classicomp_1_1_c_package_static_info.html" title="Static info for component package.">icomp::CPackageStaticInfo</a>&amp; packageStaticInfo,
-<a name="l00050"></a>00050                      <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; description,
-<a name="l00051"></a>00051                      <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; keywords)
+<a name="l00050"></a>00050                      <span class="keyword">const</span> QString&amp; description,
+<a name="l00051"></a>00051                      <span class="keyword">const</span> QString&amp; keywords)
 <a name="l00052"></a>00052 :      <a class="code" href="classicomp_1_1_c_component_static_info_base.html">BaseClass</a>(&amp;Component::InitStaticInfo(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)),
 <a name="l00053"></a>00053        m_description(description),
 <a name="l00054"></a>00054        m_keywords(keywords)
@@ -81,21 +81,21 @@
 <a name="l00057"></a>00057 
 <a name="l00058"></a>00058        m_keywords += <span class="stringliteral">&quot; &quot;</span>;
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060        m_keywords += packageStaticInfo.<a class="code" href="classicomp_1_1_c_package_static_info.html#acd375047251f06d83a07885bd0288782" title="Get keywords for this component.">GetKeywords</a>();
+<a name="l00060"></a>00060        m_keywords += packageStaticInfo.<a class="code" href="classicomp_1_1_c_package_static_info.html#a48a2f2d6824da24f23b3c764a4232624" title="Get keywords for this component.">GetKeywords</a>();
 <a name="l00061"></a>00061 }
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064 <span class="comment">//     reimplemented (icomp::IComponentStaticInfo)</span>
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Component&gt;
-<a name="l00067"></a><a class="code" href="classicomp_1_1_t_component_registrator.html#a5ad8419eb1996893ca03b530d5d35c3d">00067</a> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classicomp_1_1_t_component_registrator.html#a5ad8419eb1996893ca03b530d5d35c3d" title="Get human readable description of this component.">TComponentRegistrator&lt;Component&gt;::GetDescription</a>()<span class="keyword"> const</span>
+<a name="l00067"></a><a class="code" href="classicomp_1_1_t_component_registrator.html#abaf5b99db216c952b770da97c6621a4b">00067</a> <span class="keyword">const</span> QString&amp; <a class="code" href="classicomp_1_1_t_component_registrator.html#abaf5b99db216c952b770da97c6621a4b" title="Get human readable description of this component.">TComponentRegistrator&lt;Component&gt;::GetDescription</a>()<span class="keyword"> const</span>
 <a name="l00068"></a>00068 <span class="keyword"></span>{
 <a name="l00069"></a>00069        <span class="keywordflow">return</span> m_description;
 <a name="l00070"></a>00070 }
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072 
 <a name="l00073"></a>00073 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Component&gt;
-<a name="l00074"></a><a class="code" href="classicomp_1_1_t_component_registrator.html#a651b1226771a1fe340dfba8cc4fc1657">00074</a> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classicomp_1_1_t_component_registrator.html#a651b1226771a1fe340dfba8cc4fc1657" title="Get keywords for this component.">TComponentRegistrator&lt;Component&gt;::GetKeywords</a>()<span class="keyword"> const</span>
+<a name="l00074"></a><a class="code" href="classicomp_1_1_t_component_registrator.html#a8be9f12852054b32c90ab02d8520c9d0">00074</a> <span class="keyword">const</span> QString&amp; <a class="code" href="classicomp_1_1_t_component_registrator.html#a8be9f12852054b32c90ab02d8520c9d0" title="Get keywords for this component.">TComponentRegistrator&lt;Component&gt;::GetKeywords</a>()<span class="keyword"> const</span>
 <a name="l00075"></a>00075 <span class="keyword"></span>{
 <a name="l00076"></a>00076        <span class="keywordflow">return</span> m_keywords;
 <a name="l00077"></a>00077 }

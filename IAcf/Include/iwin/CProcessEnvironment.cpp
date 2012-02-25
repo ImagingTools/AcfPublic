@@ -27,6 +27,10 @@
 #include <windows.h>
 
 
+// Qt includes
+#include <QStringList>
+
+
 EXTERN_C IMAGE_DOS_HEADER __ImageBase;
 
 
@@ -50,7 +54,7 @@ void CProcessEnvironment::Sleep(double seconds)
 }
 
 
-istd::CString CProcessEnvironment::GetTempDirPath() const
+QString CProcessEnvironment::GetTempDirPath() const
 {
 	wchar_t tempPath[MAX_PATH] = {0};
 	::GetTempPathW(MAX_PATH, tempPath);
@@ -61,25 +65,25 @@ istd::CString CProcessEnvironment::GetTempDirPath() const
 		tempPath[length - 1] = '\0';
 	}
 
-	return istd::CString(tempPath);
+	return QString::fromStdWString(tempPath);
 }
 
 
-istd::CString CProcessEnvironment::GetWorkingDirectory() const
+QString CProcessEnvironment::GetWorkingDirectory() const
 {
 	wchar_t workingDirectory[MAX_PATH] = {0};
 
 	if (::GetCurrentDirectoryW(MAX_PATH, workingDirectory) != 0){
-		return istd::CString(workingDirectory);
+		return QString::fromStdWString(workingDirectory);
 	}
 
-	return istd::CString();
+	return QString();
 }
 
 
-istd::CStringList CProcessEnvironment::GetApplicationArguments() const
+QStringList CProcessEnvironment::GetApplicationArguments() const
 {
-	istd::CStringList applicationArguments;
+	QStringList applicationArguments;
 
 	LPWSTR commandLinePtr = GetCommandLineW();
 	if (commandLinePtr != NULL){
@@ -87,7 +91,7 @@ istd::CStringList CProcessEnvironment::GetApplicationArguments() const
 		LPWSTR* applicationArgumentsPtr = CommandLineToArgvW(commandLinePtr, &argumentsCount);
 		if (applicationArgumentsPtr != NULL){
 			for (int argumentIndex = 0; argumentIndex < argumentsCount; argumentIndex++){
-				applicationArguments.push_back(applicationArgumentsPtr[argumentIndex]);
+				applicationArguments.push_back(QString::fromStdWString(applicationArgumentsPtr[argumentIndex]));
 			}
 		}
 	}
@@ -96,7 +100,7 @@ istd::CStringList CProcessEnvironment::GetApplicationArguments() const
 }
 
 
-istd::CString CProcessEnvironment::GetModulePath(bool useApplicationModule /*= false*/, bool onlyDirectory /*= false*/) const
+QString CProcessEnvironment::GetModulePath(bool useApplicationModule /*= false*/, bool onlyDirectory /*= false*/) const
 {
 	WCHAR moduleFileName[MAX_PATH] = {0};
 
@@ -113,7 +117,7 @@ istd::CString CProcessEnvironment::GetModulePath(bool useApplicationModule /*= f
 		}   	
 	}
 
-	return istd::CString(moduleFileName);
+	return QString::fromStdWString(moduleFileName);
 }
 
 
@@ -125,11 +129,11 @@ CProcessEnvironment::EnvironmentVariables CProcessEnvironment::GetEnvironmentVar
 	if (environmentStringsPtr != NULL){
 		LPCWSTR lpszVariable = (LPCWSTR)environmentStringsPtr;
 		while (*lpszVariable){
-			istd::CString varPair = lpszVariable;
-			istd::CString::size_type separatorIndex = varPair.rfind('=');
-			if (separatorIndex != istd::CString::npos){
-				istd::CString variableName = varPair.substr(0, separatorIndex);
-				istd::CString variableValue = varPair.substr(separatorIndex + 1, varPair.length());
+			QString varPair = QString::fromStdWString(lpszVariable);
+			int separatorIndex = varPair.lastIndexOf('=');
+			if (separatorIndex != -1){
+				QString variableName = varPair.left(separatorIndex);
+				QString variableValue = varPair.mid(separatorIndex + 1, varPair.length());
 			
 				environmentVariables[variableName] = variableValue;
 			}
@@ -144,9 +148,9 @@ CProcessEnvironment::EnvironmentVariables CProcessEnvironment::GetEnvironmentVar
 }
 
 
-void CProcessEnvironment::SetEnvironmentVariableValue(const istd::CString& variableName, const istd::CString& value)
+void CProcessEnvironment::SetEnvironmentVariableValue(const QString& variableName, const QString& value)
 {
-	::SetEnvironmentVariable(variableName.ToString().c_str(), value.ToString().c_str());
+	::SetEnvironmentVariable(variableName.toStdString().c_str(), value.toStdString().c_str());
 }
 
 

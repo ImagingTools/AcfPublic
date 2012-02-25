@@ -28,10 +28,13 @@
 #include <set>
 
 
+// Qt includes
+#include <QString>
+
+
 // ACF includes
 #include "istd/istd.h"
 #include "istd/IPolymorphic.h"
-#include "istd/CString.h"
 
 
 namespace iser
@@ -83,7 +86,7 @@ public:
 							For example version number of framework cann differ from application version.
 							\sa VersionId, GetVersionNumber.
 	*/
-	virtual istd::CString GetVersionIdDescription(int versionId) const = 0;
+	virtual QString GetVersionIdDescription(int versionId) const = 0;
 
 	/**
 		Get list of version ID's.
@@ -93,7 +96,7 @@ public:
 	/**
 		Encode version number to human readable form.
 	*/
-	virtual istd::CString GetEncodedVersionName(int versionId, I_DWORD versionNumber) const = 0;
+	virtual QString GetEncodedVersionName(int versionId, I_DWORD versionNumber) const = 0;
 };
 
 

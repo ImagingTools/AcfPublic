@@ -37,19 +37,19 @@
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_polymorphic_8h.html">istd/IPolymorphic.h</a>&quot;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="keyword">namespace </span>istd
-<a name="l00014"></a>00014 {
+<a name="l00013"></a>00013 <span class="keyword">class </span>QString;
+<a name="l00014"></a>00014 
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="keyword">class </span>CString;
+<a name="l00016"></a>00016 <span class="keyword">namespace </span>istd
+<a name="l00017"></a>00017 {
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 
 <a name="l00023"></a><a class="code" href="classistd_1_1_i_localizer.html">00023</a> <span class="keyword">class </span><a class="code" href="classistd_1_1_i_localizer.html" title="Common interface for a simple string localization.">ILocalizer</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">IPolymorphic</a>
 <a name="l00024"></a>00024 {
 <a name="l00025"></a>00025 <span class="keyword">public</span>:
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classistd_1_1_i_localizer.html#a34d5095169ba8a97dd99e9466c2be50d" title="Translate text text in the context context to defined language.">GetTranslatedText</a>(
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> QString <a class="code" href="classistd_1_1_i_localizer.html#a21acaa46f1a6be76692ecb4bd8043c4f" title="Translate text text in the context context to defined language.">GetTranslatedText</a>(
 <a name="l00030"></a>00030                             <span class="keyword">const</span> std::string&amp; context,
-<a name="l00031"></a>00031                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; text,
+<a name="l00031"></a>00031                             <span class="keyword">const</span> QString&amp; text,
 <a name="l00032"></a>00032                             <span class="keyword">const</span> std::string&amp; disambiguation = std::string()) <span class="keyword">const</span> = 0;
 <a name="l00033"></a>00033 };
 <a name="l00034"></a>00034 

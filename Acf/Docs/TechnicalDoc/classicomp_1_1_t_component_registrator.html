@@ -72,11 +72,11 @@ Public Types</h2></td></tr>
 &lt; Component &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_component_registrator.html#a7254e362b32ded2e4579a04d3a02b295">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_component_registrator.html#a18e292642798ddbd978e2fd463ad7e8c">TComponentRegistrator</a> (const std::string &amp;componentId, <a class="el" href="classicomp_1_1_c_package_static_info.html">icomp::CPackageStaticInfo</a> &amp;packageStaticInfo, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;description, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;keywords)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_component_registrator.html#a5ad8419eb1996893ca03b530d5d35c3d">GetDescription</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description of this component.  <a href="#a5ad8419eb1996893ca03b530d5d35c3d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_component_registrator.html#a651b1226771a1fe340dfba8cc4fc1657">GetKeywords</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get keywords for this component.  <a href="#a651b1226771a1fe340dfba8cc4fc1657"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_component_registrator.html#aba6dde835c3f0871eb5b6c654659f2f1">TComponentRegistrator</a> (const std::string &amp;componentId, <a class="el" href="classicomp_1_1_c_package_static_info.html">icomp::CPackageStaticInfo</a> &amp;packageStaticInfo, const QString &amp;description, const QString &amp;keywords)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_component_registrator.html#abaf5b99db216c952b770da97c6621a4b">GetDescription</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description of this component.  <a href="#abaf5b99db216c952b770da97c6621a4b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_component_registrator.html#a8be9f12852054b32c90ab02d8520c9d0">GetKeywords</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get keywords for this component.  <a href="#a8be9f12852054b32c90ab02d8520c9d0"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class Component&gt;<br/>
@@ -106,7 +106,7 @@ template&lt;class Component &gt; </div>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a18e292642798ddbd978e2fd463ad7e8c"></a><!-- doxytag: member="icomp::TComponentRegistrator::TComponentRegistrator" ref="a18e292642798ddbd978e2fd463ad7e8c" args="(const std::string &amp;componentId, icomp::CPackageStaticInfo &amp;packageStaticInfo, const istd::CString &amp;description, const istd::CString &amp;keywords)" -->
+<a class="anchor" id="aba6dde835c3f0871eb5b6c654659f2f1"></a><!-- doxytag: member="icomp::TComponentRegistrator::TComponentRegistrator" ref="aba6dde835c3f0871eb5b6c654659f2f1" args="(const std::string &amp;componentId, icomp::CPackageStaticInfo &amp;packageStaticInfo, const QString &amp;description, const QString &amp;keywords)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -127,13 +127,13 @@ template&lt;class Component &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>description</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>keywords</em>&#160;</td>
         </tr>
         <tr>
@@ -147,19 +147,19 @@ template&lt;class Component &gt; </div>
 
 <p>Definition at line <a class="el" href="_t_component_registrator_8h_source.html#l00047">47</a> of file <a class="el" href="_t_component_registrator_8h_source.html">TComponentRegistrator.h</a>.</p>
 
-<p>References <a class="el" href="classicomp_1_1_c_package_static_info.html#acd375047251f06d83a07885bd0288782">icomp::CPackageStaticInfo::GetKeywords()</a>, and <a class="el" href="classicomp_1_1_c_package_static_info.html#a7c8443c3e65e2969c094a730f3df3f48">icomp::CPackageStaticInfo::RegisterEmbeddedComponentInfo()</a>.</p>
+<p>References <a class="el" href="classicomp_1_1_c_package_static_info.html#a48a2f2d6824da24f23b3c764a4232624">icomp::CPackageStaticInfo::GetKeywords()</a>, and <a class="el" href="classicomp_1_1_c_package_static_info.html#a7c8443c3e65e2969c094a730f3df3f48">icomp::CPackageStaticInfo::RegisterEmbeddedComponentInfo()</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a5ad8419eb1996893ca03b530d5d35c3d"></a><!-- doxytag: member="icomp::TComponentRegistrator::GetDescription" ref="a5ad8419eb1996893ca03b530d5d35c3d" args="() const " -->
+<a class="anchor" id="abaf5b99db216c952b770da97c6621a4b"></a><!-- doxytag: member="icomp::TComponentRegistrator::GetDescription" ref="abaf5b99db216c952b770da97c6621a4b" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Component &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp; <a class="el" href="classicomp_1_1_t_component_registrator.html">icomp::TComponentRegistrator</a>&lt; Component &gt;::GetDescription </td>
+          <td class="memname">const QString &amp; <a class="el" href="classicomp_1_1_t_component_registrator.html">icomp::TComponentRegistrator</a>&lt; Component &gt;::GetDescription </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -170,20 +170,20 @@ template&lt;class Component &gt; </div>
 
 <p>Get human readable description of this component. </p>
 
-<p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_static_info_base.html#a4175e5134c08fedd1ccbd1268ea2e8f4">icomp::CComponentStaticInfoBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_static_info_base.html#aacd90732354b2dca277991e8c2819e06">icomp::CComponentStaticInfoBase</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_component_registrator_8h_source.html#l00067">67</a> of file <a class="el" href="_t_component_registrator_8h_source.html">TComponentRegistrator.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a651b1226771a1fe340dfba8cc4fc1657"></a><!-- doxytag: member="icomp::TComponentRegistrator::GetKeywords" ref="a651b1226771a1fe340dfba8cc4fc1657" args="() const " -->
+<a class="anchor" id="a8be9f12852054b32c90ab02d8520c9d0"></a><!-- doxytag: member="icomp::TComponentRegistrator::GetKeywords" ref="a8be9f12852054b32c90ab02d8520c9d0" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Component &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp; <a class="el" href="classicomp_1_1_t_component_registrator.html">icomp::TComponentRegistrator</a>&lt; Component &gt;::GetKeywords </td>
+          <td class="memname">const QString &amp; <a class="el" href="classicomp_1_1_t_component_registrator.html">icomp::TComponentRegistrator</a>&lt; Component &gt;::GetKeywords </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -194,7 +194,7 @@ template&lt;class Component &gt; </div>
 
 <p>Get keywords for this component. </p>
 
-<p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_static_info_base.html#a4b2cc968da1906ed5d10348a047d5ced">icomp::CComponentStaticInfoBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_static_info_base.html#abc528ae2a18afe7b4a5fe91398f0f2bf">icomp::CComponentStaticInfoBase</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_component_registrator_8h_source.html#l00074">74</a> of file <a class="el" href="_t_component_registrator_8h_source.html">TComponentRegistrator.h</a>.</p>
 

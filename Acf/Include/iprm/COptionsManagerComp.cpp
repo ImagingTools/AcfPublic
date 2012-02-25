@@ -54,7 +54,7 @@ int COptionsManagerComp::GetOptionsCount() const
 }
 
 
-istd::CString COptionsManagerComp::GetOptionName(int index) const
+QString COptionsManagerComp::GetOptionName(int index) const
 {
 	I_ASSERT(index >= 0);
 	I_ASSERT(index < COptionsManagerComp::GetOptionsCount());
@@ -74,7 +74,7 @@ istd::CString COptionsManagerComp::GetOptionName(int index) const
 }
 
 
-istd::CString COptionsManagerComp::GetOptionDescription(int index) const
+QString COptionsManagerComp::GetOptionDescription(int index) const
 {
 	I_ASSERT(index >= 0);
 	I_ASSERT(index < COptionsManagerComp::GetOptionsCount());
@@ -128,9 +128,9 @@ void COptionsManagerComp::RemoveOption(int index)
 
 
 bool COptionsManagerComp::InsertOption(
-					istd::CString& optionName,
+					QString& optionName,
 					const std::string& optionId,
-					const istd::CString& optionDescription, 
+					const QString& optionDescription, 
 					int index)
 {
 	OptionInfo optionInfo(optionName, optionId, optionDescription);

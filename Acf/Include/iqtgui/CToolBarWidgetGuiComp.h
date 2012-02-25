@@ -68,7 +68,7 @@ protected:
 private:
 	I_REF(iqtgui::IGuiObject, m_toolbarWidgetCompPtr);
 	I_ATTR(int, m_dockAreaAttrPtr);
-	I_ATTR(istd::CString, m_titleAttrPtr);
+	I_ATTR(QString, m_titleAttrPtr);
 };
 
 

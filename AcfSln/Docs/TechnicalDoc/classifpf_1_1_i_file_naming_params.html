@@ -69,14 +69,14 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current renaming mode.  <a href="#a3a67608f648e7486c43a6f295afcbdfa"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_file_naming_params.html#af0cc56abe6f5803459f5abd9ab0cce70">SetRenamingMode</a> (int renamingMode)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set renaming mode.  <a href="#af0cc56abe6f5803459f5abd9ab0cce70"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_file_naming_params.html#aedf191ceee2d77057376de9c8046eb3c">GetPrefix</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get prefix of the file.  <a href="#aedf191ceee2d77057376de9c8046eb3c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_file_naming_params.html#afdb3222a193a05889b880a6599154179">SetPrefix</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;prefix)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set prefix of the file.  <a href="#afdb3222a193a05889b880a6599154179"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_file_naming_params.html#a2837260c22fc2a2da330b819488ced9f">GetSuffix</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set suffix of the file.  <a href="#a2837260c22fc2a2da330b819488ced9f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_file_naming_params.html#a9e9384a4762ebb136019249ca364eb59">SetSuffix</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;suffix)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get suffix of the file.  <a href="#a9e9384a4762ebb136019249ca364eb59"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_file_naming_params.html#a292de5d09a6b7082887fd0094dcd988f">GetPrefix</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get prefix of the file.  <a href="#a292de5d09a6b7082887fd0094dcd988f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_file_naming_params.html#a42a1b07f395f55f6490f6c176c120da7">SetPrefix</a> (const QString &amp;prefix)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set prefix of the file.  <a href="#a42a1b07f395f55f6490f6c176c120da7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_file_naming_params.html#a4c3e3cff5e301dc3e83c329881ed3797">GetSuffix</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set suffix of the file.  <a href="#a4c3e3cff5e301dc3e83c329881ed3797"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_file_naming_params.html#aae4f1c33f9ee7aaf645428e52429b570">SetSuffix</a> (const QString &amp;suffix)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get suffix of the file.  <a href="#aae4f1c33f9ee7aaf645428e52429b570"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface for calculation parameters of the new file name for any file item. </p>
@@ -112,12 +112,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aedf191ceee2d77057376de9c8046eb3c"></a><!-- doxytag: member="ifpf::IFileNamingParams::GetPrefix" ref="aedf191ceee2d77057376de9c8046eb3c" args="() const =0" -->
+<a class="anchor" id="a292de5d09a6b7082887fd0094dcd988f"></a><!-- doxytag: member="ifpf::IFileNamingParams::GetPrefix" ref="a292de5d09a6b7082887fd0094dcd988f" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> ifpf::IFileNamingParams::GetPrefix </td>
+          <td class="memname">virtual QString ifpf::IFileNamingParams::GetPrefix </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -128,7 +128,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get prefix of the file. </p>
 
-<p>Implemented in <a class="el" href="classifpf_1_1_c_file_naming_params_comp.html#a58bb621e7b6cc05d3859ea12383e04e5">ifpf::CFileNamingParamsComp</a>.</p>
+<p>Implemented in <a class="el" href="classifpf_1_1_c_file_naming_params_comp.html#a8291fe6fe613fd904520046150c97741">ifpf::CFileNamingParamsComp</a>.</p>
 
 </div>
 </div>
@@ -153,12 +153,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2837260c22fc2a2da330b819488ced9f"></a><!-- doxytag: member="ifpf::IFileNamingParams::GetSuffix" ref="a2837260c22fc2a2da330b819488ced9f" args="() const =0" -->
+<a class="anchor" id="a4c3e3cff5e301dc3e83c329881ed3797"></a><!-- doxytag: member="ifpf::IFileNamingParams::GetSuffix" ref="a4c3e3cff5e301dc3e83c329881ed3797" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> ifpf::IFileNamingParams::GetSuffix </td>
+          <td class="memname">virtual QString ifpf::IFileNamingParams::GetSuffix </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -169,18 +169,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Set suffix of the file. </p>
 
-<p>Implemented in <a class="el" href="classifpf_1_1_c_file_naming_params_comp.html#a6e62b7186bd3c5ff0dd72083101e1488">ifpf::CFileNamingParamsComp</a>.</p>
+<p>Implemented in <a class="el" href="classifpf_1_1_c_file_naming_params_comp.html#a66531a7ba03ab38139475cab9b3862cb">ifpf::CFileNamingParamsComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="afdb3222a193a05889b880a6599154179"></a><!-- doxytag: member="ifpf::IFileNamingParams::SetPrefix" ref="afdb3222a193a05889b880a6599154179" args="(const istd::CString &amp;prefix)=0" -->
+<a class="anchor" id="a42a1b07f395f55f6490f6c176c120da7"></a><!-- doxytag: member="ifpf::IFileNamingParams::SetPrefix" ref="a42a1b07f395f55f6490f6c176c120da7" args="(const QString &amp;prefix)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void ifpf::IFileNamingParams::SetPrefix </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>prefix</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -190,7 +190,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Set prefix of the file. </p>
 
-<p>Implemented in <a class="el" href="classifpf_1_1_c_file_naming_params_comp.html#a20157429f43452ca1b6378ebcaae0854">ifpf::CFileNamingParamsComp</a>.</p>
+<p>Implemented in <a class="el" href="classifpf_1_1_c_file_naming_params_comp.html#abd3cdb8bc680e6c5c01f4ebf545fe5f6">ifpf::CFileNamingParamsComp</a>.</p>
 
 </div>
 </div>
@@ -216,14 +216,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9e9384a4762ebb136019249ca364eb59"></a><!-- doxytag: member="ifpf::IFileNamingParams::SetSuffix" ref="a9e9384a4762ebb136019249ca364eb59" args="(const istd::CString &amp;suffix)=0" -->
+<a class="anchor" id="aae4f1c33f9ee7aaf645428e52429b570"></a><!-- doxytag: member="ifpf::IFileNamingParams::SetSuffix" ref="aae4f1c33f9ee7aaf645428e52429b570" args="(const QString &amp;suffix)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void ifpf::IFileNamingParams::SetSuffix </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>suffix</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -233,7 +233,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get suffix of the file. </p>
 
-<p>Implemented in <a class="el" href="classifpf_1_1_c_file_naming_params_comp.html#a9f161ea10cd8062e59f5a76686ac678a">ifpf::CFileNamingParamsComp</a>.</p>
+<p>Implemented in <a class="el" href="classifpf_1_1_c_file_naming_params_comp.html#ad83ca290f2d2fb06ca6a71e5d18fa73d">ifpf::CFileNamingParamsComp</a>.</p>
 
 </div>
 </div>

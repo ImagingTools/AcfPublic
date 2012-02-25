@@ -33,44 +33,47 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;map&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_polymorphic_8h.html">istd/IPolymorphic.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_c_string_8h.html">istd/CString.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="comment">// Qt includes</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;QString&gt;</span>
+<a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="isys_8h.html">isys/isys.h</a>&quot;</span>
-<a name="l00014"></a>00014 
+<a name="l00013"></a>00013 <span class="comment">// ACF includes</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_polymorphic_8h.html">istd/IPolymorphic.h</a>&quot;</span>
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="keyword">namespace </span>isys
-<a name="l00017"></a>00017 {
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="isys_8h.html">isys/isys.h</a>&quot;</span>
+<a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
-<a name="l00019"></a>00019 
-<a name="l00025"></a><a class="code" href="classisys_1_1_i_process_environment.html">00025</a> <span class="keyword">class </span><a class="code" href="classisys_1_1_i_process_environment.html" title="Interface for access of some system dependent features and infos.">IProcessEnvironment</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
-<a name="l00026"></a>00026 {
-<a name="l00027"></a>00027 <span class="keyword">public</span>:
-<a name="l00028"></a><a class="code" href="classisys_1_1_i_process_environment.html#a94ffe73af4421dc5da3d11917fcf85c7">00028</a>        <span class="keyword">typedef</span> std::map&lt;istd::CString, istd::CString&gt; <a class="code" href="classisys_1_1_i_process_environment.html#a94ffe73af4421dc5da3d11917fcf85c7">EnvironmentVariables</a>;
-<a name="l00029"></a>00029        
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classisys_1_1_i_process_environment.html#afd7889def17b39a9e0ea05956d778ee8" title="Get current thread ID.">GetMainThreadId</a>() <span class="keyword">const</span> = 0;
-<a name="l00034"></a>00034 
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisys_1_1_i_process_environment.html#a14f56a0de997006ff86e0d9aeabffcb3" title="Suspend the current thread for seconds.">Sleep</a>(<span class="keywordtype">double</span> seconds) = 0;
-<a name="l00039"></a>00039 
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classisys_1_1_i_process_environment.html#abf9c02e7e3f88a97eab1c9e9bc09f854" title="Returns the standard temp path, that will be used by the application.">GetTempDirPath</a>() <span class="keyword">const</span> = 0;
-<a name="l00044"></a>00044 
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classisys_1_1_i_process_environment.html#a5fa9d125e9db95f7385bf56d68c501fa" title="Returns the working directory of application.">GetWorkingDirectory</a>() <span class="keyword">const</span> = 0;
-<a name="l00049"></a>00049 
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> <a class="code" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> <a class="code" href="classisys_1_1_i_process_environment.html#a703e4dbe04a6910a398cce021c3d931a" title="Returns the arguments of command line for running application process.">GetApplicationArguments</a>() <span class="keyword">const</span> = 0;
-<a name="l00054"></a>00054 
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classisys_1_1_i_process_environment.html#a7112a9b8707381997819efed05e98db4" title="Returns the module file name.">GetModulePath</a>(<span class="keywordtype">bool</span> useApplicationModule = <span class="keyword">false</span>, <span class="keywordtype">bool</span> onlyDirectory = <span class="keyword">false</span>) <span class="keyword">const</span> = 0;
-<a name="l00061"></a>00061 
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <a class="code" href="classisys_1_1_i_process_environment.html#a94ffe73af4421dc5da3d11917fcf85c7">EnvironmentVariables</a> <a class="code" href="classisys_1_1_i_process_environment.html#a1311c2e71f1a8f25dda6afcd8d41af14" title="Returns the environment variables of the application process.">GetEnvironmentVariables</a>() <span class="keyword">const</span> = 0;
-<a name="l00067"></a>00067 
-<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisys_1_1_i_process_environment.html#a847282282112788a5f9676bddbd26852" title="Set/Add the value of a system variable to the current process.">SetEnvironmentVariableValue</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; variableName, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; value) = 0;
-<a name="l00074"></a>00074 };
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 } <span class="comment">// namespace isys</span>
+<a name="l00019"></a>00019 <span class="keyword">namespace </span>isys
+<a name="l00020"></a>00020 {
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 
+<a name="l00028"></a><a class="code" href="classisys_1_1_i_process_environment.html">00028</a> <span class="keyword">class </span><a class="code" href="classisys_1_1_i_process_environment.html" title="Interface for access of some system dependent features and infos.">IProcessEnvironment</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
+<a name="l00029"></a>00029 {
+<a name="l00030"></a>00030 <span class="keyword">public</span>:
+<a name="l00031"></a><a class="code" href="classisys_1_1_i_process_environment.html#a99efec7ae33c3029ea731cbc8a740fce">00031</a>        <span class="keyword">typedef</span> std::map&lt;QString, QString&gt; <a class="code" href="classisys_1_1_i_process_environment.html#a99efec7ae33c3029ea731cbc8a740fce">EnvironmentVariables</a>;
+<a name="l00032"></a>00032        
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classisys_1_1_i_process_environment.html#afd7889def17b39a9e0ea05956d778ee8" title="Get current thread ID.">GetMainThreadId</a>() <span class="keyword">const</span> = 0;
+<a name="l00037"></a>00037 
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisys_1_1_i_process_environment.html#a14f56a0de997006ff86e0d9aeabffcb3" title="Suspend the current thread for seconds.">Sleep</a>(<span class="keywordtype">double</span> seconds) = 0;
+<a name="l00042"></a>00042 
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> QString <a class="code" href="classisys_1_1_i_process_environment.html#ac8e0e9e5c0d9976ac446757ec7ac82be" title="Returns the standard temp path, that will be used by the application.">GetTempDirPath</a>() <span class="keyword">const</span> = 0;
+<a name="l00047"></a>00047 
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> QString <a class="code" href="classisys_1_1_i_process_environment.html#a55ceb90cee2639168659e7e2a45fbd94" title="Returns the working directory of application.">GetWorkingDirectory</a>() <span class="keyword">const</span> = 0;
+<a name="l00052"></a>00052 
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> QStringList <a class="code" href="classisys_1_1_i_process_environment.html#a11985424a95d419d84f69e904318022a" title="Returns the arguments of command line for running application process.">GetApplicationArguments</a>() <span class="keyword">const</span> = 0;
+<a name="l00057"></a>00057 
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> QString <a class="code" href="classisys_1_1_i_process_environment.html#aa121cf28470ef661e2c2aed0f89def3e" title="Returns the module file name.">GetModulePath</a>(<span class="keywordtype">bool</span> useApplicationModule = <span class="keyword">false</span>, <span class="keywordtype">bool</span> onlyDirectory = <span class="keyword">false</span>) <span class="keyword">const</span> = 0;
+<a name="l00064"></a>00064 
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <a class="code" href="classisys_1_1_i_process_environment.html#a99efec7ae33c3029ea731cbc8a740fce">EnvironmentVariables</a> <a class="code" href="classisys_1_1_i_process_environment.html#a1311c2e71f1a8f25dda6afcd8d41af14" title="Returns the environment variables of the application process.">GetEnvironmentVariables</a>() <span class="keyword">const</span> = 0;
+<a name="l00070"></a>00070 
+<a name="l00076"></a>00076        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisys_1_1_i_process_environment.html#a68804b220c1a65eb2d03e441f5570f8d" title="Set/Add the value of a system variable to the current process.">SetEnvironmentVariableValue</a>(<span class="keyword">const</span> QString&amp; variableName, <span class="keyword">const</span> QString&amp; value) = 0;
+<a name="l00077"></a>00077 };
 <a name="l00078"></a>00078 
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080 <span class="preprocessor">#endif // !isys_IProcessEnvironment_included</span>
+<a name="l00080"></a>00080 } <span class="comment">// namespace isys</span>
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 <span class="preprocessor">#endif // !isys_IProcessEnvironment_included</span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

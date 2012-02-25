@@ -76,7 +76,7 @@ bool CDateTimeBase::SerializeComponents(iser::IArchive& archive, TimeComponent f
 
 // reimplemented (isys::IDateTime)
  
-std::string CDateTimeBase::ToString(int fromComponent, int toComponent, const TimeSeparator& separator) const
+QString CDateTimeBase::ToString(int fromComponent, int toComponent, const TimeSeparator& separator) const
 {
 	std::ostringstream stream;
 
@@ -105,7 +105,7 @@ std::string CDateTimeBase::ToString(int fromComponent, int toComponent, const Ti
 		}
 	}
 
-	return stream.str();
+	return QString(stream.str().c_str());
 }
 
 

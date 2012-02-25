@@ -24,9 +24,12 @@
 #define iser_IFileTypeInfo_included
 
 
+// Qt includes
+#include <QString>
+
+
 // ACF includes
 #include "istd/IPolymorphic.h"
-#include "istd/CString.h"
 
 
 namespace iser
@@ -76,12 +79,12 @@ public:
 		\param	flags		set of flags \sa QueryFlags.
 		\param	doAppend	if true, list of extensions should be appended to existing list.
 	*/
-	virtual bool GetFileExtensions(istd::CStringList& result, int flags = -1, bool doAppend = false) const = 0;
+	virtual bool GetFileExtensions(QStringList& result, int flags = -1, bool doAppend = false) const = 0;
 
 	/**
 		Get description of object type associated with single extension.
 	*/
-	virtual istd::CString GetTypeDescription(const istd::CString* extensionPtr = NULL) const = 0;
+	virtual QString GetTypeDescription(const QString* extensionPtr = NULL) const = 0;
 };
 
 

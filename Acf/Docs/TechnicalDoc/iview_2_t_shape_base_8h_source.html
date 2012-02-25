@@ -82,7 +82,7 @@
 <a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_shape_base.html#a8a7d2f21abc5d0345e1c97fc01838700" title="Check if this shape is visible.">IsVisible</a>() <span class="keyword">const</span>;
 <a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_shape_base.html#a737240279510ff8f31d7e461272c1cf5">IsDisplayAccepted</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_display.html">IDisplay</a>&amp; display) <span class="keyword">const</span>;
 <a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_shape_base.html#a3036f3af6cb59ae683ccc3f30a8f0601">OnConnectDisplay</a>(<a class="code" href="classiview_1_1_i_display.html">IDisplay</a>* displayPtr);
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_shape_base.html#a56971c3e3ee537434ac5d1b958086024">OnDisconnectDisplay</a>(<a class="code" href="classiview_1_1_i_display.html">IDisplay</a>* displayPtr);
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_shape_base.html#ae9650b09864f87413eb0d8a4180af4ac">OnDisconnectDisplay</a>(<a class="code" href="classiview_1_1_i_display.html">IDisplay</a>* displayPtr);
 <a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_shape_base.html#a0ebdc44030ca728669323a9eb7424f7c">OnDisplayChange</a>(<span class="keywordtype">int</span> flags);
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063        <span class="comment">// reimplemented (imod::IObserver)</span>
@@ -317,7 +317,7 @@
 <a name="l00313"></a>00313 
 <a name="l00314"></a>00314 
 <a name="l00315"></a>00315 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00316"></a><a class="code" href="classiview_1_1_t_shape_base.html#a56971c3e3ee537434ac5d1b958086024">00316</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_shape_base.html#a56971c3e3ee537434ac5d1b958086024">TShapeBase&lt;Base&gt;::OnDisconnectDisplay</a>(<a class="code" href="classiview_1_1_i_display.html">IDisplay</a>* <a class="code" href="istd_8h.html#a0a13620120415a9017e5095986764a12">I_IF_DEBUG</a>(displayPtr))
+<a name="l00316"></a><a class="code" href="classiview_1_1_t_shape_base.html#ae9650b09864f87413eb0d8a4180af4ac">00316</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_shape_base.html#ae9650b09864f87413eb0d8a4180af4ac">TShapeBase&lt;Base&gt;::OnDisconnectDisplay</a>(<a class="code" href="classiview_1_1_i_display.html">IDisplay</a>* <a class="code" href="istd_8h.html#a0a13620120415a9017e5095986764a12">I_IF_DEBUG</a>(displayPtr))
 <a name="l00317"></a>00317 {
 <a name="l00318"></a>00318        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(displayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00319"></a>00319        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(displayPtr == m_displayPtr);

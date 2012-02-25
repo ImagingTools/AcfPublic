@@ -27,6 +27,10 @@
 #include <algorithm>
 
 
+// Qt includes
+#include <QStringList>
+
+
 // ACF includes
 #include "istd/TChangeNotifier.h"
 
@@ -216,14 +220,14 @@ bool CMultiDocumentManagerBase::FileNew(
 
 bool CMultiDocumentManagerBase::FileOpen(
 			const std::string* documentTypeIdPtr,
-			const istd::CString* fileNamePtr,
+			const QString* fileNamePtr,
 			bool createView,
 			const std::string& viewTypeId,
 			FileToTypeMap* loadedMapPtr)
 {
 	bool retVal = true;
 
-	istd::CStringList files;
+	QStringList files;
 
 	if (fileNamePtr != NULL){
 		files.push_back(*fileNamePtr);
@@ -232,10 +236,10 @@ bool CMultiDocumentManagerBase::FileOpen(
 		files = GetOpenFilePaths(documentTypeIdPtr);
 	}
 
-	for (		istd::CStringList::const_iterator iter = files.begin();
+	for (		QStringList::const_iterator iter = files.begin();
 				iter != files.end();
 				++iter){
-		const istd::CString& fileName = *iter;
+		const QString& fileName = *iter;
 
 		std::string documentTypeId;
 		if (OpenDocument(fileName, createView, viewTypeId, documentTypeId)){
@@ -279,13 +283,13 @@ bool CMultiDocumentManagerBase::FileSave(
 
 	I_ASSERT(infoPtr->documentPtr.IsValid());
 
-	istd::CString filePath = infoPtr->filePath;
+	QString filePath = infoPtr->filePath;
 
-	requestFileName  = requestFileName || filePath.IsEmpty();
+	requestFileName  = requestFileName || filePath.isEmpty();
 
 	if (requestFileName){
 		filePath = GetSaveFilePath(infoPtr->documentTypeId);
-		if (filePath.IsEmpty()){
+		if (filePath.isEmpty()){
 			return true;
 		}
 	}
@@ -416,13 +420,13 @@ void CMultiDocumentManagerBase::SetActiveView(istd::IPolymorphic* viewPtr)
 
 
 istd::IChangeable* CMultiDocumentManagerBase::OpenDocument(
-			const istd::CString& filePath,
+			const QString& filePath,
 			bool createView,
 			const std::string& viewTypeId,
 			std::string& documentTypeId)
 {
 	const IDocumentTemplate* documentTemplatePtr = GetDocumentTemplate();
-	if (filePath.IsEmpty() || (documentTemplatePtr == NULL)){
+	if (filePath.isEmpty() || (documentTemplatePtr == NULL)){
 		return NULL;
 	}
 
@@ -540,7 +544,7 @@ CMultiDocumentManagerBase::SingleDocumentData* CMultiDocumentManagerBase::GetDoc
 }
 
 
-CMultiDocumentManagerBase::SingleDocumentData* CMultiDocumentManagerBase::GetDocumentInfoFromPath(const istd::CString& filePath) const
+CMultiDocumentManagerBase::SingleDocumentData* CMultiDocumentManagerBase::GetDocumentInfoFromPath(const QString& filePath) const
 {
 	int documentsCount = GetDocumentsCount();
 	for (int i = 0; i < documentsCount; ++i){

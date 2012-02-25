@@ -32,7 +32,7 @@
 <a name="l00005"></a>00005 <span class="comment">// STL includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;vector&gt;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_c_string_8h.html">istd/CString.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QString&gt;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
 <a name="l00011"></a>00011 
@@ -78,8 +78,8 @@
 <a name="l00055"></a>00055        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
 <a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#aeac3d10f3aac8be90d52bdb1a9fc3fef" title="Get constraints flags.">GetConstraintsFlags</a>() <span class="keyword">const</span>;
 <a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a49477b1df2ddf39f0fa0ecc6f3f4874b" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#abdfa8daae307a43f4b95b360da352a2b" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a8105d1dea974c95a89e4e06f1250f9df" title="Get description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> QString <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a483bcb83a62e43e4ff7a1eeb322f009c" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> QString <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a96784ce3ec10619c0d3bdd4e8e6edc8e" title="Get description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00060"></a>00060        <span class="keyword">virtual</span> std::string <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a4964a2062e5fa1799adc5b969bcd1355" title="Get option ID.">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062 <span class="keyword">protected</span>:
@@ -92,12 +92,12 @@
 <a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a38ea594db0ebdfa99da890128d4a22c7">OnComponentCreated</a>();
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071 <span class="keyword">private</span>:
-<a name="l00072"></a>00072        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_paramsIdAttrPtr);
+<a name="l00072"></a>00072        I_ATTR(QString, m_paramsIdAttrPtr);
 <a name="l00073"></a>00073        I_ATTR(<span class="keywordtype">int</span>, m_maxIterationsCountAttrPtr);
 <a name="l00074"></a>00074        I_REF(<a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>, m_bufferObjectCompPtr);
 <a name="l00075"></a>00075        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_slaveProcessorCompPtr);
 <a name="l00076"></a>00076 
-<a name="l00077"></a>00077        std::vector&lt;istd::CString&gt; m_iterationNames;
+<a name="l00077"></a>00077        std::vector&lt;QString&gt; m_iterationNames;
 <a name="l00078"></a>00078 };
 <a name="l00079"></a>00079 
 <a name="l00080"></a>00080 

@@ -58,7 +58,7 @@ CConsoleGui::CConsoleGui(QWidget* parent)
 {
 	m_viewPtr = new CalibrationViewImpl(this);
 
-	m_mainLayoutPtr = new QVBoxLayout();
+	m_mainLayoutPtr = new QVBoxLayout(this);
 	m_centerLayoutPtr = new QGridLayout();
 	m_statusLayoutPtr = new QHBoxLayout();
 
@@ -181,8 +181,6 @@ CConsoleGui::CConsoleGui(QWidget* parent)
 	#ifdef _DEBUG
 	I_ASSERT(slotsConnected);
 	#endif
-
-	setLayout(m_mainLayoutPtr);
 }
 
 
@@ -531,9 +529,9 @@ void CConsoleGui::UpdateComponentsPosition()
 }
 
 
-void CConsoleGui::SetStatusText(const istd::CString& message)
+void CConsoleGui::SetStatusText(const QString& message)
 {
-	m_statusBarPtr->showMessage(iqt::GetQString(message));
+	m_statusBarPtr->showMessage(message);
 }
 
 

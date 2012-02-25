@@ -37,7 +37,7 @@ void CAutoPersistenceComp::OnComponentCreated()
 
 	if (*m_restoreOnBeginAttrPtr){
 		if (m_fileLoaderCompPtr.IsValid() && m_objectCompPtr.IsValid()){
-			istd::CString filePath;
+			QString filePath;
 			if (m_filePathCompPtr.IsValid()){
 				filePath = m_filePathCompPtr->GetPath();
 			}
@@ -52,7 +52,7 @@ void CAutoPersistenceComp::OnComponentDestroyed()
 {
 	if (*m_storeOnEndAttrPtr){
 		if (m_fileLoaderCompPtr.IsValid() && m_objectCompPtr.IsValid()){
-			istd::CString filePath;
+			QString filePath;
 			if (m_filePathCompPtr.IsValid()){
 				filePath = m_filePathCompPtr->GetPath();
 			}

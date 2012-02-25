@@ -26,7 +26,7 @@
 
 #include "istd/IChangeable.h"
 
-#include "istd/CString.h"
+#include <QString>
 
 
 namespace ibase
@@ -42,7 +42,7 @@ public:
 	/**
 		Get list of files.
 	*/
-	virtual istd::CStringList GetFileList() const = 0;
+	virtual QStringList GetFileList() const = 0;
 };
 
 

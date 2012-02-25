@@ -132,7 +132,7 @@ int main(int argc, char *argv[])
 	versionInfo.SetIntAttr("VersionNumber", istd::RS_USE_VERSION);
 	versionInfo.SetStringAttr("VersionIdDesc", "ACF");
 	versionInfo.InsertMultiAttr("KnownVersions", 0);
-	versionInfo.InsertMultiAttr("KnownVersionNames", istd::CString("i"));
+	versionInfo.InsertMultiAttr("KnownVersionNames", QString("i"));
 	versionInfo.InitComponent();
 
 	icomp::TSimComponentWrap<BasePck::ApplicationInfo> applicationInfo;
@@ -166,8 +166,8 @@ int main(int argc, char *argv[])
 	packagesLoaderComp.SetRef("Log", &log);
 	packagesLoaderComp.InitComponent();
 
-	istd::CString configFile;
-	istd::CString registryFile;
+	QString configFile;
+	QString registryFile;
 	for (int index = 1; index < argc; index++){
 		std::string argument = argv[index];
 		if (!argument.empty() && (argument[0] == '-')){
@@ -189,7 +189,7 @@ int main(int argc, char *argv[])
 			}
 		}
 		else if (index == 1){
-			registryFile = argument;
+			registryFile = QString::fromStdString(argument);
 		}
 	}
 
@@ -282,7 +282,7 @@ int main(int argc, char *argv[])
 			QMessageBox::information(
 						NULL,
 						QObject::tr("Error"),
-						QObject::tr("Cannot load registry\n%1").arg(iqt::GetQString(registryFile)));
+						QObject::tr("Cannot load registry\n%1").arg(registryFile)));
 		}
 	}
 */

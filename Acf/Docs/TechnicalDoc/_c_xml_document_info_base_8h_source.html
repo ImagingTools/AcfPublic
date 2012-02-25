@@ -34,7 +34,7 @@
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_string_8h.html">istd/CString.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;QString&gt;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="keyword">namespace </span>iser
@@ -50,9 +50,9 @@
 <a name="l00035"></a>00035        <span class="comment">// static methods</span>
 <a name="l00036"></a>00036        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_xml_document_info_base.html#afa1e0341e2ccb647db2e5118676712f3">EncodeXml</a>(<span class="keyword">const</span> std::string&amp; text, std::string&amp; xmlText);
 <a name="l00037"></a>00037        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_xml_document_info_base.html#aca7800569056e09df9926d29c09c9140">DecodeXml</a>(<span class="keyword">const</span> std::string&amp; xmlText, std::string&amp; text);
-<a name="l00038"></a>00038        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_xml_document_info_base.html#afa1e0341e2ccb647db2e5118676712f3">EncodeXml</a>(<span class="keyword">const</span> std::wstring&amp; text, std::string&amp; xmlText);
-<a name="l00039"></a>00039        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_xml_document_info_base.html#aca7800569056e09df9926d29c09c9140">DecodeXml</a>(<span class="keyword">const</span> std::string&amp; xmlText, std::wstring&amp; text);
-<a name="l00040"></a>00040        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classiser_1_1_c_xml_document_info_base.html#a1990db5a8c231b36e3f3895aab20e3a0">GetElementSeparator</a>();
+<a name="l00038"></a>00038        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_xml_document_info_base.html#afa1e0341e2ccb647db2e5118676712f3">EncodeXml</a>(<span class="keyword">const</span> QString&amp; text, std::string&amp; xmlText);
+<a name="l00039"></a>00039        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_xml_document_info_base.html#aca7800569056e09df9926d29c09c9140">DecodeXml</a>(<span class="keyword">const</span> std::string&amp; xmlText, QString&amp; text);
+<a name="l00040"></a>00040        <span class="keyword">static</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classiser_1_1_c_xml_document_info_base.html#a9e4bc4a67831288634c53b4efca5af39">GetElementSeparator</a>();
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042 <span class="keyword">protected</span>:
 <a name="l00043"></a><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_char_to_entity_map.html">00043</a>        <span class="keyword">class </span><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_char_to_entity_map.html">CharToEntityMap</a>: <span class="keyword">public</span> std::map&lt;char, std::string&gt;
@@ -67,13 +67,13 @@
 <a name="l00052"></a>00052               <a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_chart_map.html#afc2d50f87fdcf3a063e9488186031cad">EntityToChartMap</a>();
 <a name="l00053"></a>00053        };
 <a name="l00054"></a>00054 
-<a name="l00055"></a><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_wide_char_to_entity_map.html">00055</a>        <span class="keyword">class </span><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_wide_char_to_entity_map.html">WideCharToEntityMap</a>: <span class="keyword">public</span> std::map&lt;wchar_t, std::string &gt;
+<a name="l00055"></a><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_wide_char_to_entity_map.html">00055</a>        <span class="keyword">class </span><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_wide_char_to_entity_map.html">WideCharToEntityMap</a>: <span class="keyword">public</span> std::map&lt;QChar, std::string &gt;
 <a name="l00056"></a>00056        {
 <a name="l00057"></a>00057        <span class="keyword">public</span>:
 <a name="l00058"></a>00058               <a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_wide_char_to_entity_map.html#ac61b24874e133dad15c5e413a4cfaf85">WideCharToEntityMap</a>();
 <a name="l00059"></a>00059        };
 <a name="l00060"></a>00060 
-<a name="l00061"></a><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_wide_chart_map.html">00061</a>        <span class="keyword">class </span><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_wide_chart_map.html">EntityToWideChartMap</a>: <span class="keyword">public</span> std::map&lt;std::string, wchar_t&gt;
+<a name="l00061"></a><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_wide_chart_map.html">00061</a>        <span class="keyword">class </span><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_wide_chart_map.html">EntityToWideChartMap</a>: <span class="keyword">public</span> std::map&lt;std::string, QChar&gt;
 <a name="l00062"></a>00062        {
 <a name="l00063"></a>00063        <span class="keyword">public</span>:
 <a name="l00064"></a>00064               <a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_wide_chart_map.html#ad9a1822a5a9704beba935ceb6ff5043a">EntityToWideChartMap</a>();
@@ -87,7 +87,7 @@
 <a name="l00072"></a>00072        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_wide_char_to_entity_map.html">WideCharToEntityMap</a> s_wideCharToEntityMap;
 <a name="l00073"></a>00073        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_wide_chart_map.html">EntityToWideChartMap</a> s_entityToWideChartMap;
 <a name="l00074"></a>00074 
-<a name="l00075"></a>00075        <span class="keyword">static</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> s_elementSeparator;
+<a name="l00075"></a>00075        <span class="keyword">static</span> QString s_elementSeparator;
 <a name="l00076"></a>00076 };
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078 

@@ -49,8 +49,8 @@
 <a name="l00022"></a>00022        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classicomp_1_1_c_component_static_info_base.html#af9a2a2dd3cb7f99fe32f2f870987ca08" title="Get information about component type.">GetComponentType</a>() <span class="keyword">const</span>;
 <a name="l00023"></a>00023        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_attribute_static_info.html">IAttributeStaticInfo</a>* <a class="code" href="classicomp_1_1_c_component_static_info_base.html#a6f653ac91657a34384bd2a9d25c5537f" title="Get set of attributes.">GetAttributeInfo</a>(<span class="keyword">const</span> std::string&amp; attributeId) <span class="keyword">const</span>;
 <a name="l00024"></a>00024        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">IComponentStaticInfo</a>* <a class="code" href="classicomp_1_1_c_component_static_info_base.html#a815d02162e404f916539f8469f841033" title="Return number of interfaces for specific slot.">GetEmbeddedComponentInfo</a>(<span class="keyword">const</span> std::string&amp; embeddedId) <span class="keyword">const</span>;
-<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classicomp_1_1_c_component_static_info_base.html#a4175e5134c08fedd1ccbd1268ea2e8f4" title="Get human readable description of this component.">GetDescription</a>() <span class="keyword">const</span>;
-<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classicomp_1_1_c_component_static_info_base.html#a4b2cc968da1906ed5d10348a047d5ced" title="Get keywords for this component.">GetKeywords</a>() <span class="keyword">const</span>;
+<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classicomp_1_1_c_component_static_info_base.html#aacd90732354b2dca277991e8c2819e06" title="Get human readable description of this component.">GetDescription</a>() <span class="keyword">const</span>;
+<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classicomp_1_1_c_component_static_info_base.html#abc528ae2a18afe7b4a5fe91398f0f2bf" title="Get keywords for this component.">GetKeywords</a>() <span class="keyword">const</span>;
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028        <span class="comment">//     reimplemented (icomp::IElementStaticInfo)</span>
 <a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">IElementStaticInfo</a>* <a class="code" href="classicomp_1_1_c_component_static_info_base.html#ad33590843a4f3a292b33dba391f3a0e2" title="Return number of interfaces for specific slot.">GetSubelementInfo</a>(<span class="keyword">const</span> std::string&amp; subcomponentId) <span class="keyword">const</span>;
@@ -62,24 +62,28 @@
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="comment">// reimplemented (icomp::IComponentStaticInfo)</span>
 <a name="l00037"></a>00037 
-<a name="l00038"></a><a class="code" href="classicomp_1_1_c_component_static_info_base.html#a4175e5134c08fedd1ccbd1268ea2e8f4">00038</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classicomp_1_1_c_component_static_info_base.html#a4175e5134c08fedd1ccbd1268ea2e8f4" title="Get human readable description of this component.">CComponentStaticInfoBase::GetDescription</a>()<span class="keyword"> const</span>
+<a name="l00038"></a><a class="code" href="classicomp_1_1_c_component_static_info_base.html#aacd90732354b2dca277991e8c2819e06">00038</a> <span class="keyword">inline</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classicomp_1_1_c_component_static_info_base.html#aacd90732354b2dca277991e8c2819e06" title="Get human readable description of this component.">CComponentStaticInfoBase::GetDescription</a>()<span class="keyword"> const</span>
 <a name="l00039"></a>00039 <span class="keyword"></span>{
-<a name="l00040"></a>00040        <span class="keywordflow">return</span> <a class="code" href="classistd_1_1_c_string.html#aa607740cdb27aec5c2ece2466add6408">istd::CString::GetEmpty</a>();
-<a name="l00041"></a>00041 }
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 
-<a name="l00044"></a><a class="code" href="classicomp_1_1_c_component_static_info_base.html#a4b2cc968da1906ed5d10348a047d5ced">00044</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classicomp_1_1_c_component_static_info_base.html#a4b2cc968da1906ed5d10348a047d5ced" title="Get keywords for this component.">CComponentStaticInfoBase::GetKeywords</a>()<span class="keyword"> const</span>
-<a name="l00045"></a>00045 <span class="keyword"></span>{
-<a name="l00046"></a>00046        <span class="keywordflow">return</span> <a class="code" href="classistd_1_1_c_string.html#aa607740cdb27aec5c2ece2466add6408">istd::CString::GetEmpty</a>();
-<a name="l00047"></a>00047 }
-<a name="l00048"></a>00048 
+<a name="l00040"></a>00040        <span class="keyword">static</span> QString emptyString;
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042        <span class="keywordflow">return</span> emptyString;
+<a name="l00043"></a>00043 }
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 
+<a name="l00046"></a><a class="code" href="classicomp_1_1_c_component_static_info_base.html#abc528ae2a18afe7b4a5fe91398f0f2bf">00046</a> <span class="keyword">inline</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classicomp_1_1_c_component_static_info_base.html#abc528ae2a18afe7b4a5fe91398f0f2bf" title="Get keywords for this component.">CComponentStaticInfoBase::GetKeywords</a>()<span class="keyword"> const</span>
+<a name="l00047"></a>00047 <span class="keyword"></span>{
+<a name="l00048"></a>00048        <span class="keyword">static</span> QString emptyString;
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050 } <span class="comment">// namespace icomp</span>
-<a name="l00051"></a>00051 
+<a name="l00050"></a>00050        <span class="keywordflow">return</span> emptyString;
+<a name="l00051"></a>00051 }
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="preprocessor">#endif // !icomp_CComponentStaticInfoBase_included</span>
-<a name="l00054"></a>00054 <span class="preprocessor"></span>
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 } <span class="comment">// namespace icomp</span>
 <a name="l00055"></a>00055 
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 <span class="preprocessor">#endif // !icomp_CComponentStaticInfoBase_included</span>
+<a name="l00058"></a>00058 <span class="preprocessor"></span>
+<a name="l00059"></a>00059 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

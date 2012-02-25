@@ -1318,10 +1318,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TMultiProperty&lt; istd::CString &gt;</type>
+      <type>TMultiProperty&lt; QString &gt;</type>
       <name>CMultiStringProperty</name>
       <anchorfile>namespaceiprop.html</anchorfile>
-      <anchor>a317a5f5c3579bdc51edf7837c745f0d6</anchor>
+      <anchor>ae4976ce54e02ecff240a345305ca6b8b</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -1369,10 +1369,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TProperty&lt; istd::CString &gt;</type>
+      <type>TProperty&lt; QString &gt;</type>
       <name>CStringProperty</name>
       <anchorfile>namespaceiprop.html</anchorfile>
-      <anchor>a9d1e2c0600db704c2856ee8ea6a0c12a</anchor>
+      <anchor>a5b6aa25962ebcf89eb3b3e41c20de2e1</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -2021,8 +2021,8 @@
       <type>virtual int</type>
       <name>FindUserIndex</name>
       <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
-      <anchor>ae360365738c0e87ecb5d4ac2b2fcbee0</anchor>
-      <arglist>(const istd::CString &amp;name) const </arglist>
+      <anchor>a59265a8fdfd93da3c71d9443414104a5</anchor>
+      <arglist>(const QString &amp;name) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -2042,8 +2042,8 @@
       <type>virtual bool</type>
       <name>Login</name>
       <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
-      <anchor>abdffff7cae3a4b4f2b21fe99910e5d31</anchor>
-      <arglist>(const istd::CString &amp;userName, const istd::CString &amp;password)</arglist>
+      <anchor>a8d3cdd8e3c9ee2bd887870f363c58e7e</anchor>
+      <arglist>(const QString &amp;userName, const QString &amp;password)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -2078,17 +2078,17 @@
     <name>iauth::CSimpleLoginComp::User</name>
     <filename>structiauth_1_1_c_simple_login_comp_1_1_user.html</filename>
     <member kind="variable">
-      <type>istd::CString</type>
+      <type>QString</type>
       <name>name</name>
       <anchorfile>structiauth_1_1_c_simple_login_comp_1_1_user.html</anchorfile>
-      <anchor>a4db48be26b14111b21f6805ee66ecfcc</anchor>
+      <anchor>a8453a7423b237cade072f2950778096f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>istd::CString</type>
+      <type>QString</type>
       <name>password</name>
       <anchorfile>structiauth_1_1_c_simple_login_comp_1_1_user.html</anchorfile>
-      <anchor>adefe5150851748db4351e8207921da94</anchor>
+      <anchor>aa9dd7f03e04ee209a26a07feed8c5add</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -2133,8 +2133,8 @@
       <type></type>
       <name>CUser</name>
       <anchorfile>classiauth_1_1_c_user.html</anchorfile>
-      <anchor>a6f144dc5f4dca38684442318d7377093</anchor>
-      <arglist>(const istd::CString &amp;userName=&quot;&quot;, const istd::CString &amp;password=&quot;&quot;, int userGroup=0)</arglist>
+      <anchor>a9ec8faeb2ba13e5af47cfd674e2b440c</anchor>
+      <arglist>(const QString &amp;userName=&quot;&quot;, const QString &amp;password=&quot;&quot;, int userGroup=0)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -2144,18 +2144,18 @@
       <arglist>(const CUser &amp;user)</arglist>
     </member>
     <member kind="function">
-      <type>const istd::CString &amp;</type>
+      <type>const QString &amp;</type>
       <name>GetUserName</name>
       <anchorfile>classiauth_1_1_c_user.html</anchorfile>
-      <anchor>aa57baf06f83871cee80b3fdec44a7779</anchor>
+      <anchor>a4a5b3994d4699b4f2b43c10e8c0cc132</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>SetUserName</name>
       <anchorfile>classiauth_1_1_c_user.html</anchorfile>
-      <anchor>afe76408a6870b467c10fa229f71c15d3</anchor>
-      <arglist>(const istd::CString &amp;name)</arglist>
+      <anchor>a4fd652f2f61b787aececbb5947ac16c3</anchor>
+      <arglist>(const QString &amp;name)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
@@ -2172,25 +2172,25 @@
       <arglist>(int group)</arglist>
     </member>
     <member kind="function">
-      <type>const istd::CString &amp;</type>
+      <type>const QString &amp;</type>
       <name>GetPassword</name>
       <anchorfile>classiauth_1_1_c_user.html</anchorfile>
-      <anchor>afdaf4cd37540ac388eb332d50e771ced</anchor>
+      <anchor>a76a08df4b27c2665e49a7914093066ef</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>SetPassword</name>
       <anchorfile>classiauth_1_1_c_user.html</anchorfile>
-      <anchor>aa840becbbdc55af40bb1c2c407168150</anchor>
-      <arglist>(const istd::CString &amp;password)</arglist>
+      <anchor>a52cb33c8b2e98aa446b234ffa25228b0</anchor>
+      <arglist>(const QString &amp;password)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>CheckPassword</name>
       <anchorfile>classiauth_1_1_c_user.html</anchorfile>
-      <anchor>a489001af9a9ab17afdff179f2caad42b</anchor>
-      <arglist>(const istd::CString &amp;password) const </arglist>
+      <anchor>a8394ba4959170f7730b7a93bb92f5e42</anchor>
+      <arglist>(const QString &amp;password) const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -2238,8 +2238,8 @@
       <type>virtual bool</type>
       <name>Login</name>
       <anchorfile>classiauth_1_1_c_user_login_comp.html</anchorfile>
-      <anchor>ab5da2623a57a1104b2d728022f133341</anchor>
-      <arglist>(const istd::CString &amp;userName, const istd::CString &amp;password)</arglist>
+      <anchor>a1e28b5db9117c944b61b5bcf81c55321</anchor>
+      <arglist>(const QString &amp;userName, const QString &amp;password)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -2286,8 +2286,8 @@
       <type>virtual int</type>
       <name>FindUserIndex</name>
       <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
-      <anchor>a9ca3702217ad6d676f545a813123b142</anchor>
-      <arglist>(const istd::CString &amp;name) const </arglist>
+      <anchor>a94a01704ed806e45d7c05d57c77bb5cf</anchor>
+      <arglist>(const QString &amp;name) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const CUser &amp;</type>
@@ -2307,22 +2307,22 @@
       <type>virtual CUser *</type>
       <name>AddUser</name>
       <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
-      <anchor>ac83c72c1234e82b2d063833906bc9f95</anchor>
-      <arglist>(const istd::CString &amp;name)</arglist>
+      <anchor>a13b127246ee282bb661f3fe0a699cb60</anchor>
+      <arglist>(const QString &amp;name)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>DeleteUser</name>
       <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
-      <anchor>a861f831677f5e588e269b2201a6286a2</anchor>
-      <arglist>(const istd::CString &amp;name)</arglist>
+      <anchor>a2848fa5702c1725314dce3ad670a1696</anchor>
+      <arglist>(const QString &amp;name)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RenameUser</name>
       <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
-      <anchor>aa475983cdd4b5d544e20c80ded342039</anchor>
-      <arglist>(int userIndex, const istd::CString &amp;userName)</arglist>
+      <anchor>ad2faae709f54d3fa93196a18d72db6b7</anchor>
+      <arglist>(int userIndex, const QString &amp;userName)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -2332,10 +2332,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const istd::CString &amp;</type>
+      <type>virtual const QString &amp;</type>
       <name>GetUserGroupName</name>
       <anchorfile>classiauth_1_1_c_users_manager_comp.html</anchorfile>
-      <anchor>ae7d339347398810221f754c0c8861756</anchor>
+      <anchor>a669b6af4fdbed390bd4cb738bbaaf07d</anchor>
       <arglist>(int groupIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -2368,8 +2368,8 @@
       <type>virtual bool</type>
       <name>Login</name>
       <anchorfile>classiauth_1_1_i_login.html</anchorfile>
-      <anchor>ab0fc19b0f1f71432c2730e99519d6956</anchor>
-      <arglist>(const istd::CString &amp;userName, const istd::CString &amp;password)=0</arglist>
+      <anchor>abba1e2551a1068d1cda70f8e17e4136b</anchor>
+      <arglist>(const QString &amp;userName, const QString &amp;password)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -2430,8 +2430,8 @@
       <type>virtual int</type>
       <name>FindUserIndex</name>
       <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
-      <anchor>a8f872e61551574eebc4448ea15a61fba</anchor>
-      <arglist>(const istd::CString &amp;name) const =0</arglist>
+      <anchor>aab6c0884586ec899486e68b07e49990e</anchor>
+      <arglist>(const QString &amp;name) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const CUser &amp;</type>
@@ -2451,22 +2451,22 @@
       <type>virtual CUser *</type>
       <name>AddUser</name>
       <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
-      <anchor>adb72e0534dfa7e5cb8e369a4a1e047bb</anchor>
-      <arglist>(const istd::CString &amp;userName)=0</arglist>
+      <anchor>a1bbcbc43588f7059790c4e206c326667</anchor>
+      <arglist>(const QString &amp;userName)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>DeleteUser</name>
       <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
-      <anchor>a9903d898fcf04a5f50d8c48051d46297</anchor>
-      <arglist>(const istd::CString &amp;userName)=0</arglist>
+      <anchor>aa0c8e171cfbcb3eec74d64cd3a2101ce</anchor>
+      <arglist>(const QString &amp;userName)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>RenameUser</name>
       <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
-      <anchor>aa4a7a4c2ca0ddc07c6fc01b209adb1d0</anchor>
-      <arglist>(int userIndex, const istd::CString &amp;userName)=0</arglist>
+      <anchor>ae4ac7950f6f3ae33383753bd6dace182</anchor>
+      <arglist>(int userIndex, const QString &amp;userName)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -2476,10 +2476,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const istd::CString &amp;</type>
+      <type>virtual const QString &amp;</type>
       <name>GetUserGroupName</name>
       <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
-      <anchor>aa0d76cc30b4c6db2c85184dfc9d28342</anchor>
+      <anchor>ae35796766dd076c20eee154754deafed</anchor>
       <arglist>(int groupIndex) const =0</arglist>
     </member>
   </compound>
@@ -3047,32 +3047,32 @@
       <arglist>(int ovservedChanges)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CStringList</type>
+      <type>virtual QStringList</type>
       <name>GetAcceptPatterns</name>
       <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>aaba1327117f51634083e206f1227f3c6</anchor>
+      <anchor>a54d04a6fffbea582e79d934f35e2da99</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetAcceptPatterns</name>
       <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>a1e17d206313edc346377950bd08988db</anchor>
-      <arglist>(const istd::CStringList &amp;acceptPatterns)</arglist>
+      <anchor>a087676ca0a33975d1cc7368bbd2d8466</anchor>
+      <arglist>(const QStringList &amp;acceptPatterns)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CStringList</type>
+      <type>virtual QStringList</type>
       <name>GetIgnorePatterns</name>
       <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>a7d09e64126c84f7ba1238d13abc2119d</anchor>
+      <anchor>ab5567e42c7ac2267accf4a2178ccdec4</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetIgnorePatterns</name>
       <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>a5a88f17d4b99703769a3ddc30619ad95</anchor>
-      <arglist>(const istd::CStringList &amp;acceptPatterns)</arglist>
+      <anchor>ae9a1673767947233f1b274e97b6ffefa</anchor>
+      <arglist>(const QStringList &amp;acceptPatterns)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -3143,32 +3143,32 @@
       <arglist>(int renamingMode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetPrefix</name>
       <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a58bb621e7b6cc05d3859ea12383e04e5</anchor>
+      <anchor>a8291fe6fe613fd904520046150c97741</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetPrefix</name>
       <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a20157429f43452ca1b6378ebcaae0854</anchor>
-      <arglist>(const istd::CString &amp;prefix)</arglist>
+      <anchor>abd3cdb8bc680e6c5c01f4ebf545fe5f6</anchor>
+      <arglist>(const QString &amp;prefix)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetSuffix</name>
       <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a6e62b7186bd3c5ff0dd72083101e1488</anchor>
+      <anchor>a66531a7ba03ab38139475cab9b3862cb</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetSuffix</name>
       <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a9f161ea10cd8062e59f5a76686ac678a</anchor>
-      <arglist>(const istd::CString &amp;suffix)</arglist>
+      <anchor>ad83ca290f2d2fb06ca6a71e5d18fa73d</anchor>
+      <arglist>(const QString &amp;suffix)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -3197,10 +3197,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetItemPath</name>
       <anchorfile>classifpf_1_1_c_file_system_change_storage.html</anchorfile>
-      <anchor>a2392df5580ea340c67b595d22424c57d</anchor>
+      <anchor>a078f80f40d7f4265b4d2e0188fcc63e8</anchor>
       <arglist>(int fileIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -3214,8 +3214,8 @@
       <type>virtual void</type>
       <name>UpdateStorageItem</name>
       <anchorfile>classifpf_1_1_c_file_system_change_storage.html</anchorfile>
-      <anchor>a05bcf04c53d8a1c692940337923b8a07</anchor>
-      <arglist>(const istd::CString &amp;path, int itemFlags)</arglist>
+      <anchor>a66c8f125912f07bd94cb1552fed22c96</anchor>
+      <arglist>(const QString &amp;path, int itemFlags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -3264,43 +3264,43 @@
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a4b9ae0aab6e6ce87977275f5cf15ae9d</anchor>
-      <arglist>(istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+      <anchor>a8cff5be1520e49b873b6498802ddc64a</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a2dee0ad30e9493fc632ea65e706fb23f</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+      <anchor>a10f31fd399d398d863a7a71e4a1e103a</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a2be0b5ebd32472335ee2ed620911ab1e</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>a4f0ddeff61bd2f6f85a7931dd5b98371</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetTypeDescription</name>
       <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a4528c3cdf358c4c7a5b6136ef17fb792</anchor>
-      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
+      <anchor>acce65034361d959a84328cd78f157046</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>istd::CString</type>
+      <type>QString</type>
       <name>GetStaticParamsPath</name>
       <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>ae762d2b9520067b215e568e8a7b71c53</anchor>
-      <arglist>(const istd::CString &amp;objectPath) const </arglist>
+      <anchor>a56700d4ff4a510345e9c232c4c77b2f9</anchor>
+      <arglist>(const QString &amp;objectPath) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnReadError</name>
       <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a560f5a32df549218b813a75bbe511917</anchor>
-      <arglist>(const iser::CXmlFileReadArchive &amp;archive, const istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+      <anchor>aa35bc2c8080d420bf55ebfef94bec365</anchor>
+      <arglist>(const iser::CXmlFileReadArchive &amp;archive, const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3318,8 +3318,8 @@
       <type>virtual bool</type>
       <name>ItemExists</name>
       <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>a6cbc265cc79eeef4d93f01184f9b594e</anchor>
-      <arglist>(const istd::CString &amp;inputFilePath, ifpf::IHotfolderProcessingItem **foundItemPtr=NULL) const </arglist>
+      <anchor>a17223641fbd208eaf40afd7875c246fb</anchor>
+      <arglist>(const QString &amp;inputFilePath, ifpf::IHotfolderProcessingItem **foundItemPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -3332,8 +3332,8 @@
       <type>virtual const ifpf::IHotfolderProcessingItem *</type>
       <name>AddProcessingItem</name>
       <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>a206d5408c2ac64286cd25f5d0e39fbe0</anchor>
-      <arglist>(const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath=istd::CString())</arglist>
+      <anchor>a25db4fb3769754ef466961e010d4f115</anchor>
+      <arglist>(const QString &amp;inputFilePath, const QString &amp;outputFilePath=QString())</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -3446,32 +3446,32 @@
       <arglist>(int processingState)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetInputFile</name>
       <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>af31570e901eb2e2ad78c6c4ec07a584a</anchor>
+      <anchor>a864e38503a96049e8f21bc8c20e8d784</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetInputFile</name>
       <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>a7a09b89271da8e046a2dd47d25d1de45</anchor>
-      <arglist>(const istd::CString &amp;inputFile)</arglist>
+      <anchor>a153079be88e81d4a3e37422b44a2f39d</anchor>
+      <arglist>(const QString &amp;inputFile)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetOutputFile</name>
       <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>aa940f7fdc6b269bbc57f706c98caa1ba</anchor>
+      <anchor>add78233e2ae3b81fe2062a05af213eb9</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetOutputFile</name>
       <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>ae48f77660cf8b5223c19dd4e6a326c96</anchor>
-      <arglist>(const istd::CString &amp;outputFile)</arglist>
+      <anchor>ae7a577197ab6053bfaa1cc89c8afdb52</anchor>
+      <arglist>(const QString &amp;outputFile)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
@@ -3532,36 +3532,36 @@
       <type>virtual int</type>
       <name>GetItemsCount</name>
       <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>aac5ba207caea08a9084361812c32f11c</anchor>
-      <arglist>(const istd::CString &amp;directoryPath=istd::CString()) const </arglist>
+      <anchor>a1bef36f2fabe0675228d5a5f8751687a</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSuccessCount</name>
       <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>a9f316c5c4eb9255b5583480c28ee5692</anchor>
-      <arglist>(const istd::CString &amp;directoryPath=istd::CString()) const </arglist>
+      <anchor>aed90eed706e0358fe6d11ef18af1a33f</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetErrorsCount</name>
       <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>ad8e58ab1dfeb9d4df136bb297da0fcb1</anchor>
-      <arglist>(const istd::CString &amp;directoryPath=istd::CString()) const </arglist>
+      <anchor>a314f41dfb9b6c3151f628b4cc8edc224</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetAbortedCount</name>
       <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>a70f79e0b66e9b141fb0a82f12d965c67</anchor>
-      <arglist>(const istd::CString &amp;directoryPath=istd::CString()) const </arglist>
+      <anchor>ad8d5986f990fc29620afeaf6d625cb1c</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetProcessingTime</name>
       <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>a68dc71d477e7fa56c34b626d0fe15e01</anchor>
-      <arglist>(const istd::CString &amp;directoryPath=istd::CString()) const </arglist>
+      <anchor>a2e277161d3cc5294df6fbaa8287b41c8</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -3602,14 +3602,14 @@
       <type>void</type>
       <name>UpdateStateMaps</name>
       <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>a52e8f68dab5e0ae07bafbda7b191c206</anchor>
-      <arglist>(int itemState, const istd::CString &amp;directoryPath)</arglist>
+      <anchor>a12b302387ae35f6326bb67396de5d2df</anchor>
+      <arglist>(int itemState, const QString &amp;directoryPath)</arglist>
     </member>
     <member kind="function" protection="protected" static="yes">
-      <type>static istd::CString</type>
+      <type>static QString</type>
       <name>GetDirectoryPath</name>
       <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>a8ec865196868db97c93b8d46d064514b</anchor>
+      <anchor>a762a8fad33605869239474a27c66978c</anchor>
       <arglist>(const ifpf::IHotfolderProcessingItem &amp;item)</arglist>
     </member>
   </compound>
@@ -3647,43 +3647,43 @@
       <type>virtual ifpf::IHotfolderProcessingInfo *</type>
       <name>GetProcessingInfo</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a51c2dfc4748ff132f30c52a4e404d6b2</anchor>
-      <arglist>(const istd::CString &amp;hotfolderName) const </arglist>
+      <anchor>a6718745865e4d36add47a48b5edda4d8</anchor>
+      <arglist>(const QString &amp;hotfolderName) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ifpf::IHotfolderWorkflowItem *</type>
       <name>AddHotfolder</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a623b93adc4cf97a5a2b346b6245828ac</anchor>
-      <arglist>(const istd::CString &amp;hotfolderName, const istd::CString &amp;hotfolderId=istd::CString())</arglist>
+      <anchor>a087906c8f256fdac1f82ce8ff46b438b</anchor>
+      <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString())</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemoveHotfolder</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a4103592b00a3f69e168ab11b2dad96f4</anchor>
-      <arglist>(const istd::CString &amp;hotfolderName)</arglist>
+      <anchor>a08f0acd90d47e1acc11ede45bb5f8a57</anchor>
+      <arglist>(const QString &amp;hotfolderName)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CStringList</type>
+      <type>virtual QStringList</type>
       <name>GetHotfolderIds</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a93e0fe4ea284788c318a3d4da6819320</anchor>
+      <anchor>a3b12bae2b23b7783596df5a1178a8091</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CStringList</type>
+      <type>virtual QStringList</type>
       <name>GetHotfolderList</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>aeba3433404436e32bb86ce8d7408919d</anchor>
+      <anchor>ac6ad475a920fc1346ea4995221bb2245</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ifpf::IHotfolderWorkflowItem *</type>
       <name>GetHotfolder</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a7614bb622bff633106847008193a4bdf</anchor>
-      <arglist>(const istd::CString &amp;hotfolderName) const </arglist>
+      <anchor>ab78f92b9bd1c39abff6abeb5fdeed629</anchor>
+      <arglist>(const QString &amp;hotfolderName) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -3703,36 +3703,36 @@
       <type>virtual ifpf::IHotfolderProcessingInfo *</type>
       <name>AddHotfolder</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a596f74192bcb4bc5d737c99f96ee5de7</anchor>
-      <arglist>(const istd::CString &amp;hotfolderName, const istd::CString &amp;hotfolderId=istd::CString())</arglist>
+      <anchor>a484a543079228b0cf478bbee1ff3923b</anchor>
+      <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString())</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemoveHotfolder</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a4103592b00a3f69e168ab11b2dad96f4</anchor>
-      <arglist>(const istd::CString &amp;hotfolderName)</arglist>
+      <anchor>a08f0acd90d47e1acc11ede45bb5f8a57</anchor>
+      <arglist>(const QString &amp;hotfolderName)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ifpf::IHotfolderProcessingInfo *</type>
       <name>GetHotfolder</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>afe3d5b5324ea6559a5f39acfb85ada82</anchor>
-      <arglist>(const istd::CString &amp;hotfolderName) const </arglist>
+      <anchor>a80964a62611070e03fdaa64feecfde01</anchor>
+      <arglist>(const QString &amp;hotfolderName) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CStringList</type>
+      <type>virtual QStringList</type>
       <name>GetHotfoldersList</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>adaf0da0493cf688ba5eb7d0a73e6e1a0</anchor>
+      <anchor>a2cc556be2b701417dc11cee34a9b3b80</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetWorkingState</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a15718edafc4b7b4df7b6e14f194ba942</anchor>
-      <arglist>(const istd::CString &amp;hotfolderName) const </arglist>
+      <anchor>aa84adb89a61fbed926c1b47c0b402d48</anchor>
+      <arglist>(const QString &amp;hotfolderName) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -3752,22 +3752,22 @@
       <type>virtual HotfolderItem *</type>
       <name>CreateHotfolder</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a08fe2ea0dd28ec30649564b6b72cc8c5</anchor>
-      <arglist>(const istd::CString &amp;hotfolderName, const istd::CString &amp;hotfolderId=istd::CString()) const </arglist>
+      <anchor>ac221694e0600faa90cee949900b9f9af</anchor>
+      <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString()) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual ifpf::IHotfolderWorkflowItem *</type>
       <name>CreateWorkflowItem</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>aa2c4ca6b28bbea9831c66d9bed743cde</anchor>
-      <arglist>(const istd::CString &amp;hotfolderId) const </arglist>
+      <anchor>a03e7d0c80cdb8a7677a7b549ae4ff9ef</anchor>
+      <arglist>(const QString &amp;hotfolderId) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual ifpf::IHotfolderProcessingInfo *</type>
       <name>CreateHotfolder</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a1e3f83cb0561ea09f479eb818edb9a54</anchor>
-      <arglist>(const istd::CString &amp;hotfolderName, const istd::CString &amp;hotfolderId=istd::CString()) const </arglist>
+      <anchor>aaad81cef04d1819a35bc723179c9337f</anchor>
+      <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString()) const </arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -3804,28 +3804,28 @@
       <type>void</type>
       <name>Initialize</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>ab698ae991be19b49dc985f4228873e5d</anchor>
-      <arglist>(const istd::CString &amp;hotfolderId, const ifpf::IHotfolderInfoManager *infoManagerPtr)</arglist>
+      <anchor>a6cf6c3af6a572a3158ac9c2fb18524dd</anchor>
+      <arglist>(const QString &amp;hotfolderId, const ifpf::IHotfolderInfoManager *infoManagerPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetHotfolderId</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a582dcac6804105ba6f013f028633aabc</anchor>
+      <anchor>addb6b0a64a842937c149d90601c3303a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CStringList</type>
+      <type>virtual QStringList</type>
       <name>GetInputDirectories</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a005ce151f03ab5786ef875beabb88133</anchor>
+      <anchor>abf23c814942b4a043506a3851a27c670</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetOutputDirectory</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a11e4c38403d8f5f65b11f73412cff850</anchor>
+      <anchor>a08ad2ccdac98a58cbdd0db48607a5d16</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -3878,8 +3878,8 @@
       <type>virtual ifpf::IMonitoringSession *</type>
       <name>GetSession</name>
       <anchorfile>classifpf_1_1_c_monitoring_sessions_manager.html</anchorfile>
-      <anchor>af8a0a944f35b3f153c72e68e7314642e</anchor>
-      <arglist>(const istd::CString &amp;directoryPath) const </arglist>
+      <anchor>a07230f06dd00ec829f105e104ab0dfd3</anchor>
+      <arglist>(const QString &amp;directoryPath) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -3956,15 +3956,15 @@
       <type>bool</type>
       <name>SerializeItemPosition</name>
       <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>ae48330c5e9b689968374016fe70c9305</anchor>
-      <arglist>(iser::IArchive &amp;archive, istd::CString &amp;hotfolderName, i2d::CVector2d &amp;position)</arglist>
+      <anchor>ac87e75630e903c27a5c78e792945e0db</anchor>
+      <arglist>(iser::IArchive &amp;archive, QString &amp;hotfolderName, i2d::CVector2d &amp;position)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual ifpf::IHotfolderWorkflowItem *</type>
       <name>CreateWorkflowItem</name>
       <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a03614ce92f0a5321f4dbc9aa1e50a6ce</anchor>
-      <arglist>(const istd::CString &amp;hotfolderId) const </arglist>
+      <anchor>a31846c940aea83e420916704322f259a</anchor>
+      <arglist>(const QString &amp;hotfolderId) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4126,32 +4126,32 @@
       <arglist>(int ovservedChanges)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CStringList</type>
+      <type>virtual QStringList</type>
       <name>GetAcceptPatterns</name>
       <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a784cc6873d93dbdfb3d55b5bf48717f7</anchor>
+      <anchor>a14ba146345d926a8a77ea6ef7edda218</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetAcceptPatterns</name>
       <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a826bb114d4bc54e338e3e6d631c29ad1</anchor>
-      <arglist>(const istd::CStringList &amp;acceptPatterns)=0</arglist>
+      <anchor>add96510ed709758e83960787c2d0996f</anchor>
+      <arglist>(const QStringList &amp;acceptPatterns)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CStringList</type>
+      <type>virtual QStringList</type>
       <name>GetIgnorePatterns</name>
       <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>af5af6e541100e96b93e74321d6dd1d30</anchor>
+      <anchor>aa8213056b7493af62ecde04097a79e24</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetIgnorePatterns</name>
       <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>adaeae162c65d08cdac590a44e738ddba</anchor>
-      <arglist>(const istd::CStringList &amp;acceptPatterns)=0</arglist>
+      <anchor>a369083bf6a95c0dfe95f453881e99f64</anchor>
+      <arglist>(const QStringList &amp;acceptPatterns)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4159,11 +4159,11 @@
     <filename>classifpf_1_1_i_file_naming.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetFilePath</name>
       <anchorfile>classifpf_1_1_i_file_naming.html</anchorfile>
-      <anchor>aaef87060845f81ad575fec95c11e5bd3</anchor>
-      <arglist>(const istd::CString &amp;inputFileName) const =0</arglist>
+      <anchor>a1265b84f16a99ae721152bee3a3fdff5</anchor>
+      <arglist>(const QString &amp;inputFileName) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4203,32 +4203,32 @@
       <arglist>(int renamingMode)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetPrefix</name>
       <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>aedf191ceee2d77057376de9c8046eb3c</anchor>
+      <anchor>a292de5d09a6b7082887fd0094dcd988f</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetPrefix</name>
       <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>afdb3222a193a05889b880a6599154179</anchor>
-      <arglist>(const istd::CString &amp;prefix)=0</arglist>
+      <anchor>a42a1b07f395f55f6490f6c176c120da7</anchor>
+      <arglist>(const QString &amp;prefix)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetSuffix</name>
       <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>a2837260c22fc2a2da330b819488ced9f</anchor>
+      <anchor>a4c3e3cff5e301dc3e83c329881ed3797</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetSuffix</name>
       <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>a9e9384a4762ebb136019249ca364eb59</anchor>
-      <arglist>(const istd::CString &amp;suffix)=0</arglist>
+      <anchor>aae4f1c33f9ee7aaf645428e52429b570</anchor>
+      <arglist>(const QString &amp;suffix)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4279,10 +4279,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetItemPath</name>
       <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a540868c900b5912c14d6c4dc5a207b96</anchor>
+      <anchor>aec20468d7d5a38465b0642c4e46e46d4</anchor>
       <arglist>(int fileIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -4296,8 +4296,8 @@
       <type>virtual void</type>
       <name>UpdateStorageItem</name>
       <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>aa7fb4f47116fabbb6bc443031fe03d8d</anchor>
-      <arglist>(const istd::CString &amp;path, int itemFlags)=0</arglist>
+      <anchor>a8bf3c8b6cce6a0bb86b6c7fb16406561</anchor>
+      <arglist>(const QString &amp;path, int itemFlags)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -4315,8 +4315,8 @@
       <type>virtual ifpf::IHotfolderProcessingInfo *</type>
       <name>GetProcessingInfo</name>
       <anchorfile>classifpf_1_1_i_hotfolder_info_manager.html</anchorfile>
-      <anchor>adc72abd0c9998361f968c54fbd541ae1</anchor>
-      <arglist>(const istd::CString &amp;hotfolderName) const =0</arglist>
+      <anchor>aeee81966f198dada887d2342568fa9d0</anchor>
+      <arglist>(const QString &amp;hotfolderName) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4357,8 +4357,8 @@
       <type>virtual const ifpf::IHotfolderProcessingItem *</type>
       <name>AddProcessingItem</name>
       <anchorfile>classifpf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>a692bf3716c291f8e02d9601c6f6666d5</anchor>
-      <arglist>(const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath=istd::CString())=0</arglist>
+      <anchor>a56f2373511826129627a9d49fe8127c1</anchor>
+      <arglist>(const QString &amp;inputFilePath, const QString &amp;outputFilePath=QString())=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -4434,32 +4434,32 @@
       <arglist>(int processingState)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetInputFile</name>
       <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>a207000f40ffc876a3ac9d782ba517134</anchor>
+      <anchor>ad2c142f71f518e9b695dedd265bae95e</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetInputFile</name>
       <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>ac0169e6c5dbafc2413cb2ad8e3bcaf9e</anchor>
-      <arglist>(const istd::CString &amp;inputFile)=0</arglist>
+      <anchor>aaa3bb41eb5db992c249e368507dc5e58</anchor>
+      <arglist>(const QString &amp;inputFile)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetOutputFile</name>
       <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>a519f8451536963c880fa961214f45da6</anchor>
+      <anchor>afa187d986168f0bcc1597f52d143163f</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetOutputFile</name>
       <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>a6a1ab5d53546119f93d9dbce4d961100</anchor>
-      <arglist>(const istd::CString &amp;outputFile)=0</arglist>
+      <anchor>af295a3987b459d03afc5c077293d0bde</anchor>
+      <arglist>(const QString &amp;outputFile)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
@@ -4498,36 +4498,36 @@
       <type>virtual int</type>
       <name>GetItemsCount</name>
       <anchorfile>classifpf_1_1_i_hotfolder_statistics.html</anchorfile>
-      <anchor>a36c4038c2826b3916d5c1f7ec9a3a5aa</anchor>
-      <arglist>(const istd::CString &amp;directoryPath=istd::CString()) const =0</arglist>
+      <anchor>a1106cbc5d9e7fe3518a1169ddd3199cb</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetSuccessCount</name>
       <anchorfile>classifpf_1_1_i_hotfolder_statistics.html</anchorfile>
-      <anchor>a4f525cbd2085105b72750bb5841af2c6</anchor>
-      <arglist>(const istd::CString &amp;directoryPath=istd::CString()) const =0</arglist>
+      <anchor>a60e145d3c4ed5a8ab80a2921ae7c705e</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetErrorsCount</name>
       <anchorfile>classifpf_1_1_i_hotfolder_statistics.html</anchorfile>
-      <anchor>a8e99a3a548d9d00ed6f72ad0eacacb36</anchor>
-      <arglist>(const istd::CString &amp;directoryPath=istd::CString()) const =0</arglist>
+      <anchor>aae0cb2226f5039d9e2679e596b142a31</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetAbortedCount</name>
       <anchorfile>classifpf_1_1_i_hotfolder_statistics.html</anchorfile>
-      <anchor>aae7909a70703dc5261ead2dec3649ced</anchor>
-      <arglist>(const istd::CString &amp;directoryPath=istd::CString()) const =0</arglist>
+      <anchor>ae4ea4f10d85cf74f591b328094fe0185</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetProcessingTime</name>
       <anchorfile>classifpf_1_1_i_hotfolder_statistics.html</anchorfile>
-      <anchor>a3b9ab9046edd707da15aa4f61fbd245a</anchor>
-      <arglist>(const istd::CString &amp;directoryPath=istd::CString()) const =0</arglist>
+      <anchor>a7a1484ec9db1614801a80cebef97be08</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4568,36 +4568,36 @@
       <type>virtual ifpf::IHotfolderWorkflowItem *</type>
       <name>AddHotfolder</name>
       <anchorfile>classifpf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>a8f4c449c3b0352a4751345889b9b7148</anchor>
-      <arglist>(const istd::CString &amp;hotfolderName, const istd::CString &amp;hotfolderId=istd::CString())=0</arglist>
+      <anchor>af46c503e8aba808e51ea21af12516bb0</anchor>
+      <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString())=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>RemoveHotfolder</name>
       <anchorfile>classifpf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>a233d3d41a5ad372652d3f53a662887ea</anchor>
-      <arglist>(const istd::CString &amp;hotfolderName)=0</arglist>
+      <anchor>ab6273194b71ba8beb1453490b9b1d0f4</anchor>
+      <arglist>(const QString &amp;hotfolderName)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CStringList</type>
+      <type>virtual QStringList</type>
       <name>GetHotfolderIds</name>
       <anchorfile>classifpf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>aff21ca50fc0db29cf15ca00e26f3dc0b</anchor>
+      <anchor>abd678b68a8b6a5f70f7ea807f4036fe5</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CStringList</type>
+      <type>virtual QStringList</type>
       <name>GetHotfolderList</name>
       <anchorfile>classifpf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>aae8bdf35358ef3119cc302fd09c8115f</anchor>
+      <anchor>a82ac6cb98ea75418800e9234679c4214</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual ifpf::IHotfolderWorkflowItem *</type>
       <name>GetHotfolder</name>
       <anchorfile>classifpf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>a6f61de140c3a3f7a01ed047810213983</anchor>
-      <arglist>(const istd::CString &amp;hotfolderName) const =0</arglist>
+      <anchor>a4ea6f0404fec34f610acd1aa6df227cb</anchor>
+      <arglist>(const QString &amp;hotfolderName) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4605,17 +4605,17 @@
     <filename>classifpf_1_1_i_hotfolder_workflow_item.html</filename>
     <base virtualness="virtual">iprm::INameParam</base>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CStringList</type>
+      <type>virtual QStringList</type>
       <name>GetInputDirectories</name>
       <anchorfile>classifpf_1_1_i_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a23c0cb78c3ffd9177e2e01bf807039d5</anchor>
+      <anchor>a7b335d2b34d6d5f06ae93df24fd5e12c</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetOutputDirectory</name>
       <anchorfile>classifpf_1_1_i_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a07c4c7eff0df272028fe13d59c7e7f39</anchor>
+      <anchor>a3d811768a0e2793f7399ea32a3a7b049</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -4660,8 +4660,8 @@
       <type>virtual ifpf::IMonitoringSession *</type>
       <name>GetSession</name>
       <anchorfile>classifpf_1_1_i_monitoring_session_manager.html</anchorfile>
-      <anchor>a52735d4849ee8e2cff52f11789c0288f</anchor>
-      <arglist>(const istd::CString &amp;directoryPath) const =0</arglist>
+      <anchor>aaabc7bbaf2994244fca59e3bb5c793a7</anchor>
+      <arglist>(const QString &amp;directoryPath) const =0</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -6342,10 +6342,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetNumericValueDescription</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>aafeb6e94807b07f3d4fa4cf15e4e6b6e</anchor>
+      <anchor>a0fd88a4782e5e91ec9f9c0319b6df93c</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -6363,10 +6363,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetUnitName</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>ae5954d49eb1c02a0b7403c9fb0ce952e</anchor>
+      <anchor>a14117132ffb3483b18a7e85088592326</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -6481,10 +6481,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetNumericValueDescription</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>a7d8a40213e26036bf1cc176ec8c2e219</anchor>
+      <anchor>af392d7780d8d68a5296669e79892fea3</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -6509,10 +6509,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetUnitName</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>ae500ccd0c70eef269dccaf32bd768c4f</anchor>
+      <anchor>ad802414194a0d3513d4765ce1f366646</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -8104,8 +8104,8 @@
       <type></type>
       <name>CGeneralUnitInfo</name>
       <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
-      <anchor>a4fbc16011154df2e119483433770dff3</anchor>
-      <arglist>(int type=UT_UNKNOWN, const istd::CString &amp;name=&quot;&quot;, double displayMultFactor=1.0, const istd::CRange &amp;range=istd::CRange::GetInvalid())</arglist>
+      <anchor>ad1eeb958e74ae4cfb9ce84ce6e5167c2</anchor>
+      <arglist>(int type=UT_UNKNOWN, const QString &amp;name=&quot;&quot;, double displayMultFactor=1.0, const istd::CRange &amp;range=istd::CRange::GetInvalid())</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -8118,8 +8118,8 @@
       <type>void</type>
       <name>SetUnitName</name>
       <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
-      <anchor>a99c4f5a5f4c1866d7b31a63bf826dc55</anchor>
-      <arglist>(const istd::CString &amp;name)</arglist>
+      <anchor>a3b59d1acb3434e734e183aa1716e84eb</anchor>
+      <arglist>(const QString &amp;name)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -8143,10 +8143,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetUnitName</name>
       <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
-      <anchor>aead4cdc92697e4085e02abbad7eea5ea</anchor>
+      <anchor>a57dd5620f8e91326f8d98e8f90d5bb75</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -8320,10 +8320,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetNumericValueDescription</name>
       <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
-      <anchor>a065b98ea5cb53be95eee9ded41becb36</anchor>
+      <anchor>a249eb0edf8aa723a4003459b3ce1abc4</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -8341,10 +8341,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetUnitName</name>
       <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
-      <anchor>a306eb804b9750cf4f11f8b8d553f320d</anchor>
+      <anchor>a90c530a2f9d5af95a5a1e33dfeedcd68</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -8433,10 +8433,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetNumericValueDescription</name>
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>af6fca8bbee853935770080ce674f086e</anchor>
+      <anchor>a9fe3317941b0928c2452a81b13ed62de</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -8454,10 +8454,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetUnitName</name>
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>a0242431b0ab662e64ad7de1661432e9c</anchor>
+      <anchor>a577c62f05575438eda291047f6166ab0</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -8559,36 +8559,36 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
-      <anchor>a52649306a2f0cc49eb2f7fc756c14e5a</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+      <anchor>a87b94eb44e010913a0e0e4399a312b0f</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
-      <anchor>a2260eff191b5cf223ba92424f4d4fe1d</anchor>
-      <arglist>(istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+      <anchor>a878133742d1e5b18b457bd88495be2ad</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
-      <anchor>a601dfe82f092ef4e9c35f28ea87010bc</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+      <anchor>a39a39c9583189562b4a9b25b7501d1bc</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
-      <anchor>a2dddc42f58fb5e19ee4ec4d43a9a765f</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>a4a0fdf7f0ad3a68ff81cf1cb959eaaf0</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetTypeDescription</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
-      <anchor>ae8859e65428fc852d5e844f7f713387b</anchor>
-      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
+      <anchor>a31dc76bacfe8d22ce67bb58597204bf7</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
     </member>
     <member kind="enumvalue">
       <name>BYTES_PER_SAMPLE</name>
@@ -8876,10 +8876,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetNumericValueDescription</name>
       <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
-      <anchor>a91f3df26e705d9869a6e16be451e22c7</anchor>
+      <anchor>a04e085fa7191e9ba6b778c69c2f6b012</anchor>
       <arglist>(int index) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -8970,10 +8970,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetUnitName</name>
       <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
-      <anchor>a24a78d5cac9a2246dd792ddc6f78ba29</anchor>
+      <anchor>a0a420f7c02d2181c87cffffb593fe4f0</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -9177,18 +9177,18 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetOpenedMediumUrl</name>
       <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
-      <anchor>aa49ff7eb11e67f2eef3ce919a855b1a6</anchor>
+      <anchor>a493ddecd4a6609733c43011cf5df7065</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>OpenMediumUrl</name>
       <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
-      <anchor>ae94917a1946992edb7f5fa35ae0d0f88</anchor>
-      <arglist>(const istd::CString &amp;url, bool autoPlay=true)=0</arglist>
+      <anchor>a29e8ed79886ca5d5ad52373a184b873b</anchor>
+      <arglist>(const QString &amp;url, bool autoPlay=true)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -9338,10 +9338,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TMultiProperty&lt; istd::CString &gt;</type>
+      <type>TMultiProperty&lt; QString &gt;</type>
       <name>CMultiStringProperty</name>
       <anchorfile>namespaceiprop.html</anchorfile>
-      <anchor>a317a5f5c3579bdc51edf7837c745f0d6</anchor>
+      <anchor>ae4976ce54e02ecff240a345305ca6b8b</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -9373,10 +9373,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TProperty&lt; istd::CString &gt;</type>
+      <type>TProperty&lt; QString &gt;</type>
       <name>CStringProperty</name>
       <anchorfile>namespaceiprop.html</anchorfile>
-      <anchor>a9d1e2c0600db704c2856ee8ea6a0c12a</anchor>
+      <anchor>a5b6aa25962ebcf89eb3b3e41c20de2e1</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -9484,10 +9484,10 @@
       <arglist>(int propertyIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetPropertyDescription</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>a0f336928dc0befd4bd2dd0d2f8b93bcb</anchor>
+      <anchor>aaccab62dc65f9fa24b66a7d7ffe75ddc</anchor>
       <arglist>(int propertyIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9624,10 +9624,10 @@
       <arglist>(int propertyIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetPropertyDescription</name>
       <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
-      <anchor>a4b1a1be2a1667384c195d7370e2b3c14</anchor>
+      <anchor>a16b6064121146b8efab81b4cd84a7e0d</anchor>
       <arglist>(int propertyIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -10141,7 +10141,7 @@
       <type>ibase::TLoggerCompWrap&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CUserGuiComp, iauth::IUsersManager &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
-      <anchor>a8e89718522fc89641ca92342c18a4f55</anchor>
+      <anchor>a45c111946219cc24be55d39eabfde1fe</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -10215,8 +10215,8 @@
       <type>void</type>
       <name>SaveCurUsername</name>
       <anchorfile>classiqtauth_1_1_c_user_manager_dialog.html</anchorfile>
-      <anchor>a2fc76b8a321ab600612a5c0218199f61</anchor>
-      <arglist>(const istd::CString &amp;Username)</arglist>
+      <anchor>a701386f3a1d57a5cc19c94a8c9116166</anchor>
+      <arglist>(const QString &amp;Username)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
@@ -10742,22 +10742,22 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>afebea6c2a3744c827ff3b1887259b060</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+      <anchor>a7abf9d65b13281c3a8900e38ce06b436</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>a7d5a908b93962506e2b128cd27ab92b3</anchor>
-      <arglist>(istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const </arglist>
+      <anchor>a4764f110968cd4ba951f4964c8af08b6</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>a0963be0e5cfebd26cc9e0b6f0bde3dcd</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const </arglist>
+      <anchor>a40dba09a4745b24757017c53c9b5d755</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const iser::IVersionInfo *</type>
@@ -10770,8 +10770,8 @@
       <type>virtual void</type>
       <name>OnReadError</name>
       <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>ad747d4c2a8968698733eafd2e19fef79</anchor>
-      <arglist>(const iser::IArchive &amp;archive, const istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+      <anchor>a7e5c11877cdc9a68b9587ed59baee1d8</anchor>
+      <arglist>(const iser::IArchive &amp;archive, const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -10784,15 +10784,15 @@
       <type>bool</type>
       <name>CheckInputFilePath</name>
       <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>a4892e0d9da66b3f85c4cf8476f9bf781</anchor>
-      <arglist>(const istd::CString filePath) const </arglist>
+      <anchor>ac4cefb9d8b2bf773e6741f0075b7a970</anchor>
+      <arglist>(const QString filePath) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CheckTargetDirectory</name>
       <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>a259a3428c1be4b5a45ca62994b25abd5</anchor>
-      <arglist>(const istd::CString dirPath) const </arglist>
+      <anchor>abbd11d0956c8fb86f1b9bdb9e3401b75</anchor>
+      <arglist>(const QString dirPath) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10804,15 +10804,15 @@
       <type></type>
       <name>CXslTransformationReadArchive</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a56124b8315c04647c4761abf031c78ed</anchor>
-      <arglist>(const istd::CString &amp;filePath=&quot;&quot;, const istd::CString &amp;xslFilePath=&quot;&quot;, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+      <anchor>a83a6254f95123e1da16ff77b623afd20</anchor>
+      <arglist>(const QString &amp;filePath=&quot;&quot;, const QString &amp;xslFilePath=&quot;&quot;, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>OpenDocument</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a4328d63bbebdb11743873e896c42842c</anchor>
-      <arglist>(const istd::CString &amp;filePath, const istd::CString &amp;xslFilePath)</arglist>
+      <anchor>a77627f97fe8ccb3d9282cfdcc78f6ef5</anchor>
+      <arglist>(const QString &amp;filePath, const QString &amp;xslFilePath)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -10937,8 +10937,8 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a23178081b1264559b7d72648f2e8e9f6</anchor>
-      <arglist>(istd::CString &amp;value)</arglist>
+      <anchor>afdc9409c0e31f1de68e747860a462f35</anchor>
+      <arglist>(QString &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -10986,8 +10986,8 @@
       <type></type>
       <name>CXslTransformationWriteArchive</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a1e0a70d97008f837843784f84a06229a</anchor>
-      <arglist>(const istd::CString &amp;filePath=&quot;&quot;, const istd::CString &amp;xslFilePath=&quot;&quot;, const iser::IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+      <anchor>acbb2c8d10044c50b1dd1d00ee8303f74</anchor>
+      <arglist>(const QString &amp;filePath=&quot;&quot;, const QString &amp;xslFilePath=&quot;&quot;, const iser::IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -11007,8 +11007,8 @@
       <type>bool</type>
       <name>OpenDocument</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>ac0c5ffaf1e8638f25f718f81f07e47ec</anchor>
-      <arglist>(const istd::CString &amp;filePath, const istd::CString &amp;xslFilePath)</arglist>
+      <anchor>a318544fdc25e04fe31fb1fcff9d75dc7</anchor>
+      <arglist>(const QString &amp;filePath, const QString &amp;xslFilePath)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -11133,8 +11133,8 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a47b479ca9fa6c41c7fee61c7076754bd</anchor>
-      <arglist>(istd::CString &amp;value)</arglist>
+      <anchor>addb432c542889aec9d3d353964d4b84e</anchor>
+      <arglist>(QString &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -11154,8 +11154,8 @@
       <type>virtual bool</type>
       <name>SendLogMessage</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a9207958943d7c48de66100af618c4cf2</anchor>
-      <arglist>(MessageCategory category, int id, const istd::CString &amp;message, const istd::CString &amp;messageSource, int flags=0) const </arglist>
+      <anchor>ab4d9bee2108246c609b0fda3e3c65caa</anchor>
+      <arglist>(MessageCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
     <member kind="friend" protection="private">
       <type>friend class</type>
@@ -11476,11 +11476,11 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetFilePath</name>
       <anchorfile>classiqtfpf_1_1_c_file_naming_comp.html</anchorfile>
-      <anchor>aa5c8f38d9cf288114e45618b60b346ac</anchor>
-      <arglist>(const istd::CString &amp;inputFileName) const </arglist>
+      <anchor>a7a7971b31f63b91fd2f573ec58f954f4</anchor>
+      <arglist>(const QString &amp;inputFileName) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11498,8 +11498,8 @@
       <type>QPixmap</type>
       <name>CreateComponentDragPixmap</name>
       <anchorfile>classiqtfpf_1_1_c_hotfolder_container_gui_comp.html</anchorfile>
-      <anchor>a1dad727fa1df32a9c8cb0fa716bb8afa</anchor>
-      <arglist>(const istd::CString &amp;hotfolderId) const </arglist>
+      <anchor>a050346b7326893391e8e7a3798c8e797</anchor>
+      <arglist>(const QString &amp;hotfolderId) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -11690,8 +11690,8 @@
       <type></type>
       <name>ItemProcessor</name>
       <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
-      <anchor>ad8d418ad5c5585699f2572f7d0470a30</anchor>
-      <arglist>(CHotfolderProcessingComp &amp;parent, const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath, const std::string &amp;itemUuid)</arglist>
+      <anchor>aebbdd36f95b963eeaf5743378ee43bd9</anchor>
+      <arglist>(CHotfolderProcessingComp &amp;parent, const QString &amp;inputFilePath, const QString &amp;outputFilePath, const std::string &amp;itemUuid)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
@@ -11894,8 +11894,8 @@
       <type>bool</type>
       <name>TryCreateHotfolder</name>
       <anchorfile>classiqtfpf_1_1_c_hotfolder_workflow_scenographer_comp.html</anchorfile>
-      <anchor>a4c83a2995958bc217c63fde3a309c65e</anchor>
-      <arglist>(const istd::CString &amp;hofolderId, const i2d::CVector2d &amp;position)</arglist>
+      <anchor>a2cd3306d3a19d1e0a23dc5483de58641</anchor>
+      <arglist>(const QString &amp;hofolderId, const i2d::CVector2d &amp;position)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QGraphicsItem *</type>
@@ -13017,8 +13017,8 @@
       <type>void</type>
       <name>SetUnitInfo</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
-      <anchor>a9514b6ffc75d3b944e2f1ad7ba618173</anchor>
-      <arglist>(const istd::CString &amp;description, const imeas::IUnitInfo &amp;unitInfo)</arglist>
+      <anchor>a47087199665fed1c0318993392709fbe</anchor>
+      <arglist>(const QString &amp;description, const imeas::IUnitInfo &amp;unitInfo)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -13095,18 +13095,18 @@
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetOpenedMediumUrl</name>
       <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
-      <anchor>a066a2b3296a69134a9b25f04cb638823</anchor>
+      <anchor>ae9fd0791d764cafe33e5eb0c6c902010</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OpenMediumUrl</name>
       <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
-      <anchor>aedb7bb4b1c39484d600e9a6a9a9dfc67</anchor>
-      <arglist>(const istd::CString &amp;url, bool autoPlay=true)</arglist>
+      <anchor>ab0e68b8e9b31bff6dbc46da83827ea1e</anchor>
+      <arglist>(const QString &amp;url, bool autoPlay=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -13203,15 +13203,15 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
-      <anchor>ac9d24849be17b7a9cce2e2814f584376</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>a10938d38c762a36ed9b0f24746cf4571</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetTypeDescription</name>
       <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
-      <anchor>ad0deb30a5ba878080ff4595cf1992ca7</anchor>
-      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
+      <anchor>abbe5e6e4d67bb14c1f724879e2f5d136</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -13262,36 +13262,36 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
-      <anchor>ab04877783eefba8967643d4e6fcc13c7</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+      <anchor>a6ae4f59d16c5d700ad7970ab04003c31</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
-      <anchor>a203cc0aa10900b5725063c8c7388f26f</anchor>
-      <arglist>(istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+      <anchor>a5f9ddd57e57444f7c1d8b91dc415aab0</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
-      <anchor>a8c24cb92d5d3c950cc9db31ad975a8f9</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+      <anchor>a389452cc5b8c0c374325a5b8a6abf56c</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
-      <anchor>ab0f2585b4717e73574ca9b8b7187416a</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>a431f9ebdb48b2af9c461a54c03ce6388</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetTypeDescription</name>
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
-      <anchor>a132f1213e266d3f1e3f2d134f0b8d2c4</anchor>
-      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
+      <anchor>a68e82ca744a339da34c4ce76404a08c2</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13314,18 +13314,18 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetOpenedMediumUrl</name>
       <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>ad0df3028d53b4cca643355937008f65e</anchor>
+      <anchor>ac88b96fbd15fc66b02a452f41e4c7994</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OpenMediumUrl</name>
       <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a8950dce23b0b4483ae63695379653b5a</anchor>
-      <arglist>(const istd::CString &amp;url, bool autoPlay=true)</arglist>
+      <anchor>a95b63aefe32dc0a57a57b63efbcbe54a</anchor>
+      <arglist>(const QString &amp;url, bool autoPlay=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -13422,15 +13422,15 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a2a7e0af926e76f27884fa09a7000568a</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>a377068730bf34b0f942a2cdd6fbd7111</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetTypeDescription</name>
       <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>ad52843dd2486d58f1afd3d9c102ca4e1</anchor>
-      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
+      <anchor>a238262b71af88b744ab1460ad825b101</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -13541,36 +13541,36 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
-      <anchor>a5ef52e5251fe223eea3b6da03a9ef880</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+      <anchor>ae545c2491f6a3ee9d932a46867ddf86f</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
-      <anchor>a47b8dc530a068ad76b273ef5a128bfb2</anchor>
-      <arglist>(istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+      <anchor>a2e96894ec06aa4d769774c3e46ccc96e</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
-      <anchor>aa6c0bec0408ee299ced7425b75ff2a5b</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const istd::CString &amp;filePath) const </arglist>
+      <anchor>a1a1dba090daa6f066472387518192fae</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
-      <anchor>a28cee48be683503a7a2c5a33a855ea06</anchor>
-      <arglist>(istd::CStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>ac1c82d8943ab51d37c92ef3cb3347db6</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetTypeDescription</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
-      <anchor>a49bd3b99af916a25ade1b6e2f3f68a2e</anchor>
-      <arglist>(const istd::CString *extensionPtr=NULL) const </arglist>
+      <anchor>ac24b0fcd5468372a9610396a72efb444</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14285,17 +14285,17 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetOptionName</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>abd80b99785b48debf3ce27237f358c09</anchor>
+      <anchor>a65055364e45940000419eb3b78934af8</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual istd::CString</type>
+      <type>virtual QString</type>
       <name>GetOptionDescription</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>aa45cd67a716852f49a06d12e5ceb0503</anchor>
+      <anchor>a0e272a938f59922d8b211fc28c8b5643</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

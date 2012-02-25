@@ -24,8 +24,12 @@
 #define idoc_IHelpInfoProvider_included
 
 
+// Qt includes
+#include <QString>
+
+
+// ACF includes
 #include "istd/IPolymorphic.h"
-#include "istd/CString.h"
 
 
 namespace idoc
@@ -43,7 +47,7 @@ public:
 		\return	quality of help. It represented as value in range [0, 1].
 				0 means there is no usable help, 1 means good context specified help is available.
 	*/
-	virtual double GetHelpQuality(const istd::CString& contextText, const istd::IPolymorphic* contextObjectPtr) const = 0;
+	virtual double GetHelpQuality(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) const = 0;
 };
 
 

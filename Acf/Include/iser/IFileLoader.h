@@ -24,9 +24,12 @@
 #define iser_IFileLoader_included
 
 
+// Qt includes
+#include <QString>
+
+
 // ACF includes
 #include "istd/IChangeable.h"
-#include "istd/CString.h"
 
 #include "iser/IFileTypeInfo.h"
 
@@ -84,7 +87,7 @@ public:
 	*/
 	virtual bool IsOperationSupported(
 				const istd::IChangeable* dataObjectPtr,
-				const istd::CString* filePathPtr = NULL,
+				const QString* filePathPtr = NULL,
 				int flags = -1,
 				bool beQuiet = true) const = 0;
 
@@ -92,13 +95,13 @@ public:
 		This function loads data \c data from file \c filePath
 		\returns serialization state. \sa SerializationState
 	*/
-	virtual int LoadFromFile(istd::IChangeable& data, const istd::CString& filePath = istd::CString()) const = 0;
+	virtual int LoadFromFile(istd::IChangeable& data, const QString& filePath = QString()) const = 0;
 
 	/**
 		This function saves data \c data to file \c filePath
 		\returns serialization state. \sa SerializationState
 	*/
-	virtual int SaveToFile(const istd::IChangeable& data, const istd::CString& filePath = istd::CString()) const = 0;
+	virtual int SaveToFile(const istd::IChangeable& data, const QString& filePath = QString()) const = 0;
 };
 
 

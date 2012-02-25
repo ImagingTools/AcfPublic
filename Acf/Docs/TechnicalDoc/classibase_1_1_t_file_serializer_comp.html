@@ -84,22 +84,22 @@ Public Types</h2></td></tr>
 &lt; <a class="el" href="classibase_1_1_c_file_type_info_comp.html">CFileTypeInfoComp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#a427c1f360b2f92c946dcdc150cc91ddc">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#a4c78c087a4336e3512f8ac5582705fe2">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#a4c78c087a4336e3512f8ac5582705fe2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#adaa4150e1e9d6c6c5ce3ac531c846147">LoadFromFile</a> (<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function loads data <code>data</code> from file <code>filePath</code>.  <a href="#adaa4150e1e9d6c6c5ce3ac531c846147"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#a99a5f8f4b2f5e554ac83a21e78771d52">SaveToFile</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function saves data <code>data</code> to file <code>filePath</code>.  <a href="#a99a5f8f4b2f5e554ac83a21e78771d52"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#a8822602dcfb915f0ece6c34f9a350b39">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#a8822602dcfb915f0ece6c34f9a350b39"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#ab3b73bb0a58e8f00e9f051b0225eaff2">LoadFromFile</a> (<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const QString &amp;filePath=QString()) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function loads data <code>data</code> from file <code>filePath</code>.  <a href="#ab3b73bb0a58e8f00e9f051b0225eaff2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#ab287d68478ebf3e9f4d9173fe4122c1d">SaveToFile</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const QString &amp;filePath=QString()) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function saves data <code>data</code> to file <code>filePath</code>.  <a href="#ab287d68478ebf3e9f4d9173fe4122c1d"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_version_info.html">iser::IVersionInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#adf321d27bf2c73e37928e019ee51bbb4">GetVersionInfo</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get working version info.  <a href="#adf321d27bf2c73e37928e019ee51bbb4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#a31e7766b0f1afe1d279bb930886d12f4">OnReadError</a> (const ReadArchive &amp;archive, const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called if read error is occured.  <a href="#a31e7766b0f1afe1d279bb930886d12f4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#aa831b9417f00ec3c58feaed540f90122">OnReadError</a> (const ReadArchive &amp;archive, const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const QString &amp;filePath) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called if read error is occured.  <a href="#aa831b9417f00ec3c58feaed540f90122"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#ae636105c20028b553871b7e0c8effced">CheckMinimalVersion</a> (const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;object, const <a class="el" href="classiser_1_1_i_version_info.html">iser::IVersionInfo</a> &amp;versionInfo) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if minimal version of some serializable object is supported by version info.  <a href="#ae636105c20028b553871b7e0c8effced"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#ad9cf03fe70d4f36a3d60c73358b284be">CheckInputFilePath</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> filePath) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#af886d892bd2e75bc1cba8680e1360da0">CheckTargetDirectory</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> dirPath) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#a12591df54baed1d6e0edd2e2c5fc28ea">CheckInputFilePath</a> (const QString filePath) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp.html#ab7be885b7ab0a8efa3291d007b2b5f5b">CheckTargetDirectory</a> (const QString dirPath) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class ReadArchive, class WriteArchive&gt;<br/>
@@ -107,7 +107,7 @@ class ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;</h3>
 
 <p>Template implementation of file serializer using loading and storing archive implementation. </p>
 
-<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00027">27</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00033">33</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a427c1f360b2f92c946dcdc150cc91ddc"></a><!-- doxytag: member="ibase::TFileSerializerComp::BaseClass" ref="a427c1f360b2f92c946dcdc150cc91ddc" args="" -->
 <div class="memitem">
@@ -126,7 +126,7 @@ template&lt;class ReadArchive, class WriteArchive&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#aeba098475de918ae8efcd09e4654e628">icmpstr::CRegistryLoaderComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00033">33</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00039">39</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
 
 </div>
 </div>
@@ -158,12 +158,12 @@ template&lt;class ReadArchive, class WriteArchive&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#a83c4d161fe2bb108d55f1051d28143f9">icmpstr::CRegistryLoaderComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00035">35</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00041">41</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ad9cf03fe70d4f36a3d60c73358b284be"></a><!-- doxytag: member="ibase::TFileSerializerComp::CheckInputFilePath" ref="ad9cf03fe70d4f36a3d60c73358b284be" args="(const istd::CString filePath) const " -->
+<a class="anchor" id="a12591df54baed1d6e0edd2e2c5fc28ea"></a><!-- doxytag: member="ibase::TFileSerializerComp::CheckInputFilePath" ref="a12591df54baed1d6e0edd2e2c5fc28ea" args="(const QString filePath) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -172,7 +172,7 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classibase_1_1_t_file_serializer_comp.html">ibase::TFileSerializerComp</a>&lt; ReadArchive, WriteArchive &gt;::CheckInputFilePath </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td>
+          <td class="paramtype">const QString&#160;</td>
           <td class="paramname"><em>filePath</em></td><td>)</td>
           <td> const<code> [protected]</code></td>
         </tr>
@@ -180,9 +180,9 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00316">316</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00325">325</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
 
-<p>References <a class="el" href="classisys_1_1_i_file_system.html#aa2d5af72f8d7497d3ac2f1c5814faae6">isys::IFileSystem::IsPresent()</a>, <a class="el" href="istd_8h_source.html#l00189">NULL</a>, and <a class="el" href="classistd_1_1_c_string.html#ab26e525f6bb077802fe4b04c2e8f8a63">istd::CString::ToString()</a>.</p>
+<p>References <a class="el" href="classisys_1_1_i_file_system.html#ae12703ed48b095956965995d719315d8">isys::IFileSystem::IsPresent()</a>, and <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
 
 </div>
 </div>
@@ -215,13 +215,13 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
 
 <p>Check if minimal version of some serializable object is supported by version info. </p>
 
-<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00292">292</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00301">301</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
 
 <p>References <a class="el" href="classiser_1_1_i_version_info.html#a5d91838bdf51104a85ee4ca251646a4b">iser::IVersionInfo::GetVersionIds()</a>, and <a class="el" href="classiser_1_1_i_version_info.html#a9f44355a435b5ebfbfe0ea73ae399ec0">iser::IVersionInfo::GetVersionNumber()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af886d892bd2e75bc1cba8680e1360da0"></a><!-- doxytag: member="ibase::TFileSerializerComp::CheckTargetDirectory" ref="af886d892bd2e75bc1cba8680e1360da0" args="(const istd::CString dirPath) const " -->
+<a class="anchor" id="ab7be885b7ab0a8efa3291d007b2b5f5b"></a><!-- doxytag: member="ibase::TFileSerializerComp::CheckTargetDirectory" ref="ab7be885b7ab0a8efa3291d007b2b5f5b" args="(const QString dirPath) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -230,7 +230,7 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classibase_1_1_t_file_serializer_comp.html">ibase::TFileSerializerComp</a>&lt; ReadArchive, WriteArchive &gt;::CheckTargetDirectory </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td>
+          <td class="paramtype">const QString&#160;</td>
           <td class="paramname"><em>dirPath</em></td><td>)</td>
           <td> const<code> [protected]</code></td>
         </tr>
@@ -238,9 +238,9 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00336">336</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00345">345</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
 
-<p>References <a class="el" href="classisys_1_1_i_file_system.html#aedd2359672675b05f0b00cb147406789">isys::IFileSystem::GetDirPath()</a>, <a class="el" href="classisys_1_1_i_file_system.html#aa2d5af72f8d7497d3ac2f1c5814faae6">isys::IFileSystem::IsPresent()</a>, <a class="el" href="istd_8h_source.html#l00189">NULL</a>, and <a class="el" href="classistd_1_1_c_string.html#ab26e525f6bb077802fe4b04c2e8f8a63">istd::CString::ToString()</a>.</p>
+<p>References <a class="el" href="classisys_1_1_i_file_system.html#a158a724c21b8a7e322a9407895f146ee">isys::IFileSystem::GetDirPath()</a>, <a class="el" href="classisys_1_1_i_file_system.html#ae12703ed48b095956965995d719315d8">isys::IFileSystem::IsPresent()</a>, and <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
 
 </div>
 </div>
@@ -262,11 +262,11 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
 
 <p>Get working version info. </p>
 
-<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00278">278</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00287">287</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4c78c087a4336e3512f8ac5582705fe2"></a><!-- doxytag: member="ibase::TFileSerializerComp::IsOperationSupported" ref="a4c78c087a4336e3512f8ac5582705fe2" args="(const istd::IChangeable *dataObjectPtr, const istd::CString *filePathPtr=NULL, int flags=&#45;1, bool beQuiet=true) const " -->
+<a class="anchor" id="a8822602dcfb915f0ece6c34f9a350b39"></a><!-- doxytag: member="ibase::TFileSerializerComp::IsOperationSupported" ref="a8822602dcfb915f0ece6c34f9a350b39" args="(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=&#45;1, bool beQuiet=true) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -281,7 +281,7 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> *&#160;</td>
+          <td class="paramtype">const QString *&#160;</td>
           <td class="paramname"><em>filePathPtr</em> = <code>NULL</code>, </td>
         </tr>
         <tr>
@@ -316,15 +316,15 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a7118893dbc48418fd3f6ebae054e883c">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a4e5d8cde47513d09de802aa28697249d">iser::IFileLoader</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00164">164</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00170">170</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
 
-<p>References <a class="el" href="_c_string_8h_source.html#l00108">istd::CString::IsEmpty()</a>, <a class="el" href="classisys_1_1_i_file_system.html#aa2d5af72f8d7497d3ac2f1c5814faae6">isys::IFileSystem::IsPresent()</a>, <a class="el" href="istd_8h_source.html#l00189">NULL</a>, and <a class="el" href="classistd_1_1_c_string.html#aa5642dce9cfc43df80c1187dfcaf50c7">istd::CString::ToLower()</a>.</p>
+<p>References <a class="el" href="classisys_1_1_i_file_system.html#ae12703ed48b095956965995d719315d8">isys::IFileSystem::IsPresent()</a>, and <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="adaa4150e1e9d6c6c5ce3ac531c846147"></a><!-- doxytag: member="ibase::TFileSerializerComp::LoadFromFile" ref="adaa4150e1e9d6c6c5ce3ac531c846147" args="(istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const " -->
+<a class="anchor" id="ab3b73bb0a58e8f00e9f051b0225eaff2"></a><!-- doxytag: member="ibase::TFileSerializerComp::LoadFromFile" ref="ab3b73bb0a58e8f00e9f051b0225eaff2" args="(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -339,8 +339,8 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
-          <td class="paramname"><em>filePath</em> = <code><a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()</code>&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em> = <code>QString()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -355,17 +355,17 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
 <dl class="return"><dt><b>Returns:</b></dt><dd>serialization state. </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd>SerializationState </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a692b19c2e18506de95d02aed942890e6">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a1515f5bff4437903bb15dafe82b56755">iser::IFileLoader</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#a86c8bf0d55a6de7d7c776661197b4ab2">icmpstr::CRegistryLoaderComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#a2b73d7a0d3ab2c3162d4698d4972bb44">icmpstr::CRegistryLoaderComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00215">215</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00224">224</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
 
 <p>References <a class="el" href="_i_changeable_8h_source.html#l00031">istd::IChangeable::CF_MODEL</a>, <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>, <a class="el" href="istd_8h_source.html#l00189">NULL</a>, and <a class="el" href="_t_change_notifier_8h_source.html#l00082">istd::TChangeNotifier&lt; Changeable &gt;::SetPtr()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a31e7766b0f1afe1d279bb930886d12f4"></a><!-- doxytag: member="ibase::TFileSerializerComp::OnReadError" ref="a31e7766b0f1afe1d279bb930886d12f4" args="(const ReadArchive &amp;archive, const istd::IChangeable &amp;data, const istd::CString &amp;filePath) const " -->
+<a class="anchor" id="aa831b9417f00ec3c58feaed540f90122"></a><!-- doxytag: member="ibase::TFileSerializerComp::OnReadError" ref="aa831b9417f00ec3c58feaed540f90122" args="(const ReadArchive &amp;archive, const istd::IChangeable &amp;data, const QString &amp;filePath) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -386,7 +386,7 @@ template&lt;class ReadArchive, class WriteArchive &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>filePath</em>&#160;</td>
         </tr>
         <tr>
@@ -400,13 +400,13 @@ template&lt;class ReadArchive, class WriteArchive &gt; </div>
 
 <p>Called if read error is occured. </p>
 
-<p>Reimplemented in <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#acacfca9f98f946ddcb33c38ecde8899a">icmpstr::CRegistryLoaderComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#ae13008030987c8592835a2806a1812a5">icmpstr::CRegistryLoaderComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00285">285</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00294">294</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a99a5f8f4b2f5e554ac83a21e78771d52"></a><!-- doxytag: member="ibase::TFileSerializerComp::SaveToFile" ref="a99a5f8f4b2f5e554ac83a21e78771d52" args="(const istd::IChangeable &amp;data, const istd::CString &amp;filePath=istd::CString()) const " -->
+<a class="anchor" id="ab287d68478ebf3e9f4d9173fe4122c1d"></a><!-- doxytag: member="ibase::TFileSerializerComp::SaveToFile" ref="ab287d68478ebf3e9f4d9173fe4122c1d" args="(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -421,8 +421,8 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
-          <td class="paramname"><em>filePath</em> = <code><a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()</code>&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em> = <code>QString()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -437,11 +437,11 @@ template&lt;class ReadArchive , class WriteArchive &gt; </div>
 <dl class="return"><dt><b>Returns:</b></dt><dd>serialization state. </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd>SerializationState </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#aa9a5a8765a0c04900696029914ac9a26">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a600870dbf0fc5a833bfe747bf1a60c1c">iser::IFileLoader</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#aa1cec36c520ffc026095ee3cf38425dc">icmpstr::CRegistryLoaderComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#ade4dd8df0ad64e2b9a7583071e2a54d0">icmpstr::CRegistryLoaderComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00246">246</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00255">255</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
 

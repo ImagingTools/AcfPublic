@@ -24,11 +24,14 @@
 #define isys_IFileInfo_included
 
 
+/// Qt includes
+#include <QString>
+
+
 // ACF includes
 #include "istd/IPolymorphic.h"
 #include "istd/IChangeable.h"
-#include "istd/CString.h"
-
+#
 #include "isys/IDateTime.h"
 
 
@@ -47,7 +50,7 @@ public:
 	/**
 		Get file path.
 	*/
-	virtual istd::CString GetFilePath() const = 0;
+	virtual QString GetFilePath() const = 0;
 
 	/**
 		Get the file permissions.

@@ -80,7 +80,7 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiprm_1_1_c_name_param.html">iprm::CNameParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a746852630fba2c048cb2de454ff53d2a">BaseClass3</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a305d85de0204153eb1dfd11faffee66f">CHierarchicalCommand</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;name=&quot;&quot;, int priority=100, int staticFlags=CF_GLOBAL_MENU, int groupId=GI_NORMAL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#af8f687d00d6f953cae7f800e150adbde">CHierarchicalCommand</a> (const QString &amp;name=&quot;&quot;, int priority=100, int staticFlags=CF_GLOBAL_MENU, int groupId=GI_NORMAL)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#ae25c82808571cf122cef4f9123f15345">SetPriority</a> (int priority)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a3069c429f7d67830eee7d55eab560fc7">SetStaticFlags</a> (int flags)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a79602153de3c8d5281e6fb7b4140bb6f">SetGroupId</a> (int groupId)</td></tr>
@@ -102,8 +102,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of childs.  <a href="#a7770570d37a95ed72e14ce9b3303469e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classibase_1_1_i_command.html">ibase::ICommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#ae050eab66b37a5a6e1d1915e4bf485b3">GetChild</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get child value.  <a href="#ae050eab66b37a5a6e1d1915e4bf485b3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#abd1f5b84054cf987e5950de54f49dc06">SetName</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;name)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the object name.  <a href="#abd1f5b84054cf987e5950de54f49dc06"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a344474e2b4cd7113ac2dc087fdfe6a51">SetName</a> (const QString &amp;name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the object name.  <a href="#a344474e2b4cd7113ac2dc087fdfe6a51"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a056d90b0c4e74eb40809becb4d9e8c9d">SetEnabled</a> (bool isEnabled=true)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set something to <code>isEnabled</code> state.  <a href="#a056d90b0c4e74eb40809becb4d9e8c9d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a7fa01faf2be21e32cebf99c9cf19a61b">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
@@ -173,14 +173,14 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a305d85de0204153eb1dfd11faffee66f"></a><!-- doxytag: member="iqtgui::CHierarchicalCommand::CHierarchicalCommand" ref="a305d85de0204153eb1dfd11faffee66f" args="(const istd::CString &amp;name=&quot;&quot;, int priority=100, int staticFlags=CF_GLOBAL_MENU, int groupId=GI_NORMAL)" -->
+<a class="anchor" id="af8f687d00d6f953cae7f800e150adbde"></a><!-- doxytag: member="iqtgui::CHierarchicalCommand::CHierarchicalCommand" ref="af8f687d00d6f953cae7f800e150adbde" args="(const QString &amp;name=&quot;&quot;, int priority=100, int staticFlags=CF_GLOBAL_MENU, int groupId=GI_NORMAL)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">iqtgui::CHierarchicalCommand::CHierarchicalCommand </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>, </td>
         </tr>
         <tr>
@@ -556,14 +556,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abd1f5b84054cf987e5950de54f49dc06"></a><!-- doxytag: member="iqtgui::CHierarchicalCommand::SetName" ref="abd1f5b84054cf987e5950de54f49dc06" args="(const istd::CString &amp;name)" -->
+<a class="anchor" id="a344474e2b4cd7113ac2dc087fdfe6a51"></a><!-- doxytag: member="iqtgui::CHierarchicalCommand::SetName" ref="a344474e2b4cd7113ac2dc087fdfe6a51" args="(const QString &amp;name)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iqtgui::CHierarchicalCommand::SetName </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -573,7 +573,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set the object name. </p>
 
-<p>Reimplemented from <a class="el" href="classiprm_1_1_c_name_param.html#a57262562645568adbedb49deb4a526a6">iprm::CNameParam</a>.</p>
+<p>Reimplemented from <a class="el" href="classiprm_1_1_c_name_param.html#a2efc0ca157b9658762f02398975e823d">iprm::CNameParam</a>.</p>
 
 </div>
 </div>

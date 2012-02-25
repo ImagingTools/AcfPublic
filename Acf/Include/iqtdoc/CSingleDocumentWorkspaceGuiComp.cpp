@@ -69,7 +69,7 @@ void CSingleDocumentWorkspaceGuiComp::UpdateTitle()
 		const SingleDocumentData& info = GetSingleDocumentData(0);
 
 		if (!info.filePath.IsEmpty()){
-			titleName = QFileInfo(iqt::GetQString(info.filePath)).fileName();
+			titleName = QFileInfo(info.filePath)).fileName();
 		}
 
 		if (info.isDirty){
@@ -88,17 +88,17 @@ void CSingleDocumentWorkspaceGuiComp::UpdateTitle()
 
 // reimplemented (idoc::CSingleDocumentManagerBase)
 
-istd::CString CSingleDocumentWorkspaceGuiComp::GetOpenFilePath(const std::string* documentTypeIdPtr) const
+QString CSingleDocumentWorkspaceGuiComp::GetOpenFilePath(const std::string* documentTypeIdPtr) const
 {
 	QStringList files = GetOpenFilePathesFromDialog(documentTypeIdPtr);
 
 	if (!files.isEmpty()){
 		UpdateLastDirectory(files.at(0));
 
-		return iqt::GetCString(files.at(0));
+		return files.at(0);
 	}
 
-	return istd::CString();
+	return QString();
 }
 
 
@@ -145,7 +145,7 @@ void CSingleDocumentWorkspaceGuiComp::QueryDocumentClose(bool* ignoredPtr)
 
 		GetDocumentFromIndex(0, &info);
 
-		QFileInfo fileInfo(iqt::GetQString(info.filePath));
+		QFileInfo fileInfo(info.filePath);
 		QMessageBox::StandardButtons buttons = QMessageBox::Yes | QMessageBox::No;
 
 		if (ignoredPtr != NULL){

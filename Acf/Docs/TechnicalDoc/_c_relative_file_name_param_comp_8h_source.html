@@ -48,8 +48,8 @@
 <a name="l00021"></a>00021        I_END_COMPONENT;
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023        <span class="comment">// reimplemented (iprm::IFileNameParam)</span>
-<a name="l00024"></a>00024        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classiqtprm_1_1_c_relative_file_name_param_comp.html#a961c99ef3bb18359e880f92d66f887e6" title="Get path.">GetPath</a>() <span class="keyword">const</span>;
-<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_relative_file_name_param_comp.html#ae3f3a388ff72dbfc73ce1c3bf797c940" title="Set path.">SetPath</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; path);
+<a name="l00024"></a>00024        <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classiqtprm_1_1_c_relative_file_name_param_comp.html#a301ae19d7258cfd23e79e0ddfdeda000" title="Get path.">GetPath</a>() <span class="keyword">const</span>;
+<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_relative_file_name_param_comp.html#a898191a787c5aef074af9f48f7b38b7a" title="Set path.">SetPath</a>(<span class="keyword">const</span> QString&amp; path);
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027        <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtprm_1_1_c_relative_file_name_param_comp.html#a09fef93906086c4c34a9e9ad8435d689" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
@@ -57,7 +57,7 @@
 <a name="l00030"></a>00030 <span class="keyword">private</span>:
 <a name="l00031"></a>00031        I_REF(<a class="code" href="classiprm_1_1_i_file_name_param.html" title="Common interface for a file system item settings.">iprm::IFileNameParam</a>, m_relativeToCompPtr);
 <a name="l00032"></a>00032 
-<a name="l00033"></a>00033        <span class="keyword">mutable</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_relativePath;
+<a name="l00033"></a>00033        <span class="keyword">mutable</span> QString m_relativePath;
 <a name="l00034"></a>00034 };
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 

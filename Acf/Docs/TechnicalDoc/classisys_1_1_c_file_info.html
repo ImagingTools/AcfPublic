@@ -58,13 +58,13 @@ Inheritance diagram for isys::CFileInfo:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_file_info.html#a731c8d5970cd10556bf0a4591ec47b3f">CFileInfo</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=<a class="el" href="classistd_1_1_c_string.html">istd::CString</a>(), int filePermissions=0, const <a class="el" href="classisys_1_1_c_simple_date_time.html">isys::CSimpleDateTime</a> &amp;modificationTime=isys::CSimpleDateTime::GetCurrent())</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_file_info.html#a93070a8304e7b11f64368c8aaf9f0347">CFileInfo</a> (const QString &amp;filePath=QString(), int filePermissions=0, const <a class="el" href="classisys_1_1_c_simple_date_time.html">isys::CSimpleDateTime</a> &amp;modificationTime=isys::CSimpleDateTime::GetCurrent())</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_file_info.html#ada8e4637a07246cfa0e0e67ba7d54243">operator==</a> (const <a class="el" href="classisys_1_1_c_file_info.html">CFileInfo</a> &amp;fileInfo) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_file_info.html#ad846932bf23ed4e1a33022cf03418932">operator!=</a> (const <a class="el" href="classisys_1_1_c_file_info.html">CFileInfo</a> &amp;fileInfo) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_file_info.html#afaf5d7c5cf9f38e43340d9ade525ce55">SetPermissions</a> (int filePermissions)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_file_info.html#a618f77e8834f85ab1dd355ad1be365d3">SetModificationTime</a> (const <a class="el" href="classisys_1_1_i_date_time.html">isys::IDateTime</a> &amp;modificationTime)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_file_info.html#a2b54590c7a8730b26d69cc54a9900f7a">GetFilePath</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file path.  <a href="#a2b54590c7a8730b26d69cc54a9900f7a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_file_info.html#a14fecf690d2f2227b9d94f9a53294b69">GetFilePath</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file path.  <a href="#a14fecf690d2f2227b9d94f9a53294b69"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_file_info.html#ad882df2467d342b3305f6de8854bb615">GetPermissions</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the file permissions.  <a href="#ad882df2467d342b3305f6de8854bb615"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classisys_1_1_i_date_time.html">isys::IDateTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_c_file_info.html#a0f19e6310000c216248366f29c0745dd">GetModificationTime</a> () const </td></tr>
@@ -77,15 +77,15 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_file_info_8h_source.html#l00020">20</a> of file <a class="el" href="_c_file_info_8h_source.html">CFileInfo.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a731c8d5970cd10556bf0a4591ec47b3f"></a><!-- doxytag: member="isys::CFileInfo::CFileInfo" ref="a731c8d5970cd10556bf0a4591ec47b3f" args="(const istd::CString &amp;filePath=istd::CString(), int filePermissions=0, const isys::CSimpleDateTime &amp;modificationTime=isys::CSimpleDateTime::GetCurrent())" -->
+<a class="anchor" id="a93070a8304e7b11f64368c8aaf9f0347"></a><!-- doxytag: member="isys::CFileInfo::CFileInfo" ref="a93070a8304e7b11f64368c8aaf9f0347" args="(const QString &amp;filePath=QString(), int filePermissions=0, const isys::CSimpleDateTime &amp;modificationTime=isys::CSimpleDateTime::GetCurrent())" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">isys::CFileInfo::CFileInfo </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
-          <td class="paramname"><em>filePath</em> = <code><a class="el" href="classistd_1_1_c_string.html">istd::CString</a>()</code>, </td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em> = <code>QString()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -111,12 +111,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a2b54590c7a8730b26d69cc54a9900f7a"></a><!-- doxytag: member="isys::CFileInfo::GetFilePath" ref="a2b54590c7a8730b26d69cc54a9900f7a" args="() const " -->
+<a class="anchor" id="a14fecf690d2f2227b9d94f9a53294b69"></a><!-- doxytag: member="isys::CFileInfo::GetFilePath" ref="a14fecf690d2f2227b9d94f9a53294b69" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> isys::CFileInfo::GetFilePath </td>
+          <td class="memname">virtual QString isys::CFileInfo::GetFilePath </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -127,7 +127,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get file path. </p>
 
-<p>Implements <a class="el" href="classisys_1_1_i_file_info.html#a60d601b5f0cf80cad782debd4aff3824">isys::IFileInfo</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_file_info.html#a1de2d86eaf5ed8b0b5bb028bf4ea6398">isys::IFileInfo</a>.</p>
 
 </div>
 </div>

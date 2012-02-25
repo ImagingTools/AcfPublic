@@ -67,7 +67,7 @@ bool CVisualRegistryComp::SerializeNotes(iser::IArchive& archive)
 			const ElementInfo* infoPtr = GetElementInfo(elementId);
 			if (infoPtr != NULL){
 				const CVisualRegistryElement* elementPtr = dynamic_cast<const CVisualRegistryElement*>(infoPtr->elementPtr.GetPtr());
-				if ((elementPtr != NULL) && !elementPtr->GetNote().IsEmpty()){
+				if ((elementPtr != NULL) && !elementPtr->GetNote().isEmpty()){
 					notesCount++;
 				}
 			}
@@ -78,7 +78,7 @@ bool CVisualRegistryComp::SerializeNotes(iser::IArchive& archive)
 		for (Ids::const_iterator iter = ids.begin(); iter != ids.end(); ++iter){
 			std::string elementId = *iter;
 
-			istd::CString note;
+			QString note;
 			const ElementInfo* infoPtr = GetElementInfo(elementId);
 			if (infoPtr != NULL){
 				const CVisualRegistryElement* elementPtr = dynamic_cast<const CVisualRegistryElement*>(infoPtr->elementPtr.GetPtr());
@@ -87,7 +87,7 @@ bool CVisualRegistryComp::SerializeNotes(iser::IArchive& archive)
 				}
 			}
 
-			if (!note.IsEmpty()){
+			if (!note.isEmpty()){
 				retVal = retVal && archive.BeginTag(elementTag);
 
 				retVal = retVal && SerializeComponentNote(archive, elementId, note);
@@ -110,7 +110,7 @@ bool CVisualRegistryComp::SerializeNotes(iser::IArchive& archive)
 			if (infoPtr != NULL){
 				CVisualRegistryElement* elementPtr = dynamic_cast<CVisualRegistryElement*>(infoPtr->elementPtr.GetPtr());
 				if (elementPtr != NULL){
-					elementPtr->SetNote(istd::CString::GetEmpty());
+					elementPtr->SetNote(QString());
 				}
 			}
 		}
@@ -126,7 +126,7 @@ bool CVisualRegistryComp::SerializeNotes(iser::IArchive& archive)
 			retVal = retVal && archive.BeginTag(elementTag);
 			
 			std::string elementId;
-			istd::CString note;
+			QString note;
 
 			retVal = retVal && SerializeComponentNote(archive, elementId, note);
 			if (!retVal){
@@ -233,7 +233,7 @@ bool CVisualRegistryComp::SerializeUserData(iser::IArchive& archive)
 
 // reimplemented (IComponentNoteController)
 
-istd::CString CVisualRegistryComp::GetComponentNote(const std::string& componentName)
+QString CVisualRegistryComp::GetComponentNote(const std::string& componentName)
 {
 	const ElementInfo* elementInfoPtr = GetElementInfo(componentName);
 	if (elementInfoPtr != NULL){
@@ -243,11 +243,11 @@ istd::CString CVisualRegistryComp::GetComponentNote(const std::string& component
 		}
 	}
 
-	return istd::CString();
+	return QString();
 }
 
 
-void CVisualRegistryComp::SetComponentNote(const std::string& componentName, const istd::CString& componentNote)
+void CVisualRegistryComp::SetComponentNote(const std::string& componentName, const QString& componentNote)
 {
 	const ElementInfo* elementInfoPtr = GetElementInfo(componentName);
 	if (elementInfoPtr == NULL){
@@ -281,10 +281,10 @@ CVisualRegistryComp::ElementInfo* CVisualRegistryComp::InsertElementInfo(
 	else{
 		SendErrorMessage(
 					MI_CANNOT_CREATE_ELEMENT,
-					iqt::GetCString(tr("Cannot create %1 (%2: %3)").
+					tr("Cannot create %1 (%2: %3)").
 								arg(elementId.c_str()).
 								arg(address.GetPackageId().c_str()).
-								arg(address.GetComponentId().c_str())));
+								arg(address.GetComponentId().c_str()));
 	}
 
 	return infoPtr;
@@ -355,7 +355,7 @@ bool CVisualRegistryComp::SerializeComponentPosition(iser::IArchive& archive, st
 }
 
 
-bool CVisualRegistryComp::SerializeComponentNote(iser::IArchive& archive, std::string& componentName, istd::CString& componentNote)
+bool CVisualRegistryComp::SerializeComponentNote(iser::IArchive& archive, std::string& componentName, QString& componentNote)
 {
 	static iser::CArchiveTag nameTag("ComponentName", "Name of component");
 	static iser::CArchiveTag componentNoteTag("Note", "Component note");

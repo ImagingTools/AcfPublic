@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "istd/CString.h"
+#include <QString>
 
 #include "icomp/CComponentBase.h"
 
@@ -51,8 +51,8 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (ibase::ITextDocument)
-	virtual istd::CString GetText() const;
-	virtual void SetText(const istd::CString& text);
+	virtual QString GetText() const;
+	virtual void SetText(const QString& text);
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
@@ -62,9 +62,9 @@ protected:
 	virtual void OnComponentCreated();
 
 private:
-	istd::CString m_text;
+	QString m_text;
 
-	I_ATTR(istd::CString, m_defaultTextAttrPtr);
+	I_ATTR(QString, m_defaultTextAttrPtr);
 };
 
 

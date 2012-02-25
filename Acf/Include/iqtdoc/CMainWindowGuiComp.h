@@ -84,7 +84,7 @@ public:
 	virtual bool OnDetached(imod::IModel* modelPtr);
 
 protected:
-	virtual bool OpenFile(const istd::CString& fileName);
+	virtual bool OpenFile(const QString& fileName);
 
 	virtual void OnActiveViewChanged();
 	virtual void OnActiveDocumentChanged();
@@ -99,7 +99,7 @@ protected:
 
 	virtual bool SerializeRecentFileList(iser::IArchive& archive);
 	virtual void UpdateRecentFileList(const idoc::IDocumentManager::FileToTypeMap& fileToTypeMap);
-	virtual void RemoveFromRecentFileList(const istd::CString& filePath);
+	virtual void RemoveFromRecentFileList(const QString& filePath);
 
 	// reimplemented (iqtgui::CSimpleMainWindowGuiComp)
 	virtual void UpdateFixedCommands(iqtgui::CHierarchicalCommand& fixedCommands);
@@ -163,11 +163,11 @@ private:
 
 		RecentFileCommand(
 					CMainWindowGuiComp* parentPtr,
-					const istd::CString& name,
-					const istd::CString& actionString,
+					const QString& name,
+					const QString& actionString,
 					bool isOpenCommand);
 
-		const istd::CString& GetActionString() const;
+		const QString& GetActionString() const;
 		bool IsOpenCommand() const;
 
 		// reimplemented (ibase::ICommand)
@@ -175,7 +175,7 @@ private:
 
 	private:
 		CMainWindowGuiComp& m_parent;
-		istd::CString m_actionString;
+		QString m_actionString;
 		bool m_isOpenCommand;
 	};
 

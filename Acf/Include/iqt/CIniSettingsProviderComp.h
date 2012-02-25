@@ -24,7 +24,7 @@
 #define iqt_CIniSettingsProviderComp_included
 
 
-#include "istd/CString.h"
+#include <QString>
 
 #include "icomp/CComponentBase.h"
 
@@ -58,7 +58,7 @@ protected:
 	virtual void OnComponentCreated();
 	
 private:
-	I_ATTR(istd::CString, m_iniFilePathAttrPtr);
+	I_ATTR(QString, m_iniFilePathAttrPtr);
 
 	istd::TDelPtr<QSettings> m_settingsPtr;
 };

@@ -24,6 +24,12 @@
 #define ibase_TFileSerializerComp_included
 
 
+// Qt includes
+#include <QStringList>
+#include <QFileInfo>
+
+
+// ACF includes
 #include "istd/TChangeNotifier.h"
 #include "istd/CStaticServicesProvider.h"
 #include "istd/itr.h"
@@ -69,11 +75,11 @@ public:
 	// reimplemented (iser::IFileLoader)
 	virtual bool IsOperationSupported(
 				const istd::IChangeable* dataObjectPtr,
-				const istd::CString* filePathPtr = NULL,
+				const QString* filePathPtr = NULL,
 				int flags = -1,
 				bool beQuiet = true) const;
-	virtual int LoadFromFile(istd::IChangeable& data, const istd::CString& filePath = istd::CString()) const;
-	virtual int SaveToFile(const istd::IChangeable& data, const istd::CString& filePath = istd::CString()) const;
+	virtual int LoadFromFile(istd::IChangeable& data, const QString& filePath = QString()) const;
+	virtual int SaveToFile(const istd::IChangeable& data, const QString& filePath = QString()) const;
 
 protected:
 	class ReadArchiveEx: public ReadArchive
@@ -81,7 +87,7 @@ protected:
 	public:
 		typedef ReadArchive BaseClass;
 
-		ReadArchiveEx(const istd::CString& filePath, const TFileSerializerComp* loggerPtr)
+		ReadArchiveEx(const QString& filePath, const TFileSerializerComp* loggerPtr)
 		:	ReadArchive(filePath),
 			m_loggerPtr(loggerPtr)
 		{
@@ -97,11 +103,11 @@ protected:
 
 			return (m_loggerPtr != NULL) && m_loggerPtr->IsLogConsumed(&slaveCategory, flagsPtr);
 		}
-		virtual bool SendLogMessage(MessageCategory category, int id, const istd::CString& message, const istd::CString& messageSource, int flags = 0) const
+		virtual bool SendLogMessage(MessageCategory category, int id, const QString& message, const QString& messageSource, int flags = 0) const
 		{
 			if (m_loggerPtr != NULL){
-				istd::CString correctedMessage = message;
-				istd::CString correctedMessageSource = messageSource;
+				QString correctedMessage = message;
+				QString correctedMessageSource = messageSource;
 
 				BaseClass::DecorateMessage(category, id, flags, correctedMessage, correctedMessageSource);
 
@@ -120,7 +126,7 @@ protected:
 	public:
 		typedef WriteArchive BaseClass;
                 
-		WriteArchiveEx(const istd::CString& filePath, const iser::IVersionInfo* infoPtr, const TFileSerializerComp* loggerPtr)
+		WriteArchiveEx(const QString& filePath, const iser::IVersionInfo* infoPtr, const TFileSerializerComp* loggerPtr)
 		:	WriteArchive(filePath, infoPtr),
 			m_loggerPtr(loggerPtr)
 		{
@@ -136,11 +142,11 @@ protected:
 
 			return (m_loggerPtr != NULL) && m_loggerPtr->IsLogConsumed(&slaveCategory, flagsPtr);
 		}
-		virtual bool SendLogMessage(MessageCategory category, int id, const istd::CString& message, const istd::CString& messageSource, int flags = 0) const
+		virtual bool SendLogMessage(MessageCategory category, int id, const QString& message, const QString& messageSource, int flags = 0) const
 		{
 			if (m_loggerPtr != NULL){
-				istd::CString correctedMessage = message;
-				istd::CString correctedMessageSource = messageSource;
+				QString correctedMessage = message;
+				QString correctedMessageSource = messageSource;
 
 				BaseClass::DecorateMessage(category, id, flags, correctedMessage, correctedMessageSource);
 
@@ -162,16 +168,16 @@ protected:
 	/**
 		Called if read error is occured.
 	*/
-	virtual void OnReadError(const ReadArchive& archive, const istd::IChangeable& data, const istd::CString& filePath) const;
+	virtual void OnReadError(const ReadArchive& archive, const istd::IChangeable& data, const QString& filePath) const;
 
 	/**
 		Check if minimal version of some serializable object is supported by version info.
 	*/
 	bool CheckMinimalVersion(const iser::ISerializable& object, const iser::IVersionInfo& versionInfo) const;
 
-	bool CheckInputFilePath(const istd::CString filePath) const;
+	bool CheckInputFilePath(const QString filePath) const;
 
-	bool CheckTargetDirectory(const istd::CString dirPath) const;
+	bool CheckTargetDirectory(const QString dirPath) const;
 
 private:
 	I_REF(iser::IVersionInfo, m_versionInfoCompPtr);
@@ -185,7 +191,7 @@ private:
 template <class ReadArchive, class WriteArchive>
 bool TFileSerializerComp<ReadArchive, WriteArchive>::IsOperationSupported(
 			const istd::IChangeable* dataObjectPtr,
-			const istd::CString* filePathPtr,
+			const QString* filePathPtr,
 			int flags,
 			bool beQuiet) const
 {
@@ -211,12 +217,15 @@ bool TFileSerializerComp<ReadArchive, WriteArchive>::IsOperationSupported(
 			}
 		}
 
-		istd::CStringList fileExtensions;
+		QStringList fileExtensions;
 		if (GetFileExtensions(fileExtensions)){
 			int extensionsCount = int(fileExtensions.size());
 			for (int i = 0; i < extensionsCount; ++i){
-				const istd::CString& extension = fileExtensions[i];
-				if (!filePathPtr->IsEmpty() && filePathPtr->substr(filePathPtr->length() - extension.length() - 1) == istd::CString(".") + extension.ToLower()){
+				const QString& extension = fileExtensions[i];
+				QFileInfo fileInfo(*filePathPtr);
+				QString fileExtension = fileInfo.suffix();
+
+				if (!filePathPtr->isEmpty() &&  (fileExtension.compare(extension, Qt::CaseInsensitive) == 0)){
 					return true;
 				}
 			}
@@ -234,7 +243,7 @@ bool TFileSerializerComp<ReadArchive, WriteArchive>::IsOperationSupported(
 
 
 template <class ReadArchive, class WriteArchive>
-int TFileSerializerComp<ReadArchive, WriteArchive>::LoadFromFile(istd::IChangeable& data, const istd::CString& filePath) const
+int TFileSerializerComp<ReadArchive, WriteArchive>::LoadFromFile(istd::IChangeable& data, const QString& filePath) const
 {
 	if (!CheckInputFilePath(filePath)){
 		return StateFailed;
@@ -265,7 +274,7 @@ int TFileSerializerComp<ReadArchive, WriteArchive>::LoadFromFile(istd::IChangeab
 
 
 template <class ReadArchive, class WriteArchive>
-int TFileSerializerComp<ReadArchive, WriteArchive>::SaveToFile(const istd::IChangeable& data, const istd::CString& filePath) const
+int TFileSerializerComp<ReadArchive, WriteArchive>::SaveToFile(const istd::IChangeable& data, const QString& filePath) const
 {
 	if (!CheckTargetDirectory(filePath)){
 		return StateFailed;
@@ -304,9 +313,9 @@ const iser::IVersionInfo* TFileSerializerComp<ReadArchive, WriteArchive>::GetVer
 
 
 template <class ReadArchive, class WriteArchive>
-void TFileSerializerComp<ReadArchive, WriteArchive>::OnReadError(const ReadArchive& /*archive*/, const istd::IChangeable& /*data*/, const istd::CString& filePath) const
+void TFileSerializerComp<ReadArchive, WriteArchive>::OnReadError(const ReadArchive& /*archive*/, const istd::IChangeable& /*data*/, const QString& filePath) const
 {
-	SendWarningMessage(MI_CANNOT_LOAD, istd::CString(tr("Cannot load object from file ")) + filePath);
+	SendWarningMessage(MI_CANNOT_LOAD, QString(tr("Cannot load object from file ")) + filePath);
 }
 
 
@@ -335,7 +344,7 @@ bool TFileSerializerComp<ReadArchive, WriteArchive>::CheckMinimalVersion(const i
 
 
 template <class ReadArchive, class WriteArchive>
-bool TFileSerializerComp<ReadArchive, WriteArchive>::CheckInputFilePath(const istd::CString filePath) const
+bool TFileSerializerComp<ReadArchive, WriteArchive>::CheckInputFilePath(const QString filePath) const
 {
 	isys::IFileSystem* fileSystemPtr = istd::GetService<isys::IFileSystem>();
 	if (fileSystemPtr == NULL){
@@ -345,7 +354,7 @@ bool TFileSerializerComp<ReadArchive, WriteArchive>::CheckInputFilePath(const is
 	}
 	
 	if (!fileSystemPtr->IsPresent(filePath)){
-		SendWarningMessage(MI_CANNOT_LOAD, "File " + filePath.ToString() + " does not exist");
+		SendWarningMessage(MI_CANNOT_LOAD, QString("File %1 does not exist").arg(filePath));
 
 		return false;
 	}
@@ -355,7 +364,7 @@ bool TFileSerializerComp<ReadArchive, WriteArchive>::CheckInputFilePath(const is
 
 
 template <class ReadArchive, class WriteArchive>
-bool TFileSerializerComp<ReadArchive, WriteArchive>::CheckTargetDirectory(const istd::CString dirPath) const
+bool TFileSerializerComp<ReadArchive, WriteArchive>::CheckTargetDirectory(const QString dirPath) const
 {
 	isys::IFileSystem* fileSystemPtr = istd::GetService<isys::IFileSystem>();
 	if (fileSystemPtr == NULL){
@@ -365,7 +374,7 @@ bool TFileSerializerComp<ReadArchive, WriteArchive>::CheckTargetDirectory(const 
 	}
 
 	if (!fileSystemPtr->IsPresent(fileSystemPtr->GetDirPath(dirPath))){
-		SendWarningMessage(MI_CANNOT_SAVE, "Save target directory " + fileSystemPtr->GetDirPath(dirPath).ToString() + " does not exist");
+		SendWarningMessage(MI_CANNOT_SAVE, QString("Save target directory %1 does not exist").arg(fileSystemPtr->GetDirPath(dirPath)));
 
 		return false;
 	}

@@ -86,7 +86,7 @@ protected:
 	};
 
 private:
-	typedef std::map<istd::CString, ParamsInfo> DirInfos;
+	typedef std::map<QString, ParamsInfo> DirInfos;
 	DirInfos m_dirInfos;
 
 	I_DWORD m_lastIdStamp;
@@ -94,8 +94,8 @@ private:
 	istd::CIndex2d m_lastImageSize;
 
 	I_REF(iser::IFileLoader, m_bitmapLoaderCompPtr);
-	I_ATTR(istd::CString, m_defaultDirAttrPtr);
-	I_ATTR(istd::CString, m_parameterIdAttrPtr);
+	I_ATTR(QString, m_defaultDirAttrPtr);
+	I_ATTR(QString, m_parameterIdAttrPtr);
 	I_ATTR(int, m_maxCachedDirectoriesAttrPtr);
 };
 

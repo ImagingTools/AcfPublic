@@ -62,12 +62,12 @@ Public Types</h2></td></tr>
 <a class="el" href="classisys_1_1_c_system_environment_base.html">isys::CSystemEnvironmentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_system_environment.html#a0712793307f489916b54daffcef7c9e1">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_system_environment.html#a4e9a2ae5813ed6c976c59bc9390ab286">GetUser</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name of currently logged user.  <a href="#a4e9a2ae5813ed6c976c59bc9390ab286"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_system_environment.html#ac3acb0d2abf7eebf753d2f0ceb069131">GetTempDirPath</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the path of the system temp directory.  <a href="#ac3acb0d2abf7eebf753d2f0ceb069131"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_system_environment.html#acea8691e3324ba5a9fccf80b5fba3f57">GetUniqueIdentifier</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate unique identifier.  <a href="#acea8691e3324ba5a9fccf80b5fba3f57"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_system_environment.html#a8558594998b47dd3c14fbdfe73e3b59c">GetUser</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name of currently logged user.  <a href="#a8558594998b47dd3c14fbdfe73e3b59c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_system_environment.html#aeb5e542111c1e7d9438420c3f46ec46b">GetTempDirPath</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the path of the system temp directory.  <a href="#aeb5e542111c1e7d9438420c3f46ec46b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_system_environment.html#a8bdb2c3c61dc5c23a1097af16bc4fa25">GetUniqueIdentifier</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate unique identifier.  <a href="#a8bdb2c3c61dc5c23a1097af16bc4fa25"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>System implementation of ISystemEnvironment interface on Qt plattform. </p>
@@ -90,12 +90,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac3acb0d2abf7eebf753d2f0ceb069131"></a><!-- doxytag: member="iqt::CSystemEnvironment::GetTempDirPath" ref="ac3acb0d2abf7eebf753d2f0ceb069131" args="() const " -->
+<a class="anchor" id="aeb5e542111c1e7d9438420c3f46ec46b"></a><!-- doxytag: member="iqt::CSystemEnvironment::GetTempDirPath" ref="aeb5e542111c1e7d9438420c3f46ec46b" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iqt::CSystemEnvironment::GetTempDirPath </td>
+          <td class="memname">virtual QString iqt::CSystemEnvironment::GetTempDirPath </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -106,16 +106,16 @@ Public Member Functions</h2></td></tr>
 
 <p>Return the path of the system temp directory. </p>
 
-<p>Implements <a class="el" href="classisys_1_1_i_system_environment.html#a8298222b71e4f23c7eb14e78f8a8298b">isys::ISystemEnvironment</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_system_environment.html#ab82138578df92f03d231b78e4efd7ed1">isys::ISystemEnvironment</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="acea8691e3324ba5a9fccf80b5fba3f57"></a><!-- doxytag: member="iqt::CSystemEnvironment::GetUniqueIdentifier" ref="acea8691e3324ba5a9fccf80b5fba3f57" args="() const " -->
+<a class="anchor" id="a8bdb2c3c61dc5c23a1097af16bc4fa25"></a><!-- doxytag: member="iqt::CSystemEnvironment::GetUniqueIdentifier" ref="a8bdb2c3c61dc5c23a1097af16bc4fa25" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iqt::CSystemEnvironment::GetUniqueIdentifier </td>
+          <td class="memname">virtual QString iqt::CSystemEnvironment::GetUniqueIdentifier </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -126,16 +126,16 @@ Public Member Functions</h2></td></tr>
 
 <p>Generate unique identifier. </p>
 
-<p>Implements <a class="el" href="classisys_1_1_i_system_environment.html#a2950a7593de56ce653b8e83bcb12d9f2">isys::ISystemEnvironment</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_system_environment.html#a0e4f3c4ff6c1c59c48942586a417e967">isys::ISystemEnvironment</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4e9a2ae5813ed6c976c59bc9390ab286"></a><!-- doxytag: member="iqt::CSystemEnvironment::GetUser" ref="a4e9a2ae5813ed6c976c59bc9390ab286" args="() const " -->
+<a class="anchor" id="a8558594998b47dd3c14fbdfe73e3b59c"></a><!-- doxytag: member="iqt::CSystemEnvironment::GetUser" ref="a8558594998b47dd3c14fbdfe73e3b59c" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> iqt::CSystemEnvironment::GetUser </td>
+          <td class="memname">virtual QString iqt::CSystemEnvironment::GetUser </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -146,7 +146,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return the name of currently logged user. </p>
 
-<p>Implements <a class="el" href="classisys_1_1_i_system_environment.html#aa8c642b3f41520c6429cfacb8db45ffb">isys::ISystemEnvironment</a>.</p>
+<p>Implements <a class="el" href="classisys_1_1_i_system_environment.html#af0f2ae88c8ac50e229e24fd14bd47687">isys::ISystemEnvironment</a>.</p>
 
 </div>
 </div>

@@ -65,10 +65,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get category of the message.  <a href="#ac419210d5c43cd33ecf8f64d51e4219d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message.html#ac604576a4563bae847ecda3cfed559f2">GetId</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get binary ID of the message using to automatical identification of this message type.  <a href="#ac604576a4563bae847ecda3cfed559f2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message.html#ad8cd0662bc331594572e733a35d986b4">GetText</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the text of the message.  <a href="#ad8cd0662bc331594572e733a35d986b4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message.html#a936f8fc255b36880add94b2a096f5d14">GetSource</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the source of the message.  <a href="#a936f8fc255b36880add94b2a096f5d14"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message.html#a0e3e35354732321ef354b7aec1a09b14">GetText</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the text of the message.  <a href="#a0e3e35354732321ef354b7aec1a09b14"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message.html#a9a5c29196f7528265ca186e38d61fb38">GetSource</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the source of the message.  <a href="#a9a5c29196f7528265ca186e38d61fb38"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message.html#a47acc83f6341e3cbd3e341405b61e733">GetFlags</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of the message.  <a href="#a47acc83f6341e3cbd3e341405b61e733"></a><br/></td></tr>
 </table>
@@ -140,12 +140,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a936f8fc255b36880add94b2a096f5d14"></a><!-- doxytag: member="ibase::IMessage::GetSource" ref="a936f8fc255b36880add94b2a096f5d14" args="() const =0" -->
+<a class="anchor" id="a9a5c29196f7528265ca186e38d61fb38"></a><!-- doxytag: member="ibase::IMessage::GetSource" ref="a9a5c29196f7528265ca186e38d61fb38" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> ibase::IMessage::GetSource </td>
+          <td class="memname">virtual QString ibase::IMessage::GetSource </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -156,16 +156,16 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the source of the message. </p>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_message.html#a4e0ebf0af89a91cdc1c514160ab7b1a1">ibase::CMessage</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_message.html#ac80697cfb7e63c1af7764b59deb0f4ff">ibase::CMessage</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad8cd0662bc331594572e733a35d986b4"></a><!-- doxytag: member="ibase::IMessage::GetText" ref="ad8cd0662bc331594572e733a35d986b4" args="() const =0" -->
+<a class="anchor" id="a0e3e35354732321ef354b7aec1a09b14"></a><!-- doxytag: member="ibase::IMessage::GetText" ref="a0e3e35354732321ef354b7aec1a09b14" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> ibase::IMessage::GetText </td>
+          <td class="memname">virtual QString ibase::IMessage::GetText </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -176,7 +176,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the text of the message. </p>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_message.html#a1c9e5d700f5b55dd4defdc7b55e98960">ibase::CMessage</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_message.html#a6bf9cabde30ea2b43c732332bd53d112">ibase::CMessage</a>.</p>
 
 </div>
 </div>

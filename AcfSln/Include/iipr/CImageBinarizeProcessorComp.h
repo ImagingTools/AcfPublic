@@ -64,7 +64,7 @@ private:
 				iimg::IBitmap& outputBitmap) const;
 
 private:
-	I_ATTR(istd::CString, m_binarizationParamsIdAttrPtr);
+	I_ATTR(QString, m_binarizationParamsIdAttrPtr);
 };
 
 

@@ -52,13 +52,13 @@
 <a name="l00026"></a>00026 <span class="keyword">public</span>:
 <a name="l00027"></a>00027        <span class="comment">// reimplemented (ifpf::IMonitoringSessionManager)</span>
 <a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_c_monitoring_sessions_manager.html#a38cb724d2d31f325b9766de4a856fdf7" title="Clear all session data.">ResetSessions</a>();
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <a class="code" href="classifpf_1_1_i_monitoring_session.html" title="Common interface for a monitoring session for a directory.">ifpf::IMonitoringSession</a>* <a class="code" href="classifpf_1_1_c_monitoring_sessions_manager.html#af8a0a944f35b3f153c72e68e7314642e" title="Get monitoring session for the given monitor and directory path.">GetSession</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; directoryPath) <span class="keyword">const</span>;
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <a class="code" href="classifpf_1_1_i_monitoring_session.html" title="Common interface for a monitoring session for a directory.">ifpf::IMonitoringSession</a>* <a class="code" href="classifpf_1_1_c_monitoring_sessions_manager.html#a07230f06dd00ec829f105e104ab0dfd3" title="Get monitoring session for the given monitor and directory path.">GetSession</a>(<span class="keyword">const</span> QString&amp; directoryPath) <span class="keyword">const</span>;
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifpf_1_1_c_monitoring_sessions_manager.html#a5154ede64a3751ba93a1063a6d2f3858">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 <span class="keyword">private</span>:
-<a name="l00035"></a>00035        <span class="keyword">typedef</span> std::map&lt;istd::CString, istd::TDelPtr&lt;ifpf::CMonitoringSession&gt; &gt; MonitoringSessionsMap;
+<a name="l00035"></a>00035        <span class="keyword">typedef</span> std::map&lt;QString, istd::TDelPtr&lt;ifpf::CMonitoringSession&gt; &gt; MonitoringSessionsMap;
 <a name="l00036"></a>00036        <span class="keyword">mutable</span> MonitoringSessionsMap m_monitorSessionsMap;
 <a name="l00037"></a>00037 };
 <a name="l00038"></a>00038 

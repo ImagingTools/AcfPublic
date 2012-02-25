@@ -85,7 +85,7 @@ protected slots:
 private:
 	I_REF(iprm::IFileNameParam, m_urlParamCompPtr);
 	I_REF(imod::IModel, m_urlParamModelCompPtr);
-	I_MULTIATTR(istd::CString, m_presetTextsAttrPtr);
+	I_MULTIATTR(QString, m_presetTextsAttrPtr);
 
 	QTimer m_connectTimer;
 	QTcpSocket m_socket;

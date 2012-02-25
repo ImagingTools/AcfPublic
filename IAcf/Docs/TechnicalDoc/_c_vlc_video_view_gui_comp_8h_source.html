@@ -65,8 +65,8 @@
 <a name="l00039"></a>00039        <span class="keywordtype">void</span> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#afe5f574e0786a8c49caa1d46d168f409">OnGuiDestroyed</a>();
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041        <span class="comment">// reimplemented (imm::IMediaController)</span>
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#abaf66f73637638731a38af6bb1a660e4">GetOpenedMediumUrl</a>() <span class="keyword">const</span>;
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#ad9d3a5ea2e87deb012020b471712574b">OpenMediumUrl</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; url, <span class="keywordtype">bool</span> autoPlay = <span class="keyword">true</span>);
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> QString <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#a92987eac92f153ab6a3583ad2766eb49">GetOpenedMediumUrl</a>() <span class="keyword">const</span>;
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#a2606d77d598fca61629c46867f74bb39">OpenMediumUrl</a>(<span class="keyword">const</span> QString&amp; url, <span class="keywordtype">bool</span> autoPlay = <span class="keyword">true</span>);
 <a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#a89c0e2666ccaa7627c30412639cf1eb0">CloseMedium</a>();
 <a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#ae0d1d6adcdc73da5f56bba7b62d2fa90">IsPlaying</a>() <span class="keyword">const</span>;
 <a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#a8ac24d5e82deb53809947a01cdeb0235">SetPlaying</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
@@ -86,15 +86,15 @@
 <a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#aaf9cb38260297605cab0c572464e0ea9">SetCurrentFrame</a>(<span class="keywordtype">int</span> frameIndex);
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062        <span class="comment">// reimplemented (iser::IFileTypeInfo)</span>
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#a8731bf5fdbead1470205a649f9d7a93a">GetFileExtensions</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a>&amp; result, <span class="keywordtype">int</span> flags = -1, <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>) <span class="keyword">const</span>;
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#a8c674705c009ed96aee8316af8a3bf39">GetTypeDescription</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>* extensionPtr = NULL) <span class="keyword">const</span>;
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#af348ddbd1e6b77ea5407954a1e0d9c4f">GetFileExtensions</a>(QStringList&amp; result, <span class="keywordtype">int</span> flags = -1, <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>) <span class="keyword">const</span>;
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> QString <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#ab5c57b1fb2428da0614feb9856bbcf83">GetTypeDescription</a>(<span class="keyword">const</span> QString* extensionPtr = NULL) <span class="keyword">const</span>;
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066 <span class="keyword">private</span>:
 <a name="l00067"></a>00067        AXVLC::VLCPlugin2* m_vlcWidgetPtr;
 <a name="l00068"></a>00068        AXVLC::IVLCInput* m_vlcInputPtr;
 <a name="l00069"></a>00069        AXVLC::IVLCPlaylist* m_playlistPtr;
 <a name="l00070"></a>00070 
-<a name="l00071"></a>00071        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> m_currentUrl;
+<a name="l00071"></a>00071        QString m_currentUrl;
 <a name="l00072"></a>00072 
 <a name="l00073"></a>00073        I_ATTR(<span class="keywordtype">double</span>, m_framesPerSecondAttrPtr);
 <a name="l00074"></a>00074 };

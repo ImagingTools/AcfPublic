@@ -34,7 +34,7 @@
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="comment">// ACF includes</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_string_8h.html">istd/CString.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;QString&gt;</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_memory_write_archive_8h.html">iser/CMemoryWriteArchive.h</a>&quot;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="comment">// ACF-Solutions includes</span>
@@ -56,7 +56,7 @@
 <a name="l00030"></a>00030 <span class="keyword">public</span>:
 <a name="l00031"></a>00031        <a class="code" href="classiqtauth_1_1_c_user_manager_dialog.html#abf3431dd521e54ecfa9cf9c6b84695f8">CUserManagerDialog</a>(<span class="keyword">const</span> <a class="code" href="classiauth_1_1_i_user_login.html" title="Interface supporting login operation.">iauth::IUserLogin</a>&amp; login, <a class="code" href="classiauth_1_1_i_users_manager.html" title="Provide management of users.">iauth::IUsersManager</a>&amp; manager);
 <a name="l00032"></a>00032        
-<a name="l00033"></a>00033        <span class="keywordtype">void</span> <a class="code" href="classiqtauth_1_1_c_user_manager_dialog.html#a2fc76b8a321ab600612a5c0218199f61">SaveCurUsername</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; Username);
+<a name="l00033"></a>00033        <span class="keywordtype">void</span> <a class="code" href="classiqtauth_1_1_c_user_manager_dialog.html#a701386f3a1d57a5cc19c94a8c9116166">SaveCurUsername</a>(<span class="keyword">const</span> QString&amp; Username);
 <a name="l00034"></a>00034        <span class="keywordtype">int</span> <a class="code" href="classiqtauth_1_1_c_user_manager_dialog.html#a4bc5ed4b143e61a5896177d8e9ef8466">GetUserGroupSize</a>();
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="keyword">protected</span> Q_SLOTS:
@@ -99,7 +99,7 @@
 <a name="l00073"></a>00073        <span class="keywordtype">void</span> ResetGui();
 <a name="l00074"></a>00074        <span class="keywordtype">void</span> UpdateUserList();
 <a name="l00075"></a>00075 
-<a name="l00076"></a>00076        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> m_curUserName;
+<a name="l00076"></a>00076        QString m_curUserName;
 <a name="l00077"></a>00077        
 <a name="l00078"></a>00078        <span class="keywordtype">void</span>* userManagerMemBufferPtr;
 <a name="l00079"></a>00079        <span class="keywordtype">int</span> userManagerMemBufferSize;

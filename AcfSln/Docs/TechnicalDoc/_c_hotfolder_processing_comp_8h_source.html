@@ -81,10 +81,10 @@
 <a name="l00061"></a>00061        <span class="keyword">public</span>:
 <a name="l00062"></a><a class="code" href="classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html#a364543b749eab712908103acc67bc8a4">00062</a>               <span class="keyword">typedef</span> QThread <a class="code" href="classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html#a364543b749eab712908103acc67bc8a4">BaseClass</a>;
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064               <a class="code" href="classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html#ad8d418ad5c5585699f2572f7d0470a30">ItemProcessor</a>(
+<a name="l00064"></a>00064               <a class="code" href="classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html#aebbdd36f95b963eeaf5743378ee43bd9">ItemProcessor</a>(
 <a name="l00065"></a>00065                                    <a class="code" href="classiqtfpf_1_1_c_hotfolder_processing_comp.html" title="Hotfolder representation.">CHotfolderProcessingComp</a>&amp; parent,
-<a name="l00066"></a>00066                                    <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; inputFilePath,
-<a name="l00067"></a>00067                                    <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; outputFilePath,
+<a name="l00066"></a>00066                                    <span class="keyword">const</span> QString&amp; inputFilePath,
+<a name="l00067"></a>00067                                    <span class="keyword">const</span> QString&amp; outputFilePath,
 <a name="l00068"></a>00068                                    <span class="keyword">const</span> std::string&amp; itemUuid);
 <a name="l00069"></a>00069 
 <a name="l00070"></a>00070               <span class="keywordtype">int</span> <a class="code" href="classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html#ae36f393ac0883594511f83e456fbebe4">GetProcessingState</a>() <span class="keyword">const</span>;
@@ -99,8 +99,8 @@
 <a name="l00079"></a>00079 
 <a name="l00080"></a>00080        <span class="keyword">private</span>:
 <a name="l00081"></a>00081               <a class="code" href="classiqtfpf_1_1_c_hotfolder_processing_comp.html" title="Hotfolder representation.">CHotfolderProcessingComp</a>&amp; m_parent;
-<a name="l00082"></a>00082               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> m_inputFilePath;
-<a name="l00083"></a>00083               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> m_outputFilePath;
+<a name="l00082"></a>00082               QString m_inputFilePath;
+<a name="l00083"></a>00083               QString m_outputFilePath;
 <a name="l00084"></a>00084               std::string m_itemUuid;
 <a name="l00085"></a>00085               <span class="keywordtype">int</span> m_processingState;
 <a name="l00086"></a>00086               <span class="keywordtype">double</span> m_processingTime;

@@ -23,13 +23,17 @@
 #include "ibase/CFileTypeInfoComp.h"
 
 
+// Qt includes
+#include <QStringList>
+
+
 namespace ibase
 {
 
 
 // reimplemented (iser::IFileTypeInfo)
 
-bool CFileTypeInfoComp::GetFileExtensions(istd::CStringList& result, int /*flags*/, bool doAppend) const
+bool CFileTypeInfoComp::GetFileExtensions(QStringList& result, int /*flags*/, bool doAppend) const
 {
 	if (m_fileExtensionsAttrPtr.IsValid()){
 		if (!doAppend){
@@ -38,7 +42,7 @@ bool CFileTypeInfoComp::GetFileExtensions(istd::CStringList& result, int /*flags
 
 		int extensionsCount = m_fileExtensionsAttrPtr.GetCount();
 		for (int i = 0; i < extensionsCount; ++i){
-			const istd::CString& extension = m_fileExtensionsAttrPtr[i];
+			const QString& extension = m_fileExtensionsAttrPtr[i];
 
 			result.push_back(extension);
 		}
@@ -51,7 +55,7 @@ bool CFileTypeInfoComp::GetFileExtensions(istd::CStringList& result, int /*flags
 }
 
 
-istd::CString CFileTypeInfoComp::GetTypeDescription(const istd::CString* extensionPtr) const
+QString CFileTypeInfoComp::GetTypeDescription(const QString* extensionPtr) const
 {
 	if (extensionPtr != NULL){
 		int extensionsCount = istd::Min(m_fileExtensionsAttrPtr.GetCount(), m_typeDescriptionsAttrPtr.GetCount());

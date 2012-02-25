@@ -31,7 +31,7 @@
 #include <fstream>
 
 // ACF includes
-#include "istd/CString.h"
+#include <QString>
 #include "iser/CXmlWriteArchiveBase.h"
 #include "iser/CFileArchiveInfo.h"
 
@@ -57,7 +57,7 @@ public:
 	typedef iser::CFileArchiveInfo BaseClass2;
 
 	CGzXmlWriteArchive(
-				const istd::CString& filePath,
+				const QString& filePath,
 				const iser::IVersionInfo* versionInfoPtr = NULL,
 				bool serializeHeader = true,
 				const iser::CArchiveTag& rootTag = s_acfRootTag);

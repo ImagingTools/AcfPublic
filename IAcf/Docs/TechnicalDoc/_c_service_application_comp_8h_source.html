@@ -71,7 +71,7 @@
 <a name="l00048"></a>00048        <span class="comment">// reimplemented (ibase::IApplication)</span>
 <a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a973951097579aa9f68d44a2c9ad58043">InitializeApplication</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a738880bcae6c629c232bb6447a4c1607">Execute</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a23fd608b90400c1a9715575b786eb0d4">GetHelpText</a>() <span class="keyword">const</span>;
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> QString <a class="code" href="classiabc_1_1_c_service_application_comp.html#aac355bc2223551a3bfcf0dc58b08d0b1">GetHelpText</a>() <span class="keyword">const</span>;
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053        <span class="comment">// reimplemented (QObject)</span>
 <a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a97b07f99dc5a13359b3828eb88813b6c">eventFilter</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_q_object.html">QObject</a>* sourcePtr, QEvent* eventPtr);
@@ -111,8 +111,8 @@
 <a name="l00088"></a>00088 
 <a name="l00089"></a>00089 <span class="keyword">private</span>:
 <a name="l00090"></a>00090        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_application.html">ibase::IApplication</a>, m_applicationCompPtr);
-<a name="l00091"></a>00091        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_serviceDescriptionAttrPtr);
-<a name="l00092"></a>00092        I_ATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_serviceNameAttrPtr);
+<a name="l00091"></a>00091        I_ATTR(QString, m_serviceDescriptionAttrPtr);
+<a name="l00092"></a>00092        I_ATTR(QString, m_serviceNameAttrPtr);
 <a name="l00093"></a>00093        I_ATTR(<span class="keywordtype">bool</span>, m_manualStartupAttrPtr);
 <a name="l00094"></a>00094 
 <a name="l00095"></a>00095        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;CService&gt;</a> m_servicePtr;

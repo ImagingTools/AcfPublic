@@ -73,8 +73,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_executor_comp.html#a8aae6fe7df5e6e0cb18474e1e24dfee6">CProcessExecutorComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_executor_comp.html#ad8972e220f13ed2282d19464036aa33d">SetEnvironment</a> (const <a class="el" href="classisys_1_1_i_process_environment.html">isys::IProcessEnvironment</a> &amp;processEnvironment)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define execution environment for the process.  <a href="#ad8972e220f13ed2282d19464036aa33d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_executor_comp.html#af3eea8a4b87e5cdaf5f1b247ba2c67e1">ExecuteProcess</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;executablePath, const <a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> &amp;processArguments)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute external process.  <a href="#af3eea8a4b87e5cdaf5f1b247ba2c67e1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_executor_comp.html#af4d774d49b0fa5171e3ff16b59e53e28">ExecuteProcess</a> (const QString &amp;executablePath, const QStringList &amp;processArguments)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute external process.  <a href="#af4d774d49b0fa5171e3ff16b59e53e28"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_process_executor_comp.html#a7a15afd51fd5f92eb9bc4c5a25d8f7b4">OnError</a> (QProcess::ProcessError error)</td></tr>
@@ -124,20 +124,20 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="af3eea8a4b87e5cdaf5f1b247ba2c67e1"></a><!-- doxytag: member="iqt::CProcessExecutorComp::ExecuteProcess" ref="af3eea8a4b87e5cdaf5f1b247ba2c67e1" args="(const istd::CString &amp;executablePath, const istd::CStringList &amp;processArguments)" -->
+<a class="anchor" id="af4d774d49b0fa5171e3ff16b59e53e28"></a><!-- doxytag: member="iqt::CProcessExecutorComp::ExecuteProcess" ref="af4d774d49b0fa5171e3ff16b59e53e28" args="(const QString &amp;executablePath, const QStringList &amp;processArguments)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual int iqt::CProcessExecutorComp::ExecuteProcess </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>executablePath</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespaceistd.html#a816ed4e230067b70de1f8b9d8b6ec814">istd::CStringList</a> &amp;&#160;</td>
+          <td class="paramtype">const QStringList &amp;&#160;</td>
           <td class="paramname"><em>processArguments</em>&#160;</td>
         </tr>
         <tr>
@@ -158,7 +158,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classibase_1_1_i_process_executor.html#af7d2d2375f8294464e63b2746c186438">ibase::IProcessExecutor</a>.</p>
+<p>Implements <a class="el" href="classibase_1_1_i_process_executor.html#abb013c895b51fd0112bbec8f01e6a0ae">ibase::IProcessExecutor</a>.</p>
 
 </div>
 </div>

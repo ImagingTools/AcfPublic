@@ -65,9 +65,9 @@
 <a name="l00042"></a>00042        <a class="code" href="classiqwt_1_1_c_progress_history_gui_comp.html#ac54ccaf7d06839af96212fa3bb22c575">CProgressHistoryGuiComp</a>();
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044        <span class="comment">// reimplemented (iproc::IProgressManager)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqwt_1_1_c_progress_history_gui_comp.html#aea5f4335d59c62ef6613e13977e403f2">BeginProgressSession</a>(
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqwt_1_1_c_progress_history_gui_comp.html#ab3157909718a9aa6e2db8b9343bc2d2c">BeginProgressSession</a>(
 <a name="l00046"></a>00046                             <span class="keyword">const</span> std::string&amp; progressId,
-<a name="l00047"></a>00047                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; description,
+<a name="l00047"></a>00047                             <span class="keyword">const</span> QString&amp; description,
 <a name="l00048"></a>00048                             <span class="keywordtype">bool</span> isCancelable = <span class="keyword">false</span>);
 <a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqwt_1_1_c_progress_history_gui_comp.html#ade8c421cbe34c1a1822da5a6b1241d9b">EndProgressSession</a>(<span class="keywordtype">int</span> sessionId);
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqwt_1_1_c_progress_history_gui_comp.html#ae2d9c01bd40a7301a53a1d4afb1cd44e">OnProgress</a>(<span class="keywordtype">int</span> sessionId, <span class="keywordtype">double</span> currentProgress);
@@ -87,8 +87,8 @@
 <a name="l00064"></a>00064        I_ATTR(<span class="keywordtype">int</span>, m_historyStepsCountAttrPtr);
 <a name="l00065"></a>00065        I_ATTR(<span class="keywordtype">bool</span>, m_showTaskDescriptionAttrPtr);
 <a name="l00066"></a>00066        I_ATTR(<span class="keywordtype">bool</span>, m_showCancelAttrPtr);
-<a name="l00067"></a>00067        I_MULTIATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_progressIdsAttrPtr);
-<a name="l00068"></a>00068        I_MULTIATTR(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>, m_progressColorsAttrPtr);
+<a name="l00067"></a>00067        I_MULTIATTR(QString, m_progressIdsAttrPtr);
+<a name="l00068"></a>00068        I_MULTIATTR(QString, m_progressColorsAttrPtr);
 <a name="l00069"></a>00069 
 <a name="l00070"></a>00070        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QwtPlot&gt;</a> m_plotPtr;
 <a name="l00071"></a>00071        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QwtPlotMarker&gt;</a> m_nowMarker;
@@ -100,7 +100,7 @@
 <a name="l00077"></a>00077               SingleData axisY;
 <a name="l00078"></a>00078               QwtPlotCurve curve;
 <a name="l00079"></a>00079               <span class="keywordtype">bool</span> isCancelable;
-<a name="l00080"></a>00080               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> description;
+<a name="l00080"></a>00080               QString description;
 <a name="l00081"></a>00081        };
 <a name="l00082"></a>00082 
 <a name="l00083"></a>00083        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;Session&gt;</a> SessionPtr;

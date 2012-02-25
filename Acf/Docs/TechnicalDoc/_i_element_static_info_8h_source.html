@@ -36,37 +36,36 @@
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="comment">// ACF includes</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_polymorphic_8h.html">istd/IPolymorphic.h</a>&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_c_string_8h.html">istd/CString.h</a>&quot;</span>
+<a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
-<a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="keyword">namespace </span>icomp
-<a name="l00016"></a>00016 {
+<a name="l00014"></a>00014 <span class="keyword">namespace </span>icomp
+<a name="l00015"></a>00015 {
+<a name="l00016"></a>00016 
 <a name="l00017"></a>00017 
-<a name="l00018"></a>00018 
-<a name="l00024"></a><a class="code" href="classicomp_1_1_i_element_static_info.html">00024</a> <span class="keyword">class </span><a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">IElementStaticInfo</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
-<a name="l00025"></a>00025 {
-<a name="l00026"></a>00026 <span class="keyword">public</span>:
-<a name="l00027"></a><a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233">00027</a>        <span class="keyword">enum</span> <a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233">MetaGroupId</a>
-<a name="l00028"></a>00028        {
-<a name="l00032"></a><a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233a83c16248487642a0b4e09b4c1658afd5">00032</a>               <a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233a83c16248487642a0b4e09b4c1658afd5" title="ID of meta group storing list of supported interfaces.">MGI_INTERFACES</a> = 0,
-<a name="l00036"></a><a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233abaf22287d19fad04e25b37f5e239317c">00036</a>               <a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233abaf22287d19fad04e25b37f5e239317c" title="ID of group for component subelements.">MGI_SUBELEMENTS</a>,
-<a name="l00040"></a><a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233ac2334816c8eab4cf035dea3a49a49865">00040</a>               <a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233ac2334816c8eab4cf035dea3a49a49865" title="Last used ID.">MGI_LAST</a> = <a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233abaf22287d19fad04e25b37f5e239317c" title="ID of group for component subelements.">MGI_SUBELEMENTS</a>
-<a name="l00041"></a>00041        };
-<a name="l00042"></a>00042 
-<a name="l00043"></a><a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">00043</a>        <span class="keyword">typedef</span> std::set&lt;std::string&gt; <a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a>;
-<a name="l00044"></a>00044 
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">IElementStaticInfo</a>* <a class="code" href="classicomp_1_1_i_element_static_info.html#a7612abddac7e7bbd40c8fcfcce677708" title="Return number of interfaces for specific slot.">GetSubelementInfo</a>(<span class="keyword">const</span> std::string&amp; subcomponentId) <span class="keyword">const</span> = 0;
-<a name="l00051"></a>00051 
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a> <a class="code" href="classicomp_1_1_i_element_static_info.html#a989651fb00da877c874e9ddad6d204d5" title="Get list of meta IDs associated with some meta key.">GetMetaIds</a>(<span class="keywordtype">int</span> metaGroupId) <span class="keyword">const</span> = 0;
-<a name="l00057"></a>00057 };
+<a name="l00023"></a><a class="code" href="classicomp_1_1_i_element_static_info.html">00023</a> <span class="keyword">class </span><a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">IElementStaticInfo</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
+<a name="l00024"></a>00024 {
+<a name="l00025"></a>00025 <span class="keyword">public</span>:
+<a name="l00026"></a><a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233">00026</a>        <span class="keyword">enum</span> <a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233">MetaGroupId</a>
+<a name="l00027"></a>00027        {
+<a name="l00031"></a><a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233a83c16248487642a0b4e09b4c1658afd5">00031</a>               <a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233a83c16248487642a0b4e09b4c1658afd5" title="ID of meta group storing list of supported interfaces.">MGI_INTERFACES</a> = 0,
+<a name="l00035"></a><a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233abaf22287d19fad04e25b37f5e239317c">00035</a>               <a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233abaf22287d19fad04e25b37f5e239317c" title="ID of group for component subelements.">MGI_SUBELEMENTS</a>,
+<a name="l00039"></a><a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233ac2334816c8eab4cf035dea3a49a49865">00039</a>               <a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233ac2334816c8eab4cf035dea3a49a49865" title="Last used ID.">MGI_LAST</a> = <a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233abaf22287d19fad04e25b37f5e239317c" title="ID of group for component subelements.">MGI_SUBELEMENTS</a>
+<a name="l00040"></a>00040        };
+<a name="l00041"></a>00041 
+<a name="l00042"></a><a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">00042</a>        <span class="keyword">typedef</span> std::set&lt;std::string&gt; <a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a>;
+<a name="l00043"></a>00043 
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">IElementStaticInfo</a>* <a class="code" href="classicomp_1_1_i_element_static_info.html#a7612abddac7e7bbd40c8fcfcce677708" title="Return number of interfaces for specific slot.">GetSubelementInfo</a>(<span class="keyword">const</span> std::string&amp; subcomponentId) <span class="keyword">const</span> = 0;
+<a name="l00050"></a>00050 
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a> <a class="code" href="classicomp_1_1_i_element_static_info.html#a989651fb00da877c874e9ddad6d204d5" title="Get list of meta IDs associated with some meta key.">GetMetaIds</a>(<span class="keywordtype">int</span> metaGroupId) <span class="keyword">const</span> = 0;
+<a name="l00056"></a>00056 };
+<a name="l00057"></a>00057 
 <a name="l00058"></a>00058 
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 } <span class="comment">// namespace icomp</span>
+<a name="l00059"></a>00059 } <span class="comment">// namespace icomp</span>
+<a name="l00060"></a>00060 
 <a name="l00061"></a>00061 
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063 <span class="preprocessor">#endif // !icomp_IElementStaticInfo_included</span>
-<a name="l00064"></a>00064 <span class="preprocessor"></span>
-<a name="l00065"></a>00065 
+<a name="l00062"></a>00062 <span class="preprocessor">#endif // !icomp_IElementStaticInfo_included</span>
+<a name="l00063"></a>00063 <span class="preprocessor"></span>
+<a name="l00064"></a>00064 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

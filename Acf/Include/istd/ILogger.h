@@ -24,8 +24,12 @@
 #define istd_ILogger_included
 
 
+// Qt includes
+#include <QString>
+
+
+// ACF includes
 #include "istd/IPolymorphic.h"
-#include "istd/CString.h"
 
 
 namespace istd
@@ -81,8 +85,8 @@ protected:
 	virtual bool SendLogMessage(
 				MessageCategory category,
 				int id,
-				const istd::CString& message,
-				const istd::CString& messageSource,
+				const QString& message,
+				const QString& messageSource,
 				int flags = 0) const;
 
 	/**
@@ -92,8 +96,8 @@ protected:
 				MessageCategory category,
 				int id,
 				int flags,
-				istd::CString& message,
-				istd::CString& messageSource) const;
+				QString& message,
+				QString& messageSource) const;
 };
 
 
@@ -107,7 +111,7 @@ inline bool ILogger::IsLogConsumed(
 }
 
 
-inline bool ILogger::SendLogMessage(MessageCategory /*category*/, int /*id*/, const istd::CString& /*message*/, const istd::CString& /*messageSource*/, int /*flags*/) const
+inline bool ILogger::SendLogMessage(MessageCategory /*category*/, int /*id*/, const QString& /*message*/, const QString& /*messageSource*/, int /*flags*/) const
 {
 	return false;
 }
@@ -117,8 +121,8 @@ inline void ILogger::DecorateMessage(
 			MessageCategory /*category*/,
 			int /*id*/,
 			int /*flags*/,
-			istd::CString& /*message*/,
-			istd::CString& /*messageSource*/) const
+			QString& /*message*/,
+			QString& /*messageSource*/) const
 {
 }
 

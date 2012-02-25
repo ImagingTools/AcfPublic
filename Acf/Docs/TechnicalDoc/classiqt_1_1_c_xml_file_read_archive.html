@@ -48,13 +48,14 @@ Inheritance diagram for iqt::CXmlFileReadArchive:</div>
  <div class="center">
   <img src="classiqt_1_1_c_xml_file_read_archive.png" usemap="#iqt::CXmlFileReadArchive_map" alt=""/>
   <map id="iqt::CXmlFileReadArchive_map" name="iqt::CXmlFileReadArchive_map">
-<area href="classiser_1_1_c_read_archive_base.html" title="Basic implementation of an abstract archive for data reading." alt="iser::CReadArchiveBase" shape="rect" coords="92,168,266,192"/>
-<area href="classiser_1_1_c_xml_document_info_base.html" title="Base class for all XML implementations for ACF documents." alt="iser::CXmlDocumentInfoBase" shape="rect" coords="276,168,450,192"/>
-<area href="classiser_1_1_c_archive_base.html" title="Base implementation of iser::IArchive interface." alt="iser::CArchiveBase" shape="rect" coords="92,112,266,136"/>
-<area href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive." alt="iser::IArchive" shape="rect" coords="0,56,174,80"/>
-<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="184,56,358,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,174,24"/>
+<area href="classiser_1_1_c_read_archive_base.html" title="Basic implementation of an abstract archive for data reading." alt="iser::CReadArchiveBase" shape="rect" coords="184,168,358,192"/>
+<area href="classiser_1_1_c_xml_document_info_base.html" title="Base class for all XML implementations for ACF documents." alt="iser::CXmlDocumentInfoBase" shape="rect" coords="368,168,542,192"/>
+<area href="classiser_1_1_c_archive_base.html" title="Base implementation of iser::IArchive interface." alt="iser::CArchiveBase" shape="rect" coords="184,112,358,136"/>
+<area href="class_q_object.html" alt="QObject" shape="rect" coords="0,56,174,80"/>
+<area href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive." alt="iser::IArchive" shape="rect" coords="184,56,358,80"/>
+<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="368,56,542,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="184,0,358,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="368,0,542,24"/>
 </map>
  </div></div>
 
@@ -62,8 +63,8 @@ Inheritance diagram for iqt::CXmlFileReadArchive:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_xml_file_read_archive.html#a4751889f586c276c29e08495490bdc63">CXmlFileReadArchive</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath=&quot;&quot;, bool serializeHeader=true, const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;rootTag=<a class="el" href="classiser_1_1_c_archive_base.html#af37185cf961a49405088cd05130cbfef">s_acfRootTag</a>)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_xml_file_read_archive.html#ad4c0992cc36660ca81f1a8a4744bd044">OpenDocument</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;filePath)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_xml_file_read_archive.html#a723b2fd2338bb307ad700e710fae415d">CXmlFileReadArchive</a> (const QString &amp;filePath=&quot;&quot;, bool serializeHeader=true, const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;rootTag=<a class="el" href="classiser_1_1_c_archive_base.html#af37185cf961a49405088cd05130cbfef">s_acfRootTag</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_xml_file_read_archive.html#ac81e77932cd2ff8853628242ed1a7360">OpenDocument</a> (const QString &amp;filePath)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_xml_file_read_archive.html#a90544c41c9a7e9c09e95470f952b336d">IsTagSkippingSupported</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if skiping to the end of tag on EndTag is supported.  <a href="#a90544c41c9a7e9c09e95470f952b336d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_xml_file_read_archive.html#a90625c626003ff3b9c3867dca8eaad0b">BeginTag</a> (const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;tag)</td></tr>
@@ -98,8 +99,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process primitive type.  <a href="#a330461cf00cb1055a78a208d1bb06080"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_xml_file_read_archive.html#a751524a6ff01bb05babec290de358294">Process</a> (std::string &amp;value)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process primitive type.  <a href="#a751524a6ff01bb05babec290de358294"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_xml_file_read_archive.html#a3fe42bdd12371f0748cb31ae6ea4b6bd">Process</a> (<a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process primitive type.  <a href="#a3fe42bdd12371f0748cb31ae6ea4b6bd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_xml_file_read_archive.html#a33d524637e2eee4197da518681f8de47">Process</a> (QString &amp;value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process primitive type.  <a href="#a33d524637e2eee4197da518681f8de47"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_xml_file_read_archive.html#a2402a2d76bb3846c544ec797f55f7886">ProcessData</a> (void *dataPtr, int size)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process binary data block.  <a href="#a2402a2d76bb3846c544ec797f55f7886"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -112,14 +113,14 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="iqt_2_c_xml_file_read_archive_8h_source.html#l00024">24</a> of file <a class="el" href="iqt_2_c_xml_file_read_archive_8h_source.html">CXmlFileReadArchive.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a4751889f586c276c29e08495490bdc63"></a><!-- doxytag: member="iqt::CXmlFileReadArchive::CXmlFileReadArchive" ref="a4751889f586c276c29e08495490bdc63" args="(const istd::CString &amp;filePath=&quot;&quot;, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)" -->
+<a class="anchor" id="a723b2fd2338bb307ad700e710fae415d"></a><!-- doxytag: member="iqt::CXmlFileReadArchive::CXmlFileReadArchive" ref="a723b2fd2338bb307ad700e710fae415d" args="(const QString &amp;filePath=&quot;&quot;, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">iqt::CXmlFileReadArchive::CXmlFileReadArchive </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>filePath</em> = <code>&quot;&quot;</code>, </td>
         </tr>
         <tr>
@@ -266,14 +267,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad4c0992cc36660ca81f1a8a4744bd044"></a><!-- doxytag: member="iqt::CXmlFileReadArchive::OpenDocument" ref="ad4c0992cc36660ca81f1a8a4744bd044" args="(const istd::CString &amp;filePath)" -->
+<a class="anchor" id="ac81e77932cd2ff8853628242ed1a7360"></a><!-- doxytag: member="iqt::CXmlFileReadArchive::OpenDocument" ref="ac81e77932cd2ff8853628242ed1a7360" args="(const QString &amp;filePath)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CXmlFileReadArchive::OpenDocument </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>filePath</em></td><td>)</td>
           <td></td>
         </tr>
@@ -556,14 +557,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3fe42bdd12371f0748cb31ae6ea4b6bd"></a><!-- doxytag: member="iqt::CXmlFileReadArchive::Process" ref="a3fe42bdd12371f0748cb31ae6ea4b6bd" args="(istd::CString &amp;value)" -->
+<a class="anchor" id="a33d524637e2eee4197da518681f8de47"></a><!-- doxytag: member="iqt::CXmlFileReadArchive::Process" ref="a33d524637e2eee4197da518681f8de47" args="(QString &amp;value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iqt::CXmlFileReadArchive::Process </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">QString &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -573,7 +574,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Process primitive type. </p>
 
-<p>Implements <a class="el" href="classiser_1_1_i_archive.html#ad7179c4799c3fee319f04bcdb26da334">iser::IArchive</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_archive.html#acd87fdc0a55410cdd8f3bec847cdc276">iser::IArchive</a>.</p>
 
 </div>
 </div>

@@ -94,7 +94,7 @@ Signals</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a7fa7683809ea8f29e92f05d076c4a68b">mouseClicked</a> (const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;view, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position, Qt::MouseButton buttonType, bool state, const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> *shapePtr)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a52d45bfb7a896290c41d440462fdd575">CConsoleGui</a> (<a class="el" href="class_q_widget.html">QWidget</a> *parent=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#aca5387c5a17049d6130ed5ce1e821ea1">CConsoleGui</a> (<a class="el" href="class_q_widget.html">QWidget</a> *parent=0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiview_1_1_t_frame_base.html#a6a7457bf9c5d172d7080ce4117e0cff6">ViewImpl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a49c77961a3661e93879a4b43e2969ce0">GetView</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to internal view implementation.  <a href="#a49c77961a3661e93879a4b43e2969ce0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_t_frame_base.html#a6a7457bf9c5d172d7080ce4117e0cff6">ViewImpl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a9d87529ea1218bd524858172aba74c4a">GetViewRef</a> ()</td></tr>
@@ -113,8 +113,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculates enabling flags for buttons.  <a href="#a1d94bc193c34b382af2171ac8293b65f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#af70b676a1424da974c26f533517084a5">UpdateComponentsPosition</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculates position of all components.  <a href="#af70b676a1424da974c26f533517084a5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a41fac465b529c53858b08a9ce3be57c6">SetStatusText</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;message)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display specified text in status window.  <a href="#a41fac465b529c53858b08a9ce3be57c6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a3e5a0832fcee4f7636fc05934a6cdefc">SetStatusText</a> (const QString &amp;message)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display specified text in status window.  <a href="#a3e5a0832fcee4f7636fc05934a6cdefc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ae5450db91849b321fc53c4a403ff42be">OnSelectChange</a> (const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;view, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position, const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> &amp;shape, bool state)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a0839ca484be604ce6ef73fcde794875a">OnMouseButton</a> (const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;view, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position, Qt::MouseButton buttonType, bool state, const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> *shapePtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a40493b9b08232ae94350dd9eaeed6a59">OnBoundingBoxChanged</a> ()</td></tr>
@@ -211,7 +211,7 @@ Properties</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a52d45bfb7a896290c41d440462fdd575"></a><!-- doxytag: member="iview::CConsoleGui::CConsoleGui" ref="a52d45bfb7a896290c41d440462fdd575" args="(QWidget *parent=NULL)" -->
+<a class="anchor" id="aca5387c5a17049d6130ed5ce1e821ea1"></a><!-- doxytag: member="iview::CConsoleGui::CConsoleGui" ref="aca5387c5a17049d6130ed5ce1e821ea1" args="(QWidget *parent=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -219,7 +219,7 @@ Properties</h2></td></tr>
           <td class="memname">iview::CConsoleGui::CConsoleGui </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_q_widget.html">QWidget</a> *&#160;</td>
-          <td class="paramname"><em>parent</em> = <code>NULL</code></td><td>)</td>
+          <td class="paramname"><em>parent</em> = <code>0</code></td><td>)</td>
           <td><code> [explicit]</code></td>
         </tr>
       </table>
@@ -736,14 +736,14 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a41fac465b529c53858b08a9ce3be57c6"></a><!-- doxytag: member="iview::CConsoleGui::SetStatusText" ref="a41fac465b529c53858b08a9ce3be57c6" args="(const istd::CString &amp;message)" -->
+<a class="anchor" id="a3e5a0832fcee4f7636fc05934a6cdefc"></a><!-- doxytag: member="iview::CConsoleGui::SetStatusText" ref="a3e5a0832fcee4f7636fc05934a6cdefc" args="(const QString &amp;message)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iview::CConsoleGui::SetStatusText </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>message</em></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
@@ -753,7 +753,7 @@ Properties</h2></td></tr>
 
 <p>Display specified text in status window. </p>
 
-<p>Implements <a class="el" href="classiview_1_1_t_frame_base.html#a9b27bdf88fd0372a28760a26e3459d69">iview::TFrameBase&lt; CConsoleWidget &gt;</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_t_frame_base.html#a57c1ed78a4da619a14d054758a6f3aa0">iview::TFrameBase&lt; CConsoleWidget &gt;</a>.</p>
 
 </div>
 </div>

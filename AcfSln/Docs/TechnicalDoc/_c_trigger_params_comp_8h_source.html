@@ -82,8 +82,8 @@
 <a name="l00059"></a>00059        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
 <a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a09f6d348e4a5b9a46af826c641dd11f6">GetConstraintsFlags</a>() <span class="keyword">const</span>;
 <a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a57cd3472f1992f6b7b3a5ee7d23b9076">GetOptionsCount</a>() <span class="keyword">const</span>;
-<a name="l00062"></a>00062        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#abd80b99785b48debf3ce27237f358c09">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#aa45cd67a716852f49a06d12e5ceb0503">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> QString <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a65055364e45940000419eb3b78934af8">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> QString <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a0e272a938f59922d8b211fc28c8b5643">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00064"></a>00064        <span class="keyword">virtual</span> std::string <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a4e59c44bd85d683ceb2126ab66fa547f">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
@@ -94,8 +94,8 @@
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072        <span class="keyword">struct </span>SelectionEntry
 <a name="l00073"></a>00073        {
-<a name="l00074"></a>00074               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> name;
-<a name="l00075"></a>00075               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> description;
+<a name="l00074"></a>00074               QString name;
+<a name="l00075"></a>00075               QString description;
 <a name="l00076"></a>00076               <span class="keywordtype">int</span> triggerMode;
 <a name="l00077"></a>00077        };
 <a name="l00078"></a>00078        <span class="keyword">typedef</span> std::vector&lt;SelectionEntry&gt; SelectionList;

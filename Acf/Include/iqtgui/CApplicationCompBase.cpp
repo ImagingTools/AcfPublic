@@ -60,9 +60,9 @@ bool CApplicationCompBase::InitializeApplication(int argc, char** argv)
 		// set up application name
 		QString applicationFullName;
 		if (m_applicationInfoCompPtr.IsValid()){
-			QString format = iqt::GetQString(*m_titleFormatAttrPtr);
-			QString applicationName = iqt::GetQString(m_applicationInfoCompPtr->GetApplicationAttribute(ibase::IApplicationInfo::AA_APPLICATION_NAME));
-			QString companyName = iqt::GetQString(m_applicationInfoCompPtr->GetApplicationAttribute(ibase::IApplicationInfo::AA_COMPANY_NAME));
+			QString format = *m_titleFormatAttrPtr;
+			QString applicationName = m_applicationInfoCompPtr->GetApplicationAttribute(ibase::IApplicationInfo::AA_APPLICATION_NAME);
+			QString companyName = m_applicationInfoCompPtr->GetApplicationAttribute(ibase::IApplicationInfo::AA_COMPANY_NAME);
 			applicationFullName = format.arg(applicationName).arg(companyName);
 		}
 		else{
@@ -73,7 +73,7 @@ bool CApplicationCompBase::InitializeApplication(int argc, char** argv)
 		// set up icon
 		QIcon icon;
 		if (m_iconPathAttrPtr.IsValid()){
-			icon = QIcon(iqt::GetQString(*m_iconPathAttrPtr));
+			icon = QIcon(*m_iconPathAttrPtr);
 		}
 		else{	
 			icon.addFile(":/Icons/AcfLogo.svg");
@@ -83,7 +83,7 @@ bool CApplicationCompBase::InitializeApplication(int argc, char** argv)
 		// set up version
 		QString mainVersionText;
 		if (m_applicationInfoCompPtr.IsValid()){
-			mainVersionText = iqt::GetQString(m_applicationInfoCompPtr->GetApplicationAttribute(ibase::IApplicationInfo::AA_MAIN_VERSION));
+			mainVersionText = m_applicationInfoCompPtr->GetApplicationAttribute(ibase::IApplicationInfo::AA_MAIN_VERSION);
 		}
 		m_applicationPtr->setApplicationVersion(mainVersionText);
 
@@ -92,7 +92,7 @@ bool CApplicationCompBase::InitializeApplication(int argc, char** argv)
 
 		// set up style sheet
 		if (m_styleSheetAttrPtr.IsValid()){
-			SetStyleSheet(iqt::GetQString(*m_styleSheetAttrPtr));
+			SetStyleSheet(*m_styleSheetAttrPtr);
 		}
 
 		icomp::ICompositeComponent* parentPtr = const_cast<icomp::ICompositeComponent*>(GetParentComponent(true));

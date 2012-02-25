@@ -53,18 +53,18 @@
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032        <span class="comment">// reimplemented (ifpf::IFileSystemChangeStorage)</span>
 <a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">int</span>    <a class="code" href="classifpf_1_1_c_file_system_change_storage.html#acf23937654cae9feebd4357b6cb3bdd9" title="Get number of items in the storage.">GetStorageItemsCount</a>() <span class="keyword">const</span>;
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> <a class="code" href="classifpf_1_1_c_file_system_change_storage.html#a2392df5580ea340c67b595d22424c57d" title="Get item path with the given index from the storage.">GetItemPath</a>(<span class="keywordtype">int</span> fileIndex) <span class="keyword">const</span>;
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> QString <a class="code" href="classifpf_1_1_c_file_system_change_storage.html#a078f80f40d7f4265b4d2e0188fcc63e8" title="Get item path with the given index from the storage.">GetItemPath</a>(<span class="keywordtype">int</span> fileIndex) <span class="keyword">const</span>;
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classifpf_1_1_c_file_system_change_storage.html#a17b79aeeb30f8cad8e300c4175e3db72" title="Get item state with the given index from the storage.">GetItemState</a>(<span class="keywordtype">int</span> fileIndex) <span class="keyword">const</span>;
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_c_file_system_change_storage.html#a05bcf04c53d8a1c692940337923b8a07" title="Update storage item.">UpdateStorageItem</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; path, <span class="keywordtype">int</span> itemFlags);
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_c_file_system_change_storage.html#a66c8f125912f07bd94cb1552fed22c96" title="Update storage item.">UpdateStorageItem</a>(<span class="keyword">const</span> QString&amp; path, <span class="keywordtype">int</span> itemFlags);
 <a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_c_file_system_change_storage.html#aca8050eb866a5699ed7f73c33a49d137" title="Reset the storage.">ResetStorage</a>();
 <a name="l00038"></a>00038 
 <a name="l00039"></a>00039 <span class="keyword">private</span>:
-<a name="l00040"></a>00040        <span class="keywordtype">int</span> GetFileIndexFromPath(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a>&amp; filePath) <span class="keyword">const</span>;
+<a name="l00040"></a>00040        <span class="keywordtype">int</span> GetFileIndexFromPath(<span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span>;
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042 <span class="keyword">private</span>:
 <a name="l00043"></a>00043        <span class="keyword">struct </span>FileItem
 <a name="l00044"></a>00044        {
-<a name="l00045"></a>00045               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> path;
+<a name="l00045"></a>00045               QString path;
 <a name="l00046"></a>00046               <span class="keywordtype">int</span> state;
 <a name="l00047"></a>00047        };
 <a name="l00048"></a>00048 

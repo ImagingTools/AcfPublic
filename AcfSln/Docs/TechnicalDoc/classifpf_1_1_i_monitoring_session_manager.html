@@ -58,8 +58,8 @@ Inheritance diagram for ifpf::IMonitoringSessionManager:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_monitoring_session_manager.html#a3d702fca72fb6392ecd37610f6018e79">ResetSessions</a> ()=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all session data.  <a href="#a3d702fca72fb6392ecd37610f6018e79"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classifpf_1_1_i_monitoring_session.html">ifpf::IMonitoringSession</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_monitoring_session_manager.html#a52735d4849ee8e2cff52f11789c0288f">GetSession</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;directoryPath) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get monitoring session for the given monitor and directory path.  <a href="#a52735d4849ee8e2cff52f11789c0288f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classifpf_1_1_i_monitoring_session.html">ifpf::IMonitoringSession</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_monitoring_session_manager.html#aaabc7bbaf2994244fca59e3bb5c793a7">GetSession</a> (const QString &amp;directoryPath) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get monitoring session for the given monitor and directory path.  <a href="#aaabc7bbaf2994244fca59e3bb5c793a7"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for a monitoring session's manager. </p>
@@ -67,14 +67,14 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_i_monitoring_session_manager_8h_source.html#l00022">22</a> of file <a class="el" href="_i_monitoring_session_manager_8h_source.html">IMonitoringSessionManager.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a52735d4849ee8e2cff52f11789c0288f"></a><!-- doxytag: member="ifpf::IMonitoringSessionManager::GetSession" ref="a52735d4849ee8e2cff52f11789c0288f" args="(const istd::CString &amp;directoryPath) const =0" -->
+<a class="anchor" id="aaabc7bbaf2994244fca59e3bb5c793a7"></a><!-- doxytag: member="ifpf::IMonitoringSessionManager::GetSession" ref="aaabc7bbaf2994244fca59e3bb5c793a7" args="(const QString &amp;directoryPath) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classifpf_1_1_i_monitoring_session.html">ifpf::IMonitoringSession</a>* ifpf::IMonitoringSessionManager::GetSession </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>directoryPath</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -84,7 +84,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get monitoring session for the given monitor and directory path. </p>
 
-<p>Implemented in <a class="el" href="classifpf_1_1_c_monitoring_sessions_manager.html#af8a0a944f35b3f153c72e68e7314642e">ifpf::CMonitoringSessionsManager</a>.</p>
+<p>Implemented in <a class="el" href="classifpf_1_1_c_monitoring_sessions_manager.html#a07230f06dd00ec829f105e104ab0dfd3">ifpf::CMonitoringSessionsManager</a>.</p>
 
 </div>
 </div>

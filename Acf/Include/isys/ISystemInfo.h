@@ -24,13 +24,14 @@
 #define isys_ISystemInfo_included
 
 
+// Qt includes
+#include <QString>
+
+
+// ACF includes
 #include "isys/isys.h"
 
-
-#include "istd/CString.h"
-
 #include "iser/ISerializable.h"
-
 
 
 namespace isys
@@ -48,7 +49,7 @@ public:
 	/**
 		Get computer/workstation name.
 	*/
-	virtual istd::CString GetComputerName() const = 0;
+	virtual QString GetComputerName() const = 0;
 	/**
 		Get number of processors installed.
 	*/

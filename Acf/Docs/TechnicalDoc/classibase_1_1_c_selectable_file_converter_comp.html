@@ -69,8 +69,8 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html#a9a0f3690d1b31cea61b7e69ac3aadb14">CSelectableFileConverterComp</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html#aebd546bdd2744946227ea2c5140b405e">ConvertFile</a> (const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;inputFilePath, const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;outputFilePath, const <a class="el" href="classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr=NULL) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a file <code>inputFilePath</code> to destination <code>outputFilePath</code>.  <a href="#aebd546bdd2744946227ea2c5140b405e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html#a52f5b683edf3ce7809df722e9b676f18">ConvertFile</a> (const QString &amp;inputFilePath, const QString &amp;outputFilePath, const <a class="el" href="classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr=NULL) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a file <code>inputFilePath</code> to destination <code>outputFilePath</code>.  <a href="#a52f5b683edf3ce7809df722e9b676f18"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 ISelectionConstraints *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html#a92bc1e17832cc1107163e20d6bfc4173">GetSelectionConstraints</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints of this parameter.  <a href="#a92bc1e17832cc1107163e20d6bfc4173"></a><br/></td></tr>
@@ -89,10 +89,10 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints flags.  <a href="#ad1f5e956a0fbecdab7d29ae215ff6d69"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html#a3d660c559ade781f5dc7264fad3ef5ba">GetOptionsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of managed options.  <a href="#a3d660c559ade781f5dc7264fad3ef5ba"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html#a290829b2f2c8f53b87a64b1011de7a1c">GetOptionName</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified option.  <a href="#a290829b2f2c8f53b87a64b1011de7a1c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html#a1712aa721175ef4a162ecf10fa746087">GetOptionDescription</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description for a option with the index <code>index</code>.  <a href="#a1712aa721175ef4a162ecf10fa746087"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html#a7d68f86ca800011e8e509cf7b4df597e">GetOptionName</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified option.  <a href="#a7d68f86ca800011e8e509cf7b4df597e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html#a86da6f22bec992e5d313e31243086e73">GetOptionDescription</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description for a option with the index <code>index</code>.  <a href="#a86da6f22bec992e5d313e31243086e73"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_selectable_file_converter_comp.html#ab848924c7dd3ff557ca4ccb40cd59e29">GetOptionId</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option ID.  <a href="#ab848924c7dd3ff557ca4ccb40cd59e29"></a><br/></td></tr>
 </table>
@@ -133,20 +133,20 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aebd546bdd2744946227ea2c5140b405e"></a><!-- doxytag: member="ibase::CSelectableFileConverterComp::ConvertFile" ref="aebd546bdd2744946227ea2c5140b405e" args="(const istd::CString &amp;inputFilePath, const istd::CString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const " -->
+<a class="anchor" id="a52f5b683edf3ce7809df722e9b676f18"></a><!-- doxytag: member="ibase::CSelectableFileConverterComp::ConvertFile" ref="a52f5b683edf3ce7809df722e9b676f18" args="(const QString &amp;inputFilePath, const QString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool ibase::CSelectableFileConverterComp::ConvertFile </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>inputFilePath</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>outputFilePath</em>, </td>
         </tr>
         <tr>
@@ -167,7 +167,7 @@ Protected Member Functions</h2></td></tr>
 <p>Copy a file <code>inputFilePath</code> to destination <code>outputFilePath</code>. </p>
 <p>Optionally, you can use <code>paramsPtr</code> to control the copy process. </p>
 
-<p>Implements <a class="el" href="classibase_1_1_i_file_convert_copy.html#aeb8ad9ad5c486d63a88e3df68dc155bf">ibase::IFileConvertCopy</a>.</p>
+<p>Implements <a class="el" href="classibase_1_1_i_file_convert_copy.html#af11c3be97058547136044140d22dce6d">ibase::IFileConvertCopy</a>.</p>
 
 </div>
 </div>
@@ -213,12 +213,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1712aa721175ef4a162ecf10fa746087"></a><!-- doxytag: member="ibase::CSelectableFileConverterComp::GetOptionDescription" ref="a1712aa721175ef4a162ecf10fa746087" args="(int index) const " -->
+<a class="anchor" id="a86da6f22bec992e5d313e31243086e73"></a><!-- doxytag: member="ibase::CSelectableFileConverterComp::GetOptionDescription" ref="a86da6f22bec992e5d313e31243086e73" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> ibase::CSelectableFileConverterComp::GetOptionDescription </td>
+          <td class="memname">virtual QString ibase::CSelectableFileConverterComp::GetOptionDescription </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -230,7 +230,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get description for a option with the index <code>index</code>. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#aa134f7e8af11d478320121cee6228701">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a0a88f5abd55974d0fd943e9e338996bf">iprm::ISelectionConstraints</a>.</p>
 
 </div>
 </div>
@@ -257,12 +257,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a290829b2f2c8f53b87a64b1011de7a1c"></a><!-- doxytag: member="ibase::CSelectableFileConverterComp::GetOptionName" ref="a290829b2f2c8f53b87a64b1011de7a1c" args="(int index) const " -->
+<a class="anchor" id="a7d68f86ca800011e8e509cf7b4df597e"></a><!-- doxytag: member="ibase::CSelectableFileConverterComp::GetOptionName" ref="a7d68f86ca800011e8e509cf7b4df597e" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classistd_1_1_c_string.html">istd::CString</a> ibase::CSelectableFileConverterComp::GetOptionName </td>
+          <td class="memname">virtual QString ibase::CSelectableFileConverterComp::GetOptionName </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -274,7 +274,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get name of specified option. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a62f01670db997af122efa4eeb20d89be">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a9d21be275c1d2d889b964971d52ec6e0">iprm::ISelectionConstraints</a>.</p>
 
 </div>
 </div>

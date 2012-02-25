@@ -26,7 +26,7 @@
 
 // ACF includes
 #include "istd/IPolymorphic.h"
-#include "istd/CString.h"
+#include <QString>
 
 #include "iprm/IParamsSet.h"
 

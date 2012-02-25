@@ -26,6 +26,7 @@
 
 #include "isys/ISystemInfo.h"
 
+#include <vector>
 
 
 namespace isys
@@ -39,7 +40,7 @@ class CSystemInfoBase: virtual public isys::ISystemInfo
 {
 public:
 	// reimplemented (isys::ISystemInfo)
-	virtual istd::CString GetComputerName() const;
+	virtual QString GetComputerName() const;
 	virtual int GetProcessorsCount() const;
 	virtual int GetProcessorId(int processorIndex) const;
 	virtual bool IsNetworkAdapterInstalled(int* adapterCountPtr = NULL) const;
@@ -52,7 +53,7 @@ protected:
 	typedef std::vector<I_DWORD> ProcessorIds;
 	typedef std::vector<std::string> NetworkAdapters;
 
-	istd::CString m_computerName;
+	QString m_computerName;
 	ProcessorIds m_processorIds;
 	NetworkAdapters m_networkAdapters;
 };

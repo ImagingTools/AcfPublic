@@ -67,10 +67,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if state is enabled.  <a href="#ac13124fbb50151b993623a940026257f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a3145d5629097dabf40500202eaab40f3">IsStateActive</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this state is active.  <a href="#a3145d5629097dabf40500202eaab40f3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a506d51ef30b7e46193435ae37eebaa94">IsEnterAllowed</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#aad776f793e4411937efd0e28b5844c22">IsLeaveAllowed</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#ae4a9d09e2338f1e9ecbd8b10aecb13f0">TryEnterState</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a968f83a78d97ae83d947f3e01f565182">TryLeaveState</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a34bece36e6a889d8d4a27d730ab4202f">IsEnterAllowed</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a666017e0bff5e3834d96e712ac1a4d47">IsLeaveAllowed</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#ac1629849172006dcb1fb273cf60c1a70">TryEnterState</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a4fbf420ca5a6d767a0c71ab072969953">TryLeaveState</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=0)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#af88f2e5ad552056e01d1d08371c9617a">m_isStateActive</a></td></tr>
@@ -115,7 +115,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a506d51ef30b7e46193435ae37eebaa94"></a><!-- doxytag: member="iwiz::CStateControllerCompBase::IsEnterAllowed" ref="a506d51ef30b7e46193435ae37eebaa94" args="(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const " -->
+<a class="anchor" id="a34bece36e6a889d8d4a27d730ab4202f"></a><!-- doxytag: member="iwiz::CStateControllerCompBase::IsEnterAllowed" ref="a34bece36e6a889d8d4a27d730ab4202f" args="(bool isActionAllowed=true, const IStateController *prevStatePtr=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -129,7 +129,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const IStateController *&#160;</td>
-          <td class="paramname"><em>prevStatePtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>prevStatePtr</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -142,7 +142,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aad776f793e4411937efd0e28b5844c22"></a><!-- doxytag: member="iwiz::CStateControllerCompBase::IsLeaveAllowed" ref="aad776f793e4411937efd0e28b5844c22" args="(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const " -->
+<a class="anchor" id="a666017e0bff5e3834d96e712ac1a4d47"></a><!-- doxytag: member="iwiz::CStateControllerCompBase::IsLeaveAllowed" ref="a666017e0bff5e3834d96e712ac1a4d47" args="(bool isActionAllowed=true, const IStateController *nextStatePtr=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -156,7 +156,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const IStateController *&#160;</td>
-          <td class="paramname"><em>nextStatePtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>nextStatePtr</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -185,7 +185,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Check if this state is active. </p>
 <p>State is active, if it was succesfully entered and becomes inactive if it was succesfully leaved. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><code><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#ae4a9d09e2338f1e9ecbd8b10aecb13f0">TryEnterState</a></code> and <code><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a968f83a78d97ae83d947f3e01f565182">TryLeaveState</a></code>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><code><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#ac1629849172006dcb1fb273cf60c1a70">TryEnterState</a></code> and <code><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a4fbf420ca5a6d767a0c71ab072969953">TryLeaveState</a></code>. </dd></dl>
 
 <p>Implements <a class="el" href="classiproc_1_1_i_state_controller.html#a0d6e37fa8bdf58d51168db93855707a8">iproc::IStateController</a>.</p>
 
@@ -212,7 +212,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae4a9d09e2338f1e9ecbd8b10aecb13f0"></a><!-- doxytag: member="iwiz::CStateControllerCompBase::TryEnterState" ref="ae4a9d09e2338f1e9ecbd8b10aecb13f0" args="(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)" -->
+<a class="anchor" id="ac1629849172006dcb1fb273cf60c1a70"></a><!-- doxytag: member="iwiz::CStateControllerCompBase::TryEnterState" ref="ac1629849172006dcb1fb273cf60c1a70" args="(bool isActionAllowed=true, const IStateController *prevStatePtr=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -226,7 +226,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const IStateController *&#160;</td>
-          <td class="paramname"><em>prevStatePtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>prevStatePtr</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -239,7 +239,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a968f83a78d97ae83d947f3e01f565182"></a><!-- doxytag: member="iwiz::CStateControllerCompBase::TryLeaveState" ref="a968f83a78d97ae83d947f3e01f565182" args="(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)" -->
+<a class="anchor" id="a4fbf420ca5a6d767a0c71ab072969953"></a><!-- doxytag: member="iwiz::CStateControllerCompBase::TryLeaveState" ref="a4fbf420ca5a6d767a0c71ab072969953" args="(bool isActionAllowed=true, const IStateController *nextStatePtr=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -253,7 +253,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const IStateController *&#160;</td>
-          <td class="paramname"><em>nextStatePtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>nextStatePtr</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

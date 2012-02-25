@@ -39,13 +39,13 @@
 <a name="l00015"></a><a class="code" href="classiser_1_1_c_file_archive_info.html">00015</a> <span class="keyword">class </span><a class="code" href="classiser_1_1_c_file_archive_info.html" title="Basic implementation of interface iser::IFileArchiveInfo.">CFileArchiveInfo</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiser_1_1_i_file_archive_info.html" title="Simple informative interface allowing to get access to current processed file by file archives...">IFileArchiveInfo</a>
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017 <span class="keyword">public</span>:
-<a name="l00018"></a>00018        <a class="code" href="classiser_1_1_c_file_archive_info.html#ac56168dac09b8c558774092216d87c35">CFileArchiveInfo</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; filePath);
+<a name="l00018"></a>00018        <a class="code" href="classiser_1_1_c_file_archive_info.html#acbd6090cd5d2163e4852aad811202f44">CFileArchiveInfo</a>(<span class="keyword">const</span> QString&amp; filePath);
 <a name="l00019"></a>00019 
 <a name="l00020"></a>00020        <span class="comment">// reimplemented (iser::IFileArchiveInfo)</span>
-<a name="l00021"></a>00021        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classiser_1_1_c_file_archive_info.html#a6754f39a4b5b87eaceab041861b3c641">GetCurrentFilePath</a>() <span class="keyword">const</span>;
+<a name="l00021"></a>00021        <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classiser_1_1_c_file_archive_info.html#aa11da01f8f9bd6830839aba9176f5fae">GetCurrentFilePath</a>() <span class="keyword">const</span>;
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023 <span class="keyword">protected</span>:
-<a name="l00024"></a><a class="code" href="classiser_1_1_c_file_archive_info.html#ae918f4f6951d06bec63df142b4a59db7">00024</a>        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> <a class="code" href="classiser_1_1_c_file_archive_info.html#ae918f4f6951d06bec63df142b4a59db7">m_filePath</a>;
+<a name="l00024"></a><a class="code" href="classiser_1_1_c_file_archive_info.html#af5aa42f5685c72a9dd62afa7c3c138bf">00024</a>        QString <a class="code" href="classiser_1_1_c_file_archive_info.html#af5aa42f5685c72a9dd62afa7c3c138bf">m_filePath</a>;
 <a name="l00025"></a>00025 };
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 

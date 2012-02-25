@@ -56,8 +56,8 @@
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <span class="comment">// reimplemented (iprm::IFileNameParam)</span>
 <a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_file_name_param_comp.html#a93c36286b28666ef00922eacbbcf22ad" title="Get intended type of the path.">GetPathType</a>() <span class="keyword">const</span>;
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; <a class="code" href="classiprm_1_1_c_file_name_param_comp.html#a37911b25b7cdb3cd20aa6897b27d0f30" title="Get path.">GetPath</a>() <span class="keyword">const</span>;
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_file_name_param_comp.html#a3afca756454c9395ff4abc83c7b0717e" title="Set path.">SetPath</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>&amp; path);
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classiprm_1_1_c_file_name_param_comp.html#ab1a321a2c7b97f2d003034a73a1b883e" title="Get path.">GetPath</a>() <span class="keyword">const</span>;
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_file_name_param_comp.html#a0cbd623fc84a08a9df56dc6960b8ea8b" title="Set path.">SetPath</a>(<span class="keyword">const</span> QString&amp; path);
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038        <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_file_name_param_comp.html#a46abcc9b9807e0da0704fc99adf0de54" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
@@ -67,9 +67,9 @@
 <a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_file_name_param_comp.html#a257a23abfdd538f776527c460e7d4eca">OnComponentCreated</a>();
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045 <span class="keyword">private</span>:
-<a name="l00046"></a>00046        <a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a> m_path;
+<a name="l00046"></a>00046        QString m_path;
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048        I_ATTR(<a class="code" href="classistd_1_1_c_string.html" title="Standard ACF string definition.">istd::CString</a>, m_defaultDirAttrPtr);
+<a name="l00048"></a>00048        I_ATTR(QString, m_defaultDirAttrPtr);
 <a name="l00049"></a>00049        I_ATTR(<span class="keywordtype">int</span>, m_pathTypeAttrPtr);
 <a name="l00050"></a>00050 };
 <a name="l00051"></a>00051 

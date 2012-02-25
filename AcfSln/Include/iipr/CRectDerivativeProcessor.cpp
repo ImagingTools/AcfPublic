@@ -161,7 +161,7 @@ int CRectDerivativeProcessor::GetNumericValuesCount() const
 }
 
 
-istd::CString CRectDerivativeProcessor::GetNumericValueDescription(int /*dimension*/) const
+QString CRectDerivativeProcessor::GetNumericValueDescription(int /*dimension*/) const
 {
 	return "Filter length";
 }
@@ -181,7 +181,7 @@ int CRectDerivativeProcessor::GetUnitType() const
 }
 
 
-istd::CString CRectDerivativeProcessor::GetUnitName() const
+QString CRectDerivativeProcessor::GetUnitName() const
 {
 	return "px";
 }
