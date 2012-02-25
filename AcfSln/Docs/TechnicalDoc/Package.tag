@@ -1318,10 +1318,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TMultiProperty&lt; QString &gt;</type>
+      <type>TMultiProperty&lt; QString, QStringList &gt;</type>
       <name>CMultiStringProperty</name>
       <anchorfile>namespaceiprop.html</anchorfile>
-      <anchor>ae4976ce54e02ecff240a345305ca6b8b</anchor>
+      <anchor>aef09d125d1f832e723feae69e2f3db3e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -9338,10 +9338,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TMultiProperty&lt; QString &gt;</type>
+      <type>TMultiProperty&lt; QString, QStringList &gt;</type>
       <name>CMultiStringProperty</name>
       <anchorfile>namespaceiprop.html</anchorfile>
-      <anchor>ae4976ce54e02ecff240a345305ca6b8b</anchor>
+      <anchor>aef09d125d1f832e723feae69e2f3db3e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -9665,167 +9665,168 @@
   <compound kind="class">
     <name>iprop::TMultiProperty</name>
     <filename>classiprop_1_1_t_multi_property.html</filename>
-    <templarg></templarg>
+    <templarg>Value</templarg>
+    <templarg>Container</templarg>
     <base>iprop::CPropertyBase</base>
     <member kind="typedef">
       <type>Value</type>
       <name>ValueType</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>ad2f3b2fb933117f3cdd66ac3ec3fb323</anchor>
+      <anchor>a6d7d3d968c6dd9c19666b36cbecf4bd7</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CPropertyBase</type>
       <name>BaseClass</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a97f90da485cc697d056fc750ec1bac83</anchor>
+      <anchor>a32eb14e9926551a431b61068fe93eb31</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::vector&lt; ValueType &gt;</type>
+      <type>Container</type>
       <name>ValueList</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>ae5a53373ea96d95af943f2a61dcf8e77</anchor>
+      <anchor>ae8dc12a14fa647cec74f60eb6333044e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>ValueList::iterator</type>
       <name>iterator</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a38953f61120133e753953496457293f9</anchor>
+      <anchor>a846de029b9f754f5422b4561fa168d98</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>ValueList::const_iterator</type>
       <name>const_iterator</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a62268feb56b38fa17155e57bcf95c6e9</anchor>
+      <anchor>abff86fb4918ca52470e3b9629465f2c6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TMultiProperty</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a929c75a98989f9cdb710f8df863bae5e</anchor>
+      <anchor>a9a849815d641633113352063f3255fdc</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TMultiProperty</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>abf38f3c5c434ade419b636637a7ac375</anchor>
+      <anchor>a30f901491e4539344c8a1ce407f1004b</anchor>
       <arglist>(IPropertiesManager *propertyOwnerPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>SetValues</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a4018a9a473113a9960e0c43f7c7bda75</anchor>
+      <anchor>a6a41dc4d701a62bb604168c1b316d7e1</anchor>
       <arglist>(const ValueList &amp;valueList)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>SetValues</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a585d4caaea4bf0c05bf947db4e735c00</anchor>
+      <anchor>a4069d3c5dba985e6e014cf4e646e84d7</anchor>
       <arglist>(typename ContainerImpl::const_iterator begin, typename ContainerImpl::const_iterator end)</arglist>
     </member>
     <member kind="function">
       <type>const ValueList &amp;</type>
       <name>GetValues</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a19f1352db3cc8ff50889ece2c502a592</anchor>
+      <anchor>a2088714b7106dfabc5855cde6a930111</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetValuesCount</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>ac53767f3346e9e98c3d5213faf11176e</anchor>
+      <anchor>ae199698cf94f880badb1a9e78e53dd5a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Value</type>
       <name>GetValueAt</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>abcd01eb677df3392c6f7f2d553c3bcf5</anchor>
+      <anchor>a47f4c69b71d7d7937223c0934ddb52d9</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetValueAt</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a0c80db0425b8e6dd60de52e293489ef4</anchor>
+      <anchor>a95b4b16c16b99118cea7b74e0ac47e3e</anchor>
       <arglist>(int index, const Value &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InsertValue</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a23047bfc213d63d61e7584958241e454</anchor>
+      <anchor>a2ea2dc2ce52087e9c7cd9c8a75769ce0</anchor>
       <arglist>(const Value &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetValues</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a081fda931ae3b69d75d44566466747b9</anchor>
+      <anchor>a1a261ecefda44aebddb05cd1a123cbff</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>iterator</type>
       <name>begin</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a9062556998a219b85ab1e2c83a2ecd94</anchor>
+      <anchor>a78905c59074f4914d6b283c10eea3154</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>const_iterator</type>
       <name>begin</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>aceeb27e525de202e3f47f63f01ae7a03</anchor>
+      <anchor>aec4eb74a3700ea1bd9c8b02c619a8e6b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>iterator</type>
       <name>end</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a98b2f2ea5160da6a5b50529a798c8f8b</anchor>
+      <anchor>add90e2feb40a8642694f530fa9230560</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>const_iterator</type>
       <name>end</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a783e7f1af8b946008e03aa5d7ef66eca</anchor>
+      <anchor>aa757b5000e93318d53a112bb2a160ad3</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>std::string</type>
       <name>GetFactoryId</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a28dc23c710715429717bc26e9c3bae19</anchor>
+      <anchor>aa67c33a692cc29174c392b037f7d2b1d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a9ddb68757003f115ea033b3895da3952</anchor>
+      <anchor>aa662bbb29e085c53d68c3d4f3c8c126a</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static const std::string &amp;</type>
       <name>GetTypeName</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a7f6049f90789075ba23f6a89b8c422ee</anchor>
+      <anchor>a3e16b47698a3c04f35dddbba0c827792</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>std::vector&lt; Value &gt;</type>
+      <type>Container</type>
       <name>m_values</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a3131148dfd0676d7ba02d462ac8f60ba</anchor>
+      <anchor>ae5d4a756a39276cf703e684035b0c99a</anchor>
       <arglist></arglist>
     </member>
   </compound>

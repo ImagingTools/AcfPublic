@@ -24,6 +24,11 @@
 #define ibase_IMessageContainer_included
 
 
+// STL includes
+#include <vector>
+
+
+// ACF includes
 #include "istd/TIHierarchical.h"
 
 #include "iser/ISerializable.h"

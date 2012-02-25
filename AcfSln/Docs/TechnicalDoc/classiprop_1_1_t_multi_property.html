@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>iprop::TMultiProperty&lt; Value &gt; Class Template Reference</title>
+<title>iprop::TMultiProperty&lt; Value, Container &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -36,7 +36,7 @@
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
-<div class="title">iprop::TMultiProperty&lt; Value &gt; Class Template Reference</div>  </div>
+<div class="title">iprop::TMultiProperty&lt; Value, Container &gt; Class Template Reference</div>  </div>
 </div>
 <div class="contents">
 <!-- doxytag: class="iprop::TMultiProperty" --><!-- doxytag: inherits="iprop::CPropertyBase" -->
@@ -45,15 +45,15 @@
 
 <p><code>#include &lt;<a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for iprop::TMultiProperty&lt; Value &gt;:</div>
+Inheritance diagram for iprop::TMultiProperty&lt; Value, Container &gt;:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classiprop_1_1_t_multi_property.png" usemap="#iprop::TMultiProperty&lt; Value &gt;_map" alt=""/>
-  <map id="iprop::TMultiProperty&lt; Value &gt;_map" name="iprop::TMultiProperty&lt; Value &gt;_map">
-<area href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property." alt="iprop::CPropertyBase" shape="rect" coords="0,168,238,192"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_t_copy_serialized_wrap.html" alt="iser::TCopySerializedWrap&lt; IProperty &gt;" shape="rect" coords="0,112,238,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_update_manager_wrap.html" alt="istd::TUpdateManagerWrap&lt; Base &gt;" shape="rect" coords="0,56,238,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="0,0,238,24"/>
+  <img src="classiprop_1_1_t_multi_property.png" usemap="#iprop::TMultiProperty&lt; Value, Container &gt;_map" alt=""/>
+  <map id="iprop::TMultiProperty&lt; Value, Container &gt;_map" name="iprop::TMultiProperty&lt; Value, Container &gt;_map">
+<area href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property." alt="iprop::CPropertyBase" shape="rect" coords="0,168,251,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_t_copy_serialized_wrap.html" alt="iser::TCopySerializedWrap&lt; IProperty &gt;" shape="rect" coords="0,112,251,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_update_manager_wrap.html" alt="istd::TUpdateManagerWrap&lt; Base &gt;" shape="rect" coords="0,56,251,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="0,0,251,24"/>
 </map>
  </div></div>
 
@@ -61,62 +61,62 @@ Inheritance diagram for iprop::TMultiProperty&lt; Value &gt;:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#ad2f3b2fb933117f3cdd66ac3ec3fb323">ValueType</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiprop_1_1_c_property_base.html">CPropertyBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a97f90da485cc697d056fc750ec1bac83">BaseClass</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="classiprop_1_1_t_multi_property.html#ad2f3b2fb933117f3cdd66ac3ec3fb323">ValueType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#ae5a53373ea96d95af943f2a61dcf8e77">ValueList</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef ValueList::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a38953f61120133e753953496457293f9">iterator</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef ValueList::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a62268feb56b38fa17155e57bcf95c6e9">const_iterator</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a6d7d3d968c6dd9c19666b36cbecf4bd7">ValueType</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiprop_1_1_c_property_base.html">CPropertyBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a32eb14e9926551a431b61068fe93eb31">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef Container&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#ae8dc12a14fa647cec74f60eb6333044e">ValueList</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef ValueList::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a846de029b9f754f5422b4561fa168d98">iterator</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef ValueList::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#abff86fb4918ca52470e3b9629465f2c6">const_iterator</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a929c75a98989f9cdb710f8df863bae5e">TMultiProperty</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a929c75a98989f9cdb710f8df863bae5e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#abf38f3c5c434ade419b636637a7ac375">TMultiProperty</a> (<a class="el" href="classiprop_1_1_i_properties_manager.html">IPropertiesManager</a> *propertyOwnerPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#abf38f3c5c434ade419b636637a7ac375"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a4018a9a473113a9960e0c43f7c7bda75">SetValues</a> (const <a class="el" href="classiprop_1_1_t_multi_property.html#ae5a53373ea96d95af943f2a61dcf8e77">ValueList</a> &amp;valueList)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a9a849815d641633113352063f3255fdc">TMultiProperty</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a9a849815d641633113352063f3255fdc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a30f901491e4539344c8a1ce407f1004b">TMultiProperty</a> (<a class="el" href="classiprop_1_1_i_properties_manager.html">IPropertiesManager</a> *propertyOwnerPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a30f901491e4539344c8a1ce407f1004b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a6a41dc4d701a62bb604168c1b316d7e1">SetValues</a> (const <a class="el" href="classiprop_1_1_t_multi_property.html#ae8dc12a14fa647cec74f60eb6333044e">ValueList</a> &amp;valueList)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;class ContainerImpl &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a585d4caaea4bf0c05bf947db4e735c00">SetValues</a> (typename ContainerImpl::const_iterator begin, typename ContainerImpl::const_iterator end)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value list to the property.  <a href="#a585d4caaea4bf0c05bf947db4e735c00"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiprop_1_1_t_multi_property.html#ae5a53373ea96d95af943f2a61dcf8e77">ValueList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a19f1352db3cc8ff50889ece2c502a592">GetValues</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all values.  <a href="#a19f1352db3cc8ff50889ece2c502a592"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#ac53767f3346e9e98c3d5213faf11176e">GetValuesCount</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of values in the multi property.  <a href="#ac53767f3346e9e98c3d5213faf11176e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#abcd01eb677df3392c6f7f2d553c3bcf5">GetValueAt</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value at the index <code>index</code>.  <a href="#abcd01eb677df3392c6f7f2d553c3bcf5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a0c80db0425b8e6dd60de52e293489ef4">SetValueAt</a> (int index, const Value &amp;value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value at the index <code>index</code> to new value <code>value</code>.  <a href="#a0c80db0425b8e6dd60de52e293489ef4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a23047bfc213d63d61e7584958241e454">InsertValue</a> (const Value &amp;value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new value into container.  <a href="#a23047bfc213d63d61e7584958241e454"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a081fda931ae3b69d75d44566466747b9">ResetValues</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all values from the container.  <a href="#a081fda931ae3b69d75d44566466747b9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiprop_1_1_t_multi_property.html#a38953f61120133e753953496457293f9">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a9062556998a219b85ab1e2c83a2ecd94">begin</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiprop_1_1_t_multi_property.html#a62268feb56b38fa17155e57bcf95c6e9">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#aceeb27e525de202e3f47f63f01ae7a03">begin</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiprop_1_1_t_multi_property.html#a38953f61120133e753953496457293f9">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a98b2f2ea5160da6a5b50529a798c8f8b">end</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiprop_1_1_t_multi_property.html#a62268feb56b38fa17155e57bcf95c6e9">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a783e7f1af8b946008e03aa5d7ef66eca">end</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a28dc23c710715429717bc26e9c3bae19">GetFactoryId</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a9ddb68757003f115ea033b3895da3952">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a4069d3c5dba985e6e014cf4e646e84d7">SetValues</a> (typename ContainerImpl::const_iterator begin, typename ContainerImpl::const_iterator end)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value list to the property.  <a href="#a4069d3c5dba985e6e014cf4e646e84d7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiprop_1_1_t_multi_property.html#ae8dc12a14fa647cec74f60eb6333044e">ValueList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a2088714b7106dfabc5855cde6a930111">GetValues</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all values.  <a href="#a2088714b7106dfabc5855cde6a930111"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#ae199698cf94f880badb1a9e78e53dd5a">GetValuesCount</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of values in the multi property.  <a href="#ae199698cf94f880badb1a9e78e53dd5a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a47f4c69b71d7d7937223c0934ddb52d9">GetValueAt</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value at the index <code>index</code>.  <a href="#a47f4c69b71d7d7937223c0934ddb52d9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a95b4b16c16b99118cea7b74e0ac47e3e">SetValueAt</a> (int index, const Value &amp;value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value at the index <code>index</code> to new value <code>value</code>.  <a href="#a95b4b16c16b99118cea7b74e0ac47e3e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a2ea2dc2ce52087e9c7cd9c8a75769ce0">InsertValue</a> (const Value &amp;value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new value into container.  <a href="#a2ea2dc2ce52087e9c7cd9c8a75769ce0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a1a261ecefda44aebddb05cd1a123cbff">ResetValues</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all values from the container.  <a href="#a1a261ecefda44aebddb05cd1a123cbff"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiprop_1_1_t_multi_property.html#a846de029b9f754f5422b4561fa168d98">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a78905c59074f4914d6b283c10eea3154">begin</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiprop_1_1_t_multi_property.html#abff86fb4918ca52470e3b9629465f2c6">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#aec4eb74a3700ea1bd9c8b02c619a8e6b">begin</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiprop_1_1_t_multi_property.html#a846de029b9f754f5422b4561fa168d98">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#add90e2feb40a8642694f530fa9230560">end</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiprop_1_1_t_multi_property.html#abff86fb4918ca52470e3b9629465f2c6">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#aa757b5000e93318d53a112bb2a160ad3">end</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#aa67c33a692cc29174c392b037f7d2b1d">GetFactoryId</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#aa662bbb29e085c53d68c3d4f3c8c126a">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a7f6049f90789075ba23f6a89b8c422ee">GetTypeName</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a3e16b47698a3c04f35dddbba0c827792">GetTypeName</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; Value &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#a3131148dfd0676d7ba02d462ac8f60ba">m_values</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Container&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_multi_property.html#ae5d4a756a39276cf703e684035b0c99a">m_values</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Value&gt;<br/>
-class iprop::TMultiProperty&lt; Value &gt;</h3>
+<div class="textblock"><h3>template&lt;typename Value, class Container = std::vector&lt;Value&gt;&gt;<br/>
+class iprop::TMultiProperty&lt; Value, Container &gt;</h3>
 
 <p>Template implementation of multiple property. </p>
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00028">28</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00032">32</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a97f90da485cc697d056fc750ec1bac83"></a><!-- doxytag: member="iprop::TMultiProperty::BaseClass" ref="a97f90da485cc697d056fc750ec1bac83" args="" -->
+<a class="anchor" id="a32eb14e9926551a431b61068fe93eb31"></a><!-- doxytag: member="iprop::TMultiProperty::BaseClass" ref="a32eb14e9926551a431b61068fe93eb31" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value, class Container = std::vector&lt;Value&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiprop_1_1_c_property_base.html">CPropertyBase</a> <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_update_manager_wrap.html#a78133c4087bcf092ba95df2283fec3eb">BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classiprop_1_1_c_property_base.html">CPropertyBase</a> <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_update_manager_wrap.html#a78133c4087bcf092ba95df2283fec3eb">BaseClass</a></td>
         </tr>
       </table>
 </div>
@@ -124,18 +124,69 @@ template&lt;typename Value &gt; </div>
 
 <p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_t_copy_serialized_wrap.html#a714e7d87980f3b867b0b133a62d0ed74">iser::TCopySerializedWrap&lt; IProperty &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00032">32</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00036">36</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a62268feb56b38fa17155e57bcf95c6e9"></a><!-- doxytag: member="iprop::TMultiProperty::const_iterator" ref="a62268feb56b38fa17155e57bcf95c6e9" args="" -->
+<a class="anchor" id="abff86fb4918ca52470e3b9629465f2c6"></a><!-- doxytag: member="iprop::TMultiProperty::const_iterator" ref="abff86fb4918ca52470e3b9629465f2c6" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value, class Container = std::vector&lt;Value&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef ValueList::const_iterator <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#a62268feb56b38fa17155e57bcf95c6e9">const_iterator</a></td>
+          <td class="memname">typedef ValueList::const_iterator <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#abff86fb4918ca52470e3b9629465f2c6">const_iterator</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00039">39</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a846de029b9f754f5422b4561fa168d98"></a><!-- doxytag: member="iprop::TMultiProperty::iterator" ref="a846de029b9f754f5422b4561fa168d98" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Value, class Container = std::vector&lt;Value&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef ValueList::iterator <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#a846de029b9f754f5422b4561fa168d98">iterator</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00038">38</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae8dc12a14fa647cec74f60eb6333044e"></a><!-- doxytag: member="iprop::TMultiProperty::ValueList" ref="ae8dc12a14fa647cec74f60eb6333044e" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Value, class Container = std::vector&lt;Value&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Container <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#ae8dc12a14fa647cec74f60eb6333044e">ValueList</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00037">37</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6d7d3d968c6dd9c19666b36cbecf4bd7"></a><!-- doxytag: member="iprop::TMultiProperty::ValueType" ref="a6d7d3d968c6dd9c19666b36cbecf4bd7" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Value, class Container = std::vector&lt;Value&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Value <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#a6d7d3d968c6dd9c19666b36cbecf4bd7">ValueType</a></td>
         </tr>
       </table>
 </div>
@@ -145,66 +196,15 @@ template&lt;typename Value &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a38953f61120133e753953496457293f9"></a><!-- doxytag: member="iprop::TMultiProperty::iterator" ref="a38953f61120133e753953496457293f9" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Value &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef ValueList::iterator <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#a38953f61120133e753953496457293f9">iterator</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00034">34</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae5a53373ea96d95af943f2a61dcf8e77"></a><!-- doxytag: member="iprop::TMultiProperty::ValueList" ref="ae5a53373ea96d95af943f2a61dcf8e77" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Value &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::vector&lt;<a class="el" href="classiprop_1_1_t_multi_property.html#ad2f3b2fb933117f3cdd66ac3ec3fb323">ValueType</a>&gt; <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#ae5a53373ea96d95af943f2a61dcf8e77">ValueList</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00033">33</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad2f3b2fb933117f3cdd66ac3ec3fb323"></a><!-- doxytag: member="iprop::TMultiProperty::ValueType" ref="ad2f3b2fb933117f3cdd66ac3ec3fb323" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Value &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef Value <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#ad2f3b2fb933117f3cdd66ac3ec3fb323">ValueType</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00031">31</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
-
-</div>
-</div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a929c75a98989f9cdb710f8df863bae5e"></a><!-- doxytag: member="iprop::TMultiProperty::TMultiProperty" ref="a929c75a98989f9cdb710f8df863bae5e" args="()" -->
+<a class="anchor" id="a9a849815d641633113352063f3255fdc"></a><!-- doxytag: member="iprop::TMultiProperty::TMultiProperty" ref="a9a849815d641633113352063f3255fdc" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html">TMultiProperty</a> </td>
+          <td class="memname"><a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html">TMultiProperty</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -215,18 +215,18 @@ template&lt;typename Value &gt; </div>
 
 <p>Default constructor. </p>
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00124">124</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00128">128</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="abf38f3c5c434ade419b636637a7ac375"></a><!-- doxytag: member="iprop::TMultiProperty::TMultiProperty" ref="abf38f3c5c434ade419b636637a7ac375" args="(IPropertiesManager *propertyOwnerPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)" -->
+<a class="anchor" id="a30f901491e4539344c8a1ce407f1004b"></a><!-- doxytag: member="iprop::TMultiProperty::TMultiProperty" ref="a30f901491e4539344c8a1ce407f1004b" args="(IPropertiesManager *propertyOwnerPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html">TMultiProperty</a> </td>
+          <td class="memname"><a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html">TMultiProperty</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiprop_1_1_i_properties_manager.html">IPropertiesManager</a> *&#160;</td>
           <td class="paramname"><em>propertyOwnerPtr</em>, </td>
@@ -289,21 +289,21 @@ template&lt;typename Value &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00130">130</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00134">134</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
-<p>References <a class="el" href="_t_multi_property_8h_source.html#l00114">iprop::TMultiProperty&lt; Value &gt;::m_values</a>.</p>
+<p>References <a class="el" href="_t_multi_property_8h_source.html#l00118">iprop::TMultiProperty&lt; Value, Container &gt;::m_values</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a9062556998a219b85ab1e2c83a2ecd94"></a><!-- doxytag: member="iprop::TMultiProperty::begin" ref="a9062556998a219b85ab1e2c83a2ecd94" args="()" -->
+<a class="anchor" id="a78905c59074f4914d6b283c10eea3154"></a><!-- doxytag: member="iprop::TMultiProperty::begin" ref="a78905c59074f4914d6b283c10eea3154" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classiprop_1_1_t_multi_property.html">TMultiProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#a38953f61120133e753953496457293f9">iterator</a> <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::begin </td>
+          <td class="memname"><a class="el" href="classiprop_1_1_t_multi_property.html">TMultiProperty</a>&lt; Value, Container &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#a846de029b9f754f5422b4561fa168d98">iterator</a> <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::begin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -312,18 +312,18 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00226">226</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00230">230</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aceeb27e525de202e3f47f63f01ae7a03"></a><!-- doxytag: member="iprop::TMultiProperty::begin" ref="aceeb27e525de202e3f47f63f01ae7a03" args="() const " -->
+<a class="anchor" id="aec4eb74a3700ea1bd9c8b02c619a8e6b"></a><!-- doxytag: member="iprop::TMultiProperty::begin" ref="aec4eb74a3700ea1bd9c8b02c619a8e6b" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classiprop_1_1_t_multi_property.html">TMultiProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#a62268feb56b38fa17155e57bcf95c6e9">const_iterator</a> <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::begin </td>
+          <td class="memname"><a class="el" href="classiprop_1_1_t_multi_property.html">TMultiProperty</a>&lt; Value, Container &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#abff86fb4918ca52470e3b9629465f2c6">const_iterator</a> <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::begin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -332,18 +332,18 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00233">233</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00237">237</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a98b2f2ea5160da6a5b50529a798c8f8b"></a><!-- doxytag: member="iprop::TMultiProperty::end" ref="a98b2f2ea5160da6a5b50529a798c8f8b" args="()" -->
+<a class="anchor" id="add90e2feb40a8642694f530fa9230560"></a><!-- doxytag: member="iprop::TMultiProperty::end" ref="add90e2feb40a8642694f530fa9230560" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classiprop_1_1_t_multi_property.html">TMultiProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#a38953f61120133e753953496457293f9">iterator</a> <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::end </td>
+          <td class="memname"><a class="el" href="classiprop_1_1_t_multi_property.html">TMultiProperty</a>&lt; Value, Container &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#a846de029b9f754f5422b4561fa168d98">iterator</a> <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::end </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -352,18 +352,18 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00240">240</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00244">244</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a783e7f1af8b946008e03aa5d7ef66eca"></a><!-- doxytag: member="iprop::TMultiProperty::end" ref="a783e7f1af8b946008e03aa5d7ef66eca" args="() const " -->
+<a class="anchor" id="aa757b5000e93318d53a112bb2a160ad3"></a><!-- doxytag: member="iprop::TMultiProperty::end" ref="aa757b5000e93318d53a112bb2a160ad3" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classiprop_1_1_t_multi_property.html">TMultiProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#a62268feb56b38fa17155e57bcf95c6e9">const_iterator</a> <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::end </td>
+          <td class="memname"><a class="el" href="classiprop_1_1_t_multi_property.html">TMultiProperty</a>&lt; Value, Container &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#abff86fb4918ca52470e3b9629465f2c6">const_iterator</a> <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::end </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -372,18 +372,18 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00247">247</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00251">251</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a28dc23c710715429717bc26e9c3bae19"></a><!-- doxytag: member="iprop::TMultiProperty::GetFactoryId" ref="a28dc23c710715429717bc26e9c3bae19" args="() const " -->
+<a class="anchor" id="aa67c33a692cc29174c392b037f7d2b1d"></a><!-- doxytag: member="iprop::TMultiProperty::GetFactoryId" ref="aa67c33a692cc29174c392b037f7d2b1d" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::GetFactoryId </td>
+          <td class="memname">std::string <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::GetFactoryId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -392,18 +392,18 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00256">256</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00260">260</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a7f6049f90789075ba23f6a89b8c422ee"></a><!-- doxytag: member="iprop::TMultiProperty::GetTypeName" ref="a7f6049f90789075ba23f6a89b8c422ee" args="()" -->
+<a class="anchor" id="a3e16b47698a3c04f35dddbba0c827792"></a><!-- doxytag: member="iprop::TMultiProperty::GetTypeName" ref="a3e16b47698a3c04f35dddbba0c827792" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const std::string &amp; <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::GetTypeName </td>
+          <td class="memname">const std::string &amp; <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::GetTypeName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [static]</code></td>
@@ -412,18 +412,18 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00307">307</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00311">311</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="abcd01eb677df3392c6f7f2d553c3bcf5"></a><!-- doxytag: member="iprop::TMultiProperty::GetValueAt" ref="abcd01eb677df3392c6f7f2d553c3bcf5" args="(int index) const " -->
+<a class="anchor" id="a47f4c69b71d7d7937223c0934ddb52d9"></a><!-- doxytag: member="iprop::TMultiProperty::GetValueAt" ref="a47f4c69b71d7d7937223c0934ddb52d9" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Value <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::GetValueAt </td>
+          <td class="memname">Value <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::GetValueAt </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -435,20 +435,20 @@ template&lt;typename Value &gt; </div>
 
 <p>Get value at the index <code>index</code>. </p>
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00184">184</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00188">188</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a19f1352db3cc8ff50889ece2c502a592"></a><!-- doxytag: member="iprop::TMultiProperty::GetValues" ref="a19f1352db3cc8ff50889ece2c502a592" args="() const " -->
+<a class="anchor" id="a2088714b7106dfabc5855cde6a930111"></a><!-- doxytag: member="iprop::TMultiProperty::GetValues" ref="a2088714b7106dfabc5855cde6a930111" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classiprop_1_1_t_multi_property.html">TMultiProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#ae5a53373ea96d95af943f2a61dcf8e77">ValueList</a> &amp; <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::GetValues </td>
+          <td class="memname">const <a class="el" href="classiprop_1_1_t_multi_property.html">TMultiProperty</a>&lt; Value, Container &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#ae8dc12a14fa647cec74f60eb6333044e">ValueList</a> &amp; <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::GetValues </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -459,18 +459,18 @@ template&lt;typename Value &gt; </div>
 
 <p>Get all values. </p>
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00170">170</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00174">174</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac53767f3346e9e98c3d5213faf11176e"></a><!-- doxytag: member="iprop::TMultiProperty::GetValuesCount" ref="ac53767f3346e9e98c3d5213faf11176e" args="() const " -->
+<a class="anchor" id="ae199698cf94f880badb1a9e78e53dd5a"></a><!-- doxytag: member="iprop::TMultiProperty::GetValuesCount" ref="ae199698cf94f880badb1a9e78e53dd5a" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::GetValuesCount </td>
+          <td class="memname">int <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::GetValuesCount </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -481,18 +481,18 @@ template&lt;typename Value &gt; </div>
 
 <p>Get number of values in the multi property. </p>
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00177">177</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00181">181</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a23047bfc213d63d61e7584958241e454"></a><!-- doxytag: member="iprop::TMultiProperty::InsertValue" ref="a23047bfc213d63d61e7584958241e454" args="(const Value &amp;value)" -->
+<a class="anchor" id="a2ea2dc2ce52087e9c7cd9c8a75769ce0"></a><!-- doxytag: member="iprop::TMultiProperty::InsertValue" ref="a2ea2dc2ce52087e9c7cd9c8a75769ce0" args="(const Value &amp;value)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::InsertValue </td>
+          <td class="memname">void <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::InsertValue </td>
           <td>(</td>
           <td class="paramtype">const Value &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -504,18 +504,18 @@ template&lt;typename Value &gt; </div>
 
 <p>Insert new value into container. </p>
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00208">208</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00212">212</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a081fda931ae3b69d75d44566466747b9"></a><!-- doxytag: member="iprop::TMultiProperty::ResetValues" ref="a081fda931ae3b69d75d44566466747b9" args="()" -->
+<a class="anchor" id="a1a261ecefda44aebddb05cd1a123cbff"></a><!-- doxytag: member="iprop::TMultiProperty::ResetValues" ref="a1a261ecefda44aebddb05cd1a123cbff" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::ResetValues </td>
+          <td class="memname">void <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::ResetValues </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [virtual]</code></td>
@@ -526,18 +526,18 @@ template&lt;typename Value &gt; </div>
 
 <p>Remove all values from the container. </p>
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00215">215</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00219">219</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9ddb68757003f115ea033b3895da3952"></a><!-- doxytag: member="iprop::TMultiProperty::Serialize" ref="a9ddb68757003f115ea033b3895da3952" args="(iser::IArchive &amp;archive)" -->
+<a class="anchor" id="aa662bbb29e085c53d68c3d4f3c8c126a"></a><!-- doxytag: member="iprop::TMultiProperty::Serialize" ref="aa662bbb29e085c53d68c3d4f3c8c126a" args="(iser::IArchive &amp;archive)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::Serialize </td>
+          <td class="memname">bool <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::Serialize </td>
           <td>(</td>
           <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
           <td class="paramname"><em>archive</em></td><td>)</td>
@@ -547,20 +547,20 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00265">265</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00269">269</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">iser::IArchive::BeginMultiTag()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive::BeginTag()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">iser::IArchive::EndTag()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">iser::IArchive::IsStoring()</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">iser::IArchive::Process()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0c80db0425b8e6dd60de52e293489ef4"></a><!-- doxytag: member="iprop::TMultiProperty::SetValueAt" ref="a0c80db0425b8e6dd60de52e293489ef4" args="(int index, const Value &amp;value)" -->
+<a class="anchor" id="a95b4b16c16b99118cea7b74e0ac47e3e"></a><!-- doxytag: member="iprop::TMultiProperty::SetValueAt" ref="a95b4b16c16b99118cea7b74e0ac47e3e" args="(int index, const Value &amp;value)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::SetValueAt </td>
+          <td class="memname">void <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::SetValueAt </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em>, </td>
@@ -582,22 +582,22 @@ template&lt;typename Value &gt; </div>
 
 <p>Set value at the index <code>index</code> to new value <code>value</code>. </p>
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00194">194</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00198">198</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4018a9a473113a9960e0c43f7c7bda75"></a><!-- doxytag: member="iprop::TMultiProperty::SetValues" ref="a4018a9a473113a9960e0c43f7c7bda75" args="(const ValueList &amp;valueList)" -->
+<a class="anchor" id="a6a41dc4d701a62bb604168c1b316d7e1"></a><!-- doxytag: member="iprop::TMultiProperty::SetValues" ref="a6a41dc4d701a62bb604168c1b316d7e1" args="(const ValueList &amp;valueList)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::SetValues </td>
+          <td class="memname">void <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::SetValues </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiprop_1_1_t_multi_property.html#ae5a53373ea96d95af943f2a61dcf8e77">ValueList</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiprop_1_1_t_multi_property.html#ae8dc12a14fa647cec74f60eb6333044e">ValueList</a> &amp;&#160;</td>
           <td class="paramname"><em>valueList</em></td><td>)</td>
           <td></td>
         </tr>
@@ -605,20 +605,20 @@ template&lt;typename Value &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00147">147</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00151">151</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a585d4caaea4bf0c05bf947db4e735c00"></a><!-- doxytag: member="iprop::TMultiProperty::SetValues" ref="a585d4caaea4bf0c05bf947db4e735c00" args="(typename ContainerImpl::const_iterator begin, typename ContainerImpl::const_iterator end)" -->
+<a class="anchor" id="a4069d3c5dba985e6e014cf4e646e84d7"></a><!-- doxytag: member="iprop::TMultiProperty::SetValues" ref="a4069d3c5dba985e6e014cf4e646e84d7" args="(typename ContainerImpl::const_iterator begin, typename ContainerImpl::const_iterator end)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value , class Container &gt; </div>
 <div class="memtemplate">
 template&lt;class ContainerImpl &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::SetValues </td>
+          <td class="memname">void <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::SetValues </td>
           <td>(</td>
           <td class="paramtype">typename ContainerImpl::const_iterator&#160;</td>
           <td class="paramname"><em>begin</em>, </td>
@@ -640,27 +640,27 @@ template&lt;class ContainerImpl &gt; </div>
 
 <p>Set value list to the property. </p>
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00155">155</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00159">159</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a3131148dfd0676d7ba02d462ac8f60ba"></a><!-- doxytag: member="iprop::TMultiProperty::m_values" ref="a3131148dfd0676d7ba02d462ac8f60ba" args="" -->
+<a class="anchor" id="ae5d4a756a39276cf703e684035b0c99a"></a><!-- doxytag: member="iprop::TMultiProperty::m_values" ref="ae5d4a756a39276cf703e684035b0c99a" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Value &gt; </div>
+template&lt;typename Value, class Container = std::vector&lt;Value&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;Value&gt; <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#a3131148dfd0676d7ba02d462ac8f60ba">m_values</a><code> [protected]</code></td>
+          <td class="memname">Container <a class="el" href="classiprop_1_1_t_multi_property.html">iprop::TMultiProperty</a>&lt; Value, Container &gt;::<a class="el" href="classiprop_1_1_t_multi_property.html#ae5d4a756a39276cf703e684035b0c99a">m_values</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00114">114</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_property_8h_source.html#l00118">118</a> of file <a class="el" href="_t_multi_property_8h_source.html">TMultiProperty.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_multi_property_8h_source.html#l00130">iprop::TMultiProperty&lt; Value &gt;::TMultiProperty()</a>.</p>
+<p>Referenced by <a class="el" href="_t_multi_property_8h_source.html#l00134">iprop::TMultiProperty&lt; Value, Container &gt;::TMultiProperty()</a>.</p>
 
 </div>
 </div>
