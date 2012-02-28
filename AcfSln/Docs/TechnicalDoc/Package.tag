@@ -6548,13 +6548,6 @@
       <anchor>abc81ba5d137044297386268b28ec91be</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_DECLARE_TR_FUNCTION</name>
-      <anchorfile>classiipr_1_1_c_rgb_to_gray_processor_comp.html</anchorfile>
-      <anchor>ae15773b0eb50978cb40167156e89b4b6</anchor>
-      <arglist>(CRgbToGrayProcessorComp)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>

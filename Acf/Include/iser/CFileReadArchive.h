@@ -25,8 +25,8 @@
 
 
 // STL includes
+#include <vector>
 #include <fstream>
-
 
 // ACF includes
 #include "iser/CBinaryReadArchiveBase.h"

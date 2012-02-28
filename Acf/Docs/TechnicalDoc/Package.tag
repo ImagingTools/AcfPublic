@@ -833,7 +833,6 @@
     <filename>_t_file_serializer_comp_8h</filename>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <includes id="_c_static_services_provider_8h" name="CStaticServicesProvider.h" local="yes" imported="no">istd/CStaticServicesProvider.h</includes>
-    <includes id="itr_8h" name="itr.h" local="yes" imported="no">istd/itr.h</includes>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_file_system_8h" name="IFileSystem.h" local="yes" imported="no">isys/IFileSystem.h</includes>
@@ -4965,7 +4964,6 @@
     <name>CBinaryReadArchiveBase.h</name>
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>_c_binary_read_archive_base_8h</filename>
-    <includes id="itr_8h" name="itr.h" local="yes" imported="no">istd/itr.h</includes>
     <includes id="_c_read_archive_base_8h" name="CReadArchiveBase.h" local="yes" imported="no">iser/CReadArchiveBase.h</includes>
     <class kind="class">iser::CBinaryReadArchiveBase</class>
     <namespace>iser</namespace>
@@ -5690,20 +5688,6 @@
       <anchorfile>istd_8h.html</anchorfile>
       <anchor>a72b20680a1401ded1768261f3e776916</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>itr.h</name>
-    <path>C:/Temp/Acf/Include/istd/</path>
-    <filename>itr_8h</filename>
-    <includes id="_i_localizer_8h" name="ILocalizer.h" local="yes" imported="no">istd/ILocalizer.h</includes>
-    <includes id="_c_static_services_provider_8h" name="CStaticServicesProvider.h" local="yes" imported="no">istd/CStaticServicesProvider.h</includes>
-    <member kind="define">
-      <type>#define</type>
-      <name>I_DECLARE_TR_FUNCTION</name>
-      <anchorfile>itr_8h.html</anchorfile>
-      <anchor>a3ea6b2fead5c65dc46064b2a2bab8b8f</anchor>
-      <arglist>(ContextName)</arglist>
     </member>
   </compound>
   <compound kind="file">

@@ -25,7 +25,6 @@
 
 
 // ACF includes
-#include "istd/itr.h"
 #include "iser/CReadArchiveBase.h"
 
 

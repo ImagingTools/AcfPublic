@@ -24,6 +24,9 @@
 #define iser_CBitMemoryReadArchive_included
 
 
+// STL includes
+#include <vector>
+
 // ACF includes
 #include "iser/CMemoryReadArchive.h"
 

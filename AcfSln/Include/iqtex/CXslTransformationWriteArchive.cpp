@@ -26,7 +26,6 @@
 // STL includes
 #include <sstream>
 
-
 // Qt includes
 #include <QDomNodeList>
 #include <QTextStream>
@@ -43,7 +42,6 @@ namespace iqtex
 
 class WriteArchiveMessageHandler: public QAbstractMessageHandler
 {
-	I_DECLARE_TR_FUNCTION(WriteArchiveMessageHandler);
 public:
 	WriteArchiveMessageHandler(CXslTransformationWriteArchive* logger);
 
