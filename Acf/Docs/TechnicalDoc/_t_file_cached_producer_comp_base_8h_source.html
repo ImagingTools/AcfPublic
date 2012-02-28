@@ -109,7 +109,7 @@
 <a name="l00096"></a>00096                      cacheFilePath = CalcCacheFilePath(key);
 <a name="l00097"></a>00097               }
 <a name="l00098"></a>00098 
-<a name="l00099"></a>00099               <span class="keywordflow">if</span> (!cacheFilePath.IsEmpty()){
+<a name="l00099"></a>00099               <span class="keywordflow">if</span> (!cacheFilePath.isEmpty()){
 <a name="l00100"></a>00100                      <span class="keywordflow">if</span> (m_cacheLoaderCompPtr-&gt;IsOperationSupported(
 <a name="l00101"></a>00101                                           <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
 <a name="l00102"></a>00102                                           &amp;cacheFilePath,
@@ -135,7 +135,7 @@
 <a name="l00122"></a>00122               <span class="keyword">const</span> CacheObject* objectPtr = m_slaveCacheEngineCompPtr-&gt;ProduceLockedObject(key);
 <a name="l00123"></a>00123               <span class="keywordflow">if</span> (objectPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00124"></a>00124                      QString cacheFilePath = CalcCacheFilePath(key);
-<a name="l00125"></a>00125                      <span class="keywordflow">if</span> (!cacheFilePath.IsEmpty() &amp;&amp; m_cacheLoaderCompPtr.IsValid()){
+<a name="l00125"></a>00125                      <span class="keywordflow">if</span> (!cacheFilePath.isEmpty() &amp;&amp; m_cacheLoaderCompPtr.IsValid()){
 <a name="l00126"></a>00126                             <span class="keywordflow">if</span> (m_cacheLoaderCompPtr-&gt;SaveToFile(*const_cast&lt;CacheObject*&gt;(objectPtr), cacheFilePath) == <a class="code" href="classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51a5a3b52788a1d74ae0252724e06ebe26d" title="Operation was successfull.">iser::IFileLoader::StateOk</a>){
 <a name="l00127"></a>00127                                    OnCacheFileSaved(key, cacheFilePath);
 <a name="l00128"></a>00128 
@@ -181,7 +181,7 @@
 <a name="l00168"></a>00168 {
 <a name="l00169"></a>00169        <span class="keywordflow">if</span> (m_keyToFileNameMap.find(key) == m_keyToFileNameMap.end()){
 <a name="l00170"></a>00170               QString cacheFilePath = CalcCacheFilePath(key);
-<a name="l00171"></a>00171               <span class="keywordflow">if</span> (!cacheFilePath.IsEmpty()){
+<a name="l00171"></a>00171               <span class="keywordflow">if</span> (!cacheFilePath.isEmpty()){
 <a name="l00172"></a>00172                      m_keyToFileNameMap[key] = cacheFilePath;
 <a name="l00173"></a>00173                      m_recentlyUsedKeys.push_back(key);
 <a name="l00174"></a>00174 

@@ -70,10 +70,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_complex_double_manip.html#aa4e30381e5d842f9643ca9f05e1d3bb5">SetOffset</a> (double value)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_complex_double_manip.html#a650de340a62af05615109e8b837b6b1e">SetPrecision</a> (int precision)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set fixed point precision.  <a href="#a650de340a62af05615109e8b837b6b1e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_complex_double_manip.html#a26c5c03096179155aa864cbcf3c4b917">GetString</a> (const double &amp;value) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this value as string.  <a href="#a26c5c03096179155aa864cbcf3c4b917"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_complex_double_manip.html#a28c93ea167fd235df899b403a73831ed">GetParsed</a> (const std::string &amp;text, double &amp;result) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value converted from string.  <a href="#a28c93ea167fd235df899b403a73831ed"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_complex_double_manip.html#ab0635d2f1bb47a5e7116d5c32244a577">GetString</a> (const double &amp;value) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this value as string.  <a href="#ab0635d2f1bb47a5e7116d5c32244a577"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_complex_double_manip.html#ace4d992a1342982663f7ca36a0d0a946">GetParsed</a> (const QString &amp;text, double &amp;result) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value converted from string.  <a href="#ace4d992a1342982663f7ca36a0d0a946"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_complex_double_manip.html#a51bd0ab7c15b2d15dbb5a0fab707434c">GetInternalValue</a> (double value) const </td></tr>
@@ -183,14 +183,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a28c93ea167fd235df899b403a73831ed"></a><!-- doxytag: member="imath::CComplexDoubleManip::GetParsed" ref="a28c93ea167fd235df899b403a73831ed" args="(const std::string &amp;text, double &amp;result) const " -->
+<a class="anchor" id="ace4d992a1342982663f7ca36a0d0a946"></a><!-- doxytag: member="imath::CComplexDoubleManip::GetParsed" ref="ace4d992a1342982663f7ca36a0d0a946" args="(const QString &amp;text, double &amp;result) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool imath::CComplexDoubleManip::GetParsed </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>text</em>, </td>
         </tr>
         <tr>
@@ -218,7 +218,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if success. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classimath_1_1_c_fixed_point_manip.html#a1ed6a20d8ed43ef7089958500362224d">imath::CFixedPointManip</a>.</p>
+<p>Reimplemented from <a class="el" href="classimath_1_1_c_fixed_point_manip.html#ae40a4bc6fca882aab520fceb4d35381c">imath::CFixedPointManip</a>.</p>
 
 </div>
 </div>
@@ -258,12 +258,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a26c5c03096179155aa864cbcf3c4b917"></a><!-- doxytag: member="imath::CComplexDoubleManip::GetString" ref="a26c5c03096179155aa864cbcf3c4b917" args="(const double &amp;value) const " -->
+<a class="anchor" id="ab0635d2f1bb47a5e7116d5c32244a577"></a><!-- doxytag: member="imath::CComplexDoubleManip::GetString" ref="ab0635d2f1bb47a5e7116d5c32244a577" args="(const double &amp;value) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string imath::CComplexDoubleManip::GetString </td>
+          <td class="memname">virtual QString imath::CComplexDoubleManip::GetString </td>
           <td>(</td>
           <td class="paramtype">const double &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -281,7 +281,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classimath_1_1_c_fixed_point_manip.html#ae8a590d231d1ef0b221e307f5ac7f573">imath::CFixedPointManip</a>.</p>
+<p>Reimplemented from <a class="el" href="classimath_1_1_c_fixed_point_manip.html#ac475277f8640bacc7382f3a77d564903">imath::CFixedPointManip</a>.</p>
 
 </div>
 </div>

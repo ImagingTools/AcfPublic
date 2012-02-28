@@ -118,7 +118,7 @@ const CacheObject* TFileCachedProducerCompBase<Key, CacheObject>::ProduceLockedO
 			cacheFilePath = CalcCacheFilePath(key);
 		}
 
-		if (!cacheFilePath.IsEmpty()){
+		if (!cacheFilePath.isEmpty()){
 			if (m_cacheLoaderCompPtr->IsOperationSupported(
 						NULL,
 						&cacheFilePath,
@@ -144,7 +144,7 @@ const CacheObject* TFileCachedProducerCompBase<Key, CacheObject>::ProduceLockedO
 		const CacheObject* objectPtr = m_slaveCacheEngineCompPtr->ProduceLockedObject(key);
 		if (objectPtr != NULL){
 			QString cacheFilePath = CalcCacheFilePath(key);
-			if (!cacheFilePath.IsEmpty() && m_cacheLoaderCompPtr.IsValid()){
+			if (!cacheFilePath.isEmpty() && m_cacheLoaderCompPtr.IsValid()){
 				if (m_cacheLoaderCompPtr->SaveToFile(*const_cast<CacheObject*>(objectPtr), cacheFilePath) == iser::IFileLoader::StateOk){
 					OnCacheFileSaved(key, cacheFilePath);
 
@@ -190,7 +190,7 @@ bool TFileCachedProducerCompBase<Key, CacheObject>::PushKeyBack(const Key& key)
 {
 	if (m_keyToFileNameMap.find(key) == m_keyToFileNameMap.end()){
 		QString cacheFilePath = CalcCacheFilePath(key);
-		if (!cacheFilePath.IsEmpty()){
+		if (!cacheFilePath.isEmpty()){
 			m_keyToFileNameMap[key] = cacheFilePath;
 			m_recentlyUsedKeys.push_back(key);
 

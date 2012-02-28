@@ -24093,18 +24093,18 @@
       <arglist>(int precision)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QString</type>
       <name>GetString</name>
       <anchorfile>classimath_1_1_c_complex_double_manip.html</anchorfile>
-      <anchor>a26c5c03096179155aa864cbcf3c4b917</anchor>
+      <anchor>ab0635d2f1bb47a5e7116d5c32244a577</anchor>
       <arglist>(const double &amp;value) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetParsed</name>
       <anchorfile>classimath_1_1_c_complex_double_manip.html</anchorfile>
-      <anchor>a28c93ea167fd235df899b403a73831ed</anchor>
-      <arglist>(const std::string &amp;text, double &amp;result) const </arglist>
+      <anchor>ace4d992a1342982663f7ca36a0d0a946</anchor>
+      <arglist>(const QString &amp;text, double &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual I_SDWORD</type>
@@ -24425,18 +24425,18 @@
       <arglist>(const double &amp;value) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QString</type>
       <name>GetString</name>
       <anchorfile>classimath_1_1_c_double_manip.html</anchorfile>
-      <anchor>a89b4ebea47293e7fa7a64b3911372473</anchor>
+      <anchor>a1043fd659c5807e6ee89cb627a4f50a4</anchor>
       <arglist>(const double &amp;value) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetParsed</name>
       <anchorfile>classimath_1_1_c_double_manip.html</anchorfile>
-      <anchor>a0a3560c738e90f981a91537a5776812b</anchor>
-      <arglist>(const std::string &amp;text, double &amp;result) const </arglist>
+      <anchor>af07eefa49e3e13103c41271c0d690825</anchor>
+      <arglist>(const QString &amp;text, double &amp;result) const </arglist>
     </member>
     <member kind="enumvalue">
       <name>PRECISION</name>
@@ -24564,18 +24564,18 @@
       <arglist>(const double &amp;value) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QString</type>
       <name>GetString</name>
       <anchorfile>classimath_1_1_c_fixed_point_manip.html</anchorfile>
-      <anchor>ae8a590d231d1ef0b221e307f5ac7f573</anchor>
+      <anchor>ac475277f8640bacc7382f3a77d564903</anchor>
       <arglist>(const double &amp;value) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetParsed</name>
       <anchorfile>classimath_1_1_c_fixed_point_manip.html</anchorfile>
-      <anchor>a1ed6a20d8ed43ef7089958500362224d</anchor>
-      <arglist>(const std::string &amp;text, double &amp;result) const </arglist>
+      <anchor>ae40a4bc6fca882aab520fceb4d35381c</anchor>
+      <arglist>(const QString &amp;text, double &amp;result) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>double(*</type>
@@ -24599,10 +24599,10 @@
       <arglist>(I_SDWORD intValue) const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>std::string</type>
+      <type>QString</type>
       <name>GetString</name>
       <anchorfile>classimath_1_1_c_fixed_point_manip.html</anchorfile>
-      <anchor>a119edb9401e5d9382f879e95d646dc41</anchor>
+      <anchor>a10b5c3be06a284084c5cb56e599c671d</anchor>
       <arglist>(const double &amp;value, int precision) const </arglist>
     </member>
     <member kind="function" protection="protected" static="yes">
@@ -26037,18 +26037,18 @@
       <arglist>(const ValueType &amp;value1, const ValueType &amp;value2) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual std::string</type>
+      <type>virtual QString</type>
       <name>GetString</name>
       <anchorfile>classimath_1_1_t_i_value_manip.html</anchorfile>
-      <anchor>a794f350398ad0255201a3556ea4d5843</anchor>
+      <anchor>a73741ec289f76568fe1ff36b3da03e5a</anchor>
       <arglist>(const ValueType &amp;value) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>GetParsed</name>
       <anchorfile>classimath_1_1_t_i_value_manip.html</anchorfile>
-      <anchor>aeaaaf87fef034c8d533038212a8ccb72</anchor>
-      <arglist>(const std::string &amp;text, ValueType &amp;result) const =0</arglist>
+      <anchor>adb34acdddb7bd8c15b91cd8108889a50</anchor>
+      <arglist>(const QString &amp;text, ValueType &amp;result) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual ValueType</type>
