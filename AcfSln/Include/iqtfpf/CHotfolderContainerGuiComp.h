@@ -25,11 +25,10 @@
 
 
 // Qt includes
-#include <QTreeWidget>
-#include <QMimeData>
-#include <QDrag>
-#include <QDir>
-
+#include <QtCore/QDir>
+#include <QtCore/QMimeData>
+#include <QtGui/QTreeWidget>
+#include <QtGui/QDrag>
 
 // ACF includes
 #include "istd/TDelPtr.h"

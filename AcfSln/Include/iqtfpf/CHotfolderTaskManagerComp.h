@@ -25,11 +25,10 @@
 
 
 // Qt includes
-#include <QThread>
-#include <QTimer>
-#include <QList>
-#include <QDateTime>
-
+#include <QtCore/QThread>
+#include <QtCore/QTimer>
+#include <QtCore/QList>
+#include <QtCore/QDateTime>
 
 // ACF includes
 #include "istd/TPointerVector.h"

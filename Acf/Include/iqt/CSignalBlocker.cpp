@@ -24,7 +24,7 @@
 
 
 // Qt includes
-#include <QObjectList>
+#include <QtCore/QObjectList>
 
 
 namespace iqt

@@ -24,8 +24,7 @@
 
 
 // Qt includes
-#include <QBrush>
-
+#include <QtGui/QBrush>
 
 // ACF includes
 #include "istd/TChangeNotifier.h"

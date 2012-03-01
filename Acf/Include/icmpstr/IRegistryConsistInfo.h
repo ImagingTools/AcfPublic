@@ -28,7 +28,7 @@
 #include <string>
 
 // Qt includes
-#include <QIcon>
+#include <QtGui/QIcon>
 
 #include "istd/IPolymorphic.h"
 

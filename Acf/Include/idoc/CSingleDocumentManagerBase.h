@@ -28,7 +28,7 @@
 #include <string>
 
 #include "istd/TDelPtr.h"
-#include <QString>
+#include <QtCore/QString>
 
 #include "iser/IArchive.h"
 

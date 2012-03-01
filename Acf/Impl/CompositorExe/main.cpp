@@ -21,8 +21,8 @@
 
 
 // Qt includes
-#include <QCoreApplication>
-#include <QApplication>
+#include <QtCore/QCoreApplication>
+#include <QtGui/QApplication>
 
 // ACF includes
 #include "ibase/IApplication.h"

@@ -26,9 +26,8 @@
 // STL includes
 #include <algorithm>
 
-
 // Qt includes
-#include <QStringList>
+#include <QtCore/QStringList>
 
 
 namespace ibase

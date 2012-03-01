@@ -28,8 +28,8 @@
 
 
 // Qt includes
-#include <QDir>
-#include <QApplication>
+#include <QtCore/QDir>
+#include <QtGui/QApplication>
 
 
 // ACF includes

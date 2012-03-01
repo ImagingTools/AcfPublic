@@ -25,7 +25,7 @@
 
 
 // Qt includes
-#include <QObject>
+#include <QtCore/QObject>
 
 // GigE includes
 #include "gige_cpp/GigEVisionSDK.h"

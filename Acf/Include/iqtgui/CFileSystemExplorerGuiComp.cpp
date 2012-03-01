@@ -21,11 +21,10 @@
 
 
 // Qt includes
-#include <QHeaderView>
-#include <QToolButton>
-#include <QDesktopServices>
-#include <QUrl>
-
+#include <QtCore/QUrl>
+#include <QtGui/QHeaderView>
+#include <QtGui/QToolButton>
+#include <QtGui/QDesktopServices>
 
 // ACF includes
 #include "istd/TChangeNotifier.h"

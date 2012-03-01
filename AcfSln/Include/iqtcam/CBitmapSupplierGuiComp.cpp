@@ -24,7 +24,7 @@
 
 
 // Qt includes
-#include <QMessageBox>
+#include <QtGui/QMessageBox>
 
 // ACF includes
 #include "iproc/ISupplier.h"

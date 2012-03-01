@@ -89,359 +89,368 @@
 <a name="l00068"></a>00068        <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a94358791014dfa258c1037fb955d6ca7" title="Get number of digits after point used to display mouse position in logical units.">GetLogicalPositionExact</a>() <span class="keyword">const</span>;
 <a name="l00069"></a>00069 
 <a name="l00070"></a>00070        <span class="comment">// reimplemented (IViewEventObserver)</span>
-<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a777468d73490617aec535a38f928eac0" title="Message handler for selection changes.">OnSelectChange</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>&amp; shape, <span class="keywordtype">bool</span> state);
-<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#aa4eae562b5179dfce0b711a6a4bbf4f8" title="Message handler for mouse button click.">OnMouseButton</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> state, <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>* shapePtr);
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074        <span class="comment">// reimplemented (IMouseActionObserver)</span>
-<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#ab7ce0f6f46330e20d15b45dbee18a76f">OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position);
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 <span class="keyword">protected</span>:
-<a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#aeae6cb12d52bd56be81d60e76ab2d57e">SetBackgroundBufferValid</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#aac24950f51559b534aa986a35eafc71e">OnBoundingBoxChanged</a>();
-<a name="l00080"></a>00080        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a48da366c30d38d6e1dd5cd5b6c73edcf">OnResize</a>();
-<a name="l00081"></a>00081        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#ad3a1e9c9b104fccbbfaf57d7f51efd4a">CanBeMoved</a>() <span class="keyword">const</span>;
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a777468d73490617aec535a38f928eac0" title="Message handler for selection changes.">OnSelectChange</a>(
+<a name="l00072"></a>00072                             <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view,
+<a name="l00073"></a>00073                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position,
+<a name="l00074"></a>00074                             <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>&amp; shape,
+<a name="l00075"></a>00075                             <span class="keywordtype">bool</span> state);
+<a name="l00076"></a>00076        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#aa4eae562b5179dfce0b711a6a4bbf4f8" title="Message handler for mouse button click.">OnMouseButton</a>(
+<a name="l00077"></a>00077                             <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view,
+<a name="l00078"></a>00078                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position,
+<a name="l00079"></a>00079                             Qt::MouseButton buttonType,
+<a name="l00080"></a>00080                             <span class="keywordtype">bool</span> state,
+<a name="l00081"></a>00081                             <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>* shapePtr);
 <a name="l00082"></a>00082 
-<a name="l00083"></a>00083        <span class="comment">// reimplemented (CViewBase)</span>
-<a name="l00084"></a>00084        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#afc421f8bb5549e52d3a6d26c98d0eba0">CalcBoundingBox</a>() <span class="keyword">const</span>;
+<a name="l00083"></a>00083        <span class="comment">// reimplemented (IMouseActionObserver)</span>
+<a name="l00084"></a>00084        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#ab7ce0f6f46330e20d15b45dbee18a76f">OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position);
 <a name="l00085"></a>00085 
-<a name="l00086"></a>00086        <span class="comment">// reimplemented (IDisplay)</span>
-<a name="l00087"></a>00087        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a919e7f34124a389d119869cbc066a042">OnAreaInvalidated</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; beforeBox, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; afterBox);
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089 <span class="keyword">private</span>:
-<a name="l00090"></a>00090        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_blockBBoxEvent;
-<a name="l00091"></a>00091        <span class="keyword">mutable</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> m_lastBoundingBox;
-<a name="l00092"></a>00092 
-<a name="l00093"></a>00093        <a class="code" href="classiview_1_1_t_framed_view_base.html#a1dd5bbe2d32694826b9a804462516761">Frame</a>* m_framePtr;
-<a name="l00094"></a>00094        <a class="code" href="classimath_1_1_c_fixed_point_manip.html" title="Implementation of imath::IDoubleManip interface for fixed point arithmentic.">imath::CFixedPointManip</a> m_pixelPositionFormatter;
-<a name="l00095"></a>00095        <a class="code" href="classimath_1_1_c_fixed_point_manip.html" title="Implementation of imath::IDoubleManip interface for fixed point arithmentic.">imath::CFixedPointManip</a> m_logicalPositionFormatter;
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097        <span class="keyword">friend</span> <span class="keyword">typename</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a1dd5bbe2d32694826b9a804462516761">Frame</a>;
-<a name="l00098"></a>00098 };
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101 <span class="comment">// public methods</span>
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00104"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#ae4fde6d60ab548cc4b501be9602ecd7c">00104</a> <a class="code" href="classiview_1_1_t_framed_view_base.html#ae4fde6d60ab548cc4b501be9602ecd7c">TFramedViewBase&lt;ViewBase&gt;::TFramedViewBase</a>(<a class="code" href="classiview_1_1_t_frame_base.html">Frame</a>* framePtr)
-<a name="l00105"></a>00105        :      m_pixelPositionFormatter(0),
-<a name="l00106"></a>00106               m_logicalPositionFormatter(2)
-<a name="l00107"></a>00107 {
-<a name="l00108"></a>00108        m_framePtr = framePtr;
-<a name="l00109"></a>00109        m_blockBBoxEvent = <span class="keyword">false</span>;
-<a name="l00110"></a>00110        AddViewEventObserver(<span class="keyword">this</span>);
-<a name="l00111"></a>00111        m_lastBoundingBox.<a class="code" href="classi2d_1_1_c_rect.html#af481f8a8deb4260a5f8857f758eb66bd" title="Set all members to 0.">Reset</a>();
-<a name="l00112"></a>00112 }
-<a name="l00113"></a>00113 
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00116"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#af57ba5532376f624efd713e5fca73120">00116</a> <a class="code" href="classiview_1_1_t_framed_view_base.html#af57ba5532376f624efd713e5fca73120">TFramedViewBase&lt;ViewBase&gt;::~TFramedViewBase</a>()
-<a name="l00117"></a>00117 {
-<a name="l00118"></a>00118        m_framePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
-<a name="l00119"></a>00119 }
-<a name="l00120"></a>00120 
-<a name="l00121"></a>00121 
-<a name="l00122"></a>00122 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00123"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#a93ceac238942b2bcc9b2cb2fed1723e8">00123</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a93ceac238942b2bcc9b2cb2fed1723e8">TFramedViewBase&lt;ViewBase&gt;::SetFramework</a>(<a class="code" href="classiview_1_1_t_frame_base.html">Frame</a>* framePtr)
-<a name="l00124"></a>00124 {
-<a name="l00125"></a>00125        m_framePtr = framePtr;
-<a name="l00126"></a>00126 }
-<a name="l00127"></a>00127 
-<a name="l00128"></a>00128 
-<a name="l00129"></a>00129 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00130"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#adb6c808a2e96e515004c515bf3a42773">00130</a> <span class="keyword">typename</span> <a class="code" href="classiview_1_1_t_frame_base.html">TFramedViewBase&lt;ViewBase&gt;::Frame</a>* <a class="code" href="classiview_1_1_t_framed_view_base.html#adb6c808a2e96e515004c515bf3a42773">TFramedViewBase&lt;ViewBase&gt;::GetFramePtr</a>()<span class="keyword"> const</span>
-<a name="l00131"></a>00131 <span class="keyword"></span>{
-<a name="l00132"></a>00132        <span class="keywordflow">return</span> m_framePtr;
-<a name="l00133"></a>00133 }
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135 
-<a name="l00136"></a>00136 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00137"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#a807f5712fc657e85a318e24bd5c58c17">00137</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a807f5712fc657e85a318e24bd5c58c17">TFramedViewBase&lt;ViewBase&gt;::UpdateFitTransform</a>()
-<a name="l00138"></a>00138 {
-<a name="l00139"></a>00139        <span class="keywordflow">if</span> (m_framePtr-&gt;m_isZoomToFit){
-<a name="l00140"></a>00140               m_framePtr-&gt;m_isZoomToFit = <span class="keyword">false</span>;
-<a name="l00141"></a>00141               <span class="keywordflow">switch</span> (m_framePtr-&gt;m_fitMode){
-<a name="l00142"></a>00142               <span class="keywordflow">case</span> Frame::FM_RESET:
-<a name="l00143"></a>00143                      SetZoom(<a class="code" href="classiview_1_1_c_view_base.html#a51746c32939cf2ec0705d1eb68be8f39a238260311869631b0d9a138f6a7c2e8d">iview::CViewBase::ZM_RESET</a>);
-<a name="l00144"></a>00144                      <span class="keywordflow">break</span>;
-<a name="l00145"></a>00145 
-<a name="l00146"></a>00146               <span class="keywordflow">case</span> Frame::FM_BOTH:
-<a name="l00147"></a>00147                      SetZoom(<a class="code" href="classiview_1_1_c_view_base.html#a51746c32939cf2ec0705d1eb68be8f39aa4c1ab7f94b966bb5b98f6e594b2f690">iview::CViewBase::ZM_FIT</a>);
-<a name="l00148"></a>00148                      <span class="keywordflow">break</span>;
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150               <span class="keywordflow">case</span> Frame::FM_HORIZONTAL:
-<a name="l00151"></a>00151                      SetZoom(<a class="code" href="classiview_1_1_c_view_base.html#a51746c32939cf2ec0705d1eb68be8f39a53809696f3442f7fa22c4aab41cea684">iview::CViewBase::ZM_FIT_H</a>);
-<a name="l00152"></a>00152                      <span class="keywordflow">break</span>;
-<a name="l00153"></a>00153 
-<a name="l00154"></a>00154               <span class="keywordflow">case</span> Frame::FM_VERTICAL:
-<a name="l00155"></a>00155                      SetZoom(<a class="code" href="classiview_1_1_c_view_base.html#a51746c32939cf2ec0705d1eb68be8f39a444a15a8374d5c65a04b983190e82c68">iview::CViewBase::ZM_FIT_V</a>);
-<a name="l00156"></a>00156                      <span class="keywordflow">break</span>;
-<a name="l00157"></a>00157 
-<a name="l00158"></a>00158               <span class="keywordflow">case</span> Frame::FM_UNPROP:
-<a name="l00159"></a>00159                      SetZoom(<a class="code" href="classiview_1_1_c_view_base.html#a51746c32939cf2ec0705d1eb68be8f39af4b104d80c85905d4687bde24f05ffcb">iview::CViewBase::ZM_FIT_UNPROP</a>);
-<a name="l00160"></a>00160                      <span class="keywordflow">break</span>;
-<a name="l00161"></a>00161 
-<a name="l00162"></a>00162               <span class="keywordflow">case</span> Frame::FM_COVER:
-<a name="l00163"></a>00163                      SetZoom(<a class="code" href="classiview_1_1_c_view_base.html#a51746c32939cf2ec0705d1eb68be8f39a96339e8e83104299d0d9c9e39ca4ad43">iview::CViewBase::ZM_FIT_COVER</a>);
-<a name="l00164"></a>00164                      <span class="keywordflow">break</span>;
-<a name="l00165"></a>00165               }
-<a name="l00166"></a>00166               m_framePtr-&gt;m_isZoomToFit = <span class="keyword">true</span>;
-<a name="l00167"></a>00167        }
-<a name="l00168"></a>00168 
-<a name="l00169"></a>00169        CalcBoundingBox();
+<a name="l00086"></a>00086 <span class="keyword">protected</span>:
+<a name="l00087"></a>00087        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#aeae6cb12d52bd56be81d60e76ab2d57e">SetBackgroundBufferValid</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00088"></a>00088        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#aac24950f51559b534aa986a35eafc71e">OnBoundingBoxChanged</a>();
+<a name="l00089"></a>00089        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a48da366c30d38d6e1dd5cd5b6c73edcf">OnResize</a>();
+<a name="l00090"></a>00090        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#ad3a1e9c9b104fccbbfaf57d7f51efd4a">CanBeMoved</a>() <span class="keyword">const</span>;
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092        <span class="comment">// reimplemented (CViewBase)</span>
+<a name="l00093"></a>00093        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#afc421f8bb5549e52d3a6d26c98d0eba0">CalcBoundingBox</a>() <span class="keyword">const</span>;
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095        <span class="comment">// reimplemented (IDisplay)</span>
+<a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a919e7f34124a389d119869cbc066a042">OnAreaInvalidated</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; beforeBox, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; afterBox);
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098 <span class="keyword">private</span>:
+<a name="l00099"></a>00099        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_blockBBoxEvent;
+<a name="l00100"></a>00100        <span class="keyword">mutable</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> m_lastBoundingBox;
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102        <a class="code" href="classiview_1_1_t_framed_view_base.html#a1dd5bbe2d32694826b9a804462516761">Frame</a>* m_framePtr;
+<a name="l00103"></a>00103        <a class="code" href="classimath_1_1_c_fixed_point_manip.html" title="Implementation of imath::IDoubleManip interface for fixed point arithmentic.">imath::CFixedPointManip</a> m_pixelPositionFormatter;
+<a name="l00104"></a>00104        <a class="code" href="classimath_1_1_c_fixed_point_manip.html" title="Implementation of imath::IDoubleManip interface for fixed point arithmentic.">imath::CFixedPointManip</a> m_logicalPositionFormatter;
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106        <span class="keyword">friend</span> <span class="keyword">typename</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a1dd5bbe2d32694826b9a804462516761">Frame</a>;
+<a name="l00107"></a>00107 };
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 <span class="comment">// public methods</span>
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00113"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#ae4fde6d60ab548cc4b501be9602ecd7c">00113</a> <a class="code" href="classiview_1_1_t_framed_view_base.html#ae4fde6d60ab548cc4b501be9602ecd7c">TFramedViewBase&lt;ViewBase&gt;::TFramedViewBase</a>(<a class="code" href="classiview_1_1_t_frame_base.html">Frame</a>* framePtr)
+<a name="l00114"></a>00114        :      m_pixelPositionFormatter(0),
+<a name="l00115"></a>00115               m_logicalPositionFormatter(2)
+<a name="l00116"></a>00116 {
+<a name="l00117"></a>00117        m_framePtr = framePtr;
+<a name="l00118"></a>00118        m_blockBBoxEvent = <span class="keyword">false</span>;
+<a name="l00119"></a>00119        AddViewEventObserver(<span class="keyword">this</span>);
+<a name="l00120"></a>00120        m_lastBoundingBox.<a class="code" href="classi2d_1_1_c_rect.html#af481f8a8deb4260a5f8857f758eb66bd" title="Set all members to 0.">Reset</a>();
+<a name="l00121"></a>00121 }
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00125"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#af57ba5532376f624efd713e5fca73120">00125</a> <a class="code" href="classiview_1_1_t_framed_view_base.html#af57ba5532376f624efd713e5fca73120">TFramedViewBase&lt;ViewBase&gt;::~TFramedViewBase</a>()
+<a name="l00126"></a>00126 {
+<a name="l00127"></a>00127        m_framePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00128"></a>00128 }
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00132"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#a93ceac238942b2bcc9b2cb2fed1723e8">00132</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a93ceac238942b2bcc9b2cb2fed1723e8">TFramedViewBase&lt;ViewBase&gt;::SetFramework</a>(<a class="code" href="classiview_1_1_t_frame_base.html">Frame</a>* framePtr)
+<a name="l00133"></a>00133 {
+<a name="l00134"></a>00134        m_framePtr = framePtr;
+<a name="l00135"></a>00135 }
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137 
+<a name="l00138"></a>00138 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00139"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#adb6c808a2e96e515004c515bf3a42773">00139</a> <span class="keyword">typename</span> <a class="code" href="classiview_1_1_t_frame_base.html">TFramedViewBase&lt;ViewBase&gt;::Frame</a>* <a class="code" href="classiview_1_1_t_framed_view_base.html#adb6c808a2e96e515004c515bf3a42773">TFramedViewBase&lt;ViewBase&gt;::GetFramePtr</a>()<span class="keyword"> const</span>
+<a name="l00140"></a>00140 <span class="keyword"></span>{
+<a name="l00141"></a>00141        <span class="keywordflow">return</span> m_framePtr;
+<a name="l00142"></a>00142 }
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144 
+<a name="l00145"></a>00145 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00146"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#a807f5712fc657e85a318e24bd5c58c17">00146</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a807f5712fc657e85a318e24bd5c58c17">TFramedViewBase&lt;ViewBase&gt;::UpdateFitTransform</a>()
+<a name="l00147"></a>00147 {
+<a name="l00148"></a>00148        <span class="keywordflow">if</span> (m_framePtr-&gt;m_isZoomToFit){
+<a name="l00149"></a>00149               m_framePtr-&gt;m_isZoomToFit = <span class="keyword">false</span>;
+<a name="l00150"></a>00150               <span class="keywordflow">switch</span> (m_framePtr-&gt;m_fitMode){
+<a name="l00151"></a>00151               <span class="keywordflow">case</span> Frame::FM_RESET:
+<a name="l00152"></a>00152                      SetZoom(<a class="code" href="classiview_1_1_c_view_base.html#a51746c32939cf2ec0705d1eb68be8f39a238260311869631b0d9a138f6a7c2e8d">iview::CViewBase::ZM_RESET</a>);
+<a name="l00153"></a>00153                      <span class="keywordflow">break</span>;
+<a name="l00154"></a>00154 
+<a name="l00155"></a>00155               <span class="keywordflow">case</span> Frame::FM_BOTH:
+<a name="l00156"></a>00156                      SetZoom(<a class="code" href="classiview_1_1_c_view_base.html#a51746c32939cf2ec0705d1eb68be8f39aa4c1ab7f94b966bb5b98f6e594b2f690">iview::CViewBase::ZM_FIT</a>);
+<a name="l00157"></a>00157                      <span class="keywordflow">break</span>;
+<a name="l00158"></a>00158 
+<a name="l00159"></a>00159               <span class="keywordflow">case</span> Frame::FM_HORIZONTAL:
+<a name="l00160"></a>00160                      SetZoom(<a class="code" href="classiview_1_1_c_view_base.html#a51746c32939cf2ec0705d1eb68be8f39a53809696f3442f7fa22c4aab41cea684">iview::CViewBase::ZM_FIT_H</a>);
+<a name="l00161"></a>00161                      <span class="keywordflow">break</span>;
+<a name="l00162"></a>00162 
+<a name="l00163"></a>00163               <span class="keywordflow">case</span> Frame::FM_VERTICAL:
+<a name="l00164"></a>00164                      SetZoom(<a class="code" href="classiview_1_1_c_view_base.html#a51746c32939cf2ec0705d1eb68be8f39a444a15a8374d5c65a04b983190e82c68">iview::CViewBase::ZM_FIT_V</a>);
+<a name="l00165"></a>00165                      <span class="keywordflow">break</span>;
+<a name="l00166"></a>00166 
+<a name="l00167"></a>00167               <span class="keywordflow">case</span> Frame::FM_UNPROP:
+<a name="l00168"></a>00168                      SetZoom(<a class="code" href="classiview_1_1_c_view_base.html#a51746c32939cf2ec0705d1eb68be8f39af4b104d80c85905d4687bde24f05ffcb">iview::CViewBase::ZM_FIT_UNPROP</a>);
+<a name="l00169"></a>00169                      <span class="keywordflow">break</span>;
 <a name="l00170"></a>00170 
-<a name="l00171"></a>00171        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> boundingBox = GetBoundingBox();
-<a name="l00172"></a>00172        <span class="keywordflow">if</span> (boundingBox != GetBoundingBox()){
-<a name="l00173"></a>00173               OnBoundingBoxChanged();
-<a name="l00174"></a>00174        }
-<a name="l00175"></a>00175 }
-<a name="l00176"></a>00176 
+<a name="l00171"></a>00171               <span class="keywordflow">case</span> Frame::FM_COVER:
+<a name="l00172"></a>00172                      SetZoom(<a class="code" href="classiview_1_1_c_view_base.html#a51746c32939cf2ec0705d1eb68be8f39a96339e8e83104299d0d9c9e39ca4ad43">iview::CViewBase::ZM_FIT_COVER</a>);
+<a name="l00173"></a>00173                      <span class="keywordflow">break</span>;
+<a name="l00174"></a>00174               }
+<a name="l00175"></a>00175               m_framePtr-&gt;m_isZoomToFit = <span class="keyword">true</span>;
+<a name="l00176"></a>00176        }
 <a name="l00177"></a>00177 
-<a name="l00178"></a>00178 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00179"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#ab7ce0f6f46330e20d15b45dbee18a76f">00179</a> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#ab7ce0f6f46330e20d15b45dbee18a76f">TFramedViewBase&lt;ViewBase&gt;::OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position)
-<a name="l00180"></a>00180 {
-<a name="l00181"></a>00181        <span class="keywordtype">bool</span> retVal = BaseClass::OnMouseMove(position);
-<a name="l00182"></a>00182 
-<a name="l00183"></a>00183        <a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html">Frame::CursorInfo</a> info;
-<a name="l00184"></a>00184 
-<a name="l00185"></a>00185        <span class="comment">// pixel position</span>
-<a name="l00186"></a>00186        <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a>&amp; transform = GetTransform();
-<a name="l00187"></a>00187        info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#ab23085ec1a4d5ca99b5d1ea172d92f27">pixelPos</a> = transform.<a class="code" href="classiview_1_1_c_screen_transform.html#a9d910fea791a14c806425712d5dfaeca" title="Return position of point in logical coordinates.">GetClientPosition</a>(position);
-<a name="l00188"></a>00188 
-<a name="l00189"></a>00189        <span class="comment">// color info</span>
-<a name="l00190"></a>00190        <span class="keywordtype">int</span> backgroundLayerIndex = GetBackgroundLayerIndex();
-<a name="l00191"></a>00191        <span class="keywordflow">if</span> (backgroundLayerIndex &gt;= 0){
-<a name="l00192"></a>00192               <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_single_layer.html">iview::CSingleLayer</a>* layerPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classiview_1_1_c_single_layer.html">iview::CSingleLayer</a>*<span class="keyword">&gt;</span>(&amp;GetLayer(backgroundLayerIndex));
-<a name="l00193"></a>00193               <span class="keywordflow">if</span> (layerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00194"></a>00194                      <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_image_shape.html">iview::CImageShape</a>* backgroundShapePtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classiview_1_1_c_image_shape.html">iview::CImageShape</a>*<span class="keyword">&gt;</span>(layerPtr-&gt;<a class="code" href="classiview_1_1_c_single_layer.html#abcbd1b8ca8e963eaf5455fd6541368e1">GetShapePtr</a>());
-<a name="l00195"></a>00195                      <span class="keywordflow">if</span> (m_framePtr-&gt;IsPixelValueVisible() &amp;&amp; backgroundShapePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00196"></a>00196                             <span class="keyword">const</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>* bitmapPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>*<span class="keyword">&gt;</span>(backgroundShapePtr-&gt;<a class="code" href="classimod_1_1_c_single_model_observer_base.html#aa829b5502a451e194324e36688d2352b" title="Get access to observed model.">GetModelPtr</a>());
-<a name="l00197"></a>00197                             <span class="keywordflow">if</span> (bitmapPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00198"></a>00198                                    <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> bitmapPos = info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#ab23085ec1a4d5ca99b5d1ea172d92f27">pixelPos</a>.<a class="code" href="classi2d_1_1_c_vector2d.html#ac7c7d39b9684f25cf62cbb1c817266cf" title="Get vector converted to 2D index.">ToIndex2d</a>();
-<a name="l00199"></a>00199                                    <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">ibase::CSize</a> bitmapSize = bitmapPtr-&gt;<a class="code" href="classiimg_1_1_i_raster_image.html#aa85b38b917a050808e72ee497c2c0f01" title="Get size of this raster image.">GetImageSize</a>();
-<a name="l00200"></a>00200                                    <span class="keywordflow">if</span> (                 (bitmapPos.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>() &gt;= 0) &amp;&amp;
-<a name="l00201"></a>00201                                                                (bitmapPos.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>() &gt;= 0) &amp;&amp;
-<a name="l00202"></a>00202                                                                (bitmapPos.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>() &lt; bitmapSize.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>()) &amp;&amp;
-<a name="l00203"></a>00203                                                                (bitmapPos.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>() &lt; bitmapSize.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>())){
-<a name="l00204"></a>00204                                           <span class="keywordtype">int</span> pixelMode = bitmapPtr-&gt;<a class="code" href="classiimg_1_1_i_bitmap.html#aa183038c573dd5e980f4bacd727121ed" title="Get the bitmap&#39;s pixel format.">GetPixelFormat</a>();
-<a name="l00205"></a>00205 
-<a name="l00206"></a>00206                                           <a class="code" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a>* linePtr = (<a class="code" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a>*)bitmapPtr-&gt;<a class="code" href="classiimg_1_1_i_bitmap.html#a2bcff0f9b40b1128dbb4a382206d442f" title="Get pointer to buffer for single line.">GetLinePtr</a>(bitmapPos.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>());
-<a name="l00207"></a>00207 
-<a name="l00208"></a>00208                                           <span class="keywordtype">int</span> x = bitmapPos.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>();
-<a name="l00209"></a>00209                                           
-<a name="l00210"></a>00210                                           <span class="keywordflow">switch</span> (pixelMode){
-<a name="l00211"></a>00211                                                  <span class="keywordflow">case</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10eac69d6ee4375ead4b1381f7e2d4b32eb8" title="8-bit grayscale bitmap.">iimg::IBitmap::PF_GRAY</a>:
-<a name="l00212"></a>00212                                                  {
-<a name="l00213"></a>00213                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#abc3a451f03315e7768c30f2057e8f106">pixelBrightness</a> = linePtr[x] * 100 / 255;
-<a name="l00214"></a>00214                                                         <span class="keywordflow">break</span>;
-<a name="l00215"></a>00215                                                  }
+<a name="l00178"></a>00178        CalcBoundingBox();
+<a name="l00179"></a>00179 
+<a name="l00180"></a>00180        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> boundingBox = GetBoundingBox();
+<a name="l00181"></a>00181        <span class="keywordflow">if</span> (boundingBox != GetBoundingBox()){
+<a name="l00182"></a>00182               OnBoundingBoxChanged();
+<a name="l00183"></a>00183        }
+<a name="l00184"></a>00184 }
+<a name="l00185"></a>00185 
+<a name="l00186"></a>00186 
+<a name="l00187"></a>00187 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00188"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#ab7ce0f6f46330e20d15b45dbee18a76f">00188</a> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#ab7ce0f6f46330e20d15b45dbee18a76f">TFramedViewBase&lt;ViewBase&gt;::OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position)
+<a name="l00189"></a>00189 {
+<a name="l00190"></a>00190        <span class="keywordtype">bool</span> retVal = BaseClass::OnMouseMove(position);
+<a name="l00191"></a>00191 
+<a name="l00192"></a>00192        <a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html">Frame::CursorInfo</a> info;
+<a name="l00193"></a>00193 
+<a name="l00194"></a>00194        <span class="comment">// pixel position</span>
+<a name="l00195"></a>00195        <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a>&amp; transform = GetTransform();
+<a name="l00196"></a>00196        info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#ab23085ec1a4d5ca99b5d1ea172d92f27">pixelPos</a> = transform.<a class="code" href="classiview_1_1_c_screen_transform.html#a9d910fea791a14c806425712d5dfaeca" title="Return position of point in logical coordinates.">GetClientPosition</a>(position);
+<a name="l00197"></a>00197 
+<a name="l00198"></a>00198        <span class="comment">// color info</span>
+<a name="l00199"></a>00199        <span class="keywordtype">int</span> backgroundLayerIndex = GetBackgroundLayerIndex();
+<a name="l00200"></a>00200        <span class="keywordflow">if</span> (backgroundLayerIndex &gt;= 0){
+<a name="l00201"></a>00201               <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_single_layer.html">iview::CSingleLayer</a>* layerPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classiview_1_1_c_single_layer.html">iview::CSingleLayer</a>*<span class="keyword">&gt;</span>(&amp;GetLayer(backgroundLayerIndex));
+<a name="l00202"></a>00202               <span class="keywordflow">if</span> (layerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00203"></a>00203                      <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_image_shape.html">iview::CImageShape</a>* backgroundShapePtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classiview_1_1_c_image_shape.html">iview::CImageShape</a>*<span class="keyword">&gt;</span>(layerPtr-&gt;<a class="code" href="classiview_1_1_c_single_layer.html#abcbd1b8ca8e963eaf5455fd6541368e1">GetShapePtr</a>());
+<a name="l00204"></a>00204                      <span class="keywordflow">if</span> (m_framePtr-&gt;IsPixelValueVisible() &amp;&amp; backgroundShapePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00205"></a>00205                             <span class="keyword">const</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>* bitmapPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>*<span class="keyword">&gt;</span>(backgroundShapePtr-&gt;<a class="code" href="classimod_1_1_c_single_model_observer_base.html#aa829b5502a451e194324e36688d2352b" title="Get access to observed model.">GetModelPtr</a>());
+<a name="l00206"></a>00206                             <span class="keywordflow">if</span> (bitmapPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00207"></a>00207                                    <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> bitmapPos = info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#ab23085ec1a4d5ca99b5d1ea172d92f27">pixelPos</a>.<a class="code" href="classi2d_1_1_c_vector2d.html#ac7c7d39b9684f25cf62cbb1c817266cf" title="Get vector converted to 2D index.">ToIndex2d</a>();
+<a name="l00208"></a>00208                                    <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">ibase::CSize</a> bitmapSize = bitmapPtr-&gt;<a class="code" href="classiimg_1_1_i_raster_image.html#aa85b38b917a050808e72ee497c2c0f01" title="Get size of this raster image.">GetImageSize</a>();
+<a name="l00209"></a>00209                                    <span class="keywordflow">if</span> (                 (bitmapPos.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>() &gt;= 0) &amp;&amp;
+<a name="l00210"></a>00210                                                                (bitmapPos.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>() &gt;= 0) &amp;&amp;
+<a name="l00211"></a>00211                                                                (bitmapPos.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>() &lt; bitmapSize.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>()) &amp;&amp;
+<a name="l00212"></a>00212                                                                (bitmapPos.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>() &lt; bitmapSize.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>())){
+<a name="l00213"></a>00213                                           <span class="keywordtype">int</span> pixelMode = bitmapPtr-&gt;<a class="code" href="classiimg_1_1_i_bitmap.html#aa183038c573dd5e980f4bacd727121ed" title="Get the bitmap&#39;s pixel format.">GetPixelFormat</a>();
+<a name="l00214"></a>00214 
+<a name="l00215"></a>00215                                           <a class="code" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a>* linePtr = (<a class="code" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a>*)bitmapPtr-&gt;<a class="code" href="classiimg_1_1_i_bitmap.html#a2bcff0f9b40b1128dbb4a382206d442f" title="Get pointer to buffer for single line.">GetLinePtr</a>(bitmapPos.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>());
 <a name="l00216"></a>00216 
-<a name="l00217"></a>00217                                                  <span class="keywordflow">case</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10eae1e0393b1a6897adbf4f73afe1c6a93d" title="32-bit RGB-bitmap, alpha channel can be ignored.">iimg::IBitmap::PF_RGB</a>:
-<a name="l00218"></a>00218                                                  {
-<a name="l00219"></a>00219                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#aae9163a222915d965ee9e369a4477969">red</a> = linePtr[x] * 100 / 255;
-<a name="l00220"></a>00220                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#aea65c220a37ec5296de188216e0f6a3b">green</a> = linePtr[x + 1] * 100 / 255;
-<a name="l00221"></a>00221                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#a2875b0d2a43365bee78b970eff8f416d">blue</a> = linePtr[x + 2] * 100 / 255;
-<a name="l00222"></a>00222                                                         <span class="keywordflow">break</span>;
-<a name="l00223"></a>00223                                                  }
-<a name="l00224"></a>00224 
-<a name="l00225"></a>00225                                                  <span class="keywordflow">case</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10ea941311bdd09e1a76a60d1993929f3738" title="32-bit RGB bitmap with alpha channel.">iimg::IBitmap::PF_RGBA</a>:
-<a name="l00226"></a>00226                                                  {
-<a name="l00227"></a>00227                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#aae9163a222915d965ee9e369a4477969">red</a> = linePtr[x] * 100 / 255;
-<a name="l00228"></a>00228                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#aea65c220a37ec5296de188216e0f6a3b">green</a> = linePtr[x + 1] * 100 / 255;
-<a name="l00229"></a>00229                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#a2875b0d2a43365bee78b970eff8f416d">blue</a> = linePtr[x + 2] * 100 / 255;
-<a name="l00230"></a>00230                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#ac86ec67f239234646fe1ebb8304a97a2">alpha</a> = linePtr[x + 3] * 100 / 255;
+<a name="l00217"></a>00217                                           <span class="keywordtype">int</span> x = bitmapPos.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>();
+<a name="l00218"></a>00218                                           
+<a name="l00219"></a>00219                                           <span class="keywordflow">switch</span> (pixelMode){
+<a name="l00220"></a>00220                                                  <span class="keywordflow">case</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10eac69d6ee4375ead4b1381f7e2d4b32eb8" title="8-bit grayscale bitmap.">iimg::IBitmap::PF_GRAY</a>:
+<a name="l00221"></a>00221                                                  {
+<a name="l00222"></a>00222                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#abc3a451f03315e7768c30f2057e8f106">pixelBrightness</a> = linePtr[x] * 100 / 255;
+<a name="l00223"></a>00223                                                         <span class="keywordflow">break</span>;
+<a name="l00224"></a>00224                                                  }
+<a name="l00225"></a>00225 
+<a name="l00226"></a>00226                                                  <span class="keywordflow">case</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10eae1e0393b1a6897adbf4f73afe1c6a93d" title="32-bit RGB-bitmap, alpha channel can be ignored.">iimg::IBitmap::PF_RGB</a>:
+<a name="l00227"></a>00227                                                  {
+<a name="l00228"></a>00228                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#aae9163a222915d965ee9e369a4477969">red</a> = linePtr[x] * 100 / 255;
+<a name="l00229"></a>00229                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#aea65c220a37ec5296de188216e0f6a3b">green</a> = linePtr[x + 1] * 100 / 255;
+<a name="l00230"></a>00230                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#a2875b0d2a43365bee78b970eff8f416d">blue</a> = linePtr[x + 2] * 100 / 255;
 <a name="l00231"></a>00231                                                         <span class="keywordflow">break</span>;
 <a name="l00232"></a>00232                                                  }
-<a name="l00233"></a>00233                                           }
-<a name="l00234"></a>00234                                    }
-<a name="l00235"></a>00235                             }
-<a name="l00236"></a>00236                      }
-<a name="l00237"></a>00237               }
-<a name="l00238"></a>00238        }
-<a name="l00239"></a>00239 
-<a name="l00240"></a>00240        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> logPosition;
-<a name="l00241"></a>00241        <span class="keywordflow">if</span> (m_framePtr-&gt;IsMmPositionVisible()){
-<a name="l00242"></a>00242               <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a>&amp; logToScreenTransform = GetLogToScreenTransform();
-<a name="l00243"></a>00243 
-<a name="l00244"></a>00244               <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_calibration.html" title="Common interface for all calibration objects.">iview::ICalibration</a>&amp; calibration = GetCalibration();
-<a name="l00245"></a>00245               <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_isomorphic_calibration.html" title="This is common interface for all isomorphic calibrations.">iview::IIsomorphicCalibration</a>* isomorphCalibPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classiview_1_1_i_isomorphic_calibration.html" title="This is common interface for all isomorphic calibrations.">iview::IIsomorphicCalibration</a>*<span class="keyword">&gt;</span>(&amp;calibration);
-<a name="l00246"></a>00246               <span class="keywordflow">if</span> (isomorphCalibPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00247"></a>00247                      isomorphCalibPtr-&gt;<a class="code" href="classiview_1_1_i_isomorphic_calibration.html#af0048a260bce55dda296afb8778ef854" title="Transform position to logical coordination system.">GetApplyToLog</a>(info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#ab23085ec1a4d5ca99b5d1ea172d92f27">pixelPos</a>, info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#a3d18cb167c084ef6c01e83a7caba7f42">logicalPos</a>);
-<a name="l00248"></a>00248               }
-<a name="l00249"></a>00249               <span class="keywordflow">else</span>{
-<a name="l00250"></a>00250                      info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#a3d18cb167c084ef6c01e83a7caba7f42">logicalPos</a> = logToScreenTransform.<a class="code" href="classiview_1_1_c_screen_transform.html#a9d910fea791a14c806425712d5dfaeca" title="Return position of point in logical coordinates.">GetClientPosition</a>(position);
-<a name="l00251"></a>00251               }
-<a name="l00252"></a>00252        }
-<a name="l00253"></a>00253 
-<a name="l00254"></a>00254        m_framePtr-&gt;UpdateCursorInfo(info);
-<a name="l00255"></a>00255 
-<a name="l00256"></a>00256        <span class="keywordflow">return</span> retVal;
-<a name="l00257"></a>00257 }
-<a name="l00258"></a>00258 
-<a name="l00259"></a>00259 
-<a name="l00260"></a>00260 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00261"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#addc43b32b754c0f05357a6ff3cd8487d">00261</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#addc43b32b754c0f05357a6ff3cd8487d">TFramedViewBase&lt;ViewBase&gt;::SetEditMode</a>(<span class="keywordtype">int</span> mode)
-<a name="l00262"></a>00262 {
-<a name="l00263"></a>00263        <span class="keywordflow">if</span> (mode != GetEditMode()){
-<a name="l00264"></a>00264               BaseClass::SetEditMode(mode);
-<a name="l00265"></a>00265               
-<a name="l00266"></a>00266               m_framePtr-&gt;UpdateEditModeButtons();
-<a name="l00267"></a>00267        }
-<a name="l00268"></a>00268 }
-<a name="l00269"></a>00269 
-<a name="l00270"></a>00270 
-<a name="l00271"></a>00271 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00272"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#a42287cf7d30fa6501135c05dae987926">00272</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a42287cf7d30fa6501135c05dae987926">TFramedViewBase&lt;ViewBase&gt;::SetFitArea</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; area)
-<a name="l00273"></a>00273 {
-<a name="l00274"></a>00274        <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a> prevFitArea = GetFitArea();
-<a name="l00275"></a>00275 
-<a name="l00276"></a>00276        BaseClass::SetFitArea(area);
-<a name="l00277"></a>00277 
-<a name="l00278"></a>00278        <span class="keywordflow">if</span> ((prevFitArea != area) &amp;&amp; m_framePtr-&gt;IsZoomToFit()){
-<a name="l00279"></a>00279               UpdateFitTransform();
-<a name="l00280"></a>00280        }
-<a name="l00281"></a>00281 }
-<a name="l00282"></a>00282 
-<a name="l00283"></a>00283 
-<a name="l00284"></a>00284 <span class="comment">// reimplement (IViewEventObserver)</span>
-<a name="l00285"></a>00285 
-<a name="l00286"></a>00286 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00287"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#a777468d73490617aec535a38f928eac0">00287</a> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a777468d73490617aec535a38f928eac0" title="Message handler for selection changes.">TFramedViewBase&lt;ViewBase&gt;::OnSelectChange</a>(
-<a name="l00288"></a>00288                      <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view,
-<a name="l00289"></a>00289                      <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position,
-<a name="l00290"></a>00290                      <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>&amp; shape,
-<a name="l00291"></a>00291                      <span class="keywordtype">bool</span> state)
-<a name="l00292"></a>00292 {
-<a name="l00293"></a>00293        <span class="keywordflow">return</span> m_framePtr-&gt;OnSelectChange(view, position, shape, state);
-<a name="l00294"></a>00294 }
-<a name="l00295"></a>00295 
-<a name="l00296"></a>00296 
-<a name="l00297"></a>00297 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00298"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#aa4eae562b5179dfce0b711a6a4bbf4f8">00298</a> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#aa4eae562b5179dfce0b711a6a4bbf4f8" title="Message handler for mouse button click.">TFramedViewBase&lt;ViewBase&gt;::OnMouseButton</a>(
-<a name="l00299"></a>00299                      <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">IShapeView</a>&amp; view,
-<a name="l00300"></a>00300                      <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position,
-<a name="l00301"></a>00301                      Qt::MouseButton buttonType,
-<a name="l00302"></a>00302                      <span class="keywordtype">bool</span> state,
-<a name="l00303"></a>00303                      <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">IInteractiveShape</a>* shapePtr)
-<a name="l00304"></a>00304 {
-<a name="l00305"></a>00305        <span class="keywordflow">if</span> (!state){
-<a name="l00306"></a>00306               m_framePtr-&gt;UpdateButtonsState();
-<a name="l00307"></a>00307        }
-<a name="l00308"></a>00308 
-<a name="l00309"></a>00309        <span class="keywordflow">return</span> m_framePtr-&gt;OnMouseButton(view, position, buttonType, state, shapePtr);
-<a name="l00310"></a>00310 }
-<a name="l00311"></a>00311 
-<a name="l00312"></a>00312 
-<a name="l00313"></a>00313 <span class="comment">// protected methods</span>
-<a name="l00314"></a>00314 
-<a name="l00315"></a>00315 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00316"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#aeae6cb12d52bd56be81d60e76ab2d57e">00316</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#aeae6cb12d52bd56be81d60e76ab2d57e">TFramedViewBase&lt;ViewBase&gt;::SetBackgroundBufferValid</a>(<span class="keywordtype">bool</span> state)
-<a name="l00317"></a>00317 {
-<a name="l00318"></a>00318        BaseClass::SetBackgroundBufferValid(state);
-<a name="l00319"></a>00319        <span class="keywordflow">if</span> (!state){
-<a name="l00320"></a>00320               <span class="keywordtype">int</span> backgroundLayerIndex = GetBackgroundLayerIndex();
-<a name="l00321"></a>00321               <span class="keywordflow">if</span> (backgroundLayerIndex &gt;= 0){
-<a name="l00322"></a>00322                      <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_single_layer.html">iview::CSingleLayer</a>* layerPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classiview_1_1_c_single_layer.html">iview::CSingleLayer</a>*<span class="keyword">&gt;</span>(&amp;GetLayer(backgroundLayerIndex));
-<a name="l00323"></a>00323                      <span class="keywordflow">if</span> (layerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00324"></a>00324                             <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_image_shape.html">iview::CImageShape</a>* backgroundPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classiview_1_1_c_image_shape.html">iview::CImageShape</a>*<span class="keyword">&gt;</span>(layerPtr-&gt;<a class="code" href="classiview_1_1_c_single_layer.html#abcbd1b8ca8e963eaf5455fd6541368e1">GetShapePtr</a>());
-<a name="l00325"></a>00325                             <span class="keywordtype">bool</span> isBkActive = (backgroundPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; !backgroundPtr-&gt;<a class="code" href="classiview_1_1_t_shape_base.html#a88b8a89761a1eefc809c0c03af376727">GetBoundingBox</a>().<a class="code" href="classi2d_1_1_c_rect.html#a18d6a0922c3fa40a70bac30d3bea35fb" title="Check if rectangle is empty.">IsEmpty</a>();
-<a name="l00326"></a>00326                             <span class="keywordflow">if</span> ((m_framePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; (isBkActive != m_framePtr-&gt;m_isBkActive)){
-<a name="l00327"></a>00327                                    m_framePtr-&gt;m_isBkActive = isBkActive;
-<a name="l00328"></a>00328                                    <span class="keywordflow">if</span> (m_framePtr-&gt;m_isZoomToFit){
-<a name="l00329"></a>00329                                           <span class="keywordflow">if</span> (isBkActive){
-<a name="l00330"></a>00330                                                  UpdateFitTransform();
-<a name="l00331"></a>00331                                           }
-<a name="l00332"></a>00332                                           <span class="keywordflow">else</span>{
-<a name="l00333"></a>00333                                                  SetZoom(<a class="code" href="classiview_1_1_c_view_base.html#a51746c32939cf2ec0705d1eb68be8f39a238260311869631b0d9a138f6a7c2e8d">iview::CViewBase::ZM_RESET</a>);
-<a name="l00334"></a>00334                                           }
-<a name="l00335"></a>00335                                    }
-<a name="l00336"></a>00336                                    m_framePtr-&gt;UpdateButtonsState();
-<a name="l00337"></a>00337                             }
-<a name="l00338"></a>00338                      }
-<a name="l00339"></a>00339               }
-<a name="l00340"></a>00340        }
-<a name="l00341"></a>00341 }
-<a name="l00342"></a>00342 
-<a name="l00343"></a>00343 
-<a name="l00344"></a>00344 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00345"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#aac24950f51559b534aa986a35eafc71e">00345</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#aac24950f51559b534aa986a35eafc71e">TFramedViewBase&lt;ViewBase&gt;::OnBoundingBoxChanged</a>()
-<a name="l00346"></a>00346 {
-<a name="l00347"></a>00347        <span class="keywordflow">if</span> (m_framePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00348"></a>00348               m_framePtr-&gt;OnBoundingBoxChanged();
+<a name="l00233"></a>00233 
+<a name="l00234"></a>00234                                                  <span class="keywordflow">case</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10ea941311bdd09e1a76a60d1993929f3738" title="32-bit RGB bitmap with alpha channel.">iimg::IBitmap::PF_RGBA</a>:
+<a name="l00235"></a>00235                                                  {
+<a name="l00236"></a>00236                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#aae9163a222915d965ee9e369a4477969">red</a> = linePtr[x] * 100 / 255;
+<a name="l00237"></a>00237                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#aea65c220a37ec5296de188216e0f6a3b">green</a> = linePtr[x + 1] * 100 / 255;
+<a name="l00238"></a>00238                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#a2875b0d2a43365bee78b970eff8f416d">blue</a> = linePtr[x + 2] * 100 / 255;
+<a name="l00239"></a>00239                                                         info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#ac86ec67f239234646fe1ebb8304a97a2">alpha</a> = linePtr[x + 3] * 100 / 255;
+<a name="l00240"></a>00240                                                         <span class="keywordflow">break</span>;
+<a name="l00241"></a>00241                                                  }
+<a name="l00242"></a>00242                                           }
+<a name="l00243"></a>00243                                    }
+<a name="l00244"></a>00244                             }
+<a name="l00245"></a>00245                      }
+<a name="l00246"></a>00246               }
+<a name="l00247"></a>00247        }
+<a name="l00248"></a>00248 
+<a name="l00249"></a>00249        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> logPosition;
+<a name="l00250"></a>00250        <span class="keywordflow">if</span> (m_framePtr-&gt;IsMmPositionVisible()){
+<a name="l00251"></a>00251               <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a>&amp; logToScreenTransform = GetLogToScreenTransform();
+<a name="l00252"></a>00252 
+<a name="l00253"></a>00253               <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_calibration.html" title="Common interface for all calibration objects.">iview::ICalibration</a>&amp; calibration = GetCalibration();
+<a name="l00254"></a>00254               <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_isomorphic_calibration.html" title="This is common interface for all isomorphic calibrations.">iview::IIsomorphicCalibration</a>* isomorphCalibPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classiview_1_1_i_isomorphic_calibration.html" title="This is common interface for all isomorphic calibrations.">iview::IIsomorphicCalibration</a>*<span class="keyword">&gt;</span>(&amp;calibration);
+<a name="l00255"></a>00255               <span class="keywordflow">if</span> (isomorphCalibPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00256"></a>00256                      isomorphCalibPtr-&gt;<a class="code" href="classiview_1_1_i_isomorphic_calibration.html#af0048a260bce55dda296afb8778ef854" title="Transform position to logical coordination system.">GetApplyToLog</a>(info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#ab23085ec1a4d5ca99b5d1ea172d92f27">pixelPos</a>, info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#a3d18cb167c084ef6c01e83a7caba7f42">logicalPos</a>);
+<a name="l00257"></a>00257               }
+<a name="l00258"></a>00258               <span class="keywordflow">else</span>{
+<a name="l00259"></a>00259                      info.<a class="code" href="structiview_1_1_t_frame_base_1_1_cursor_info.html#a3d18cb167c084ef6c01e83a7caba7f42">logicalPos</a> = logToScreenTransform.<a class="code" href="classiview_1_1_c_screen_transform.html#a9d910fea791a14c806425712d5dfaeca" title="Return position of point in logical coordinates.">GetClientPosition</a>(position);
+<a name="l00260"></a>00260               }
+<a name="l00261"></a>00261        }
+<a name="l00262"></a>00262 
+<a name="l00263"></a>00263        m_framePtr-&gt;UpdateCursorInfo(info);
+<a name="l00264"></a>00264 
+<a name="l00265"></a>00265        <span class="keywordflow">return</span> retVal;
+<a name="l00266"></a>00266 }
+<a name="l00267"></a>00267 
+<a name="l00268"></a>00268 
+<a name="l00269"></a>00269 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00270"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#addc43b32b754c0f05357a6ff3cd8487d">00270</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#addc43b32b754c0f05357a6ff3cd8487d">TFramedViewBase&lt;ViewBase&gt;::SetEditMode</a>(<span class="keywordtype">int</span> mode)
+<a name="l00271"></a>00271 {
+<a name="l00272"></a>00272        <span class="keywordflow">if</span> (mode != GetEditMode()){
+<a name="l00273"></a>00273               BaseClass::SetEditMode(mode);
+<a name="l00274"></a>00274               
+<a name="l00275"></a>00275               m_framePtr-&gt;UpdateEditModeButtons();
+<a name="l00276"></a>00276        }
+<a name="l00277"></a>00277 }
+<a name="l00278"></a>00278 
+<a name="l00279"></a>00279 
+<a name="l00280"></a>00280 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00281"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#a42287cf7d30fa6501135c05dae987926">00281</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a42287cf7d30fa6501135c05dae987926">TFramedViewBase&lt;ViewBase&gt;::SetFitArea</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; area)
+<a name="l00282"></a>00282 {
+<a name="l00283"></a>00283        <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a> prevFitArea = GetFitArea();
+<a name="l00284"></a>00284 
+<a name="l00285"></a>00285        BaseClass::SetFitArea(area);
+<a name="l00286"></a>00286 
+<a name="l00287"></a>00287        <span class="keywordflow">if</span> ((prevFitArea != area) &amp;&amp; m_framePtr-&gt;IsZoomToFit()){
+<a name="l00288"></a>00288               UpdateFitTransform();
+<a name="l00289"></a>00289        }
+<a name="l00290"></a>00290 }
+<a name="l00291"></a>00291 
+<a name="l00292"></a>00292 
+<a name="l00293"></a>00293 <span class="comment">// reimplement (IViewEventObserver)</span>
+<a name="l00294"></a>00294 
+<a name="l00295"></a>00295 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00296"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#a777468d73490617aec535a38f928eac0">00296</a> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a777468d73490617aec535a38f928eac0" title="Message handler for selection changes.">TFramedViewBase&lt;ViewBase&gt;::OnSelectChange</a>(
+<a name="l00297"></a>00297                      <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view,
+<a name="l00298"></a>00298                      <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position,
+<a name="l00299"></a>00299                      <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>&amp; shape,
+<a name="l00300"></a>00300                      <span class="keywordtype">bool</span> state)
+<a name="l00301"></a>00301 {
+<a name="l00302"></a>00302        <span class="keywordflow">return</span> m_framePtr-&gt;OnSelectChange(view, position, shape, state);
+<a name="l00303"></a>00303 }
+<a name="l00304"></a>00304 
+<a name="l00305"></a>00305 
+<a name="l00306"></a>00306 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00307"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#aa4eae562b5179dfce0b711a6a4bbf4f8">00307</a> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#aa4eae562b5179dfce0b711a6a4bbf4f8" title="Message handler for mouse button click.">TFramedViewBase&lt;ViewBase&gt;::OnMouseButton</a>(
+<a name="l00308"></a>00308                      <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">IShapeView</a>&amp; view,
+<a name="l00309"></a>00309                      <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position,
+<a name="l00310"></a>00310                      Qt::MouseButton buttonType,
+<a name="l00311"></a>00311                      <span class="keywordtype">bool</span> state,
+<a name="l00312"></a>00312                      <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">IInteractiveShape</a>* shapePtr)
+<a name="l00313"></a>00313 {
+<a name="l00314"></a>00314        <span class="keywordflow">if</span> (!state){
+<a name="l00315"></a>00315               m_framePtr-&gt;UpdateButtonsState();
+<a name="l00316"></a>00316        }
+<a name="l00317"></a>00317 
+<a name="l00318"></a>00318        <span class="keywordflow">return</span> m_framePtr-&gt;OnMouseButton(view, position, buttonType, state, shapePtr);
+<a name="l00319"></a>00319 }
+<a name="l00320"></a>00320 
+<a name="l00321"></a>00321 
+<a name="l00322"></a>00322 <span class="comment">// protected methods</span>
+<a name="l00323"></a>00323 
+<a name="l00324"></a>00324 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00325"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#aeae6cb12d52bd56be81d60e76ab2d57e">00325</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#aeae6cb12d52bd56be81d60e76ab2d57e">TFramedViewBase&lt;ViewBase&gt;::SetBackgroundBufferValid</a>(<span class="keywordtype">bool</span> state)
+<a name="l00326"></a>00326 {
+<a name="l00327"></a>00327        BaseClass::SetBackgroundBufferValid(state);
+<a name="l00328"></a>00328        <span class="keywordflow">if</span> (!state){
+<a name="l00329"></a>00329               <span class="keywordtype">int</span> backgroundLayerIndex = GetBackgroundLayerIndex();
+<a name="l00330"></a>00330               <span class="keywordflow">if</span> (backgroundLayerIndex &gt;= 0){
+<a name="l00331"></a>00331                      <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_single_layer.html">iview::CSingleLayer</a>* layerPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classiview_1_1_c_single_layer.html">iview::CSingleLayer</a>*<span class="keyword">&gt;</span>(&amp;GetLayer(backgroundLayerIndex));
+<a name="l00332"></a>00332                      <span class="keywordflow">if</span> (layerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00333"></a>00333                             <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_image_shape.html">iview::CImageShape</a>* backgroundPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classiview_1_1_c_image_shape.html">iview::CImageShape</a>*<span class="keyword">&gt;</span>(layerPtr-&gt;<a class="code" href="classiview_1_1_c_single_layer.html#abcbd1b8ca8e963eaf5455fd6541368e1">GetShapePtr</a>());
+<a name="l00334"></a>00334                             <span class="keywordtype">bool</span> isBkActive = (backgroundPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; !backgroundPtr-&gt;<a class="code" href="classiview_1_1_t_shape_base.html#a88b8a89761a1eefc809c0c03af376727">GetBoundingBox</a>().<a class="code" href="classi2d_1_1_c_rect.html#a18d6a0922c3fa40a70bac30d3bea35fb" title="Check if rectangle is empty.">IsEmpty</a>();
+<a name="l00335"></a>00335                             <span class="keywordflow">if</span> ((m_framePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; (isBkActive != m_framePtr-&gt;m_isBkActive)){
+<a name="l00336"></a>00336                                    m_framePtr-&gt;m_isBkActive = isBkActive;
+<a name="l00337"></a>00337                                    <span class="keywordflow">if</span> (m_framePtr-&gt;m_isZoomToFit){
+<a name="l00338"></a>00338                                           <span class="keywordflow">if</span> (isBkActive){
+<a name="l00339"></a>00339                                                  UpdateFitTransform();
+<a name="l00340"></a>00340                                           }
+<a name="l00341"></a>00341                                           <span class="keywordflow">else</span>{
+<a name="l00342"></a>00342                                                  SetZoom(<a class="code" href="classiview_1_1_c_view_base.html#a51746c32939cf2ec0705d1eb68be8f39a238260311869631b0d9a138f6a7c2e8d">iview::CViewBase::ZM_RESET</a>);
+<a name="l00343"></a>00343                                           }
+<a name="l00344"></a>00344                                    }
+<a name="l00345"></a>00345                                    m_framePtr-&gt;UpdateButtonsState();
+<a name="l00346"></a>00346                             }
+<a name="l00347"></a>00347                      }
+<a name="l00348"></a>00348               }
 <a name="l00349"></a>00349        }
 <a name="l00350"></a>00350 }
 <a name="l00351"></a>00351 
 <a name="l00352"></a>00352 
 <a name="l00353"></a>00353 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00354"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#a48da366c30d38d6e1dd5cd5b6c73edcf">00354</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a48da366c30d38d6e1dd5cd5b6c73edcf">TFramedViewBase&lt;ViewBase&gt;::OnResize</a>()
+<a name="l00354"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#aac24950f51559b534aa986a35eafc71e">00354</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#aac24950f51559b534aa986a35eafc71e">TFramedViewBase&lt;ViewBase&gt;::OnBoundingBoxChanged</a>()
 <a name="l00355"></a>00355 {
-<a name="l00356"></a>00356        BaseClass::OnResize();
-<a name="l00357"></a>00357 
-<a name="l00358"></a>00358        UpdateFitTransform();
-<a name="l00359"></a>00359        <span class="keywordflow">if</span> (m_framePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00360"></a>00360               m_framePtr-&gt;UpdateComponentsPosition();
-<a name="l00361"></a>00361        }
-<a name="l00362"></a>00362 }
-<a name="l00363"></a>00363 
-<a name="l00364"></a>00364 
-<a name="l00365"></a>00365 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00366"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#ad3a1e9c9b104fccbbfaf57d7f51efd4a">00366</a> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#ad3a1e9c9b104fccbbfaf57d7f51efd4a">TFramedViewBase&lt;ViewBase&gt;::CanBeMoved</a>()<span class="keyword"> const</span>
-<a name="l00367"></a>00367 <span class="keyword"></span>{
+<a name="l00356"></a>00356        <span class="keywordflow">if</span> (m_framePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00357"></a>00357               m_framePtr-&gt;OnBoundingBoxChanged();
+<a name="l00358"></a>00358        }
+<a name="l00359"></a>00359 }
+<a name="l00360"></a>00360 
+<a name="l00361"></a>00361 
+<a name="l00362"></a>00362 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00363"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#a48da366c30d38d6e1dd5cd5b6c73edcf">00363</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a48da366c30d38d6e1dd5cd5b6c73edcf">TFramedViewBase&lt;ViewBase&gt;::OnResize</a>()
+<a name="l00364"></a>00364 {
+<a name="l00365"></a>00365        BaseClass::OnResize();
+<a name="l00366"></a>00366 
+<a name="l00367"></a>00367        UpdateFitTransform();
 <a name="l00368"></a>00368        <span class="keywordflow">if</span> (m_framePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00369"></a>00369               <span class="keywordflow">return</span> !m_framePtr-&gt;m_isZoomToFit &amp;&amp; BaseClass::CanBeMoved();
+<a name="l00369"></a>00369               m_framePtr-&gt;UpdateComponentsPosition();
 <a name="l00370"></a>00370        }
-<a name="l00371"></a>00371 
-<a name="l00372"></a>00372        <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00373"></a>00373 }
-<a name="l00374"></a>00374 
-<a name="l00375"></a>00375 
-<a name="l00376"></a>00376 <span class="comment">// reimplemented (iview::CViewBase)</span>
-<a name="l00377"></a>00377 
-<a name="l00378"></a>00378 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00379"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#afc421f8bb5549e52d3a6d26c98d0eba0">00379</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#afc421f8bb5549e52d3a6d26c98d0eba0">TFramedViewBase&lt;ViewBase&gt;::CalcBoundingBox</a>()<span class="keyword"> const</span>
-<a name="l00380"></a>00380 <span class="keyword"></span>{
-<a name="l00381"></a>00381        <span class="keywordflow">if</span> (!m_blockBBoxEvent){
-<a name="l00382"></a>00382               m_blockBBoxEvent = <span class="keyword">true</span>;
+<a name="l00371"></a>00371 }
+<a name="l00372"></a>00372 
+<a name="l00373"></a>00373 
+<a name="l00374"></a>00374 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00375"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#ad3a1e9c9b104fccbbfaf57d7f51efd4a">00375</a> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#ad3a1e9c9b104fccbbfaf57d7f51efd4a">TFramedViewBase&lt;ViewBase&gt;::CanBeMoved</a>()<span class="keyword"> const</span>
+<a name="l00376"></a>00376 <span class="keyword"></span>{
+<a name="l00377"></a>00377        <span class="keywordflow">if</span> (m_framePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00378"></a>00378               <span class="keywordflow">return</span> !m_framePtr-&gt;m_isZoomToFit &amp;&amp; BaseClass::CanBeMoved();
+<a name="l00379"></a>00379        }
+<a name="l00380"></a>00380 
+<a name="l00381"></a>00381        <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00382"></a>00382 }
 <a name="l00383"></a>00383 
-<a name="l00384"></a>00384               <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; lastBox = GetBoundingBox();
-<a name="l00385"></a>00385               BaseClass::CalcBoundingBox();
-<a name="l00386"></a>00386               <span class="keywordflow">if</span> (lastBox != GetBoundingBox()){
-<a name="l00387"></a>00387                      <span class="keyword">const_cast&lt;</span><a class="code" href="classiview_1_1_t_framed_view_base.html">TFramedViewBase&lt;ViewBase&gt;</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;OnBoundingBoxChanged();
-<a name="l00388"></a>00388               }
-<a name="l00389"></a>00389 
-<a name="l00390"></a>00390               m_blockBBoxEvent = <span class="keyword">false</span>;
-<a name="l00391"></a>00391        }
-<a name="l00392"></a>00392        <span class="keywordflow">else</span>{
-<a name="l00393"></a>00393               BaseClass::CalcBoundingBox();
-<a name="l00394"></a>00394        }
-<a name="l00395"></a>00395 }
-<a name="l00396"></a>00396 
-<a name="l00397"></a>00397 
-<a name="l00398"></a>00398 <span class="comment">// reimplemented (iview::IDisplay)</span>
-<a name="l00399"></a>00399 
-<a name="l00400"></a>00400 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
-<a name="l00401"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#a919e7f34124a389d119869cbc066a042">00401</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a919e7f34124a389d119869cbc066a042">TFramedViewBase&lt;ViewBase&gt;::OnAreaInvalidated</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; beforeBox, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; afterBox)
-<a name="l00402"></a>00402 {
-<a name="l00403"></a>00403        BaseClass::OnAreaInvalidated(beforeBox, afterBox);
-<a name="l00404"></a>00404 
-<a name="l00405"></a>00405        <span class="keywordflow">if</span> (!m_blockBBoxEvent){
-<a name="l00406"></a>00406               m_blockBBoxEvent = <span class="keyword">true</span>;
-<a name="l00407"></a>00407               <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> boundingBox = GetBoundingBox();
-<a name="l00408"></a>00408               <span class="keywordflow">if</span> (boundingBox != m_lastBoundingBox){
-<a name="l00409"></a>00409                      OnBoundingBoxChanged();
-<a name="l00410"></a>00410                      m_lastBoundingBox = boundingBox;
-<a name="l00411"></a>00411               }
-<a name="l00412"></a>00412 
-<a name="l00413"></a>00413               m_blockBBoxEvent = <span class="keyword">false</span>;
-<a name="l00414"></a>00414        }
-<a name="l00415"></a>00415 }
-<a name="l00416"></a>00416 
-<a name="l00417"></a>00417 
-<a name="l00418"></a>00418 } <span class="comment">// namespace iview</span>
-<a name="l00419"></a>00419 
-<a name="l00420"></a>00420 
-<a name="l00421"></a>00421 <span class="preprocessor">#endif // !iview_TFramedViewBase_included</span>
-<a name="l00422"></a>00422 <span class="preprocessor"></span>
-<a name="l00423"></a>00423 
+<a name="l00384"></a>00384 
+<a name="l00385"></a>00385 <span class="comment">// reimplemented (iview::CViewBase)</span>
+<a name="l00386"></a>00386 
+<a name="l00387"></a>00387 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00388"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#afc421f8bb5549e52d3a6d26c98d0eba0">00388</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#afc421f8bb5549e52d3a6d26c98d0eba0">TFramedViewBase&lt;ViewBase&gt;::CalcBoundingBox</a>()<span class="keyword"> const</span>
+<a name="l00389"></a>00389 <span class="keyword"></span>{
+<a name="l00390"></a>00390        <span class="keywordflow">if</span> (!m_blockBBoxEvent){
+<a name="l00391"></a>00391               m_blockBBoxEvent = <span class="keyword">true</span>;
+<a name="l00392"></a>00392 
+<a name="l00393"></a>00393               <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; lastBox = GetBoundingBox();
+<a name="l00394"></a>00394               BaseClass::CalcBoundingBox();
+<a name="l00395"></a>00395               <span class="keywordflow">if</span> (lastBox != GetBoundingBox()){
+<a name="l00396"></a>00396                      <span class="keyword">const_cast&lt;</span><a class="code" href="classiview_1_1_t_framed_view_base.html">TFramedViewBase&lt;ViewBase&gt;</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;OnBoundingBoxChanged();
+<a name="l00397"></a>00397               }
+<a name="l00398"></a>00398 
+<a name="l00399"></a>00399               m_blockBBoxEvent = <span class="keyword">false</span>;
+<a name="l00400"></a>00400        }
+<a name="l00401"></a>00401        <span class="keywordflow">else</span>{
+<a name="l00402"></a>00402               BaseClass::CalcBoundingBox();
+<a name="l00403"></a>00403        }
+<a name="l00404"></a>00404 }
+<a name="l00405"></a>00405 
+<a name="l00406"></a>00406 
+<a name="l00407"></a>00407 <span class="comment">// reimplemented (iview::IDisplay)</span>
+<a name="l00408"></a>00408 
+<a name="l00409"></a>00409 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ViewBase&gt;
+<a name="l00410"></a><a class="code" href="classiview_1_1_t_framed_view_base.html#a919e7f34124a389d119869cbc066a042">00410</a> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_t_framed_view_base.html#a919e7f34124a389d119869cbc066a042">TFramedViewBase&lt;ViewBase&gt;::OnAreaInvalidated</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; beforeBox, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; afterBox)
+<a name="l00411"></a>00411 {
+<a name="l00412"></a>00412        BaseClass::OnAreaInvalidated(beforeBox, afterBox);
+<a name="l00413"></a>00413 
+<a name="l00414"></a>00414        <span class="keywordflow">if</span> (!m_blockBBoxEvent){
+<a name="l00415"></a>00415               m_blockBBoxEvent = <span class="keyword">true</span>;
+<a name="l00416"></a>00416               <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> boundingBox = GetBoundingBox();
+<a name="l00417"></a>00417               <span class="keywordflow">if</span> (boundingBox != m_lastBoundingBox){
+<a name="l00418"></a>00418                      OnBoundingBoxChanged();
+<a name="l00419"></a>00419                      m_lastBoundingBox = boundingBox;
+<a name="l00420"></a>00420               }
+<a name="l00421"></a>00421 
+<a name="l00422"></a>00422               m_blockBBoxEvent = <span class="keyword">false</span>;
+<a name="l00423"></a>00423        }
+<a name="l00424"></a>00424 }
+<a name="l00425"></a>00425 
+<a name="l00426"></a>00426 
+<a name="l00427"></a>00427 } <span class="comment">// namespace iview</span>
+<a name="l00428"></a>00428 
+<a name="l00429"></a>00429 
+<a name="l00430"></a>00430 <span class="preprocessor">#endif // !iview_TFramedViewBase_included</span>
+<a name="l00431"></a>00431 <span class="preprocessor"></span>
+<a name="l00432"></a>00432 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

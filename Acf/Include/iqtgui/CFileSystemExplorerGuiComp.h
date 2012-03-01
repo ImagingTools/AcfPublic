@@ -25,11 +25,10 @@
 
 
 // Qt includes
-#include <QTreeWidget>
-#include <QFileSystemModel>
-#include <QItemSelectionModel>
-#include <QFileIconProvider>
-
+#include <QtGui/QTreeWidget>
+#include <QtGui/QFileSystemModel>
+#include <QtGui/QItemSelectionModel>
+#include <QtGui/QFileIconProvider>
 
 // ACF includes
 #include "iser/IFileTypeInfo.h"

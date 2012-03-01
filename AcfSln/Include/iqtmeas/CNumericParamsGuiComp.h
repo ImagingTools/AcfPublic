@@ -25,8 +25,8 @@
 
 
 // Qt includes
-#include <QFrame>
-#include <QGroupBox>
+#include <QtGui/QFrame>
+#include <QtGui/QGroupBox>
 
 
 // ACF includes

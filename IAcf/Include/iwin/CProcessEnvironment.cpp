@@ -28,7 +28,7 @@
 
 
 // Qt includes
-#include <QStringList>
+#include <QtCore/QStringList>
 
 
 EXTERN_C IMAGE_DOS_HEADER __ImageBase;

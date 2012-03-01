@@ -24,7 +24,7 @@
 
 
 // Qt includes
-#include <QPainter>
+#include <QtGui/QPainter>
 
 // ACF includes
 #include "iqt/CSignalBlocker.h"

@@ -31,7 +31,7 @@
 
 #include "isys/IFunctionsProvider.h"
 
-#include <QString>
+#include <QtCore/QString>
 
 
 namespace iwin

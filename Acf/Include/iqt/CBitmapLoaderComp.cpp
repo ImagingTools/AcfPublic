@@ -28,9 +28,9 @@
 
 
 // Qt includes
-#include <QFileInfo>
-#include <QByteArray>
-#include <QImageReader>
+#include <QtCore/QFileInfo>
+#include <QtCore/QByteArray>
+#include <QtGui/QImageReader>
 
 
 // ACF includes

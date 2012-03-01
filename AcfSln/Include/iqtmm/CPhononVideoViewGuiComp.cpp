@@ -24,10 +24,9 @@
 
 
 // Qt includes
-#include <QCoreApplication>
-#include <QEventLoop>
-#include <QUrl>
-
+#include <QtCore/QCoreApplication>
+#include <QtCore/QEventLoop>
+#include <QtCore/QUrl>
 
 // ACF includes
 #include <istd/TChangeNotifier.h>

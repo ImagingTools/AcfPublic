@@ -25,9 +25,8 @@
 
 
 // Qt includes
-#include <QTreeWidget>
-#include <QDir>
-
+#include <QtCore/QDir>
+#include <QtGui/QTreeWidget>
 
 // ACF includes
 #include "istd/TDelPtr.h"

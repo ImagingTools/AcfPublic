@@ -24,9 +24,9 @@
 
 
 // Qt includes
-#include <QTextStream>
-#include <QDateTime>
-#include <QFile>
+#include <QtCore/QTextStream>
+#include <QtCore/QDateTime>
+#include <QtCore/QFile>
 
 
 // ACF includes

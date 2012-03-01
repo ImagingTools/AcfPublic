@@ -25,8 +25,8 @@
 
 
 // Qt includes
-#include <QFileInfo>
-#include <QDir>
+#include <QtCore/QFileInfo>
+#include <QtCore/QDir>
 
 // STL includes
 #include <map>

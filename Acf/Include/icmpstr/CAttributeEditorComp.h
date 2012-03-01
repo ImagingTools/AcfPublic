@@ -25,9 +25,9 @@
 
 
 // Qt includes
-#include <QWidget>
-#include <QIcon>
-#include <QItemDelegate>
+#include <QtGui/QWidget>
+#include <QtGui/QIcon>
+#include <QtGui/QItemDelegate>
 
 
 // ACF includes

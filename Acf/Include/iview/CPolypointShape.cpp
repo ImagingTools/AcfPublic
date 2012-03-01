@@ -28,7 +28,7 @@
 
 
 // Qt includes
-#include <QPainter>
+#include <QtGui/QPainter>
 
 
 // ACF includes

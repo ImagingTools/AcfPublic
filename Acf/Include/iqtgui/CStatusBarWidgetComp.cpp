@@ -24,7 +24,7 @@
 
 
 // Qt includes
-#include <QMainWindow>
+#include <QtGui/QMainWindow>
 
 
 namespace iqtgui

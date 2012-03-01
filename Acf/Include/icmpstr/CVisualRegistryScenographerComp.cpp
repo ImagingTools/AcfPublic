@@ -24,15 +24,14 @@
 
 
 // Qt includes
-#include <QInputDialog>
-#include <QMessageBox>
-#include <QFileDialog>
-#include <QApplication>
-#include <QClipboard>
-#include <QMimeData>
+#include <QtCore/QMimeData>
+#include <QtGui/QInputDialog>
+#include <QtGui/QMessageBox>
+#include <QtGui/QFileDialog>
+#include <QtGui/QApplication>
+#include <QtGui/QClipboard>
 
-
-// ACF inlcudes
+// ACF includes
 #include "istd/TChangeNotifier.h"
 
 #include "iser/CXmlStringReadArchive.h"

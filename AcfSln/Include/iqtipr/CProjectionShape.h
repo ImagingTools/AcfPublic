@@ -25,7 +25,7 @@
 
 
 // Qt includes
-#include <QGraphicsPathItem>
+#include <QtGui/QGraphicsPathItem>
 
 // ACF includes
 #include "imod/CMultiModelObserverBase.h"

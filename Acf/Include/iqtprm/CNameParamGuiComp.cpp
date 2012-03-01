@@ -24,7 +24,7 @@
 
 
 // Qt includes
-#include <QLabel>
+#include <QtGui/QLabel>
 
 
 // ACF includes

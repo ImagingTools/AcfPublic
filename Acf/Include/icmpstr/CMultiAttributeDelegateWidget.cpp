@@ -24,9 +24,9 @@
 
 
 // Qt includes
-#include <QLineEdit>
-#include <QPushButton>
-#include <QFocusEvent>
+#include <QtGui/QLineEdit>
+#include <QtGui/QPushButton>
+#include <QtGui/QFocusEvent>
 
 
 // ACF includes

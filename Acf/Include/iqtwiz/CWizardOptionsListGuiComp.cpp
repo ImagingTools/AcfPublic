@@ -24,7 +24,7 @@
 
 
 // Qt includes
-#include <QHeaderView>
+#include <QtGui/QHeaderView>
 
 // ACF includes
 #include "istd/TChangeNotifier.h"

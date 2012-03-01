@@ -26,7 +26,7 @@
 
 // ACF includes
 #include "istd/IChangeable.h"
-#include <QString>
+#include <QtCore/QString>
 
 
 namespace ifpf

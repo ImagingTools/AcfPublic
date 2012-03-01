@@ -25,9 +25,8 @@
 
 
 // Qt includes
-#include <QTcpSocket>
-#include <QHostAddress>
-
+#include <QtNetwork/QTcpSocket>
+#include <QtNetwork/QHostAddress>
 
 // ACF includes
 #include "iser/CMemoryWriteArchive.h"

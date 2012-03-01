@@ -25,13 +25,11 @@
 
 
 // Qt includes
-#include <QWidget>
-#include <QSplitter>
-
+#include <QtCore/QString>
+#include <QtGui/QWidget>
+#include <QtGui/QSplitter>
 
 // ACF includes
-#include <QString>
-
 #include "iser/IFileLoader.h"
 
 #include "iprm/IParamsSet.h"

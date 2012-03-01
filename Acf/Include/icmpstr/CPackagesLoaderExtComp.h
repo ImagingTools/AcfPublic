@@ -28,8 +28,9 @@
 #include <map>
 
 // Qt includes
-#include <QDir>
+#include <QtCore/QDir>
 
+// ACF includes
 #include "iqt/CPackagesLoaderComp.h"
 
 #include "icmpstr/IExternalMetaInfoManager.h"

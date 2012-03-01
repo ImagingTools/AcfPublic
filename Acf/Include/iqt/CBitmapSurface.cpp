@@ -24,8 +24,8 @@
 
 
 // Qt includes
-#include <QVector>
-#include <QColor>
+#include <QtCore/QVector>
+#include <QtGui/QColor>
 
 
 // ACF includes

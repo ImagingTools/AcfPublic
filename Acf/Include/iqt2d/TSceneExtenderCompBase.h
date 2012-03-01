@@ -25,7 +25,7 @@
 
 
 // Qt includes
-#include <QGraphicsItem>
+#include <QtGui/QGraphicsItem>
 
 
 // ACF includes

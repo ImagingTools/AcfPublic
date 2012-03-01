@@ -25,7 +25,7 @@
 
 
 // Qt includes
-#include <QStringList>
+#include <QtCore/QStringList>
 
 
 // AcfSln includes

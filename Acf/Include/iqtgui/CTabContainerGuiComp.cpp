@@ -24,8 +24,8 @@
 
 
 // Qt includes
-#include <QGridLayout>
-#include <QFrame>
+#include <QtGui/QGridLayout>
+#include <QtGui/QFrame>
 
 
 namespace iqtgui

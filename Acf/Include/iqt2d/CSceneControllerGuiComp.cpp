@@ -24,8 +24,7 @@
 
 
 // Qt includes
-#include <QGraphicsView>
-
+#include <QtGui/QGraphicsView>
 
 // ACF includes
 #include "istd/TChangeNotifier.h"

@@ -24,7 +24,7 @@
 
 
 // Qt includes
-#include <QPainter>
+#include <QtGui/QPainter>
 
 
 namespace iqtgui

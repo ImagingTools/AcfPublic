@@ -25,13 +25,16 @@
 
 
 // Qt includes
-#include <QFrame>
+#include <QtGui/QFrame>
 #include <QAxWidget>
 
-#include "imm/IVideoController.h"
-
+// ACF includes
 #include "iqtgui/TGuiComponentBase.h"
 
+// ACF-Solutions includes
+#include "imm/IVideoController.h"
+
+// IACF includes
 #include "iqaxmm/Wrapped/axvlc.h"
 
 

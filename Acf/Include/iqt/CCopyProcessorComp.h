@@ -25,12 +25,12 @@
 
 
 // Qt includes
-#include <QString>
-#include <QDir>
+#include <QtCore/QString>
+#include <QtCore/QDir>
 
 
 // ACF includes
-#include <QString>
+#include <QtCore/QString>
 
 #include "icomp/CComponentBase.h"
 

@@ -26,7 +26,7 @@
 
 #include "istd/IChangeable.h"
 
-#include <QString>
+#include <QtCore/QString>
 
 
 namespace ibase

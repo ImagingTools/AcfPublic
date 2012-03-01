@@ -25,7 +25,7 @@
 
 
 // Qt includes
-#include <QFileInfo>
+#include <QtCore/QFileInfo>
 
 
 namespace iqt

@@ -54,7 +54,7 @@ bool CComposedStateControllerComp::IsStateActive() const
 }
 
 
-bool CComposedStateControllerComp::IsEnterAllowed(bool isActionAllowed, const IStateController* prevStatePtr) const
+bool CComposedStateControllerComp::IsEnterAllowed(bool isActionAllowed, const IStateController* /*prevStatePtr*/) const
 {
 	if (m_isStateActive){
 		return false;
@@ -79,7 +79,7 @@ bool CComposedStateControllerComp::IsEnterAllowed(bool isActionAllowed, const IS
 }
 
 
-bool CComposedStateControllerComp::IsLeaveAllowed(bool isActionAllowed, const IStateController* nextStatePtr) const
+bool CComposedStateControllerComp::IsLeaveAllowed(bool isActionAllowed, const IStateController* /*nextStatePtr*/) const
 {
 	if (isActionAllowed && m_processOnLeaveCompPtr.IsValid()){
 		if (		(m_processOnLeaveCompPtr->GetProcessorState(this) != iproc::IProcessor::PS_READY) ||

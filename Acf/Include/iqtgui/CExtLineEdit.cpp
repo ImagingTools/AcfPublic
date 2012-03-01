@@ -24,8 +24,7 @@
 
 
 // Qt includes
-#include <QResizeEvent>
-
+#include <QtGui/QResizeEvent>
 
 // ACF includes
 #include "iqt/CSignalBlocker.h"

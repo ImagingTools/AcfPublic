@@ -29,8 +29,8 @@
 
 
 // Qt includes
-#include <QString>
-#include <QStringList>
+#include <QtCore/QString>
+#include <QtCore/QStringList>
 
 
 namespace icomp

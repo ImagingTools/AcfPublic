@@ -25,9 +25,9 @@
 
 
 // Qt includes
-#include <QObject>
-#include <QProcess>
-#include <QMutex>
+#include <QtCore/QObject>
+#include <QtCore/QProcess>
+#include <QtCore/QMutex>
 
 
 // ACF includes

@@ -25,9 +25,8 @@
 
 
 // Qt includes
-#include <QMainWindow>
-#include <QDockWidget>
-
+#include <QtGui/QMainWindow>
+#include <QtGui/QDockWidget>
 
 // ACF includes
 #include "imod/IModel.h"

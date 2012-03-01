@@ -28,8 +28,8 @@
 
 
 // Qt includes
-#include <QDomNodeList>
-#include <QTextStream>
+#include <QtXml/QDomNodeList>
+#include <QtCore/QTextStream>
 
 
 // ACF includes

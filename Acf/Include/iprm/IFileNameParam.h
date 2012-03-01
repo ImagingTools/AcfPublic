@@ -24,7 +24,7 @@
 #define iprm_IFileNameParam_included
 
 
-#include <QString>
+#include <QtCore/QString>
 
 #include "iser/ISerializable.h"
 

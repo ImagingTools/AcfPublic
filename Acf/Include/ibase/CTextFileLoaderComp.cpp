@@ -28,7 +28,7 @@
 
 
 // Qt includes
-#include <QStringList>
+#include <QtCore/QStringList>
 
 
 // ACF includes

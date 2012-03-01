@@ -24,7 +24,7 @@
 
 
 // Qt includes
-#include <QDir>
+#include <QtCore/QDir>
 
 
 // ACF includes

@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef iqt2d_TSceneExtenderDelgatorCompWrap_included
-#define iqt2d_TSceneExtenderDelgatorCompWrap_included
+#ifndef iqt2d_TSceneExtenderDelegatorCompWrap_included
+#define iqt2d_TSceneExtenderDelegatorCompWrap_included
 
 
 // ACF includes
@@ -35,14 +35,14 @@ namespace iqt2d
 
 
 template<class Base>
-class TSceneExtenderDelgatorCompWrap:
+class TSceneExtenderDelegatorCompWrap:
 			public Base,
 			virtual public iqt2d::ISceneExtender
 {
 public:
 	typedef icomp::CComponentBase BaseClass;
 
-	I_BEGIN_COMPONENT(TSceneExtenderDelgatorCompWrap);
+	I_BEGIN_COMPONENT(TSceneExtenderDelegatorCompWrap);
 		I_REGISTER_INTERFACE(iqt2d::ISceneExtender);
 		I_ASSIGN(m_slaveExtenderCompPtr, "SlaveSceneExtender", "Slave scene extender", false, "SlaveSceneExtender");
 	I_END_COMPONENT;
@@ -60,7 +60,7 @@ private:
 // reimplemented (iqt2d::ISceneExtender)
 
 template<class Base>
-void TSceneExtenderDelgatorCompWrap<Base>::AddItemsToScene(iqt2d::ISceneProvider* providerPtr, int flags)
+void TSceneExtenderDelegatorCompWrap<Base>::AddItemsToScene(iqt2d::ISceneProvider* providerPtr, int flags)
 {
 	if (m_slaveExtenderCompPtr.IsValid()){
 		m_slaveExtenderCompPtr->AddItemsToScene(providerPtr, flags);
@@ -69,7 +69,7 @@ void TSceneExtenderDelgatorCompWrap<Base>::AddItemsToScene(iqt2d::ISceneProvider
 
 
 template<class Base>
-void TSceneExtenderDelgatorCompWrap<Base>::RemoveItemsFromScene(iqt2d::ISceneProvider* providerPtr)
+void TSceneExtenderDelegatorCompWrap<Base>::RemoveItemsFromScene(iqt2d::ISceneProvider* providerPtr)
 {
 	if (m_slaveExtenderCompPtr.IsValid()){
 		m_slaveExtenderCompPtr->RemoveItemsFromScene(providerPtr);
@@ -77,12 +77,12 @@ void TSceneExtenderDelgatorCompWrap<Base>::RemoveItemsFromScene(iqt2d::IScenePro
 }
 
 
-typedef TSceneExtenderDelgatorCompWrap<icomp::CComponentBase> CSceneExtenderDelgatorComp;
+typedef TSceneExtenderDelegatorCompWrap<icomp::CComponentBase> CSceneExtenderDelegatorComp;
 
 
 } // namespace iqt2d
 
 
-#endif // !iqt2d_TSceneExtenderDelgatorCompWrap_included
+#endif // !iqt2d_TSceneExtenderDelegatorCompWrap_included
 
 

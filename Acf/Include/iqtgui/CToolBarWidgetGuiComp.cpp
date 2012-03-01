@@ -24,9 +24,9 @@
 
 
 // Qt includes
-#include <QHBoxLayout>
-#include <QComboBox>
-#include <QMainWindow>
+#include <QtGui/QHBoxLayout>
+#include <QtGui/QComboBox>
+#include <QtGui/QMainWindow>
 
 
 namespace iqtgui

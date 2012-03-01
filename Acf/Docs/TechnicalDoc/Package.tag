@@ -3326,8 +3326,8 @@
     <name>CCriticalSection.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_critical_section_8h</filename>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <includes id="_i_critical_section_8h" name="ICriticalSection.h" local="yes" imported="no">isys/ICriticalSection.h</includes>
+    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <class kind="class">iqt::CCriticalSection</class>
     <namespace>iqt</namespace>
   </compound>
@@ -3372,8 +3372,8 @@
     <name>CDllFunctionsProvider.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_dll_functions_provider_8h</filename>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <includes id="_i_functions_provider_8h" name="IFunctionsProvider.h" local="yes" imported="no">isys/IFunctionsProvider.h</includes>
+    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <class kind="class">iqt::CDllFunctionsProvider</class>
     <namespace>iqt</namespace>
   </compound>
@@ -4124,18 +4124,18 @@
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
-    <name>TSceneExtenderDelgatorCompWrap.h</name>
+    <name>TSceneExtenderDelegatorCompWrap.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_t_scene_extender_delgator_comp_wrap_8h</filename>
+    <filename>_t_scene_extender_delegator_comp_wrap_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_scene_extender_8h" name="ISceneExtender.h" local="yes" imported="no">iqt2d/ISceneExtender.h</includes>
-    <class kind="class">iqt2d::TSceneExtenderDelgatorCompWrap</class>
+    <class kind="class">iqt2d::TSceneExtenderDelegatorCompWrap</class>
     <namespace>iqt2d</namespace>
     <member kind="typedef">
-      <type>TSceneExtenderDelgatorCompWrap&lt; icomp::CComponentBase &gt;</type>
-      <name>CSceneExtenderDelgatorComp</name>
+      <type>TSceneExtenderDelegatorCompWrap&lt; icomp::CComponentBase &gt;</type>
+      <name>CSceneExtenderDelegatorComp</name>
       <anchorfile>namespaceiqt2d.html</anchorfile>
-      <anchor>aced32902ccc50f3e2fa8aaeed53a3080</anchor>
+      <anchor>a02e60426ed5d1ad3884d837f5236c724</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -34184,15 +34184,15 @@
     <class kind="class">iqt2d::ISceneProvider</class>
     <class kind="class">iqt2d::TObjectShapeBase</class>
     <class kind="class">iqt2d::TSceneExtenderCompBase</class>
-    <class kind="class">iqt2d::TSceneExtenderDelgatorCompWrap</class>
+    <class kind="class">iqt2d::TSceneExtenderDelegatorCompWrap</class>
     <class kind="class">iqt2d::TScenographerCompBase</class>
     <class kind="class">iqt2d::TShapeBase</class>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
     <member kind="typedef">
-      <type>TSceneExtenderDelgatorCompWrap&lt; icomp::CComponentBase &gt;</type>
-      <name>CSceneExtenderDelgatorComp</name>
+      <type>TSceneExtenderDelegatorCompWrap&lt; icomp::CComponentBase &gt;</type>
+      <name>CSceneExtenderDelegatorComp</name>
       <anchorfile>namespaceiqt2d.html</anchorfile>
-      <anchor>aced32902ccc50f3e2fa8aaeed53a3080</anchor>
+      <anchor>a02e60426ed5d1ad3884d837f5236c724</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -35886,30 +35886,30 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt2d::TSceneExtenderDelgatorCompWrap</name>
-    <filename>classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html</filename>
+    <name>iqt2d::TSceneExtenderDelegatorCompWrap</name>
+    <filename>classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html</filename>
     <templarg></templarg>
     <base>Base</base>
     <base virtualness="virtual">iqt2d::ISceneExtender</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html</anchorfile>
-      <anchor>a76f4c88e79c91e86a64850422b883407</anchor>
+      <anchorfile>classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html</anchorfile>
+      <anchor>a4fc6cf3153ee416f55c982ad1b52e52a</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AddItemsToScene</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html</anchorfile>
-      <anchor>a261b0dee3c1a4664a02feabb3f224a31</anchor>
+      <anchorfile>classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html</anchorfile>
+      <anchor>afb5e9735491c5e1df22e4257e384a458</anchor>
       <arglist>(iqt2d::ISceneProvider *providerPtr, int flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveItemsFromScene</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_delgator_comp_wrap.html</anchorfile>
-      <anchor>a463e9be45cf21eb3383d2d4bd8bbc768</anchor>
+      <anchorfile>classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html</anchorfile>
+      <anchor>a43df01460ade9b4f1c4ed009e175cd8a</anchor>
       <arglist>(iqt2d::ISceneProvider *providerPtr)</arglist>
     </member>
   </compound>

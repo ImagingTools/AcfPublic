@@ -27,7 +27,7 @@
 #include "i2d/CCircle.h"
 #include "iview/CScreenTransform.h"
 
-#include <QPainter>
+#include <QtGui/QPainter>
 
 
 // ACF includes

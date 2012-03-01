@@ -24,7 +24,7 @@
 
 
 // Qt includes
-#include <QLineEdit>
+#include <QtGui/QLineEdit>
 
 
 // ACF includes

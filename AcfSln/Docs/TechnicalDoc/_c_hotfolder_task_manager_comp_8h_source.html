@@ -29,147 +29,146 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QThread&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QTimer&gt;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QList&gt;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;QDateTime&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QThread&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QTimer&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QtCore/QList&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;QtCore/QDateTime&gt;</span>
 <a name="l00010"></a>00010 
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="comment">// ACF includes</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_pointer_vector_8h.html">istd/TPointerVector.h</a>&quot;</span>
-<a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_model_wrap_8h.html">imod/TModelWrap.h</a>&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_multi_model_observer_base_8h.html">imod/CMultiModelObserverBase.h</a>&quot;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_single_model_observer_base_8h.html">imod/CSingleModelObserverBase.h</a>&quot;</span>
-<a name="l00018"></a>00018 
-<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
-<a name="l00020"></a>00020 
-<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_params_set_8h.html">iprm/IParamsSet.h</a>&quot;</span>
-<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_params_manager_8h.html">iprm/IParamsManager.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="comment">// ACF includes</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_pointer_vector_8h.html">istd/TPointerVector.h</a>&quot;</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_model_wrap_8h.html">imod/TModelWrap.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_multi_model_observer_base_8h.html">imod/CMultiModelObserverBase.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_single_model_observer_base_8h.html">imod/CSingleModelObserverBase.h</a>&quot;</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_params_set_8h.html">iprm/IParamsSet.h</a>&quot;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_params_manager_8h.html">iprm/IParamsManager.h</a>&quot;</span>
+<a name="l00022"></a>00022 
 <a name="l00023"></a>00023 
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="comment">// AcfSln includes</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_naming_8h.html">ifpf/IFileNaming.h</a>&quot;</span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_system_change_storage_8h.html">ifpf/IFileSystemChangeStorage.h</a>&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="_i_hotfolder_processing_info_8h.html">ifpf/IHotfolderProcessingInfo.h</a>&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="_i_directory_monitor_8h.html">ifpf/IDirectoryMonitor.h</a>&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="_i_hotfolder_task_manager_8h.html">ifpf/IHotfolderTaskManager.h</a>&quot;</span>
+<a name="l00024"></a>00024 <span class="comment">// AcfSln includes</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_naming_8h.html">ifpf/IFileNaming.h</a>&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_system_change_storage_8h.html">ifpf/IFileSystemChangeStorage.h</a>&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="_i_hotfolder_processing_info_8h.html">ifpf/IHotfolderProcessingInfo.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="_i_directory_monitor_8h.html">ifpf/IDirectoryMonitor.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="_i_hotfolder_task_manager_8h.html">ifpf/IHotfolderTaskManager.h</a>&quot;</span>
+<a name="l00030"></a>00030 
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 <span class="keyword">namespace </span>iqtfpf
-<a name="l00034"></a>00034 {
+<a name="l00032"></a>00032 <span class="keyword">namespace </span>iqtfpf
+<a name="l00033"></a>00033 {
+<a name="l00034"></a>00034 
 <a name="l00035"></a>00035 
-<a name="l00036"></a>00036 
-<a name="l00043"></a><a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html">00043</a> <span class="keyword">class </span><a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html" title="Processing task manager.">CHotfolderTaskManagerComp</a>:
-<a name="l00044"></a>00044                      <span class="keyword">public</span> ibase::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">CLoggerComponentBase</a>,
-<a name="l00045"></a>00045                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifpf::IHotfolderTaskManager
-<a name="l00046"></a>00046 {
-<a name="l00047"></a>00047 <span class="keyword">public</span>:
-<a name="l00048"></a><a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a055510f6a523db53a6975f2c0c2df6ac">00048</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::CLoggerComponentBase</a> <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a055510f6a523db53a6975f2c0c2df6ac">BaseClass</a>;
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050        I_BEGIN_COMPONENT(<a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html" title="Processing task manager.">CHotfolderTaskManagerComp</a>);
-<a name="l00051"></a>00051               I_REGISTER_INTERFACE(<a class="code" href="classifpf_1_1_i_hotfolder_task_manager.html" title="Common interface for a hotfolder processing trask mananger.">ifpf::IHotfolderTaskManager</a>);
-<a name="l00052"></a>00052               I_ASSIGN(m_fileNamingCompPtr, <span class="stringliteral">&quot;FileNamingStrategy&quot;</span>, <span class="stringliteral">&quot;Strategy for naming of the output file&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;FileNamingStrategy&quot;</span>);
-<a name="l00053"></a>00053               I_ASSIGN(m_monitorFactCompPtr, <span class="stringliteral">&quot;DirectoryMontorFactory&quot;</span>, <span class="stringliteral">&quot;Factory for creation of a directory monitor&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DirectoryMontorFactory&quot;</span>);
-<a name="l00054"></a>00054               I_ASSIGN(m_hotfolderProcessingInfoCompPtr, <span class="stringliteral">&quot;HotfolderProcessingInfo&quot;</span>, <span class="stringliteral">&quot;State data model of the hotfolder&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;HotfolderProcessingInfo&quot;</span>);
-<a name="l00055"></a>00055               <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a57fd9873ba82c7cdac195f10bf314167">I_ASSIGN_TO</a>(m_hotfolderProcessingModelCompPtr, m_hotfolderProcessingInfoCompPtr, <span class="keyword">true</span>);
-<a name="l00056"></a>00056               I_ASSIGN(m_inputDirectoriesManagerCompPtr, <span class="stringliteral">&quot;InputDirectoriesManager&quot;</span>, <span class="stringliteral">&quot;Parameter&#39;s manageer for the hotfolder&#39;s input directories&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;InputDirectoriesManager&quot;</span>);
-<a name="l00057"></a>00057               I_ASSIGN(m_hotfolderSettingsModelCompPtr, <span class="stringliteral">&quot;HotfolderSettingsModel&quot;</span>, <span class="stringliteral">&quot;Hotfolder settings&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;HotfolderSettingsModel&quot;</span>);
-<a name="l00058"></a>00058               I_ASSIGN(m_fileSystemChangeStorageCompPtr, <span class="stringliteral">&quot;FileSystemChangeStorage&quot;</span>, <span class="stringliteral">&quot;File storage used by directory monitor&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;FileSystemChangeStorage&quot;</span>);
-<a name="l00059"></a>00059               <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a57fd9873ba82c7cdac195f10bf314167">I_ASSIGN_TO</a>(m_fileSystemChangeStorageModelCompPtr, m_fileSystemChangeStorageCompPtr, <span class="keyword">true</span>);
-<a name="l00060"></a>00060               I_END_COMPONENT;
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062        <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a31e8c6896be7f495fcb67a7b9ce2fa7c">CHotfolderTaskManagerComp</a>();
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064        <span class="comment">// reimplemented (ifpf::IHotfolderTaskManager)</span>
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">ifpf::IHotfolderProcessingItem</a>* <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a040875fd3913bc5b50f750d9757a689a" title="Get the next processing task, if available, other.">GetNextProcessingTask</a>() <span class="keyword">const</span>;
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 <span class="keyword">protected</span>:
-<a name="l00068"></a>00068        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a0e0b0af61d4c5df2fd0bf334c9abc10b">OnComponentCreated</a>();
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a167da5c8a10b7f70fca738bcf79b8f36">OnComponentDestroyed</a>();
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072 <span class="keyword">private</span>:
-<a name="l00073"></a>00073        QStringList GetFilesFromStorage(<span class="keyword">const</span> <a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>&amp; storage, <span class="keywordtype">int</span> fileState) <span class="keyword">const</span>;
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075        <span class="keywordtype">void</span> OnFilesAddedEvent(<span class="keyword">const</span> <a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>&amp; storage);
-<a name="l00076"></a>00076        <span class="keywordtype">void</span> OnFilesRemovedEvent(<span class="keyword">const</span> <a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>&amp; storage);
-<a name="l00077"></a>00077        <span class="keywordtype">void</span> OnFilesModifiedEvent(<span class="keyword">const</span> <a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>&amp; storage);
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079        <span class="keywordtype">void</span> AddFilesToProcessingQueue(<span class="keyword">const</span> QStringList&amp; files);
-<a name="l00080"></a>00080        <span class="keywordtype">void</span> RemoveFilesFromProcessingQueue(<span class="keyword">const</span> QStringList&amp; files);
-<a name="l00081"></a>00081        <span class="keywordtype">void</span> RestartProcessingQueueFiles(<span class="keyword">const</span> QStringList&amp; files);
-<a name="l00082"></a>00082 
-<a name="l00088"></a>00088        <span class="keywordtype">void</span> SynchronizeWithModel(<span class="keywordtype">bool</span> applyToPendingTasks = <span class="keyword">false</span>);
-<a name="l00089"></a>00089 
-<a name="l00093"></a>00093        QStringList GetInputDirectories() <span class="keyword">const</span>;
-<a name="l00094"></a>00094 
-<a name="l00098"></a>00098        <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* GetMonitoringParamsSet(<span class="keyword">const</span> QString&amp; directoryPath) <span class="keyword">const</span>;
-<a name="l00099"></a>00099 
-<a name="l00103"></a>00103        QStringList GetAddedInputDirectories() <span class="keyword">const</span>;
-<a name="l00104"></a>00104 
-<a name="l00108"></a>00108        QStringList GetRemovedInputDirectories() <span class="keyword">const</span>;
-<a name="l00109"></a>00109 
-<a name="l00113"></a>00113        <a class="code" href="classifpf_1_1_i_directory_monitor.html" title="Interface for a folder monitor.">ifpf::IDirectoryMonitor</a>* AddDirectoryMonitor(<span class="keyword">const</span> QString&amp; directoryPath, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* monitoringParamsPtr);
-<a name="l00114"></a>00114 
-<a name="l00118"></a>00118        <span class="keywordtype">void</span> RemoveDirectoryMonitor(<span class="keyword">const</span> QString&amp; directoryPath);
-<a name="l00119"></a>00119 
-<a name="l00123"></a>00123        <span class="keywordtype">void</span> RemoveDirectoryItems(<span class="keyword">const</span> QString&amp; directoryPath);
-<a name="l00124"></a>00124 
-<a name="l00128"></a>00128        <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">ifpf::IHotfolderProcessingItem</a>* FindProcessingItem(<span class="keyword">const</span> QString&amp; fileName) <span class="keyword">const</span>;
-<a name="l00129"></a>00129 
-<a name="l00133"></a>00133        <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">ifpf::IHotfolderProcessingItem</a>* GetItemFromId(<span class="keyword">const</span> std::string&amp; itemUuid) <span class="keyword">const</span>;
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135 <span class="keyword">private</span>:
-<a name="l00139"></a>00139        <span class="keyword">class </span>FileSystemChangeStorageObserver: <span class="keyword">public</span> imod::CMultiModelObserverBase
-<a name="l00140"></a>00140        {
-<a name="l00141"></a>00141        <span class="keyword">public</span>:
-<a name="l00142"></a>00142               FileSystemChangeStorageObserver(<a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html" title="Processing task manager.">CHotfolderTaskManagerComp</a>&amp; parent);
-<a name="l00143"></a>00143 
-<a name="l00144"></a>00144               <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00145"></a>00145               <span class="keyword">virtual</span> <span class="keywordtype">void</span> AfterUpdate(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00146"></a>00146 
-<a name="l00147"></a>00147        <span class="keyword">private</span>:
-<a name="l00148"></a>00148               <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html" title="Processing task manager.">CHotfolderTaskManagerComp</a>&amp; m_parent;
-<a name="l00149"></a>00149        };
+<a name="l00042"></a><a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html">00042</a> <span class="keyword">class </span><a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html" title="Processing task manager.">CHotfolderTaskManagerComp</a>:
+<a name="l00043"></a>00043                      <span class="keyword">public</span> ibase::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">CLoggerComponentBase</a>,
+<a name="l00044"></a>00044                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifpf::IHotfolderTaskManager
+<a name="l00045"></a>00045 {
+<a name="l00046"></a>00046 <span class="keyword">public</span>:
+<a name="l00047"></a><a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a055510f6a523db53a6975f2c0c2df6ac">00047</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::CLoggerComponentBase</a> <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a055510f6a523db53a6975f2c0c2df6ac">BaseClass</a>;
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049        I_BEGIN_COMPONENT(<a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html" title="Processing task manager.">CHotfolderTaskManagerComp</a>);
+<a name="l00050"></a>00050               I_REGISTER_INTERFACE(<a class="code" href="classifpf_1_1_i_hotfolder_task_manager.html" title="Common interface for a hotfolder processing trask mananger.">ifpf::IHotfolderTaskManager</a>);
+<a name="l00051"></a>00051               I_ASSIGN(m_fileNamingCompPtr, <span class="stringliteral">&quot;FileNamingStrategy&quot;</span>, <span class="stringliteral">&quot;Strategy for naming of the output file&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;FileNamingStrategy&quot;</span>);
+<a name="l00052"></a>00052               I_ASSIGN(m_monitorFactCompPtr, <span class="stringliteral">&quot;DirectoryMontorFactory&quot;</span>, <span class="stringliteral">&quot;Factory for creation of a directory monitor&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DirectoryMontorFactory&quot;</span>);
+<a name="l00053"></a>00053               I_ASSIGN(m_hotfolderProcessingInfoCompPtr, <span class="stringliteral">&quot;HotfolderProcessingInfo&quot;</span>, <span class="stringliteral">&quot;State data model of the hotfolder&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;HotfolderProcessingInfo&quot;</span>);
+<a name="l00054"></a>00054               <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a57fd9873ba82c7cdac195f10bf314167">I_ASSIGN_TO</a>(m_hotfolderProcessingModelCompPtr, m_hotfolderProcessingInfoCompPtr, <span class="keyword">true</span>);
+<a name="l00055"></a>00055               I_ASSIGN(m_inputDirectoriesManagerCompPtr, <span class="stringliteral">&quot;InputDirectoriesManager&quot;</span>, <span class="stringliteral">&quot;Parameter&#39;s manageer for the hotfolder&#39;s input directories&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;InputDirectoriesManager&quot;</span>);
+<a name="l00056"></a>00056               I_ASSIGN(m_hotfolderSettingsModelCompPtr, <span class="stringliteral">&quot;HotfolderSettingsModel&quot;</span>, <span class="stringliteral">&quot;Hotfolder settings&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;HotfolderSettingsModel&quot;</span>);
+<a name="l00057"></a>00057               I_ASSIGN(m_fileSystemChangeStorageCompPtr, <span class="stringliteral">&quot;FileSystemChangeStorage&quot;</span>, <span class="stringliteral">&quot;File storage used by directory monitor&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;FileSystemChangeStorage&quot;</span>);
+<a name="l00058"></a>00058               <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a57fd9873ba82c7cdac195f10bf314167">I_ASSIGN_TO</a>(m_fileSystemChangeStorageModelCompPtr, m_fileSystemChangeStorageCompPtr, <span class="keyword">true</span>);
+<a name="l00059"></a>00059               I_END_COMPONENT;
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061        <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a31e8c6896be7f495fcb67a7b9ce2fa7c">CHotfolderTaskManagerComp</a>();
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063        <span class="comment">// reimplemented (ifpf::IHotfolderTaskManager)</span>
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">ifpf::IHotfolderProcessingItem</a>* <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a040875fd3913bc5b50f750d9757a689a" title="Get the next processing task, if available, other.">GetNextProcessingTask</a>() <span class="keyword">const</span>;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="keyword">protected</span>:
+<a name="l00067"></a>00067        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a0e0b0af61d4c5df2fd0bf334c9abc10b">OnComponentCreated</a>();
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html#a167da5c8a10b7f70fca738bcf79b8f36">OnComponentDestroyed</a>();
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="keyword">private</span>:
+<a name="l00072"></a>00072        QStringList GetFilesFromStorage(<span class="keyword">const</span> <a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>&amp; storage, <span class="keywordtype">int</span> fileState) <span class="keyword">const</span>;
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074        <span class="keywordtype">void</span> OnFilesAddedEvent(<span class="keyword">const</span> <a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>&amp; storage);
+<a name="l00075"></a>00075        <span class="keywordtype">void</span> OnFilesRemovedEvent(<span class="keyword">const</span> <a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>&amp; storage);
+<a name="l00076"></a>00076        <span class="keywordtype">void</span> OnFilesModifiedEvent(<span class="keyword">const</span> <a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>&amp; storage);
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078        <span class="keywordtype">void</span> AddFilesToProcessingQueue(<span class="keyword">const</span> QStringList&amp; files);
+<a name="l00079"></a>00079        <span class="keywordtype">void</span> RemoveFilesFromProcessingQueue(<span class="keyword">const</span> QStringList&amp; files);
+<a name="l00080"></a>00080        <span class="keywordtype">void</span> RestartProcessingQueueFiles(<span class="keyword">const</span> QStringList&amp; files);
+<a name="l00081"></a>00081 
+<a name="l00087"></a>00087        <span class="keywordtype">void</span> SynchronizeWithModel(<span class="keywordtype">bool</span> applyToPendingTasks = <span class="keyword">false</span>);
+<a name="l00088"></a>00088 
+<a name="l00092"></a>00092        QStringList GetInputDirectories() <span class="keyword">const</span>;
+<a name="l00093"></a>00093 
+<a name="l00097"></a>00097        <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* GetMonitoringParamsSet(<span class="keyword">const</span> QString&amp; directoryPath) <span class="keyword">const</span>;
+<a name="l00098"></a>00098 
+<a name="l00102"></a>00102        QStringList GetAddedInputDirectories() <span class="keyword">const</span>;
+<a name="l00103"></a>00103 
+<a name="l00107"></a>00107        QStringList GetRemovedInputDirectories() <span class="keyword">const</span>;
+<a name="l00108"></a>00108 
+<a name="l00112"></a>00112        <a class="code" href="classifpf_1_1_i_directory_monitor.html" title="Interface for a folder monitor.">ifpf::IDirectoryMonitor</a>* AddDirectoryMonitor(<span class="keyword">const</span> QString&amp; directoryPath, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* monitoringParamsPtr);
+<a name="l00113"></a>00113 
+<a name="l00117"></a>00117        <span class="keywordtype">void</span> RemoveDirectoryMonitor(<span class="keyword">const</span> QString&amp; directoryPath);
+<a name="l00118"></a>00118 
+<a name="l00122"></a>00122        <span class="keywordtype">void</span> RemoveDirectoryItems(<span class="keyword">const</span> QString&amp; directoryPath);
+<a name="l00123"></a>00123 
+<a name="l00127"></a>00127        <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">ifpf::IHotfolderProcessingItem</a>* FindProcessingItem(<span class="keyword">const</span> QString&amp; fileName) <span class="keyword">const</span>;
+<a name="l00128"></a>00128 
+<a name="l00132"></a>00132        <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">ifpf::IHotfolderProcessingItem</a>* GetItemFromId(<span class="keyword">const</span> std::string&amp; itemUuid) <span class="keyword">const</span>;
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134 <span class="keyword">private</span>:
+<a name="l00138"></a>00138        <span class="keyword">class </span>FileSystemChangeStorageObserver: <span class="keyword">public</span> imod::CMultiModelObserverBase
+<a name="l00139"></a>00139        {
+<a name="l00140"></a>00140        <span class="keyword">public</span>:
+<a name="l00141"></a>00141               FileSystemChangeStorageObserver(<a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html" title="Processing task manager.">CHotfolderTaskManagerComp</a>&amp; parent);
+<a name="l00142"></a>00142 
+<a name="l00143"></a>00143               <span class="comment">// reimplemented (imod::IObserver)</span>
+<a name="l00144"></a>00144               <span class="keyword">virtual</span> <span class="keywordtype">void</span> AfterUpdate(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146        <span class="keyword">private</span>:
+<a name="l00147"></a>00147               <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html" title="Processing task manager.">CHotfolderTaskManagerComp</a>&amp; m_parent;
+<a name="l00148"></a>00148        };
+<a name="l00149"></a>00149 
 <a name="l00150"></a>00150 
-<a name="l00151"></a>00151 
-<a name="l00155"></a>00155        <span class="keyword">class </span>ParametersObserver: <span class="keyword">public</span> imod::CSingleModelObserverBase
-<a name="l00156"></a>00156        {
-<a name="l00157"></a>00157        <span class="keyword">public</span>:
-<a name="l00158"></a>00158               ParametersObserver(<a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html" title="Processing task manager.">CHotfolderTaskManagerComp</a>&amp; parent);
-<a name="l00159"></a>00159               
-<a name="l00160"></a>00160               <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00161"></a>00161               <span class="keyword">virtual</span> <span class="keywordtype">void</span> AfterUpdate(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00162"></a>00162        <span class="keyword">private</span>:
-<a name="l00163"></a>00163               <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html" title="Processing task manager.">CHotfolderTaskManagerComp</a>&amp; m_parent;
-<a name="l00164"></a>00164        };
-<a name="l00165"></a>00165 
-<a name="l00166"></a>00166 <span class="keyword">private</span>:
-<a name="l00167"></a>00167        I_REF(<a class="code" href="classifpf_1_1_i_file_naming.html" title="Interface for calculation of the new file path for an existing file.">ifpf::IFileNaming</a>, m_fileNamingCompPtr);
-<a name="l00168"></a>00168        I_REF(<a class="code" href="classifpf_1_1_i_hotfolder_processing_info.html" title="Interface for a hotfolder&#39;s processing data model.">ifpf::IHotfolderProcessingInfo</a>, m_hotfolderProcessingInfoCompPtr);
-<a name="l00169"></a>00169        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_hotfolderProcessingModelCompPtr);
-<a name="l00170"></a>00170        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_manager.html">iprm::IParamsManager</a>, m_inputDirectoriesManagerCompPtr);
-<a name="l00171"></a>00171        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_hotfolderSettingsModelCompPtr);
-<a name="l00172"></a>00172        I_FACT(<a class="code" href="classifpf_1_1_i_directory_monitor.html" title="Interface for a folder monitor.">ifpf::IDirectoryMonitor</a>, m_monitorFactCompPtr);
-<a name="l00173"></a>00173        I_REF(<a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>, m_fileSystemChangeStorageCompPtr);
-<a name="l00174"></a>00174        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_fileSystemChangeStorageModelCompPtr);
-<a name="l00175"></a>00175 
-<a name="l00176"></a>00176        <span class="keyword">typedef</span> std::map&lt;QString, istd::TDelPtr&lt;ifpf::IDirectoryMonitor&gt; &gt; DirectoryMonitorsMap;
-<a name="l00177"></a>00177        DirectoryMonitorsMap m_directoryMonitorsMap;
-<a name="l00178"></a>00178 
-<a name="l00179"></a>00179        FileSystemChangeStorageObserver m_fileSystemChangeStorageObserver;
-<a name="l00180"></a>00180        ParametersObserver m_parametersObserver;
-<a name="l00181"></a>00181 
-<a name="l00182"></a>00182        <span class="keywordtype">bool</span> m_isInitialized;
-<a name="l00183"></a>00183 };
+<a name="l00154"></a>00154        <span class="keyword">class </span>ParametersObserver: <span class="keyword">public</span> imod::CSingleModelObserverBase
+<a name="l00155"></a>00155        {
+<a name="l00156"></a>00156        <span class="keyword">public</span>:
+<a name="l00157"></a>00157               ParametersObserver(<a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html" title="Processing task manager.">CHotfolderTaskManagerComp</a>&amp; parent);
+<a name="l00158"></a>00158               
+<a name="l00159"></a>00159               <span class="comment">// reimplemented (imod::IObserver)</span>
+<a name="l00160"></a>00160               <span class="keyword">virtual</span> <span class="keywordtype">void</span> AfterUpdate(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00161"></a>00161        <span class="keyword">private</span>:
+<a name="l00162"></a>00162               <a class="code" href="classiqtfpf_1_1_c_hotfolder_task_manager_comp.html" title="Processing task manager.">CHotfolderTaskManagerComp</a>&amp; m_parent;
+<a name="l00163"></a>00163        };
+<a name="l00164"></a>00164 
+<a name="l00165"></a>00165 <span class="keyword">private</span>:
+<a name="l00166"></a>00166        I_REF(<a class="code" href="classifpf_1_1_i_file_naming.html" title="Interface for calculation of the new file path for an existing file.">ifpf::IFileNaming</a>, m_fileNamingCompPtr);
+<a name="l00167"></a>00167        I_REF(<a class="code" href="classifpf_1_1_i_hotfolder_processing_info.html" title="Interface for a hotfolder&#39;s processing data model.">ifpf::IHotfolderProcessingInfo</a>, m_hotfolderProcessingInfoCompPtr);
+<a name="l00168"></a>00168        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_hotfolderProcessingModelCompPtr);
+<a name="l00169"></a>00169        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_manager.html">iprm::IParamsManager</a>, m_inputDirectoriesManagerCompPtr);
+<a name="l00170"></a>00170        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_hotfolderSettingsModelCompPtr);
+<a name="l00171"></a>00171        I_FACT(<a class="code" href="classifpf_1_1_i_directory_monitor.html" title="Interface for a folder monitor.">ifpf::IDirectoryMonitor</a>, m_monitorFactCompPtr);
+<a name="l00172"></a>00172        I_REF(<a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>, m_fileSystemChangeStorageCompPtr);
+<a name="l00173"></a>00173        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_fileSystemChangeStorageModelCompPtr);
+<a name="l00174"></a>00174 
+<a name="l00175"></a>00175        <span class="keyword">typedef</span> std::map&lt;QString, istd::TDelPtr&lt;ifpf::IDirectoryMonitor&gt; &gt; DirectoryMonitorsMap;
+<a name="l00176"></a>00176        DirectoryMonitorsMap m_directoryMonitorsMap;
+<a name="l00177"></a>00177 
+<a name="l00178"></a>00178        FileSystemChangeStorageObserver m_fileSystemChangeStorageObserver;
+<a name="l00179"></a>00179        ParametersObserver m_parametersObserver;
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181        <span class="keywordtype">bool</span> m_isInitialized;
+<a name="l00182"></a>00182 };
+<a name="l00183"></a>00183 
 <a name="l00184"></a>00184 
-<a name="l00185"></a>00185 
-<a name="l00186"></a>00186 } <span class="comment">// namespace iqtfpf</span>
+<a name="l00185"></a>00185 } <span class="comment">// namespace iqtfpf</span>
+<a name="l00186"></a>00186 
 <a name="l00187"></a>00187 
-<a name="l00188"></a>00188 
-<a name="l00189"></a>00189 <span class="preprocessor">#endif // !iqtfpf_CHotfolderTaskManagerComp_included</span>
-<a name="l00190"></a>00190 <span class="preprocessor"></span>
+<a name="l00188"></a>00188 <span class="preprocessor">#endif // !iqtfpf_CHotfolderTaskManagerComp_included</span>
+<a name="l00189"></a>00189 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

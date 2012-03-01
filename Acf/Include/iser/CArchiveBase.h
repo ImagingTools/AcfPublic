@@ -24,7 +24,7 @@
 #define iser_CArchiveBase_included
 
 
-#include <QObject>
+#include <QtCore/QObject>
 
 
 // ACF includes

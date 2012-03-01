@@ -24,8 +24,8 @@
 
 
 // Qt includes
-#include <QEvent>
-#include <QMouseEvent>
+#include <QtCore/QEvent>
+#include <QtGui/QMouseEvent>
 
 
 namespace iqtgui

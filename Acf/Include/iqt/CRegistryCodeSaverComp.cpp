@@ -27,8 +27,8 @@
 #include <fstream>
 
 // Qt includes
-#include <QObject>
-#include <QDir>
+#include <QtCore/QObject>
+#include <QtCore/QDir>
 
 // ACF includes
 #include "iqt/iqt.h"

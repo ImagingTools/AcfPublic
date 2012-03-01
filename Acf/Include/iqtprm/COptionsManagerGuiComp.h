@@ -25,7 +25,7 @@
 
 
 // Qt includes
-#include <QComboBox>
+#include <QtGui/QComboBox>
 
 
 // ACF includes

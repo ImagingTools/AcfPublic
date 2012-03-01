@@ -24,9 +24,9 @@
 
 
 // Qt includes
-#include <QFileInfo>
+#include <QtCore/QFileInfo>
 #include <QtSvg/QSvgRenderer>
-#include <QPainter>
+#include <QtGui/QPainter>
 
 
 // ACF includes

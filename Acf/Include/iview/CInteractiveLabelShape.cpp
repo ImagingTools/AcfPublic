@@ -24,8 +24,8 @@
 
 
 // Qt includes
-#include <QFontMetrics>
-#include <QPainter>
+#include <QtGui/QFontMetrics>
+#include <QtGui/QPainter>
 
 
 // ACF includes

@@ -25,7 +25,7 @@
 
 
 // Qt includes
-#include <QTime>
+#include <QtCore/QTime>
 
 
 // ACF includes

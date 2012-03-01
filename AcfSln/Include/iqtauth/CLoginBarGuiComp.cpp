@@ -24,7 +24,7 @@
 
 
 // Qt includes
-#include <QMessageBox>
+#include <QtGui/QMessageBox>
 
 
 namespace iqtauth

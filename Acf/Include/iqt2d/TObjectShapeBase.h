@@ -25,8 +25,7 @@
 
 
 // Qt includes
-#include <QGraphicsSceneMouseEvent>
-
+#include <QtGui/QGraphicsSceneMouseEvent>
 
 // ACF includes
 #include "istd/TChangeNotifier.h"

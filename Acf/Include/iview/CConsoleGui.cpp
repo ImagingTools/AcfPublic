@@ -24,11 +24,13 @@
 
 
 // Qt includes
-#include <QFrame>
-#include <QToolButton>
-#include <QLayout>
-#include <QLabel>
-#include <QWheelEvent>
+#include <QtGui/QFrame>
+#include <QtGui/QToolButton>
+#include <QtGui/QLayout>
+#include <QtGui/QLabel>
+#include <QtGui/QWheelEvent>
+#include <QtGui/QScrollBar>
+#include <QtGui/QStatusBar>
 
 
 // ACF includes

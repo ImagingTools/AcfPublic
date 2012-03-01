@@ -24,7 +24,7 @@
 
 
 // Qt includes
-#include <QRegExp>
+#include <QtCore/QRegExp>
 
 
 // ACF includes

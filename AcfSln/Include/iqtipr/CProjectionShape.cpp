@@ -24,8 +24,8 @@
 
 
 // Qt includes
-#include <QStyleOptionGraphicsItem>
-#include <QPainter>
+#include <QtGui/QStyleOptionGraphicsItem>
+#include <QtGui/QPainter>
 
 // ACF-Solutions includes
 #include "imeas/IDataSequence.h"

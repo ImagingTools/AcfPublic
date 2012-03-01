@@ -25,7 +25,7 @@
 
 
 #include "istd/IPolymorphic.h"
-#include <QString>
+#include <QtCore/QString>
 
 #include "icomp/CComponentAddress.h"
 

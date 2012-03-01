@@ -25,8 +25,8 @@
 
 
 // Qt includes
-#include <QDir>
-#include <QStringList>
+#include <QtCore/QDir>
+#include <QtCore/QStringList>
 
 
 // ACF includes

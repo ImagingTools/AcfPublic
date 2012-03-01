@@ -24,8 +24,8 @@
 #define isys_IFileInfo_included
 
 
-/// Qt includes
-#include <QString>
+// Qt includes
+#include <QtCore/QString>
 
 
 // ACF includes

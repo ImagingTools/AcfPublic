@@ -24,7 +24,7 @@
 
 
 // Qt includes
-#include <QObject>
+#include <QtCore/QObject>
 
  // ACF includes
 #include "istd/TChangeNotifier.h"

@@ -25,7 +25,7 @@
 
 
 // Qt includes
-#include <QTreeWidget>
+#include <QtGui/QTreeWidget>
 
 
 // ACF includes

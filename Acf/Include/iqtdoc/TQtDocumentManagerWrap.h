@@ -25,8 +25,8 @@
 
 
 // Qt includes
-#include <QFileDialog>
-#include <QSettings>
+#include <QtGui/QFileDialog>
+#include <QtCore/QSettings>
 
 
 // ACF includes

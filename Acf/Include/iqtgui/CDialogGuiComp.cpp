@@ -24,8 +24,8 @@
 
 
 // Qt includes
-#include <QIcon>
-#include <QApplication>
+#include <QtGui/QIcon>
+#include <QtGui/QApplication>
 
 
 namespace iqtgui

@@ -25,8 +25,7 @@
 
 
 // Qt includes
-#include <QTextBrowser>
-
+#include <QtGui/QTextBrowser>
 
 // ACF includes
 #include "istd/TDelPtr.h"

@@ -25,9 +25,9 @@
 
 
 // Qt includes
-#include <QTextBrowser>
+#include <QtGui/QTextBrowser>
 
-
+// ACF includes
 #include "icomp/IMetaInfoManager.h"
 
 #include "iprm/IFileNameParam.h"

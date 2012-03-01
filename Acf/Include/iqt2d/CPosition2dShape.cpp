@@ -24,8 +24,8 @@
 
 
 // Qt includes
-#include <QPen>
-#include <QBrush>
+#include <QtGui/QPen>
+#include <QtGui/QBrush>
 
 
 // ACF includes
