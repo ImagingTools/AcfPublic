@@ -30,7 +30,7 @@
 
 // ACF-Solutions includes
 #include "iauth/IRightsProvider.h"
-#include "iauth/IUserLogin.h"
+#include "iauth/ILogin.h"
 #include "iauth/IUsersManager.h"
 #include "iauth/IPasswordChanger.h"
 
@@ -43,7 +43,7 @@ namespace iauth
 */
 class CUserLoginComp:
 			public icomp::CComponentBase,
-			virtual public IUserLogin,
+			virtual public ILogin,
 			virtual public IRightsProvider
 {
 public:
@@ -51,18 +51,15 @@ public:
 
 	I_BEGIN_COMPONENT(CUserLoginComp);
 		I_REGISTER_INTERFACE(IRightsProvider);
-		I_REGISTER_INTERFACE(IUserLogin);
+		I_REGISTER_INTERFACE(ILogin);
 		I_REGISTER_INTERFACE(ILogin);
 		I_ASSIGN_MULTI_0(m_userLevelsIfPtr, "UserLevels", "User levels", true);
 		I_ASSIGN(m_usersManagerIfPtr, "UsersManager", "Users manager", true, "UsersManager");
 		I_ASSIGN(m_passwordChangerIfPtr, "PasswordChanger", "Passwort manager", false, "PasswordChanger");
 	I_END_COMPONENT;		
 
-	// reimplemented (iauth::IUserLogin)
-	virtual CUser* GetLoggedUser() const;
-
 	// reimplemented (iauth::ILogin)
-	virtual bool IsUserLogged() const;
+	virtual CUser* GetLoggedUser() const;
 	virtual bool Login(const QString& userName, const QString& password);
 	virtual bool Logout();
 

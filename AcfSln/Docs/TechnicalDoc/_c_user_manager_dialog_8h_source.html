@@ -37,7 +37,7 @@
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_memory_write_archive_8h.html">iser/CMemoryWriteArchive.h</a>&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="comment">// ACF-Solutions includes</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_user_login_8h.html">iauth/IUserLogin.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_login_8h.html">iauth/ILogin.h</a>&quot;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_i_users_manager_8h.html">iauth/IUsersManager.h</a>&quot;</span>
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017 <span class="preprocessor">#include &quot;iqtauth/Generated/ui_CUserManagerDialog.h&quot;</span>
@@ -53,7 +53,7 @@
 <a name="l00027"></a>00027 {
 <a name="l00028"></a>00028        Q_OBJECT
 <a name="l00029"></a>00029 <span class="keyword">public</span>:
-<a name="l00030"></a>00030        <a class="code" href="classiqtauth_1_1_c_user_manager_dialog.html#abf3431dd521e54ecfa9cf9c6b84695f8">CUserManagerDialog</a>(<span class="keyword">const</span> <a class="code" href="classiauth_1_1_i_user_login.html" title="Interface supporting login operation.">iauth::IUserLogin</a>&amp; login, <a class="code" href="classiauth_1_1_i_users_manager.html" title="Provide management of users.">iauth::IUsersManager</a>&amp; manager);
+<a name="l00030"></a>00030        <a class="code" href="classiqtauth_1_1_c_user_manager_dialog.html#a98e75eb342ca5164934e458c2c4ccab3">CUserManagerDialog</a>(<span class="keyword">const</span> <a class="code" href="classiauth_1_1_i_login.html">iauth::ILogin</a>&amp; login, <a class="code" href="classiauth_1_1_i_users_manager.html" title="Provide management of users.">iauth::IUsersManager</a>&amp; manager);
 <a name="l00031"></a>00031        
 <a name="l00032"></a>00032        <span class="keywordtype">void</span> <a class="code" href="classiqtauth_1_1_c_user_manager_dialog.html#a701386f3a1d57a5cc19c94a8c9116166">SaveCurUsername</a>(<span class="keyword">const</span> QString&amp; Username);
 <a name="l00033"></a>00033        <span class="keywordtype">int</span> <a class="code" href="classiqtauth_1_1_c_user_manager_dialog.html#a4bc5ed4b143e61a5896177d8e9ef8466">GetUserGroupSize</a>();
@@ -92,7 +92,7 @@
 <a name="l00066"></a>00066               <span class="keywordtype">int</span> m_loggedUserLevel;
 <a name="l00067"></a>00067        };
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069        <span class="keyword">const</span> <a class="code" href="classiauth_1_1_i_user_login.html" title="Interface supporting login operation.">iauth::IUserLogin</a>&amp; m_login;
+<a name="l00069"></a>00069        <span class="keyword">const</span> <a class="code" href="classiauth_1_1_i_login.html">iauth::ILogin</a>&amp; m_login;
 <a name="l00070"></a>00070        <a class="code" href="classiauth_1_1_i_users_manager.html" title="Provide management of users.">iauth::IUsersManager</a>&amp; m_manager;
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072        <span class="keywordtype">void</span> ResetGui();

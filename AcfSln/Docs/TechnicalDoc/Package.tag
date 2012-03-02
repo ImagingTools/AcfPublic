@@ -19,8 +19,8 @@
     <filename>_c_simple_login_comp_8h</filename>
     <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
     <includes id="_i_rights_provider_8h" name="IRightsProvider.h" local="yes" imported="no">iauth/IRightsProvider.h</includes>
+    <includes id="_c_user_8h" name="CUser.h" local="yes" imported="no">iauth/CUser.h</includes>
     <class kind="class">iauth::CSimpleLoginComp</class>
-    <class kind="struct">iauth::CSimpleLoginComp::User</class>
     <namespace>iauth</namespace>
   </compound>
   <compound kind="file">
@@ -43,7 +43,7 @@
     <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_c_user_login_comp_8h</filename>
     <includes id="_i_rights_provider_8h" name="IRightsProvider.h" local="yes" imported="no">iauth/IRightsProvider.h</includes>
-    <includes id="_i_user_login_8h" name="IUserLogin.h" local="yes" imported="no">iauth/IUserLogin.h</includes>
+    <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
     <includes id="_i_users_manager_8h" name="IUsersManager.h" local="yes" imported="no">iauth/IUsersManager.h</includes>
     <includes id="_i_password_changer_8h" name="IPasswordChanger.h" local="yes" imported="no">iauth/IPasswordChanger.h</includes>
     <class kind="class">iauth::CUserLoginComp</class>
@@ -62,6 +62,7 @@
     <name>ILogin.h</name>
     <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_i_login_8h</filename>
+    <includes id="_c_user_8h" name="CUser.h" local="yes" imported="no">iauth/CUser.h</includes>
     <class kind="class">iauth::ILogin</class>
     <namespace>iauth</namespace>
   </compound>
@@ -78,15 +79,6 @@
     <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_i_rights_provider_8h</filename>
     <class kind="class">iauth::IRightsProvider</class>
-    <namespace>iauth</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IUserLogin.h</name>
-    <path>C:/Temp/AcfSln/Include/iauth/</path>
-    <filename>_i_user_login_8h</filename>
-    <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
-    <includes id="_c_user_8h" name="CUser.h" local="yes" imported="no">iauth/CUser.h</includes>
-    <class kind="class">iauth::IUserLogin</class>
     <namespace>iauth</namespace>
   </compound>
   <compound kind="file">
@@ -1405,7 +1397,7 @@
     <path>C:/Temp/AcfSln/Include/iqtauth/</path>
     <filename>_c_user_gui_comp_8h</filename>
     <includes id="_i_rights_provider_8h" name="IRightsProvider.h" local="yes" imported="no">iauth/IRightsProvider.h</includes>
-    <includes id="_i_user_login_8h" name="IUserLogin.h" local="yes" imported="no">iauth/IUserLogin.h</includes>
+    <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
     <includes id="_i_users_manager_8h" name="IUsersManager.h" local="yes" imported="no">iauth/IUsersManager.h</includes>
     <includes id="_i_password_changer_8h" name="IPasswordChanger.h" local="yes" imported="no">iauth/IPasswordChanger.h</includes>
     <class kind="class">iqtauth::CUserGuiComp</class>
@@ -1415,7 +1407,7 @@
     <name>CUserManagerDialog.h</name>
     <path>C:/Temp/AcfSln/Include/iqtauth/</path>
     <filename>_c_user_manager_dialog_8h</filename>
-    <includes id="_i_user_login_8h" name="IUserLogin.h" local="yes" imported="no">iauth/IUserLogin.h</includes>
+    <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
     <includes id="_i_users_manager_8h" name="IUsersManager.h" local="yes" imported="no">iauth/IUsersManager.h</includes>
     <class kind="class">iqtauth::CUserManagerDialog</class>
     <namespace>iqtauth</namespace>
@@ -1978,7 +1970,6 @@
     <class kind="class">iauth::ILogin</class>
     <class kind="class">iauth::IPasswordChanger</class>
     <class kind="class">iauth::IRightsProvider</class>
-    <class kind="class">iauth::IUserLogin</class>
     <class kind="class">iauth::IUsersManager</class>
   </compound>
   <compound kind="class">
@@ -1988,7 +1979,6 @@
     <base>iauth::ILogin</base>
     <base>iauth::IRightsProvider</base>
     <base>iser::ISerializable</base>
-    <class kind="struct">iauth::CSimpleLoginComp::User</class>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -2011,10 +2001,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual User &amp;</type>
+      <type>virtual CUser &amp;</type>
       <name>GetUser</name>
       <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
-      <anchor>a16ee77134921068a558eaedb99ce6b45</anchor>
+      <anchor>a9517f72117c8d991ddcb68f35371fe6c</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -2028,14 +2018,14 @@
       <type>virtual bool</type>
       <name>AddUser</name>
       <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
-      <anchor>a7aa094373880a4da0ebd1e879b8d37a4</anchor>
-      <arglist>(const User &amp;user)</arglist>
+      <anchor>ae902938cd32b804fb0c3e6b9bec8795c</anchor>
+      <arglist>(const CUser &amp;user)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsUserLogged</name>
+      <type>virtual CUser *</type>
+      <name>GetLoggedUser</name>
       <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
-      <anchor>a304f4e31703feb3967534095de467eab</anchor>
+      <anchor>a541ee352230ae47be6b404f7a6ae4955</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -2072,31 +2062,6 @@
       <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
       <anchor>a7e03972da09e439000435d3b7e950237</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>iauth::CSimpleLoginComp::User</name>
-    <filename>structiauth_1_1_c_simple_login_comp_1_1_user.html</filename>
-    <member kind="variable">
-      <type>QString</type>
-      <name>name</name>
-      <anchorfile>structiauth_1_1_c_simple_login_comp_1_1_user.html</anchorfile>
-      <anchor>a8453a7423b237cade072f2950778096f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>QString</type>
-      <name>password</name>
-      <anchorfile>structiauth_1_1_c_simple_login_comp_1_1_user.html</anchorfile>
-      <anchor>aa9dd7f03e04ee209a26a07feed8c5add</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>group</name>
-      <anchorfile>structiauth_1_1_c_simple_login_comp_1_1_user.html</anchorfile>
-      <anchor>a8d47b37e021f556011aa00549d8eab80</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2211,7 +2176,7 @@
     <name>iauth::CUserLoginComp</name>
     <filename>classiauth_1_1_c_user_login_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iauth::IUserLogin</base>
+    <base virtualness="virtual">iauth::ILogin</base>
     <base virtualness="virtual">iauth::IRightsProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -2225,13 +2190,6 @@
       <name>GetLoggedUser</name>
       <anchorfile>classiauth_1_1_c_user_login_comp.html</anchorfile>
       <anchor>a4030ef5f4b901b1025c82e220eb7f297</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsUserLogged</name>
-      <anchorfile>classiauth_1_1_c_user_login_comp.html</anchorfile>
-      <anchor>a8c00b056862034a21300126e6a5b88a2</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -2358,10 +2316,10 @@
     <filename>classiauth_1_1_i_login.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsUserLogged</name>
+      <type>virtual CUser *</type>
+      <name>GetLoggedUser</name>
       <anchorfile>classiauth_1_1_i_login.html</anchorfile>
-      <anchor>ac2f88f7f6267a03af47cb2ac850b373d</anchor>
+      <anchor>a956f0253c73fe842a2d5e15ad773eb59</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -2401,18 +2359,6 @@
       <anchorfile>classiauth_1_1_i_rights_provider.html</anchorfile>
       <anchor>a71b48e0f11e625e3a55f0a1ea294d43c</anchor>
       <arglist>(const std::string &amp;operationId, bool beQuiet=false) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iauth::IUserLogin</name>
-    <filename>classiauth_1_1_i_user_login.html</filename>
-    <base>iauth::ILogin</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual CUser *</type>
-      <name>GetLoggedUser</name>
-      <anchorfile>classiauth_1_1_i_user_login.html</anchorfile>
-      <anchor>a1944c75348037e8abd18d41638f189ff</anchor>
-      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10202,8 +10148,8 @@
       <type></type>
       <name>CUserManagerDialog</name>
       <anchorfile>classiqtauth_1_1_c_user_manager_dialog.html</anchorfile>
-      <anchor>abf3431dd521e54ecfa9cf9c6b84695f8</anchor>
-      <arglist>(const iauth::IUserLogin &amp;login, iauth::IUsersManager &amp;manager)</arglist>
+      <anchor>a98e75eb342ca5164934e458c2c4ccab3</anchor>
+      <arglist>(const iauth::ILogin &amp;login, iauth::IUsersManager &amp;manager)</arglist>
     </member>
     <member kind="function">
       <type>void</type>

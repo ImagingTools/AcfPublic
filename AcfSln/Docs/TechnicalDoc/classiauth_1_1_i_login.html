@@ -46,8 +46,7 @@ Inheritance diagram for iauth::ILogin:</div>
   <map id="iauth::ILogin_map" name="iauth::ILogin_map">
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="82,0,236,24"/>
 <area href="classiauth_1_1_c_simple_login_comp.html" alt="iauth::CSimpleLoginComp" shape="rect" coords="0,112,154,136"/>
-<area href="classiauth_1_1_i_user_login.html" title="Interface supporting login operation." alt="iauth::IUserLogin" shape="rect" coords="164,112,318,136"/>
-<area href="classiauth_1_1_c_user_login_comp.html" title="Implementation of user login allowing to get rights for current logged user." alt="iauth::CUserLoginComp" shape="rect" coords="164,168,318,192"/>
+<area href="classiauth_1_1_c_user_login_comp.html" title="Implementation of user login allowing to get rights for current logged user." alt="iauth::CUserLoginComp" shape="rect" coords="164,112,318,136"/>
 </map>
  </div></div>
 
@@ -55,8 +54,8 @@ Inheritance diagram for iauth::ILogin:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_login.html#ac2f88f7f6267a03af47cb2ac850b373d">IsUserLogged</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if any user is logged to the system.  <a href="#ac2f88f7f6267a03af47cb2ac850b373d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiauth_1_1_c_user.html">CUser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_login.html#a956f0253c73fe842a2d5e15ad773eb59">GetLoggedUser</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the currently logged on user.  <a href="#a956f0253c73fe842a2d5e15ad773eb59"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_login.html#abba1e2551a1068d1cda70f8e17e4136b">Login</a> (const QString &amp;userName, const QString &amp;password)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Log in user.  <a href="#abba1e2551a1068d1cda70f8e17e4136b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_login.html#ad2a63aa20e923ae5b495e1e3b6d9dd0c">Logout</a> ()=0</td></tr>
@@ -64,14 +63,14 @@ Public Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_i_login_8h_source.html#l00017">17</a> of file <a class="el" href="_i_login_8h_source.html">ILogin.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_login_8h_source.html#l00020">20</a> of file <a class="el" href="_i_login_8h_source.html">ILogin.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac2f88f7f6267a03af47cb2ac850b373d"></a><!-- doxytag: member="iauth::ILogin::IsUserLogged" ref="ac2f88f7f6267a03af47cb2ac850b373d" args="() const =0" -->
+<a class="anchor" id="a956f0253c73fe842a2d5e15ad773eb59"></a><!-- doxytag: member="iauth::ILogin::GetLoggedUser" ref="a956f0253c73fe842a2d5e15ad773eb59" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool iauth::ILogin::IsUserLogged </td>
+          <td class="memname">virtual <a class="el" href="classiauth_1_1_c_user.html">CUser</a>* iauth::ILogin::GetLoggedUser </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -80,9 +79,10 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Check, if any user is logged to the system. </p>
+<p>Returns the currently logged on user. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>user is currently logged on, or NULL, if no user is logged. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiauth_1_1_c_simple_login_comp.html#a304f4e31703feb3967534095de467eab">iauth::CSimpleLoginComp</a>, and <a class="el" href="classiauth_1_1_c_user_login_comp.html#a8c00b056862034a21300126e6a5b88a2">iauth::CUserLoginComp</a>.</p>
+<p>Implemented in <a class="el" href="classiauth_1_1_c_simple_login_comp.html#a541ee352230ae47be6b404f7a6ae4955">iauth::CSimpleLoginComp</a>, and <a class="el" href="classiauth_1_1_c_user_login_comp.html#a4030ef5f4b901b1025c82e220eb7f297">iauth::CUserLoginComp</a>.</p>
 
 </div>
 </div>

@@ -31,7 +31,7 @@ namespace iauth
 {
 
 
-// reimplemented (iauth::IUserLogin)
+// reimplemented (iauth::ILogin)
 
 CUser* CUserLoginComp::GetLoggedUser() const
 {
@@ -43,14 +43,6 @@ CUser* CUserLoginComp::GetLoggedUser() const
 	}
 
 	return NULL;
-}
-
-
-// reimplemented (iauth::ILogin)
-
-bool CUserLoginComp::IsUserLogged() const
-{
-	return (!m_loggedUserName.isEmpty());
 }
 
 

@@ -33,7 +33,7 @@
 #include "iser/CMemoryWriteArchive.h"
 
 // ACF-Solutions includes
-#include "iauth/IUserLogin.h"
+#include "iauth/ILogin.h"
 #include "iauth/IUsersManager.h"
 
 #include "iqtauth/Generated/ui_CUserManagerDialog.h"
@@ -49,7 +49,7 @@ class CUserManagerDialog:
 {
 	Q_OBJECT
 public:
-	CUserManagerDialog(const iauth::IUserLogin& login, iauth::IUsersManager& manager);
+	CUserManagerDialog(const iauth::ILogin& login, iauth::IUsersManager& manager);
 	
 	void SaveCurUsername(const QString& Username);
 	int GetUserGroupSize();
@@ -88,7 +88,7 @@ private:
 		int m_loggedUserLevel;
 	};
 
-	const iauth::IUserLogin& m_login;
+	const iauth::ILogin& m_login;
 	iauth::IUsersManager& m_manager;
 
 	void ResetGui();
