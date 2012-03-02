@@ -57,7 +57,7 @@
 <a name="l00035"></a>00035               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_processor.html">iproc::IProcessor</a>);
 <a name="l00036"></a>00036               I_ASSIGN(m_slaveProcessorCompPtr, <span class="stringliteral">&quot;SlaveEdgeProcessor&quot;</span>, <span class="stringliteral">&quot;Slave edge finder processor converting image to list of found edges&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;SlaveEdgeProcessor&quot;</span>);
 <a name="l00037"></a>00037               I_ASSIGN(m_featuresMapperCompPtr, <span class="stringliteral">&quot;FeaturesMapper&quot;</span>, <span class="stringliteral">&quot;Calculate position from caliper extracted features&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;FeaturesMapper&quot;</span>);
-<a name="l00038"></a>00038               I_ASSIGN(m_aoiParamsIdAttrPtr, <span class="stringliteral">&quot;AoiParamsId&quot;</span>, <span class="stringliteral">&quot;ID of area of interest in parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;AoiParams&quot;</span>);
+<a name="l00038"></a>00038               I_ASSIGN(m_aoiParamIdAttrPtr, <span class="stringliteral">&quot;AoiParamId&quot;</span>, <span class="stringliteral">&quot;ID of area of interest in parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;AoiParams&quot;</span>);
 <a name="l00039"></a>00039               I_ASSIGN(m_circleFinderParamsIdAttrPtr, <span class="stringliteral">&quot;CircleFinderParamsId&quot;</span>, <span class="stringliteral">&quot;ID cirlcie finder parameters in parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;CircleFinderParams&quot;</span>);
 <a name="l00040"></a>00040               I_ASSIGN(m_slaveLineIdAttrPtr, <span class="stringliteral">&quot;SlaveLineId&quot;</span>, <span class="stringliteral">&quot;ID of line parameter added by this processor to parameter set for slave edge processor&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;LineParam&quot;</span>);
 <a name="l00041"></a>00041               I_ASSIGN(m_searchForAnnulusAttrPtr, <span class="stringliteral">&quot;SearchForAnnulus&quot;</span>, <span class="stringliteral">&quot;If it is true, annulus will be searched&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
@@ -118,9 +118,9 @@
 <a name="l00096"></a>00096 <span class="keyword">private</span>:
 <a name="l00097"></a>00097        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_processor.html">iproc::IProcessor</a>, m_slaveProcessorCompPtr);
 <a name="l00098"></a>00098        I_REF(<a class="code" href="classiipr_1_1_i_feature_to_image_mapper.html" title="Interface allowing mapping of extracted features to native coordinate systems.">iipr::IFeatureToImageMapper</a>, m_featuresMapperCompPtr);
-<a name="l00099"></a>00099        I_ATTR(QString, m_aoiParamsIdAttrPtr);
-<a name="l00100"></a>00100        I_ATTR(QString, m_slaveLineIdAttrPtr);
-<a name="l00101"></a>00101        I_ATTR(QString, m_circleFinderParamsIdAttrPtr);
+<a name="l00099"></a>00099        I_ATTR(std::string, m_aoiParamIdAttrPtr);
+<a name="l00100"></a>00100        I_ATTR(std::string, m_slaveLineIdAttrPtr);
+<a name="l00101"></a>00101        I_ATTR(std::string, m_circleFinderParamsIdAttrPtr);
 <a name="l00102"></a>00102        I_ATTR(<span class="keywordtype">bool</span>, m_searchForAnnulusAttrPtr);
 <a name="l00103"></a>00103 };
 <a name="l00104"></a>00104 

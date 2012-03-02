@@ -60,7 +60,7 @@
 <a name="l00037"></a>00037               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_bitmap_acquisition.html">iproc::IBitmapAcquisition</a>);
 <a name="l00038"></a>00038               I_ASSIGN(m_bitmapLoaderCompPtr, <span class="stringliteral">&quot;BitmapLoader&quot;</span>, <span class="stringliteral">&quot;Load bitmap from file&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;BitmapLoader&quot;</span>);
 <a name="l00039"></a>00039               I_ASSIGN(m_defaultDirAttrPtr, <span class="stringliteral">&quot;DefaultDir&quot;</span>, <span class="stringliteral">&quot;Directory will be used if no parameters are specified&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;.&quot;</span>);
-<a name="l00040"></a>00040               I_ASSIGN(m_parameterIdAttrPtr, <span class="stringliteral">&quot;ParameterId&quot;</span>, <span class="stringliteral">&quot;Id used to get parameters from the parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;FileBitmapAcquisition&quot;</span>);
+<a name="l00040"></a>00040               I_ASSIGN(m_parameterIdAttrPtr, <span class="stringliteral">&quot;DirParamId&quot;</span>, <span class="stringliteral">&quot;Id used to get directory parameter (iprm::IFileNameParam)&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;FileBitmapAcquisition&quot;</span>);
 <a name="l00041"></a>00041               I_ASSIGN(m_maxCachedDirectoriesAttrPtr, <span class="stringliteral">&quot;MaxCachedDirs&quot;</span>, <span class="stringliteral">&quot;Maximum number of cached directories&quot;</span>, <span class="keyword">true</span>, 10);
 <a name="l00042"></a>00042        I_END_COMPONENT;
 <a name="l00043"></a>00043 
@@ -96,7 +96,7 @@
 <a name="l00073"></a>00073 
 <a name="l00074"></a>00074        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_bitmapLoaderCompPtr);
 <a name="l00075"></a>00075        I_ATTR(QString, m_defaultDirAttrPtr);
-<a name="l00076"></a>00076        I_ATTR(QString, m_parameterIdAttrPtr);
+<a name="l00076"></a>00076        I_ATTR(std::string, m_parameterIdAttrPtr);
 <a name="l00077"></a>00077        I_ATTR(<span class="keywordtype">int</span>, m_maxCachedDirectoriesAttrPtr);
 <a name="l00078"></a>00078 };
 <a name="l00079"></a>00079 

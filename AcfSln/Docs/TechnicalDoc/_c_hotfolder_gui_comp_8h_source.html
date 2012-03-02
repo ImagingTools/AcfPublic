@@ -87,7 +87,7 @@
 <a name="l00061"></a>00061               I_ASSIGN(m_processingParamsDialogCompPtr, <span class="stringliteral">&quot;ProcessingParamsDialog&quot;</span>, <span class="stringliteral">&quot;Dialog for the processing parameters&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ProcessingParamsDialog&quot;</span>);
 <a name="l00062"></a>00062               I_ASSIGN(m_inputDirectoriesParamsManagerCompPtr, <span class="stringliteral">&quot;InputDirectoriesManager&quot;</span>, <span class="stringliteral">&quot;Parameter manager for the input directories&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;InputDirectoriesManager&quot;</span>);
 <a name="l00063"></a>00063               <a class="code" href="classiqtfpf_1_1_c_hotfolder_gui_comp.html#a528edd61360e64485cc9dcc0ce824e78">I_ASSIGN_TO</a>(m_inputDirectoriesParamsManagerModelCompPtr, m_inputDirectoriesParamsManagerCompPtr, <span class="keyword">true</span>);
-<a name="l00064"></a>00064               I_ASSIGN(m_directoryPathIdAttrPtr, <span class="stringliteral">&quot;DirectoryPathId&quot;</span>, <span class="stringliteral">&quot;ID of the directory path in the input directory parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DirectoryPath&quot;</span>);
+<a name="l00064"></a>00064               I_ASSIGN(m_directoryPathIdAttrPtr, <span class="stringliteral">&quot;DirParamId&quot;</span>, <span class="stringliteral">&quot;ID of the directory path in the input directory parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DirectoryPath&quot;</span>);
 <a name="l00065"></a>00065        I_END_COMPONENT;
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067        <a class="code" href="classiqtfpf_1_1_c_hotfolder_gui_comp.html#a2733aadc5ee2b71ea880a954024e0980">CHotfolderGuiComp</a>();
@@ -192,7 +192,7 @@
 <a name="l00169"></a>00169        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_dialog.html">iqtgui::IDialog</a>, m_processingParamsDialogCompPtr);
 <a name="l00170"></a>00170        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_manager.html">iprm::IParamsManager</a>, m_inputDirectoriesParamsManagerCompPtr);
 <a name="l00171"></a>00171        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_inputDirectoriesParamsManagerModelCompPtr);
-<a name="l00172"></a>00172        I_ATTR(QString, m_directoryPathIdAttrPtr);
+<a name="l00172"></a>00172        I_ATTR(std::string, m_directoryPathIdAttrPtr);
 <a name="l00173"></a>00173 
 <a name="l00174"></a>00174        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> m_hotfolderCommands;
 <a name="l00175"></a>00175        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> m_runCommand;

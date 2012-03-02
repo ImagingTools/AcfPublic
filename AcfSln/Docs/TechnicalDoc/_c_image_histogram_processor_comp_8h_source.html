@@ -50,7 +50,7 @@
 <a name="l00027"></a><a class="code" href="classiipr_1_1_c_image_histogram_processor_comp.html#a7e9e8bdbd3ba7feb0ca85e824b3cc9d3">00027</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_sync_processor_comp_base.html">iproc::CSyncProcessorCompBase</a> <a class="code" href="classiipr_1_1_c_image_histogram_processor_comp.html#a7e9e8bdbd3ba7feb0ca85e824b3cc9d3">BaseClass</a>;
 <a name="l00028"></a>00028        
 <a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_image_histogram_processor_comp.html" title="Implementation of a processor for the image histogram calculation.">CImageHistogramProcessorComp</a>);
-<a name="l00030"></a>00030               I_ASSIGN(m_aoiParamsIdAttrPtr, <span class="stringliteral">&quot;AoiParamsId&quot;</span>, <span class="stringliteral">&quot;ID of the AOI parameter in the parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;AoiParams&quot;</span>);
+<a name="l00030"></a>00030               I_ASSIGN(m_aoiParamIdAttrPtr, <span class="stringliteral">&quot;AoiParamId&quot;</span>, <span class="stringliteral">&quot;ID of the AOI parameter in the parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;AoiParams&quot;</span>);
 <a name="l00031"></a>00031        I_END_COMPONENT;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <span class="comment">// reimplemented (iproc::IProcessor)</span>
@@ -67,7 +67,7 @@
 <a name="l00044"></a>00044                                    <a class="code" href="classimeas_1_1_i_discr_data_sequence.html" title="General definition of sequence contains discrete sample values in regular time grid.">imeas::IDiscrDataSequence</a>&amp; histogram) <span class="keyword">const</span>;
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046 <span class="keyword">private</span>:
-<a name="l00047"></a>00047        I_ATTR(QString, m_aoiParamsIdAttrPtr);
+<a name="l00047"></a>00047        I_ATTR(std::string, m_aoiParamIdAttrPtr);
 <a name="l00048"></a>00048 };
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050 

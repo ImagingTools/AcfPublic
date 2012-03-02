@@ -72,7 +72,7 @@
 <a name="l00049"></a>00049               <a class="code" href="classiqtfpf_1_1_c_directory_monitor_comp.html#a0fe1f80a8ffd029f80df4039778cc130">I_ASSIGN_TO</a>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, <span class="keyword">false</span>);
 <a name="l00050"></a>00050               I_ASSIGN(m_monitoringSessionManagerCompPtr, <span class="stringliteral">&quot;SessionManager&quot;</span>, <span class="stringliteral">&quot;Provider of previous monitoring sessions&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;SessionManager&quot;</span>);
 <a name="l00051"></a>00051               I_ASSIGN(m_fileSystemChangeStorageCompPtr, <span class="stringliteral">&quot;FileSystemChangeStorage&quot;</span>, <span class="stringliteral">&quot;File storage&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;FileSystemChangeStorage&quot;</span>);
-<a name="l00052"></a>00052               I_ASSIGN(m_directoryPathIdAttrPtr, <span class="stringliteral">&quot;DirectoryPathParamsId&quot;</span>, <span class="stringliteral">&quot;Parameter ID of the path to be observed in the parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DirectoryPathParamsId&quot;</span>);
+<a name="l00052"></a>00052               I_ASSIGN(m_directoryPathIdAttrPtr, <span class="stringliteral">&quot;DirParamId&quot;</span>, <span class="stringliteral">&quot;Parameter ID of the path to be observed in the parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DirParamId&quot;</span>);
 <a name="l00053"></a>00053               I_ASSIGN(m_directoryMonitorParamsIdAttrPtr, <span class="stringliteral">&quot;DirectoryMonitorParamsId&quot;</span>, <span class="stringliteral">&quot;ID of the directory observing parameters in the parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DirectoryMonitorParamsId&quot;</span>);
 <a name="l00054"></a>00054               I_ASSIGN(m_autoStartAttrPtr, <span class="stringliteral">&quot;AutoStart&quot;</span>, <span class="stringliteral">&quot;If enabled, start the directory monitoring after initialization&quot;</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);
 <a name="l00055"></a>00055        I_END_COMPONENT;
@@ -178,8 +178,8 @@
 <a name="l00164"></a>00164        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_paramsSetModelCompPtr);
 <a name="l00165"></a>00165        I_REF(<a class="code" href="classifpf_1_1_i_monitoring_session_manager.html" title="Common interface for a monitoring session&#39;s manager.">ifpf::IMonitoringSessionManager</a>, m_monitoringSessionManagerCompPtr);
 <a name="l00166"></a>00166        I_REF(<a class="code" href="classifpf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ifpf::IFileSystemChangeStorage</a>, m_fileSystemChangeStorageCompPtr);
-<a name="l00167"></a>00167        I_ATTR(QString, m_directoryPathIdAttrPtr);
-<a name="l00168"></a>00168        I_ATTR(QString, m_directoryMonitorParamsIdAttrPtr);
+<a name="l00167"></a>00167        I_ATTR(std::string, m_directoryPathIdAttrPtr);
+<a name="l00168"></a>00168        I_ATTR(std::string, m_directoryMonitorParamsIdAttrPtr);
 <a name="l00169"></a>00169        I_ATTR(<span class="keywordtype">bool</span>, m_autoStartAttrPtr);
 <a name="l00170"></a>00170 
 <a name="l00171"></a>00171        <span class="keywordtype">bool</span> m_lockChanges;

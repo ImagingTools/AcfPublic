@@ -25,6 +25,7 @@
 
 
 // Qt includes
+#include <QtCore/QObject>
 #include <QtNetwork/QTcpSocket>
 #include <QtNetwork/QHostAddress>
 
@@ -38,9 +39,12 @@ namespace iqt
 {
 
 
-class CNetworkWriteArchive: public iser::CMemoryWriteArchive
+class CNetworkWriteArchive:
+			public QObject,
+			public iser::CMemoryWriteArchive
 {
 	Q_OBJECT
+
 public:
 	typedef iser::CMemoryWriteArchive BaseClass;
 

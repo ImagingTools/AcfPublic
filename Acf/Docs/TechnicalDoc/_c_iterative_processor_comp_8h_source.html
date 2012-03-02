@@ -62,7 +62,7 @@
 <a name="l00039"></a>00039        I_BEGIN_COMPONENT(<a class="code" href="classiproc_1_1_c_iterative_processor_comp.html" title="Processor wrapper for multiple executing of a slave processor.">CIterativeProcessorComp</a>);
 <a name="l00040"></a>00040               I_REGISTER_INTERFACE(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>);
 <a name="l00041"></a>00041               I_REGISTER_INTERFACE(<a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">iprm::ISelectionConstraints</a>);
-<a name="l00042"></a>00042               I_ASSIGN(m_paramsIdAttrPtr, <span class="stringliteral">&quot;ParamsId&quot;</span>, <span class="stringliteral">&quot;ID of parameter defining number of iterations (type iprm::ISelectionParam)&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;ParamsId&quot;</span>);
+<a name="l00042"></a>00042               I_ASSIGN(m_paramsIdAttrPtr, <span class="stringliteral">&quot;IterationParamId&quot;</span>, <span class="stringliteral">&quot;ID of parameter defining number of iterations (type iprm::ISelectionParam)&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;ParamsId&quot;</span>);
 <a name="l00043"></a>00043               I_ASSIGN(m_maxIterationsCountAttrPtr, <span class="stringliteral">&quot;MaxIterations&quot;</span>, <span class="stringliteral">&quot;Maximal number of iterations&quot;</span>, <span class="keyword">true</span>, 10);
 <a name="l00044"></a>00044               I_ASSIGN(m_bufferObjectCompPtr, <span class="stringliteral">&quot;BufferObject&quot;</span>, <span class="stringliteral">&quot;Object used as buffer between single processing steps&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;BufferObject&quot;</span>);
 <a name="l00045"></a>00045               I_ASSIGN(m_slaveProcessorCompPtr, <span class="stringliteral">&quot;SlaveProcessor&quot;</span>, <span class="stringliteral">&quot;Slave image processor&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;SlaveProcessor&quot;</span>);
@@ -92,7 +92,7 @@
 <a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a38ea594db0ebdfa99da890128d4a22c7">OnComponentCreated</a>();
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071 <span class="keyword">private</span>:
-<a name="l00072"></a>00072        I_ATTR(QString, m_paramsIdAttrPtr);
+<a name="l00072"></a>00072        I_ATTR(std::string, m_paramsIdAttrPtr);
 <a name="l00073"></a>00073        I_ATTR(<span class="keywordtype">int</span>, m_maxIterationsCountAttrPtr);
 <a name="l00074"></a>00074        I_REF(<a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>, m_bufferObjectCompPtr);
 <a name="l00075"></a>00075        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_slaveProcessorCompPtr);

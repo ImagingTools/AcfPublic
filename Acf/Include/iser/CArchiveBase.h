@@ -24,9 +24,6 @@
 #define iser_CArchiveBase_included
 
 
-#include <QtCore/QObject>
-
-
 // ACF includes
 #include "istd/ILogger.h"
 
@@ -43,7 +40,6 @@ namespace iser
 	It provides standard implementation of some methods and standard tags.
 */
 class CArchiveBase:
-			public QObject,
 			virtual public IArchive,
 			virtual protected istd::ILogger
 {

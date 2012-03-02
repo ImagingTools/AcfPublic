@@ -32262,6 +32262,7 @@
   <compound kind="class">
     <name>iqt::CNetworkWriteArchive</name>
     <filename>classiqt_1_1_c_network_write_archive.html</filename>
+    <base>QObject</base>
     <base>iser::CMemoryWriteArchive</base>
     <member kind="typedef">
       <type>iser::CMemoryWriteArchive</type>
@@ -41000,7 +41001,6 @@
   <compound kind="class">
     <name>iser::CArchiveBase</name>
     <filename>classiser_1_1_c_archive_base.html</filename>
-    <base>QObject</base>
     <base virtualness="virtual">iser::IArchive</base>
     <base protection="protected" virtualness="virtual">istd::ILogger</base>
     <member kind="function" virtualness="virtual">

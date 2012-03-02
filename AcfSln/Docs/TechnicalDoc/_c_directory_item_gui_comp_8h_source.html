@@ -60,7 +60,7 @@
 <a name="l00034"></a>00034        I_BEGIN_COMPONENT(<a class="code" href="classiqtfpf_1_1_c_directory_item_gui_comp.html">CDirectoryItemGuiComp</a>);
 <a name="l00035"></a>00035               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>);
 <a name="l00036"></a>00036               I_ASSIGN(m_inputDirectoriesParamsManagerCompPtr, <span class="stringliteral">&quot;InputDirectoriesManager&quot;</span>, <span class="stringliteral">&quot;Parameter manager for the input directories&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;InputDirectoriesManager&quot;</span>);
-<a name="l00037"></a>00037               I_ASSIGN(m_directoryPathIdAttrPtr, <span class="stringliteral">&quot;DirectoryPathId&quot;</span>, <span class="stringliteral">&quot;Parameter ID of the directory path&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DirectoryPath&quot;</span>);
+<a name="l00037"></a>00037               I_ASSIGN(m_directoryPathIdAttrPtr, <span class="stringliteral">&quot;DirParamId&quot;</span>, <span class="stringliteral">&quot;Parameter ID of the directory path&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DirectoryPath&quot;</span>);
 <a name="l00038"></a>00038        I_END_COMPONENT;
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040        <a class="code" href="classiqtfpf_1_1_c_directory_item_gui_comp.html#a8565fef677fc07a9b254ee80b42e8dc1">CDirectoryItemGuiComp</a>();
@@ -84,7 +84,7 @@
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059 <span class="keyword">private</span>:
 <a name="l00060"></a>00060        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_manager.html">iprm::IParamsManager</a>, m_inputDirectoriesParamsManagerCompPtr);
-<a name="l00061"></a>00061        I_ATTR(QString, m_directoryPathIdAttrPtr);
+<a name="l00061"></a>00061        I_ATTR(std::string, m_directoryPathIdAttrPtr);
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063        QString m_directoryPath;
 <a name="l00064"></a>00064        QString m_hotfolderInputName;

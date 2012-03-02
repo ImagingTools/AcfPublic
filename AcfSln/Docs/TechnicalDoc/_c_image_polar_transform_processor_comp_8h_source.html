@@ -50,31 +50,29 @@
 <a name="l00027"></a><a class="code" href="classiipr_1_1_c_image_polar_transform_processor_comp.html#aa578ff557e1f7fca78b1b9a5c164a8eb">00027</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_sync_processor_comp_base.html">iproc::CSyncProcessorCompBase</a> <a class="code" href="classiipr_1_1_c_image_polar_transform_processor_comp.html#aa578ff557e1f7fca78b1b9a5c164a8eb">BaseClass</a>;
 <a name="l00028"></a>00028        
 <a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_image_polar_transform_processor_comp.html" title="Implementation of a processor for the image histogram calculation.">CImagePolarTransformProcessorComp</a>);
-<a name="l00030"></a>00030               I_ASSIGN(m_aoiParamsIdAttrPtr, <span class="stringliteral">&quot;AoiParamsId&quot;</span>, <span class="stringliteral">&quot;ID of the AOI rectangle in the parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;AoiParams&quot;</span>);
-<a name="l00031"></a>00031               I_ASSIGN(m_interpolationParamsIdAttrPtr, <span class="stringliteral">&quot;InterpolationParamsId&quot;</span>, <span class="stringliteral">&quot;ID of the interpolation parameters in the parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;InterpolationParams&quot;</span>);
-<a name="l00032"></a>00032        I_END_COMPONENT;
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034        <span class="comment">// reimplemented (iproc::IProcessor)</span>
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_image_polar_transform_processor_comp.html#a5f89719ff9e74d5b3e8a3748bb9232e0">DoProcessing</a>(
-<a name="l00036"></a>00036                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
-<a name="l00037"></a>00037                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
-<a name="l00038"></a>00038                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
-<a name="l00039"></a>00039                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a>* progressManagerPtr = NULL);
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="keyword">private</span>:
-<a name="l00042"></a>00042        <span class="keywordtype">bool</span> ConvertImage(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; input, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html">i2d::IObject2d</a>* aoiPtr, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; outputBitmap) <span class="keyword">const</span>;
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 <span class="keyword">private</span>:
-<a name="l00045"></a>00045        I_ATTR(QString, m_aoiParamsIdAttrPtr);
-<a name="l00046"></a>00046        I_ATTR(QString, m_interpolationParamsIdAttrPtr);
-<a name="l00047"></a>00047 };
-<a name="l00048"></a>00048 
+<a name="l00030"></a>00030               I_ASSIGN(m_aoiParamIdAttrPtr, <span class="stringliteral">&quot;AoiParamId&quot;</span>, <span class="stringliteral">&quot;ID of the AOI rectangle in the parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;AoiParams&quot;</span>);
+<a name="l00031"></a>00031        I_END_COMPONENT;
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033        <span class="comment">// reimplemented (iproc::IProcessor)</span>
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_image_polar_transform_processor_comp.html#a5f89719ff9e74d5b3e8a3748bb9232e0">DoProcessing</a>(
+<a name="l00035"></a>00035                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00036"></a>00036                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
+<a name="l00037"></a>00037                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
+<a name="l00038"></a>00038                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a>* progressManagerPtr = NULL);
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="keyword">private</span>:
+<a name="l00041"></a>00041        <span class="keywordtype">bool</span> ConvertImage(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; input, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html">i2d::IObject2d</a>* aoiPtr, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; outputBitmap) <span class="keyword">const</span>;
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 <span class="keyword">private</span>:
+<a name="l00044"></a>00044        I_ATTR(std::string, m_aoiParamIdAttrPtr);
+<a name="l00045"></a>00045 };
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 } <span class="comment">// namespace iipr</span>
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050 } <span class="comment">// namespace iipr</span>
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="preprocessor">#endif // !iipr_CImagePolarTransformProcessorComp_included</span>
-<a name="l00054"></a>00054 <span class="preprocessor"></span>
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="preprocessor">#endif // !iipr_CImagePolarTransformProcessorComp_included</span>
+<a name="l00052"></a>00052 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
