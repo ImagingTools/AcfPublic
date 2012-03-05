@@ -3841,8 +3841,8 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_annulus_params_gui_comp_8h</filename>
     <includes id="_c_annulus_8h" name="CAnnulus.h" local="yes" imported="no">i2d/CAnnulus.h</includes>
+    <includes id="_c_interactive_annulus_shape_8h" name="CInteractiveAnnulusShape.h" local="yes" imported="no">iview/CInteractiveAnnulusShape.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
-    <includes id="_c_annulus_shape_8h" name="CAnnulusShape.h" local="yes" imported="no">iqt2d/CAnnulusShape.h</includes>
     <class kind="class">iqt2d::CAnnulusParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3852,27 +3852,8 @@
     <filename>_c_annulus_segment_params_gui_comp_8h</filename>
     <includes id="_c_annulus_segment_8h" name="CAnnulusSegment.h" local="yes" imported="no">i2d/CAnnulusSegment.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
-    <includes id="_c_annulus_segment_shape_8h" name="CAnnulusSegmentShape.h" local="yes" imported="no">iqt2d/CAnnulusSegmentShape.h</includes>
+    <includes id="_c_interactive_annulus_segment_shape_8h" name="CInteractiveAnnulusSegmentShape.h" local="yes" imported="no">iview/CInteractiveAnnulusSegmentShape.h</includes>
     <class kind="class">iqt2d::CAnnulusSegmentParamsGuiComp</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CAnnulusSegmentShape.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_c_annulus_segment_shape_8h</filename>
-    <includes id="_c_annulus_shape_8h" name="CAnnulusShape.h" local="yes" imported="no">iqt2d/CAnnulusShape.h</includes>
-    <includes id="_c_grip_shape_8h" name="CGripShape.h" local="yes" imported="no">iqt2d/CGripShape.h</includes>
-    <class kind="class">iqt2d::CAnnulusSegmentShape</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CAnnulusShape.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_c_annulus_shape_8h</filename>
-    <includes id="_c_annulus_8h" name="CAnnulus.h" local="yes" imported="no">i2d/CAnnulus.h</includes>
-    <includes id="_t_object_shape_base_8h" name="TObjectShapeBase.h" local="yes" imported="no">iqt2d/TObjectShapeBase.h</includes>
-    <includes id="_c_grip_shape_8h" name="CGripShape.h" local="yes" imported="no">iqt2d/CGripShape.h</includes>
-    <class kind="class">iqt2d::CAnnulusShape</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -3880,103 +3861,33 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_circle_params_gui_comp_8h</filename>
     <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
+    <includes id="_c_interactive_circle_shape_8h" name="CInteractiveCircleShape.h" local="yes" imported="no">iview/CInteractiveCircleShape.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
-    <includes id="_c_circle_shape_8h" name="CCircleShape.h" local="yes" imported="no">iqt2d/CCircleShape.h</includes>
     <class kind="class">iqt2d::CCircleParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
-    <name>CCircleShape.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_c_circle_shape_8h</filename>
-    <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
-    <includes id="_t_object_shape_base_8h" name="TObjectShapeBase.h" local="yes" imported="no">iqt2d/TObjectShapeBase.h</includes>
-    <includes id="_c_grip_shape_8h" name="CGripShape.h" local="yes" imported="no">iqt2d/CGripShape.h</includes>
-    <class kind="class">iqt2d::CCircleShape</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CGripShape.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_c_grip_shape_8h</filename>
-    <includes id="iqt2d_2_t_shape_base_8h" name="TShapeBase.h" local="yes" imported="no">iqt2d/TShapeBase.h</includes>
-    <class kind="class">iqt2d::CGripShape</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CImageShape.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>iqt2d_2_c_image_shape_8h</filename>
-    <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
-    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
-    <includes id="_i_color_transformation_8h" name="IColorTransformation.h" local="yes" imported="no">icmm/IColorTransformation.h</includes>
-    <includes id="iqt2d_8h" name="iqt2d.h" local="yes" imported="no">iqt2d/iqt2d.h</includes>
-    <class kind="class">iqt2d::CImageShape</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CImageShape.h</name>
-    <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>iview_2_c_image_shape_8h</filename>
-    <includes id="_i_color_transformation_8h" name="IColorTransformation.h" local="yes" imported="no">icmm/IColorTransformation.h</includes>
-    <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
-    <includes id="_c_shape_base_8h" name="CShapeBase.h" local="yes" imported="no">iview/CShapeBase.h</includes>
-    <class kind="class">iview::CImageShape</class>
-    <namespace>iview</namespace>
-  </compound>
-  <compound kind="file">
     <name>CImageViewComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>iqt2d_2_c_image_view_comp_8h</filename>
-    <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
-    <includes id="iqt2d_2_c_image_shape_8h" name="CImageShape.h" local="yes" imported="no">iqt2d/CImageShape.h</includes>
-    <includes id="_c_scene_provider_gui_comp_8h" name="CSceneProviderGuiComp.h" local="yes" imported="no">iqt2d/CSceneProviderGuiComp.h</includes>
-    <class kind="class">iqt2d::CImageViewComp</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CImageViewComp.h</name>
-    <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>iview_2_c_image_view_comp_8h</filename>
+    <filename>_c_image_view_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
-    <includes id="iview_2_c_image_shape_8h" name="CImageShape.h" local="yes" imported="no">iview/CImageShape.h</includes>
+    <includes id="_c_image_shape_8h" name="CImageShape.h" local="yes" imported="no">iview/CImageShape.h</includes>
     <includes id="_c_none_calibration_8h" name="CNoneCalibration.h" local="yes" imported="no">iview/CNoneCalibration.h</includes>
     <includes id="_c_none_calibration_shape_8h" name="CNoneCalibrationShape.h" local="yes" imported="no">iview/CNoneCalibrationShape.h</includes>
-    <includes id="_c_console_gui_8h" name="CConsoleGui.h" local="yes" imported="no">iview/CConsoleGui.h</includes>
-    <class kind="class">iview::CImageViewComp</class>
-    <namespace>iview</namespace>
+    <includes id="_c_view_provider_gui_comp_8h" name="CViewProviderGuiComp.h" local="yes" imported="no">iqt2d/CViewProviderGuiComp.h</includes>
+    <class kind="class">iqt2d::CImageViewComp</class>
+    <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
     <name>CLine2dParamsGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_line2d_params_gui_comp_8h</filename>
     <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
-    <includes id="_c_line2d_shape_8h" name="CLine2dShape.h" local="yes" imported="no">iqt2d/CLine2dShape.h</includes>
+    <includes id="_c_interactive_arrow_shape_8h" name="CInteractiveArrowShape.h" local="yes" imported="no">iview/CInteractiveArrowShape.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
     <class kind="class">iqt2d::CLine2dParamsGuiComp</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CLine2dShape.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_c_line2d_shape_8h</filename>
-    <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
-    <includes id="_t_object_shape_base_8h" name="TObjectShapeBase.h" local="yes" imported="no">iqt2d/TObjectShapeBase.h</includes>
-    <includes id="_c_grip_shape_8h" name="CGripShape.h" local="yes" imported="no">iqt2d/CGripShape.h</includes>
-    <class kind="class">iqt2d::CLine2dShape</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CPosition2dShape.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_c_position2d_shape_8h</filename>
-    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_c_position2d_8h" name="CPosition2d.h" local="yes" imported="no">i2d/CPosition2d.h</includes>
-    <includes id="_c_grip_shape_8h" name="CGripShape.h" local="yes" imported="no">iqt2d/CGripShape.h</includes>
-    <class kind="class">iqt2d::CPosition2dShape</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -3984,19 +3895,9 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_quadrangle_params_gui_comp_8h</filename>
     <includes id="_c_quadrangle_8h" name="CQuadrangle.h" local="yes" imported="no">i2d/CQuadrangle.h</includes>
+    <includes id="_c_interactive_parallelogram_shape_8h" name="CInteractiveParallelogramShape.h" local="yes" imported="no">iview/CInteractiveParallelogramShape.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
-    <includes id="_c_quadrangle_shape_8h" name="CQuadrangleShape.h" local="yes" imported="no">iqt2d/CQuadrangleShape.h</includes>
     <class kind="class">iqt2d::CQuadrangleParamsGuiComp</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CQuadrangleShape.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_c_quadrangle_shape_8h</filename>
-    <includes id="_c_quadrangle_8h" name="CQuadrangle.h" local="yes" imported="no">i2d/CQuadrangle.h</includes>
-    <includes id="_t_object_shape_base_8h" name="TObjectShapeBase.h" local="yes" imported="no">iqt2d/TObjectShapeBase.h</includes>
-    <includes id="_c_grip_shape_8h" name="CGripShape.h" local="yes" imported="no">iqt2d/CGripShape.h</includes>
-    <class kind="class">iqt2d::CQuadrangleShape</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -4004,19 +3905,9 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_rectangle_params_gui_comp_8h</filename>
     <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
+    <includes id="_c_interactive_rectangle_shape_8h" name="CInteractiveRectangleShape.h" local="yes" imported="no">iview/CInteractiveRectangleShape.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
-    <includes id="_c_rectangle_shape_8h" name="CRectangleShape.h" local="yes" imported="no">iqt2d/CRectangleShape.h</includes>
     <class kind="class">iqt2d::CRectangleParamsGuiComp</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CRectangleShape.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_c_rectangle_shape_8h</filename>
-    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
-    <includes id="_t_object_shape_base_8h" name="TObjectShapeBase.h" local="yes" imported="no">iqt2d/TObjectShapeBase.h</includes>
-    <includes id="_c_grip_shape_8h" name="CGripShape.h" local="yes" imported="no">iqt2d/CGripShape.h</includes>
-    <class kind="class">iqt2d::CRectangleShape</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -4024,8 +3915,8 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_scene_binder_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">iqt2d/ISceneProvider.h</includes>
-    <includes id="_i_scene_extender_8h" name="ISceneExtender.h" local="yes" imported="no">iqt2d/ISceneExtender.h</includes>
+    <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
+    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
     <class kind="class">iqt2d::CSceneBinderComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -4037,8 +3928,8 @@
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
-    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">iqt2d/ISceneProvider.h</includes>
-    <includes id="_i_scene_extender_8h" name="ISceneExtender.h" local="yes" imported="no">iqt2d/ISceneExtender.h</includes>
+    <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
+    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
     <class kind="class">iqt2d::CSceneConnectorGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -4073,8 +3964,18 @@
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_i_scene_extender_8h" name="ISceneExtender.h" local="yes" imported="no">iqt2d/ISceneExtender.h</includes>
+    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
     <class kind="class">iqt2d::CSelectableSceneExtenderComp</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CViewProviderGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_c_view_provider_gui_comp_8h</filename>
+    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <includes id="_c_console_gui_8h" name="CConsoleGui.h" local="yes" imported="no">iview/CConsoleGui.h</includes>
+    <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
+    <class kind="class">iqt2d::CViewProviderGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -4085,21 +3986,31 @@
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
-    <name>ISceneExtender.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_i_scene_extender_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="iqt2d_8h" name="iqt2d.h" local="yes" imported="no">iqt2d/iqt2d.h</includes>
-    <class kind="class">iqt2d::ISceneExtender</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
     <name>ISceneProvider.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_i_scene_provider_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="iqt2d_8h" name="iqt2d.h" local="yes" imported="no">iqt2d/iqt2d.h</includes>
     <class kind="class">iqt2d::ISceneProvider</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IViewExtender.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_i_view_extender_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
+    <class kind="class">iqt2d::IViewExtender</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IViewProvider.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_i_view_provider_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_i_shape_view_8h" name="IShapeView.h" local="yes" imported="no">iview/IShapeView.h</includes>
+    <includes id="iqt2d_8h" name="iqt2d.h" local="yes" imported="no">iqt2d/iqt2d.h</includes>
+    <class kind="class">iqt2d::IViewProvider</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -4118,8 +4029,9 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_t_scene_extender_comp_base_8h</filename>
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
-    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">iqt2d/ISceneProvider.h</includes>
-    <includes id="_i_scene_extender_8h" name="ISceneExtender.h" local="yes" imported="no">iqt2d/ISceneExtender.h</includes>
+    <includes id="_i_shape_8h" name="IShape.h" local="yes" imported="no">iview/IShape.h</includes>
+    <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
+    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
     <class kind="class">iqt2d::TSceneExtenderCompBase</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -4128,7 +4040,7 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_t_scene_extender_delegator_comp_wrap_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_scene_extender_8h" name="ISceneExtender.h" local="yes" imported="no">iqt2d/ISceneExtender.h</includes>
+    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
     <class kind="class">iqt2d::TSceneExtenderDelegatorCompWrap</class>
     <namespace>iqt2d</namespace>
     <member kind="typedef">
@@ -4174,6 +4086,7 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_t_shape_params_gui_comp_base_8h</filename>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="_c_shape_control_8h" name="CShapeControl.h" local="yes" imported="no">iview/CShapeControl.h</includes>
     <includes id="_t_scene_extender_comp_base_8h" name="TSceneExtenderCompBase.h" local="yes" imported="no">iqt2d/TSceneExtenderCompBase.h</includes>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
     <namespace>iqt2d</namespace>
@@ -4755,7 +4668,7 @@
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_i_scene_extender_8h" name="ISceneExtender.h" local="yes" imported="no">iqt2d/ISceneExtender.h</includes>
+    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
     <includes id="iqtprm_8h" name="iqtprm.h" local="yes" imported="no">iqtprm/iqtprm.h</includes>
     <class kind="class">iqtprm::CComposedParamsSetGuiComp</class>
     <namespace>iqtprm</namespace>
@@ -4857,7 +4770,7 @@
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
     <includes id="_i_variable_param_8h" name="IVariableParam.h" local="yes" imported="no">iprm/IVariableParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_i_scene_extender_8h" name="ISceneExtender.h" local="yes" imported="no">iqt2d/ISceneExtender.h</includes>
+    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
     <includes id="iqtprm_8h" name="iqtprm.h" local="yes" imported="no">iqtprm/iqtprm.h</includes>
     <class kind="class">iqtprm::CVariableParamGuiComp</class>
     <namespace>iqtprm</namespace>
@@ -6152,6 +6065,16 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
+    <name>CImageShape.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_image_shape_8h</filename>
+    <includes id="_i_color_transformation_8h" name="IColorTransformation.h" local="yes" imported="no">icmm/IColorTransformation.h</includes>
+    <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
+    <includes id="_c_shape_base_8h" name="CShapeBase.h" local="yes" imported="no">iview/CShapeBase.h</includes>
+    <class kind="class">iview::CImageShape</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
     <name>CInteractiveAnnulusSegmentShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_interactive_annulus_segment_shape_8h</filename>
@@ -6763,7 +6686,7 @@
     <includes id="_c_fixed_point_manip_8h" name="CFixedPointManip.h" local="yes" imported="no">imath/CFixedPointManip.h</includes>
     <includes id="_i_view_event_observer_8h" name="IViewEventObserver.h" local="yes" imported="no">iview/IViewEventObserver.h</includes>
     <includes id="_t_frame_base_8h" name="TFrameBase.h" local="yes" imported="no">iview/TFrameBase.h</includes>
-    <includes id="iview_2_c_image_shape_8h" name="CImageShape.h" local="yes" imported="no">iview/CImageShape.h</includes>
+    <includes id="_c_image_shape_8h" name="CImageShape.h" local="yes" imported="no">iview/CImageShape.h</includes>
     <class kind="class">iview::TFramedViewBase</class>
     <namespace>iview</namespace>
   </compound>
@@ -7072,24 +6995,8 @@
     <filename>class_c_element_selection_info_manager_base.html</filename>
   </compound>
   <compound kind="class">
-    <name>CImageShape</name>
-    <filename>class_c_image_shape.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>CSceneProviderGuiComp</name>
-    <filename>class_c_scene_provider_gui_comp.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>QGraphicsEllipseItem</name>
-    <filename>class_q_graphics_ellipse_item.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>QGraphicsLineItem</name>
-    <filename>class_q_graphics_line_item.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>QGraphicsPathItem</name>
-    <filename>class_q_graphics_path_item.html</filename>
+    <name>CViewProviderGuiComp</name>
+    <filename>class_c_view_provider_gui_comp.html</filename>
   </compound>
   <compound kind="class">
     <name>QGraphicsRectItem</name>
@@ -34162,27 +34069,20 @@
     <filename>namespaceiqt2d.html</filename>
     <class kind="class">iqt2d::CAnnulusParamsGuiComp</class>
     <class kind="class">iqt2d::CAnnulusSegmentParamsGuiComp</class>
-    <class kind="class">iqt2d::CAnnulusSegmentShape</class>
-    <class kind="class">iqt2d::CAnnulusShape</class>
     <class kind="class">iqt2d::CCircleParamsGuiComp</class>
-    <class kind="class">iqt2d::CCircleShape</class>
-    <class kind="class">iqt2d::CGripShape</class>
-    <class kind="class">iqt2d::CImageShape</class>
     <class kind="class">iqt2d::CImageViewComp</class>
     <class kind="class">iqt2d::CLine2dParamsGuiComp</class>
-    <class kind="class">iqt2d::CLine2dShape</class>
-    <class kind="class">iqt2d::CPosition2dShape</class>
     <class kind="class">iqt2d::CQuadrangleParamsGuiComp</class>
-    <class kind="class">iqt2d::CQuadrangleShape</class>
     <class kind="class">iqt2d::CRectangleParamsGuiComp</class>
-    <class kind="class">iqt2d::CRectangleShape</class>
     <class kind="class">iqt2d::CSceneBinderComp</class>
     <class kind="class">iqt2d::CSceneConnectorGuiComp</class>
     <class kind="class">iqt2d::CSceneControllerGuiComp</class>
     <class kind="class">iqt2d::CSceneProviderGuiComp</class>
     <class kind="class">iqt2d::CSelectableSceneExtenderComp</class>
-    <class kind="class">iqt2d::ISceneExtender</class>
+    <class kind="class">iqt2d::CViewProviderGuiComp</class>
     <class kind="class">iqt2d::ISceneProvider</class>
+    <class kind="class">iqt2d::IViewExtender</class>
+    <class kind="class">iqt2d::IViewProvider</class>
     <class kind="class">iqt2d::TObjectShapeBase</class>
     <class kind="class">iqt2d::TSceneExtenderCompBase</class>
     <class kind="class">iqt2d::TSceneExtenderDelegatorCompWrap</class>
@@ -34200,12 +34100,12 @@
   <compound kind="class">
     <name>iqt2d::CAnnulusParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_annulus_params_gui_comp.html</filename>
-    <base>TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iqt2d::CAnnulusShape, i2d::CAnnulus &gt;</base>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iview::CInteractiveAnnulusShape, i2d::CAnnulus &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iqt2d::CAnnulusShape, i2d::CAnnulus &gt;</type>
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iview::CInteractiveAnnulusShape, i2d::CAnnulus &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_annulus_params_gui_comp.html</anchorfile>
-      <anchor>a5b92a08fa8e59880fdc4701ae852f8ce</anchor>
+      <anchor>ad70b25ff30de590ce0d133dd07c419bf</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -34247,12 +34147,12 @@
   <compound kind="class">
     <name>iqt2d::CAnnulusSegmentParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_annulus_segment_params_gui_comp.html</filename>
-    <base>TShapeParamsGuiCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, iqt2d::CAnnulusSegmentShape, i2d::CAnnulusSegment &gt;</base>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, iview::CInteractiveAnnulusSegmentShape, i2d::CAnnulusSegment &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, iqt2d::CAnnulusSegmentShape, i2d::CAnnulusSegment &gt;</type>
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, iview::CInteractiveAnnulusSegmentShape, i2d::CAnnulusSegment &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_annulus_segment_params_gui_comp.html</anchorfile>
-      <anchor>ac0f907f1fe9b58da88c7e9038020512a</anchor>
+      <anchor>a7abfaa4f7034c055080f4ef00154bbdc</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -34292,101 +34192,14 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt2d::CAnnulusSegmentShape</name>
-    <filename>classiqt2d_1_1_c_annulus_segment_shape.html</filename>
-    <base>iqt2d::CAnnulusShape</base>
-    <member kind="typedef">
-      <type>CAnnulusShape</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_segment_shape.html</anchorfile>
-      <anchor>a04f250697109640e9d7d648690d5f22a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CAnnulusSegmentShape</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_segment_shape.html</anchorfile>
-      <anchor>a8937f2136987d121896f1d173373913a</anchor>
-      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnAngleGripPositionChanged</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_segment_shape.html</anchorfile>
-      <anchor>ab397287002a0a6467a1500b8be55a195</anchor>
-      <arglist>(const i2d::CVector2d &amp;point)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CalcVisualization</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_segment_shape.html</anchorfile>
-      <anchor>a07ed171b121bb9d0c58f3d37b889eb33</anchor>
-      <arglist>(const i2d::CAnnulus &amp;annulus)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateGraphicsItem</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_segment_shape.html</anchorfile>
-      <anchor>a9267c46ea557372f86817d5460f88d91</anchor>
-      <arglist>(const i2d::CAnnulus &amp;circle)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt2d::CAnnulusShape</name>
-    <filename>classiqt2d_1_1_c_annulus_shape.html</filename>
-    <base>TObjectShapeBase&lt; QGraphicsPathItem, i2d::CAnnulus &gt;</base>
-    <member kind="typedef">
-      <type>TObjectShapeBase&lt; QGraphicsPathItem, i2d::CAnnulus &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_shape.html</anchorfile>
-      <anchor>afeb0c2402ed0ee095ee77263c247ac05</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CAnnulusShape</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_shape.html</anchorfile>
-      <anchor>a61308db86c29b63d963f73e0437cd610</anchor>
-      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnInnerGripPositionChanged</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_shape.html</anchorfile>
-      <anchor>a9c9095f18d3918faa996f9a14c904458</anchor>
-      <arglist>(const i2d::CVector2d &amp;point)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnOuterGripPositionChanged</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_shape.html</anchorfile>
-      <anchor>a8eb87e1a80215c9150282d9afe2b64b1</anchor>
-      <arglist>(const i2d::CVector2d &amp;point)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CalcVisualization</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_shape.html</anchorfile>
-      <anchor>af7cc2b49331b74ade5330a04441c4041</anchor>
-      <arglist>(const i2d::CAnnulus &amp;annulus)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateGraphicsItem</name>
-      <anchorfile>classiqt2d_1_1_c_annulus_shape.html</anchorfile>
-      <anchor>aa5b21e5f2c93f47beb1e56ffaff6340a</anchor>
-      <arglist>(const i2d::CAnnulus &amp;annulus)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqt2d::CCircleParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_circle_params_gui_comp.html</filename>
-    <base>TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iqt2d::CCircleShape, i2d::CCircle &gt;</base>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iview::CInteractiveCircleShape, i2d::CCircle &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iqt2d::CCircleShape, i2d::CCircle &gt;</type>
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iview::CInteractiveCircleShape, i2d::CCircle &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>afe11ba9d2fe376797798ba94c772c408</anchor>
+      <anchor>a27dee4ec09ad02c9115139b8f4fc4284</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -34426,246 +34239,30 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt2d::CCircleShape</name>
-    <filename>classiqt2d_1_1_c_circle_shape.html</filename>
-    <base>TObjectShapeBase&lt; QGraphicsEllipseItem, i2d::CCircle &gt;</base>
-    <member kind="typedef">
-      <type>TObjectShapeBase&lt; QGraphicsEllipseItem, i2d::CCircle &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_circle_shape.html</anchorfile>
-      <anchor>a23a3af02a89f439c7ea1faeb0b6b4a27</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CCircleShape</name>
-      <anchorfile>classiqt2d_1_1_c_circle_shape.html</anchorfile>
-      <anchor>affdde63b127574ffaa98b7cac182849d</anchor>
-      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGripPositionChanged</name>
-      <anchorfile>classiqt2d_1_1_c_circle_shape.html</anchorfile>
-      <anchor>a2fc99de40f411142e555c46b90f48db6</anchor>
-      <arglist>(const i2d::CVector2d &amp;point)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt2d::CGripShape</name>
-    <filename>classiqt2d_1_1_c_grip_shape.html</filename>
-    <base>TShapeBase&lt; QGraphicsEllipseItem &gt;</base>
-    <member kind="enumeration">
-      <name>LabelPosition</name>
-      <anchorfile>classiqt2d_1_1_c_grip_shape.html</anchorfile>
-      <anchor>a7983f1267c07fc1aca650ff5fb802533</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>LabelLeft</name>
-      <anchorfile>classiqt2d_1_1_c_grip_shape.html</anchorfile>
-      <anchor>a7983f1267c07fc1aca650ff5fb802533a00cebbad7ae3df6954ed9207ba2b9575</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>LabelRight</name>
-      <anchorfile>classiqt2d_1_1_c_grip_shape.html</anchorfile>
-      <anchor>a7983f1267c07fc1aca650ff5fb802533a8264e0e746980961d2b9a9e40f8a3148</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>LabelTop</name>
-      <anchorfile>classiqt2d_1_1_c_grip_shape.html</anchorfile>
-      <anchor>a7983f1267c07fc1aca650ff5fb802533aa798f5adcaea5e52b5c532043e80c816</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>LabelBottom</name>
-      <anchorfile>classiqt2d_1_1_c_grip_shape.html</anchorfile>
-      <anchor>a7983f1267c07fc1aca650ff5fb802533ac777db953f4f0d29f5f27c125782c2b7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TShapeBase&lt; QGraphicsEllipseItem &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_grip_shape.html</anchorfile>
-      <anchor>a0dde53570ab2ea2b62cfb35f5523c052</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>PositionChanged</name>
-      <anchorfile>classiqt2d_1_1_c_grip_shape.html</anchorfile>
-      <anchor>a483da70f23d77f27ff70153dec475b76</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CGripShape</name>
-      <anchorfile>classiqt2d_1_1_c_grip_shape.html</anchorfile>
-      <anchor>a1e5c5674714f4957ff899243fe43914b</anchor>
-      <arglist>(QGraphicsItem *parentPtr=NULL, const ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type>i2d::CVector2d</type>
-      <name>GetPosition</name>
-      <anchorfile>classiqt2d_1_1_c_grip_shape.html</anchorfile>
-      <anchor>a5efd1df7ec7fd384902e056ca6f1ce0e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetPosition</name>
-      <anchorfile>classiqt2d_1_1_c_grip_shape.html</anchorfile>
-      <anchor>a8f9ac3fbc8c260da5e5c8e243224e4a1</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetLabelPosition</name>
-      <anchorfile>classiqt2d_1_1_c_grip_shape.html</anchorfile>
-      <anchor>aedb38e68cd2fa1c93218e8dcbb13dd1a</anchor>
-      <arglist>(int labelArea)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnPositionChanged</name>
-      <anchorfile>classiqt2d_1_1_c_grip_shape.html</anchorfile>
-      <anchor>a08c0071d8c483677abdd5fddadef2f59</anchor>
-      <arglist>(const QPointF &amp;position)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSelectionChanged</name>
-      <anchorfile>classiqt2d_1_1_c_grip_shape.html</anchorfile>
-      <anchor>a8e534a7cfc11add4dfd95a0e56129ce8</anchor>
-      <arglist>(bool isSelected)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt2d::CImageShape</name>
-    <filename>classiqt2d_1_1_c_image_shape.html</filename>
-    <base>TSingleModelObserverBase&lt; iimg::IBitmap &gt;</base>
-    <member kind="enumeration">
-      <name>PositionMode</name>
-      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
-      <anchor>abca450ff35b34e46a91891ca99a2457c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PM_CORNER_LT</name>
-      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
-      <anchor>abca450ff35b34e46a91891ca99a2457ca542e901d721397378fe27707e9d4e23d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PM_CENTER</name>
-      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
-      <anchor>abca450ff35b34e46a91891ca99a2457ca18e2c0d834c250587f9b9df4399e0ee6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CImageShape</name>
-      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
-      <anchor>a0dcb005a62f2690ccc0b10a577d10a06</anchor>
-      <arglist>(const icmm::IColorTransformation *colorTransformationPtr=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type>istd::CIndex2d</type>
-      <name>GetSize</name>
-      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
-      <anchor>a8bc114fff5bf091cb0787e299be7fd51</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsFrameVisible</name>
-      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
-      <anchor>a00ef9450cfc274c599d53ebdc5eddc7b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetFrameVisible</name>
-      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
-      <anchor>a5f6502ace2c18f877c2484c7e23dfd29</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetPositionMode</name>
-      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
-      <anchor>ae54894a67255c645dd0845ed2a45105e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetPositionMode</name>
-      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
-      <anchor>aca5cf5098da2c0806113abf3ec199cca</anchor>
-      <arglist>(int mode)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QRectF</type>
-      <name>boundingRect</name>
-      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
-      <anchor>a96ade44436f34443531f045a28b9a7e3</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>paint</name>
-      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
-      <anchor>a8fe0f355ff07ef90f1221cfdaf4a0355</anchor>
-      <arglist>(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>BeforeUpdate</name>
-      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
-      <anchor>a452c5c24c1398a4334f1c7142ab62a4f</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
-      <anchor>aa86a22cb79f836367e9412725ba10a31</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDetached</name>
-      <anchorfile>classiqt2d_1_1_c_image_shape.html</anchorfile>
-      <anchor>a540f627b5978bb2da19617e2ebeac0d4</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqt2d::CImageViewComp</name>
     <filename>classiqt2d_1_1_c_image_view_comp.html</filename>
-    <base>TGuiObserverWrap&lt; CSceneProviderGuiComp, CImageShape &gt;</base>
+    <base>TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt;</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
-      <type>iqtgui::TGuiObserverWrap&lt; CSceneProviderGuiComp, CImageShape &gt;</type>
+      <type>iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a5c60057226772e2d22399c92b6679c31</anchor>
+      <anchor>a2fdbd3aa5e88ef42315be24c92305743</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDetached</name>
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
       <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a3ef397bc23b7b85b76e2669570353305</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>a4ffe94cd3541486fc8425e4a541e3c85</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a0d0aaa63924c63662b4d9e95029fcca9</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a5c77637f56405bfc898341ccc64d0464</anchor>
+      <arglist>(int updateFlags)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -34674,23 +34271,16 @@
       <anchor>a86eab23c6253d004a56d7b0aa1bc8377</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a93c2502b98b18d61ddf5b9cd76b7d279</anchor>
-      <arglist>()</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iqt2d::CLine2dParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_line2d_params_gui_comp.html</filename>
-    <base>TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iqt2d::CLine2dShape, i2d::CLine2d &gt;</base>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iview::CInteractiveArrowShape, i2d::CLine2d &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iqt2d::CLine2dShape, i2d::CLine2d &gt;</type>
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iview::CInteractiveArrowShape, i2d::CLine2d &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
-      <anchor>a61bdb63b6d319f03b3dbbaca1e40b712</anchor>
+      <anchor>a73d52c1e98e6956e87dc19a61a23fa70</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -34730,95 +34320,14 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt2d::CLine2dShape</name>
-    <filename>classiqt2d_1_1_c_line2d_shape.html</filename>
-    <base>TObjectShapeBase&lt; QGraphicsLineItem, i2d::CLine2d &gt;</base>
-    <member kind="typedef">
-      <type>TObjectShapeBase&lt; QGraphicsLineItem, i2d::CLine2d &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_line2d_shape.html</anchorfile>
-      <anchor>a8b38ba0919036c4e2a00cfba786cc9c4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CLine2dShape</name>
-      <anchorfile>classiqt2d_1_1_c_line2d_shape.html</anchorfile>
-      <anchor>ad9c264a0987f9548343cd03c448a0249</anchor>
-      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnPosition1Changed</name>
-      <anchorfile>classiqt2d_1_1_c_line2d_shape.html</anchorfile>
-      <anchor>a994f4c97d5b6c9ef2f5dfd2ac69dbcad</anchor>
-      <arglist>(const i2d::CVector2d &amp;point)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnPosition2Changed</name>
-      <anchorfile>classiqt2d_1_1_c_line2d_shape.html</anchorfile>
-      <anchor>a10e23f0e4ad29a45d4586525010b23c3</anchor>
-      <arglist>(const i2d::CVector2d &amp;point)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateGraphicsItem</name>
-      <anchorfile>classiqt2d_1_1_c_line2d_shape.html</anchorfile>
-      <anchor>a0918fec1d2b8935a8c95b603c10a8658</anchor>
-      <arglist>(const i2d::CLine2d &amp;line)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt2d::CPosition2dShape</name>
-    <filename>classiqt2d_1_1_c_position2d_shape.html</filename>
-    <base>iqt2d::CGripShape</base>
-    <base>TSingleModelObserverBase&lt; i2d::CPosition2d &gt;</base>
-    <member kind="typedef">
-      <type>CGripShape</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_position2d_shape.html</anchorfile>
-      <anchor>ae2c1a5548603efdccafd7b7fccf31371</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::TSingleModelObserverBase&lt; i2d::CPosition2d &gt;</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiqt2d_1_1_c_position2d_shape.html</anchorfile>
-      <anchor>a759edeba8f6bd53ab1a05095e925f654</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CPosition2dShape</name>
-      <anchorfile>classiqt2d_1_1_c_position2d_shape.html</anchorfile>
-      <anchor>a2532aa8998d7271f4f00f9a2c0139fd8</anchor>
-      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classiqt2d_1_1_c_position2d_shape.html</anchorfile>
-      <anchor>adc5cb763caadb0f064da4f9e722ed111</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnPositionChanged</name>
-      <anchorfile>classiqt2d_1_1_c_position2d_shape.html</anchorfile>
-      <anchor>a110d17a021ad51df9241eae37fb621bd</anchor>
-      <arglist>(const QPointF &amp;position)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqt2d::CQuadrangleParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</filename>
-    <base>TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iqt2d::CQuadrangleShape, i2d::CQuadrangle &gt;</base>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iview::CInteractiveParallelogramShape, i2d::CQuadrangle &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iqt2d::CQuadrangleShape, i2d::CQuadrangle &gt;</type>
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iview::CInteractiveParallelogramShape, i2d::CQuadrangle &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_quadrangle_params_gui_comp.html</anchorfile>
-      <anchor>a22bb057b5f36a58b5dffb89d091b1457</anchor>
+      <anchor>a5e0931dc79a29563e980cb28dc9547f8</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -34858,68 +34367,14 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt2d::CQuadrangleShape</name>
-    <filename>classiqt2d_1_1_c_quadrangle_shape.html</filename>
-    <base>TObjectShapeBase&lt; QGraphicsPathItem, i2d::CQuadrangle &gt;</base>
-    <member kind="typedef">
-      <type>TObjectShapeBase&lt; QGraphicsPathItem, i2d::CQuadrangle &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_quadrangle_shape.html</anchorfile>
-      <anchor>a404fdf3c79e0b20fe2e5d3ef056d089c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CQuadrangleShape</name>
-      <anchorfile>classiqt2d_1_1_c_quadrangle_shape.html</anchorfile>
-      <anchor>a61e8510faf7eeac149313345d4647b3a</anchor>
-      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnFirstDiagGrip1Changed</name>
-      <anchorfile>classiqt2d_1_1_c_quadrangle_shape.html</anchorfile>
-      <anchor>a037f871f6b3ce29bde584bf295ab450a</anchor>
-      <arglist>(const i2d::CVector2d &amp;point)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnFirstDiagGrip2Changed</name>
-      <anchorfile>classiqt2d_1_1_c_quadrangle_shape.html</anchorfile>
-      <anchor>a4a9b504784d2eb55ec6b0093acb67019</anchor>
-      <arglist>(const i2d::CVector2d &amp;point)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSecondDiagGrip1Changed</name>
-      <anchorfile>classiqt2d_1_1_c_quadrangle_shape.html</anchorfile>
-      <anchor>abe5e4575518ae26596517833aa59822b</anchor>
-      <arglist>(const i2d::CVector2d &amp;point)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSecondDiagGrip2Changed</name>
-      <anchorfile>classiqt2d_1_1_c_quadrangle_shape.html</anchorfile>
-      <anchor>a73059f0b75246dfa582685b2403559fa</anchor>
-      <arglist>(const i2d::CVector2d &amp;point)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateGraphicsItem</name>
-      <anchorfile>classiqt2d_1_1_c_quadrangle_shape.html</anchorfile>
-      <anchor>a87666fc7287cdf61574cfed5623bdc7c</anchor>
-      <arglist>(const i2d::CQuadrangle &amp;quadrangle)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqt2d::CRectangleParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_rectangle_params_gui_comp.html</filename>
-    <base>TShapeParamsGuiCompBase&lt; Ui::CRectangleParamsGuiComp, iqt2d::CRectangleShape, i2d::CRectangle &gt;</base>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CRectangleParamsGuiComp, iview::CInteractiveRectangleShape, i2d::CRectangle &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CRectangleParamsGuiComp, iqt2d::CRectangleShape, i2d::CRectangle &gt;</type>
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CRectangleParamsGuiComp, iview::CInteractiveRectangleShape, i2d::CRectangle &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
-      <anchor>aa0a342c4dac4a9302c4dd4673ea98044</anchor>
+      <anchor>aff4284746434bf7e7fe748bc5f6623f6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -34956,60 +34411,6 @@
       <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
       <anchor>ac4550561fd3225603bcfd3026cf9f638</anchor>
       <arglist>(int updateFlags=0)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt2d::CRectangleShape</name>
-    <filename>classiqt2d_1_1_c_rectangle_shape.html</filename>
-    <base>TObjectShapeBase&lt; QGraphicsPathItem, i2d::CRectangle &gt;</base>
-    <member kind="typedef">
-      <type>TObjectShapeBase&lt; QGraphicsPathItem, i2d::CRectangle &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_rectangle_shape.html</anchorfile>
-      <anchor>afc2e6890815d2f67354981be36472304</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CRectangleShape</name>
-      <anchorfile>classiqt2d_1_1_c_rectangle_shape.html</anchorfile>
-      <anchor>a82a6e7c074513067d4e015272704e404</anchor>
-      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnTopLeftChanged</name>
-      <anchorfile>classiqt2d_1_1_c_rectangle_shape.html</anchorfile>
-      <anchor>a7151e415cd08192642223ccc8ed58be3</anchor>
-      <arglist>(const i2d::CVector2d &amp;point)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnTopRightChanged</name>
-      <anchorfile>classiqt2d_1_1_c_rectangle_shape.html</anchorfile>
-      <anchor>ad809a26553e7ff4cf15d16ae9e0b1288</anchor>
-      <arglist>(const i2d::CVector2d &amp;point)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnBottomLeftChanged</name>
-      <anchorfile>classiqt2d_1_1_c_rectangle_shape.html</anchorfile>
-      <anchor>a133862566aad2aafef3057a51c626edb</anchor>
-      <arglist>(const i2d::CVector2d &amp;point)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnBottomRightChanged</name>
-      <anchorfile>classiqt2d_1_1_c_rectangle_shape.html</anchorfile>
-      <anchor>a32527898e637bb7a924f276a26240d40</anchor>
-      <arglist>(const i2d::CVector2d &amp;point)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateGraphicsItem</name>
-      <anchorfile>classiqt2d_1_1_c_rectangle_shape.html</anchorfile>
-      <anchor>a1a2b680bfbc6f61e6478ad2d9b190f3b</anchor>
-      <arglist>(const i2d::CRectangle &amp;rect)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35446,7 +34847,7 @@
       <type>iqtgui::CHierarchicalCommand &amp;</type>
       <name>GetCommandsRootRef</name>
       <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a0d2dcc8dbd5b6204877312123c4dda86</anchor>
+      <anchor>ab309dd5bbe6351fdfca166501798af88</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -35571,7 +34972,7 @@
     <filename>classiqt2d_1_1_c_selectable_scene_extender_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base>TSingleModelObserverBase&lt; iprm::ISelectionParam &gt;</base>
-    <base virtualness="virtual">iqt2d::ISceneExtender</base>
+    <base virtualness="virtual">iqt2d::IViewExtender</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -35611,15 +35012,15 @@
       <type>virtual void</type>
       <name>AddItemsToScene</name>
       <anchorfile>classiqt2d_1_1_c_selectable_scene_extender_comp.html</anchorfile>
-      <anchor>ad7c626f2721cdfbf5aa3bd592f37606c</anchor>
-      <arglist>(iqt2d::ISceneProvider *providerPtr, int flags)</arglist>
+      <anchor>ae74c8233f181122015830f5b1e93a6bb</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveItemsFromScene</name>
       <anchorfile>classiqt2d_1_1_c_selectable_scene_extender_comp.html</anchorfile>
-      <anchor>a512be69885b4c700544428ebcbc96a5d</anchor>
-      <arglist>(iqt2d::ISceneProvider *providerPtr)</arglist>
+      <anchor>a1b28be47573bc93c841b5c5ec66a8ad8</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -35651,40 +35052,37 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt2d::ISceneExtender</name>
-    <filename>classiqt2d_1_1_i_scene_extender.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>SceneFlags</name>
-      <anchorfile>classiqt2d_1_1_i_scene_extender.html</anchorfile>
-      <anchor>a341f0960a1cc6fed0bac27c62f9b3dae</anchor>
+    <name>iqt2d::CViewProviderGuiComp</name>
+    <filename>classiqt2d_1_1_c_view_provider_gui_comp.html</filename>
+    <base>TGuiComponentBase&lt; iview::CConsoleGui &gt;</base>
+    <base virtualness="virtual">iqt2d::IViewProvider</base>
+    <member kind="typedef">
+      <type>iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a8b23d37e2179b3996b6ad136f47f81ed</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
-      <name>SF_BACKGROUND</name>
-      <anchorfile>classiqt2d_1_1_i_scene_extender.html</anchorfile>
-      <anchor>a341f0960a1cc6fed0bac27c62f9b3daeaf5625e6bee6e472ab7d2ad33dc06e040</anchor>
-      <arglist></arglist>
+    <member kind="function">
+      <type></type>
+      <name>CViewProviderGuiComp</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a84200e7f2b0af35936d53949ac22de32</anchor>
+      <arglist>()</arglist>
     </member>
-    <member kind="enumvalue">
-      <name>SF_DIRECT</name>
-      <anchorfile>classiqt2d_1_1_i_scene_extender.html</anchorfile>
-      <anchor>a341f0960a1cc6fed0bac27c62f9b3daea28630f44d1db9218cb5e7f578e501559</anchor>
-      <arglist></arglist>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetViewId</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>ae4766251c9e5a0e71990def7ac27c588</anchor>
+      <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>AddItemsToScene</name>
-      <anchorfile>classiqt2d_1_1_i_scene_extender.html</anchorfile>
-      <anchor>a2b76b94bdf042cb2152491d9cf2212c0</anchor>
-      <arglist>(ISceneProvider *providerPtr, int flags)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>RemoveItemsFromScene</name>
-      <anchorfile>classiqt2d_1_1_i_scene_extender.html</anchorfile>
-      <anchor>af00afdb2ad174b3cadccfcdc7d6d0113</anchor>
-      <arglist>(ISceneProvider *providerPtr)=0</arglist>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iview::IShapeView *</type>
+      <name>GetView</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>adc78fdfd1b381f0da35436a3257afa52</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35735,6 +35133,62 @@
       <name>GetSceneFlags</name>
       <anchorfile>classiqt2d_1_1_i_scene_provider.html</anchorfile>
       <anchor>a14318a9b609aa57bf48551ffe09c36e2</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::IViewExtender</name>
+    <filename>classiqt2d_1_1_i_view_extender.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="enumeration">
+      <name>SceneFlags</name>
+      <anchorfile>classiqt2d_1_1_i_view_extender.html</anchorfile>
+      <anchor>afc3716716624595bd3e0d451eb8dec41</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SF_BACKGROUND</name>
+      <anchorfile>classiqt2d_1_1_i_view_extender.html</anchorfile>
+      <anchor>afc3716716624595bd3e0d451eb8dec41aef2a0742b2fa40eaacea39422dd53e81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SF_DIRECT</name>
+      <anchorfile>classiqt2d_1_1_i_view_extender.html</anchorfile>
+      <anchor>afc3716716624595bd3e0d451eb8dec41a214cdb39d9c2faefaba55c8e01e02828</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>AddItemsToScene</name>
+      <anchorfile>classiqt2d_1_1_i_view_extender.html</anchorfile>
+      <anchor>ac29beac66239f36f9460b2fe9716e1b2</anchor>
+      <arglist>(IViewProvider *providerPtr, int flags)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>RemoveItemsFromScene</name>
+      <anchorfile>classiqt2d_1_1_i_view_extender.html</anchorfile>
+      <anchor>a360fe9a6f3f33884ed0b99847a9157ba</anchor>
+      <arglist>(IViewProvider *providerPtr)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::IViewProvider</name>
+    <filename>classiqt2d_1_1_i_view_provider.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetViewId</name>
+      <anchorfile>classiqt2d_1_1_i_view_provider.html</anchorfile>
+      <anchor>aab7b7fe3c884776e4a6e8befd9c706bf</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual iview::IShapeView *</type>
+      <name>GetView</name>
+      <anchorfile>classiqt2d_1_1_i_view_provider.html</anchorfile>
+      <anchor>aed42332764dc5898f6efc543aded8d54</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -35828,7 +35282,7 @@
     <filename>classiqt2d_1_1_t_scene_extender_comp_base.html</filename>
     <templarg>Base</templarg>
     <base>Base</base>
-    <base virtualness="virtual">iqt2d::ISceneExtender</base>
+    <base virtualness="virtual">iqt2d::IViewExtender</base>
     <member kind="typedef">
       <type>Base</type>
       <name>BaseClass</name>
@@ -35840,28 +35294,28 @@
       <type>virtual void</type>
       <name>AddItemsToScene</name>
       <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>a51e2199e9e3e14fe52baae9cce24900e</anchor>
-      <arglist>(ISceneProvider *providerPtr, int flags)</arglist>
+      <anchor>a48c1ec039e146b12a7e1897f47aa7c10</anchor>
+      <arglist>(IViewProvider *providerPtr, int flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveItemsFromScene</name>
       <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>a880a3ea3e8b3c93cff7107e755b235fa</anchor>
-      <arglist>(ISceneProvider *providerPtr)</arglist>
+      <anchor>ac3d6f86771fa1fd5d3acc08e47752bb1</anchor>
+      <arglist>(IViewProvider *providerPtr)</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>istd::TPointerVector&lt; QGraphicsItem &gt;</type>
+      <type>istd::TPointerVector&lt; iview::IShape &gt;</type>
       <name>Shapes</name>
       <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>a39d68e9f5afe0172658d469e55a5e699</anchor>
+      <anchor>a761c50f2aa84a7ecd0e9ebcd976ae673</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::map&lt; ISceneProvider *, Shapes &gt;</type>
+      <type>std::map&lt; IViewProvider *, Shapes &gt;</type>
       <name>ShapesMap</name>
       <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>af50360216b807015db7a34af595c405f</anchor>
+      <anchor>a868933541356569a33fca6b0a2ae68ea</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -35882,8 +35336,8 @@
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>a234d9e955c1224937d65b4882ddcebfe</anchor>
-      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)=0</arglist>
+      <anchor>a2cfddc21f2e3a0134525af0b40e01e52</anchor>
+      <arglist>(int sceneId, Shapes &amp;result)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35891,7 +35345,7 @@
     <filename>classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html</filename>
     <templarg></templarg>
     <base>Base</base>
-    <base virtualness="virtual">iqt2d::ISceneExtender</base>
+    <base virtualness="virtual">iqt2d::IViewExtender</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -35903,15 +35357,15 @@
       <type>virtual void</type>
       <name>AddItemsToScene</name>
       <anchorfile>classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html</anchorfile>
-      <anchor>afb5e9735491c5e1df22e4257e384a458</anchor>
-      <arglist>(iqt2d::ISceneProvider *providerPtr, int flags)</arglist>
+      <anchor>a3bff627cd8072c2fd5acb5b37d8b35cf</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveItemsFromScene</name>
       <anchorfile>classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html</anchorfile>
-      <anchor>a43df01460ade9b4f1c4ed009e175cd8a</anchor>
-      <arglist>(iqt2d::ISceneProvider *providerPtr)</arglist>
+      <anchor>ad01515711fc700a2243b0f05f7bb3703</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -36253,10 +35707,17 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>UpdateShapeView</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a76193d87a7035d882513aecf9e366f18</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
-      <anchor>a065de61285326f12b547600de2e6cd9c</anchor>
-      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
+      <anchor>a983c22bfc8806ba26585fbcbe97bf392</anchor>
+      <arglist>(int sceneId, Shapes &amp;result)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -39715,7 +39176,7 @@
     <name>iqtprm::CComposedParamsSetGuiComp</name>
     <filename>classiqtprm_1_1_c_composed_params_set_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CComposedParamsSetGuiComp, iprm::IParamsSet &gt;</base>
-    <base>iqt2d::ISceneExtender</base>
+    <base>iqt2d::IViewExtender</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CComposedParamsSetGuiComp, iprm::IParamsSet &gt;</type>
       <name>BaseClass</name>
@@ -39797,15 +39258,15 @@
       <type>virtual void</type>
       <name>AddItemsToScene</name>
       <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
-      <anchor>a0cc86680a35662e8a3eb5e86258daf41</anchor>
-      <arglist>(iqt2d::ISceneProvider *providerPtr, int flags)</arglist>
+      <anchor>a2f88a10133435406a50ee5ea435c7990</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveItemsFromScene</name>
       <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
-      <anchor>a79bb32a5f78559f3efe7b15ee9fa8882</anchor>
-      <arglist>(iqt2d::ISceneProvider *providerPtr)</arglist>
+      <anchor>a017bb5c552ced86274f73b1b3291e072</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -39832,15 +39293,15 @@
       <type>void</type>
       <name>AttachToScene</name>
       <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
-      <anchor>a4c047e3c1e04bd7e55a1069833808a72</anchor>
-      <arglist>(iqt2d::ISceneProvider *providerPtr, int flags)</arglist>
+      <anchor>a90a7ed4b1bc980846c2e3c89b9ba36af</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>DetachFromScene</name>
       <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
-      <anchor>a39897c8184ef7c13b1f78bc6a36e446f</anchor>
-      <arglist>(iqt2d::ISceneProvider *providerPtr)</arglist>
+      <anchor>ae8075acee4270b03c9547a2d0c412494</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40476,7 +39937,7 @@
     <name>iqtprm::CVariableParamGuiComp</name>
     <filename>classiqtprm_1_1_c_variable_param_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CVariableParamGuiComp, iprm::IVariableParam &gt;</base>
-    <base>iqt2d::ISceneExtender</base>
+    <base>iqt2d::IViewExtender</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CVariableParamGuiComp, iprm::IVariableParam &gt;</type>
       <name>BaseClass</name>
@@ -40523,15 +39984,15 @@
       <type>virtual void</type>
       <name>AddItemsToScene</name>
       <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
-      <anchor>ab2ed10b3acb98913cd62e1a2ba1452ff</anchor>
-      <arglist>(iqt2d::ISceneProvider *providerPtr, int flags)</arglist>
+      <anchor>a7d2db4c762fd80a60c5673525fd344a7</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveItemsFromScene</name>
       <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
-      <anchor>a65314fde1ca8cfa494e7d103c5e0b3e3</anchor>
-      <arglist>(iqt2d::ISceneProvider *providerPtr)</arglist>
+      <anchor>a55e301fd26587ee989e424ea07e30465</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -48422,7 +47883,6 @@
     <class kind="class">iview::CConsoleWidget</class>
     <class kind="class">iview::CDrawBuffer</class>
     <class kind="class">iview::CImageShape</class>
-    <class kind="class">iview::CImageViewComp</class>
     <class kind="class">iview::CInteractiveAnnulusSegmentShape</class>
     <class kind="class">iview::CInteractiveAnnulusShape</class>
     <class kind="class">iview::CInteractiveArrowShape</class>
@@ -49723,40 +49183,6 @@
       <anchorfile>classiview_1_1_c_image_shape.html</anchorfile>
       <anchor>a75945e74309720116e9d600e7186a045</anchor>
       <arglist>(QPainter &amp;painter, const iimg::IBitmap &amp;bitmap, const i2d::CRect &amp;bitmapArea, const i2d::CAffine2d &amp;destTransform) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iview::CImageViewComp</name>
-    <filename>classiview_1_1_c_image_view_comp.html</filename>
-    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;, iview::CImageShape &gt;</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
-    <member kind="typedef">
-      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;, iview::CImageShape &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiview_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a11a73598551af0551d1f860427870049</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IHierarchicalCommand *</type>
-      <name>GetCommands</name>
-      <anchorfile>classiview_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a523bb32dd19114b1a5fe2bcd1d85325c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiview_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a38f3b45c39a7cd4ac707a70736058f98</anchor>
-      <arglist>(int updateFlags)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiview_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>ad4d98b6aca649788129e91d469f4cc6b</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

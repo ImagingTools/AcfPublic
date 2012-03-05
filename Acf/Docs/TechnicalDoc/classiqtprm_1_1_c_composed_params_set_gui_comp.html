@@ -39,7 +39,7 @@
 <div class="title">iqtprm::CComposedParamsSetGuiComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtprm::CComposedParamsSetGuiComp" --><!-- doxytag: inherits="TDesignerGuiObserverCompBase&lt; Ui::CComposedParamsSetGuiComp, iprm::IParamsSet &gt;,iqt2d::ISceneExtender" -->
+<!-- doxytag: class="iqtprm::CComposedParamsSetGuiComp" --><!-- doxytag: inherits="TDesignerGuiObserverCompBase&lt; Ui::CComposedParamsSetGuiComp, iprm::IParamsSet &gt;,iqt2d::IViewExtender" -->
 <p><code>#include &lt;<a class="el" href="_c_composed_params_set_gui_comp_8h_source.html">CComposedParamsSetGuiComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqtprm::CComposedParamsSetGuiComp:</div>
@@ -48,7 +48,7 @@ Inheritance diagram for iqtprm::CComposedParamsSetGuiComp:</div>
   <img src="classiqtprm_1_1_c_composed_params_set_gui_comp.png" usemap="#iqtprm::CComposedParamsSetGuiComp_map" alt=""/>
   <map id="iqtprm::CComposedParamsSetGuiComp_map" name="iqtprm::CComposedParamsSetGuiComp_map">
 <area href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" alt="iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CComposedParamsSetGuiComp, iprm::IParamsSet &gt;" shape="rect" coords="3525,448,4690,472"/>
-<area href="classiqt2d_1_1_i_scene_extender.html" title="Interface for GUI objects presenting its results using extern scene objects." alt="iqt2d::ISceneExtender" shape="rect" coords="4700,448,5865,472"/>
+<area href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects." alt="iqt2d::IViewExtender" shape="rect" coords="4700,448,5865,472"/>
 <area href="classibase_1_1_t_model_observer_comp_wrap.html" alt="ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CComposedParamsSetGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt; &gt;" shape="rect" coords="3525,392,4690,416"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="4700,392,5865,416"/>
 <area href="classiqtgui_1_1_t_gui_observer_wrap.html" alt="iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CComposedParamsSetGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt;" shape="rect" coords="3525,336,4690,360"/>
@@ -96,10 +96,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#ab699f38faf310ad6af06f75006453fd3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_composed_params_set_gui_comp.html#ac912df851209d08cfa39077747756b12">OnGuiDestroyed</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just before GUI is released.  <a href="#ac912df851209d08cfa39077747756b12"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_composed_params_set_gui_comp.html#a0cc86680a35662e8a3eb5e86258daf41">AddItemsToScene</a> (<a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *providerPtr, int flags)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be added to specified scene.  <a href="#a0cc86680a35662e8a3eb5e86258daf41"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_composed_params_set_gui_comp.html#a79bb32a5f78559f3efe7b15ee9fa8882">RemoveItemsFromScene</a> (<a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *providerPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be removed from specified scene.  <a href="#a79bb32a5f78559f3efe7b15ee9fa8882"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_composed_params_set_gui_comp.html#a2f88a10133435406a50ee5ea435c7990">AddItemsToScene</a> (<a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *providerPtr, int flags)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be added to specified scene.  <a href="#a2f88a10133435406a50ee5ea435c7990"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_composed_params_set_gui_comp.html#a017bb5c552ced86274f73b1b3291e072">RemoveItemsFromScene</a> (<a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *providerPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be removed from specified scene.  <a href="#a017bb5c552ced86274f73b1b3291e072"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_composed_params_set_gui_comp.html#a04ffa160c40d8f4a7ab5a712548218e5">OnEditorChanged</a> (int index)</td></tr>
@@ -107,8 +107,8 @@ Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_composed_params_set_gui_comp.html#ab7d4b0ba80d6c0c8384df091f0bde878">on_SaveParamsButton_clicked</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_composed_params_set_gui_comp.html#a4c047e3c1e04bd7e55a1069833808a72">AttachToScene</a> (<a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *providerPtr, int flags)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_composed_params_set_gui_comp.html#a39897c8184ef7c13b1f78bc6a36e446f">DetachFromScene</a> (<a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *providerPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_composed_params_set_gui_comp.html#a90a7ed4b1bc980846c2e3c89b9ba36af">AttachToScene</a> (<a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *providerPtr, int flags)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_composed_params_set_gui_comp.html#ae8075acee4270b03c9547a2d0c412494">DetachFromScene</a> (<a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *providerPtr)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -149,14 +149,14 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a0cc86680a35662e8a3eb5e86258daf41"></a><!-- doxytag: member="iqtprm::CComposedParamsSetGuiComp::AddItemsToScene" ref="a0cc86680a35662e8a3eb5e86258daf41" args="(iqt2d::ISceneProvider *providerPtr, int flags)" -->
+<a class="anchor" id="a2f88a10133435406a50ee5ea435c7990"></a><!-- doxytag: member="iqtprm::CComposedParamsSetGuiComp::AddItemsToScene" ref="a2f88a10133435406a50ee5ea435c7990" args="(iqt2d::IViewProvider *providerPtr, int flags)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iqtprm::CComposedParamsSetGuiComp::AddItemsToScene </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *&#160;</td>
           <td class="paramname"><em>providerPtr</em>, </td>
         </tr>
         <tr>
@@ -176,18 +176,18 @@ Protected Member Functions</h2></td></tr>
 
 <p>Called when items should be added to specified scene. </p>
 
-<p>Implements <a class="el" href="classiqt2d_1_1_i_scene_extender.html#a2b76b94bdf042cb2152491d9cf2212c0">iqt2d::ISceneExtender</a>.</p>
+<p>Implements <a class="el" href="classiqt2d_1_1_i_view_extender.html#ac29beac66239f36f9460b2fe9716e1b2">iqt2d::IViewExtender</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4c047e3c1e04bd7e55a1069833808a72"></a><!-- doxytag: member="iqtprm::CComposedParamsSetGuiComp::AttachToScene" ref="a4c047e3c1e04bd7e55a1069833808a72" args="(iqt2d::ISceneProvider *providerPtr, int flags)" -->
+<a class="anchor" id="a90a7ed4b1bc980846c2e3c89b9ba36af"></a><!-- doxytag: member="iqtprm::CComposedParamsSetGuiComp::AttachToScene" ref="a90a7ed4b1bc980846c2e3c89b9ba36af" args="(iqt2d::IViewProvider *providerPtr, int flags)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void iqtprm::CComposedParamsSetGuiComp::AttachToScene </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *&#160;</td>
           <td class="paramname"><em>providerPtr</em>, </td>
         </tr>
         <tr>
@@ -207,14 +207,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a39897c8184ef7c13b1f78bc6a36e446f"></a><!-- doxytag: member="iqtprm::CComposedParamsSetGuiComp::DetachFromScene" ref="a39897c8184ef7c13b1f78bc6a36e446f" args="(iqt2d::ISceneProvider *providerPtr)" -->
+<a class="anchor" id="ae8075acee4270b03c9547a2d0c412494"></a><!-- doxytag: member="iqtprm::CComposedParamsSetGuiComp::DetachFromScene" ref="ae8075acee4270b03c9547a2d0c412494" args="(iqt2d::IViewProvider *providerPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void iqtprm::CComposedParamsSetGuiComp::DetachFromScene </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *&#160;</td>
           <td class="paramname"><em>providerPtr</em></td><td>)</td>
           <td><code> [protected]</code></td>
         </tr>
@@ -455,14 +455,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a79bb32a5f78559f3efe7b15ee9fa8882"></a><!-- doxytag: member="iqtprm::CComposedParamsSetGuiComp::RemoveItemsFromScene" ref="a79bb32a5f78559f3efe7b15ee9fa8882" args="(iqt2d::ISceneProvider *providerPtr)" -->
+<a class="anchor" id="a017bb5c552ced86274f73b1b3291e072"></a><!-- doxytag: member="iqtprm::CComposedParamsSetGuiComp::RemoveItemsFromScene" ref="a017bb5c552ced86274f73b1b3291e072" args="(iqt2d::IViewProvider *providerPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iqtprm::CComposedParamsSetGuiComp::RemoveItemsFromScene </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *&#160;</td>
           <td class="paramname"><em>providerPtr</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -472,7 +472,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Called when items should be removed from specified scene. </p>
 
-<p>Implements <a class="el" href="classiqt2d_1_1_i_scene_extender.html#af00afdb2ad174b3cadccfcdc7d6d0113">iqt2d::ISceneExtender</a>.</p>
+<p>Implements <a class="el" href="classiqt2d_1_1_i_view_extender.html#a360fe9a6f3f33884ed0b99847a9157ba">iqt2d::IViewExtender</a>.</p>
 
 </div>
 </div>

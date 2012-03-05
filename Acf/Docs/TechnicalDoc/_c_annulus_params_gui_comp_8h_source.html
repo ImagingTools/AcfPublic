@@ -31,9 +31,9 @@
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_c_annulus_8h.html">i2d/CAnnulus.h</a>&quot;</span>
 <a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_t_shape_params_gui_comp_base_8h.html">iqt2d/TShapeParamsGuiCompBase.h</a>&quot;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_c_annulus_shape_8h.html">iqt2d/CAnnulusShape.h</a>&quot;</span>
-<a name="l00009"></a>00009 
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_c_interactive_annulus_shape_8h.html">iview/CInteractiveAnnulusShape.h</a>&quot;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_t_shape_params_gui_comp_base_8h.html">iqt2d/TShapeParamsGuiCompBase.h</a>&quot;</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;iqt2d/Generated/ui_CAnnulusParamsGuiComp.h&quot;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
@@ -44,7 +44,7 @@
 <a name="l00017"></a><a class="code" href="classiqt2d_1_1_c_annulus_params_gui_comp.html">00017</a> <span class="keyword">class </span><a class="code" href="classiqt2d_1_1_c_annulus_params_gui_comp.html">CAnnulusParamsGuiComp</a>:
 <a name="l00018"></a>00018                      <span class="keyword">public</span> iqt2d::<a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">TShapeParamsGuiCompBase</a>&lt;
 <a name="l00019"></a>00019                                           Ui::CAnnulusParamsGuiComp,
-<a name="l00020"></a>00020                                           iqt2d::CAnnulusShape,
+<a name="l00020"></a>00020                                           iview::CInteractiveAnnulusShape,
 <a name="l00021"></a>00021                                           i2d::CAnnulus&gt;
 <a name="l00022"></a>00022 {
 <a name="l00023"></a>00023        Q_OBJECT
@@ -52,8 +52,8 @@
 <a name="l00025"></a>00025 <span class="keyword">public</span>:
 <a name="l00026"></a>00026        <span class="keyword">typedef</span> <a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">iqt2d::TShapeParamsGuiCompBase</a>&lt;
 <a name="l00027"></a>00027                             Ui::CAnnulusParamsGuiComp,
-<a name="l00028"></a>00028                             <a class="code" href="classiqt2d_1_1_c_annulus_shape.html">iqt2d::CAnnulusShape</a>,
-<a name="l00029"></a><a class="code" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#a5b92a08fa8e59880fdc4701ae852f8ce">00029</a>                             <a class="code" href="classi2d_1_1_c_annulus.html" title="Definition of graphical annulus object.">i2d::CAnnulus</a>&gt; <a class="code" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#a5b92a08fa8e59880fdc4701ae852f8ce">BaseClass</a>;
+<a name="l00028"></a>00028                             <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html">iview::CInteractiveAnnulusShape</a>,
+<a name="l00029"></a><a class="code" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#ad70b25ff30de590ce0d133dd07c419bf">00029</a>                             <a class="code" href="classi2d_1_1_c_annulus.html" title="Definition of graphical annulus object.">i2d::CAnnulus</a>&gt; <a class="code" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#ad70b25ff30de590ce0d133dd07c419bf">BaseClass</a>;
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_annulus_params_gui_comp.html">CAnnulusParamsGuiComp</a>);
 <a name="l00032"></a>00032        I_END_COMPONENT;

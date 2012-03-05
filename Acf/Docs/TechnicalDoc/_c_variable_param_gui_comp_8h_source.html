@@ -38,7 +38,7 @@
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
 <a name="l00013"></a>00013 
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_scene_extender_8h.html">iqt2d/ISceneExtender.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_view_extender_8h.html">iqt2d/IViewExtender.h</a>&quot;</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="iqtprm_8h.html">iqtprm/iqtprm.h</a>&quot;</span>
 <a name="l00017"></a>00017 <span class="preprocessor">#include &quot;iqtprm/Generated/ui_CVariableParamGuiComp.h&quot;</span>
@@ -50,7 +50,7 @@
 <a name="l00023"></a>00023 
 <a name="l00024"></a><a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html">00024</a> <span class="keyword">class </span><a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html">CVariableParamGuiComp</a>:
 <a name="l00025"></a>00025                      <span class="keyword">public</span> iqtgui::TDesignerGuiObserverCompBase&lt;Ui::CVariableParamGuiComp, iprm::IVariableParam&gt;,
-<a name="l00026"></a>00026                      <span class="keyword">public</span> iqt2d::ISceneExtender
+<a name="l00026"></a>00026                      <span class="keyword">public</span> iqt2d::IViewExtender
 <a name="l00027"></a>00027 {
 <a name="l00028"></a>00028        Q_OBJECT
 <a name="l00029"></a>00029 
@@ -58,7 +58,7 @@
 <a name="l00031"></a><a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#a41e9559a3c4027edbaf576bc2b947d3e">00031</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase&lt;Ui::CVariableParamGuiComp, iprm::IVariableParam&gt;</a> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#a41e9559a3c4027edbaf576bc2b947d3e">BaseClass</a>;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        I_BEGIN_COMPONENT(<a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html">CVariableParamGuiComp</a>);
-<a name="l00034"></a>00034               I_REGISTER_INTERFACE(<a class="code" href="classiqt2d_1_1_i_scene_extender.html" title="Interface for GUI objects presenting its results using extern scene objects.">iqt2d::ISceneExtender</a>);
+<a name="l00034"></a>00034               I_REGISTER_INTERFACE(<a class="code" href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects.">iqt2d::IViewExtender</a>);
 <a name="l00035"></a>00035               I_ASSIGN_MULTI_0(m_editorsCompPtr, <span class="stringliteral">&quot;Editors&quot;</span>, <span class="stringliteral">&quot;List of editor GUI&#39;s for each parameter type ID&quot;</span>, <span class="keyword">true</span>);
 <a name="l00036"></a>00036               <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#a820149c75921895854413de2b42cf22c">I_ASSIGN_TO</a>(m_guisCompPtr, m_editorsCompPtr, <span class="keyword">true</span>);
 <a name="l00037"></a>00037               <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#a820149c75921895854413de2b42cf22c">I_ASSIGN_TO</a>(m_observersCompPtr, m_editorsCompPtr, <span class="keyword">true</span>);
@@ -73,9 +73,9 @@
 <a name="l00046"></a>00046        <span class="comment">// reimplemented (imod::IObserver)</span>
 <a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#ae293812d7001eec2733342aa0b7a4b85" title="This call back function will be called, if an observable object is about to be detached.">OnDetached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049        <span class="comment">// reimplemented (iqt2d::ISceneExtender)</span>
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#ab2ed10b3acb98913cd62e1a2ba1452ff" title="Called when items should be added to specified scene.">AddItemsToScene</a>(<a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">iqt2d::ISceneProvider</a>* providerPtr, <span class="keywordtype">int</span> flags);
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#a65314fde1ca8cfa494e7d103c5e0b3e3" title="Called when items should be removed from specified scene.">RemoveItemsFromScene</a>(<a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">iqt2d::ISceneProvider</a>* providerPtr);
+<a name="l00049"></a>00049        <span class="comment">// reimplemented (iqt2d::IViewExtender)</span>
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#a7d2db4c762fd80a60c5673525fd344a7" title="Called when items should be added to specified scene.">AddItemsToScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">iqt2d::IViewProvider</a>* providerPtr, <span class="keywordtype">int</span> flags);
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#a55e301fd26587ee989e424ea07e30465" title="Called when items should be removed from specified scene.">RemoveItemsFromScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">iqt2d::IViewProvider</a>* providerPtr);
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053 <span class="keyword">protected</span>:
 <a name="l00054"></a>00054        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_variable_param_gui_comp.html#a8f3d9f2e4436f53996c408959ae4a313">AttachCurrentType</a>();
@@ -95,11 +95,11 @@
 <a name="l00068"></a>00068        I_MULTIREF(<a class="code" href="classimod_1_1_i_model_editor.html" title="Common interface for an model editor.">imod::IModelEditor</a>, m_editorsCompPtr);
 <a name="l00069"></a>00069        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_guisCompPtr);
 <a name="l00070"></a>00070        I_MULTIREF(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>, m_observersCompPtr);
-<a name="l00071"></a>00071        I_MULTIREF(<a class="code" href="classiqt2d_1_1_i_scene_extender.html" title="Interface for GUI objects presenting its results using extern scene objects.">iqt2d::ISceneExtender</a>, m_extendersCompPtr);
+<a name="l00071"></a>00071        I_MULTIREF(<a class="code" href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects.">iqt2d::IViewExtender</a>, m_extendersCompPtr);
 <a name="l00072"></a>00072        I_MULTIATTR(QString, m_typeIdsAttrPtr);
 <a name="l00073"></a>00073        I_MULTIATTR(QString, m_typeNamesAttrPtr);
 <a name="l00074"></a>00074 
-<a name="l00075"></a>00075        <span class="keyword">typedef</span> std::map&lt;iqt2d::ISceneProvider*, int&gt; ConnectedSceneFlags;    <span class="comment">// maps connected scene provider to connection flags</span>
+<a name="l00075"></a>00075        <span class="keyword">typedef</span> std::map&lt;iqt2d::IViewProvider*, int&gt; ConnectedSceneFlags;     <span class="comment">// maps connected scene provider to connection flags</span>
 <a name="l00076"></a>00076        ConnectedSceneFlags m_connectedSceneFlags;
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* m_lastParamModelPtr;

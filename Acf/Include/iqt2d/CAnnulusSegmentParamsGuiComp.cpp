@@ -144,6 +144,8 @@ void CAnnulusSegmentParamsGuiComp::OnParamsChanged(double /*value*/)
 		UpdateBlocker updateBlocker(this);
 
 		UpdateModel();
+
+		UpdateShapeView();
 	}
 }
 

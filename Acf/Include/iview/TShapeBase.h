@@ -26,9 +26,6 @@
 
 // ACF includes
 #include "imod/CSingleModelObserverBase.h"
-
-
-
 #include "iview/IDisplay.h"
 #include "iview/IColorShema.h"
 #include "iview/ILogicalCoords.h"

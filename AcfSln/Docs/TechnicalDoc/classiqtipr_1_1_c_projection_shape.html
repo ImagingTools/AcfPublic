@@ -32,12 +32,13 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iqtipr::CProjectionShape Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtipr::CProjectionShape" --><!-- doxytag: inherits="QGraphicsPathItem,imod::CMultiModelObserverBase" -->
+<!-- doxytag: class="iqtipr::CProjectionShape" --><!-- doxytag: inherits="iview::CShapeBase" -->
 <p><code>#include &lt;<a class="el" href="_c_projection_shape_8h_source.html">CProjectionShape.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqtipr::CProjectionShape:</div>
@@ -45,10 +46,19 @@ Inheritance diagram for iqtipr::CProjectionShape:</div>
  <div class="center">
   <img src="classiqtipr_1_1_c_projection_shape.png" usemap="#iqtipr::CProjectionShape_map" alt=""/>
   <map id="iqtipr::CProjectionShape_map" name="iqtipr::CProjectionShape_map">
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_q_graphics_path_item.html" alt="QGraphicsPathItem" shape="rect" coords="0,112,197,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_multi_model_observer_base.html" alt="imod::CMultiModelObserverBase" shape="rect" coords="207,112,404,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html" alt="imod::IObserver" shape="rect" coords="207,56,404,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="207,0,404,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_shape_base.html" alt="iview::CShapeBase" shape="rect" coords="430,224,635,248"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_t_shape_base.html" alt="iview::TShapeBase&lt; IShape &gt;" shape="rect" coords="430,168,635,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_i_shape.html" alt="iview::IShape" shape="rect" coords="107,112,312,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_shape_control.html" alt="iview::CShapeControl" shape="rect" coords="430,112,635,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_single_model_observer_base.html" alt="imod::CSingleModelObserverBase" shape="rect" coords="645,112,850,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html" alt="imod::IObserver" shape="rect" coords="0,56,205,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_i_visualizable.html" alt="iview::IVisualizable" shape="rect" coords="215,56,420,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_i_logical_coords.html" alt="iview::ILogicalCoords" shape="rect" coords="430,56,635,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html" alt="imod::IObserver" shape="rect" coords="645,56,850,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,205,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="215,0,420,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="430,0,635,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="645,0,850,24"/>
 </map>
  </div></div>
 
@@ -56,29 +66,35 @@ Inheritance diagram for iqtipr::CProjectionShape:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_multi_model_observer_base.html">imod::CMultiModelObserverBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_projection_shape.html#a87f4aaf7564d78c18f0acff894df6edf">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_shape_base.html">iview::CShapeBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_projection_shape.html#a1ebc66ebe08394460c1e28588015ccb0">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_projection_shape.html#a8e55c3767cb9349db2ff6b09cd7d77b8">CProjectionShape</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_projection_shape.html#a41fc070e5b142175ef7f8b98ee09179d">Draw</a> (QPainter &amp;drawContext) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_projection_shape.html#adf5d2457459860dc554cb693c48d4437">CalcBoundingBox</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;result) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_projection_shape.html#a4be8acc861e1d2e09d3a80babde1f0c5">AfterUpdate</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_projection_shape.html#aefef15dd210ac541fde35e19ea397f1a">UpdateFigure</a> () const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_projection_shape_8h_source.html#l00021">21</a> of file <a class="el" href="_c_projection_shape_8h_source.html">CProjectionShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_projection_shape_8h_source.html#l00018">18</a> of file <a class="el" href="_c_projection_shape_8h_source.html">CProjectionShape.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a87f4aaf7564d78c18f0acff894df6edf"></a><!-- doxytag: member="iqtipr::CProjectionShape::BaseClass" ref="a87f4aaf7564d78c18f0acff894df6edf" args="" -->
+<a class="anchor" id="a1ebc66ebe08394460c1e28588015ccb0"></a><!-- doxytag: member="iqtipr::CProjectionShape::BaseClass" ref="a1ebc66ebe08394460c1e28588015ccb0" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_multi_model_observer_base.html">imod::CMultiModelObserverBase</a> <a class="el" href="classiqtipr_1_1_c_projection_shape.html#a87f4aaf7564d78c18f0acff894df6edf">iqtipr::CProjectionShape::BaseClass</a></td>
+          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_shape_base.html">iview::CShapeBase</a> <a class="el" href="classiqtipr_1_1_c_projection_shape.html#a1ebc66ebe08394460c1e28588015ccb0">iqtipr::CProjectionShape::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_projection_shape_8h_source.html#l00024">24</a> of file <a class="el" href="_c_projection_shape_8h_source.html">CProjectionShape.h</a>.</p>
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_shape_base.html#a7224e6c066cc0235be3c5fae2da28a87">iview::CShapeBase</a>.</p>
+
+<p>Definition at line <a class="el" href="_c_projection_shape_8h_source.html#l00021">21</a> of file <a class="el" href="_c_projection_shape_8h_source.html">CProjectionShape.h</a>.</p>
 
 </div>
 </div>
@@ -131,7 +147,61 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_multi_model_observer_base.html#a52d553e4c021cd3022ca5beac156df1f">imod::CMultiModelObserverBase</a>.</p>
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_single_model_observer_base.html#a3bca1011478d03c5a4f99f6d158c9191">imod::CSingleModelObserverBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adf5d2457459860dc554cb693c48d4437"></a><!-- doxytag: member="iqtipr::CProjectionShape::CalcBoundingBox" ref="adf5d2457459860dc554cb693c48d4437" args="(i2d::CRect &amp;result) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtipr::CProjectionShape::CalcBoundingBox </td>
+          <td>(</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_t_shape_base.html#ac8122a1550808cea9e3150181e8d6dc5">iview::TShapeBase&lt; IShape &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a41fc070e5b142175ef7f8b98ee09179d"></a><!-- doxytag: member="iqtipr::CProjectionShape::Draw" ref="a41fc070e5b142175ef7f8b98ee09179d" args="(QPainter &amp;drawContext) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtipr::CProjectionShape::Draw </td>
+          <td>(</td>
+          <td class="paramtype">QPainter &amp;&#160;</td>
+          <td class="paramname"><em>drawContext</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_i_visualizable.html#a06eba0a783012c44824a2fa581d74c89">iview::IVisualizable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aefef15dd210ac541fde35e19ea397f1a"></a><!-- doxytag: member="iqtipr::CProjectionShape::UpdateFigure" ref="aefef15dd210ac541fde35e19ea397f1a" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqtipr::CProjectionShape::UpdateFigure </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>

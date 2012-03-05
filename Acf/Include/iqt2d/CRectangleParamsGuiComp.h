@@ -26,9 +26,9 @@
 
 #include "i2d/CRectangle.h"
 
-#include "iqt2d/TShapeParamsGuiCompBase.h"
-#include "iqt2d/CRectangleShape.h"
+#include "iview/CInteractiveRectangleShape.h"
 
+#include "iqt2d/TShapeParamsGuiCompBase.h"
 #include "iqt2d/Generated/ui_CRectangleParamsGuiComp.h"
 
 
@@ -39,7 +39,7 @@ namespace iqt2d
 class CRectangleParamsGuiComp:
 			public iqt2d::TShapeParamsGuiCompBase<
 						Ui::CRectangleParamsGuiComp,
-						iqt2d::CRectangleShape,
+						iview::CInteractiveRectangleShape,
 						i2d::CRectangle>
 {
 	Q_OBJECT
@@ -47,7 +47,7 @@ class CRectangleParamsGuiComp:
 public:
 	typedef iqt2d::TShapeParamsGuiCompBase<
 				Ui::CRectangleParamsGuiComp,
-				iqt2d::CRectangleShape,
+				iview::CInteractiveRectangleShape,
 				i2d::CRectangle> BaseClass;
 
 	I_BEGIN_COMPONENT(CRectangleParamsGuiComp);

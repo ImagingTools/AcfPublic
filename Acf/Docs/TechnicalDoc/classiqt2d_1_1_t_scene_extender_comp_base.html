@@ -39,7 +39,7 @@
 <div class="title">iqt2d::TSceneExtenderCompBase&lt; Base &gt; Class Template Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt2d::TSceneExtenderCompBase" --><!-- doxytag: inherits="Base,iqt2d::ISceneExtender" -->
+<!-- doxytag: class="iqt2d::TSceneExtenderCompBase" --><!-- doxytag: inherits="Base,iqt2d::IViewExtender" -->
 <p><code>#include &lt;<a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqt2d::TSceneExtenderCompBase&lt; Base &gt;:</div>
@@ -48,7 +48,7 @@ Inheritance diagram for iqt2d::TSceneExtenderCompBase&lt; Base &gt;:</div>
   <img src="classiqt2d_1_1_t_scene_extender_comp_base.png" usemap="#iqt2d::TSceneExtenderCompBase&lt; Base &gt;_map" alt=""/>
   <map id="iqt2d::TSceneExtenderCompBase&lt; Base &gt;_map" name="iqt2d::TSceneExtenderCompBase&lt; Base &gt;_map">
 <area href="class_base.html" alt="Base" shape="rect" coords="0,56,249,80"/>
-<area href="classiqt2d_1_1_i_scene_extender.html" title="Interface for GUI objects presenting its results using extern scene objects." alt="iqt2d::ISceneExtender" shape="rect" coords="259,56,508,80"/>
+<area href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects." alt="iqt2d::IViewExtender" shape="rect" coords="259,56,508,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="259,0,508,24"/>
 </map>
  </div></div>
@@ -60,28 +60,28 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_base.html">Base</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#aa84d65318184c8ebda8617619bbc17ee">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a51e2199e9e3e14fe52baae9cce24900e">AddItemsToScene</a> (<a class="el" href="classiqt2d_1_1_i_scene_provider.html">ISceneProvider</a> *providerPtr, int flags)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be added to specified scene.  <a href="#a51e2199e9e3e14fe52baae9cce24900e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a880a3ea3e8b3c93cff7107e755b235fa">RemoveItemsFromScene</a> (<a class="el" href="classiqt2d_1_1_i_scene_provider.html">ISceneProvider</a> *providerPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be removed from specified scene.  <a href="#a880a3ea3e8b3c93cff7107e755b235fa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a48c1ec039e146b12a7e1897f47aa7c10">AddItemsToScene</a> (<a class="el" href="classiqt2d_1_1_i_view_provider.html">IViewProvider</a> *providerPtr, int flags)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be added to specified scene.  <a href="#a48c1ec039e146b12a7e1897f47aa7c10"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#ac3d6f86771fa1fd5d3acc08e47752bb1">RemoveItemsFromScene</a> (<a class="el" href="classiqt2d_1_1_i_view_provider.html">IViewProvider</a> *providerPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be removed from specified scene.  <a href="#ac3d6f86771fa1fd5d3acc08e47752bb1"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector</a><br class="typebreak"/>
-&lt; QGraphicsItem &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a39d68e9f5afe0172658d469e55a5e699">Shapes</a></td></tr>
+&lt; <a class="el" href="classiview_1_1_i_shape.html">iview::IShape</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a761c50f2aa84a7ecd0e9ebcd976ae673">Shapes</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef std::map<br class="typebreak"/>
-&lt; <a class="el" href="classiqt2d_1_1_i_scene_provider.html">ISceneProvider</a> *, <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a39d68e9f5afe0172658d469e55a5e699">Shapes</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#af50360216b807015db7a34af595c405f">ShapesMap</a></td></tr>
+&lt; <a class="el" href="classiqt2d_1_1_i_view_provider.html">IViewProvider</a> *, <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a761c50f2aa84a7ecd0e9ebcd976ae673">Shapes</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a868933541356569a33fca6b0a2ae68ea">ShapesMap</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#ae24d4f1dde611254d0929942bad37622">IsSceneIdSupported</a> (int id) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#af50360216b807015db7a34af595c405f">ShapesMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a32afb4ca5dc03c0f63b0f4d840d0639e">GetShapesMap</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a234d9e955c1224937d65b4882ddcebfe">CreateShapes</a> (int sceneId, bool inactiveOnly, <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a39d68e9f5afe0172658d469e55a5e699">Shapes</a> &amp;result)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a868933541356569a33fca6b0a2ae68ea">ShapesMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a32afb4ca5dc03c0f63b0f4d840d0639e">GetShapesMap</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a2cfddc21f2e3a0134525af0b40e01e52">CreateShapes</a> (int sceneId, <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a761c50f2aa84a7ecd0e9ebcd976ae673">Shapes</a> &amp;result)=0</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class Base&gt;<br/>
 class iqt2d::TSceneExtenderCompBase&lt; Base &gt;</h3>
 
 
-<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00021">21</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00023">23</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="aa84d65318184c8ebda8617619bbc17ee"></a><!-- doxytag: member="iqt2d::TSceneExtenderCompBase::BaseClass" ref="aa84d65318184c8ebda8617619bbc17ee" args="" -->
 <div class="memitem">
@@ -96,52 +96,52 @@ template&lt;class Base&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classiqt2d_1_1_c_annulus_segment_params_gui_comp.html#ac0f907f1fe9b58da88c7e9038020512a">iqt2d::CAnnulusSegmentParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#a61bdb63b6d319f03b3dbbaca1e40b712">iqt2d::CLine2dParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#a5b92a08fa8e59880fdc4701ae852f8ce">iqt2d::CAnnulusParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_circle_params_gui_comp.html#afe11ba9d2fe376797798ba94c772c408">iqt2d::CCircleParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#a22bb057b5f36a58b5dffb89d091b1457">iqt2d::CQuadrangleParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_rectangle_params_gui_comp.html#aa0a342c4dac4a9302c4dd4673ea98044">iqt2d::CRectangleParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui, Shape, ShapeModel &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, iqt2d::CAnnulusSegmentShape, i2d::CAnnulusSegment &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iqt2d::CAnnulusShape, i2d::CAnnulus &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iqt2d::CCircleShape, i2d::CCircle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CRectangleParamsGuiComp, iqt2d::CRectangleShape, i2d::CRectangle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iqt2d::CQuadrangleShape, i2d::CQuadrangle &gt;</a>, and <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iqt2d::CLine2dShape, i2d::CLine2d &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqt2d_1_1_c_annulus_segment_params_gui_comp.html#a7abfaa4f7034c055080f4ef00154bbdc">iqt2d::CAnnulusSegmentParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#ad70b25ff30de590ce0d133dd07c419bf">iqt2d::CAnnulusParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a27dee4ec09ad02c9115139b8f4fc4284">iqt2d::CCircleParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#a73d52c1e98e6956e87dc19a61a23fa70">iqt2d::CLine2dParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#a5e0931dc79a29563e980cb28dc9547f8">iqt2d::CQuadrangleParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_rectangle_params_gui_comp.html#aff4284746434bf7e7fe748bc5f6623f6">iqt2d::CRectangleParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui, Shape, ShapeModel &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iview::CInteractiveParallelogramShape, i2d::CQuadrangle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, iview::CInteractiveAnnulusSegmentShape, i2d::CAnnulusSegment &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CRectangleParamsGuiComp, iview::CInteractiveRectangleShape, i2d::CRectangle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iview::CInteractiveAnnulusShape, i2d::CAnnulus &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iview::CInteractiveArrowShape, i2d::CLine2d &gt;</a>, and <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iview::CInteractiveCircleShape, i2d::CCircle &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00024">24</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00026">26</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a39d68e9f5afe0172658d469e55a5e699"></a><!-- doxytag: member="iqt2d::TSceneExtenderCompBase::Shapes" ref="a39d68e9f5afe0172658d469e55a5e699" args="" -->
+<a class="anchor" id="a761c50f2aa84a7ecd0e9ebcd976ae673"></a><!-- doxytag: member="iqt2d::TSceneExtenderCompBase::Shapes" ref="a761c50f2aa84a7ecd0e9ebcd976ae673" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Base&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector</a>&lt;QGraphicsItem&gt; <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::<a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a39d68e9f5afe0172658d469e55a5e699">Shapes</a><code> [protected]</code></td>
+          <td class="memname">typedef <a class="el" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector</a>&lt;<a class="el" href="classiview_1_1_i_shape.html">iview::IShape</a>&gt; <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::<a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a761c50f2aa84a7ecd0e9ebcd976ae673">Shapes</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">iqt2d::TShapeParamsGuiCompBase&lt; Ui, Shape, ShapeModel &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, iqt2d::CAnnulusSegmentShape, i2d::CAnnulusSegment &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iqt2d::CAnnulusShape, i2d::CAnnulus &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iqt2d::CCircleShape, i2d::CCircle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CRectangleParamsGuiComp, iqt2d::CRectangleShape, i2d::CRectangle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iqt2d::CQuadrangleShape, i2d::CQuadrangle &gt;</a>, and <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iqt2d::CLine2dShape, i2d::CLine2d &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">iqt2d::TShapeParamsGuiCompBase&lt; Ui, Shape, ShapeModel &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iview::CInteractiveParallelogramShape, i2d::CQuadrangle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, iview::CInteractiveAnnulusSegmentShape, i2d::CAnnulusSegment &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CRectangleParamsGuiComp, iview::CInteractiveRectangleShape, i2d::CRectangle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iview::CInteractiveAnnulusShape, i2d::CAnnulus &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iview::CInteractiveArrowShape, i2d::CLine2d &gt;</a>, and <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iview::CInteractiveCircleShape, i2d::CCircle &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00037">37</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00039">39</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af50360216b807015db7a34af595c405f"></a><!-- doxytag: member="iqt2d::TSceneExtenderCompBase::ShapesMap" ref="af50360216b807015db7a34af595c405f" args="" -->
+<a class="anchor" id="a868933541356569a33fca6b0a2ae68ea"></a><!-- doxytag: member="iqt2d::TSceneExtenderCompBase::ShapesMap" ref="a868933541356569a33fca6b0a2ae68ea" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Base&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::map&lt;<a class="el" href="classiqt2d_1_1_i_scene_provider.html">ISceneProvider</a>*, <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a39d68e9f5afe0172658d469e55a5e699">Shapes</a>&gt; <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::<a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#af50360216b807015db7a34af595c405f">ShapesMap</a><code> [protected]</code></td>
+          <td class="memname">typedef std::map&lt;<a class="el" href="classiqt2d_1_1_i_view_provider.html">IViewProvider</a>*, <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a761c50f2aa84a7ecd0e9ebcd976ae673">Shapes</a>&gt; <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::<a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a868933541356569a33fca6b0a2ae68ea">ShapesMap</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">iqt2d::TShapeParamsGuiCompBase&lt; Ui, Shape, ShapeModel &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, iqt2d::CAnnulusSegmentShape, i2d::CAnnulusSegment &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iqt2d::CAnnulusShape, i2d::CAnnulus &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iqt2d::CCircleShape, i2d::CCircle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CRectangleParamsGuiComp, iqt2d::CRectangleShape, i2d::CRectangle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iqt2d::CQuadrangleShape, i2d::CQuadrangle &gt;</a>, and <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iqt2d::CLine2dShape, i2d::CLine2d &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">iqt2d::TShapeParamsGuiCompBase&lt; Ui, Shape, ShapeModel &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iview::CInteractiveParallelogramShape, i2d::CQuadrangle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, iview::CInteractiveAnnulusSegmentShape, i2d::CAnnulusSegment &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CRectangleParamsGuiComp, iview::CInteractiveRectangleShape, i2d::CRectangle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iview::CInteractiveAnnulusShape, i2d::CAnnulus &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iview::CInteractiveArrowShape, i2d::CLine2d &gt;</a>, and <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iview::CInteractiveCircleShape, i2d::CCircle &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00038">38</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00040">40</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a51e2199e9e3e14fe52baae9cce24900e"></a><!-- doxytag: member="iqt2d::TSceneExtenderCompBase::AddItemsToScene" ref="a51e2199e9e3e14fe52baae9cce24900e" args="(ISceneProvider *providerPtr, int flags)" -->
+<a class="anchor" id="a48c1ec039e146b12a7e1897f47aa7c10"></a><!-- doxytag: member="iqt2d::TSceneExtenderCompBase::AddItemsToScene" ref="a48c1ec039e146b12a7e1897f47aa7c10" args="(IViewProvider *providerPtr, int flags)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -150,7 +150,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::AddItemsToScene </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_scene_provider.html">ISceneProvider</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_view_provider.html">IViewProvider</a> *&#160;</td>
           <td class="paramname"><em>providerPtr</em>, </td>
         </tr>
         <tr>
@@ -170,15 +170,15 @@ template&lt;class Base &gt; </div>
 
 <p>Called when items should be added to specified scene. </p>
 
-<p>Implements <a class="el" href="classiqt2d_1_1_i_scene_extender.html#a2b76b94bdf042cb2152491d9cf2212c0">iqt2d::ISceneExtender</a>.</p>
+<p>Implements <a class="el" href="classiqt2d_1_1_i_view_extender.html#ac29beac66239f36f9460b2fe9716e1b2">iqt2d::IViewExtender</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00059">59</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00061">61</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
 
-<p>References <a class="el" href="_t_pointer_vector_8h_source.html#l00222">istd::TPointerVector&lt; Pointer, AccessAdapter &gt;::GetAt()</a>, <a class="el" href="_t_pointer_vector_8h_source.html#l00170">istd::TPointerVector&lt; Pointer, AccessAdapter &gt;::GetCount()</a>, <a class="el" href="classiqt2d_1_1_i_scene_provider.html#a5f1caa93d28f19dcaf7508de18a11fd4">iqt2d::ISceneProvider::GetScene()</a>, <a class="el" href="classiqt2d_1_1_i_scene_provider.html#a5b09d83d80abdb96138b3fc03fd18ec4">iqt2d::ISceneProvider::GetSceneId()</a>, <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
+<p>References <a class="el" href="classiview_1_1_i_shape_view.html#adcc1951da539d42c5d21cafa5b539590">iview::IShapeView::ConnectBackgroundShape()</a>, <a class="el" href="classiview_1_1_i_shape_view.html#a318b841f0315f4ea1e995ea6eb6fc4ae">iview::IShapeView::ConnectShape()</a>, <a class="el" href="_t_pointer_vector_8h_source.html#l00222">istd::TPointerVector&lt; Pointer, AccessAdapter &gt;::GetAt()</a>, <a class="el" href="_t_pointer_vector_8h_source.html#l00170">istd::TPointerVector&lt; Pointer, AccessAdapter &gt;::GetCount()</a>, <a class="el" href="classiqt2d_1_1_i_view_provider.html#aed42332764dc5898f6efc543aded8d54">iqt2d::IViewProvider::GetView()</a>, <a class="el" href="classiqt2d_1_1_i_view_provider.html#aab7b7fe3c884776e4a6e8befd9c706bf">iqt2d::IViewProvider::GetViewId()</a>, <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a234d9e955c1224937d65b4882ddcebfe"></a><!-- doxytag: member="iqt2d::TSceneExtenderCompBase::CreateShapes" ref="a234d9e955c1224937d65b4882ddcebfe" args="(int sceneId, bool inactiveOnly, Shapes &amp;result)=0" -->
+<a class="anchor" id="a2cfddc21f2e3a0134525af0b40e01e52"></a><!-- doxytag: member="iqt2d::TSceneExtenderCompBase::CreateShapes" ref="a2cfddc21f2e3a0134525af0b40e01e52" args="(int sceneId, Shapes &amp;result)=0" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -193,13 +193,7 @@ template&lt;class Base&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>inactiveOnly</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a39d68e9f5afe0172658d469e55a5e699">Shapes</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a761c50f2aa84a7ecd0e9ebcd976ae673">Shapes</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
@@ -211,7 +205,7 @@ template&lt;class Base&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Implemented in <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a065de61285326f12b547600de2e6cd9c">iqt2d::TShapeParamsGuiCompBase&lt; Ui, Shape, ShapeModel &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a065de61285326f12b547600de2e6cd9c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, iqt2d::CAnnulusSegmentShape, i2d::CAnnulusSegment &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a065de61285326f12b547600de2e6cd9c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iqt2d::CAnnulusShape, i2d::CAnnulus &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a065de61285326f12b547600de2e6cd9c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iqt2d::CCircleShape, i2d::CCircle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a065de61285326f12b547600de2e6cd9c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CRectangleParamsGuiComp, iqt2d::CRectangleShape, i2d::CRectangle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a065de61285326f12b547600de2e6cd9c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iqt2d::CQuadrangleShape, i2d::CQuadrangle &gt;</a>, and <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a065de61285326f12b547600de2e6cd9c">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iqt2d::CLine2dShape, i2d::CLine2d &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a983c22bfc8806ba26585fbcbe97bf392">iqt2d::TShapeParamsGuiCompBase&lt; Ui, Shape, ShapeModel &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a983c22bfc8806ba26585fbcbe97bf392">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CQuadrangleParamsGuiComp, iview::CInteractiveParallelogramShape, i2d::CQuadrangle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a983c22bfc8806ba26585fbcbe97bf392">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusSegmentParamsGuiComp, iview::CInteractiveAnnulusSegmentShape, i2d::CAnnulusSegment &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a983c22bfc8806ba26585fbcbe97bf392">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CRectangleParamsGuiComp, iview::CInteractiveRectangleShape, i2d::CRectangle &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a983c22bfc8806ba26585fbcbe97bf392">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAnnulusParamsGuiComp, iview::CInteractiveAnnulusShape, i2d::CAnnulus &gt;</a>, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a983c22bfc8806ba26585fbcbe97bf392">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iview::CInteractiveArrowShape, i2d::CLine2d &gt;</a>, and <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a983c22bfc8806ba26585fbcbe97bf392">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iview::CInteractiveCircleShape, i2d::CCircle &gt;</a>.</p>
 
 </div>
 </div>
@@ -222,7 +216,7 @@ template&lt;class Base&gt; </div>
 template&lt;class Base &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::<a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#af50360216b807015db7a34af595c405f">ShapesMap</a> &amp; <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::GetShapesMap </td>
+          <td class="memname">const <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::<a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a868933541356569a33fca6b0a2ae68ea">ShapesMap</a> &amp; <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::GetShapesMap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [protected]</code></td>
@@ -231,7 +225,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00139">139</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00146">146</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
 
 </div>
 </div>
@@ -252,11 +246,11 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00120">120</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00127">127</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a880a3ea3e8b3c93cff7107e755b235fa"></a><!-- doxytag: member="iqt2d::TSceneExtenderCompBase::RemoveItemsFromScene" ref="a880a3ea3e8b3c93cff7107e755b235fa" args="(ISceneProvider *providerPtr)" -->
+<a class="anchor" id="ac3d6f86771fa1fd5d3acc08e47752bb1"></a><!-- doxytag: member="iqt2d::TSceneExtenderCompBase::RemoveItemsFromScene" ref="ac3d6f86771fa1fd5d3acc08e47752bb1" args="(IViewProvider *providerPtr)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -265,7 +259,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::RemoveItemsFromScene </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_scene_provider.html">ISceneProvider</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_view_provider.html">IViewProvider</a> *&#160;</td>
           <td class="paramname"><em>providerPtr</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -275,11 +269,11 @@ template&lt;class Base &gt; </div>
 
 <p>Called when items should be removed from specified scene. </p>
 
-<p>Implements <a class="el" href="classiqt2d_1_1_i_scene_extender.html#af00afdb2ad174b3cadccfcdc7d6d0113">iqt2d::ISceneExtender</a>.</p>
+<p>Implements <a class="el" href="classiqt2d_1_1_i_view_extender.html#a360fe9a6f3f33884ed0b99847a9157ba">iqt2d::IViewExtender</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00088">88</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00095">95</a> of file <a class="el" href="_t_scene_extender_comp_base_8h_source.html">TSceneExtenderCompBase.h</a>.</p>
 
-<p>References <a class="el" href="_t_pointer_vector_8h_source.html#l00222">istd::TPointerVector&lt; Pointer, AccessAdapter &gt;::GetAt()</a>, <a class="el" href="_t_pointer_vector_8h_source.html#l00170">istd::TPointerVector&lt; Pointer, AccessAdapter &gt;::GetCount()</a>, <a class="el" href="classiqt2d_1_1_i_scene_provider.html#a5f1caa93d28f19dcaf7508de18a11fd4">iqt2d::ISceneProvider::GetScene()</a>, <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
+<p>References <a class="el" href="classiview_1_1_i_shape_observer.html#aca1acc27c4434a4122d6c4a0c984fa79">iview::IShapeObserver::DisconnectShape()</a>, <a class="el" href="_t_pointer_vector_8h_source.html#l00222">istd::TPointerVector&lt; Pointer, AccessAdapter &gt;::GetAt()</a>, <a class="el" href="_t_pointer_vector_8h_source.html#l00170">istd::TPointerVector&lt; Pointer, AccessAdapter &gt;::GetCount()</a>, <a class="el" href="classiqt2d_1_1_i_view_provider.html#aed42332764dc5898f6efc543aded8d54">iqt2d::IViewProvider::GetView()</a>, <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
 
 </div>
 </div>

@@ -38,7 +38,7 @@
 <div class="title">iqt2d::CSelectableSceneExtenderComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt2d::CSelectableSceneExtenderComp" --><!-- doxytag: inherits="icomp::CComponentBase,TSingleModelObserverBase&lt; iprm::ISelectionParam &gt;,iqt2d::ISceneExtender" -->
+<!-- doxytag: class="iqt2d::CSelectableSceneExtenderComp" --><!-- doxytag: inherits="icomp::CComponentBase,TSingleModelObserverBase&lt; iprm::ISelectionParam &gt;,iqt2d::IViewExtender" -->
 <p><code>#include &lt;<a class="el" href="_c_selectable_scene_extender_comp_8h_source.html">CSelectableSceneExtenderComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqt2d::CSelectableSceneExtenderComp:</div>
@@ -48,7 +48,7 @@ Inheritance diagram for iqt2d::CSelectableSceneExtenderComp:</div>
   <map id="iqt2d::CSelectableSceneExtenderComp_map" name="iqt2d::CSelectableSceneExtenderComp_map">
 <area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,168,348,192"/>
 <area href="classimod_1_1_t_single_model_observer_base.html" alt="imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt;" shape="rect" coords="358,168,706,192"/>
-<area href="classiqt2d_1_1_i_scene_extender.html" title="Interface for GUI objects presenting its results using extern scene objects." alt="iqt2d::ISceneExtender" shape="rect" coords="716,168,1064,192"/>
+<area href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects." alt="iqt2d::IViewExtender" shape="rect" coords="716,168,1064,192"/>
 <area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,112,348,136"/>
 <area href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer." alt="imod::CSingleModelObserverBase" shape="rect" coords="358,112,706,136"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="716,112,1064,136"/>
@@ -73,10 +73,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#ac1f0a4b11796b90bfb6213221b281b33"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_selectable_scene_extender_comp.html#a895cef5cd8e646dd165d2134a8e9ac3f">OnDetached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be detached.  <a href="#a895cef5cd8e646dd165d2134a8e9ac3f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_selectable_scene_extender_comp.html#ad7c626f2721cdfbf5aa3bd592f37606c">AddItemsToScene</a> (<a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *providerPtr, int flags)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be added to specified scene.  <a href="#ad7c626f2721cdfbf5aa3bd592f37606c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_selectable_scene_extender_comp.html#a512be69885b4c700544428ebcbc96a5d">RemoveItemsFromScene</a> (<a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *providerPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be removed from specified scene.  <a href="#a512be69885b4c700544428ebcbc96a5d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_selectable_scene_extender_comp.html#ae74c8233f181122015830f5b1e93a6bb">AddItemsToScene</a> (<a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *providerPtr, int flags)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be added to specified scene.  <a href="#ae74c8233f181122015830f5b1e93a6bb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_selectable_scene_extender_comp.html#a1b28be47573bc93c841b5c5ec66a8ad8">RemoveItemsFromScene</a> (<a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *providerPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be removed from specified scene.  <a href="#a1b28be47573bc93c841b5c5ec66a8ad8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_selectable_scene_extender_comp.html#af7a71dcbba6fef8373d1b4dc1601facc">AttachCurrent</a> ()</td></tr>
@@ -140,14 +140,14 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ad7c626f2721cdfbf5aa3bd592f37606c"></a><!-- doxytag: member="iqt2d::CSelectableSceneExtenderComp::AddItemsToScene" ref="ad7c626f2721cdfbf5aa3bd592f37606c" args="(iqt2d::ISceneProvider *providerPtr, int flags)" -->
+<a class="anchor" id="ae74c8233f181122015830f5b1e93a6bb"></a><!-- doxytag: member="iqt2d::CSelectableSceneExtenderComp::AddItemsToScene" ref="ae74c8233f181122015830f5b1e93a6bb" args="(iqt2d::IViewProvider *providerPtr, int flags)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iqt2d::CSelectableSceneExtenderComp::AddItemsToScene </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *&#160;</td>
           <td class="paramname"><em>providerPtr</em>, </td>
         </tr>
         <tr>
@@ -167,7 +167,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Called when items should be added to specified scene. </p>
 
-<p>Implements <a class="el" href="classiqt2d_1_1_i_scene_extender.html#a2b76b94bdf042cb2152491d9cf2212c0">iqt2d::ISceneExtender</a>.</p>
+<p>Implements <a class="el" href="classiqt2d_1_1_i_view_extender.html#ac29beac66239f36f9460b2fe9716e1b2">iqt2d::IViewExtender</a>.</p>
 
 </div>
 </div>
@@ -321,14 +321,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a512be69885b4c700544428ebcbc96a5d"></a><!-- doxytag: member="iqt2d::CSelectableSceneExtenderComp::RemoveItemsFromScene" ref="a512be69885b4c700544428ebcbc96a5d" args="(iqt2d::ISceneProvider *providerPtr)" -->
+<a class="anchor" id="a1b28be47573bc93c841b5c5ec66a8ad8"></a><!-- doxytag: member="iqt2d::CSelectableSceneExtenderComp::RemoveItemsFromScene" ref="a1b28be47573bc93c841b5c5ec66a8ad8" args="(iqt2d::IViewProvider *providerPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iqt2d::CSelectableSceneExtenderComp::RemoveItemsFromScene </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *&#160;</td>
           <td class="paramname"><em>providerPtr</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -338,7 +338,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Called when items should be removed from specified scene. </p>
 
-<p>Implements <a class="el" href="classiqt2d_1_1_i_scene_extender.html#af00afdb2ad174b3cadccfcdc7d6d0113">iqt2d::ISceneExtender</a>.</p>
+<p>Implements <a class="el" href="classiqt2d_1_1_i_view_extender.html#a360fe9a6f3f33884ed0b99847a9157ba">iqt2d::IViewExtender</a>.</p>
 
 </div>
 </div>

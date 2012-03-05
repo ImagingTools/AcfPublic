@@ -26,9 +26,9 @@
 
 #include "i2d/CQuadrangle.h"
 
-#include "iqt2d/TShapeParamsGuiCompBase.h"
-#include "iqt2d/CQuadrangleShape.h"
+#include "iview/CInteractiveParallelogramShape.h"
 
+#include "iqt2d/TShapeParamsGuiCompBase.h"
 #include "iqt2d/Generated/ui_CQuadrangleParamsGuiComp.h"
 
 
@@ -39,7 +39,7 @@ namespace iqt2d
 class CQuadrangleParamsGuiComp:
 			public iqt2d::TShapeParamsGuiCompBase<
 						Ui::CQuadrangleParamsGuiComp,
-						iqt2d::CQuadrangleShape,
+						iview::CInteractiveParallelogramShape,
 						i2d::CQuadrangle>
 {
 	Q_OBJECT
@@ -47,7 +47,7 @@ class CQuadrangleParamsGuiComp:
 public:
 	typedef iqt2d::TShapeParamsGuiCompBase<
 				Ui::CQuadrangleParamsGuiComp,
-				iqt2d::CQuadrangleShape,
+				iview::CInteractiveParallelogramShape,
 				i2d::CQuadrangle> BaseClass;
 
 	I_BEGIN_COMPONENT(CQuadrangleParamsGuiComp);

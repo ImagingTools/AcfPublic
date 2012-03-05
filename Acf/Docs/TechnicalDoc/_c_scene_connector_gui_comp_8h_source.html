@@ -35,8 +35,8 @@
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_t_designer_gui_comp_base_8h.html">iqtgui/TDesignerGuiCompBase.h</a>&quot;</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_c_hierarchical_command_8h.html">iqtgui/CHierarchicalCommand.h</a>&quot;</span>
 <a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_scene_provider_8h.html">iqt2d/ISceneProvider.h</a>&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_scene_extender_8h.html">iqt2d/ISceneExtender.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_view_provider_8h.html">iqt2d/IViewProvider.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_view_extender_8h.html">iqt2d/IViewExtender.h</a>&quot;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;iqt2d/Generated/ui_CSceneConnectorGuiComp.h&quot;</span>
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 
@@ -76,10 +76,10 @@
 <a name="l00049"></a>00049 <span class="keyword">private</span>:
 <a name="l00050"></a>00050        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_sceneGuiCompPtr);
 <a name="l00051"></a>00051        I_REF(<a class="code" href="classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>, m_sceneCommandsCompPtr);
-<a name="l00052"></a>00052        I_REF(<a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">ISceneProvider</a>, m_sceneProviderCompPtr);
+<a name="l00052"></a>00052        I_REF(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>, m_sceneProviderCompPtr);
 <a name="l00053"></a>00053        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_extenderGuiCompPtr);
 <a name="l00054"></a>00054        I_REF(<a class="code" href="classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>, m_extenderCommandsCompPtr);
-<a name="l00055"></a>00055        I_REF(<a class="code" href="classiqt2d_1_1_i_scene_extender.html" title="Interface for GUI objects presenting its results using extern scene objects.">ISceneExtender</a>, m_extenderCompPtr);
+<a name="l00055"></a>00055        I_REF(<a class="code" href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects.">IViewExtender</a>, m_extenderCompPtr);
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057        <span class="keyword">mutable</span> <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_commands;
 <a name="l00058"></a>00058 };

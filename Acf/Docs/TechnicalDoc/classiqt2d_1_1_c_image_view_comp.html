@@ -38,22 +38,37 @@
 <div class="title">iqt2d::CImageViewComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt2d::CImageViewComp" --><!-- doxytag: inherits="TGuiObserverWrap&lt; CSceneProviderGuiComp, CImageShape &gt;" -->
-<p>Show observed bitmap on the scene.  
+<!-- doxytag: class="iqt2d::CImageViewComp" --><!-- doxytag: inherits="TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt;,ibase::ICommandsProvider" -->
+<p>Show observed bitmap on the 2D-console.  
  <a href="classiqt2d_1_1_c_image_view_comp.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="iqt2d_2_c_image_view_comp_8h_source.html">CImageViewComp.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_c_image_view_comp_8h_source.html">CImageViewComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqt2d::CImageViewComp:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classiqt2d_1_1_c_image_view_comp.png" usemap="#iqt2d::CImageViewComp_map" alt=""/>
   <map id="iqt2d::CImageViewComp_map" name="iqt2d::CImageViewComp_map">
-<area href="classiqtgui_1_1_t_gui_observer_wrap.html" alt="iqtgui::TGuiObserverWrap&lt; CSceneProviderGuiComp, CImageShape &gt;" shape="rect" coords="423,112,836,136"/>
-<area href="class_c_scene_provider_gui_comp.html" alt="CSceneProviderGuiComp" shape="rect" coords="0,56,413,80"/>
-<area href="class_c_image_shape.html" alt="CImageShape" shape="rect" coords="423,56,836,80"/>
-<area href="classimod_1_1_i_model_editor.html" title="Common interface for an model editor." alt="imod::IModelEditor" shape="rect" coords="846,56,1259,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="846,0,1259,24"/>
+<area href="classiqtgui_1_1_t_gui_observer_wrap.html" alt="iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt;" shape="rect" coords="900,336,1340,360"/>
+<area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="1800,336,2240,360"/>
+<area href="class_c_view_provider_gui_comp.html" alt="CViewProviderGuiComp" shape="rect" coords="0,280,440,304"/>
+<area href="classiview_1_1_c_image_shape.html" alt="iview::CImageShape" shape="rect" coords="900,280,1340,304"/>
+<area href="classimod_1_1_i_model_editor.html" title="Common interface for an model editor." alt="imod::IModelEditor" shape="rect" coords="1350,280,1790,304"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1800,280,2240,304"/>
+<area href="classiview_1_1_c_shape_base.html" alt="iview::CShapeBase" shape="rect" coords="900,224,1340,248"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1350,224,1790,248"/>
+<area href="classiview_1_1_t_shape_base.html" alt="iview::TShapeBase&lt; IShape &gt;" shape="rect" coords="900,168,1340,192"/>
+<area href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes." alt="iview::IShape" shape="rect" coords="225,112,665,136"/>
+<area href="classiview_1_1_c_shape_control.html" alt="iview::CShapeControl" shape="rect" coords="900,112,1340,136"/>
+<area href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer." alt="imod::CSingleModelObserverBase" shape="rect" coords="1350,112,1790,136"/>
+<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="0,56,440,80"/>
+<area href="classiview_1_1_i_visualizable.html" alt="iview::IVisualizable" shape="rect" coords="450,56,890,80"/>
+<area href="classiview_1_1_i_logical_coords.html" alt="iview::ILogicalCoords" shape="rect" coords="900,56,1340,80"/>
+<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="1350,56,1790,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,440,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="450,0,890,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="900,0,1340,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1350,0,1790,24"/>
 </map>
  </div></div>
 
@@ -63,56 +78,61 @@ Inheritance diagram for iqt2d::CImageViewComp:</div>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html">iqtgui::TGuiObserverWrap</a><br class="typebreak"/>
-&lt; <a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html">CSceneProviderGuiComp</a>, <br class="typebreak"/>
-<a class="el" href="classiqt2d_1_1_c_image_shape.html">CImageShape</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a5c60057226772e2d22399c92b6679c31">BaseClass</a></td></tr>
+&lt; <a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html">CViewProviderGuiComp</a>, <br class="typebreak"/>
+<a class="el" href="classiview_1_1_c_image_shape.html">iview::CImageShape</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a2fdbd3aa5e88ef42315be24c92305743">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a3ef397bc23b7b85b76e2669570353305">OnDetached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
+<a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a4ffe94cd3541486fc8425e4a541e3c85">GetCommands</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of menu commands.  <a href="#a4ffe94cd3541486fc8425e4a541e3c85"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a0d0aaa63924c63662b4d9e95029fcca9">UpdateGui</a> (int updateFlags=0)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do update of the model GUI.  <a href="#a0d0aaa63924c63662b4d9e95029fcca9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a5c77637f56405bfc898341ccc64d0464">UpdateGui</a> (int updateFlags)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do update of the model GUI.  <a href="#a5c77637f56405bfc898341ccc64d0464"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a86eab23c6253d004a56d7b0aa1bc8377">OnGuiCreated</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a93c2502b98b18d61ddf5b9cd76b7d279">OnGuiDestroyed</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Show observed bitmap on the scene. </p>
-<p>This class extends standard scene provider to provide background bitmap object. </p>
+<div class="textblock"><p>Show observed bitmap on the 2D-console. </p>
+<p>This class extends standard 2D-console to provide background bitmap object. </p>
 
-<p>Definition at line <a class="el" href="iqt2d_2_c_image_view_comp_8h_source.html#l00019">19</a> of file <a class="el" href="iqt2d_2_c_image_view_comp_8h_source.html">CImageViewComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_image_view_comp_8h_source.html#l00026">26</a> of file <a class="el" href="_c_image_view_comp_8h_source.html">CImageViewComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a5c60057226772e2d22399c92b6679c31"></a><!-- doxytag: member="iqt2d::CImageViewComp::BaseClass" ref="a5c60057226772e2d22399c92b6679c31" args="" -->
+<a class="anchor" id="a2fdbd3aa5e88ef42315be24c92305743"></a><!-- doxytag: member="iqt2d::CImageViewComp::BaseClass" ref="a2fdbd3aa5e88ef42315be24c92305743" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html">iqtgui::TGuiObserverWrap</a>&lt;<a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html">CSceneProviderGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_image_shape.html">CImageShape</a>&gt; <a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a5c60057226772e2d22399c92b6679c31">iqt2d::CImageViewComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html">iqtgui::TGuiObserverWrap</a>&lt; <a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html">CViewProviderGuiComp</a>, <a class="el" href="classiview_1_1_c_image_shape.html">iview::CImageShape</a>&gt; <a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a2fdbd3aa5e88ef42315be24c92305743">iqt2d::CImageViewComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iqt2d_2_c_image_view_comp_8h_source.html#l00022">22</a> of file <a class="el" href="iqt2d_2_c_image_view_comp_8h_source.html">CImageViewComp.h</a>.</p>
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_image_shape.html#abf404c7385429d2ad708d53682bd52d4">iview::CImageShape</a>.</p>
+
+<p>Definition at line <a class="el" href="_c_image_view_comp_8h_source.html#l00035">35</a> of file <a class="el" href="_c_image_view_comp_8h_source.html">CImageViewComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a3ef397bc23b7b85b76e2669570353305"></a><!-- doxytag: member="iqt2d::CImageViewComp::OnDetached" ref="a3ef397bc23b7b85b76e2669570353305" args="(imod::IModel *modelPtr)" -->
+<a class="anchor" id="a4ffe94cd3541486fc8425e4a541e3c85"></a><!-- doxytag: member="iqt2d::CImageViewComp::GetCommands" ref="a4ffe94cd3541486fc8425e4a541e3c85" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool iqt2d::CImageViewComp::OnDetached </td>
+          <td class="memname">virtual const <a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a>* iqt2d::CImageViewComp::GetCommands </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
-          <td class="paramname"><em>modelPtr</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#adc9cd1c668357a08d839a51b6403a40c">iqtgui::TGuiObserverWrap&lt; CSceneProviderGuiComp, CImageShape &gt;</a>.</p>
+<p>Get list of menu commands. </p>
+<p>This commands will be integrated in global menu system undependent of actual selected view. For support of normal pull down menu, depth of this tree structure should be at least 3. </p>
+
+<p>Implements <a class="el" href="classibase_1_1_i_commands_provider.html#a18e74c6d8b6a6c4023fce0a7c3da4c7d">ibase::ICommandsProvider</a>.</p>
 
 </div>
 </div>
@@ -130,29 +150,11 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#ad9c99838dff86b005fc5cf32198c332d">iqtgui::TGuiObserverWrap&lt; CSceneProviderGuiComp, CImageShape &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#ad9c99838dff86b005fc5cf32198c332d">iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a93c2502b98b18d61ddf5b9cd76b7d279"></a><!-- doxytag: member="iqt2d::CImageViewComp::OnGuiDestroyed" ref="a93c2502b98b18d61ddf5b9cd76b7d279" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqt2d::CImageViewComp::OnGuiDestroyed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#ae6d3a0820a47c572289ddd3d07a7da51">iqtgui::TGuiObserverWrap&lt; CSceneProviderGuiComp, CImageShape &gt;</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a0d0aaa63924c63662b4d9e95029fcca9"></a><!-- doxytag: member="iqt2d::CImageViewComp::UpdateGui" ref="a0d0aaa63924c63662b4d9e95029fcca9" args="(int updateFlags=0)" -->
+<a class="anchor" id="a5c77637f56405bfc898341ccc64d0464"></a><!-- doxytag: member="iqt2d::CImageViewComp::UpdateGui" ref="a5c77637f56405bfc898341ccc64d0464" args="(int updateFlags)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -160,7 +162,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">virtual void iqt2d::CImageViewComp::UpdateGui </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>updateFlags</em> = <code>0</code></td><td>)</td>
+          <td class="paramname"><em>updateFlags</em></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
@@ -169,12 +171,12 @@ Protected Member Functions</h2></td></tr>
 
 <p>Do update of the model GUI. </p>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; CSceneProviderGuiComp, CImageShape &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a4006cbfcb625457199435c24a00f581a">iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt;</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Include/iqt2d/<a class="el" href="iqt2d_2_c_image_view_comp_8h_source.html">CImageViewComp.h</a></li>
+<li>Include/iqt2d/<a class="el" href="_c_image_view_comp_8h_source.html">CImageViewComp.h</a></li>
 </ul>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

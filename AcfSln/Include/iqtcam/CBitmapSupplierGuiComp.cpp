@@ -28,7 +28,7 @@
 
 // ACF includes
 #include "iproc/ISupplier.h"
-#include "iqt2d/CImageShape.h"
+#include "iview/CImageShape.h"
 
 
 namespace iqtcam
@@ -102,9 +102,9 @@ QWidget* CBitmapSupplierGuiComp::GetParamsWidget() const
 
 // reimplemented (iqt2d::TSceneExtenderCompBase)
 
-void CBitmapSupplierGuiComp::CreateShapes(int /*sceneId*/, bool /*inactiveOnly*/, Shapes& result)
+void CBitmapSupplierGuiComp::CreateShapes(int /*sceneId*/, Shapes& result)
 {
-	iqt2d::CImageShape* shapePtr = new iqt2d::CImageShape;
+	iview::CImageShape* shapePtr = new iview::CImageShape;
 	if (shapePtr != NULL){
 		result.PushBack(shapePtr);
 

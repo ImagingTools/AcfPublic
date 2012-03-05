@@ -1664,31 +1664,6 @@
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
-    <name>CSearchGuiComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
-    <filename>_c_search_gui_comp_8h</filename>
-    <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
-    <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
-    <class kind="class">iqtipr::CSearchGuiComp</class>
-    <namespace>iqtipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CSearchParamsGuiComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
-    <filename>_c_search_params_gui_comp_8h</filename>
-    <includes id="_c_search_params_8h" name="CSearchParams.h" local="yes" imported="no">iipr/CSearchParams.h</includes>
-    <class kind="class">iqtipr::CSearchParamsGuiComp</class>
-    <namespace>iqtipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CSearchResultShape.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
-    <filename>_c_search_result_shape_8h</filename>
-    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="yes" imported="no">iipr/IFeaturesProvider.h</includes>
-    <class kind="class">iqtipr::CSearchResultShape</class>
-    <namespace>iqtipr</namespace>
-  </compound>
-  <compound kind="file">
     <name>CValueSupplierGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_value_supplier_gui_comp_8h</filename>
@@ -10252,8 +10227,8 @@
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>ab77f75801c4dda1ddcde577ef7733856</anchor>
-      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
+      <anchor>ac18cf1f6b895addf037fcc93daacc910</anchor>
+      <arglist>(int sceneId, Shapes &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -10441,15 +10416,15 @@
       <type>virtual void</type>
       <name>AddItemsToScene</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>a29044bae5f1081a183384da2f08ed00e</anchor>
-      <arglist>(iqt2d::ISceneProvider *providerPtr, int flags)</arglist>
+      <anchor>a35d15ce54c839c27613dd372c2074ac7</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveItemsFromScene</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>ae6f8eb226d6dc6278aa2ba266e2a756c</anchor>
-      <arglist>(iqt2d::ISceneProvider *providerPtr)</arglist>
+      <anchor>a880029695b9daef6702eb374e41c1055</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -10504,8 +10479,8 @@
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>ac36f01cde393cf3127d3fddd04c1b0de</anchor>
-      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
+      <anchor>a8c9034b06b859bc5f7ab5da4c25b4b9e</anchor>
+      <arglist>(int sceneId, Shapes &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -12178,15 +12153,15 @@
       <type>virtual void</type>
       <name>AddItemsToScene</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a7a48acaf7d94e8f4de49aac6d9787bdc</anchor>
-      <arglist>(iqt2d::ISceneProvider *providerPtr, int flags)</arglist>
+      <anchor>a455a346553f22519cc62f8a2283d5b66</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveItemsFromScene</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a03723ace6afc4cce19f77bdd402c7a48</anchor>
-      <arglist>(iqt2d::ISceneProvider *providerPtr)</arglist>
+      <anchor>a93745769f36d860dc445b1c8319851b4</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -12248,8 +12223,8 @@
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a6c7422967d05ce81217b7bc3adaa5505</anchor>
-      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
+      <anchor>ad494e2beac100236a61573856ca6de8c</anchor>
+      <arglist>(int sceneId, Shapes &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual QWidget *</type>
@@ -12266,9 +12241,6 @@
     <class kind="class">iqtipr::CCircleFinderParamsGuiComp</class>
     <class kind="class">iqtipr::CLineProjectionSupplierGuiComp</class>
     <class kind="class">iqtipr::CProjectionShape</class>
-    <class kind="class">iqtipr::CSearchGuiComp</class>
-    <class kind="class">iqtipr::CSearchParamsGuiComp</class>
-    <class kind="class">iqtipr::CSearchResultShape</class>
     <class kind="class">iqtipr::CValueSupplierGuiComp</class>
   </compound>
   <compound kind="class">
@@ -12422,8 +12394,8 @@
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>a75c2b66a0f4b4612a010e8679121dcc6</anchor>
-      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
+      <anchor>ac9ebe456434e30fcd33b2623aea976e3</anchor>
+      <arglist>(int sceneId, Shapes &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -12457,13 +12429,12 @@
   <compound kind="class">
     <name>iqtipr::CProjectionShape</name>
     <filename>classiqtipr_1_1_c_projection_shape.html</filename>
-    <base>QGraphicsPathItem</base>
-    <base>imod::CMultiModelObserverBase</base>
+    <base>iview::CShapeBase</base>
     <member kind="typedef">
-      <type>imod::CMultiModelObserverBase</type>
+      <type>iview::CShapeBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtipr_1_1_c_projection_shape.html</anchorfile>
-      <anchor>a87f4aaf7564d78c18f0acff894df6edf</anchor>
+      <anchor>a1ebc66ebe08394460c1e28588015ccb0</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -12475,151 +12446,31 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
+      <name>Draw</name>
+      <anchorfile>classiqtipr_1_1_c_projection_shape.html</anchorfile>
+      <anchor>a41fc070e5b142175ef7f8b98ee09179d</anchor>
+      <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CalcBoundingBox</name>
+      <anchorfile>classiqtipr_1_1_c_projection_shape.html</anchorfile>
+      <anchor>adf5d2457459860dc554cb693c48d4437</anchor>
+      <arglist>(i2d::CRect &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtipr_1_1_c_projection_shape.html</anchorfile>
       <anchor>a4be8acc861e1d2e09d3a80babde1f0c5</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtipr::CSearchGuiComp</name>
-    <filename>classiqtipr_1_1_c_search_gui_comp.html</filename>
-    <base>TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSearchGuiComp, QWidget &gt; &gt;</base>
-    <member kind="typedef">
-      <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSearchGuiComp, QWidget &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>a3b53977a981118c8b40f9bfa2e7855a5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>a058138f97172bd1415df23252f0c3cf4</anchor>
-      <arglist>(m_searchResultsCompPtr, m_searchResultsModelCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>a4c20ad144c9483e3a01fa0f558b253d5</anchor>
-      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>a2f08efb78093a618afaf36ef8135f001</anchor>
-      <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>a626c80e934c44086b1d96c99fc6e5260</anchor>
-      <arglist>(m_bitmapModelCompPtr, m_bitmapCompPtr, true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CreateShapes</name>
-      <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>a6e5675c698fe001ebbe9a07e9c67d65e</anchor>
-      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
+    <member kind="function" protection="protected">
       <type>void</type>
-      <name>on_FindButton_clicked</name>
-      <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>a89ab12a148c4f74c35dba9f86a3275b9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>ac4f037352e285a5046bd308287f83654</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtipr_1_1_c_search_gui_comp.html</anchorfile>
-      <anchor>ae8d51cadbee296415ffb5cdf730acb45</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtipr::CSearchParamsGuiComp</name>
-    <filename>classiqtipr_1_1_c_search_params_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CSearchParamsGuiComp, iipr::ISearchParams &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSearchParamsGuiComp, iipr::ISearchParams &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>a2bcf3e4478c2566fd4e77283ce8f1cd9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>ad28de1e7375e67bfbdccce22239182dc</anchor>
-      <arglist>(m_modelObserverCompPtr, m_modelViewCompPtr, false)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>adc7316aed2f2c18079b341a6c63a074d</anchor>
+      <name>UpdateFigure</name>
+      <anchorfile>classiqtipr_1_1_c_projection_shape.html</anchorfile>
+      <anchor>aefef15dd210ac541fde35e19ea397f1a</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnParameterChanged</name>
-      <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>add8d7032a32e5870a17dd298bc37d199</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>a180977f89cdd4712d842018f314ee61f</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>a561a06b857067639cd49a87f796778e4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtipr_1_1_c_search_params_gui_comp.html</anchorfile>
-      <anchor>add406bb60ec8fa85ceea3ea466e601b8</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtipr::CSearchResultShape</name>
-    <filename>classiqtipr_1_1_c_search_result_shape.html</filename>
-    <base>TSingleModelObserverBase&lt; iipr::IFeaturesProvider &gt;</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>BeforeUpdate</name>
-      <anchorfile>classiqtipr_1_1_c_search_result_shape.html</anchorfile>
-      <anchor>a722b893742311e89eb0f4d39ed3180a6</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classiqtipr_1_1_c_search_result_shape.html</anchorfile>
-      <anchor>aa867b06cc7a28a1f5d58af77da77c62a</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12673,8 +12524,8 @@
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>a4cfce61899a27800165748d2cc4a3416</anchor>
-      <arglist>(int sceneId, bool inactiveOnly, Shapes &amp;result)</arglist>
+      <anchor>aa99cdb959efcf75bd1978d71e475f94d</anchor>
+      <arglist>(int sceneId, Shapes &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

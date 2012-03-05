@@ -82,15 +82,15 @@
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057        <a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#ab2b13cedf8526c1495f6975d436555ad">CSnapImageGuiComp</a>();
 <a name="l00058"></a>00058 
-<a name="l00059"></a>00059        <span class="comment">// reimplemented (iqt2d::ISceneExtender)</span>
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#a29044bae5f1081a183384da2f08ed00e">AddItemsToScene</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a>* providerPtr, <span class="keywordtype">int</span> flags);
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#ae6f8eb226d6dc6278aa2ba266e2a756c">RemoveItemsFromScene</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a>* providerPtr);
+<a name="l00059"></a>00059        <span class="comment">// reimplemented (iqt2d::IViewExtender)</span>
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#a35d15ce54c839c27613dd372c2074ac7">AddItemsToScene</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a>* providerPtr, <span class="keywordtype">int</span> flags);
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#a880029695b9daef6702eb374e41c1055">RemoveItemsFromScene</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a>* providerPtr);
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063 <span class="keyword">protected</span>:
 <a name="l00064"></a>00064        <span class="keywordtype">bool</span> <a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#a41d4d06b619c8b4a7768d1bcc603160f">SnapImage</a>();
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066        <span class="comment">// reimplemented (iqt2d::TSceneExtenderCompBase)</span>
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#ac36f01cde393cf3127d3fddd04c1b0de">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <span class="keywordtype">bool</span> inactiveOnly, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Shapes</a>&amp; result);
+<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#a8c9034b06b859bc5f7ab5da4c25b4b9e">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Shapes</a>&amp; result);
 <a name="l00068"></a>00068 
 <a name="l00069"></a>00069        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
 <a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#a4335c96470759561d6913f4ef4360010">OnGuiCreated</a>();
@@ -120,7 +120,7 @@
 <a name="l00094"></a>00094        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_paramsSetModelCompPtr);
 <a name="l00095"></a>00095        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_paramsSetGuiCompPtr);
 <a name="l00096"></a>00096        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_paramsSetObserverCompPtr);
-<a name="l00097"></a>00097        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_scene_extender.html">iqt2d::ISceneExtender</a>, m_paramsSetExtenderCompPtr);
+<a name="l00097"></a>00097        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_extender.html">iqt2d::IViewExtender</a>, m_paramsSetExtenderCompPtr);
 <a name="l00098"></a>00098 
 <a name="l00099"></a>00099        I_ATTR(<span class="keywordtype">double</span>, m_liveIntervalAttrPtr);
 <a name="l00100"></a>00100 

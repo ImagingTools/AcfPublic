@@ -26,8 +26,6 @@
 // ACF includes
 #include "istd/TChangeNotifier.h"
 
-#include "iqt2d/CQuadrangleShape.h"
-
 #include "iqt/CSignalBlocker.h"
 
 
@@ -154,6 +152,8 @@ void CQuadrangleParamsGuiComp::OnParamsChanged(double /*value*/)
 		UpdateBlocker updateBlocker(this);
 
 		UpdateModel();
+
+		UpdateShapeView();
 	}
 }
 

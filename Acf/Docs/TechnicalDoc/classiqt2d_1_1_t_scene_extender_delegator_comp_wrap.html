@@ -37,7 +37,7 @@
 <div class="title">iqt2d::TSceneExtenderDelegatorCompWrap&lt; Base &gt; Class Template Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt2d::TSceneExtenderDelegatorCompWrap" --><!-- doxytag: inherits="Base,iqt2d::ISceneExtender" -->
+<!-- doxytag: class="iqt2d::TSceneExtenderDelegatorCompWrap" --><!-- doxytag: inherits="Base,iqt2d::IViewExtender" -->
 <p><code>#include &lt;<a class="el" href="_t_scene_extender_delegator_comp_wrap_8h_source.html">TSceneExtenderDelegatorCompWrap.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqt2d::TSceneExtenderDelegatorCompWrap&lt; Base &gt;:</div>
@@ -46,7 +46,7 @@ Inheritance diagram for iqt2d::TSceneExtenderDelegatorCompWrap&lt; Base &gt;:</d
   <img src="classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.png" usemap="#iqt2d::TSceneExtenderDelegatorCompWrap&lt; Base &gt;_map" alt=""/>
   <map id="iqt2d::TSceneExtenderDelegatorCompWrap&lt; Base &gt;_map" name="iqt2d::TSceneExtenderDelegatorCompWrap&lt; Base &gt;_map">
 <area href="class_base.html" alt="Base" shape="rect" coords="0,56,306,80"/>
-<area href="classiqt2d_1_1_i_scene_extender.html" title="Interface for GUI objects presenting its results using extern scene objects." alt="iqt2d::ISceneExtender" shape="rect" coords="316,56,622,80"/>
+<area href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects." alt="iqt2d::IViewExtender" shape="rect" coords="316,56,622,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="316,0,622,24"/>
 </map>
  </div></div>
@@ -58,10 +58,10 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html#a4fc6cf3153ee416f55c982ad1b52e52a">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html#afb5e9735491c5e1df22e4257e384a458">AddItemsToScene</a> (<a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *providerPtr, int flags)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be added to specified scene.  <a href="#afb5e9735491c5e1df22e4257e384a458"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html#a43df01460ade9b4f1c4ed009e175cd8a">RemoveItemsFromScene</a> (<a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *providerPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be removed from specified scene.  <a href="#a43df01460ade9b4f1c4ed009e175cd8a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html#a3bff627cd8072c2fd5acb5b37d8b35cf">AddItemsToScene</a> (<a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *providerPtr, int flags)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be added to specified scene.  <a href="#a3bff627cd8072c2fd5acb5b37d8b35cf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html#ad01515711fc700a2243b0f05f7bb3703">RemoveItemsFromScene</a> (<a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *providerPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be removed from specified scene.  <a href="#ad01515711fc700a2243b0f05f7bb3703"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class Base&gt;<br/>
@@ -88,7 +88,7 @@ template&lt;class Base &gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="afb5e9735491c5e1df22e4257e384a458"></a><!-- doxytag: member="iqt2d::TSceneExtenderDelegatorCompWrap::AddItemsToScene" ref="afb5e9735491c5e1df22e4257e384a458" args="(iqt2d::ISceneProvider *providerPtr, int flags)" -->
+<a class="anchor" id="a3bff627cd8072c2fd5acb5b37d8b35cf"></a><!-- doxytag: member="iqt2d::TSceneExtenderDelegatorCompWrap::AddItemsToScene" ref="a3bff627cd8072c2fd5acb5b37d8b35cf" args="(iqt2d::IViewProvider *providerPtr, int flags)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -97,7 +97,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html">iqt2d::TSceneExtenderDelegatorCompWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::AddItemsToScene </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *&#160;</td>
           <td class="paramname"><em>providerPtr</em>, </td>
         </tr>
         <tr>
@@ -117,13 +117,13 @@ template&lt;class Base &gt; </div>
 
 <p>Called when items should be added to specified scene. </p>
 
-<p>Implements <a class="el" href="classiqt2d_1_1_i_scene_extender.html#a2b76b94bdf042cb2152491d9cf2212c0">iqt2d::ISceneExtender</a>.</p>
+<p>Implements <a class="el" href="classiqt2d_1_1_i_view_extender.html#ac29beac66239f36f9460b2fe9716e1b2">iqt2d::IViewExtender</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_scene_extender_delegator_comp_wrap_8h_source.html#l00041">41</a> of file <a class="el" href="_t_scene_extender_delegator_comp_wrap_8h_source.html">TSceneExtenderDelegatorCompWrap.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a43df01460ade9b4f1c4ed009e175cd8a"></a><!-- doxytag: member="iqt2d::TSceneExtenderDelegatorCompWrap::RemoveItemsFromScene" ref="a43df01460ade9b4f1c4ed009e175cd8a" args="(iqt2d::ISceneProvider *providerPtr)" -->
+<a class="anchor" id="ad01515711fc700a2243b0f05f7bb3703"></a><!-- doxytag: member="iqt2d::TSceneExtenderDelegatorCompWrap::RemoveItemsFromScene" ref="ad01515711fc700a2243b0f05f7bb3703" args="(iqt2d::IViewProvider *providerPtr)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -132,7 +132,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html">iqt2d::TSceneExtenderDelegatorCompWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::RemoveItemsFromScene </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_scene_provider.html">iqt2d::ISceneProvider</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *&#160;</td>
           <td class="paramname"><em>providerPtr</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -142,7 +142,7 @@ template&lt;class Base &gt; </div>
 
 <p>Called when items should be removed from specified scene. </p>
 
-<p>Implements <a class="el" href="classiqt2d_1_1_i_scene_extender.html#af00afdb2ad174b3cadccfcdc7d6d0113">iqt2d::ISceneExtender</a>.</p>
+<p>Implements <a class="el" href="classiqt2d_1_1_i_view_extender.html#a360fe9a6f3f33884ed0b99847a9157ba">iqt2d::IViewExtender</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_scene_extender_delegator_comp_wrap_8h_source.html#l00050">50</a> of file <a class="el" href="_t_scene_extender_delegator_comp_wrap_8h_source.html">TSceneExtenderDelegatorCompWrap.h</a>.</p>
 
