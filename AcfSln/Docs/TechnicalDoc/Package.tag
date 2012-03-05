@@ -6162,13 +6162,13 @@
   <compound kind="class">
     <name>iipr::CProcessedBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_processed_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; std::pair&lt; istd::TDelPtr&lt; i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; std::pair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; std::pair&lt; istd::TDelPtr&lt; i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; std::pair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a93e515ce868806141ef5e77d96c6c077</anchor>
+      <anchor>ac24f27d3c78232e579fbd18def0e61a2</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
