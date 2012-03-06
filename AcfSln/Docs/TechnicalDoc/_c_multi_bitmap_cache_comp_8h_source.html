@@ -40,39 +40,39 @@
 <a name="l00014"></a>00014 {
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
-<a name="l00017"></a><a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html">00017</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html">CMultiBitmapCacheComp</a>:
-<a name="l00018"></a>00018                      <span class="keyword">public</span> icomp::CComponentBase,
-<a name="l00019"></a>00019                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiipr_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps.">IMultiBitmapProvider</a>
-<a name="l00020"></a>00020 {
-<a name="l00021"></a>00021 <span class="keyword">public</span>:
-<a name="l00022"></a><a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a05cb5521e849eaadc9f271aae3b953a8">00022</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a05cb5521e849eaadc9f271aae3b953a8">BaseClass</a>;
-<a name="l00023"></a>00023 
-<a name="l00024"></a>00024        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html">CMultiBitmapCacheComp</a>);
-<a name="l00025"></a>00025               I_REGISTER_INTERFACE(<a class="code" href="classiipr_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps.">IMultiBitmapProvider</a>);
-<a name="l00026"></a>00026        I_END_COMPONENT;
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028        <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a25f81226b1873d3e06cc5de300ac7f92">CMultiBitmapCacheComp</a>();
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030        <span class="comment">// reimplemented (iipr::IMultiBitmapProvider)</span>
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a03025bb4473f7b1f9073102b37ba9e70" title="Get number of produced bitmaps.">GetBitmapsCount</a>() <span class="keyword">const</span>;
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a54007d2545576446ef50be04cfe42a0a" title="Get access to produced bitmap object.">GetBitmap</a>(<span class="keywordtype">int</span> bitmapIndex) <span class="keyword">const</span>;
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a1d98671a18b010063e14109b7f02103f" title="Get access to transformation from bitmap to logical positions.">GetLogTransform</a>(<span class="keywordtype">int</span> bitmapIndex) <span class="keyword">const</span>;
+<a name="l00022"></a><a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html">00022</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html" title="Multi bitmap provider returning always stored bitmaps.">CMultiBitmapCacheComp</a>:
+<a name="l00023"></a>00023                      <span class="keyword">public</span> icomp::CComponentBase,
+<a name="l00024"></a>00024                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiipr_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps.">IMultiBitmapProvider</a>
+<a name="l00025"></a>00025 {
+<a name="l00026"></a>00026 <span class="keyword">public</span>:
+<a name="l00027"></a><a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a05cb5521e849eaadc9f271aae3b953a8">00027</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a05cb5521e849eaadc9f271aae3b953a8">BaseClass</a>;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html" title="Multi bitmap provider returning always stored bitmaps.">CMultiBitmapCacheComp</a>);
+<a name="l00030"></a>00030               I_REGISTER_INTERFACE(<a class="code" href="classiipr_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps.">IMultiBitmapProvider</a>);
+<a name="l00031"></a>00031        I_END_COMPONENT;
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033        <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a25f81226b1873d3e06cc5de300ac7f92">CMultiBitmapCacheComp</a>();
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035        <span class="comment">// reimplemented (istd::IChangeable)</span>
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a5a9b3e28451dd73d780f51d82958ce7b">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="keyword">private</span>:
-<a name="l00039"></a>00039        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;iimg::IBitmap&gt;</a> m_bitmapsPtr;
-<a name="l00040"></a>00040        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;i2d::ITransformation2d&gt;</a> m_transformsPtr;
-<a name="l00041"></a>00041 };
+<a name="l00035"></a>00035        <span class="comment">// reimplemented (iipr::IMultiBitmapProvider)</span>
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a03025bb4473f7b1f9073102b37ba9e70" title="Get number of produced bitmaps.">GetBitmapsCount</a>() <span class="keyword">const</span>;
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a54007d2545576446ef50be04cfe42a0a" title="Get access to produced bitmap object.">GetBitmap</a>(<span class="keywordtype">int</span> bitmapIndex) <span class="keyword">const</span>;
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a1d98671a18b010063e14109b7f02103f" title="Get access to transformation from bitmap to logical positions.">GetLogTransform</a>(<span class="keywordtype">int</span> bitmapIndex) <span class="keyword">const</span>;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040        <span class="comment">// reimplemented (istd::IChangeable)</span>
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a5a9b3e28451dd73d780f51d82958ce7b">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 } <span class="comment">// namespace iipr</span>
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="preprocessor">#endif // !iipr_CMultiBitmapCacheComp_included</span>
-<a name="l00048"></a>00048 <span class="preprocessor"></span>
-<a name="l00049"></a>00049 
+<a name="l00043"></a>00043 <span class="keyword">private</span>:
+<a name="l00044"></a>00044        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;iimg::IBitmap&gt;</a> m_bitmapsPtr;
+<a name="l00045"></a>00045        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;i2d::ITransformation2d&gt;</a> m_transformsPtr;
+<a name="l00046"></a>00046 };
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 } <span class="comment">// namespace iipr</span>
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="preprocessor">#endif // !iipr_CMultiBitmapCacheComp_included</span>
+<a name="l00053"></a>00053 <span class="preprocessor"></span>
+<a name="l00054"></a>00054 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

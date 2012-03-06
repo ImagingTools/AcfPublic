@@ -42,35 +42,35 @@
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
-<a name="l00019"></a><a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html">00019</a> <span class="keyword">class </span><a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html">CTimeStampCacheComp</a>:
-<a name="l00020"></a>00020                      <span class="keyword">public</span> icomp::CComponentBase,
-<a name="l00021"></a>00021                      <span class="keyword">virtual</span> <span class="keyword">public</span> iinsp::ITimeStampProvider
-<a name="l00022"></a>00022 {
-<a name="l00023"></a>00023 <span class="keyword">public</span>:
-<a name="l00024"></a><a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html#a1488feef0643accb9cf2d0c2c7c74336">00024</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html#a1488feef0643accb9cf2d0c2c7c74336">BaseClass</a>;
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026        I_BEGIN_COMPONENT(<a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html">CTimeStampCacheComp</a>);
-<a name="l00027"></a>00027               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiinsp_1_1_i_time_stamp_provider.html">iinsp::ITimeStampProvider</a>);
-<a name="l00028"></a>00028        I_END_COMPONENT;
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030        <span class="comment">// reimplemented (iinsp::ITimeStampProvider)</span>
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_i_timer.html">isys::ITimer</a>* <a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html#a0709da9de2abd6bb7b7313f0ec8e2799">GetCurrentTimeStamp</a>() <span class="keyword">const</span>;
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033        <span class="comment">// reimplemented (istd::IChangeable)</span>
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html#a8f6b3cbaa60448fa0d24e3d9b1b4051f">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="keyword">private</span>:
-<a name="l00037"></a>00037        <span class="keywordtype">bool</span> m_isTimerValid;
-<a name="l00038"></a>00038        <a class="code" href="classiwin_1_1_c_timer.html" title="An timer implementation for the Windows plattform.">iwin::CTimer</a> m_timer;
-<a name="l00039"></a>00039 };
+<a name="l00024"></a><a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html">00024</a> <span class="keyword">class </span><a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html" title="Time stamp provider returning always stored time stamp.">CTimeStampCacheComp</a>:
+<a name="l00025"></a>00025                      <span class="keyword">public</span> icomp::CComponentBase,
+<a name="l00026"></a>00026                      <span class="keyword">virtual</span> <span class="keyword">public</span> iinsp::ITimeStampProvider
+<a name="l00027"></a>00027 {
+<a name="l00028"></a>00028 <span class="keyword">public</span>:
+<a name="l00029"></a><a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html#a1488feef0643accb9cf2d0c2c7c74336">00029</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html#a1488feef0643accb9cf2d0c2c7c74336">BaseClass</a>;
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031        I_BEGIN_COMPONENT(<a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html" title="Time stamp provider returning always stored time stamp.">CTimeStampCacheComp</a>);
+<a name="l00032"></a>00032               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiinsp_1_1_i_time_stamp_provider.html">iinsp::ITimeStampProvider</a>);
+<a name="l00033"></a>00033        I_END_COMPONENT;
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035        <span class="comment">// reimplemented (iinsp::ITimeStampProvider)</span>
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_i_timer.html">isys::ITimer</a>* <a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html#a0709da9de2abd6bb7b7313f0ec8e2799">GetCurrentTimeStamp</a>() <span class="keyword">const</span>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038        <span class="comment">// reimplemented (istd::IChangeable)</span>
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html#a8f6b3cbaa60448fa0d24e3d9b1b4051f">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 } <span class="comment">// namespace iwin</span>
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="preprocessor">#endif // !iwin_CTimeStampCacheComp_included</span>
-<a name="l00046"></a>00046 <span class="preprocessor"></span>
-<a name="l00047"></a>00047 
+<a name="l00041"></a>00041 <span class="keyword">private</span>:
+<a name="l00042"></a>00042        <span class="keywordtype">bool</span> m_isTimerValid;
+<a name="l00043"></a>00043        <a class="code" href="classiwin_1_1_c_timer.html" title="An timer implementation for the Windows plattform.">iwin::CTimer</a> m_timer;
+<a name="l00044"></a>00044 };
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 } <span class="comment">// namespace iwin</span>
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="preprocessor">#endif // !iwin_CTimeStampCacheComp_included</span>
+<a name="l00051"></a>00051 <span class="preprocessor"></span>
+<a name="l00052"></a>00052 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
