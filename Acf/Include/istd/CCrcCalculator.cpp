@@ -25,7 +25,6 @@
 // STL includes
 #include <fstream>
 
-
 // ACF includes
 #include <QtCore/QString>
 

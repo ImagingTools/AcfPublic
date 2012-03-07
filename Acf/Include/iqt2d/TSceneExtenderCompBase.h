@@ -27,7 +27,6 @@
 // Qt includes
 #include <QtGui/QGraphicsItem>
 
-
 // ACF includes
 #include "istd/TPointerVector.h"
 

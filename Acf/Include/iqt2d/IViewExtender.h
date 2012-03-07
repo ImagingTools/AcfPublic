@@ -24,8 +24,7 @@
 #define iqt2d_ISceneExtender_included
 
 
-#include "istd/IPolymorphic.h"
-
+// ACF includes
 #include "iqt2d/IViewProvider.h"
 
 
