@@ -119,3 +119,5 @@ private:
 
 
 #endif // !iview_CAffiniteCalibration_included
+
+
