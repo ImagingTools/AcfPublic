@@ -47,7 +47,7 @@
 <a name="l00023"></a>00023 <span class="keyword">public</span>:
 <a name="l00024"></a><a class="code" href="classiqtgui_1_1_t_designer_basic_gui.html#a740e98f132b60cb16f6ab16ab5ed8121">00024</a>        <span class="keyword">typedef</span> WidgetType <a class="code" href="classiqtgui_1_1_t_designer_basic_gui.html#a740e98f132b60cb16f6ab16ab5ed8121">BaseClass</a>;
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026        <a class="code" href="classiqtgui_1_1_t_designer_basic_gui.html#a94a128b00714261f4ec3568d31b9e6be">TDesignerBasicGui</a>(<a class="code" href="class_q_widget.html">QWidget</a>* parentPtr = 0, Qt::WindowFlags f = 0);
+<a name="l00026"></a>00026        <a class="code" href="classiqtgui_1_1_t_designer_basic_gui.html#a94a128b00714261f4ec3568d31b9e6be">TDesignerBasicGui</a>(QWidget* parentPtr = 0, Qt::WindowFlags f = 0);
 <a name="l00027"></a>00027 };
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029 
@@ -56,7 +56,7 @@
 <a name="l00032"></a>00032 <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType&gt;
-<a name="l00035"></a><a class="code" href="classiqtgui_1_1_t_designer_basic_gui.html#a94a128b00714261f4ec3568d31b9e6be">00035</a> <a class="code" href="classiqtgui_1_1_t_designer_basic_gui.html#a94a128b00714261f4ec3568d31b9e6be">TDesignerBasicGui&lt;UI, WidgetType&gt;::TDesignerBasicGui</a>(<a class="code" href="class_q_widget.html">QWidget</a>* parentPtr, Qt::WindowFlags f)
+<a name="l00035"></a><a class="code" href="classiqtgui_1_1_t_designer_basic_gui.html#a94a128b00714261f4ec3568d31b9e6be">00035</a> <a class="code" href="classiqtgui_1_1_t_designer_basic_gui.html#a94a128b00714261f4ec3568d31b9e6be">TDesignerBasicGui&lt;UI, WidgetType&gt;::TDesignerBasicGui</a>(QWidget* parentPtr, Qt::WindowFlags f)
 <a name="l00036"></a>00036 :      <a class="code" href="classiqtgui_1_1_t_designer_basic_gui.html#a740e98f132b60cb16f6ab16ab5ed8121">BaseClass</a>(parentPtr, f)
 <a name="l00037"></a>00037 {
 <a name="l00038"></a>00038        UI::setupUi(<span class="keyword">this</span>);

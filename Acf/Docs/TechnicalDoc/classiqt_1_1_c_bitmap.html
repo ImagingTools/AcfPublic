@@ -102,6 +102,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size of this raster image.  <a href="#aa742c88df939191041351a7299858974"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#a9f6394c5d491673d20d77dd6314f4c88">GetComponentsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of color components.  <a href="#a9f6394c5d491673d20d77dd6314f4c88"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicmm_1_1_c_var_color.html">icmm::CVarColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#ab2be60c31d86ac53521e1fee2c27b3a4">GetColorAt</a> (const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get color at specified pixel.  <a href="#ab2be60c31d86ac53521e1fee2c27b3a4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#a69577f76f19e828b0c639e99f56e39c6">GetSupportedOperations</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#a69577f76f19e828b0c639e99f56e39c6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#ab715214d8af97572827885105124ab8b">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object)</td></tr>
@@ -393,6 +395,33 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab2be60c31d86ac53521e1fee2c27b3a4"></a><!-- doxytag: member="iqt::CBitmap::GetColorAt" ref="ab2be60c31d86ac53521e1fee2c27b3a4" args="(const istd::CIndex2d &amp;position) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classicmm_1_1_c_var_color.html">icmm::CVarColor</a> iqt::CBitmap::GetColorAt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get color at specified pixel. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>pixel position, must be inside of returned size. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classiimg_1_1_c_bitmap_base.html#a0e25e29f34c7a5343b96f10a2c1c6ec3">iimg::CBitmapBase</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a9f6394c5d491673d20d77dd6314f4c88"></a><!-- doxytag: member="iqt::CBitmap::GetComponentsCount" ref="a9f6394c5d491673d20d77dd6314f4c88" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -600,7 +629,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00076">76</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00077">77</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
 
 </div>
 </div>

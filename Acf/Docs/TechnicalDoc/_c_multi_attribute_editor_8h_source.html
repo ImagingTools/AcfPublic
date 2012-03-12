@@ -77,9 +77,9 @@
 <a name="l00056"></a>00056               ValueItemDelegate(<span class="keyword">const</span> <a class="code" href="classicmpstr_1_1_c_multi_attribute_editor.html">CMultiAttributeEditor</a>&amp; parent);
 <a name="l00057"></a>00057               
 <a name="l00058"></a>00058               <span class="comment">// reimplemented (QItemDelegate)</span>
-<a name="l00059"></a>00059               <span class="keyword">virtual</span> <a class="code" href="class_q_widget.html">QWidget</a>* createEditor(<a class="code" href="class_q_widget.html">QWidget</a>* parent, <span class="keyword">const</span> QStyleOptionViewItem&amp; option, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
-<a name="l00060"></a>00060               <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEditorData(<a class="code" href="class_q_widget.html">QWidget</a>* editor, <span class="keyword">const</span> QModelIndex&amp; index ) <span class="keyword">const</span>;
-<a name="l00061"></a>00061               <span class="keyword">virtual</span> <span class="keywordtype">void</span> setModelData(<a class="code" href="class_q_widget.html">QWidget</a>* editor, QAbstractItemModel* model, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
+<a name="l00059"></a>00059               <span class="keyword">virtual</span> QWidget* createEditor(QWidget* parent, <span class="keyword">const</span> QStyleOptionViewItem&amp; option, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
+<a name="l00060"></a>00060               <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEditorData(QWidget* editor, <span class="keyword">const</span> QModelIndex&amp; index ) <span class="keyword">const</span>;
+<a name="l00061"></a>00061               <span class="keyword">virtual</span> <span class="keywordtype">void</span> setModelData(QWidget* editor, QAbstractItemModel* model, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063        <span class="keyword">private</span>:
 <a name="l00064"></a>00064               <span class="keyword">const</span> <a class="code" href="classicmpstr_1_1_c_multi_attribute_editor.html">CMultiAttributeEditor</a>&amp; m_parent;

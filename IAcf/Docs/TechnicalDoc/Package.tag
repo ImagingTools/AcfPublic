@@ -1973,7 +1973,6 @@
   <compound kind="class">
     <name>iqsci::CTextEditor</name>
     <filename>classiqsci_1_1_c_text_editor.html</filename>
-    <base>QWidget</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
       <type>QWidget</type>

@@ -4150,6 +4150,7 @@
     <filename>_c_multi_document_workspace_gui_comp_8h</filename>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_c_multi_document_manager_base_8h" name="CMultiDocumentManagerBase.h" local="yes" imported="no">idoc/CMultiDocumentManagerBase.h</includes>
+    <includes id="_i_document_template_8h" name="IDocumentTemplate.h" local="yes" imported="no">idoc/IDocumentTemplate.h</includes>
     <includes id="_i_settings_provider_8h" name="ISettingsProvider.h" local="yes" imported="no">iqt/ISettingsProvider.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_restorable_gui_wrap_8h" name="TRestorableGuiWrap.h" local="yes" imported="no">iqtgui/TRestorableGuiWrap.h</includes>
@@ -5992,10 +5993,14 @@
     <name>CCalibratedViewBase.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_calibrated_view_base_8h</filename>
+    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
+    <includes id="_c_rect_8h" name="CRect.h" local="yes" imported="no">i2d/CRect.h</includes>
     <includes id="_i_calibration_8h" name="ICalibration.h" local="yes" imported="no">iview/ICalibration.h</includes>
     <includes id="_i_visual_calibration_info_8h" name="IVisualCalibrationInfo.h" local="yes" imported="no">iview/IVisualCalibrationInfo.h</includes>
     <includes id="_c_none_calibration_8h" name="CNoneCalibration.h" local="yes" imported="no">iview/CNoneCalibration.h</includes>
     <includes id="_c_view_base_8h" name="CViewBase.h" local="yes" imported="no">iview/CViewBase.h</includes>
+    <includes id="_c_draw_buffer_8h" name="CDrawBuffer.h" local="yes" imported="no">iview/CDrawBuffer.h</includes>
+    <includes id="_c_color_shema_8h" name="CColorShema.h" local="yes" imported="no">iview/CColorShema.h</includes>
     <class kind="class">iview::CCalibratedViewBase</class>
     <namespace>iview</namespace>
   </compound>
@@ -6025,33 +6030,25 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
+    <name>CConsoleBase.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_console_base_8h</filename>
+    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
+    <includes id="_i_view_event_observer_8h" name="IViewEventObserver.h" local="yes" imported="no">iview/IViewEventObserver.h</includes>
+    <includes id="_c_screen_transform_8h" name="CScreenTransform.h" local="yes" imported="no">iview/CScreenTransform.h</includes>
+    <class kind="class">iview::CConsoleBase</class>
+    <class kind="struct">iview::CConsoleBase::CursorInfo</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
     <name>CConsoleGui.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_console_gui_8h</filename>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
-    <includes id="_t_frame_base_8h" name="TFrameBase.h" local="yes" imported="no">iview/TFrameBase.h</includes>
-    <includes id="_t_calibrated_view_base_8h" name="TCalibratedViewBase.h" local="yes" imported="no">iview/TCalibratedViewBase.h</includes>
-    <includes id="_c_console_widget_8h" name="CConsoleWidget.h" local="yes" imported="no">iview/CConsoleWidget.h</includes>
+    <includes id="_c_console_base_8h" name="CConsoleBase.h" local="yes" imported="no">iview/CConsoleBase.h</includes>
+    <includes id="_c_viewport_8h" name="CViewport.h" local="yes" imported="no">iview/CViewport.h</includes>
     <class kind="class">iview::CConsoleGui</class>
-    <namespace>iview</namespace>
-    <member kind="typedef">
-      <type>iview::CConsoleGui</type>
-      <name>_qqt_CConsoleGui</name>
-      <anchorfile>_c_console_gui_8h.html</anchorfile>
-      <anchor>ab1a144407743d0a831e42ec24d2636d9</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>CConsoleWidget.h</name>
-    <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_c_console_widget_8h</filename>
-    <includes id="_t_view_impl_8h" name="TViewImpl.h" local="yes" imported="no">iview/TViewImpl.h</includes>
-    <includes id="_c_draw_buffer_8h" name="CDrawBuffer.h" local="yes" imported="no">iview/CDrawBuffer.h</includes>
-    <includes id="_c_color_shema_8h" name="CColorShema.h" local="yes" imported="no">iview/CColorShema.h</includes>
-    <includes id="_c_calibrated_view_base_8h" name="CCalibratedViewBase.h" local="yes" imported="no">iview/CCalibratedViewBase.h</includes>
-    <class kind="class">iview::CConsoleWidget</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -6386,6 +6383,20 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
+    <name>CViewport.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_viewport_8h</filename>
+    <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
+    <includes id="_c_fixed_point_manip_8h" name="CFixedPointManip.h" local="yes" imported="no">imath/CFixedPointManip.h</includes>
+    <includes id="_c_var_color_8h" name="CVarColor.h" local="yes" imported="no">icmm/CVarColor.h</includes>
+    <includes id="_i_view_event_observer_8h" name="IViewEventObserver.h" local="yes" imported="no">iview/IViewEventObserver.h</includes>
+    <includes id="_c_console_base_8h" name="CConsoleBase.h" local="yes" imported="no">iview/CConsoleBase.h</includes>
+    <includes id="_c_calibrated_view_base_8h" name="CCalibratedViewBase.h" local="yes" imported="no">iview/CCalibratedViewBase.h</includes>
+    <includes id="_c_image_shape_8h" name="CImageShape.h" local="yes" imported="no">iview/CImageShape.h</includes>
+    <class kind="class">iview::CViewport</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
     <name>ICalibrated.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_i_calibrated_8h</filename>
@@ -6658,38 +6669,6 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
-    <name>TCalibratedViewBase.h</name>
-    <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_t_calibrated_view_base_8h</filename>
-    <includes id="_t_framed_view_base_8h" name="TFramedViewBase.h" local="yes" imported="no">iview/TFramedViewBase.h</includes>
-    <class kind="class">iview::TCalibratedViewBase</class>
-    <namespace>iview</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TFrameBase.h</name>
-    <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_t_frame_base_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
-    <includes id="_i_view_event_observer_8h" name="IViewEventObserver.h" local="yes" imported="no">iview/IViewEventObserver.h</includes>
-    <includes id="_c_screen_transform_8h" name="CScreenTransform.h" local="yes" imported="no">iview/CScreenTransform.h</includes>
-    <class kind="class">iview::TFrameBase</class>
-    <class kind="struct">iview::TFrameBase::CursorInfo</class>
-    <namespace>iview</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TFramedViewBase.h</name>
-    <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_t_framed_view_base_8h</filename>
-    <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
-    <includes id="_c_fixed_point_manip_8h" name="CFixedPointManip.h" local="yes" imported="no">imath/CFixedPointManip.h</includes>
-    <includes id="_i_view_event_observer_8h" name="IViewEventObserver.h" local="yes" imported="no">iview/IViewEventObserver.h</includes>
-    <includes id="_t_frame_base_8h" name="TFrameBase.h" local="yes" imported="no">iview/TFrameBase.h</includes>
-    <includes id="_c_image_shape_8h" name="CImageShape.h" local="yes" imported="no">iview/CImageShape.h</includes>
-    <class kind="class">iview::TFramedViewBase</class>
-    <namespace>iview</namespace>
-  </compound>
-  <compound kind="file">
     <name>TInteractiveMultiPolylineShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_t_interactive_multi_polyline_shape_8h</filename>
@@ -6721,17 +6700,6 @@
     <filename>_t_multi_polyline_calibration_shape_8h</filename>
     <includes id="_c_polyline_calibration_shape_8h" name="CPolylineCalibrationShape.h" local="yes" imported="no">iview/CPolylineCalibrationShape.h</includes>
     <class kind="class">iview::TMultiPolylineCalibrationShape</class>
-    <namespace>iview</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TViewImpl.h</name>
-    <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_t_view_impl_8h</filename>
-    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
-    <includes id="_c_rect_8h" name="CRect.h" local="yes" imported="no">i2d/CRect.h</includes>
-    <includes id="_c_draw_buffer_8h" name="CDrawBuffer.h" local="yes" imported="no">iview/CDrawBuffer.h</includes>
-    <includes id="_c_color_shema_8h" name="CColorShema.h" local="yes" imported="no">iview/CColorShema.h</includes>
-    <class kind="class">iview::TViewImpl</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -7004,10 +6972,6 @@
   <compound kind="class">
     <name>QObject</name>
     <filename>class_q_object.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>QWidget</name>
-    <filename>class_q_widget.html</filename>
   </compound>
   <compound kind="class">
     <name>SelectionInfoImpl</name>
@@ -11122,7 +11086,7 @@
   <compound kind="class">
     <name>i2d::TPolylineExPrimitive</name>
     <filename>classi2d_1_1_t_polyline_ex_primitive.html</filename>
-    <templarg></templarg>
+    <templarg>SegmentData</templarg>
     <base>i2d::CPolyline</base>
     <member kind="typedef">
       <type>CPolyline</type>
@@ -11131,11 +11095,18 @@
       <anchor>abcc2d35fa849cf89b1d02814e1357d63</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>SegmentData</type>
+      <name>SegmentDataType</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_primitive.html</anchorfile>
+      <anchor>a877363372f009fae80a0e9729a7346d3</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const SegmentData &amp;</type>
+      <type>virtual const SegmentDataType &amp;</type>
       <name>GetSegmentData</name>
       <anchorfile>classi2d_1_1_t_polyline_ex_primitive.html</anchorfile>
-      <anchor>a07b698feea2b07bae0b397293ee53a5a</anchor>
+      <anchor>a5527b1e992e680a02c0bab924968f23b</anchor>
       <arglist>(int segmentIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -16452,7 +16423,6 @@
   <compound kind="class">
     <name>icmpstr::CMultiAttributeDelegateWidget</name>
     <filename>classicmpstr_1_1_c_multi_attribute_delegate_widget.html</filename>
-    <base>QWidget</base>
     <member kind="typedef">
       <type>QWidget</type>
       <name>BaseClass</name>
@@ -31379,6 +31349,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual icmm::CVarColor</type>
+      <name>GetColorAt</name>
+      <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
+      <anchor>ab2be60c31d86ac53521e1fee2c27b3a4</anchor>
+      <arglist>(const istd::CIndex2d &amp;position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
@@ -36574,6 +36551,13 @@
       <name>BaseClass</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
       <anchor>ae85de65726cc00d124d1cdaa63c17a95</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BaseClass::Ids</type>
+      <name>Ids</name>
+      <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
+      <anchor>a660e086706eeed80e2a7ae00306c3468</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -47878,8 +47862,8 @@
     <class kind="class">iview::CCalibrationShapeBase</class>
     <class kind="class">iview::CColorShema</class>
     <class kind="class">iview::CColorShemaBase</class>
+    <class kind="class">iview::CConsoleBase</class>
     <class kind="class">iview::CConsoleGui</class>
-    <class kind="class">iview::CConsoleWidget</class>
     <class kind="class">iview::CDrawBuffer</class>
     <class kind="class">iview::CImageShape</class>
     <class kind="class">iview::CInteractiveAnnulusSegmentShape</class>
@@ -47916,6 +47900,7 @@
     <class kind="class">iview::CSingleLayer</class>
     <class kind="class">iview::CTransformableRectangleCalibrationShape</class>
     <class kind="class">iview::CViewBase</class>
+    <class kind="class">iview::CViewport</class>
     <class kind="class">iview::ICalibrated</class>
     <class kind="class">iview::ICalibration</class>
     <class kind="class">iview::IColorShema</class>
@@ -47938,15 +47923,11 @@
     <class kind="class">iview::IViewRulersAccessor</class>
     <class kind="class">iview::IVisualCalibrationInfo</class>
     <class kind="class">iview::IVisualizable</class>
-    <class kind="class">iview::TCalibratedViewBase</class>
-    <class kind="class">iview::TFrameBase</class>
-    <class kind="class">iview::TFramedViewBase</class>
     <class kind="class">iview::TInteractiveMultiPolylineShape</class>
     <class kind="class">iview::TLayerBase</class>
     <class kind="class">iview::TLayerBaseEx</class>
     <class kind="class">iview::TMultiPolylineCalibrationShape</class>
     <class kind="class">iview::TShapeBase</class>
-    <class kind="class">iview::TViewImpl</class>
     <member kind="enumeration">
       <name>ChangeFlags</name>
       <anchorfile>namespaceiview.html</anchorfile>
@@ -48211,12 +48192,19 @@
       <anchor>a52f5fe4b9523a881eef75f7b978c58f7</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>QWidget</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a88408f3abdd7b35d80acc8fe5a929d73</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CCalibratedViewBase</name>
       <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
-      <anchor>a9658bfe22b3445c1bcafbb502a70d8cf</anchor>
-      <arglist>()</arglist>
+      <anchor>a9966b8370c11b439e4a90c393d70023f</anchor>
+      <arglist>(QWidget *parentWidgetPtr=0)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -48258,6 +48246,90 @@
       <name>GetCalibrationLayer</name>
       <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
       <anchor>ab8d78035603a7177df2da09270a4967c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDefaultColorShema</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>abaa7c4bada0ea318e1505db317c923c3</anchor>
+      <arglist>(const IColorShema *colorShemaPtr, bool releaseFlag=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsBackgroundBufferActive</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a1d7274deb0450cdf230d5ca1d2f2595a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetBackgroundBufferActive</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a048cc11d6231adee980a2fed8cd42e1d</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsDoubleBufferActive</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a1b2a442b848a3a5493e364dc10226ac5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDoubleBufferActive</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a724d2130e1871f07a3c2767ceb42367b</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>const iview::CDrawBuffer &amp;</type>
+      <name>GetBackgroundBuffer</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a959baf5d040bf764e13c5d5f26f33b2f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>iview::CDrawBuffer &amp;</type>
+      <name>GetBackgroundBuffer</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a4aece349b7bd9641f5893833acc557d9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const iview::CDrawBuffer &amp;</type>
+      <name>GetDoubleBuffer</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a12c71e0614bb7ac5eb6c7dcfd7f154ec</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>iview::CDrawBuffer &amp;</type>
+      <name>GetDoubleBuffer</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a46fb61da8ee6ca2b59de32bf283d82d7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnResize</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a907d7f2b8d57d6126d039c7563272d67</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CheckResize</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a76c31f33af210cfc14f0ebd2e71b1556</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iview::IColorShema &amp;</type>
+      <name>GetDefaultColorShema</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a808e54b859e44d92320c4380131dcc90</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -48315,6 +48387,20 @@
       <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
       <anchor>af37c933f1191a355445fa67b1ea4f171</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DrawBuffers</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a5006a54b7d2a31aefecb53fd399d5ed9</anchor>
+      <arglist>(QPaintDevice &amp;nativeContext, const i2d::CRect &amp;clipRect)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DrawToContext</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a26261d7a8f8a6f7b7ab23f8b318d8dd2</anchor>
+      <arglist>(QPaintDevice &amp;nativeContext, QPainter &amp;context, const i2d::CRect &amp;invalidatedBox)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -48546,9 +48632,515 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iview::CConsoleBase</name>
+    <filename>classiview_1_1_c_console_base.html</filename>
+    <class kind="struct">iview::CConsoleBase::CursorInfo</class>
+    <member kind="enumeration">
+      <name>FitMode</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a2a64e46576f8a55c6c0abf9bac6539bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FM_RESET</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a2a64e46576f8a55c6c0abf9bac6539bfa81352a1b7b2d68a54df237131c2066ec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FM_BOTH</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a2a64e46576f8a55c6c0abf9bac6539bfa93680127a3e68feda8946a2a6bf682cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FM_HORIZONTAL</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a2a64e46576f8a55c6c0abf9bac6539bfa49a16318afd9bf797f1c7bbf8ec2454d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FM_VERTICAL</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a2a64e46576f8a55c6c0abf9bac6539bfa069ce7b9c9326570f6b30b863b5ce6ec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FM_UNPROP</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a2a64e46576f8a55c6c0abf9bac6539bfaa4db0dbe9804ba2e502e5c3c2f56f55a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FM_COVER</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a2a64e46576f8a55c6c0abf9bac6539bfa50c90ed4b0167a939110726a01d8b1f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CConsoleBase</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ad1d25974ed6a57fb0bba9d18e510f544</anchor>
+      <arglist>(QWidget *parent)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsZoomToFit</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>af2bad4b713e6beb4fc9c7b13af5d5ba8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetZoomToFit</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ac32cdbdecc3ce9306f34db47d1a4ab5f</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>FitMode</type>
+      <name>GetFitMode</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a5bab8e54068b889d9bb97adfabb7492b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetFitMode</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ac094fa090d7743e83505cb445121c09e</anchor>
+      <arglist>(FitMode mode)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsGridVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a08f96f18e7f3f48f88f01365a633e17e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetGridVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a8eff02836fd51e6f1b900f36a5d59655</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsRulerVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a9dee284c55d32566b4b2dfd642da6816</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetRulerVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a5251c1982b559f0213369061a2758f9c</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsGridInMm</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ad97a7eef0ab89c7446d884bbb9c34cc9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetGridInMm</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a6dd966ab9c39d3bb88973bd5ed15ff9b</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsButtonsPanelVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a77e2ae95c0b2ed76c620bbec33172cd1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetButtonsPanelVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ada1739937b518b7f2c59df9a686b27c7</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsButtonsPanelVertical</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a9d1a79d08c42b614027e63bfae011d3b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetButtonsPanelVertical</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a195b77103d38e9d73582cda8ed84409f</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AreScrollbarsVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ab270cff28b854b93f94337f85c5a4f58</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetScrollbarsVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>af81b457987ec530a2e27f1168c84dac0</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsStatusVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ab8b2cb60ac0d80edfd5c57b559ecbf8e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetStatusVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>af7dcd795f128e4eb652632bca40948ea</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AreZoomsVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>af978b7fc84a0995b45640902fc2b2421</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetZoomsVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a23c8174038120d420923e6fb55d510e2</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsZoomToFitVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ae2730248ab29bc03b331f23e3e2126e8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetZoomToFitVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>aee89798ce5cfc06dd401dd3a133c70b4</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ArePolylineButtonsVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a1b4b7875e0419936a7654f805da049c4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPolylineButtonsVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a3070369f8827feda1be3bb4ac04fc1ce</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AreUserModeButtonsVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ae615347e5667a499f07e7410159485da</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetUserModeButtonsVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a56d02ab8442ab345354993d07586e516</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsStatusButtonVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a5f920a4d36810c24073a9b5d8d0391e5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetStatusButtonVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a1ef3952bc0262bcf6130ab2d18424e09</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsScrollbarsButtonVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>adf6e71c1628819787fa66ef4e2398d08</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetScrollbarsButtonVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a2f8390c2b25637bf96b0c34e9b266a84</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsGridButtonVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a6513fe05b29b29291357dad0b4729757</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetGridButtonVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a9f37b269aff70fa6e389f278cf19c4db</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsRulerButtonVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ade8206a135fb3494a21bb3d5a99b9dab</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetRulerButtonVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a2599669284f3264a28711a6c538d9e41</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsMmButtonVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>acd882d27398cd2d782bc3f826897b172</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMmButtonVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>aa055148071b926cda010bd0ee50cf006</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsPixelPositionVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a4ddd36a46dacde7cd1d8b4ad58dae16d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPixelPositionVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a73ab8ea942b5e41deab86b95d0d3f9fd</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsPixelValueVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ae1706275b05ec28f0bf267a66344e28b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPixelValueVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>aeb12a597311658a923e921e5a94514aa</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsMmPositionVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>aca5338ba00b60d21613669a0a6f77c4a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMmPositionVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ae515cb4a1ce73376d73787ab7604fb02</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsBackgroundActive</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a7296591b320981355219d739c4b9a5f0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UpdateView</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a242e6a3aabec627a8a151b2f3d14a1a3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const CViewport &amp;</type>
+      <name>GetView</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a8e5ff5fef1ef39abe96f7f07dd95d4e6</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual CViewport &amp;</type>
+      <name>GetViewRef</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a6b75d35864e307cb98efa1ead7da9655</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>UpdateEditModeButtons</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a42ef55f25f9bd0f71c35427c19f8db38</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>UpdateButtonsState</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ad0ee11238eeae602cf5c10f18bec6a7f</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>UpdateComponentsPosition</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a2099267391ddea5f463ec06acb30d8d3</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>UpdateCommands</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a81739f98a77b72a9a7b8265e4395fee4</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetStatusText</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a2fe06d42bcca7429c3a047e63ae90848</anchor>
+      <arglist>(const QString &amp;message)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>UpdateCursorInfo</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>aab6cd580e31799edbbd0729888cd2ba9</anchor>
+      <arglist>(const CursorInfo &amp;info)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual bool</type>
+      <name>OnSelectChange</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a093c5a4411f7a19c7bb14c5b50d8687b</anchor>
+      <arglist>(const iview::IShapeView &amp;view, const istd::CIndex2d &amp;position, const iview::IInteractiveShape &amp;shape, bool state)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual bool</type>
+      <name>OnMouseButton</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a20c25121739e123a7eb603b917548b08</anchor>
+      <arglist>(const iview::IShapeView &amp;view, const istd::CIndex2d &amp;position, Qt::MouseButton buttonType, bool state, const iview::IInteractiveShape *shapePtr)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnBoundingBoxChanged</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ae572753880bc73e2e7a4f4756bf85b5d</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>CViewport</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>aca5ab6a701842682cce5d5d8c6a33353</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iview::CConsoleBase::CursorInfo</name>
+    <filename>structiview_1_1_c_console_base_1_1_cursor_info.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CursorInfo</name>
+      <anchorfile>structiview_1_1_c_console_base_1_1_cursor_info.html</anchorfile>
+      <anchor>ab5049f766b3122b9c4debda3dd6632d7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>i2d::CVector2d</type>
+      <name>pixelPos</name>
+      <anchorfile>structiview_1_1_c_console_base_1_1_cursor_info.html</anchorfile>
+      <anchor>a0229744adb5002fad4184d634eaccad6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>i2d::CVector2d</type>
+      <name>logicalPos</name>
+      <anchorfile>structiview_1_1_c_console_base_1_1_cursor_info.html</anchorfile>
+      <anchor>a7d7f002d3722e34d0595a98f9f9347b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>pixelBrightness</name>
+      <anchorfile>structiview_1_1_c_console_base_1_1_cursor_info.html</anchorfile>
+      <anchor>aa3e9dba40ba928986100a8256659fa2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>red</name>
+      <anchorfile>structiview_1_1_c_console_base_1_1_cursor_info.html</anchorfile>
+      <anchor>a6b9050c3c8f9db78ebaa2ec454dc1cff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>green</name>
+      <anchorfile>structiview_1_1_c_console_base_1_1_cursor_info.html</anchorfile>
+      <anchor>af1db97780fcf72caae3356ebf7ac8122</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>blue</name>
+      <anchorfile>structiview_1_1_c_console_base_1_1_cursor_info.html</anchorfile>
+      <anchor>a062528ad51780ddaf774097eed81f70b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>alpha</name>
+      <anchorfile>structiview_1_1_c_console_base_1_1_cursor_info.html</anchorfile>
+      <anchor>ad17731dbe1974e72c47e83c177a385b1</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iview::CConsoleGui</name>
     <filename>classiview_1_1_c_console_gui.html</filename>
-    <base>TFrameBase&lt; CConsoleWidget &gt;</base>
+    <base>iview::CConsoleBase</base>
     <base>ibase::ICommandsProvider</base>
     <member kind="enumeration">
       <name>CommandGroupId</name>
@@ -48581,17 +49173,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iview::TFrameBase&lt; CConsoleWidget &gt;</type>
+      <type>iview::CConsoleBase</type>
       <name>BaseClass</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>ad55cc24003bcb4c8f1ad2a5e8bbd1282</anchor>
+      <anchor>a389ff3c2c9caa342f1d812ea456aaa9c</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iview::TCalibratedViewBase&lt; CConsoleWidget &gt;</type>
+      <type>iview::CViewport</type>
       <name>CalibrationViewImpl</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>aecac2b673e8c4405ab9eba8cf5e37356</anchor>
+      <anchor>a8ce90b099674ad5cd23d64a6d273c9a9</anchor>
       <arglist></arglist>
     </member>
     <member kind="slot" virtualness="virtual">
@@ -48621,6 +49213,13 @@
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>aac1fc55e4cefa92daa74d5611897aaa4</anchor>
       <arglist>(bool state)</arglist>
+    </member>
+    <member kind="slot" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnFitContentstoView</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>aef8126c9527ebcf572dd571866a2f8be</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="slot" virtualness="virtual">
       <type>virtual void</type>
@@ -48721,17 +49320,17 @@
       <arglist>(QWidget *parent=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ViewImpl &amp;</type>
+      <type>virtual const CViewport &amp;</type>
       <name>GetView</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a49c77961a3661e93879a4b43e2969ce0</anchor>
+      <anchor>a349c91a50ed2ff5cb6709ed72606baec</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual ViewImpl &amp;</type>
+      <type>virtual CViewport &amp;</type>
       <name>GetViewRef</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a9d87529ea1218bd524858172aba74c4a</anchor>
+      <anchor>abfd35718f066ad2bb6c851e2b4254bf1</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -48781,6 +49380,13 @@
       <name>UpdateComponentsPosition</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>af70b676a1424da974c26f533517084a5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateCommands</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a9fa79c8d457cb76686aa81f3018f8edd</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -48946,13 +49552,6 @@
     </member>
     <member kind="property">
       <type>bool</type>
-      <name>UndoButtonVisible</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>af374afd67ceb91c66a17688d8d5fd90d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="property">
-      <type>bool</type>
       <name>PixelPositionVisible</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>ac606e0b9ef1051a9f0a380a9d9433ce4</anchor>
@@ -48978,96 +49577,6 @@
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>a8e23b9a3878fa87f53cd49b50fde452b</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iview::CConsoleWidget</name>
-    <filename>classiview_1_1_c_console_widget.html</filename>
-    <base>QWidget</base>
-    <base>TViewImpl&lt; iview::CCalibratedViewBase &gt;</base>
-    <member kind="typedef">
-      <type>iview::TViewImpl&lt; iview::CCalibratedViewBase &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiview_1_1_c_console_widget.html</anchorfile>
-      <anchor>ada425480a98f51b820a3f4bed4144ca8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QWidget</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiview_1_1_c_console_widget.html</anchorfile>
-      <anchor>a2e690dad67ce48cff57cc24987125271</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CConsoleWidget</name>
-      <anchorfile>classiview_1_1_c_console_widget.html</anchorfile>
-      <anchor>a999458ce35de7ca0176ab1de0255fb35</anchor>
-      <arglist>(QWidget *parent=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual i2d::CRect</type>
-      <name>GetClientRect</name>
-      <anchorfile>classiview_1_1_c_console_widget.html</anchorfile>
-      <anchor>a28f5ecdc09b8047f550ed3b9b6d2cb05</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>paintEvent</name>
-      <anchorfile>classiview_1_1_c_console_widget.html</anchorfile>
-      <anchor>a7cdd646544a595d0a6064f240c1565aa</anchor>
-      <arglist>(QPaintEvent *event)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>resizeEvent</name>
-      <anchorfile>classiview_1_1_c_console_widget.html</anchorfile>
-      <anchor>ab49bec6d1a765442ceb07439f3b6e69f</anchor>
-      <arglist>(QResizeEvent *event)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mousePressEvent</name>
-      <anchorfile>classiview_1_1_c_console_widget.html</anchorfile>
-      <anchor>a07025c0b9dbfa02764edff0b5b6581ea</anchor>
-      <arglist>(QMouseEvent *event)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mouseReleaseEvent</name>
-      <anchorfile>classiview_1_1_c_console_widget.html</anchorfile>
-      <anchor>ae5adcadec9cae00b8f0a1ad90ac514a8</anchor>
-      <arglist>(QMouseEvent *event)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mouseMoveEvent</name>
-      <anchorfile>classiview_1_1_c_console_widget.html</anchorfile>
-      <anchor>aa0d22104a09e9c8ef3803181b0b8645e</anchor>
-      <arglist>(QMouseEvent *event)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetMousePointer</name>
-      <anchorfile>classiview_1_1_c_console_widget.html</anchorfile>
-      <anchor>a351e03dbec1b3a3fbe9dbcaf720957ce</anchor>
-      <arglist>(MousePointerMode mode)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateRectArea</name>
-      <anchorfile>classiview_1_1_c_console_widget.html</anchorfile>
-      <anchor>a47b5960745c4a13a5e8a6c9df4982efe</anchor>
-      <arglist>(const i2d::CRect &amp;rect)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>GetKeysState</name>
-      <anchorfile>classiview_1_1_c_console_widget.html</anchorfile>
-      <anchor>aeeac3bb26fc65c84d1342d53ab7c1090</anchor>
-      <arglist>(const QMouseEvent &amp;event)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -54244,6 +54753,215 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iview::CViewport</name>
+    <filename>classiview_1_1_c_viewport.html</filename>
+    <base>iview::CCalibratedViewBase</base>
+    <base virtualness="virtual">iview::IViewEventObserver</base>
+    <member kind="typedef">
+      <type>CCalibratedViewBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>aa894e9822e1ecde84212a4be707965d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CViewport</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>ae56531f6b06b86d731da0a63ec93de04</anchor>
+      <arglist>(CConsoleBase *framePtr, QWidget *parent=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CViewport</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a1ecb4e68928e38e639f10025b1de5ff7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>CConsoleBase *</type>
+      <name>GetFramePtr</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a86c331f9be5531e6b6b87307fb97bce8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UpdateFitTransform</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>ab507fcac386f58d6bb835c9a3603cd16</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetEditMode</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a13c2641ae9dca5a42c05254c0265f298</anchor>
+      <arglist>(int mode)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetFitArea</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a336da414fa0e7d4ff92fb815777ee921</anchor>
+      <arglist>(const i2d::CRectangle &amp;area)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetPixelPositionExact</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a731acdbd8f68e779d08899a62a58461c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetLogicalPositionExact</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>ae31c5608f634a689e9d528f13df3da22</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CRect</type>
+      <name>GetClientRect</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>ac3aa542abbd7b163ee2e2617eb8184bf</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnSelectChange</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>abe44bf463ce2699dee173a73ba0e9739</anchor>
+      <arglist>(const iview::IShapeView &amp;view, const istd::CIndex2d &amp;position, const iview::IInteractiveShape &amp;shape, bool state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseButton</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>abf8b019ac57fb70d7c90447eed008d47</anchor>
+      <arglist>(const iview::IShapeView &amp;view, const istd::CIndex2d &amp;position, Qt::MouseButton buttonType, bool state, const iview::IInteractiveShape *shapePtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseMove</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a5ec9b73933389a6aff56bdda659b1574</anchor>
+      <arglist>(istd::CIndex2d position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ConnectCalibrationShape</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a0c59a58bec301b238c6c3291201bbf4a</anchor>
+      <arglist>(iview::IShape *shapePtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>paintEvent</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>afb02b714f3cd7e9c581c6ddb691c1df5</anchor>
+      <arglist>(QPaintEvent *event)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>resizeEvent</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>ab0d531efc3662db37c3a01871cd14b58</anchor>
+      <arglist>(QResizeEvent *event)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>mousePressEvent</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a0236e7c571e2541f3dc4b0ff55e13bd7</anchor>
+      <arglist>(QMouseEvent *event)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>mouseReleaseEvent</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a9ca1b05b897da527afbe5f89b15bd612</anchor>
+      <arglist>(QMouseEvent *event)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>mouseMoveEvent</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a02f46b7da17f10eec6a4cb139cdff834</anchor>
+      <arglist>(QMouseEvent *event)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetMousePointer</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>ac8447fa605c6f5e131ddf4bac1fae5e5</anchor>
+      <arglist>(MousePointerMode mode)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateRectArea</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>ac1195a8cdf4494c3d80d354f5ef20683</anchor>
+      <arglist>(const i2d::CRect &amp;rect)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>GetKeysState</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>afb7ba17ccf611a6a5c8895cc994be300</anchor>
+      <arglist>(const QMouseEvent &amp;event)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetBackgroundBufferValid</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a55713a630af99f4d977c1d0a758ba562</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnBoundingBoxChanged</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>ae90d6a53c030cc08208eaa2c49c4aca8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnResize</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>af2a477c38b2b0c2e271be7ca6437fca9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CanBeMoved</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a2a59fec2ddd71d298bf0c17cf3f9da33</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CalcBoundingBox</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>ab239215f49c9c9828db931f3aec9f771</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnAreaInvalidated</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a85b684dbb7dc3ee485dde550815d84c5</anchor>
+      <arglist>(const i2d::CRect &amp;beforeBox, const i2d::CRect &amp;afterBox)</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>CConsoleBase</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a97d1351fa9266c153d285189ce5e62bf</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iview::ICalibrated</name>
     <filename>classiview_1_1_i_calibrated.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -55748,715 +56466,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iview::TCalibratedViewBase</name>
-    <filename>classiview_1_1_t_calibrated_view_base.html</filename>
-    <templarg></templarg>
-    <base>iview::TFramedViewBase</base>
-    <member kind="typedef">
-      <type>iview::TFramedViewBase&lt; ViewBase &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiview_1_1_t_calibrated_view_base.html</anchorfile>
-      <anchor>a439fba14e9e62dfaee448f1178d1dd7a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TCalibratedViewBase</name>
-      <anchorfile>classiview_1_1_t_calibrated_view_base.html</anchorfile>
-      <anchor>a26ab6219cda94bf8849a2ad50b951a2c</anchor>
-      <arglist>(Frame *framePtr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TCalibratedViewBase</name>
-      <anchorfile>classiview_1_1_t_calibrated_view_base.html</anchorfile>
-      <anchor>ac1556324e2dd4c077c9736c5a27d9a46</anchor>
-      <arglist>(Frame *framePtr, ConstructorParam *param)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ConnectCalibrationShape</name>
-      <anchorfile>classiview_1_1_t_calibrated_view_base.html</anchorfile>
-      <anchor>a95f1ef16b33ace926c2ff38dc5a6c909</anchor>
-      <arglist>(iview::IShape *shapePtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iview::TFrameBase</name>
-    <filename>classiview_1_1_t_frame_base.html</filename>
-    <templarg>ViewBase</templarg>
-    <base>QWidget</base>
-    <class kind="struct">iview::TFrameBase::CursorInfo</class>
-    <member kind="enumeration">
-      <name>FitMode</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a22de5ef9905b838f1cd29c7f90948b05</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>FM_RESET</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a22de5ef9905b838f1cd29c7f90948b05a9403bb26e96664fbd30e28877236dca9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>FM_BOTH</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a22de5ef9905b838f1cd29c7f90948b05afe5c8606a785f559dd7aa37185e42be9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>FM_HORIZONTAL</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a22de5ef9905b838f1cd29c7f90948b05a0ce4942eb92b1d425f7039108b06bf5f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>FM_VERTICAL</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a22de5ef9905b838f1cd29c7f90948b05af0b3f1f96c760b0bb3469337cfa26abb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>FM_UNPROP</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a22de5ef9905b838f1cd29c7f90948b05a79d739596d380064fb80d1b6c8afc066</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>FM_COVER</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a22de5ef9905b838f1cd29c7f90948b05a0eeb7b00db4d83523b456b4c1ccd58b3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iview::TFramedViewBase&lt; ViewBase &gt;</type>
-      <name>ViewImpl</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a6a7457bf9c5d172d7080ce4117e0cff6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TFrameBase</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a8c7b78c6b99a999841a384877f7571d6</anchor>
-      <arglist>(QWidget *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsZoomToFit</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a17f87e86e3b6a4b6616c56cf7a04061a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetZoomToFit</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>afaf7f8441495252d3bf5726943eb8f80</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>FitMode</type>
-      <name>GetFitMode</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a809533ed33cc56f4249f4e307f7b2ecd</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetFitMode</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a4cf6feda94312783ec91ca3a2367d247</anchor>
-      <arglist>(FitMode mode)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsGridVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>ad4be8d815d9d364ab94856c10350dcc7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetGridVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>af9da3e3e47c5e4d29119609bf6ab3c3c</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsRulerVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a5f27ab744a6c45702c32d963534105ba</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetRulerVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a7db8a71ce9e08847e37eb4d01ce804f3</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsGridInMm</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a486767ad3b1d128e3d4e47aa44531f09</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetGridInMm</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>ab8dccc848eacb94c2cb270b4ef53ea99</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsButtonsPanelVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a40042fdedb36775df4b358271c6bd4cf</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetButtonsPanelVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a5a84c2f2002bf2df5597b76d04291f49</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsButtonsPanelVertical</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a94475a37f0f76da45238f4707cf37cf7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetButtonsPanelVertical</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a37c4179d5ae8dfaf58ecbde1762696da</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AreScrollbarsVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a205dec63db8dce398f70fa90f01fcaa5</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetScrollbarsVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a72fc54afe98e976705fa0e45cd8fd4b6</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsStatusVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a3035b2decdfa94738d44d59aa34cb411</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetStatusVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a47b5edd6573273c33c11c64be9494960</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AreZoomsVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a1d4c1092b3987082b90dbd3d62f902ab</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetZoomsVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a745a9f71f4f7b4fef5365858413e033b</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsZoomToFitVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>add67e87c4617b5e768e859fb5e6d24f2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetZoomToFitVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a6a7758ab0d946cdd5d52a95bac7d1cb0</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>ArePolylineButtonsVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a0bc1656ecd1f678ec5f962d2c46b6e37</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetPolylineButtonsVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a02e04a50d77c7ef3d89b48d4b2d1bfd9</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AreUserModeButtonsVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a49e9bd3bc5c9f12258f797edeb613ffa</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetUserModeButtonsVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a58bce9d40cfd4c5fc9ba7bcacc1ea6ac</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsStatusButtonVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>ad588893a6b80fec48d3e339235180825</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetStatusButtonVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a289eb9c6309f2f92f323f41ecc8d13a6</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsScrollbarsButtonVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a3a379a76420e6e261e82bde8b6c56a38</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetScrollbarsButtonVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>ac5685aa91607739e7e9fa8aa56ba154d</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsGridButtonVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>aa0fdc79af2c585ac302c567e2c978ef4</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetGridButtonVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>af874898507599568c83b4f49e65cdc5e</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsRulerButtonVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>aba2af7164f04f5a08d022458686e24b0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetRulerButtonVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>acefea8362213aa245ccc3c9c43c2f162</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsMmButtonVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a16c5ded5eccb91b17823cf5f107e49ee</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetMmButtonVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>ac826ecb208d899e700c5782f4a283df9</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsUndoButtonVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>aa7602d0df94105509d7eaf28a1d0d35b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetUndoButtonVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>aaa5d88bec97e9f65bdcab4de9d469433</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsPixelPositionVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a087e778ec467095f607d35f42619b6fc</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetPixelPositionVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a3338eb187be648a7c9320c5552116c04</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsPixelValueVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>afb04ebb8c69066065ece5a5019a21b4b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetPixelValueVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>aae2a8fc252e538a28d51646416e8478f</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsMmPositionVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>ab8c08601f01405309f5c9e9d461d36ac</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetMmPositionVisible</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a73f7ce447cb5e32f24620bf70a260d0e</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsBackgroundActive</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a13139f358bf56bfa5339b57e9e67e12a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>UpdateView</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>ae5d5f08e0f054da0170f68cdeb8628ba</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const ViewImpl &amp;</type>
-      <name>GetView</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>afc7a0de5b692cb9c591045acc28021ac</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ViewImpl &amp;</type>
-      <name>GetViewRef</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a9d106e528e90122d3daa35c0ee318ff2</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>UpdateEditModeButtons</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>ad6f270de8fcbfb2699ac8e0b9aede415</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>UpdateButtonsState</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a754dca19c8be535a4802979f773bb334</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>UpdateComponentsPosition</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a699be64b3479ebfe8d9ee532affbc986</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetStatusText</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a57c1ed78a4da619a14d054758a6f3aa0</anchor>
-      <arglist>(const QString &amp;message)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>UpdateCursorInfo</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a1eea52579decf61f1923db579bca3e18</anchor>
-      <arglist>(const CursorInfo &amp;info)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual bool</type>
-      <name>OnSelectChange</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>ae99dbe96e9508b4cae435b2c0fabb529</anchor>
-      <arglist>(const iview::IShapeView &amp;view, const istd::CIndex2d &amp;position, const iview::IInteractiveShape &amp;shape, bool state)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual bool</type>
-      <name>OnMouseButton</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>a957c7fbf66711a481fea9a18d93de726</anchor>
-      <arglist>(const iview::IShapeView &amp;view, const istd::CIndex2d &amp;position, Qt::MouseButton buttonType, bool state, const iview::IInteractiveShape *shapePtr)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>OnBoundingBoxChanged</name>
-      <anchorfile>classiview_1_1_t_frame_base.html</anchorfile>
-      <anchor>aedc6a75ab0e1998ba6cc80d88dbd3047</anchor>
-      <arglist>()=0</arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>iview::TFrameBase::CursorInfo</name>
-    <filename>structiview_1_1_t_frame_base_1_1_cursor_info.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>CursorInfo</name>
-      <anchorfile>structiview_1_1_t_frame_base_1_1_cursor_info.html</anchorfile>
-      <anchor>ab8fc9b930aaf1f809151d464421dff97</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable">
-      <type>i2d::CVector2d</type>
-      <name>pixelPos</name>
-      <anchorfile>structiview_1_1_t_frame_base_1_1_cursor_info.html</anchorfile>
-      <anchor>ab23085ec1a4d5ca99b5d1ea172d92f27</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>i2d::CVector2d</type>
-      <name>logicalPos</name>
-      <anchorfile>structiview_1_1_t_frame_base_1_1_cursor_info.html</anchorfile>
-      <anchor>a3d18cb167c084ef6c01e83a7caba7f42</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>pixelBrightness</name>
-      <anchorfile>structiview_1_1_t_frame_base_1_1_cursor_info.html</anchorfile>
-      <anchor>abc3a451f03315e7768c30f2057e8f106</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>red</name>
-      <anchorfile>structiview_1_1_t_frame_base_1_1_cursor_info.html</anchorfile>
-      <anchor>aae9163a222915d965ee9e369a4477969</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>green</name>
-      <anchorfile>structiview_1_1_t_frame_base_1_1_cursor_info.html</anchorfile>
-      <anchor>aea65c220a37ec5296de188216e0f6a3b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>blue</name>
-      <anchorfile>structiview_1_1_t_frame_base_1_1_cursor_info.html</anchorfile>
-      <anchor>a2875b0d2a43365bee78b970eff8f416d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>alpha</name>
-      <anchorfile>structiview_1_1_t_frame_base_1_1_cursor_info.html</anchorfile>
-      <anchor>ac86ec67f239234646fe1ebb8304a97a2</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iview::TFramedViewBase</name>
-    <filename>classiview_1_1_t_framed_view_base.html</filename>
-    <templarg></templarg>
-    <base virtualness="virtual">iview::IViewEventObserver</base>
-    <member kind="typedef">
-      <type>ViewBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>a760aab4ff4e2bbcf3f92280e8eec0d1c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iview::IViewEventObserver</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>a9751e4b302209f64487ac8b8f070fa1e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TFrameBase&lt; ViewBase &gt;</type>
-      <name>Frame</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>a1dd5bbe2d32694826b9a804462516761</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TFramedViewBase</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>ae4fde6d60ab548cc4b501be9602ecd7c</anchor>
-      <arglist>(Frame *framePtr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TFramedViewBase</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>ae4d599ff0d72ddb08417d898372d4d61</anchor>
-      <arglist>(Frame *framePtr, ConstructorParam *param)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~TFramedViewBase</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>af57ba5532376f624efd713e5fca73120</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetFramework</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>a93ceac238942b2bcc9b2cb2fed1723e8</anchor>
-      <arglist>(TFrameBase&lt; ViewBase &gt; *framePtr)</arglist>
-    </member>
-    <member kind="function">
-      <type>Frame *</type>
-      <name>GetFramePtr</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>adb6c808a2e96e515004c515bf3a42773</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>UpdateFitTransform</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>a807f5712fc657e85a318e24bd5c58c17</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetEditMode</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>addc43b32b754c0f05357a6ff3cd8487d</anchor>
-      <arglist>(int mode)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetFitArea</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>a42287cf7d30fa6501135c05dae987926</anchor>
-      <arglist>(const i2d::CRectangle &amp;area)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetPixelPositionExact</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>abb9f1332c87a558af7f03ce3876e17c4</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetLogicalPositionExact</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>a94358791014dfa258c1037fb955d6ca7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnSelectChange</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>a777468d73490617aec535a38f928eac0</anchor>
-      <arglist>(const iview::IShapeView &amp;view, const istd::CIndex2d &amp;position, const iview::IInteractiveShape &amp;shape, bool state)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnMouseButton</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>aa4eae562b5179dfce0b711a6a4bbf4f8</anchor>
-      <arglist>(const iview::IShapeView &amp;view, const istd::CIndex2d &amp;position, Qt::MouseButton buttonType, bool state, const iview::IInteractiveShape *shapePtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnMouseMove</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>ab7ce0f6f46330e20d15b45dbee18a76f</anchor>
-      <arglist>(istd::CIndex2d position)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetBackgroundBufferValid</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>aeae6cb12d52bd56be81d60e76ab2d57e</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnBoundingBoxChanged</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>aac24950f51559b534aa986a35eafc71e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnResize</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>a48da366c30d38d6e1dd5cd5b6c73edcf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CanBeMoved</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>ad3a1e9c9b104fccbbfaf57d7f51efd4a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CalcBoundingBox</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>afc421f8bb5549e52d3a6d26c98d0eba0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnAreaInvalidated</name>
-      <anchorfile>classiview_1_1_t_framed_view_base.html</anchorfile>
-      <anchor>a919e7f34124a389d119869cbc066a042</anchor>
-      <arglist>(const i2d::CRect &amp;beforeBox, const i2d::CRect &amp;afterBox)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iview::TInteractiveMultiPolylineShape</name>
     <filename>classiview_1_1_t_interactive_multi_polyline_shape.html</filename>
     <templarg></templarg>
@@ -57103,124 +57112,6 @@
       <anchorfile>classiview_1_1_t_shape_base.html</anchorfile>
       <anchor>ac8122a1550808cea9e3150181e8d6dc5</anchor>
       <arglist>(i2d::CRect &amp;result) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iview::TViewImpl</name>
-    <filename>classiview_1_1_t_view_impl.html</filename>
-    <templarg>Base</templarg>
-    <base>Base</base>
-    <member kind="function">
-      <type></type>
-      <name>TViewImpl</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>a273fb4739d1176f19868e20ac25c5d17</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetDefaultColorShema</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>a7d1039b792001ead0194660c138ae51a</anchor>
-      <arglist>(const IColorShema *colorShemaPtr, bool releaseFlag=false)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsBackgroundBufferActive</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>aa4687314d85546a0a41c00c775911198</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetBackgroundBufferActive</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>a40e06af22459eb6b853aa30fdcca4293</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsDoubleBufferActive</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>ae272b59951b85d84e5f5a51af63f6760</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetDoubleBufferActive</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>abf14c122064e5a7dd3241ffa965fbc7a</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>const iview::CDrawBuffer &amp;</type>
-      <name>GetBackgroundBuffer</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>acfae8d87c6096211be246fe4832e20d9</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>iview::CDrawBuffer &amp;</type>
-      <name>GetBackgroundBuffer</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>a2712983ed082e462e7213be83a7716e8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const iview::CDrawBuffer &amp;</type>
-      <name>GetDoubleBuffer</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>a8be50f978aa7371e576b94dff4c05156</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>iview::CDrawBuffer &amp;</type>
-      <name>GetDoubleBuffer</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>ab2247db7978a1c3145c5692c10114363</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const iview::IColorShema &amp;</type>
-      <name>GetDefaultColorShema</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>abe09c733f0c646faa629fa80708dc42d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DrawBuffers</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>a0c9152e202e434e191b47d18b79d8783</anchor>
-      <arglist>(QPaintDevice &amp;nativeContext, const i2d::CRect &amp;clipRect)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DrawToContext</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>aa6e19fd361fb62d75644b90a8848b2be</anchor>
-      <arglist>(QPaintDevice &amp;nativeContext, QPainter &amp;context, const i2d::CRect &amp;invalidatedBox)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnResize</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>ae7524c090cae6dc2a33f3fd582b5d845</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CheckResize</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>aac380a7ca96e3bbae6884fff86f5fa1e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>istd::TOptDelPtr&lt; const IColorShema &gt;</type>
-      <name>m_defaultColorShemaPtr</name>
-      <anchorfile>classiview_1_1_t_view_impl.html</anchorfile>
-      <anchor>ab74ac1df9f816e003a0d7f25f903f4bc</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="namespace">

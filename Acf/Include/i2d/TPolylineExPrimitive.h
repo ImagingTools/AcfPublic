@@ -37,10 +37,11 @@ class TPolylineExPrimitive: public CPolyline
 {
 public:
 	typedef CPolyline BaseClass;
+	typedef SegmentData SegmentDataType;
 
 	/** Get segment user data.
 	 */
-	virtual const SegmentData& GetSegmentData(int segmentIndex) const;
+	virtual const SegmentDataType& GetSegmentData(int segmentIndex) const;
 	/** Set segment user data.
 	 */
 	virtual void SetSegmentData(int segmentIndex, const SegmentData& data);
@@ -65,7 +66,7 @@ private:
 
 
 template<class SegmentData>
-inline const typename SegmentData& TPolylineExPrimitive<SegmentData>::GetSegmentData(int segmentIndex) const
+inline const typename TPolylineExPrimitive<SegmentData>::SegmentDataType& TPolylineExPrimitive<SegmentData>::GetSegmentData(int segmentIndex) const
 {
 	I_ASSERT(segmentIndex >= 0);
 	I_ASSERT(segmentIndex < int(m_segmentsData.size()));
@@ -91,7 +92,7 @@ inline bool TPolylineExPrimitive<SegmentData>::RemoveSegment(int node, int segme
 	I_ASSERT(segment < int(m_segmentsData.size()));
 
 	node %= GetNodesCount();
-	::std::vector<SegmentData>::iterator iter = m_segmentsData.begin();
+	typename std::vector<SegmentDataType>::iterator iter = m_segmentsData.begin();
 	iter += segment;
 	m_segmentsData.erase(iter);
 
@@ -153,7 +154,7 @@ inline bool TPolylineExPrimitive<SegmentData>::InsertNode(int index, const i2d::
 				}
 			}
 
-			::std::vector<SegmentData>::iterator iter = m_segmentsData.begin();
+			typename std::vector<SegmentData>::iterator iter = m_segmentsData.begin();
 			iter += index;
 
 			m_segmentsData.insert(iter, newSegment);

@@ -12704,7 +12704,6 @@
   <compound kind="class">
     <name>iqtmeas::CDataSequenceViewComp::DiagramWidget</name>
     <filename>classiqtmeas_1_1_c_data_sequence_view_comp_1_1_diagram_widget.html</filename>
-    <base>QWidget</base>
     <member kind="function">
       <type></type>
       <name>DiagramWidget</name>
@@ -12782,7 +12781,6 @@
   <compound kind="class">
     <name>iqtmeas::CNumericValueWidget</name>
     <filename>classiqtmeas_1_1_c_numeric_value_widget.html</filename>
-    <base>QWidget</base>
     <member kind="signal">
       <type>void</type>
       <name>ValueChanged</name>
@@ -13575,7 +13573,6 @@
   <compound kind="class">
     <name>iqtsig::CSampleContainerView</name>
     <filename>classiqtsig_1_1_c_sample_container_view.html</filename>
-    <base>QWidget</base>
     <base>TSingleModelObserverBase&lt; imeas::IDataSequence &gt;</base>
     <member kind="typedef">
       <type>QWidget</type>

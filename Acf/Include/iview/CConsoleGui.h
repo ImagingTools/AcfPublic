@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef _qqt_CConsoleGui_included
-#define _qqt_CConsoleGui_included
+#ifndef iview_CConsoleGui_included
+#define iview_CConsoleGui_included
 
 
 // ACF includes
@@ -29,9 +29,8 @@
 
 #include "ibase/ICommandsProvider.h"
 
-#include "iview/TFrameBase.h"
-#include "iview/TCalibratedViewBase.h"
-#include "iview/CConsoleWidget.h"
+#include "iview/CConsoleBase.h"
+#include "iview/CViewport.h"
 
 
 // Foirward declarations
@@ -48,7 +47,7 @@ namespace iview
 
 
 class CConsoleGui: 
-			public iview::TFrameBase<CConsoleWidget>,
+			public iview::CConsoleBase,
 			public ibase::ICommandsProvider
 {
 	Q_OBJECT
@@ -72,15 +71,14 @@ class CConsoleGui:
 	Q_PROPERTY(bool RulerButtonVisible READ IsRulerButtonVisible WRITE SetRulerButtonVisible)	
 
 	Q_PROPERTY(bool MmButtonVisible READ IsMmButtonVisible WRITE SetMmButtonVisible)	
-	Q_PROPERTY(bool UndoButtonVisible READ IsUndoButtonVisible WRITE SetUndoButtonVisible)	
 	Q_PROPERTY(bool PixelPositionVisible READ IsPixelPositionVisible WRITE SetPixelPositionVisible)	
 	Q_PROPERTY(bool PixelValueVisible READ IsPixelValueVisible WRITE SetPixelValueVisible)	
 	Q_PROPERTY(bool MmPositionVisible READ IsMmPositionVisible WRITE SetMmPositionVisible)	
 	Q_PROPERTY(FitMode FitMode READ GetFitMode WRITE SetFitMode)
 
 public:
-	typedef iview::TFrameBase<CConsoleWidget> BaseClass;
-	typedef iview::TCalibratedViewBase<CConsoleWidget> CalibrationViewImpl;
+	typedef iview::CConsoleBase BaseClass;
+	typedef iview::CViewport CalibrationViewImpl;
 
 	enum CommandGroupId
 	{
@@ -92,9 +90,9 @@ public:
 
 	explicit CConsoleGui(QWidget* parent = NULL);
 
-	// reimplemented (iview::TFrameBase)
-	virtual const ViewImpl& GetView() const;
-	virtual ViewImpl& GetViewRef();
+	// reimplemented (iview::CConsoleBase)
+	virtual const CViewport& GetView() const;
+	virtual CViewport& GetViewRef();
 
 	// reimplemented (ibase::ICommandsProvider)
 	virtual const ibase::IHierarchicalCommand* GetCommands() const;
@@ -104,6 +102,7 @@ public Q_SLOTS:
 	virtual void OnZoomOut();
 	virtual void OnZoomReset();
 	virtual void OnZoomToFit(bool state);
+	virtual void OnFitContentstoView();
 	virtual void OnPointsNone();
 	virtual void OnPoinsMove();
 	virtual void OnPointsAdd();
@@ -124,11 +123,12 @@ protected:
 	void UpdateZoomInOutState();
 	void UpdateScrollbarsValues();
 
-	// reimplemented (iview::TFrameBase)
+	// reimplemented (iview::CConsoleBase)
 	virtual void UpdateCursorInfo(const BaseClass::CursorInfo& info);
 	virtual void UpdateEditModeButtons();
 	virtual void UpdateButtonsState();
 	virtual void UpdateComponentsPosition();
+	virtual void UpdateCommands();
 	virtual void SetStatusText(const QString& message);
 
 	// events
@@ -183,7 +183,7 @@ private:
 
 // view access
 
-inline const CConsoleGui::ViewImpl& CConsoleGui::GetView() const
+inline const CViewport& CConsoleGui::GetView() const
 {
 	I_ASSERT(m_viewPtr != NULL);
 
@@ -191,7 +191,7 @@ inline const CConsoleGui::ViewImpl& CConsoleGui::GetView() const
 }
 
 
-inline CConsoleGui::ViewImpl& CConsoleGui::GetViewRef()
+inline CViewport& CConsoleGui::GetViewRef()
 {
 	I_ASSERT(m_viewPtr != NULL);
 
@@ -202,12 +202,7 @@ inline CConsoleGui::ViewImpl& CConsoleGui::GetViewRef()
 } // namespace iview
 
 
-/**	Typedef for compatibility with resource editor.
-*/
-typedef iview::CConsoleGui _qqt_CConsoleGui;
-
-
-#endif // !_qqt_CConsoleGui_included
+#endif // !iview_CConsoleGui_included
 
 
 

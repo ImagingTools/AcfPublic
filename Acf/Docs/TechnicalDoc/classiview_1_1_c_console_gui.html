@@ -42,7 +42,7 @@
 <div class="title">iview::CConsoleGui Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iview::CConsoleGui" --><!-- doxytag: inherits="TFrameBase&lt; CConsoleWidget &gt;,ibase::ICommandsProvider" -->
+<!-- doxytag: class="iview::CConsoleGui" --><!-- doxytag: inherits="iview::CConsoleBase,ibase::ICommandsProvider" -->
 <p><code>#include &lt;<a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iview::CConsoleGui:</div>
@@ -50,10 +50,9 @@ Inheritance diagram for iview::CConsoleGui:</div>
  <div class="center">
   <img src="classiview_1_1_c_console_gui.png" usemap="#iview::CConsoleGui_map" alt=""/>
   <map id="iview::CConsoleGui_map" name="iview::CConsoleGui_map">
-<area href="classiview_1_1_t_frame_base.html" alt="iview::TFrameBase&lt; CConsoleWidget &gt;" shape="rect" coords="0,56,235,80"/>
-<area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="245,56,480,80"/>
-<area href="class_q_widget.html" alt="QWidget" shape="rect" coords="0,0,235,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="245,0,480,24"/>
+<area href="classiview_1_1_c_console_base.html" alt="iview::CConsoleBase" shape="rect" coords="0,56,161,80"/>
+<area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="171,56,332,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="171,0,332,24"/>
 </map>
  </div></div>
 
@@ -66,17 +65,15 @@ Public Types</h2></td></tr>
 <a class="el" href="classiview_1_1_c_console_gui.html#adcdfbd863f48b01faef69948040312edae51a1eea64c7816612d604625e345800">CGI_CALIBRATION</a> =  ibase::ICommand::GI_USER + 3, 
 <a class="el" href="classiview_1_1_c_console_gui.html#adcdfbd863f48b01faef69948040312eda4f96629465537a3e25bad2a4ae84ef56">CGI_VIEW_CONTROL</a> =  ibase::ICommand::GI_USER + 4
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiview_1_1_t_frame_base.html">iview::TFrameBase</a><br class="typebreak"/>
-&lt; <a class="el" href="classiview_1_1_c_console_widget.html">CConsoleWidget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ad55cc24003bcb4c8f1ad2a5e8bbd1282">BaseClass</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="classiview_1_1_t_calibrated_view_base.html">iview::TCalibratedViewBase</a><br class="typebreak"/>
-&lt; <a class="el" href="classiview_1_1_c_console_widget.html">CConsoleWidget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#aecac2b673e8c4405ab9eba8cf5e37356">CalibrationViewImpl</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiview_1_1_c_console_base.html">iview::CConsoleBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a389ff3c2c9caa342f1d812ea456aaa9c">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiview_1_1_c_viewport.html">iview::CViewport</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a8ce90b099674ad5cd23d64a6d273c9a9">CalibrationViewImpl</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a395894f922ec0a7d9de47b8d3f101267">OnZoomIn</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#aac0a6fdae2aa33634e8f5c6d9ae882d5">OnZoomOut</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#add0132820aaa70052c58316ab4c59b1f">OnZoomReset</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#aac1fc55e4cefa92daa74d5611897aaa4">OnZoomToFit</a> (bool state)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#aef8126c9527ebcf572dd571866a2f8be">OnFitContentstoView</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a4f512ffd3f22563d2ba0e1500e9d77b1">OnPointsNone</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#acc8be9bd57a59b41d9944ee0228dbbcb">OnPoinsMove</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a4cdd578f3b80fabb2423f21907b6e1a3">OnPointsAdd</a> ()</td></tr>
@@ -94,11 +91,11 @@ Signals</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a7fa7683809ea8f29e92f05d076c4a68b">mouseClicked</a> (const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;view, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position, Qt::MouseButton buttonType, bool state, const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> *shapePtr)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#aca5387c5a17049d6130ed5ce1e821ea1">CConsoleGui</a> (<a class="el" href="class_q_widget.html">QWidget</a> *parent=0)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiview_1_1_t_frame_base.html#a6a7457bf9c5d172d7080ce4117e0cff6">ViewImpl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a49c77961a3661e93879a4b43e2969ce0">GetView</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to internal view implementation.  <a href="#a49c77961a3661e93879a4b43e2969ce0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_t_frame_base.html#a6a7457bf9c5d172d7080ce4117e0cff6">ViewImpl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a9d87529ea1218bd524858172aba74c4a">GetViewRef</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to internal view implementation.  <a href="#a9d87529ea1218bd524858172aba74c4a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#aca5387c5a17049d6130ed5ce1e821ea1">CConsoleGui</a> (QWidget *parent=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiview_1_1_c_viewport.html">CViewport</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a349c91a50ed2ff5cb6709ed72606baec">GetView</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to internal view implementation.  <a href="#a349c91a50ed2ff5cb6709ed72606baec"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_c_viewport.html">CViewport</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#abfd35718f066ad2bb6c851e2b4254bf1">GetViewRef</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to internal view implementation.  <a href="#abfd35718f066ad2bb6c851e2b4254bf1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ae1e1ba50dbac1497c193cc2b48023417">GetCommands</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of menu commands.  <a href="#ae1e1ba50dbac1497c193cc2b48023417"></a><br/></td></tr>
@@ -106,13 +103,15 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a449b6f542830be21da32068ff8c4b6c0">UpdateZoomInOutState</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#af1d787905207f1c2243074aff63d06de">UpdateScrollbarsValues</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a04272f090a119a9365f98eed816c2260">UpdateCursorInfo</a> (const BaseClass::CursorInfo &amp;info)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a04272f090a119a9365f98eed816c2260">UpdateCursorInfo</a> (const <a class="el" href="structiview_1_1_c_console_base_1_1_cursor_info.html">BaseClass::CursorInfo</a> &amp;info)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a75c16cbc934985f8b3d01c70f2828ac9">UpdateEditModeButtons</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update state of edit mode buttons.  <a href="#a75c16cbc934985f8b3d01c70f2828ac9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a1d94bc193c34b382af2171ac8293b65f">UpdateButtonsState</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculates enabling flags for buttons.  <a href="#a1d94bc193c34b382af2171ac8293b65f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#af70b676a1424da974c26f533517084a5">UpdateComponentsPosition</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculates position of all components.  <a href="#af70b676a1424da974c26f533517084a5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a9fa79c8d457cb76686aa81f3018f8edd">UpdateCommands</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate menu commands.  <a href="#a9fa79c8d457cb76686aa81f3018f8edd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a3e5a0832fcee4f7636fc05934a6cdefc">SetStatusText</a> (const QString &amp;message)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display specified text in status window.  <a href="#a3e5a0832fcee4f7636fc05934a6cdefc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ae5450db91849b321fc53c4a403ff42be">OnSelectChange</a> (const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;view, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position, const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> &amp;shape, bool state)</td></tr>
@@ -121,7 +120,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ab58f49dd051ebbdd993d51cb62f8728e">wheelEvent</a> (QWheelEvent *event)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiview_1_1_c_console_gui.html#aecac2b673e8c4405ab9eba8cf5e37356">CalibrationViewImpl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#acccfcdb08e989aea6fd82c7e393e83f0">m_viewPtr</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiview_1_1_c_console_gui.html#a8ce90b099674ad5cd23d64a6d273c9a9">CalibrationViewImpl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#acccfcdb08e989aea6fd82c7e393e83f0">m_viewPtr</a></td></tr>
 <tr><td colspan="2"><h2><a name="properties"></a>
 Properties</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a6d5d8be74ee7aef7f558619e495a8cf8">ZoomToFit</a></td></tr>
@@ -141,44 +140,43 @@ Properties</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#abddbb27566bd7cbf55819a1ace78dcda">GridButtonVisible</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#aea836c6629075b927886933901e14078">RulerButtonVisible</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a2e405e690dd05e1fb7478e89f51faa5c">MmButtonVisible</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#af374afd67ceb91c66a17688d8d5fd90d">UndoButtonVisible</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ac606e0b9ef1051a9f0a380a9d9433ce4">PixelPositionVisible</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a5611a164dda94f7ee25c78ee23d5dde2">PixelValueVisible</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a78f8a6f42873f7628ecca18ae775be59">MmPositionVisible</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">FitMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a8e23b9a3878fa87f53cd49b50fde452b">FitMode</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiview_1_1_c_console_base.html#a2a64e46576f8a55c6c0abf9bac6539bf">FitMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a8e23b9a3878fa87f53cd49b50fde452b">FitMode</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Control fitting mode, to fit area of interest (AOI) to display.  <a href="#a8e23b9a3878fa87f53cd49b50fde452b"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00028">28</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00027">27</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="ad55cc24003bcb4c8f1ad2a5e8bbd1282"></a><!-- doxytag: member="iview::CConsoleGui::BaseClass" ref="ad55cc24003bcb4c8f1ad2a5e8bbd1282" args="" -->
+<a class="anchor" id="a389ff3c2c9caa342f1d812ea456aaa9c"></a><!-- doxytag: member="iview::CConsoleGui::BaseClass" ref="a389ff3c2c9caa342f1d812ea456aaa9c" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiview_1_1_t_frame_base.html">iview::TFrameBase</a>&lt;<a class="el" href="classiview_1_1_c_console_widget.html">CConsoleWidget</a>&gt; <a class="el" href="classiview_1_1_c_console_gui.html#ad55cc24003bcb4c8f1ad2a5e8bbd1282">iview::CConsoleGui::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classiview_1_1_c_console_base.html">iview::CConsoleBase</a> <a class="el" href="classiview_1_1_c_console_gui.html#a389ff3c2c9caa342f1d812ea456aaa9c">iview::CConsoleGui::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00060">60</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00058">58</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aecac2b673e8c4405ab9eba8cf5e37356"></a><!-- doxytag: member="iview::CConsoleGui::CalibrationViewImpl" ref="aecac2b673e8c4405ab9eba8cf5e37356" args="" -->
+<a class="anchor" id="a8ce90b099674ad5cd23d64a6d273c9a9"></a><!-- doxytag: member="iview::CConsoleGui::CalibrationViewImpl" ref="a8ce90b099674ad5cd23d64a6d273c9a9" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiview_1_1_t_calibrated_view_base.html">iview::TCalibratedViewBase</a>&lt;<a class="el" href="classiview_1_1_c_console_widget.html">CConsoleWidget</a>&gt; <a class="el" href="classiview_1_1_c_console_gui.html#aecac2b673e8c4405ab9eba8cf5e37356">iview::CConsoleGui::CalibrationViewImpl</a></td>
+          <td class="memname">typedef <a class="el" href="classiview_1_1_c_viewport.html">iview::CViewport</a> <a class="el" href="classiview_1_1_c_console_gui.html#a8ce90b099674ad5cd23d64a6d273c9a9">iview::CConsoleGui::CalibrationViewImpl</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00061">61</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00059">59</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -206,7 +204,7 @@ Properties</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00063">63</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00061">61</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -218,7 +216,7 @@ Properties</h2></td></tr>
         <tr>
           <td class="memname">iview::CConsoleGui::CConsoleGui </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_q_widget.html">QWidget</a> *&#160;</td>
+          <td class="paramtype">QWidget *&#160;</td>
           <td class="paramname"><em>parent</em> = <code>0</code></td><td>)</td>
           <td><code> [explicit]</code></td>
         </tr>
@@ -250,12 +248,12 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a49c77961a3661e93879a4b43e2969ce0"></a><!-- doxytag: member="iview::CConsoleGui::GetView" ref="a49c77961a3661e93879a4b43e2969ce0" args="() const " -->
+<a class="anchor" id="a349c91a50ed2ff5cb6709ed72606baec"></a><!-- doxytag: member="iview::CConsoleGui::GetView" ref="a349c91a50ed2ff5cb6709ed72606baec" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classiview_1_1_t_frame_base.html#a6a7457bf9c5d172d7080ce4117e0cff6">CConsoleGui::ViewImpl</a> &amp; iview::CConsoleGui::GetView </td>
+          <td class="memname">const <a class="el" href="classiview_1_1_c_viewport.html">CViewport</a> &amp; iview::CConsoleGui::GetView </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [inline, virtual]</code></td>
@@ -266,7 +264,7 @@ Properties</h2></td></tr>
 
 <p>Get access to internal view implementation. </p>
 
-<p>Implements <a class="el" href="classiview_1_1_t_frame_base.html#afc7a0de5b692cb9c591045acc28021ac">iview::TFrameBase&lt; CConsoleWidget &gt;</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#a8e5ff5fef1ef39abe96f7f07dd95d4e6">iview::CConsoleBase</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00164">164</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
@@ -274,12 +272,12 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9d87529ea1218bd524858172aba74c4a"></a><!-- doxytag: member="iview::CConsoleGui::GetViewRef" ref="a9d87529ea1218bd524858172aba74c4a" args="()" -->
+<a class="anchor" id="abfd35718f066ad2bb6c851e2b4254bf1"></a><!-- doxytag: member="iview::CConsoleGui::GetViewRef" ref="abfd35718f066ad2bb6c851e2b4254bf1" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classiview_1_1_t_frame_base.html#a6a7457bf9c5d172d7080ce4117e0cff6">CConsoleGui::ViewImpl</a> &amp; iview::CConsoleGui::GetViewRef </td>
+          <td class="memname"><a class="el" href="classiview_1_1_c_viewport.html">CViewport</a> &amp; iview::CConsoleGui::GetViewRef </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [inline, virtual]</code></td>
@@ -290,7 +288,7 @@ Properties</h2></td></tr>
 
 <p>Get access to internal view implementation. </p>
 
-<p>Implements <a class="el" href="classiview_1_1_t_frame_base.html#a9d106e528e90122d3daa35c0ee318ff2">iview::TFrameBase&lt; CConsoleWidget &gt;</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#a6b75d35864e307cb98efa1ead7da9655">iview::CConsoleBase</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00172">172</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
@@ -357,7 +355,23 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="classiview_1_1_t_frame_base.html#aedc6a75ab0e1998ba6cc80d88dbd3047">iview::TFrameBase&lt; CConsoleWidget &gt;</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#ae572753880bc73e2e7a4f4756bf85b5d">iview::CConsoleBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aef8126c9527ebcf572dd571866a2f8be"></a><!-- doxytag: member="iview::CConsoleGui::OnFitContentstoView" ref="aef8126c9527ebcf572dd571866a2f8be" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iview::CConsoleGui::OnFitContentstoView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -421,7 +435,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="classiview_1_1_t_frame_base.html#a957c7fbf66711a481fea9a18d93de726">iview::TFrameBase&lt; CConsoleWidget &gt;</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#a20c25121739e123a7eb603b917548b08">iview::CConsoleBase</a>.</p>
 
 </div>
 </div>
@@ -526,7 +540,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="classiview_1_1_t_frame_base.html#ae99dbe96e9508b4cae435b2c0fabb529">iview::TFrameBase&lt; CConsoleWidget &gt;</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#a093c5a4411f7a19c7bb14c5b50d8687b">iview::CConsoleBase</a>.</p>
 
 </div>
 </div>
@@ -753,7 +767,7 @@ Properties</h2></td></tr>
 
 <p>Display specified text in status window. </p>
 
-<p>Implements <a class="el" href="classiview_1_1_t_frame_base.html#a57c1ed78a4da619a14d054758a6f3aa0">iview::TFrameBase&lt; CConsoleWidget &gt;</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#a2fe06d42bcca7429c3a047e63ae90848">iview::CConsoleBase</a>.</p>
 
 </div>
 </div>
@@ -773,7 +787,27 @@ Properties</h2></td></tr>
 
 <p>Recalculates enabling flags for buttons. </p>
 
-<p>Implements <a class="el" href="classiview_1_1_t_frame_base.html#a754dca19c8be535a4802979f773bb334">iview::TFrameBase&lt; CConsoleWidget &gt;</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#ad0ee11238eeae602cf5c10f18bec6a7f">iview::CConsoleBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9fa79c8d457cb76686aa81f3018f8edd"></a><!-- doxytag: member="iview::CConsoleGui::UpdateCommands" ref="a9fa79c8d457cb76686aa81f3018f8edd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iview::CConsoleGui::UpdateCommands </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Recalculate menu commands. </p>
+
+<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#a81739f98a77b72a9a7b8265e4395fee4">iview::CConsoleBase</a>.</p>
 
 </div>
 </div>
@@ -793,7 +827,7 @@ Properties</h2></td></tr>
 
 <p>Recalculates position of all components. </p>
 
-<p>Implements <a class="el" href="classiview_1_1_t_frame_base.html#a699be64b3479ebfe8d9ee532affbc986">iview::TFrameBase&lt; CConsoleWidget &gt;</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#a2099267391ddea5f463ec06acb30d8d3">iview::CConsoleBase</a>.</p>
 
 </div>
 </div>
@@ -804,13 +838,15 @@ Properties</h2></td></tr>
         <tr>
           <td class="memname">virtual void iview::CConsoleGui::UpdateCursorInfo </td>
           <td>(</td>
-          <td class="paramtype">const BaseClass::CursorInfo &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structiview_1_1_c_console_base_1_1_cursor_info.html">BaseClass::CursorInfo</a> &amp;&#160;</td>
           <td class="paramname"><em>info</em></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#aab6cd580e31799edbbd0729888cd2ba9">iview::CConsoleBase</a>.</p>
 
 </div>
 </div>
@@ -832,7 +868,7 @@ Properties</h2></td></tr>
 <p>Edit mode buttons controls the mode of interaction with objects. For example for polyline nodes: select, move, insert, remove. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiview_1_1_i_selectable.html#a8a9ed4ad58e6ba0cef652c6fc989c474" title="Describes standard edit modes.">iview::ISelectable::EditMode</a> </dd></dl>
 
-<p>Implements <a class="el" href="classiview_1_1_t_frame_base.html#ad6f270de8fcbfb2699ac8e0b9aede415">iview::TFrameBase&lt; CConsoleWidget &gt;</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#a42ef55f25f9bd0f71c35427c19f8db38">iview::CConsoleBase</a>.</p>
 
 </div>
 </div>
@@ -891,7 +927,7 @@ Properties</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classiview_1_1_c_console_gui.html#aecac2b673e8c4405ab9eba8cf5e37356">CalibrationViewImpl</a>* <a class="el" href="classiview_1_1_c_console_gui.html#acccfcdb08e989aea6fd82c7e393e83f0">iview::CConsoleGui::m_viewPtr</a><code> [protected]</code></td>
+          <td class="memname"><a class="el" href="classiview_1_1_c_console_gui.html#a8ce90b099674ad5cd23d64a6d273c9a9">CalibrationViewImpl</a>* <a class="el" href="classiview_1_1_c_console_gui.html#acccfcdb08e989aea6fd82c7e393e83f0">iview::CConsoleGui::m_viewPtr</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -915,7 +951,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00040">40</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00039">39</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -924,7 +960,7 @@ Properties</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FitMode <a class="el" href="classiview_1_1_t_frame_base.html#a22de5ef9905b838f1cd29c7f90948b05">iview::CConsoleGui::FitMode</a><code> [read, write]</code></td>
+          <td class="memname"><a class="el" href="classiview_1_1_c_console_base.html#a2a64e46576f8a55c6c0abf9bac6539bf">FitMode</a> <a class="el" href="classiview_1_1_c_console_base.html#a2a64e46576f8a55c6c0abf9bac6539bf">iview::CConsoleGui::FitMode</a><code> [read, write]</code></td>
         </tr>
       </table>
 </div>
@@ -932,9 +968,9 @@ Properties</h2></td></tr>
 
 <p>Control fitting mode, to fit area of interest (AOI) to display. </p>
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_t_frame_base.html#a22de5ef9905b838f1cd29c7f90948b05">iview::TFrameBase&lt; CConsoleWidget &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_console_base.html#a2a64e46576f8a55c6c0abf9bac6539bf">iview::CConsoleBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00057">57</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00055">55</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -949,7 +985,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00049">49</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00048">48</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -964,7 +1000,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00038">38</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00037">37</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -979,7 +1015,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00036">36</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00035">35</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -994,7 +1030,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00052">52</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00051">51</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1009,7 +1045,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00056">56</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00054">54</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1024,7 +1060,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00054">54</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00052">52</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1039,7 +1075,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00055">55</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00053">53</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1054,7 +1090,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00045">45</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00044">44</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1069,7 +1105,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00050">50</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00049">49</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1084,7 +1120,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00037">37</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00036">36</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1099,7 +1135,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00048">48</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00047">47</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1114,7 +1150,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00041">41</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00040">40</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1129,7 +1165,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00039">39</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00038">38</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1144,7 +1180,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00047">47</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00046">46</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1159,22 +1195,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00042">42</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af374afd67ceb91c66a17688d8d5fd90d"></a><!-- doxytag: member="iview::CConsoleGui::UndoButtonVisible" ref="af374afd67ceb91c66a17688d8d5fd90d" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool iview::CConsoleGui::UndoButtonVisible<code> [read, write]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00053">53</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00041">41</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1189,7 +1210,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00046">46</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00045">45</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1204,7 +1225,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00043">43</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00042">42</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1219,7 +1240,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00035">35</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00034">34</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>
@@ -1234,7 +1255,7 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00044">44</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00043">43</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
 </div>
 </div>

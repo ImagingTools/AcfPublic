@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef INCLUEDED__qqt_CDrawBuffer_included
-#define INCLUEDED__qqt_CDrawBuffer_included
+#ifndef iview_CDrawBuffer_included
+#define iview_CDrawBuffer_included
 
 
 // Qt includes
@@ -106,5 +106,5 @@ inline QPainter& CDrawBuffer::GetDrawContext()
 } // namespace iview
 
 
-#endif // !_qqt_CDrawBuffer_included
+#endif // !iview_CDrawBuffer_included
 

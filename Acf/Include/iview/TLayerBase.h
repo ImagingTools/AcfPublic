@@ -43,6 +43,9 @@ class TLayerBase: public Layer
 public:
 	typedef Layer BaseClass;
 
+	using BaseClass::GetBoundingBox;
+
+
 	TLayerBase();
 	virtual ~TLayerBase();
 

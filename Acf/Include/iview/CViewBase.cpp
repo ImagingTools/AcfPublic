@@ -26,7 +26,8 @@
 // STL includes
 #include <algorithm>
 
-
+// ACF includes
+#include "imod/IModel.h"
 
 #include "iimg/IBitmap.h"
 
@@ -36,10 +37,6 @@
 #include "iview/CSingleLayer.h"
 #include "iview/CLayerBase.h"
 #include "iview/CSelectableLayerBase.h"
-
-
-// ACF includes
-#include "imod/IModel.h"
 
 
 namespace iview

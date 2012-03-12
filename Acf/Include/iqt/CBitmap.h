@@ -76,6 +76,7 @@ public:
 	virtual void ResetImage();
 	virtual istd::CIndex2d GetImageSize() const;
 	virtual int GetComponentsCount() const;
+	virtual icmm::CVarColor GetColorAt(const istd::CIndex2d& position) const;
 
 	// reimplemented (istd::IChangeable)
 	virtual int GetSupportedOperations() const;

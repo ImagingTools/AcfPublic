@@ -192,11 +192,11 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CConsoleGui.cpp"
+				RelativePath="..\CConsoleBase.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\CConsoleWidget.cpp"
+				RelativePath="..\CConsoleGui.cpp"
 				>
 			</File>
 			<File
@@ -343,6 +343,10 @@
 				RelativePath="..\CViewBase.cpp"
 				>
 			</File>
+			<File
+				RelativePath="..\CViewport.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -374,11 +378,11 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CConsoleGui.h"
+				RelativePath="..\CConsoleBase.h"
 				>
 			</File>
 			<File
-				RelativePath="..\CConsoleWidget.h"
+				RelativePath="..\CConsoleGui.h"
 				>
 			</File>
 			<File
@@ -526,6 +530,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CViewport.h"
+				>
+			</File>
+			<File
 				RelativePath="..\ICalibrated.h"
 				>
 			</File>
@@ -618,22 +626,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\TCalibratedViewBase.h"
-				>
-			</File>
-			<File
-				RelativePath="..\TClbShapeMultiPolyline.h"
-				>
-			</File>
-			<File
-				RelativePath="..\TFrameBase.h"
-				>
-			</File>
-			<File
-				RelativePath="..\TFramedViewBase.h"
-				>
-			</File>
-			<File
 				RelativePath="..\TInteractiveMultiPolylineShape.h"
 				>
 			</File>
@@ -651,10 +643,6 @@
 			</File>
 			<File
 				RelativePath="..\TShapeBase.h"
-				>
-			</File>
-			<File
-				RelativePath="..\TViewImpl.h"
 				>
 			</File>
 		</Filter>

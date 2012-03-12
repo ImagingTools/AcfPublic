@@ -91,7 +91,7 @@
 <a name="l00082"></a>00082        <span class="keyword">virtual</span> QVariant <a class="code" href="classiqt2d_1_1_t_shape_base.html#a357a444a7d4f7c58e0cb7577f8e3b3dc">itemChange</a>(QGraphicsItem::GraphicsItemChange change, <span class="keyword">const</span> QVariant&amp; value);
 <a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_shape_base.html#a15729fd3011af09fed22939e2fdf5888">hoverEnterEvent</a>(QGraphicsSceneHoverEvent* event);
 <a name="l00084"></a>00084        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_shape_base.html#a89a9ff8818b9f8be6b8e88a56f4995fd">hoverLeaveEvent</a>(QGraphicsSceneHoverEvent* event);
-<a name="l00085"></a>00085        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_shape_base.html#ab2f433b5c65bea87d8b38db555875efd">paint</a>(QPainter* painter, <span class="keyword">const</span> QStyleOptionGraphicsItem* option, <a class="code" href="class_q_widget.html">QWidget</a>* widget = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00085"></a>00085        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_shape_base.html#ab2f433b5c65bea87d8b38db555875efd">paint</a>(QPainter* painter, <span class="keyword">const</span> QStyleOptionGraphicsItem* option, QWidget* widget = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00086"></a>00086 
 <a name="l00087"></a>00087 <span class="keyword">private</span>:
 <a name="l00088"></a>00088        <span class="keyword">typedef</span> QPair&lt;QPen, QBrush&gt; ColorShemeInfo;
@@ -313,7 +313,7 @@
 <a name="l00304"></a>00304 
 <a name="l00305"></a>00305 
 <a name="l00306"></a>00306 <span class="keyword">template</span> &lt;<span class="keyword">class</span> GraphicsItemClass&gt;
-<a name="l00307"></a><a class="code" href="classiqt2d_1_1_t_shape_base.html#ab2f433b5c65bea87d8b38db555875efd">00307</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_shape_base.html#ab2f433b5c65bea87d8b38db555875efd">TShapeBase&lt;GraphicsItemClass&gt;::paint</a>(QPainter* painter, <span class="keyword">const</span> QStyleOptionGraphicsItem* option, <a class="code" href="class_q_widget.html">QWidget</a>* widget)
+<a name="l00307"></a><a class="code" href="classiqt2d_1_1_t_shape_base.html#ab2f433b5c65bea87d8b38db555875efd">00307</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_shape_base.html#ab2f433b5c65bea87d8b38db555875efd">TShapeBase&lt;GraphicsItemClass&gt;::paint</a>(QPainter* painter, <span class="keyword">const</span> QStyleOptionGraphicsItem* option, QWidget* widget)
 <a name="l00308"></a>00308 {
 <a name="l00309"></a>00309        <span class="comment">// remove selected flag to prevent the drawing of the cruel rubber band:</span>
 <a name="l00310"></a>00310 
@@ -333,13 +333,13 @@
 <a name="l00324"></a>00324 <span class="comment">// specialized implementations</span>
 <a name="l00325"></a>00325 
 <a name="l00326"></a>00326 <span class="keyword">template</span> &lt;&gt;
-<a name="l00327"></a><a class="code" href="classiqt2d_1_1_t_shape_base.html#a4e16ab7c64471f2d99ea78d9fe9aebf2">00327</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_shape_base.html#ab2f433b5c65bea87d8b38db555875efd">TShapeBase&lt;QGraphicsItem&gt;::paint</a>(QPainter* <span class="comment">/*painter*/</span>, <span class="keyword">const</span> QStyleOptionGraphicsItem* <span class="comment">/*option*/</span>, <a class="code" href="class_q_widget.html">QWidget</a>* <span class="comment">/*widget*/</span>)
+<a name="l00327"></a><a class="code" href="classiqt2d_1_1_t_shape_base.html#a4e16ab7c64471f2d99ea78d9fe9aebf2">00327</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_shape_base.html#ab2f433b5c65bea87d8b38db555875efd">TShapeBase&lt;QGraphicsItem&gt;::paint</a>(QPainter* <span class="comment">/*painter*/</span>, <span class="keyword">const</span> QStyleOptionGraphicsItem* <span class="comment">/*option*/</span>, QWidget* <span class="comment">/*widget*/</span>)
 <a name="l00328"></a>00328 {
 <a name="l00329"></a>00329 }
 <a name="l00330"></a>00330 
 <a name="l00331"></a>00331 
 <a name="l00332"></a>00332 <span class="keyword">template</span> &lt;&gt;
-<a name="l00333"></a><a class="code" href="classiqt2d_1_1_t_shape_base.html#af5144b764257c4ccfe47298125396e38">00333</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_shape_base.html#ab2f433b5c65bea87d8b38db555875efd">TShapeBase&lt;QAbstractGraphicsShapeItem&gt;::paint</a>(QPainter* <span class="comment">/*painter*/</span>, <span class="keyword">const</span> QStyleOptionGraphicsItem* <span class="comment">/*option*/</span>, <a class="code" href="class_q_widget.html">QWidget</a>* <span class="comment">/*widget*/</span>)
+<a name="l00333"></a><a class="code" href="classiqt2d_1_1_t_shape_base.html#af5144b764257c4ccfe47298125396e38">00333</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_shape_base.html#ab2f433b5c65bea87d8b38db555875efd">TShapeBase&lt;QAbstractGraphicsShapeItem&gt;::paint</a>(QPainter* <span class="comment">/*painter*/</span>, <span class="keyword">const</span> QStyleOptionGraphicsItem* <span class="comment">/*option*/</span>, QWidget* <span class="comment">/*widget*/</span>)
 <a name="l00334"></a>00334 {
 <a name="l00335"></a>00335 }
 <a name="l00336"></a>00336 

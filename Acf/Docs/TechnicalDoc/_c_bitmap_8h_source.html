@@ -78,37 +78,38 @@
 <a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_c_bitmap.html#aae33eee8e8f341836f8d9b5f696e093b" title="Reset this image.">ResetImage</a>();
 <a name="l00055"></a>00055        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiqt_1_1_c_bitmap.html#aa742c88df939191041351a7299858974" title="Get size of this raster image.">GetImageSize</a>() <span class="keyword">const</span>;
 <a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_c_bitmap.html#a9f6394c5d491673d20d77dd6314f4c88" title="Get number of color components.">GetComponentsCount</a>() <span class="keyword">const</span>;
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058        <span class="comment">// reimplemented (istd::IChangeable)</span>
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_c_bitmap.html#a69577f76f19e828b0c639e99f56e39c6" title="Get set of flags for supported operations.">GetSupportedOperations</a>() <span class="keyword">const</span>;
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_bitmap.html#ab715214d8af97572827885105124ab8b" title="Copy this object from another one.">CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>);
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classiqt_1_1_c_bitmap.html#aa007c0e6306a104e66f1213861b5c37a" title="Make a copy of this object.">CloneMe</a>() <span class="keyword">const</span>;
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063 <span class="keyword">protected</span>:
-<a name="l00064"></a>00064        QImage::Format <a class="code" href="classiqt_1_1_c_bitmap.html#ac3cfdae5ebbafd4d943c7481af9fea1a">CalcQtFormat</a>(<span class="keywordtype">int</span> pixelFormat) <span class="keyword">const</span>;
-<a name="l00065"></a>00065        <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_c_bitmap.html#ad0847e943b6ef08cb11803c5d2a79955">CalcFromQtFormat</a>(QImage::Format imageFormat) <span class="keyword">const</span>;
-<a name="l00066"></a>00066        <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_bitmap.html#a21916a4f52e08db48e6f6bb020404a36">SetQImage</a>(<span class="keyword">const</span> QImage&amp; image);
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="keyword">private</span>:
-<a name="l00069"></a>00069        <a class="code" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr&lt;I_BYTE, true&gt;</a> m_externalBuffer;
-<a name="l00070"></a>00070        QImage m_image;
-<a name="l00071"></a>00071 };
-<a name="l00072"></a>00072 
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with components number set at construction time.">icmm::CVarColor</a> <a class="code" href="classiqt_1_1_c_bitmap.html#ab2be60c31d86ac53521e1fee2c27b3a4" title="Get color at specified pixel.">GetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position) <span class="keyword">const</span>;
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059        <span class="comment">// reimplemented (istd::IChangeable)</span>
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_c_bitmap.html#a69577f76f19e828b0c639e99f56e39c6" title="Get set of flags for supported operations.">GetSupportedOperations</a>() <span class="keyword">const</span>;
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_bitmap.html#ab715214d8af97572827885105124ab8b" title="Copy this object from another one.">CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>);
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classiqt_1_1_c_bitmap.html#aa007c0e6306a104e66f1213861b5c37a" title="Make a copy of this object.">CloneMe</a>() <span class="keyword">const</span>;
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="keyword">protected</span>:
+<a name="l00065"></a>00065        QImage::Format <a class="code" href="classiqt_1_1_c_bitmap.html#ac3cfdae5ebbafd4d943c7481af9fea1a">CalcQtFormat</a>(<span class="keywordtype">int</span> pixelFormat) <span class="keyword">const</span>;
+<a name="l00066"></a>00066        <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_c_bitmap.html#ad0847e943b6ef08cb11803c5d2a79955">CalcFromQtFormat</a>(QImage::Format imageFormat) <span class="keyword">const</span>;
+<a name="l00067"></a>00067        <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_bitmap.html#a21916a4f52e08db48e6f6bb020404a36">SetQImage</a>(<span class="keyword">const</span> QImage&amp; image);
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 <span class="keyword">private</span>:
+<a name="l00070"></a>00070        <a class="code" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr&lt;I_BYTE, true&gt;</a> m_externalBuffer;
+<a name="l00071"></a>00071        QImage m_image;
+<a name="l00072"></a>00072 };
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074 <span class="comment">// inline methods</span>
-<a name="l00075"></a>00075 
-<a name="l00076"></a><a class="code" href="classiqt_1_1_c_bitmap.html#aaacfb894ad52984cd44ae50df80b8429">00076</a> <span class="keyword">inline</span> QImage&amp; <a class="code" href="classiqt_1_1_c_bitmap.html#aaacfb894ad52984cd44ae50df80b8429">CBitmap::GetQImageRef</a>()
-<a name="l00077"></a>00077 {
-<a name="l00078"></a>00078        <span class="keywordflow">return</span> m_image;
-<a name="l00079"></a>00079 }
-<a name="l00080"></a>00080 
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075 <span class="comment">// inline methods</span>
+<a name="l00076"></a>00076 
+<a name="l00077"></a><a class="code" href="classiqt_1_1_c_bitmap.html#aaacfb894ad52984cd44ae50df80b8429">00077</a> <span class="keyword">inline</span> QImage&amp; <a class="code" href="classiqt_1_1_c_bitmap.html#aaacfb894ad52984cd44ae50df80b8429">CBitmap::GetQImageRef</a>()
+<a name="l00078"></a>00078 {
+<a name="l00079"></a>00079        <span class="keywordflow">return</span> m_image;
+<a name="l00080"></a>00080 }
 <a name="l00081"></a>00081 
-<a name="l00082"></a>00082 } <span class="comment">// namespace iqt</span>
-<a name="l00083"></a>00083 
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 } <span class="comment">// namespace iqt</span>
 <a name="l00084"></a>00084 
-<a name="l00085"></a>00085 <span class="preprocessor">#endif //!iqt_CBitmap_included</span>
-<a name="l00086"></a>00086 <span class="preprocessor"></span>
-<a name="l00087"></a>00087 
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 <span class="preprocessor">#endif //!iqt_CBitmap_included</span>
+<a name="l00087"></a>00087 <span class="preprocessor"></span>
+<a name="l00088"></a>00088 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
