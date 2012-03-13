@@ -52,35 +52,36 @@
 <a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_image_shape.html#ac3005ab75fba425d6d704f68da879990" title="Draw this shape using draw context.">Draw</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_image_shape.html#a6cd31521e0ff784b6777ea0f42c1e780" title="This function will be called after update of the observer contents occures.">AfterUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030        <span class="comment">// reimplemented (iview::CShapeBase)</span>
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_image_shape.html#a8077338f7267ce9b28d9689db1b4f930" title="Calculate bounding box.">CalcBoundingBox</a>(<a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 <span class="keyword">protected</span>:
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_image_shape.html#a75945e74309720116e9d600e7186a045">DrawBitmap</a>(
-<a name="l00035"></a>00035                             QPainter&amp; painter,
-<a name="l00036"></a>00036                             <span class="keyword">const</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>&amp; bitmap,
-<a name="l00037"></a>00037                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; bitmapArea,
-<a name="l00038"></a>00038                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; destTransform) <span class="keyword">const</span>;
-<a name="l00039"></a>00039 <span class="keyword">private</span>:
-<a name="l00040"></a>00040        <span class="keywordtype">void</span> SetLookupTableToImage(QImage&amp; image, <span class="keyword">const</span> <a class="code" href="classicmm_1_1_i_color_transformation.html" title="Basic interface for a color transformation.">icmm::IColorTransformation</a>&amp; colorTransformation);
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 <span class="keyword">private</span>:
-<a name="l00043"></a>00043        QPixmap m_pixmap;
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045        <span class="keyword">const</span> <a class="code" href="classicmm_1_1_i_color_transformation.html" title="Basic interface for a color transformation.">icmm::IColorTransformation</a>* m_colorTransformationPtr;
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 };
-<a name="l00048"></a>00048 
+<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_image_shape.html#a247f542b3c199450fd1ad7d7cb77bfd2" title="This call back function will be called, if an observable object is about to be attached.">OnAttached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_image_shape.html#a6cd31521e0ff784b6777ea0f42c1e780" title="This function will be called after update of the observer contents occures.">AfterUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031        <span class="comment">// reimplemented (iview::CShapeBase)</span>
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_image_shape.html#a8077338f7267ce9b28d9689db1b4f930" title="Calculate bounding box.">CalcBoundingBox</a>(<a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="keyword">protected</span>:
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_image_shape.html#a75945e74309720116e9d600e7186a045">DrawBitmap</a>(
+<a name="l00036"></a>00036                             QPainter&amp; painter,
+<a name="l00037"></a>00037                             <span class="keyword">const</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>&amp; bitmap,
+<a name="l00038"></a>00038                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; bitmapArea,
+<a name="l00039"></a>00039                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; destTransform) <span class="keyword">const</span>;
+<a name="l00040"></a>00040 <span class="keyword">private</span>:
+<a name="l00041"></a>00041        <span class="keywordtype">void</span> SetLookupTableToImage(QImage&amp; image, <span class="keyword">const</span> <a class="code" href="classicmm_1_1_i_color_transformation.html" title="Basic interface for a color transformation.">icmm::IColorTransformation</a>&amp; colorTransformation);
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 <span class="keyword">private</span>:
+<a name="l00044"></a>00044        QPixmap m_pixmap;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046        <span class="keyword">const</span> <a class="code" href="classicmm_1_1_i_color_transformation.html" title="Basic interface for a color transformation.">icmm::IColorTransformation</a>* m_colorTransformationPtr;
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 };
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050 } <span class="comment">// namespace iview</span>
-<a name="l00051"></a>00051 
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 } <span class="comment">// namespace iview</span>
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="preprocessor">#endif // !iview_CImageShape_included</span>
-<a name="l00054"></a>00054 <span class="preprocessor"></span>
-<a name="l00055"></a>00055 
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="preprocessor">#endif // !iview_CImageShape_included</span>
+<a name="l00055"></a>00055 <span class="preprocessor"></span>
 <a name="l00056"></a>00056 
+<a name="l00057"></a>00057 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

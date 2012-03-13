@@ -38,7 +38,7 @@
 <div class="title">iqtgui::CCommandsBinderComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtgui::CCommandsBinderComp" --><!-- doxytag: inherits="icomp::CComponentBase,ibase::ICommandsProvider" -->
+<!-- doxytag: class="iqtgui::CCommandsBinderComp" --><!-- doxytag: inherits="TCommandsProviderCompWrap&lt; icomp::CComponentBase &gt;,imod::CMultiModelDispatcherBase" -->
 <p>Component for binding of multiple command providers.  
  <a href="classiqtgui_1_1_c_commands_binder_comp.html#details">More...</a></p>
 
@@ -49,11 +49,21 @@ Inheritance diagram for iqtgui::CCommandsBinderComp:</div>
  <div class="center">
   <img src="classiqtgui_1_1_c_commands_binder_comp.png" usemap="#iqtgui::CCommandsBinderComp_map" alt=""/>
   <map id="iqtgui::CCommandsBinderComp_map" name="iqtgui::CCommandsBinderComp_map">
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,112,186,136"/>
-<area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="196,112,382,136"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,186,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="196,56,382,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,186,24"/>
+<area href="classibase_1_1_t_commands_provider_comp_wrap.html" alt="ibase::TCommandsProviderCompWrap&lt; icomp::CComponentBase &gt;" shape="rect" coords="300,336,690,360"/>
+<area href="classimod_1_1_c_multi_model_dispatcher_base.html" title="Generic implementation of a data model changes notifier." alt="imod::CMultiModelDispatcherBase" shape="rect" coords="1000,336,1390,360"/>
+<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,280,390,304"/>
+<area href="classimod_1_1_t_model_wrap.html" alt="imod::TModelWrap&lt; ibase::ICommandsProvider &gt;" shape="rect" coords="600,280,990,304"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1000,280,1390,304"/>
+<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,224,390,248"/>
+<area href="classiser_1_1_t_copy_serialized_wrap.html" alt="iser::TCopySerializedWrap&lt; ibase::ICommandsProvider &gt;" shape="rect" coords="400,224,790,248"/>
+<area href="classimod_1_1_c_model_base.html" title="Basic implementation of a model." alt="imod::CModelBase" shape="rect" coords="800,224,1190,248"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,168,390,192"/>
+<area href="classistd_1_1_t_update_manager_wrap.html" alt="istd::TUpdateManagerWrap&lt; ibase::ICommandsProvider &gt;" shape="rect" coords="400,168,790,192"/>
+<area href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern." alt="imod::IModel" shape="rect" coords="800,168,1190,192"/>
+<area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="400,112,790,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="800,112,1190,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="400,56,790,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="400,0,790,24"/>
 </map>
  </div></div>
 
@@ -61,7 +71,9 @@ Inheritance diagram for iqtgui::CCommandsBinderComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_commands_binder_comp.html#a53a2725fb55293f4d25db7a3da416e5c">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+<a class="el" href="classibase_1_1_t_commands_provider_comp_wrap.html">ibase::TCommandsProviderCompWrap</a><br class="typebreak"/>
+&lt; <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_commands_binder_comp.html#a8bf579c190282d7bad4d82a76ea98ba5">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
@@ -69,25 +81,28 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of menu commands.  <a href="#ae4a6b550b802ac54f905067c8cbb3844"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_commands_binder_comp.html#a3251e22119e35288f631a0c9ba587ac6">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_commands_binder_comp.html#acf64dcb32d40d64f0edd6f1c106ec22d">OnComponentCreated</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Component for binding of multiple command providers. </p>
 
-<p>Definition at line <a class="el" href="_c_commands_binder_comp_8h_source.html#l00020">20</a> of file <a class="el" href="_c_commands_binder_comp_8h_source.html">CCommandsBinderComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_commands_binder_comp_8h_source.html#l00023">23</a> of file <a class="el" href="_c_commands_binder_comp_8h_source.html">CCommandsBinderComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a53a2725fb55293f4d25db7a3da416e5c"></a><!-- doxytag: member="iqtgui::CCommandsBinderComp::BaseClass" ref="a53a2725fb55293f4d25db7a3da416e5c" args="" -->
+<a class="anchor" id="a8bf579c190282d7bad4d82a76ea98ba5"></a><!-- doxytag: member="iqtgui::CCommandsBinderComp::BaseClass" ref="a8bf579c190282d7bad4d82a76ea98ba5" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="el" href="classiqtgui_1_1_c_commands_binder_comp.html#a53a2725fb55293f4d25db7a3da416e5c">iqtgui::CCommandsBinderComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classibase_1_1_t_commands_provider_comp_wrap.html">ibase::TCommandsProviderCompWrap</a>&lt;<a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&gt; <a class="el" href="classiqtgui_1_1_c_commands_binder_comp.html#a8bf579c190282d7bad4d82a76ea98ba5">iqtgui::CCommandsBinderComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_commands_binder_comp_8h_source.html#l00023">23</a> of file <a class="el" href="_c_commands_binder_comp_8h_source.html">CCommandsBinderComp.h</a>.</p>
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_commands_provider_comp_wrap.html#af7665d2133d46e75fb088a662ea265d5">ibase::TCommandsProviderCompWrap&lt; icomp::CComponentBase &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="_c_commands_binder_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_commands_binder_comp_8h_source.html">CCommandsBinderComp.h</a>.</p>
 
 </div>
 </div>
@@ -109,7 +124,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get list of menu commands. </p>
 <p>This commands will be integrated in global menu system undependent of actual selected view. For support of normal pull down menu, depth of this tree structure should be at least 3. </p>
 
-<p>Implements <a class="el" href="classibase_1_1_i_commands_provider.html#a18e74c6d8b6a6c4023fce0a7c3da4c7d">ibase::ICommandsProvider</a>.</p>
+<p>Reimplemented from <a class="el" href="classibase_1_1_i_commands_provider.html#a970c1822d91bc215e53b0e972f5b294d">ibase::ICommandsProvider</a>.</p>
 
 </div>
 </div>
@@ -128,6 +143,41 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_base.html#a8a79eed0233a1ff69972975180f5210a">icomp::CComponentBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3251e22119e35288f631a0c9ba587ac6"></a><!-- doxytag: member="iqtgui::CCommandsBinderComp::OnModelChanged" ref="a3251e22119e35288f631a0c9ba587ac6" args="(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqtgui::CCommandsBinderComp::OnModelChanged </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>modelId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>changeFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html#aa28b9338ca45e28b03cadaf4454f14e8">imod::CMultiModelDispatcherBase</a>.</p>
 
 </div>
 </div>

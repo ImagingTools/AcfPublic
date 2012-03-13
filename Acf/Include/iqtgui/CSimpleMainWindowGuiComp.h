@@ -33,6 +33,8 @@
 #include <QtGui/QActionGroup>
 
 // ACF includes
+#include "imod/CMultiModelDispatcherBase.h"
+
 #include "ibase/ICommandsProvider.h"
 
 #include "iqtgui/IMainWindowComponent.h"
@@ -118,6 +120,24 @@ protected Q_SLOTS:
 	void OnShowToolbars();
 	void OnSettings();
 	void OnAbout();
+
+private:
+	class CommandsObserver: public imod::CMultiModelDispatcherBase
+	{
+	public:
+		typedef imod::CMultiModelDispatcherBase BaseClass;
+
+		CommandsObserver(CSimpleMainWindowGuiComp& parent);
+		
+		// reimplemented (imod::CMultiModelDispatcherBase)
+		void OnModelChanged(int modelId, int changeFlags, istd::IPolymorphic* updateParamsPtr);
+
+	private:
+		CSimpleMainWindowGuiComp& m_parent;
+	};
+
+protected:
+	CommandsObserver m_commandsObserver;
 
 private:
 	I_REF(iqtgui::IGuiObject, m_workspaceCompPtr);

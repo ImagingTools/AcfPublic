@@ -32,12 +32,13 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iqt2d::CViewProviderGuiComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt2d::CViewProviderGuiComp" --><!-- doxytag: inherits="TGuiComponentBase&lt; iview::CConsoleGui &gt;,iqt2d::IViewProvider" -->
+<!-- doxytag: class="iqt2d::CViewProviderGuiComp" --><!-- doxytag: inherits="TCommandsProviderCompWrap&lt; iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt; &gt;,iqt2d::IViewProvider" -->
 <p><code>#include &lt;<a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqt2d::CViewProviderGuiComp:</div>
@@ -45,16 +46,26 @@ Inheritance diagram for iqt2d::CViewProviderGuiComp:</div>
  <div class="center">
   <img src="classiqt2d_1_1_c_view_provider_gui_comp.png" usemap="#iqt2d::CViewProviderGuiComp_map" alt=""/>
   <map id="iqt2d::CViewProviderGuiComp_map" name="iqt2d::CViewProviderGuiComp_map">
-<area href="classiqtgui_1_1_t_gui_component_base.html" alt="iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;" shape="rect" coords="307,224,604,248"/>
-<area href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view." alt="iqt2d::IViewProvider" shape="rect" coords="614,224,911,248"/>
-<area href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject." alt="iqtgui::CGuiComponentBase" shape="rect" coords="307,168,604,192"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="614,168,911,192"/>
-<area href="class_q_object.html" alt="QObject" shape="rect" coords="0,112,297,136"/>
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="307,112,604,136"/>
-<area href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context." alt="iqtgui::IGuiObject" shape="rect" coords="614,112,911,136"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="307,56,604,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="614,56,911,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="307,0,604,24"/>
+<area href="classibase_1_1_t_commands_provider_comp_wrap.html" alt="ibase::TCommandsProviderCompWrap&lt; iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt; &gt;" shape="rect" coords="1228,336,1764,360"/>
+<area href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view." alt="iqt2d::IViewProvider" shape="rect" coords="2457,336,2993,360"/>
+<area href="classiqtgui_1_1_t_gui_component_base.html" alt="iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;" shape="rect" coords="546,280,1082,304"/>
+<area href="classimod_1_1_t_model_wrap.html" alt="imod::TModelWrap&lt; ibase::ICommandsProvider &gt;" shape="rect" coords="1911,280,2447,304"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="2457,280,2993,304"/>
+<area href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject." alt="iqtgui::CGuiComponentBase" shape="rect" coords="546,224,1082,248"/>
+<area href="classiser_1_1_t_copy_serialized_wrap.html" alt="iser::TCopySerializedWrap&lt; ibase::ICommandsProvider &gt;" shape="rect" coords="1638,224,2174,248"/>
+<area href="classimod_1_1_c_model_base.html" title="Basic implementation of a model." alt="imod::CModelBase" shape="rect" coords="2184,224,2720,248"/>
+<area href="class_q_object.html" alt="QObject" shape="rect" coords="0,168,536,192"/>
+<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="546,168,1082,192"/>
+<area href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context." alt="iqtgui::IGuiObject" shape="rect" coords="1092,168,1628,192"/>
+<area href="classistd_1_1_t_update_manager_wrap.html" alt="istd::TUpdateManagerWrap&lt; ibase::ICommandsProvider &gt;" shape="rect" coords="1638,168,2174,192"/>
+<area href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern." alt="imod::IModel" shape="rect" coords="2184,168,2720,192"/>
+<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="546,112,1082,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1092,112,1628,136"/>
+<area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="1638,112,2174,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="2184,112,2720,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="546,56,1082,80"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="1638,56,2174,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1638,0,2174,24"/>
 </map>
  </div></div>
 
@@ -63,55 +74,66 @@ Inheritance diagram for iqt2d::CViewProviderGuiComp:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase</a><br class="typebreak"/>
-&lt; <a class="el" href="classiview_1_1_c_console_gui.html">iview::CConsoleGui</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a8b23d37e2179b3996b6ad136f47f81ed">BaseClass</a></td></tr>
+<a class="el" href="classibase_1_1_t_commands_provider_comp_wrap.html">ibase::TCommandsProviderCompWrap</a><br class="typebreak"/>
+&lt; <a class="el" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase</a><br class="typebreak"/>
+&lt; <a class="el" href="classiview_1_1_c_console_gui.html">iview::CConsoleGui</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#aa7729973864dc12890ee7957535c490b">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a84200e7f2b0af35936d53949ac22de32">CViewProviderGuiComp</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
+<a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a55a137fea748d3b7e61dc8d1c18b9cb1">GetCommands</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of menu commands.  <a href="#a55a137fea748d3b7e61dc8d1c18b9cb1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#ae4766251c9e5a0e71990def7ac27c588">GetViewId</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID indentifing this view.  <a href="#ae4766251c9e5a0e71990def7ac27c588"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#adc78fdfd1b381f0da35436a3257afa52">GetView</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be removed from specified view.  <a href="#adc78fdfd1b381f0da35436a3257afa52"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a00c5aee16212fa2937f7a6d7670a5796">OnGuiCreated</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a00c5aee16212fa2937f7a6d7670a5796"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00017">17</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00019">19</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a8b23d37e2179b3996b6ad136f47f81ed"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::BaseClass" ref="a8b23d37e2179b3996b6ad136f47f81ed" args="" -->
+<a class="anchor" id="aa7729973864dc12890ee7957535c490b"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::BaseClass" ref="aa7729973864dc12890ee7957535c490b" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase</a>&lt;<a class="el" href="classiview_1_1_c_console_gui.html">iview::CConsoleGui</a>&gt; <a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a8b23d37e2179b3996b6ad136f47f81ed">iqt2d::CViewProviderGuiComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classibase_1_1_t_commands_provider_comp_wrap.html">ibase::TCommandsProviderCompWrap</a>&lt; <a class="el" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase</a>&lt;<a class="el" href="classiview_1_1_c_console_gui.html">iview::CConsoleGui</a>&gt; &gt; <a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#aa7729973864dc12890ee7957535c490b">iqt2d::CViewProviderGuiComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_component_base.html#a71d48e5e9425438c80e0d95aa88fa782">iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_commands_provider_comp_wrap.html#af7665d2133d46e75fb088a662ea265d5">ibase::TCommandsProviderCompWrap&lt; iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
-
-</div>
-</div>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a84200e7f2b0af35936d53949ac22de32"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::CViewProviderGuiComp" ref="a84200e7f2b0af35936d53949ac22de32" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">iqt2d::CViewProviderGuiComp::CViewProviderGuiComp </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00026">26</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a55a137fea748d3b7e61dc8d1c18b9cb1"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::GetCommands" ref="a55a137fea748d3b7e61dc8d1c18b9cb1" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a>* iqt2d::CViewProviderGuiComp::GetCommands </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get list of menu commands. </p>
+<p>This commands will be integrated in global menu system undependent of actual selected view. For support of normal pull down menu, depth of this tree structure should be at least 3. </p>
+
+<p>Reimplemented from <a class="el" href="classibase_1_1_i_commands_provider.html#a970c1822d91bc215e53b0e972f5b294d">ibase::ICommandsProvider</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="adc78fdfd1b381f0da35436a3257afa52"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::GetView" ref="adc78fdfd1b381f0da35436a3257afa52" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -150,6 +172,26 @@ Public Member Functions</h2></td></tr>
 <p>Typically this ID is 0 for first view, 1 for the second etc. </p>
 
 <p>Implements <a class="el" href="classiqt2d_1_1_i_view_provider.html#aab7b7fe3c884776e4a6e8befd9c706bf">iqt2d::IViewProvider</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a00c5aee16212fa2937f7a6d7670a5796"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::OnGuiCreated" ref="a00c5aee16212fa2937f7a6d7670a5796" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqt2d::CViewProviderGuiComp::OnGuiCreated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Called just after GUI is initialized. </p>
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#ab66ecf3d13faa48018f89d871bd32ae3">iqtgui::CGuiComponentBase</a>.</p>
 
 </div>
 </div>

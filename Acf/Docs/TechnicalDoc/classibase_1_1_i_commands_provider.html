@@ -31,12 +31,13 @@
 </div>
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ibase::ICommandsProvider Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ibase::ICommandsProvider" --><!-- doxytag: inherits="istd::IPolymorphic" -->
+<!-- doxytag: class="ibase::ICommandsProvider" --><!-- doxytag: inherits="istd::IChangeable" -->
 <p><code>#include &lt;<a class="el" href="_i_commands_provider_8h_source.html">ICommandsProvider.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ibase::ICommandsProvider:</div>
@@ -44,40 +45,78 @@ Inheritance diagram for ibase::ICommandsProvider:</div>
  <div class="center">
   <img src="classibase_1_1_i_commands_provider.png" usemap="#ibase::ICommandsProvider_map" alt=""/>
   <map id="ibase::ICommandsProvider_map" name="ibase::ICommandsProvider_map">
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,295,24"/>
-<area href="classicmpstr_1_1_c_package_overview_comp.html" alt="icmpstr::CPackageOverviewComp" shape="rect" coords="305,112,600,136"/>
-<area href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html" alt="icmpstr::CVisualRegistryScenographerComp" shape="rect" coords="305,168,600,192"/>
-<area href="classiqt2d_1_1_c_image_view_comp.html" title="Show observed bitmap on the 2D-console." alt="iqt2d::CImageViewComp" shape="rect" coords="305,224,600,248"/>
-<area href="classiqt2d_1_1_c_scene_connector_gui_comp.html" alt="iqt2d::CSceneConnectorGuiComp" shape="rect" coords="305,280,600,304"/>
-<area href="classiqt2d_1_1_c_scene_provider_gui_comp.html" alt="iqt2d::CSceneProviderGuiComp" shape="rect" coords="305,336,600,360"/>
-<area href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html" title="This class is a Qt-based workspace implementation of a document manager." alt="iqtdoc::CMultiDocumentWorkspaceGuiComp" shape="rect" coords="305,392,600,416"/>
-<area href="classiqtgui_1_1_c_commands_binder_comp.html" title="Component for binding of multiple command providers." alt="iqtgui::CCommandsBinderComp" shape="rect" coords="305,448,600,472"/>
-<area href="classiqtproc_1_1_c_document_processing_manager_comp_base.html" alt="iqtproc::CDocumentProcessingManagerCompBase" shape="rect" coords="305,504,600,528"/>
-<area href="classiview_1_1_c_console_gui.html" alt="iview::CConsoleGui" shape="rect" coords="305,560,600,584"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="1857,56,2466,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1857,0,2466,24"/>
+<area href="classicmpstr_1_1_c_package_overview_comp.html" alt="icmpstr::CPackageOverviewComp" shape="rect" coords="0,168,609,192"/>
+<area href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html" alt="icmpstr::CVisualRegistryScenographerComp" shape="rect" coords="619,168,1228,192"/>
+<area href="classiqt2d_1_1_c_scene_connector_gui_comp.html" alt="iqt2d::CSceneConnectorGuiComp" shape="rect" coords="1238,168,1847,192"/>
+<area href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html" title="This class is a Qt-based workspace implementation of a document manager." alt="iqtdoc::CMultiDocumentWorkspaceGuiComp" shape="rect" coords="1857,168,2466,192"/>
+<area href="classiqtproc_1_1_c_document_processing_manager_comp_base.html" alt="iqtproc::CDocumentProcessingManagerCompBase" shape="rect" coords="2476,168,3085,192"/>
+<area href="classiview_1_1_c_console_gui.html" alt="iview::CConsoleGui" shape="rect" coords="3095,168,3704,192"/>
+<area href="classistd_1_1_t_update_manager_wrap.html" alt="istd::TUpdateManagerWrap&lt; ibase::ICommandsProvider &gt;" shape="rect" coords="3714,168,4323,192"/>
+<area href="classiqtproc_1_1_c_document_processing_command_comp.html" title="Component to trigger some processing action for the current document." alt="iqtproc::CDocumentProcessingCommandComp" shape="rect" coords="2166,224,2775,248"/>
+<area href="classiqtproc_1_1_c_document_processing_manager_comp.html" title="Component to trigger document-to-document processing action." alt="iqtproc::CDocumentProcessingManagerComp" shape="rect" coords="2785,224,3394,248"/>
+<area href="classiser_1_1_t_copy_serialized_wrap.html" alt="iser::TCopySerializedWrap&lt; ibase::ICommandsProvider &gt;" shape="rect" coords="3714,224,4323,248"/>
+<area href="classimod_1_1_t_model_wrap.html" alt="imod::TModelWrap&lt; ibase::ICommandsProvider &gt;" shape="rect" coords="3714,280,4323,304"/>
+<area href="classibase_1_1_t_commands_provider_comp_wrap.html" title="Generic macro for ICommandsProvider implementation." alt="ibase::TCommandsProviderCompWrap&lt; Base &gt;" shape="rect" coords="2785,336,3394,360"/>
+<area href="classibase_1_1_t_commands_provider_comp_wrap.html" alt="ibase::TCommandsProviderCompWrap&lt; icomp::CComponentBase &gt;" shape="rect" coords="3404,336,4013,360"/>
+<area href="classibase_1_1_t_commands_provider_comp_wrap.html" alt="ibase::TCommandsProviderCompWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt; &gt;" shape="rect" coords="4023,336,4632,360"/>
+<area href="classibase_1_1_t_commands_provider_comp_wrap.html" alt="ibase::TCommandsProviderCompWrap&lt; iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt; &gt;" shape="rect" coords="4642,336,5251,360"/>
+<area href="classiqtgui_1_1_c_commands_binder_comp.html" title="Component for binding of multiple command providers." alt="iqtgui::CCommandsBinderComp" shape="rect" coords="3404,392,4013,416"/>
+<area href="classiqt2d_1_1_c_scene_provider_gui_comp.html" alt="iqt2d::CSceneProviderGuiComp" shape="rect" coords="4023,392,4632,416"/>
+<area href="classiqt2d_1_1_c_view_provider_gui_comp.html" alt="iqt2d::CViewProviderGuiComp" shape="rect" coords="4642,392,5251,416"/>
 </map>
  </div></div>
 
 <p><a href="classibase_1_1_i_commands_provider-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_commands_provider.html#a30550b3bec67b55eb54cfaddc6fcc601">ChangeFlags</a> { <a class="el" href="classibase_1_1_i_commands_provider.html#a30550b3bec67b55eb54cfaddc6fcc601a4e76bd7588c3c7c12ea6ddd70dded60b">CF_COMMANDS</a> =  1 &lt;&lt; 14
+ }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">IHierarchicalCommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_commands_provider.html#a18e74c6d8b6a6c4023fce0a7c3da4c7d">GetCommands</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of menu commands.  <a href="#a18e74c6d8b6a6c4023fce0a7c3da4c7d"></a><br/></td></tr>
+<a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">IHierarchicalCommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_commands_provider.html#a970c1822d91bc215e53b0e972f5b294d">GetCommands</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of menu commands.  <a href="#a970c1822d91bc215e53b0e972f5b294d"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_i_commands_provider_8h_source.html#l00015">15</a> of file <a class="el" href="_i_commands_provider_8h_source.html">ICommandsProvider.h</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a18e74c6d8b6a6c4023fce0a7c3da4c7d"></a><!-- doxytag: member="ibase::ICommandsProvider::GetCommands" ref="a18e74c6d8b6a6c4023fce0a7c3da4c7d" args="() const =0" -->
+</div><hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="a30550b3bec67b55eb54cfaddc6fcc601"></a><!-- doxytag: member="ibase::ICommandsProvider::ChangeFlags" ref="a30550b3bec67b55eb54cfaddc6fcc601" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">IHierarchicalCommand</a>* ibase::ICommandsProvider::GetCommands </td>
+          <td class="memname">enum <a class="el" href="classibase_1_1_i_commands_provider.html#a30550b3bec67b55eb54cfaddc6fcc601">ibase::ICommandsProvider::ChangeFlags</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a30550b3bec67b55eb54cfaddc6fcc601a4e76bd7588c3c7c12ea6ddd70dded60b"></a><!-- doxytag: member="CF_COMMANDS" ref="a30550b3bec67b55eb54cfaddc6fcc601a4e76bd7588c3c7c12ea6ddd70dded60b" args="" -->CF_COMMANDS</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9">istd::IChangeable</a>.</p>
+
+<p>Definition at line <a class="el" href="_i_commands_provider_8h_source.html#l00018">18</a> of file <a class="el" href="_i_commands_provider_8h_source.html">ICommandsProvider.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a970c1822d91bc215e53b0e972f5b294d"></a><!-- doxytag: member="ibase::ICommandsProvider::GetCommands" ref="a970c1822d91bc215e53b0e972f5b294d" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">IHierarchicalCommand</a> * ibase::ICommandsProvider::GetCommands </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [pure virtual]</code></td>
+          <td> const<code> [inline, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -86,7 +125,11 @@ Public Member Functions</h2></td></tr>
 <p>Get list of menu commands. </p>
 <p>This commands will be integrated in global menu system undependent of actual selected view. For support of normal pull down menu, depth of this tree structure should be at least 3. </p>
 
-<p>Implemented in <a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#af0bc538aa444d9a8ec0af09f5811dd8c">iqt2d::CSceneProviderGuiComp</a>, <a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a9e361089e77284e5efa91e7dae124ec5">icmpstr::CVisualRegistryScenographerComp</a>, <a class="el" href="classiview_1_1_c_console_gui.html#ae1e1ba50dbac1497c193cc2b48023417">iview::CConsoleGui</a>, <a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a871fd0b855d57687831d1323102d6e11">iqtdoc::CMultiDocumentWorkspaceGuiComp</a>, <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#a33d98e4fcbc2f0a1bcde4071bbfa1041">iqtproc::CDocumentProcessingManagerCompBase</a>, <a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#a3897ef00415b959fd9c7879e7d707d1e">icmpstr::CPackageOverviewComp</a>, <a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a4ffe94cd3541486fc8425e4a541e3c85">iqt2d::CImageViewComp</a>, <a class="el" href="classiqt2d_1_1_c_scene_connector_gui_comp.html#aae7ed6a34aa79e0d1f73ba022527786a">iqt2d::CSceneConnectorGuiComp</a>, and <a class="el" href="classiqtgui_1_1_c_commands_binder_comp.html#ae4a6b550b802ac54f905067c8cbb3844">iqtgui::CCommandsBinderComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#af0bc538aa444d9a8ec0af09f5811dd8c">iqt2d::CSceneProviderGuiComp</a>, <a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a9e361089e77284e5efa91e7dae124ec5">icmpstr::CVisualRegistryScenographerComp</a>, <a class="el" href="classiview_1_1_c_console_gui.html#ae1e1ba50dbac1497c193cc2b48023417">iview::CConsoleGui</a>, <a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a871fd0b855d57687831d1323102d6e11">iqtdoc::CMultiDocumentWorkspaceGuiComp</a>, <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#a33d98e4fcbc2f0a1bcde4071bbfa1041">iqtproc::CDocumentProcessingManagerCompBase</a>, <a class="el" href="classicmpstr_1_1_c_package_overview_comp.html#a3897ef00415b959fd9c7879e7d707d1e">icmpstr::CPackageOverviewComp</a>, <a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a55a137fea748d3b7e61dc8d1c18b9cb1">iqt2d::CViewProviderGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_scene_connector_gui_comp.html#aae7ed6a34aa79e0d1f73ba022527786a">iqt2d::CSceneConnectorGuiComp</a>, and <a class="el" href="classiqtgui_1_1_c_commands_binder_comp.html#ae4a6b550b802ac54f905067c8cbb3844">iqtgui::CCommandsBinderComp</a>.</p>
+
+<p>Definition at line <a class="el" href="_i_commands_provider_8h_source.html#l00032">32</a> of file <a class="el" href="_i_commands_provider_8h_source.html">ICommandsProvider.h</a>.</p>
+
+<p>References <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
 
 </div>
 </div>

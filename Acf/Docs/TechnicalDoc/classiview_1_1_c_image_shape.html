@@ -74,6 +74,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_image_shape.html#aef4ba2cf792cb67071fb9b0620ec0a43">CImageShape</a> (const <a class="el" href="classicmm_1_1_i_color_transformation.html">icmm::IColorTransformation</a> *colorTransformationPtr=0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_image_shape.html#ac3005ab75fba425d6d704f68da879990">Draw</a> (QPainter &amp;drawContext) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw this shape using draw context.  <a href="#ac3005ab75fba425d6d704f68da879990"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_image_shape.html#a247f542b3c199450fd1ad7d7cb77bfd2">OnAttached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#a247f542b3c199450fd1ad7d7cb77bfd2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_image_shape.html#a6cd31521e0ff784b6777ea0f42c1e780">AfterUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called after update of the observer contents occures.  <a href="#a6cd31521e0ff784b6777ea0f42c1e780"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_image_shape.html#a8077338f7267ce9b28d9689db1b4f930">CalcBoundingBox</a> (<a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;result) const </td></tr>
@@ -99,7 +101,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_shape_base.html#a7224e6c066cc0235be3c5fae2da28a87">iview::CShapeBase</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a2fdbd3aa5e88ef42315be24c92305743">iqt2d::CImageViewComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqt2d_1_1_c_image_view_comp.html#adac782324508e06ea2df8aad8cd94530">iqt2d::CImageViewComp</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_image_shape_8h_source.html#l00020">20</a> of file <a class="el" href="_c_image_shape_8h_source.html">CImageShape.h</a>.</p>
 
@@ -242,6 +244,30 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a247f542b3c199450fd1ad7d7cb77bfd2"></a><!-- doxytag: member="iview::CImageShape::OnAttached" ref="a247f542b3c199450fd1ad7d7cb77bfd2" args="(imod::IModel *modelPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::CImageShape::OnAttached </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
+          <td class="paramname"><em>modelPtr</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This call back function will be called, if an observable object is about to be attached. </p>
+<p>This function returns a <code>true</code>, if observable object is accepted by the implementation logic of the observer, otherwise the function returns a <code>false</code>. </p>
+
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_shape_base.html#a67615b4f1490b9817638da7c1af18496">iview::CShapeBase</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a1e5ea143e01a0798090e8989ded7fb94">iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt;</a>.</p>
 
 </div>
 </div>

@@ -46,48 +46,34 @@
 <a name="l00019"></a>00019 {
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021 
-<a name="l00026"></a><a class="code" href="classiqt2d_1_1_c_image_view_comp.html">00026</a> <span class="keyword">class </span><a class="code" href="classiqt2d_1_1_c_image_view_comp.html" title="Show observed bitmap on the 2D-console.">CImageViewComp</a>:
-<a name="l00027"></a>00027                      <span class="keyword">public</span> iqtgui::TGuiObserverWrap&lt;
-<a name="l00028"></a>00028                                           CViewProviderGuiComp,
-<a name="l00029"></a>00029                                           iview::CImageShape&gt;,
-<a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::ICommandsProvider
-<a name="l00031"></a>00031 {
-<a name="l00032"></a>00032 <span class="keyword">public</span>:
-<a name="l00033"></a>00033        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html" title="Join functionality of iqtgui::IGuiObject interface and imod::IObserver.">iqtgui::TGuiObserverWrap</a>&lt;
-<a name="l00034"></a>00034                             <a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html">CViewProviderGuiComp</a>,
-<a name="l00035"></a><a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a2fdbd3aa5e88ef42315be24c92305743">00035</a>                             <a class="code" href="classiview_1_1_c_image_shape.html">iview::CImageShape</a>&gt; <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a2fdbd3aa5e88ef42315be24c92305743">BaseClass</a>;
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_image_view_comp.html" title="Show observed bitmap on the 2D-console.">CImageViewComp</a>);
-<a name="l00038"></a>00038               I_REGISTER_INTERFACE(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>);
-<a name="l00039"></a>00039               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>);
-<a name="l00040"></a>00040               I_ASSIGN(m_fitOnStartAttrPtr, <span class="stringliteral">&quot;FitToViewOnStart&quot;</span>, <span class="stringliteral">&quot;If true, the image content will be fit to the view on start&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
-<a name="l00041"></a>00041               I_ASSIGN(m_showControlButtonsAttrPtr, <span class="stringliteral">&quot;ShowControlButtons&quot;</span>, <span class="stringliteral">&quot;If true, control buttons will be shown&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
-<a name="l00042"></a>00042        I_END_COMPONENT;
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044        <span class="comment">// reimplemented (ibase::ICommandsProvider)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures.">ibase::IHierarchicalCommand</a>* <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a4ffe94cd3541486fc8425e4a541e3c85" title="Get list of menu commands.">GetCommands</a>() <span class="keyword">const</span>;
+<a name="l00026"></a><a class="code" href="classiqt2d_1_1_c_image_view_comp.html">00026</a> <span class="keyword">class </span><a class="code" href="classiqt2d_1_1_c_image_view_comp.html" title="Show observed bitmap on the 2D-console.">CImageViewComp</a>: <span class="keyword">public</span> iqtgui::TGuiObserverWrap&lt;CViewProviderGuiComp, iview::CImageShape&gt;
+<a name="l00027"></a>00027 {
+<a name="l00028"></a>00028 <span class="keyword">public</span>:
+<a name="l00029"></a><a class="code" href="classiqt2d_1_1_c_image_view_comp.html#adac782324508e06ea2df8aad8cd94530">00029</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html">iqtgui::TGuiObserverWrap&lt;CViewProviderGuiComp, iview::CImageShape&gt;</a> <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#adac782324508e06ea2df8aad8cd94530">BaseClass</a>;
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_image_view_comp.html" title="Show observed bitmap on the 2D-console.">CImageViewComp</a>);
+<a name="l00032"></a>00032               I_REGISTER_INTERFACE(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>);
+<a name="l00033"></a>00033        I_END_COMPONENT;
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 <span class="keyword">protected</span>:
+<a name="l00036"></a>00036        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a5c77637f56405bfc898341ccc64d0464" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags);
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039        <span class="comment">// reimplemented (iqtui::CComponentBase)</span>
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a86eab23c6253d004a56d7b0aa1bc8377">OnGuiCreated</a>();
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042 <span class="keyword">private</span>:
+<a name="l00043"></a>00043        <a class="code" href="classiview_1_1_c_none_calibration.html">iview::CNoneCalibration</a> m_calibration;
+<a name="l00044"></a>00044        <a class="code" href="classiview_1_1_c_none_calibration_shape.html" title="Shape object for none calibration.">iview::CNoneCalibrationShape</a> m_calibrationShape;
+<a name="l00045"></a>00045 };
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="keyword">protected</span>:
-<a name="l00048"></a>00048        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a5c77637f56405bfc898341ccc64d0464" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags);
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 } <span class="comment">// namespace iqt2d</span>
+<a name="l00049"></a>00049 
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051        <span class="comment">// reimplemented (iqtui::CComponentBase)</span>
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_image_view_comp.html#a86eab23c6253d004a56d7b0aa1bc8377">OnGuiCreated</a>();
+<a name="l00051"></a>00051 <span class="preprocessor">#endif // !iqt2d_CImageViewComp_included</span>
+<a name="l00052"></a>00052 <span class="preprocessor"></span>
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="keyword">private</span>:
-<a name="l00055"></a>00055        I_ATTR(<span class="keywordtype">bool</span>, m_showControlButtonsAttrPtr);
-<a name="l00056"></a>00056        I_ATTR(<span class="keywordtype">bool</span>, m_fitOnStartAttrPtr);
-<a name="l00057"></a>00057        <a class="code" href="classiview_1_1_c_none_calibration.html">iview::CNoneCalibration</a> m_calibration;
-<a name="l00058"></a>00058        <a class="code" href="classiview_1_1_c_none_calibration_shape.html" title="Shape object for none calibration.">iview::CNoneCalibrationShape</a> m_calibrationShape;
-<a name="l00059"></a>00059 };
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 } <span class="comment">// namespace iqt2d</span>
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 <span class="preprocessor">#endif // !iqt2d_CImageViewComp_included</span>
-<a name="l00066"></a>00066 <span class="preprocessor"></span>
-<a name="l00067"></a>00067 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

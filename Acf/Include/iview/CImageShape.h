@@ -47,6 +47,7 @@ public:
 	virtual void Draw(QPainter& drawContext) const;
 
 	// reimplemented (imod::IObserver)
+	virtual bool OnAttached(imod::IModel* modelPtr);
 	virtual void AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
 
 	// reimplemented (iview::CShapeBase)

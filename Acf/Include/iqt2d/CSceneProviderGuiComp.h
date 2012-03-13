@@ -33,7 +33,7 @@
 // ACF includes
 #include "i2d/ISceneController.h"
 
-#include "ibase/ICommandsProvider.h"
+#include "ibase/TCommandsProviderCompWrap.h"
 
 #include "iqtgui/IDropConsumer.h"
 #include "iqtgui/TDesignerGuiCompBase.h"
@@ -48,14 +48,15 @@ namespace iqt2d
 
 
 class CSceneProviderGuiComp: 
-			public iqtgui::TDesignerGuiCompBase<Ui::CSceneProviderGuiComp>,
-			virtual public ibase::ICommandsProvider,
+			public ibase::TCommandsProviderCompWrap<
+						iqtgui::TDesignerGuiCompBase<Ui::CSceneProviderGuiComp> >,
 			virtual public ISceneProvider,
 			virtual public i2d::ISceneController
 {
 	Q_OBJECT
 public:
-	typedef iqtgui::TDesignerGuiCompBase<Ui::CSceneProviderGuiComp> BaseClass;
+	typedef ibase::TCommandsProviderCompWrap<
+				iqtgui::TDesignerGuiCompBase<Ui::CSceneProviderGuiComp> >BaseClass;
 
 	enum BackgroundMode
 	{
@@ -91,7 +92,6 @@ public:
 	};
 
 	I_BEGIN_COMPONENT(CSceneProviderGuiComp);
-		I_REGISTER_INTERFACE(ibase::ICommandsProvider);
 		I_REGISTER_INTERFACE(ISceneProvider);
 		I_REGISTER_INTERFACE(i2d::ISceneController);
 		I_ASSIGN(m_allowWidgetResizeAttrPtr, "AllowWidgetResize", "Allow resize of QWidet object (should be disabled if this GUI size is managed by layout)", true, false);

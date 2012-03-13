@@ -41,7 +41,7 @@
 <div class="title">iqt2d::CSceneProviderGuiComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt2d::CSceneProviderGuiComp" --><!-- doxytag: inherits="TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;,ibase::ICommandsProvider,iqt2d::ISceneProvider,i2d::ISceneController" -->
+<!-- doxytag: class="iqt2d::CSceneProviderGuiComp" --><!-- doxytag: inherits="TCommandsProviderCompWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt; &gt;,iqt2d::ISceneProvider,i2d::ISceneController" -->
 <p><code>#include &lt;<a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqt2d::CSceneProviderGuiComp:</div>
@@ -49,21 +49,29 @@ Inheritance diagram for iqt2d::CSceneProviderGuiComp:</div>
  <div class="center">
   <img src="classiqt2d_1_1_c_scene_provider_gui_comp.png" usemap="#iqt2d::CSceneProviderGuiComp_map" alt=""/>
   <map id="iqt2d::CSceneProviderGuiComp_map" name="iqt2d::CSceneProviderGuiComp_map">
-<area href="classiqtgui_1_1_t_designer_gui_comp_base.html" alt="iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;" shape="rect" coords="570,280,940,304"/>
-<area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="1140,280,1510,304"/>
-<area href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene." alt="iqt2d::ISceneProvider" shape="rect" coords="1520,280,1890,304"/>
-<area href="classi2d_1_1_i_scene_controller.html" title="Interface for scene manipulation and query the restrictions." alt="i2d::ISceneController" shape="rect" coords="1900,280,2270,304"/>
-<area href="classiqtgui_1_1_t_gui_component_base.html" alt="iqtgui::TGuiComponentBase&lt; QWidget &gt;" shape="rect" coords="380,224,750,248"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1140,224,1510,248"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1520,224,1890,248"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1900,224,2270,248"/>
-<area href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject." alt="iqtgui::CGuiComponentBase" shape="rect" coords="380,168,750,192"/>
-<area href="class_q_object.html" alt="QObject" shape="rect" coords="0,112,370,136"/>
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="380,112,750,136"/>
-<area href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context." alt="iqtgui::IGuiObject" shape="rect" coords="760,112,1130,136"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="380,56,750,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="760,56,1130,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="380,0,750,24"/>
+<area href="classibase_1_1_t_commands_provider_comp_wrap.html" alt="ibase::TCommandsProviderCompWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt; &gt;" shape="rect" coords="1547,336,2156,360"/>
+<area href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene." alt="iqt2d::ISceneProvider" shape="rect" coords="2785,336,3394,360"/>
+<area href="classi2d_1_1_i_scene_controller.html" title="Interface for scene manipulation and query the restrictions." alt="i2d::ISceneController" shape="rect" coords="3404,336,4013,360"/>
+<area href="classiqtgui_1_1_t_designer_gui_comp_base.html" alt="iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;" shape="rect" coords="928,280,1537,304"/>
+<area href="classimod_1_1_t_model_wrap.html" alt="imod::TModelWrap&lt; ibase::ICommandsProvider &gt;" shape="rect" coords="2166,280,2775,304"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="2785,280,3394,304"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="3404,280,4013,304"/>
+<area href="classiqtgui_1_1_t_gui_component_base.html" alt="iqtgui::TGuiComponentBase&lt; QWidget &gt;" shape="rect" coords="619,224,1228,248"/>
+<area href="classiser_1_1_t_copy_serialized_wrap.html" alt="iser::TCopySerializedWrap&lt; ibase::ICommandsProvider &gt;" shape="rect" coords="1857,224,2466,248"/>
+<area href="classimod_1_1_c_model_base.html" title="Basic implementation of a model." alt="imod::CModelBase" shape="rect" coords="2476,224,3085,248"/>
+<area href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject." alt="iqtgui::CGuiComponentBase" shape="rect" coords="619,168,1228,192"/>
+<area href="classistd_1_1_t_update_manager_wrap.html" alt="istd::TUpdateManagerWrap&lt; ibase::ICommandsProvider &gt;" shape="rect" coords="1857,168,2466,192"/>
+<area href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern." alt="imod::IModel" shape="rect" coords="2476,168,3085,192"/>
+<area href="class_q_object.html" alt="QObject" shape="rect" coords="0,112,609,136"/>
+<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="619,112,1228,136"/>
+<area href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context." alt="iqtgui::IGuiObject" shape="rect" coords="1238,112,1847,136"/>
+<area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="1857,112,2466,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="2476,112,3085,136"/>
+<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="619,56,1228,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1238,56,1847,80"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="1857,56,2466,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="619,0,1228,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1857,0,2466,24"/>
 </map>
  </div></div>
 
@@ -86,8 +94,9 @@ Public Types</h2></td></tr>
 <br/>
  }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="classiqtgui_1_1_t_designer_gui_comp_base.html">iqtgui::TDesignerGuiCompBase</a><br class="typebreak"/>
-&lt; Ui::CSceneProviderGuiComp &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ac598d435b94b6f15664b487a2e5cef92">BaseClass</a></td></tr>
+<a class="el" href="classibase_1_1_t_commands_provider_comp_wrap.html">ibase::TCommandsProviderCompWrap</a><br class="typebreak"/>
+&lt; <a class="el" href="classiqtgui_1_1_t_designer_gui_comp_base.html">iqtgui::TDesignerGuiCompBase</a><br class="typebreak"/>
+&lt; Ui::CSceneProviderGuiComp &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a9d260afd9bf3dde9d40e179d0627f9ba">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="signals"></a>
 Signals</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#add6a64efd2299ac542c266bf42e7f6ae">zoomChanged</a> (double)</td></tr>
@@ -157,20 +166,20 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="ac598d435b94b6f15664b487a2e5cef92"></a><!-- doxytag: member="iqt2d::CSceneProviderGuiComp::BaseClass" ref="ac598d435b94b6f15664b487a2e5cef92" args="" -->
+<a class="anchor" id="a9d260afd9bf3dde9d40e179d0627f9ba"></a><!-- doxytag: member="iqt2d::CSceneProviderGuiComp::BaseClass" ref="a9d260afd9bf3dde9d40e179d0627f9ba" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiqtgui_1_1_t_designer_gui_comp_base.html">iqtgui::TDesignerGuiCompBase</a>&lt;Ui::CSceneProviderGuiComp&gt; <a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ac598d435b94b6f15664b487a2e5cef92">iqt2d::CSceneProviderGuiComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classibase_1_1_t_commands_provider_comp_wrap.html">ibase::TCommandsProviderCompWrap</a>&lt; <a class="el" href="classiqtgui_1_1_t_designer_gui_comp_base.html">iqtgui::TDesignerGuiCompBase</a>&lt;Ui::CSceneProviderGuiComp&gt; &gt; <a class="el" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a9d260afd9bf3dde9d40e179d0627f9ba">iqt2d::CSceneProviderGuiComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_designer_gui_comp_base.html#a46da9fc3ba988136e325956bb7aaa220">iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_commands_provider_comp_wrap.html#af7665d2133d46e75fb088a662ea265d5">ibase::TCommandsProviderCompWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00036">36</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00037">37</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -208,7 +217,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00038">38</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00039">39</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -303,7 +312,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get list of menu commands. </p>
 <p>This commands will be integrated in global menu system undependent of actual selected view. For support of normal pull down menu, depth of this tree structure should be at least 3. </p>
 
-<p>Implements <a class="el" href="classibase_1_1_i_commands_provider.html#a18e74c6d8b6a6c4023fce0a7c3da4c7d">ibase::ICommandsProvider</a>.</p>
+<p>Reimplemented from <a class="el" href="classibase_1_1_i_commands_provider.html#a970c1822d91bc215e53b0e972f5b294d">ibase::ICommandsProvider</a>.</p>
 
 </div>
 </div>

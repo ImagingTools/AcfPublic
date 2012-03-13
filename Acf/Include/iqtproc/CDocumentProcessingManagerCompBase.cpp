@@ -166,6 +166,10 @@ void CDocumentProcessingManagerCompBase::OnDoProcessing()
 		}
 	}
 
+	// Force model update:
+	dialogPtr.Reset();
+
+	// Process document:
 	DoDocumentProcessing(inputDocumentPtr, documentTypeId);
 }
 

@@ -27,21 +27,6 @@ namespace iqt2d
 {
 
 
-// public methods
-
-// reimplemented (ibase::ICommandsProvider)
-
-const ibase::IHierarchicalCommand* CImageViewComp::GetCommands() const
-{
-	if (IsGuiCreated()){
-		iview::CConsoleGui* consolePtr = GetQtWidget();
-	
-		return consolePtr->GetCommands();
-	}
-
-	return NULL;
-}
-
 
 // protected methods
 
@@ -53,10 +38,6 @@ void CImageViewComp::UpdateGui(int /*updateFlags*/)
 	I_ASSERT(consolePtr != NULL);
 
 	consolePtr->UpdateView();
-
-	if (m_fitOnStartAttrPtr.IsValid() && *m_fitOnStartAttrPtr){
-		consolePtr->SetZoomToFit();
-	}
 }
 
 

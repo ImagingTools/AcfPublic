@@ -693,7 +693,7 @@
     <name>ICommandsProvider.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_i_commands_provider_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_i_command_8h" name="ICommand.h" local="yes" imported="no">ibase/ICommand.h</includes>
     <class kind="class">ibase::ICommandsProvider</class>
     <namespace>ibase</namespace>
@@ -796,6 +796,16 @@
     <filename>_i_text_document_8h</filename>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <class kind="class">ibase::ITextDocument</class>
+    <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TCommandsProviderCompWrap.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_t_commands_provider_comp_wrap_8h</filename>
+    <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <class kind="class">ibase::TCommandsProviderCompWrap</class>
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
@@ -3948,7 +3958,7 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_scene_provider_gui_comp_8h</filename>
     <includes id="_i_scene_controller_8h" name="ISceneController.h" local="yes" imported="no">i2d/ISceneController.h</includes>
-    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_t_commands_provider_comp_wrap_8h" name="TCommandsProviderCompWrap.h" local="yes" imported="no">ibase/TCommandsProviderCompWrap.h</includes>
     <includes id="_i_drop_consumer_8h" name="IDropConsumer.h" local="yes" imported="no">iqtgui/IDropConsumer.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
@@ -3972,6 +3982,7 @@
     <name>CViewProviderGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_view_provider_gui_comp_8h</filename>
+    <includes id="_t_commands_provider_comp_wrap_8h" name="TCommandsProviderCompWrap.h" local="yes" imported="no">ibase/TCommandsProviderCompWrap.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_c_console_gui_8h" name="CConsoleGui.h" local="yes" imported="no">iview/CConsoleGui.h</includes>
     <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
@@ -4235,7 +4246,9 @@
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_commands_binder_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_t_commands_provider_comp_wrap_8h" name="TCommandsProviderCompWrap.h" local="yes" imported="no">ibase/TCommandsProviderCompWrap.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
     <class kind="class">iqtgui::CCommandsBinderComp</class>
     <namespace>iqtgui</namespace>
@@ -4453,6 +4466,7 @@
     <name>CSimpleMainWindowGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_simple_main_window_gui_comp_8h</filename>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_i_main_window_component_8h" name="IMainWindowComponent.h" local="yes" imported="no">iqtgui/IMainWindowComponent.h</includes>
     <includes id="_i_dialog_8h" name="IDialog.h" local="yes" imported="no">iqtgui/IDialog.h</includes>
@@ -4489,7 +4503,6 @@
     <filename>_c_tabbed_multi_view_gui_comp_8h</filename>
     <includes id="_i_model_editor_8h" name="IModelEditor.h" local="yes" imported="no">imod/IModelEditor.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
-    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
     <includes id="_c_tab_container_gui_comp_8h" name="CTabContainerGuiComp.h" local="yes" imported="no">iqtgui/CTabContainerGuiComp.h</includes>
     <class kind="class">iqtgui::CTabbedMultiViewGuiComp</class>
@@ -11365,6 +11378,7 @@
     <class kind="class">ibase::IObjectSnap</class>
     <class kind="class">ibase::IProcessExecutor</class>
     <class kind="class">ibase::ITextDocument</class>
+    <class kind="class">ibase::TCommandsProviderCompWrap</class>
     <class kind="class">ibase::TComposedFactoryComp</class>
     <class kind="class">ibase::TContainer</class>
     <class kind="class">ibase::TFactorisableContainer</class>
@@ -12882,13 +12896,25 @@
   <compound kind="class">
     <name>ibase::ICommandsProvider</name>
     <filename>classibase_1_1_i_commands_provider.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classibase_1_1_i_commands_provider.html</anchorfile>
+      <anchor>a30550b3bec67b55eb54cfaddc6fcc601</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_COMMANDS</name>
+      <anchorfile>classibase_1_1_i_commands_provider.html</anchorfile>
+      <anchor>a30550b3bec67b55eb54cfaddc6fcc601a4e76bd7588c3c7c12ea6ddd70dded60b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classibase_1_1_i_commands_provider.html</anchorfile>
-      <anchor>a18e74c6d8b6a6c4023fce0a7c3da4c7d</anchor>
-      <arglist>() const =0</arglist>
+      <anchor>a970c1822d91bc215e53b0e972f5b294d</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13216,6 +13242,20 @@
       <anchorfile>classibase_1_1_i_text_document.html</anchorfile>
       <anchor>a84c4a5012dbb291c122be939a29e1473</anchor>
       <arglist>(const QString &amp;text)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::TCommandsProviderCompWrap</name>
+    <filename>classibase_1_1_t_commands_provider_comp_wrap.html</filename>
+    <templarg>Base</templarg>
+    <base>Base</base>
+    <base>TModelWrap&lt; ibase::ICommandsProvider &gt;</base>
+    <member kind="typedef">
+      <type>Base</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_t_commands_provider_comp_wrap.html</anchorfile>
+      <anchor>af7665d2133d46e75fb088a662ea265d5</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34218,20 +34258,12 @@
     <name>iqt2d::CImageViewComp</name>
     <filename>classiqt2d_1_1_c_image_view_comp.html</filename>
     <base>TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt;</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
       <type>iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a2fdbd3aa5e88ef42315be24c92305743</anchor>
+      <anchor>adac782324508e06ea2df8aad8cd94530</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IHierarchicalCommand *</type>
-      <name>GetCommands</name>
-      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a4ffe94cd3541486fc8425e4a541e3c85</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -34555,8 +34587,7 @@
   <compound kind="class">
     <name>iqt2d::CSceneProviderGuiComp</name>
     <filename>classiqt2d_1_1_c_scene_provider_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <base>TCommandsProviderCompWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt; &gt;</base>
     <base virtualness="virtual">iqt2d::ISceneProvider</base>
     <base virtualness="virtual">i2d::ISceneController</base>
     <class kind="class">iqt2d::CSceneProviderGuiComp::CScene</class>
@@ -34603,10 +34634,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;</type>
+      <type>ibase::TCommandsProviderCompWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ac598d435b94b6f15664b487a2e5cef92</anchor>
+      <anchor>a9d260afd9bf3dde9d40e179d0627f9ba</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
@@ -35030,21 +35061,21 @@
   <compound kind="class">
     <name>iqt2d::CViewProviderGuiComp</name>
     <filename>classiqt2d_1_1_c_view_provider_gui_comp.html</filename>
-    <base>TGuiComponentBase&lt; iview::CConsoleGui &gt;</base>
+    <base>TCommandsProviderCompWrap&lt; iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt; &gt;</base>
     <base virtualness="virtual">iqt2d::IViewProvider</base>
     <member kind="typedef">
-      <type>iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;</type>
+      <type>ibase::TCommandsProviderCompWrap&lt; iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
-      <anchor>a8b23d37e2179b3996b6ad136f47f81ed</anchor>
+      <anchor>aa7729973864dc12890ee7957535c490b</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>CViewProviderGuiComp</name>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
-      <anchor>a84200e7f2b0af35936d53949ac22de32</anchor>
-      <arglist>()</arglist>
+      <anchor>a55a137fea748d3b7e61dc8d1c18b9cb1</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -35059,6 +35090,13 @@
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
       <anchor>adc78fdfd1b381f0da35436a3257afa52</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a00c5aee16212fa2937f7a6d7670a5796</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35870,6 +35908,30 @@
       <name>GI_RECENT_FILE</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
       <anchor>a37f570cb3786da9479dbb3ced2083621ab21d37144962bf23c1c0d9ee2af329df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>CommandProviderId</name>
+      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
+      <anchor>afb92752e383834174dd0cf81aeda3dee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CPI_DOCUMENT_MANAGER</name>
+      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
+      <anchor>afb92752e383834174dd0cf81aeda3deead01ac58c1979d9e8fd643a9ff0eec201</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CPI_ACTIVE_VIEW</name>
+      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
+      <anchor>afb92752e383834174dd0cf81aeda3deea8d7427531a9a5fcaaa26d123e54a1567</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CPI_ACTIVE_DOCUMENT</name>
+      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
+      <anchor>afb92752e383834174dd0cf81aeda3deea6ac6d2f815263382b3e452e66ff0dce9</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -36783,13 +36845,13 @@
   <compound kind="class">
     <name>iqtgui::CCommandsBinderComp</name>
     <filename>classiqtgui_1_1_c_commands_binder_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <base>TCommandsProviderCompWrap&lt; icomp::CComponentBase &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ibase::TCommandsProviderCompWrap&lt; icomp::CComponentBase &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_commands_binder_comp.html</anchorfile>
-      <anchor>a53a2725fb55293f4d25db7a3da416e5c</anchor>
+      <anchor>a8bf579c190282d7bad4d82a76ea98ba5</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -36798,6 +36860,13 @@
       <anchorfile>classiqtgui_1_1_c_commands_binder_comp.html</anchorfile>
       <anchor>ae4a6b550b802ac54f905067c8cbb3844</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqtgui_1_1_c_commands_binder_comp.html</anchorfile>
+      <anchor>a3251e22119e35288f631a0c9ba587ac6</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -38372,6 +38441,13 @@
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
       <anchor>a7186625bd332df240115c513e6964dbf</anchor>
       <arglist>(const iqtgui::CHierarchicalCommand &amp;command, MenuType &amp;result) const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>CommandsObserver</type>
+      <name>m_commandsObserver</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
+      <anchor>a1f384daa61609986c8a0dc5b57d751e4</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -49179,13 +49255,6 @@
       <anchor>a389ff3c2c9caa342f1d812ea456aaa9c</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>iview::CViewport</type>
-      <name>CalibrationViewImpl</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a8ce90b099674ad5cd23d64a6d273c9a9</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="slot" virtualness="virtual">
       <type>virtual void</type>
       <name>OnZoomIn</name>
@@ -49425,10 +49494,10 @@
       <arglist>(QWheelEvent *event)</arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>CalibrationViewImpl *</type>
+      <type>iview::CViewport *</type>
       <name>m_viewPtr</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>acccfcdb08e989aea6fd82c7e393e83f0</anchor>
+      <anchor>abf5a4a802825f2baf42d1fb57c83e0f9</anchor>
       <arglist></arglist>
     </member>
     <member kind="property">
@@ -49670,6 +49739,13 @@
       <anchorfile>classiview_1_1_c_image_shape.html</anchorfile>
       <anchor>ac3005ab75fba425d6d704f68da879990</anchor>
       <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classiview_1_1_c_image_shape.html</anchorfile>
+      <anchor>a247f542b3c199450fd1ad7d7cb77bfd2</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>

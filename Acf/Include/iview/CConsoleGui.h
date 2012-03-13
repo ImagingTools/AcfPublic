@@ -78,7 +78,6 @@ class CConsoleGui:
 
 public:
 	typedef iview::CConsoleBase BaseClass;
-	typedef iview::CViewport CalibrationViewImpl;
 
 	enum CommandGroupId
 	{
@@ -139,7 +138,7 @@ protected:
 	// reimplemented Qt (QWidget)
 	virtual void wheelEvent(QWheelEvent* event);
 
-	CalibrationViewImpl* m_viewPtr;
+	iview::CViewport* m_viewPtr;
 
 private:
 	bool ConnectSignalSlots();
