@@ -116,7 +116,7 @@ bool CFileReadArchive::ProcessData(void* data, int size)
 // reimplemented (istd::ILogger)
 
 void CFileReadArchive::DecorateMessage(
-			MessageCategory /*category*/,
+			istd::IInformation::InformationCategory /*category*/,
 			int /*id*/,
 			int /*flags*/,
 			QString& message,

@@ -38,7 +38,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="ibase::IMessageConsumer" --><!-- doxytag: inherits="istd::IPolymorphic" -->
-<p>Common interface for a message container consuming message objects.  
+<p>Common interface for a message container consuming information objects (messages).  
  <a href="classibase_1_1_i_message_consumer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_message_consumer_8h_source.html">IMessageConsumer.h</a>&gt;</code></p>
@@ -62,31 +62,31 @@ Inheritance diagram for ibase::IMessageConsumer:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_smart_ptr.html">istd::TSmartPtr</a>&lt; const <br class="typebreak"/>
-<a class="el" href="classibase_1_1_i_message.html">IMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_consumer.html#a3ce48ac791b8d674f4b8b35de07b7948">MessagePtr</a></td></tr>
+<a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">MessagePtr</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_consumer.html#ab2c6d4762fa922d9ddbbe7b552adec6b">IsMessageSupported</a> (int messageCategory=-1, int messageId=-1, const <a class="el" href="classibase_1_1_i_message.html">IMessage</a> *messagePtr=NULL) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if some messge is supported.  <a href="#ab2c6d4762fa922d9ddbbe7b552adec6b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_consumer.html#a00ab2d3aa60b88bf13a8c4ac687273cb">AddMessage</a> (const <a class="el" href="classibase_1_1_i_message_consumer.html#a3ce48ac791b8d674f4b8b35de07b7948">MessagePtr</a> &amp;messagePtr)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_consumer.html#a7ea687c817844fbc1b2e31526ca592a2">IsMessageSupported</a> (int messageCategory=-1, int messageId=-1, const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> *messagePtr=NULL) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if some messge is supported.  <a href="#a7ea687c817844fbc1b2e31526ca592a2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_consumer.html#a00ab2d3aa60b88bf13a8c4ac687273cb">AddMessage</a> (const <a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">MessagePtr</a> &amp;messagePtr)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a message item to the container.  <a href="#a00ab2d3aa60b88bf13a8c4ac687273cb"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Common interface for a message container consuming message objects. </p>
+<div class="textblock"><p>Common interface for a message container consuming information objects (messages). </p>
 
-<p>Definition at line <a class="el" href="_i_message_consumer_8h_source.html#l00020">20</a> of file <a class="el" href="_i_message_consumer_8h_source.html">IMessageConsumer.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_message_consumer_8h_source.html#l00019">19</a> of file <a class="el" href="_i_message_consumer_8h_source.html">IMessageConsumer.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a3ce48ac791b8d674f4b8b35de07b7948"></a><!-- doxytag: member="ibase::IMessageConsumer::MessagePtr" ref="a3ce48ac791b8d674f4b8b35de07b7948" args="" -->
+<a class="anchor" id="a16386c008e15580f1274fdbab6498ded"></a><!-- doxytag: member="ibase::IMessageConsumer::MessagePtr" ref="a16386c008e15580f1274fdbab6498ded" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classistd_1_1_t_smart_ptr.html">istd::TSmartPtr</a>&lt;const <a class="el" href="classibase_1_1_i_message.html">IMessage</a>&gt; <a class="el" href="classibase_1_1_i_message_consumer.html#a3ce48ac791b8d674f4b8b35de07b7948">ibase::IMessageConsumer::MessagePtr</a></td>
+          <td class="memname">typedef <a class="el" href="classistd_1_1_t_smart_ptr.html">istd::TSmartPtr</a>&lt;const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a>&gt; <a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">ibase::IMessageConsumer::MessagePtr</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_i_message_consumer_8h_source.html#l00023">23</a> of file <a class="el" href="_i_message_consumer_8h_source.html">IMessageConsumer.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_message_consumer_8h_source.html#l00022">22</a> of file <a class="el" href="_i_message_consumer_8h_source.html">IMessageConsumer.h</a>.</p>
 
 </div>
 </div>
@@ -98,7 +98,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void ibase::IMessageConsumer::AddMessage </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classibase_1_1_i_message_consumer.html#a3ce48ac791b8d674f4b8b35de07b7948">MessagePtr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">MessagePtr</a> &amp;&#160;</td>
           <td class="paramname"><em>messagePtr</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -112,7 +112,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab2c6d4762fa922d9ddbbe7b552adec6b"></a><!-- doxytag: member="ibase::IMessageConsumer::IsMessageSupported" ref="ab2c6d4762fa922d9ddbbe7b552adec6b" args="(int messageCategory=&#45;1, int messageId=&#45;1, const IMessage *messagePtr=NULL) const =0" -->
+<a class="anchor" id="a7ea687c817844fbc1b2e31526ca592a2"></a><!-- doxytag: member="ibase::IMessageConsumer::IsMessageSupported" ref="a7ea687c817844fbc1b2e31526ca592a2" args="(int messageCategory=&#45;1, int messageId=&#45;1, const istd::IInformation *messagePtr=NULL) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -131,7 +131,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classibase_1_1_i_message.html">IMessage</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> *&#160;</td>
           <td class="paramname"><em>messagePtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -150,16 +150,16 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343" title="Category of message.">istd::ILogger::MessageCategory</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1" title="Category of message.">istd::IInformation::InformationCategory</a>. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">messageId</td><td>ID of message as defined in <a class="el" href="classibase_1_1_i_message.html" title="Common interface for an message.">ibase::IMessage</a> or -1 if undefined. </td></tr>
+    <tr><td class="paramname">messageId</td><td>ID of message as defined in <a class="el" href="classistd_1_1_i_information.html" title="Common interface for class providing some basic information object.">istd::IInformation</a> or -1 if undefined. </td></tr>
     <tr><td class="paramname">messagePtr</td><td>optional message object, or NULL if undefined. Please note, this object will not be stored by receiver. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html#a9ea674016746ce00b4fcd3faed652034">icmpstr::CRegistryPropEditorComp::TextLog</a>, and <a class="el" href="classibase_1_1_c_stream_log_comp_base.html#aaa416a51423a858735f4d61a2d2ee598">ibase::CStreamLogCompBase</a>.</p>
+<p>Implemented in <a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html#aab742bf7896dcdda297a053786cd0b25">icmpstr::CRegistryPropEditorComp::TextLog</a>, and <a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a1afe84ff8614bc78e87c9ebe9c6cc37b">ibase::CStreamLogCompBase</a>.</p>
 
 </div>
 </div>

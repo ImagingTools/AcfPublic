@@ -97,10 +97,10 @@ Protected Types</h2></td></tr>
 <a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#ad9e797c367cb906a3707367d7de04baaabe22f3653a1ef4c9d4126199328f57d2">CT_SOURCE</a>, 
 <a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#ad9e797c367cb906a3707367d7de04baaa0a2b769ce663820be3e3f34ffb294a69">CT_MESSAGE</a>
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a0d5f0ce82cd63c410f2f7f5fe7a84954">MessageMode</a> { <a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a0d5f0ce82cd63c410f2f7f5fe7a84954a8f8634cc0429aca4f1f028116254904d">MM_INFO</a> =  istd::ILogger::MC_INFO, 
-<a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a0d5f0ce82cd63c410f2f7f5fe7a84954aae612defc864130777a65445450026b3">MM_WARNING</a> =  istd::ILogger::MC_WARNING, 
-<a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a0d5f0ce82cd63c410f2f7f5fe7a84954a755a290f8942214d8464b349a159d7a7">MM_ERROR</a> =  istd::ILogger::MC_ERROR, 
-<a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a0d5f0ce82cd63c410f2f7f5fe7a84954a0d455854ab7d5c277c5345728b6d518e">MM_ALL</a> =  istd::ILogger::MC_CRITICAL
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a0d5f0ce82cd63c410f2f7f5fe7a84954">MessageMode</a> { <a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a0d5f0ce82cd63c410f2f7f5fe7a84954a8f8634cc0429aca4f1f028116254904d">MM_INFO</a> =  istd::IInformation::IC_INFO, 
+<a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a0d5f0ce82cd63c410f2f7f5fe7a84954aae612defc864130777a65445450026b3">MM_WARNING</a> =  istd::IInformation::IC_WARNING, 
+<a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a0d5f0ce82cd63c410f2f7f5fe7a84954a755a290f8942214d8464b349a159d7a7">MM_ERROR</a> =  istd::IInformation::IC_ERROR, 
+<a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a0d5f0ce82cd63c410f2f7f5fe7a84954a0d455854ab7d5c277c5345728b6d518e">MM_ALL</a> =  istd::IInformation::IC_CRITICAL
  }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#ae690e3b2dfa33b48acf1c7513d42ae14">DataRole</a> { <a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#ae690e3b2dfa33b48acf1c7513d42ae14ace3e879dcc7e3d9ceeda0df8b7a52bc5">DR_MESSAGE_ID</a> =  Qt::UserRole, 
 <a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#ae690e3b2dfa33b48acf1c7513d42ae14ac2a7717d903429e38286ff80005ec858">DR_CATEGORY</a>
@@ -115,11 +115,11 @@ Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#acc4ebe610e35d3894f18c2f238f2d0c8">OnExportAction</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QTreeWidgetItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#ad71fa6cabc06d472657c68625fec9fa2">CreateGuiItem</a> (const <a class="el" href="classibase_1_1_i_message.html">ibase::IMessage</a> &amp;message)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create GUI item corresponding to specified message.  <a href="#ad71fa6cabc06d472657c68625fec9fa2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QTreeWidgetItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a25641bce26e5613c70b22df2764b3810">CreateGuiItem</a> (const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> &amp;message)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create GUI item corresponding to specified message.  <a href="#a25641bce26e5613c70b22df2764b3810"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a44909e40ef9b41d478dd952b85df1d21">UpdateItemState</a> (QTreeWidgetItem &amp;item) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QIcon&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a1ab4405f0e140cbcb77e89e8f9cdcb4c">GetIcon</a> (<a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">istd::ILogger::MessageCategory</a> mode)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get icons corresponding to specified MessageMode.  <a href="#a1ab4405f0e140cbcb77e89e8f9cdcb4c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QIcon&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#ae7c7f2cb1b9912b810cee23da744f338">GetIcon</a> (<a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> mode)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get icons corresponding to specified MessageMode.  <a href="#ae7c7f2cb1b9912b810cee23da744f338"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#aeed1e50c8be9461a77121f946c7ecd49">OnGuiModelAttached</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#aeed1e50c8be9461a77121f946c7ecd49"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#aca39e9db4d7598da61351ccc6a2c8f50">OnGuiCreated</a> ()</td></tr>
@@ -329,14 +329,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad71fa6cabc06d472657c68625fec9fa2"></a><!-- doxytag: member="iqtgui::CLogGuiComp::CreateGuiItem" ref="ad71fa6cabc06d472657c68625fec9fa2" args="(const ibase::IMessage &amp;message)" -->
+<a class="anchor" id="a25641bce26e5613c70b22df2764b3810"></a><!-- doxytag: member="iqtgui::CLogGuiComp::CreateGuiItem" ref="a25641bce26e5613c70b22df2764b3810" args="(const istd::IInformation &amp;message)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual QTreeWidgetItem* iqtgui::CLogGuiComp::CreateGuiItem </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classibase_1_1_i_message.html">ibase::IMessage</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> &amp;&#160;</td>
           <td class="paramname"><em>message</em></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
@@ -398,14 +398,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1ab4405f0e140cbcb77e89e8f9cdcb4c"></a><!-- doxytag: member="iqtgui::CLogGuiComp::GetIcon" ref="a1ab4405f0e140cbcb77e89e8f9cdcb4c" args="(istd::ILogger::MessageCategory mode)" -->
+<a class="anchor" id="ae7c7f2cb1b9912b810cee23da744f338"></a><!-- doxytag: member="iqtgui::CLogGuiComp::GetIcon" ref="ae7c7f2cb1b9912b810cee23da744f338" args="(istd::IInformation::InformationCategory mode)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual QIcon iqtgui::CLogGuiComp::GetIcon </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">istd::ILogger::MessageCategory</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a>&#160;</td>
           <td class="paramname"><em>mode</em></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>

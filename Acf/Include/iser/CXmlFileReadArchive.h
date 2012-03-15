@@ -59,7 +59,7 @@ public:
 protected:
 	// reimplemented (istd::ILogger)
 	virtual void DecorateMessage(
-				MessageCategory category,
+				istd::IInformation::InformationCategory category,
 				int id,
 				int flags,
 				QString& message,

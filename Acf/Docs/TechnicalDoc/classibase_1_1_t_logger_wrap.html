@@ -38,7 +38,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="ibase::TLoggerWrap" --><!-- doxytag: inherits="Base,ibase::ILoggable,istd::ILogger" -->
-<p>Class wrapper implementing interface <a class="el" href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info.">istd::ILogger</a> sending log messages over <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>.  
+<p>Class wrapper implementing interface <a class="el" href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info.">istd::ILogger</a> sending log messages over <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>.  
  <a href="classibase_1_1_t_logger_wrap.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>&gt;</code></p>
@@ -96,17 +96,17 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send error message to log.  <a href="#adf53e77edcb828d2e35db7ce2fde3781"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_wrap.html#addd6b9bd21a7c28c928ddc269d7e4432">SendCriticalMessage</a> (int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send critical message to log.  <a href="#addd6b9bd21a7c28c928ddc269d7e4432"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_wrap.html#ad70a95a9ee8ac499d3b17172017e9ada">IsLogConsumed</a> (const <a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a> *categoryPtr=NULL, const int *flagsPtr=NULL) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if any log message is consumed.  <a href="#ad70a95a9ee8ac499d3b17172017e9ada"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_wrap.html#a447257f9b266f3451efc4e187fb76e8c">SendLogMessage</a> (<a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a> category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send any message to log.  <a href="#a447257f9b266f3451efc4e187fb76e8c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_wrap.html#ab1908f7efbbe85a94ce37540366d4a16">IsLogConsumed</a> (const <a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> *categoryPtr=NULL, const int *flagsPtr=NULL) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if any log message is consumed.  <a href="#ab1908f7efbbe85a94ce37540366d4a16"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_wrap.html#a186f9b47aa440fdd2890c9c576361a02">SendLogMessage</a> (<a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send any message to log.  <a href="#a186f9b47aa440fdd2890c9c576361a02"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class Base&gt;<br/>
 class ibase::TLoggerWrap&lt; Base &gt;</h3>
 
-<p>Class wrapper implementing interface <a class="el" href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info.">istd::ILogger</a> sending log messages over <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>. </p>
-<p>Access to interface <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a> must be registered by user. To register it use interface <a class="el" href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the.">ibase::ILoggable</a> implemented by this wrapper. </p>
+<p>Class wrapper implementing interface <a class="el" href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info.">istd::ILogger</a> sending log messages over <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>. </p>
+<p>Access to interface <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a> must be registered by user. To register it use interface <a class="el" href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the.">ibase::ILoggable</a> implemented by this wrapper. </p>
 
 <p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00024">24</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -155,7 +155,7 @@ template&lt;class Base &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ad70a95a9ee8ac499d3b17172017e9ada"></a><!-- doxytag: member="ibase::TLoggerWrap::IsLogConsumed" ref="ad70a95a9ee8ac499d3b17172017e9ada" args="(const MessageCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const " -->
+<a class="anchor" id="ab1908f7efbbe85a94ce37540366d4a16"></a><!-- doxytag: member="ibase::TLoggerWrap::IsLogConsumed" ref="ab1908f7efbbe85a94ce37540366d4a16" args="(const istd::IInformation::InformationCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -164,7 +164,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classibase_1_1_t_logger_wrap.html">ibase::TLoggerWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::IsLogConsumed </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> *&#160;</td>
           <td class="paramname"><em>categoryPtr</em> = <code>NULL</code>, </td>
         </tr>
         <tr>
@@ -185,7 +185,7 @@ template&lt;class Base &gt; </div>
 <p>Check if any log message is consumed. </p>
 <p>Default implementation retuns false. </p>
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_i_logger.html#afa4a69c13c1765ce444ffaddca30df88">istd::ILogger</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_logger.html#aa2d219834352507b1192c91f901a4074">istd::ILogger</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00160">160</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
@@ -235,7 +235,7 @@ template&lt;class Base &gt; </div>
 <div class="memdoc">
 
 <p>Send critical message to log. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classibase_1_1_i_message.html" title="Common interface for an message.">ibase::IMessage</a> for message meaning documentation. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information.html" title="Common interface for class providing some basic information object.">istd::IInformation</a> for message meaning documentation. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>binary id identifying this message type for automatical processing. </td></tr>
@@ -247,7 +247,7 @@ template&lt;class Base &gt; </div>
 
 <p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00151">151</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
-<p>References <a class="el" href="_i_logger_8h_source.html#l00031">istd::ILogger::MC_CRITICAL</a>.</p>
+<p>References <a class="el" href="_i_information_8h_source.html#l00031">istd::IInformation::IC_CRITICAL</a>.</p>
 
 </div>
 </div>
@@ -291,7 +291,7 @@ template&lt;class Base &gt; </div>
 <div class="memdoc">
 
 <p>Send error message to log. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classibase_1_1_i_message.html" title="Common interface for an message.">ibase::IMessage</a> for message meaning documentation. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information.html" title="Common interface for class providing some basic information object.">istd::IInformation</a> for message meaning documentation. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>binary id identifying this message type for automatical processing. </td></tr>
@@ -303,7 +303,7 @@ template&lt;class Base &gt; </div>
 
 <p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00144">144</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
-<p>References <a class="el" href="_i_logger_8h_source.html#l00030">istd::ILogger::MC_ERROR</a>.</p>
+<p>References <a class="el" href="_i_information_8h_source.html#l00030">istd::IInformation::IC_ERROR</a>.</p>
 
 </div>
 </div>
@@ -347,7 +347,7 @@ template&lt;class Base &gt; </div>
 <div class="memdoc">
 
 <p>Send info message to log. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classibase_1_1_i_message.html" title="Common interface for an message.">ibase::IMessage</a> for message meaning documentation. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information.html" title="Common interface for class providing some basic information object.">istd::IInformation</a> for message meaning documentation. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>binary id identifying this message type for automatical processing. </td></tr>
@@ -359,11 +359,11 @@ template&lt;class Base &gt; </div>
 
 <p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00130">130</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
-<p>References <a class="el" href="_i_logger_8h_source.html#l00028">istd::ILogger::MC_INFO</a>.</p>
+<p>References <a class="el" href="_i_information_8h_source.html#l00028">istd::IInformation::IC_INFO</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a447257f9b266f3451efc4e187fb76e8c"></a><!-- doxytag: member="ibase::TLoggerWrap::SendLogMessage" ref="a447257f9b266f3451efc4e187fb76e8c" args="(MessageCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const " -->
+<a class="anchor" id="a186f9b47aa440fdd2890c9c576361a02"></a><!-- doxytag: member="ibase::TLoggerWrap::SendLogMessage" ref="a186f9b47aa440fdd2890c9c576361a02" args="(istd::IInformation::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -372,7 +372,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classibase_1_1_t_logger_wrap.html">ibase::TLoggerWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::SendLogMessage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a>&#160;</td>
           <td class="paramname"><em>category</em>, </td>
         </tr>
         <tr>
@@ -421,7 +421,7 @@ template&lt;class Base &gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if it was possible to send this message and it is 'consumed'. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_i_logger.html#a489ecfa55ba01bba6c648388651a8721">istd::ILogger</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_logger.html#a0dc098a83c45a8701a8a710764e009fd">istd::ILogger</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00169">169</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
@@ -471,7 +471,7 @@ template&lt;class Base &gt; </div>
 <div class="memdoc">
 
 <p>Send warning message to log. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classibase_1_1_i_message.html" title="Common interface for an message.">ibase::IMessage</a> for message meaning documentation. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information.html" title="Common interface for class providing some basic information object.">istd::IInformation</a> for message meaning documentation. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>binary id identifying this message type for automatical processing. </td></tr>
@@ -483,7 +483,7 @@ template&lt;class Base &gt; </div>
 
 <p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00137">137</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
-<p>References <a class="el" href="_i_logger_8h_source.html#l00029">istd::ILogger::MC_WARNING</a>.</p>
+<p>References <a class="el" href="_i_information_8h_source.html#l00029">istd::IInformation::IC_WARNING</a>.</p>
 
 </div>
 </div>

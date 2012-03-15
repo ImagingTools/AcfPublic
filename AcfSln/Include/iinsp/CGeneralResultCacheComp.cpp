@@ -28,14 +28,14 @@ namespace iinsp
 
 
 CGeneralResultCacheComp::CGeneralResultCacheComp()
-:	m_result(GR_CRITICAL)
+:	m_result(istd::IInformation::IC_CRITICAL)
 {
 }
 
 
 // reimplemented (iinsp::IGeneralResultProvider)
 
-IGeneralResultProvider::GeneralResult CGeneralResultCacheComp::GetGeneralResult() const
+istd::IInformation::InformationCategory CGeneralResultCacheComp::GetGeneralResult() const
 {
 	return m_result;
 }

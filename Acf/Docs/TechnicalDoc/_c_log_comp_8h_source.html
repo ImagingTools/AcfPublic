@@ -51,7 +51,7 @@
 <a name="l00027"></a><a class="code" href="classibase_1_1_c_log_comp.html#af3497bda2968a9ba9952b1083a9135fa">00027</a>        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_message_container_wrap.html" title="Basic implementation of a message container.">ibase::CMessageContainer</a> <a class="code" href="classibase_1_1_c_log_comp.html#af3497bda2968a9ba9952b1083a9135fa">BaseClass2</a>;
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classibase_1_1_c_log_comp.html" title="Data model of logging component.">CLogComp</a>);
-<a name="l00030"></a>00030               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>);
+<a name="l00030"></a>00030               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>);
 <a name="l00031"></a>00031               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_message_container.html" title="Common interface for an message container.">ibase::IMessageContainer</a>);
 <a name="l00032"></a>00032               I_ASSIGN(m_maxMessageCountAttrPtr, <span class="stringliteral">&quot;MaxMessageCount&quot;</span>, <span class="stringliteral">&quot;Maximal number of messages&quot;</span>, <span class="keyword">false</span>, 1000);
 <a name="l00033"></a>00033        I_END_COMPONENT;

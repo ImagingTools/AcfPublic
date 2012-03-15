@@ -47,8 +47,8 @@
 <a name="l00027"></a>00027        <a class="code" href="classibase_1_1_t_logger_wrap.html#aa209df371e25c11fa421aeb34cb221a4">TLoggerWrap</a>();
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029        <span class="comment">// reimplemented (ibase::ILoggable)</span>
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#a6f5c8250b60c1899ebdbbc5d43334ae0" title="Install log.">SetLogPtr</a>(<a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>* logPtr);
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>* <a class="code" href="classibase_1_1_t_logger_wrap.html#ac66e43fec85060af81a884d4d98c1cc6" title="Get log.">GetLogPtr</a>() <span class="keyword">const</span>;
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#a6f5c8250b60c1899ebdbbc5d43334ae0" title="Install log.">SetLogPtr</a>(<a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* logPtr);
+<a name="l00031"></a>00031        <span class="keyword">virtual</span> <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* <a class="code" href="classibase_1_1_t_logger_wrap.html#ac66e43fec85060af81a884d4d98c1cc6" title="Get log.">GetLogPtr</a>() <span class="keyword">const</span>;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033 <span class="keyword">protected</span>:
 <a name="l00041"></a>00041        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#ab956c62c01c4bb63500ae2c0b93fbd42" title="Send info message to log.">SendInfoMessage</a>(
@@ -76,18 +76,18 @@
 <a name="l00084"></a>00084                             <span class="keywordtype">int</span> flags = 0) <span class="keyword">const</span>;
 <a name="l00085"></a>00085 
 <a name="l00086"></a>00086        <span class="comment">// reimplemented (istd::ILogger)</span>
-<a name="l00087"></a>00087        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#ad70a95a9ee8ac499d3b17172017e9ada" title="Check if any log message is consumed.">IsLogConsumed</a>(
-<a name="l00088"></a>00088                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343" title="Category of message.">MessageCategory</a>* categoryPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
+<a name="l00087"></a>00087        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#ab1908f7efbbe85a94ce37540366d4a16" title="Check if any log message is consumed.">IsLogConsumed</a>(
+<a name="l00088"></a>00088                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1" title="Category of message.">istd::IInformation::InformationCategory</a>* categoryPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
 <a name="l00089"></a>00089                             <span class="keyword">const</span> <span class="keywordtype">int</span>* flagsPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
-<a name="l00090"></a>00090        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#a447257f9b266f3451efc4e187fb76e8c" title="Send any message to log.">SendLogMessage</a>(
-<a name="l00091"></a>00091                             <a class="code" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343" title="Category of message.">MessageCategory</a> category,
+<a name="l00090"></a>00090        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#a186f9b47aa440fdd2890c9c576361a02" title="Send any message to log.">SendLogMessage</a>(
+<a name="l00091"></a>00091                             <a class="code" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1" title="Category of message.">istd::IInformation::InformationCategory</a> category,
 <a name="l00092"></a>00092                             <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
 <a name="l00093"></a>00093                             <span class="keyword">const</span> QString&amp; message,
 <a name="l00094"></a>00094                             <span class="keyword">const</span> QString&amp; messageSource,
 <a name="l00095"></a>00095                             <span class="keywordtype">int</span> flags = 0) <span class="keyword">const</span>;
 <a name="l00096"></a>00096 
 <a name="l00097"></a>00097 <span class="keyword">private</span>:
-<a name="l00098"></a>00098        <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>* m_logPtr;
+<a name="l00098"></a>00098        <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* m_logPtr;
 <a name="l00099"></a>00099 };
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101 
@@ -103,14 +103,14 @@
 <a name="l00111"></a>00111 <span class="comment">// pseudo-reimplemented (ibase::ILoggable)</span>
 <a name="l00112"></a>00112 
 <a name="l00113"></a>00113 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00114"></a><a class="code" href="classibase_1_1_t_logger_wrap.html#a6f5c8250b60c1899ebdbbc5d43334ae0">00114</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#a6f5c8250b60c1899ebdbbc5d43334ae0" title="Install log.">TLoggerWrap&lt;Base&gt;::SetLogPtr</a>(<a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>* logPtr)
+<a name="l00114"></a><a class="code" href="classibase_1_1_t_logger_wrap.html#a6f5c8250b60c1899ebdbbc5d43334ae0">00114</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#a6f5c8250b60c1899ebdbbc5d43334ae0" title="Install log.">TLoggerWrap&lt;Base&gt;::SetLogPtr</a>(<a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* logPtr)
 <a name="l00115"></a>00115 {
 <a name="l00116"></a>00116        m_logPtr = logPtr;
 <a name="l00117"></a>00117 }
 <a name="l00118"></a>00118 
 <a name="l00119"></a>00119 
 <a name="l00120"></a>00120 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00121"></a><a class="code" href="classibase_1_1_t_logger_wrap.html#ac66e43fec85060af81a884d4d98c1cc6">00121</a> <span class="keyword">inline</span> <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>* <a class="code" href="classibase_1_1_t_logger_wrap.html#ac66e43fec85060af81a884d4d98c1cc6" title="Get log.">TLoggerWrap&lt;Base&gt;::GetLogPtr</a>()<span class="keyword"> const</span>
+<a name="l00121"></a><a class="code" href="classibase_1_1_t_logger_wrap.html#ac66e43fec85060af81a884d4d98c1cc6">00121</a> <span class="keyword">inline</span> <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* <a class="code" href="classibase_1_1_t_logger_wrap.html#ac66e43fec85060af81a884d4d98c1cc6" title="Get log.">TLoggerWrap&lt;Base&gt;::GetLogPtr</a>()<span class="keyword"> const</span>
 <a name="l00122"></a>00122 <span class="keyword"></span>{
 <a name="l00123"></a>00123        <span class="keywordflow">return</span> m_logPtr;
 <a name="l00124"></a>00124 }
@@ -121,36 +121,36 @@
 <a name="l00129"></a>00129 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
 <a name="l00130"></a><a class="code" href="classibase_1_1_t_logger_wrap.html#ab956c62c01c4bb63500ae2c0b93fbd42">00130</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#ab956c62c01c4bb63500ae2c0b93fbd42" title="Send info message to log.">TLoggerWrap&lt;Base&gt;::SendInfoMessage</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> QString&amp; message, <span class="keyword">const</span> QString&amp; messageSource, <span class="keywordtype">int</span> flags)<span class="keyword"> const</span>
 <a name="l00131"></a>00131 <span class="keyword"></span>{
-<a name="l00132"></a>00132        <span class="keywordflow">return</span> SendLogMessage(<a class="code" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343a697a4c99ce286f4e5b6dbe07d5c29c2f">istd::ILogger::MC_INFO</a>, <span class="keywordtype">id</span>, message, messageSource, flags);
+<a name="l00132"></a>00132        <span class="keywordflow">return</span> SendLogMessage(<a class="code" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1a6b57490d6b5ebf143a1f606762e91f5a">istd::IInformation::IC_INFO</a>, <span class="keywordtype">id</span>, message, messageSource, flags);
 <a name="l00133"></a>00133 }
 <a name="l00134"></a>00134 
 <a name="l00135"></a>00135 
 <a name="l00136"></a>00136 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
 <a name="l00137"></a><a class="code" href="classibase_1_1_t_logger_wrap.html#aa4afeae4985faa72eacf78b5d177b9fe">00137</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#aa4afeae4985faa72eacf78b5d177b9fe" title="Send warning message to log.">TLoggerWrap&lt;Base&gt;::SendWarningMessage</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> QString&amp; message, <span class="keyword">const</span> QString&amp; messageSource, <span class="keywordtype">int</span> flags)<span class="keyword"> const</span>
 <a name="l00138"></a>00138 <span class="keyword"></span>{
-<a name="l00139"></a>00139        <span class="keywordflow">return</span> SendLogMessage(<a class="code" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343a46b408c23a91c99eb5d9ac797d8de41f">istd::ILogger::MC_WARNING</a>, <span class="keywordtype">id</span>, message, messageSource, flags);
+<a name="l00139"></a>00139        <span class="keywordflow">return</span> SendLogMessage(<a class="code" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1aad612caa9c85ea93c7338ca090946135">istd::IInformation::IC_WARNING</a>, <span class="keywordtype">id</span>, message, messageSource, flags);
 <a name="l00140"></a>00140 }
 <a name="l00141"></a>00141 
 <a name="l00142"></a>00142 
 <a name="l00143"></a>00143 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
 <a name="l00144"></a><a class="code" href="classibase_1_1_t_logger_wrap.html#adf53e77edcb828d2e35db7ce2fde3781">00144</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#adf53e77edcb828d2e35db7ce2fde3781" title="Send error message to log.">TLoggerWrap&lt;Base&gt;::SendErrorMessage</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> QString&amp; message, <span class="keyword">const</span> QString&amp; messageSource, <span class="keywordtype">int</span> flags)<span class="keyword"> const</span>
 <a name="l00145"></a>00145 <span class="keyword"></span>{
-<a name="l00146"></a>00146        <span class="keywordflow">return</span> SendLogMessage(<a class="code" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343af7499b0e9d132761c3242f0eb5c52eee">istd::ILogger::MC_ERROR</a>, <span class="keywordtype">id</span>, message, messageSource, flags);
+<a name="l00146"></a>00146        <span class="keywordflow">return</span> SendLogMessage(<a class="code" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1ad1825893758c8d737c41278a9a4316f2">istd::IInformation::IC_ERROR</a>, <span class="keywordtype">id</span>, message, messageSource, flags);
 <a name="l00147"></a>00147 }
 <a name="l00148"></a>00148 
 <a name="l00149"></a>00149 
 <a name="l00150"></a>00150 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
 <a name="l00151"></a><a class="code" href="classibase_1_1_t_logger_wrap.html#addd6b9bd21a7c28c928ddc269d7e4432">00151</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#addd6b9bd21a7c28c928ddc269d7e4432" title="Send critical message to log.">TLoggerWrap&lt;Base&gt;::SendCriticalMessage</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> QString&amp; message, <span class="keyword">const</span> QString&amp; messageSource, <span class="keywordtype">int</span> flags)<span class="keyword"> const</span>
 <a name="l00152"></a>00152 <span class="keyword"></span>{
-<a name="l00153"></a>00153        <span class="keywordflow">return</span> SendLogMessage(<a class="code" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343a545adf09495051fa6ada659716284f23">istd::ILogger::MC_CRITICAL</a>, <span class="keywordtype">id</span>, message, messageSource, flags);
+<a name="l00153"></a>00153        <span class="keywordflow">return</span> SendLogMessage(<a class="code" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1ad180f3caf459bd34992c9497e63738f1">istd::IInformation::IC_CRITICAL</a>, <span class="keywordtype">id</span>, message, messageSource, flags);
 <a name="l00154"></a>00154 }
 <a name="l00155"></a>00155 
 <a name="l00156"></a>00156 
 <a name="l00157"></a>00157 <span class="comment">// reimplemented (istd::ILogger)</span>
 <a name="l00158"></a>00158 
 <a name="l00159"></a>00159 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00160"></a><a class="code" href="classibase_1_1_t_logger_wrap.html#ad70a95a9ee8ac499d3b17172017e9ada">00160</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#ad70a95a9ee8ac499d3b17172017e9ada" title="Check if any log message is consumed.">TLoggerWrap&lt;Base&gt;::IsLogConsumed</a>(
-<a name="l00161"></a>00161                      <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343" title="Category of message.">MessageCategory</a>* <span class="comment">/*categoryPtr*/</span>,
+<a name="l00160"></a><a class="code" href="classibase_1_1_t_logger_wrap.html#ab1908f7efbbe85a94ce37540366d4a16">00160</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#ab1908f7efbbe85a94ce37540366d4a16" title="Check if any log message is consumed.">TLoggerWrap&lt;Base&gt;::IsLogConsumed</a>(
+<a name="l00161"></a>00161                      <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1" title="Category of message.">istd::IInformation::InformationCategory</a>* <span class="comment">/*categoryPtr*/</span>,
 <a name="l00162"></a>00162                      <span class="keyword">const</span> <span class="keywordtype">int</span>* <span class="comment">/*flagsPtr*/</span>)<span class="keyword"> const</span>
 <a name="l00163"></a>00163 <span class="keyword"></span>{
 <a name="l00164"></a>00164        <span class="keywordflow">return</span> (m_logPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
@@ -158,8 +158,8 @@
 <a name="l00166"></a>00166 
 <a name="l00167"></a>00167 
 <a name="l00168"></a>00168 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00169"></a><a class="code" href="classibase_1_1_t_logger_wrap.html#a447257f9b266f3451efc4e187fb76e8c">00169</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#a447257f9b266f3451efc4e187fb76e8c" title="Send any message to log.">TLoggerWrap&lt;Base&gt;::SendLogMessage</a>(
-<a name="l00170"></a>00170                      <a class="code" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343" title="Category of message.">istd::ILogger::MessageCategory</a> category,
+<a name="l00169"></a><a class="code" href="classibase_1_1_t_logger_wrap.html#a186f9b47aa440fdd2890c9c576361a02">00169</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_logger_wrap.html#a186f9b47aa440fdd2890c9c576361a02" title="Send any message to log.">TLoggerWrap&lt;Base&gt;::SendLogMessage</a>(
+<a name="l00170"></a>00170                      <a class="code" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1" title="Category of message.">istd::IInformation::InformationCategory</a> category,
 <a name="l00171"></a>00171                      <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
 <a name="l00172"></a>00172                      <span class="keyword">const</span> QString&amp; message,
 <a name="l00173"></a>00173                      <span class="keyword">const</span> QString&amp; messageSource,
@@ -171,7 +171,7 @@
 <a name="l00179"></a>00179 
 <a name="l00180"></a>00180               DecorateMessage(category, <span class="keywordtype">id</span>, flags, correctedMessage, correctedMessageSource);
 <a name="l00181"></a>00181 
-<a name="l00182"></a>00182               m_logPtr-&gt;AddMessage(<a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">istd::TSmartPtr&lt;const IMessage&gt;</a>(<span class="keyword">new</span> <a class="code" href="classibase_1_1_c_message.html" title="Basic implementation of the ibase::IMessage interface.">ibase::CMessage</a>(category, <span class="keywordtype">id</span>, correctedMessage, correctedMessageSource, flags)));
+<a name="l00182"></a>00182               m_logPtr-&gt;AddMessage(<a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">istd::TSmartPtr&lt;const istd::IInformation&gt;</a>(<span class="keyword">new</span> <a class="code" href="classibase_1_1_c_message.html" title="Basic implementation of the istd::IInformation interface.">ibase::CMessage</a>(category, <span class="keywordtype">id</span>, correctedMessage, correctedMessageSource, flags)));
 <a name="l00183"></a>00183        
 <a name="l00184"></a>00184               <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00185"></a>00185        }

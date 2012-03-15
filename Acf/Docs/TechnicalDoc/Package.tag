@@ -512,10 +512,8 @@
     <name>CMessage.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_message_8h</filename>
-    <includes id="_i_logger_8h" name="ILogger.h" local="yes" imported="no">istd/ILogger.h</includes>
-    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
-    <includes id="_c_simple_date_time_8h" name="CSimpleDateTime.h" local="yes" imported="no">isys/CSimpleDateTime.h</includes>
-    <includes id="_i_message_8h" name="IMessage.h" local="yes" imported="no">ibase/IMessage.h</includes>
+    <includes id="_i_information_8h" name="IInformation.h" local="yes" imported="no">istd/IInformation.h</includes>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <class kind="class">ibase::CMessage</class>
     <namespace>ibase</namespace>
   </compound>
@@ -725,23 +723,12 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
-    <name>IMessage.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_i_message_8h</filename>
-    <includes id="_i_logger_8h" name="ILogger.h" local="yes" imported="no">istd/ILogger.h</includes>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <includes id="ibase_8h" name="ibase.h" local="yes" imported="no">ibase/ibase.h</includes>
-    <class kind="class">ibase::IMessage</class>
-    <namespace>isys</namespace>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
     <name>IMessageConsumer.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_i_message_consumer_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_i_information_8h" name="IInformation.h" local="yes" imported="no">istd/IInformation.h</includes>
     <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
-    <includes id="_i_message_8h" name="IMessage.h" local="yes" imported="no">ibase/IMessage.h</includes>
     <class kind="class">ibase::IMessageConsumer</class>
     <namespace>ibase</namespace>
   </compound>
@@ -749,9 +736,9 @@
     <name>IMessageContainer.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_i_message_container_8h</filename>
+    <includes id="_i_information_8h" name="IInformation.h" local="yes" imported="no">istd/IInformation.h</includes>
     <includes id="_t_i_hierarchical_8h" name="TIHierarchical.h" local="yes" imported="no">istd/TIHierarchical.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <includes id="_i_message_8h" name="IMessage.h" local="yes" imported="no">ibase/IMessage.h</includes>
     <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ibase/IMessageConsumer.h</includes>
     <class kind="class">ibase::IMessageContainer</class>
     <namespace>ibase</namespace>
@@ -896,10 +883,10 @@
     <name>TMessageContainerWrap.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_t_message_container_wrap_8h</filename>
+    <includes id="_i_information_8h" name="IInformation.h" local="yes" imported="no">istd/IInformation.h</includes>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_i_message_8h" name="IMessage.h" local="yes" imported="no">ibase/IMessage.h</includes>
     <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ibase/IMessageContainer.h</includes>
     <includes id="_t_hierarchical_base_8h" name="THierarchicalBase.h" local="yes" imported="no">ibase/THierarchicalBase.h</includes>
     <class kind="class">ibase::TMessageContainerWrap</class>
@@ -5366,6 +5353,14 @@
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
+    <name>IInformation.h</name>
+    <path>C:/Temp/Acf/Include/istd/</path>
+    <filename>_i_information_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <class kind="class">istd::IInformation</class>
+    <namespace>istd</namespace>
+  </compound>
+  <compound kind="file">
     <name>ILocalizer.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_i_localizer_8h</filename>
@@ -5378,6 +5373,7 @@
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_i_logger_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_i_information_8h" name="IInformation.h" local="yes" imported="no">istd/IInformation.h</includes>
     <class kind="class">istd::ILogger</class>
     <namespace>istd</namespace>
   </compound>
@@ -5385,6 +5381,7 @@
     <name>IPolymorphic.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_i_polymorphic_8h</filename>
+    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <class kind="class">istd::IPolymorphic</class>
     <namespace>istd</namespace>
   </compound>
@@ -11371,7 +11368,6 @@
     <class kind="class">ibase::IFileConvertCopy</class>
     <class kind="class">ibase::IFileListProvider</class>
     <class kind="class">ibase::ILoggable</class>
-    <class kind="class">ibase::IMessage</class>
     <class kind="class">ibase::IMessageConsumer</class>
     <class kind="class">ibase::IMessageContainer</class>
     <class kind="class">ibase::IObjectQueue</class>
@@ -11791,7 +11787,8 @@
   <compound kind="class">
     <name>ibase::CMessage</name>
     <filename>classibase_1_1_c_message.html</filename>
-    <base virtualness="virtual">ibase::IMessage</base>
+    <base virtualness="virtual">istd::IInformation</base>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function">
       <type></type>
       <name>CMessage</name>
@@ -11803,15 +11800,15 @@
       <type></type>
       <name>CMessage</name>
       <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>ab02e6ab29ec741ba8e2a3dac52646f47</anchor>
-      <arglist>(istd::ILogger::MessageCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0)</arglist>
+      <anchor>abf295ce1c8e500e01120985ddc230510</anchor>
+      <arglist>(istd::IInformation::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetCategory</name>
       <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a5cee8d6e9e706e5d87df0da0f338b58e</anchor>
-      <arglist>(istd::ILogger::MessageCategory category)</arglist>
+      <anchor>a50969820ae95d0dc6196f88f81163cbe</anchor>
+      <arglist>(istd::IInformation::InformationCategory category)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -11828,31 +11825,31 @@
       <arglist>(const QString &amp;source)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const isys::IDateTime &amp;</type>
+      <type>virtual QDateTime</type>
       <name>GetTimeStamp</name>
       <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>ac5ceb049c8117b9a578b439aefa10201</anchor>
+      <anchor>a8a94e20e4c25f6a2480cf952f6b313fc</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::ILogger::MessageCategory</type>
-      <name>GetCategory</name>
+      <type>virtual InformationCategory</type>
+      <name>GetInformationCategory</name>
       <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>ab522a40d7dc6a900e1b34e422e9bf078</anchor>
+      <anchor>a784847d5f2ed287f47d3dc481c68f19e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetId</name>
+      <name>GetInformationId</name>
       <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a9ec1d933b2e4dff75c629c64846ad29d</anchor>
+      <anchor>a51558dcbf12955d02fb22c4ff7d9591c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
-      <name>GetText</name>
+      <name>GetInformationDescription</name>
       <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a6bf9cabde30ea2b43c732332bd53d112</anchor>
+      <anchor>a98d8823175baad2e2eee6202a4829bf7</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11876,18 +11873,11 @@
       <anchor>a2cfd9251b94e5f9a6fd5b4bfd281bb19</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
-    <member kind="typedef" protection="protected">
-      <type>istd::TSmartPtr&lt; isys::IDateTime &gt;</type>
-      <name>TimePtr</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a2676ddc340aaf455cec1ea7473795b48</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="variable" protection="protected">
-      <type>istd::ILogger::MessageCategory</type>
+      <type>istd::IInformation::InformationCategory</type>
       <name>m_category</name>
       <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>adf7fd0d429757c543e2909e26e0e42ba</anchor>
+      <anchor>a3ae15fe15868d6c3b162ae2af65e2e5b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -11919,10 +11909,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>TimePtr</type>
-      <name>m_timePtr</name>
+      <type>QDateTime</type>
+      <name>m_timeStamp</name>
       <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>abb3a9d8f8c020158151ad00ffc2ec448</anchor>
+      <anchor>a296bd9e63e88fa79f2f691319de5f84e</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -12425,8 +12415,8 @@
       <type>virtual bool</type>
       <name>IsMessageSupported</name>
       <anchorfile>classibase_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>aaa416a51423a858735f4d61a2d2ee598</anchor>
-      <arglist>(int messageCategory=-1, int messageId=-1, const IMessage *messagePtr=NULL) const </arglist>
+      <anchor>a1afe84ff8614bc78e87c9ebe9c6cc37b</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformation *messagePtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -12439,15 +12429,15 @@
       <type>virtual void</type>
       <name>WriteMessageToStream</name>
       <anchorfile>classibase_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a1e58023a198a0433e4e3e911839d241c</anchor>
-      <arglist>(const ibase::IMessage &amp;message)</arglist>
+      <anchor>a7f4fdc988215a65e8c11eb107afb3a3f</anchor>
+      <arglist>(const istd::IInformation &amp;message)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QString</type>
       <name>GenerateMessageText</name>
       <anchorfile>classibase_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a746111e7f737f5acd31578b0d58907fe</anchor>
-      <arglist>(const ibase::IMessage &amp;message) const </arglist>
+      <anchor>a47b4b97eb597676db226dc87254f9756</anchor>
+      <arglist>(const istd::IInformation &amp;message) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
@@ -12961,69 +12951,22 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ibase::IMessage</name>
-    <filename>classibase_1_1_i_message.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual const isys::IDateTime &amp;</type>
-      <name>GetTimeStamp</name>
-      <anchorfile>classibase_1_1_i_message.html</anchorfile>
-      <anchor>a100eb7aa6b0dcb377061df9f9ab4a210</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual istd::ILogger::MessageCategory</type>
-      <name>GetCategory</name>
-      <anchorfile>classibase_1_1_i_message.html</anchorfile>
-      <anchor>ac419210d5c43cd33ecf8f64d51e4219d</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetId</name>
-      <anchorfile>classibase_1_1_i_message.html</anchorfile>
-      <anchor>ac604576a4563bae847ecda3cfed559f2</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetText</name>
-      <anchorfile>classibase_1_1_i_message.html</anchorfile>
-      <anchor>a0e3e35354732321ef354b7aec1a09b14</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetSource</name>
-      <anchorfile>classibase_1_1_i_message.html</anchorfile>
-      <anchor>a9a5c29196f7528265ca186e38d61fb38</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetFlags</name>
-      <anchorfile>classibase_1_1_i_message.html</anchorfile>
-      <anchor>a47acc83f6341e3cbd3e341405b61e733</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ibase::IMessageConsumer</name>
     <filename>classibase_1_1_i_message_consumer.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="typedef">
-      <type>istd::TSmartPtr&lt; const IMessage &gt;</type>
+      <type>istd::TSmartPtr&lt; const istd::IInformation &gt;</type>
       <name>MessagePtr</name>
       <anchorfile>classibase_1_1_i_message_consumer.html</anchorfile>
-      <anchor>a3ce48ac791b8d674f4b8b35de07b7948</anchor>
+      <anchor>a16386c008e15580f1274fdbab6498ded</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsMessageSupported</name>
       <anchorfile>classibase_1_1_i_message_consumer.html</anchorfile>
-      <anchor>ab2c6d4762fa922d9ddbbe7b552adec6b</anchor>
-      <arglist>(int messageCategory=-1, int messageId=-1, const IMessage *messagePtr=NULL) const =0</arglist>
+      <anchor>a7ea687c817844fbc1b2e31526ca592a2</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformation *messagePtr=NULL) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -13638,15 +13581,15 @@
       <type>virtual bool</type>
       <name>IsLogConsumed</name>
       <anchorfile>classibase_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
-      <anchor>ad5cb195ee1e9bbf0c8e57b8bc2b4b67f</anchor>
-      <arglist>(const MessageCategory *, const int *flagsPtr=NULL) const </arglist>
+      <anchor>a8e254d0207f79fc0d1c280d88182ec76</anchor>
+      <arglist>(const istd::IInformation::InformationCategory *, const int *flagsPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>SendLogMessage</name>
       <anchorfile>classibase_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
-      <anchor>a59a2b0291c17f8f0e13fcb6705993c5d</anchor>
-      <arglist>(MessageCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
+      <anchor>aa30d9cb97c14af660cd4f68333ce3e49</anchor>
+      <arglist>(istd::IInformation::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13670,15 +13613,15 @@
       <type>virtual bool</type>
       <name>IsLogConsumed</name>
       <anchorfile>classibase_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
-      <anchor>ab8baad3cd4a40b20b8e1c660ded59f1c</anchor>
-      <arglist>(const MessageCategory *, const int *flagsPtr=NULL) const </arglist>
+      <anchor>a531f4fd00e5f16bb9a3ddea3c605b08c</anchor>
+      <arglist>(const istd::IInformation::InformationCategory *, const int *flagsPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>SendLogMessage</name>
       <anchorfile>classibase_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
-      <anchor>a55a843decd2958de7f2308662f24dd0f</anchor>
-      <arglist>(MessageCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
+      <anchor>a4e5fea21ba56b649b1a107fb2de2d859</anchor>
+      <arglist>(istd::IInformation::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13774,8 +13717,8 @@
       <type>virtual void</type>
       <name>DecorateMessage</name>
       <anchorfile>classibase_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a944c2950ba2fc96c22648d8c250dd2be</anchor>
-      <arglist>(istd::ILogger::MessageCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+      <anchor>a99eb35689d537aa5b76fb1b80bde3909</anchor>
+      <arglist>(istd::IInformation::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -13845,15 +13788,15 @@
       <type>virtual bool</type>
       <name>IsLogConsumed</name>
       <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ad70a95a9ee8ac499d3b17172017e9ada</anchor>
-      <arglist>(const MessageCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const </arglist>
+      <anchor>ab1908f7efbbe85a94ce37540366d4a16</anchor>
+      <arglist>(const istd::IInformation::InformationCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>SendLogMessage</name>
       <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a447257f9b266f3451efc4e187fb76e8c</anchor>
-      <arglist>(MessageCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
+      <anchor>a186f9b47aa440fdd2890c9c576361a02</anchor>
+      <arglist>(istd::IInformation::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13935,8 +13878,8 @@
       <type>virtual bool</type>
       <name>IsMessageSupported</name>
       <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a943f499219d29017d561ab8b8c05885c</anchor>
-      <arglist>(int messageCategory=-1, int messageId=-1, const IMessage *messagePtr=NULL) const </arglist>
+      <anchor>aa1632451a1f784c75f9fd97b4615b41b</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformation *messagePtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -17385,8 +17328,8 @@
       <type>virtual bool</type>
       <name>IsMessageSupported</name>
       <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html</anchorfile>
-      <anchor>a9ea674016746ce00b4fcd3faed652034</anchor>
-      <arglist>(int messageCategory=-1, int messageId=-1, const ibase::IMessage *messagePtr=NULL) const </arglist>
+      <anchor>aab742bf7896dcdda297a053786cd0b25</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformation *messagePtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -37942,8 +37885,8 @@
       <type>virtual QTreeWidgetItem *</type>
       <name>CreateGuiItem</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ad71fa6cabc06d472657c68625fec9fa2</anchor>
-      <arglist>(const ibase::IMessage &amp;message)</arglist>
+      <anchor>a25641bce26e5613c70b22df2764b3810</anchor>
+      <arglist>(const istd::IInformation &amp;message)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -37956,8 +37899,8 @@
       <type>virtual QIcon</type>
       <name>GetIcon</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a1ab4405f0e140cbcb77e89e8f9cdcb4c</anchor>
-      <arglist>(istd::ILogger::MessageCategory mode)</arglist>
+      <anchor>ae7c7f2cb1b9912b810cee23da744f338</anchor>
+      <arglist>(istd::IInformation::InformationCategory mode)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -41084,8 +41027,8 @@
       <type>virtual void</type>
       <name>DecorateMessage</name>
       <anchorfile>classiser_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>a11d0a69713f1c905a8d8732d66745684</anchor>
-      <arglist>(MessageCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+      <anchor>a71cd49dc5155b91c74f099a8d3719686</anchor>
+      <arglist>(istd::IInformation::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -41957,8 +41900,8 @@
       <type>virtual void</type>
       <name>DecorateMessage</name>
       <anchorfile>classiser_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a563696933460fa16a84c8a0f60ff86bf</anchor>
-      <arglist>(MessageCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+      <anchor>ad7f18837aa04ae51675f9cf0fd2389c5</anchor>
+      <arglist>(istd::IInformation::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -42797,8 +42740,8 @@
       <type>virtual void</type>
       <name>DecorateMessage</name>
       <anchorfile>classiser_1_1_t_xml_stream_read_archive_base.html</anchorfile>
-      <anchor>a174d911d0c1827ed531e3a00d75e5dac</anchor>
-      <arglist>(MessageCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+      <anchor>a886a5d8acc02d641c36417f76ceca696</anchor>
+      <arglist>(istd::IInformation::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>StreamClass</type>
@@ -42888,6 +42831,7 @@
     <class kind="class">istd::IChangeDelegator</class>
     <class kind="class">istd::IContainerInfo</class>
     <class kind="class">istd::IFactoryInfo</class>
+    <class kind="class">istd::IInformation</class>
     <class kind="class">istd::ILocalizer</class>
     <class kind="class">istd::ILogger</class>
     <class kind="class">istd::IPolymorphic</class>
@@ -44325,6 +44269,107 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>istd::IInformation</name>
+    <filename>classistd_1_1_i_information.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="enumeration">
+      <name>InformationCategory</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>afb1da3c08e1f6c8923c820000b2da2e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IC_INFO</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>afb1da3c08e1f6c8923c820000b2da2e1a6b57490d6b5ebf143a1f606762e91f5a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IC_WARNING</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>afb1da3c08e1f6c8923c820000b2da2e1aad612caa9c85ea93c7338ca090946135</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IC_ERROR</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>afb1da3c08e1f6c8923c820000b2da2e1ad1825893758c8d737c41278a9a4316f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IC_CRITICAL</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>afb1da3c08e1f6c8923c820000b2da2e1ad180f3caf459bd34992c9497e63738f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>InformationTypeFlags</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>a2e3468f0329b1460e7828ea9fc125996</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ITF_DEBUG</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>a2e3468f0329b1460e7828ea9fc125996a9c609186298c6affbc44c72490b06f2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ITF_SYSTEM</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>a2e3468f0329b1460e7828ea9fc125996a8d6d1579b54648d1062b41984040a80b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ITF_USER</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>a2e3468f0329b1460e7828ea9fc125996a9f08c0fb29fca542ec6f3355537f6a4b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QDateTime</type>
+      <name>GetTimeStamp</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>ae83d6db7abeb1a09327080adfbbe3b06</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::IInformation::InformationCategory</type>
+      <name>GetInformationCategory</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>a8ed3328b28bd6aa7dd27c62fecae4b8b</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetInformationId</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>a43ce6d76fb597e4d58d469853fe5b320</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetInformationDescription</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>ab9947b71191ad594f2b62e4b9902dc09</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetSource</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>a229955c5ded1e2948e362aef83832f26</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetFlags</name>
+      <anchorfile>classistd_1_1_i_information.html</anchorfile>
+      <anchor>af08b1a0c3e43d36cc826da870afc0cd4</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>istd::ILocalizer</name>
     <filename>classistd_1_1_i_localizer.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -44340,80 +44385,26 @@
     <name>istd::ILogger</name>
     <filename>classistd_1_1_i_logger.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>MessageCategory</name>
-      <anchorfile>classistd_1_1_i_logger.html</anchorfile>
-      <anchor>a59b8f966e065927a722418a20bc42343</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MC_INFO</name>
-      <anchorfile>classistd_1_1_i_logger.html</anchorfile>
-      <anchor>a59b8f966e065927a722418a20bc42343a697a4c99ce286f4e5b6dbe07d5c29c2f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MC_WARNING</name>
-      <anchorfile>classistd_1_1_i_logger.html</anchorfile>
-      <anchor>a59b8f966e065927a722418a20bc42343a46b408c23a91c99eb5d9ac797d8de41f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MC_ERROR</name>
-      <anchorfile>classistd_1_1_i_logger.html</anchorfile>
-      <anchor>a59b8f966e065927a722418a20bc42343af7499b0e9d132761c3242f0eb5c52eee</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MC_CRITICAL</name>
-      <anchorfile>classistd_1_1_i_logger.html</anchorfile>
-      <anchor>a59b8f966e065927a722418a20bc42343a545adf09495051fa6ada659716284f23</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>MessageFlags</name>
-      <anchorfile>classistd_1_1_i_logger.html</anchorfile>
-      <anchor>a1a7d38841752e552738984bbee3b2912</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MF_DEBUG</name>
-      <anchorfile>classistd_1_1_i_logger.html</anchorfile>
-      <anchor>a1a7d38841752e552738984bbee3b2912a02bb8dc76cea731e32ab9531650b4c3b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MF_SYSTEM</name>
-      <anchorfile>classistd_1_1_i_logger.html</anchorfile>
-      <anchor>a1a7d38841752e552738984bbee3b2912a116c04a266fad09a283a76bb7cdea423</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MF_USER</name>
-      <anchorfile>classistd_1_1_i_logger.html</anchorfile>
-      <anchor>a1a7d38841752e552738984bbee3b2912a59543ab43727fc82010a51a25a95ca86</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsLogConsumed</name>
       <anchorfile>classistd_1_1_i_logger.html</anchorfile>
-      <anchor>afa4a69c13c1765ce444ffaddca30df88</anchor>
-      <arglist>(const MessageCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const </arglist>
+      <anchor>aa2d219834352507b1192c91f901a4074</anchor>
+      <arglist>(const IInformation::InformationCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const </arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SendLogMessage</name>
       <anchorfile>classistd_1_1_i_logger.html</anchorfile>
-      <anchor>a489ecfa55ba01bba6c648388651a8721</anchor>
-      <arglist>(MessageCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
+      <anchor>a0dc098a83c45a8701a8a710764e009fd</anchor>
+      <arglist>(IInformation::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>DecorateMessage</name>
       <anchorfile>classistd_1_1_i_logger.html</anchorfile>
-      <anchor>a58a320e5da108df1b481fb66948c8593</anchor>
-      <arglist>(MessageCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+      <anchor>aa6cfc1f34aaa724b22d96efc6ad74f89</anchor>
+      <arglist>(IInformation::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45029,15 +45020,15 @@
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classistd_1_1_t_change_binder.html</anchorfile>
-      <anchor>a1e7618a528226aac5afcda4d0d98f60f</anchor>
-      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr=NULL)</arglist>
+      <anchor>a8cf1308596d3b85af30dac1ed44365c4</anchor>
+      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classistd_1_1_t_change_binder.html</anchorfile>
-      <anchor>a1872440622c281fff3753320519ca873</anchor>
-      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr=NULL)</arglist>
+      <anchor>a07baa40bf79b972cea6ac2cd151debfd</anchor>
+      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr=0)</arglist>
     </member>
   </compound>
   <compound kind="class">

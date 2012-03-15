@@ -67,14 +67,14 @@
 <a name="l00058"></a>00058                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
 <a name="l00059"></a>00059                             <span class="keywordtype">bool</span> ignoreUndef,
 <a name="l00060"></a>00060                             <span class="keywordtype">bool</span> allReasons,
-<a name="l00061"></a>00061                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span> = 0;
+<a name="l00061"></a>00061                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span> = 0;
 <a name="l00062"></a>00062 
 <a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html#ae82dcc68bd6a730d9b330929c385778d" title="Check if element is valid.">IsElementValid</a>(
 <a name="l00072"></a>00072                             <span class="keyword">const</span> std::string&amp; elementName,
 <a name="l00073"></a>00073                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
 <a name="l00074"></a>00074                             <span class="keywordtype">bool</span> ignoreUndef,
 <a name="l00075"></a>00075                             <span class="keywordtype">bool</span> allReasons,
-<a name="l00076"></a>00076                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span> = 0;
+<a name="l00076"></a>00076                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span> = 0;
 <a name="l00077"></a>00077 
 <a name="l00087"></a>00087        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html#a1a92226a697d9aebb07a9d91f5d7e8be" title="Check if attribute is valid.">IsAttributeValid</a>(
 <a name="l00088"></a>00088                             <span class="keyword">const</span> std::string&amp; attributeName,
@@ -82,7 +82,7 @@
 <a name="l00090"></a>00090                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
 <a name="l00091"></a>00091                             <span class="keywordtype">bool</span> ignoreUndef,
 <a name="l00092"></a>00092                             <span class="keywordtype">bool</span> allReasons,
-<a name="l00093"></a>00093                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span> = 0;
+<a name="l00093"></a>00093                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span> = 0;
 <a name="l00097"></a>00097        <span class="keyword">virtual</span> QIcon <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html#adfe758e659238dc37492c437179d8c31" title="Get icon of component.">GetComponentIcon</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address) <span class="keyword">const</span> = 0;
 <a name="l00098"></a>00098 };
 <a name="l00099"></a>00099 

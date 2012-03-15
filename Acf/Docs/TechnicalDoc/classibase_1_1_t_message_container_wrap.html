@@ -78,14 +78,14 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#aaa613df1d9dcdbcc621e9badc899fe46">GetWorstCategory</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classibase_1_1_i_message_container.html#aca3800f565c96e50a48cd06cac3d304c">IMessageContainer::Messages</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#a783de0b2ef703a6e00d0f860383f3147">GetMessages</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#a0e6b48fc72490f4a02a98e3e171ca062">ClearMessages</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#a943f499219d29017d561ab8b8c05885c">IsMessageSupported</a> (int messageCategory=-1, int messageId=-1, const <a class="el" href="classibase_1_1_i_message.html">IMessage</a> *messagePtr=NULL) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#aeaa3bd93b11e51c3376f79699a04dc2a">AddMessage</a> (const <a class="el" href="classibase_1_1_i_message_consumer.html#a3ce48ac791b8d674f4b8b35de07b7948">IMessageConsumer::MessagePtr</a> &amp;messagePtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#aa1632451a1f784c75f9fd97b4615b41b">IsMessageSupported</a> (int messageCategory=-1, int messageId=-1, const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> *messagePtr=NULL) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#aeaa3bd93b11e51c3376f79699a04dc2a">AddMessage</a> (const <a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">IMessageConsumer::MessagePtr</a> &amp;messagePtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#a4bd90c7e0c8244ef0fea34bf7ec08ede">GetChildsCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classibase_1_1_i_message_container.html">IMessageContainer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#a6ac518f8a9f2415dc794903bb6acb9b2">GetChild</a> (int index) const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef std::list<br class="typebreak"/>
-&lt; <a class="el" href="classibase_1_1_i_message_consumer.html#a3ce48ac791b8d674f4b8b35de07b7948">IMessageContainer::MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#aef90c2e7302c0ca0f3d1478edce66722">MessageList</a></td></tr>
+&lt; <a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">IMessageContainer::MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#aef90c2e7302c0ca0f3d1478edce66722">MessageList</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classibase_1_1_t_message_container_wrap.html#aef90c2e7302c0ca0f3d1478edce66722">MessageList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#ad489aa402d1186a09b86033faad396c6">m_messages</a></td></tr>
@@ -127,7 +127,7 @@ template&lt;class Base &gt; </div>
 template&lt;class Base &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::list&lt;<a class="el" href="classibase_1_1_i_message_consumer.html#a3ce48ac791b8d674f4b8b35de07b7948">IMessageContainer::MessagePtr</a>&gt; <a class="el" href="classibase_1_1_t_message_container_wrap.html">ibase::TMessageContainerWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::<a class="el" href="classibase_1_1_t_message_container_wrap.html#aef90c2e7302c0ca0f3d1478edce66722">MessageList</a><code> [protected]</code></td>
+          <td class="memname">typedef std::list&lt;<a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">IMessageContainer::MessagePtr</a>&gt; <a class="el" href="classibase_1_1_t_message_container_wrap.html">ibase::TMessageContainerWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::<a class="el" href="classibase_1_1_t_message_container_wrap.html#aef90c2e7302c0ca0f3d1478edce66722">MessageList</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -211,7 +211,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classibase_1_1_t_message_container_wrap.html">ibase::TMessageContainerWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::AddMessage </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classibase_1_1_i_message_consumer.html#a3ce48ac791b8d674f4b8b35de07b7948">IMessageConsumer::MessagePtr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">IMessageConsumer::MessagePtr</a> &amp;&#160;</td>
           <td class="paramname"><em>messagePtr</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -219,7 +219,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00230">230</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00232">232</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
 
 <p>References <a class="el" href="_i_message_container_8h_source.html#l00032">ibase::IMessageContainer::CF_MESSAGE_ADDED</a>, <a class="el" href="_i_message_container_8h_source.html#l00033">ibase::IMessageContainer::CF_MESSAGE_REMOVED</a>, <a class="el" href="_t_trans_ptr_8h_source.html#l00129">istd::TTransPtr&lt; Type &gt;::GetPtr()</a>, <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>, and <a class="el" href="_t_trans_ptr_8h_source.html#l00122">istd::TTransPtr&lt; Type &gt;::IsValid()</a>.</p>
 
@@ -241,7 +241,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00275">275</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00277">277</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
 
 <p>References <a class="el" href="_i_message_container_8h_source.html#l00034">ibase::IMessageContainer::CF_RESET</a>.</p>
 
@@ -266,7 +266,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classibase_1_1_t_hierarchical_base.html#a04614eb6d4ddcb795c12e10b198bc979">ibase::THierarchicalBase&lt; Base &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00295">295</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00297">297</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>.</p>
 
@@ -290,7 +290,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classibase_1_1_t_hierarchical_base.html#a950be4ab87167bbf72fe856a40ab52ce">ibase::THierarchicalBase&lt; Base &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00288">288</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00290">290</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
 
 </div>
 </div>
@@ -310,7 +310,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00193">193</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00195">195</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
 
 <p>References <a class="el" href="classibase_1_1_i_message_container.html#a0c3f5911eeb22ad94eaa97fe64fae100">ibase::IMessageContainer::GetMessages()</a>, <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
 
@@ -332,13 +332,13 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00158">158</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00160">160</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
 
 <p>References <a class="el" href="classibase_1_1_i_message_container.html#adaec1546c8caaeac32971c96ea73e2eb">ibase::IMessageContainer::GetWorstCategory()</a>, and <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a943f499219d29017d561ab8b8c05885c"></a><!-- doxytag: member="ibase::TMessageContainerWrap::IsMessageSupported" ref="a943f499219d29017d561ab8b8c05885c" args="(int messageCategory=&#45;1, int messageId=&#45;1, const IMessage *messagePtr=NULL) const " -->
+<a class="anchor" id="aa1632451a1f784c75f9fd97b4615b41b"></a><!-- doxytag: member="ibase::TMessageContainerWrap::IsMessageSupported" ref="aa1632451a1f784c75f9fd97b4615b41b" args="(int messageCategory=&#45;1, int messageId=&#45;1, const istd::IInformation *messagePtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -359,7 +359,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classibase_1_1_i_message.html">IMessage</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> *&#160;</td>
           <td class="paramname"><em>messagePtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -371,7 +371,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00220">220</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00222">222</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
 
 </div>
 </div>
@@ -394,7 +394,7 @@ template&lt;class Base &gt; </div>
 
 <p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00104">104</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
 
-<p>References <a class="el" href="classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">iser::IArchive::BeginMultiTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive::BeginTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">iser::IArchive::EndTag()</a>, and <a class="el" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">iser::IArchive::IsStoring()</a>.</p>
+<p>References <a class="el" href="classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">iser::IArchive::BeginMultiTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive::BeginTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">iser::IArchive::EndTag()</a>, <a class="el" href="_t_trans_ptr_8h_source.html#l00129">istd::TTransPtr&lt; Type &gt;::GetPtr()</a>, <a class="el" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">iser::IArchive::IsStoring()</a>, and <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable::Serialize()</a>.</p>
 
 </div>
 </div>
@@ -415,7 +415,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00151">151</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00153">153</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
 
 </div>
 </div>
@@ -436,7 +436,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00142">142</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_message_container_wrap_8h_source.html#l00144">144</a> of file <a class="el" href="_t_message_container_wrap_8h_source.html">TMessageContainerWrap.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>.</p>
 

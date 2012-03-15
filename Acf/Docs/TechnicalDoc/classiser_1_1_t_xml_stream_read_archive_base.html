@@ -75,8 +75,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a9053e90dfff92f0770b7997d3d100881">TXmlStreamReadArchiveBase</a> (const <a class="el" href="classiser_1_1_c_archive_tag.html">CArchiveTag</a> &amp;rootTag=<a class="el" href="classiser_1_1_c_archive_base.html#af37185cf961a49405088cd05130cbfef">s_acfRootTag</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#aa291554c858a8108b0be3eb64a09d79e">ReadToDelimeter</a> (const std::string &amp;delimeters, std::string &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input stream till one of specified delimeters is found.  <a href="#aa291554c858a8108b0be3eb64a09d79e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a174d911d0c1827ed531e3a00d75e5dac">DecorateMessage</a> (<a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a> category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Decorate message parts before outputting.  <a href="#a174d911d0c1827ed531e3a00d75e5dac"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a886a5d8acc02d641c36417f76ceca696">DecorateMessage</a> (<a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Decorate message parts before outputting.  <a href="#a886a5d8acc02d641c36417f76ceca696"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">StreamClass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#abc5a5cca111781a3864fabf3aa0ce5a5">m_stream</a></td></tr>
@@ -136,7 +136,7 @@ template&lt;class StreamClass &gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a174d911d0c1827ed531e3a00d75e5dac"></a><!-- doxytag: member="iser::TXmlStreamReadArchiveBase::DecorateMessage" ref="a174d911d0c1827ed531e3a00d75e5dac" args="(MessageCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const " -->
+<a class="anchor" id="a886a5d8acc02d641c36417f76ceca696"></a><!-- doxytag: member="iser::TXmlStreamReadArchiveBase::DecorateMessage" ref="a886a5d8acc02d641c36417f76ceca696" args="(istd::IInformation::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -145,7 +145,7 @@ template&lt;class StreamClass &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html">iser::TXmlStreamReadArchiveBase</a>&lt; StreamClass &gt;::DecorateMessage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a>&#160;</td>
           <td class="paramname"><em>category</em>, </td>
         </tr>
         <tr>
@@ -183,9 +183,9 @@ template&lt;class StreamClass &gt; </div>
 
 <p>Decorate message parts before outputting. </p>
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_i_logger.html#a58a320e5da108df1b481fb66948c8593">istd::ILogger</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_logger.html#aa6cfc1f34aaa724b22d96efc6ad74f89">istd::ILogger</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiser_1_1_c_xml_file_read_archive.html#a563696933460fa16a84c8a0f60ff86bf">iser::CXmlFileReadArchive</a>.</p>
+<p>Reimplemented in <a class="el" href="classiser_1_1_c_xml_file_read_archive.html#ad7f18837aa04ae51675f9cf0fd2389c5">iser::CXmlFileReadArchive</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_xml_stream_read_archive_base_8h_source.html#l00143">143</a> of file <a class="el" href="_t_xml_stream_read_archive_base_8h_source.html">TXmlStreamReadArchiveBase.h</a>.</p>
 

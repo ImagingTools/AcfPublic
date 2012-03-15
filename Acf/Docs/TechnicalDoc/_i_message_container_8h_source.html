@@ -34,11 +34,11 @@
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_t_i_hierarchical_8h.html">istd/TIHierarchical.h</a>&quot;</span>
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
-<a name="l00013"></a>00013 
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_message_8h.html">ibase/IMessage.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_information_8h.html">istd/IInformation.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_t_i_hierarchical_8h.html">istd/TIHierarchical.h</a>&quot;</span>
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
+<a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_i_message_consumer_8h.html">ibase/IMessageConsumer.h</a>&quot;</span>
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017 
@@ -46,7 +46,7 @@
 <a name="l00019"></a>00019 {
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021 
-<a name="l00025"></a><a class="code" href="classibase_1_1_i_message_container.html">00025</a> <span class="keyword">class </span><a class="code" href="classibase_1_1_i_message_container.html" title="Common interface for an message container.">IMessageContainer</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming message objects.">IMessageConsumer</a>, <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
+<a name="l00025"></a><a class="code" href="classibase_1_1_i_message_container.html">00025</a> <span class="keyword">class </span><a class="code" href="classibase_1_1_i_message_container.html" title="Common interface for an message container.">IMessageContainer</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">IMessageConsumer</a>, <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
 <a name="l00026"></a>00026 {
 <a name="l00027"></a>00027 <span class="keyword">public</span>:
 <a name="l00028"></a><a class="code" href="classibase_1_1_i_message_container.html#aca3800f565c96e50a48cd06cac3d304c">00028</a>        <span class="keyword">typedef</span> std::vector&lt;MessagePtr&gt; <a class="code" href="classibase_1_1_i_message_container.html#aca3800f565c96e50a48cd06cac3d304c">Messages</a>;

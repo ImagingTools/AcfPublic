@@ -270,7 +270,7 @@ QString CRegistryPropEditorComp::ConvertToKeyword(const QString& input, const QS
 bool CRegistryPropEditorComp::TextLog::IsMessageSupported(
 			int /*messageCategory*/,
 			int /*messageId*/,
-			const ibase::IMessage* /*messagePtr*/) const
+			const istd::IInformation* /*messagePtr*/) const
 {
 	return true;
 }
@@ -283,7 +283,7 @@ void CRegistryPropEditorComp::TextLog::AddMessage(const MessagePtr& messagePtr)
 			operator+=("\n");
 		}
 
-		operator+=(messagePtr->GetText());
+		operator+=(messagePtr->GetInformationDescription());
 	}
 }
 

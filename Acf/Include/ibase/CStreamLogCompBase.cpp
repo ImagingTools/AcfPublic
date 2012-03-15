@@ -24,9 +24,8 @@
 
 
 // ACF includes
+#include "istd/IInformation.h"
 #include "isys/IDateTime.h"
-
-#include "ibase/IMessage.h"
 
 
 namespace ibase
@@ -46,7 +45,7 @@ CStreamLogCompBase::CStreamLogCompBase()
 bool CStreamLogCompBase::IsMessageSupported(
 			int /*messageCategory*/,
 			int /*messageId*/,
-			const IMessage* /*messagePtr*/) const
+			const istd::IInformation* /*messagePtr*/) const
 {
 	return true;
 }
@@ -55,7 +54,7 @@ bool CStreamLogCompBase::IsMessageSupported(
 void CStreamLogCompBase::AddMessage(const MessagePtr& messagePtr)
 {
 	if (messagePtr.IsValid()){
-		if (messagePtr->GetCategory() >= *m_minPriorityAttrPtr){
+		if (messagePtr->GetInformationCategory() >= *m_minPriorityAttrPtr){
 			if (m_isLastDotShown){
 				NewLine();
 
@@ -75,7 +74,7 @@ void CStreamLogCompBase::AddMessage(const MessagePtr& messagePtr)
 
 // protected methods
 
-void CStreamLogCompBase::WriteMessageToStream(const ibase::IMessage& message)
+void CStreamLogCompBase::WriteMessageToStream(const istd::IInformation& message)
 {
 	QString messageText = GenerateMessageText(message);
 	
@@ -85,16 +84,12 @@ void CStreamLogCompBase::WriteMessageToStream(const ibase::IMessage& message)
 }
 
 
-QString CStreamLogCompBase::GenerateMessageText(const ibase::IMessage& message) const
+QString CStreamLogCompBase::GenerateMessageText(const istd::IInformation& message) const
 {
-	QString messageText = message.GetText();
+	QString messageText = message.GetInformationDescription();
 
 	if (m_useTimeStampAttrPtr.IsValid() && *m_useTimeStampAttrPtr){
-		messageText =
-					QString("[") +
-					message.GetTimeStamp().ToString(isys::IDateTime::TC_YEAR, isys::IDateTime::TC_SECOND) +
-					QString("] ") +
-					messageText;
+		messageText = QObject::tr("[%1] %2").arg(message.GetTimeStamp().toString()).arg(messageText);
 	}
 
 	return messageText;

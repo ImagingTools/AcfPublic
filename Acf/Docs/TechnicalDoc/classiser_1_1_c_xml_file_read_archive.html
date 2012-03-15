@@ -78,8 +78,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_file_read_archive.html#a4f11eb02f5239f489ed0f3566a873efd">CXmlFileReadArchive</a> (const QString &amp;filePath, bool serializeHeader=true, const <a class="el" href="classiser_1_1_c_archive_tag.html">CArchiveTag</a> &amp;rootTag=<a class="el" href="classiser_1_1_c_archive_base.html#af37185cf961a49405088cd05130cbfef">s_acfRootTag</a>)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_file_read_archive.html#a563696933460fa16a84c8a0f60ff86bf">DecorateMessage</a> (<a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a> category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Decorate message parts before outputting.  <a href="#a563696933460fa16a84c8a0f60ff86bf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_file_read_archive.html#ad7f18837aa04ae51675f9cf0fd2389c5">DecorateMessage</a> (<a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Decorate message parts before outputting.  <a href="#ad7f18837aa04ae51675f9cf0fd2389c5"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Simple implementation of archive reading from XML file. </p>
@@ -154,14 +154,14 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a563696933460fa16a84c8a0f60ff86bf"></a><!-- doxytag: member="iser::CXmlFileReadArchive::DecorateMessage" ref="a563696933460fa16a84c8a0f60ff86bf" args="(MessageCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const " -->
+<a class="anchor" id="ad7f18837aa04ae51675f9cf0fd2389c5"></a><!-- doxytag: member="iser::CXmlFileReadArchive::DecorateMessage" ref="ad7f18837aa04ae51675f9cf0fd2389c5" args="(istd::IInformation::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iser::CXmlFileReadArchive::DecorateMessage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a>&#160;</td>
           <td class="paramname"><em>category</em>, </td>
         </tr>
         <tr>
@@ -199,7 +199,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Decorate message parts before outputting. </p>
 
-<p>Reimplemented from <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a174d911d0c1827ed531e3a00d75e5dac">iser::TXmlStreamReadArchiveBase&lt; std::ifstream &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a886a5d8acc02d641c36417f76ceca696">iser::TXmlStreamReadArchiveBase&lt; std::ifstream &gt;</a>.</p>
 
 </div>
 </div>

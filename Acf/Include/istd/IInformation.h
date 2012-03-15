@@ -20,55 +20,69 @@
 ********************************************************************************/
 
 
-#ifndef ibase_IMessage_included
-#define ibase_IMessage_included
+#ifndef istd_IInformation_included
+#define istd_IInformation_included
 
 
-#include "istd/ILogger.h"
+// Qt includes
 #include <QtCore/QString>
+#include <QtCore/QDateTime>
 
-#include "iser/ISerializable.h"
+// ACF includes
+#include "istd/IPolymorphic.h"
 
-#include "ibase/ibase.h"
 
-
-namespace isys
+namespace istd
 {
-	class IDateTime;
-}
-
-
-namespace ibase
-{		
 
 
 /**
-	Common interface for an message.
-	\sa istd::ILogger
+	Common interface for class providing some basic information object.
 */
-class IMessage: virtual public iser::ISerializable
+class IInformation: virtual public IPolymorphic
 {
 public:
 	/**
-		Get time stamp of the message.
+		Category of message.
 	*/
-	virtual const isys::IDateTime& GetTimeStamp() const = 0;
+	enum InformationCategory
+	{
+		IC_INFO,
+		IC_WARNING,
+		IC_ERROR,
+		IC_CRITICAL
+	};
+
+	/**
+		Additionaly message flags.
+	*/
+	enum InformationTypeFlags
+	{
+		ITF_DEBUG = 0x1,
+		ITF_SYSTEM = 0x2,
+		ITF_USER = 0x4
+	};
+
+	/**
+		Get optional time stamp of the message.
+	*/
+	virtual QDateTime GetTimeStamp() const = 0;
 
 	/**
 		Get category of the message.
-		\sa MessageCategory
+		\sa InformationCategory
 	*/
-	virtual istd::ILogger::MessageCategory GetCategory() const = 0;
+	virtual istd::IInformation::InformationCategory GetInformationCategory() const = 0;
 
 	/**
 		Get binary ID of the message using to automatical identification of this message type.
 	*/
-	virtual int GetId() const = 0;
+	virtual int GetInformationId() const = 0;
 
 	/**
 		Get the text of the message.
 	*/
-	virtual QString GetText() const = 0;
+	virtual QString GetInformationDescription() const = 0;
 
 	/**
 		Get the source of the message.
@@ -77,14 +91,15 @@ public:
 
 	/**
 		Get flags of the message.
-		\sa istd::ILogger::MessageFlags
+		\sa InformationFlags
 	*/
 	virtual int GetFlags() const = 0;
 };
 
 
-} // namespace ibase
+} // namespace istd
 
 
-#endif // !ibase_IMessage_included
+#endif // !istd_IInformation_included
+
 

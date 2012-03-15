@@ -52,8 +52,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp_1_1_read_archive_ex.html#a3eba56cf1f75d9f33af9e0fc84a5b30c">ReadArchiveEx</a> (const QString &amp;filePath, const <a class="el" href="classibase_1_1_t_file_serializer_comp.html">TFileSerializerComp</a> *loggerPtr)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp_1_1_read_archive_ex.html#ad5cb195ee1e9bbf0c8e57b8bc2b4b67f">IsLogConsumed</a> (const <a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a> *, const int *flagsPtr=NULL) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp_1_1_read_archive_ex.html#a59a2b0291c17f8f0e13fcb6705993c5d">SendLogMessage</a> (<a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a> category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp_1_1_read_archive_ex.html#a8e254d0207f79fc0d1c280d88182ec76">IsLogConsumed</a> (const <a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> *, const int *flagsPtr=NULL) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_file_serializer_comp_1_1_read_archive_ex.html#aa30d9cb97c14af660cd4f68333ce3e49">SendLogMessage</a> (<a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class ReadArchive, class WriteArchive&gt;<br/>
@@ -112,7 +112,7 @@ template&lt;class ReadArchive, class WriteArchive&gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ad5cb195ee1e9bbf0c8e57b8bc2b4b67f"></a><!-- doxytag: member="ibase::TFileSerializerComp::ReadArchiveEx::IsLogConsumed" ref="ad5cb195ee1e9bbf0c8e57b8bc2b4b67f" args="(const MessageCategory *, const int *flagsPtr=NULL) const " -->
+<a class="anchor" id="a8e254d0207f79fc0d1c280d88182ec76"></a><!-- doxytag: member="ibase::TFileSerializerComp::ReadArchiveEx::IsLogConsumed" ref="a8e254d0207f79fc0d1c280d88182ec76" args="(const istd::IInformation::InformationCategory *, const int *flagsPtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -121,7 +121,7 @@ template&lt;class ReadArchive, class WriteArchive&gt; </div>
         <tr>
           <td class="memname">virtual bool <a class="el" href="classibase_1_1_t_file_serializer_comp.html">ibase::TFileSerializerComp</a>&lt; ReadArchive, WriteArchive &gt;::ReadArchiveEx::IsLogConsumed </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> *&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
@@ -141,11 +141,11 @@ template&lt;class ReadArchive, class WriteArchive&gt; </div>
 
 <p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00074">74</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
 
-<p>References <a class="el" href="_t_logger_wrap_8h_source.html#l00160">ibase::TLoggerWrap&lt; Base &gt;::IsLogConsumed()</a>, <a class="el" href="_i_logger_8h_source.html#l00028">istd::ILogger::MC_INFO</a>, and <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
+<p>References <a class="el" href="_i_information_8h_source.html#l00028">istd::IInformation::IC_INFO</a>, <a class="el" href="_t_logger_wrap_8h_source.html#l00160">ibase::TLoggerWrap&lt; Base &gt;::IsLogConsumed()</a>, and <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a59a2b0291c17f8f0e13fcb6705993c5d"></a><!-- doxytag: member="ibase::TFileSerializerComp::ReadArchiveEx::SendLogMessage" ref="a59a2b0291c17f8f0e13fcb6705993c5d" args="(MessageCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const " -->
+<a class="anchor" id="aa30d9cb97c14af660cd4f68333ce3e49"></a><!-- doxytag: member="ibase::TFileSerializerComp::ReadArchiveEx::SendLogMessage" ref="aa30d9cb97c14af660cd4f68333ce3e49" args="(istd::IInformation::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -154,7 +154,7 @@ template&lt;class ReadArchive, class WriteArchive&gt; </div>
         <tr>
           <td class="memname">virtual bool <a class="el" href="classibase_1_1_t_file_serializer_comp.html">ibase::TFileSerializerComp</a>&lt; ReadArchive, WriteArchive &gt;::ReadArchiveEx::SendLogMessage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_logger.html#a59b8f966e065927a722418a20bc42343">MessageCategory</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a>&#160;</td>
           <td class="paramname"><em>category</em>, </td>
         </tr>
         <tr>
@@ -192,7 +192,7 @@ template&lt;class ReadArchive, class WriteArchive&gt; </div>
 
 <p>Definition at line <a class="el" href="_t_file_serializer_comp_8h_source.html#l00082">82</a> of file <a class="el" href="_t_file_serializer_comp_8h_source.html">TFileSerializerComp.h</a>.</p>
 
-<p>References <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a944c2950ba2fc96c22648d8c250dd2be">ibase::TLoggerCompWrap&lt; CFileTypeInfoComp &gt;::DecorateMessage()</a>, <a class="el" href="_i_logger_8h_source.html#l00028">istd::ILogger::MC_INFO</a>, <a class="el" href="istd_8h_source.html#l00189">NULL</a>, and <a class="el" href="_t_logger_wrap_8h_source.html#l00169">ibase::TLoggerWrap&lt; Base &gt;::SendLogMessage()</a>.</p>
+<p>References <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a99eb35689d537aa5b76fb1b80bde3909">ibase::TLoggerCompWrap&lt; CFileTypeInfoComp &gt;::DecorateMessage()</a>, <a class="el" href="_i_information_8h_source.html#l00028">istd::IInformation::IC_INFO</a>, <a class="el" href="istd_8h_source.html#l00189">NULL</a>, and <a class="el" href="_t_logger_wrap_8h_source.html#l00169">ibase::TLoggerWrap&lt; Base &gt;::SendLogMessage()</a>.</p>
 
 </div>
 </div>

@@ -103,7 +103,7 @@
 <a name="l00090"></a>00090               <span class="keyword">typename</span> KeyToFileNameMap::iterator foundIter = m_keyToFileNameMap.find(key);
 <a name="l00091"></a>00091               <span class="keywordflow">if</span> (foundIter != m_keyToFileNameMap.end()){
 <a name="l00092"></a>00092                      cacheFilePath = foundIter-&gt;second;
-<a name="l00093"></a>00093                      <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(!cacheFilePath.IsEmpty());
+<a name="l00093"></a>00093                      <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(!cacheFilePath.isEmpty());
 <a name="l00094"></a>00094               }
 <a name="l00095"></a>00095               <span class="keywordflow">else</span>{
 <a name="l00096"></a>00096                      cacheFilePath = CalcCacheFilePath(key);
