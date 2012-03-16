@@ -49,9 +49,9 @@ CMultiAttributeDelegateWidget::CMultiAttributeDelegateWidget(
 			int attributeFlags)
 	:BaseClass(parentWidget),
 	m_itemDelegate(itemDelegate),
-	m_elementSelectionInfoManager(elementSelectionInfoManager),
 	m_attributeId(attributeId),
-	m_attributeFlags(attributeFlags)
+	m_attributeFlags(attributeFlags),
+	m_elementSelectionInfoManager(elementSelectionInfoManager)
 {
 	QHBoxLayout* layout = new QHBoxLayout(this);
 	layout->setMargin(0);
