@@ -81,10 +81,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get processing time.  <a href="#ad333f06c6f055aa13119e430d5176760"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_hotfolder_processing_item.html#acfff128208f38e25d325ec966896134f">SetProcessingTime</a> (double processingTime)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set processing time.  <a href="#acfff128208f38e25d325ec966896134f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_i_date_time.html">isys::IDateTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_hotfolder_processing_item.html#a18e092ee007524855cfb0026a69106e6">GetStartTime</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get start time of the job.  <a href="#a18e092ee007524855cfb0026a69106e6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_hotfolder_processing_item.html#a05d78f4fe4975f8f81109da437baae03">SetStartTime</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_i_date_time.html">isys::IDateTime</a> &amp;startTime)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set start time of the job.  <a href="#a05d78f4fe4975f8f81109da437baae03"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const QDateTime &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_hotfolder_processing_item.html#a9d2bf261a3ca668640149b2fb07af11b">GetStartTime</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get start time of the job.  <a href="#a9d2bf261a3ca668640149b2fb07af11b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_hotfolder_processing_item.html#a86b4809c248e84baa803eaf4ef6eb989">SetStartTime</a> (const QDateTime &amp;startTime)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set start time of the job.  <a href="#a86b4809c248e84baa803eaf4ef6eb989"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface for a single processing item in the hotfolder. </p>
@@ -216,12 +216,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a18e092ee007524855cfb0026a69106e6"></a><!-- doxytag: member="ifpf::IHotfolderProcessingItem::GetStartTime" ref="a18e092ee007524855cfb0026a69106e6" args="() const =0" -->
+<a class="anchor" id="a9d2bf261a3ca668640149b2fb07af11b"></a><!-- doxytag: member="ifpf::IHotfolderProcessingItem::GetStartTime" ref="a9d2bf261a3ca668640149b2fb07af11b" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_i_date_time.html">isys::IDateTime</a>&amp; ifpf::IHotfolderProcessingItem::GetStartTime </td>
+          <td class="memname">virtual const QDateTime&amp; ifpf::IHotfolderProcessingItem::GetStartTime </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -232,7 +232,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get start time of the job. </p>
 
-<p>Implemented in <a class="el" href="classifpf_1_1_c_hotfolder_processing_item.html#a414e3dc7711e9a96c4546e45a02e9b36">ifpf::CHotfolderProcessingItem</a>.</p>
+<p>Implemented in <a class="el" href="classifpf_1_1_c_hotfolder_processing_item.html#a033daa9af7dc7bc673c58e62c6b224bb">ifpf::CHotfolderProcessingItem</a>.</p>
 
 </div>
 </div>
@@ -321,14 +321,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a05d78f4fe4975f8f81109da437baae03"></a><!-- doxytag: member="ifpf::IHotfolderProcessingItem::SetStartTime" ref="a05d78f4fe4975f8f81109da437baae03" args="(const isys::IDateTime &amp;startTime)=0" -->
+<a class="anchor" id="a86b4809c248e84baa803eaf4ef6eb989"></a><!-- doxytag: member="ifpf::IHotfolderProcessingItem::SetStartTime" ref="a86b4809c248e84baa803eaf4ef6eb989" args="(const QDateTime &amp;startTime)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void ifpf::IHotfolderProcessingItem::SetStartTime </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_i_date_time.html">isys::IDateTime</a> &amp;&#160;</td>
+          <td class="paramtype">const QDateTime &amp;&#160;</td>
           <td class="paramname"><em>startTime</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -338,7 +338,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Set start time of the job. </p>
 
-<p>Implemented in <a class="el" href="classifpf_1_1_c_hotfolder_processing_item.html#a1959db69717565cd84e07e5489eb44f3">ifpf::CHotfolderProcessingItem</a>.</p>
+<p>Implemented in <a class="el" href="classifpf_1_1_c_hotfolder_processing_item.html#ada35cc61ff5790ff16764b7bbe785897">ifpf::CHotfolderProcessingItem</a>.</p>
 
 </div>
 </div>

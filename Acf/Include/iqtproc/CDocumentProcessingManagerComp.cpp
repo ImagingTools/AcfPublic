@@ -23,10 +23,11 @@
 #include "iqtproc/CDocumentProcessingManagerComp.h"
 
 
+// Qt includes
+#include <QtCore/QElapsedTimer>
+
 // ACF includes
 #include "istd/TChangeNotifier.h"
-
-#include "iqt/CTimer.h"
 
 
 namespace iqtproc
@@ -76,7 +77,7 @@ void CDocumentProcessingManagerComp::DoProcessingToOutput(const istd::IChangeabl
 
 	istd::CChangeNotifier changePtr(outputDocumentPtr);
 
-	iqt::CTimer timer;
+	QElapsedTimer timer;
 
 	int retVal = m_processorCompPtr->DoProcessing(
 				m_paramsSetCompPtr.GetPtr(),
@@ -84,8 +85,7 @@ void CDocumentProcessingManagerComp::DoProcessingToOutput(const istd::IChangeabl
 				outputDocumentPtr,
 				m_progressManagerCompPtr.GetPtr());
 
-	double processingTime = timer.GetElapsed();
-	SendInfoMessage(0, QString("Processing time: ") + QString("%1").arg(processingTime * 1000) + " ms", "Document processing manager");
+	SendInfoMessage(0, QObject::tr("Processing time: %1 ms").arg(timer.elapsed()), "Document processing manager");
 	
 	if (retVal != iproc::IProcessor::TS_OK){
 		SendErrorMessage(0, "Processing was failed", "Document processing manager");
@@ -124,7 +124,7 @@ void CDocumentProcessingManagerComp::DoInPlaceProcessing(istd::IChangeable* inpu
 		return;
 	}
 
-	iqt::CTimer timer;
+	QElapsedTimer timer;
 
 	int retVal = m_processorCompPtr->DoProcessing(
 				m_paramsSetCompPtr.GetPtr(),
@@ -132,8 +132,7 @@ void CDocumentProcessingManagerComp::DoInPlaceProcessing(istd::IChangeable* inpu
 				outputDocumentPtr.GetPtr(),
 				m_progressManagerCompPtr.GetPtr());
 
-	double processingTime = timer.GetElapsed();
-	SendInfoMessage(0, QString("Processing time: ") + QString("%1").arg(processingTime * 1000) + " ms", "Document processing manager");
+	SendInfoMessage(0, QObject::tr("Processing time: %1 ms").arg(timer.elapsed()), "Document processing manager");
 	
 	if (retVal != iproc::IProcessor::TS_OK){
 		SendErrorMessage(0, "Processing was failed", "Document processing manager");

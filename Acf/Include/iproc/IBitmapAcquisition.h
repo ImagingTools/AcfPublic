@@ -26,8 +26,6 @@
 
 #include "istd/CIndex2d.h"
 
-#include "isys/ITimer.h"
-
 #include "iimg/IBitmap.h"
 
 #include "iproc/IProcessor.h"
@@ -39,7 +37,7 @@ namespace iproc
 
 /**
 	Bitmap acquisition processor.
-	This processor use as \c iproc::IProcessor template parameter Input optional isys::ITimer object to indicate trigger time of acquision.
+	This processor use as \c iproc::IProcessor template parameter Input optional istd::ITimeStamp object to indicate trigger time of acquision.
 */
 class IBitmapAcquisition: virtual public IProcessor
 {

@@ -34,7 +34,6 @@
 
 // ACF includes
 #include "icomp/CCompositeComponent.h"
-#include "iqt/CTimer.h"
 
 
 namespace iqtgui

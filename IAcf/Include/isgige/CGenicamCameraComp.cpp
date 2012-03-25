@@ -36,7 +36,7 @@
 #include "iqt/iqt.h"
 
 // ACF-Solutions include
-#include "iwin/CTimer.h"
+#include "iwin/CPerformanceTimeStamp.h"
 
 
 namespace isgige
@@ -116,7 +116,7 @@ int CGenicamCameraComp::DoProcessing(
 		}
 	}
 
-	iwin::CTimer elapsedTime;
+	iwin::CPerformanceTimeStamp elapsedTime;
 
 	do{
 		if (deviceInfoPtr->devicePtr->IsBufferEmpty()){
@@ -136,9 +136,9 @@ int CGenicamCameraComp::DoProcessing(
 			return TS_INVALID;
 		}
 
-		const isys::ITimer* triggerTimerPtr = dynamic_cast<const isys::ITimer*>(inputPtr);
+		const istd::ITimeStamp* triggerTimerPtr = dynamic_cast<const istd::ITimeStamp*>(inputPtr);
 		if (triggerTimerPtr != NULL){
-			iwin::CTimer imageTimestamp;
+			iwin::CPerformanceTimeStamp imageTimestamp;
 			imageTimestamp.SetNativeRepresentation(imageInfoPtr->GetTimestamp());
 
 			double timeDiff = imageTimestamp.GetTimeTo(*triggerTimerPtr) - *m_triggerDifferenceAttrPtr;

@@ -32,6 +32,15 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CAffineTransformation2dComp.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_affine_transformation2d_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_affine_transformation2d_8h" name="CAffineTransformation2d.h" local="yes" imported="no">i2d/CAffineTransformation2d.h</includes>
+    <class kind="class">i2d::CAffineTransformation2dComp</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAnnulus.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_annulus_8h</filename>
@@ -316,6 +325,15 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>ICalibrationProvider.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_i_calibration_provider_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_i_transformation2d_8h" name="ITransformation2d.h" local="yes" imported="no">i2d/ITransformation2d.h</includes>
+    <class kind="class">i2d::ICalibrationProvider</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>IObject2d.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_i_object2d_8h</filename>
@@ -557,16 +575,6 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_object_queue_8h" name="IObjectQueue.h" local="yes" imported="no">ibase/IObjectQueue.h</includes>
     <class kind="class">ibase::CObjectQueueComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CRangeSerializer.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_range_serializer_8h</filename>
-    <includes id="_c_range_8h" name="CRange.h" local="yes" imported="no">istd/CRange.h</includes>
-    <includes id="ibase_8h" name="ibase.h" local="yes" imported="no">ibase/ibase.h</includes>
-    <class kind="class">ibase::CRangeSerializer</class>
-    <namespace>iser</namespace>
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
@@ -3106,7 +3114,6 @@
     <path>C:/Temp/Acf/Include/iproc/</path>
     <filename>_i_bitmap_acquisition_8h</filename>
     <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
-    <includes id="_i_timer_8h" name="ITimer.h" local="yes" imported="no">isys/ITimer.h</includes>
     <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">iproc::IBitmapAcquisition</class>
@@ -3209,7 +3216,6 @@
     <includes id="_c_multi_model_observer_base_8h" name="CMultiModelObserverBase.h" local="yes" imported="no">imod/CMultiModelObserverBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <includes id="_i_timer_8h" name="ITimer.h" local="yes" imported="no">isys/ITimer.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <class kind="class">iproc::TSupplierCompWrap</class>
     <class kind="class">iproc::TSupplierCompWrap::InputObserver</class>
@@ -3326,14 +3332,6 @@
     <includes id="_i_critical_section_8h" name="ICriticalSection.h" local="yes" imported="no">isys/ICriticalSection.h</includes>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <class kind="class">iqt::CCriticalSection</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CDateTime.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_date_time_8h</filename>
-    <includes id="_c_date_time_base_8h" name="CDateTimeBase.h" local="yes" imported="no">isys/CDateTimeBase.h</includes>
-    <class kind="class">iqt::CDateTime</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -3600,15 +3598,6 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
-    <name>CTimer.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_timer_8h</filename>
-    <includes id="_i_timer_8h" name="ITimer.h" local="yes" imported="no">isys/ITimer.h</includes>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CTimer</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
     <name>CTrace.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_trace_8h</filename>
@@ -3683,7 +3672,6 @@
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>iqt_8h</filename>
     <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
-    <includes id="_c_file_info_8h" name="CFileInfo.h" local="yes" imported="no">isys/CFileInfo.h</includes>
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
     <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
@@ -3772,34 +3760,6 @@
       <anchorfile>namespaceiqt.html</anchorfile>
       <anchor>a0b1d4b6556f3117a1b2d12937eb99624</anchor>
       <arglist>(const i2d::CLine2d &amp;line)</arglist>
-    </member>
-    <member kind="function">
-      <type>isys::CFileInfo</type>
-      <name>GetCFileInfo</name>
-      <anchorfile>namespaceiqt.html</anchorfile>
-      <anchor>a7abfcf2d60dc7d2d208d718a07f674b7</anchor>
-      <arglist>(const QFileInfo &amp;fileInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type>QFileInfo</type>
-      <name>GetQFileInfo</name>
-      <anchorfile>namespaceiqt.html</anchorfile>
-      <anchor>a7988983e9ec75bda2663351925a75661</anchor>
-      <arglist>(const isys::CFileInfo &amp;fileInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type>QDateTime</type>
-      <name>GetQDateTime</name>
-      <anchorfile>namespaceiqt.html</anchorfile>
-      <anchor>aff9d3af329ae7c8f027d054a92fc5dda</anchor>
-      <arglist>(const isys::IDateTime &amp;dateTime)</arglist>
-    </member>
-    <member kind="function">
-      <type>isys::CSimpleDateTime</type>
-      <name>GetCSimpleDateTime</name>
-      <anchorfile>namespaceiqt.html</anchorfile>
-      <anchor>ae36880c4f1ca011484ac14f02bf5a10a</anchor>
-      <arglist>(const QDateTime &amp;dateTime)</arglist>
     </member>
     <member kind="function">
       <type>QRect</type>
@@ -4210,11 +4170,11 @@
     <name>CApplicationCompBase.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_application_comp_base_8h</filename>
+    <includes id="_c_general_time_stamp_8h" name="CGeneralTimeStamp.h" local="yes" imported="no">istd/CGeneralTimeStamp.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_application_8h" name="IApplication.h" local="yes" imported="no">ibase/IApplication.h</includes>
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
     <includes id="_i_translation_manager_8h" name="ITranslationManager.h" local="yes" imported="no">iqt/ITranslationManager.h</includes>
-    <includes id="_c_timer_8h" name="CTimer.h" local="yes" imported="no">iqt/CTimer.h</includes>
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
     <class kind="class">iqtgui::CApplicationCompBase</class>
     <namespace>iqtgui</namespace>
@@ -4822,7 +4782,6 @@
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
-    <includes id="_i_timer_8h" name="ITimer.h" local="yes" imported="no">isys/ITimer.h</includes>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">iqtproc::CProcessorControlGuiComp</class>
     <namespace>iqtproc</namespace>
@@ -4955,6 +4914,14 @@
     <filename>_c_minimal_version_info_8h</filename>
     <includes id="_i_version_info_8h" name="IVersionInfo.h" local="yes" imported="no">iser/IVersionInfo.h</includes>
     <class kind="class">iser::CMinimalVersionInfo</class>
+    <namespace>iser</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPrimitiveTypesSerializer.h</name>
+    <path>C:/Temp/Acf/Include/iser/</path>
+    <filename>_c_primitive_types_serializer_8h</filename>
+    <includes id="_c_range_8h" name="CRange.h" local="yes" imported="no">istd/CRange.h</includes>
+    <class kind="class">iser::CPrimitiveTypesSerializer</class>
     <namespace>iser</namespace>
   </compound>
   <compound kind="file">
@@ -5232,6 +5199,14 @@
     <includes id="_c_bit_manip_8h" name="CBitManip.h" local="yes" imported="no">istd/CBitManip.h</includes>
     <class kind="class">istd::CFastBinaryIndex</class>
     <class kind="class">istd::CFastBinaryIndex::Iterator</class>
+    <namespace>istd</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CGeneralTimeStamp.h</name>
+    <path>C:/Temp/Acf/Include/istd/</path>
+    <filename>_c_general_time_stamp_8h</filename>
+    <includes id="_i_time_stamp_8h" name="ITimeStamp.h" local="yes" imported="no">istd/ITimeStamp.h</includes>
+    <class kind="class">istd::CGeneralTimeStamp</class>
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
@@ -5614,6 +5589,15 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>ITimeStamp.h</name>
+    <path>C:/Temp/Acf/Include/istd/</path>
+    <filename>_i_time_stamp_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
+    <class kind="class">istd::ITimeStamp</class>
+    <namespace>istd</namespace>
+  </compound>
+  <compound kind="file">
     <name>ITrace.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_i_trace_8h</filename>
@@ -5845,39 +5829,12 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>CDateTimeBase.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_c_date_time_base_8h</filename>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_i_date_time_8h" name="IDateTime.h" local="yes" imported="no">isys/IDateTime.h</includes>
-    <class kind="class">isys::CDateTimeBase</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileInfo.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_c_file_info_8h</filename>
-    <includes id="_i_file_info_8h" name="IFileInfo.h" local="yes" imported="no">isys/IFileInfo.h</includes>
-    <includes id="_c_simple_date_time_8h" name="CSimpleDateTime.h" local="yes" imported="no">isys/CSimpleDateTime.h</includes>
-    <class kind="class">isys::CFileInfo</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
     <name>CSectionBlocker.h</name>
     <path>C:/Temp/Acf/Include/isys/</path>
     <filename>_c_section_blocker_8h</filename>
     <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <includes id="_i_critical_section_8h" name="ICriticalSection.h" local="yes" imported="no">isys/ICriticalSection.h</includes>
     <class kind="class">isys::CSectionBlocker</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CSimpleDateTime.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_c_simple_date_time_8h</filename>
-    <includes id="_t_index_8h" name="TIndex.h" local="yes" imported="no">istd/TIndex.h</includes>
-    <includes id="_c_date_time_base_8h" name="CDateTimeBase.h" local="yes" imported="no">isys/CDateTimeBase.h</includes>
-    <class kind="class">isys::CSimpleDateTime</class>
     <namespace>isys</namespace>
   </compound>
   <compound kind="file">
@@ -5903,24 +5860,6 @@
     <includes id="isys_8h" name="isys.h" local="yes" imported="no">isys/isys.h</includes>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <class kind="class">isys::ICriticalSection</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IDateTime.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_i_date_time_8h</filename>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <class kind="class">isys::IDateTime</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IFileInfo.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_i_file_info_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_i_date_time_8h" name="IDateTime.h" local="yes" imported="no">isys/IDateTime.h</includes>
-    <class kind="class">isys::IFileInfo</class>
     <namespace>isys</namespace>
   </compound>
   <compound kind="file">
@@ -5971,15 +5910,6 @@
     <includes id="isys_8h" name="isys.h" local="yes" imported="no">isys/isys.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <class kind="class">isys::ISystemInfo</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ITimer.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_i_timer_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="isys_8h" name="isys.h" local="yes" imported="no">isys/isys.h</includes>
-    <class kind="class">isys::ITimer</class>
     <namespace>isys</namespace>
   </compound>
   <compound kind="file">
@@ -6827,7 +6757,6 @@
     <class kind="class">iser::ISerializable</class>
     <class kind="class">iser::IVersionInfo</class>
     <class kind="class">iser::TVersionInfoSerializer</class>
-    <class kind="class">isys::IFileInfo</class>
     <namespace>iser</namespace>
   </compound>
   <compound kind="group">
@@ -6856,13 +6785,13 @@
     <name>Main</name>
     <title>Main concepts and implementations</title>
     <filename>group___main.html</filename>
-    <class kind="class">ibase::CRangeSerializer</class>
     <class kind="class">ibase::CSize</class>
     <class kind="class">ibase::IApplication</class>
     <class kind="class">ibase::IApplicationInfo</class>
     <class kind="class">ibase::IMessageConsumer</class>
     <class kind="class">ibase::IProcessExecutor</class>
     <class kind="class">icomp::CComponentBase</class>
+    <class kind="class">iser::CPrimitiveTypesSerializer</class>
     <class kind="class">iser::IArchive</class>
     <class kind="class">iser::ISerializable</class>
     <class kind="class">istd::CClassInfo</class>
@@ -6919,14 +6848,12 @@
     <filename>group___system.html</filename>
     <class kind="class">iqt::CDefaultServicesProvider</class>
     <class kind="class">istd::CStaticServicesProvider</class>
-    <class kind="class">isys::CFileInfo</class>
+    <class kind="class">istd::ITimeStamp</class>
     <class kind="class">isys::ICriticalSection</class>
-    <class kind="class">isys::IDateTime</class>
     <class kind="class">isys::IFileSystem</class>
     <class kind="class">isys::IProcessEnvironment</class>
     <class kind="class">isys::ISystemEnvironment</class>
     <class kind="class">isys::ISystemInfo</class>
-    <class kind="class">isys::ITimer</class>
     <namespace>isys</namespace>
     <member kind="function">
       <type>Service *</type>
@@ -7004,6 +6931,7 @@
     <filename>namespacei2d.html</filename>
     <class kind="class">i2d::CAffine2d</class>
     <class kind="class">i2d::CAffineTransformation2d</class>
+    <class kind="class">i2d::CAffineTransformation2dComp</class>
     <class kind="class">i2d::CAnnulus</class>
     <class kind="class">i2d::CAnnulusComp</class>
     <class kind="class">i2d::CAnnulusSegment</class>
@@ -7033,6 +6961,7 @@
     <class kind="class">i2d::CSpline</class>
     <class kind="class">i2d::CSplineSegment</class>
     <class kind="class">i2d::CVector2d</class>
+    <class kind="class">i2d::ICalibrationProvider</class>
     <class kind="class">i2d::IObject2d</class>
     <class kind="class">i2d::ISceneController</class>
     <class kind="class">i2d::ITransformation2d</class>
@@ -7378,6 +7307,33 @@
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
       <anchor>a75b334351ed65d769049fb2451e3d06d</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CAffineTransformation2dComp</name>
+    <filename>classi2d_1_1_c_affine_transformation2d_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::CAffineTransformation2d</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d_comp.html</anchorfile>
+      <anchor>ae19152e1589debdfbad9c900eedf45fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CAffineTransformation2d</type>
+      <name>BaseClass2</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d_comp.html</anchorfile>
+      <anchor>a1e32c28289a50c785c68f9503f9cb6fa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d_comp.html</anchorfile>
+      <anchor>a374a624b643e95d5f39964e7867cdefb</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10371,6 +10327,18 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>i2d::ICalibrationProvider</name>
+    <filename>classi2d_1_1_i_calibration_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetLogicalTransform</name>
+      <anchorfile>classi2d_1_1_i_calibration_provider.html</anchorfile>
+      <anchor>a95048e64785106418934f54e13f1324d</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>i2d::IObject2d</name>
     <filename>classi2d_1_1_i_object2d.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
@@ -11352,7 +11320,6 @@
     <class kind="class">ibase::CModelProxyComp</class>
     <class kind="class">ibase::CMultiObserverBinderComp</class>
     <class kind="class">ibase::CObjectQueueComp</class>
-    <class kind="class">ibase::CRangeSerializer</class>
     <class kind="class">ibase::CSelectableFileConverterComp</class>
     <class kind="class">ibase::CSize</class>
     <class kind="class">ibase::CStreamLogCompBase</class>
@@ -12198,17 +12165,6 @@
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
       <anchor>a9a514d1597d09a363c7856b2e870e2a9</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CRangeSerializer</name>
-    <filename>classibase_1_1_c_range_serializer.html</filename>
-    <member kind="function" static="yes">
-      <type>static bool</type>
-      <name>SerializeRange</name>
-      <anchorfile>classibase_1_1_c_range_serializer.html</anchorfile>
-      <anchor>a916bb605d9d73ff3deace9fb3ee774cd</anchor>
-      <arglist>(iser::IArchive &amp;archive, istd::CRange &amp;range)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30989,7 +30945,6 @@
     <class kind="class">iqt::CComponentAccessor</class>
     <class kind="class">iqt::CCopyProcessorComp</class>
     <class kind="class">iqt::CCriticalSection</class>
-    <class kind="class">iqt::CDateTime</class>
     <class kind="class">iqt::CDefaultRegistryLoaderProvider</class>
     <class kind="class">iqt::CDefaultServicesProvider</class>
     <class kind="class">iqt::CDirList</class>
@@ -31016,7 +30971,6 @@
     <class kind="class">iqt::CSettingsWriteArchive</class>
     <class kind="class">iqt::CSignalBlocker</class>
     <class kind="class">iqt::CSystemEnvironment</class>
-    <class kind="class">iqt::CTimer</class>
     <class kind="class">iqt::CTrace</class>
     <class kind="class">iqt::CTranslationManagerComp</class>
     <class kind="class">iqt::CXmlFileReadArchive</class>
@@ -31107,34 +31061,6 @@
       <anchorfile>namespaceiqt.html</anchorfile>
       <anchor>a0b1d4b6556f3117a1b2d12937eb99624</anchor>
       <arglist>(const i2d::CLine2d &amp;line)</arglist>
-    </member>
-    <member kind="function">
-      <type>isys::CFileInfo</type>
-      <name>GetCFileInfo</name>
-      <anchorfile>namespaceiqt.html</anchorfile>
-      <anchor>a7abfcf2d60dc7d2d208d718a07f674b7</anchor>
-      <arglist>(const QFileInfo &amp;fileInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type>QFileInfo</type>
-      <name>GetQFileInfo</name>
-      <anchorfile>namespaceiqt.html</anchorfile>
-      <anchor>a7988983e9ec75bda2663351925a75661</anchor>
-      <arglist>(const isys::CFileInfo &amp;fileInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type>QDateTime</type>
-      <name>GetQDateTime</name>
-      <anchorfile>namespaceiqt.html</anchorfile>
-      <anchor>aff9d3af329ae7c8f027d054a92fc5dda</anchor>
-      <arglist>(const isys::IDateTime &amp;dateTime)</arglist>
-    </member>
-    <member kind="function">
-      <type>isys::CSimpleDateTime</type>
-      <name>GetCSimpleDateTime</name>
-      <anchorfile>namespaceiqt.html</anchorfile>
-      <anchor>ae36880c4f1ca011484ac14f02bf5a10a</anchor>
-      <arglist>(const QDateTime &amp;dateTime)</arglist>
     </member>
     <member kind="function">
       <type>QRect</type>
@@ -31664,81 +31590,6 @@
       <anchorfile>classiqt_1_1_c_critical_section.html</anchorfile>
       <anchor>af9ec325f0f31e213faf3605b6472e99a</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CDateTime</name>
-    <filename>classiqt_1_1_c_date_time.html</filename>
-    <base>isys::CDateTimeBase</base>
-    <member kind="function">
-      <type></type>
-      <name>CDateTime</name>
-      <anchorfile>classiqt_1_1_c_date_time.html</anchorfile>
-      <anchor>a3cbdbf7b1bb4805811a9f4945a7349b8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CDateTime</name>
-      <anchorfile>classiqt_1_1_c_date_time.html</anchorfile>
-      <anchor>a559f45f88b5f79f520c09cf7c60c935c</anchor>
-      <arglist>(const CDateTime &amp;time)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CDateTime</name>
-      <anchorfile>classiqt_1_1_c_date_time.html</anchorfile>
-      <anchor>a31eb3e79debfbf3674f16c7b6ab21ee4</anchor>
-      <arglist>(const QDateTime &amp;time)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetComponent</name>
-      <anchorfile>classiqt_1_1_c_date_time.html</anchorfile>
-      <anchor>a531f7bcd56c4a14791d539014ef41699</anchor>
-      <arglist>(int component) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetComponent</name>
-      <anchorfile>classiqt_1_1_c_date_time.html</anchorfile>
-      <anchor>a07a90be51e7313e7f69b7f5a27f8a19d</anchor>
-      <arglist>(int component, int value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetCurrentTime</name>
-      <anchorfile>classiqt_1_1_c_date_time.html</anchorfile>
-      <anchor>ad342d2073235f9cf8180ea75faa6eb98</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>ToCTime</name>
-      <anchorfile>classiqt_1_1_c_date_time.html</anchorfile>
-      <anchor>a608f74ec2eb078e41dd362a1e3161b08</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>FromCTime</name>
-      <anchorfile>classiqt_1_1_c_date_time.html</anchorfile>
-      <anchor>a1d9ff541205dbef9093b0bd41707ef7b</anchor>
-      <arglist>(double ctime)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classiqt_1_1_c_date_time.html</anchorfile>
-      <anchor>a8d5ff032bd048a1ffeb48e3e9b910c0d</anchor>
-      <arglist>(const istd::IChangeable &amp;object)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
-      <name>CloneMe</name>
-      <anchorfile>classiqt_1_1_c_date_time.html</anchorfile>
-      <anchor>afcb69876b5e5d78805863dab6a7a4b97</anchor>
-      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33373,74 +33224,6 @@
       <name>GetUniqueIdentifier</name>
       <anchorfile>classiqt_1_1_c_system_environment.html</anchorfile>
       <anchor>a8bdb2c3c61dc5c23a1097af16bc4fa25</anchor>
-      <arglist>() const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CTimer</name>
-    <filename>classiqt_1_1_c_timer.html</filename>
-    <base virtualness="virtual">isys::ITimer</base>
-    <member kind="function">
-      <type></type>
-      <name>CTimer</name>
-      <anchorfile>classiqt_1_1_c_timer.html</anchorfile>
-      <anchor>a3b40d08ebc6d45ac2970ac0fdf5f7bd5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetTimeTo</name>
-      <anchorfile>classiqt_1_1_c_timer.html</anchorfile>
-      <anchor>aa63739c496413ea7370f073015cc102d</anchor>
-      <arglist>(const CTimer &amp;timer) const </arglist>
-    </member>
-    <member kind="function">
-      <type>unsigned long long</type>
-      <name>GetNativeRepresentation</name>
-      <anchorfile>classiqt_1_1_c_timer.html</anchorfile>
-      <anchor>a4c3d3f34715d5c4d7808b60c7a920c09</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetNativeRepresentation</name>
-      <anchorfile>classiqt_1_1_c_timer.html</anchorfile>
-      <anchor>ad550be80f168f914169a6959baf2414f</anchor>
-      <arglist>(unsigned long long value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Start</name>
-      <anchorfile>classiqt_1_1_c_timer.html</anchorfile>
-      <anchor>ae0620e031893c792e324d85ca36228f9</anchor>
-      <arglist>(double elapsedTime=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetElapsed</name>
-      <anchorfile>classiqt_1_1_c_timer.html</anchorfile>
-      <anchor>aa8de6ba6f62c1db0363cc9778cd64e94</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetTimeTo</name>
-      <anchorfile>classiqt_1_1_c_timer.html</anchorfile>
-      <anchor>a80c5c59531f297e658ecbef37daee2ba</anchor>
-      <arglist>(const ITimer &amp;timer) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>WaitTo</name>
-      <anchorfile>classiqt_1_1_c_timer.html</anchorfile>
-      <anchor>a032c93da6150323795e527e4a0b5eecf</anchor>
-      <arglist>(double time) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetTimerResolution</name>
-      <anchorfile>classiqt_1_1_c_timer.html</anchorfile>
-      <anchor>a3f55a91a89ab5402697764146cf2469e</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -35288,6 +35071,13 @@
       <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
       <anchor>a32afb4ca5dc03c0f63b0f4d840d0639e</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateAllViews</name>
+      <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
+      <anchor>a3e1552a85bafc3ce11e45d68e5d4142b</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
@@ -40436,6 +40226,7 @@
     <class kind="class">iser::CMemoryReadArchive</class>
     <class kind="class">iser::CMemoryWriteArchive</class>
     <class kind="class">iser::CMinimalVersionInfo</class>
+    <class kind="class">iser::CPrimitiveTypesSerializer</class>
     <class kind="class">iser::CReadArchiveBase</class>
     <class kind="class">iser::CReaderVersionInfo</class>
     <class kind="class">iser::CTextReadArchiveBase</class>
@@ -41346,6 +41137,24 @@
       <anchorfile>classiser_1_1_c_minimal_version_info.html</anchorfile>
       <anchor>a6deb50e2f0ffd3e6732bb5df09dae1a3</anchor>
       <arglist>(int versionId, I_DWORD versionNumber) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iser::CPrimitiveTypesSerializer</name>
+    <filename>classiser_1_1_c_primitive_types_serializer.html</filename>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SerializeRange</name>
+      <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
+      <anchor>af046032065ec0007d29bffe9c57b40e2</anchor>
+      <arglist>(iser::IArchive &amp;archive, istd::CRange &amp;range)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SerializeDateTime</name>
+      <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
+      <anchor>a479cbded59d35c92ce27a04a8380592c</anchor>
+      <arglist>(iser::IArchive &amp;archive, QDateTime &amp;dateTime)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -42822,6 +42631,7 @@
     <class kind="class">istd::CClassInfo</class>
     <class kind="class">istd::CCrcCalculator</class>
     <class kind="class">istd::CFastBinaryIndex</class>
+    <class kind="class">istd::CGeneralTimeStamp</class>
     <class kind="class">istd::CIdManipBase</class>
     <class kind="class">istd::CIndex2d</class>
     <class kind="class">istd::CRandomNumber</class>
@@ -42837,6 +42647,7 @@
     <class kind="class">istd::IPolymorphic</class>
     <class kind="class">istd::IServicesProvider</class>
     <class kind="class">istd::CGroupRegistrator</class>
+    <class kind="class">istd::ITimeStamp</class>
     <class kind="class">istd::ITrace</class>
     <class kind="class">istd::TArray</class>
     <class kind="class">istd::TCachedUpdateManagerWrap</class>
@@ -43619,6 +43430,60 @@
       <anchorfile>classistd_1_1_c_fast_binary_index_1_1_iterator.html</anchorfile>
       <anchor>a0b1b6ea93dba7479ffdc28dd313cf36e</anchor>
       <arglist>(const Iterator &amp;iter)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>istd::CGeneralTimeStamp</name>
+    <filename>classistd_1_1_c_general_time_stamp.html</filename>
+    <base virtualness="virtual">istd::ITimeStamp</base>
+    <member kind="function">
+      <type></type>
+      <name>CGeneralTimeStamp</name>
+      <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
+      <anchor>a54fdc9e781778708e4e073af9c216dfa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetTimeTo</name>
+      <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
+      <anchor>a8a9205be21fddee2ebba71bc0b6ab40f</anchor>
+      <arglist>(const CGeneralTimeStamp &amp;timeStamp) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Start</name>
+      <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
+      <anchor>a7d0d886d2e4a74255a9309154542e15e</anchor>
+      <arglist>(double elapsedTime=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetElapsed</name>
+      <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
+      <anchor>aa37c00dca90fc8983405a0904447b47d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetTimeTo</name>
+      <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
+      <anchor>a909f2cd1c2cbd21eb7d4fb81d3cb2c56</anchor>
+      <arglist>(const ITimeStamp &amp;timeStamp) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>WaitTo</name>
+      <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
+      <anchor>a5276d5b30a55e083d992556250912f1b</anchor>
+      <arglist>(double time) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetTimerResolution</name>
+      <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
+      <anchor>a71d69301e765f85dfa565d218400821d</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -44446,6 +44311,46 @@
       <anchorfile>classistd_1_1_c_group_registrator.html</anchorfile>
       <anchor>af7fbef2b49432b4d1ffe22bec8d217aa</anchor>
       <arglist>(const char *groupId)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>istd::ITimeStamp</name>
+    <filename>classistd_1_1_i_time_stamp.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>Start</name>
+      <anchorfile>classistd_1_1_i_time_stamp.html</anchorfile>
+      <anchor>a84d5ef2189364a7cfe9a88e1623bf2f4</anchor>
+      <arglist>(double elapsedTime=0)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetElapsed</name>
+      <anchorfile>classistd_1_1_i_time_stamp.html</anchorfile>
+      <anchor>a09824dad3ef60de35815a494ebd7ef0b</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetTimeTo</name>
+      <anchorfile>classistd_1_1_i_time_stamp.html</anchorfile>
+      <anchor>a2e2d82ba7d4837bdf5edcbf8988d1bd0</anchor>
+      <arglist>(const ITimeStamp &amp;timer) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>WaitTo</name>
+      <anchorfile>classistd_1_1_i_time_stamp.html</anchorfile>
+      <anchor>a5bbb1f4755c0421d3c1225932ac09096</anchor>
+      <arglist>(double time) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetTimerResolution</name>
+      <anchorfile>classistd_1_1_i_time_stamp.html</anchorfile>
+      <anchor>a5bae651e2a473fd581ea94be7b7272e2</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -47132,136 +47037,15 @@
   <compound kind="namespace">
     <name>isys</name>
     <filename>namespaceisys.html</filename>
-    <class kind="class">isys::CDateTimeBase</class>
-    <class kind="class">isys::CFileInfo</class>
     <class kind="class">isys::CSectionBlocker</class>
-    <class kind="class">isys::CSimpleDateTime</class>
     <class kind="class">isys::CSystemEnvironmentBase</class>
     <class kind="class">isys::CSystemInfoBase</class>
     <class kind="class">isys::ICriticalSection</class>
-    <class kind="class">isys::IDateTime</class>
-    <class kind="class">isys::IFileInfo</class>
     <class kind="class">isys::IFileSystem</class>
     <class kind="class">isys::IFunctionsProvider</class>
     <class kind="class">isys::IProcessEnvironment</class>
     <class kind="class">isys::ISystemEnvironment</class>
     <class kind="class">isys::ISystemInfo</class>
-    <class kind="class">isys::ITimer</class>
-  </compound>
-  <compound kind="class">
-    <name>isys::CDateTimeBase</name>
-    <filename>classisys_1_1_c_date_time_base.html</filename>
-    <base>isys::IDateTime</base>
-    <member kind="function">
-      <type>bool</type>
-      <name>SerializeComponents</name>
-      <anchorfile>classisys_1_1_c_date_time_base.html</anchorfile>
-      <anchor>aedba1428e0f3e11fa668188d3bb0ad0c</anchor>
-      <arglist>(iser::IArchive &amp;archive, TimeComponent fromComponent, TimeComponent toComponent)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>ToString</name>
-      <anchorfile>classisys_1_1_c_date_time_base.html</anchorfile>
-      <anchor>a9995c2293105330b7ccc39c5c127741c</anchor>
-      <arglist>(int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND, const TimeSeparator &amp;separator=TS_ISO) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>FromString</name>
-      <anchorfile>classisys_1_1_c_date_time_base.html</anchorfile>
-      <anchor>a8aa40be99dcd255a5c1e8fbda2b9452b</anchor>
-      <arglist>(const std::string &amp;dateTime, int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classisys_1_1_c_date_time_base.html</anchorfile>
-      <anchor>aec5a2c8dc82af0d8ef0895788464710d</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>ResetAllComponents</name>
-      <anchorfile>classisys_1_1_c_date_time_base.html</anchorfile>
-      <anchor>aa1c2ffb5552d72e3613e3435583b14d4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static iser::CArchiveTag</type>
-      <name>s_archiveTags</name>
-      <anchorfile>classisys_1_1_c_date_time_base.html</anchorfile>
-      <anchor>a1a4c178a257d18ef0c094e2bae0af9a1</anchor>
-      <arglist>[TC_LAST+1]</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isys::CFileInfo</name>
-    <filename>classisys_1_1_c_file_info.html</filename>
-    <base virtualness="virtual">isys::IFileInfo</base>
-    <member kind="function">
-      <type></type>
-      <name>CFileInfo</name>
-      <anchorfile>classisys_1_1_c_file_info.html</anchorfile>
-      <anchor>a93070a8304e7b11f64368c8aaf9f0347</anchor>
-      <arglist>(const QString &amp;filePath=QString(), int filePermissions=0, const isys::CSimpleDateTime &amp;modificationTime=isys::CSimpleDateTime::GetCurrent())</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>classisys_1_1_c_file_info.html</anchorfile>
-      <anchor>ada8e4637a07246cfa0e0e67ba7d54243</anchor>
-      <arglist>(const CFileInfo &amp;fileInfo) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator!=</name>
-      <anchorfile>classisys_1_1_c_file_info.html</anchorfile>
-      <anchor>ad846932bf23ed4e1a33022cf03418932</anchor>
-      <arglist>(const CFileInfo &amp;fileInfo) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPermissions</name>
-      <anchorfile>classisys_1_1_c_file_info.html</anchorfile>
-      <anchor>afaf5d7c5cf9f38e43340d9ade525ce55</anchor>
-      <arglist>(int filePermissions)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetModificationTime</name>
-      <anchorfile>classisys_1_1_c_file_info.html</anchorfile>
-      <anchor>a618f77e8834f85ab1dd355ad1be365d3</anchor>
-      <arglist>(const isys::IDateTime &amp;modificationTime)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetFilePath</name>
-      <anchorfile>classisys_1_1_c_file_info.html</anchorfile>
-      <anchor>a14fecf690d2f2227b9d94f9a53294b69</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetPermissions</name>
-      <anchorfile>classisys_1_1_c_file_info.html</anchorfile>
-      <anchor>ad882df2467d342b3305f6de8854bb615</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const isys::IDateTime &amp;</type>
-      <name>GetModificationTime</name>
-      <anchorfile>classisys_1_1_c_file_info.html</anchorfile>
-      <anchor>a0f19e6310000c216248366f29c0745dd</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classisys_1_1_c_file_info.html</anchorfile>
-      <anchor>a85f2e4c35b77494c11df87f03a27329f</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>isys::CSectionBlocker</name>
@@ -47285,88 +47069,6 @@
       <name>Reset</name>
       <anchorfile>classisys_1_1_c_section_blocker.html</anchorfile>
       <anchor>a04528947a5607cb3078efc4aa21931da</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isys::CSimpleDateTime</name>
-    <filename>classisys_1_1_c_simple_date_time.html</filename>
-    <base>isys::CDateTimeBase</base>
-    <member kind="function">
-      <type></type>
-      <name>CSimpleDateTime</name>
-      <anchorfile>classisys_1_1_c_simple_date_time.html</anchorfile>
-      <anchor>a29902fccce32c73b16f33c39fb9e73f7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CSimpleDateTime</name>
-      <anchorfile>classisys_1_1_c_simple_date_time.html</anchorfile>
-      <anchor>a748333a7a55ff53014215da71e5be21d</anchor>
-      <arglist>(const IDateTime &amp;dateTime)</arglist>
-    </member>
-    <member kind="function">
-      <type>CSimpleDateTime &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classisys_1_1_c_simple_date_time.html</anchorfile>
-      <anchor>accac398a1edd9585c72388837534ec6c</anchor>
-      <arglist>(const IDateTime &amp;dateTime)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>classisys_1_1_c_simple_date_time.html</anchorfile>
-      <anchor>a5e9ab14ec85b9ce522685caf1c1fcb5c</anchor>
-      <arglist>(const IDateTime &amp;dateTime) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator!=</name>
-      <anchorfile>classisys_1_1_c_simple_date_time.html</anchorfile>
-      <anchor>ae088c1dc440c251f6396e28622d8c78a</anchor>
-      <arglist>(const IDateTime &amp;dateTime) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetComponent</name>
-      <anchorfile>classisys_1_1_c_simple_date_time.html</anchorfile>
-      <anchor>a95f5fcac5a7a81ebae543dbb98023921</anchor>
-      <arglist>(int component) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetComponent</name>
-      <anchorfile>classisys_1_1_c_simple_date_time.html</anchorfile>
-      <anchor>a6f019edc185d32d08a21a8df8825fb50</anchor>
-      <arglist>(int component, int value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetCurrentTime</name>
-      <anchorfile>classisys_1_1_c_simple_date_time.html</anchorfile>
-      <anchor>a24f8a000cf9b98f679e3dd1ada7a0c0e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>ToCTime</name>
-      <anchorfile>classisys_1_1_c_simple_date_time.html</anchorfile>
-      <anchor>a6d672878c39903d2821044b8375b8cb2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>FromCTime</name>
-      <anchorfile>classisys_1_1_c_simple_date_time.html</anchorfile>
-      <anchor>adc4276003b89cee18c1c32a72bcaa072</anchor>
-      <arglist>(double ctime)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static CSimpleDateTime</type>
-      <name>GetCurrent</name>
-      <anchorfile>classisys_1_1_c_simple_date_time.html</anchorfile>
-      <anchor>ab998d5b4b7529547a62c66866a3d59c0</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -47488,161 +47190,6 @@
       <anchorfile>classisys_1_1_i_critical_section.html</anchorfile>
       <anchor>a1e554cb481c7830439219b7c61e1db03</anchor>
       <arglist>()=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isys::IDateTime</name>
-    <filename>classisys_1_1_i_date_time.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>TimeComponent</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a1bba51eb345f78d6966c79e5d732a54e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TC_YEAR</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a1bba51eb345f78d6966c79e5d732a54eafa68769ac2b3ba9092c90eaa09ed18fa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TC_MONTH</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a1bba51eb345f78d6966c79e5d732a54ea6511f0b3a1548f4080b467a714a2a674</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TC_DAY</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a1bba51eb345f78d6966c79e5d732a54ea650ba03cfbb3cd4c9d5ee8fa7b30c8cb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TC_HOUR</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a1bba51eb345f78d6966c79e5d732a54ea78daab1dad8810cc04d3adb260a11f38</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TC_MINUTE</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a1bba51eb345f78d6966c79e5d732a54ea81e5c1ed65a5dac273f99577929516aa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TC_SECOND</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a1bba51eb345f78d6966c79e5d732a54ea966045093f4251fd9b9619c8bffa6f3c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TC_MILLISECOND</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a1bba51eb345f78d6966c79e5d732a54ea9b0976fd286092b6f378fcbc4c5aafa1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TC_LAST</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a1bba51eb345f78d6966c79e5d732a54ea44a3469dbc292da97ce39c6427e54fec</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>char</type>
-      <name>TimeSeparator</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a818ed36af6d2de11837ae03cc1448491</anchor>
-      <arglist>[4]</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetComponent</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a2ae1f50a3728b9147d9a2c89964d3ee1</anchor>
-      <arglist>(int component) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetComponent</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a033d33cd4ea886ebb50edda4f005f981</anchor>
-      <arglist>(int component, int value)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>SetCurrentTime</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a5f80e23475e9a7ac8e359df873fd2c7e</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual double</type>
-      <name>ToCTime</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>ab7482a5d5713b529f3c585f0f7f92d43</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>FromCTime</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a879845430a7f95cf4fa2b02abe2ae776</anchor>
-      <arglist>(double ctime)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>ToString</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a00c6c622335a7c4be16e19b7eb5883f9</anchor>
-      <arglist>(int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND, const TimeSeparator &amp;separator=TS_ISO) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>FromString</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a50cd073c853a94c33e3720041f12ed51</anchor>
-      <arglist>(const std::string &amp;dateTime, int fromComponent=TC_YEAR, int toComponent=TC_MILLISECOND)=0</arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const TimeSeparator</type>
-      <name>TS_ISO</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a07b2d37aeb87e9bccd7728ff4b2cef05</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const TimeSeparator</type>
-      <name>TS_FILENAME</name>
-      <anchorfile>classisys_1_1_i_date_time.html</anchorfile>
-      <anchor>a4dd73fd63d719c4e99dca1e6c3ace395</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isys::IFileInfo</name>
-    <filename>classisys_1_1_i_file_info.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetFilePath</name>
-      <anchorfile>classisys_1_1_i_file_info.html</anchorfile>
-      <anchor>a1de2d86eaf5ed8b0b5bb028bf4ea6398</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetPermissions</name>
-      <anchorfile>classisys_1_1_i_file_info.html</anchorfile>
-      <anchor>a0419130822bcd0a77f3fd496c7f4bca5</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const isys::IDateTime &amp;</type>
-      <name>GetModificationTime</name>
-      <anchorfile>classisys_1_1_i_file_info.html</anchorfile>
-      <anchor>a6bb21af50e049f1357e2a05f5ff271db</anchor>
-      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -47878,46 +47425,6 @@
       <anchorfile>classisys_1_1_i_system_info.html</anchorfile>
       <anchor>aa86515a199017f957640c560e9fb2f31</anchor>
       <arglist>(int adapterIndex) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isys::ITimer</name>
-    <filename>classisys_1_1_i_timer.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>Start</name>
-      <anchorfile>classisys_1_1_i_timer.html</anchorfile>
-      <anchor>acc298cc215cf7a5332c0a1375bfcabc5</anchor>
-      <arglist>(double elapsedTime=0)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual double</type>
-      <name>GetElapsed</name>
-      <anchorfile>classisys_1_1_i_timer.html</anchorfile>
-      <anchor>ae41f285c4cd8503fe134693e0ee8c21a</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual double</type>
-      <name>GetTimeTo</name>
-      <anchorfile>classisys_1_1_i_timer.html</anchorfile>
-      <anchor>a71c28b6ebca724edd004fe9e71afe69f</anchor>
-      <arglist>(const ITimer &amp;timer) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>WaitTo</name>
-      <anchorfile>classisys_1_1_i_timer.html</anchorfile>
-      <anchor>a6c1808f1745ae5bb6f61342f2e8aa170</anchor>
-      <arglist>(double time) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual double</type>
-      <name>GetTimerResolution</name>
-      <anchorfile>classisys_1_1_i_timer.html</anchorfile>
-      <anchor>a1e9f1a87e32077210ee2208668148ea4</anchor>
-      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -55599,30 +55106,9 @@
   <compound kind="class">
     <name>iview::IInteractiveShape</name>
     <filename>classiview_1_1_i_interactive_shape.html</filename>
-    <base>iview::IShape</base>
+    <base virtualness="virtual">iview::IShape</base>
     <base virtualness="virtual">iview::IMouseActionObserver</base>
     <base virtualness="virtual">iview::ITouchable</base>
-    <member kind="typedef">
-      <type>IShape</type>
-      <name>BaseClass</name>
-      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
-      <anchor>afa83f095a9b3dc662aad69a0cdcdfb90</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMouseActionObserver</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
-      <anchor>a834c0325b94657b69093b551eb3eca7f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ITouchable</type>
-      <name>BaseClass3</name>
-      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
-      <anchor>a9dad4435b7576bff1ff58c441fcf74f8</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsSelected</name>
@@ -56719,10 +56205,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const iview::CScreenTransform &amp;</type>
+      <type>virtual const CScreenTransform &amp;</type>
       <name>GetTransform</name>
       <anchorfile>classiview_1_1_t_layer_base.html</anchorfile>
-      <anchor>af0b39622d75df75bae3058e5f1b08de7</anchor>
+      <anchor>a699cc5f1019545f3d7ed61d46e021860</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -56789,10 +56275,10 @@
       <arglist>(const i2d::CRect &amp;prevArea, const i2d::CRect &amp;newArea)</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>::std::map&lt; IShape *, i2d::CRect &gt;</type>
+      <type>std::map&lt; IShape *, i2d::CRect &gt;</type>
       <name>ShapeMap</name>
       <anchorfile>classiview_1_1_t_layer_base_ex.html</anchorfile>
-      <anchor>aff9cc0834bf4b8aa15d7faa6c78499aa</anchor>
+      <anchor>a1d1acfbe0f79aa5d7301af4ef04e28e7</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">

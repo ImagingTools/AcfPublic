@@ -105,6 +105,8 @@ void CCircleParamsGuiComp::UpdateGui(int /*updateFlags*/)
 		YSpin->setValue(center.GetY());
 
 		RadiusSpin->setValue(objectPtr->GetRadius());
+
+		UpdateAllViews();
 	}
 }
 

@@ -35,7 +35,7 @@
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_time_stamp_provider_8h.html">iinsp/ITimeStampProvider.h</a>&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="comment">// IACF includes</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="iwin_2_c_timer_8h.html">iwin/CTimer.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_c_performance_time_stamp_8h.html">iwin/CPerformanceTimeStamp.h</a>&quot;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="keyword">namespace </span>iwin
@@ -54,14 +54,14 @@
 <a name="l00033"></a>00033        I_END_COMPONENT;
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035        <span class="comment">// reimplemented (iinsp::ITimeStampProvider)</span>
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_i_timer.html">isys::ITimer</a>* <a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html#a0709da9de2abd6bb7b7313f0ec8e2799">GetCurrentTimeStamp</a>() <span class="keyword">const</span>;
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_time_stamp.html">istd::ITimeStamp</a>* <a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html#a09f9f9929f025f22dce0ebd6d56d999d">GetCurrentTimeStamp</a>() <span class="keyword">const</span>;
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038        <span class="comment">// reimplemented (istd::IChangeable)</span>
 <a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_c_time_stamp_cache_comp.html#a8f6b3cbaa60448fa0d24e3d9b1b4051f">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 <span class="keyword">private</span>:
 <a name="l00042"></a>00042        <span class="keywordtype">bool</span> m_isTimerValid;
-<a name="l00043"></a>00043        <a class="code" href="classiwin_1_1_c_timer.html" title="An timer implementation for the Windows plattform.">iwin::CTimer</a> m_timer;
+<a name="l00043"></a>00043        <a class="code" href="classiwin_1_1_c_performance_time_stamp.html" title="High perfomance time stamp implementation.">iwin::CPerformanceTimeStamp</a> m_timer;
 <a name="l00044"></a>00044 };
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046 

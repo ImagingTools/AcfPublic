@@ -82,6 +82,8 @@ void CAnnulusParamsGuiComp::UpdateGui(int /*updateFlags*/)
 
 		InnerRadiusSpin->setValue(objectPtr->GetInnerRadius());
 		OuterRadiusSpin->setValue(objectPtr->GetOuterRadius());
+
+		UpdateAllViews();
 	}
 }
 

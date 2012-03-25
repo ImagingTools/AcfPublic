@@ -24,18 +24,14 @@
 #define ifpf_IMonitoringSession_included
 
 
-// STL includes
-#include <vector>
-
-
 // Qt includes
 #include <QtCore/QString>
-
+#include <QtCore/QMap>
+#include <QtCore/QFileInfo>
+#include <QtCore/QDateTime>
 
 // ACF includes
 #include "istd/IChangeable.h"
-
-#include "isys/CFileInfo.h"
 
 #include "iser/ISerializable.h"
 
@@ -52,7 +48,10 @@ namespace ifpf
 class IMonitoringSession: virtual public iser::ISerializable
 {
 public:
-	typedef std::vector<isys::CFileInfo> FileItems;
+	/**
+		Map absolute file path to modification time.
+	*/
+	typedef QMap<QString, QDateTime> FileItems;
 
 	/**
 		Get the list of file items.

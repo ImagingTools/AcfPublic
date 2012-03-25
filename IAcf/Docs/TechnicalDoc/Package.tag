@@ -107,15 +107,8 @@
   <compound kind="file">
     <name>CTimer.h</name>
     <path>C:/Temp/Iacf/Include/inat/</path>
-    <filename>inat_2_c_timer_8h</filename>
+    <filename>_c_timer_8h</filename>
     <includes id="inat_8h" name="inat.h" local="yes" imported="no">inat/inat.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>CTimer.h</name>
-    <path>C:/Temp/Iacf/Include/iwin/</path>
-    <filename>iwin_2_c_timer_8h</filename>
-    <class kind="class">iwin::CTimer</class>
-    <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
     <name>inat.h</name>
@@ -263,6 +256,13 @@
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
+    <name>CPerformanceTimeStamp.h</name>
+    <path>C:/Temp/Iacf/Include/iwin/</path>
+    <filename>_c_performance_time_stamp_8h</filename>
+    <class kind="class">iwin::CPerformanceTimeStamp</class>
+    <namespace>iwin</namespace>
+  </compound>
+  <compound kind="file">
     <name>CProcessEnvironment.h</name>
     <path>C:/Temp/Iacf/Include/iwin/</path>
     <filename>_c_process_environment_8h</filename>
@@ -288,7 +288,7 @@
     <name>CTimeStampCacheComp.h</name>
     <path>C:/Temp/Iacf/Include/iwin/</path>
     <filename>_c_time_stamp_cache_comp_8h</filename>
-    <includes id="iwin_2_c_timer_8h" name="CTimer.h" local="yes" imported="no">iwin/CTimer.h</includes>
+    <includes id="_c_performance_time_stamp_8h" name="CPerformanceTimeStamp.h" local="yes" imported="no">iwin/CPerformanceTimeStamp.h</includes>
     <class kind="class">iwin::CTimeStampCacheComp</class>
     <namespace>iwin</namespace>
   </compound>
@@ -2354,10 +2354,10 @@
     <class kind="class">iwin::CCriticalSection</class>
     <class kind="class">iwin::CDefaultServicesProvider</class>
     <class kind="class">iwin::CDllFunctionsProvider</class>
+    <class kind="class">iwin::CPerformanceTimeStamp</class>
     <class kind="class">iwin::CProcessEnvironment</class>
     <class kind="class">iwin::CSystemEnvironment</class>
     <class kind="class">iwin::CSystemInfo</class>
-    <class kind="class">iwin::CTimer</class>
     <class kind="class">iwin::CTimeStampCacheComp</class>
     <class kind="class">iwin::TComPtr</class>
   </compound>
@@ -2457,6 +2457,95 @@
       <anchorfile>classiwin_1_1_c_dll_functions_provider.html</anchorfile>
       <anchor>a397b1858800f6853e82f68cc53488fb5</anchor>
       <arglist>(const std::string &amp;id) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwin::CPerformanceTimeStamp</name>
+    <filename>classiwin_1_1_c_performance_time_stamp.html</filename>
+    <base virtualness="virtual">istd::ITimeStamp</base>
+    <member kind="function">
+      <type></type>
+      <name>CPerformanceTimeStamp</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>aac48770f15b299d01a8b37e5e0fecf65</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsVaild</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>af993c0486ead6c97333739ab85e8eccc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetTimeTo</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>a50890a4ba7decc909ecb80ef24f6e91c</anchor>
+      <arglist>(const CPerformanceTimeStamp &amp;timeStamp) const </arglist>
+    </member>
+    <member kind="function">
+      <type>I_QWORD</type>
+      <name>GetNativeRepresentation</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>a06a620636c95bcb703a0601f9499601e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetNativeRepresentation</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>ad07a337cb86f8c336fb23dba9b788214</anchor>
+      <arglist>(I_QWORD value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Start</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>ae3331426035df2167dc3e4fce915cac9</anchor>
+      <arglist>(double elapsedTime=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetElapsed</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>ad4b4573d41106beb68da8a6c077188c5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetTimeTo</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>a42d6e51e5bbd5d7f912afaf9c198c9ae</anchor>
+      <arglist>(const istd::ITimeStamp &amp;timeStamp) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>WaitTo</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>a29b68b6a6c474a8ae7fc839e3992983b</anchor>
+      <arglist>(double time) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetTimerResolution</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>adf6e3dec35bfc09d0433d5f02f33c428</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>a0cff265f686beed4198272cf47faa5ef</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>a31d3a7fc182e65b3f47faae63d663f87</anchor>
+      <arglist>(const istd::IChangeable &amp;object)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2573,95 +2662,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iwin::CTimer</name>
-    <filename>classiwin_1_1_c_timer.html</filename>
-    <base virtualness="virtual">isys::ITimer</base>
-    <member kind="function">
-      <type></type>
-      <name>CTimer</name>
-      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
-      <anchor>a5876fa5d9f6d57fd01c204318e9b23a3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsVaild</name>
-      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
-      <anchor>a4c542bfcfe5bb1eabcebb7e2234df465</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetTimeTo</name>
-      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
-      <anchor>ab9e95463c4d8c53ce5bf69f1e5056997</anchor>
-      <arglist>(const CTimer &amp;timer) const </arglist>
-    </member>
-    <member kind="function">
-      <type>I_QWORD</type>
-      <name>GetNativeRepresentation</name>
-      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
-      <anchor>a54d0475575bcd6e63fdb4d8303114349</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetNativeRepresentation</name>
-      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
-      <anchor>a3d6657b0055f0faa149fe3290b628c27</anchor>
-      <arglist>(I_QWORD value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Start</name>
-      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
-      <anchor>ae032396202c2ada5efe3c88ad7b0b488</anchor>
-      <arglist>(double elapsedTime=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetElapsed</name>
-      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
-      <anchor>a118f16d76c9027f61139171e974f1ed5</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetTimeTo</name>
-      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
-      <anchor>ae290f53a9a68679da1cbd23d4f6d57ba</anchor>
-      <arglist>(const ITimer &amp;timer) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>WaitTo</name>
-      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
-      <anchor>a9da9739f8da92d76bcd3e42a6b971910</anchor>
-      <arglist>(double time) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetTimerResolution</name>
-      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
-      <anchor>ab57a2c8efbf8bd01bc41e16e58ed4176</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSupportedOperations</name>
-      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
-      <anchor>ab818c68dc4bb537c5465da3eb21bb8ad</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classiwin_1_1_c_timer.html</anchorfile>
-      <anchor>ab2031809d3bdabe870cd676ce9a223d2</anchor>
-      <arglist>(const istd::IChangeable &amp;object)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iwin::CTimeStampCacheComp</name>
     <filename>classiwin_1_1_c_time_stamp_cache_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -2674,10 +2674,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const isys::ITimer *</type>
+      <type>virtual const istd::ITimeStamp *</type>
       <name>GetCurrentTimeStamp</name>
       <anchorfile>classiwin_1_1_c_time_stamp_cache_comp.html</anchorfile>
-      <anchor>a0709da9de2abd6bb7b7313f0ec8e2799</anchor>
+      <anchor>a09f9f9929f025f22dce0ebd6d56d999d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">

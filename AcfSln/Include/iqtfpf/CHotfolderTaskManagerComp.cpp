@@ -26,11 +26,9 @@
 // STL includes
 #include <algorithm>
 
-
 // Qt includes
 #include <QtCore/QDir>
 #include <QtGui/QApplication>
-
 
 // ACF includes
 #include "istd/TChangeDelegator.h"
@@ -40,8 +38,6 @@
 #include "iprm/IFileNameParam.h"
 
 #include "iproc/IProcessor.h"
-
-#include "iqt/CTimer.h"
 
 
 namespace iqtfpf

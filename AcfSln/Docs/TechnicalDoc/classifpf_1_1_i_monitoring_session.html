@@ -59,13 +59,13 @@ Inheritance diagram for ifpf::IMonitoringSession:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector<br class="typebreak"/>
-&lt; <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_c_file_info.html">isys::CFileInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_monitoring_session.html#a6f6a65004d575c8d9a459f7d32043cf7">FileItems</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; QString, QDateTime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_monitoring_session.html#ac47d3a11d4a8515d18ad728217afe462">FileItems</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map absolute file path to modification time.  <a href="#ac47d3a11d4a8515d18ad728217afe462"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classifpf_1_1_i_monitoring_session.html#a6f6a65004d575c8d9a459f7d32043cf7">FileItems</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_monitoring_session.html#ac539132606b758ed3a1e02f0278a4712">GetFileInfoList</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classifpf_1_1_i_monitoring_session.html#ac47d3a11d4a8515d18ad728217afe462">FileItems</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_monitoring_session.html#ac539132606b758ed3a1e02f0278a4712">GetFileInfoList</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of file items.  <a href="#ac539132606b758ed3a1e02f0278a4712"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_monitoring_session.html#a219e4ed4a936ffd6ad509d0d8a34462c">SetFileInfoList</a> (const <a class="el" href="classifpf_1_1_i_monitoring_session.html#a6f6a65004d575c8d9a459f7d32043cf7">FileItems</a> &amp;fileList)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_monitoring_session.html#a219e4ed4a936ffd6ad509d0d8a34462c">SetFileInfoList</a> (const <a class="el" href="classifpf_1_1_i_monitoring_session.html#ac47d3a11d4a8515d18ad728217afe462">FileItems</a> &amp;fileList)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the file list.  <a href="#a219e4ed4a936ffd6ad509d0d8a34462c"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -73,20 +73,22 @@ Public Member Functions</h2></td></tr>
 <p>Each directory monitor can persist its monitoring state in a monitoring session, which is provided by <a class="el" href="classifpf_1_1_i_monitoring_session_manager.html" title="Common interface for a monitoring session&#39;s manager.">IMonitoringSessionManager</a>. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classifpf_1_1_i_monitoring_session_manager.html" title="Common interface for a monitoring session&#39;s manager.">IMonitoringSessionManager</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_i_monitoring_session_8h_source.html#l00030">30</a> of file <a class="el" href="_i_monitoring_session_8h_source.html">IMonitoringSession.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_monitoring_session_8h_source.html#l00026">26</a> of file <a class="el" href="_i_monitoring_session_8h_source.html">IMonitoringSession.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a6f6a65004d575c8d9a459f7d32043cf7"></a><!-- doxytag: member="ifpf::IMonitoringSession::FileItems" ref="a6f6a65004d575c8d9a459f7d32043cf7" args="" -->
+<a class="anchor" id="ac47d3a11d4a8515d18ad728217afe462"></a><!-- doxytag: member="ifpf::IMonitoringSession::FileItems" ref="ac47d3a11d4a8515d18ad728217afe462" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::vector&lt;<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_c_file_info.html">isys::CFileInfo</a>&gt; <a class="el" href="classifpf_1_1_i_monitoring_session.html#a6f6a65004d575c8d9a459f7d32043cf7">ifpf::IMonitoringSession::FileItems</a></td>
+          <td class="memname">typedef QMap&lt;QString, QDateTime&gt; <a class="el" href="classifpf_1_1_i_monitoring_session.html#ac47d3a11d4a8515d18ad728217afe462">ifpf::IMonitoringSession::FileItems</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_i_monitoring_session_8h_source.html#l00033">33</a> of file <a class="el" href="_i_monitoring_session_8h_source.html">IMonitoringSession.h</a>.</p>
+<p>Map absolute file path to modification time. </p>
+
+<p>Definition at line <a class="el" href="_i_monitoring_session_8h_source.html#l00032">32</a> of file <a class="el" href="_i_monitoring_session_8h_source.html">IMonitoringSession.h</a>.</p>
 
 </div>
 </div>
@@ -96,7 +98,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classifpf_1_1_i_monitoring_session.html#a6f6a65004d575c8d9a459f7d32043cf7">FileItems</a>&amp; ifpf::IMonitoringSession::GetFileInfoList </td>
+          <td class="memname">virtual const <a class="el" href="classifpf_1_1_i_monitoring_session.html#ac47d3a11d4a8515d18ad728217afe462">FileItems</a>&amp; ifpf::IMonitoringSession::GetFileInfoList </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -118,7 +120,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void ifpf::IMonitoringSession::SetFileInfoList </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classifpf_1_1_i_monitoring_session.html#a6f6a65004d575c8d9a459f7d32043cf7">FileItems</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classifpf_1_1_i_monitoring_session.html#ac47d3a11d4a8515d18ad728217afe462">FileItems</a> &amp;&#160;</td>
           <td class="paramname"><em>fileList</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>

@@ -24,21 +24,22 @@
 #define iview_TLayerBaseEx_included
 
 
-
+// STL includes
 #include <map>
 
+// ACF includes
 #include "iview/IShape.h"
 #include "iview/TLayerBase.h"
 
 
+namespace iview
+{
 
-namespace iview{
 
-
-
-/**	This is internal class to generate common implementation
- *		for diffrent layers implementations.
- *		Template paramener must be derivate from iview::ILayer interface.
+/**
+	This is internal class to generate common implementation
+	for diffrent layers implementations.
+	Template paramener must be derivate from iview::ILayer interface.
 */
 template <class Layer, class View = IShapeView>
 class TLayerBaseEx: public TLayerBase<Layer, View>
@@ -56,15 +57,18 @@ public:
 	virtual void OnAreaInvalidated(const i2d::CRect& prevArea, const i2d::CRect& newArea);
 
 protected:
-	typedef ::std::map<IShape*, i2d::CRect> ShapeMap;
+	typedef std::map<IShape*, i2d::CRect> ShapeMap;
 	typedef ShapeMap::value_type ShapeMapElement;
 
-	/**	Internal invalidate shape method.
-	 *		\internal
+	/**
+		\internal
+		Internal invalidate shape method.
 	*/
 	bool OnChangeShapeElement(ShapeMapElement& element);
-	/**	Internal disconnect shape method.
-	 *		\internal
+	
+	/**
+		\internal
+		Internal disconnect shape method.
 	*/
 	void DisconnectShapeElement(ShapeMap& map, ShapeMap::iterator iter);
 
@@ -81,7 +85,6 @@ private:
 };
 
 
-
 // public methods
 
 template <class Layer, class View>
@@ -92,7 +95,6 @@ TLayerBaseEx<Layer, View>::TLayerBaseEx()
 }
 
 
-
 // reimplemented (iview::IDisplay)
 
 template <class Layer, class View>
@@ -101,7 +103,6 @@ inline void TLayerBaseEx<Layer, View>::SetVisible(bool state)
 	m_isBoundingBoxValid = false;
 	BaseClass::SetVisible(state);
 }
-
 
 
 // reimplemented (iview::IDisplay)
@@ -117,7 +118,6 @@ i2d::CRect TLayerBaseEx<Layer, View>::GetBoundingBox() const
 	
 	return m_boundingBox;
 }
-
 
 
 template <class Layer, class View>
@@ -143,7 +143,6 @@ void TLayerBaseEx<Layer, View>::OnAreaInvalidated(const i2d::CRect& prevArea, co
 }
 
 
-
 // protected methods
 
 template <class Layer, class View>
@@ -161,7 +160,6 @@ bool TLayerBaseEx<Layer, View>::OnChangeShapeElement(ShapeMapElement& element)
 }
 
 
-
 template <class Layer, class View>
 void TLayerBaseEx<Layer, View>::DisconnectShapeElement(ShapeMap& map, ShapeMap::iterator iter)
 {
@@ -175,13 +173,11 @@ void TLayerBaseEx<Layer, View>::DisconnectShapeElement(ShapeMap& map, ShapeMap::
 }
 
 
-
 template <class Layer, class View>
 void TLayerBaseEx<Layer, View>::InvalidateBoundingBox()
 {
 	m_isBoundingBoxValid = false;
 }
-
 
 
 template <class Layer, class View>
@@ -191,7 +187,6 @@ i2d::CRect& TLayerBaseEx<Layer, View>::GetBoundingBoxRef() const
 }
 
 
-
 template <class Layer, class View>
 void TLayerBaseEx<Layer, View>::SetBoundingBoxValid() const
 {
@@ -199,9 +194,7 @@ void TLayerBaseEx<Layer, View>::SetBoundingBoxValid() const
 }
 
 
-
 } // namespace iview
-
 
 
 #endif // !iview_TLayerBaseEx_included

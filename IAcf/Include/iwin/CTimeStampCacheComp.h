@@ -31,7 +31,7 @@
 #include "iinsp/ITimeStampProvider.h"
 
 // IACF includes
-#include "iwin/CTimer.h"
+#include "iwin/CPerformanceTimeStamp.h"
 
 
 namespace iwin
@@ -55,14 +55,14 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (iinsp::ITimeStampProvider)
-	virtual const isys::ITimer* GetCurrentTimeStamp() const;
+	virtual const istd::ITimeStamp* GetCurrentTimeStamp() const;
 
 	// reimplemented (istd::IChangeable)
 	virtual bool CopyFrom(const IChangeable& object);
 
 private:
 	bool m_isTimerValid;
-	iwin::CTimer m_timer;
+	iwin::CPerformanceTimeStamp m_timer;
 };
 
 

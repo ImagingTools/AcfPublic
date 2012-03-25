@@ -28,11 +28,11 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ifpf_IHotfolderProcessingItem_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QString&gt;</span>
-<a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_date_time_8h.html">isys/IDateTime.h</a>&quot;</span>
-<a name="l00009"></a>00009 
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QDateTime.h&gt;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
@@ -67,9 +67,9 @@
 <a name="l00072"></a>00072 
 <a name="l00076"></a>00076        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#acfff128208f38e25d325ec966896134f" title="Set processing time.">SetProcessingTime</a>(<span class="keywordtype">double</span> processingTime) = 0;
 <a name="l00077"></a>00077 
-<a name="l00081"></a>00081        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_i_date_time.html">isys::IDateTime</a>&amp; <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#a18e092ee007524855cfb0026a69106e6" title="Get start time of the job.">GetStartTime</a>() <span class="keyword">const</span> = 0;
+<a name="l00081"></a>00081        <span class="keyword">virtual</span> <span class="keyword">const</span> QDateTime&amp; <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#a9d2bf261a3ca668640149b2fb07af11b" title="Get start time of the job.">GetStartTime</a>() <span class="keyword">const</span> = 0;
 <a name="l00082"></a>00082 
-<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#a05d78f4fe4975f8f81109da437baae03" title="Set start time of the job.">SetStartTime</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_i_date_time.html">isys::IDateTime</a>&amp; startTime) = 0;
+<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html#a86b4809c248e84baa803eaf4ef6eb989" title="Set start time of the job.">SetStartTime</a>(<span class="keyword">const</span> QDateTime&amp; startTime) = 0;
 <a name="l00087"></a>00087 };
 <a name="l00088"></a>00088 
 <a name="l00089"></a>00089 

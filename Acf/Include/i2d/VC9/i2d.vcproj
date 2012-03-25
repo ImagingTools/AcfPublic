@@ -169,6 +169,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CAffineTransformation2dComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CAnnulus.cpp"
 				>
 			</File>
@@ -298,6 +302,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CAffineTransformation2dComp.h"
+				>
+			</File>
+			<File
 				RelativePath="..\CAnnulus.h"
 				>
 			</File>
@@ -415,6 +423,10 @@
 			</File>
 			<File
 				RelativePath="..\i2d.h"
+				>
+			</File>
+			<File
+				RelativePath="..\ICalibrationProvider.h"
 				>
 			</File>
 			<File

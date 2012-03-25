@@ -38,8 +38,6 @@
 #include "iqtgui/IGuiObject.h"
 #include "iqtgui/TDesignerGuiCompBase.h"
 
-#include "isys/ITimer.h"
-
 #include "iproc/IProcessor.h"
 
 #include "iqtproc/Generated/ui_CProcessorControlGuiComp.h"

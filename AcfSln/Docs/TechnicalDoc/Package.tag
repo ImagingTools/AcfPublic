@@ -608,7 +608,7 @@
     <name>CImageCropProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_crop_processor_comp_8h</filename>
-    <includes id="_i_discr_data_sequence_8h" name="IDiscrDataSequence.h" local="yes" imported="no">imeas/IDiscrDataSequence.h</includes>
+    <includes id="_i_discrete_data_sequence_8h" name="IDiscreteDataSequence.h" local="yes" imported="no">imeas/IDiscreteDataSequence.h</includes>
     <class kind="class">iipr::CImageCropProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -616,7 +616,7 @@
     <name>CImageHistogramProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_histogram_processor_comp_8h</filename>
-    <includes id="_i_discr_data_sequence_8h" name="IDiscrDataSequence.h" local="yes" imported="no">imeas/IDiscrDataSequence.h</includes>
+    <includes id="_i_discrete_data_sequence_8h" name="IDiscreteDataSequence.h" local="yes" imported="no">imeas/IDiscreteDataSequence.h</includes>
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -640,7 +640,7 @@
     <name>CImagePolarTransformProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_polar_transform_processor_comp_8h</filename>
-    <includes id="_i_discr_data_sequence_8h" name="IDiscrDataSequence.h" local="yes" imported="no">imeas/IDiscrDataSequence.h</includes>
+    <includes id="_i_discrete_data_sequence_8h" name="IDiscreteDataSequence.h" local="yes" imported="no">imeas/IDiscreteDataSequence.h</includes>
     <class kind="class">iipr::CImagePolarTransformProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -1122,11 +1122,11 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
-    <name>IDiscrDataSequence.h</name>
+    <name>IDiscreteDataSequence.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
-    <filename>_i_discr_data_sequence_8h</filename>
+    <filename>_i_discrete_data_sequence_8h</filename>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
-    <class kind="class">imeas::IDiscrDataSequence</class>
+    <class kind="class">imeas::IDiscreteDataSequence</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -1166,38 +1166,38 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
-    <name>TDiscrDataSequence.h</name>
+    <name>TDiscreteDataSequence.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
-    <filename>_t_discr_data_sequence_8h</filename>
-    <includes id="_i_discr_data_sequence_8h" name="IDiscrDataSequence.h" local="yes" imported="no">imeas/IDiscrDataSequence.h</includes>
-    <class kind="class">imeas::TDiscrDataSequence</class>
+    <filename>_t_discrete_data_sequence_8h</filename>
+    <includes id="_i_discrete_data_sequence_8h" name="IDiscreteDataSequence.h" local="yes" imported="no">imeas/IDiscreteDataSequence.h</includes>
+    <class kind="class">imeas::TDiscreteDataSequence</class>
     <namespace>imeas</namespace>
     <member kind="typedef">
-      <type>TDiscrDataSequence&lt; I_BYTE &gt;</type>
+      <type>TDiscreteDataSequence&lt; I_BYTE &gt;</type>
       <name>CSimpleSamplesSequence8</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>a1774c31bc536789c89df3968e2db735f</anchor>
+      <anchor>a0530bccf3550005ef3a5082fa890f74e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TDiscrDataSequence&lt; I_WORD &gt;</type>
+      <type>TDiscreteDataSequence&lt; I_WORD &gt;</type>
       <name>CSimpleSamplesSequence16</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>a84044fd3607306cf3afc70c08e3fcbc2</anchor>
+      <anchor>a331f461ee42a1da0ace19e2e91dddabe</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TDiscrDataSequence&lt; I_DWORD &gt;</type>
+      <type>TDiscreteDataSequence&lt; I_DWORD &gt;</type>
       <name>CSimpleSamplesSequence32</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>a16a6f34a4a9d77942981bec31328b65b</anchor>
+      <anchor>aa57870ab7541194de37fb5da01379a7f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TDiscrDataSequence&lt; I_QWORD &gt;</type>
+      <type>TDiscreteDataSequence&lt; I_QWORD &gt;</type>
       <name>CSimpleSamplesSequence64</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>a4d8da0b7ba5d4837166b8330c0b84440</anchor>
+      <anchor>aaddd3e4ceed80054a91e77ea920fcca2</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -2766,6 +2766,7 @@
     <filename>classicam_1_1_c_snap_bitmap_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; std::pair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; std::pair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
@@ -2782,9 +2783,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::ITransformation2d *</type>
-      <name>GetLogTransform</name>
+      <name>GetLogicalTransform</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a60bdc80744617cef36960048f06e6b65</anchor>
+      <anchor>a391613c2207d621cdc36bd0e9a44558f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -3402,18 +3403,18 @@
       <arglist>(double processingTime)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const isys::IDateTime &amp;</type>
+      <type>virtual const QDateTime &amp;</type>
       <name>GetStartTime</name>
       <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>a414e3dc7711e9a96c4546e45a02e9b36</anchor>
+      <anchor>a033daa9af7dc7bc673c58e62c6b224bb</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetStartTime</name>
       <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>a1959db69717565cd84e07e5489eb44f3</anchor>
-      <arglist>(const isys::IDateTime &amp;startTime)</arglist>
+      <anchor>ada35cc61ff5790ff16764b7bbe785897</anchor>
+      <arglist>(const QDateTime &amp;startTime)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -4390,18 +4391,18 @@
       <arglist>(double processingTime)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const isys::IDateTime &amp;</type>
+      <type>virtual const QDateTime &amp;</type>
       <name>GetStartTime</name>
       <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>a18e092ee007524855cfb0026a69106e6</anchor>
+      <anchor>a9d2bf261a3ca668640149b2fb07af11b</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetStartTime</name>
       <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>a05d78f4fe4975f8f81109da437baae03</anchor>
-      <arglist>(const isys::IDateTime &amp;startTime)=0</arglist>
+      <anchor>a86b4809c248e84baa803eaf4ef6eb989</anchor>
+      <arglist>(const QDateTime &amp;startTime)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4538,10 +4539,10 @@
     <filename>classifpf_1_1_i_monitoring_session.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
-      <type>std::vector&lt; isys::CFileInfo &gt;</type>
+      <type>QMap&lt; QString, QDateTime &gt;</type>
       <name>FileItems</name>
       <anchorfile>classifpf_1_1_i_monitoring_session.html</anchorfile>
-      <anchor>a6f6a65004d575c8d9a459f7d32043cf7</anchor>
+      <anchor>ac47d3a11d4a8515d18ad728217afe462</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -4967,10 +4968,10 @@
     <filename>classiinsp_1_1_i_time_stamp_provider.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
-      <type>virtual const isys::ITimer *</type>
+      <type>virtual const istd::ITimeStamp *</type>
       <name>GetCurrentTimeStamp</name>
       <anchorfile>classiinsp_1_1_i_time_stamp_provider.html</anchorfile>
-      <anchor>a0e70ad4c505dc5c76f7057f38c821faf</anchor>
+      <anchor>a4ccdc9a5c90fb230664dfae71f2f3723</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -5064,6 +5065,7 @@
     <filename>classiipr_1_1_c_bitmap_cache_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -5080,9 +5082,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::ITransformation2d *</type>
-      <name>GetLogTransform</name>
+      <name>GetLogicalTransform</name>
       <anchorfile>classiipr_1_1_c_bitmap_cache_comp.html</anchorfile>
-      <anchor>ae873c3d13829db204e6a410945ab9fbd</anchor>
+      <anchor>a34f668d25b1f9f0972f2f5df36c75dd5</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -5541,6 +5543,7 @@
     <filename>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</type>
       <name>BaseClass</name>
@@ -5554,6 +5557,13 @@
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a0597dfa29b168beb07e8731186a66ddb</anchor>
       <arglist>(m_inputBitmapProviderModelCompPtr, m_inputBitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a9122af93a1b324f7aabd388990b6b175</anchor>
+      <arglist>(m_calibrationProviderCompPtr, m_inputBitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -5578,9 +5588,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const i2d::ITransformation2d *</type>
-      <name>GetLogTransform</name>
+      <name>GetLogicalTransform</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>aef74ba8867f5f77e8160bf0cf9f50583</anchor>
+      <anchor>ae165583fed8b57575c5ba62f52d29c52</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -6134,6 +6144,7 @@
     <filename>classiipr_1_1_c_processed_bitmap_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; std::pair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; std::pair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
@@ -6147,6 +6158,13 @@
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
       <anchor>a6ddc62f438e357669453ca2d2a22e68d</anchor>
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>aa74ec8673fc7c8e4f603c52f697ab262</anchor>
+      <arglist>(m_calibrationProviderCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -6164,9 +6182,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const i2d::ITransformation2d *</type>
-      <name>GetLogTransform</name>
+      <name>GetLogicalTransform</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a2a75ac1fbf2d1cc128882ce0f941c2ba</anchor>
+      <anchor>a2460131d14bf285c00d181f122f601d3</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -6849,13 +6867,6 @@
       <name>GetBitmap</name>
       <anchorfile>classiipr_1_1_i_bitmap_provider.html</anchorfile>
       <anchor>ae43b432f1334ca40461f8bea3ac2be9d</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const i2d::ITransformation2d *</type>
-      <name>GetLogTransform</name>
-      <anchorfile>classiipr_1_1_i_bitmap_provider.html</anchorfile>
-      <anchor>a425b722a257299b331c008262f8eca97</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -7630,38 +7641,38 @@
     <class kind="class">imeas::IDataSequenceInfo</class>
     <class kind="class">imeas::IDataSequenceStatistics</class>
     <class kind="class">imeas::IDataStatistics</class>
-    <class kind="class">imeas::IDiscrDataSequence</class>
+    <class kind="class">imeas::IDiscreteDataSequence</class>
     <class kind="class">imeas::INumericConstraints</class>
     <class kind="class">imeas::INumericParams</class>
     <class kind="class">imeas::ISampleAcquisition</class>
     <class kind="class">imeas::IUnitInfo</class>
-    <class kind="class">imeas::TDiscrDataSequence</class>
+    <class kind="class">imeas::TDiscreteDataSequence</class>
     <member kind="typedef">
-      <type>TDiscrDataSequence&lt; I_BYTE &gt;</type>
+      <type>TDiscreteDataSequence&lt; I_BYTE &gt;</type>
       <name>CSimpleSamplesSequence8</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>a1774c31bc536789c89df3968e2db735f</anchor>
+      <anchor>a0530bccf3550005ef3a5082fa890f74e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TDiscrDataSequence&lt; I_WORD &gt;</type>
+      <type>TDiscreteDataSequence&lt; I_WORD &gt;</type>
       <name>CSimpleSamplesSequence16</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>a84044fd3607306cf3afc70c08e3fcbc2</anchor>
+      <anchor>a331f461ee42a1da0ace19e2e91dddabe</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TDiscrDataSequence&lt; I_DWORD &gt;</type>
+      <type>TDiscreteDataSequence&lt; I_DWORD &gt;</type>
       <name>CSimpleSamplesSequence32</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>a16a6f34a4a9d77942981bec31328b65b</anchor>
+      <anchor>aa57870ab7541194de37fb5da01379a7f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TDiscrDataSequence&lt; I_QWORD &gt;</type>
+      <type>TDiscreteDataSequence&lt; I_QWORD &gt;</type>
       <name>CSimpleSamplesSequence64</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>a4d8da0b7ba5d4837166b8330c0b84440</anchor>
+      <anchor>aaddd3e4ceed80054a91e77ea920fcca2</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -8709,35 +8720,35 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>imeas::IDiscrDataSequence</name>
-    <filename>classimeas_1_1_i_discr_data_sequence.html</filename>
+    <name>imeas::IDiscreteDataSequence</name>
+    <filename>classimeas_1_1_i_discrete_data_sequence.html</filename>
     <base virtualness="virtual">imeas::IDataSequence</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>CreateDiscrSequence</name>
-      <anchorfile>classimeas_1_1_i_discr_data_sequence.html</anchorfile>
-      <anchor>a9e789ab856e112d8f3b8512df259f26d</anchor>
+      <anchorfile>classimeas_1_1_i_discrete_data_sequence.html</anchorfile>
+      <anchor>a99de39376809f55abf7457dac8b1ed78</anchor>
       <arglist>(int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetSampleDepth</name>
-      <anchorfile>classimeas_1_1_i_discr_data_sequence.html</anchorfile>
-      <anchor>a246ee0e0f6b7d8b4dbc0526698f9de04</anchor>
+      <anchorfile>classimeas_1_1_i_discrete_data_sequence.html</anchorfile>
+      <anchor>af48314e6595db1b1e5e24172865e354a</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual I_DWORD</type>
       <name>GetDiscrSample</name>
-      <anchorfile>classimeas_1_1_i_discr_data_sequence.html</anchorfile>
-      <anchor>a6746a42dd4371f78eaef7d127554991f</anchor>
+      <anchorfile>classimeas_1_1_i_discrete_data_sequence.html</anchorfile>
+      <anchor>a2a3a65ededfebe85757b9f95660e0601</anchor>
       <arglist>(int position, int channel=0) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>SetDiscrSample</name>
-      <anchorfile>classimeas_1_1_i_discr_data_sequence.html</anchorfile>
-      <anchor>af6bea4c94f21ae5ff5be84b55576ba13</anchor>
+      <anchorfile>classimeas_1_1_i_discrete_data_sequence.html</anchorfile>
+      <anchor>a5c22961afa3e8b878e4a0d0376b2028b</anchor>
       <arglist>(int position, int channel, I_DWORD sample)=0</arglist>
     </member>
   </compound>
@@ -8876,120 +8887,120 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>imeas::TDiscrDataSequence</name>
-    <filename>classimeas_1_1_t_discr_data_sequence.html</filename>
+    <name>imeas::TDiscreteDataSequence</name>
+    <filename>classimeas_1_1_t_discrete_data_sequence.html</filename>
     <templarg>Element</templarg>
-    <base virtualness="virtual">imeas::IDiscrDataSequence</base>
+    <base virtualness="virtual">imeas::IDiscreteDataSequence</base>
     <member kind="function">
       <type></type>
-      <name>TDiscrDataSequence</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>af7189ed042d1f686f4a250b3777f01e7</anchor>
+      <name>TDiscreteDataSequence</name>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>a802c1c1597e23d349527a32c1f34121d</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateDiscrSequence</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>aef6290ede90a55b136ce1c1a1e2e1743</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>a118cce5f7e33cb24765828018d37b707</anchor>
       <arglist>(int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSampleDepth</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>ad068e42e70ea831799e5cb9f8a42df63</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>a02d28d60964512418c70b92beadbcd62</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual I_DWORD</type>
       <name>GetDiscrSample</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>aca98b01d24b006aca65de7d7fa809e0a</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>a7dde7bba22c7dc8aaf580b324a6b5c55</anchor>
       <arglist>(int position, int channel=0) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetDiscrSample</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>a7989198bfe9280d4a89a5b4f32f02d9f</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>add0521c6fa60ee8900749b89dd734730</anchor>
       <arglist>(int position, int channel, I_DWORD sample)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateSequence</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>a73e72f5675b89a08997ced50e957a205</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>a6ad4ba6126070b849f12bd46a2626786</anchor>
       <arglist>(int samplesCount, int channelsCount=1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateSequenceWithInfo</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>ab89da317ca871d50a9b2b0d50c56f0b0</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>a4439c86ecdd285afcb568c6eb3449933</anchor>
       <arglist>(const istd::TTransPtr&lt; const IDataSequenceInfo &gt; &amp;infoPtr, int samplesCount=-1, int channelsCount=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IDataSequenceInfo *</type>
       <name>GetSequenceInfo</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>a9b7f315b962573d46b3e277954864784</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>aed4c9fae121805e5fc43e9378c4159aa</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEmpty</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>a10bfdac8bf99e7b2abd4c6dbb9617797</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>aa4c70ca5a571bafab53ce095f7e08ec9</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetSequence</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>a9ef4503d4e0ce279f1a5c99701777416</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>a93e320650bb81984cb73b97fa38cb9e9</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSamplesCount</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>a5539c3aa6705c3abcd86651d06c21d2a</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>a32bf68b56d9e7ec8fdf1e094a8eb4e32</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetChannelsCount</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>a409e5a54888028313e6e4e2bbe174c90</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>a9e287d4be15b47e150ed79811eb9ac9a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetSample</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>a0c6d36e3afafc07d5ce45e42a8dcffe5</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>ad517de32eeff0e42d234971dec4030cc</anchor>
       <arglist>(int index, int channel=0) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetSample</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>ab389a85ef805a013c260296ad94051e0</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>a302b6302a403e5eeeb6b106e6b179971</anchor>
       <arglist>(int index, int channel, double value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>a90a2698081aaaccd1a8357c635b81244</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>adf51600624d3a9994897ad990db2d5bd</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
-      <anchorfile>classimeas_1_1_t_discr_data_sequence.html</anchorfile>
-      <anchor>a14c6dc8f5ef565c6add7e16eaba8d133</anchor>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>ac9533ba8a082f7795675a2455ebb863f</anchor>
       <arglist>(const istd::IChangeable &amp;object)</arglist>
     </member>
   </compound>
@@ -12102,7 +12113,7 @@
       <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a673bdc37b989c792b0ba2456a2b7722a</anchor>
+      <anchor>a9b968d56fdbb043a6621bf74ab5f2e7d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">

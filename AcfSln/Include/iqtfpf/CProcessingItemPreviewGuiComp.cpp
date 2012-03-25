@@ -106,7 +106,7 @@ void CProcessingItemPreviewGuiComp::UpdateGui(int updateFlags)
 			}
 		}
 
-		QDateTime startedDateTime = iqt::GetQDateTime(objectPtr->GetStartTime());
+		QDateTime startedDateTime = objectPtr->GetStartTime();
 
 		StartedAtLabel->setText(startedDateTime.toString(Qt::SystemLocaleLongDate));
 

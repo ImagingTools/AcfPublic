@@ -38,7 +38,7 @@
 <div class="title">iipr::CDelegatedBitmapSupplierComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CDelegatedBitmapSupplierComp" --><!-- doxytag: inherits="TSupplierCompWrap&lt; std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;,iipr::IBitmapProvider" -->
+<!-- doxytag: class="iipr::CDelegatedBitmapSupplierComp" --><!-- doxytag: inherits="TSupplierCompWrap&lt; std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;,iipr::IBitmapProvider,i2d::ICalibrationProvider" -->
 <p>Image supplier delegating the calls to another one or accessing some bitmap object directly.  
  <a href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#details">More...</a></p>
 
@@ -51,12 +51,15 @@ Inheritance diagram for iipr::CDelegatedBitmapSupplierComp:</div>
   <map id="iipr::CDelegatedBitmapSupplierComp_map" name="iipr::CDelegatedBitmapSupplierComp_map">
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_supplier_comp_wrap.html" alt="iproc::TSupplierCompWrap&lt; std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;" shape="rect" coords="1120,224,1670,248"/>
 <area href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap." alt="iipr::IBitmapProvider" shape="rect" coords="2240,224,2790,248"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html" alt="i2d::ICalibrationProvider" shape="rect" coords="2800,224,3350,248"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html" alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="560,168,1110,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html" alt="iproc::ISupplier" shape="rect" coords="1680,168,2230,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="2240,168,2790,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="2800,168,3350,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_wrap.html" alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="560,112,1110,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="1680,112,2230,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="2240,112,2790,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="2800,112,3350,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="0,56,550,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_loggable.html" alt="ibase::ILoggable" shape="rect" coords="560,56,1110,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_logger.html" alt="istd::ILogger" shape="rect" coords="1120,56,1670,80"/>
@@ -78,6 +81,7 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a0597dfa29b168beb07e8731186a66ddb">I_ASSIGN_TO</a> (m_inputBitmapProviderModelCompPtr, m_inputBitmapProviderCompPtr, false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a9122af93a1b324f7aabd388990b6b175">I_ASSIGN_TO</a> (m_calibrationProviderCompPtr, m_inputBitmapProviderCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a7ccbd1a36502e4e2ff19434b9d98d4b9">I_ASSIGN_TO</a> (m_bitmapModelCompPtr, m_bitmapCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a4d3cdff494dea97e02b218106afbac04">I_ASSIGN_TO</a> (m_calibrationModelCompPtr, m_calibrationCompPtr, false)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -85,8 +89,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a45c7c3568ba2c8cb44a1a35e1fb9a74e">GetBitmap</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to produced bitmap object.  <a href="#a45c7c3568ba2c8cb44a1a35e1fb9a74e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#aef74ba8867f5f77e8160bf0cf9f50583">GetLogTransform</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation from bitmap to logical positions.  <a href="#aef74ba8867f5f77e8160bf0cf9f50583"></a><br/></td></tr>
+<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#ae165583fed8b57575c5ba62f52d29c52">GetLogicalTransform</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a6054a1c2b5856e22d6529357d72f3c1f">ProduceObject</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a> &amp;result) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a02c62def2d9d7e2964b87c6d35370a29">OnComponentCreated</a> ()</td></tr>
 </table>
@@ -108,7 +111,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_supplier_comp_wrap.html#aa798f2691f94a39db1097a56727a68b9">iproc::TSupplierCompWrap&lt; std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_delegated_bitmap_supplier_comp_8h_source.html#l00030">30</a> of file <a class="el" href="_c_delegated_bitmap_supplier_comp_8h_source.html">CDelegatedBitmapSupplierComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_delegated_bitmap_supplier_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_delegated_bitmap_supplier_comp_8h_source.html">CDelegatedBitmapSupplierComp.h</a>.</p>
 
 </div>
 </div>
@@ -134,12 +137,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aef74ba8867f5f77e8160bf0cf9f50583"></a><!-- doxytag: member="iipr::CDelegatedBitmapSupplierComp::GetLogTransform" ref="aef74ba8867f5f77e8160bf0cf9f50583" args="() const " -->
+<a class="anchor" id="ae165583fed8b57575c5ba62f52d29c52"></a><!-- doxytag: member="iipr::CDelegatedBitmapSupplierComp::GetLogicalTransform" ref="ae165583fed8b57575c5ba62f52d29c52" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* iipr::CDelegatedBitmapSupplierComp::GetLogTransform </td>
+          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* iipr::CDelegatedBitmapSupplierComp::GetLogicalTransform </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [protected, virtual]</code></td>
@@ -148,11 +151,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get access to transformation from bitmap to logical positions. </p>
-<p>Please note, not all implementations must support this information. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>pointer to transformation if it is accessible, or NULL. </dd></dl>
-
-<p>Implements <a class="el" href="classiipr_1_1_i_bitmap_provider.html#a425b722a257299b331c008262f8eca97">iipr::IBitmapProvider</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html#a95048e64785106418934f54e13f1324d">i2d::ICalibrationProvider</a>.</p>
 
 </div>
 </div>
@@ -164,6 +163,39 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">iipr::CDelegatedBitmapSupplierComp::I_ASSIGN_TO </td>
           <td>(</td>
           <td class="paramtype">m_inputBitmapProviderModelCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_inputBitmapProviderCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9122af93a1b324f7aabd388990b6b175"></a><!-- doxytag: member="iipr::CDelegatedBitmapSupplierComp::I_ASSIGN_TO" ref="a9122af93a1b324f7aabd388990b6b175" args="(m_calibrationProviderCompPtr, m_inputBitmapProviderCompPtr, false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iipr::CDelegatedBitmapSupplierComp::I_ASSIGN_TO </td>
+          <td>(</td>
+          <td class="paramtype">m_calibrationProviderCompPtr&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>

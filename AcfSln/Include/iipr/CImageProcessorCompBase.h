@@ -25,7 +25,6 @@
 
 
 // ACF includes
-#include "isys/ITimer.h"
 #include "istd/TSmartPtr.h"
 #include "iproc/TSyncProcessorCompBase.h"
 #include "iimg/IBitmap.h"
