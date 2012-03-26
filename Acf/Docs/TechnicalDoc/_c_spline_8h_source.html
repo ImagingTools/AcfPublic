@@ -51,15 +51,13 @@
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025        <a class="code" href="classi2d_1_1_c_spline.html#ab81a177d2737e0de07741a8d6c29e957">CSpline</a>();
 <a name="l00026"></a>00026 
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classi2d_1_1_c_spline.html#a89d69bcebf6a93a064be6636566c10f2" title="Get count of segments.">GetSegmentCount</a>() <span class="keyword">const</span>;
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_spline_segment.html">CSplineSegment</a>&amp; <a class="code" href="classi2d_1_1_c_spline.html#ae34f2fc39860d36c207de8c806f41b27" title="Get segment in polynomial.">GetSplineSegment</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035 <span class="keyword">protected</span>:
-<a name="l00036"></a>00036        <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_spline.html#ad124d826016fef5f441975b0908d839e">CalcAllSegments</a>() <span class="keyword">const</span>;
-<a name="l00037"></a>00037        
-<a name="l00038"></a>00038        <span class="comment">// reimplemented (i2d::CPolygon)</span>
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_spline.html#ac9c8be1c4d5d0d5011ee9fb2349dd3d1" title="It is called after every state change.">SetInconsistent</a>();
-<a name="l00040"></a>00040 
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classi2d_1_1_c_spline.html#a89d69bcebf6a93a064be6636566c10f2" title="Get count of segments.">GetSegmentCount</a>() <span class="keyword">const</span>;
+<a name="l00031"></a>00031        
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_spline_segment.html">CSplineSegment</a>&amp; <a class="code" href="classi2d_1_1_c_spline.html#ae34f2fc39860d36c207de8c806f41b27" title="Get segment in polynomial.">GetSplineSegment</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 <span class="keyword">protected</span>:
+<a name="l00039"></a>00039        <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_spline.html#ad124d826016fef5f441975b0908d839e">CalcAllSegments</a>() <span class="keyword">const</span>;
+<a name="l00040"></a>00040        
 <a name="l00041"></a>00041 <span class="keyword">private</span>:
 <a name="l00042"></a>00042        <span class="keyword">static</span> <span class="keywordtype">void</span> SolveOpen(<span class="keywordtype">double</span>* d,<span class="keywordtype">int</span> count);
 <a name="l00043"></a>00043 

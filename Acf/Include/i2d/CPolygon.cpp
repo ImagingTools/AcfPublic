@@ -37,8 +37,6 @@ bool CPolygon::InsertNode(const i2d::CVector2d& node)
 {
 	m_nodes.push_back(node);
 
-	SetInconsistent();
-
 	return true;
 }
 
@@ -48,8 +46,6 @@ bool CPolygon::InsertNode(int index, const i2d::CVector2d& node)
 	::std::vector<i2d::CVector2d>::iterator iter = m_nodes.begin();
 	iter += index;
 	m_nodes.insert(iter, node);
-
-	SetInconsistent();
 
 	return true;
 }
@@ -66,8 +62,6 @@ bool CPolygon::RemoveNode(int index)
 	::std::vector<i2d::CVector2d>::iterator iter = m_nodes.begin();
 	iter += index;
 	m_nodes.erase(iter);
-
-	SetInconsistent();
 
 	return true;
 }

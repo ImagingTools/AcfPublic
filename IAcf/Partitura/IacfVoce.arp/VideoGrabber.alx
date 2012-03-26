@@ -1,7 +1,18 @@
 <?xml version="1.0"?>
 <Acf>
   <AcfHeader>
-    <VersionInfos count="0">
+    <VersionInfos count="1">
+      <Version>
+        <Id>
+          0
+        </Id>
+        <Number>
+          2246
+        </Number>
+        <Description>
+          ACF
+        </Description>
+      </Version>
     </VersionInfos>
   </AcfHeader>
   <PositionMap count="3">
@@ -10,33 +21,42 @@
         ControllerBinder
       </ComponentName>
       <X>
-        425
+        550
       </X>
       <X>
-        375
+        225
       </X>
+      <Note>
+        
+      </Note>
     </Element>
     <Element>
       <ComponentName>
         ControllerGui
       </ComponentName>
       <X>
-        775
+        300
       </X>
       <X>
-        375
+        350
       </X>
+      <Note>
+        
+      </Note>
     </Element>
     <Element>
       <ComponentName>
         VideoDecoder
       </ComponentName>
       <X>
-        425
+        825
       </X>
       <X>
-        225
+        350
       </X>
+      <Note>
+        
+      </Note>
     </Element>
   </PositionMap>
 </Acf>

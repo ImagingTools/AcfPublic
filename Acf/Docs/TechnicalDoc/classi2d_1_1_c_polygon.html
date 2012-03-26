@@ -45,17 +45,13 @@ Inheritance diagram for i2d::CPolygon:</div>
  <div class="center">
   <img src="classi2d_1_1_c_polygon.png" usemap="#i2d::CPolygon_map" alt=""/>
   <map id="i2d::CPolygon_map" name="i2d::CPolygon_map">
-<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="514,112,761,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="514,56,761,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="514,0,761,24"/>
-<area href="classi2d_1_1_c_polyline.html" alt="i2d::CPolyline" shape="rect" coords="514,224,761,248"/>
-<area href="classi2d_1_1_c_multi_polyline_base.html" title="Represent polyline and set of parallel lines." alt="i2d::CMultiPolylineBase" shape="rect" coords="0,280,247,304"/>
-<area href="classi2d_1_1_c_polyline_ex_node_base.html" alt="i2d::CPolylineExNodeBase" shape="rect" coords="257,280,504,304"/>
-<area href="classi2d_1_1_c_spline.html" alt="i2d::CSpline" shape="rect" coords="514,280,761,304"/>
-<area href="classi2d_1_1_t_polyline_ex.html" alt="i2d::TPolylineEx&lt; SegmentData &gt;" shape="rect" coords="771,280,1018,304"/>
-<area href="classi2d_1_1_t_polyline_ex_primitive.html" alt="i2d::TPolylineExPrimitive&lt; SegmentData &gt;" shape="rect" coords="1028,280,1275,304"/>
-<area href="classi2d_1_1_t_multi_polyline.html" alt="i2d::TMultiPolyline&lt; SegmentData &gt;" shape="rect" coords="0,336,247,360"/>
-<area href="classi2d_1_1_t_polyline_ex_node.html" alt="i2d::TPolylineExNode&lt; NodeData &gt;" shape="rect" coords="257,336,504,360"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="110,112,321,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="110,56,321,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="110,0,321,24"/>
+<area href="classi2d_1_1_c_polyline.html" alt="i2d::CPolyline" shape="rect" coords="110,224,321,248"/>
+<area href="classi2d_1_1_c_polyline_ex_node_base.html" alt="i2d::CPolylineExNodeBase" shape="rect" coords="0,280,211,304"/>
+<area href="classi2d_1_1_c_spline.html" alt="i2d::CSpline" shape="rect" coords="221,280,432,304"/>
+<area href="classi2d_1_1_t_polyline_ex_node.html" alt="i2d::TPolylineExNode&lt; NodeData &gt;" shape="rect" coords="0,336,211,360"/>
 </map>
  </div></div>
 
@@ -83,14 +79,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a49d056b1cb74eb4111b46a1d5944188a">CalcBoundingBox</a> (<a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;result) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box.  <a href="#a49d056b1cb74eb4111b46a1d5944188a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classi2d_1_1_c_polygon.html">CPolygon</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a9e1dde0d9fb0012232676d84aabea088">operator=</a> (const <a class="el" href="classi2d_1_1_c_polygon.html">CPolygon</a> &amp;polygon)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator.  <a href="#a9e1dde0d9fb0012232676d84aabea088"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#aee96368e13548faa82bd3c2cf7aad01a">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#aee96368e13548faa82bd3c2cf7aad01a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a855c33b5809933c0c29ffc945b304b60">SetNodesCount</a> (int nodesCount)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new nodes count.  <a href="#a855c33b5809933c0c29ffc945b304b60"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#aadd0997e62740fd4afb8477b2187f06d">SetInconsistent</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">It is called after every state change.  <a href="#aadd0997e62740fd4afb8477b2187f06d"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -110,7 +105,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00076">76</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00094">94</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 </div>
 </div>
@@ -150,7 +145,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Removes all nodes. </p>
 
-<p>Reimplemented in <a class="el" href="classi2d_1_1_t_multi_polyline.html#a98c32626088655a2ece1e743c35ab7f6">i2d::TMultiPolyline&lt; SegmentData &gt;</a>, <a class="el" href="classi2d_1_1_t_polyline_ex_node.html#ad9892f1de2670452f05707b31de634c4">i2d::TPolylineExNode&lt; NodeData &gt;</a>, <a class="el" href="classi2d_1_1_t_polyline_ex_primitive.html#ac07029455b452f0850faccd4a02d6731">i2d::TPolylineExPrimitive&lt; SegmentData &gt;</a>, and <a class="el" href="classi2d_1_1_t_polyline_ex.html#af9b914d75b56514790f7f4776578e43a">i2d::TPolylineEx&lt; SegmentData &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classi2d_1_1_t_polyline_ex_node.html#ad9892f1de2670452f05707b31de634c4">i2d::TPolylineExNode&lt; NodeData &gt;</a>.</p>
 
 </div>
 </div>
@@ -177,7 +172,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00083">83</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00101">101</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>.</p>
 
@@ -199,7 +194,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Return size of node table. </p>
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00101">101</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00117">117</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 </div>
 </div>
@@ -238,7 +233,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Insert a node at the end of node table. </p>
 
-<p>Reimplemented in <a class="el" href="classi2d_1_1_t_multi_polyline.html#af743ec90cfdd855ebe7981bf3d80791d">i2d::TMultiPolyline&lt; SegmentData &gt;</a>, <a class="el" href="classi2d_1_1_t_polyline_ex_node.html#a7d1815057e7b551b4def29114205bc02">i2d::TPolylineExNode&lt; NodeData &gt;</a>, <a class="el" href="classi2d_1_1_t_polyline_ex_primitive.html#a9cae743613511b27116775f56672db1b">i2d::TPolylineExPrimitive&lt; SegmentData &gt;</a>, and <a class="el" href="classi2d_1_1_t_polyline_ex.html#a065f02b445223675f486710bf9277c6a">i2d::TPolylineEx&lt; SegmentData &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classi2d_1_1_t_polyline_ex_node.html#a7d1815057e7b551b4def29114205bc02">i2d::TPolylineExNode&lt; NodeData &gt;</a>.</p>
 
 </div>
 </div>
@@ -269,7 +264,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Insert a node at specified index. </p>
 
-<p>Reimplemented in <a class="el" href="classi2d_1_1_t_multi_polyline.html#a6a7e542a96e6cadf3f497f68669f3478">i2d::TMultiPolyline&lt; SegmentData &gt;</a>, <a class="el" href="classi2d_1_1_t_polyline_ex_node.html#a6962c49e4acbed86899e113be2c30d0d">i2d::TPolylineExNode&lt; NodeData &gt;</a>, <a class="el" href="classi2d_1_1_t_polyline_ex_primitive.html#a903ab2c839ccc0a99bd3e8f4d537497e">i2d::TPolylineExPrimitive&lt; SegmentData &gt;</a>, and <a class="el" href="classi2d_1_1_t_polyline_ex.html#a49f06c1b1f032526f4d40aa707c29f7c">i2d::TPolylineEx&lt; SegmentData &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classi2d_1_1_t_polyline_ex_node.html#a6962c49e4acbed86899e113be2c30d0d">i2d::TPolylineExNode&lt; NodeData &gt;</a>.</p>
 
 </div>
 </div>
@@ -288,7 +283,9 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00107">107</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Assignment operator. </p>
+
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00123">123</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 </div>
 </div>
@@ -334,33 +331,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classi2d_1_1_t_multi_polyline.html#a05fb7033b4b57479b5aa2642d670cd92">i2d::TMultiPolyline&lt; SegmentData &gt;</a>, <a class="el" href="classi2d_1_1_t_polyline_ex_primitive.html#a92f46b0f6476edd3514c0b9133715dd1">i2d::TPolylineExPrimitive&lt; SegmentData &gt;</a>, <a class="el" href="classi2d_1_1_t_polyline_ex.html#a7abf784769786998d268cbfcfec315bd">i2d::TPolylineEx&lt; SegmentData &gt;</a>, and <a class="el" href="classi2d_1_1_c_polyline_ex_node_base.html#a2b91352237ed0eb8daa68ba8d6be713f">i2d::CPolylineExNodeBase</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_multi_polyline_8h_source.html#l00370">i2d::TMultiPolyline&lt; SegmentData &gt;::Serialize()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aadd0997e62740fd4afb8477b2187f06d"></a><!-- doxytag: member="i2d::CPolygon::SetInconsistent" ref="aadd0997e62740fd4afb8477b2187f06d" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void i2d::CPolygon::SetInconsistent </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [inline, protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>It is called after every state change. </p>
-
-<p>Reimplemented in <a class="el" href="classi2d_1_1_c_spline.html#ac9c8be1c4d5d0d5011ee9fb2349dd3d1">i2d::CSpline</a>.</p>
-
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00117">117</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
-
-<p>Referenced by <a class="el" href="_c_polygon_8h_source.html#l00091">SetNode()</a>.</p>
+<p>Reimplemented in <a class="el" href="classi2d_1_1_c_polyline_ex_node_base.html#a2b91352237ed0eb8daa68ba8d6be713f">i2d::CPolylineExNodeBase</a>.</p>
 
 </div>
 </div>
@@ -392,15 +363,15 @@ Protected Member Functions</h2></td></tr>
 <p>Set node at specified index. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>an index in node table. </td></tr>
-    <tr><td class="paramname">node</td><td>a new node value. </td></tr>
+    <tr><td class="paramname">index</td><td>Index in node table. </td></tr>
+    <tr><td class="paramname">node</td><td>New node value. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00091">91</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00109">109</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>, and <a class="el" href="_c_polygon_8h_source.html#l00117">SetInconsistent()</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>.</p>
 
 </div>
 </div>

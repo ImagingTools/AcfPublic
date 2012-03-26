@@ -2506,6 +2506,13 @@
       <arglist>(double elapsedTime=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual QDateTime</type>
+      <name>GetStartTime</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>a7b0a156c16bf7987d367cc397b39e4d4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetElapsed</name>
       <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>

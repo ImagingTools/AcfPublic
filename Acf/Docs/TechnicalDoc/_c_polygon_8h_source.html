@@ -49,84 +49,82 @@
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
 <a name="l00023"></a>00023        <a class="code" href="classi2d_1_1_c_polygon.html#ab4ea42338c6ef2d89deb95fa4881963f">CPolygon</a>();
 <a name="l00024"></a>00024 
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; <a class="code" href="classi2d_1_1_c_polygon.html#a717767fd1adf1b08bfa185ee666a572d" title="Return node at specified index.">GetNode</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polygon.html#a2b4fe8ecf2eb3e51ace24ec83772b726" title="Set node at specified index.">SetNode</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node);
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_polygon.html#ae60e65f1c5cc18ba3ddb67fc8d9c55fb" title="Insert a node at the end of node table.">InsertNode</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node);
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_polygon.html#ae60e65f1c5cc18ba3ddb67fc8d9c55fb" title="Insert a node at the end of node table.">InsertNode</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node);
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polygon.html#a85f6f7462c442efdb6b94e61ea5e4170" title="Removes all nodes.">Clear</a>();
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_polygon.html#a9ae30d587ee316efdc1bd8ed5ab73ad1" title="Remove a node at specified index.">RemoveNode</a>(<span class="keywordtype">int</span> index);
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classi2d_1_1_c_polygon.html#a0e9474de5b18f742068ac948bc517d07" title="Return size of node table.">GetNodesCount</a>() <span class="keyword">const</span>;
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classi2d_1_1_c_polygon.html#a72c2492397c3e1b6c2c3b3bc702e9d7d" title="Get outline length of this polygon.">GetOutlineLength</a>() <span class="keyword">const</span>;
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polygon.html#a49d056b1cb74eb4111b46a1d5944188a" title="Calculate bounding box.">CalcBoundingBox</a>(<a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056        <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_polygon.html">CPolygon</a>&amp; <a class="code" href="classi2d_1_1_c_polygon.html#a9e1dde0d9fb0012232676d84aabea088">operator=</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_polygon.html">CPolygon</a>&amp; polygon);
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_polygon.html#aee96368e13548faa82bd3c2cf7aad01a" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 <span class="keyword">protected</span>:
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polygon.html#a855c33b5809933c0c29ffc945b304b60" title="Set new nodes count.">SetNodesCount</a>(<span class="keywordtype">int</span> nodesCount);
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polygon.html#aadd0997e62740fd4afb8477b2187f06d" title="It is called after every state change.">SetInconsistent</a>();
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="keyword">private</span>:
-<a name="l00070"></a>00070        ::std::vector&lt;i2d::CVector2d&gt; m_nodes;
-<a name="l00071"></a>00071 };
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; <a class="code" href="classi2d_1_1_c_polygon.html#a717767fd1adf1b08bfa185ee666a572d" title="Return node at specified index.">GetNode</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00030"></a>00030        
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polygon.html#a2b4fe8ecf2eb3e51ace24ec83772b726" title="Set node at specified index.">SetNode</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node);
+<a name="l00037"></a>00037        
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_polygon.html#ae60e65f1c5cc18ba3ddb67fc8d9c55fb" title="Insert a node at the end of node table.">InsertNode</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node);
+<a name="l00042"></a>00042        
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_polygon.html#ae60e65f1c5cc18ba3ddb67fc8d9c55fb" title="Insert a node at the end of node table.">InsertNode</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node);
+<a name="l00047"></a>00047        
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polygon.html#a85f6f7462c442efdb6b94e61ea5e4170" title="Removes all nodes.">Clear</a>();
+<a name="l00052"></a>00052        
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_polygon.html#a9ae30d587ee316efdc1bd8ed5ab73ad1" title="Remove a node at specified index.">RemoveNode</a>(<span class="keywordtype">int</span> index);
+<a name="l00057"></a>00057        
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classi2d_1_1_c_polygon.html#a0e9474de5b18f742068ac948bc517d07" title="Return size of node table.">GetNodesCount</a>() <span class="keyword">const</span>;
+<a name="l00062"></a>00062        
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classi2d_1_1_c_polygon.html#a72c2492397c3e1b6c2c3b3bc702e9d7d" title="Get outline length of this polygon.">GetOutlineLength</a>() <span class="keyword">const</span>;
+<a name="l00067"></a>00067        
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polygon.html#a49d056b1cb74eb4111b46a1d5944188a" title="Calculate bounding box.">CalcBoundingBox</a>(<a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; result) <span class="keyword">const</span>;
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074 <span class="comment">// constructors</span>
-<a name="l00075"></a>00075 
-<a name="l00076"></a><a class="code" href="classi2d_1_1_c_polygon.html#ab4ea42338c6ef2d89deb95fa4881963f">00076</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_polygon.html#ab4ea42338c6ef2d89deb95fa4881963f">CPolygon::CPolygon</a>()
-<a name="l00077"></a>00077 {
-<a name="l00078"></a>00078 }
-<a name="l00079"></a>00079 
+<a name="l00076"></a>00076        <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_polygon.html">CPolygon</a>&amp; <a class="code" href="classi2d_1_1_c_polygon.html#a9e1dde0d9fb0012232676d84aabea088" title="Assignment operator.">operator=</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_polygon.html">CPolygon</a>&amp; polygon);
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_polygon.html#aee96368e13548faa82bd3c2cf7aad01a" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
 <a name="l00080"></a>00080 
-<a name="l00081"></a>00081 <span class="comment">// inline functions</span>
-<a name="l00082"></a>00082 
-<a name="l00083"></a><a class="code" href="classi2d_1_1_c_polygon.html#a717767fd1adf1b08bfa185ee666a572d">00083</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; <a class="code" href="classi2d_1_1_c_polygon.html#a717767fd1adf1b08bfa185ee666a572d" title="Return node at specified index.">CPolygon::GetNode</a>(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
-<a name="l00084"></a>00084 <span class="keyword"></span>{
-<a name="l00085"></a>00085        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0 &amp;&amp; index &lt; <span class="keywordtype">int</span>(m_nodes.size()));
+<a name="l00081"></a>00081 <span class="keyword">protected</span>:
+<a name="l00085"></a>00085        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polygon.html#a855c33b5809933c0c29ffc945b304b60" title="Set new nodes count.">SetNodesCount</a>(<span class="keywordtype">int</span> nodesCount);
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087        <span class="keywordflow">return</span> m_nodes[index];
-<a name="l00088"></a>00088 }
-<a name="l00089"></a>00089 
+<a name="l00087"></a>00087 <span class="keyword">private</span>:
+<a name="l00088"></a>00088        std::vector&lt;i2d::CVector2d&gt; m_nodes;
+<a name="l00089"></a>00089 };
 <a name="l00090"></a>00090 
-<a name="l00091"></a><a class="code" href="classi2d_1_1_c_polygon.html#a2b4fe8ecf2eb3e51ace24ec83772b726">00091</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polygon.html#a2b4fe8ecf2eb3e51ace24ec83772b726" title="Set node at specified index.">CPolygon::SetNode</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node)
-<a name="l00092"></a>00092 {
-<a name="l00093"></a>00093        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0 &amp;&amp; index &lt; <span class="keywordtype">int</span>(m_nodes.size()));
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095        m_nodes[index] = node;
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097        <a class="code" href="classi2d_1_1_c_polygon.html#aadd0997e62740fd4afb8477b2187f06d" title="It is called after every state change.">SetInconsistent</a>();
-<a name="l00098"></a>00098 }
-<a name="l00099"></a>00099 
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 <span class="comment">// constructors</span>
+<a name="l00093"></a>00093 
+<a name="l00094"></a><a class="code" href="classi2d_1_1_c_polygon.html#ab4ea42338c6ef2d89deb95fa4881963f">00094</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_polygon.html#ab4ea42338c6ef2d89deb95fa4881963f">CPolygon::CPolygon</a>()
+<a name="l00095"></a>00095 {
+<a name="l00096"></a>00096 }
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099 <span class="comment">// inline functions</span>
 <a name="l00100"></a>00100 
-<a name="l00101"></a><a class="code" href="classi2d_1_1_c_polygon.html#a0e9474de5b18f742068ac948bc517d07">00101</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classi2d_1_1_c_polygon.html#a0e9474de5b18f742068ac948bc517d07" title="Return size of node table.">CPolygon::GetNodesCount</a>()<span class="keyword"> const</span>
+<a name="l00101"></a><a class="code" href="classi2d_1_1_c_polygon.html#a717767fd1adf1b08bfa185ee666a572d">00101</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; <a class="code" href="classi2d_1_1_c_polygon.html#a717767fd1adf1b08bfa185ee666a572d" title="Return node at specified index.">CPolygon::GetNode</a>(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
 <a name="l00102"></a>00102 <span class="keyword"></span>{
-<a name="l00103"></a>00103        <span class="keywordflow">return</span> int(m_nodes.size());
-<a name="l00104"></a>00104 }
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106 
-<a name="l00107"></a><a class="code" href="classi2d_1_1_c_polygon.html#a9e1dde0d9fb0012232676d84aabea088">00107</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_polygon.html">CPolygon</a>&amp; <a class="code" href="classi2d_1_1_c_polygon.html#a9e1dde0d9fb0012232676d84aabea088">CPolygon::operator=</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_polygon.html">CPolygon</a>&amp; polygon)
-<a name="l00108"></a>00108 {
-<a name="l00109"></a>00109        m_nodes = polygon.m_nodes;
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111        <span class="keywordflow">return</span> *<span class="keyword">this</span>;
-<a name="l00112"></a>00112 }
-<a name="l00113"></a>00113 
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115 <span class="comment">// protected methods</span>
+<a name="l00103"></a>00103        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0 &amp;&amp; index &lt; <span class="keywordtype">int</span>(m_nodes.size()));
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105        <span class="keywordflow">return</span> m_nodes[index];
+<a name="l00106"></a>00106 }
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 
+<a name="l00109"></a><a class="code" href="classi2d_1_1_c_polygon.html#a2b4fe8ecf2eb3e51ace24ec83772b726">00109</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polygon.html#a2b4fe8ecf2eb3e51ace24ec83772b726" title="Set node at specified index.">CPolygon::SetNode</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node)
+<a name="l00110"></a>00110 {
+<a name="l00111"></a>00111        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0 &amp;&amp; index &lt; <span class="keywordtype">int</span>(m_nodes.size()));
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113        m_nodes[index] = node;
+<a name="l00114"></a>00114 }
+<a name="l00115"></a>00115 
 <a name="l00116"></a>00116 
-<a name="l00117"></a><a class="code" href="classi2d_1_1_c_polygon.html#aadd0997e62740fd4afb8477b2187f06d">00117</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polygon.html#aadd0997e62740fd4afb8477b2187f06d" title="It is called after every state change.">CPolygon::SetInconsistent</a>()
-<a name="l00118"></a>00118 {
-<a name="l00119"></a>00119 }
-<a name="l00120"></a>00120 
+<a name="l00117"></a><a class="code" href="classi2d_1_1_c_polygon.html#a0e9474de5b18f742068ac948bc517d07">00117</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classi2d_1_1_c_polygon.html#a0e9474de5b18f742068ac948bc517d07" title="Return size of node table.">CPolygon::GetNodesCount</a>()<span class="keyword"> const</span>
+<a name="l00118"></a>00118 <span class="keyword"></span>{
+<a name="l00119"></a>00119        <span class="keywordflow">return</span> int(m_nodes.size());
+<a name="l00120"></a>00120 }
 <a name="l00121"></a>00121 
-<a name="l00122"></a>00122 } <span class="comment">// namespace i2d</span>
-<a name="l00123"></a>00123 
-<a name="l00124"></a>00124 
-<a name="l00125"></a>00125 <span class="preprocessor">#endif // !i2d_CPolygon_included</span>
-<a name="l00126"></a>00126 <span class="preprocessor"></span>
-<a name="l00127"></a>00127 
+<a name="l00122"></a>00122 
+<a name="l00123"></a><a class="code" href="classi2d_1_1_c_polygon.html#a9e1dde0d9fb0012232676d84aabea088">00123</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_polygon.html">CPolygon</a>&amp; <a class="code" href="classi2d_1_1_c_polygon.html#a9e1dde0d9fb0012232676d84aabea088" title="Assignment operator.">CPolygon::operator=</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_polygon.html">CPolygon</a>&amp; polygon)
+<a name="l00124"></a>00124 {
+<a name="l00125"></a>00125        m_nodes = polygon.m_nodes;
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127        <span class="keywordflow">return</span> *<span class="keyword">this</span>;
+<a name="l00128"></a>00128 }
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131 } <span class="comment">// namespace i2d</span>
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134 <span class="preprocessor">#endif // !i2d_CPolygon_included</span>
+<a name="l00135"></a>00135 <span class="preprocessor"></span>
+<a name="l00136"></a>00136 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

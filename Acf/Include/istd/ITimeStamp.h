@@ -24,10 +24,11 @@
 #define istd_ITimeStamp_included
 
 
+// Qt includes
+#include <QtCore/QDateTime>
+
 // ACF includes
 #include "istd/IChangeable.h"
-
-#include "istd/istd.h"
 
 
 namespace istd
@@ -47,6 +48,11 @@ public:
 		\param	elapsed	optional current elapsed time.
 	*/
 	virtual void Start(double elapsedTime = 0) = 0;
+
+	/**
+		Get point in time of latest start.
+	*/
+	virtual QDateTime GetStartTime() const = 0;
 
 	/**
 		Return the time in seconds from start until this call.

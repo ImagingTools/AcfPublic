@@ -51,6 +51,7 @@ public:
 
 	// reimplemented (istd::ITimeStamp)
 	virtual void Start(double elapsedTime = 0);
+	virtual QDateTime GetStartTime() const;
 	virtual double GetElapsed() const;
 	virtual double GetTimeTo(const istd::ITimeStamp& timeStamp) const;
 	virtual void WaitTo(double time) const;

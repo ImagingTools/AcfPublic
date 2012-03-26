@@ -50,6 +50,7 @@ public:
 
 	// reimplemented (istd::ITimeStamp)
 	virtual void Start(double elapsedTime = 0);
+	virtual QDateTime GetStartTime() const;
 	virtual double GetElapsed() const;
 	virtual double GetTimeTo(const ITimeStamp& timeStamp) const;
 	virtual void WaitTo(double time) const;
@@ -59,7 +60,7 @@ private:
 #if QT_VERSION >= 0x040700
 	QElapsedTimer m_timer;
 #else
-	QTime m_timer;
+	QDateTime m_timer;
 #endif
 
 	double m_timeShift;
