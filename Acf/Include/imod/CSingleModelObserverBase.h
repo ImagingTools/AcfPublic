@@ -41,6 +41,8 @@ class IModel;
 class CSingleModelObserverBase: virtual public IObserver 
 {
 public:
+	typedef imod::IModel ModelType;
+
 	CSingleModelObserverBase();
 	virtual ~CSingleModelObserverBase();
 

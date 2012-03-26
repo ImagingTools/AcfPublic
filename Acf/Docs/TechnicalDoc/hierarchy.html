@@ -125,10 +125,6 @@
 </ul>
 </li>
 <li><a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a><ul>
-<li><a class="el" href="classi2d_1_1_c_affine_transformation2d.html">i2d::CAffineTransformation2d</a><ul>
-<li><a class="el" href="classi2d_1_1_c_affine_transformation2d_comp.html">i2d::CAffineTransformation2dComp</a></li>
-</ul>
-</li>
 <li><a class="el" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a></li>
 </ul>
 </li>
@@ -566,7 +562,10 @@
 </li>
 <li><a class="el" href="class_c_view_provider_gui_comp.html">CViewProviderGuiComp</a><ul>
 <li><a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html">iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt;</a><ul>
+<li><a class="el" href="classibase_1_1_t_model_observer_comp_wrap.html">ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt; &gt;</a><ul>
 <li><a class="el" href="classiqt2d_1_1_c_image_view_comp.html">iqt2d::CImageViewComp</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -721,6 +720,7 @@
 <li><a class="el" href="classi2d_1_1_c_position2d_comp.html">i2d::CPosition2dComp</a></li>
 <li><a class="el" href="classi2d_1_1_c_quadrangle_comp.html">i2d::CQuadrangleComp</a></li>
 <li><a class="el" href="classi2d_1_1_c_rectangle_comp.html">i2d::CRectangleComp</a></li>
+<li><a class="el" href="classi2d_1_1_c_static_calibration_provider_comp.html">i2d::CStaticCalibrationProviderComp</a></li>
 <li><a class="el" href="classibase_1_1_c_application_info_comp.html">ibase::CApplicationInfoComp</a></li>
 <li><a class="el" href="classibase_1_1_c_auto_persistence_comp.html">ibase::CAutoPersistenceComp</a></li>
 <li><a class="el" href="classibase_1_1_c_composed_loader_comp.html">ibase::CComposedLoaderComp</a></li>
@@ -1140,6 +1140,7 @@
 <li><a class="el" href="classimath_1_1_t_i_value_manip.html">imath::TIValueManip&lt; ValueType &gt;</a></li>
 <li><a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html">imod::CMultiModelDispatcherBase</a><ul>
 <li><a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html">icmpstr::CComponentNoteEditorComp</a></li>
+<li><a class="el" href="classiqt2d_1_1_c_image_view_comp.html">iqt2d::CImageViewComp</a></li>
 <li><a class="el" href="classiqtgui_1_1_c_commands_binder_comp.html">iqtgui::CCommandsBinderComp</a></li>
 <li><a class="el" href="classiqtprm_1_1_c_options_manager_gui_comp.html">iqtprm::COptionsManagerGuiComp</a></li>
 <li><a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html">iqtprm::CSelectionParamGuiComp</a></li>
@@ -1585,7 +1586,17 @@
 </li>
 <li><a class="el" href="classistd_1_1_c_class_info.html">istd::CClassInfo</a></li>
 <li><a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a><ul>
-<li><a class="el" href="classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a></li>
+<li><a class="el" href="classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a><ul>
+<li><a class="el" href="classi2d_1_1_c_static_calibration_provider_comp.html">i2d::CStaticCalibrationProviderComp</a></li>
+<li><a class="el" href="classiview_1_1_i_visual_calibration_info.html">iview::IVisualCalibrationInfo</a><ul>
+<li><a class="el" href="classiview_1_1_c_calibrated_view_base.html">iview::CCalibratedViewBase</a><ul>
+<li><a class="el" href="classiview_1_1_c_viewport.html">iview::CViewport</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="el" href="classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a><ul>
 <li><a class="el" href="classicmpstr_1_1_c_package_overview_comp.html">icmpstr::CPackageOverviewComp</a></li>
 <li><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html">icmpstr::CVisualRegistryScenographerComp</a></li>
@@ -1738,7 +1749,13 @@
 </ul>
 </li>
 <li><a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a><ul>
-<li><a class="el" href="classi2d_1_1_c_affine_transformation2d.html">i2d::CAffineTransformation2d</a></li>
+<li><a class="el" href="classi2d_1_1_c_affine_transformation2d.html">i2d::CAffineTransformation2d</a><ul>
+<li><a class="el" href="classi2d_1_1_c_affine_transformation2d_comp.html">i2d::CAffineTransformation2dComp</a></li>
+</ul>
+</li>
+<li><a class="el" href="classiview_1_1_c_none_calibration.html">iview::CNoneCalibration</a></li>
+<li><a class="el" href="classiview_1_1_c_perspective_calibration.html">iview::CPerspectiveCalibration</a></li>
+<li><a class="el" href="classiview_1_1_c_scale_calibration.html">iview::CScaleCalibration</a></li>
 </ul>
 </li>
 <li><a class="el" href="classibase_1_1_c_message.html">ibase::CMessage</a></li>
@@ -1864,16 +1881,6 @@
 </li>
 <li><a class="el" href="classisys_1_1_i_system_info.html">isys::ISystemInfo</a><ul>
 <li><a class="el" href="classisys_1_1_c_system_info_base.html">isys::CSystemInfoBase</a></li>
-</ul>
-</li>
-<li><a class="el" href="classiview_1_1_i_calibration.html">iview::ICalibration</a><ul>
-<li><a class="el" href="classiview_1_1_i_isomorphic_calibration.html">iview::IIsomorphicCalibration</a><ul>
-<li><a class="el" href="classiview_1_1_c_affinite_calibration.html">iview::CAffiniteCalibration</a></li>
-<li><a class="el" href="classiview_1_1_c_none_calibration.html">iview::CNoneCalibration</a></li>
-<li><a class="el" href="classiview_1_1_c_perspective_calibration.html">iview::CPerspectiveCalibration</a></li>
-<li><a class="el" href="classiview_1_1_c_scale_calibration.html">iview::CScaleCalibration</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li><a class="el" href="classicmm_1_1_t_composed_color.html">icmm::TComposedColor&lt; 3 &gt;</a><ul>
@@ -2005,16 +2012,6 @@
 <li><a class="el" href="classisys_1_1_i_system_environment.html">isys::ISystemEnvironment</a><ul>
 <li><a class="el" href="classisys_1_1_c_system_environment_base.html">isys::CSystemEnvironmentBase</a><ul>
 <li><a class="el" href="classiqt_1_1_c_system_environment.html">iqt::CSystemEnvironment</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="el" href="classiview_1_1_i_calibrated.html">iview::ICalibrated</a><ul>
-<li><a class="el" href="classiview_1_1_i_visual_calibration_info.html">iview::IVisualCalibrationInfo</a><ul>
-<li><a class="el" href="classiview_1_1_c_calibrated_view_base.html">iview::CCalibratedViewBase</a><ul>
-<li><a class="el" href="classiview_1_1_c_viewport.html">iview::CViewport</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>

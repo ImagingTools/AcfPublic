@@ -40,7 +40,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="iview::CCalibrationShapeBase" --><!-- doxytag: inherits="iview::CInteractiveShapeBase" -->
-<p><a class="el" href="class_base.html">Base</a> class for all shapes using <a class="el" href="classiview_1_1_i_isomorphic_calibration.html" title="This is common interface for all isomorphic calibrations.">iview::IIsomorphicCalibration</a> to transform between logical and physical positions.  
+<p><a class="el" href="class_base.html">Base</a> class for all shapes using <a class="el" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a> to transform between logical and physical positions.  
  <a href="classiview_1_1_c_calibration_shape_base.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_calibration_shape_base_8h_source.html">CCalibrationShapeBase.h</a>&gt;</code></p>
@@ -105,17 +105,17 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classiview_1_1_i_isomorphic_calibration.html">IIsomorphicCalibration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibration_shape_base.html#a8313fa03d680da80650d000c322c0709">GetIsomorphCalib</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to calibration object.  <a href="#a8313fa03d680da80650d000c322c0709"></a><br/></td></tr>
+<a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibration_shape_base.html#a155aac7b9686fc204ab6fafe97c57f1f">GetIsomorphCalib</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to calibration object.  <a href="#a155aac7b9686fc204ab6fafe97c57f1f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibration_shape_base.html#a064fcb43846cddd9b7be21606e8ad87c">GetDisplayChangesMask</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get display changes mask.  <a href="#a064fcb43846cddd9b7be21606e8ad87c"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const <br class="typebreak"/>
-<a class="el" href="classiview_1_1_i_isomorphic_calibration.html">IIsomorphicCalibration</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibration_shape_base.html#a96fca025c51071ca8220e967e2c1270b">FindCalib</a> (const <a class="el" href="classiview_1_1_i_display.html">iview::IDisplay</a> &amp;display)</td></tr>
+<a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibration_shape_base.html#a9df8f0d76057adb0ad828e3d13233e4f">FindCalibration</a> (const <a class="el" href="classiview_1_1_i_display.html">iview::IDisplay</a> &amp;display)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="class_base.html">Base</a> class for all shapes using <a class="el" href="classiview_1_1_i_isomorphic_calibration.html" title="This is common interface for all isomorphic calibrations.">iview::IIsomorphicCalibration</a> to transform between logical and physical positions. </p>
+<div class="textblock"><p><a class="el" href="class_base.html">Base</a> class for all shapes using <a class="el" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a> to transform between logical and physical positions. </p>
 
 <p>Definition at line <a class="el" href="_c_calibration_shape_base_8h_source.html#l00018">18</a> of file <a class="el" href="_c_calibration_shape_base_8h_source.html">CCalibrationShapeBase.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
@@ -178,12 +178,12 @@ Static Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a96fca025c51071ca8220e967e2c1270b"></a><!-- doxytag: member="iview::CCalibrationShapeBase::FindCalib" ref="a96fca025c51071ca8220e967e2c1270b" args="(const iview::IDisplay &amp;display)" -->
+<a class="anchor" id="a9df8f0d76057adb0ad828e3d13233e4f"></a><!-- doxytag: member="iview::CCalibrationShapeBase::FindCalibration" ref="a9df8f0d76057adb0ad828e3d13233e4f" args="(const iview::IDisplay &amp;display)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static const <a class="el" href="classiview_1_1_i_isomorphic_calibration.html">IIsomorphicCalibration</a>* iview::CCalibrationShapeBase::FindCalib </td>
+          <td class="memname">static const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* iview::CCalibrationShapeBase::FindCalibration </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classiview_1_1_i_display.html">iview::IDisplay</a> &amp;&#160;</td>
           <td class="paramname"><em>display</em></td><td>)</td>
@@ -214,18 +214,18 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_shape_base.html#abc26858da9a056111d240d5312cb250c">iview::CInteractiveShapeBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_calibration_shape_base_8h_source.html#l00062">62</a> of file <a class="el" href="_c_calibration_shape_base_8h_source.html">CCalibrationShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibration_shape_base_8h_source.html#l00063">63</a> of file <a class="el" href="_c_calibration_shape_base_8h_source.html">CCalibrationShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="_i_shape_8h_source.html#l00032">iview::IShape::CF_CALIB</a>, and <a class="el" href="_c_interactive_shape_base_8h_source.html#l00160">iview::CInteractiveShapeBase::GetDisplayChangesMask()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8313fa03d680da80650d000c322c0709"></a><!-- doxytag: member="iview::CCalibrationShapeBase::GetIsomorphCalib" ref="a8313fa03d680da80650d000c322c0709" args="() const " -->
+<a class="anchor" id="a155aac7b9686fc204ab6fafe97c57f1f"></a><!-- doxytag: member="iview::CCalibrationShapeBase::GetIsomorphCalib" ref="a155aac7b9686fc204ab6fafe97c57f1f" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classiview_1_1_i_isomorphic_calibration.html">IIsomorphicCalibration</a> &amp; iview::CCalibrationShapeBase::GetIsomorphCalib </td>
+          <td class="memname">const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp; iview::CCalibrationShapeBase::GetIsomorphCalib </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [inline, protected, virtual]</code></td>
@@ -236,7 +236,7 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Get access to calibration object. </p>
 
-<p>Definition at line <a class="el" href="_c_calibration_shape_base_8h_source.html#l00051">51</a> of file <a class="el" href="_c_calibration_shape_base_8h_source.html">CCalibrationShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibration_shape_base_8h_source.html#l00052">52</a> of file <a class="el" href="_c_calibration_shape_base_8h_source.html">CCalibrationShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00144">I_ASSERT</a>, <a class="el" href="classiview_1_1_t_shape_base.html#a1ce37c1160e788e6797caccd936f7889">iview::TShapeBase&lt; IInteractiveShape &gt;::IsDisplayConnected()</a>, and <a class="el" href="istd_8h_source.html#l00189">NULL</a>.</p>
 

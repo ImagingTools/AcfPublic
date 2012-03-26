@@ -39,10 +39,10 @@
 <a name="l00012"></a>00012 {
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 
-<a name="l00018"></a><a class="code" href="classi2d_1_1_i_calibration_provider.html">00018</a> <span class="keyword">class </span><a class="code" href="classi2d_1_1_i_calibration_provider.html" title="Common interface for a calibration provider.">ICalibrationProvider</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IChangeable
+<a name="l00018"></a><a class="code" href="classi2d_1_1_i_calibration_provider.html">00018</a> <span class="keyword">class </span><a class="code" href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration.">ICalibrationProvider</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IChangeable
 <a name="l00019"></a>00019 {
 <a name="l00020"></a>00020 <span class="keyword">public</span>:
-<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* <a class="code" href="classi2d_1_1_i_calibration_provider.html#a95048e64785106418934f54e13f1324d" title="Get access to transformation object, which transforms a coordinate system to a logical one...">GetLogicalTransform</a>() <span class="keyword">const</span> = 0;
+<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* <a class="code" href="classi2d_1_1_i_calibration_provider.html#aeea8b083da9ca252354e63a35358ea4d" title="Get access to transformation object, which transforms a coordinate system to a logical one...">GetCalibration</a>() <span class="keyword">const</span> = 0;
 <a name="l00026"></a>00026 };
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 

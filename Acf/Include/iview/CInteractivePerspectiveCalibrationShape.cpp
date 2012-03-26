@@ -26,11 +26,8 @@
 // Qt includes
 #include <QtGui/QPainter>
 
-
 // ACF includes
 #include "iqt/iqt.h"
-
-
 
 #include "iview/CCalibratedViewBase.h"
 #include "iview/CPerspectiveCalibration.h"
@@ -51,10 +48,10 @@ iview::ITouchable::TouchState CInteractivePerspectiveCalibrationShape::IsTouched
 		const i2d::CRectangle& bounds = calibPtr->GetBounds();
 		i2d::CVector2d viewLeftTop, viewRightTop, viewLeftBottom, viewRightBottom;
 
-		calibPtr->GetApplyToView(bounds.GetTopLeft(), viewLeftTop);
-		calibPtr->GetApplyToView(bounds.GetTopRight(), viewRightTop);
-		calibPtr->GetApplyToView(bounds.GetBottomLeft(), viewLeftBottom);
-		calibPtr->GetApplyToView(bounds.GetBottomRight(), viewRightBottom);
+		calibPtr->GetInvPositionAt(bounds.GetTopLeft(), viewLeftTop);
+		calibPtr->GetInvPositionAt(bounds.GetTopRight(), viewRightTop);
+		calibPtr->GetInvPositionAt(bounds.GetBottomLeft(), viewLeftBottom);
+		calibPtr->GetInvPositionAt(bounds.GetBottomRight(), viewRightBottom);
 
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 		const iview::IColorShema& colorShema = GetColorShema();
@@ -92,10 +89,10 @@ void CInteractivePerspectiveCalibrationShape::Draw(QPainter& drawContext) const
 		const i2d::CRectangle& bounds = calibPtr->GetBounds();
 		i2d::CVector2d viewLeftTop, viewRightTop, viewLeftBottom, viewRightBottom;
 
-		calibPtr->GetApplyToView(bounds.GetTopLeft(), viewLeftTop);
-		calibPtr->GetApplyToView(bounds.GetTopRight(), viewRightTop);
-		calibPtr->GetApplyToView(bounds.GetBottomLeft(), viewLeftBottom);
-		calibPtr->GetApplyToView(bounds.GetBottomRight(), viewRightBottom);
+		calibPtr->GetInvPositionAt(bounds.GetTopLeft(), viewLeftTop);
+		calibPtr->GetInvPositionAt(bounds.GetTopRight(), viewRightTop);
+		calibPtr->GetInvPositionAt(bounds.GetBottomLeft(), viewLeftBottom);
+		calibPtr->GetInvPositionAt(bounds.GetBottomRight(), viewRightBottom);
 
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 		const iview::IColorShema& colorShema = GetColorShema();
@@ -135,10 +132,10 @@ bool CInteractivePerspectiveCalibrationShape::OnMouseButton(istd::CIndex2d posit
 			const i2d::CRectangle& bounds = calibPtr->GetBounds();
 			i2d::CVector2d viewLeftTop, viewRightTop, viewLeftBottom, viewRightBottom;
 
-			calibPtr->GetApplyToView(bounds.GetTopLeft(), viewLeftTop);
-			calibPtr->GetApplyToView(bounds.GetTopRight(), viewRightTop);
-			calibPtr->GetApplyToView(bounds.GetBottomLeft(), viewLeftBottom);
-			calibPtr->GetApplyToView(bounds.GetBottomRight(), viewRightBottom);
+			calibPtr->GetInvPositionAt(bounds.GetTopLeft(), viewLeftTop);
+			calibPtr->GetInvPositionAt(bounds.GetTopRight(), viewRightTop);
+			calibPtr->GetInvPositionAt(bounds.GetBottomLeft(), viewLeftBottom);
+			calibPtr->GetInvPositionAt(bounds.GetBottomRight(), viewRightBottom);
 
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
 			const iview::IColorShema& colorShema = GetColorShema();
@@ -197,7 +194,7 @@ bool CInteractivePerspectiveCalibrationShape::OnMouseMove(istd::CIndex2d positio
 		i2d::CVector2d viewPos = transform.GetClientPosition(position);
 
 		i2d::CVector2d logPos;
-		if (calibPtr->GetApplyToLog(viewPos, logPos) != ICalibration::CS_FAILED){
+		if (calibPtr->GetPositionAt(viewPos, logPos)){
 			bool isChanged = false;
 
 			switch (m_editBound){

@@ -34,7 +34,7 @@
 
 #include "i2d/CRect.h"
 
-#include "iview/ICalibration.h"
+#include "i2d/ITransformation2d.h"
 #include "iview/IVisualCalibrationInfo.h"
 #include "iview/CNoneCalibration.h"
 #include "iview/CViewBase.h"
@@ -48,7 +48,7 @@ namespace iview
 
 /**
 	Abstract base class for all calibrated view.
-	Calibrated view implements iview::ICalibrated interface,
+	Calibrated view implements i2d::ICalibrationProvider interface,
 	and can automatically show calibration grid if supported.
 */
 class CCalibratedViewBase:
@@ -70,7 +70,7 @@ public:
 	/**
 		Set calibration object for this view.
 	*/
-	void SetCalibrationPtr(const ICalibration* calibrationPtr);
+	void SetCalibrationPtr(const i2d::ITransformation2d* calibrationPtr);
 
 	/**
 		Set grid visibility state.
@@ -136,8 +136,8 @@ public:
 	virtual double GetMinGridDistance() const;
 	virtual bool IsGridInMm() const;
 
-	// reimplemented (iview::ICalibrated)
-	virtual const ICalibration& GetCalibration() const;
+	// reimplemented (i2d::ICalibrationProvider)
+	virtual const i2d::ITransformation2d* GetCalibration() const;
 
 	using BaseClass::InvalidateBackground;
 
@@ -156,7 +156,7 @@ private:
 
 	i2d::CRect m_lastClientArea;
 
-	const ICalibration* m_calibrationPtr;
+	const i2d::ITransformation2d* m_calibrationPtr;
 	bool m_isGridVisible;
 	bool m_isGridInMm;
 	double m_minGridDistance;
@@ -170,7 +170,7 @@ private:
 
 // inline methods
 
-inline 	void CCalibratedViewBase::SetCalibrationPtr(const ICalibration* calibrationPtr)
+inline 	void CCalibratedViewBase::SetCalibrationPtr(const i2d::ITransformation2d* calibrationPtr)
 {
 	if (calibrationPtr != m_calibrationPtr){
 		if (calibrationPtr != NULL){
@@ -240,11 +240,11 @@ inline bool CCalibratedViewBase::IsGridInMm() const
 }
 
 
-// reimplemented (iview::ICalibrated)
+// reimplemented (i2d::ICalibrationProvider)
 
-inline const ICalibration& CCalibratedViewBase::GetCalibration() const
+inline const i2d::ITransformation2d* CCalibratedViewBase::GetCalibration() const
 {
-	return *m_calibrationPtr;
+	return m_calibrationPtr;
 }
 
 

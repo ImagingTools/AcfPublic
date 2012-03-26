@@ -36,10 +36,7 @@
 <div class="title">iview::CScaleCalibration Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iview::CScaleCalibration" --><!-- doxytag: inherits="iview::IIsomorphicCalibration" -->
-<p>Isomorphic calibration.  
- <a href="classiview_1_1_c_scale_calibration.html#details">More...</a></p>
-
+<!-- doxytag: class="iview::CScaleCalibration" --><!-- doxytag: inherits="i2d::ITransformation2d" -->
 <p><code>#include &lt;<a class="el" href="_c_scale_calibration_8h_source.html">CScaleCalibration.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iview::CScaleCalibration:</div>
@@ -47,11 +44,13 @@ Inheritance diagram for iview::CScaleCalibration:</div>
  <div class="center">
   <img src="classiview_1_1_c_scale_calibration.png" usemap="#iview::CScaleCalibration_map" alt=""/>
   <map id="iview::CScaleCalibration_map" name="iview::CScaleCalibration_map">
-<area href="classiview_1_1_i_isomorphic_calibration.html" title="This is common interface for all isomorphic calibrations." alt="iview::IIsomorphicCalibration" shape="rect" coords="0,224,172,248"/>
-<area href="classiview_1_1_i_calibration.html" title="Common interface for all calibration objects." alt="iview::ICalibration" shape="rect" coords="0,168,172,192"/>
-<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="0,112,172,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,172,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,172,24"/>
+<area href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects." alt="i2d::ITransformation2d" shape="rect" coords="155,168,456,192"/>
+<area href="classimath_1_1_t_i_surject_function.html" alt="imath::TISurjectFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="0,112,301,136"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="311,112,612,136"/>
+<area href="classimath_1_1_t_i_math_function.html" alt="imath::TIMathFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="0,56,301,80"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="311,56,612,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,301,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="311,0,612,24"/>
 </map>
  </div></div>
 
@@ -75,25 +74,31 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#aea4727189c49fee80d49d3db5c832209">GetLogToViewTransform</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get global transformation from logical into view units representing this calibration.  <a href="#aea4727189c49fee80d49d3db5c832209"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#a7e70ed25f998eae6686faacab3200b84">GetLogToViewTransform</a> (<a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;result) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get global transformation from logical into view units representing this calibration.  <a href="#a7e70ed25f998eae6686faacab3200b84"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2">CalcStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#a54281168b97f674ec2e95f2256abe32d">GetLogLength</a> (const <a class="el" href="classi2d_1_1_c_line2d.html">i2d::CLine2d</a> &amp;line, double &amp;result) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a distance in real world units.  <a href="#a54281168b97f674ec2e95f2256abe32d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2">CalcStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#a43f440331fa22db4130794e0f5d306b7">GetLogDeform</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;logPosition, <a class="el" href="classi2d_1_1_c_matrix2d.html">i2d::CMatrix2d</a> &amp;result) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get local deformation (from logical to view system) at defined logical position.  <a href="#a43f440331fa22db4130794e0f5d306b7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2">CalcStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#a6c2fd8d549ca7b124c0e4f34fd4e8857">GetViewDeform</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;viewPosition, <a class="el" href="classi2d_1_1_c_matrix2d.html">i2d::CMatrix2d</a> &amp;result) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get local deformation (from view to logical system) at defined view position.  <a href="#a6c2fd8d549ca7b124c0e4f34fd4e8857"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2">CalcStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#ac099f75b50b1dceb2225b0ea5a58cc92">GetApplyToLog</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;viewPosition, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;result) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform position to logical coordination system.  <a href="#ac099f75b50b1dceb2225b0ea5a58cc92"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2">CalcStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#a01f5bb82032c378106cc98ce81662803">GetApplyToView</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;logPosition, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;result) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform position to view coordination system.  <a href="#a01f5bb82032c378106cc98ce81662803"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#aeb9b0f21a9f37d71f0b698af10023cc8">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#aeb9b0f21a9f37d71f0b698af10023cc8"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.  <a href="#a7e70ed25f998eae6686faacab3200b84"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#a93fc605b6c3b6cc0fc05d9961f4d7bb3">GetTransformationFlags</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of describing type of this transformation.  <a href="#a93fc605b6c3b6cc0fc05d9961f4d7bb3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#a3d0e83413643ab1ffe4e6704a9745988">GetDistance</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;origPos1, const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;origPos2, double &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode=EM_NONE) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a shorteness distance in transformed coordinations.  <a href="#a3d0e83413643ab1ffe4e6704a9745988"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#ad288876b7aca8091c06166cff317b77f">GetPositionAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;origPosition, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode=EM_NONE) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get position after transformation.  <a href="#ad288876b7aca8091c06166cff317b77f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#a8966d9c9da9cc3b81f5deb459d3e4a18">GetInvPositionAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;transfPosition, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode=EM_NONE) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get position after transformation.  <a href="#a8966d9c9da9cc3b81f5deb459d3e4a18"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#a8d87e04a40535910aa4dd9299a4a65ad">GetLocalTransform</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;origPosition, <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode=EM_NONE) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get local transformation (from original to transformed coordinate system) at some original position.  <a href="#a8d87e04a40535910aa4dd9299a4a65ad"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#ab16b714f5c5e6dde95e8b1fdff1915f4">GetLocalInvTransform</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;transfPosition, <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode=EM_NONE) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get local transformation (from transformed to original coordinate system) at some transformed position.  <a href="#ab16b714f5c5e6dde95e8b1fdff1915f4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
+<a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#a420481686857caf97862cdfefdc93821">CreateCombinedTransformation</a> (const ITransformation2d &amp;transform) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#a0f983c959c83ce98b2d1773c92ca7e4a">GetInvValueAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;argument, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;result) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#ab33c0d37008b28b2d1c07e6e6ce1d65f">GetInvValueAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;argument) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#a68f4e61c6a4a891726db47e30a855a45">GetValueAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;argument, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;result) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#acbf8a01929b7d64420cd0e5e1f12fadd">GetValueAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;argument) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_scale_calibration.html#aeba3614cefbaae01a6b4bbacd3ee2bf6">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#aeba3614cefbaae01a6b4bbacd3ee2bf6"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Isomorphic calibration. </p>
-<p>You need this calibration when your logical coordination system is flat, and orthogonal to camera axis. </p>
-
-<p>Definition at line <a class="el" href="_c_scale_calibration_8h_source.html#l00027">27</a> of file <a class="el" href="_c_scale_calibration_8h_source.html">CScaleCalibration.h</a>.</p>
+<div class="textblock">
+<p>Definition at line <a class="el" href="_c_scale_calibration_8h_source.html#l00015">15</a> of file <a class="el" href="_c_scale_calibration_8h_source.html">CScaleCalibration.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a55aca5acf676d81f4bd23c3d8acb449a"></a><!-- doxytag: member="iview::CScaleCalibration::CScaleCalibration" ref="a55aca5acf676d81f4bd23c3d8acb449a" args="()" -->
 <div class="memitem">
@@ -112,135 +117,136 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac099f75b50b1dceb2225b0ea5a58cc92"></a><!-- doxytag: member="iview::CScaleCalibration::GetApplyToLog" ref="ac099f75b50b1dceb2225b0ea5a58cc92" args="(const i2d::CVector2d &amp;viewPosition, i2d::CVector2d &amp;result) const " -->
+<a class="anchor" id="a420481686857caf97862cdfefdc93821"></a><!-- doxytag: member="iview::CScaleCalibration::CreateCombinedTransformation" ref="a420481686857caf97862cdfefdc93821" args="(const ITransformation2d &amp;transform) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2">CalcStatus</a> iview::CScaleCalibration::GetApplyToLog </td>
+          <td class="memname">virtual const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* iview::CScaleCalibration::CreateCombinedTransformation </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>viewPosition</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>result</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const<code> [virtual]</code></td>
+          <td class="paramtype">const ITransformation2d &amp;&#160;</td>
+          <td class="paramname"><em>transform</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Transform position to logical coordination system. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">viewPos</td><td>position in view coordination system. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><code>true</code>, if it was possible to transform, otherwíse false. </dd></dl>
-
-<p>Implements <a class="el" href="classiview_1_1_i_isomorphic_calibration.html#af0048a260bce55dda296afb8778ef854">iview::IIsomorphicCalibration</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a01f5bb82032c378106cc98ce81662803"></a><!-- doxytag: member="iview::CScaleCalibration::GetApplyToView" ref="a01f5bb82032c378106cc98ce81662803" args="(const i2d::CVector2d &amp;logPosition, i2d::CVector2d &amp;result) const " -->
+<a class="anchor" id="a3d0e83413643ab1ffe4e6704a9745988"></a><!-- doxytag: member="iview::CScaleCalibration::GetDistance" ref="a3d0e83413643ab1ffe4e6704a9745988" args="(const i2d::CVector2d &amp;origPos1, const i2d::CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2">CalcStatus</a> iview::CScaleCalibration::GetApplyToView </td>
+          <td class="memname">virtual bool iview::CScaleCalibration::GetDistance </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>logPosition</em>, </td>
+          <td class="paramname"><em>origPos1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>result</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Transform position to view coordination system. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">logPos</td><td>position in logical coordination system. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><code>true</code>, if it was possible to transform, otherwise false. </dd></dl>
-
-<p>Implements <a class="el" href="classiview_1_1_i_isomorphic_calibration.html#ab0ffa3f9ac4f88e0234ef8fe4c471aa9">iview::IIsomorphicCalibration</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a43f440331fa22db4130794e0f5d306b7"></a><!-- doxytag: member="iview::CScaleCalibration::GetLogDeform" ref="a43f440331fa22db4130794e0f5d306b7" args="(const i2d::CVector2d &amp;logPosition, i2d::CMatrix2d &amp;result) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2">CalcStatus</a> iview::CScaleCalibration::GetLogDeform </td>
-          <td>(</td>
           <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>logPosition</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classi2d_1_1_c_matrix2d.html">i2d::CMatrix2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>result</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get local deformation (from logical to view system) at defined logical position. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">viewPosition</td><td>position in view coordination system. </td></tr>
-    <tr><td class="paramname">result</td><td>local transformation. The columns of this transform are derative in specified position. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>status of this operation. </dd></dl>
-
-<p>Implements <a class="el" href="classiview_1_1_i_calibration.html#a3306fed8808263dec230de95b186ad9d">iview::ICalibration</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a54281168b97f674ec2e95f2256abe32d"></a><!-- doxytag: member="iview::CScaleCalibration::GetLogLength" ref="a54281168b97f674ec2e95f2256abe32d" args="(const i2d::CLine2d &amp;line, double &amp;result) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2">CalcStatus</a> iview::CScaleCalibration::GetLogLength </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_line2d.html">i2d::CLine2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>line</em>, </td>
+          <td class="paramname"><em>origPos2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>EM_NONE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Compute a shorteness distance in transformed coordinations. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origPos1</td><td>first position in original coordinates. </td></tr>
+    <tr><td class="paramname">origPos2</td><td>second position in original coordinates. </td></tr>
+    <tr><td class="paramname">result</td><td>object where result distance between positions in transformed coordinates will be stored. </td></tr>
+    <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_transformation2d.html#ab81b43d90130362a22d788ebd4710d00">i2d::ITransformation2d</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8966d9c9da9cc3b81f5deb459d3e4a18"></a><!-- doxytag: member="iview::CScaleCalibration::GetInvPositionAt" ref="a8966d9c9da9cc3b81f5deb459d3e4a18" args="(const i2d::CVector2d &amp;transfPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::CScaleCalibration::GetInvPositionAt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>transfPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>EM_NONE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get position after transformation. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transfPosition</td><td>position in transformed coordination system. </td></tr>
+    <tr><td class="paramname">result</td><td>result position (original coordination system). </td></tr>
+    <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_transformation2d.html#a7821530bcc886a5920e632fe3c1a91ed">i2d::ITransformation2d</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f983c959c83ce98b2d1773c92ca7e4a"></a><!-- doxytag: member="iview::CScaleCalibration::GetInvValueAt" ref="a0f983c959c83ce98b2d1773c92ca7e4a" args="(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::CScaleCalibration::GetInvValueAt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
@@ -252,16 +258,114 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Compute a distance in real world units. </p>
+</div>
+</div>
+<a class="anchor" id="ab33c0d37008b28b2d1c07e6e6ce1d65f"></a><!-- doxytag: member="iview::CScaleCalibration::GetInvValueAt" ref="ab33c0d37008b28b2d1c07e6e6ce1d65f" args="(const i2d::CVector2d &amp;argument) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> iview::CScaleCalibration::GetInvValueAt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab16b714f5c5e6dde95e8b1fdff1915f4"></a><!-- doxytag: member="iview::CScaleCalibration::GetLocalInvTransform" ref="ab16b714f5c5e6dde95e8b1fdff1915f4" args="(const i2d::CVector2d &amp;transfPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::CScaleCalibration::GetLocalInvTransform </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>transfPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>EM_NONE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get local transformation (from transformed to original coordinate system) at some transformed position. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">line</td><td>line in view coords system. </td></tr>
+    <tr><td class="paramname">transfPosition</td><td>position in transformed coordination system. </td></tr>
+    <tr><td class="paramname">result</td><td>inverse transformation for specified position. </td></tr>
+    <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>distance between line ends in real world units. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
 
-<p>Implements <a class="el" href="classiview_1_1_i_calibration.html#a8964c0f4884a99a68f979df3150f369c">iview::ICalibration</a>.</p>
+<p>Implements <a class="el" href="classi2d_1_1_i_transformation2d.html#af7f159bd12d686543beee0c5f9210d99">i2d::ITransformation2d</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d87e04a40535910aa4dd9299a4a65ad"></a><!-- doxytag: member="iview::CScaleCalibration::GetLocalTransform" ref="a8d87e04a40535910aa4dd9299a4a65ad" args="(const i2d::CVector2d &amp;origPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::CScaleCalibration::GetLocalTransform </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>origPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>EM_NONE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get local transformation (from original to transformed coordinate system) at some original position. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origPosition</td><td>position in (original coordination system). </td></tr>
+    <tr><td class="paramname">result</td><td>transformation for specified position. </td></tr>
+    <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_transformation2d.html#adbb8dfe9b050fd67c5ea18faa2296ad6">i2d::ITransformation2d</a>.</p>
 
 </div>
 </div>
@@ -298,8 +402,53 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get global transformation from logical into view units representing this calibration. </p>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad288876b7aca8091c06166cff317b77f"></a><!-- doxytag: member="iview::CScaleCalibration::GetPositionAt" ref="ad288876b7aca8091c06166cff317b77f" args="(const i2d::CVector2d &amp;origPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::CScaleCalibration::GetPositionAt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>origPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>EM_NONE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get position after transformation. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origPosition</td><td>position in (original coordination system). </td></tr>
+    <tr><td class="paramname">result</td><td>result position (transformed coordination system). </td></tr>
+    <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_transformation2d.html#a66a97873ee8c42d3dac119032f8bb8d5">i2d::ITransformation2d</a>.</p>
 
 </div>
 </div>
@@ -320,7 +469,71 @@ Public Member Functions</h2></td></tr>
 <p>Get scale factor. </p>
 <p>This scale factor is multiplier used to calculate view position from logical position. </p>
 
-<p>Definition at line <a class="el" href="_c_scale_calibration_8h_source.html#l00098">98</a> of file <a class="el" href="_c_scale_calibration_8h_source.html">CScaleCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_scale_calibration_8h_source.html#l00108">108</a> of file <a class="el" href="_c_scale_calibration_8h_source.html">CScaleCalibration.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a93fc605b6c3b6cc0fc05d9961f4d7bb3"></a><!-- doxytag: member="iview::CScaleCalibration::GetTransformationFlags" ref="a93fc605b6c3b6cc0fc05d9961f4d7bb3" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iview::CScaleCalibration::GetTransformationFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get flags of describing type of this transformation. </p>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_transformation2d.html#a68f590d710df7df8eda66f06a8273915">i2d::ITransformation2d</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a68f4e61c6a4a891726db47e30a855a45"></a><!-- doxytag: member="iview::CScaleCalibration::GetValueAt" ref="a68f4e61c6a4a891726db47e30a855a45" args="(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::CScaleCalibration::GetValueAt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acbf8a01929b7d64420cd0e5e1f12fadd"></a><!-- doxytag: member="iview::CScaleCalibration::GetValueAt" ref="acbf8a01929b7d64420cd0e5e1f12fadd" args="(const i2d::CVector2d &amp;argument) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> iview::CScaleCalibration::GetValueAt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -340,46 +553,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get position of logical center in view units. </p>
 
-<p>Definition at line <a class="el" href="_c_scale_calibration_8h_source.html#l00110">110</a> of file <a class="el" href="_c_scale_calibration_8h_source.html">CScaleCalibration.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6c2fd8d549ca7b124c0e4f34fd4e8857"></a><!-- doxytag: member="iview::CScaleCalibration::GetViewDeform" ref="a6c2fd8d549ca7b124c0e4f34fd4e8857" args="(const i2d::CVector2d &amp;viewPosition, i2d::CMatrix2d &amp;result) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2">CalcStatus</a> iview::CScaleCalibration::GetViewDeform </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>viewPosition</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classi2d_1_1_c_matrix2d.html">i2d::CMatrix2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>result</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get local deformation (from view to logical system) at defined view position. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">viewPosition</td><td>position in view coordination system. </td></tr>
-    <tr><td class="paramname">result</td><td>local transformation. The columns of this transform are derative in specified position. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>status of this operation. </dd></dl>
-
-<p>Implements <a class="el" href="classiview_1_1_i_calibration.html#a029dcfb0a79f20d032aacc4bf9f0a527">iview::ICalibration</a>.</p>
+<p>Definition at line <a class="el" href="_c_scale_calibration_8h_source.html#l00124">124</a> of file <a class="el" href="_c_scale_calibration_8h_source.html">CScaleCalibration.h</a>.</p>
 
 </div>
 </div>
@@ -399,7 +573,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Check, if this calibration is identity. </p>
 
-<p>Definition at line <a class="el" href="_c_scale_calibration_8h_source.html#l00122">122</a> of file <a class="el" href="_c_scale_calibration_8h_source.html">CScaleCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_scale_calibration_8h_source.html#l00140">140</a> of file <a class="el" href="_c_scale_calibration_8h_source.html">CScaleCalibration.h</a>.</p>
 
 <p>References <a class="el" href="_t_vector_8h_source.html#l00321">imath::TVector&lt; Size, Element &gt;::GetLength2()</a>, and <a class="el" href="istd_8h_source.html#l00118">I_EPSILON</a>.</p>
 
@@ -423,12 +597,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aeb9b0f21a9f37d71f0b698af10023cc8"></a><!-- doxytag: member="iview::CScaleCalibration::Serialize" ref="aeb9b0f21a9f37d71f0b698af10023cc8" args="(iser::IArchive &amp;archive)" -->
+<a class="anchor" id="aeba3614cefbaae01a6b4bbacd3ee2bf6"></a><!-- doxytag: member="iview::CScaleCalibration::Serialize" ref="aeba3614cefbaae01a6b4bbacd3ee2bf6" args="(iser::IArchive &amp;archive)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool iview::CScaleCalibration::Serialize </td>
+          <td class="memname">virtual bool iview::CScaleCalibration::Serialize </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
           <td class="paramname"><em>archive</em></td><td>)</td>
@@ -464,7 +638,7 @@ Public Member Functions</h2></td></tr>
 <p>Set scale factor. </p>
 <p>This scale factor is multiplier used to calculate view position from logical position. </p>
 
-<p>Definition at line <a class="el" href="_c_scale_calibration_8h_source.html#l00104">104</a> of file <a class="el" href="_c_scale_calibration_8h_source.html">CScaleCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_scale_calibration_8h_source.html#l00114">114</a> of file <a class="el" href="_c_scale_calibration_8h_source.html">CScaleCalibration.h</a>.</p>
 
 </div>
 </div>
@@ -485,7 +659,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Set position of logical center in view units. </p>
 
-<p>Definition at line <a class="el" href="_c_scale_calibration_8h_source.html#l00116">116</a> of file <a class="el" href="_c_scale_calibration_8h_source.html">CScaleCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_scale_calibration_8h_source.html#l00130">130</a> of file <a class="el" href="_c_scale_calibration_8h_source.html">CScaleCalibration.h</a>.</p>
 
 </div>
 </div>

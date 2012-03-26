@@ -54,15 +54,16 @@ Inheritance diagram for iview::CCalibratedViewBase:</div>
 <area href="classiview_1_1_i_logical_view.html" title="Comon interface for all views with logical transform support." alt="iview::ILogicalView" shape="rect" coords="235,224,413,248"/>
 <area href="classiview_1_1_i_draggable.html" title="Common interface for all, you can drag." alt="iview::IDraggable" shape="rect" coords="564,224,742,248"/>
 <area href="classiview_1_1_i_mouse_action_observer.html" title="Common interface for all shapes which are mouse events receiver." alt="iview::IMouseActionObserver" shape="rect" coords="752,224,930,248"/>
-<area href="classiview_1_1_i_calibrated.html" title="Common interface for all objects which allow access to calibration info." alt="iview::ICalibrated" shape="rect" coords="940,224,1118,248"/>
+<area href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration." alt="i2d::ICalibrationProvider" shape="rect" coords="940,224,1118,248"/>
 <area href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations." alt="iview::IShapeView" shape="rect" coords="94,168,272,192"/>
 <area href="classiview_1_1_i_logical_coords.html" alt="iview::ILogicalCoords" shape="rect" coords="376,168,554,192"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="564,168,742,192"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="752,168,930,192"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="940,168,1118,192"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="940,168,1118,192"/>
 <area href="classiview_1_1_i_display.html" alt="iview::IDisplay" shape="rect" coords="0,112,178,136"/>
 <area href="classiview_1_1_i_selectable.html" alt="iview::ISelectable" shape="rect" coords="188,112,366,136"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="376,112,554,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="940,112,1118,136"/>
 <area href="classiview_1_1_i_shape_observer.html" title="Common interface for all objects informed about shapes state changes." alt="iview::IShapeObserver" shape="rect" coords="0,56,178,80"/>
 <area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="188,56,366,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,178,24"/>
@@ -82,8 +83,8 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a9966b8370c11b439e4a90c393d70023f">CCalibratedViewBase</a> (QWidget *parentWidgetPtr=0)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a378c5aa9c95b5c0e5010669f236dcae0">SetCalibrationPtr</a> (const <a class="el" href="classiview_1_1_i_calibration.html">ICalibration</a> *calibrationPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set calibration object for this view.  <a href="#a378c5aa9c95b5c0e5010669f236dcae0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#ab5f3aadf635e42f5f85fb6ceb146d5d5">SetCalibrationPtr</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *calibrationPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set calibration object for this view.  <a href="#ab5f3aadf635e42f5f85fb6ceb146d5d5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a77581d34d0f800e095f70172cb2cf651">SetGridVisible</a> (bool state=true)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set grid visibility state.  <a href="#a77581d34d0f800e095f70172cb2cf651"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a5578ebbb9acb7f193715a0122a44ec78">ConnectCalibrationShape</a> (<a class="el" href="classiview_1_1_i_shape.html">iview::IShape</a> *shapePtr)</td></tr>
@@ -122,8 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get minimal distance between grid lines.  <a href="#a2820758cda8cae66ab61f1dfaee3f256"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#accb843682981aae29e3a57de5ee6ba71">IsGridInMm</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if grid should be shown in milimeter.  <a href="#accb843682981aae29e3a57de5ee6ba71"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiview_1_1_i_calibration.html">ICalibration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#af37c933f1191a355445fa67b1ea4f171">GetCalibration</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to the calibration object.  <a href="#af37c933f1191a355445fa67b1ea4f171"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
+<a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#ab99e55de7f2adb278eb7e9e306c9593f">GetCalibration</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation object, which transforms a coordinate system to a logical one.  <a href="#ab99e55de7f2adb278eb7e9e306c9593f"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a5006a54b7d2a31aefecb53fd399d5ed9">DrawBuffers</a> (QPaintDevice &amp;nativeContext, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;clipRect)</td></tr>
@@ -131,7 +133,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Abstract base class for all calibrated view. </p>
-<p>Calibrated view implements <a class="el" href="classiview_1_1_i_calibrated.html" title="Common interface for all objects which allow access to calibration info.">iview::ICalibrated</a> interface, and can automatically show calibration grid if supported. </p>
+<p>Calibrated view implements <a class="el" href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration.">i2d::ICalibrationProvider</a> interface, and can automatically show calibration grid if supported. </p>
 
 <p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00032">32</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
@@ -341,12 +343,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af37c933f1191a355445fa67b1ea4f171"></a><!-- doxytag: member="iview::CCalibratedViewBase::GetCalibration" ref="af37c933f1191a355445fa67b1ea4f171" args="() const " -->
+<a class="anchor" id="ab99e55de7f2adb278eb7e9e306c9593f"></a><!-- doxytag: member="iview::CCalibratedViewBase::GetCalibration" ref="ab99e55de7f2adb278eb7e9e306c9593f" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classiview_1_1_i_calibration.html">ICalibration</a> &amp; iview::CCalibratedViewBase::GetCalibration </td>
+          <td class="memname">const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> * iview::CCalibratedViewBase::GetCalibration </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [inline, virtual]</code></td>
@@ -355,9 +357,10 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get access to the calibration object. </p>
+<p>Get access to transformation object, which transforms a coordinate system to a logical one. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Pointer to transformation if it is accessible, or NULL. </dd></dl>
 
-<p>Implements <a class="el" href="classiview_1_1_i_calibrated.html#aeb272557964f7f58aa9d08cbd1e843bd">iview::ICalibrated</a>.</p>
+<p>Implements <a class="el" href="classi2d_1_1_i_calibration_provider.html#aeea8b083da9ca252354e63a35358ea4d">i2d::ICalibrationProvider</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00223">223</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
@@ -654,14 +657,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a378c5aa9c95b5c0e5010669f236dcae0"></a><!-- doxytag: member="iview::CCalibratedViewBase::SetCalibrationPtr" ref="a378c5aa9c95b5c0e5010669f236dcae0" args="(const ICalibration *calibrationPtr)" -->
+<a class="anchor" id="ab5f3aadf635e42f5f85fb6ceb146d5d5"></a><!-- doxytag: member="iview::CCalibratedViewBase::SetCalibrationPtr" ref="ab5f3aadf635e42f5f85fb6ceb146d5d5" args="(const i2d::ITransformation2d *calibrationPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void iview::CCalibratedViewBase::SetCalibrationPtr </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiview_1_1_i_calibration.html">ICalibration</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td>
           <td class="paramname"><em>calibrationPtr</em></td><td>)</td>
           <td><code> [inline]</code></td>
         </tr>

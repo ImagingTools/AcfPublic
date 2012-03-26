@@ -2783,9 +2783,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::ITransformation2d *</type>
-      <name>GetLogicalTransform</name>
+      <name>GetCalibration</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a391613c2207d621cdc36bd0e9a44558f</anchor>
+      <anchor>a8a68ddc1f0ddaa674f516dabfc6a54cd</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -5082,9 +5082,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::ITransformation2d *</type>
-      <name>GetLogicalTransform</name>
+      <name>GetCalibration</name>
       <anchorfile>classiipr_1_1_c_bitmap_cache_comp.html</anchorfile>
-      <anchor>a34f668d25b1f9f0972f2f5df36c75dd5</anchor>
+      <anchor>ac901e850a72f1cf9cf18033a67496b2a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -5588,9 +5588,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const i2d::ITransformation2d *</type>
-      <name>GetLogicalTransform</name>
+      <name>GetCalibration</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>ae165583fed8b57575c5ba62f52d29c52</anchor>
+      <anchor>a555ad46c29c3d2440209fa8458b1c1a3</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -6182,9 +6182,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const i2d::ITransformation2d *</type>
-      <name>GetLogicalTransform</name>
+      <name>GetCalibration</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a2460131d14bf285c00d181f122f601d3</anchor>
+      <anchor>a54a0ca0953038fc07b9ce2e6d2729f1f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

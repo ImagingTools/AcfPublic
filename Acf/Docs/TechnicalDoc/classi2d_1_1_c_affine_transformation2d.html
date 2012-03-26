@@ -31,13 +31,13 @@
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">i2d::CAffineTransformation2d Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="i2d::CAffineTransformation2d" --><!-- doxytag: inherits="i2d::CAffine2d,i2d::ITransformation2d" -->
+<!-- doxytag: class="i2d::CAffineTransformation2d" --><!-- doxytag: inherits="i2d::ITransformation2d" -->
 <p>Affine transformation for 2D spaces.  
  <a href="classi2d_1_1_c_affine_transformation2d.html#details">More...</a></p>
 
@@ -48,25 +48,33 @@ Inheritance diagram for i2d::CAffineTransformation2d:</div>
  <div class="center">
   <img src="classi2d_1_1_c_affine_transformation2d.png" usemap="#i2d::CAffineTransformation2d_map" alt=""/>
   <map id="i2d::CAffineTransformation2d_map" name="i2d::CAffineTransformation2d_map">
-<area href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation." alt="i2d::CAffine2d" shape="rect" coords="0,168,301,192"/>
-<area href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects." alt="i2d::ITransformation2d" shape="rect" coords="311,168,612,192"/>
-<area href="classimath_1_1_t_i_surject_function.html" alt="imath::TISurjectFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="155,112,456,136"/>
-<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="466,112,767,136"/>
-<area href="classimath_1_1_t_i_math_function.html" alt="imath::TIMathFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="155,56,456,80"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="466,56,767,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="155,0,456,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="466,0,767,24"/>
+<area href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects." alt="i2d::ITransformation2d" shape="rect" coords="155,168,456,192"/>
+<area href="classimath_1_1_t_i_surject_function.html" alt="imath::TISurjectFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="0,112,301,136"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="311,112,612,136"/>
+<area href="classimath_1_1_t_i_math_function.html" alt="imath::TIMathFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="0,56,301,80"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="311,56,612,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,301,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="311,0,612,24"/>
 <area href="classi2d_1_1_c_affine_transformation2d_comp.html" title="Attributable component for affine transformation." alt="i2d::CAffineTransformation2dComp" shape="rect" coords="155,280,456,304"/>
 </map>
  </div></div>
 
 <p><a href="classi2d_1_1_c_affine_transformation2d-members.html">List of all members.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classi2d_1_1_c_affine2d.html">CAffine2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#abcac23f30bb328b68b1a7c47e7fc2888">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a20a3767b358f0de59a1cf5128b9f03e3">GetTransformation</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get used transformation object.  <a href="#a20a3767b358f0de59a1cf5128b9f03e3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a4c5cbc922fa7b51fcdd3008c56d54356">SetTransformation</a> (const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;transformation)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the tranformation object.  <a href="#a4c5cbc922fa7b51fcdd3008c56d54356"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a87289c50a82e49e70fa2ce2113c704bd">Reset</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to identity transformation.  <a href="#a87289c50a82e49e70fa2ce2113c704bd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a46eb5e159e6d70ee35bac0619bf58659">Reset</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;translation)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this transformation to translation.  <a href="#a46eb5e159e6d70ee35bac0619bf58659"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a5ee36c90a1f80419754c95495ec6ec55">Reset</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;translation, double angle, double scale=1.0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this transformation to translation, rotation and scaling.  <a href="#a5ee36c90a1f80419754c95495ec6ec55"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a748cb942664072fd64ccd9aa4049f9af">Reset</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;translation, double angle, const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;scale)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this transformation to translation, rotation and both axis scaling.  <a href="#a748cb942664072fd64ccd9aa4049f9af"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#adaa094ede3fb8d976cf132a8ac7977fc">GetTransformationFlags</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of describing type of this transformation.  <a href="#adaa094ede3fb8d976cf132a8ac7977fc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a8d8ac117c27f5366c3c476a6212812cc">GetDistance</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;origPos1, const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;origPos2, double &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode=EM_NONE) const </td></tr>
@@ -86,30 +94,16 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a467f0c9f2120d8ab74a75700575a9c1c">GetValueAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;argument, <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;result) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a9ec8f0febcd856716fcb16492204c094">GetValueAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;argument) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a75b334351ed65d769049fb2451e3d06d">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a75b334351ed65d769049fb2451e3d06d"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_affine2d.html">CAffine2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a4f4aa4d0c69401e30ac3691e9d72cc35">m_transformation</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Affine transformation for 2D spaces. </p>
 
 <p>Definition at line <a class="el" href="_c_affine_transformation2d_8h_source.html#l00017">17</a> of file <a class="el" href="_c_affine_transformation2d_8h_source.html">CAffineTransformation2d.h</a>.</p>
-</div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="abcac23f30bb328b68b1a7c47e7fc2888"></a><!-- doxytag: member="i2d::CAffineTransformation2d::BaseClass" ref="abcac23f30bb328b68b1a7c47e7fc2888" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="classi2d_1_1_c_affine2d.html">CAffine2d</a> <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#abcac23f30bb328b68b1a7c47e7fc2888">i2d::CAffineTransformation2d::BaseClass</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classi2d_1_1_c_affine_transformation2d_comp.html#ae19152e1589debdfbad9c900eedf45fd">i2d::CAffineTransformation2dComp</a>.</p>
-
-<p>Definition at line <a class="el" href="_c_affine_transformation2d_8h_source.html#l00022">22</a> of file <a class="el" href="_c_affine_transformation2d_8h_source.html">CAffineTransformation2d.h</a>.</p>
-
-</div>
-</div>
-<hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a7a898b2fa281d504ab723cbcee61fdcd"></a><!-- doxytag: member="i2d::CAffineTransformation2d::CreateCombinedTransformation" ref="a7a898b2fa281d504ab723cbcee61fdcd" args="(const ITransformation2d &amp;transform) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -414,6 +408,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a20a3767b358f0de59a1cf5128b9f03e3"></a><!-- doxytag: member="i2d::CAffineTransformation2d::GetTransformation" ref="a20a3767b358f0de59a1cf5128b9f03e3" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a>&amp; i2d::CAffineTransformation2d::GetTransformation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get used transformation object. </p>
+
+</div>
+</div>
 <a class="anchor" id="adaa094ede3fb8d976cf132a8ac7977fc"></a><!-- doxytag: member="i2d::CAffineTransformation2d::GetTransformationFlags" ref="adaa094ede3fb8d976cf132a8ac7977fc" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -478,6 +490,113 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a87289c50a82e49e70fa2ce2113c704bd"></a><!-- doxytag: member="i2d::CAffineTransformation2d::Reset" ref="a87289c50a82e49e70fa2ce2113c704bd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2d::CAffineTransformation2d::Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set to identity transformation. </p>
+
+</div>
+</div>
+<a class="anchor" id="a46eb5e159e6d70ee35bac0619bf58659"></a><!-- doxytag: member="i2d::CAffineTransformation2d::Reset" ref="a46eb5e159e6d70ee35bac0619bf58659" args="(const CVector2d &amp;translation)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2d::CAffineTransformation2d::Reset </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>translation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set this transformation to translation. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5ee36c90a1f80419754c95495ec6ec55"></a><!-- doxytag: member="i2d::CAffineTransformation2d::Reset" ref="a5ee36c90a1f80419754c95495ec6ec55" args="(const CVector2d &amp;translation, double angle, double scale=1.0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2d::CAffineTransformation2d::Reset </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>translation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set this transformation to translation, rotation and scaling. </p>
+
+</div>
+</div>
+<a class="anchor" id="a748cb942664072fd64ccd9aa4049f9af"></a><!-- doxytag: member="i2d::CAffineTransformation2d::Reset" ref="a748cb942664072fd64ccd9aa4049f9af" args="(const CVector2d &amp;translation, double angle, const CVector2d &amp;scale)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2d::CAffineTransformation2d::Reset </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>translation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set this transformation to translation, rotation and both axis scaling. </p>
+
+</div>
+</div>
 <a class="anchor" id="a75b334351ed65d769049fb2451e3d06d"></a><!-- doxytag: member="i2d::CAffineTransformation2d::Serialize" ref="a75b334351ed65d769049fb2451e3d06d" args="(iser::IArchive &amp;archive)" -->
 <div class="memitem">
 <div class="memproto">
@@ -493,7 +612,46 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classi2d_1_1_c_affine2d.html#ac88396787be04049fed6a7ab14db5e94">i2d::CAffine2d</a>.</p>
+<p>Load or store state of this object as a archive stream. </p>
+<p>Type of operation is depending on archive type. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a> </dd></dl>
+
+<p>Implements <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c5cbc922fa7b51fcdd3008c56d54356"></a><!-- doxytag: member="i2d::CAffineTransformation2d::SetTransformation" ref="a4c5cbc922fa7b51fcdd3008c56d54356" args="(const i2d::CAffine2d &amp;transformation)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2d::CAffineTransformation2d::SetTransformation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>transformation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the tranformation object. </p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a4f4aa4d0c69401e30ac3691e9d72cc35"></a><!-- doxytag: member="i2d::CAffineTransformation2d::m_transformation" ref="a4f4aa4d0c69401e30ac3691e9d72cc35" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_affine2d.html">CAffine2d</a> <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a4f4aa4d0c69401e30ac3691e9d72cc35">i2d::CAffineTransformation2d::m_transformation</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_affine_transformation2d_8h_source.html#l00087">87</a> of file <a class="el" href="_c_affine_transformation2d_8h_source.html">CAffineTransformation2d.h</a>.</p>
 
 </div>
 </div>

@@ -57,10 +57,10 @@ bool CPolylineCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::Mouse
 		if (downFlag){
             const iview::IColorShema& colorShema = GetColorShema();
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
-			const iview::IIsomorphicCalibration& calib = GetIsomorphCalib();
+			const i2d::ITransformation2d& calib = GetIsomorphCalib();
 
 			i2d::CVector2d logMouse;
-			calib.GetApplyToLog(transform.GetClientPosition(position), logMouse);
+			calib.GetPositionAt(transform.GetClientPosition(position), logMouse);
 
 			int nodesCount = polylinePtr->GetNodesCount();
 
@@ -79,7 +79,7 @@ bool CPolylineCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::Mouse
 					for (int i = nodesCount - 1; i >= 0; --i){
 						const i2d::CVector2d& logPos = polylinePtr->GetNode(i);
 						i2d::CVector2d viewPos;
-						calib.GetApplyToView(logPos, viewPos);
+						calib.GetInvPositionAt(logPos, viewPos);
 						istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 						if (tickerBox.IsInside(position - screenPos)){
 							m_referencePosition = logPos - logMouse;
@@ -103,7 +103,7 @@ bool CPolylineCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::Mouse
 					else{
 						logLast = GetSegmentMiddle(nodesCount - 1);
 					}
-					calib.GetApplyToView(logLast, viewLast);
+					calib.GetInvPositionAt(logLast, viewLast);
 					istd::CIndex2d screenLast = transform.GetScreenPosition(viewLast);
 					if (tickerBox.IsInside(position - screenLast)){
 						BeginModelChanges();
@@ -118,7 +118,7 @@ bool CPolylineCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::Mouse
 					for (int i = nodesCount - 2; i >= 0; --i){
 						i2d::CVector2d logPos = GetSegmentMiddle(i);
 						i2d::CVector2d viewPos;
-						calib.GetApplyToView(logPos, viewPos);
+						calib.GetInvPositionAt(logPos, viewPos);
 						istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 						if (tickerBox.IsInside(position - screenPos)){
 							BeginModelChanges();
@@ -134,7 +134,7 @@ bool CPolylineCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::Mouse
 					if (!polylinePtr->IsClosed()){
 						i2d::CVector2d logFirst = polylinePtr->GetNode(0);
 						i2d::CVector2d viewFirst;
-						calib.GetApplyToView(logFirst, viewFirst);
+						calib.GetInvPositionAt(logFirst, viewFirst);
 						istd::CIndex2d screenFirst = transform.GetScreenPosition(viewFirst);
 						if (tickerBox.IsInside(position - screenFirst)){
 							BeginModelChanges();
@@ -157,7 +157,7 @@ bool CPolylineCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::Mouse
 					for (int i = nodesCount - 1; i >= 0; --i){
 						const i2d::CVector2d& logPos = polylinePtr->GetNode(i);
 						i2d::CVector2d viewPos;
-						calib.GetApplyToView(logPos, viewPos);
+						calib.GetInvPositionAt(logPos, viewPos);
 						istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 						if (tickerBox.IsInside(position - screenPos)){
 							BeginModelChanges();
@@ -203,17 +203,17 @@ void CPolylineCalibrationShape::DrawCurve(QPainter& drawContext) const
 			QPoint point1;
 
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
-			const iview::IIsomorphicCalibration& calib = GetIsomorphCalib();
+			const i2d::ITransformation2d& calib = GetIsomorphCalib();
 
 			if (polylinePtr->IsClosed()){
 				i2d::CVector2d viewPos;
-				calib.GetApplyToView(polylinePtr->GetNode(nodesCount - 1), viewPos);
+				calib.GetInvPositionAt(polylinePtr->GetNode(nodesCount - 1), viewPos);
 				firstPoint = iqt::GetQPoint(transform.GetScreenPosition(viewPos));
 				secondPointIndex = 0;
 			}
 			else{
 				i2d::CVector2d viewPos;
-				calib.GetApplyToView(polylinePtr->GetNode(0), viewPos);
+				calib.GetInvPositionAt(polylinePtr->GetNode(0), viewPos);
 				firstPoint = iqt::GetQPoint(transform.GetScreenPosition(viewPos));
 				secondPointIndex = 1;
 			}
@@ -224,7 +224,7 @@ void CPolylineCalibrationShape::DrawCurve(QPainter& drawContext) const
 				point1 = firstPoint;
 				for (pointIndex = secondPointIndex; pointIndex < nodesCount; ++pointIndex){
 					i2d::CVector2d viewPos;
-					calib.GetApplyToView(polylinePtr->GetNode(pointIndex), viewPos);
+					calib.GetInvPositionAt(polylinePtr->GetNode(pointIndex), viewPos);
 					QPoint point2 = iqt::GetQPoint(transform.GetScreenPosition(viewPos));
 					istd::CIndex2d delta(point2.x() - point1.x(), point2.y() - point1.y());
 					if (::abs(delta.GetY()) > ::abs(delta.GetX())){
@@ -293,7 +293,7 @@ void CPolylineCalibrationShape::DrawCurve(QPainter& drawContext) const
 			point1 = firstPoint;
 			for (pointIndex = secondPointIndex; pointIndex < nodesCount; ++pointIndex){
 				i2d::CVector2d viewPos;
-				calib.GetApplyToView(polylinePtr->GetNode(pointIndex), viewPos);
+				calib.GetInvPositionAt(polylinePtr->GetNode(pointIndex), viewPos);
 				QPoint point2 = iqt::GetQPoint(transform.GetScreenPosition(viewPos));
 				
 				drawContext.drawLine(point1, point2);
@@ -317,7 +317,7 @@ void CPolylineCalibrationShape::DrawSelectionElements(QPainter& drawContext) con
 	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
 	if (IsDisplayConnected() && (polylinePtr != NULL)){
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-		const IIsomorphicCalibration& calib = GetIsomorphCalib();
+		const i2d::ITransformation2d& calib = GetIsomorphCalib();
 
         const iview::IColorShema& colorShema = GetColorShema();
 		int nodesCount = polylinePtr->GetNodesCount();
@@ -334,7 +334,7 @@ void CPolylineCalibrationShape::DrawSelectionElements(QPainter& drawContext) con
 		case iview::ISelectable::EM_MOVE:
 			for (i = 0; i < nodesCount; i++){
 				i2d::CVector2d viewPos;
-				calib.GetApplyToView(polylinePtr->GetNode(i), viewPos);
+				calib.GetInvPositionAt(polylinePtr->GetNode(i), viewPos);
 				istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
 				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_MOVE);
@@ -345,7 +345,7 @@ void CPolylineCalibrationShape::DrawSelectionElements(QPainter& drawContext) con
 			if (nodesCount > 2){
 				for (i = 0; i < nodesCount; i++){
 					i2d::CVector2d viewPos;
-					calib.GetApplyToView(polylinePtr->GetNode(i), viewPos);
+					calib.GetInvPositionAt(polylinePtr->GetNode(i), viewPos);
 					istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
 					colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_DELETE);
@@ -356,7 +356,7 @@ void CPolylineCalibrationShape::DrawSelectionElements(QPainter& drawContext) con
 		case iview::ISelectable::EM_ADD:
 			for (i = 1; i < nodesCount - 1; i++){
 				i2d::CVector2d viewPos;
-				calib.GetApplyToView(polylinePtr->GetNode(i), viewPos);
+				calib.GetInvPositionAt(polylinePtr->GetNode(i), viewPos);
 				istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
 				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_SELECTED_INACTIVE);
@@ -368,7 +368,7 @@ void CPolylineCalibrationShape::DrawSelectionElements(QPainter& drawContext) con
 			bool isOpened = !polylinePtr->IsClosed();
 			if (isOpened){
 				i2d::CVector2d viewPos;
-				calib.GetApplyToView(polylinePtr->GetNode(0), viewPos);
+				calib.GetInvPositionAt(polylinePtr->GetNode(0), viewPos);
 				istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
 				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_INSERT);
@@ -377,7 +377,7 @@ void CPolylineCalibrationShape::DrawSelectionElements(QPainter& drawContext) con
 			int segmentsCount = polylinePtr->GetSegmentsCount();
 			for (int i = 0; i < segmentsCount; i++){
 				i2d::CVector2d viewPos;
-				calib.GetApplyToView(GetSegmentMiddle(i), viewPos);
+				calib.GetInvPositionAt(GetSegmentMiddle(i), viewPos);
 				istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
 				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_INSERT);
@@ -385,7 +385,7 @@ void CPolylineCalibrationShape::DrawSelectionElements(QPainter& drawContext) con
 
 			if (isOpened){
 				i2d::CVector2d viewPos;
-				calib.GetApplyToView(polylinePtr->GetNode(nodesCount - 1), viewPos);
+				calib.GetInvPositionAt(polylinePtr->GetNode(nodesCount - 1), viewPos);
 				istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
 				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_INSERT);
@@ -408,7 +408,7 @@ bool CPolylineCalibrationShape::IsCurveTouched(istd::CIndex2d position) const
 
         const iview::IColorShema& colorShema = GetColorShema();
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-		const IIsomorphicCalibration& calib = GetIsomorphCalib();
+		const i2d::ITransformation2d& calib = GetIsomorphCalib();
 
 		double proportions = ::sqrt(transform.GetDeformMatrix().GetDet());
 
@@ -417,11 +417,11 @@ bool CPolylineCalibrationShape::IsCurveTouched(istd::CIndex2d position) const
 		i2d::CVector2d node1;
 		int i;
 		if (polylinePtr->IsClosed()){
-			calib.GetApplyToView(polylinePtr->GetNode(nodesCount - 1), node1);
+			calib.GetInvPositionAt(polylinePtr->GetNode(nodesCount - 1), node1);
 			i = 0;
 		}
 		else{
-			calib.GetApplyToView(polylinePtr->GetNode(0), node1);
+			calib.GetInvPositionAt(polylinePtr->GetNode(0), node1);
 			i = 1;
 		}
 
@@ -431,7 +431,7 @@ bool CPolylineCalibrationShape::IsCurveTouched(istd::CIndex2d position) const
 
 		for (; i < nodesCount; i++){
 			i2d::CVector2d node2;
-			calib.GetApplyToView(polylinePtr->GetNode(i), node2);
+			calib.GetInvPositionAt(polylinePtr->GetNode(i), node2);
 
 			i2d::CVector2d delta = node2 - node1;
 
@@ -457,7 +457,7 @@ bool CPolylineCalibrationShape::IsTickerTouched(istd::CIndex2d position) const
 	if (IsDisplayConnected() && (polylinePtr != NULL)){
         const iview::IColorShema& colorShema = GetColorShema();
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-		const IIsomorphicCalibration& calib = GetIsomorphCalib();
+		const i2d::ITransformation2d& calib = GetIsomorphCalib();
 
 		int nodesCount = polylinePtr->GetNodesCount();
 
@@ -478,7 +478,7 @@ bool CPolylineCalibrationShape::IsTickerTouched(istd::CIndex2d position) const
 				const i2d::CRect& tickerBox = colorShema.GetTickerBox(iview::IColorShema::TT_MOVE);
 				for (int i = 0; i < nodesCount; i++){
 					i2d::CVector2d viewPos;
-					calib.GetApplyToView(polylinePtr->GetNode(i), viewPos);
+					calib.GetInvPositionAt(polylinePtr->GetNode(i), viewPos);
 					istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 					if (tickerBox.IsInside(position - screenPos)){
 						return true;
@@ -492,7 +492,7 @@ bool CPolylineCalibrationShape::IsTickerTouched(istd::CIndex2d position) const
 				const i2d::CRect& tickerBox = colorShema.GetTickerBox(iview::IColorShema::TT_DELETE);
 				for (int i = 0; i < nodesCount; i++){
 					i2d::CVector2d viewPos;
-					calib.GetApplyToView(polylinePtr->GetNode(i), viewPos);
+					calib.GetInvPositionAt(polylinePtr->GetNode(i), viewPos);
 					istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 					if (tickerBox.IsInside(position - screenPos)){
 						return true;
@@ -512,13 +512,13 @@ bool CPolylineCalibrationShape::IsTickerTouched(istd::CIndex2d position) const
 					lastIndex = nodesCount - 2;
 
 					i2d::CVector2d viewPos;
-					calib.GetApplyToView(polylinePtr->GetNode(0), viewPos);
+					calib.GetInvPositionAt(polylinePtr->GetNode(0), viewPos);
 					istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 					if (tickerBox.IsInside(position - screenPos)){
 						return true;
 					}
 
-					calib.GetApplyToView(polylinePtr->GetNode(nodesCount - 1), viewPos);
+					calib.GetInvPositionAt(polylinePtr->GetNode(nodesCount - 1), viewPos);
 					screenPos = transform.GetScreenPosition(viewPos);
 					if (tickerBox.IsInside(position - screenPos)){
 						return true;
@@ -530,7 +530,7 @@ bool CPolylineCalibrationShape::IsTickerTouched(istd::CIndex2d position) const
 
 				for (int i = 0; i <= lastIndex; i++){
 					i2d::CVector2d viewPos;
-					calib.GetApplyToView(GetSegmentMiddle(i), viewPos);
+					calib.GetInvPositionAt(GetSegmentMiddle(i), viewPos);
 					istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 					if (tickerBox.IsInside(position - screenPos)){
 						return true;

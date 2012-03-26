@@ -26,19 +26,15 @@
 // Qt includes
 #include <QtGui/QPainter>
 
-
 // ACF includes
 #include "iqt/iqt.h"
-
-
-
-#include "iview/CScreenTransform.h"
 
 #include "iview/IInteractiveShape.h"
 #include "iview/IShapeView.h"
 #include "iview/IDraggable.h"
 #include "iview/IShapeView.h"
 #include "iview/IViewEventObserver.h"
+#include "iview/CScreenTransform.h"
 
 
 namespace iview
@@ -549,6 +545,5 @@ void CSelectableLayerBase::DisconnectShape(IShape* shapePtr)
 
 
 } // namespace iview
-
 
 

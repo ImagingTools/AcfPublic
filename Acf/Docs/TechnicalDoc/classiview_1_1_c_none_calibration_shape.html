@@ -49,7 +49,7 @@ Inheritance diagram for iview::CNoneCalibrationShape:</div>
  <div class="center">
   <img src="classiview_1_1_c_none_calibration_shape.png" usemap="#iview::CNoneCalibrationShape_map" alt=""/>
   <map id="iview::CNoneCalibrationShape_map" name="iview::CNoneCalibrationShape_map">
-<area href="classiview_1_1_c_calibration_shape_base.html" title="Base class for all shapes using iview::IIsomorphicCalibration to transform between logical and physic..." alt="iview::CCalibrationShapeBase" shape="rect" coords="1250,336,1490,360"/>
+<area href="classiview_1_1_c_calibration_shape_base.html" title="Base class for all shapes using i2d::ITransformation2d to transform between logical and physical posi..." alt="iview::CCalibrationShapeBase" shape="rect" coords="1250,336,1490,360"/>
 <area href="classiview_1_1_c_interactive_shape_base.html" alt="iview::CInteractiveShapeBase" shape="rect" coords="1250,280,1490,304"/>
 <area href="classiview_1_1_t_shape_base.html" alt="iview::TShapeBase&lt; IInteractiveShape &gt;" shape="rect" coords="1000,224,1240,248"/>
 <area href="classiview_1_1_i_draggable.html" title="Common interface for all, you can drag." alt="iview::IDraggable" shape="rect" coords="1500,224,1740,248"/>
@@ -84,18 +84,19 @@ Public Types</h2></td></tr>
 <a class="el" href="classiview_1_1_c_calibration_shape_base.html">iview::CCalibrationShapeBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_none_calibration_shape.html#a4d6f4175e180f96fb78c4299e72c54b2">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiview_1_1_i_calibration.html">ICalibration</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_none_calibration_shape.html#a81c7216b91e5313cdad6ff3a44b5e281">GetCalibrationPtr</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to calibration.  <a href="#a81c7216b91e5313cdad6ff3a44b5e281"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2">TouchState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_none_calibration_shape.html#aa8913aa443ee267bd451d4837bb4b336">IsTouched</a> (<a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if any shape is touched.  <a href="#aa8913aa443ee267bd451d4837bb4b336"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_none_calibration_shape.html#a32fbbdfdaebb8c24328118da99a1287c">Draw</a> (QPainter &amp;drawContext) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw this shape using draw context.  <a href="#a32fbbdfdaebb8c24328118da99a1287c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2">TouchState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_none_calibration_shape.html#aa8913aa443ee267bd451d4837bb4b336">IsTouched</a> (<a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if any shape is touched.  <a href="#aa8913aa443ee267bd451d4837bb4b336"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_none_calibration_shape.html#afac1dddb663a2070130b6efc1907c13f">OnMouseButton</a> (<a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position, Qt::MouseButton buttonType, bool downFlag)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">It is called, when mouse button is pushed down or up on this object.  <a href="#afac1dddb663a2070130b6efc1907c13f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_none_calibration_shape.html#a6ee9bc84468f3e28690c9112bc8230a0">OnMouseMove</a> (<a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">It is called, when mouse is moved.  <a href="#a6ee9bc84468f3e28690c9112bc8230a0"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
+<a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_none_calibration_shape.html#ab529109eb6ccbfc9065f181c29ef1e2e">GetCalibrationPtr</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to calibration.  <a href="#ab529109eb6ccbfc9065f181c29ef1e2e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_none_calibration_shape.html#a2fccf9d3bbec6fb618fc53bd9c84ae00">CalcBoundingBox</a> (<a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;result) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box.  <a href="#a2fccf9d3bbec6fb618fc53bd9c84ae00"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_none_calibration_shape.html#aa121b4e05b51323f36b578d4414debef">BeginLogDrag</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;reference)</td></tr>
@@ -191,15 +192,15 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a81c7216b91e5313cdad6ff3a44b5e281"></a><!-- doxytag: member="iview::CNoneCalibrationShape::GetCalibrationPtr" ref="a81c7216b91e5313cdad6ff3a44b5e281" args="() const " -->
+<a class="anchor" id="ab529109eb6ccbfc9065f181c29ef1e2e"></a><!-- doxytag: member="iview::CNoneCalibrationShape::GetCalibrationPtr" ref="ab529109eb6ccbfc9065f181c29ef1e2e" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classiview_1_1_i_calibration.html">ICalibration</a>* iview::CNoneCalibrationShape::GetCalibrationPtr </td>
+          <td class="memname">virtual const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* iview::CNoneCalibrationShape::GetCalibrationPtr </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
+          <td> const<code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>

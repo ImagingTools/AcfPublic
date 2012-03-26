@@ -20,34 +20,46 @@
 ********************************************************************************/
 
 
-#ifndef iview_ICalibrated_included
-#define iview_ICalibrated_included
+#ifndef i2d_CStaticCalibrationProviderComp_included
+#define i2d_CStaticCalibrationProviderComp_included
 
 
-#include "istd/IPolymorphic.h"
+#include "i2d/ICalibrationProvider.h"
 
-#include "iview/ICalibration.h"
+#include "icomp/CComponentBase.h"
 
 
-namespace iview
-{
+namespace i2d
+{		
+
 
 /**
-	Common interface for all objects which allow access to calibration info.
+	Implementation of a annulus as a component.
+	It gives the possibility to define a annulus segment model via component attributes.
 */
-class ICalibrated: virtual public istd::IPolymorphic
+class CStaticCalibrationProviderComp: public icomp::CComponentBase, public ICalibrationProvider
 {
 public:
-	/**
-		Get access to the calibration object.
-	*/
-	virtual const ICalibration& GetCalibration() const = 0;
+	typedef icomp::CComponentBase BaseClass;
+
+	I_BEGIN_COMPONENT(CStaticCalibrationProviderComp);
+		I_REGISTER_INTERFACE(ICalibrationProvider);
+		I_REGISTER_INTERFACE(istd::IChangeable);
+		I_ASSIGN(m_calibrationCompPtr, "Calibration", "Static calibration object", true, "Calibration");
+	I_END_COMPONENT;
+
+protected:
+	// reimplemented (ICalibrationProvider)
+	virtual const i2d::ITransformation2d* GetCalibration() const;
+
+private:
+	I_REF(ITransformation2d, m_calibrationCompPtr);
 };
 
 
-} // namespace iview
+} // namespace i2d
 
 
-#endif // !iview_ICalibrated_included
+#endif // !i2d_CStaticCalibrationProviderComp_included
 
 

@@ -29,205 +29,225 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iview_CPerspectiveCalibration_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_c_rectangle_8h.html">i2d/CRectangle.h</a>&quot;</span>
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_c_vector3d_8h.html">i3d/CVector3d.h</a>&quot;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_isomorphic_calibration_8h.html">iview/IIsomorphicCalibration.h</a>&quot;</span>
-<a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_c_affine2d_8h.html">i2d/CAffine2d.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_c_vector3d_8h.html">i3d/CVector3d.h</a>&quot;</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_i_transformation2d_8h.html">i2d/ITransformation2d.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_c_affine2d_8h.html">i2d/CAffine2d.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_rectangle_8h.html">i2d/CRectangle.h</a>&quot;</span>
+<a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
-<a name="l00013"></a>00013 
-<a name="l00014"></a>00014 <span class="keyword">namespace </span>iview
-<a name="l00015"></a>00015 {
+<a name="l00013"></a>00013 <span class="keyword">namespace </span>iview
+<a name="l00014"></a>00014 {
+<a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="comment">// TODO: Redesign it to ACF transformation concept.</span>
-<a name="l00019"></a>00019 
-<a name="l00028"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html">00028</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_perspective_calibration.html" title="Perspective calibration.">CPerspectiveCalibration</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_i_isomorphic_calibration.html" title="This is common interface for all isomorphic calibrations.">IIsomorphicCalibration</a>
-<a name="l00029"></a>00029 {
-<a name="l00030"></a>00030 <span class="keyword">public</span>:
-<a name="l00031"></a>00031        <a class="code" href="classiview_1_1_c_perspective_calibration.html#a942b9cdbabb3fdc44fda20361bb6cef2">CPerspectiveCalibration</a>();
-<a name="l00032"></a>00032 
-<a name="l00036"></a>00036        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a64eb72eb61a4ff816707a0800f054a39" title="Reset this calibration, set to be identity transform.">Reset</a>();
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a269019721b763834d3c80385b36abeef">SetCameraParams</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; viewOpticalCenter, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; pixelAngleTangents);
-<a name="l00039"></a>00039 
-<a name="l00043"></a>00043        <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#a06e25fa40759cd7fc1ce9e45feb7a17a" title="Get logical coordinates bounds.">GetBounds</a>() <span class="keyword">const</span>;
-<a name="l00044"></a>00044        
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a41ba6138668baaf20e1dedd280fdee07" title="Set locical coordinates bounds.">SetBounds</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; bounds);
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050        <span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#acd974cdea9aaae18c70661ad3c051bb1">GetLogAxisGetX</a>() <span class="keyword">const</span>;
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#ab3433dd59d3e2c185a6180d8ce2008d5">SetLogAxisX</a>(<span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; value);
-<a name="l00052"></a>00052        <span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#ab8d416475332744e9a8b31ad60c1bf9d">GetLogAxisGetY</a>() <span class="keyword">const</span>;
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#adf75127cfbe493fbdcd48dc0b6547e8c">SetLogAxisY</a>(<span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; value);
-<a name="l00054"></a>00054        <span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#a0e18d1a688ff97048c52c41ec49489a9">GetLogCenter</a>() <span class="keyword">const</span>;
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a54a3ba8aa63645fc81e85f6f0509c6bf">SetLogCenter</a>(<span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; value);
+<a name="l00025"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html">00025</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_perspective_calibration.html" title="Perspective calibration.">CPerspectiveCalibration</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::ITransformation2d
+<a name="l00026"></a>00026 {
+<a name="l00027"></a>00027 <span class="keyword">public</span>:
+<a name="l00028"></a>00028        <a class="code" href="classiview_1_1_c_perspective_calibration.html#a942b9cdbabb3fdc44fda20361bb6cef2">CPerspectiveCalibration</a>();
+<a name="l00029"></a>00029 
+<a name="l00033"></a>00033        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a64eb72eb61a4ff816707a0800f054a39" title="Reset this calibration, set to be identity transform.">Reset</a>();
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a269019721b763834d3c80385b36abeef">SetCameraParams</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; viewOpticalCenter, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; pixelAngleTangents);
+<a name="l00036"></a>00036 
+<a name="l00040"></a>00040        <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#a06e25fa40759cd7fc1ce9e45feb7a17a" title="Get logical coordinates bounds.">GetBounds</a>() <span class="keyword">const</span>;
+<a name="l00041"></a>00041        
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a41ba6138668baaf20e1dedd280fdee07" title="Set locical coordinates bounds.">SetBounds</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; bounds);
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047        <span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#acd974cdea9aaae18c70661ad3c051bb1">GetLogAxisGetX</a>() <span class="keyword">const</span>;
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#ab3433dd59d3e2c185a6180d8ce2008d5">SetLogAxisX</a>(<span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; value);
+<a name="l00049"></a>00049        <span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#ab8d416475332744e9a8b31ad60c1bf9d">GetLogAxisGetY</a>() <span class="keyword">const</span>;
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#adf75127cfbe493fbdcd48dc0b6547e8c">SetLogAxisY</a>(<span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; value);
+<a name="l00051"></a>00051        <span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#a0e18d1a688ff97048c52c41ec49489a9">GetLogCenter</a>() <span class="keyword">const</span>;
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a54a3ba8aa63645fc81e85f6f0509c6bf">SetLogCenter</a>(<span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; value);
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054        <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#ac0651bef2d86e928aa74fa7a3285b707">GetViewCenter</a>() <span class="keyword">const</span>;
+<a name="l00055"></a>00055        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a85e7bb5339d753c66975b862c125a4d3">SetViewCenter</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; center);
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057        <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#ac0651bef2d86e928aa74fa7a3285b707">GetViewCenter</a>() <span class="keyword">const</span>;
-<a name="l00058"></a>00058        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a85e7bb5339d753c66975b862c125a4d3">SetViewCenter</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; center);
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a4064e35edbf40d24b72c3f5418554cb9">ApplyLeft</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; transform);
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#ad2ffed12e60b24d6e1d2d3ffa43e46ca">ResetAxes</a>();
-<a name="l00063"></a>00063 
-<a name="l00067"></a>00067        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#adc097f11138f9ad02e37f0e479a810d3" title="Calculte calibration using set of two set of points.">DoCalibration</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* logicalPoints, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* viewPoints, <span class="keywordtype">int</span> pointsCount);
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2" title="Describe a computation status for calibration methods.">CalcStatus</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#ac40e0061dadb1842044ee4ed4663b987">GetLogDerivative</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; viewPosition, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; viewDirection, <span class="keywordtype">double</span>&amp; result) <span class="keyword">const</span>;
+<a name="l00057"></a>00057        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a4064e35edbf40d24b72c3f5418554cb9">ApplyLeft</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; transform);
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#ad2ffed12e60b24d6e1d2d3ffa43e46ca">ResetAxes</a>();
+<a name="l00060"></a>00060 
+<a name="l00064"></a>00064        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#adc097f11138f9ad02e37f0e479a810d3" title="Calculte calibration using set of two set of points.">DoCalibration</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* logicalPoints, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* viewPoints, <span class="keywordtype">int</span> pointsCount);
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#aa51cdb52968a1b696e439d6100d00bad">GetLogDerivative</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; viewPosition, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; viewDirection, <span class="keywordtype">double</span>&amp; result) <span class="keyword">const</span>;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a5faacf00b2a3b6020599685dcd9ad93d">operator==</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html" title="Perspective calibration.">CPerspectiveCalibration</a>&amp; calib) <span class="keyword">const</span>;
+<a name="l00069"></a>00069        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a72e0948c4bb0549a4c20ae88432d2bea">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html" title="Perspective calibration.">CPerspectiveCalibration</a>&amp; calib) <span class="keyword">const</span>;
 <a name="l00070"></a>00070 
-<a name="l00071"></a>00071        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a5faacf00b2a3b6020599685dcd9ad93d">operator==</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html" title="Perspective calibration.">CPerspectiveCalibration</a>&amp; calib) <span class="keyword">const</span>;
-<a name="l00072"></a>00072        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a72e0948c4bb0549a4c20ae88432d2bea">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html" title="Perspective calibration.">CPerspectiveCalibration</a>&amp; calib) <span class="keyword">const</span>;
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074        <span class="comment">// reimplemented (iview::ICalibration)</span>
-<a name="l00075"></a>00075        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2" title="Describe a computation status for calibration methods.">CalcStatus</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a4ed18be664ee039c19650ae91db1f2b4" title="Compute a distance in real world units.">GetLogLength</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space.">i2d::CLine2d</a>&amp; line, <span class="keywordtype">double</span>&amp; result) <span class="keyword">const</span>;
-<a name="l00076"></a>00076        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2" title="Describe a computation status for calibration methods.">CalcStatus</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a43b5bd78eade252cd1a0fc7b18e46931" title="Get local deformation (from logical to view system) at defined logical position.">GetLogDeform</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; logPosition, <a class="code" href="classi2d_1_1_c_matrix2d.html" title="2D matrix.">i2d::CMatrix2d</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00077"></a>00077        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2" title="Describe a computation status for calibration methods.">CalcStatus</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#acd95e67968ed8178b44d22e261f95ee6" title="Get local deformation (from view to logical system) at defined view position.">GetViewDeform</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; viewPosition, <a class="code" href="classi2d_1_1_c_matrix2d.html" title="2D matrix.">i2d::CMatrix2d</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079        <span class="comment">// reimplemented (iview::IIsomorphicCalibration)</span>
-<a name="l00080"></a>00080        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2" title="Describe a computation status for calibration methods.">CalcStatus</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#abeaa27bb5f3d9d51e411bd901a225db4" title="Transform position to logical coordination system.">GetApplyToLog</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; viewPosition, <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00081"></a>00081        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_calibration.html#a70d27c654989ee7d0dd5b039e7bc53b2" title="Describe a computation status for calibration methods.">CalcStatus</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a0a7482bfbba18dbb9e21f86eed1a2f0a" title="Transform position to view coordination system.">GetApplyToView</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; logPosition, <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00084"></a>00084        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a892a7238910337bd7e820fd29630306a" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086 <span class="keyword">protected</span>:
-<a name="l00087"></a>00087        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#ae6217749e1153594dbce4177fce33e3e">GetNormPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; viewPosition) <span class="keyword">const</span>;    
-<a name="l00088"></a>00088        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a6d523da00ecedbb535d8487be2f2373a">GetViewPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; normPosition) <span class="keyword">const</span>;
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#aeaf646c009c3980ea3c8fdfa710bfdfe">CalcAllAxes</a>(
-<a name="l00091"></a>00091                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* logicalPoints,
-<a name="l00092"></a>00092                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* viewPoints,
-<a name="l00093"></a>00093                                    <span class="keywordtype">int</span> pointsCount,
-<a name="l00094"></a>00094                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisX,
-<a name="l00095"></a>00095                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisY,
-<a name="l00096"></a>00096                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newCenter);
-<a name="l00097"></a>00097        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#aa5e4dd3ea9dcaf81201324f7c7ad50e8">CalcAxes2d</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* logicalPoints,
-<a name="l00098"></a>00098                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* viewPoints,
-<a name="l00099"></a>00099                                    <span class="keywordtype">int</span> pointsCount,
-<a name="l00100"></a>00100                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisX,
-<a name="l00101"></a>00101                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisY,
-<a name="l00102"></a>00102                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newCenter);
-<a name="l00103"></a>00103        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a51712808fd8ab3a9f8024b7c0596306e">CalcRotationOY</a>(
-<a name="l00104"></a>00104                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* logicalPoints,
-<a name="l00105"></a>00105                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* viewPoints,
-<a name="l00106"></a>00106                                    <span class="keywordtype">int</span> pointsCount,
-<a name="l00107"></a>00107                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisX,
-<a name="l00108"></a>00108                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisY,
-<a name="l00109"></a>00109                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newCenter);
-<a name="l00110"></a>00110        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a4d7cc78dc68c8df15b42a3aab4fc76be">CalcRotationOX</a>(
-<a name="l00111"></a>00111                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* logicalPoints,
-<a name="l00112"></a>00112                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* viewPoints,
-<a name="l00113"></a>00113                                    <span class="keywordtype">int</span> pointsCount,
-<a name="l00114"></a>00114                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisX,
-<a name="l00115"></a>00115                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisY,
-<a name="l00116"></a>00116                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newCenter);
-<a name="l00117"></a>00117 
-<a name="l00118"></a>00118 <span class="keyword">private</span>:
-<a name="l00119"></a>00119        <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a> m_logAxisX;
-<a name="l00120"></a>00120        <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a> m_logAxisY;
-<a name="l00121"></a>00121        <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a> m_logCenter;
-<a name="l00122"></a>00122 
-<a name="l00123"></a>00123        <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a> m_bounds;
-<a name="l00124"></a>00124 
-<a name="l00125"></a>00125        <span class="comment">//     Camera attributes.</span>
-<a name="l00126"></a>00126        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> m_viewCenter;
-<a name="l00127"></a>00127        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> m_pixelAngleTangents;
-<a name="l00128"></a>00128 };
-<a name="l00129"></a>00129 
-<a name="l00130"></a>00130 
-<a name="l00131"></a>00131 <span class="comment">// inline methods</span>
-<a name="l00132"></a>00132 
-<a name="l00133"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#a06e25fa40759cd7fc1ce9e45feb7a17a">00133</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#a06e25fa40759cd7fc1ce9e45feb7a17a" title="Get logical coordinates bounds.">CPerspectiveCalibration::GetBounds</a>()<span class="keyword"> const</span>
-<a name="l00134"></a>00134 <span class="keyword"></span>{
-<a name="l00135"></a>00135        <span class="keywordflow">return</span> m_bounds;
-<a name="l00136"></a>00136 }
-<a name="l00137"></a>00137 
+<a name="l00071"></a>00071        <span class="comment">// reimplemented (i2d::ITransformation2d)</span>
+<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#aceb0f7855189f660b498be630a7e8468" title="Get flags of describing type of this transformation.">GetTransformationFlags</a>() <span class="keyword">const</span>;
+<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a988967453a370d2f8add535a6be9923b" title="Compute a shorteness distance in transformed coordinations.">GetDistance</a>(
+<a name="l00074"></a>00074                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; origPos1,
+<a name="l00075"></a>00075                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; origPos2,
+<a name="l00076"></a>00076                             <span class="keywordtype">double</span>&amp; result,
+<a name="l00077"></a>00077                             <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode = <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c" title="There is no preferencies, should be automatically selected.">EM_NONE</a>) <span class="keyword">const</span>;
+<a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a2b33003812ec5148ae6266e428b63edb" title="Get position after transformation.">GetPositionAt</a>(
+<a name="l00079"></a>00079                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; origPosition,
+<a name="l00080"></a>00080                             <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; result,
+<a name="l00081"></a>00081                             <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode = <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c" title="There is no preferencies, should be automatically selected.">EM_NONE</a>) <span class="keyword">const</span>;
+<a name="l00082"></a>00082        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a9e8ce493f4b7fc7409c7f8034bf70322" title="Get position after transformation.">GetInvPositionAt</a>(
+<a name="l00083"></a>00083                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; transfPosition,
+<a name="l00084"></a>00084                             <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; result,
+<a name="l00085"></a>00085                             <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode = <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c" title="There is no preferencies, should be automatically selected.">EM_NONE</a>) <span class="keyword">const</span>;
+<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a09222bb7cee9c793f92f8a157f814562" title="Get local transformation (from original to transformed coordinate system) at some original position...">GetLocalTransform</a>(
+<a name="l00087"></a>00087                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; origPosition,
+<a name="l00088"></a>00088                             <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; result,
+<a name="l00089"></a>00089                             <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode = <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c" title="There is no preferencies, should be automatically selected.">EM_NONE</a>) <span class="keyword">const</span>;
+<a name="l00090"></a>00090        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a3942a7a93fbc60996cee893b28cd0224" title="Get local transformation (from transformed to original coordinate system) at some transformed positio...">GetLocalInvTransform</a>(
+<a name="l00091"></a>00091                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; transfPosition,
+<a name="l00092"></a>00092                             <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; result,
+<a name="l00093"></a>00093                             <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode = <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c" title="There is no preferencies, should be automatically selected.">EM_NONE</a>) <span class="keyword">const</span>;
+<a name="l00094"></a>00094        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* <a class="code" href="classiview_1_1_c_perspective_calibration.html#a4536adbe29354c1daafa5680d08a90c1" title="Create new transformation being combination of this transformation and the second one...">CreateCombinedTransformation</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>&amp; transform) <span class="keyword">const</span>;
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096        <span class="comment">// reimplemented (imath::TISurjectFunction)</span>
+<a name="l00097"></a>00097        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a29613caca42292d96829992a149b940c">GetInvValueAt</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; argument, <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00098"></a>00098        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a29613caca42292d96829992a149b940c">GetInvValueAt</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; argument) <span class="keyword">const</span>;
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100        <span class="comment">// reimplemented (imath::TIMathFunction)</span>
+<a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a8b27318fd4c112f623e26e05403fdd63">GetValueAt</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; argument, <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00102"></a>00102        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a8b27318fd4c112f623e26e05403fdd63">GetValueAt</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; argument) <span class="keyword">const</span>;
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00105"></a>00105        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a4cb8727c5b01ae87c8aea399c52f67c8" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107 <span class="keyword">protected</span>:
+<a name="l00108"></a>00108        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#ae6217749e1153594dbce4177fce33e3e">GetNormPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; viewPosition) <span class="keyword">const</span>;    
+<a name="l00109"></a>00109        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a6d523da00ecedbb535d8487be2f2373a">GetViewPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; normPosition) <span class="keyword">const</span>;
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#aeaf646c009c3980ea3c8fdfa710bfdfe">CalcAllAxes</a>(
+<a name="l00112"></a>00112                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* logicalPoints,
+<a name="l00113"></a>00113                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* viewPoints,
+<a name="l00114"></a>00114                                    <span class="keywordtype">int</span> pointsCount,
+<a name="l00115"></a>00115                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisX,
+<a name="l00116"></a>00116                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisY,
+<a name="l00117"></a>00117                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newCenter);
+<a name="l00118"></a>00118        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#aa5e4dd3ea9dcaf81201324f7c7ad50e8">CalcAxes2d</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* logicalPoints,
+<a name="l00119"></a>00119                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* viewPoints,
+<a name="l00120"></a>00120                                    <span class="keywordtype">int</span> pointsCount,
+<a name="l00121"></a>00121                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisX,
+<a name="l00122"></a>00122                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisY,
+<a name="l00123"></a>00123                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newCenter);
+<a name="l00124"></a>00124        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a51712808fd8ab3a9f8024b7c0596306e">CalcRotationOY</a>(
+<a name="l00125"></a>00125                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* logicalPoints,
+<a name="l00126"></a>00126                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* viewPoints,
+<a name="l00127"></a>00127                                    <span class="keywordtype">int</span> pointsCount,
+<a name="l00128"></a>00128                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisX,
+<a name="l00129"></a>00129                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisY,
+<a name="l00130"></a>00130                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newCenter);
+<a name="l00131"></a>00131        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a4d7cc78dc68c8df15b42a3aab4fc76be">CalcRotationOX</a>(
+<a name="l00132"></a>00132                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* logicalPoints,
+<a name="l00133"></a>00133                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* viewPoints,
+<a name="l00134"></a>00134                                    <span class="keywordtype">int</span> pointsCount,
+<a name="l00135"></a>00135                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisX,
+<a name="l00136"></a>00136                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newAxisY,
+<a name="l00137"></a>00137                                    <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; newCenter);
 <a name="l00138"></a>00138 
-<a name="l00139"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#a41ba6138668baaf20e1dedd280fdee07">00139</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a41ba6138668baaf20e1dedd280fdee07" title="Set locical coordinates bounds.">CPerspectiveCalibration::SetBounds</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; bounds)
-<a name="l00140"></a>00140 {
-<a name="l00141"></a>00141        m_bounds = bounds;
-<a name="l00142"></a>00142 }
+<a name="l00139"></a>00139 <span class="keyword">private</span>:
+<a name="l00140"></a>00140        <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a> m_logAxisX;
+<a name="l00141"></a>00141        <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a> m_logAxisY;
+<a name="l00142"></a>00142        <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a> m_logCenter;
 <a name="l00143"></a>00143 
-<a name="l00144"></a>00144 
-<a name="l00145"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#acd974cdea9aaae18c70661ad3c051bb1">00145</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#acd974cdea9aaae18c70661ad3c051bb1">CPerspectiveCalibration::GetLogAxisGetX</a>()<span class="keyword"> const</span>
-<a name="l00146"></a>00146 <span class="keyword"></span>{
-<a name="l00147"></a>00147        <span class="keywordflow">return</span> m_logAxisX;
-<a name="l00148"></a>00148 }
-<a name="l00149"></a>00149 
+<a name="l00144"></a>00144        <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a> m_bounds;
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146        <span class="comment">//     Camera attributes.</span>
+<a name="l00147"></a>00147        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> m_viewCenter;
+<a name="l00148"></a>00148        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> m_pixelAngleTangents;
+<a name="l00149"></a>00149 };
 <a name="l00150"></a>00150 
-<a name="l00151"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#ab3433dd59d3e2c185a6180d8ce2008d5">00151</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#ab3433dd59d3e2c185a6180d8ce2008d5">CPerspectiveCalibration::SetLogAxisX</a>(<span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; value)
-<a name="l00152"></a>00152 {
-<a name="l00153"></a>00153        m_logAxisX = value;
-<a name="l00154"></a>00154 }
-<a name="l00155"></a>00155 
-<a name="l00156"></a>00156 
-<a name="l00157"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#ab8d416475332744e9a8b31ad60c1bf9d">00157</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#ab8d416475332744e9a8b31ad60c1bf9d">CPerspectiveCalibration::GetLogAxisGetY</a>()<span class="keyword"> const</span>
-<a name="l00158"></a>00158 <span class="keyword"></span>{
-<a name="l00159"></a>00159        <span class="keywordflow">return</span> m_logAxisY;
-<a name="l00160"></a>00160 }
-<a name="l00161"></a>00161 
-<a name="l00162"></a>00162 
-<a name="l00163"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#adf75127cfbe493fbdcd48dc0b6547e8c">00163</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#adf75127cfbe493fbdcd48dc0b6547e8c">CPerspectiveCalibration::SetLogAxisY</a>(<span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; value)
-<a name="l00164"></a>00164 {
-<a name="l00165"></a>00165        m_logAxisY = value;
-<a name="l00166"></a>00166 }
-<a name="l00167"></a>00167 
-<a name="l00168"></a>00168 
-<a name="l00169"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#a0e18d1a688ff97048c52c41ec49489a9">00169</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#a0e18d1a688ff97048c52c41ec49489a9">CPerspectiveCalibration::GetLogCenter</a>()<span class="keyword"> const</span>
-<a name="l00170"></a>00170 <span class="keyword"></span>{
-<a name="l00171"></a>00171        <span class="keywordflow">return</span> m_logCenter;
-<a name="l00172"></a>00172 }
-<a name="l00173"></a>00173 
-<a name="l00174"></a>00174 
-<a name="l00175"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#a54a3ba8aa63645fc81e85f6f0509c6bf">00175</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a54a3ba8aa63645fc81e85f6f0509c6bf">CPerspectiveCalibration::SetLogCenter</a>(<span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; value)
-<a name="l00176"></a>00176 {
-<a name="l00177"></a>00177        m_logCenter = value;
-<a name="l00178"></a>00178 }
-<a name="l00179"></a>00179 
-<a name="l00180"></a>00180 
-<a name="l00181"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#ac0651bef2d86e928aa74fa7a3285b707">00181</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#ac0651bef2d86e928aa74fa7a3285b707">CPerspectiveCalibration::GetViewCenter</a>()<span class="keyword"> const</span>
-<a name="l00182"></a>00182 <span class="keyword"></span>{
-<a name="l00183"></a>00183        <span class="keywordflow">return</span> m_viewCenter;
-<a name="l00184"></a>00184 }
-<a name="l00185"></a>00185 
-<a name="l00186"></a>00186 
-<a name="l00187"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#a85e7bb5339d753c66975b862c125a4d3">00187</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a85e7bb5339d753c66975b862c125a4d3">CPerspectiveCalibration::SetViewCenter</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; center)
-<a name="l00188"></a>00188 {
-<a name="l00189"></a>00189        m_viewCenter = center;
-<a name="l00190"></a>00190 }
-<a name="l00191"></a>00191 
-<a name="l00192"></a>00192 
-<a name="l00193"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#a72e0948c4bb0549a4c20ae88432d2bea">00193</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a72e0948c4bb0549a4c20ae88432d2bea">CPerspectiveCalibration::operator!=</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html" title="Perspective calibration.">CPerspectiveCalibration</a>&amp; calib)<span class="keyword"> const</span>
-<a name="l00194"></a>00194 <span class="keyword"></span>{
-<a name="l00195"></a>00195        <span class="keywordflow">return</span> !<a class="code" href="classiview_1_1_c_perspective_calibration.html#a5faacf00b2a3b6020599685dcd9ad93d">operator==</a>(calib);
-<a name="l00196"></a>00196 }
-<a name="l00197"></a>00197 
-<a name="l00198"></a>00198 
-<a name="l00199"></a>00199 <span class="comment">// protected methods</span>
+<a name="l00151"></a>00151 
+<a name="l00152"></a>00152 <span class="comment">// inline methods</span>
+<a name="l00153"></a>00153 
+<a name="l00154"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#a06e25fa40759cd7fc1ce9e45feb7a17a">00154</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#a06e25fa40759cd7fc1ce9e45feb7a17a" title="Get logical coordinates bounds.">CPerspectiveCalibration::GetBounds</a>()<span class="keyword"> const</span>
+<a name="l00155"></a>00155 <span class="keyword"></span>{
+<a name="l00156"></a>00156        <span class="keywordflow">return</span> m_bounds;
+<a name="l00157"></a>00157 }
+<a name="l00158"></a>00158 
+<a name="l00159"></a>00159 
+<a name="l00160"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#a41ba6138668baaf20e1dedd280fdee07">00160</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a41ba6138668baaf20e1dedd280fdee07" title="Set locical coordinates bounds.">CPerspectiveCalibration::SetBounds</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; bounds)
+<a name="l00161"></a>00161 {
+<a name="l00162"></a>00162        m_bounds = bounds;
+<a name="l00163"></a>00163 }
+<a name="l00164"></a>00164 
+<a name="l00165"></a>00165 
+<a name="l00166"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#acd974cdea9aaae18c70661ad3c051bb1">00166</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#acd974cdea9aaae18c70661ad3c051bb1">CPerspectiveCalibration::GetLogAxisGetX</a>()<span class="keyword"> const</span>
+<a name="l00167"></a>00167 <span class="keyword"></span>{
+<a name="l00168"></a>00168        <span class="keywordflow">return</span> m_logAxisX;
+<a name="l00169"></a>00169 }
+<a name="l00170"></a>00170 
+<a name="l00171"></a>00171 
+<a name="l00172"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#ab3433dd59d3e2c185a6180d8ce2008d5">00172</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#ab3433dd59d3e2c185a6180d8ce2008d5">CPerspectiveCalibration::SetLogAxisX</a>(<span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; value)
+<a name="l00173"></a>00173 {
+<a name="l00174"></a>00174        m_logAxisX = value;
+<a name="l00175"></a>00175 }
+<a name="l00176"></a>00176 
+<a name="l00177"></a>00177 
+<a name="l00178"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#ab8d416475332744e9a8b31ad60c1bf9d">00178</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#ab8d416475332744e9a8b31ad60c1bf9d">CPerspectiveCalibration::GetLogAxisGetY</a>()<span class="keyword"> const</span>
+<a name="l00179"></a>00179 <span class="keyword"></span>{
+<a name="l00180"></a>00180        <span class="keywordflow">return</span> m_logAxisY;
+<a name="l00181"></a>00181 }
+<a name="l00182"></a>00182 
+<a name="l00183"></a>00183 
+<a name="l00184"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#adf75127cfbe493fbdcd48dc0b6547e8c">00184</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#adf75127cfbe493fbdcd48dc0b6547e8c">CPerspectiveCalibration::SetLogAxisY</a>(<span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; value)
+<a name="l00185"></a>00185 {
+<a name="l00186"></a>00186        m_logAxisY = value;
+<a name="l00187"></a>00187 }
+<a name="l00188"></a>00188 
+<a name="l00189"></a>00189 
+<a name="l00190"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#a0e18d1a688ff97048c52c41ec49489a9">00190</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#a0e18d1a688ff97048c52c41ec49489a9">CPerspectiveCalibration::GetLogCenter</a>()<span class="keyword"> const</span>
+<a name="l00191"></a>00191 <span class="keyword"></span>{
+<a name="l00192"></a>00192        <span class="keywordflow">return</span> m_logCenter;
+<a name="l00193"></a>00193 }
+<a name="l00194"></a>00194 
+<a name="l00195"></a>00195 
+<a name="l00196"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#a54a3ba8aa63645fc81e85f6f0509c6bf">00196</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a54a3ba8aa63645fc81e85f6f0509c6bf">CPerspectiveCalibration::SetLogCenter</a>(<span class="keyword">const</span> <a class="code" href="classi3d_1_1_c_vector3d.html">i3d::CVector3d</a>&amp; value)
+<a name="l00197"></a>00197 {
+<a name="l00198"></a>00198        m_logCenter = value;
+<a name="l00199"></a>00199 }
 <a name="l00200"></a>00200 
-<a name="l00201"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#ae6217749e1153594dbce4177fce33e3e">00201</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#ae6217749e1153594dbce4177fce33e3e">CPerspectiveCalibration::GetNormPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; viewPosition)<span class="keyword"> const</span>
-<a name="l00202"></a>00202 <span class="keyword"></span>{
-<a name="l00203"></a>00203        <span class="keywordflow">return</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>(
-<a name="l00204"></a>00204                                    (viewPosition.<a class="code" href="classi2d_1_1_c_vector2d.html#a1d0d6125aff440bbac7138047baf2cbe" title="Get X position of this vector.">GetX</a>() - m_viewCenter.<a class="code" href="classi2d_1_1_c_vector2d.html#a1d0d6125aff440bbac7138047baf2cbe" title="Get X position of this vector.">GetX</a>()) * m_pixelAngleTangents.<a class="code" href="classi2d_1_1_c_vector2d.html#a1d0d6125aff440bbac7138047baf2cbe" title="Get X position of this vector.">GetX</a>(),
-<a name="l00205"></a>00205                                    (viewPosition.<a class="code" href="classi2d_1_1_c_vector2d.html#ac83c909b1cd1969707da31779a8fdf3a" title="Get Y position of this vector.">GetY</a>() - m_viewCenter.<a class="code" href="classi2d_1_1_c_vector2d.html#ac83c909b1cd1969707da31779a8fdf3a" title="Get Y position of this vector.">GetY</a>()) * m_pixelAngleTangents.<a class="code" href="classi2d_1_1_c_vector2d.html#ac83c909b1cd1969707da31779a8fdf3a" title="Get Y position of this vector.">GetY</a>());
-<a name="l00206"></a>00206 }
+<a name="l00201"></a>00201 
+<a name="l00202"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#ac0651bef2d86e928aa74fa7a3285b707">00202</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; <a class="code" href="classiview_1_1_c_perspective_calibration.html#ac0651bef2d86e928aa74fa7a3285b707">CPerspectiveCalibration::GetViewCenter</a>()<span class="keyword"> const</span>
+<a name="l00203"></a>00203 <span class="keyword"></span>{
+<a name="l00204"></a>00204        <span class="keywordflow">return</span> m_viewCenter;
+<a name="l00205"></a>00205 }
+<a name="l00206"></a>00206 
 <a name="l00207"></a>00207 
-<a name="l00208"></a>00208 
-<a name="l00209"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#a6d523da00ecedbb535d8487be2f2373a">00209</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a6d523da00ecedbb535d8487be2f2373a">CPerspectiveCalibration::GetViewPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; normPosition)<span class="keyword"> const</span>
-<a name="l00210"></a>00210 <span class="keyword"></span>{
-<a name="l00211"></a>00211        <span class="keywordflow">return</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>(
-<a name="l00212"></a>00212                                    normPosition.<a class="code" href="classi2d_1_1_c_vector2d.html#a1d0d6125aff440bbac7138047baf2cbe" title="Get X position of this vector.">GetX</a>() / m_pixelAngleTangents.<a class="code" href="classi2d_1_1_c_vector2d.html#a1d0d6125aff440bbac7138047baf2cbe" title="Get X position of this vector.">GetX</a>() + m_viewCenter.<a class="code" href="classi2d_1_1_c_vector2d.html#a1d0d6125aff440bbac7138047baf2cbe" title="Get X position of this vector.">GetX</a>(),
-<a name="l00213"></a>00213                                    normPosition.<a class="code" href="classi2d_1_1_c_vector2d.html#ac83c909b1cd1969707da31779a8fdf3a" title="Get Y position of this vector.">GetY</a>() / m_pixelAngleTangents.<a class="code" href="classi2d_1_1_c_vector2d.html#ac83c909b1cd1969707da31779a8fdf3a" title="Get Y position of this vector.">GetY</a>() + m_viewCenter.<a class="code" href="classi2d_1_1_c_vector2d.html#ac83c909b1cd1969707da31779a8fdf3a" title="Get Y position of this vector.">GetY</a>());
-<a name="l00214"></a>00214 }
-<a name="l00215"></a>00215 
-<a name="l00216"></a>00216 
-<a name="l00217"></a>00217 } <span class="comment">// namespace iview</span>
+<a name="l00208"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#a85e7bb5339d753c66975b862c125a4d3">00208</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a85e7bb5339d753c66975b862c125a4d3">CPerspectiveCalibration::SetViewCenter</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; center)
+<a name="l00209"></a>00209 {
+<a name="l00210"></a>00210        m_viewCenter = center;
+<a name="l00211"></a>00211 }
+<a name="l00212"></a>00212 
+<a name="l00213"></a>00213 
+<a name="l00214"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#a72e0948c4bb0549a4c20ae88432d2bea">00214</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a72e0948c4bb0549a4c20ae88432d2bea">CPerspectiveCalibration::operator!=</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_c_perspective_calibration.html" title="Perspective calibration.">CPerspectiveCalibration</a>&amp; calib)<span class="keyword"> const</span>
+<a name="l00215"></a>00215 <span class="keyword"></span>{
+<a name="l00216"></a>00216        <span class="keywordflow">return</span> !<a class="code" href="classiview_1_1_c_perspective_calibration.html#a5faacf00b2a3b6020599685dcd9ad93d">operator==</a>(calib);
+<a name="l00217"></a>00217 }
 <a name="l00218"></a>00218 
 <a name="l00219"></a>00219 
-<a name="l00220"></a>00220 <span class="preprocessor">#endif // !iview_CPerspectiveCalibration_included</span>
-<a name="l00221"></a>00221 <span class="preprocessor"></span>
-<a name="l00222"></a>00222 
-<a name="l00223"></a>00223 
+<a name="l00220"></a>00220 <span class="comment">// protected methods</span>
+<a name="l00221"></a>00221 
+<a name="l00222"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#ae6217749e1153594dbce4177fce33e3e">00222</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#ae6217749e1153594dbce4177fce33e3e">CPerspectiveCalibration::GetNormPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; viewPosition)<span class="keyword"> const</span>
+<a name="l00223"></a>00223 <span class="keyword"></span>{
+<a name="l00224"></a>00224        <span class="keywordflow">return</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>(
+<a name="l00225"></a>00225                                    (viewPosition.<a class="code" href="classi2d_1_1_c_vector2d.html#a1d0d6125aff440bbac7138047baf2cbe" title="Get X position of this vector.">GetX</a>() - m_viewCenter.<a class="code" href="classi2d_1_1_c_vector2d.html#a1d0d6125aff440bbac7138047baf2cbe" title="Get X position of this vector.">GetX</a>()) * m_pixelAngleTangents.<a class="code" href="classi2d_1_1_c_vector2d.html#a1d0d6125aff440bbac7138047baf2cbe" title="Get X position of this vector.">GetX</a>(),
+<a name="l00226"></a>00226                                    (viewPosition.<a class="code" href="classi2d_1_1_c_vector2d.html#ac83c909b1cd1969707da31779a8fdf3a" title="Get Y position of this vector.">GetY</a>() - m_viewCenter.<a class="code" href="classi2d_1_1_c_vector2d.html#ac83c909b1cd1969707da31779a8fdf3a" title="Get Y position of this vector.">GetY</a>()) * m_pixelAngleTangents.<a class="code" href="classi2d_1_1_c_vector2d.html#ac83c909b1cd1969707da31779a8fdf3a" title="Get Y position of this vector.">GetY</a>());
+<a name="l00227"></a>00227 }
+<a name="l00228"></a>00228 
+<a name="l00229"></a>00229 
+<a name="l00230"></a><a class="code" href="classiview_1_1_c_perspective_calibration.html#a6d523da00ecedbb535d8487be2f2373a">00230</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_perspective_calibration.html#a6d523da00ecedbb535d8487be2f2373a">CPerspectiveCalibration::GetViewPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; normPosition)<span class="keyword"> const</span>
+<a name="l00231"></a>00231 <span class="keyword"></span>{
+<a name="l00232"></a>00232        <span class="keywordflow">return</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>(
+<a name="l00233"></a>00233                                    normPosition.<a class="code" href="classi2d_1_1_c_vector2d.html#a1d0d6125aff440bbac7138047baf2cbe" title="Get X position of this vector.">GetX</a>() / m_pixelAngleTangents.<a class="code" href="classi2d_1_1_c_vector2d.html#a1d0d6125aff440bbac7138047baf2cbe" title="Get X position of this vector.">GetX</a>() + m_viewCenter.<a class="code" href="classi2d_1_1_c_vector2d.html#a1d0d6125aff440bbac7138047baf2cbe" title="Get X position of this vector.">GetX</a>(),
+<a name="l00234"></a>00234                                    normPosition.<a class="code" href="classi2d_1_1_c_vector2d.html#ac83c909b1cd1969707da31779a8fdf3a" title="Get Y position of this vector.">GetY</a>() / m_pixelAngleTangents.<a class="code" href="classi2d_1_1_c_vector2d.html#ac83c909b1cd1969707da31779a8fdf3a" title="Get Y position of this vector.">GetY</a>() + m_viewCenter.<a class="code" href="classi2d_1_1_c_vector2d.html#ac83c909b1cd1969707da31779a8fdf3a" title="Get Y position of this vector.">GetY</a>());
+<a name="l00235"></a>00235 }
+<a name="l00236"></a>00236 
+<a name="l00237"></a>00237 
+<a name="l00238"></a>00238 } <span class="comment">// namespace iview</span>
+<a name="l00239"></a>00239 
+<a name="l00240"></a>00240 
+<a name="l00241"></a>00241 <span class="preprocessor">#endif // !iview_CPerspectiveCalibration_included</span>
+<a name="l00242"></a>00242 <span class="preprocessor"></span>
+<a name="l00243"></a>00243 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
