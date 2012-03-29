@@ -47,7 +47,7 @@ public:
 	};
 
 	/**
-		Default constructor without member initialization.
+		Default constructor with initialization of member to 0.
 	*/
 	TIndex();
 
@@ -400,7 +400,7 @@ TIndex<Dimensions>& TIndex<Dimensions>::operator+=(const TIndex<Dimensions>& ind
 		m_elements[i] += index[i];
 	}
 
-	return this;
+	return *this;
 }
 
 
@@ -428,7 +428,7 @@ TIndex<Dimensions>& TIndex<Dimensions>::operator-=(const TIndex<Dimensions>& ind
 		m_elements[i] -= index[i];
 	}
 
-	return this;
+	return *this;
 }
 
 

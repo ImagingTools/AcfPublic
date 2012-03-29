@@ -45,30 +45,31 @@
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
 <a name="l00026"></a><a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97">00026</a>        <span class="keyword">enum</span> <a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97" title="General type of unit.">UnitType</a>
 <a name="l00027"></a>00027        {
-<a name="l00028"></a><a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a9ecf28fad195778d4694f6a4404f320b">00028</a>               <a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a9ecf28fad195778d4694f6a4404f320b">UT_UNKNOWN</a>,
-<a name="l00029"></a><a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a0f4fdd509041ea186b66562ef3b979ba">00029</a>               <a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a0f4fdd509041ea186b66562ef3b979ba">UT_PHYSICAL</a>,
-<a name="l00030"></a><a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a97e93306b278a6cc376a53ba3a3bea1d">00030</a>               <a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a97e93306b278a6cc376a53ba3a3bea1d">UT_TECHNICAL</a>,
-<a name="l00031"></a><a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97aacd984f9ec52cd5cb35a5f6547f01095">00031</a>               <a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97aacd984f9ec52cd5cb35a5f6547f01095">UT_RELATIVE</a>
-<a name="l00032"></a>00032        };
-<a name="l00033"></a>00033 
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_i_unit_info.html#a8994df8847910c86d7dec55ae3020f6f" title="Get type of unit.">GetUnitType</a>() <span class="keyword">const</span> = 0;
-<a name="l00038"></a>00038 
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_i_unit_info.html#a0a420f7c02d2181c87cffffb593fe4f0" title="Get name of unit.">GetUnitName</a>() <span class="keyword">const</span> = 0;
-<a name="l00043"></a>00043 
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimeas_1_1_i_unit_info.html#ac436177409b9434bebfd5e6aaf584104" title="Get multiplication factor used to calculate user input values.">GetDisplayMultiplicationFactor</a>() <span class="keyword">const</span> = 0;
-<a name="l00048"></a>00048 
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a> <a class="code" href="classimeas_1_1_i_unit_info.html#a2af82f2fa9b39ec00daf544178eb4002" title="Get range of possible filter value for specified dimension.">GetValueRange</a>() <span class="keyword">const</span> = 0;
-<a name="l00053"></a>00053 
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a>&amp; <a class="code" href="classimeas_1_1_i_unit_info.html#ad3bc9f6511af9a8013e2dda73e4bb2b7" title="Return number manipulator object for filter length value.">GetValueManip</a>() <span class="keyword">const</span> = 0;
-<a name="l00058"></a>00058 };
+<a name="l00031"></a><a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a9ecf28fad195778d4694f6a4404f320b">00031</a>               <a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a9ecf28fad195778d4694f6a4404f320b" title="Unit type is unknown.">UT_UNKNOWN</a>,
+<a name="l00035"></a><a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a0f4fdd509041ea186b66562ef3b979ba">00035</a>               <a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a0f4fdd509041ea186b66562ef3b979ba" title="Physical unit like volt or amper.">UT_PHYSICAL</a>,
+<a name="l00039"></a><a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a97e93306b278a6cc376a53ba3a3bea1d">00039</a>               <a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a97e93306b278a6cc376a53ba3a3bea1d" title="Technical unit without physical dimension like pixel.">UT_TECHNICAL</a>,
+<a name="l00043"></a><a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97aacd984f9ec52cd5cb35a5f6547f01095">00043</a>               <a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97aacd984f9ec52cd5cb35a5f6547f01095" title="Unit relative to something others (for example %).">UT_RELATIVE</a>,
+<a name="l00047"></a><a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a32d7134994422498e1a745090c96b655">00047</a>               <a class="code" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a32d7134994422498e1a745090c96b655" title="Integer number counter, it represents number of occurence of something.">UT_COUNTER</a>
+<a name="l00048"></a>00048        };
+<a name="l00049"></a>00049 
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_i_unit_info.html#a8994df8847910c86d7dec55ae3020f6f" title="Get type of unit.">GetUnitType</a>() <span class="keyword">const</span> = 0;
+<a name="l00054"></a>00054 
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_i_unit_info.html#a0a420f7c02d2181c87cffffb593fe4f0" title="Get name of unit.">GetUnitName</a>() <span class="keyword">const</span> = 0;
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 } <span class="comment">// namespace imeas</span>
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="preprocessor">#endif // !imeas_IUnitInfo_included</span>
-<a name="l00065"></a>00065 <span class="preprocessor"></span>
-<a name="l00066"></a>00066 
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimeas_1_1_i_unit_info.html#ac436177409b9434bebfd5e6aaf584104" title="Get multiplication factor used to calculate user input values.">GetDisplayMultiplicationFactor</a>() <span class="keyword">const</span> = 0;
+<a name="l00064"></a>00064 
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a> <a class="code" href="classimeas_1_1_i_unit_info.html#a2af82f2fa9b39ec00daf544178eb4002" title="Get range of possible filter value for specified dimension.">GetValueRange</a>() <span class="keyword">const</span> = 0;
+<a name="l00069"></a>00069 
+<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a>&amp; <a class="code" href="classimeas_1_1_i_unit_info.html#ad3bc9f6511af9a8013e2dda73e4bb2b7" title="Return number manipulator object for filter length value.">GetValueManip</a>() <span class="keyword">const</span> = 0;
+<a name="l00074"></a>00074 };
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 } <span class="comment">// namespace imeas</span>
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080 <span class="preprocessor">#endif // !imeas_IUnitInfo_included</span>
+<a name="l00081"></a>00081 <span class="preprocessor"></span>
+<a name="l00082"></a>00082 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

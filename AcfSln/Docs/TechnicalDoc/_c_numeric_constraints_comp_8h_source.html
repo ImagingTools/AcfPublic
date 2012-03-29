@@ -45,53 +45,58 @@
 <a name="l00019"></a>00019 
 <a name="l00024"></a><a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html">00024</a> <span class="keyword">class </span><a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html" title="Simple implementation of imeas::INumericConstraints interface.">CNumericConstraintsComp</a>:
 <a name="l00025"></a>00025                      <span class="keyword">public</span> icomp::CComponentBase,
-<a name="l00026"></a>00026                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classimeas_1_1_i_numeric_constraints.html">INumericConstraints</a>,
+<a name="l00026"></a>00026                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">INumericConstraints</a>,
 <a name="l00027"></a>00027                      <span class="keyword">virtual</span> <span class="keyword">protected</span> imeas::<a class="code" href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit.">IUnitInfo</a>
 <a name="l00028"></a>00028 {
 <a name="l00029"></a>00029 <span class="keyword">public</span>:
 <a name="l00030"></a><a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a039838ce734e896c780ac5a2e0a6f986">00030</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a039838ce734e896c780ac5a2e0a6f986">BaseClass</a>;
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032        I_BEGIN_COMPONENT(<a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html" title="Simple implementation of imeas::INumericConstraints interface.">CNumericConstraintsComp</a>);
-<a name="l00033"></a>00033               I_REGISTER_INTERFACE(<a class="code" href="classimeas_1_1_i_numeric_constraints.html">INumericConstraints</a>);
+<a name="l00033"></a>00033               I_REGISTER_INTERFACE(<a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">INumericConstraints</a>);
 <a name="l00034"></a>00034               I_ASSIGN(m_dimensionsCountAttrPtr, <span class="stringliteral">&quot;ValuesCount&quot;</span>, <span class="stringliteral">&quot;Default number of numeric values&quot;</span>, <span class="keyword">true</span>, 1);
-<a name="l00035"></a>00035               I_ASSIGN(m_elementDescriptionAttrPtr, <span class="stringliteral">&quot;ValueDescription&quot;</span>, <span class="stringliteral">&quot;Description of single value&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Value&quot;</span>);
-<a name="l00036"></a>00036               I_ASSIGN(m_unitTypeAttrPtr, <span class="stringliteral">&quot;UnitType&quot;</span>, <span class="stringliteral">&quot;Type of unit\n\t0 - unknown,\n\t1 - physical,\n\t2 - technical,\n\t3 - relative&quot;</span>, <span class="keyword">true</span>, 0);
-<a name="l00037"></a>00037               I_ASSIGN(m_unitNameAttrPtr, <span class="stringliteral">&quot;UnitName&quot;</span>, <span class="stringliteral">&quot;Name of unit&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;&quot;</span>);
-<a name="l00038"></a>00038               I_ASSIGN(m_displayMultFactorAttrPtr, <span class="stringliteral">&quot;DisplayMultFactor&quot;</span>, <span class="stringliteral">&quot;Scale factor used for display, e.g for unit name &#39;%&#39; it will be 100&quot;</span>, <span class="keyword">true</span>, 1);
-<a name="l00039"></a>00039               I_ASSIGN(m_minValueAttrPtr, <span class="stringliteral">&quot;MinValue&quot;</span>, <span class="stringliteral">&quot;Minimal value&quot;</span>, <span class="keyword">true</span>, 0);
-<a name="l00040"></a>00040               I_ASSIGN(m_maxValueAttrPtr, <span class="stringliteral">&quot;MaxValue&quot;</span>, <span class="stringliteral">&quot;Maximal value&quot;</span>, <span class="keyword">true</span>, 1);
-<a name="l00041"></a>00041        I_END_COMPONENT;
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043        <span class="comment">// reimplemented (imeas::INumericConstraints)</span>
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a46ea8f969fb991dab11f48747eb64dea" title="Get number of expected numeric values.">GetNumericValuesCount</a>() <span class="keyword">const</span>;
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a249eb0edf8aa723a4003459b3ce1abc4" title="Get description of numeric value for specified list index.">GetNumericValueDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit.">imeas::IUnitInfo</a>&amp; <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#ad0069c9bdc0c0901e6edb2b84fefa3ff" title="Get range of possible numeric values for specified list index.">GetNumericValueUnitInfo</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048 <span class="keyword">protected</span>:
-<a name="l00049"></a>00049        <span class="comment">// reimplemented (imeas::IUnitInfo)</span>
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#af5961bae317564dfc272f74f0f691d1a" title="Get type of unit.">GetUnitType</a>() <span class="keyword">const</span>;
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a90c530a2f9d5af95a5a1e33dfeedcd68" title="Get name of unit.">GetUnitName</a>() <span class="keyword">const</span>;
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a795fb67cc15a119c3b66ed315f57d64e" title="Get multiplication factor used to calculate user input values.">GetDisplayMultiplicationFactor</a>() <span class="keyword">const</span>;
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a> <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#ad3d07ac8efbd610fb0303fefaa8c162e" title="Get range of possible filter value for specified dimension.">GetValueRange</a>() <span class="keyword">const</span>;
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a>&amp; <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#ac61407fc545cb06f6ba226eb296112b2" title="Return number manipulator object for filter length value.">GetValueManip</a>() <span class="keyword">const</span>;
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056 <span class="keyword">private</span>:
-<a name="l00057"></a>00057        I_ATTR(<span class="keywordtype">int</span>, m_dimensionsCountAttrPtr);
-<a name="l00058"></a>00058        I_ATTR(QString, m_elementDescriptionAttrPtr);
-<a name="l00059"></a>00059        I_ATTR(<span class="keywordtype">int</span>, m_unitTypeAttrPtr);
-<a name="l00060"></a>00060        I_ATTR(QString, m_unitNameAttrPtr);
-<a name="l00061"></a>00061        I_ATTR(<span class="keywordtype">double</span>, m_displayMultFactorAttrPtr);
-<a name="l00062"></a>00062        I_ATTR(<span class="keywordtype">double</span>, m_minValueAttrPtr);
-<a name="l00063"></a>00063        I_ATTR(<span class="keywordtype">double</span>, m_maxValueAttrPtr);
-<a name="l00064"></a>00064 };
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 } <span class="comment">// namespace imeas</span>
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070 <span class="preprocessor">#endif // !imeas_CNumericConstraintsComp_included</span>
-<a name="l00071"></a>00071 <span class="preprocessor"></span>
-<a name="l00072"></a>00072 
+<a name="l00035"></a>00035               I_ASSIGN_MULTI_0(m_namesAttrPtr, <span class="stringliteral">&quot;ValueName&quot;</span>, <span class="stringliteral">&quot;Name of each single value&quot;</span>, <span class="keyword">true</span>);
+<a name="l00036"></a>00036               I_ASSIGN_MULTI_0(m_descriptionsAttrPtr, <span class="stringliteral">&quot;ValueDescriptions&quot;</span>, <span class="stringliteral">&quot;Description of each single value&quot;</span>, <span class="keyword">true</span>);
+<a name="l00037"></a>00037               I_ASSIGN_MULTI_0(m_valueIdsAttrPtr, <span class="stringliteral">&quot;ValueIds&quot;</span>, <span class="stringliteral">&quot;ID of each single value&quot;</span>, <span class="keyword">true</span>);
+<a name="l00038"></a>00038               I_ASSIGN(m_unitTypeAttrPtr, <span class="stringliteral">&quot;UnitType&quot;</span>, <span class="stringliteral">&quot;Type of unit\n\t0 - unknown,\n\t1 - physical,\n\t2 - technical,\n\t3 - relative&quot;</span>, <span class="keyword">true</span>, 0);
+<a name="l00039"></a>00039               I_ASSIGN(m_unitNameAttrPtr, <span class="stringliteral">&quot;UnitName&quot;</span>, <span class="stringliteral">&quot;Name of unit&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;&quot;</span>);
+<a name="l00040"></a>00040               I_ASSIGN(m_displayMultFactorAttrPtr, <span class="stringliteral">&quot;DisplayMultFactor&quot;</span>, <span class="stringliteral">&quot;Scale factor used for display, e.g for unit name &#39;%&#39; it will be 100&quot;</span>, <span class="keyword">true</span>, 1);
+<a name="l00041"></a>00041               I_ASSIGN(m_minValueAttrPtr, <span class="stringliteral">&quot;MinValue&quot;</span>, <span class="stringliteral">&quot;Minimal value&quot;</span>, <span class="keyword">true</span>, 0);
+<a name="l00042"></a>00042               I_ASSIGN(m_maxValueAttrPtr, <span class="stringliteral">&quot;MaxValue&quot;</span>, <span class="stringliteral">&quot;Maximal value&quot;</span>, <span class="keyword">true</span>, 1);
+<a name="l00043"></a>00043        I_END_COMPONENT;
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045        <span class="comment">// reimplemented (imeas::INumericConstraints)</span>
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a46ea8f969fb991dab11f48747eb64dea" title="Get number of expected numeric values.">GetNumericValuesCount</a>() <span class="keyword">const</span>;
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a807ba9208ec18a8c912d7ed8fedd8788" title="Get human readable name of numeric value for specified list index.">GetNumericValueName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a249eb0edf8aa723a4003459b3ce1abc4" title="Get human readable description of numeric value for specified list index.">GetNumericValueDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit.">imeas::IUnitInfo</a>&amp; <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#ad0069c9bdc0c0901e6edb2b84fefa3ff" title="Get range of possible numeric values for specified list index.">GetNumericValueUnitInfo</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="keyword">protected</span>:
+<a name="l00052"></a>00052        <span class="comment">// reimplemented (imeas::IUnitInfo)</span>
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#af5961bae317564dfc272f74f0f691d1a" title="Get type of unit.">GetUnitType</a>() <span class="keyword">const</span>;
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a90c530a2f9d5af95a5a1e33dfeedcd68" title="Get name of unit.">GetUnitName</a>() <span class="keyword">const</span>;
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a795fb67cc15a119c3b66ed315f57d64e" title="Get multiplication factor used to calculate user input values.">GetDisplayMultiplicationFactor</a>() <span class="keyword">const</span>;
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a> <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#ad3d07ac8efbd610fb0303fefaa8c162e" title="Get range of possible filter value for specified dimension.">GetValueRange</a>() <span class="keyword">const</span>;
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a>&amp; <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#ac61407fc545cb06f6ba226eb296112b2" title="Return number manipulator object for filter length value.">GetValueManip</a>() <span class="keyword">const</span>;
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <span class="keyword">private</span>:
+<a name="l00060"></a>00060        I_ATTR(<span class="keywordtype">int</span>, m_dimensionsCountAttrPtr);
+<a name="l00061"></a>00061        I_MULTIATTR(QString, m_namesAttrPtr);
+<a name="l00062"></a>00062        I_MULTIATTR(QString, m_descriptionsAttrPtr);
+<a name="l00063"></a>00063        I_MULTIATTR(std::string, m_valueIdsAttrPtr);
+<a name="l00064"></a>00064        I_ATTR(<span class="keywordtype">int</span>, m_unitTypeAttrPtr);
+<a name="l00065"></a>00065        I_ATTR(QString, m_unitNameAttrPtr);
+<a name="l00066"></a>00066        I_ATTR(<span class="keywordtype">double</span>, m_displayMultFactorAttrPtr);
+<a name="l00067"></a>00067        I_ATTR(<span class="keywordtype">double</span>, m_minValueAttrPtr);
+<a name="l00068"></a>00068        I_ATTR(<span class="keywordtype">double</span>, m_maxValueAttrPtr);
+<a name="l00069"></a>00069 };
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 } <span class="comment">// namespace imeas</span>
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075 <span class="preprocessor">#endif // !imeas_CNumericConstraintsComp_included</span>
+<a name="l00076"></a>00076 <span class="preprocessor"></span>
+<a name="l00077"></a>00077 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

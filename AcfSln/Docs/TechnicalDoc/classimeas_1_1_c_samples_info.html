@@ -36,7 +36,7 @@
 <div class="title">imeas::CSamplesInfo Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="imeas::CSamplesInfo" --><!-- doxytag: inherits="imeas::IDataSequenceInfo" -->
+<!-- doxytag: class="imeas::CSamplesInfo" --><!-- doxytag: inherits="imeas::CDataSequenceInfoBase" -->
 <p>Stores additional data sequence data used to interpret samples value correctly.  
  <a href="classimeas_1_1_c_samples_info.html#details">More...</a></p>
 
@@ -47,10 +47,14 @@ Inheritance diagram for imeas::CSamplesInfo:</div>
  <div class="center">
   <img src="classimeas_1_1_c_samples_info.png" usemap="#imeas::CSamplesInfo_map" alt=""/>
   <map id="imeas::CSamplesInfo_map" name="imeas::CSamplesInfo_map">
-<area href="classimeas_1_1_i_data_sequence_info.html" title="Stores additional data sequence data used to interpret samples value correctly." alt="imeas::IDataSequenceInfo" shape="rect" coords="0,168,156,192"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="0,112,156,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,156,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,156,24"/>
+<area href="classimeas_1_1_c_data_sequence_info_base.html" title="Simple base class for implementations of interface imeas::IDataSequenceInfo." alt="imeas::CDataSequenceInfoBase" shape="rect" coords="100,224,290,248"/>
+<area href="classimeas_1_1_i_data_sequence_info.html" title="Stores additional data sequence data used to interpret samples value correctly." alt="imeas::IDataSequenceInfo" shape="rect" coords="100,168,290,192"/>
+<area href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values." alt="imeas::INumericConstraints" shape="rect" coords="0,112,190,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="200,112,390,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,190,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="200,56,390,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,190,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="200,0,390,24"/>
 </map>
  </div></div>
 
@@ -63,14 +67,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get logical position range (time axis) of this data sequence.  <a href="#a6e45ca9440bf4215ab2c927e932b426e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_samples_info.html#a67d7db65c77093dadbe41a9b4741ae5e">SetLogicalSamplesRange</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> &amp;range)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set logical position range (time axis) of this data sequence.  <a href="#a67d7db65c77093dadbe41a9b4741ae5e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_samples_info.html#a292e7629b92bd9e6286e7e93de4a9ba1">GetSequenceInfoFlags</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags for this data sequence.  <a href="#a292e7629b92bd9e6286e7e93de4a9ba1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_samples_info.html#ab565faf5149b9570973ac501fd2d07d6">GetDefaultSamplesCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get default number of samples.  <a href="#ab565faf5149b9570973ac501fd2d07d6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_samples_info.html#a2aedd820128a93895552ed804fe328a5">GetDefaultChannelsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get default number of channels.  <a href="#a2aedd820128a93895552ed804fe328a5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_samples_info.html#ab6a671303f7e76ff4bd13a238849398d">GetWeightMode</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weight mode for this sequence.  <a href="#ab6a671303f7e76ff4bd13a238849398d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_samples_info.html#a290d85c76a02ae9783ccbfcffba647b2">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -112,7 +112,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get default number of channels. </p>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_data_sequence_info.html#a14d058233340fbc7204d41d9108ec27a">imeas::IDataSequenceInfo</a>.</p>
+<p>Reimplemented from <a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#a4a74931ff01bae453404a7e69d9531f0">imeas::CDataSequenceInfoBase</a>.</p>
 
 </div>
 </div>
@@ -132,7 +132,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get default number of samples. </p>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_data_sequence_info.html#a3aa1d7d6fcb16ead917f0f6da29016d1">imeas::IDataSequenceInfo</a>.</p>
+<p>Reimplemented from <a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#aa920243bbfc4bbd954ea23c0a7a77f6e">imeas::CDataSequenceInfoBase</a>.</p>
 
 </div>
 </div>
@@ -155,47 +155,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a292e7629b92bd9e6286e7e93de4a9ba1"></a><!-- doxytag: member="imeas::CSamplesInfo::GetSequenceInfoFlags" ref="a292e7629b92bd9e6286e7e93de4a9ba1" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int imeas::CSamplesInfo::GetSequenceInfoFlags </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get flags for this data sequence. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_data_sequence_info.html#a5fa2ac13da5738d1245bede98b07369e">imeas::IDataSequenceInfo</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab6a671303f7e76ff4bd13a238849398d"></a><!-- doxytag: member="imeas::CSamplesInfo::GetWeightMode" ref="ab6a671303f7e76ff4bd13a238849398d" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int imeas::CSamplesInfo::GetWeightMode </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get weight mode for this sequence. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1" title="Describe mode of weight information.">WeightMode</a> </dd></dl>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_data_sequence_info.html#a05f4844ae3c9b5d23cb9c318f1e4d03d">imeas::IDataSequenceInfo</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a290d85c76a02ae9783ccbfcffba647b2"></a><!-- doxytag: member="imeas::CSamplesInfo::Serialize" ref="a290d85c76a02ae9783ccbfcffba647b2" args="(iser::IArchive &amp;archive)" -->
 <div class="memitem">
 <div class="memproto">
@@ -211,7 +170,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
+<p>Reimplemented from <a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#af078794b6798ac77fdeb986c085f4c84">imeas::CDataSequenceInfoBase</a>.</p>
 
 </div>
 </div>

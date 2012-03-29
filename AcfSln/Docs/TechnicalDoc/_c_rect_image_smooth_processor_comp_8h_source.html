@@ -62,42 +62,43 @@
 <a name="l00040"></a>00040        };
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html" title="Implementation of image smooth operator with homogeneous rectangle kernel.">CRectImageSmoothProcessorComp</a>);
-<a name="l00043"></a>00043               I_REGISTER_INTERFACE(<a class="code" href="classimeas_1_1_i_numeric_constraints.html">imeas::INumericConstraints</a>);
+<a name="l00043"></a>00043               I_REGISTER_INTERFACE(<a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">imeas::INumericConstraints</a>);
 <a name="l00044"></a>00044               I_ASSIGN(m_unitModeAttrPtr, <span class="stringliteral">&quot;UnitMode&quot;</span>, <span class="stringliteral">&quot;Define used units:\n\t0 - Pixels\n\t1 - Percent of width and height\n\t2 - Percent of diagonal&quot;</span>, <span class="keyword">true</span>, 0);
 <a name="l00045"></a>00045               I_ASSIGN(m_borderModeAttrPtr, <span class="stringliteral">&quot;BorderMode&quot;</span>, <span class="stringliteral">&quot;Define used mode for border area:\n\t0 - Kernel will be stretched, original image size will be outputed\n\t1 - Border area removed, output image will be smaller&quot;</span>, <span class="keyword">true</span>, 0);
 <a name="l00046"></a>00046        I_END_COMPONENT;
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048        <span class="comment">// reimplemented (imeas::INumericConstraints)</span>
 <a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#aa5078c209ea812abb27b263737ce919f" title="Get number of expected numeric values.">GetNumericValuesCount</a>() <span class="keyword">const</span>;
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#af392d7780d8d68a5296669e79892fea3" title="Get description of numeric value for specified list index.">GetNumericValueDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit.">imeas::IUnitInfo</a>&amp; <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ae33a423a10270dcd8a27479cba698ae3" title="Get range of possible numeric values for specified list index.">GetNumericValueUnitInfo</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="keyword">protected</span>:
-<a name="l00054"></a>00054        <span class="comment">// reimplemented (iipr::TImageParamProcessorCompBase&lt;imeas::INumericParams&gt;)</span>
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#a0bfb14f5413c121c1371e5c12e77d74a" title="Do image processing with some (optional) parameter set.">ParamProcessImage</a>(
-<a name="l00056"></a>00056                             <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_numeric_params.html" title="General parameter set containing list of numeric values.">imeas::INumericParams</a>* paramsPtr,
-<a name="l00057"></a>00057                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; inputImage,
-<a name="l00058"></a>00058                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; outputImage);
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060        <span class="comment">// reimplemented (imeas::IUnitInfo)</span>
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ad29e44d4dea5acd9b900e8d8e8c5cbba" title="Get type of unit.">GetUnitType</a>() <span class="keyword">const</span>;
-<a name="l00062"></a>00062        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ad802414194a0d3513d4765ce1f366646" title="Get name of unit.">GetUnitName</a>() <span class="keyword">const</span>;
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#abb296d8ab35fa5e44e1612e701238b62" title="Get multiplication factor used to calculate user input values.">GetDisplayMultiplicationFactor</a>() <span class="keyword">const</span>;
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a> <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ad863e90199ab1a3ed1284b0d72ee138c" title="Get range of possible filter value for specified dimension.">GetValueRange</a>() <span class="keyword">const</span>;
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a>&amp; <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#adbf9f15b2cf3d9c99818945965c1aabd" title="Return number manipulator object for filter length value.">GetValueManip</a>() <span class="keyword">const</span>;
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 <span class="keyword">private</span>:
-<a name="l00068"></a>00068        I_ATTR(<span class="keywordtype">int</span>, m_unitModeAttrPtr);
-<a name="l00069"></a>00069        I_ATTR(<span class="keywordtype">int</span>, m_borderModeAttrPtr);
-<a name="l00070"></a>00070 };
-<a name="l00071"></a>00071 
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ace3dfd70dbb6334b9c451f1a815ac4d8" title="Get human readable name of numeric value for specified list index.">GetNumericValueName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#af392d7780d8d68a5296669e79892fea3" title="Get human readable description of numeric value for specified list index.">GetNumericValueDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit.">imeas::IUnitInfo</a>&amp; <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ae33a423a10270dcd8a27479cba698ae3" title="Get range of possible numeric values for specified list index.">GetNumericValueUnitInfo</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="keyword">protected</span>:
+<a name="l00055"></a>00055        <span class="comment">// reimplemented (iipr::TImageParamProcessorCompBase&lt;imeas::INumericParams&gt;)</span>
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#a0bfb14f5413c121c1371e5c12e77d74a" title="Do image processing with some (optional) parameter set.">ParamProcessImage</a>(
+<a name="l00057"></a>00057                             <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_numeric_params.html" title="General parameter set containing list of numeric values.">imeas::INumericParams</a>* paramsPtr,
+<a name="l00058"></a>00058                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; inputImage,
+<a name="l00059"></a>00059                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; outputImage);
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061        <span class="comment">// reimplemented (imeas::IUnitInfo)</span>
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ad29e44d4dea5acd9b900e8d8e8c5cbba" title="Get type of unit.">GetUnitType</a>() <span class="keyword">const</span>;
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ad802414194a0d3513d4765ce1f366646" title="Get name of unit.">GetUnitName</a>() <span class="keyword">const</span>;
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#abb296d8ab35fa5e44e1612e701238b62" title="Get multiplication factor used to calculate user input values.">GetDisplayMultiplicationFactor</a>() <span class="keyword">const</span>;
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a> <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ad863e90199ab1a3ed1284b0d72ee138c" title="Get range of possible filter value for specified dimension.">GetValueRange</a>() <span class="keyword">const</span>;
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a>&amp; <a class="code" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#adbf9f15b2cf3d9c99818945965c1aabd" title="Return number manipulator object for filter length value.">GetValueManip</a>() <span class="keyword">const</span>;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="keyword">private</span>:
+<a name="l00069"></a>00069        I_ATTR(<span class="keywordtype">int</span>, m_unitModeAttrPtr);
+<a name="l00070"></a>00070        I_ATTR(<span class="keywordtype">int</span>, m_borderModeAttrPtr);
+<a name="l00071"></a>00071 };
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073 } <span class="comment">// namespace iipr</span>
-<a name="l00074"></a>00074 
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074 } <span class="comment">// namespace iipr</span>
 <a name="l00075"></a>00075 
-<a name="l00076"></a>00076 <span class="preprocessor">#endif // !iipr_CRectImageSmoothProcessorComp_included</span>
-<a name="l00077"></a>00077 <span class="preprocessor"></span>
-<a name="l00078"></a>00078 
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 <span class="preprocessor">#endif // !iipr_CRectImageSmoothProcessorComp_included</span>
+<a name="l00078"></a>00078 <span class="preprocessor"></span>
+<a name="l00079"></a>00079 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

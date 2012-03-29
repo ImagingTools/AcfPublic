@@ -37,6 +37,9 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="imeas::INumericConstraints" --><!-- doxytag: inherits="istd::IChangeable" -->
+<p>Describe additional meta information for set of numeric values.  
+ <a href="classimeas_1_1_i_numeric_constraints.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_i_numeric_constraints_8h_source.html">INumericConstraints.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for imeas::INumericConstraints:</div>
@@ -44,13 +47,16 @@ Inheritance diagram for imeas::INumericConstraints:</div>
  <div class="center">
   <img src="classimeas_1_1_i_numeric_constraints.png" usemap="#imeas::INumericConstraints_map" alt=""/>
   <map id="imeas::INumericConstraints_map" name="imeas::INumericConstraints_map">
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="366,56,600,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="366,0,600,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="488,56,722,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="488,0,722,24"/>
 <area href="classiipr_1_1_c_rect_derivative_processor.html" title="Calculate derivative of projection using rectangular filter kernel." alt="iipr::CRectDerivativeProcessor" shape="rect" coords="0,168,234,192"/>
 <area href="classiipr_1_1_c_rect_image_smooth_processor_comp.html" title="Implementation of image smooth operator with homogeneous rectangle kernel." alt="iipr::CRectImageSmoothProcessorComp" shape="rect" coords="244,168,478,192"/>
 <area href="classimeas_1_1_c_numeric_constraints_comp.html" title="Simple implementation of imeas::INumericConstraints interface." alt="imeas::CNumericConstraintsComp" shape="rect" coords="488,168,722,192"/>
 <area href="classimeas_1_1_c_numeric_params_comp.html" title="Component implementating imeas::INumericParams interface." alt="imeas::CNumericParamsComp" shape="rect" coords="732,168,966,192"/>
+<area href="classimeas_1_1_i_data_sequence_info.html" title="Stores additional data sequence data used to interpret samples value correctly." alt="imeas::IDataSequenceInfo" shape="rect" coords="976,168,1210,192"/>
 <area href="classiipr_1_1_c_rect_derivative_processor_comp.html" title="Component implemnetation of derivative processor using rectangular filter kernel." alt="iipr::CRectDerivativeProcessorComp" shape="rect" coords="0,224,234,248"/>
+<area href="classimeas_1_1_c_data_sequence_info_base.html" title="Simple base class for implementations of interface imeas::IDataSequenceInfo." alt="imeas::CDataSequenceInfoBase" shape="rect" coords="976,224,1210,248"/>
+<area href="classimeas_1_1_c_samples_info.html" title="Stores additional data sequence data used to interpret samples value correctly." alt="imeas::CSamplesInfo" shape="rect" coords="976,280,1210,304"/>
 </map>
  </div></div>
 
@@ -60,14 +66,18 @@ Inheritance diagram for imeas::INumericConstraints:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_numeric_constraints.html#afb5236f4459c18f02f9e62df438e5eee">GetNumericValuesCount</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of expected numeric values.  <a href="#afb5236f4459c18f02f9e62df438e5eee"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_numeric_constraints.html#adbde228cdec587b904b887db335fbb5d">GetNumericValueName</a> (int index) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of numeric value for specified list index.  <a href="#adbde228cdec587b904b887db335fbb5d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_numeric_constraints.html#a04e085fa7191e9ba6b778c69c2f6b012">GetNumericValueDescription</a> (int index) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of numeric value for specified list index.  <a href="#a04e085fa7191e9ba6b778c69c2f6b012"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description of numeric value for specified list index.  <a href="#a04e085fa7191e9ba6b778c69c2f6b012"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_numeric_constraints.html#a5fe12b84ab6af1e5c7220a7925583950">GetNumericValueUnitInfo</a> (int index) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of possible numeric values for specified list index.  <a href="#a5fe12b84ab6af1e5c7220a7925583950"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_i_numeric_constraints_8h_source.html#l00018">18</a> of file <a class="el" href="_i_numeric_constraints_8h_source.html">INumericConstraints.h</a>.</p>
+<div class="textblock"><p>Describe additional meta information for set of numeric values. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classimeas_1_1_i_numeric_params.html" title="General parameter set containing list of numeric values.">imeas::INumericParams</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_i_numeric_constraints_8h_source.html#l00022">22</a> of file <a class="el" href="_i_numeric_constraints_8h_source.html">INumericConstraints.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a04e085fa7191e9ba6b778c69c2f6b012"></a><!-- doxytag: member="imeas::INumericConstraints::GetNumericValueDescription" ref="a04e085fa7191e9ba6b778c69c2f6b012" args="(int index) const =0" -->
 <div class="memitem">
@@ -84,9 +94,42 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get description of numeric value for specified list index. </p>
+<p>Get human readable description of numeric value for specified list index. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index of numeric value. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implemented in <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a9fe3317941b0928c2452a81b13ed62de">imeas::CNumericParamsComp</a>, <a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a0fd88a4782e5e91ec9f9c0319b6df93c">iipr::CRectDerivativeProcessor</a>, <a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#af392d7780d8d68a5296669e79892fea3">iipr::CRectImageSmoothProcessorComp</a>, and <a class="el" href="classimeas_1_1_c_numeric_constraints_comp.html#a249eb0edf8aa723a4003459b3ce1abc4">imeas::CNumericConstraintsComp</a>.</p>
+<p>Implemented in <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a9fe3317941b0928c2452a81b13ed62de">imeas::CNumericParamsComp</a>, <a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a0fd88a4782e5e91ec9f9c0319b6df93c">iipr::CRectDerivativeProcessor</a>, <a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#af392d7780d8d68a5296669e79892fea3">iipr::CRectImageSmoothProcessorComp</a>, <a class="el" href="classimeas_1_1_c_numeric_constraints_comp.html#a249eb0edf8aa723a4003459b3ce1abc4">imeas::CNumericConstraintsComp</a>, and <a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#a2b8ac66049cf3e28f4b76004ec5c4944">imeas::CDataSequenceInfoBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adbde228cdec587b904b887db335fbb5d"></a><!-- doxytag: member="imeas::INumericConstraints::GetNumericValueName" ref="adbde228cdec587b904b887db335fbb5d" args="(int index) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString imeas::INumericConstraints::GetNumericValueName </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get human readable name of numeric value for specified list index. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index of numeric value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a8e120a246115a3659eb3e7929160ecaf">imeas::CNumericParamsComp</a>, <a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#ab9844cca4f7b282b578e7a3f1bfe892f">iipr::CRectDerivativeProcessor</a>, <a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ace3dfd70dbb6334b9c451f1a815ac4d8">iipr::CRectImageSmoothProcessorComp</a>, <a class="el" href="classimeas_1_1_c_numeric_constraints_comp.html#a807ba9208ec18a8c912d7ed8fedd8788">imeas::CNumericConstraintsComp</a>, and <a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#a17f97a951adc0a4951eb3d6972ce8c8d">imeas::CDataSequenceInfoBase</a>.</p>
 
 </div>
 </div>
@@ -106,7 +149,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get number of expected numeric values. </p>
 
-<p>Implemented in <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#ac8da5149c791906ce64c7d58a86a73fb">imeas::CNumericParamsComp</a>, <a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a8aaa5845f57f38aea453a90cdefe07ab">iipr::CRectDerivativeProcessor</a>, <a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#aa5078c209ea812abb27b263737ce919f">iipr::CRectImageSmoothProcessorComp</a>, and <a class="el" href="classimeas_1_1_c_numeric_constraints_comp.html#a46ea8f969fb991dab11f48747eb64dea">imeas::CNumericConstraintsComp</a>.</p>
+<p>Implemented in <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#ac8da5149c791906ce64c7d58a86a73fb">imeas::CNumericParamsComp</a>, <a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a8aaa5845f57f38aea453a90cdefe07ab">iipr::CRectDerivativeProcessor</a>, <a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#aa5078c209ea812abb27b263737ce919f">iipr::CRectImageSmoothProcessorComp</a>, <a class="el" href="classimeas_1_1_c_numeric_constraints_comp.html#a46ea8f969fb991dab11f48747eb64dea">imeas::CNumericConstraintsComp</a>, and <a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#a380cfd1b8ff2dcd1b872ff755ac7e1eb">imeas::CDataSequenceInfoBase</a>.</p>
 
 </div>
 </div>
@@ -126,8 +169,14 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get range of possible numeric values for specified list index. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index of numeric value. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implemented in <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#ab68e7942771ae4172f14b7fc66778549">imeas::CNumericParamsComp</a>, <a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a87bd4a695300f85c2526d6bb04279642">iipr::CRectDerivativeProcessor</a>, <a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ae33a423a10270dcd8a27479cba698ae3">iipr::CRectImageSmoothProcessorComp</a>, and <a class="el" href="classimeas_1_1_c_numeric_constraints_comp.html#ad0069c9bdc0c0901e6edb2b84fefa3ff">imeas::CNumericConstraintsComp</a>.</p>
+<p>Implemented in <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#ab68e7942771ae4172f14b7fc66778549">imeas::CNumericParamsComp</a>, <a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a87bd4a695300f85c2526d6bb04279642">iipr::CRectDerivativeProcessor</a>, <a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ae33a423a10270dcd8a27479cba698ae3">iipr::CRectImageSmoothProcessorComp</a>, <a class="el" href="classimeas_1_1_c_numeric_constraints_comp.html#ad0069c9bdc0c0901e6edb2b84fefa3ff">imeas::CNumericConstraintsComp</a>, and <a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#a98d19e6600310b548af2e2bbb45613cb">imeas::CDataSequenceInfoBase</a>.</p>
 
 </div>
 </div>

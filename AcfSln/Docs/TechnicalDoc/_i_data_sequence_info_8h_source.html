@@ -29,48 +29,49 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_range_8h.html">istd/CRange.h</a>&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="imeas_8h.html">imeas/imeas.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_i_numeric_constraints_8h.html">imeas/INumericConstraints.h</a>&quot;</span>
+<a name="l00009"></a>00009 
 <a name="l00010"></a>00010 
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="keyword">namespace </span>imeas
-<a name="l00013"></a>00013 {
+<a name="l00011"></a>00011 <span class="keyword">namespace </span>imeas
+<a name="l00012"></a>00012 {
+<a name="l00013"></a>00013 
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 
-<a name="l00019"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html">00019</a> <span class="keyword">class </span><a class="code" href="classimeas_1_1_i_data_sequence_info.html" title="Stores additional data sequence data used to interpret samples value correctly.">IDataSequenceInfo</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
-<a name="l00020"></a>00020 {
-<a name="l00021"></a>00021 <span class="keyword">public</span>:
-<a name="l00022"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#a799d2bc45d0c73ed828937ba43d1623e">00022</a>        <span class="keyword">enum</span> <a class="code" href="classimeas_1_1_i_data_sequence_info.html#a799d2bc45d0c73ed828937ba43d1623e">SequenceInfoFlags</a>
-<a name="l00023"></a>00023        {
-<a name="l00029"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#a799d2bc45d0c73ed828937ba43d1623eaffbf9ceb24b3cd902d878fd04e0c139c">00029</a>               <a class="code" href="classimeas_1_1_i_data_sequence_info.html#a799d2bc45d0c73ed828937ba43d1623eaffbf9ceb24b3cd902d878fd04e0c139c" title="Number of samples is fixed by this info object.">SIF_SAMPLES_COUNT_FIXED</a> = 1 &lt;&lt; 1,
-<a name="l00035"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#a799d2bc45d0c73ed828937ba43d1623eaf7e0ba28364c2f0a90e5d5e5c3c8255e">00035</a>               <a class="code" href="classimeas_1_1_i_data_sequence_info.html#a799d2bc45d0c73ed828937ba43d1623eaf7e0ba28364c2f0a90e5d5e5c3c8255e" title="Number of channels is fixed by this info object.">SIF_CHANNELS_COUNT_FIXED</a> = 1 &lt;&lt; 2
-<a name="l00036"></a>00036        };
-<a name="l00037"></a>00037 
-<a name="l00041"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1">00041</a>        <span class="keyword">enum</span> <a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1" title="Describe mode of weight information.">WeightMode</a>
-<a name="l00042"></a>00042        {
-<a name="l00046"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1acd19b3c481e23c09e28ab37f8344b2d5">00046</a>               <a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1acd19b3c481e23c09e28ab37f8344b2d5" title="There is no weights.">WM_NONE</a>,
-<a name="l00050"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1a9f2597f45365d41a85ddbfaae5165d06">00050</a>               <a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1a9f2597f45365d41a85ddbfaae5165d06" title="The last channel (if more than 1) describes weight values, weights are shared for all channels...">WM_LAST</a>,
-<a name="l00054"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1a0c727a1b26aed71f8cdbd7ddb284746d">00054</a>               <a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1a0c727a1b26aed71f8cdbd7ddb284746d" title="The weight channels are interleaved with &#39;normal&#39; channels (e.g.">WM_INTERLEAVED</a>,
-<a name="l00058"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1ad876765fa8242bf6d2d364db62965f79">00058</a>               <a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1ad876765fa8242bf6d2d364db62965f79" title="There is unknown weight channel interpretation.">WM_UNKNOWN</a>
-<a name="l00059"></a>00059        };
-<a name="l00060"></a>00060 
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_i_data_sequence_info.html#a5fa2ac13da5738d1245bede98b07369e" title="Get flags for this data sequence.">GetSequenceInfoFlags</a>() <span class="keyword">const</span> = 0;
-<a name="l00065"></a>00065 
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_i_data_sequence_info.html#a3aa1d7d6fcb16ead917f0f6da29016d1" title="Get default number of samples.">GetDefaultSamplesCount</a>() <span class="keyword">const</span> = 0;
-<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_i_data_sequence_info.html#a14d058233340fbc7204d41d9108ec27a" title="Get default number of channels.">GetDefaultChannelsCount</a>() <span class="keyword">const</span> = 0;
-<a name="l00074"></a>00074 
-<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_i_data_sequence_info.html#a05f4844ae3c9b5d23cb9c318f1e4d03d" title="Get weight mode for this sequence.">GetWeightMode</a>() <span class="keyword">const</span> = 0;
-<a name="l00080"></a>00080 };
-<a name="l00081"></a>00081 
+<a name="l00018"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html">00018</a> <span class="keyword">class </span><a class="code" href="classimeas_1_1_i_data_sequence_info.html" title="Stores additional data sequence data used to interpret samples value correctly.">IDataSequenceInfo</a>:
+<a name="l00019"></a>00019                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">INumericConstraints</a>,
+<a name="l00020"></a>00020                      <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
+<a name="l00021"></a>00021 {
+<a name="l00022"></a>00022 <span class="keyword">public</span>:
+<a name="l00023"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#a799d2bc45d0c73ed828937ba43d1623e">00023</a>        <span class="keyword">enum</span> <a class="code" href="classimeas_1_1_i_data_sequence_info.html#a799d2bc45d0c73ed828937ba43d1623e">SequenceInfoFlags</a>
+<a name="l00024"></a>00024        {
+<a name="l00030"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#a799d2bc45d0c73ed828937ba43d1623eaffbf9ceb24b3cd902d878fd04e0c139c">00030</a>               <a class="code" href="classimeas_1_1_i_data_sequence_info.html#a799d2bc45d0c73ed828937ba43d1623eaffbf9ceb24b3cd902d878fd04e0c139c" title="Number of samples is fixed by this info object.">SIF_SAMPLES_COUNT_FIXED</a> = 1 &lt;&lt; 1,
+<a name="l00036"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#a799d2bc45d0c73ed828937ba43d1623eaf7e0ba28364c2f0a90e5d5e5c3c8255e">00036</a>               <a class="code" href="classimeas_1_1_i_data_sequence_info.html#a799d2bc45d0c73ed828937ba43d1623eaf7e0ba28364c2f0a90e5d5e5c3c8255e" title="Number of channels is fixed by this info object.">SIF_CHANNELS_COUNT_FIXED</a> = 1 &lt;&lt; 2
+<a name="l00037"></a>00037        };
+<a name="l00038"></a>00038 
+<a name="l00042"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1">00042</a>        <span class="keyword">enum</span> <a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1" title="Describe mode of weight information.">WeightMode</a>
+<a name="l00043"></a>00043        {
+<a name="l00047"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1acd19b3c481e23c09e28ab37f8344b2d5">00047</a>               <a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1acd19b3c481e23c09e28ab37f8344b2d5" title="There is no weights.">WM_NONE</a>,
+<a name="l00051"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1a9f2597f45365d41a85ddbfaae5165d06">00051</a>               <a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1a9f2597f45365d41a85ddbfaae5165d06" title="The last channel (if more than 1) describes weight values, weights are shared for all channels...">WM_LAST</a>,
+<a name="l00055"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1a0c727a1b26aed71f8cdbd7ddb284746d">00055</a>               <a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1a0c727a1b26aed71f8cdbd7ddb284746d" title="The weight channels are interleaved with &#39;normal&#39; channels (e.g.">WM_INTERLEAVED</a>,
+<a name="l00059"></a><a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1ad876765fa8242bf6d2d364db62965f79">00059</a>               <a class="code" href="classimeas_1_1_i_data_sequence_info.html#ac9385a6602e6b92291cd1ae403dff2a1ad876765fa8242bf6d2d364db62965f79" title="There is unknown weight channel interpretation.">WM_UNKNOWN</a>
+<a name="l00060"></a>00060        };
+<a name="l00061"></a>00061 
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_i_data_sequence_info.html#a5fa2ac13da5738d1245bede98b07369e" title="Get flags for this data sequence.">GetSequenceInfoFlags</a>() <span class="keyword">const</span> = 0;
+<a name="l00066"></a>00066 
+<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_i_data_sequence_info.html#a3aa1d7d6fcb16ead917f0f6da29016d1" title="Get default number of samples.">GetDefaultSamplesCount</a>() <span class="keyword">const</span> = 0;
+<a name="l00074"></a>00074        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_i_data_sequence_info.html#a14d058233340fbc7204d41d9108ec27a" title="Get default number of channels.">GetDefaultChannelsCount</a>() <span class="keyword">const</span> = 0;
+<a name="l00075"></a>00075 
+<a name="l00080"></a>00080        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_i_data_sequence_info.html#a05f4844ae3c9b5d23cb9c318f1e4d03d" title="Get weight mode for this sequence.">GetWeightMode</a>() <span class="keyword">const</span> = 0;
+<a name="l00081"></a>00081 };
 <a name="l00082"></a>00082 
-<a name="l00083"></a>00083 } <span class="comment">// namespace imeas</span>
-<a name="l00084"></a>00084 
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 } <span class="comment">// namespace imeas</span>
 <a name="l00085"></a>00085 
-<a name="l00086"></a>00086 <span class="preprocessor">#endif // !imeas_IDataSequenceInfo_included</span>
-<a name="l00087"></a>00087 <span class="preprocessor"></span>
-<a name="l00088"></a>00088 
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 <span class="preprocessor">#endif // !imeas_IDataSequenceInfo_included</span>
+<a name="l00088"></a>00088 <span class="preprocessor"></span>
+<a name="l00089"></a>00089 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

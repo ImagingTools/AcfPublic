@@ -153,9 +153,15 @@ int CNumericParamsComp::GetNumericValuesCount() const
 }
 
 
-QString CNumericParamsComp::GetNumericValueDescription(int index) const
+QString CNumericParamsComp::GetNumericValueName(int index) const
 {
 	return QString("Value ") + QString().setNum(index + 1);
+}
+
+
+QString CNumericParamsComp::GetNumericValueDescription(int /*index*/) const
+{
+	return QString();
 }
 
 

@@ -51,7 +51,7 @@ Inheritance diagram for imeas::CNumericParamsComp:</div>
   <map id="imeas::CNumericParamsComp_map" name="imeas::CNumericParamsComp_map">
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,168,180,192"/>
 <area href="classimeas_1_1_i_numeric_params.html" title="General parameter set containing list of numeric values." alt="imeas::INumericParams" shape="rect" coords="190,168,370,192"/>
-<area href="classimeas_1_1_i_numeric_constraints.html" alt="imeas::INumericConstraints" shape="rect" coords="380,168,560,192"/>
+<area href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values." alt="imeas::INumericConstraints" shape="rect" coords="380,168,560,192"/>
 <area href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit." alt="imeas::IUnitInfo" shape="rect" coords="570,168,750,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,112,180,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="190,112,370,136"/>
@@ -84,8 +84,10 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a66df79f5747b3d2bbb39be65805502e9">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#ac8da5149c791906ce64c7d58a86a73fb">GetNumericValuesCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of expected numeric values.  <a href="#ac8da5149c791906ce64c7d58a86a73fb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a8e120a246115a3659eb3e7929160ecaf">GetNumericValueName</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of numeric value for specified list index.  <a href="#a8e120a246115a3659eb3e7929160ecaf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a9fe3317941b0928c2452a81b13ed62de">GetNumericValueDescription</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of numeric value for specified list index.  <a href="#a9fe3317941b0928c2452a81b13ed62de"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description of numeric value for specified list index.  <a href="#a9fe3317941b0928c2452a81b13ed62de"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#ab68e7942771ae4172f14b7fc66778549">GetNumericValueUnitInfo</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of possible numeric values for specified list index.  <a href="#ab68e7942771ae4172f14b7fc66778549"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#afc86be53b80f6d8d2d67790f37f65b94">GetUnitType</a> () const </td></tr>
@@ -193,9 +195,42 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get description of numeric value for specified list index. </p>
+<p>Get human readable description of numeric value for specified list index. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index of numeric value. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#a04e085fa7191e9ba6b778c69c2f6b012">imeas::INumericConstraints</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e120a246115a3659eb3e7929160ecaf"></a><!-- doxytag: member="imeas::CNumericParamsComp::GetNumericValueName" ref="a8e120a246115a3659eb3e7929160ecaf" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString imeas::CNumericParamsComp::GetNumericValueName </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get human readable name of numeric value for specified list index. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index of numeric value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#adbde228cdec587b904b887db335fbb5d">imeas::INumericConstraints</a>.</p>
 
 </div>
 </div>
@@ -235,6 +270,12 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get range of possible numeric values for specified list index. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index of numeric value. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#a5fe12b84ab6af1e5c7220a7925583950">imeas::INumericConstraints</a>.</p>
 

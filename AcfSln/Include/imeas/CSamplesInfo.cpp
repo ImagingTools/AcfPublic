@@ -52,12 +52,6 @@ void CSamplesInfo::SetLogicalSamplesRange(const istd::CRange& range)
 
 // reimplemented (imeas::IDataSequenceInfo)
 
-int CSamplesInfo::GetSequenceInfoFlags() const
-{
-	return 0;
-}
-
-
 int CSamplesInfo::GetDefaultSamplesCount() const
 {
 	return -1;
@@ -67,12 +61,6 @@ int CSamplesInfo::GetDefaultSamplesCount() const
 int CSamplesInfo::GetDefaultChannelsCount() const
 {
 	return 1;
-}
-
-
-int CSamplesInfo::GetWeightMode() const
-{
-	return WM_NONE;
 }
 
 

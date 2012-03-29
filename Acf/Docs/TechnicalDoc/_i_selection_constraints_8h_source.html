@@ -53,11 +53,11 @@
 <a name="l00038"></a><a class="code" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1ea9252e2dd649825e860f655fc68b229f3">00038</a>               <a class="code" href="classiprm_1_1_i_selection_constraints.html#a437f92296b248eb729438492dd5d5e1ea9252e2dd649825e860f655fc68b229f3" title="One or more options were renamed.">CF_OPTION_RENAMED</a> = 1 &lt;&lt; 19
 <a name="l00039"></a>00039        };
 <a name="l00040"></a>00040 
-<a name="l00044"></a><a class="code" href="classiprm_1_1_i_selection_constraints.html#ad883cd5ce4e96945cffeaa3e252c912c">00044</a>        <span class="keyword">enum</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html#ad883cd5ce4e96945cffeaa3e252c912c" title="Flags for control constraints behavior.">SelectionContstraintsFlags</a>
+<a name="l00044"></a><a class="code" href="classiprm_1_1_i_selection_constraints.html#ada775de17f376a27c8c53fa2330ada1b">00044</a>        <span class="keyword">enum</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html#ada775de17f376a27c8c53fa2330ada1b" title="Flags for control constraints behavior.">SelectionConstraintsFlags</a>
 <a name="l00045"></a>00045        {
-<a name="l00046"></a><a class="code" href="classiprm_1_1_i_selection_constraints.html#ad883cd5ce4e96945cffeaa3e252c912cab7ff33e6d2167ba10ca394b8d61b3571">00046</a>               <a class="code" href="classiprm_1_1_i_selection_constraints.html#ad883cd5ce4e96945cffeaa3e252c912cab7ff33e6d2167ba10ca394b8d61b3571">SCF_NONE</a> = 0,
+<a name="l00046"></a><a class="code" href="classiprm_1_1_i_selection_constraints.html#ada775de17f376a27c8c53fa2330ada1bab7ff33e6d2167ba10ca394b8d61b3571">00046</a>               <a class="code" href="classiprm_1_1_i_selection_constraints.html#ada775de17f376a27c8c53fa2330ada1bab7ff33e6d2167ba10ca394b8d61b3571">SCF_NONE</a> = 0,
 <a name="l00047"></a>00047 
-<a name="l00051"></a><a class="code" href="classiprm_1_1_i_selection_constraints.html#ad883cd5ce4e96945cffeaa3e252c912ca317e844d30b736eeb428b6daff17c6c5">00051</a>               <a class="code" href="classiprm_1_1_i_selection_constraints.html#ad883cd5ce4e96945cffeaa3e252c912ca317e844d30b736eeb428b6daff17c6c5" title="If set, every option must have an unique ID.">SCF_SUPPORT_UNIQUE_ID</a> = 1 &lt;&lt; 0
+<a name="l00051"></a><a class="code" href="classiprm_1_1_i_selection_constraints.html#ada775de17f376a27c8c53fa2330ada1ba317e844d30b736eeb428b6daff17c6c5">00051</a>               <a class="code" href="classiprm_1_1_i_selection_constraints.html#ada775de17f376a27c8c53fa2330ada1ba317e844d30b736eeb428b6daff17c6c5" title="If set, every option must have an unique ID.">SCF_SUPPORT_UNIQUE_ID</a> = 1 &lt;&lt; 0
 <a name="l00052"></a>00052        };
 <a name="l00053"></a>00053 
 <a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html#a5eb4e50e233db8653ade1827f94611a3" title="Get constraints flags.">GetConstraintsFlags</a>() <span class="keyword">const</span> = 0;
@@ -66,7 +66,7 @@
 <a name="l00063"></a>00063 
 <a name="l00067"></a>00067        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_i_selection_constraints.html#a9d21be275c1d2d889b964971d52ec6e0" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
 <a name="l00068"></a>00068 
-<a name="l00072"></a>00072        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_i_selection_constraints.html#a0a88f5abd55974d0fd943e9e338996bf" title="Get description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
+<a name="l00072"></a>00072        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_i_selection_constraints.html#a0a88f5abd55974d0fd943e9e338996bf" title="Get human readable description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
 <a name="l00073"></a>00073 
 <a name="l00078"></a>00078        <span class="keyword">virtual</span> std::string <a class="code" href="classiprm_1_1_i_selection_constraints.html#a2d9228f4e01880b48336deafeaa6393a" title="Get option ID.">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
 <a name="l00079"></a>00079 };

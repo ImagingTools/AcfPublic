@@ -4888,6 +4888,8 @@
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>_c_primitive_types_serializer_8h</filename>
     <includes id="_c_range_8h" name="CRange.h" local="yes" imported="no">istd/CRange.h</includes>
+    <includes id="_t_index_8h" name="TIndex.h" local="yes" imported="no">istd/TIndex.h</includes>
+    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <class kind="class">iser::CPrimitiveTypesSerializer</class>
     <namespace>iser</namespace>
   </compound>
@@ -29055,21 +29057,21 @@
       <arglist></arglist>
     </member>
     <member kind="enumeration">
-      <name>SelectionContstraintsFlags</name>
+      <name>SelectionConstraintsFlags</name>
       <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>ad883cd5ce4e96945cffeaa3e252c912c</anchor>
+      <anchor>ada775de17f376a27c8c53fa2330ada1b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SCF_NONE</name>
       <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>ad883cd5ce4e96945cffeaa3e252c912cab7ff33e6d2167ba10ca394b8d61b3571</anchor>
+      <anchor>ada775de17f376a27c8c53fa2330ada1bab7ff33e6d2167ba10ca394b8d61b3571</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SCF_SUPPORT_UNIQUE_ID</name>
       <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>ad883cd5ce4e96945cffeaa3e252c912ca317e844d30b736eeb428b6daff17c6c5</anchor>
+      <anchor>ada775de17f376a27c8c53fa2330ada1ba317e844d30b736eeb428b6daff17c6c5</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -40705,6 +40707,13 @@
       <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
       <anchor>a479cbded59d35c92ce27a04a8380592c</anchor>
       <arglist>(iser::IArchive &amp;archive, QDateTime &amp;dateTime)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SerializeIndex</name>
+      <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
+      <anchor>a16c2e38a58fc765a088f8e37afb3bd2d</anchor>
+      <arglist>(iser::IArchive &amp;archive, istd::TIndex&lt; Dimensions &gt; &amp;index)</arglist>
     </member>
   </compound>
   <compound kind="class">

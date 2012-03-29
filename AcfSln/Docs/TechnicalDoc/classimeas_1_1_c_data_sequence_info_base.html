@@ -37,6 +37,9 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="imeas::CDataSequenceInfoBase" --><!-- doxytag: inherits="imeas::IDataSequenceInfo" -->
+<p>Simple base class for implementations of interface <code><a class="el" href="classimeas_1_1_i_data_sequence_info.html" title="Stores additional data sequence data used to interpret samples value correctly.">imeas::IDataSequenceInfo</a></code>.  
+ <a href="classimeas_1_1_c_data_sequence_info_base.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_c_data_sequence_info_base_8h_source.html">CDataSequenceInfoBase.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for imeas::CDataSequenceInfoBase:</div>
@@ -44,10 +47,14 @@ Inheritance diagram for imeas::CDataSequenceInfoBase:</div>
  <div class="center">
   <img src="classimeas_1_1_c_data_sequence_info_base.png" usemap="#imeas::CDataSequenceInfoBase_map" alt=""/>
   <map id="imeas::CDataSequenceInfoBase_map" name="imeas::CDataSequenceInfoBase_map">
-<area href="classimeas_1_1_i_data_sequence_info.html" title="Stores additional data sequence data used to interpret samples value correctly." alt="imeas::IDataSequenceInfo" shape="rect" coords="0,168,190,192"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="0,112,190,136"/>
+<area href="classimeas_1_1_i_data_sequence_info.html" title="Stores additional data sequence data used to interpret samples value correctly." alt="imeas::IDataSequenceInfo" shape="rect" coords="100,168,290,192"/>
+<area href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values." alt="imeas::INumericConstraints" shape="rect" coords="0,112,190,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="200,112,390,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,190,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="200,56,390,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,190,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="200,0,390,24"/>
+<area href="classimeas_1_1_c_samples_info.html" title="Stores additional data sequence data used to interpret samples value correctly." alt="imeas::CSamplesInfo" shape="rect" coords="100,280,290,304"/>
 </map>
  </div></div>
 
@@ -63,11 +70,20 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get default number of channels.  <a href="#a4a74931ff01bae453404a7e69d9531f0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#a946cf8663a6c859940e218187f6412c0">GetWeightMode</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weight mode for this sequence.  <a href="#a946cf8663a6c859940e218187f6412c0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#a380cfd1b8ff2dcd1b872ff755ac7e1eb">GetNumericValuesCount</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of expected numeric values.  <a href="#a380cfd1b8ff2dcd1b872ff755ac7e1eb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#a17f97a951adc0a4951eb3d6972ce8c8d">GetNumericValueName</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of numeric value for specified list index.  <a href="#a17f97a951adc0a4951eb3d6972ce8c8d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#a2b8ac66049cf3e28f4b76004ec5c4944">GetNumericValueDescription</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description of numeric value for specified list index.  <a href="#a2b8ac66049cf3e28f4b76004ec5c4944"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#a98d19e6600310b548af2e2bbb45613cb">GetNumericValueUnitInfo</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of possible numeric values for specified list index.  <a href="#a98d19e6600310b548af2e2bbb45613cb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#af078794b6798ac77fdeb986c085f4c84">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_c_data_sequence_info_base_8h_source.html#l00013">13</a> of file <a class="el" href="_c_data_sequence_info_base_8h_source.html">CDataSequenceInfoBase.h</a>.</p>
+<div class="textblock"><p>Simple base class for implementations of interface <code><a class="el" href="classimeas_1_1_i_data_sequence_info.html" title="Stores additional data sequence data used to interpret samples value correctly.">imeas::IDataSequenceInfo</a></code>. </p>
+
+<p>Definition at line <a class="el" href="_c_data_sequence_info_base_8h_source.html#l00016">16</a> of file <a class="el" href="_c_data_sequence_info_base_8h_source.html">CDataSequenceInfoBase.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a4a74931ff01bae453404a7e69d9531f0"></a><!-- doxytag: member="imeas::CDataSequenceInfoBase::GetDefaultChannelsCount" ref="a4a74931ff01bae453404a7e69d9531f0" args="() const " -->
 <div class="memitem">
@@ -86,6 +102,8 @@ Public Member Functions</h2></td></tr>
 <p>Get default number of channels. </p>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_data_sequence_info.html#a14d058233340fbc7204d41d9108ec27a">imeas::IDataSequenceInfo</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classimeas_1_1_c_samples_info.html#a2aedd820128a93895552ed804fe328a5">imeas::CSamplesInfo</a>.</p>
 
 </div>
 </div>
@@ -106,6 +124,109 @@ Public Member Functions</h2></td></tr>
 <p>Get default number of samples. </p>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_data_sequence_info.html#a3aa1d7d6fcb16ead917f0f6da29016d1">imeas::IDataSequenceInfo</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classimeas_1_1_c_samples_info.html#ab565faf5149b9570973ac501fd2d07d6">imeas::CSamplesInfo</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2b8ac66049cf3e28f4b76004ec5c4944"></a><!-- doxytag: member="imeas::CDataSequenceInfoBase::GetNumericValueDescription" ref="a2b8ac66049cf3e28f4b76004ec5c4944" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString imeas::CDataSequenceInfoBase::GetNumericValueDescription </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get human readable description of numeric value for specified list index. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index of numeric value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#a04e085fa7191e9ba6b778c69c2f6b012">imeas::INumericConstraints</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a17f97a951adc0a4951eb3d6972ce8c8d"></a><!-- doxytag: member="imeas::CDataSequenceInfoBase::GetNumericValueName" ref="a17f97a951adc0a4951eb3d6972ce8c8d" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString imeas::CDataSequenceInfoBase::GetNumericValueName </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get human readable name of numeric value for specified list index. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index of numeric value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#adbde228cdec587b904b887db335fbb5d">imeas::INumericConstraints</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a380cfd1b8ff2dcd1b872ff755ac7e1eb"></a><!-- doxytag: member="imeas::CDataSequenceInfoBase::GetNumericValuesCount" ref="a380cfd1b8ff2dcd1b872ff755ac7e1eb" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int imeas::CDataSequenceInfoBase::GetNumericValuesCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get number of expected numeric values. </p>
+
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#afb5236f4459c18f02f9e62df438e5eee">imeas::INumericConstraints</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98d19e6600310b548af2e2bbb45613cb"></a><!-- doxytag: member="imeas::CDataSequenceInfoBase::GetNumericValueUnitInfo" ref="a98d19e6600310b548af2e2bbb45613cb" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a>&amp; imeas::CDataSequenceInfoBase::GetNumericValueUnitInfo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get range of possible numeric values for specified list index. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index of numeric value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#a5fe12b84ab6af1e5c7220a7925583950">imeas::INumericConstraints</a>.</p>
 
 </div>
 </div>
@@ -166,6 +287,8 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classimeas_1_1_c_samples_info.html#a290d85c76a02ae9783ccbfcffba647b2">imeas::CSamplesInfo</a>.</p>
 
 </div>
 </div>

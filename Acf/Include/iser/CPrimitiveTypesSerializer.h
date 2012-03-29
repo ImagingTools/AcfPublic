@@ -29,12 +29,8 @@
 
 // ACF includes
 #include "istd/CRange.h"
-
-
-namespace iser
-{
-	class IArchive;
-}
+#include "istd/TIndex.h"
+#include "iser/IArchive.h"
 
 
 namespace iser
@@ -51,7 +47,26 @@ class CPrimitiveTypesSerializer
 public:
 	static bool SerializeRange(iser::IArchive& archive, istd::CRange& range);
 	static bool SerializeDateTime(iser::IArchive& archive, QDateTime& dateTime);
+
+	template <int Dimensions>
+	static bool SerializeIndex(iser::IArchive& archive, istd::TIndex<Dimensions>& index);
 };
+
+
+// public template methods
+
+template <int Dimensions>
+bool CPrimitiveTypesSerializer::SerializeIndex(iser::IArchive& archive, istd::TIndex<Dimensions>& index)
+{
+	bool retVal = true;
+
+	for (int i = 0; i < Dimensions; ++i){
+		retVal = retVal && archive.Process(index[i]);
+	}
+
+	return retVal;
+}
+
 
 } // namespace iser
 

@@ -62,10 +62,14 @@ Inheritance diagram for imeas::IUnitInfo:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97">UnitType</a> { <a class="el" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a9ecf28fad195778d4694f6a4404f320b">UT_UNKNOWN</a>, 
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97">UnitType</a> { <br/>
+&#160;&#160;<a class="el" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a9ecf28fad195778d4694f6a4404f320b">UT_UNKNOWN</a>, 
 <a class="el" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a0f4fdd509041ea186b66562ef3b979ba">UT_PHYSICAL</a>, 
 <a class="el" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a97e93306b278a6cc376a53ba3a3bea1d">UT_TECHNICAL</a>, 
-<a class="el" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97aacd984f9ec52cd5cb35a5f6547f01095">UT_RELATIVE</a>
+<a class="el" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97aacd984f9ec52cd5cb35a5f6547f01095">UT_RELATIVE</a>, 
+<br/>
+&#160;&#160;<a class="el" href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97a32d7134994422498e1a745090c96b655">UT_COUNTER</a>
+<br/>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">General type of unit.  <a href="classimeas_1_1_i_unit_info.html#a590f3660129c9cd7aed62b3a148fdd97">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
@@ -100,12 +104,19 @@ Public Member Functions</h2></td></tr>
 <p>General type of unit. </p>
 <dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
 <tr><td valign="top"><em><a class="anchor" id="a590f3660129c9cd7aed62b3a148fdd97a9ecf28fad195778d4694f6a4404f320b"></a><!-- doxytag: member="UT_UNKNOWN" ref="a590f3660129c9cd7aed62b3a148fdd97a9ecf28fad195778d4694f6a4404f320b" args="" -->UT_UNKNOWN</em>&nbsp;</td><td>
+<p>Unit type is unknown. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a590f3660129c9cd7aed62b3a148fdd97a0f4fdd509041ea186b66562ef3b979ba"></a><!-- doxytag: member="UT_PHYSICAL" ref="a590f3660129c9cd7aed62b3a148fdd97a0f4fdd509041ea186b66562ef3b979ba" args="" -->UT_PHYSICAL</em>&nbsp;</td><td>
+<p>Physical unit like volt or amper. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a590f3660129c9cd7aed62b3a148fdd97a97e93306b278a6cc376a53ba3a3bea1d"></a><!-- doxytag: member="UT_TECHNICAL" ref="a590f3660129c9cd7aed62b3a148fdd97a97e93306b278a6cc376a53ba3a3bea1d" args="" -->UT_TECHNICAL</em>&nbsp;</td><td>
+<p>Technical unit without physical dimension like pixel. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a590f3660129c9cd7aed62b3a148fdd97aacd984f9ec52cd5cb35a5f6547f01095"></a><!-- doxytag: member="UT_RELATIVE" ref="a590f3660129c9cd7aed62b3a148fdd97aacd984f9ec52cd5cb35a5f6547f01095" args="" -->UT_RELATIVE</em>&nbsp;</td><td>
+<p>Unit relative to something others (for example %). </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a590f3660129c9cd7aed62b3a148fdd97a32d7134994422498e1a745090c96b655"></a><!-- doxytag: member="UT_COUNTER" ref="a590f3660129c9cd7aed62b3a148fdd97a32d7134994422498e1a745090c96b655" args="" -->UT_COUNTER</em>&nbsp;</td><td>
+<p>Integer number counter, it represents number of occurence of something. </p>
 </td></tr>
 </table>
 </dd>

@@ -1080,7 +1080,7 @@
     <name>CSamplesInfo.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_samples_info_8h</filename>
-    <includes id="_i_data_sequence_info_8h" name="IDataSequenceInfo.h" local="yes" imported="no">imeas/IDataSequenceInfo.h</includes>
+    <includes id="_c_data_sequence_info_base_8h" name="CDataSequenceInfoBase.h" local="yes" imported="no">imeas/CDataSequenceInfoBase.h</includes>
     <class kind="class">imeas::CSamplesInfo</class>
     <namespace>imeas</namespace>
   </compound>
@@ -1103,7 +1103,7 @@
     <name>IDataSequenceInfo.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_data_sequence_info_8h</filename>
-    <includes id="imeas_8h" name="imeas.h" local="yes" imported="no">imeas/imeas.h</includes>
+    <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
     <class kind="class">imeas::IDataSequenceInfo</class>
     <namespace>imeas</namespace>
   </compound>
@@ -6245,6 +6245,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
+      <name>GetNumericValueName</name>
+      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
+      <anchor>ab9844cca4f7b282b578e7a3f1bfe892f</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
       <name>GetNumericValueDescription</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
       <anchor>a0fd88a4782e5e91ec9f9c0319b6df93c</anchor>
@@ -6381,6 +6388,13 @@
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
       <anchor>aa5078c209ea812abb27b263737ce919f</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueName</name>
+      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
+      <anchor>ace3dfd70dbb6334b9c451f1a815ac4d8</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -7709,6 +7723,34 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNumericValuesCount</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>a380cfd1b8ff2dcd1b872ff755ac7e1eb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueName</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>a17f97a951adc0a4951eb3d6972ce8c8d</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueDescription</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>a2b8ac66049cf3e28f4b76004ec5c4944</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <name>GetNumericValueUnitInfo</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>a98d19e6600310b548af2e2bbb45613cb</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
@@ -8209,6 +8251,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
+      <name>GetNumericValueName</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>a807ba9208ec18a8c912d7ed8fedd8788</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
       <name>GetNumericValueDescription</name>
       <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
       <anchor>a249eb0edf8aa723a4003459b3ce1abc4</anchor>
@@ -8322,6 +8371,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QString</type>
+      <name>GetNumericValueName</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>a8e120a246115a3659eb3e7929160ecaf</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
       <name>GetNumericValueDescription</name>
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
       <anchor>a9fe3317941b0928c2452a81b13ed62de</anchor>
@@ -8373,7 +8429,7 @@
   <compound kind="class">
     <name>imeas::CSamplesInfo</name>
     <filename>classimeas_1_1_c_samples_info.html</filename>
-    <base virtualness="virtual">imeas::IDataSequenceInfo</base>
+    <base virtualness="virtual">imeas::CDataSequenceInfoBase</base>
     <member kind="function">
       <type></type>
       <name>CSamplesInfo</name>
@@ -8397,13 +8453,6 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetSequenceInfoFlags</name>
-      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
-      <anchor>a292e7629b92bd9e6286e7e93de4a9ba1</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
       <name>GetDefaultSamplesCount</name>
       <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
       <anchor>ab565faf5149b9570973ac501fd2d07d6</anchor>
@@ -8414,13 +8463,6 @@
       <name>GetDefaultChannelsCount</name>
       <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
       <anchor>a2aedd820128a93895552ed804fe328a5</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetWeightMode</name>
-      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
-      <anchor>ab6a671303f7e76ff4bd13a238849398d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -8568,6 +8610,7 @@
   <compound kind="class">
     <name>imeas::IDataSequenceInfo</name>
     <filename>classimeas_1_1_i_data_sequence_info.html</filename>
+    <base virtualness="virtual">imeas::INumericConstraints</base>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <name>SequenceInfoFlags</name>
@@ -8765,6 +8808,13 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
+      <name>GetNumericValueName</name>
+      <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
+      <anchor>adbde228cdec587b904b887db335fbb5d</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
       <name>GetNumericValueDescription</name>
       <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
       <anchor>a04e085fa7191e9ba6b778c69c2f6b012</anchor>
@@ -8848,6 +8898,12 @@
       <name>UT_RELATIVE</name>
       <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
       <anchor>a590f3660129c9cd7aed62b3a148fdd97aacd984f9ec52cd5cb35a5f6547f01095</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UT_COUNTER</name>
+      <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
+      <anchor>a590f3660129c9cd7aed62b3a148fdd97a32d7134994422498e1a745090c96b655</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">

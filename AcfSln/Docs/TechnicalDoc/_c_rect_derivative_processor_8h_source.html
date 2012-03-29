@@ -62,41 +62,42 @@
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050        <span class="comment">// reimplemented (imeas::INumericConstraints)</span>
 <a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a8aaa5845f57f38aea453a90cdefe07ab" title="Get number of expected numeric values.">GetNumericValuesCount</a>() <span class="keyword">const</span>;
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a0fd88a4782e5e91ec9f9c0319b6df93c" title="Get description of numeric value for specified list index.">GetNumericValueDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit.">imeas::IUnitInfo</a>&amp; <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a87bd4a695300f85c2526d6bb04279642" title="Get range of possible numeric values for specified list index.">GetNumericValueUnitInfo</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055        <span class="comment">// reimplemented (imeas::IUnitInfo)</span>
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a1f7091b5f0e9e4df0a59d151bac45219" title="Get type of unit.">GetUnitType</a>() <span class="keyword">const</span>;
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a14117132ffb3483b18a7e85088592326" title="Get name of unit.">GetUnitName</a>() <span class="keyword">const</span>;
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a71683c5497afb431d988bfe3733a197f" title="Get multiplication factor used to calculate user input values.">GetDisplayMultiplicationFactor</a>() <span class="keyword">const</span>;
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#af146bc0a65e5e5583ea415a5174e8835" title="Get range of possible filter value for specified dimension.">GetValueRange</a>() <span class="keyword">const</span>;
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a>&amp; <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#acaa2fddf52ca73f302a3b00ee6436947" title="Return number manipulator object for filter length value.">GetValueManip</a>() <span class="keyword">const</span>;
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 <span class="keyword">private</span>:
-<a name="l00063"></a>00063        std::string m_filterParamsId;
-<a name="l00064"></a>00064 };
-<a name="l00065"></a>00065 
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#ab9844cca4f7b282b578e7a3f1bfe892f" title="Get human readable name of numeric value for specified list index.">GetNumericValueName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a0fd88a4782e5e91ec9f9c0319b6df93c" title="Get human readable description of numeric value for specified list index.">GetNumericValueDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit.">imeas::IUnitInfo</a>&amp; <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a87bd4a695300f85c2526d6bb04279642" title="Get range of possible numeric values for specified list index.">GetNumericValueUnitInfo</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056        <span class="comment">// reimplemented (imeas::IUnitInfo)</span>
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a1f7091b5f0e9e4df0a59d151bac45219" title="Get type of unit.">GetUnitType</a>() <span class="keyword">const</span>;
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a14117132ffb3483b18a7e85088592326" title="Get name of unit.">GetUnitName</a>() <span class="keyword">const</span>;
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a71683c5497afb431d988bfe3733a197f" title="Get multiplication factor used to calculate user input values.">GetDisplayMultiplicationFactor</a>() <span class="keyword">const</span>;
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#af146bc0a65e5e5583ea415a5174e8835" title="Get range of possible filter value for specified dimension.">GetValueRange</a>() <span class="keyword">const</span>;
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a>&amp; <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#acaa2fddf52ca73f302a3b00ee6436947" title="Return number manipulator object for filter length value.">GetValueManip</a>() <span class="keyword">const</span>;
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 <span class="keyword">private</span>:
+<a name="l00064"></a>00064        std::string m_filterParamsId;
+<a name="l00065"></a>00065 };
 <a name="l00066"></a>00066 
-<a name="l00067"></a>00067 <span class="comment">// inline methods</span>
-<a name="l00068"></a>00068 
-<a name="l00069"></a><a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a446d473424596e7185e3baedfca44035">00069</a> <span class="keyword">inline</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a446d473424596e7185e3baedfca44035" title="Get parameter ID used to extract caliper parameter object from parameter set.">CRectDerivativeProcessor::GetFilterParamsId</a>()<span class="keyword"> const</span>
-<a name="l00070"></a>00070 <span class="keyword"></span>{
-<a name="l00071"></a>00071        <span class="keywordflow">return</span> m_filterParamsId;
-<a name="l00072"></a>00072 }
-<a name="l00073"></a>00073 
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="comment">// inline methods</span>
+<a name="l00069"></a>00069 
+<a name="l00070"></a><a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a446d473424596e7185e3baedfca44035">00070</a> <span class="keyword">inline</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a446d473424596e7185e3baedfca44035" title="Get parameter ID used to extract caliper parameter object from parameter set.">CRectDerivativeProcessor::GetFilterParamsId</a>()<span class="keyword"> const</span>
+<a name="l00071"></a>00071 <span class="keyword"></span>{
+<a name="l00072"></a>00072        <span class="keywordflow">return</span> m_filterParamsId;
+<a name="l00073"></a>00073 }
 <a name="l00074"></a>00074 
-<a name="l00075"></a><a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#ae5b6dc2b60a25a67419aeefa039bc91b">00075</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#ae5b6dc2b60a25a67419aeefa039bc91b" title="Set parameter ID used to extract caliper parameter object from parameter set.">CRectDerivativeProcessor::SetFilterParamsId</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)
-<a name="l00076"></a>00076 {
-<a name="l00077"></a>00077        m_filterParamsId = id;
-<a name="l00078"></a>00078 }
-<a name="l00079"></a>00079 
+<a name="l00075"></a>00075 
+<a name="l00076"></a><a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#ae5b6dc2b60a25a67419aeefa039bc91b">00076</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#ae5b6dc2b60a25a67419aeefa039bc91b" title="Set parameter ID used to extract caliper parameter object from parameter set.">CRectDerivativeProcessor::SetFilterParamsId</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)
+<a name="l00077"></a>00077 {
+<a name="l00078"></a>00078        m_filterParamsId = id;
+<a name="l00079"></a>00079 }
 <a name="l00080"></a>00080 
-<a name="l00081"></a>00081 } <span class="comment">// namespace iipr</span>
-<a name="l00082"></a>00082 
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 } <span class="comment">// namespace iipr</span>
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084 <span class="preprocessor">#endif // !iipr_CRectDerivativeProcessor_included</span>
-<a name="l00085"></a>00085 <span class="preprocessor"></span>
-<a name="l00086"></a>00086 
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 <span class="preprocessor">#endif // !iipr_CRectDerivativeProcessor_included</span>
+<a name="l00086"></a>00086 <span class="preprocessor"></span>
+<a name="l00087"></a>00087 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
