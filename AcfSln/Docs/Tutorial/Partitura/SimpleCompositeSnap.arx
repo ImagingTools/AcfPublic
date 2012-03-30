@@ -1,30 +1,81 @@
 <?xml version="1.0"?>
 <Acf>
   <AcfHeader>
-    <VersionInfos count="1">
+    <VersionInfos count="2">
       <Version>
         <Id>
           0
         </Id>
         <Number>
-          2246
+          1672
         </Number>
         <Description>
           ACF
         </Description>
       </Version>
+      <Version>
+        <Id>
+          1
+        </Id>
+        <Number>
+          301
+        </Number>
+        <Description>
+          ACF-Solutions
+        </Description>
+      </Version>
     </VersionInfos>
   </AcfHeader>
-  <ElementsList count="2">
+  <ElementsList count="5">
     <Element>
       <Id>
-        FileCamera
+        BitmapAcquisition
       </Id>
       <PackageId>
-        ProcessorVoce
+        QtCameraPck
       </PackageId>
       <ComponentId>
-        FileCamera
+        FileAcquisition
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="1">
+          <AttributeInfo>
+            <Id>
+              BitmapLoader
+            </Id>
+            <Type>
+              icomp::CReferenceAttribute
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                BitmapLoader
+              </Value>
+            </Data>
+          </AttributeInfo>
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        BitmapLoader
+      </Id>
+      <PackageId>
+        QtPck
+      </PackageId>
+      <ComponentId>
+        BitmapLoader
       </ComponentId>
       <Data>
         <IsEnabled>
@@ -49,7 +100,7 @@
                 true
               </IsEnabled>
               <Value>
-                Framework
+                SnapApplication
               </Value>
             </Data>
           </AttributeInfo>
@@ -58,13 +109,13 @@
     </Element>
     <Element>
       <Id>
-        Framework
+        SnapApplication
       </Id>
       <PackageId>
-        IacfTutorialVoce
+        SnapTutorialVoce
       </PackageId>
       <ComponentId>
-        CircleFinderTestFramework
+        SnapFramework
       </ComponentId>
       <Data>
         <IsEnabled>
@@ -76,7 +127,7 @@
         <AttributeInfoMap count="3">
           <AttributeInfo>
             <Id>
-              Camera
+              BitmapAcquisition
             </Id>
             <Type>
               icomp::CReferenceAttribute
@@ -89,13 +140,13 @@
                 true
               </IsEnabled>
               <Value>
-                FileCamera
+                BitmapAcquisition
               </Value>
             </Data>
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              CameraParamsSet
+              ParamsSet
             </Id>
             <Type>
               icomp::CReferenceAttribute
@@ -108,13 +159,13 @@
                 true
               </IsEnabled>
               <Value>
-                FileCamera/ParamsSet
+                SnapParams
               </Value>
             </Data>
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              CameraParamsSetGui
+              ParamsSetGui
             </Id>
             <Type>
               icomp::CReferenceAttribute
@@ -127,10 +178,71 @@
                 true
               </IsEnabled>
               <Value>
-                FileCamera/SetGui
+                SnapParamsGui
               </Value>
             </Data>
           </AttributeInfo>
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        SnapParams
+      </Id>
+      <PackageId>
+        SnapTutorialVoce
+      </PackageId>
+      <ComponentId>
+        FileSnapParams
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="1">
+          <AttributeInfo>
+            <Id>
+              AcquisitionDir
+            </Id>
+            <Type>
+              icomp::TAttribute&lt;QString&gt;
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                C:\Work\TestImages\Gray
+              </Value>
+            </Data>
+          </AttributeInfo>
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        SnapParamsGui
+      </Id>
+      <PackageId>
+        SnapTutorialVoce
+      </PackageId>
+      <ComponentId>
+        FileSnapParamsGui
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="0">
         </AttributeInfoMap>
       </Data>
     </Element>
@@ -143,7 +255,7 @@
         ibase::IApplication
       </InterfaceId>
       <ComponentId>
-        Framework
+        SnapApplication
       </ComponentId>
     </Interface>
   </ExportedInterfaces>

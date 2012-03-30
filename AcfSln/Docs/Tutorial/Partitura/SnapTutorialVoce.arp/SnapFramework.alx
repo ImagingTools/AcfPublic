@@ -15,44 +15,16 @@
       </Version>
     </VersionInfos>
   </AcfHeader>
-  <PositionMap count="15">
-    <Element>
-      <ComponentName>
-        AudioDock
-      </ComponentName>
-      <X>
-        325
-      </X>
-      <X>
-        325
-      </X>
-      <Note>
-        
-      </Note>
-    </Element>
+  <PositionMap count="9">
     <Element>
       <ComponentName>
         Bitmap
       </ComponentName>
       <X>
-        475
+        575
       </X>
       <X>
-        550
-      </X>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        BitmapDialogLoader
-      </ComponentName>
-      <X>
-        150
-      </X>
-      <X>
-        650
+        750
       </X>
       <Note>
         
@@ -60,13 +32,13 @@
     </Element>
     <Element>
       <ComponentName>
-        BitmapPersistenceGui
+        BitmapLoader
       </ComponentName>
       <X>
-        125
+        1050
       </X>
       <X>
-        525
+        750
       </X>
       <Note>
         
@@ -74,13 +46,13 @@
     </Element>
     <Element>
       <ComponentName>
-        BitmapView
+        ImageDialogLoader
       </ComponentName>
       <X>
-        650
+        825
       </X>
       <X>
-        550
+        600
       </X>
       <Note>
         
@@ -88,24 +60,10 @@
     </Element>
     <Element>
       <ComponentName>
-        ImageGui
+        Log
       </ComponentName>
       <X>
-        875
-      </X>
-      <X>
-        550
-      </X>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        LogDock
-      </ComponentName>
-      <X>
-        1025
+        1050
       </X>
       <X>
         100
@@ -116,13 +74,13 @@
     </Element>
     <Element>
       <ComponentName>
-        MediaDialogLoader
+        SnapGui
       </ComponentName>
       <X>
-        150
+        550
       </X>
       <X>
-        125
+        600
       </X>
       <Note>
         
@@ -130,55 +88,13 @@
     </Element>
     <Element>
       <ComponentName>
-        MediaLoader
+        SnapTab
       </ComponentName>
       <X>
-        125
+        575
       </X>
       <X>
-        225
-      </X>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        MediaPersistenceGui
-      </ComponentName>
-      <X>
-        525
-      </X>
-      <X>
-        150
-      </X>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        PersistenceDock
-      </ComponentName>
-      <X>
-        750
-      </X>
-      <X>
-        25
-      </X>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        PersistenceGui
-      </ComponentName>
-      <X>
-        750
-      </X>
-      <X>
-        150
+        475
       </X>
       <Note>
         
@@ -189,10 +105,10 @@
         StandaloneApp
       </ComponentName>
       <X>
-        375
+        575
       </X>
       <X>
-        50
+        100
       </X>
       <Note>
         
@@ -203,10 +119,10 @@
         VersionInfo
       </ComponentName>
       <X>
-        100
+        750
       </X>
       <X>
-        50
+        275
       </X>
       <Note>
         
@@ -214,13 +130,13 @@
     </Element>
     <Element>
       <ComponentName>
-        VideoGrabber
+        View
       </ComponentName>
       <X>
-        675
+        350
       </X>
       <X>
-        350
+        475
       </X>
       <Note>
         

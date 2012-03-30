@@ -1,75 +1,24 @@
 <?xml version="1.0"?>
 <Acf>
   <AcfHeader>
-    <VersionInfos count="2">
+    <VersionInfos count="1">
       <Version>
         <Id>
           0
         </Id>
         <Number>
-          1705
+          2211
         </Number>
         <Description>
           ACF
         </Description>
       </Version>
-      <Version>
-        <Id>
-          1
-        </Id>
-        <Number>
-          313
-        </Number>
-        <Description>
-          ACF-Solutions
-        </Description>
-      </Version>
     </VersionInfos>
   </AcfHeader>
-  <ElementsList count="7">
+  <ElementsList count="10">
     <Element>
       <Id>
-        BitmapLoader
-      </Id>
-      <PackageId>
-        QtPck
-      </PackageId>
-      <ComponentId>
-        BitmapLoader
-      </ComponentId>
-      <Data>
-        <IsEnabled>
-          true
-        </IsEnabled>
-        <Flags>
-          0
-        </Flags>
-        <AttributeInfoMap count="1">
-          <AttributeInfo>
-            <Id>
-              Log
-            </Id>
-            <Type>
-              icomp::CReferenceAttribute
-            </Type>
-            <ExportId>
-              
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                true
-              </IsEnabled>
-              <Value>
-                Framework
-              </Value>
-            </Data>
-          </AttributeInfo>
-        </AttributeInfoMap>
-      </Data>
-    </Element>
-    <Element>
-      <Id>
-        FileAcquisition
+        BitmapAcquisition
       </Id>
       <PackageId>
         QtCameraPck
@@ -109,13 +58,53 @@
     </Element>
     <Element>
       <Id>
-        FileSnapParam
+        BitmapLoader
+      </Id>
+      <PackageId>
+        QtPck
+      </PackageId>
+      <ComponentId>
+        BitmapLoader
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="1">
+          <AttributeInfo>
+            <Id>
+              Log
+            </Id>
+            <Type>
+              icomp::CReferenceAttribute
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                SnapApplication
+              </Value>
+            </Data>
+          </AttributeInfo>
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        ParamsManager
       </Id>
       <PackageId>
         BasePck
       </PackageId>
       <ComponentId>
-        FileNameParam
+        ParamsManager
       </ComponentId>
       <Data>
         <IsEnabled>
@@ -124,13 +113,13 @@
         <Flags>
           0
         </Flags>
-        <AttributeInfoMap count="1">
+        <AttributeInfoMap count="2">
           <AttributeInfo>
             <Id>
-              PathType
+              FixedParamSets
             </Id>
             <Type>
-              icomp::TAttribute&lt;int&gt;
+              icomp::CMultiReferenceAttribute
             </Type>
             <ExportId>
               
@@ -139,9 +128,38 @@
               <IsEnabled>
                 true
               </IsEnabled>
-              <Value>
-                2
-              </Value>
+              <Values count="2">
+                <Value>
+                  SnapParamsGray
+                </Value>
+                <Value>
+                  SnapParamsColor
+                </Value>
+              </Values>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              FixedSetNames
+            </Id>
+            <Type>
+              icomp::TMultiAttribute&lt;QString&gt;
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Values count="2">
+                <Value>
+                  Gray
+                </Value>
+                <Value>
+                  Color
+                </Value>
+              </Values>
             </Data>
           </AttributeInfo>
         </AttributeInfoMap>
@@ -149,13 +167,72 @@
     </Element>
     <Element>
       <Id>
-        FileSnapParamGui
+        ParamsManagerGui
       </Id>
       <PackageId>
         QtGuiPck
       </PackageId>
       <ComponentId>
-        FileNameParamGui
+        ParamsManagerGui
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="2">
+          <AttributeInfo>
+            <Id>
+              ParamsGui
+            </Id>
+            <Type>
+              icomp::CReferenceAttribute
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                SnapParamsGui
+              </Value>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              ParamsManager
+            </Id>
+            <Type>
+              icomp::CReferenceAttribute
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                ParamsManager
+              </Value>
+            </Data>
+          </AttributeInfo>
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        SelectableParameter
+      </Id>
+      <PackageId>
+        BasePck
+      </PackageId>
+      <ComponentId>
+        SelectableParamsSet
       </ComponentId>
       <Data>
         <IsEnabled>
@@ -167,10 +244,10 @@
         <AttributeInfoMap count="1">
           <AttributeInfo>
             <Id>
-              StartHint
+              ParamsManager
             </Id>
             <Type>
-              icomp::TAttribute&lt;QString&gt;
+              icomp::CReferenceAttribute
             </Type>
             <ExportId>
               
@@ -180,7 +257,7 @@
                 true
               </IsEnabled>
               <Value>
-                &lt;Enter image directory&gt;
+                ParamsManager
               </Value>
             </Data>
           </AttributeInfo>
@@ -189,10 +266,31 @@
     </Element>
     <Element>
       <Id>
-        Framework
+        SelectionParamGui
       </Id>
       <PackageId>
-        IacfTutorialVoce
+        QtGuiPck
+      </PackageId>
+      <ComponentId>
+        SelectionParamGui
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="0">
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        SnapApplication
+      </Id>
+      <PackageId>
+        SnapTutorialVoce
       </PackageId>
       <ComponentId>
         SnapFramework
@@ -220,7 +318,7 @@
                 true
               </IsEnabled>
               <Value>
-                FileAcquisition
+                BitmapAcquisition
               </Value>
             </Data>
           </AttributeInfo>
@@ -239,7 +337,7 @@
                 true
               </IsEnabled>
               <Value>
-                SnapParams
+                SelectableParameter
               </Value>
             </Data>
           </AttributeInfo>
@@ -258,7 +356,7 @@
                 true
               </IsEnabled>
               <Value>
-                SnapParamsGui
+                SelectionParamGui
               </Value>
             </Data>
           </AttributeInfo>
@@ -267,13 +365,13 @@
     </Element>
     <Element>
       <Id>
-        SnapParams
+        SnapParamsColor
       </Id>
       <PackageId>
-        BasePck
+        SnapTutorialVoce
       </PackageId>
       <ComponentId>
-        ComposedParamsSet
+        FileSnapParams
       </ComponentId>
       <Data>
         <IsEnabled>
@@ -282,13 +380,13 @@
         <Flags>
           0
         </Flags>
-        <AttributeInfoMap count="3">
+        <AttributeInfoMap count="1">
           <AttributeInfo>
             <Id>
-              Parameters
+              AcquisitionDir
             </Id>
             <Type>
-              icomp::CMultiReferenceAttribute
+              icomp::TAttribute&lt;QString&gt;
             </Type>
             <ExportId>
               
@@ -297,19 +395,38 @@
               <IsEnabled>
                 true
               </IsEnabled>
-              <Values count="1">
-                <Value>
-                  FileSnapParam
-                </Value>
-              </Values>
+              <Value>
+                C:\Work\TestImages\ProfileEditor
+              </Value>
             </Data>
           </AttributeInfo>
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        SnapParamsGray
+      </Id>
+      <PackageId>
+        SnapTutorialVoce
+      </PackageId>
+      <ComponentId>
+        FileSnapParams
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="1">
           <AttributeInfo>
             <Id>
-              ParametersId
+              AcquisitionDir
             </Id>
             <Type>
-              icomp::TMultiAttribute&lt;QString&gt;
+              icomp::TAttribute&lt;QString&gt;
             </Type>
             <ExportId>
               
@@ -318,29 +435,9 @@
               <IsEnabled>
                 true
               </IsEnabled>
-              <Values count="1">
-                <Value>
-                  FileBitmapAcquisition
-                </Value>
-              </Values>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              SlaveSets
-            </Id>
-            <Type>
-              icomp::CMultiReferenceAttribute
-            </Type>
-            <ExportId>
-              
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                true
-              </IsEnabled>
-              <Values count="0">
-              </Values>
+              <Value>
+                C:\Work\TestImages\Gray
+              </Value>
             </Data>
           </AttributeInfo>
         </AttributeInfoMap>
@@ -351,10 +448,10 @@
         SnapParamsGui
       </Id>
       <PackageId>
-        QtGuiPck
+        SnapTutorialVoce
       </PackageId>
       <ComponentId>
-        ComposedParamsSetGui
+        FileSnapParamsGui
       </ComponentId>
       <Data>
         <IsEnabled>
@@ -363,78 +460,20 @@
         <Flags>
           0
         </Flags>
-        <AttributeInfoMap count="2">
-          <AttributeInfo>
-            <Id>
-              Editors
-            </Id>
-            <Type>
-              icomp::CMultiReferenceAttribute
-            </Type>
-            <ExportId>
-              
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                true
-              </IsEnabled>
-              <Values count="1">
-                <Value>
-                  FileSnapParamGui
-                </Value>
-              </Values>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              Ids
-            </Id>
-            <Type>
-              icomp::TMultiAttribute&lt;QString&gt;
-            </Type>
-            <ExportId>
-              
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                true
-              </IsEnabled>
-              <Values count="1">
-                <Value>
-                  FileBitmapAcquisition
-                </Value>
-              </Values>
-            </Data>
-          </AttributeInfo>
+        <AttributeInfoMap count="0">
         </AttributeInfoMap>
       </Data>
     </Element>
   </ElementsList>
   <EmbeddedRegistriesList count="0">
   </EmbeddedRegistriesList>
-  <ExportedInterfaces count="3">
+  <ExportedInterfaces count="1">
     <Interface>
       <InterfaceId>
         ibase::IApplication
       </InterfaceId>
       <ComponentId>
-        Framework
-      </ComponentId>
-    </Interface>
-    <Interface>
-      <InterfaceId>
-        ibase::IApplicationInfo
-      </InterfaceId>
-      <ComponentId>
-        Framework
-      </ComponentId>
-    </Interface>
-    <Interface>
-      <InterfaceId>
-        iser::IVersionInfo
-      </InterfaceId>
-      <ComponentId>
-        Framework
+        SnapApplication
       </ComponentId>
     </Interface>
   </ExportedInterfaces>

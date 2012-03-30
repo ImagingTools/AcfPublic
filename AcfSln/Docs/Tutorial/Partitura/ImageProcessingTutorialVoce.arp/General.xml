@@ -16,9 +16,9 @@
     </VersionInfos>
   </AcfHeader>
   <Description>
-		Composed package for IACF tutorial
+		Image processing basics tutorial
 	</Description>
   <Keywords>
-		IACF Company='ImagingTools' Project='IACF' Author='"Witold Gantzke" "Kirill Lepskiy"'
+		Company='ImagingTools' Project='ACF-Solutions' Author='"Witold Gantzke" "Kirill Lepskiy"'
 	</Keywords>
 </Acf>
