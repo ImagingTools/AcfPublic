@@ -105,12 +105,6 @@
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
-    <name>CTimer.h</name>
-    <path>C:/Temp/Iacf/Include/inat/</path>
-    <filename>_c_timer_8h</filename>
-    <includes id="inat_8h" name="inat.h" local="yes" imported="no">inat/inat.h</includes>
-  </compound>
-  <compound kind="file">
     <name>inat.h</name>
     <path>C:/Temp/Iacf/Include/inat/</path>
     <filename>inat_8h</filename>

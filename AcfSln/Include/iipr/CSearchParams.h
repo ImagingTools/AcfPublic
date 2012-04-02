@@ -22,9 +22,11 @@
 
 #ifndef iipr_CSearchParams_included
 #define iipr_CSearchParams_included
-
-
 #include "iipr/ISearchParams.h"
+
+
+// ACF includes
+#include "iimg/CGeneralBitmap.h"
 
 
 namespace iipr
@@ -40,7 +42,7 @@ public:
 	CSearchParams();
 	
 	// reimplemented (iipr::ISearchParams)
-	virtual i2d::CRectangle GetSearchRegion() const;
+	virtual const iimg::IBitmap& GetModelImage() const;
 	virtual double GetMinScore() const;
 	virtual void SetMinScore(double minScore);
 	virtual const istd::CRange& GetRotationRange() const;
@@ -58,13 +60,14 @@ public:
 	virtual bool Serialize(iser::IArchive & archive);
 
 protected:
-	i2d::CRectangle m_searchRegion;
 	istd::CRange m_angleRange;
 	istd::CRange m_scaleRange;
 	int m_nominalModelsCount;
 	double m_minScore;
 	bool m_isRotationEnabled;
 	bool m_isScaleEnabled;
+
+	iimg::CGeneralBitmap m_modelImage;
 };
 
 

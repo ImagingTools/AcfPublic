@@ -6646,10 +6646,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual i2d::CRectangle</type>
-      <name>GetSearchRegion</name>
+      <type>virtual const iimg::IBitmap &amp;</type>
+      <name>GetModelImage</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>a22f511e31fc983d4767216ff560ba332</anchor>
+      <anchor>a3397014adc74bb92c2e7c42853298283</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -6744,13 +6744,6 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>i2d::CRectangle</type>
-      <name>m_searchRegion</name>
-      <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>a60c53896a4df3b1aca74bb005dfb518a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
       <type>istd::CRange</type>
       <name>m_angleRange</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
@@ -6790,6 +6783,13 @@
       <name>m_isScaleEnabled</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
       <anchor>a0584125b6650dcc7e207d1ae4a0c824b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iimg::CGeneralBitmap</type>
+      <name>m_modelImage</name>
+      <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
+      <anchor>a8cfad68358c234a846eef70aae418fae</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7439,13 +7439,6 @@
     <name>iipr::ISearchParams</name>
     <filename>classiipr_1_1_i_search_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual i2d::CRectangle</type>
-      <name>GetSearchRegion</name>
-      <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>a5f5fe7e199737afc1ea8150d28574dd3</anchor>
-      <arglist>() const =0</arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iimg::IBitmap &amp;</type>
       <name>GetModelImage</name>

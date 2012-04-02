@@ -42,33 +42,31 @@
 <a name="l00019"></a><a class="code" href="classiipr_1_1_i_search_params.html">00019</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_i_search_params.html" title="Common interface for a set of parameters for a model search.">ISearchParams</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
 <a name="l00020"></a>00020 {
 <a name="l00021"></a>00021 <span class="keyword">public</span>:
-<a name="l00025"></a>00025        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> <a class="code" href="classiipr_1_1_i_search_params.html#a5f5fe7e199737afc1ea8150d28574dd3" title="Gets the region that is used for model search.">GetSearchRegion</a>() <span class="keyword">const</span> = 0;
-<a name="l00026"></a>00026               
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; <a class="code" href="classiipr_1_1_i_search_params.html#a776d053539fa475ae7893ce7a827c547" title="Returns the model image.">GetModelImage</a>() <span class="keyword">const</span> = 0;
+<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; <a class="code" href="classiipr_1_1_i_search_params.html#a776d053539fa475ae7893ce7a827c547" title="Returns the model image.">GetModelImage</a>() <span class="keyword">const</span> = 0;
+<a name="l00026"></a>00026 
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_i_search_params.html#a1db7e9dae7d78569ac67a0f70f43ea01" title="Get minimum score for a succefull search.">GetMinScore</a>() <span class="keyword">const</span> = 0;
 <a name="l00031"></a>00031 
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_i_search_params.html#a1db7e9dae7d78569ac67a0f70f43ea01" title="Get minimum score for a succefull search.">GetMinScore</a>() <span class="keyword">const</span> = 0;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#a8bbb7f79fb3e93ffbff78990c47c8538" title="Set minimum score for a succefull search.">SetMinScore</a>(<span class="keywordtype">double</span> minScore) = 0;
 <a name="l00036"></a>00036 
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#a8bbb7f79fb3e93ffbff78990c47c8538" title="Set minimum score for a succefull search.">SetMinScore</a>(<span class="keywordtype">double</span> minScore) = 0;
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a>&amp; <a class="code" href="classiipr_1_1_i_search_params.html#a388a2b254d790f8ba3db86befb178ed6" title="Get rotation range for the model search.">GetRotationRange</a>() <span class="keyword">const</span> = 0;
 <a name="l00041"></a>00041 
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a>&amp; <a class="code" href="classiipr_1_1_i_search_params.html#a388a2b254d790f8ba3db86befb178ed6" title="Get rotation range for the model search.">GetRotationRange</a>() <span class="keyword">const</span> = 0;
-<a name="l00046"></a>00046 
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#a2345bbd541b1753e28e7a024ad994b4e" title="Set rotation range for the model search.">SetRotationRange</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a>&amp; angleRange) = 0;
-<a name="l00052"></a>00052 
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a>&amp; <a class="code" href="classiipr_1_1_i_search_params.html#aca78512a786767871db8575871fd6f6c" title="Get scale range for the model search.">GetScaleRange</a>() <span class="keyword">const</span> = 0;
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#a2345bbd541b1753e28e7a024ad994b4e" title="Set rotation range for the model search.">SetRotationRange</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a>&amp; angleRange) = 0;
+<a name="l00047"></a>00047 
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a>&amp; <a class="code" href="classiipr_1_1_i_search_params.html#aca78512a786767871db8575871fd6f6c" title="Get scale range for the model search.">GetScaleRange</a>() <span class="keyword">const</span> = 0;
+<a name="l00053"></a>00053 
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#a9251dec5c19467110f464b13dd5445e1" title="Set scale range for the model search.">SetScaleRange</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a>&amp; scaleRange) = 0;
 <a name="l00058"></a>00058 
-<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#a9251dec5c19467110f464b13dd5445e1" title="Set scale range for the model search.">SetScaleRange</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a>&amp; scaleRange) = 0;
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_i_search_params.html#ae551a172057a394d39d5274ea00f0561" title="Get the number of models that should be found for a successfull search result.">GetNominalModelsCount</a>() <span class="keyword">const</span> = 0;
 <a name="l00063"></a>00063 
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_i_search_params.html#ae551a172057a394d39d5274ea00f0561" title="Get the number of models that should be found for a successfull search result.">GetNominalModelsCount</a>() <span class="keyword">const</span> = 0;
-<a name="l00068"></a>00068 
-<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#aa8ed7557cfd27fcf7d282a5729c0043c" title="Set the number of models that should be found for a successfull search result.">SetNominalModelsCount</a>(<span class="keywordtype">int</span> nominalModelsCount) = 0;
-<a name="l00074"></a>00074 };
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 } <span class="comment">// namespace iipr</span>
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080 <span class="preprocessor">#endif // !iipr_IISearchParams_included</span>
-<a name="l00081"></a>00081 <span class="preprocessor"></span>
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_i_search_params.html#aa8ed7557cfd27fcf7d282a5729c0043c" title="Set the number of models that should be found for a successfull search result.">SetNominalModelsCount</a>(<span class="keywordtype">int</span> nominalModelsCount) = 0;
+<a name="l00069"></a>00069 };
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 } <span class="comment">// namespace iipr</span>
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075 <span class="preprocessor">#endif // !iipr_IISearchParams_included</span>
+<a name="l00076"></a>00076 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

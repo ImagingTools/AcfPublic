@@ -117,7 +117,6 @@ I_EXPORT_COMPONENT(
 			"Calculate image histogram",
 			"Processor Histogram");
 
-
 I_EXPORT_COMPONENT(
 			CircleFinderParams,
 			"Circle finder parameters",
@@ -157,6 +156,11 @@ I_EXPORT_COMPONENT(
 			ImageBinarizeProcessor,
 			"Image binarization processor with static threshold",
 			"Binarization Grayscale Image");
+
+I_EXPORT_COMPONENT(
+			SearchParams,
+			"General parameter for a pattern search",
+			"Pattern Search Model Geometric");
 
 
 } // namespace IprPck
