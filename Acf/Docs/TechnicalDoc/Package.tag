@@ -444,7 +444,6 @@
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_file_convert_over_processor_comp_8h</filename>
     <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
-    <includes id="_i_critical_section_8h" name="ICriticalSection.h" local="yes" imported="no">isys/ICriticalSection.h</includes>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
     <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ibase/IFileConvertCopy.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
@@ -3292,15 +3291,6 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
-    <name>CCriticalSection.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_critical_section_8h</filename>
-    <includes id="_i_critical_section_8h" name="ICriticalSection.h" local="yes" imported="no">isys/ICriticalSection.h</includes>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CCriticalSection</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
     <name>CDefaultRegistryLoaderProvider.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_default_registry_loader_provider_8h</filename>
@@ -5797,15 +5787,6 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>CSectionBlocker.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_c_section_blocker_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
-    <includes id="_i_critical_section_8h" name="ICriticalSection.h" local="yes" imported="no">isys/ICriticalSection.h</includes>
-    <class kind="class">isys::CSectionBlocker</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
     <name>CSystemEnvironmentBase.h</name>
     <path>C:/Temp/Acf/Include/isys/</path>
     <filename>_c_system_environment_base_8h</filename>
@@ -5819,15 +5800,6 @@
     <filename>_c_system_info_base_8h</filename>
     <includes id="_i_system_info_8h" name="ISystemInfo.h" local="yes" imported="no">isys/ISystemInfo.h</includes>
     <class kind="class">isys::CSystemInfoBase</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ICriticalSection.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_i_critical_section_8h</filename>
-    <includes id="isys_8h" name="isys.h" local="yes" imported="no">isys/isys.h</includes>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">isys::ICriticalSection</class>
     <namespace>isys</namespace>
   </compound>
   <compound kind="file">
@@ -6755,7 +6727,6 @@
     <class kind="class">iqt::CDefaultServicesProvider</class>
     <class kind="class">istd::CStaticServicesProvider</class>
     <class kind="class">istd::ITimeStamp</class>
-    <class kind="class">isys::ICriticalSection</class>
     <class kind="class">isys::IFileSystem</class>
     <class kind="class">isys::IProcessEnvironment</class>
     <class kind="class">isys::ISystemEnvironment</class>
@@ -30460,7 +30431,6 @@
     <class kind="class">iqt::CClipboardSerializerComp</class>
     <class kind="class">iqt::CComponentAccessor</class>
     <class kind="class">iqt::CCopyProcessorComp</class>
-    <class kind="class">iqt::CCriticalSection</class>
     <class kind="class">iqt::CDefaultRegistryLoaderProvider</class>
     <class kind="class">iqt::CDefaultServicesProvider</class>
     <class kind="class">iqt::CDirList</class>
@@ -31072,39 +31042,6 @@
       <name>OnComponentCreated</name>
       <anchorfile>classiqt_1_1_c_copy_processor_comp.html</anchorfile>
       <anchor>a3f4e89be171b82c512a22d73e2619120</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CCriticalSection</name>
-    <filename>classiqt_1_1_c_critical_section.html</filename>
-    <base>isys::ICriticalSection</base>
-    <member kind="function">
-      <type></type>
-      <name>CCriticalSection</name>
-      <anchorfile>classiqt_1_1_c_critical_section.html</anchorfile>
-      <anchor>a0bd5da41df8a206a6ba8cec1a6ac169f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Enter</name>
-      <anchorfile>classiqt_1_1_c_critical_section.html</anchorfile>
-      <anchor>a3fd6fb1a0a28f6106e8155ebae643654</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>EnterIfFree</name>
-      <anchorfile>classiqt_1_1_c_critical_section.html</anchorfile>
-      <anchor>a390a28281755e6a9a8b58c675401b8f4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Leave</name>
-      <anchorfile>classiqt_1_1_c_critical_section.html</anchorfile>
-      <anchor>af9ec325f0f31e213faf3605b6472e99a</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -46610,40 +46547,13 @@
   <compound kind="namespace">
     <name>isys</name>
     <filename>namespaceisys.html</filename>
-    <class kind="class">isys::CSectionBlocker</class>
     <class kind="class">isys::CSystemEnvironmentBase</class>
     <class kind="class">isys::CSystemInfoBase</class>
-    <class kind="class">isys::ICriticalSection</class>
     <class kind="class">isys::IFileSystem</class>
     <class kind="class">isys::IFunctionsProvider</class>
     <class kind="class">isys::IProcessEnvironment</class>
     <class kind="class">isys::ISystemEnvironment</class>
     <class kind="class">isys::ISystemInfo</class>
-  </compound>
-  <compound kind="class">
-    <name>isys::CSectionBlocker</name>
-    <filename>classisys_1_1_c_section_blocker.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>CSectionBlocker</name>
-      <anchorfile>classisys_1_1_c_section_blocker.html</anchorfile>
-      <anchor>a4f1a6db85d97f46d5689b849d0400b19</anchor>
-      <arglist>(const isys::ICriticalSection *sectionPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~CSectionBlocker</name>
-      <anchorfile>classisys_1_1_c_section_blocker.html</anchorfile>
-      <anchor>a9bcc2772c6a822e5e125debcd031666b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Reset</name>
-      <anchorfile>classisys_1_1_c_section_blocker.html</anchorfile>
-      <anchor>a04528947a5607cb3078efc4aa21931da</anchor>
-      <arglist>()</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>isys::CSystemEnvironmentBase</name>
@@ -46737,32 +46647,6 @@
       <anchorfile>classisys_1_1_c_system_info_base.html</anchorfile>
       <anchor>ad1c1a258773b67d6ca95e4ec0672e4d8</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isys::ICriticalSection</name>
-    <filename>classisys_1_1_i_critical_section.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>Enter</name>
-      <anchorfile>classisys_1_1_i_critical_section.html</anchorfile>
-      <anchor>a52c077c1e82d814c59f9239f9b0d3362</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>EnterIfFree</name>
-      <anchorfile>classisys_1_1_i_critical_section.html</anchorfile>
-      <anchor>a4a6ea5b6e5808bf020bf599fbda47b99</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>Leave</name>
-      <anchorfile>classisys_1_1_i_critical_section.html</anchorfile>
-      <anchor>a1e554cb481c7830439219b7c61e1db03</anchor>
-      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">

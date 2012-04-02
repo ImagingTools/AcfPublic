@@ -24,15 +24,17 @@
 #define iipr_IISearchParams_included
 
 
+// ACF includes
 #include "iser/ISerializable.h"
-
 #include "i2d/CRectangle.h"
-
 #include "iimg/IBitmap.h"
 
 
 namespace iipr
 {
+
+
+class ISearchConstraints;
 
 
 /**	
@@ -41,10 +43,10 @@ namespace iipr
 class ISearchParams: virtual public iser::ISerializable
 {
 public:
-	/** 
-		Returns the model image. 
+	/**
+		Get constraints for the search parameters.
 	*/
-	virtual const iimg::IBitmap& GetModelImage() const = 0;
+	virtual const ISearchConstraints* GetSearchConstraints() const = 0;
 
 	/**
 		Get minimum score for a succefull search.

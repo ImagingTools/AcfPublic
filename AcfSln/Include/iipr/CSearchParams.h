@@ -42,7 +42,7 @@ public:
 	CSearchParams();
 	
 	// reimplemented (iipr::ISearchParams)
-	virtual const iimg::IBitmap& GetModelImage() const;
+	virtual const ISearchConstraints* GetSearchConstraints() const;
 	virtual double GetMinScore() const;
 	virtual void SetMinScore(double minScore);
 	virtual const istd::CRange& GetRotationRange() const;
@@ -66,8 +66,6 @@ protected:
 	double m_minScore;
 	bool m_isRotationEnabled;
 	bool m_isScaleEnabled;
-
-	iimg::CGeneralBitmap m_modelImage;
 };
 
 

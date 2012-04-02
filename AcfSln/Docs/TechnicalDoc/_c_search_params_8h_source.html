@@ -43,7 +43,7 @@
 <a name="l00020"></a>00020        <a class="code" href="classiipr_1_1_c_search_params.html#add422098279cdfacf18d94921f74d0a5">CSearchParams</a>();
 <a name="l00021"></a>00021        
 <a name="l00022"></a>00022        <span class="comment">// reimplemented (iipr::ISearchParams)</span>
-<a name="l00023"></a>00023        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; <a class="code" href="classiipr_1_1_c_search_params.html#a3397014adc74bb92c2e7c42853298283" title="Returns the model image.">GetModelImage</a>() <span class="keyword">const</span>;
+<a name="l00023"></a>00023        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiipr_1_1_i_search_constraints.html" title="Interface for search algorithm limitations.">ISearchConstraints</a>* <a class="code" href="classiipr_1_1_c_search_params.html#a9963a8f48468902a79f8ebca5fc095ba" title="Get constraints for the search parameters.">GetSearchConstraints</a>() <span class="keyword">const</span>;
 <a name="l00024"></a>00024        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_c_search_params.html#a2fcd10b1be3272504a86e4d841eca343" title="Get minimum score for a succefull search.">GetMinScore</a>() <span class="keyword">const</span>;
 <a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_search_params.html#ac6199c9b3567db71fdd61e1c3671707b" title="Set minimum score for a succefull search.">SetMinScore</a>(<span class="keywordtype">double</span> minScore);
 <a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a>&amp; <a class="code" href="classiipr_1_1_c_search_params.html#ae781c61124782820a4d3ef1d29e9ceb8" title="Get rotation range for the model search.">GetRotationRange</a>() <span class="keyword">const</span>;
@@ -67,17 +67,15 @@
 <a name="l00044"></a><a class="code" href="classiipr_1_1_c_search_params.html#a7482c094c903d46c107c63f3a267a48e">00044</a>        <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_c_search_params.html#a7482c094c903d46c107c63f3a267a48e">m_minScore</a>;
 <a name="l00045"></a><a class="code" href="classiipr_1_1_c_search_params.html#a0fb4d62fe2f4044f214a9af6e84b9095">00045</a>        <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_search_params.html#a0fb4d62fe2f4044f214a9af6e84b9095">m_isRotationEnabled</a>;
 <a name="l00046"></a><a class="code" href="classiipr_1_1_c_search_params.html#a0584125b6650dcc7e207d1ae4a0c824b">00046</a>        <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_search_params.html#a0584125b6650dcc7e207d1ae4a0c824b">m_isScaleEnabled</a>;
-<a name="l00047"></a>00047 
-<a name="l00048"></a><a class="code" href="classiipr_1_1_c_search_params.html#a8cfad68358c234a846eef70aae418fae">00048</a>        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_c_general_bitmap.html">iimg::CGeneralBitmap</a> <a class="code" href="classiipr_1_1_c_search_params.html#a8cfad68358c234a846eef70aae418fae">m_modelImage</a>;
-<a name="l00049"></a>00049 };
-<a name="l00050"></a>00050 
+<a name="l00047"></a>00047 };
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 } <span class="comment">// namespace iipr</span>
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052 } <span class="comment">// namespace iipr</span>
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055 <span class="preprocessor">#endif // !iipr_CSearchParams_included</span>
-<a name="l00056"></a>00056 <span class="preprocessor"></span>
-<a name="l00057"></a>00057 
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="preprocessor">#endif // !iipr_CSearchParams_included</span>
+<a name="l00054"></a>00054 <span class="preprocessor"></span>
+<a name="l00055"></a>00055 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -26,18 +26,15 @@
 
 // Qt includes
 #include <QtCore/QFileSystemWatcher>
-#include <QtCore/QFileInfo>
-#include <QtCore/QTimer>
 #include <QtCore/QThread>
 #include <QtCore/QDir>
-#include <QtCore/QDateTime>
 #include <QtCore/QSet>
+#include <QtCore/QMutex>
 
 // ACF includes
 #include "imod/TSingleModelObserverBase.h"
 #include "icomp/CComponentBase.h"
 #include "ibase/TLoggerCompWrap.h"
-#include "iqt/CCriticalSection.h"
 #include "iprm/IParamsSet.h"
 #include "iprm/IFileNameParam.h"
 
@@ -160,8 +157,6 @@ private:
 	ifpf::IMonitoringSession::FileItems m_directoryFiles;
 	FilesSet m_nonAccessedFiles;
 
-	mutable iqt::CCriticalSection m_lock;
-
 	bool m_finishThread;
 
 	FileSystemChanges m_folderChanges;
@@ -191,6 +186,8 @@ private:
 	I_ATTR(bool, m_autoStartAttrPtr);
 
 	bool m_lockChanges;
+
+	mutable QMutex m_mutex;
 };
 
 

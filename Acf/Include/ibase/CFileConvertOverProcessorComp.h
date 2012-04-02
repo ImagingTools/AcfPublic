@@ -24,9 +24,11 @@
 #define ibase_CFileConvertOverProcessorComp_included
 
 
-#include "istd/TSmartPtr.h"
+// Qt includes
+#include <QtCore/QMutex>
 
-#include "isys/ICriticalSection.h"
+// ACF includes
+#include "istd/TSmartPtr.h"
 
 #include "iser/IFileLoader.h"
 
@@ -79,9 +81,9 @@ private:
 	I_REF(iproc::IProgressManager, m_progressManagerCompPtr);
 	I_REF(iprm::IParamsSet, m_processingParamsSetCompPtr);
 
-	istd::TSmartPtr<isys::ICriticalSection> m_lock;
-
 	int m_progressSessionId;
+
+	mutable QMutex m_mutex;
 };
 
 

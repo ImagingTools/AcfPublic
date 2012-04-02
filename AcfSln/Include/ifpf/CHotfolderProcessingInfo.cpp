@@ -23,15 +23,14 @@
 #include "ifpf/CHotfolderProcessingInfo.h"
 
 
+// Qt includes
+#include <QtCore/QMutexLocker>
+
 // ACF includes
 #include "istd/TChangeNotifier.h"
 #include "istd/CStaticServicesProvider.h"
-
-#include "isys/CSectionBlocker.h"
-
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
-
 #include "iproc/IProcessor.h"
 
 
@@ -42,17 +41,14 @@ namespace ifpf
 // public methods
 
 CHotfolderProcessingInfo::CHotfolderProcessingInfo()
-	:m_isWorking(false)
+:	m_isWorking(false)
 {
-	m_lockPtr = istd::CreateService<isys::ICriticalSection>();
-
-	I_ASSERT(m_lockPtr.IsValid());
 }
 
 
 bool CHotfolderProcessingInfo::ItemExists(const QString& inputFilePath, ifpf::IHotfolderProcessingItem** foundItemPtr) const
 {
-	isys::CSectionBlocker lock(const_cast<isys::ICriticalSection*>(m_lockPtr.GetPtr()));
+	QMutexLocker locker(&m_mutex);
 
 	for(int itemIndex = 0; itemIndex < m_processingItems.GetCount(); itemIndex++){
 		ifpf::IHotfolderProcessingItem* itemPtr = m_processingItems.GetAt(itemIndex);
@@ -95,11 +91,9 @@ const ifpf::IHotfolderProcessingItem* CHotfolderProcessingInfo::AddProcessingIte
 	itemPtr->SetProcessingState(iproc::IProcessor::TS_NONE);
 	itemPtr->SetSlavePtr(this);
 
-	m_lockPtr->Enter();
+	QMutexLocker locker(&m_mutex);
 
 	m_processingItems.PushBack(itemPtr);
-
-	m_lockPtr->Leave();
 
 	return itemPtr;
 }
@@ -107,7 +101,7 @@ const ifpf::IHotfolderProcessingItem* CHotfolderProcessingInfo::AddProcessingIte
 
 void CHotfolderProcessingInfo::RemoveProcessingItem(ifpf::IHotfolderProcessingItem* fileItemPtr)
 {
-	isys::CSectionBlocker lock(const_cast<isys::ICriticalSection*>(m_lockPtr.GetPtr()));
+	QMutexLocker locker(&m_mutex);
 
 	// if file is in processing, abort
 	if (fileItemPtr->GetProcessingState() == iproc::IProcessor::TS_WAIT){
@@ -119,14 +113,12 @@ void CHotfolderProcessingInfo::RemoveProcessingItem(ifpf::IHotfolderProcessingIt
 	if (!m_processingItems.Remove(fileItemPtr)){
 		changePtr.Abort();
 	}
-
-	lock.Reset();
 }
 
 
 int CHotfolderProcessingInfo::GetProcessingItemsCount() const
 {
-	isys::CSectionBlocker lock(const_cast<isys::ICriticalSection*>(m_lockPtr.GetPtr()));
+	QMutexLocker locker(&m_mutex);
 
 	return m_processingItems.GetCount();
 }
@@ -134,7 +126,7 @@ int CHotfolderProcessingInfo::GetProcessingItemsCount() const
 
 ifpf::IHotfolderProcessingItem* CHotfolderProcessingInfo::GetProcessingItem(int processingItemIndex) const
 {
-	isys::CSectionBlocker lock(const_cast<isys::ICriticalSection*>(m_lockPtr.GetPtr()));
+	QMutexLocker locker(&m_mutex);
 
 	return m_processingItems.GetAt(processingItemIndex);
 }
@@ -160,7 +152,7 @@ void CHotfolderProcessingInfo::SetWorking(bool working)
 
 bool CHotfolderProcessingInfo::Serialize(iser::IArchive& archive)
 {
-	isys::CSectionBlocker lock(const_cast<isys::ICriticalSection*>(m_lockPtr.GetPtr()));
+	QMutexLocker locker(&m_mutex);
 
 	bool retVal = true;
 
@@ -210,7 +202,7 @@ bool CHotfolderProcessingInfo::Serialize(iser::IArchive& archive)
 	retVal = retVal && archive.EndTag(processingItemsTag);
 
 	if (retVal && !archive.IsStoring()){
-		lock.Reset();
+		locker.unlock();
 
 		changePtr.SetPtr(this);
 	}

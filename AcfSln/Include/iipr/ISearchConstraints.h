@@ -1,8 +1,8 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,43 +15,38 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF.
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
 
 
-#include "iqt/CCriticalSection.h"
+#ifndef iipr_IISearchParamsConstraints_included
+#define iipr_IISearchParamsConstraints_included
 
 
-namespace iqt
+#include "istd/IChangeable.h"
+#include "istd/CRange.h"
+
+
+namespace iipr
 {
 
 
-CCriticalSection::CCriticalSection()
-	:m_section(QMutex::Recursive)
+/**	
+	Interface for search algorithm limitations.
+*/
+class ISearchConstraints: virtual public istd::IChangeable
 {
-}
+public:
+	virtual const istd::CRange& GetRotationRangeConstraints() const = 0;
+	virtual bool IsRotationRangeSupported() const = 0;
+	virtual const istd::CRange& GetScaleRangeConstraints() const = 0;
+	virtual bool IsScaleRangeSupported() const = 0;
+};
 
 
-// reimplemented (isys::ICriticalSection)
-
-void CCriticalSection::Enter()
-{
-	m_section.lock();
-}
+} // namespace iipr
 
 
-bool CCriticalSection::EnterIfFree()
-{
-	return m_section.tryLock();
-}
-
-
-void CCriticalSection::Leave()
-{
-	m_section.unlock();
-}
-
-
-} // namespace iqt
+#endif // !iipr_IISearchParamsConstraints_included
 

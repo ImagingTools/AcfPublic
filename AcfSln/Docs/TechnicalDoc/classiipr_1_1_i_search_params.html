@@ -58,8 +58,8 @@ Inheritance diagram for iipr::ISearchParams:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a776d053539fa475ae7893ce7a827c547">GetModelImage</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the model image.  <a href="#a776d053539fa475ae7893ce7a827c547"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiipr_1_1_i_search_constraints.html">ISearchConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a231c87db1f09bfd96473021a4cbb74dd">GetSearchConstraints</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints for the search parameters.  <a href="#a231c87db1f09bfd96473021a4cbb74dd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a1db7e9dae7d78569ac67a0f70f43ea01">GetMinScore</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get minimum score for a succefull search.  <a href="#a1db7e9dae7d78569ac67a0f70f43ea01"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a8bbb7f79fb3e93ffbff78990c47c8538">SetMinScore</a> (double minScore)=0</td></tr>
@@ -80,7 +80,7 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for a set of parameters for a model search. </p>
 
-<p>Definition at line <a class="el" href="_i_search_params_8h_source.html#l00019">19</a> of file <a class="el" href="_i_search_params_8h_source.html">ISearchParams.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_search_params_8h_source.html#l00021">21</a> of file <a class="el" href="_i_search_params_8h_source.html">ISearchParams.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a1db7e9dae7d78569ac67a0f70f43ea01"></a><!-- doxytag: member="iipr::ISearchParams::GetMinScore" ref="a1db7e9dae7d78569ac67a0f70f43ea01" args="() const =0" -->
 <div class="memitem">
@@ -99,26 +99,6 @@ Public Member Functions</h2></td></tr>
 <p>Get minimum score for a succefull search. </p>
 
 <p>Implemented in <a class="el" href="classiipr_1_1_c_search_params.html#a2fcd10b1be3272504a86e4d841eca343">iipr::CSearchParams</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a776d053539fa475ae7893ce7a827c547"></a><!-- doxytag: member="iipr::ISearchParams::GetModelImage" ref="a776d053539fa475ae7893ce7a827c547" args="() const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; iipr::ISearchParams::GetModelImage </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Returns the model image. </p>
-
-<p>Implemented in <a class="el" href="classiipr_1_1_c_search_params.html#a3397014adc74bb92c2e7c42853298283">iipr::CSearchParams</a>.</p>
 
 </div>
 </div>
@@ -180,6 +160,26 @@ Public Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiipr_1_1_i_search_params.html#a9251dec5c19467110f464b13dd5445e1" title="Set scale range for the model search.">SetScaleRange()</a> </dd></dl>
 
 <p>Implemented in <a class="el" href="classiipr_1_1_c_search_params.html#a6f46b67e8b19f67657357bd5a3d417da">iipr::CSearchParams</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a231c87db1f09bfd96473021a4cbb74dd"></a><!-- doxytag: member="iipr::ISearchParams::GetSearchConstraints" ref="a231c87db1f09bfd96473021a4cbb74dd" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classiipr_1_1_i_search_constraints.html">ISearchConstraints</a>* iipr::ISearchParams::GetSearchConstraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get constraints for the search parameters. </p>
+
+<p>Implemented in <a class="el" href="classiipr_1_1_c_search_params.html#a9963a8f48468902a79f8ebca5fc095ba">iipr::CSearchParams</a>.</p>
 
 </div>
 </div>

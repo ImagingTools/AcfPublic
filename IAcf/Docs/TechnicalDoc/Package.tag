@@ -77,20 +77,6 @@
     <namespace>iqaxmm</namespace>
   </compound>
   <compound kind="file">
-    <name>CCriticalSection.h</name>
-    <path>C:/Temp/Iacf/Include/inat/</path>
-    <filename>inat_2_c_critical_section_8h</filename>
-    <includes id="inat_8h" name="inat.h" local="yes" imported="no">inat/inat.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>CCriticalSection.h</name>
-    <path>C:/Temp/Iacf/Include/iwin/</path>
-    <filename>iwin_2_c_critical_section_8h</filename>
-    <includes id="iwin_8h" name="iwin.h" local="yes" imported="no">iwin/iwin.h</includes>
-    <class kind="class">iwin::CCriticalSection</class>
-    <namespace>iwin</namespace>
-  </compound>
-  <compound kind="file">
     <name>CDllFunctionsProvider.h</name>
     <path>C:/Temp/Iacf/Include/inat/</path>
     <filename>inat_2_c_dll_functions_provider_8h</filename>
@@ -2345,7 +2331,6 @@
   <compound kind="namespace">
     <name>iwin</name>
     <filename>namespaceiwin.html</filename>
-    <class kind="class">iwin::CCriticalSection</class>
     <class kind="class">iwin::CDefaultServicesProvider</class>
     <class kind="class">iwin::CDllFunctionsProvider</class>
     <class kind="class">iwin::CPerformanceTimeStamp</class>
@@ -2354,46 +2339,6 @@
     <class kind="class">iwin::CSystemInfo</class>
     <class kind="class">iwin::CTimeStampCacheComp</class>
     <class kind="class">iwin::TComPtr</class>
-  </compound>
-  <compound kind="class">
-    <name>iwin::CCriticalSection</name>
-    <filename>classiwin_1_1_c_critical_section.html</filename>
-    <base virtualness="virtual">isys::ICriticalSection</base>
-    <member kind="function">
-      <type></type>
-      <name>CCriticalSection</name>
-      <anchorfile>classiwin_1_1_c_critical_section.html</anchorfile>
-      <anchor>ab99617677e23448cb7f16bd6e30bede6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~CCriticalSection</name>
-      <anchorfile>classiwin_1_1_c_critical_section.html</anchorfile>
-      <anchor>a1a7a05f2d778420d7bb8d0d7b6cddd89</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Enter</name>
-      <anchorfile>classiwin_1_1_c_critical_section.html</anchorfile>
-      <anchor>ab094091864cc890e712b7158c89efc93</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>EnterIfFree</name>
-      <anchorfile>classiwin_1_1_c_critical_section.html</anchorfile>
-      <anchor>a4f76cf9c2e009d8beb9f8d9493d48437</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Leave</name>
-      <anchorfile>classiwin_1_1_c_critical_section.html</anchorfile>
-      <anchor>abdc566ac799ca6c4b126263862942b98</anchor>
-      <arglist>()</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iwin::CDefaultServicesProvider</name>

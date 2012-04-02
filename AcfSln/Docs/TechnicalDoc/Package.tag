@@ -954,6 +954,13 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>ISearchConstraints.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_i_search_constraints_8h</filename>
+    <class kind="class">iipr::ISearchConstraints</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>ISearchParams.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_search_params_8h</filename>
@@ -1661,6 +1668,16 @@
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
     <class kind="class">iqtipr::CProjectionShape</class>
+    <namespace>iqtipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSearchBasedFeaturesSupplierGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
+    <filename>_c_search_based_features_supplier_gui_comp_8h</filename>
+    <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
+    <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
+    <class kind="class">iqtipr::CSearchBasedFeaturesSupplierGuiComp</class>
+    <class kind="class">iqtipr::CSearchBasedFeaturesSupplierGuiComp::ParamsObserver</class>
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
@@ -3097,13 +3114,6 @@
     <name>ifpf::CFileSystemChangeStorage</name>
     <filename>classifpf_1_1_c_file_system_change_storage.html</filename>
     <base virtualness="virtual">ifpf::IFileSystemChangeStorage</base>
-    <member kind="function">
-      <type></type>
-      <name>CFileSystemChangeStorage</name>
-      <anchorfile>classifpf_1_1_c_file_system_change_storage.html</anchorfile>
-      <anchor>a0b109d6eec3d93df1cf1bd08cb4c993a</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetStorageItemsCount</name>
@@ -3321,10 +3331,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>istd::TSmartPtr&lt; isys::ICriticalSection &gt;</type>
-      <name>m_lockPtr</name>
+      <type>QMutex</type>
+      <name>m_mutex</name>
       <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>aff910ff829468f5622a9fe5acb482962</anchor>
+      <anchor>a60529b2cf50c08714ab7d9aec66b4d5d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5034,6 +5044,7 @@
     <class kind="class">iipr::IProjectionConstraints</class>
     <class kind="class">iipr::IProjectionParams</class>
     <class kind="class">iipr::IRingPatternGeneratorParams</class>
+    <class kind="class">iipr::ISearchConstraints</class>
     <class kind="class">iipr::ISearchParams</class>
     <class kind="class">iipr::TFeatureWrap</class>
     <class kind="class">iipr::TImageParamProcessorCompBase</class>
@@ -6646,10 +6657,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const iimg::IBitmap &amp;</type>
-      <name>GetModelImage</name>
+      <type>virtual const ISearchConstraints *</type>
+      <name>GetSearchConstraints</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>a3397014adc74bb92c2e7c42853298283</anchor>
+      <anchor>a9963a8f48468902a79f8ebca5fc095ba</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -6783,13 +6794,6 @@
       <name>m_isScaleEnabled</name>
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
       <anchor>a0584125b6650dcc7e207d1ae4a0c824b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>iimg::CGeneralBitmap</type>
-      <name>m_modelImage</name>
-      <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
-      <anchor>a8cfad68358c234a846eef70aae418fae</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7436,14 +7440,47 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::ISearchConstraints</name>
+    <filename>classiipr_1_1_i_search_constraints.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const istd::CRange &amp;</type>
+      <name>GetRotationRangeConstraints</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>a4300242f37d9b3c7ee7a7cc8c2182324</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsRotationRangeSupported</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>aa437b7ba3dfa2fbb1e1c75cb9a2acae8</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const istd::CRange &amp;</type>
+      <name>GetScaleRangeConstraints</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>aa493dcc76ae927e1d4319ad35cad80d3</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsScaleRangeSupported</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>a59429c1c0b9872ba5ff924ee7eff2aeb</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::ISearchParams</name>
     <filename>classiipr_1_1_i_search_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
-      <type>virtual const iimg::IBitmap &amp;</type>
-      <name>GetModelImage</name>
+      <type>virtual const ISearchConstraints *</type>
+      <name>GetSearchConstraints</name>
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
-      <anchor>a776d053539fa475ae7893ce7a827c547</anchor>
+      <anchor>a231c87db1f09bfd96473021a4cbb74dd</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -12271,6 +12308,7 @@
     <class kind="class">iqtipr::CCircleFinderParamsGuiComp</class>
     <class kind="class">iqtipr::CLineProjectionSupplierGuiComp</class>
     <class kind="class">iqtipr::CProjectionShape</class>
+    <class kind="class">iqtipr::CSearchBasedFeaturesSupplierGuiComp</class>
     <class kind="class">iqtipr::CValueSupplierGuiComp</class>
   </compound>
   <compound kind="class">
@@ -12501,6 +12539,157 @@
       <anchorfile>classiqtipr_1_1_c_projection_shape.html</anchorfile>
       <anchor>aefef15dd210ac541fde35e19ea397f1a</anchor>
       <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtipr::CSearchBasedFeaturesSupplierGuiComp</name>
+    <filename>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</filename>
+    <base>TSupplierGuiCompBase&lt; Ui::CSearchBasedFeaturesSupplierGuiComp &gt;</base>
+    <class kind="class">iqtipr::CSearchBasedFeaturesSupplierGuiComp::ParamsObserver</class>
+    <member kind="enumeration">
+      <name>ColumnType</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a987696d6998db2f2a611815f942cc9be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_SCORE</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a987696d6998db2f2a611815f942cc9bea82d5f2e058036ad010b8e53e2fe0702b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_X</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a987696d6998db2f2a611815f942cc9bea36c0c643764d95914ee38b8200e75c85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_Y</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a987696d6998db2f2a611815f942cc9beafbf97958e5aa79f45dac48b1cb6fe331</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_ANGLE</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a987696d6998db2f2a611815f942cc9beaee2a3086187a80c2f954350b547ba5f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_X_SCALE</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a987696d6998db2f2a611815f942cc9beadccca87addafbea160f4f03f05bf5d72</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_Y_SCALE</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a987696d6998db2f2a611815f942cc9beac3295ff54c48b6972bacb151bae0e599</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CSearchBasedFeaturesSupplierGuiComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>ae08774f52b192b30c9f8cfaa2fd6f988</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSearchBasedFeaturesSupplierGuiComp</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>ada57267820c20e102cc354fa63f5a08f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_TestButton_clicked</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a217441d92d511901d3c0a8742d3bd83c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_LoadParamsButton_clicked</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a7b355ab82eb84ef5adf68e974df7397d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_SaveParamsButton_clicked</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a7bf25c1f1f62003be3ff7ec952b1221a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>GetParamsWidget</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>ad7b8b0d008c667d2800cc4eca638c348</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreateShapes</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>aa016338d123a7b48bb284c7f7536e958</anchor>
+      <arglist>(int sceneId, Shapes &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>af3ffb4548b31f53e48a94d936375ca43</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a5b0ba931a51005936119096efb7011d3</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>ab089ac6d27dc53727f46ea0596f58e8e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a47349aff291d427801847a6f3943737d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>af9d2735f53f3df11fa336ad78dcc827b</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtipr::CSearchBasedFeaturesSupplierGuiComp::ParamsObserver</name>
+    <filename>classiqtipr_1_1_c_search_based_features_supplier_gui_comp_1_1_params_observer.html</filename>
+    <base>imod::CSingleModelObserverBase</base>
+    <member kind="function">
+      <type></type>
+      <name>ParamsObserver</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp_1_1_params_observer.html</anchorfile>
+      <anchor>aff1f365e7b2201fd545f7aef61b056ca</anchor>
+      <arglist>(CSearchBasedFeaturesSupplierGuiComp *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp_1_1_params_observer.html</anchorfile>
+      <anchor>a91044fb3dc297e39a3c4680afda65ffd</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">

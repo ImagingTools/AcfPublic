@@ -22,9 +22,12 @@
 
 #include "ibase/CFileConvertOverProcessorComp.h"
 
-#include "istd/CStaticServicesProvider.h"
 
-#include "isys/CSectionBlocker.h"
+// Qt includes
+#include <QtCore/QMutexLocker>
+
+// ACF includes
+#include "istd/CStaticServicesProvider.h"
 
 
 namespace ibase
@@ -36,7 +39,6 @@ namespace ibase
 CFileConvertOverProcessorComp::CFileConvertOverProcessorComp()
 :	m_progressSessionId(0)
 {
-	m_lock = istd::CreateService<isys::ICriticalSection>();
 }
 
 
@@ -47,7 +49,7 @@ bool CFileConvertOverProcessorComp::ConvertFile(
 			const QString& outputFilePath,
 			const iprm::IParamsSet* /*paramsSetPtr*/) const
 {
-	isys::CSectionBlocker blocker(m_lock.GetPtr());
+	QMutexLocker blocker(&m_mutex);
 
 	if (!m_inputFileLoaderCompPtr.IsValid()){
 		SendErrorMessage(0, "No file loader defined", "File processing component");

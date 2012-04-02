@@ -90,13 +90,12 @@ Protected Types</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classifpf_1_1_c_hotfolder_processing_info.html#ad80099b1d9fb53af75e7a25a9e18760d">FileItems</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_hotfolder_processing_info.html#a43c988e5acb8cde9bf3997434ee49a6c">m_processingItems</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_hotfolder_processing_info.html#a876570a8f9e51b107d479ed73fd50f83">m_isWorking</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">istd::TSmartPtr</a><br class="typebreak"/>
-&lt; <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_i_critical_section.html">isys::ICriticalSection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_hotfolder_processing_info.html#aff910ff829468f5622a9fe5acb482962">m_lockPtr</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QMutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_hotfolder_processing_info.html#a60529b2cf50c08714ab7d9aec66b4d5d">m_mutex</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implementation of the processing data model of the hotfolder. </p>
 
-<p>Definition at line <a class="el" href="_c_hotfolder_processing_info_8h_source.html#l00032">32</a> of file <a class="el" href="_c_hotfolder_processing_info_8h_source.html">CHotfolderProcessingInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_hotfolder_processing_info_8h_source.html#l00030">30</a> of file <a class="el" href="_c_hotfolder_processing_info_8h_source.html">CHotfolderProcessingInfo.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="ad80099b1d9fb53af75e7a25a9e18760d"></a><!-- doxytag: member="ifpf::CHotfolderProcessingInfo::FileItems" ref="ad80099b1d9fb53af75e7a25a9e18760d" args="" -->
 <div class="memitem">
@@ -109,7 +108,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_hotfolder_processing_info_8h_source.html#l00061">61</a> of file <a class="el" href="_c_hotfolder_processing_info_8h_source.html">CHotfolderProcessingInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_hotfolder_processing_info_8h_source.html#l00059">59</a> of file <a class="el" href="_c_hotfolder_processing_info_8h_source.html">CHotfolderProcessingInfo.h</a>.</p>
 
 </div>
 </div>
@@ -124,7 +123,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_hotfolder_processing_info_8h_source.html#l00060">60</a> of file <a class="el" href="_c_hotfolder_processing_info_8h_source.html">CHotfolderProcessingInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_hotfolder_processing_info_8h_source.html#l00058">58</a> of file <a class="el" href="_c_hotfolder_processing_info_8h_source.html">CHotfolderProcessingInfo.h</a>.</p>
 
 </div>
 </div>
@@ -359,22 +358,22 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_hotfolder_processing_info_8h_source.html#l00065">65</a> of file <a class="el" href="_c_hotfolder_processing_info_8h_source.html">CHotfolderProcessingInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_hotfolder_processing_info_8h_source.html#l00063">63</a> of file <a class="el" href="_c_hotfolder_processing_info_8h_source.html">CHotfolderProcessingInfo.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aff910ff829468f5622a9fe5acb482962"></a><!-- doxytag: member="ifpf::CHotfolderProcessingInfo::m_lockPtr" ref="aff910ff829468f5622a9fe5acb482962" args="" -->
+<a class="anchor" id="a60529b2cf50c08714ab7d9aec66b4d5d"></a><!-- doxytag: member="ifpf::CHotfolderProcessingInfo::m_mutex" ref="a60529b2cf50c08714ab7d9aec66b4d5d" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">istd::TSmartPtr</a>&lt;<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisys_1_1_i_critical_section.html">isys::ICriticalSection</a>&gt; <a class="el" href="classifpf_1_1_c_hotfolder_processing_info.html#aff910ff829468f5622a9fe5acb482962">ifpf::CHotfolderProcessingInfo::m_lockPtr</a><code> [protected]</code></td>
+          <td class="memname">QMutex <a class="el" href="classifpf_1_1_c_hotfolder_processing_info.html#a60529b2cf50c08714ab7d9aec66b4d5d">ifpf::CHotfolderProcessingInfo::m_mutex</a><code> [mutable, protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_hotfolder_processing_info_8h_source.html#l00067">67</a> of file <a class="el" href="_c_hotfolder_processing_info_8h_source.html">CHotfolderProcessingInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_hotfolder_processing_info_8h_source.html#l00065">65</a> of file <a class="el" href="_c_hotfolder_processing_info_8h_source.html">CHotfolderProcessingInfo.h</a>.</p>
 
 </div>
 </div>
@@ -389,7 +388,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_hotfolder_processing_info_8h_source.html#l00063">63</a> of file <a class="el" href="_c_hotfolder_processing_info_8h_source.html">CHotfolderProcessingInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_hotfolder_processing_info_8h_source.html#l00061">61</a> of file <a class="el" href="_c_hotfolder_processing_info_8h_source.html">CHotfolderProcessingInfo.h</a>.</p>
 
 </div>
 </div>

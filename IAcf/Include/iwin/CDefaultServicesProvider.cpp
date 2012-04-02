@@ -30,7 +30,6 @@
 #include "istd/CStaticServicesProvider.h"
 
 #include "iwin/CProcessEnvironment.h"
-#include "iwin/CCriticalSection.h"
 #include "iwin/CSystemEnvironment.h"
 #include "iwin/CSystemInfo.h"
 
@@ -43,9 +42,6 @@ void CDefaultServicesProvider::RegisterServices()
 {
 	static iwin::CProcessEnvironment applicationEnvironment;
 	istd::CStaticServicesProvider::RegisterService<isys::IProcessEnvironment>(&applicationEnvironment);
-
-	static iwin::CCriticalSection criticalSection;
-	istd::CStaticServicesProvider::RegisterService<isys::ICriticalSection>(&criticalSection);
 
 	static iwin::CSystemEnvironment systemEnvironment;
 	istd::CStaticServicesProvider::RegisterService<isys::ISystemEnvironment>(&systemEnvironment);

@@ -27,12 +27,11 @@
 // STL includes
 #include <vector>
 
+// Qt includes
+#include <QtCore/QMutex>
 
 // ACF includes
 #include "istd/TSmartPtr.h"
-
-#include "isys/ICriticalSection.h"
-
 
 // AcfSln includes
 #include "ifpf/IFileSystemChangeStorage.h"
@@ -49,8 +48,6 @@ namespace ifpf
 class CFileSystemChangeStorage: virtual public ifpf::IFileSystemChangeStorage
 {
 public:
-	CFileSystemChangeStorage();
-
 	// reimplemented (ifpf::IFileSystemChangeStorage)
 	virtual int	 GetStorageItemsCount() const;
 	virtual QString GetItemPath(int fileIndex) const;
@@ -71,7 +68,7 @@ private:
 	typedef std::vector<FileItem> FileItems;
 	FileItems m_storageItems;
 
-	istd::TSmartPtr<isys::ICriticalSection> m_lockPtr;
+	mutable QMutex m_mutex;
 };
 
 

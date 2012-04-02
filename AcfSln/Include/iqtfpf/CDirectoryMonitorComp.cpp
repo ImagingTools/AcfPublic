@@ -24,14 +24,12 @@
 
 
 // Qt includes
+#include <QtCore/QMutexLocker>
 #include <QtCore/QElapsedTimer>
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
-
 #include "imod/IModel.h"
-
-#include "isys/CSectionBlocker.h"
 
 
 namespace iqtfpf
@@ -146,9 +144,9 @@ void CDirectoryMonitorComp::run()
 			continue;
 		}
 
-		// set parameters and do file search:
-		m_lock.Enter();
+		QMutexLocker locker(&m_mutex);
 
+		// set parameters and do file search:
 		int observingChanges = m_observingChanges;
 		QStringList acceptPatterns = m_fileFilterExpressions;
 		int observingItemTypes = m_observingItemTypes;
@@ -156,7 +154,7 @@ void CDirectoryMonitorComp::run()
 		m_directoryPendingChangesCounter = 0;
 		m_lockChanges = true;
 
-		m_lock.Leave();
+		locker.unlock();
 
 		QStringList addedFiles;
 		QStringList removedFiles;
@@ -274,7 +272,7 @@ void CDirectoryMonitorComp::run()
 			}
 		}
 
-		isys::CSectionBlocker block(&m_lock);
+		locker.relock();
 
 		m_folderChanges.addedFiles = addedFiles;
 		m_folderChanges.removedFiles = removedFiles;
@@ -319,7 +317,7 @@ void CDirectoryMonitorComp::run()
 
 void CDirectoryMonitorComp::OnFolderChanged(int changeFlags)
 {
-	isys::CSectionBlocker block(&m_lock);
+	QMutexLocker locker(&m_mutex);
 
 	I_ASSERT(m_fileSystemChangeStorageCompPtr.IsValid());
 	if (m_fileSystemChangeStorageCompPtr.IsValid()){
@@ -366,7 +364,7 @@ void CDirectoryMonitorComp::OnFolderChanged(int changeFlags)
 
 void CDirectoryMonitorComp::OnDirectoryChangeNotification(const QString& /*directory*/)
 {
-	isys::CSectionBlocker block(&m_lock);
+	QMutexLocker locker(&m_mutex);
 
 	++m_directoryPendingChangesCounter;
 }
@@ -438,7 +436,7 @@ void CDirectoryMonitorComp::StopObserverThread()
 
 void CDirectoryMonitorComp::ResetFiles()
 {
-	isys::CSectionBlocker block(&m_lock);
+	QMutexLocker locker(&m_mutex);
 
 	m_directoryFiles.clear();
 
@@ -503,7 +501,7 @@ void CDirectoryMonitorComp::MonitoringParamsObserver::AfterUpdate(imod::IModel* 
 {
 	I_ASSERT(modelPtr != NULL);
 	if (modelPtr != NULL){
-		isys::CSectionBlocker block(&m_parent.m_lock);
+		QMutexLocker locker(&m_parent.m_mutex);
 
 		const ifpf::IDirectoryMonitorParams* directoryMonitorParamsPtr = dynamic_cast<const ifpf::IDirectoryMonitorParams*>(modelPtr);
 		I_ASSERT(directoryMonitorParamsPtr != NULL);
