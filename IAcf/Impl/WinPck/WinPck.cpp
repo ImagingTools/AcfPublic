@@ -29,9 +29,6 @@ namespace WinPck
 {
 
 
-I_EXPORT_DEFAULT_SERVICES
-
-
 I_EXPORT_PACKAGE(
 			"WinPck",
 			"Widows dependend standard package",

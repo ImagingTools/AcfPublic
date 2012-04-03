@@ -1471,8 +1471,6 @@
     <name>CXslSerializerComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtex/</path>
     <filename>_c_xsl_serializer_comp_8h</filename>
-    <includes id="_c_xsl_transformation_read_archive_8h" name="CXslTransformationReadArchive.h" local="yes" imported="no">iqtex/CXslTransformationReadArchive.h</includes>
-    <includes id="_c_xsl_transformation_write_archive_8h" name="CXslTransformationWriteArchive.h" local="yes" imported="no">iqtex/CXslTransformationWriteArchive.h</includes>
     <class kind="class">iqtex::CXslSerializerComp</class>
     <namespace>iqtex</namespace>
   </compound>
@@ -10686,39 +10684,13 @@
   <compound kind="class">
     <name>iqtex::CXslSerializerComp</name>
     <filename>classiqtex_1_1_c_xsl_serializer_comp.html</filename>
-    <base>TLoggerCompWrap&lt; ibase::CFileTypeInfoComp &gt;</base>
-    <base virtualness="virtual">iser::IFileLoader</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>a2651cb70f658699e5dce6b84ded5c278</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_BAD_EXTENSION</name>
-      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>a2651cb70f658699e5dce6b84ded5c278abd1872a625bb67a7b8b02af6a30ec8e1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_UNSUPPORTED_VERSION</name>
-      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>a2651cb70f658699e5dce6b84ded5c278ad102ee43d3b92ef832eb9bddcd0d5805</anchor>
-      <arglist></arglist>
-    </member>
+    <base>ibase::CFileSerializerCompBase</base>
     <member kind="typedef">
-      <type>ibase::TLoggerCompWrap&lt; ibase::CFileTypeInfoComp &gt;</type>
+      <type>ibase::CFileSerializerCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>a2c12cf114b9ea9fe900265c791b4a551</anchor>
+      <anchor>a59fcb66b78c67ae2438a3e89eda69edb</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOperationSupported</name>
-      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>a7abf9d65b13281c3a8900e38ce06b436</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -10735,39 +10707,11 @@
       <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const iser::IVersionInfo *</type>
-      <name>GetVersionInfo</name>
-      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>ac7e5d1b6dca8b0d3e3f9b0cdef3e6583</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnReadError</name>
       <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
       <anchor>a7e5c11877cdc9a68b9587ed59baee1d8</anchor>
       <arglist>(const iser::IArchive &amp;archive, const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckMinimalVersion</name>
-      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>aff950958781cc1a921c01d2cbcc8c8a8</anchor>
-      <arglist>(const iser::ISerializable &amp;object, const iser::IVersionInfo &amp;versionInfo) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckInputFilePath</name>
-      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>ac4cefb9d8b2bf773e6741f0075b7a970</anchor>
-      <arglist>(const QString filePath) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckTargetDirectory</name>
-      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
-      <anchor>abbd11d0956c8fb86f1b9bdb9e3401b75</anchor>
-      <arglist>(const QString dirPath) const </arglist>
     </member>
   </compound>
   <compound kind="class">

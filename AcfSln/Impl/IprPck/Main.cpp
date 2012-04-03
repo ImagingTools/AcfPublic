@@ -30,8 +30,6 @@ namespace IprPck
 {
 
 
-I_EXPORT_DEFAULT_SERVICES
-
 I_EXPORT_PACKAGE(
 			"IprPck",
 			"Image processing package",

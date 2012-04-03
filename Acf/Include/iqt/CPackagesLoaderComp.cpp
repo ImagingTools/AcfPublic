@@ -30,7 +30,6 @@
 #include <QtCore/QFileInfo>
 #include <QtGui/QMessageBox>
 
-
 // ACF includes
 #include "istd/TChangeNotifier.h"
 
@@ -38,7 +37,7 @@
 
 #include "icomp/export.h"
 
-#include "iqt/CFileSystem.h"
+#include "iqt/CSystem.h"
 
 
 namespace iqt
@@ -95,7 +94,7 @@ bool CPackagesLoaderComp::LoadPackages(const QString& configFilePath)
 		if (!path.isEmpty()){
 			QDir applicationDir = QCoreApplication::applicationDirPath();
 
-			QString enrolledPath = iqt::CFileSystem::GetEnrolledPath(path);
+			QString enrolledPath = iqt::CSystem::GetEnrolledPath(path);
 
 			m_configFilePath = applicationDir.absoluteFilePath(enrolledPath);
 		}
@@ -250,15 +249,9 @@ bool CPackagesLoaderComp::RegisterPackageFile(const QString& file)
 	if (fileInfo.isFile()){
 		RealPackagesMap::const_iterator foundIter = m_realPackagesMap.find(packageId);
 		if (foundIter == m_realPackagesMap.end()){
-			CDllFunctionsProvider& provider = GetProviderRef(fileInfo);
-			if (provider.IsValid()){
-				// register services:
-				icomp::RegisterServicesFunc registerServicesInfoPtr = (icomp::RegisterServicesFunc)provider.GetFunction(I_EXPORT_SERVICES_FUNCTION_NAME);
-				if (registerServicesInfoPtr != NULL){
-					registerServicesInfoPtr(&istd::CStaticServicesProvider::GetProviderInstance());
-				}
-
-				icomp::GetPackageInfoFunc getInfoPtr = (icomp::GetPackageInfoFunc)provider.GetFunction(I_PACKAGE_EXPORT_FUNCTION_NAME);
+			QLibrary& provider = GetLibrary(fileInfo);
+			if (provider.isLoaded()){
+				icomp::GetPackageInfoFunc getInfoPtr = (icomp::GetPackageInfoFunc)provider.resolve(I_PACKAGE_EXPORT_FUNCTION_NAME);
 				if (getInfoPtr != NULL){
 					icomp::CPackageStaticInfo* infoPtr = getInfoPtr();
 					if (infoPtr != NULL){
@@ -443,7 +436,7 @@ bool CPackagesLoaderComp::LoadConfigFile(const QString& configFile)
 }
 
 
-CDllFunctionsProvider& CPackagesLoaderComp::GetProviderRef(const QFileInfo& fileInfo)
+QLibrary& CPackagesLoaderComp::GetLibrary(const QFileInfo& fileInfo)
 {
 	QString absolutePath = fileInfo.canonicalFilePath();
 
@@ -454,17 +447,15 @@ CDllFunctionsProvider& CPackagesLoaderComp::GetProviderRef(const QFileInfo& file
 		return *iter->second;
 	}
 
-	FunctionsProviderPtr& providerPtr = m_dllCacheMap[absolutePath];
-	providerPtr.SetPtr(new CDllFunctionsProvider(absolutePath));
-	I_ASSERT(providerPtr.IsValid());
-
-	if (!providerPtr->IsValid()){
+	LibraryPtr& libraryPtr = m_dllCacheMap[absolutePath];
+	libraryPtr.SetPtr(new QLibrary(absolutePath));
+	if (!libraryPtr.IsValid() || !libraryPtr->load()){
 		SendErrorMessage(
 					MI_CANNOT_REGISTER,
 					QObject::tr("Cannot register components from package %1").arg(fileInfo.fileName()));
 	}
 
-	return *providerPtr;
+	return *libraryPtr;
 }
 
 
@@ -501,7 +492,7 @@ CPackagesLoaderComp::LogingRegistry::ElementInfo* CPackagesLoaderComp::LogingReg
 
 bool CPackagesLoaderComp::CheckAndMarkPath(const QDir& directory, const QString& path, QString& resultPath) const
 {
-	QString fullPath = QFileInfo(directory.filePath(iqt::CFileSystem::GetEnrolledPath(path))).canonicalFilePath();
+	QString fullPath = QFileInfo(directory.filePath(iqt::CSystem::GetEnrolledPath(path))).canonicalFilePath();
 	if (m_usedFilesList.find(fullPath) == m_usedFilesList.end()){
 		m_usedFilesList.insert(fullPath);
 

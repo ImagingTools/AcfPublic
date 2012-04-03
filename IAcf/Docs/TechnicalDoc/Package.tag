@@ -77,20 +77,6 @@
     <namespace>iqaxmm</namespace>
   </compound>
   <compound kind="file">
-    <name>CDllFunctionsProvider.h</name>
-    <path>C:/Temp/Iacf/Include/inat/</path>
-    <filename>inat_2_c_dll_functions_provider_8h</filename>
-    <includes id="inat_8h" name="inat.h" local="yes" imported="no">inat/inat.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>CDllFunctionsProvider.h</name>
-    <path>C:/Temp/Iacf/Include/iwin/</path>
-    <filename>iwin_2_c_dll_functions_provider_8h</filename>
-    <includes id="iwin_8h" name="iwin.h" local="yes" imported="no">iwin/iwin.h</includes>
-    <class kind="class">iwin::CDllFunctionsProvider</class>
-    <namespace>iwin</namespace>
-  </compound>
-  <compound kind="file">
     <name>inat.h</name>
     <path>C:/Temp/Iacf/Include/inat/</path>
     <filename>inat_8h</filename>
@@ -228,40 +214,10 @@
     <namespace>isgige</namespace>
   </compound>
   <compound kind="file">
-    <name>CDefaultServicesProvider.h</name>
-    <path>C:/Temp/Iacf/Include/iwin/</path>
-    <filename>_c_default_services_provider_8h</filename>
-    <includes id="iwin_8h" name="iwin.h" local="yes" imported="no">iwin/iwin.h</includes>
-    <class kind="class">iwin::CDefaultServicesProvider</class>
-    <namespace>iwin</namespace>
-  </compound>
-  <compound kind="file">
     <name>CPerformanceTimeStamp.h</name>
     <path>C:/Temp/Iacf/Include/iwin/</path>
     <filename>_c_performance_time_stamp_8h</filename>
     <class kind="class">iwin::CPerformanceTimeStamp</class>
-    <namespace>iwin</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CProcessEnvironment.h</name>
-    <path>C:/Temp/Iacf/Include/iwin/</path>
-    <filename>_c_process_environment_8h</filename>
-    <class kind="class">iwin::CProcessEnvironment</class>
-    <namespace>iwin</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CSystemEnvironment.h</name>
-    <path>C:/Temp/Iacf/Include/iwin/</path>
-    <filename>_c_system_environment_8h</filename>
-    <class kind="class">iwin::CSystemEnvironment</class>
-    <namespace>iwin</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CSystemInfo.h</name>
-    <path>C:/Temp/Iacf/Include/iwin/</path>
-    <filename>_c_system_info_8h</filename>
-    <includes id="iwin_8h" name="iwin.h" local="yes" imported="no">iwin/iwin.h</includes>
-    <class kind="class">iwin::CSystemInfo</class>
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
@@ -2331,72 +2287,9 @@
   <compound kind="namespace">
     <name>iwin</name>
     <filename>namespaceiwin.html</filename>
-    <class kind="class">iwin::CDefaultServicesProvider</class>
-    <class kind="class">iwin::CDllFunctionsProvider</class>
     <class kind="class">iwin::CPerformanceTimeStamp</class>
-    <class kind="class">iwin::CProcessEnvironment</class>
-    <class kind="class">iwin::CSystemEnvironment</class>
-    <class kind="class">iwin::CSystemInfo</class>
     <class kind="class">iwin::CTimeStampCacheComp</class>
     <class kind="class">iwin::TComPtr</class>
-  </compound>
-  <compound kind="class">
-    <name>iwin::CDefaultServicesProvider</name>
-    <filename>classiwin_1_1_c_default_services_provider.html</filename>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>RegisterServices</name>
-      <anchorfile>classiwin_1_1_c_default_services_provider.html</anchorfile>
-      <anchor>a1e06c229438b118e22927f30bb9ca9a7</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iwin::CDllFunctionsProvider</name>
-    <filename>classiwin_1_1_c_dll_functions_provider.html</filename>
-    <base virtualness="virtual">isys::IFunctionsProvider</base>
-    <member kind="function">
-      <type></type>
-      <name>CDllFunctionsProvider</name>
-      <anchorfile>classiwin_1_1_c_dll_functions_provider.html</anchorfile>
-      <anchor>ae7b398dcabd4eb707cb84cb74badfb1a</anchor>
-      <arglist>(const QString &amp;dllPath=&quot;&quot;)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~CDllFunctionsProvider</name>
-      <anchorfile>classiwin_1_1_c_dll_functions_provider.html</anchorfile>
-      <anchor>a0a882282d4d9a085e201075369aef4f4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>OpenDll</name>
-      <anchorfile>classiwin_1_1_c_dll_functions_provider.html</anchorfile>
-      <anchor>a3875650d2324a3443213d6b7251ae566</anchor>
-      <arglist>(const QString &amp;dllPath)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Reset</name>
-      <anchorfile>classiwin_1_1_c_dll_functions_provider.html</anchorfile>
-      <anchor>a5a0ea872f7db1f8658d5cce9720c7ef5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsValid</name>
-      <anchorfile>classiwin_1_1_c_dll_functions_provider.html</anchorfile>
-      <anchor>a1708cdf707125690ba2abaac855153c5</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void *</type>
-      <name>GetFunction</name>
-      <anchorfile>classiwin_1_1_c_dll_functions_provider.html</anchorfile>
-      <anchor>a397b1858800f6853e82f68cc53488fb5</anchor>
-      <arglist>(const std::string &amp;id) const </arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iwin::CPerformanceTimeStamp</name>
@@ -2492,119 +2385,6 @@
       <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
       <anchor>a31d3a7fc182e65b3f47faae63d663f87</anchor>
       <arglist>(const istd::IChangeable &amp;object)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iwin::CProcessEnvironment</name>
-    <filename>classiwin_1_1_c_process_environment.html</filename>
-    <base virtualness="virtual">isys::IProcessEnvironment</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetMainThreadId</name>
-      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
-      <anchor>a558962f636f2bff47176543a249d0583</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Sleep</name>
-      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
-      <anchor>ab65fc64a9bc3d13b86beb29438ea5499</anchor>
-      <arglist>(double seconds)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTempDirPath</name>
-      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
-      <anchor>af593ad67dcfea8b8c8cc7a03f7a0400b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetWorkingDirectory</name>
-      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
-      <anchor>a017d66fd2902fc7af619eafa77eed173</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetApplicationArguments</name>
-      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
-      <anchor>a2da918c3cccd31de991760c94b7f68ea</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetModulePath</name>
-      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
-      <anchor>aca7942d1f91f3f6d4d7cf40ed4044a08</anchor>
-      <arglist>(bool useApplicationModule=false, bool onlyDirectory=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual EnvironmentVariables</type>
-      <name>GetEnvironmentVariables</name>
-      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
-      <anchor>a8e826ba4f050c47e7849e152a8196031</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetEnvironmentVariableValue</name>
-      <anchorfile>classiwin_1_1_c_process_environment.html</anchorfile>
-      <anchor>a995c93f5927df7beca2684e5dac5c7e0</anchor>
-      <arglist>(const QString &amp;variableName, const QString &amp;value)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iwin::CSystemEnvironment</name>
-    <filename>classiwin_1_1_c_system_environment.html</filename>
-    <base virtualness="virtual">isys::CSystemEnvironmentBase</base>
-    <member kind="typedef">
-      <type>isys::CSystemEnvironmentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiwin_1_1_c_system_environment.html</anchorfile>
-      <anchor>a5e3b18ada0ceeb09e0ad797867f9d761</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetUser</name>
-      <anchorfile>classiwin_1_1_c_system_environment.html</anchorfile>
-      <anchor>ae62f414f5648f32c4fddb751d9e1561c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTempDirPath</name>
-      <anchorfile>classiwin_1_1_c_system_environment.html</anchorfile>
-      <anchor>a9d824393154b625012d370697aa35ca7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetUniqueIdentifier</name>
-      <anchorfile>classiwin_1_1_c_system_environment.html</anchorfile>
-      <anchor>a5106532265e149293c24090e28ab9b56</anchor>
-      <arglist>() const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iwin::CSystemInfo</name>
-    <filename>classiwin_1_1_c_system_info.html</filename>
-    <base>isys::CSystemInfoBase</base>
-    <member kind="function">
-      <type></type>
-      <name>CSystemInfo</name>
-      <anchorfile>classiwin_1_1_c_system_info.html</anchorfile>
-      <anchor>a482afa91bb0eb2cdbec325c4955155c4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>GetSystemInfo</name>
-      <anchorfile>classiwin_1_1_c_system_info.html</anchorfile>
-      <anchor>adabd09c2bb7b26bf189a8bd068963053</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

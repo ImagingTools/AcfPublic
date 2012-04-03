@@ -30,8 +30,6 @@ namespace FpfPck
 {
 
 
-I_EXPORT_DEFAULT_SERVICES
-
 I_EXPORT_PACKAGE(
 			"Fpf",
 			"Acf-Solutions File-To-File Processing Framework package",

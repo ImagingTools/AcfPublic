@@ -30,8 +30,6 @@ namespace BasePck
 {
 
 
-I_EXPORT_DEFAULT_SERVICES;
-
 I_EXPORT_PACKAGE(
 			"Base",
 			"Base system-undependent general package",

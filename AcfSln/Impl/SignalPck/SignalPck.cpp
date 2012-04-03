@@ -30,8 +30,6 @@ namespace SignalPck
 {
 
 
-I_EXPORT_DEFAULT_SERVICES
-
 I_EXPORT_PACKAGE(
 			"SignalPck",
 			"General, system-independent image processing package",

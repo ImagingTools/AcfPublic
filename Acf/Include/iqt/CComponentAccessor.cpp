@@ -23,8 +23,6 @@
 #include "iqt/CComponentAccessor.h"
 
 
-#include "istd/CStaticServicesProvider.h"
-
 #include "icomp/IRegistryLoaderProvider.h"
 #include "icomp/IComponentEnvironmentManager.h"
 #include "icomp/IRegistryLoader.h"

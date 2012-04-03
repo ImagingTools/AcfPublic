@@ -43,7 +43,7 @@
 #include "icomp/CComponentMetaDescriptionEncoder.h"
 
 #include "iqt/CSignalBlocker.h"
-#include "iqt/CFileSystem.h"
+#include "iqt/CSystem.h"
 
 
 namespace icmpstr
@@ -792,8 +792,8 @@ void CPackageOverviewComp::OnReloadPackages()
 	if (m_configFilePathCompPtr.IsValid()){
 		configFilePath = m_configFilePathCompPtr->GetPath();
 	}
-	static iqt::CFileSystem fileSystem;
-	m_envManagerCompPtr->LoadPackages(fileSystem.GetNormalizedPath(configFilePath));
+
+	m_envManagerCompPtr->LoadPackages(iqt::CSystem::GetNormalizedPath(configFilePath));
 
 	UpdateAllLists();
 }
@@ -1185,10 +1185,9 @@ void CPackageOverviewComp::ConfigObserver::OnUpdate(int /*updateFlags*/, istd::I
 	if (m_parent.m_configFilePathCompPtr.IsValid()){
 		configFilePath = m_parent.m_configFilePathCompPtr->GetPath();
 	}
-	static iqt::CFileSystem fileSystem;
 
 	if (configFilePath != m_parent.m_envManagerCompPtr->GetConfigFilePath()){
-		m_parent.m_envManagerCompPtr->LoadPackages(fileSystem.GetNormalizedPath(configFilePath));
+		m_parent.m_envManagerCompPtr->LoadPackages(iqt::CSystem::GetNormalizedPath(configFilePath));
 		m_parent.UpdateAllLists();
 	}
 }

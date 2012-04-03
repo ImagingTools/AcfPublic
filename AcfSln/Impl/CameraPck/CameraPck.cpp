@@ -30,8 +30,6 @@ namespace CameraPck
 {
 
 
-I_EXPORT_DEFAULT_SERVICES
-
 I_EXPORT_PACKAGE(
 			"CameraPck",
 			"General, system-independent image processing package",

@@ -40,8 +40,6 @@ namespace QtExPck
 {
 
 
-I_EXPORT_DEFAULT_SERVICES
-
 I_EXPORT_PACKAGE(
 			"QtExPck",
 			"Acf-Solutions extended package based on Qt",

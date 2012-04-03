@@ -31,7 +31,6 @@
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
-#include "istd/CStaticServicesProvider.h"
 
 #include "imod/IModel.h"
 #include "imod/CMultiModelObserverBase.h"

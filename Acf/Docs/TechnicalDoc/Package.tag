@@ -432,7 +432,6 @@
     <name>CExternalFileConverterComp.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_external_file_converter_comp_8h</filename>
-    <includes id="_i_process_executor_8h" name="IProcessExecutor.h" local="yes" imported="no">ibase/IProcessExecutor.h</includes>
     <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ibase/IFileConvertCopy.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
@@ -461,6 +460,16 @@
     <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ibase/IFileConvertCopy.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <class kind="class">ibase::CFileCopyOverLoaderComp</class>
+    <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileSerializerCompBase.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_c_file_serializer_comp_base_8h</filename>
+    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_c_file_type_info_comp_8h" name="CFileTypeInfoComp.h" local="yes" imported="no">ibase/CFileTypeInfoComp.h</includes>
+    <class kind="class">ibase::CFileSerializerCompBase</class>
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
@@ -742,15 +751,6 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
-    <name>IProcessExecutor.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_i_process_executor_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="_i_process_environment_8h" name="IProcessEnvironment.h" local="yes" imported="no">isys/IProcessEnvironment.h</includes>
-    <class kind="class">ibase::IProcessExecutor</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
     <name>ITextDocument.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_i_text_document_8h</filename>
@@ -802,12 +802,7 @@
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_t_file_serializer_comp_8h</filename>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
-    <includes id="_c_static_services_provider_8h" name="CStaticServicesProvider.h" local="yes" imported="no">istd/CStaticServicesProvider.h</includes>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_file_system_8h" name="IFileSystem.h" local="yes" imported="no">isys/IFileSystem.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <includes id="_c_file_type_info_comp_8h" name="CFileTypeInfoComp.h" local="yes" imported="no">ibase/CFileTypeInfoComp.h</includes>
+    <includes id="_c_file_serializer_comp_base_8h" name="CFileSerializerCompBase.h" local="yes" imported="no">ibase/CFileSerializerCompBase.h</includes>
     <class kind="class">ibase::TFileSerializerComp</class>
     <class kind="class">ibase::TFileSerializerComp::ReadArchiveEx</class>
     <class kind="class">ibase::TFileSerializerComp::WriteArchiveEx</class>
@@ -3176,7 +3171,6 @@
     <path>C:/Temp/Acf/Include/iproc/</path>
     <filename>_t_supplier_comp_wrap_8h</filename>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
-    <includes id="_c_static_services_provider_8h" name="CStaticServicesProvider.h" local="yes" imported="no">istd/CStaticServicesProvider.h</includes>
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
     <includes id="_c_multi_model_observer_base_8h" name="CMultiModelObserverBase.h" local="yes" imported="no">imod/CMultiModelObserverBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
@@ -3304,28 +3298,11 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
-    <name>CDefaultServicesProvider.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_default_services_provider_8h</filename>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CDefaultServicesProvider</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
     <name>CDirList.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_dir_list_8h</filename>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <class kind="class">iqt::CDirList</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CDllFunctionsProvider.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_dll_functions_provider_8h</filename>
-    <includes id="_i_functions_provider_8h" name="IFunctionsProvider.h" local="yes" imported="no">isys/IFunctionsProvider.h</includes>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CDllFunctionsProvider</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -3362,30 +3339,12 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
-    <name>CFileSystem.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_file_system_8h</filename>
-    <includes id="_i_file_system_8h" name="IFileSystem.h" local="yes" imported="no">isys/IFileSystem.h</includes>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CFileSystem</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
     <name>CIniSettingsProviderComp.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_ini_settings_provider_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_settings_provider_8h" name="ISettingsProvider.h" local="yes" imported="no">iqt/ISettingsProvider.h</includes>
     <class kind="class">iqt::CIniSettingsProviderComp</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CLocalizer.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_localizer_8h</filename>
-    <includes id="_i_localizer_8h" name="ILocalizer.h" local="yes" imported="no">istd/ILocalizer.h</includes>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CLocalizer</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -3410,28 +3369,8 @@
     <includes id="_c_composite_package_static_info_8h" name="CCompositePackageStaticInfo.h" local="yes" imported="no">icomp/CCompositePackageStaticInfo.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
-    <includes id="_c_dll_functions_provider_8h" name="CDllFunctionsProvider.h" local="yes" imported="no">iqt/CDllFunctionsProvider.h</includes>
     <class kind="class">iqt::CPackagesLoaderComp</class>
     <class kind="class">iqt::CPackagesLoaderComp::LogingRegistry</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CProcessEnvironment.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_process_environment_8h</filename>
-    <includes id="_i_process_environment_8h" name="IProcessEnvironment.h" local="yes" imported="no">isys/IProcessEnvironment.h</includes>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CProcessEnvironment</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CProcessExecutorComp.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_process_executor_comp_8h</filename>
-    <includes id="_i_process_executor_8h" name="IProcessExecutor.h" local="yes" imported="no">ibase/IProcessExecutor.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CProcessExecutorComp</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -3545,21 +3484,10 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
-    <name>CSystemEnvironment.h</name>
+    <name>CSystem.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_system_environment_8h</filename>
-    <includes id="_c_system_environment_base_8h" name="CSystemEnvironmentBase.h" local="yes" imported="no">isys/CSystemEnvironmentBase.h</includes>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CSystemEnvironment</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CTrace.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_trace_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
-    <includes id="_i_trace_8h" name="ITrace.h" local="yes" imported="no">istd/ITrace.h</includes>
-    <class kind="class">iqt::CTrace</class>
+    <filename>_c_system_8h</filename>
+    <class kind="class">iqt::CSystem</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -5220,32 +5148,6 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>CStaticServicesProvider.h</name>
-    <path>C:/Temp/Acf/Include/istd/</path>
-    <filename>_c_static_services_provider_8h</filename>
-    <includes id="_i_services_provider_8h" name="IServicesProvider.h" local="yes" imported="no">istd/IServicesProvider.h</includes>
-    <includes id="_t_i_factory_8h" name="TIFactory.h" local="yes" imported="no">istd/TIFactory.h</includes>
-    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
-    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
-    <class kind="class">istd::CStaticServicesProvider</class>
-    <class kind="class">istd::CStaticServicesProvider::Provider</class>
-    <namespace>istd</namespace>
-    <member kind="function">
-      <type>Service *</type>
-      <name>GetService</name>
-      <anchorfile>group___system.html</anchorfile>
-      <anchor>ga97abd7f737126eaa330aeb181fee7c4e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>TTransPtr&lt; Service &gt;</type>
-      <name>CreateService</name>
-      <anchorfile>group___system.html</anchorfile>
-      <anchor>ga71f9fc449ec076ba12a9c2d1b124bbf0</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>CVarIndex.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_c_var_index_8h</filename>
@@ -5295,14 +5197,6 @@
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
-    <name>ILocalizer.h</name>
-    <path>C:/Temp/Acf/Include/istd/</path>
-    <filename>_i_localizer_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">istd::ILocalizer</class>
-    <namespace>istd</namespace>
-  </compound>
-  <compound kind="file">
     <name>ILogger.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_i_logger_8h</filename>
@@ -5320,19 +5214,9 @@
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
-    <name>IServicesProvider.h</name>
-    <path>C:/Temp/Acf/Include/istd/</path>
-    <filename>_i_services_provider_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
-    <class kind="class">istd::IServicesProvider</class>
-    <namespace>istd</namespace>
-  </compound>
-  <compound kind="file">
     <name>istd.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>istd_8h</filename>
-    <class kind="class">istd::CGroupRegistrator</class>
     <namespace>istd</namespace>
     <member kind="define">
       <type>#define</type>
@@ -5518,27 +5402,6 @@
       <anchor>af36ed2630110e4dcacccaaddc4903c44</anchor>
       <arglist>(const T &amp;value, const T &amp;value1, const T &amp;value2)</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>OnSoftwareError</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>acc87710f8e36330726a1cbb413493961</anchor>
-      <arglist>(const char *fileName, int line)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>CheckTraceEnabled</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>ac67a58e68d8845319dd9afea05e5bf67</anchor>
-      <arglist>(TraceLevel level, const char *groupId)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SendTraceMessage</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a1b6ae3705dcda3302d9dd1ea10d7df75</anchor>
-      <arglist>(TraceLevel level, const char *groupId, const char *message, const char *fileName, int line)</arglist>
-    </member>
     <member kind="variable" static="yes">
       <type>static const double</type>
       <name>I_BIG_EPSILON</name>
@@ -5553,14 +5416,6 @@
     <filename>_i_time_stamp_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <class kind="class">istd::ITimeStamp</class>
-    <namespace>istd</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ITrace.h</name>
-    <path>C:/Temp/Acf/Include/istd/</path>
-    <filename>_i_trace_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">istd::ITrace</class>
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
@@ -5785,72 +5640,6 @@
       <anchor>a96a5fda8e4ce755e1a60e4223948425a</anchor>
       <arglist></arglist>
     </member>
-  </compound>
-  <compound kind="file">
-    <name>CSystemEnvironmentBase.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_c_system_environment_base_8h</filename>
-    <includes id="_i_system_environment_8h" name="ISystemEnvironment.h" local="yes" imported="no">isys/ISystemEnvironment.h</includes>
-    <class kind="class">isys::CSystemEnvironmentBase</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CSystemInfoBase.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_c_system_info_base_8h</filename>
-    <includes id="_i_system_info_8h" name="ISystemInfo.h" local="yes" imported="no">isys/ISystemInfo.h</includes>
-    <class kind="class">isys::CSystemInfoBase</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IFileSystem.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_i_file_system_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="isys_8h" name="isys.h" local="yes" imported="no">isys/isys.h</includes>
-    <class kind="class">isys::IFileSystem</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IFunctionsProvider.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_i_functions_provider_8h</filename>
-    <includes id="isys_8h" name="isys.h" local="yes" imported="no">isys/isys.h</includes>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">isys::IFunctionsProvider</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IProcessEnvironment.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_i_process_environment_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="isys_8h" name="isys.h" local="yes" imported="no">isys/isys.h</includes>
-    <class kind="class">isys::IProcessEnvironment</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
-    <name>isys.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>isys_8h</filename>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ISystemEnvironment.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_i_system_environment_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">isys::ISystemEnvironment</class>
-    <namespace>isys</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ISystemInfo.h</name>
-    <path>C:/Temp/Acf/Include/isys/</path>
-    <filename>_i_system_info_8h</filename>
-    <includes id="isys_8h" name="isys.h" local="yes" imported="no">isys/isys.h</includes>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <class kind="class">isys::ISystemInfo</class>
-    <namespace>isys</namespace>
   </compound>
   <compound kind="file">
     <name>CAffiniteCalibrationShape.h</name>
@@ -6667,7 +6456,6 @@
     <class kind="class">ibase::IApplication</class>
     <class kind="class">ibase::IApplicationInfo</class>
     <class kind="class">ibase::IMessageConsumer</class>
-    <class kind="class">ibase::IProcessExecutor</class>
     <class kind="class">icomp::CComponentBase</class>
     <class kind="class">iser::CPrimitiveTypesSerializer</class>
     <class kind="class">iser::IArchive</class>
@@ -6724,28 +6512,7 @@
     <name>System</name>
     <title>Defines access to operating system dependent implementation</title>
     <filename>group___system.html</filename>
-    <class kind="class">iqt::CDefaultServicesProvider</class>
-    <class kind="class">istd::CStaticServicesProvider</class>
     <class kind="class">istd::ITimeStamp</class>
-    <class kind="class">isys::IFileSystem</class>
-    <class kind="class">isys::IProcessEnvironment</class>
-    <class kind="class">isys::ISystemEnvironment</class>
-    <class kind="class">isys::ISystemInfo</class>
-    <namespace>isys</namespace>
-    <member kind="function">
-      <type>Service *</type>
-      <name>GetService</name>
-      <anchorfile>group___system.html</anchorfile>
-      <anchor>ga97abd7f737126eaa330aeb181fee7c4e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>TTransPtr&lt; Service &gt;</type>
-      <name>CreateService</name>
-      <anchorfile>group___system.html</anchorfile>
-      <anchor>ga71f9fc449ec076ba12a9c2d1b124bbf0</anchor>
-      <arglist>()</arglist>
-    </member>
   </compound>
   <compound kind="group">
     <name>ComponentConcept</name>
@@ -10806,6 +10573,7 @@
     <class kind="class">ibase::CExternalFileConverterComp</class>
     <class kind="class">ibase::CFileConvertOverProcessorComp</class>
     <class kind="class">ibase::CFileCopyOverLoaderComp</class>
+    <class kind="class">ibase::CFileSerializerCompBase</class>
     <class kind="class">ibase::CFileTypeInfoComp</class>
     <class kind="class">ibase::CInstantiatorComp</class>
     <class kind="class">ibase::CLogComp</class>
@@ -10833,7 +10601,6 @@
     <class kind="class">ibase::IMessageContainer</class>
     <class kind="class">ibase::IObjectQueue</class>
     <class kind="class">ibase::IObjectSnap</class>
-    <class kind="class">ibase::IProcessExecutor</class>
     <class kind="class">ibase::ITextDocument</class>
     <class kind="class">ibase::TCommandsProviderCompWrap</class>
     <class kind="class">ibase::TComposedFactoryComp</class>
@@ -11152,6 +10919,72 @@
       <anchorfile>classibase_1_1_c_file_copy_over_loader_comp.html</anchorfile>
       <anchor>af2455dbdbf80a828d9ab9ddc804466e0</anchor>
       <arglist>(const QString &amp;inputFilePath, const QString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::CFileSerializerCompBase</name>
+    <filename>classibase_1_1_c_file_serializer_comp_base.html</filename>
+    <base>TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</base>
+    <base virtualness="virtual">iser::IFileLoader</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>acc7406a1d564b4d9ea4205a8f6b1b1dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_BAD_EXTENSION</name>
+      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>acc7406a1d564b4d9ea4205a8f6b1b1dca3da140f5bdfbdd1cccbcabab44c67df9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNSUPPORTED_VERSION</name>
+      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>acc7406a1d564b4d9ea4205a8f6b1b1dcac761f5160148f67c5264bae0247a1c4e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>afd788ef9ae1f896f918d7e7115d83116</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>ac46bd5354b18a54118b7e8a303ca1853</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const iser::IVersionInfo *</type>
+      <name>GetVersionInfo</name>
+      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>a482fec29c6390148e824aaa6d32f5430</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckMinimalVersion</name>
+      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>a7488934b5de0dd8b55b8bdc7959a8253</anchor>
+      <arglist>(const iser::ISerializable &amp;object, const iser::IVersionInfo &amp;versionInfo) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckInputFile</name>
+      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>afda947621577403fa1127cb26ef0efec</anchor>
+      <arglist>(const QString filePath, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckOutputFile</name>
+      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>a1661a12f1a179e02e5189049ac527cc3</anchor>
+      <arglist>(const QString filePath, bool beQuiet=true) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12600,25 +12433,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ibase::IProcessExecutor</name>
-    <filename>classibase_1_1_i_process_executor.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetEnvironment</name>
-      <anchorfile>classibase_1_1_i_process_executor.html</anchorfile>
-      <anchor>ac34fbab12b75f42b9cad451c7f24dd3a</anchor>
-      <arglist>(const isys::IProcessEnvironment &amp;processEnvironment)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>ExecuteProcess</name>
-      <anchorfile>classibase_1_1_i_process_executor.html</anchorfile>
-      <anchor>abb013c895b51fd0112bbec8f01e6a0ae</anchor>
-      <arglist>(const QString &amp;executablePath, const QStringList &amp;processArguments)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ibase::ITextDocument</name>
     <filename>classibase_1_1_i_text_document.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
@@ -12924,41 +12738,15 @@
     <filename>classibase_1_1_t_file_serializer_comp.html</filename>
     <templarg>ReadArchive</templarg>
     <templarg>WriteArchive</templarg>
-    <base>TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</base>
-    <base virtualness="virtual">iser::IFileLoader</base>
+    <base>ibase::CFileSerializerCompBase</base>
     <class kind="class">ibase::TFileSerializerComp::ReadArchiveEx</class>
     <class kind="class">ibase::TFileSerializerComp::WriteArchiveEx</class>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>a168f8feaf23116d76210ed63afd2e786</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_BAD_EXTENSION</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>a168f8feaf23116d76210ed63afd2e786ab20568dddf72d0337b837897385c09ed</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_UNSUPPORTED_VERSION</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>a168f8feaf23116d76210ed63afd2e786a7bc96a009bf66b57379a39f88277ee7c</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
-      <type>ibase::TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</type>
+      <type>CFileSerializerCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>a427c1f360b2f92c946dcdc150cc91ddc</anchor>
+      <anchor>a9746991279933ef2e3b6127c4323554b</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOperationSupported</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>a8822602dcfb915f0ece6c34f9a350b39</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -12975,39 +12763,11 @@
       <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const iser::IVersionInfo *</type>
-      <name>GetVersionInfo</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>adf321d27bf2c73e37928e019ee51bbb4</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnReadError</name>
       <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
       <anchor>aa831b9417f00ec3c58feaed540f90122</anchor>
       <arglist>(const ReadArchive &amp;archive, const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckMinimalVersion</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>ae636105c20028b553871b7e0c8effced</anchor>
-      <arglist>(const iser::ISerializable &amp;object, const iser::IVersionInfo &amp;versionInfo) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckInputFilePath</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>a12591df54baed1d6e0edd2e2c5fc28ea</anchor>
-      <arglist>(const QString filePath) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckTargetDirectory</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>ab7be885b7ab0a8efa3291d007b2b5f5b</anchor>
-      <arglist>(const QString dirPath) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30432,19 +30192,13 @@
     <class kind="class">iqt::CComponentAccessor</class>
     <class kind="class">iqt::CCopyProcessorComp</class>
     <class kind="class">iqt::CDefaultRegistryLoaderProvider</class>
-    <class kind="class">iqt::CDefaultServicesProvider</class>
     <class kind="class">iqt::CDirList</class>
-    <class kind="class">iqt::CDllFunctionsProvider</class>
     <class kind="class">iqt::CFileInfoCopyComp</class>
     <class kind="class">iqt::CFileList</class>
     <class kind="class">iqt::CFileListProviderComp</class>
-    <class kind="class">iqt::CFileSystem</class>
     <class kind="class">iqt::CIniSettingsProviderComp</class>
-    <class kind="class">iqt::CLocalizer</class>
     <class kind="class">iqt::CNetworkWriteArchive</class>
     <class kind="class">iqt::CPackagesLoaderComp</class>
-    <class kind="class">iqt::CProcessEnvironment</class>
-    <class kind="class">iqt::CProcessExecutorComp</class>
     <class kind="class">iqt::CReflectedBitmapBase</class>
     <class kind="class">iqt::CRegistriesManagerComp</class>
     <class kind="class">iqt::CRegistryCodeSaverComp</class>
@@ -30456,8 +30210,7 @@
     <class kind="class">iqt::CSettingsSerializerComp</class>
     <class kind="class">iqt::CSettingsWriteArchive</class>
     <class kind="class">iqt::CSignalBlocker</class>
-    <class kind="class">iqt::CSystemEnvironment</class>
-    <class kind="class">iqt::CTrace</class>
+    <class kind="class">iqt::CSystem</class>
     <class kind="class">iqt::CTranslationManagerComp</class>
     <class kind="class">iqt::CXmlFileReadArchive</class>
     <class kind="class">iqt::CXmlFileWriteArchive</class>
@@ -31072,17 +30825,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt::CDefaultServicesProvider</name>
-    <filename>classiqt_1_1_c_default_services_provider.html</filename>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>RegisterServices</name>
-      <anchorfile>classiqt_1_1_c_default_services_provider.html</anchorfile>
-      <anchor>ac7135ba020f1934aabed5460eac81ea4</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqt::CDirList</name>
     <filename>classiqt_1_1_c_dir_list.html</filename>
     <base>QObject</base>
@@ -31120,53 +30862,6 @@
       <anchorfile>classiqt_1_1_c_dir_list.html</anchorfile>
       <anchor>a60668451c9c6892db2f100299037f91c</anchor>
       <arglist>(const QDir &amp;root, int minRecursionDepth, int maxRecursionDepth)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CDllFunctionsProvider</name>
-    <filename>classiqt_1_1_c_dll_functions_provider.html</filename>
-    <base virtualness="virtual">isys::IFunctionsProvider</base>
-    <member kind="function">
-      <type></type>
-      <name>CDllFunctionsProvider</name>
-      <anchorfile>classiqt_1_1_c_dll_functions_provider.html</anchorfile>
-      <anchor>adcb30e79eae068f05dc0052886b2366f</anchor>
-      <arglist>(const QString &amp;dllPath=&quot;&quot;)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~CDllFunctionsProvider</name>
-      <anchorfile>classiqt_1_1_c_dll_functions_provider.html</anchorfile>
-      <anchor>a52dcab2338dbdcaf6e17b9688b7a0eca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>OpenDll</name>
-      <anchorfile>classiqt_1_1_c_dll_functions_provider.html</anchorfile>
-      <anchor>ab783f1f8f1a56a17c81c0fe11c0bb02a</anchor>
-      <arglist>(const QString &amp;dllPath)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Reset</name>
-      <anchorfile>classiqt_1_1_c_dll_functions_provider.html</anchorfile>
-      <anchor>a6fbc1c8fa4699125afcd219f13c37000</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsValid</name>
-      <anchorfile>classiqt_1_1_c_dll_functions_provider.html</anchorfile>
-      <anchor>ab5e8010c39b3afbbe7fadfdeff3d9f1f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void *</type>
-      <name>GetFunction</name>
-      <anchorfile>classiqt_1_1_c_dll_functions_provider.html</anchorfile>
-      <anchor>a66a237bfb06bde1a049a063cb5c19e67</anchor>
-      <arglist>(const std::string &amp;id) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31302,95 +30997,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt::CFileSystem</name>
-    <filename>classiqt_1_1_c_file_system.html</filename>
-    <base virtualness="virtual">isys::IFileSystem</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNormalizedPath</name>
-      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
-      <anchor>ac9f4aca2e8e9bfa1b7f64f83b4529ad7</anchor>
-      <arglist>(const QString &amp;path) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetFileName</name>
-      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
-      <anchor>ad31f2e1407175d36836017822bb49141</anchor>
-      <arglist>(const QString &amp;filePath) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetBaseFileName</name>
-      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
-      <anchor>a71b69d093f185bff47ea9d0b86d5274f</anchor>
-      <arglist>(const QString &amp;filePath) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetDirPath</name>
-      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
-      <anchor>aebafb17f6df7c7a887df7dd64d8a00cf</anchor>
-      <arglist>(const QString &amp;filePath) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>HasExtension</name>
-      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
-      <anchor>a1813a231255f14851dfecab9a1e29556</anchor>
-      <arglist>(const QString &amp;filePath, const QString &amp;extension) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsPresent</name>
-      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
-      <anchor>ad7c06867c2515339486d8061d07fbb6e</anchor>
-      <arglist>(const QString &amp;filePath) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CreateFileCopy</name>
-      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
-      <anchor>ac38e6469f3f2a09f7665b640606bc614</anchor>
-      <arglist>(const QString &amp;inputFile, const QString &amp;outputFile, bool overwriteExisting=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>RemoveFile</name>
-      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
-      <anchor>a0af0bc97c32ae4553254d85ee4efa61a</anchor>
-      <arglist>(const QString &amp;filePath) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>RemoveFolder</name>
-      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
-      <anchor>a9fff87f73709ad4dbafce20dbf693f58</anchor>
-      <arglist>(const QString &amp;directoryPath, bool ignoreNonEmpty=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CreateFolder</name>
-      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
-      <anchor>afefbd83e7898d847293736f9b6a09ff8</anchor>
-      <arglist>(const QString &amp;directoryPath) const </arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static QString</type>
-      <name>FindVariableValue</name>
-      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
-      <anchor>af80a8de786cac69bef9df9d8249d96b5</anchor>
-      <arglist>(const QString &amp;varName)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static QString</type>
-      <name>GetEnrolledPath</name>
-      <anchorfile>classiqt_1_1_c_file_system.html</anchorfile>
-      <anchor>a170e7ff0ee8e2ddf767923c34fb8ca9d</anchor>
-      <arglist>(const QString &amp;path)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqt::CIniSettingsProviderComp</name>
     <filename>classiqt_1_1_c_ini_settings_provider_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -31415,18 +31021,6 @@
       <anchorfile>classiqt_1_1_c_ini_settings_provider_comp.html</anchorfile>
       <anchor>aaa535dfbc9ee3799b20da9010124d2ff</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CLocalizer</name>
-    <filename>classiqt_1_1_c_localizer.html</filename>
-    <base virtualness="virtual">istd::ILocalizer</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTranslatedText</name>
-      <anchorfile>classiqt_1_1_c_localizer.html</anchorfile>
-      <anchor>aee7fcc58033c486100ef2840960f3180</anchor>
-      <arglist>(const std::string &amp;context, const QString &amp;text, const std::string &amp;disambiguation=std::string()) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31588,10 +31182,10 @@
       <arglist>(const QString &amp;configFile)</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>CDllFunctionsProvider &amp;</type>
-      <name>GetProviderRef</name>
+      <type>QLibrary &amp;</type>
+      <name>GetLibrary</name>
       <anchorfile>classiqt_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>a9439be9178fd4c4a731a36658c174808</anchor>
+      <anchor>a871076ffac68c8c499ed56cb55c5c492</anchor>
       <arglist>(const QFileInfo &amp;fileInfo)</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -31626,130 +31220,6 @@
       <anchorfile>classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html</anchorfile>
       <anchor>ac240fa5334f244f2b7c06c2045040c01</anchor>
       <arglist>(const std::string &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CProcessEnvironment</name>
-    <filename>classiqt_1_1_c_process_environment.html</filename>
-    <base virtualness="virtual">isys::IProcessEnvironment</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetMainThreadId</name>
-      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
-      <anchor>a6a5ed130f50dce92fc4fa0b339055540</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Sleep</name>
-      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
-      <anchor>a602cf25d704f149a73521659fc810087</anchor>
-      <arglist>(double seconds)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTempDirPath</name>
-      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
-      <anchor>a7ea88b64d7c96bbb45c5a7aac8f89ae8</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetWorkingDirectory</name>
-      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
-      <anchor>a29f4c72c1a955afac920a072a5bf5dbb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetApplicationArguments</name>
-      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
-      <anchor>ab14c174a9dde96d286e7004c0665874f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetModulePath</name>
-      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
-      <anchor>a8c7b97ae9022cb02ca66d97cd051c23b</anchor>
-      <arglist>(bool useApplicationModule=false, bool onlyDirectory=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual EnvironmentVariables</type>
-      <name>GetEnvironmentVariables</name>
-      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
-      <anchor>a8918e350d02277088ccc6211c05cbbbe</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetEnvironmentVariableValue</name>
-      <anchorfile>classiqt_1_1_c_process_environment.html</anchorfile>
-      <anchor>aef99b8b4a5b918c83eddabccc542f077</anchor>
-      <arglist>(const QString &amp;variableName, const QString &amp;value)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CProcessExecutorComp</name>
-    <filename>classiqt_1_1_c_process_executor_comp.html</filename>
-    <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">ibase::IProcessExecutor</base>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt_1_1_c_process_executor_comp.html</anchorfile>
-      <anchor>a9ba4362e29188482849b2d06c6a72b88</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CProcessExecutorComp</name>
-      <anchorfile>classiqt_1_1_c_process_executor_comp.html</anchorfile>
-      <anchor>a8aae6fe7df5e6e0cb18474e1e24dfee6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetEnvironment</name>
-      <anchorfile>classiqt_1_1_c_process_executor_comp.html</anchorfile>
-      <anchor>ad8972e220f13ed2282d19464036aa33d</anchor>
-      <arglist>(const isys::IProcessEnvironment &amp;processEnvironment)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>ExecuteProcess</name>
-      <anchorfile>classiqt_1_1_c_process_executor_comp.html</anchorfile>
-      <anchor>af4d774d49b0fa5171e3ff16b59e53e28</anchor>
-      <arglist>(const QString &amp;executablePath, const QStringList &amp;processArguments)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnError</name>
-      <anchorfile>classiqt_1_1_c_process_executor_comp.html</anchorfile>
-      <anchor>a7a15afd51fd5f92eb9bc4c5a25d8f7b4</anchor>
-      <arglist>(QProcess::ProcessError error)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnReadyReadStandardError</name>
-      <anchorfile>classiqt_1_1_c_process_executor_comp.html</anchorfile>
-      <anchor>a0c6a0f34f6ee910f742515c428f1a603</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnReadyReadStandardOutput</name>
-      <anchorfile>classiqt_1_1_c_process_executor_comp.html</anchorfile>
-      <anchor>a7330b09319766f9b08b5182059f3a3a0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiqt_1_1_c_process_executor_comp.html</anchorfile>
-      <anchor>a2782c97b367282ec491ab777c992d007</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32648,69 +32118,49 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt::CSystemEnvironment</name>
-    <filename>classiqt_1_1_c_system_environment.html</filename>
-    <base virtualness="virtual">isys::CSystemEnvironmentBase</base>
+    <name>iqt::CSystem</name>
+    <filename>classiqt_1_1_c_system.html</filename>
     <member kind="typedef">
-      <type>isys::CSystemEnvironmentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt_1_1_c_system_environment.html</anchorfile>
-      <anchor>a0712793307f489916b54daffcef7c9e1</anchor>
+      <type>std::map&lt; QString, QString &gt;</type>
+      <name>EnvironmentVariables</name>
+      <anchorfile>classiqt_1_1_c_system.html</anchorfile>
+      <anchor>a441c2b4d9f2ff25c90d915c1ec81c355</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetUser</name>
-      <anchorfile>classiqt_1_1_c_system_environment.html</anchorfile>
-      <anchor>a8558594998b47dd3c14fbdfe73e3b59c</anchor>
-      <arglist>() const </arglist>
+    <member kind="function" static="yes">
+      <type>static QString</type>
+      <name>GetNormalizedPath</name>
+      <anchorfile>classiqt_1_1_c_system.html</anchorfile>
+      <anchor>a45576d6fbd34142a2c92fef497fdf960</anchor>
+      <arglist>(const QString &amp;path)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTempDirPath</name>
-      <anchorfile>classiqt_1_1_c_system_environment.html</anchorfile>
-      <anchor>aeb5e542111c1e7d9438420c3f46ec46b</anchor>
-      <arglist>() const </arglist>
+    <member kind="function" static="yes">
+      <type>static QString</type>
+      <name>FindVariableValue</name>
+      <anchorfile>classiqt_1_1_c_system.html</anchorfile>
+      <anchor>ad907d09c093363178ae933de7fe80a9a</anchor>
+      <arglist>(const QString &amp;varName)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetUniqueIdentifier</name>
-      <anchorfile>classiqt_1_1_c_system_environment.html</anchorfile>
-      <anchor>a8bdb2c3c61dc5c23a1097af16bc4fa25</anchor>
-      <arglist>() const </arglist>
+    <member kind="function" static="yes">
+      <type>static QString</type>
+      <name>GetEnrolledPath</name>
+      <anchorfile>classiqt_1_1_c_system.html</anchorfile>
+      <anchor>a1803dec41c66e3984b07589954b7277b</anchor>
+      <arglist>(const QString &amp;path)</arglist>
     </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CTrace</name>
-    <filename>classiqt_1_1_c_trace.html</filename>
-    <base virtualness="virtual">istd::ITrace</base>
-    <member kind="function">
-      <type></type>
-      <name>CTrace</name>
-      <anchorfile>classiqt_1_1_c_trace.html</anchorfile>
-      <anchor>aa921f7e6a674a9140e21d21f0bc2d768</anchor>
+    <member kind="function" static="yes">
+      <type>static EnvironmentVariables</type>
+      <name>GetEnvironmentVariables</name>
+      <anchorfile>classiqt_1_1_c_system.html</anchorfile>
+      <anchor>afe9c6a75002da02c8f8a6c42a3c8cf7e</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>LogMessage</name>
-      <anchorfile>classiqt_1_1_c_trace.html</anchorfile>
-      <anchor>a573e1049d460fe17e5369f5889eae92a</anchor>
-      <arglist>(istd::TraceLevel level, const std::string &amp;groupId, const QString &amp;message, const std::string &amp;fileName=std::string(), int line=-1) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsTraceEnabled</name>
-      <anchorfile>classiqt_1_1_c_trace.html</anchorfile>
-      <anchor>a05c501e83795a8eb68bcd86ba425cc93</anchor>
-      <arglist>(istd::TraceLevel level, const std::string &amp;groupId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>RegisterGroupId</name>
-      <anchorfile>classiqt_1_1_c_trace.html</anchorfile>
-      <anchor>a2c26ea2fec8cea9dcb5d43891eb9ff69</anchor>
-      <arglist>(const std::string &amp;groupId)</arglist>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>Sleep</name>
+      <anchorfile>classiqt_1_1_c_system.html</anchorfile>
+      <anchor>ac568999a6d59287edc20e8134472c0b4</anchor>
+      <arglist>(double seconds)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -42131,20 +41581,15 @@
     <class kind="class">istd::CIdManipBase</class>
     <class kind="class">istd::CIndex2d</class>
     <class kind="class">istd::CRandomNumber</class>
-    <class kind="class">istd::CStaticServicesProvider</class>
     <class kind="class">istd::CVarIndex</class>
     <class kind="class">istd::IChangeable</class>
     <class kind="class">istd::IChangeDelegator</class>
     <class kind="class">istd::IContainerInfo</class>
     <class kind="class">istd::IFactoryInfo</class>
     <class kind="class">istd::IInformation</class>
-    <class kind="class">istd::ILocalizer</class>
     <class kind="class">istd::ILogger</class>
     <class kind="class">istd::IPolymorphic</class>
-    <class kind="class">istd::IServicesProvider</class>
-    <class kind="class">istd::CGroupRegistrator</class>
     <class kind="class">istd::ITimeStamp</class>
-    <class kind="class">istd::ITrace</class>
     <class kind="class">istd::TArray</class>
     <class kind="class">istd::TCachedUpdateManagerWrap</class>
     <class kind="class">istd::TCascadedMap</class>
@@ -42275,20 +41720,6 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>Service *</type>
-      <name>GetService</name>
-      <anchorfile>group___system.html</anchorfile>
-      <anchor>ga97abd7f737126eaa330aeb181fee7c4e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>TTransPtr&lt; Service &gt;</type>
-      <name>CreateService</name>
-      <anchorfile>group___system.html</anchorfile>
-      <anchor>ga71f9fc449ec076ba12a9c2d1b124bbf0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
       <type>const T &amp;</type>
       <name>Min</name>
       <anchorfile>group___main.html</anchorfile>
@@ -42322,27 +41753,6 @@
       <anchorfile>namespaceistd.html</anchorfile>
       <anchor>af36ed2630110e4dcacccaaddc4903c44</anchor>
       <arglist>(const T &amp;value, const T &amp;value1, const T &amp;value2)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>OnSoftwareError</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>acc87710f8e36330726a1cbb413493961</anchor>
-      <arglist>(const char *fileName, int line)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>CheckTraceEnabled</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>ac67a58e68d8845319dd9afea05e5bf67</anchor>
-      <arglist>(TraceLevel level, const char *groupId)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SendTraceMessage</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a1b6ae3705dcda3302d9dd1ea10d7df75</anchor>
-      <arglist>(TraceLevel level, const char *groupId, const char *message, const char *fileName, int line)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43136,86 +42546,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>istd::CStaticServicesProvider</name>
-    <filename>classistd_1_1_c_static_services_provider.html</filename>
-    <class kind="class">istd::CStaticServicesProvider::Provider</class>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>InitServices</name>
-      <anchorfile>classistd_1_1_c_static_services_provider.html</anchorfile>
-      <anchor>a37b9b259d711e6c715ddc0bcd88c697a</anchor>
-      <arglist>(const IServicesProvider *parentPtr)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static bool</type>
-      <name>RegisterService</name>
-      <anchorfile>classistd_1_1_c_static_services_provider.html</anchorfile>
-      <anchor>a6e4ada5a87cd5d801c70f13f8ce6c34e</anchor>
-      <arglist>(const istd::CClassInfo &amp;info, void *servicePtr)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static bool</type>
-      <name>RegisterFactory</name>
-      <anchorfile>classistd_1_1_c_static_services_provider.html</anchorfile>
-      <anchor>a6effa291426f3d0c8c0ad2b5838da4ad</anchor>
-      <arglist>(const istd::CClassInfo &amp;info, const IVoidFactory *factoryPtr)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static bool</type>
-      <name>RegisterService</name>
-      <anchorfile>classistd_1_1_c_static_services_provider.html</anchorfile>
-      <anchor>aa872ed948ab52d018a446a635c89a032</anchor>
-      <arglist>(Service *servicePtr)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static bool</type>
-      <name>RegisterFactory</name>
-      <anchorfile>classistd_1_1_c_static_services_provider.html</anchorfile>
-      <anchor>a55d36073a7867225b6d1e2a1191b01c5</anchor>
-      <arglist>(const TIFactory&lt; Interface &gt; *factoryPtr)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void *</type>
-      <name>GetService</name>
-      <anchorfile>classistd_1_1_c_static_services_provider.html</anchorfile>
-      <anchor>a46905c23cdfd194b785b3a0e3421c220</anchor>
-      <arglist>(const istd::CClassInfo &amp;info)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void *</type>
-      <name>CreateService</name>
-      <anchorfile>classistd_1_1_c_static_services_provider.html</anchorfile>
-      <anchor>a6f19dfff970b3ee4afd686f9f5151bc9</anchor>
-      <arglist>(const istd::CClassInfo &amp;info)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static IServicesProvider &amp;</type>
-      <name>GetProviderInstance</name>
-      <anchorfile>classistd_1_1_c_static_services_provider.html</anchorfile>
-      <anchor>ada21f8c64d1d3b10290f87b97493592f</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>istd::CStaticServicesProvider::Provider</name>
-    <filename>classistd_1_1_c_static_services_provider_1_1_provider.html</filename>
-    <base virtualness="virtual">istd::IServicesProvider</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void *</type>
-      <name>GetService</name>
-      <anchorfile>classistd_1_1_c_static_services_provider_1_1_provider.html</anchorfile>
-      <anchor>a6ceb23b377279222b1ea3e80e3b0bb81</anchor>
-      <arglist>(const istd::CClassInfo &amp;info) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void *</type>
-      <name>CreateService</name>
-      <anchorfile>classistd_1_1_c_static_services_provider_1_1_provider.html</anchorfile>
-      <anchor>ac1c8dcf792f2a01e67d7211a4892e482</anchor>
-      <arglist>(const istd::CClassInfo &amp;info) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>istd::CVarIndex</name>
     <filename>classistd_1_1_c_var_index.html</filename>
     <member kind="typedef">
@@ -43738,18 +43068,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>istd::ILocalizer</name>
-    <filename>classistd_1_1_i_localizer.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetTranslatedText</name>
-      <anchorfile>classistd_1_1_i_localizer.html</anchorfile>
-      <anchor>a21acaa46f1a6be76692ecb4bd8043c4f</anchor>
-      <arglist>(const std::string &amp;context, const QString &amp;text, const std::string &amp;disambiguation=std::string()) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>istd::ILogger</name>
     <filename>classistd_1_1_i_logger.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -43784,36 +43102,6 @@
       <anchorfile>classistd_1_1_i_polymorphic.html</anchorfile>
       <anchor>a238d6167615349bf27ebc13f8f397902</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>istd::IServicesProvider</name>
-    <filename>classistd_1_1_i_services_provider.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual void *</type>
-      <name>GetService</name>
-      <anchorfile>classistd_1_1_i_services_provider.html</anchorfile>
-      <anchor>a2f91585286b09e96bd5ae3442343ce38</anchor>
-      <arglist>(const istd::CClassInfo &amp;serviceId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void *</type>
-      <name>CreateService</name>
-      <anchorfile>classistd_1_1_i_services_provider.html</anchorfile>
-      <anchor>ae79389b000bf380faffb483d1d6310c7</anchor>
-      <arglist>(const istd::CClassInfo &amp;info) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>istd::CGroupRegistrator</name>
-    <filename>classistd_1_1_c_group_registrator.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>CGroupRegistrator</name>
-      <anchorfile>classistd_1_1_c_group_registrator.html</anchorfile>
-      <anchor>af7fbef2b49432b4d1ffe22bec8d217aa</anchor>
-      <arglist>(const char *groupId)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43861,32 +43149,6 @@
       <anchorfile>classistd_1_1_i_time_stamp.html</anchorfile>
       <anchor>a5bae651e2a473fd581ea94be7b7272e2</anchor>
       <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>istd::ITrace</name>
-    <filename>classistd_1_1_i_trace.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>LogMessage</name>
-      <anchorfile>classistd_1_1_i_trace.html</anchorfile>
-      <anchor>a2a8f277d68fe8a6bc9e8a1d931931421</anchor>
-      <arglist>(TraceLevel level, const std::string &amp;groupId, const QString &amp;message, const std::string &amp;fileName=std::string(), int line=-1) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsTraceEnabled</name>
-      <anchorfile>classistd_1_1_i_trace.html</anchorfile>
-      <anchor>a78ad64cd8d285b1dd3ee3c837c5e0071</anchor>
-      <arglist>(TraceLevel level, const std::string &amp;groupId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>RegisterGroupId</name>
-      <anchorfile>classistd_1_1_i_trace.html</anchorfile>
-      <anchor>a022feb1d006c1cdbe5671f2345a7414d</anchor>
-      <arglist>(const std::string &amp;groupId)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -46542,346 +45804,6 @@
       <anchorfile>classistd_1_1_t_var_array_1_1_iterator.html</anchorfile>
       <anchor>af945ee7df145713b05805a229df8f4a8</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
-    <name>isys</name>
-    <filename>namespaceisys.html</filename>
-    <class kind="class">isys::CSystemEnvironmentBase</class>
-    <class kind="class">isys::CSystemInfoBase</class>
-    <class kind="class">isys::IFileSystem</class>
-    <class kind="class">isys::IFunctionsProvider</class>
-    <class kind="class">isys::IProcessEnvironment</class>
-    <class kind="class">isys::ISystemEnvironment</class>
-    <class kind="class">isys::ISystemInfo</class>
-  </compound>
-  <compound kind="class">
-    <name>isys::CSystemEnvironmentBase</name>
-    <filename>classisys_1_1_c_system_environment_base.html</filename>
-    <base virtualness="virtual">isys::ISystemEnvironment</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetSystemVariableValue</name>
-      <anchorfile>classisys_1_1_c_system_environment_base.html</anchorfile>
-      <anchor>a06b77fe5ddc54b3a5cf5dbb0d41a0d02</anchor>
-      <arglist>(const QString &amp;variableName) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isys::CSystemInfoBase</name>
-    <filename>classisys_1_1_c_system_info_base.html</filename>
-    <base virtualness="virtual">isys::ISystemInfo</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetComputerName</name>
-      <anchorfile>classisys_1_1_c_system_info_base.html</anchorfile>
-      <anchor>a49ac08f5cb5baaee746bf7e69a65e3f2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetProcessorsCount</name>
-      <anchorfile>classisys_1_1_c_system_info_base.html</anchorfile>
-      <anchor>a4fd7959d3c2636636b12db05dad36c74</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetProcessorId</name>
-      <anchorfile>classisys_1_1_c_system_info_base.html</anchorfile>
-      <anchor>abd94416a0274f485731a2975e6731922</anchor>
-      <arglist>(int processorIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsNetworkAdapterInstalled</name>
-      <anchorfile>classisys_1_1_c_system_info_base.html</anchorfile>
-      <anchor>a5606abf16e6502804723d1144c7e576f</anchor>
-      <arglist>(int *adapterCountPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
-      <name>GetMacAdress</name>
-      <anchorfile>classisys_1_1_c_system_info_base.html</anchorfile>
-      <anchor>a655c0840b62f3a565916b9fe017d8655</anchor>
-      <arglist>(int adapterIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classisys_1_1_c_system_info_base.html</anchorfile>
-      <anchor>a4ce14aaf7659bdaf02c76d26e46950e5</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>std::vector&lt; I_DWORD &gt;</type>
-      <name>ProcessorIds</name>
-      <anchorfile>classisys_1_1_c_system_info_base.html</anchorfile>
-      <anchor>af6bddaf7df10a22eaa124306765ba0e6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>std::vector&lt; std::string &gt;</type>
-      <name>NetworkAdapters</name>
-      <anchorfile>classisys_1_1_c_system_info_base.html</anchorfile>
-      <anchor>ab90c7067ebbdb77338feec18c73ae691</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QString</type>
-      <name>m_computerName</name>
-      <anchorfile>classisys_1_1_c_system_info_base.html</anchorfile>
-      <anchor>a4ad8540ffe85c9aa0755fafd8c9f31e7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ProcessorIds</type>
-      <name>m_processorIds</name>
-      <anchorfile>classisys_1_1_c_system_info_base.html</anchorfile>
-      <anchor>ae90c3242f8a5fa5d7cb78b678fa6ea93</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>NetworkAdapters</type>
-      <name>m_networkAdapters</name>
-      <anchorfile>classisys_1_1_c_system_info_base.html</anchorfile>
-      <anchor>ad1c1a258773b67d6ca95e4ec0672e4d8</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isys::IFileSystem</name>
-    <filename>classisys_1_1_i_file_system.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetNormalizedPath</name>
-      <anchorfile>classisys_1_1_i_file_system.html</anchorfile>
-      <anchor>ad6995113ef9ffe3a54a4a98398f0ac05</anchor>
-      <arglist>(const QString &amp;path) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetFileName</name>
-      <anchorfile>classisys_1_1_i_file_system.html</anchorfile>
-      <anchor>a6330698f20e6672b5bf8c7da0a628522</anchor>
-      <arglist>(const QString &amp;filePath) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetBaseFileName</name>
-      <anchorfile>classisys_1_1_i_file_system.html</anchorfile>
-      <anchor>adc58e4c6ea34d3778ebc2fb8b4816e86</anchor>
-      <arglist>(const QString &amp;filePath) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetDirPath</name>
-      <anchorfile>classisys_1_1_i_file_system.html</anchorfile>
-      <anchor>a158a724c21b8a7e322a9407895f146ee</anchor>
-      <arglist>(const QString &amp;filePath) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>HasExtension</name>
-      <anchorfile>classisys_1_1_i_file_system.html</anchorfile>
-      <anchor>a79d2027c0705617ee3a7de891a1a6644</anchor>
-      <arglist>(const QString &amp;filePath, const QString &amp;extension) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsPresent</name>
-      <anchorfile>classisys_1_1_i_file_system.html</anchorfile>
-      <anchor>ae12703ed48b095956965995d719315d8</anchor>
-      <arglist>(const QString &amp;filePath) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>CreateFileCopy</name>
-      <anchorfile>classisys_1_1_i_file_system.html</anchorfile>
-      <anchor>a21d8804705b527af16a9d5ec75b31341</anchor>
-      <arglist>(const QString &amp;inputFile, const QString &amp;outputFile, bool overwriteExisting=false) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>RemoveFile</name>
-      <anchorfile>classisys_1_1_i_file_system.html</anchorfile>
-      <anchor>a25cea2620e6d79ae860272bb08e430b9</anchor>
-      <arglist>(const QString &amp;filePath) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>RemoveFolder</name>
-      <anchorfile>classisys_1_1_i_file_system.html</anchorfile>
-      <anchor>a99623b5d5782dabcd5d67951db9ca106</anchor>
-      <arglist>(const QString &amp;directoryPath, bool ignoreNonEmpty=false) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>CreateFolder</name>
-      <anchorfile>classisys_1_1_i_file_system.html</anchorfile>
-      <anchor>a66cfe52b893ea799cf9121286ac50c69</anchor>
-      <arglist>(const QString &amp;directoryPath) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isys::IFunctionsProvider</name>
-    <filename>classisys_1_1_i_functions_provider.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsValid</name>
-      <anchorfile>classisys_1_1_i_functions_provider.html</anchorfile>
-      <anchor>ae100aa63042ee5cad9eb0fbcff3c30ab</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void *</type>
-      <name>GetFunction</name>
-      <anchorfile>classisys_1_1_i_functions_provider.html</anchorfile>
-      <anchor>af23fa290dde501e0d387f273fd2ffa1c</anchor>
-      <arglist>(const std::string &amp;id) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isys::IProcessEnvironment</name>
-    <filename>classisys_1_1_i_process_environment.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="typedef">
-      <type>std::map&lt; QString, QString &gt;</type>
-      <name>EnvironmentVariables</name>
-      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
-      <anchor>a99efec7ae33c3029ea731cbc8a740fce</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetMainThreadId</name>
-      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
-      <anchor>afd7889def17b39a9e0ea05956d778ee8</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>Sleep</name>
-      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
-      <anchor>a14f56a0de997006ff86e0d9aeabffcb3</anchor>
-      <arglist>(double seconds)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetTempDirPath</name>
-      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
-      <anchor>ac8e0e9e5c0d9976ac446757ec7ac82be</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetWorkingDirectory</name>
-      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
-      <anchor>a55ceb90cee2639168659e7e2a45fbd94</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QStringList</type>
-      <name>GetApplicationArguments</name>
-      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
-      <anchor>a11985424a95d419d84f69e904318022a</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetModulePath</name>
-      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
-      <anchor>aa121cf28470ef661e2c2aed0f89def3e</anchor>
-      <arglist>(bool useApplicationModule=false, bool onlyDirectory=false) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual EnvironmentVariables</type>
-      <name>GetEnvironmentVariables</name>
-      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
-      <anchor>a1311c2e71f1a8f25dda6afcd8d41af14</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetEnvironmentVariableValue</name>
-      <anchorfile>classisys_1_1_i_process_environment.html</anchorfile>
-      <anchor>a68804b220c1a65eb2d03e441f5570f8d</anchor>
-      <arglist>(const QString &amp;variableName, const QString &amp;value)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isys::ISystemEnvironment</name>
-    <filename>classisys_1_1_i_system_environment.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetUser</name>
-      <anchorfile>classisys_1_1_i_system_environment.html</anchorfile>
-      <anchor>af0f2ae88c8ac50e229e24fd14bd47687</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetTempDirPath</name>
-      <anchorfile>classisys_1_1_i_system_environment.html</anchorfile>
-      <anchor>ab82138578df92f03d231b78e4efd7ed1</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetSystemVariableValue</name>
-      <anchorfile>classisys_1_1_i_system_environment.html</anchorfile>
-      <anchor>ac1075f98e8c26efcb09f424b556850ba</anchor>
-      <arglist>(const QString &amp;variableName) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetUniqueIdentifier</name>
-      <anchorfile>classisys_1_1_i_system_environment.html</anchorfile>
-      <anchor>a0e4f3c4ff6c1c59c48942586a417e967</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>isys::ISystemInfo</name>
-    <filename>classisys_1_1_i_system_info.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetComputerName</name>
-      <anchorfile>classisys_1_1_i_system_info.html</anchorfile>
-      <anchor>afb90c8378860b7d44ff428623c7141a9</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetProcessorsCount</name>
-      <anchorfile>classisys_1_1_i_system_info.html</anchorfile>
-      <anchor>ad2e06b7bf7e429f490f50b150f56e139</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetProcessorId</name>
-      <anchorfile>classisys_1_1_i_system_info.html</anchorfile>
-      <anchor>a5486fbd8ae3615882da3229bad926d5b</anchor>
-      <arglist>(int processorIndex) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsNetworkAdapterInstalled</name>
-      <anchorfile>classisys_1_1_i_system_info.html</anchorfile>
-      <anchor>a172d59bc1ad4d89b24baa4c5ddc06b51</anchor>
-      <arglist>(int *adapterCountPtr=0) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual std::string</type>
-      <name>GetMacAdress</name>
-      <anchorfile>classisys_1_1_i_system_info.html</anchorfile>
-      <anchor>aa86515a199017f957640c560e9fb2f31</anchor>
-      <arglist>(int adapterIndex) const =0</arglist>
     </member>
   </compound>
   <compound kind="namespace">

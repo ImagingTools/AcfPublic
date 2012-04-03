@@ -17,99 +17,17 @@
 </div>
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">Defines access to operating system dependent implementation</div>  </div>
 <div class="ingroups"><a class="el" href="group___a_c_f.html">ACF</a></div></div>
 <div class="contents">
-
-<p>Many of system dependent interfaces will be registered on global level as services.  
-<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_default_services_provider.html">iqt::CDefaultServicesProvider</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Default services provider for qt based services.  <a href="classiqt_1_1_c_default_services_provider.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_static_services_provider.html">istd::CStaticServicesProvider</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Manage list of global services.  <a href="classistd_1_1_c_static_services_provider.html#details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_time_stamp.html">istd::ITimeStamp</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Common interface for timer implementations.  <a href="classistd_1_1_i_time_stamp.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_file_system.html">isys::IFileSystem</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines some file system dependent operations.  <a href="classisys_1_1_i_file_system.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_process_environment.html">isys::IProcessEnvironment</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for access of some system dependent features and infos.  <a href="classisys_1_1_i_process_environment.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_system_environment.html">isys::ISystemEnvironment</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to getting the information about the currently system configuration.  <a href="classisys_1_1_i_system_environment.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisys_1_1_i_system_info.html">isys::ISystemInfo</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Common interface to get the information about the system resources.  <a href="classisys_1_1_i_system_info.html#details">More...</a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceisys.html">isys</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>This namespace contains system implementations. </p>
-<br/></td></tr>
-<tr><td colspan="2"><h2><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename Service &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">Service *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___system.html#ga97abd7f737126eaa330aeb181fee7c4e">istd::GetService</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow to access some global service from anywhere.  <a href="#ga97abd7f737126eaa330aeb181fee7c4e"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename Service &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">TTransPtr&lt; Service &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___system.html#ga71f9fc449ec076ba12a9c2d1b124bbf0">istd::CreateService</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow to create a new service instance from anywhere.  <a href="#ga71f9fc449ec076ba12a9c2d1b124bbf0"></a><br/></td></tr>
 </table>
-<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<p>Many of system dependent interfaces will be registered on global level as services. </p>
-<p>This interfaces can be accessed using global template functions <a class="el" href="group___system.html#ga97abd7f737126eaa330aeb181fee7c4e" title="Allow to access some global service from anywhere.">istd::GetService()</a> and <a class="el" href="group___system.html#ga71f9fc449ec076ba12a9c2d1b124bbf0" title="Allow to create a new service instance from anywhere.">istd::CreateService()</a>. </p>
-<hr/><h2>Function Documentation</h2>
-<a class="anchor" id="ga71f9fc449ec076ba12a9c2d1b124bbf0"></a><!-- doxytag: member="istd::CreateService" ref="ga71f9fc449ec076ba12a9c2d1b124bbf0" args="()" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Service &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">TTransPtr&lt;Service&gt; istd::CreateService </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Allow to create a new service instance from anywhere. </p>
-
-<p>Definition at line <a class="el" href="_c_static_services_provider_8h_source.html#l00121">121</a> of file <a class="el" href="_c_static_services_provider_8h_source.html">CStaticServicesProvider.h</a>.</p>
-
-<p>References <a class="el" href="classistd_1_1_c_static_services_provider.html#a6f19dfff970b3ee4afd686f9f5151bc9">istd::CStaticServicesProvider::CreateService()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ga97abd7f737126eaa330aeb181fee7c4e"></a><!-- doxytag: member="istd::GetService" ref="ga97abd7f737126eaa330aeb181fee7c4e" args="()" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Service &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">Service* istd::GetService </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Allow to access some global service from anywhere. </p>
-
-<p>Definition at line <a class="el" href="_c_static_services_provider_8h_source.html#l00107">107</a> of file <a class="el" href="_c_static_services_provider_8h_source.html">CStaticServicesProvider.h</a>.</p>
-
-<p>References <a class="el" href="classistd_1_1_c_static_services_provider.html#a46905c23cdfd194b785b3a0e3421c220">istd::CStaticServicesProvider::GetService()</a>.</p>
-
-</div>
-</div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

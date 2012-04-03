@@ -30,8 +30,6 @@ namespace ZlibPck
 {
 
 
-I_EXPORT_DEFAULT_SERVICES;
-
 I_EXPORT_PACKAGE(
 			"Zlib",
 			"Package based on compression library ZLIB",

@@ -25,8 +25,6 @@
 
 #include "icomp/export.h"
 
-#include "iqt/CDefaultServicesProvider.h"
-
 
 static struct StaticInit
 {
@@ -41,8 +39,6 @@ static struct StaticInit
 namespace QtWizardPck
 {
 
-
-I_EXPORT_SERVICES_PROVIDER(iqt::CDefaultServicesProvider);
 
 I_EXPORT_PACKAGE(
 			"Acf/Qt/Wizard",

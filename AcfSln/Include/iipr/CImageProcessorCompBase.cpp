@@ -24,7 +24,6 @@
 
 
 // ACF includes
-#include "istd/CStaticServicesProvider.h"
 #include "iimg/CGeneralBitmap.h"
 
 #include "iipr/CImageProcessorCompBase.h"

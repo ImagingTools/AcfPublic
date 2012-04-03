@@ -105,7 +105,7 @@ typedef iipr::CImageBinarizeProcessorComp ImageBinarizeProcessor;
 
 typedef icomp::TMakeComponentWrap<
 			imod::TModelWrap<iipr::CSearchParams>,
-			iipr::ISearchParams,
+			iipr::IImageInterpolationParams,
 			iser::ISerializable,
 			istd::IChangeable,
 			imod::IModel> SearchParams;

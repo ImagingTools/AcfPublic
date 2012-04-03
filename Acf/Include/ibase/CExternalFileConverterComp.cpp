@@ -25,6 +25,7 @@
 
 // Qt includes
 #include <QtCore/QStringList>
+#include <QtCore/QProcess>
 
 
 namespace ibase
@@ -50,12 +51,6 @@ bool CExternalFileConverterComp::ConvertFile(
 		return false;
 	}
 
-	if (!m_processExecuterCompPtr.IsValid()){
-		SendErrorMessage(0, "Process execution component was not set.");
-
-		return false;
-	}
-
 	QStringList arguments;
 
 	// setup command line arguments:
@@ -74,7 +69,16 @@ bool CExternalFileConverterComp::ConvertFile(
 		}
 	}
 
-	return (m_processExecuterCompPtr->ExecuteProcess(m_executablePathCompPtr->GetPath(), arguments) == 0);
+	QProcess appProcess;
+	appProcess.start(m_executablePathCompPtr->GetPath(), arguments);
+
+	appProcess.waitForFinished(-1);
+
+	if (appProcess.error() != QProcess::UnknownError){
+		return false;
+	}
+
+	return (appProcess.exitCode() == 0);
 }
 
 

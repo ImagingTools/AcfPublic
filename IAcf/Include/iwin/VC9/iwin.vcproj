@@ -151,27 +151,7 @@
 			Filter="cpp"
 			>
 			<File
-				RelativePath="..\CDefaultServicesProvider.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\CDllFunctionsProvider.cpp"
-				>
-			</File>
-			<File
 				RelativePath="..\CPerformanceTimeStamp.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\CProcessEnvironment.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\CSystemEnvironment.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\CSystemInfo.cpp"
 				>
 			</File>
 			<File
@@ -184,27 +164,7 @@
 			Filter="h"
 			>
 			<File
-				RelativePath="..\CDefaultServicesProvider.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CDllFunctionsProvider.h"
-				>
-			</File>
-			<File
 				RelativePath="..\CPerformanceTimeStamp.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CProcessEnvironment.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CSystemEnvironment.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CSystemInfo.h"
 				>
 			</File>
 			<File

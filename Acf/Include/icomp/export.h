@@ -27,8 +27,6 @@
 #include "icomp/TComponentRegistrator.h"
 #include "icomp/CPackageStaticInfo.h"
 
-#include "istd/CStaticServicesProvider.h"
-
 
 namespace icomp
 {
@@ -61,18 +59,6 @@ namespace icomp
 #endif // _DEBUG || DEBUG
 
 
-#define I_EXPORT_SERVICES_PROVIDER(serviceProvider)\
-	extern "C" I_FUNCTION_EXPORT void I_EXPORT_SERVICES_FUNCTION(const istd::IServicesProvider* parentPtr){\
-		istd::CStaticServicesProvider::InitServices(parentPtr);\
-		serviceProvider::RegisterServices();\
-	}
-
-#define I_EXPORT_DEFAULT_SERVICES\
-	extern "C" I_FUNCTION_EXPORT void I_EXPORT_SERVICES_FUNCTION(const istd::IServicesProvider* parentPtr){\
-		istd::CStaticServicesProvider::InitServices(parentPtr);\
-	}
-
-
 #define I_EXPORT_PACKAGE(logicalName, description, keywords) \
 	static icomp::CPackageStaticInfo packageInfo(description, keywords);\
 	extern "C" I_FUNCTION_EXPORT icomp::CPackageStaticInfo* I_PACKAGE_EXPORT_FUNCTION(){\
@@ -83,7 +69,6 @@ namespace icomp
 	static icomp::TComponentRegistrator<component> component##_registrator(#component, packageInfo, description, keywords);\
 
 typedef icomp::CPackageStaticInfo* (*GetPackageInfoFunc)();
-typedef void (*RegisterServicesFunc)(const istd::IServicesProvider*);
 
 
 #define I_DATA_PERSISTENCE "\"Data Persistence\""

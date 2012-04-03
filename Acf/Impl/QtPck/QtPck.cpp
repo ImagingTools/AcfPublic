@@ -25,8 +25,6 @@
 
 #include "icomp/export.h"
 
-#include "iqt/CDefaultServicesProvider.h"
-
 
 static struct StaticInit
 {
@@ -41,8 +39,6 @@ static struct StaticInit
 namespace QtPck
 {
 
-
-I_EXPORT_SERVICES_PROVIDER(iqt::CDefaultServicesProvider);
 
 I_EXPORT_PACKAGE(
 			"Acf/Qt/Base",
@@ -108,11 +104,6 @@ I_EXPORT_COMPONENT(
 			ClipboardSerializer,
 			"Load and store objects from and to clipboard",
 			"System Clipboard Serializer Copy Paste" IM_TAG("Loader"));
-
-I_EXPORT_COMPONENT(
-			ProcessorExecutor,
-			"Execute an external application",
-			"Application External Process" IM_CATEGORY(I_APPLICATION) IM_TAG("Application"));
 
 I_EXPORT_COMPONENT(
 			RenderedObjectFileLoader,

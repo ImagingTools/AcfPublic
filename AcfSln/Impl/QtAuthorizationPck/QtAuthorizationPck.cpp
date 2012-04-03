@@ -26,11 +26,8 @@
 // Qt includes
 #include <QtCore/QDir>
 
-
 // ACF includes
 #include "icomp/export.h"
-
-#include "iqt/CDefaultServicesProvider.h"
 
 
 static struct StaticInit
@@ -45,9 +42,6 @@ static struct StaticInit
 
 namespace QtAuthorizationPck
 {
-
-
-I_EXPORT_SERVICES_PROVIDER(iqt::CDefaultServicesProvider);
 
 
 I_EXPORT_PACKAGE(

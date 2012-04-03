@@ -115,7 +115,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a1a8e94faafaaa263121eb0d09289ae1b">RegisterPackageFile</a> (const QString &amp;file)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#ae16fedaf6f730869f26d890dbb7e1e02">RegisterPackagesDir</a> (const QString &amp;subDir)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#ac77d10d1b31c1dac9f11e42a30fc543b">LoadConfigFile</a> (const QString &amp;configFile)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiqt_1_1_c_dll_functions_provider.html">CDllFunctionsProvider</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a9439be9178fd4c4a731a36658c174808">GetProviderRef</a> (const QFileInfo &amp;fileInfo)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QLibrary &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a871076ffac68c8c499ed56cb55c5c492">GetLibrary</a> (const QFileInfo &amp;fileInfo)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a8094c67450718c0a22e9be2cde371a5b">CheckAndMarkPath</a> (const QDir &amp;directory, const QString &amp;path, QString &amp;resultPath) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -259,6 +259,23 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a871076ffac68c8c499ed56cb55c5c492"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::GetLibrary" ref="a871076ffac68c8c499ed56cb55c5c492" args="(const QFileInfo &amp;fileInfo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QLibrary&amp; iqt::CPackagesLoaderComp::GetLibrary </td>
+          <td>(</td>
+          <td class="paramtype">const QFileInfo &amp;&#160;</td>
+          <td class="paramname"><em>fileInfo</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a020bdae6e4bfe597089251399ba5eac3"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::GetPackagePath" ref="a020bdae6e4bfe597089251399ba5eac3" args="(const std::string &amp;packageId) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -305,23 +322,6 @@ Protected Member Functions</h2></td></tr>
 <p>Get type of package as defined in <code>PackageType</code>. </p>
 
 <p>Reimplemented from <a class="el" href="classicomp_1_1_c_environment_manager_base.html#a480bd52a1c68d754538bffd1a51e8422">icomp::CEnvironmentManagerBase</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9439be9178fd4c4a731a36658c174808"></a><!-- doxytag: member="iqt::CPackagesLoaderComp::GetProviderRef" ref="a9439be9178fd4c4a731a36658c174808" args="(const QFileInfo &amp;fileInfo)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classiqt_1_1_c_dll_functions_provider.html">CDllFunctionsProvider</a>&amp; iqt::CPackagesLoaderComp::GetProviderRef </td>
-          <td>(</td>
-          <td class="paramtype">const QFileInfo &amp;&#160;</td>
-          <td class="paramname"><em>fileInfo</em></td><td>)</td>
-          <td><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
 
 </div>
 </div>
