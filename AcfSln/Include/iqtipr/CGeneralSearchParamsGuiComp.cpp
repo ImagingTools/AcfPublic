@@ -26,7 +26,7 @@ void CGeneralSearchParamsGuiComp::UpdateModel() const
 
 	if ((objectPtr->GetMinScore() * 100) != MinScoreSB->value()){
 		notifier.SetPtr(objectPtr);
-		objectPtr->SetMinScore(MinScoreSB->value() / 100.0);
+		objectPtr->SetMinScore(double(MinScoreSB->value()) / 100.0);
 	}
 
 	const istd::CRange& rotationRange = objectPtr->GetRotationRange();
@@ -90,7 +90,7 @@ void CGeneralSearchParamsGuiComp::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
-	QObject::connect(MinScoreSB, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
+	QObject::connect(MinScoreSB, SIGNAL(valueChanged(int)), this, SLOT(OnParamsChanged(int)));
 	QObject::connect(MinRotationSB, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
 	QObject::connect(MaxRotationSB, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
 	QObject::connect(MinScaleSB, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
@@ -100,7 +100,7 @@ void CGeneralSearchParamsGuiComp::OnGuiModelAttached()
 
 void CGeneralSearchParamsGuiComp::OnGuiModelDetached()
 {
-	QObject::disconnect(MinScoreSB, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
+	QObject::disconnect(MinScoreSB, SIGNAL(valueChanged(int)), this, SLOT(OnParamsChanged(int)));
 	QObject::disconnect(MinRotationSB, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
 	QObject::disconnect(MaxRotationSB, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
 	QObject::disconnect(MinScaleSB, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
@@ -117,7 +117,7 @@ void CGeneralSearchParamsGuiComp::UpdateGui(int /*updateFlags*/)
 	iipr::ISearchParams* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
 		iqt::CSignalBlocker block(MinScoreSB);
-		MinScoreSB->setValue(objectPtr->GetMinScore());
+		MinScoreSB->setValue(objectPtr->GetMinScore() * 100.0 + 0.5);
 
 		iqt::CSignalBlocker block2(MinRotationSB);
 		MinRotationSB->setValue(objectPtr->GetRotationRange().GetMinValue());
@@ -137,6 +137,16 @@ void CGeneralSearchParamsGuiComp::UpdateGui(int /*updateFlags*/)
 // protected slots
 
 void CGeneralSearchParamsGuiComp::OnParamsChanged(double /*value*/)
+{
+	if (!IsUpdateBlocked()){
+		UpdateBlocker updateBlocker(this);
+
+		UpdateModel();
+	}
+}
+
+
+void CGeneralSearchParamsGuiComp::OnParamsChanged(int /*value*/)
 {
 	if (!IsUpdateBlocked()){
 		UpdateBlocker updateBlocker(this);

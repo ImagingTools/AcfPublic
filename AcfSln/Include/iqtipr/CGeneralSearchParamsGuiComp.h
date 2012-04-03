@@ -43,7 +43,8 @@ protected:
 	virtual void UpdateGui(int updateFlags = 0);
 
 protected Q_SLOTS:
-	void OnParamsChanged(double value);
+	void OnParamsChanged(double);
+	void OnParamsChanged(int);
 	void on_RotationCB_toggled(bool);
 	void on_ScalingCB_toggled(bool);
 };
