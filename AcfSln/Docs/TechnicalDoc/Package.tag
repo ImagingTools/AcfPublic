@@ -1649,6 +1649,14 @@
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CGeneralSearchParamsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
+    <filename>_c_general_search_params_gui_comp_8h</filename>
+    <includes id="_i_search_params_8h" name="ISearchParams.h" local="yes" imported="no">iipr/ISearchParams.h</includes>
+    <class kind="class">iqtipr::CGeneralSearchParamsGuiComp</class>
+    <namespace>iqtipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CLineProjectionSupplierGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_line_projection_supplier_gui_comp_8h</filename>
@@ -12250,6 +12258,7 @@
     <filename>namespaceiqtipr.html</filename>
     <class kind="class">iqtipr::CCaliperParamsGuiComp</class>
     <class kind="class">iqtipr::CCircleFinderParamsGuiComp</class>
+    <class kind="class">iqtipr::CGeneralSearchParamsGuiComp</class>
     <class kind="class">iqtipr::CLineProjectionSupplierGuiComp</class>
     <class kind="class">iqtipr::CProjectionShape</class>
     <class kind="class">iqtipr::CSearchBasedFeaturesSupplierGuiComp</class>
@@ -12353,6 +12362,67 @@
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
       <anchor>ac7946e515605ac530c82aff1f6e0475d</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtipr::CGeneralSearchParamsGuiComp</name>
+    <filename>classiqtipr_1_1_c_general_search_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CGeneralSearchParamsGuiComp, iipr::ISearchParams &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CGeneralSearchParamsGuiComp, iipr::ISearchParams &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a9e11ab36a0eda73aec80a4149321ef25</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a646dfb07f30e7411e2f7c2f10fbeb44f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnParamsChanged</name>
+      <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>abb91c1ae04a3856f73b95d94f6e4e860</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RotationCB_toggled</name>
+      <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a49e84221f9eaee52aabc3ea97e269114</anchor>
+      <arglist>(bool)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ScalingCB_toggled</name>
+      <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>af7226f2742588a33815917361e01facb</anchor>
+      <arglist>(bool)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>ab6b231c0573dc2b612ee70e1b494ba40</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a0fc6b9cf2aefd527ab125cfd80be0f80</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a2e15fb6e8a75efc33895e34a83db5978</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>

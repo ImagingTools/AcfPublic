@@ -29,6 +29,7 @@
 #include "icomp/TModelCompWrap.h"
 #include "icomp/TMakeComponentWrap.h"
 
+// ACF-Solutions includes
 #include "iipr/CRectImageSmoothProcessorComp.h"
 #include "iipr/CProcessedAcquisitionComp.h"
 #include "iipr/TUnaryTransformProcessorComp.h"
@@ -105,7 +106,7 @@ typedef iipr::CImageBinarizeProcessorComp ImageBinarizeProcessor;
 
 typedef icomp::TMakeComponentWrap<
 			imod::TModelWrap<iipr::CSearchParams>,
-			iipr::IImageInterpolationParams,
+			iipr::ISearchParams,
 			iser::ISerializable,
 			istd::IChangeable,
 			imod::IModel> SearchParams;
