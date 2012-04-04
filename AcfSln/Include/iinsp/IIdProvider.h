@@ -43,7 +43,7 @@ public:
 	/**
 		Get current ID value.
 	*/
-	virtual I_DWORD GetCurrentId() const = 0;
+	virtual quint32 GetCurrentId() const = 0;
 };
 
 

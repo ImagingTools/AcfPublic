@@ -241,23 +241,23 @@
 <a name="l00362"></a><a class="code" href="classistd_1_1_t_range.html#a155594e58a59eb679f180fef2de3d354">00362</a> <span class="keyword">inline</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange&lt;ValueType&gt;</a> <a class="code" href="classistd_1_1_t_range.html#a155594e58a59eb679f180fef2de3d354" title="Get validated range, if it was invalid.">TRange&lt;ValueType&gt;::GetValidated</a>()<span class="keyword"> const</span>
 <a name="l00363"></a>00363 <span class="keyword"></span>{
 <a name="l00364"></a>00364        <span class="keywordflow">return</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>(
-<a name="l00365"></a>00365                             <a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(m_minValue, m_maxValue),
-<a name="l00366"></a>00366                             <a class="code" href="group___main.html#ga761fb858ab3e61d9682b99f0b32c06f7" title="Define own max function to avoid conflicts between STL and Microsoft macros.">istd::Max</a>(m_minValue, m_maxValue));
+<a name="l00365"></a>00365                             qMin(m_minValue, m_maxValue),
+<a name="l00366"></a>00366                             qMax(m_minValue, m_maxValue));
 <a name="l00367"></a>00367 }
 <a name="l00368"></a>00368 
 <a name="l00369"></a>00369 
 <a name="l00370"></a>00370 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
 <a name="l00371"></a><a class="code" href="classistd_1_1_t_range.html#a4db3b1e8ec9cfc125bf5fadc87b052ef">00371</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_range.html#a155594e58a59eb679f180fef2de3d354" title="Get validated range, if it was invalid.">TRange&lt;ValueType&gt;::GetValidated</a>(<a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>&amp; result)<span class="keyword"> const</span>
 <a name="l00372"></a>00372 <span class="keyword"></span>{
-<a name="l00373"></a>00373        result.<a class="code" href="classistd_1_1_t_range.html#a64619392b313212e01a5fbeb1b6449f7" title="Set the bottom value.">SetMinValue</a>(<a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(m_minValue, m_maxValue));
-<a name="l00374"></a>00374        result.<a class="code" href="classistd_1_1_t_range.html#af8e558b7ae646d6eac480649769d9818" title="Set the top value.">SetMaxValue</a>(<a class="code" href="group___main.html#ga761fb858ab3e61d9682b99f0b32c06f7" title="Define own max function to avoid conflicts between STL and Microsoft macros.">istd::Max</a>(m_minValue, m_maxValue));
+<a name="l00373"></a>00373        result.<a class="code" href="classistd_1_1_t_range.html#a64619392b313212e01a5fbeb1b6449f7" title="Set the bottom value.">SetMinValue</a>(qMin(m_minValue, m_maxValue));
+<a name="l00374"></a>00374        result.<a class="code" href="classistd_1_1_t_range.html#af8e558b7ae646d6eac480649769d9818" title="Set the top value.">SetMaxValue</a>(qMax(m_minValue, m_maxValue));
 <a name="l00375"></a>00375 }
 <a name="l00376"></a>00376 
 <a name="l00377"></a>00377 
 <a name="l00378"></a>00378 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
 <a name="l00379"></a><a class="code" href="classistd_1_1_t_range.html#a2947ea25f37b79e2dfd4cf3c42d68032">00379</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_range.html#a2947ea25f37b79e2dfd4cf3c42d68032" title="Force this range to be valid.">TRange&lt;ValueType&gt;::Validate</a>()
 <a name="l00380"></a>00380 {
-<a name="l00381"></a>00381        *<span class="keyword">this</span> = <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>(<a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(m_minValue, m_maxValue), <a class="code" href="group___main.html#ga761fb858ab3e61d9682b99f0b32c06f7" title="Define own max function to avoid conflicts between STL and Microsoft macros.">istd::Max</a>(m_minValue, m_maxValue));
+<a name="l00381"></a>00381        *<span class="keyword">this</span> = <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>(qMin(m_minValue, m_maxValue), qMax(m_minValue, m_maxValue));
 <a name="l00382"></a>00382 }
 <a name="l00383"></a>00383 
 <a name="l00384"></a>00384 
@@ -301,7 +301,7 @@
 <a name="l00422"></a>00422               <span class="keywordflow">return</span> *<span class="keyword">this</span>;
 <a name="l00423"></a>00423        }
 <a name="l00424"></a>00424        <span class="keywordflow">else</span>{
-<a name="l00425"></a>00425               <span class="keywordflow">return</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>(<a class="code" href="group___main.html#ga761fb858ab3e61d9682b99f0b32c06f7" title="Define own max function to avoid conflicts between STL and Microsoft macros.">Max</a>(m_minValue, range.m_minValue), <a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">Min</a>(m_maxValue, range.m_maxValue));
+<a name="l00425"></a>00425               <span class="keywordflow">return</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>(qMax(m_minValue, range.m_minValue), qMin(m_maxValue, range.m_maxValue));
 <a name="l00426"></a>00426        }
 <a name="l00427"></a>00427 }
 <a name="l00428"></a>00428 
@@ -326,7 +326,7 @@
 <a name="l00447"></a>00447 <span class="keyword"></span>{
 <a name="l00448"></a>00448        <span class="keywordflow">if</span> (range.<a class="code" href="classistd_1_1_t_range.html#a26a383dad01a17298fa1ab3d4db2cbb0" title="Return true if the bottom value is smaller or equal then the top value.">IsValid</a>()){
 <a name="l00449"></a>00449               <span class="keywordflow">if</span> (IsValid()){
-<a name="l00450"></a>00450                      <span class="keywordflow">return</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>(<a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">Min</a>(m_minValue, range.m_minValue), <a class="code" href="group___main.html#ga761fb858ab3e61d9682b99f0b32c06f7" title="Define own max function to avoid conflicts between STL and Microsoft macros.">Max</a>(m_maxValue, range.m_maxValue));
+<a name="l00450"></a>00450                      <span class="keywordflow">return</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>(qMin(m_minValue, range.m_minValue), qMax(m_maxValue, range.m_maxValue));
 <a name="l00451"></a>00451               }
 <a name="l00452"></a>00452               <span class="keywordflow">else</span>{
 <a name="l00453"></a>00453                      <span class="keywordflow">return</span> range;
@@ -342,7 +342,7 @@
 <a name="l00463"></a><a class="code" href="classistd_1_1_t_range.html#a07b481fd80186ac93a1df7bab4411daa">00463</a> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange&lt;ValueType&gt;</a> <a class="code" href="classistd_1_1_t_range.html#a2097eaecea08f5284ce57fab97791c95" title="Get union with the second range.">TRange&lt;ValueType&gt;::GetUnion</a>(<span class="keywordtype">double</span> value)<span class="keyword"> const</span>
 <a name="l00464"></a>00464 <span class="keyword"></span>{
 <a name="l00465"></a>00465        <span class="keywordflow">if</span> (IsValid()){
-<a name="l00466"></a>00466               <span class="keywordflow">return</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>(<a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">Min</a>(m_minValue, value), <a class="code" href="group___main.html#ga761fb858ab3e61d9682b99f0b32c06f7" title="Define own max function to avoid conflicts between STL and Microsoft macros.">Max</a>(m_maxValue, value));
+<a name="l00466"></a>00466               <span class="keywordflow">return</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>(qMin(m_minValue, value), qMax(m_maxValue, value));
 <a name="l00467"></a>00467        }
 <a name="l00468"></a>00468        <span class="keywordflow">else</span>{
 <a name="l00469"></a>00469               <span class="keywordflow">return</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>(value, value);
@@ -572,7 +572,7 @@
 <a name="l00693"></a>00693 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
 <a name="l00694"></a><a class="code" href="classistd_1_1_t_range.html#a8f0da6a2bff843dd5c35950d6ab48e39">00694</a> <span class="keyword">inline</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange&lt;ValueType&gt;</a> <a class="code" href="classistd_1_1_t_range.html#a8f0da6a2bff843dd5c35950d6ab48e39" title="Return always valid range.">TRange&lt;ValueType&gt;::GetValid</a>(ValueType value1, ValueType value2)
 <a name="l00695"></a>00695 {
-<a name="l00696"></a>00696        <span class="keywordflow">return</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>(<a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(value1, value2), <a class="code" href="group___main.html#ga761fb858ab3e61d9682b99f0b32c06f7" title="Define own max function to avoid conflicts between STL and Microsoft macros.">istd::Max</a>(value1, value2));
+<a name="l00696"></a>00696        <span class="keywordflow">return</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>(qMin(value1, value2), qMax(value1, value2));
 <a name="l00697"></a>00697 }
 <a name="l00698"></a>00698 
 <a name="l00699"></a>00699 

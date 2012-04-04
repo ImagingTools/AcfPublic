@@ -68,8 +68,8 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_bit_memory_write_archive.html#a0de1bd6f75196774671a20787e066424">CBitMemoryWriteArchive</a> (const <a class="el" href="classiser_1_1_i_version_info.html">IVersionInfo</a> *versionInfoPtr=NULL, bool serializeHeader=true)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_bit_memory_write_archive.html#a7fef31b09d80ffc5667dc7081cd72e13">WriteValue</a> (<a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> inputValue, int bits)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes a value of the <code>word</code> bounding by N <code>bits</code> into the stream.  <a href="#a7fef31b09d80ffc5667dc7081cd72e13"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_bit_memory_write_archive.html#a29a39bc738d2a092d8fd0daaec5f5471">WriteValue</a> (quint32 inputValue, int bits)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes a value of the <code>word</code> bounding by N <code>bits</code> into the stream.  <a href="#a29a39bc738d2a092d8fd0daaec5f5471"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_bit_memory_write_archive.html#a9cb02bed871578ae5d210cfea597269a">ProcessData</a> (void *data, int size)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process binary data block.  <a href="#a9cb02bed871578ae5d210cfea597269a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_bit_memory_write_archive.html#a2a59b8e88a3f66b3343b40ce8b601c87">ProcessBits</a> (void *data, int bitsCount, int bytesCount)</td></tr>
@@ -212,14 +212,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7fef31b09d80ffc5667dc7081cd72e13"></a><!-- doxytag: member="iser::CBitMemoryWriteArchive::WriteValue" ref="a7fef31b09d80ffc5667dc7081cd72e13" args="(I_DWORD inputValue, int bits)" -->
+<a class="anchor" id="a29a39bc738d2a092d8fd0daaec5f5471"></a><!-- doxytag: member="iser::CBitMemoryWriteArchive::WriteValue" ref="a29a39bc738d2a092d8fd0daaec5f5471" args="(quint32 inputValue, int bits)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void iser::CBitMemoryWriteArchive::WriteValue </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td>
+          <td class="paramtype">quint32&#160;</td>
           <td class="paramname"><em>inputValue</em>, </td>
         </tr>
         <tr>

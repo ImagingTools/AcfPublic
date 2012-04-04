@@ -54,7 +54,7 @@ const std::string& CArchiveTag::GetId() const
 
 
 
-I_DWORD CArchiveTag::GetBinaryId() const
+quint32 CArchiveTag::GetBinaryId() const
 {
 	return m_binaryId;
 }

@@ -58,10 +58,10 @@ Inheritance diagram for icomp::CRegistryElement:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry_element.html#aae2837df5a05c94c3a013b48c5ad1d9b">CRegistryElement</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html">AttributeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry_element.html#a43d3fb94ed602ddf69774eefd5278bdc">GetAttributeInfo</a> (const std::string &amp;attributeId)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry_element.html#a681370b837931760937b1f0f6f30cbb0">GetElementFlags</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of this registry element.  <a href="#a681370b837931760937b1f0f6f30cbb0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry_element.html#ac5e72da772fedbfe95f3b5bbaae87f88">SetElementFlags</a> (<a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> flags)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flags of this registry element.  <a href="#ac5e72da772fedbfe95f3b5bbaae87f88"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry_element.html#aaf8852d339a798daa55f84ebe29a9fa4">GetElementFlags</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of this registry element.  <a href="#aaf8852d339a798daa55f84ebe29a9fa4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry_element.html#a47890eb5479818fcf6fd8bf89c7132ae">SetElementFlags</a> (quint32 flags)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flags of this registry element.  <a href="#a47890eb5479818fcf6fd8bf89c7132ae"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry_element.html#ac62e79cf494e0d11c8a2f8757d577996">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry_element.html#ad9b22526be5a419ac6c5130a537a4ce7">GetAttributeIds</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID list of existing attributes.  <a href="#ad9b22526be5a419ac6c5130a537a4ce7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html">AttributeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry_element.html#a9deb70e720ba3bcc7209e73c6a7e9474">InsertAttributeInfo</a> (const std::string &amp;attributeId, const std::string &amp;attributeType)</td></tr>
@@ -177,12 +177,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a681370b837931760937b1f0f6f30cbb0"></a><!-- doxytag: member="icomp::CRegistryElement::GetElementFlags" ref="a681370b837931760937b1f0f6f30cbb0" args="() const " -->
+<a class="anchor" id="aaf8852d339a798daa55f84ebe29a9fa4"></a><!-- doxytag: member="icomp::CRegistryElement::GetElementFlags" ref="aaf8852d339a798daa55f84ebe29a9fa4" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> icomp::CRegistryElement::GetElementFlags </td>
+          <td class="memname">virtual quint32 icomp::CRegistryElement::GetElementFlags </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -194,7 +194,7 @@ Public Member Functions</h2></td></tr>
 <p>Get flags of this registry element. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classicomp_1_1_i_registry_element.html#acf042457ccccd5a4f00f8b840a2dfe4b">ElementFlags</a> </dd></dl>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_registry_element.html#a9aa4897f090502b8717538d774e063a6">icomp::IRegistryElement</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_registry_element.html#a903ec24e7a3be924678f340e948d45c0">icomp::IRegistryElement</a>.</p>
 
 </div>
 </div>
@@ -282,14 +282,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac5e72da772fedbfe95f3b5bbaae87f88"></a><!-- doxytag: member="icomp::CRegistryElement::SetElementFlags" ref="ac5e72da772fedbfe95f3b5bbaae87f88" args="(I_DWORD flags)" -->
+<a class="anchor" id="a47890eb5479818fcf6fd8bf89c7132ae"></a><!-- doxytag: member="icomp::CRegistryElement::SetElementFlags" ref="a47890eb5479818fcf6fd8bf89c7132ae" args="(quint32 flags)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void icomp::CRegistryElement::SetElementFlags </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td>
+          <td class="paramtype">quint32&#160;</td>
           <td class="paramname"><em>flags</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -300,7 +300,7 @@ Public Member Functions</h2></td></tr>
 <p>Set flags of this registry element. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classicomp_1_1_i_registry_element.html#acf042457ccccd5a4f00f8b840a2dfe4b">ElementFlags</a> </dd></dl>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_registry_element.html#afe332f55bbeb768950f22a3d03b1d74c">icomp::IRegistryElement</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_registry_element.html#afb588669e8ab74482ab16cb74d5dcc2b">icomp::IRegistryElement</a>.</p>
 
 </div>
 </div>

@@ -1000,10 +1000,10 @@
     <class kind="class">iipr::TUnaryTransformProcessorComp</class>
     <namespace>iipr</namespace>
     <member kind="typedef">
-      <type>TUnaryTransformProcessorComp&lt; I_BYTE, InvertFunction&lt; I_BYTE &gt; &gt;</type>
+      <type>TUnaryTransformProcessorComp&lt; quint8, InvertFunction&lt; quint8 &gt; &gt;</type>
       <name>CInvertOperatorComp</name>
       <anchorfile>namespaceiipr.html</anchorfile>
-      <anchor>a1338874f6c5f00966ec64e0b06992393</anchor>
+      <anchor>ad0d6faf1c0ae8bff60c0b05d75c55f67</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1180,31 +1180,31 @@
     <class kind="class">imeas::TDiscreteDataSequence</class>
     <namespace>imeas</namespace>
     <member kind="typedef">
-      <type>TDiscreteDataSequence&lt; I_BYTE &gt;</type>
+      <type>TDiscreteDataSequence&lt; quint8 &gt;</type>
       <name>CSimpleSamplesSequence8</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>a0530bccf3550005ef3a5082fa890f74e</anchor>
+      <anchor>a08464091db3d0fdecb67cd0a2c3f57ae</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TDiscreteDataSequence&lt; I_WORD &gt;</type>
+      <type>TDiscreteDataSequence&lt; quint16 &gt;</type>
       <name>CSimpleSamplesSequence16</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>a331f461ee42a1da0ace19e2e91dddabe</anchor>
+      <anchor>a0230bb7ba2012e4cd52f11d64379dc69</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TDiscreteDataSequence&lt; I_DWORD &gt;</type>
+      <type>TDiscreteDataSequence&lt; quint32 &gt;</type>
       <name>CSimpleSamplesSequence32</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>aa57870ab7541194de37fb5da01379a7f</anchor>
+      <anchor>a0d92c1716a1eb179808bbe1f54ab500e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TDiscreteDataSequence&lt; I_QWORD &gt;</type>
+      <type>TDiscreteDataSequence&lt; quint64 &gt;</type>
       <name>CSimpleSamplesSequence64</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>aaddd3e4ceed80054a91e77ea920fcca2</anchor>
+      <anchor>a82b05a8e2ec7b09559314bcae7bdc4b8</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -4662,10 +4662,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_DWORD</type>
+      <type>virtual quint32</type>
       <name>GetCurrentId</name>
       <anchorfile>classiinsp_1_1_c_id_cache_comp.html</anchorfile>
-      <anchor>a52dddd437677a6ab1948546a4d7d97cc</anchor>
+      <anchor>a8a7f3b95fcd2d2eda0778a53bbbd08c6</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4926,10 +4926,10 @@
     <filename>classiinsp_1_1_i_id_provider.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
-      <type>virtual I_DWORD</type>
+      <type>virtual quint32</type>
       <name>GetCurrentId</name>
       <anchorfile>classiinsp_1_1_i_id_provider.html</anchorfile>
-      <anchor>a278a0d0ce1fdf7437bd71fb9f4a2e0d6</anchor>
+      <anchor>a278e12c95173278c5a3403d569811d09</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -5058,10 +5058,10 @@
     <class kind="class">iipr::InvertFunction</class>
     <class kind="class">iipr::TUnaryTransformProcessorComp</class>
     <member kind="typedef">
-      <type>TUnaryTransformProcessorComp&lt; I_BYTE, InvertFunction&lt; I_BYTE &gt; &gt;</type>
+      <type>TUnaryTransformProcessorComp&lt; quint8, InvertFunction&lt; quint8 &gt; &gt;</type>
       <name>CInvertOperatorComp</name>
       <anchorfile>namespaceiipr.html</anchorfile>
-      <anchor>a1338874f6c5f00966ec64e0b06992393</anchor>
+      <anchor>ad0d6faf1c0ae8bff60c0b05d75c55f67</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -5529,10 +5529,10 @@
       <arglist>(iser::IArchive &amp;archive)=0</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_DWORD</type>
+      <type>virtual quint32</type>
       <name>GetMinimalVersion</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>a193c33ceaa2eb889ce80ab302d2a4957</anchor>
+      <anchor>a7813c5bb06fa67f634ccca1ab468ef9a</anchor>
       <arglist>(int versionId) const </arglist>
     </member>
   </compound>
@@ -7698,31 +7698,31 @@
     <class kind="class">imeas::IUnitInfo</class>
     <class kind="class">imeas::TDiscreteDataSequence</class>
     <member kind="typedef">
-      <type>TDiscreteDataSequence&lt; I_BYTE &gt;</type>
+      <type>TDiscreteDataSequence&lt; quint8 &gt;</type>
       <name>CSimpleSamplesSequence8</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>a0530bccf3550005ef3a5082fa890f74e</anchor>
+      <anchor>a08464091db3d0fdecb67cd0a2c3f57ae</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TDiscreteDataSequence&lt; I_WORD &gt;</type>
+      <type>TDiscreteDataSequence&lt; quint16 &gt;</type>
       <name>CSimpleSamplesSequence16</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>a331f461ee42a1da0ace19e2e91dddabe</anchor>
+      <anchor>a0230bb7ba2012e4cd52f11d64379dc69</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TDiscreteDataSequence&lt; I_DWORD &gt;</type>
+      <type>TDiscreteDataSequence&lt; quint32 &gt;</type>
       <name>CSimpleSamplesSequence32</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>aa57870ab7541194de37fb5da01379a7f</anchor>
+      <anchor>a0d92c1716a1eb179808bbe1f54ab500e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TDiscreteDataSequence&lt; I_QWORD &gt;</type>
+      <type>TDiscreteDataSequence&lt; quint64 &gt;</type>
       <name>CSimpleSamplesSequence64</name>
       <anchorfile>namespaceimeas.html</anchorfile>
-      <anchor>aaddd3e4ceed80054a91e77ea920fcca2</anchor>
+      <anchor>a82b05a8e2ec7b09559314bcae7bdc4b8</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -8817,18 +8817,18 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual I_DWORD</type>
+      <type>virtual quint32</type>
       <name>GetDiscrSample</name>
       <anchorfile>classimeas_1_1_i_discrete_data_sequence.html</anchorfile>
-      <anchor>a2a3a65ededfebe85757b9f95660e0601</anchor>
+      <anchor>a7cd2bacc9056c18b59ccb7691c57b95b</anchor>
       <arglist>(int position, int channel=0) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>SetDiscrSample</name>
       <anchorfile>classimeas_1_1_i_discrete_data_sequence.html</anchorfile>
-      <anchor>a5c22961afa3e8b878e4a0d0376b2028b</anchor>
-      <arglist>(int position, int channel, I_DWORD sample)=0</arglist>
+      <anchor>acde7c99860839fec94a1707e348cb2c0</anchor>
+      <arglist>(int position, int channel, quint32 sample)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9005,18 +9005,18 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_DWORD</type>
+      <type>virtual quint32</type>
       <name>GetDiscrSample</name>
       <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
-      <anchor>a7dde7bba22c7dc8aaf580b324a6b5c55</anchor>
+      <anchor>ac1ccf33bc3806bc8070c84ad07cfef2e</anchor>
       <arglist>(int position, int channel=0) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetDiscrSample</name>
       <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
-      <anchor>add0521c6fa60ee8900749b89dd734730</anchor>
-      <arglist>(int position, int channel, I_DWORD sample)</arglist>
+      <anchor>a561fb705e0c901e22b79f2fb07ac4de8</anchor>
+      <arglist>(int position, int channel, quint32 sample)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -10432,10 +10432,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>I_DWORD</type>
+      <type>quint32</type>
       <name>idStamp</name>
       <anchorfile>structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html</anchorfile>
-      <anchor>a72e335ee8684933de7526c856e83c4b6</anchor>
+      <anchor>a922346277292f8827b9817759720ebb7</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -10787,57 +10787,57 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a7f313ebf4dc82e3ace4a74dde1e8867a</anchor>
-      <arglist>(I_BYTE &amp;value)</arglist>
+      <anchor>a98f49c355df2c28474c2780b259887a4</anchor>
+      <arglist>(quint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a2d9175262ff002d8f88ead6b3c365017</anchor>
-      <arglist>(I_SBYTE &amp;value)</arglist>
+      <anchor>a08be6eddf315f8558909fdef1222c385</anchor>
+      <arglist>(qint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a0b6285f1e8f9a9dd0257c0efb394874b</anchor>
-      <arglist>(I_WORD &amp;value)</arglist>
+      <anchor>ab9723bb468e0c2eefa031ef6d2e07108</anchor>
+      <arglist>(quint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a5b1923e531d0587b566d35053bb092d6</anchor>
-      <arglist>(I_SWORD &amp;value)</arglist>
+      <anchor>a158bf3c5dd76b279e41a562451977aef</anchor>
+      <arglist>(qint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>aaa44dd7202dd67c999ae9a634e4703f7</anchor>
-      <arglist>(I_DWORD &amp;value)</arglist>
+      <anchor>a28d8e054e12649c807550b2375bfdcd9</anchor>
+      <arglist>(quint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a598df4f8e709076f4af1f826c1216cb8</anchor>
-      <arglist>(I_SDWORD &amp;value)</arglist>
+      <anchor>ad059ed98f239376f88ddf216098bf4ac</anchor>
+      <arglist>(qint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a44489a0860a437723b3fee6a7a9b72a3</anchor>
-      <arglist>(I_QWORD &amp;value)</arglist>
+      <anchor>a140786a1eba058fa04ca5d1ecef1e850</anchor>
+      <arglist>(quint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>aeb80b4c3d2d110de8ce5e2de91c618b9</anchor>
-      <arglist>(I_SQWORD &amp;value)</arglist>
+      <anchor>a18e6a76453141c486d9ea335487b87a4</anchor>
+      <arglist>(qint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -10983,57 +10983,57 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a8e4cc39e4b873ffc6a6509876df6e1ee</anchor>
-      <arglist>(I_BYTE &amp;value)</arglist>
+      <anchor>a7e704786242ae89d16f3c3d3ba45bb66</anchor>
+      <arglist>(quint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a1ed42f4b146ccd8836b5f535e190adf0</anchor>
-      <arglist>(I_SBYTE &amp;value)</arglist>
+      <anchor>a3ddafedc51b0091ca8cf9b6f4e99fd3d</anchor>
+      <arglist>(qint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>afc053f74b7e79ab01fad1bd396247c34</anchor>
-      <arglist>(I_WORD &amp;value)</arglist>
+      <anchor>a1b2d1756bf4de12e932435a80a74cbbb</anchor>
+      <arglist>(quint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a5088fa6a2536b39c3224a41c5271f144</anchor>
-      <arglist>(I_SWORD &amp;value)</arglist>
+      <anchor>abeebbed349463030de22a6b434926947</anchor>
+      <arglist>(qint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a9975df265314b7ff4f42b3776f8796e0</anchor>
-      <arglist>(I_DWORD &amp;value)</arglist>
+      <anchor>abf29c5dc8a868e5ecb88a1b709182e46</anchor>
+      <arglist>(quint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>ad8f19a2173afce26b534e4c224dfef00</anchor>
-      <arglist>(I_SDWORD &amp;value)</arglist>
+      <anchor>a88b4f096bc6f2a75310dc0ff8299da97</anchor>
+      <arglist>(qint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>af003685364178d397699087b24d4af41</anchor>
-      <arglist>(I_QWORD &amp;value)</arglist>
+      <anchor>a8eb0d72b23f0f0ef5d7959df8862e4b8</anchor>
+      <arglist>(quint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a9fbe3aaca2b8b14568de5032ef4c677f</anchor>
-      <arglist>(I_SQWORD &amp;value)</arglist>
+      <anchor>a6ca7e3abbe187f120332c4314d88e9e6</anchor>
+      <arglist>(qint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

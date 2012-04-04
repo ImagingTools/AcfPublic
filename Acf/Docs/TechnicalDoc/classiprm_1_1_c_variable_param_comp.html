@@ -72,8 +72,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign type ID to this object.  <a href="#a56e411d74670c22b8405878b3f5465d0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_variable_param_comp.html#a65e305c0e6db58df7f85ade3b7785abf">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a65e305c0e6db58df7f85ade3b7785abf"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_variable_param_comp.html#ae6fbd05365a9962f9b1c0a6d345fa521">GetMinimalVersion</a> (int versionId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get minimal needed version to correct storing of this data.  <a href="#ae6fbd05365a9962f9b1c0a6d345fa521"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_variable_param_comp.html#a309d31c093f16e2dbc6027b6b468918f">GetMinimalVersion</a> (int versionId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get minimal needed version to correct storing of this data.  <a href="#a309d31c093f16e2dbc6027b6b468918f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -137,12 +137,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae6fbd05365a9962f9b1c0a6d345fa521"></a><!-- doxytag: member="iprm::CVariableParamComp::GetMinimalVersion" ref="ae6fbd05365a9962f9b1c0a6d345fa521" args="(int versionId) const " -->
+<a class="anchor" id="a309d31c093f16e2dbc6027b6b468918f"></a><!-- doxytag: member="iprm::CVariableParamComp::GetMinimalVersion" ref="a309d31c093f16e2dbc6027b6b468918f" args="(int versionId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> iprm::CVariableParamComp::GetMinimalVersion </td>
+          <td class="memname">virtual quint32 iprm::CVariableParamComp::GetMinimalVersion </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>versionId</em></td><td>)</td>
@@ -155,7 +155,7 @@ Public Member Functions</h2></td></tr>
 <p>Get minimal needed version to correct storing of this data. </p>
 <p>In implementation shold be calculated maximum version of this and composed component. </p>
 
-<p>Reimplemented from <a class="el" href="classiser_1_1_i_serializable.html#a27f3d8c7065ece5fa34fa44927c509a6">iser::ISerializable</a>.</p>
+<p>Reimplemented from <a class="el" href="classiser_1_1_i_serializable.html#a455e034210010adc169a4966903822f6">iser::ISerializable</a>.</p>
 
 </div>
 </div>

@@ -83,7 +83,7 @@
 <a name="l00062"></a>00062                      retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575" title="Process primitive type.">Process</a>(<span class="keywordtype">id</span>);
 <a name="l00063"></a>00063                      retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(s_versionIdTag);
 <a name="l00064"></a>00064 
-<a name="l00065"></a>00065                      <a class="code" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> version = 0;
+<a name="l00065"></a>00065                      quint32 version = 0;
 <a name="l00066"></a>00066                      retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(s_versionNumberTag);
 <a name="l00067"></a>00067                      retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575" title="Process primitive type.">Process</a>(version);
 <a name="l00068"></a>00068                      retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(s_versionNumberTag);
@@ -139,7 +139,7 @@
 <a name="l00118"></a>00118 
 <a name="l00119"></a>00119               <span class="keywordtype">int</span> <span class="keywordtype">id</span> = *iter;
 <a name="l00120"></a>00120               <a class="code" href="istd_8h.html#a0a13620120415a9017e5095986764a12">I_IF_DEBUG</a>(
-<a name="l00121"></a>00121                      <a class="code" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> dummyVersion;
+<a name="l00121"></a>00121                      quint32 dummyVersion;
 <a name="l00122"></a>00122                      <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(versionInfoPtr-&gt;GetVersionNumber(<span class="keywordtype">id</span>, dummyVersion)) <span class="comment">// // all known IDs must have its version.</span>
 <a name="l00123"></a>00123               );
 <a name="l00124"></a>00124 
@@ -147,7 +147,7 @@
 <a name="l00126"></a>00126               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575" title="Process primitive type.">Process</a>(<span class="keywordtype">id</span>);
 <a name="l00127"></a>00127               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(s_versionIdTag);
 <a name="l00128"></a>00128 
-<a name="l00129"></a>00129               <a class="code" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> versionNumber;
+<a name="l00129"></a>00129               quint32 versionNumber;
 <a name="l00130"></a>00130               versionInfoPtr-&gt;GetVersionNumber(<span class="keywordtype">id</span>, versionNumber);
 <a name="l00131"></a>00131               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(s_versionNumberTag);
 <a name="l00132"></a>00132               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575" title="Process primitive type.">Process</a>(versionNumber);

@@ -57,8 +57,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor without member initialization.  <a href="#a2ca5c32cd18951e4d0fde921d38ed4dd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_fast_binary_index.html#a20d0a900737de82443f77f5618f57da2">CFastBinaryIndex</a> (int size, int value=0)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor initializing all member to specified value.  <a href="#a20d0a900737de82443f77f5618f57da2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_fast_binary_index.html#aa6576628ac95100e009b4028339f0a00">CFastBinaryIndex</a> (<a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> bits, int size, int dummy)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor initializing all internal members.  <a href="#aa6576628ac95100e009b4028339f0a00"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_fast_binary_index.html#a9aaebf833fc20a41eff28a6e48ad3f44">CFastBinaryIndex</a> (quint32 bits, int size, int dummy)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor initializing all internal members.  <a href="#a9aaebf833fc20a41eff28a6e48ad3f44"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_fast_binary_index.html#a36e033a4bf9e8d4ad5084423440b947b">CFastBinaryIndex</a> (const <a class="el" href="classistd_1_1_c_fast_binary_index.html">CFastBinaryIndex</a> &amp;index)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#a36e033a4bf9e8d4ad5084423440b947b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_fast_binary_index.html#aa5135ec7fb565700ec8fc9a479be598b">IsValid</a> () const </td></tr>
@@ -79,8 +79,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get element stored at specified index.  <a href="#a18de057f2bfcbf96d58f3b93f171fa9a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_fast_binary_index.html#ad6cf7e67f211be1903fe6905fe675cd1">SetAt</a> (int index, int value)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set element at specified index.  <a href="#ad6cf7e67f211be1903fe6905fe675cd1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_fast_binary_index.html#aebecb97ecf294809e09991c5d863dbce">GetBits</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bit coded value of this index.  <a href="#aebecb97ecf294809e09991c5d863dbce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_fast_binary_index.html#ad3480681a6591a4a3c988ad9351f7e23">GetBits</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bit coded value of this index.  <a href="#ad3480681a6591a4a3c988ad9351f7e23"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_fast_binary_index.html#a33abde59db60263dd31da9aeb27c3e7b">SetAllTo</a> (int value)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all components to specified value.  <a href="#a33abde59db60263dd31da9aeb27c3e7b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_fast_binary_index.html#a37fbc3e8d7aa4d7b38148b9253eafe56">IncreaseAt</a> (int index)</td></tr>
@@ -198,14 +198,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa6576628ac95100e009b4028339f0a00"></a><!-- doxytag: member="istd::CFastBinaryIndex::CFastBinaryIndex" ref="aa6576628ac95100e009b4028339f0a00" args="(I_DWORD bits, int size, int dummy)" -->
+<a class="anchor" id="a9aaebf833fc20a41eff28a6e48ad3f44"></a><!-- doxytag: member="istd::CFastBinaryIndex::CFastBinaryIndex" ref="a9aaebf833fc20a41eff28a6e48ad3f44" args="(quint32 bits, int size, int dummy)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">istd::CFastBinaryIndex::CFastBinaryIndex </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td>
+          <td class="paramtype">quint32&#160;</td>
           <td class="paramname"><em>bits</em>, </td>
         </tr>
         <tr>
@@ -241,7 +241,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_fast_binary_index_8h_source.html#l00206">206</a> of file <a class="el" href="_c_fast_binary_index_8h_source.html">CFastBinaryIndex.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00136">I_ASSERT</a>, and <a class="el" href="_c_bit_manip_8h_source.html#l00022">istd::CBitManip::instance</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="_c_bit_manip_8h_source.html#l00022">istd::CBitManip::instance</a>.</p>
 
 </div>
 </div>
@@ -264,7 +264,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_fast_binary_index_8h_source.html#l00213">213</a> of file <a class="el" href="_c_fast_binary_index_8h_source.html">CFastBinaryIndex.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00136">I_ASSERT</a>, and <a class="el" href="_c_fast_binary_index_8h_source.html#l00018">MAX_ELEMENTS_COUNT</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="_c_fast_binary_index_8h_source.html#l00018">MAX_ELEMENTS_COUNT</a>.</p>
 
 </div>
 </div>
@@ -358,7 +358,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_fast_binary_index_8h_source.html#l00327">327</a> of file <a class="el" href="_c_fast_binary_index_8h_source.html">CFastBinaryIndex.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00136">I_ASSERT</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
 
 </div>
 </div>
@@ -402,18 +402,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_fast_binary_index_8h_source.html#l00272">272</a> of file <a class="el" href="_c_fast_binary_index_8h_source.html">CFastBinaryIndex.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00136">I_ASSERT</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_fast_binary_index_8h_source.html#l00378">operator[]()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aebecb97ecf294809e09991c5d863dbce"></a><!-- doxytag: member="istd::CFastBinaryIndex::GetBits" ref="aebecb97ecf294809e09991c5d863dbce" args="() const " -->
+<a class="anchor" id="ad3480681a6591a4a3c988ad9351f7e23"></a><!-- doxytag: member="istd::CFastBinaryIndex::GetBits" ref="ad3480681a6591a4a3c988ad9351f7e23" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> istd::CFastBinaryIndex::GetBits </td>
+          <td class="memname">quint32 istd::CFastBinaryIndex::GetBits </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [inline]</code></td>
@@ -517,7 +517,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_fast_binary_index_8h_source.html#l00312">312</a> of file <a class="el" href="_c_fast_binary_index_8h_source.html">CFastBinaryIndex.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00136">I_ASSERT</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
 
 </div>
 </div>
@@ -739,7 +739,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_fast_binary_index_8h_source.html#l00281">281</a> of file <a class="el" href="_c_fast_binary_index_8h_source.html">CFastBinaryIndex.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00136">I_ASSERT</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
 
 </div>
 </div>

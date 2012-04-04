@@ -133,7 +133,7 @@
 <a name="l00158"></a>00158 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Base&gt;
 <a name="l00159"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#afd5079adcf83cdd67dce362c473a3aa7">00159</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html#afd5079adcf83cdd67dce362c473a3aa7" title="Translate the point.">TMathVectorWrap&lt;Base&gt;::Translate</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container (vector)...">TMathVectorWrap&lt;Base&gt;</a>&amp; vector)
 <a name="l00160"></a>00160 {
-<a name="l00161"></a>00161        <span class="keywordtype">int</span> elementsCount = <a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(BaseClass::GetElementsCount(), vector.GetElementsCount());
+<a name="l00161"></a>00161        <span class="keywordtype">int</span> elementsCount = qMin(BaseClass::GetElementsCount(), vector.GetElementsCount());
 <a name="l00162"></a>00162        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
 <a name="l00163"></a>00163               BaseClass::GetElementRef(i) += vector.GetElement(i);
 <a name="l00164"></a>00164        }
@@ -166,7 +166,7 @@
 <a name="l00191"></a>00191 <span class="keyword"></span>{
 <a name="l00192"></a>00192        <span class="keyword">typename</span> Base::ElementType retVal = 0.0;
 <a name="l00193"></a>00193 
-<a name="l00194"></a>00194        <span class="keywordtype">int</span> elementsCount = <a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(BaseClass::GetElementsCount(), vector.GetElementsCount());
+<a name="l00194"></a>00194        <span class="keywordtype">int</span> elementsCount = qMin(BaseClass::GetElementsCount(), vector.GetElementsCount());
 <a name="l00195"></a>00195        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
 <a name="l00196"></a>00196               retVal +=  BaseClass::GetElement(i) * vector.GetElement(i);
 <a name="l00197"></a>00197        }
@@ -232,7 +232,7 @@
 <a name="l00257"></a>00257 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Base&gt;
 <a name="l00258"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#afc40bd394b2a8c09b263518f324b5c9f">00258</a> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html#afc40bd394b2a8c09b263518f324b5c9f">TMathVectorWrap&lt;Base&gt;::operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container (vector)...">TMathVectorWrap&lt;Base&gt;</a>&amp; vector)<span class="keyword"> const</span>
 <a name="l00259"></a>00259 <span class="keyword"></span>{
-<a name="l00260"></a>00260        <span class="keywordtype">int</span> elementsCount = <a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(BaseClass::GetElementsCount(), vector.GetElementsCount());
+<a name="l00260"></a>00260        <span class="keywordtype">int</span> elementsCount = qMin(BaseClass::GetElementsCount(), vector.GetElementsCount());
 <a name="l00261"></a>00261        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
 <a name="l00262"></a>00262               <span class="keyword">typename</span> Base::ElementType firstElement = BaseClass::GetElement(i);
 <a name="l00263"></a>00263               <span class="keyword">typename</span> Base::ElementType secondElement = vector.GetElement(i);
@@ -252,7 +252,7 @@
 <a name="l00277"></a>00277 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Base&gt;
 <a name="l00278"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#af4fc71b17c672e42a727ed9a28ab7bcb">00278</a> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html#af4fc71b17c672e42a727ed9a28ab7bcb">TMathVectorWrap&lt;Base&gt;::operator&gt;</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container (vector)...">TMathVectorWrap&lt;Base&gt;</a>&amp; vector)<span class="keyword"> const</span>
 <a name="l00279"></a>00279 <span class="keyword"></span>{
-<a name="l00280"></a>00280        <span class="keywordtype">int</span> elementsCount = <a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(BaseClass::GetElementsCount(), vector.GetElementsCount());
+<a name="l00280"></a>00280        <span class="keywordtype">int</span> elementsCount = qMin(BaseClass::GetElementsCount(), vector.GetElementsCount());
 <a name="l00281"></a>00281        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
 <a name="l00282"></a>00282               <span class="keyword">typename</span> Base::ElementType firstElement = BaseClass::GetElement(i);
 <a name="l00283"></a>00283               <span class="keyword">typename</span> Base::ElementType secondElement = vector.GetElement(i);
@@ -272,7 +272,7 @@
 <a name="l00297"></a>00297 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Base&gt;
 <a name="l00298"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#a5476b69d1d99273ee3d251809922cb80">00298</a> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html#a5476b69d1d99273ee3d251809922cb80">TMathVectorWrap&lt;Base&gt;::operator&lt;=</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container (vector)...">TMathVectorWrap&lt;Base&gt;</a>&amp; vector)<span class="keyword"> const</span>
 <a name="l00299"></a>00299 <span class="keyword"></span>{
-<a name="l00300"></a>00300        <span class="keywordtype">int</span> elementsCount = <a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(BaseClass::GetElementsCount(), vector.GetElementsCount());
+<a name="l00300"></a>00300        <span class="keywordtype">int</span> elementsCount = qMin(BaseClass::GetElementsCount(), vector.GetElementsCount());
 <a name="l00301"></a>00301        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
 <a name="l00302"></a>00302               <span class="keyword">typename</span> Base::ElementType firstElement = BaseClass::GetElement(i);
 <a name="l00303"></a>00303               <span class="keyword">typename</span> Base::ElementType secondElement = vector.GetElement(i);
@@ -292,7 +292,7 @@
 <a name="l00317"></a>00317 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Base&gt;
 <a name="l00318"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#af296ccb409f645b3756cde51a5a496cf">00318</a> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html#af296ccb409f645b3756cde51a5a496cf">TMathVectorWrap&lt;Base&gt;::operator&gt;=</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container (vector)...">TMathVectorWrap&lt;Base&gt;</a>&amp; vector)<span class="keyword"> const</span>
 <a name="l00319"></a>00319 <span class="keyword"></span>{
-<a name="l00320"></a>00320        <span class="keywordtype">int</span> elementsCount = <a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(BaseClass::GetElementsCount(), vector.GetElementsCount());
+<a name="l00320"></a>00320        <span class="keywordtype">int</span> elementsCount = qMin(BaseClass::GetElementsCount(), vector.GetElementsCount());
 <a name="l00321"></a>00321        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
 <a name="l00322"></a>00322               <span class="keyword">typename</span> Base::ElementType firstElement = BaseClass::GetElement(i);
 <a name="l00323"></a>00323               <span class="keyword">typename</span> Base::ElementType secondElement = vector.GetElement(i);
@@ -321,7 +321,7 @@
 <a name="l00346"></a>00346 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Base&gt;
 <a name="l00347"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#abb20747b4733f074fca2488bd49c6b55">00347</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container (vector)...">TMathVectorWrap&lt;Base&gt;</a>&amp; <a class="code" href="classimath_1_1_t_math_vector_wrap.html#abb20747b4733f074fca2488bd49c6b55">TMathVectorWrap&lt;Base&gt;::operator+=</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container (vector)...">TMathVectorWrap&lt;Base&gt;</a>&amp; vector)
 <a name="l00348"></a>00348 {
-<a name="l00349"></a>00349        <span class="keywordtype">int</span> elementsCount = <a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(BaseClass::GetElementsCount(), vector.GetElementsCount());
+<a name="l00349"></a>00349        <span class="keywordtype">int</span> elementsCount = qMin(BaseClass::GetElementsCount(), vector.GetElementsCount());
 <a name="l00350"></a>00350        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
 <a name="l00351"></a>00351               BaseClass::GetElementRef(i) += vector.GetElement(i);
 <a name="l00352"></a>00352        }
@@ -333,7 +333,7 @@
 <a name="l00358"></a>00358 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Base&gt;
 <a name="l00359"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#a35ddda30ce58238dccac6c917b5844aa">00359</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container (vector)...">TMathVectorWrap&lt;Base&gt;</a>&amp; <a class="code" href="classimath_1_1_t_math_vector_wrap.html#a35ddda30ce58238dccac6c917b5844aa">TMathVectorWrap&lt;Base&gt;::operator-=</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container (vector)...">TMathVectorWrap&lt;Base&gt;</a>&amp; vector)
 <a name="l00360"></a>00360 {
-<a name="l00361"></a>00361        <span class="keywordtype">int</span> elementsCount = <a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(BaseClass::GetElementsCount(), vector.GetElementsCount());
+<a name="l00361"></a>00361        <span class="keywordtype">int</span> elementsCount = qMin(BaseClass::GetElementsCount(), vector.GetElementsCount());
 <a name="l00362"></a>00362        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
 <a name="l00363"></a>00363               BaseClass::GetElementRef(i) -= vector.GetElement(i);
 <a name="l00364"></a>00364        }
@@ -386,7 +386,7 @@
 <a name="l00411"></a>00411 <span class="keyword"></span>{
 <a name="l00412"></a>00412        <a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container (vector)...">TMathVectorWrap&lt;Base&gt;</a> retVal;
 <a name="l00413"></a>00413 
-<a name="l00414"></a>00414        <span class="keywordtype">int</span> elementsCount = <a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(BaseClass::GetElementsCount(), vector.GetElementsCount());
+<a name="l00414"></a>00414        <span class="keywordtype">int</span> elementsCount = qMin(BaseClass::GetElementsCount(), vector.GetElementsCount());
 <a name="l00415"></a>00415        retVal.SetElementsCount(elementsCount);
 <a name="l00416"></a>00416        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
 <a name="l00417"></a>00417               retVal.SetElement(i, BaseClass::GetElement(i) + vector.GetElement(i));
@@ -401,7 +401,7 @@
 <a name="l00426"></a>00426 <span class="keyword"></span>{
 <a name="l00427"></a>00427        <a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container (vector)...">TMathVectorWrap&lt;Base&gt;</a> retVal;
 <a name="l00428"></a>00428 
-<a name="l00429"></a>00429        <span class="keywordtype">int</span> elementsCount = <a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(BaseClass::GetElementsCount(), vector.GetElementsCount());
+<a name="l00429"></a>00429        <span class="keywordtype">int</span> elementsCount = qMin(BaseClass::GetElementsCount(), vector.GetElementsCount());
 <a name="l00430"></a>00430        retVal.SetElementsCount(elementsCount);
 <a name="l00431"></a>00431        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
 <a name="l00432"></a>00432               retVal.SetElement(i, BaseClass::GetElement(i) - vector.GetElement(i));

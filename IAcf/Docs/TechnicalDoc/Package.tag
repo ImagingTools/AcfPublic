@@ -626,8 +626,8 @@
       <type>bool</type>
       <name>CheckError</name>
       <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a27e48fea37bc91fa7eb44b58dea842f2</anchor>
-      <arglist>(I_DWORD errorCode) const </arglist>
+      <anchor>a06eba6f5d6afef66a7c0cd45999e1206</anchor>
+      <arglist>(quint32 errorCode) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -694,31 +694,31 @@
     <name>ilibav::CLibAvConverter::Rgba</name>
     <filename>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</filename>
     <member kind="variable">
-      <type>I_BYTE</type>
+      <type>quint8</type>
       <name>r</name>
       <anchorfile>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</anchorfile>
-      <anchor>a9520b47ac47397564a0c0749d593f49a</anchor>
+      <anchor>a50db7994977a7ad022b4c956b46e078f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>I_BYTE</type>
+      <type>quint8</type>
       <name>g</name>
       <anchorfile>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</anchorfile>
-      <anchor>a8dd726563d318f250ec05e84b9ff5964</anchor>
+      <anchor>ab81a488fcd6d82feaabfc6e27436ce1e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>I_BYTE</type>
+      <type>quint8</type>
       <name>b</name>
       <anchorfile>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</anchorfile>
-      <anchor>a7d638a799040e94597da686912f57b81</anchor>
+      <anchor>a9e60ece58c0d11b6116d353d3d46b11d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>I_BYTE</type>
+      <type>quint8</type>
       <name>a</name>
       <anchorfile>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</anchorfile>
-      <anchor>aa3b9bde8a26f61088d730cb2e05d6a82</anchor>
+      <anchor>a81c969d65f0101a34846c96a74e63e42</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -2317,18 +2317,18 @@
       <arglist>(const CPerformanceTimeStamp &amp;timeStamp) const </arglist>
     </member>
     <member kind="function">
-      <type>I_QWORD</type>
+      <type>quint64</type>
       <name>GetNativeRepresentation</name>
       <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>a06a620636c95bcb703a0601f9499601e</anchor>
+      <anchor>ad04752b351c6c004860fb2f775310296</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>SetNativeRepresentation</name>
       <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>ad07a337cb86f8c336fb23dba9b788214</anchor>
-      <arglist>(I_QWORD value)</arglist>
+      <anchor>afa0b4e846ba566df8459042480149803</anchor>
+      <arglist>(quint64 value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -2451,8 +2451,8 @@
       <type>bool</type>
       <name>CoCreateInstance</name>
       <anchorfile>classiwin_1_1_t_com_ptr.html</anchorfile>
-      <anchor>a65a9fc28017791dc9a985924ce2807a6</anchor>
-      <arglist>(REFCLSID rclsid, IUnknown *outerPtr=NULL, I_DWORD clsContext=CLSCTX_ALL)</arglist>
+      <anchor>a0cf09d0de25db27195a38425d435908d</anchor>
+      <arglist>(REFCLSID rclsid, IUnknown *outerPtr=NULL, quint32 clsContext=CLSCTX_ALL)</arglist>
     </member>
     <member kind="function">
       <type>void</type>

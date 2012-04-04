@@ -70,14 +70,14 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_version_info.html#a14c10439f5c53047c6b54b3a6168264c">VersionIds</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_version_info.html#a9f44355a435b5ebfbfe0ea73ae399ec0">GetVersionNumber</a> (int versionId, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> &amp;result) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get version of archived stream for specific versioning type.  <a href="#a9f44355a435b5ebfbfe0ea73ae399ec0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_version_info.html#a440b5a30977a2dcbfef384aa40f490c1">GetVersionNumber</a> (int versionId, quint32 &amp;result) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get version of archived stream for specific versioning type.  <a href="#a440b5a30977a2dcbfef384aa40f490c1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_version_info.html#abb7b458bc2e8bec8b5381d3abe8867d7">GetVersionIdDescription</a> (int versionId) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of version ID.  <a href="#abb7b458bc2e8bec8b5381d3abe8867d7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_version_info.html#a14c10439f5c53047c6b54b3a6168264c">VersionIds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_version_info.html#a5d91838bdf51104a85ee4ca251646a4b">GetVersionIds</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of version ID's.  <a href="#a5d91838bdf51104a85ee4ca251646a4b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_version_info.html#aea7f3127caed1ee86040752d958482cc">GetEncodedVersionName</a> (int versionId, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> versionNumber) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode version number to human readable form.  <a href="#aea7f3127caed1ee86040752d958482cc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_version_info.html#a0841adb3f3af6fd0eb5546027b66b6b7">GetEncodedVersionName</a> (int versionId, quint32 versionNumber) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode version number to human readable form.  <a href="#a0841adb3f3af6fd0eb5546027b66b6b7"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Provides access to version information. </p>
@@ -149,7 +149,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aea7f3127caed1ee86040752d958482cc"></a><!-- doxytag: member="iser::IVersionInfo::GetEncodedVersionName" ref="aea7f3127caed1ee86040752d958482cc" args="(int versionId, I_DWORD versionNumber) const =0" -->
+<a class="anchor" id="a0841adb3f3af6fd0eb5546027b66b6b7"></a><!-- doxytag: member="iser::IVersionInfo::GetEncodedVersionName" ref="a0841adb3f3af6fd0eb5546027b66b6b7" args="(int versionId, quint32 versionNumber) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -162,7 +162,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td>
+          <td class="paramtype">quint32&#160;</td>
           <td class="paramname"><em>versionNumber</em>&#160;</td>
         </tr>
         <tr>
@@ -176,7 +176,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Encode version number to human readable form. </p>
 
-<p>Implemented in <a class="el" href="classiser_1_1_c_minimal_version_info.html#a6deb50e2f0ffd3e6732bb5df09dae1a3">iser::CMinimalVersionInfo</a>, <a class="el" href="classibase_1_1_c_application_info_comp.html#a1cc371625da8474ffe34cd9af0de5b9d">ibase::CApplicationInfoComp</a>, <a class="el" href="classiser_1_1_c_reader_version_info.html#a8bd8a4b392579b4bd1df43bbb4ec9c62">iser::CReaderVersionInfo</a>, <a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#a755bb5c25873a98e7c21c4bb720fe6d6">iser::CWriteArchiveBase::EmptyVersionInfo</a>, and <a class="el" href="classibase_1_1_c_version_info_comp.html#a688ab02824b860d386eb4cf2a86d4e3b">ibase::CVersionInfoComp</a>.</p>
+<p>Implemented in <a class="el" href="classiser_1_1_c_minimal_version_info.html#a844b4d57cc128a03a6055a3fd5493170">iser::CMinimalVersionInfo</a>, <a class="el" href="classibase_1_1_c_application_info_comp.html#a94128d9c2b6cd54d8107fc7e6a23b805">ibase::CApplicationInfoComp</a>, <a class="el" href="classiser_1_1_c_reader_version_info.html#abe8e9e0dcf6a0488f6eb079a9f6d1600">iser::CReaderVersionInfo</a>, <a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#ac1771d5ce29c48eada7c09537d531e7b">iser::CWriteArchiveBase::EmptyVersionInfo</a>, and <a class="el" href="classibase_1_1_c_version_info_comp.html#afeab5debcd2c9ebcbc4d341b0c98e7fe">ibase::CVersionInfoComp</a>.</p>
 
 </div>
 </div>
@@ -202,7 +202,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_version_info.html#a71f9c819b642773712cca9fed1407b80" title="Type of version.">VersionId</a>, <a class="el" href="classiser_1_1_i_version_info.html#a9f44355a435b5ebfbfe0ea73ae399ec0" title="Get version of archived stream for specific versioning type.">GetVersionNumber</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_version_info.html#a71f9c819b642773712cca9fed1407b80" title="Type of version.">VersionId</a>, <a class="el" href="classiser_1_1_i_version_info.html#a440b5a30977a2dcbfef384aa40f490c1" title="Get version of archived stream for specific versioning type.">GetVersionNumber</a>. </dd></dl>
 
 <p>Implemented in <a class="el" href="classiser_1_1_c_minimal_version_info.html#a327b20658b04ce90db6104663d750e52">iser::CMinimalVersionInfo</a>, <a class="el" href="classibase_1_1_c_application_info_comp.html#a9141aafcdfbe179f1783de08e00fc94b">ibase::CApplicationInfoComp</a>, <a class="el" href="classiser_1_1_c_reader_version_info.html#a799fd8d0728da646519e741c6defd3a6">iser::CReaderVersionInfo</a>, <a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#a6197460e372e20f15693e6cf9d4e9172">iser::CWriteArchiveBase::EmptyVersionInfo</a>, and <a class="el" href="classibase_1_1_c_version_info_comp.html#a24f8c2a37f12a665857fa66d65c52ea4">ibase::CVersionInfoComp</a>.</p>
 
@@ -228,7 +228,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9f44355a435b5ebfbfe0ea73ae399ec0"></a><!-- doxytag: member="iser::IVersionInfo::GetVersionNumber" ref="a9f44355a435b5ebfbfe0ea73ae399ec0" args="(int versionId, I_DWORD &amp;result) const =0" -->
+<a class="anchor" id="a440b5a30977a2dcbfef384aa40f490c1"></a><!-- doxytag: member="iser::IVersionInfo::GetVersionNumber" ref="a440b5a30977a2dcbfef384aa40f490c1" args="(int versionId, quint32 &amp;result) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -241,7 +241,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> &amp;&#160;</td>
+          <td class="paramtype">quint32 &amp;&#160;</td>
           <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
@@ -269,7 +269,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if version is known. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiser_1_1_c_minimal_version_info.html#a96b77026908fd1a336675409eed39cd5">iser::CMinimalVersionInfo</a>, <a class="el" href="classibase_1_1_c_application_info_comp.html#ac8ae49f6cbbdc6664325c77a15c1f3c1">ibase::CApplicationInfoComp</a>, <a class="el" href="classiser_1_1_c_reader_version_info.html#a71070b440ca061d2eaf93b5b3639873c">iser::CReaderVersionInfo</a>, <a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#a338c809831f3544de1c2bd85cf5b6175">iser::CWriteArchiveBase::EmptyVersionInfo</a>, and <a class="el" href="classibase_1_1_c_version_info_comp.html#a9d9abf7007eabf5efe5f373f57364c34">ibase::CVersionInfoComp</a>.</p>
+<p>Implemented in <a class="el" href="classiser_1_1_c_minimal_version_info.html#ad645cb984ed16819250390ccbebd873a">iser::CMinimalVersionInfo</a>, <a class="el" href="classibase_1_1_c_application_info_comp.html#a5d285720f958cbc1780cb7dc1ef3ad69">ibase::CApplicationInfoComp</a>, <a class="el" href="classiser_1_1_c_reader_version_info.html#aaaf0f28da197f0ccf04a4bacf4a4b871">iser::CReaderVersionInfo</a>, <a class="el" href="classiser_1_1_c_write_archive_base_1_1_empty_version_info.html#a26064266c6b54efe8d4284a4e42bf6d5">iser::CWriteArchiveBase::EmptyVersionInfo</a>, and <a class="el" href="classibase_1_1_c_version_info_comp.html#ad3a168e71f50b120b38ba0b2c86c642c">ibase::CVersionInfoComp</a>.</p>
 
 </div>
 </div>

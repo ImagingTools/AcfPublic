@@ -121,7 +121,7 @@ bool CVarIndex::Increase(const CVarIndex& boundaries)
 {
 	I_ASSERT(IsInside(boundaries));
 
-	int dimensionsCount = istd::Min(GetDimensionsCount(), boundaries.GetDimensionsCount());
+	int dimensionsCount = qMin(GetDimensionsCount(), boundaries.GetDimensionsCount());
 
 	for (int i = 0; i < dimensionsCount; ++i){
 		if (m_elements[i] < boundaries.m_elements[i] - 1){
@@ -142,7 +142,7 @@ bool CVarIndex::Decrease(const CVarIndex& boundaries)
 {
 	I_ASSERT(IsInside(boundaries));
 
-	int dimensionsCount = istd::Min(GetDimensionsCount(), boundaries.GetDimensionsCount());
+	int dimensionsCount = qMin(GetDimensionsCount(), boundaries.GetDimensionsCount());
 
 	for (int i = 0; i < dimensionsCount; ++i){
 		if (m_elements[i] > 0){
@@ -185,7 +185,7 @@ bool CVarIndex::operator!=(const CVarIndex& index) const
 
 CVarIndex& CVarIndex::operator+=(const CVarIndex& index)
 {
-	int dimensionsCount = istd::Min(GetDimensionsCount(), index.GetDimensionsCount());
+	int dimensionsCount = qMin(GetDimensionsCount(), index.GetDimensionsCount());
 	for (int i = 0; i < dimensionsCount; ++i){
 		m_elements[i] += index.m_elements[i];
 	}
@@ -196,7 +196,7 @@ CVarIndex& CVarIndex::operator+=(const CVarIndex& index)
 
 CVarIndex& CVarIndex::operator-=(const CVarIndex& index)
 {
-	int dimensionsCount = istd::Min(GetDimensionsCount(), index.GetDimensionsCount());
+	int dimensionsCount = qMin(GetDimensionsCount(), index.GetDimensionsCount());
 	for (int i = 0; i < dimensionsCount; ++i){
 		m_elements[i] -= index.m_elements[i];
 	}

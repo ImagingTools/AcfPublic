@@ -141,7 +141,7 @@
 <a name="l00121"></a>00121 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Key, <span class="keyword">class</span> CacheObject&gt;
 <a name="l00122"></a><a class="code" href="classiproc_1_1_t_mem_cached_producer_comp.html#a154ec56923ea6e7c1574e6bb6ebbc819">00122</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_mem_cached_producer_comp.html#a154ec56923ea6e7c1574e6bb6ebbc819" title="Remove elements from list if cumulated weight is above defined maximum.">TMemCachedProducerComp&lt;Key, CacheObject&gt;::CleanElementList</a>()
 <a name="l00123"></a>00123 {
-<a name="l00124"></a>00124        <span class="keywordtype">int</span> maxCachedObjects = <a class="code" href="group___main.html#ga761fb858ab3e61d9682b99f0b32c06f7" title="Define own max function to avoid conflicts between STL and Microsoft macros.">istd::Max</a>(0, *m_maxCachedObjectsAttrPtr);
+<a name="l00124"></a>00124        <span class="keywordtype">int</span> maxCachedObjects = qMax(0, *m_maxCachedObjectsAttrPtr);
 <a name="l00125"></a>00125 
 <a name="l00126"></a>00126        <span class="keyword">typename</span> CachedList::iterator iter = m_cachedList.begin();
 <a name="l00127"></a>00127        <span class="keywordflow">while</span> (              (<span class="keywordtype">int</span>(m_cachedList.size()) &gt; maxCachedObjects) &amp;&amp;

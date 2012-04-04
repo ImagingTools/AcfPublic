@@ -61,13 +61,13 @@
 <a name="l00048"></a>00048 
 <a name="l00049"></a><a class="code" href="classiser_1_1_i_version_info.html#a14c10439f5c53047c6b54b3a6168264c">00049</a>        <span class="keyword">typedef</span> std::set&lt;int&gt; <a class="code" href="classiser_1_1_i_version_info.html#a14c10439f5c53047c6b54b3a6168264c">VersionIds</a>;
 <a name="l00050"></a>00050 
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_i_version_info.html#a9f44355a435b5ebfbfe0ea73ae399ec0" title="Get version of archived stream for specific versioning type.">GetVersionNumber</a>(<span class="keywordtype">int</span> versionId, <a class="code" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&amp; result) <span class="keyword">const</span> = 0;
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_i_version_info.html#a440b5a30977a2dcbfef384aa40f490c1" title="Get version of archived stream for specific versioning type.">GetVersionNumber</a>(<span class="keywordtype">int</span> versionId, quint32&amp; result) <span class="keyword">const</span> = 0;
 <a name="l00060"></a>00060 
 <a name="l00067"></a>00067        <span class="keyword">virtual</span> QString <a class="code" href="classiser_1_1_i_version_info.html#abb7b458bc2e8bec8b5381d3abe8867d7" title="Get description of version ID.">GetVersionIdDescription</a>(<span class="keywordtype">int</span> versionId) <span class="keyword">const</span> = 0;
 <a name="l00068"></a>00068 
 <a name="l00072"></a>00072        <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_i_version_info.html#a14c10439f5c53047c6b54b3a6168264c">VersionIds</a> <a class="code" href="classiser_1_1_i_version_info.html#a5d91838bdf51104a85ee4ca251646a4b" title="Get list of version ID&#39;s.">GetVersionIds</a>() <span class="keyword">const</span> = 0;
 <a name="l00073"></a>00073 
-<a name="l00077"></a>00077        <span class="keyword">virtual</span> QString <a class="code" href="classiser_1_1_i_version_info.html#aea7f3127caed1ee86040752d958482cc" title="Encode version number to human readable form.">GetEncodedVersionName</a>(<span class="keywordtype">int</span> versionId, <a class="code" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> versionNumber) <span class="keyword">const</span> = 0;
+<a name="l00077"></a>00077        <span class="keyword">virtual</span> QString <a class="code" href="classiser_1_1_i_version_info.html#a0841adb3f3af6fd0eb5546027b66b6b7" title="Encode version number to human readable form.">GetEncodedVersionName</a>(<span class="keywordtype">int</span> versionId, quint32 versionNumber) <span class="keyword">const</span> = 0;
 <a name="l00078"></a>00078 };
 <a name="l00079"></a>00079 
 <a name="l00080"></a>00080 

@@ -63,18 +63,18 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_reader_version_info.html#ac3e9e7c4236a1b43f98c997c99888903">Reset</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all stored version infos.  <a href="#ac3e9e7c4236a1b43f98c997c99888903"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_reader_version_info.html#a5033374fd75ab62ded9a6fe1ce738621">InsertVersionId</a> (int id, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> version, const QString &amp;description)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new version id with its actual version number and its description.  <a href="#a5033374fd75ab62ded9a6fe1ce738621"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_reader_version_info.html#a9b6f3377b52fb88924536afc1f88ab66">InsertVersionId</a> (int id, quint32 version, const QString &amp;description)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new version id with its actual version number and its description.  <a href="#a9b6f3377b52fb88924536afc1f88ab66"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_reader_version_info.html#a21a6f420eb1d1d3f4e9967708d5e92a2">RemoveVersionId</a> (int id)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove single version info.  <a href="#a21a6f420eb1d1d3f4e9967708d5e92a2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_reader_version_info.html#a71070b440ca061d2eaf93b5b3639873c">GetVersionNumber</a> (int versionId, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> &amp;result) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get version of archived stream for specific versioning type.  <a href="#a71070b440ca061d2eaf93b5b3639873c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_reader_version_info.html#aaaf0f28da197f0ccf04a4bacf4a4b871">GetVersionNumber</a> (int versionId, quint32 &amp;result) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get version of archived stream for specific versioning type.  <a href="#aaaf0f28da197f0ccf04a4bacf4a4b871"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_reader_version_info.html#a799fd8d0728da646519e741c6defd3a6">GetVersionIdDescription</a> (int versionId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of version ID.  <a href="#a799fd8d0728da646519e741c6defd3a6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_version_info.html#a14c10439f5c53047c6b54b3a6168264c">VersionIds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_reader_version_info.html#a14a76654dbaefb66125c96979a8ec507">GetVersionIds</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of version ID's.  <a href="#a14a76654dbaefb66125c96979a8ec507"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_reader_version_info.html#a8bd8a4b392579b4bd1df43bbb4ec9c62">GetEncodedVersionName</a> (int versionId, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> versionNumber) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode version number to human readable form.  <a href="#a8bd8a4b392579b4bd1df43bbb4ec9c62"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_reader_version_info.html#abe8e9e0dcf6a0488f6eb079a9f6d1600">GetEncodedVersionName</a> (int versionId, quint32 versionNumber) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode version number to human readable form.  <a href="#abe8e9e0dcf6a0488f6eb079a9f6d1600"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html">VersionIdElement</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_reader_version_info.html#afdf0469871a50891c7bacd84c19d1b7b">GetVersionIdElement</a> (int versionId) const </td></tr>
@@ -85,7 +85,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_reader_version_info_8h_source.html#l00023">23</a> of file <a class="el" href="_c_reader_version_info_8h_source.html">CReaderVersionInfo.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a8bd8a4b392579b4bd1df43bbb4ec9c62"></a><!-- doxytag: member="iser::CReaderVersionInfo::GetEncodedVersionName" ref="a8bd8a4b392579b4bd1df43bbb4ec9c62" args="(int versionId, I_DWORD versionNumber) const " -->
+<a class="anchor" id="abe8e9e0dcf6a0488f6eb079a9f6d1600"></a><!-- doxytag: member="iser::CReaderVersionInfo::GetEncodedVersionName" ref="abe8e9e0dcf6a0488f6eb079a9f6d1600" args="(int versionId, quint32 versionNumber) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -98,7 +98,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td>
+          <td class="paramtype">quint32&#160;</td>
           <td class="paramname"><em>versionNumber</em>&#160;</td>
         </tr>
         <tr>
@@ -112,7 +112,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Encode version number to human readable form. </p>
 
-<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#aea7f3127caed1ee86040752d958482cc">iser::IVersionInfo</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#a0841adb3f3af6fd0eb5546027b66b6b7">iser::IVersionInfo</a>.</p>
 
 </div>
 </div>
@@ -138,7 +138,7 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_version_info.html#a71f9c819b642773712cca9fed1407b80" title="Type of version.">VersionId</a>, <a class="el" href="classiser_1_1_c_reader_version_info.html#a71070b440ca061d2eaf93b5b3639873c" title="Get version of archived stream for specific versioning type.">GetVersionNumber</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_version_info.html#a71f9c819b642773712cca9fed1407b80" title="Type of version.">VersionId</a>, <a class="el" href="classiser_1_1_c_reader_version_info.html#aaaf0f28da197f0ccf04a4bacf4a4b871" title="Get version of archived stream for specific versioning type.">GetVersionNumber</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classiser_1_1_i_version_info.html#abb7b458bc2e8bec8b5381d3abe8867d7">iser::IVersionInfo</a>.</p>
 
@@ -181,7 +181,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a71070b440ca061d2eaf93b5b3639873c"></a><!-- doxytag: member="iser::CReaderVersionInfo::GetVersionNumber" ref="a71070b440ca061d2eaf93b5b3639873c" args="(int versionId, I_DWORD &amp;result) const " -->
+<a class="anchor" id="aaaf0f28da197f0ccf04a4bacf4a4b871"></a><!-- doxytag: member="iser::CReaderVersionInfo::GetVersionNumber" ref="aaaf0f28da197f0ccf04a4bacf4a4b871" args="(int versionId, quint32 &amp;result) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -194,7 +194,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> &amp;&#160;</td>
+          <td class="paramtype">quint32 &amp;&#160;</td>
           <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
@@ -222,11 +222,11 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if version is known. </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#a9f44355a435b5ebfbfe0ea73ae399ec0">iser::IVersionInfo</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_version_info.html#a440b5a30977a2dcbfef384aa40f490c1">iser::IVersionInfo</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5033374fd75ab62ded9a6fe1ce738621"></a><!-- doxytag: member="iser::CReaderVersionInfo::InsertVersionId" ref="a5033374fd75ab62ded9a6fe1ce738621" args="(int id, I_DWORD version, const QString &amp;description)" -->
+<a class="anchor" id="a9b6f3377b52fb88924536afc1f88ab66"></a><!-- doxytag: member="iser::CReaderVersionInfo::InsertVersionId" ref="a9b6f3377b52fb88924536afc1f88ab66" args="(int id, quint32 version, const QString &amp;description)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -239,7 +239,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td>
+          <td class="paramtype">quint32&#160;</td>
           <td class="paramname"><em>version</em>, </td>
         </tr>
         <tr>

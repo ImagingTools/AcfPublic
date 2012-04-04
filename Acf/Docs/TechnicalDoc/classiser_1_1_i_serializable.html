@@ -87,20 +87,20 @@ Inheritance diagram for iser::ISerializable:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">IArchive</a> &amp;archive)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a7b061fb451416f6044c5a0aca655cf59"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_serializable.html#a27f3d8c7065ece5fa34fa44927c509a6">GetMinimalVersion</a> (int versionId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get minimal needed version to correct storing of this data.  <a href="#a27f3d8c7065ece5fa34fa44927c509a6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_serializable.html#a455e034210010adc169a4966903822f6">GetMinimalVersion</a> (int versionId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get minimal needed version to correct storing of this data.  <a href="#a455e034210010adc169a4966903822f6"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common class for all classes which objects can be archived or restored from archive. </p>
 
 <p>Definition at line <a class="el" href="_i_serializable_8h_source.html#l00024">24</a> of file <a class="el" href="_i_serializable_8h_source.html">ISerializable.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a27f3d8c7065ece5fa34fa44927c509a6"></a><!-- doxytag: member="iser::ISerializable::GetMinimalVersion" ref="a27f3d8c7065ece5fa34fa44927c509a6" args="(int versionId) const " -->
+<a class="anchor" id="a455e034210010adc169a4966903822f6"></a><!-- doxytag: member="iser::ISerializable::GetMinimalVersion" ref="a455e034210010adc169a4966903822f6" args="(int versionId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> iser::ISerializable::GetMinimalVersion </td>
+          <td class="memname">quint32 iser::ISerializable::GetMinimalVersion </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>versionId</em></td><td>)</td>
@@ -113,7 +113,7 @@ Public Member Functions</h2></td></tr>
 <p>Get minimal needed version to correct storing of this data. </p>
 <p>In implementation shold be calculated maximum version of this and composed component. </p>
 
-<p>Reimplemented in <a class="el" href="classiprm_1_1_c_params_set.html#aff94090a8764dfbdb02499bcd388142b">iprm::CParamsSet</a>, <a class="el" href="classicomp_1_1_c_registry.html#ab362e17e819beab46934e0458fa7786a">icomp::CRegistry</a>, and <a class="el" href="classiprm_1_1_c_variable_param_comp.html#ae6fbd05365a9962f9b1c0a6d345fa521">iprm::CVariableParamComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classiprm_1_1_c_params_set.html#afae644efa9a789dc5c6f6c5a9c9de3de">iprm::CParamsSet</a>, <a class="el" href="classicomp_1_1_c_registry.html#a63182add395b7372c583005fbe0a2ef5">icomp::CRegistry</a>, and <a class="el" href="classiprm_1_1_c_variable_param_comp.html#a309d31c093f16e2dbc6027b6b468918f">iprm::CVariableParamComp</a>.</p>
 
 <p>Definition at line <a class="el" href="_i_serializable_8h_source.html#l00043">43</a> of file <a class="el" href="_i_serializable_8h_source.html">ISerializable.h</a>.</p>
 

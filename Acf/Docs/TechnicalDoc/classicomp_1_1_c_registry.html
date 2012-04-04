@@ -102,8 +102,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set keywords for this registry used for search.  <a href="#a68ec6a1fd0e6c1756917b49faf2957cc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#a49626ece290ed49fa9777010ae844e68">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a49626ece290ed49fa9777010ae844e68"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#ab362e17e819beab46934e0458fa7786a">GetMinimalVersion</a> (int versionId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get minimal needed version to correct storing of this data.  <a href="#ab362e17e819beab46934e0458fa7786a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#a63182add395b7372c583005fbe0a2ef5">GetMinimalVersion</a> (int versionId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get minimal needed version to correct storing of this data.  <a href="#a63182add395b7372c583005fbe0a2ef5"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap</a><br class="typebreak"/>
@@ -337,12 +337,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab362e17e819beab46934e0458fa7786a"></a><!-- doxytag: member="icomp::CRegistry::GetMinimalVersion" ref="ab362e17e819beab46934e0458fa7786a" args="(int versionId) const " -->
+<a class="anchor" id="a63182add395b7372c583005fbe0a2ef5"></a><!-- doxytag: member="icomp::CRegistry::GetMinimalVersion" ref="a63182add395b7372c583005fbe0a2ef5" args="(int versionId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> icomp::CRegistry::GetMinimalVersion </td>
+          <td class="memname">virtual quint32 icomp::CRegistry::GetMinimalVersion </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>versionId</em></td><td>)</td>
@@ -355,7 +355,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get minimal needed version to correct storing of this data. </p>
 <p>In implementation shold be calculated maximum version of this and composed component. </p>
 
-<p>Reimplemented from <a class="el" href="classiser_1_1_i_serializable.html#a27f3d8c7065ece5fa34fa44927c509a6">iser::ISerializable</a>.</p>
+<p>Reimplemented from <a class="el" href="classiser_1_1_i_serializable.html#a455e034210010adc169a4966903822f6">iser::ISerializable</a>.</p>
 
 </div>
 </div>

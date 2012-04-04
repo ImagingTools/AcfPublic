@@ -104,43 +104,43 @@
 <a name="l00088"></a>00088 
 <a name="l00089"></a>00089 
 <a name="l00090"></a>00090 <span class="keyword">template</span> &lt;&gt;
-<a name="l00091"></a><a class="code" href="classiimg_1_1_t_pixel_conversion.html#ac8384e9110515f782f62169b06190692">00091</a> <span class="keyword">inline</span> <a class="code" href="classiimg_1_1_t_pixel_conversion.html#ad7d3e458e7da45cfe12d2f89c69596aa">TPixelConversion&lt;I_BYTE, I_BYTE, I_BYTE&gt;::TPixelConversion</a>()
+<a name="l00091"></a><a class="code" href="classiimg_1_1_t_pixel_conversion.html#a4206e96d61472383e920d2fa6745f011">00091</a> <span class="keyword">inline</span> <a class="code" href="classiimg_1_1_t_pixel_conversion.html#ad7d3e458e7da45cfe12d2f89c69596aa">TPixelConversion&lt;quint8, quint8, quint8&gt;::TPixelConversion</a>()
 <a name="l00092"></a>00092 :      whiteIntensity(255)
 <a name="l00093"></a>00093 {
 <a name="l00094"></a>00094 }
 <a name="l00095"></a>00095 
 <a name="l00096"></a>00096 
 <a name="l00097"></a>00097 <span class="keyword">template</span> &lt;&gt;
-<a name="l00098"></a><a class="code" href="classiimg_1_1_t_pixel_conversion.html#a86977ea96493d6ceb674b549c7c28f30">00098</a> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="classiimg_1_1_t_pixel_conversion.html#aa77e0ad8939fe7ada20a646addb44372">TPixelConversion&lt;I_BYTE, float, float&gt;::operator()</a>(<span class="keyword">const</span> <a class="code" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a>&amp; pixel)<span class="keyword"> const</span>
+<a name="l00098"></a><a class="code" href="classiimg_1_1_t_pixel_conversion.html#a562c632ad68be79912c89aaf4d8a74dc">00098</a> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="classiimg_1_1_t_pixel_conversion.html#aa77e0ad8939fe7ada20a646addb44372">TPixelConversion&lt;quint8, float, float&gt;::operator()</a>(<span class="keyword">const</span> quint8&amp; pixel)<span class="keyword"> const</span>
 <a name="l00099"></a>00099 <span class="keyword"></span>{
 <a name="l00100"></a>00100        <span class="keywordflow">return</span> pixel / 255.0f;
 <a name="l00101"></a>00101 }
 <a name="l00102"></a>00102 
 <a name="l00103"></a>00103 
 <a name="l00104"></a>00104 <span class="keyword">template</span> &lt;&gt;
-<a name="l00105"></a><a class="code" href="classiimg_1_1_t_pixel_conversion.html#ae5f962aa7cd044bea385d0b7dcf6e8da">00105</a> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="classiimg_1_1_t_pixel_conversion.html#a4ee812556a721a15658f812873b56ba6">TPixelConversion&lt;I_BYTE, float, float&gt;::GetCalc</a>(<span class="keyword">const</span> <a class="code" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a>&amp; pixel)<span class="keyword"> const</span>
+<a name="l00105"></a><a class="code" href="classiimg_1_1_t_pixel_conversion.html#a63a447a28eaf3ea3ba7daaca5ed75ef9">00105</a> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="classiimg_1_1_t_pixel_conversion.html#a4ee812556a721a15658f812873b56ba6">TPixelConversion&lt;quint8, float, float&gt;::GetCalc</a>(<span class="keyword">const</span> quint8&amp; pixel)<span class="keyword"> const</span>
 <a name="l00106"></a>00106 <span class="keyword"></span>{
 <a name="l00107"></a>00107        <span class="keywordflow">return</span> pixel / 255.0f;
 <a name="l00108"></a>00108 }
 <a name="l00109"></a>00109 
 <a name="l00110"></a>00110 
 <a name="l00111"></a>00111 <span class="keyword">template</span> &lt;&gt;
-<a name="l00112"></a><a class="code" href="classiimg_1_1_t_pixel_conversion.html#a58474516e911fe8ddd9528991b3fc031">00112</a> <span class="keyword">inline</span> <a class="code" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a> <a class="code" href="classiimg_1_1_t_pixel_conversion.html#aa77e0ad8939fe7ada20a646addb44372">TPixelConversion&lt;float, I_BYTE, float&gt;::operator()</a>(<span class="keyword">const</span> <span class="keywordtype">float</span>&amp; pixel)<span class="keyword"> const</span>
+<a name="l00112"></a><a class="code" href="classiimg_1_1_t_pixel_conversion.html#ad87bf0c7aa1a7e5a5f6e1d3da77cccf4">00112</a> <span class="keyword">inline</span> quint8 <a class="code" href="classiimg_1_1_t_pixel_conversion.html#aa77e0ad8939fe7ada20a646addb44372">TPixelConversion&lt;float, quint8, float&gt;::operator()</a>(<span class="keyword">const</span> <span class="keywordtype">float</span>&amp; pixel)<span class="keyword"> const</span>
 <a name="l00113"></a>00113 <span class="keyword"></span>{
-<a name="l00114"></a>00114        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a>(pixel * 255);
+<a name="l00114"></a>00114        <span class="keywordflow">return</span> quint8(pixel * 255);
 <a name="l00115"></a>00115 }
 <a name="l00116"></a>00116 
 <a name="l00117"></a>00117 
 <a name="l00118"></a>00118 <span class="keyword">template</span> &lt;&gt;
-<a name="l00119"></a><a class="code" href="classiimg_1_1_t_pixel_conversion.html#adad21a1af611d029912ec2f498427d6d">00119</a> <span class="keyword">inline</span> <a class="code" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a> <a class="code" href="classiimg_1_1_t_pixel_conversion.html#a2efcfa09ce28cfeaf1286814cb7dc868">TPixelConversion&lt;float, I_BYTE, float&gt;::GetDest</a>(<span class="keyword">const</span> <span class="keywordtype">float</span>&amp; pixel)<span class="keyword"> const</span>
+<a name="l00119"></a><a class="code" href="classiimg_1_1_t_pixel_conversion.html#a24fb795c3a5ebc5a5ebb61e249ecd906">00119</a> <span class="keyword">inline</span> quint8 <a class="code" href="classiimg_1_1_t_pixel_conversion.html#a2efcfa09ce28cfeaf1286814cb7dc868">TPixelConversion&lt;float, quint8, float&gt;::GetDest</a>(<span class="keyword">const</span> <span class="keywordtype">float</span>&amp; pixel)<span class="keyword"> const</span>
 <a name="l00120"></a>00120 <span class="keyword"></span>{
-<a name="l00121"></a>00121        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a>(pixel * 255);
+<a name="l00121"></a>00121        <span class="keywordflow">return</span> quint8(pixel * 255);
 <a name="l00122"></a>00122 }
 <a name="l00123"></a>00123 
 <a name="l00124"></a>00124 
-<a name="l00125"></a><a class="code" href="namespaceiimg.html#aefd3bae9d308722c69f7568af9b4bdf3">00125</a> <span class="keyword">typedef</span> <a class="code" href="classiimg_1_1_t_pixel_conversion.html">TPixelConversion&lt;I_BYTE, I_BYTE&gt;</a> <a class="code" href="namespaceiimg.html#aefd3bae9d308722c69f7568af9b4bdf3">CGrayGrayPixelConversion</a>;
-<a name="l00126"></a><a class="code" href="namespaceiimg.html#a729bac06ff899b76381c6434bf978693">00126</a> <span class="keyword">typedef</span> <a class="code" href="classiimg_1_1_t_pixel_conversion.html">TPixelConversion&lt;float, I_BYTE, float&gt;</a> <a class="code" href="namespaceiimg.html#a729bac06ff899b76381c6434bf978693">CFloatGrayPixelConversion</a>;
-<a name="l00127"></a><a class="code" href="namespaceiimg.html#a327e2052b00095e844fccc95e3d61b55">00127</a> <span class="keyword">typedef</span> <a class="code" href="classiimg_1_1_t_pixel_conversion.html">TPixelConversion&lt;I_BYTE, float, float&gt;</a> <a class="code" href="namespaceiimg.html#a327e2052b00095e844fccc95e3d61b55">CGrayFloatPixelConversion</a>;
+<a name="l00125"></a><a class="code" href="namespaceiimg.html#ac1550747e4284c4b76c3149814789286">00125</a> <span class="keyword">typedef</span> <a class="code" href="classiimg_1_1_t_pixel_conversion.html">TPixelConversion&lt;quint8, quint8&gt;</a> <a class="code" href="namespaceiimg.html#ac1550747e4284c4b76c3149814789286">CGrayGrayPixelConversion</a>;
+<a name="l00126"></a><a class="code" href="namespaceiimg.html#a43998907f5159631d56218731b6b91c8">00126</a> <span class="keyword">typedef</span> <a class="code" href="classiimg_1_1_t_pixel_conversion.html">TPixelConversion&lt;float, quint8, float&gt;</a> <a class="code" href="namespaceiimg.html#a43998907f5159631d56218731b6b91c8">CFloatGrayPixelConversion</a>;
+<a name="l00127"></a><a class="code" href="namespaceiimg.html#ac6d45c7d34c54e32942016c56a2dc243">00127</a> <span class="keyword">typedef</span> <a class="code" href="classiimg_1_1_t_pixel_conversion.html">TPixelConversion&lt;quint8, float, float&gt;</a> <a class="code" href="namespaceiimg.html#ac6d45c7d34c54e32942016c56a2dc243">CGrayFloatPixelConversion</a>;
 <a name="l00128"></a><a class="code" href="namespaceiimg.html#abc60b4a807e4c35802b08f5d9d693446">00128</a> <span class="keyword">typedef</span> <a class="code" href="classiimg_1_1_t_pixel_conversion.html">TPixelConversion&lt;float, float&gt;</a> <a class="code" href="namespaceiimg.html#abc60b4a807e4c35802b08f5d9d693446">CFloatFloatPixelConversion</a>;
 <a name="l00129"></a>00129 
 <a name="l00130"></a>00130 

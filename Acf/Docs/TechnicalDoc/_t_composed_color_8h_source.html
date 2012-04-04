@@ -115,7 +115,7 @@
 <a name="l00116"></a>00116 :      <a class="code" href="classimath_1_1_t_vector.html">BaseClass</a>(vector)
 <a name="l00117"></a>00117 {
 <a name="l00118"></a>00118        <a class="code" href="classicmm_1_1_t_composed_color.html#aa5a8b215621c57df47be564ff13771b0">Elements</a>&amp; elements = <a class="code" href="classimath_1_1_t_vector.html#a43ffc5e766d4f1ccbee2f862112255d5" title="Get access to internal element container.">BaseClass::GetElementsRef</a>();
-<a name="l00119"></a>00119        <span class="keywordtype">int</span> commonSize = <a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(vector.<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>(), Size);
+<a name="l00119"></a>00119        <span class="keywordtype">int</span> commonSize = qMin(vector.<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>(), Size);
 <a name="l00120"></a>00120        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> copyIndex = 0; copyIndex &lt; commonSize; ++copyIndex){
 <a name="l00121"></a>00121               <a class="code" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249" title="Set element at specified i.">BaseClass::SetElement</a>(copyIndex, vector[copyIndex]);
 <a name="l00122"></a>00122        }

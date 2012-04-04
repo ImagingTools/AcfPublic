@@ -250,7 +250,7 @@ inline TFastVector<MaxSize, Element>::TFastVector()
 
 template <int MaxSize, class Element>
 inline TFastVector<MaxSize, Element>::TFastVector(int componentsCount, const Element& value)
-:	m_elementsCount(istd::Min(MaxSize, componentsCount))
+:	m_elementsCount(qMin(MaxSize, componentsCount))
 {
 	for (int i = 0; i < m_elementsCount; ++i){
 		m_elements[i] = value;
@@ -355,7 +355,7 @@ inline void TFastVector<MaxSize, Element>::Clear()
 template <int MaxSize, class Element>
 inline void TFastVector<MaxSize, Element>::Translate(const TFastVector<MaxSize, Element>& vector)
 {
-	int commonSize = istd::Min(m_elementsCount, vector.m_elementsCount);
+	int commonSize = qMin(m_elementsCount, vector.m_elementsCount);
 	for (int i = 0; i < commonSize; ++i){
 		m_elements[i] += vector.m_elements[i];
 	}
@@ -388,7 +388,7 @@ inline void TFastVector<MaxSize, Element>::ScaledCumulate(const TFastVector<MaxS
 template <int MaxSize, class Element>
 void TFastVector<MaxSize, Element>::SetElementsFrom(const TFastVector& vector, const Element& expansionValue)
 {
-	int commonSize = istd::Min(m_elementsCount, vector.m_elementsCount);
+	int commonSize = qMin(m_elementsCount, vector.m_elementsCount);
 
 	for (int i = 0; i < commonSize; ++i){
 		SetElement(i, vector[i]);
@@ -428,7 +428,7 @@ inline Element TFastVector<MaxSize, Element>::GetDotProduct(const TFastVector<Ma
 {
 	Element retVal = 0.0;
 
-	int commonSize = istd::Min(m_elementsCount, vector.m_elementsCount);
+	int commonSize = qMin(m_elementsCount, vector.m_elementsCount);
 	for (int i = 0; i < commonSize; ++i){
 		retVal +=  m_elements[i] * vector.m_elements[i];
 	}
@@ -494,7 +494,7 @@ inline bool TFastVector<MaxSize, Element>::operator!=(const TFastVector<MaxSize,
 template <int MaxSize, class Element>
 bool TFastVector<MaxSize, Element>::operator<(const TFastVector<MaxSize, Element>& vector) const
 {
-	int commonSize = istd::Min(m_elementsCount, vector.m_elementsCount);
+	int commonSize = qMin(m_elementsCount, vector.m_elementsCount);
 	for (int i = 0; i < commonSize; ++i){
 		if (m_elements[i] > vector.m_elements[i]){
 			return false;
@@ -511,7 +511,7 @@ bool TFastVector<MaxSize, Element>::operator<(const TFastVector<MaxSize, Element
 template <int MaxSize, class Element>
 bool TFastVector<MaxSize, Element>::operator>(const TFastVector<MaxSize, Element>& vector) const
 {
-	int commonSize = istd::Min(m_elementsCount, vector.m_elementsCount);
+	int commonSize = qMin(m_elementsCount, vector.m_elementsCount);
 	for (int i = 0; i < commonSize; ++i){
 		if (m_elements[i] > vector.m_elements[i]){
 			return true;
@@ -528,7 +528,7 @@ bool TFastVector<MaxSize, Element>::operator>(const TFastVector<MaxSize, Element
 template <int MaxSize, class Element>
 bool TFastVector<MaxSize, Element>::operator<=(const TFastVector<MaxSize, Element>& vector) const
 {
-	int commonSize = istd::Min(m_elementsCount, vector.m_elementsCount);
+	int commonSize = qMin(m_elementsCount, vector.m_elementsCount);
 	for (int i = 0; i < commonSize; ++i){
 		if (m_elements[i] > vector.m_elements[i]){
 			return false;
@@ -545,7 +545,7 @@ bool TFastVector<MaxSize, Element>::operator<=(const TFastVector<MaxSize, Elemen
 template <int MaxSize, class Element>
 bool TFastVector<MaxSize, Element>::operator>=(const TFastVector<MaxSize, Element>& vector) const
 {
-	int commonSize = istd::Min(m_elementsCount, vector.m_elementsCount);
+	int commonSize = qMin(m_elementsCount, vector.m_elementsCount);
 	for (int i = 0; i < commonSize; ++i){
 		if (m_elements[i] > vector.m_elements[i]){
 			return true;
@@ -769,12 +769,12 @@ bool TFastVector<MaxSize, Element>::GetNormalized(TFastVector<MaxSize, Element>&
 template <int MaxSize, class Element>
 void TFastVector<MaxSize, Element>::GetMinimal(const TFastVector<MaxSize, Element>& vector, TFastVector<MaxSize, Element>& result) const
 {
-	int elementsCount = istd::Min(GetElementsCount(), vector.GetElementsCount());
+	int elementsCount = qMin(GetElementsCount(), vector.GetElementsCount());
 
 	result.SetElementsCount(elementsCount);
 
 	for (int i = 0; i < elementsCount; ++i){
-		result.SetElement(i, istd::Min(GetElement(i), vector.GetElement(i)));
+		result.SetElement(i, qMin(GetElement(i), vector.GetElement(i)));
 	}
 }
 
@@ -782,12 +782,12 @@ void TFastVector<MaxSize, Element>::GetMinimal(const TFastVector<MaxSize, Elemen
 template <int MaxSize, class Element>
 void TFastVector<MaxSize, Element>::GetMaximal(const TFastVector<MaxSize, Element>& vector, TFastVector<MaxSize, Element>& result) const
 {
-	int elementsCount = istd::Min(GetElementsCount(), vector.GetElementsCount());
+	int elementsCount = qMin(GetElementsCount(), vector.GetElementsCount());
 
 	result.SetElementsCount(elementsCount);
 
 	for (int i = 0; i < elementsCount; ++i){
-		result.SetElement(i, istd::Max(GetElement(i), vector.GetElement(i)));
+		result.SetElement(i, qMax(GetElement(i), vector.GetElement(i)));
 	}
 }
 

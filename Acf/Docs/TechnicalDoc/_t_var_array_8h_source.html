@@ -233,7 +233,7 @@
 <a name="l00259"></a>00259        <span class="keywordtype">int</span> indexDimensionsCount = index.<a class="code" href="classistd_1_1_c_var_index.html#a5a4f5f89ad94acc72aa8a9221e45f8bc" title="Get number of dimensions of this index.">GetDimensionsCount</a>();
 <a name="l00260"></a>00260        <span class="keywordtype">int</span> dimensionsCount = m_sizes.GetDimensionsCount();
 <a name="l00261"></a>00261 
-<a name="l00262"></a>00262        <span class="keywordtype">int</span> minDimensionsCount = <a class="code" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf" title="Define own min function to avoid conflicts between STL and Microsoft macros.">istd::Min</a>(indexDimensionsCount, dimensionsCount);
+<a name="l00262"></a>00262        <span class="keywordtype">int</span> minDimensionsCount = qMin(indexDimensionsCount, dimensionsCount);
 <a name="l00263"></a>00263 
 <a name="l00264"></a>00264        <span class="keywordtype">int</span> elementIndex = 0;
 <a name="l00265"></a>00265        <span class="keywordtype">int</span> cumulatedSizes = 1;

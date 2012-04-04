@@ -33,7 +33,7 @@ void CReaderVersionInfo::Reset()
 }
 
 
-bool CReaderVersionInfo::InsertVersionId(int id, I_DWORD version, const QString& description)
+bool CReaderVersionInfo::InsertVersionId(int id, quint32 version, const QString& description)
 {
 	VersionIdElement element(version, description);
 
@@ -51,7 +51,7 @@ bool CReaderVersionInfo::RemoveVersionId(int id)
 
 // reimplemented (iser::IVersionInfo)
 
-bool CReaderVersionInfo::GetVersionNumber(int versionId, I_DWORD& result) const
+bool CReaderVersionInfo::GetVersionNumber(int versionId, quint32& result) const
 {
 	const VersionIdElement& element = GetVersionIdElement(versionId);
 
@@ -89,7 +89,7 @@ CReaderVersionInfo::VersionIds CReaderVersionInfo::GetVersionIds() const
 }
 
 
-QString CReaderVersionInfo::GetEncodedVersionName(int /*versionId*/, I_DWORD /*versionNumber*/) const
+QString CReaderVersionInfo::GetEncodedVersionName(int /*versionId*/, quint32 /*versionNumber*/) const
 {
 	return "";
 }
@@ -111,7 +111,7 @@ const CReaderVersionInfo::VersionIdElement& CReaderVersionInfo::GetVersionIdElem
 
 // static attributes
 
-CReaderVersionInfo::VersionIdElement CReaderVersionInfo::s_element(I_DWORD(UnknownVersion), "");
+CReaderVersionInfo::VersionIdElement CReaderVersionInfo::s_element(quint32(UnknownVersion), "");
 
 
 } // namespace iser

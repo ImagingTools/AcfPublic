@@ -51,7 +51,7 @@
 <a name="l00035"></a>00035 
 <a name="l00040"></a>00040        <a class="code" href="classiwin_1_1_t_com_ptr.html#a23bd8eddf738d5b373e3ebbee09ee0a3" title="Destructor.">~TComPtr</a>();
 <a name="l00041"></a>00041 
-<a name="l00045"></a>00045        <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_t_com_ptr.html#a65a9fc28017791dc9a985924ce2807a6" title="Create instance of COM object using its CLSID.">CoCreateInstance</a>(REFCLSID rclsid, IUnknown* outerPtr = NULL, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> clsContext = CLSCTX_ALL);
+<a name="l00045"></a>00045        <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_t_com_ptr.html#a0cf09d0de25db27195a38425d435908d" title="Create instance of COM object using its CLSID.">CoCreateInstance</a>(REFCLSID rclsid, IUnknown* outerPtr = NULL, quint32 clsContext = CLSCTX_ALL);
 <a name="l00046"></a>00046 
 <a name="l00050"></a>00050        <span class="keywordtype">void</span> <a class="code" href="classiwin_1_1_t_com_ptr.html#a338f3fc146bc2591e233d8bc837e2a67" title="It decreses COM reference pointer and set this pointer to NULL.">Reset</a>();
 <a name="l00051"></a>00051 
@@ -142,7 +142,7 @@
 <a name="l00158"></a>00158 <span class="comment">// public methods</span>
 <a name="l00159"></a>00159 
 <a name="l00160"></a>00160 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;
-<a name="l00161"></a><a class="code" href="classiwin_1_1_t_com_ptr.html#a65a9fc28017791dc9a985924ce2807a6">00161</a> <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_t_com_ptr.html#a65a9fc28017791dc9a985924ce2807a6" title="Create instance of COM object using its CLSID.">TComPtr&lt;Type&gt;::CoCreateInstance</a>(REFCLSID rclsid, IUnknown* outerPtr, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> clsContext)
+<a name="l00161"></a><a class="code" href="classiwin_1_1_t_com_ptr.html#a0cf09d0de25db27195a38425d435908d">00161</a> <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_t_com_ptr.html#a0cf09d0de25db27195a38425d435908d" title="Create instance of COM object using its CLSID.">TComPtr&lt;Type&gt;::CoCreateInstance</a>(REFCLSID rclsid, IUnknown* outerPtr, quint32 clsContext)
 <a name="l00162"></a>00162 {
 <a name="l00163"></a>00163        Reset();
 <a name="l00164"></a>00164 

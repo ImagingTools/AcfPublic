@@ -20,7 +20,6 @@
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Main concepts and implementations</div>  </div>
@@ -84,14 +83,6 @@ Typedefs</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef TLoggerCompWrap<br class="typebreak"/>
 &lt; <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Type defininig base class for simple components outputing log messages.  <a href="#ga8ef64a77c28b704454f15c826587cc93"></a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___main.html#gab2258500c5eb353e9e76798ab44a59cf">istd::Min</a> (const T &amp;value1, const T &amp;value2)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define own min function to avoid conflicts between STL and Microsoft macros.  <a href="#gab2258500c5eb353e9e76798ab44a59cf"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___main.html#ga761fb858ab3e61d9682b99f0b32c06f7">istd::Max</a> (const T &amp;value1, const T &amp;value2)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define own max function to avoid conflicts between STL and Microsoft macros.  <a href="#ga761fb858ab3e61d9682b99f0b32c06f7"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___main.html#ga1333edce51c7bb35eb2c60f3a02e787a">I_PI</a> = 3.14159265358979323846</td></tr>
@@ -116,77 +107,6 @@ Variables</h2></td></tr>
 <p>Type defininig base class for simple components outputing log messages. </p>
 
 <p>Definition at line <a class="el" href="_t_logger_comp_wrap_8h_source.html#l00121">121</a> of file <a class="el" href="_t_logger_comp_wrap_8h_source.html">TLoggerCompWrap.h</a>.</p>
-
-</div>
-</div>
-<hr/><h2>Function Documentation</h2>
-<a class="anchor" id="ga761fb858ab3e61d9682b99f0b32c06f7"></a><!-- doxytag: member="istd::Max" ref="ga761fb858ab3e61d9682b99f0b32c06f7" args="(const T &amp;value1, const T &amp;value2)" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const T&amp; istd::Max </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>value1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>value2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Define own max function to avoid conflicts between STL and Microsoft macros. </p>
-
-<p>Definition at line <a class="el" href="istd_8h_source.html#l00045">45</a> of file <a class="el" href="istd_8h_source.html">istd.h</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_mem_cached_producer_comp_8h_source.html#l00122">iproc::TMemCachedProducerComp&lt; Key, CacheObject &gt;::CleanElementList()</a>, <a class="el" href="_t_range_8h_source.html#l00419">istd::TRange&lt; ValueType &gt;::GetIntersection()</a>, <a class="el" href="_t_vector_8h_source.html#l00643">imath::TVector&lt; Size, Element &gt;::GetMaximal()</a>, <a class="el" href="_t_fast_vector_8h_source.html#l00761">imath::TFastVector&lt; MaxSize, Element &gt;::GetMaximal()</a>, <a class="el" href="_t_range_8h_source.html#l00446">istd::TRange&lt; ValueType &gt;::GetUnion()</a>, <a class="el" href="_t_range_8h_source.html#l00694">istd::TRange&lt; ValueType &gt;::GetValid()</a>, <a class="el" href="_t_range_8h_source.html#l00362">istd::TRange&lt; ValueType &gt;::GetValidated()</a>, <a class="el" href="istd_8h_source.html#l00074">istd::IsBeetween()</a>, <a class="el" href="istd_8h_source.html#l00057">istd::Max3()</a>, <a class="el" href="istd_8h_source.html#l00064">istd::Max4()</a>, <a class="el" href="_c_rect_8h_source.html#l00477">i2d::CRect::Union()</a>, and <a class="el" href="_t_range_8h_source.html#l00379">istd::TRange&lt; ValueType &gt;::Validate()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="gab2258500c5eb353e9e76798ab44a59cf"></a><!-- doxytag: member="istd::Min" ref="gab2258500c5eb353e9e76798ab44a59cf" args="(const T &amp;value1, const T &amp;value2)" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const T&amp; istd::Min </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>value1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>value2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Define own min function to avoid conflicts between STL and Microsoft macros. </p>
-
-<p>Definition at line <a class="el" href="istd_8h_source.html#l00028">28</a> of file <a class="el" href="istd_8h_source.html">istd.h</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_math_vector_wrap_8h_source.html#l00190">imath::TMathVectorWrap&lt; Base &gt;::GetDotProduct()</a>, <a class="el" href="_t_fast_vector_8h_source.html#l00405">imath::TFastVector&lt; MaxSize, Element &gt;::GetDotProduct()</a>, <a class="el" href="_t_var_array_8h_source.html#l00257">istd::TVarArray&lt; Element &gt;::GetElementIndex()</a>, <a class="el" href="_t_range_8h_source.html#l00419">istd::TRange&lt; ValueType &gt;::GetIntersection()</a>, <a class="el" href="_t_fast_vector_8h_source.html#l00761">imath::TFastVector&lt; MaxSize, Element &gt;::GetMaximal()</a>, <a class="el" href="_t_vector_8h_source.html#l00634">imath::TVector&lt; Size, Element &gt;::GetMinimal()</a>, <a class="el" href="_t_fast_vector_8h_source.html#l00748">imath::TFastVector&lt; MaxSize, Element &gt;::GetMinimal()</a>, <a class="el" href="_t_matrix_8h_source.html#l00806">imath::TMatrix&lt; Width, Height, Element &gt;::GetTriangleDecomposed()</a>, <a class="el" href="_t_range_8h_source.html#l00446">istd::TRange&lt; ValueType &gt;::GetUnion()</a>, <a class="el" href="_t_range_8h_source.html#l00694">istd::TRange&lt; ValueType &gt;::GetValid()</a>, <a class="el" href="_t_range_8h_source.html#l00362">istd::TRange&lt; ValueType &gt;::GetValidated()</a>, <a class="el" href="istd_8h_source.html#l00074">istd::IsBeetween()</a>, <a class="el" href="_t_math_vector_wrap_8h_source.html#l00410">imath::TMathVectorWrap&lt; Base &gt;::operator+()</a>, <a class="el" href="_t_math_vector_wrap_8h_source.html#l00347">imath::TMathVectorWrap&lt; Base &gt;::operator+=()</a>, <a class="el" href="_t_math_vector_wrap_8h_source.html#l00425">imath::TMathVectorWrap&lt; Base &gt;::operator-()</a>, <a class="el" href="_t_math_vector_wrap_8h_source.html#l00359">imath::TMathVectorWrap&lt; Base &gt;::operator-=()</a>, <a class="el" href="_t_math_vector_wrap_8h_source.html#l00258">imath::TMathVectorWrap&lt; Base &gt;::operator&lt;()</a>, <a class="el" href="_t_fast_vector_8h_source.html#l00473">imath::TFastVector&lt; MaxSize, Element &gt;::operator&lt;()</a>, <a class="el" href="_t_math_vector_wrap_8h_source.html#l00298">imath::TMathVectorWrap&lt; Base &gt;::operator&lt;=()</a>, <a class="el" href="_t_fast_vector_8h_source.html#l00507">imath::TFastVector&lt; MaxSize, Element &gt;::operator&lt;=()</a>, <a class="el" href="_t_math_vector_wrap_8h_source.html#l00278">imath::TMathVectorWrap&lt; Base &gt;::operator&gt;()</a>, <a class="el" href="_t_fast_vector_8h_source.html#l00490">imath::TFastVector&lt; MaxSize, Element &gt;::operator&gt;()</a>, <a class="el" href="_t_math_vector_wrap_8h_source.html#l00318">imath::TMathVectorWrap&lt; Base &gt;::operator&gt;=()</a>, <a class="el" href="_t_fast_vector_8h_source.html#l00524">imath::TFastVector&lt; MaxSize, Element &gt;::operator&gt;=()</a>, <a class="el" href="_t_fast_vector_8h_source.html#l00367">imath::TFastVector&lt; MaxSize, Element &gt;::SetElementsFrom()</a>, <a class="el" href="_t_composed_color_8h_source.html#l00115">icmm::TComposedColor&lt; Size &gt;::TComposedColor()</a>, <a class="el" href="_t_math_vector_wrap_8h_source.html#l00159">imath::TMathVectorWrap&lt; Base &gt;::Translate()</a>, <a class="el" href="_t_fast_vector_8h_source.html#l00334">imath::TFastVector&lt; MaxSize, Element &gt;::Translate()</a>, <a class="el" href="_c_rect_8h_source.html#l00477">i2d::CRect::Union()</a>, and <a class="el" href="_t_range_8h_source.html#l00379">istd::TRange&lt; ValueType &gt;::Validate()</a>.</p>
 
 </div>
 </div>

@@ -44,24 +44,24 @@
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_crc_calculator.html#a00bdccc5c7ae3867cc70e2aa6903c7d9">ByteStream</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; quint8 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_crc_calculator.html#a335385002ed800814f4e0b98e836faef">ByteStream</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_crc_calculator.html#a5a73c052e98f1e3bbb4ddda412dad0f7">GetCrcFromData</a> (const <a class="el" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a> *dataPtr, int dataSize)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_crc_calculator.html#ab392748a86f2f39ca4acbf1ed6dd93f2">GetCrcFromStream</a> (const <a class="el" href="classistd_1_1_c_crc_calculator.html#a00bdccc5c7ae3867cc70e2aa6903c7d9">ByteStream</a> &amp;byteStream)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_crc_calculator.html#aa5d50fdd6eade33a863bf2b61d98a321">GetCrcFromFile</a> (const QString &amp;fileName)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_crc_calculator.html#a0b8763e85a8be84aba45ca1edf44d9c7">UpdateCrc</a> (const <a class="el" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a> &amp;byte, <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> &amp;dwCrc32)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_crc_calculator.html#abaeba72ab1756163d8677806349624f5">GetCrcFromData</a> (const quint8 *dataPtr, int dataSize)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_crc_calculator.html#a80e67625cff67487d0f9cf7f87704496">GetCrcFromStream</a> (const <a class="el" href="classistd_1_1_c_crc_calculator.html#a335385002ed800814f4e0b98e836faef">ByteStream</a> &amp;byteStream)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_crc_calculator.html#a308558531cb95423a4c8d2f665d4e99c">GetCrcFromFile</a> (const QString &amp;fileName)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_crc_calculator.html#ac177b27b7b40fecf205ce49f45683f33">UpdateCrc</a> (const quint8 &amp;byte, quint32 &amp;dwCrc32)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_c_crc_calculator_8h_source.html#l00018">18</a> of file <a class="el" href="_c_crc_calculator_8h_source.html">CCrcCalculator.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a00bdccc5c7ae3867cc70e2aa6903c7d9"></a><!-- doxytag: member="istd::CCrcCalculator::ByteStream" ref="a00bdccc5c7ae3867cc70e2aa6903c7d9" args="" -->
+<a class="anchor" id="a335385002ed800814f4e0b98e836faef"></a><!-- doxytag: member="istd::CCrcCalculator::ByteStream" ref="a335385002ed800814f4e0b98e836faef" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::vector&lt;<a class="el" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a>&gt; <a class="el" href="classistd_1_1_c_crc_calculator.html#a00bdccc5c7ae3867cc70e2aa6903c7d9">istd::CCrcCalculator::ByteStream</a></td>
+          <td class="memname">typedef std::vector&lt;quint8&gt; <a class="el" href="classistd_1_1_c_crc_calculator.html#a335385002ed800814f4e0b98e836faef">istd::CCrcCalculator::ByteStream</a></td>
         </tr>
       </table>
 </div>
@@ -72,14 +72,14 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a5a73c052e98f1e3bbb4ddda412dad0f7"></a><!-- doxytag: member="istd::CCrcCalculator::GetCrcFromData" ref="a5a73c052e98f1e3bbb4ddda412dad0f7" args="(const I_BYTE *dataPtr, int dataSize)" -->
+<a class="anchor" id="abaeba72ab1756163d8677806349624f5"></a><!-- doxytag: member="istd::CCrcCalculator::GetCrcFromData" ref="abaeba72ab1756163d8677806349624f5" args="(const quint8 *dataPtr, int dataSize)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> istd::CCrcCalculator::GetCrcFromData </td>
+          <td class="memname">static quint32 istd::CCrcCalculator::GetCrcFromData </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a> *&#160;</td>
+          <td class="paramtype">const quint8 *&#160;</td>
           <td class="paramname"><em>dataPtr</em>, </td>
         </tr>
         <tr>
@@ -99,12 +99,12 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa5d50fdd6eade33a863bf2b61d98a321"></a><!-- doxytag: member="istd::CCrcCalculator::GetCrcFromFile" ref="aa5d50fdd6eade33a863bf2b61d98a321" args="(const QString &amp;fileName)" -->
+<a class="anchor" id="a308558531cb95423a4c8d2f665d4e99c"></a><!-- doxytag: member="istd::CCrcCalculator::GetCrcFromFile" ref="a308558531cb95423a4c8d2f665d4e99c" args="(const QString &amp;fileName)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> istd::CCrcCalculator::GetCrcFromFile </td>
+          <td class="memname">static quint32 istd::CCrcCalculator::GetCrcFromFile </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>fileName</em></td><td>)</td>
@@ -116,14 +116,14 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab392748a86f2f39ca4acbf1ed6dd93f2"></a><!-- doxytag: member="istd::CCrcCalculator::GetCrcFromStream" ref="ab392748a86f2f39ca4acbf1ed6dd93f2" args="(const ByteStream &amp;byteStream)" -->
+<a class="anchor" id="a80e67625cff67487d0f9cf7f87704496"></a><!-- doxytag: member="istd::CCrcCalculator::GetCrcFromStream" ref="a80e67625cff67487d0f9cf7f87704496" args="(const ByteStream &amp;byteStream)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> istd::CCrcCalculator::GetCrcFromStream </td>
+          <td class="memname">static quint32 istd::CCrcCalculator::GetCrcFromStream </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_crc_calculator.html#a00bdccc5c7ae3867cc70e2aa6903c7d9">ByteStream</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_crc_calculator.html#a335385002ed800814f4e0b98e836faef">ByteStream</a> &amp;&#160;</td>
           <td class="paramname"><em>byteStream</em></td><td>)</td>
           <td><code> [static]</code></td>
         </tr>
@@ -133,20 +133,20 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0b8763e85a8be84aba45ca1edf44d9c7"></a><!-- doxytag: member="istd::CCrcCalculator::UpdateCrc" ref="a0b8763e85a8be84aba45ca1edf44d9c7" args="(const I_BYTE &amp;byte, I_DWORD &amp;dwCrc32)" -->
+<a class="anchor" id="ac177b27b7b40fecf205ce49f45683f33"></a><!-- doxytag: member="istd::CCrcCalculator::UpdateCrc" ref="ac177b27b7b40fecf205ce49f45683f33" args="(const quint8 &amp;byte, quint32 &amp;dwCrc32)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void istd::CCrcCalculator::UpdateCrc </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a> &amp;&#160;</td>
+          <td class="paramtype">const quint8 &amp;&#160;</td>
           <td class="paramname"><em>byte</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> &amp;&#160;</td>
+          <td class="paramtype">quint32 &amp;&#160;</td>
           <td class="paramname"><em>dwCrc32</em>&#160;</td>
         </tr>
         <tr>

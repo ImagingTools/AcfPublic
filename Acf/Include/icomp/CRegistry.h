@@ -72,7 +72,7 @@ public:
 	
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
-	virtual I_DWORD GetMinimalVersion(int versionId) const;
+	virtual quint32 GetMinimalVersion(int versionId) const;
 
 protected:
 	typedef imod::TModelWrap<istd::TChangeDelegator<CRegistryElement> > Element;

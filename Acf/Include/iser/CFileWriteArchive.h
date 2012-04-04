@@ -81,8 +81,8 @@ public:
 protected:
 	struct TagStackElement
 	{
-		I_DWORD tagBinaryId;
-		I_DWORD endFieldPosition;
+		quint32 tagBinaryId;
+		quint32 endFieldPosition;
 	};
 	
 private:

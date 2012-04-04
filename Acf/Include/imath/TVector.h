@@ -656,7 +656,7 @@ template <int Size, class Element>
 void TVector<Size, Element>::GetMinimal(const TVector<Size, Element>& vector, TVector<Size, Element>& result) const
 {
 	for (int i = 0; i < Size; ++i){
-		result.SetElement(i, istd::Min(GetElement(i), vector.GetElement(i)));
+		result.SetElement(i, qMin(GetElement(i), vector.GetElement(i)));
 	}
 }
 
@@ -665,7 +665,7 @@ template <int Size, class Element>
 void TVector<Size, Element>::GetMaximal(const TVector<Size, Element>& vector, TVector<Size, Element>& result) const
 {
 	for (int i = 0; i < Size; ++i){
-		result.SetElement(i, istd::Max(GetElement(i), vector.GetElement(i)));
+		result.SetElement(i, qMax(GetElement(i), vector.GetElement(i)));
 	}
 }
 

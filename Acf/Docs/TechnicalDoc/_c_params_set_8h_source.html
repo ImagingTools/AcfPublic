@@ -80,7 +80,7 @@
 <a name="l00073"></a>00073 
 <a name="l00074"></a>00074        <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_set.html#a00131a1b6da0e7f0a6d5b8f2d46f7c5a" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00076"></a>00076        <span class="keyword">virtual</span> <a class="code" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> <a class="code" href="classiprm_1_1_c_params_set.html#aff94090a8764dfbdb02499bcd388142b" title="Get minimal needed version to correct storing of this data.">GetMinimalVersion</a>(<span class="keywordtype">int</span> versionId) <span class="keyword">const</span>;
+<a name="l00076"></a>00076        <span class="keyword">virtual</span> quint32 <a class="code" href="classiprm_1_1_c_params_set.html#afae644efa9a789dc5c6f6c5a9c9de3de" title="Get minimal needed version to correct storing of this data.">GetMinimalVersion</a>(<span class="keywordtype">int</span> versionId) <span class="keyword">const</span>;
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078        <span class="comment">// reimplemented (istd::IChangeable)</span>
 <a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_set.html#a42e2ab00999fe061d3e718d07ed165d1">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);

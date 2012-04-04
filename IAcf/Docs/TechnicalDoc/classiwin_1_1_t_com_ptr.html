@@ -64,8 +64,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#afbdbca76d72e1589529249e6120b0159"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_t_com_ptr.html#a23bd8eddf738d5b373e3ebbee09ee0a3">~TComPtr</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a23bd8eddf738d5b373e3ebbee09ee0a3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_t_com_ptr.html#a65a9fc28017791dc9a985924ce2807a6">CoCreateInstance</a> (REFCLSID rclsid, IUnknown *outerPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> clsContext=CLSCTX_ALL)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of COM object using its CLSID.  <a href="#a65a9fc28017791dc9a985924ce2807a6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_t_com_ptr.html#a0cf09d0de25db27195a38425d435908d">CoCreateInstance</a> (REFCLSID rclsid, IUnknown *outerPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, quint32 clsContext=CLSCTX_ALL)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of COM object using its CLSID.  <a href="#a0cf09d0de25db27195a38425d435908d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_t_com_ptr.html#a338f3fc146bc2591e233d8bc837e2a67">Reset</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">It decreses COM reference pointer and set this pointer to NULL.  <a href="#a338f3fc146bc2591e233d8bc837e2a67"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_t_com_ptr.html#a72f0d701a841e15c86a4041606ce95ef">SetPtr</a> (Type *ptr, bool addRef=true)</td></tr>
@@ -194,7 +194,7 @@ template&lt;class Type &gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a65a9fc28017791dc9a985924ce2807a6"></a><!-- doxytag: member="iwin::TComPtr::CoCreateInstance" ref="a65a9fc28017791dc9a985924ce2807a6" args="(REFCLSID rclsid, IUnknown *outerPtr=NULL, I_DWORD clsContext=CLSCTX_ALL)" -->
+<a class="anchor" id="a0cf09d0de25db27195a38425d435908d"></a><!-- doxytag: member="iwin::TComPtr::CoCreateInstance" ref="a0cf09d0de25db27195a38425d435908d" args="(REFCLSID rclsid, IUnknown *outerPtr=NULL, quint32 clsContext=CLSCTX_ALL)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -215,7 +215,7 @@ template&lt;class Type &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td>
+          <td class="paramtype">quint32&#160;</td>
           <td class="paramname"><em>clsContext</em> = <code>CLSCTX_ALL</code>&#160;</td>
         </tr>
         <tr>

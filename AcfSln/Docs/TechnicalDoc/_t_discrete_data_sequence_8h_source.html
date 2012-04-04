@@ -62,8 +62,8 @@
 <a name="l00036"></a>00036                             <span class="keywordtype">int</span> sampleDepth,
 <a name="l00037"></a>00037                             <span class="keywordtype">int</span> channelsCount = 1);
 <a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a02d28d60964512418c70b92beadbcd62" title="Get number of bits used to represent single sample.">GetSampleDepth</a>() <span class="keyword">const</span>;
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a7dde7bba22c7dc8aaf580b324a6b5c55" title="Get discrete sample at specified position.">GetDiscrSample</a>(<span class="keywordtype">int</span> position, <span class="keywordtype">int</span> channel = 0) <span class="keyword">const</span>;
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#add0521c6fa60ee8900749b89dd734730" title="Set discrete sample at specified position.">SetDiscrSample</a>(<span class="keywordtype">int</span> position, <span class="keywordtype">int</span> channel, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> sample);
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> quint32 <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#ac1ccf33bc3806bc8070c84ad07cfef2e" title="Get discrete sample at specified position.">GetDiscrSample</a>(<span class="keywordtype">int</span> position, <span class="keywordtype">int</span> channel = 0) <span class="keyword">const</span>;
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a561fb705e0c901e22b79f2fb07ac4de8" title="Set discrete sample at specified position.">SetDiscrSample</a>(<span class="keywordtype">int</span> position, <span class="keywordtype">int</span> channel, quint32 sample);
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042        <span class="comment">// reimplemented (imeas::IDataSequence)</span>
 <a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a6ad4ba6126070b849f12bd46a2626786" title="Create container for sample sequence with specified number of samples, channels and sample depth...">CreateSequence</a>(<span class="keywordtype">int</span> samplesCount, <span class="keywordtype">int</span> channelsCount = 1);
@@ -149,18 +149,18 @@
 <a name="l00123"></a>00123 
 <a name="l00124"></a>00124 
 <a name="l00125"></a>00125 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Element&gt;
-<a name="l00126"></a><a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a7dde7bba22c7dc8aaf580b324a6b5c55">00126</a> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a7dde7bba22c7dc8aaf580b324a6b5c55" title="Get discrete sample at specified position.">TDiscreteDataSequence&lt;Element&gt;::GetDiscrSample</a>(<span class="keywordtype">int</span> position, <span class="keywordtype">int</span> channel)<span class="keyword"> const</span>
+<a name="l00126"></a><a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#ac1ccf33bc3806bc8070c84ad07cfef2e">00126</a> quint32 <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#ac1ccf33bc3806bc8070c84ad07cfef2e" title="Get discrete sample at specified position.">TDiscreteDataSequence&lt;Element&gt;::GetDiscrSample</a>(<span class="keywordtype">int</span> position, <span class="keywordtype">int</span> channel)<span class="keyword"> const</span>
 <a name="l00127"></a>00127 <span class="keyword"></span>{
-<a name="l00128"></a>00128        <span class="keyword">const</span> Element&amp; element = *(<span class="keyword">const</span> Element*)((<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a>*)m_sampleBuffer.GetPtr() + position * m_sampleDiff + channel * m_channelDiff);
+<a name="l00128"></a>00128        <span class="keyword">const</span> Element&amp; element = *(<span class="keyword">const</span> Element*)((<span class="keyword">const</span> quint8*)m_sampleBuffer.GetPtr() + position * m_sampleDiff + channel * m_channelDiff);
 <a name="l00129"></a>00129 
 <a name="l00130"></a>00130        <span class="keywordflow">return</span> element;
 <a name="l00131"></a>00131 }
 <a name="l00132"></a>00132 
 <a name="l00133"></a>00133 
 <a name="l00134"></a>00134 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Element&gt;
-<a name="l00135"></a><a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#add0521c6fa60ee8900749b89dd734730">00135</a> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#add0521c6fa60ee8900749b89dd734730" title="Set discrete sample at specified position.">TDiscreteDataSequence&lt;Element&gt;::SetDiscrSample</a>(<span class="keywordtype">int</span> position, <span class="keywordtype">int</span> channel, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> sample)
+<a name="l00135"></a><a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a561fb705e0c901e22b79f2fb07ac4de8">00135</a> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a561fb705e0c901e22b79f2fb07ac4de8" title="Set discrete sample at specified position.">TDiscreteDataSequence&lt;Element&gt;::SetDiscrSample</a>(<span class="keywordtype">int</span> position, <span class="keywordtype">int</span> channel, quint32 sample)
 <a name="l00136"></a>00136 {
-<a name="l00137"></a>00137        Element&amp; element = *(Element*)((<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a>*)m_sampleBuffer.GetPtr() + position * m_sampleDiff + channel * m_channelDiff);
+<a name="l00137"></a>00137        Element&amp; element = *(Element*)((quint8*)m_sampleBuffer.GetPtr() + position * m_sampleDiff + channel * m_channelDiff);
 <a name="l00138"></a>00138 
 <a name="l00139"></a>00139        element = Element(sample);
 <a name="l00140"></a>00140 
@@ -263,7 +263,7 @@
 <a name="l00237"></a>00237 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Element&gt;
 <a name="l00238"></a><a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#ad517de32eeff0e42d234971dec4030cc">00238</a> <span class="keywordtype">double</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#ad517de32eeff0e42d234971dec4030cc" title="Get sample value at specified index.">TDiscreteDataSequence&lt;Element&gt;::GetSample</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> channel)<span class="keyword"> const</span>
 <a name="l00239"></a>00239 <span class="keyword"></span>{
-<a name="l00240"></a>00240        <span class="keyword">const</span> Element&amp; element = *(<span class="keyword">const</span> Element*)((<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a>*)m_sampleBuffer.GetPtr() + index * m_sampleDiff + channel * m_channelDiff);
+<a name="l00240"></a>00240        <span class="keyword">const</span> Element&amp; element = *(<span class="keyword">const</span> Element*)((<span class="keyword">const</span> quint8*)m_sampleBuffer.GetPtr() + index * m_sampleDiff + channel * m_channelDiff);
 <a name="l00241"></a>00241 
 <a name="l00242"></a>00242        <span class="keywordflow">return</span> double(element) / m_normFactor;
 <a name="l00243"></a>00243 }
@@ -272,7 +272,7 @@
 <a name="l00246"></a>00246 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Element&gt;
 <a name="l00247"></a><a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a302b6302a403e5eeeb6b106e6b179971">00247</a> <span class="keywordtype">void</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a302b6302a403e5eeeb6b106e6b179971" title="Set sample value at specified index.">TDiscreteDataSequence&lt;Element&gt;::SetSample</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> channel, <span class="keywordtype">double</span> value)
 <a name="l00248"></a>00248 {
-<a name="l00249"></a>00249        Element&amp; element = *(Element*)((<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a>*)m_sampleBuffer.GetPtr() + index * m_sampleDiff + channel * m_channelDiff);
+<a name="l00249"></a>00249        Element&amp; element = *(Element*)((quint8*)m_sampleBuffer.GetPtr() + index * m_sampleDiff + channel * m_channelDiff);
 <a name="l00250"></a>00250 
 <a name="l00251"></a>00251        element = Element(value * m_normFactor - I_BIG_EPSILON);
 <a name="l00252"></a>00252 }
@@ -404,10 +404,10 @@
 <a name="l00378"></a>00378 }
 <a name="l00379"></a>00379 
 <a name="l00380"></a>00380 
-<a name="l00381"></a><a class="code" href="namespaceimeas.html#a0530bccf3550005ef3a5082fa890f74e">00381</a> <span class="keyword">typedef</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html">TDiscreteDataSequence&lt;I_BYTE&gt;</a> <a class="code" href="namespaceimeas.html#a0530bccf3550005ef3a5082fa890f74e">CSimpleSamplesSequence8</a>;
-<a name="l00382"></a><a class="code" href="namespaceimeas.html#a331f461ee42a1da0ace19e2e91dddabe">00382</a> <span class="keyword">typedef</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html">TDiscreteDataSequence&lt;I_WORD&gt;</a> <a class="code" href="namespaceimeas.html#a331f461ee42a1da0ace19e2e91dddabe">CSimpleSamplesSequence16</a>;
-<a name="l00383"></a><a class="code" href="namespaceimeas.html#aa57870ab7541194de37fb5da01379a7f">00383</a> <span class="keyword">typedef</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html">TDiscreteDataSequence&lt;I_DWORD&gt;</a> <a class="code" href="namespaceimeas.html#aa57870ab7541194de37fb5da01379a7f">CSimpleSamplesSequence32</a>;
-<a name="l00384"></a><a class="code" href="namespaceimeas.html#aaddd3e4ceed80054a91e77ea920fcca2">00384</a> <span class="keyword">typedef</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html">TDiscreteDataSequence&lt;I_QWORD&gt;</a> <a class="code" href="namespaceimeas.html#aaddd3e4ceed80054a91e77ea920fcca2">CSimpleSamplesSequence64</a>;
+<a name="l00381"></a><a class="code" href="namespaceimeas.html#a08464091db3d0fdecb67cd0a2c3f57ae">00381</a> <span class="keyword">typedef</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html">TDiscreteDataSequence&lt;quint8&gt;</a> <a class="code" href="namespaceimeas.html#a08464091db3d0fdecb67cd0a2c3f57ae">CSimpleSamplesSequence8</a>;
+<a name="l00382"></a><a class="code" href="namespaceimeas.html#a0230bb7ba2012e4cd52f11d64379dc69">00382</a> <span class="keyword">typedef</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html">TDiscreteDataSequence&lt;quint16&gt;</a> <a class="code" href="namespaceimeas.html#a0230bb7ba2012e4cd52f11d64379dc69">CSimpleSamplesSequence16</a>;
+<a name="l00383"></a><a class="code" href="namespaceimeas.html#a0d92c1716a1eb179808bbe1f54ab500e">00383</a> <span class="keyword">typedef</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html">TDiscreteDataSequence&lt;quint32&gt;</a> <a class="code" href="namespaceimeas.html#a0d92c1716a1eb179808bbe1f54ab500e">CSimpleSamplesSequence32</a>;
+<a name="l00384"></a><a class="code" href="namespaceimeas.html#a82b05a8e2ec7b09559314bcae7bdc4b8">00384</a> <span class="keyword">typedef</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html">TDiscreteDataSequence&lt;quint64&gt;</a> <a class="code" href="namespaceimeas.html#a82b05a8e2ec7b09559314bcae7bdc4b8">CSimpleSamplesSequence64</a>;
 <a name="l00385"></a>00385 
 <a name="l00386"></a>00386 
 <a name="l00387"></a>00387 } <span class="comment">// namespace imeas</span>

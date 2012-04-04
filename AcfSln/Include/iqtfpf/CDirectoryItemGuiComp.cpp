@@ -146,7 +146,7 @@ QString CDirectoryItemGuiComp::GenerateStyleSheet(double successed, double error
 		boundary += delta;
 	}
 
-	boundary = istd::Min(1.0, boundary);
+	boundary = qMin(1.0, boundary);
 
 	istd::CRange errorRange(boundary, errors + boundary);
 	boundary = errorRange.GetMaxValue();
@@ -154,7 +154,7 @@ QString CDirectoryItemGuiComp::GenerateStyleSheet(double successed, double error
 		boundary += delta;
 	}
 
-	boundary = istd::Min(1.0, boundary);
+	boundary = qMin(1.0, boundary);
 
 	istd::CRange abortedRange(boundary, boundary + aborted);
 	boundary = abortedRange.GetMaxValue();
@@ -162,7 +162,7 @@ QString CDirectoryItemGuiComp::GenerateStyleSheet(double successed, double error
 		boundary += delta;
 	}
 
-	boundary = istd::Min(1.0, boundary);
+	boundary = qMin(1.0, boundary);
 
 	QString successColor = "rgba(50, 180, 60, 255)";
 	QString errorColor = "rgba(255, 0, 0, 192)";

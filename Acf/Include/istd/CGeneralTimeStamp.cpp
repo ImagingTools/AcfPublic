@@ -119,7 +119,7 @@ void CGeneralTimeStamp::WaitTo(double time) const
 {
 	double restMicroseconds;
 	while ((restMicroseconds = (time - GetElapsed()) * 1000000) >= 1){
-		ThreadBrute::usleep(I_DWORD(restMicroseconds));
+		ThreadBrute::usleep(quint32(restMicroseconds));
 	}
 }
 

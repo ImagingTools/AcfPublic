@@ -67,12 +67,12 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiser_1_1_c_memory_read_archive.html">CMemoryReadArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_bit_memory_read_archive.html#ae32879ec530b59f522b777614ddcd449">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_bit_memory_read_archive.html#a898e949207f23b8d54ab0d05bd1bf7b6">CBitMemoryReadArchive</a> (const std::vector&lt; <a class="el" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a> &gt; &amp;data, bool serializeHeader=true)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a bit stream from a vector of bytes.  <a href="#a898e949207f23b8d54ab0d05bd1bf7b6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_bit_memory_read_archive.html#abd2752336396b3fc695ba2aeabcc8a17">CBitMemoryReadArchive</a> (const std::vector&lt; quint8 &gt; &amp;data, bool serializeHeader=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a bit stream from a vector of bytes.  <a href="#abd2752336396b3fc695ba2aeabcc8a17"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_bit_memory_read_archive.html#a54df58b576c72693c34b4b5b9987d781">CBitMemoryReadArchive</a> (const void *bufferPtr, int bufferSize, bool serializeHeader=true)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_bit_memory_read_archive.html#a28530eaf93a40407a94bb7f7e482c2c0">CBitMemoryReadArchive</a> (const <a class="el" href="classiser_1_1_c_memory_write_archive.html">CMemoryWriteArchive</a> &amp;writeArchive, bool serializeHeader=true)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_bit_memory_read_archive.html#a0cb368b66a283c7840496ea06b07232c">ReadValue</a> (int bits)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of the next <code>bits</code> in the stream.  <a href="#a0cb368b66a283c7840496ea06b07232c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_bit_memory_read_archive.html#a59cce117fe01628659e7fe752dc6100c">ReadValue</a> (int bits)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of the next <code>bits</code> in the stream.  <a href="#a59cce117fe01628659e7fe752dc6100c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_bit_memory_read_archive.html#a2a61a2b60d2c0ee1dfdeddb68d1d91b7">ProcessData</a> (void *data, int size)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process binary data block.  <a href="#a2a61a2b60d2c0ee1dfdeddb68d1d91b7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_bit_memory_read_archive.html#af88e68f4fc1f1804ddae4116b132fe0e">ProcessBits</a> (void *dataPtr, int bitsCount, int bytesCount)</td></tr>
@@ -108,14 +108,14 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a898e949207f23b8d54ab0d05bd1bf7b6"></a><!-- doxytag: member="iser::CBitMemoryReadArchive::CBitMemoryReadArchive" ref="a898e949207f23b8d54ab0d05bd1bf7b6" args="(const std::vector&lt; I_BYTE &gt; &amp;data, bool serializeHeader=true)" -->
+<a class="anchor" id="abd2752336396b3fc695ba2aeabcc8a17"></a><!-- doxytag: member="iser::CBitMemoryReadArchive::CBitMemoryReadArchive" ref="abd2752336396b3fc695ba2aeabcc8a17" args="(const std::vector&lt; quint8 &gt; &amp;data, bool serializeHeader=true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">iser::CBitMemoryReadArchive::CBitMemoryReadArchive </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="istd_8h.html#aad354fc4431fe9d71885b5bc75adc313">I_BYTE</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; quint8 &gt; &amp;&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
@@ -301,12 +301,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0cb368b66a283c7840496ea06b07232c"></a><!-- doxytag: member="iser::CBitMemoryReadArchive::ReadValue" ref="a0cb368b66a283c7840496ea06b07232c" args="(int bits)" -->
+<a class="anchor" id="a59cce117fe01628659e7fe752dc6100c"></a><!-- doxytag: member="iser::CBitMemoryReadArchive::ReadValue" ref="a59cce117fe01628659e7fe752dc6100c" args="(int bits)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="istd_8h.html#a84c73ce218157caddb0304f786e7120d">I_DWORD</a> iser::CBitMemoryReadArchive::ReadValue </td>
+          <td class="memname">virtual quint32 iser::CBitMemoryReadArchive::ReadValue </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>bits</em></td><td>)</td>

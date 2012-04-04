@@ -2313,24 +2313,24 @@
     <class kind="class">iimg::TPixelConversion</class>
     <namespace>iimg</namespace>
     <member kind="typedef">
-      <type>TPixelConversion&lt; I_BYTE, I_BYTE &gt;</type>
+      <type>TPixelConversion&lt; quint8, quint8 &gt;</type>
       <name>CGrayGrayPixelConversion</name>
       <anchorfile>namespaceiimg.html</anchorfile>
-      <anchor>aefd3bae9d308722c69f7568af9b4bdf3</anchor>
+      <anchor>ac1550747e4284c4b76c3149814789286</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TPixelConversion&lt; float, I_BYTE, float &gt;</type>
+      <type>TPixelConversion&lt; float, quint8, float &gt;</type>
       <name>CFloatGrayPixelConversion</name>
       <anchorfile>namespaceiimg.html</anchorfile>
-      <anchor>a729bac06ff899b76381c6434bf978693</anchor>
+      <anchor>a43998907f5159631d56218731b6b91c8</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TPixelConversion&lt; I_BYTE, float, float &gt;</type>
+      <type>TPixelConversion&lt; quint8, float, float &gt;</type>
       <name>CGrayFloatPixelConversion</name>
       <anchorfile>namespaceiimg.html</anchorfile>
-      <anchor>a327e2052b00095e844fccc95e3d61b55</anchor>
+      <anchor>ac6d45c7d34c54e32942016c56a2dc243</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -5262,145 +5262,10 @@
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>I_TRACE</name>
-      <anchorfile>istd_8h.html</anchorfile>
-      <anchor>aaf16653ec75b48fe176b2744e7cd0756</anchor>
-      <arglist>(level, groupId, message)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>I_TRACE_ONCE</name>
-      <anchorfile>istd_8h.html</anchorfile>
-      <anchor>a3d22c4f05a97d887a59f806aaf091085</anchor>
-      <arglist>(level, groupId, message)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
       <name>NULL</name>
       <anchorfile>istd_8h.html</anchorfile>
       <anchor>a070d2ce7b6bb7e5c05602aa8c308d0c4</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>unsigned char</type>
-      <name>I_BYTE</name>
-      <anchorfile>istd_8h.html</anchorfile>
-      <anchor>aad354fc4431fe9d71885b5bc75adc313</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>signed char</type>
-      <name>I_SBYTE</name>
-      <anchorfile>istd_8h.html</anchorfile>
-      <anchor>a633f4edb78cff09300e0dcd667295131</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>unsigned short</type>
-      <name>I_WORD</name>
-      <anchorfile>istd_8h.html</anchorfile>
-      <anchor>a6ea7f6849b00596cf62684000e142dd9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>signed short</type>
-      <name>I_SWORD</name>
-      <anchorfile>istd_8h.html</anchorfile>
-      <anchor>a4e62ecc89d46226297d414c14a7322ee</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>unsigned int</type>
-      <name>I_DWORD</name>
-      <anchorfile>istd_8h.html</anchorfile>
-      <anchor>a84c73ce218157caddb0304f786e7120d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>signed int</type>
-      <name>I_SDWORD</name>
-      <anchorfile>istd_8h.html</anchorfile>
-      <anchor>a9af8f70f29558fb9f306d66fdf4b99ad</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>unsigned long long</type>
-      <name>I_QWORD</name>
-      <anchorfile>istd_8h.html</anchorfile>
-      <anchor>a49d02a5be51a966cfebeabc79b53b27a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>signed long long</type>
-      <name>I_SQWORD</name>
-      <anchorfile>istd_8h.html</anchorfile>
-      <anchor>acc21c955baf6cc528081b9fa4470e109</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>TraceLevel</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a69b9ebbd3e17f150aaed949a61bc4a24</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InfoLevel</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a69b9ebbd3e17f150aaed949a61bc4a24a75dab897f169e695af37b4e9c1e27c5e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WarningLevel</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a69b9ebbd3e17f150aaed949a61bc4a24a523b3b29a369c655110603b9a908634f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ErrorLevel</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a69b9ebbd3e17f150aaed949a61bc4a24a0898edc62bccd6c37b187b1e91604c78</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CriticalLevel</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a69b9ebbd3e17f150aaed949a61bc4a24af33192b8ad71000d7f54e1ef6fce8463</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>const T &amp;</type>
-      <name>Min</name>
-      <anchorfile>group___main.html</anchorfile>
-      <anchor>gab2258500c5eb353e9e76798ab44a59cf</anchor>
-      <arglist>(const T &amp;value1, const T &amp;value2)</arglist>
-    </member>
-    <member kind="function">
-      <type>const T &amp;</type>
-      <name>Max</name>
-      <anchorfile>group___main.html</anchorfile>
-      <anchor>ga761fb858ab3e61d9682b99f0b32c06f7</anchor>
-      <arglist>(const T &amp;value1, const T &amp;value2)</arglist>
-    </member>
-    <member kind="function">
-      <type>const T &amp;</type>
-      <name>Max3</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>ae335a97bc1b6e54ae4a03238a15a68d6</anchor>
-      <arglist>(const T &amp;value1, const T &amp;value2, const T &amp;value3)</arglist>
-    </member>
-    <member kind="function">
-      <type>const T &amp;</type>
-      <name>Max4</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a628afc0b1abb650fd93426abe1ff4c3e</anchor>
-      <arglist>(const T &amp;value1, const T &amp;value2, const T &amp;value3, const T &amp;value4)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsBeetween</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>af36ed2630110e4dcacccaaddc4903c44</anchor>
-      <arglist>(const T &amp;value, const T &amp;value1, const T &amp;value2)</arglist>
     </member>
     <member kind="variable" static="yes">
       <type>static const double</type>
@@ -6478,20 +6343,6 @@
       <anchorfile>group___main.html</anchorfile>
       <anchor>ga8ef64a77c28b704454f15c826587cc93</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>const T &amp;</type>
-      <name>Min</name>
-      <anchorfile>group___main.html</anchorfile>
-      <anchor>gab2258500c5eb353e9e76798ab44a59cf</anchor>
-      <arglist>(const T &amp;value1, const T &amp;value2)</arglist>
-    </member>
-    <member kind="function">
-      <type>const T &amp;</type>
-      <name>Max</name>
-      <anchorfile>group___main.html</anchorfile>
-      <anchor>ga761fb858ab3e61d9682b99f0b32c06f7</anchor>
-      <arglist>(const T &amp;value1, const T &amp;value2)</arglist>
     </member>
     <member kind="variable" static="yes">
       <type>static const double</type>
@@ -10695,8 +10546,8 @@
       <type>virtual bool</type>
       <name>GetVersionNumber</name>
       <anchorfile>classibase_1_1_c_application_info_comp.html</anchorfile>
-      <anchor>ac8ae49f6cbbdc6664325c77a15c1f3c1</anchor>
-      <arglist>(int versionId, I_DWORD &amp;result) const </arglist>
+      <anchor>a5d285720f958cbc1780cb7dc1ef3ad69</anchor>
+      <arglist>(int versionId, quint32 &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QString</type>
@@ -10716,8 +10567,8 @@
       <type>virtual QString</type>
       <name>GetEncodedVersionName</name>
       <anchorfile>classibase_1_1_c_application_info_comp.html</anchorfile>
-      <anchor>a1cc371625da8474ffe34cd9af0de5b9d</anchor>
-      <arglist>(int versionId, I_DWORD versionNumber) const </arglist>
+      <anchor>a94128d9c2b6cd54d8107fc7e6a23b805</anchor>
+      <arglist>(int versionId, quint32 versionNumber) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11923,8 +11774,8 @@
       <type>virtual bool</type>
       <name>GetVersionNumber</name>
       <anchorfile>classibase_1_1_c_version_info_comp.html</anchorfile>
-      <anchor>a9d9abf7007eabf5efe5f373f57364c34</anchor>
-      <arglist>(int versionId, I_DWORD &amp;result) const </arglist>
+      <anchor>ad3a168e71f50b120b38ba0b2c86c642c</anchor>
+      <arglist>(int versionId, quint32 &amp;result) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -11944,8 +11795,8 @@
       <type>virtual QString</type>
       <name>GetEncodedVersionName</name>
       <anchorfile>classibase_1_1_c_version_info_comp.html</anchorfile>
-      <anchor>a688ab02824b860d386eb4cf2a86d4e3b</anchor>
-      <arglist>(int versionId, I_DWORD versionNumber) const </arglist>
+      <anchor>afeab5debcd2c9ebcbc4d341b0c98e7fe</anchor>
+      <arglist>(int versionId, quint32 versionNumber) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13182,8 +13033,8 @@
       <type></type>
       <name>TMsbWord</name>
       <anchorfile>classibase_1_1_t_msb_word.html</anchorfile>
-      <anchor>aadd1ce98adf5460a24a9454b453d9824</anchor>
-      <arglist>(I_DWORD inputValue)</arglist>
+      <anchor>aea231353129f552182d0935f74d31434</anchor>
+      <arglist>(quint32 inputValue)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -13194,16 +13045,16 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>operator I_DWORD</name>
+      <name>operator quint32</name>
       <anchorfile>classibase_1_1_t_msb_word.html</anchorfile>
-      <anchor>af5ef48b3fdf1e6c47ccc242c54e2669d</anchor>
+      <anchor>a5f0aa78bf83287680d6dda4b1410f757</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>I_DWORD</type>
+      <type>quint32</type>
       <name>GetLsb</name>
       <anchorfile>classibase_1_1_t_msb_word.html</anchorfile>
-      <anchor>a98adf593cc348b9e346f32894b076bc7</anchor>
+      <anchor>a0aaa2486af911163754bc4e0c7e22865</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -18670,10 +18521,10 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_DWORD</type>
+      <type>virtual quint32</type>
       <name>GetMinimalVersion</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>ab362e17e819beab46934e0458fa7786a</anchor>
+      <anchor>a63182add395b7372c583005fbe0a2ef5</anchor>
       <arglist>(int versionId) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
@@ -18738,18 +18589,18 @@
       <arglist>(const std::string &amp;attributeId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_DWORD</type>
+      <type>virtual quint32</type>
       <name>GetElementFlags</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>a681370b837931760937b1f0f6f30cbb0</anchor>
+      <anchor>aaf8852d339a798daa55f84ebe29a9fa4</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetElementFlags</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>ac5e72da772fedbfe95f3b5bbaae87f88</anchor>
-      <arglist>(I_DWORD flags)</arglist>
+      <anchor>a47890eb5479818fcf6fd8bf89c7132ae</anchor>
+      <arglist>(quint32 flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -19773,18 +19624,18 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual I_DWORD</type>
+      <type>virtual quint32</type>
       <name>GetElementFlags</name>
       <anchorfile>classicomp_1_1_i_registry_element.html</anchorfile>
-      <anchor>a9aa4897f090502b8717538d774e063a6</anchor>
+      <anchor>a903ec24e7a3be924678f340e948d45c0</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetElementFlags</name>
       <anchorfile>classicomp_1_1_i_registry_element.html</anchorfile>
-      <anchor>afe332f55bbeb768950f22a3d03b1d74c</anchor>
-      <arglist>(I_DWORD flags)=0</arglist>
+      <anchor>afb588669e8ab74482ab16cb74d5dcc2b</anchor>
+      <arglist>(quint32 flags)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual Ids</type>
@@ -22385,24 +22236,24 @@
     <class kind="class">iimg::IRasterImage</class>
     <class kind="class">iimg::TPixelConversion</class>
     <member kind="typedef">
-      <type>TPixelConversion&lt; I_BYTE, I_BYTE &gt;</type>
+      <type>TPixelConversion&lt; quint8, quint8 &gt;</type>
       <name>CGrayGrayPixelConversion</name>
       <anchorfile>namespaceiimg.html</anchorfile>
-      <anchor>aefd3bae9d308722c69f7568af9b4bdf3</anchor>
+      <anchor>ac1550747e4284c4b76c3149814789286</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TPixelConversion&lt; float, I_BYTE, float &gt;</type>
+      <type>TPixelConversion&lt; float, quint8, float &gt;</type>
       <name>CFloatGrayPixelConversion</name>
       <anchorfile>namespaceiimg.html</anchorfile>
-      <anchor>a729bac06ff899b76381c6434bf978693</anchor>
+      <anchor>a43998907f5159631d56218731b6b91c8</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TPixelConversion&lt; I_BYTE, float, float &gt;</type>
+      <type>TPixelConversion&lt; quint8, float, float &gt;</type>
       <name>CGrayFloatPixelConversion</name>
       <anchorfile>namespaceiimg.html</anchorfile>
-      <anchor>a327e2052b00095e844fccc95e3d61b55</anchor>
+      <anchor>ac6d45c7d34c54e32942016c56a2dc243</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -22948,35 +22799,35 @@
       <type></type>
       <name>TPixelConversion</name>
       <anchorfile>classiimg_1_1_t_pixel_conversion.html</anchorfile>
-      <anchor>ac8384e9110515f782f62169b06190692</anchor>
+      <anchor>a4206e96d61472383e920d2fa6745f011</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>float</type>
       <name>operator()</name>
       <anchorfile>classiimg_1_1_t_pixel_conversion.html</anchorfile>
-      <anchor>a86977ea96493d6ceb674b549c7c28f30</anchor>
-      <arglist>(const I_BYTE &amp;pixel) const</arglist>
+      <anchor>a562c632ad68be79912c89aaf4d8a74dc</anchor>
+      <arglist>(const quint8 &amp;pixel) const</arglist>
     </member>
     <member kind="function">
       <type>float</type>
       <name>GetCalc</name>
       <anchorfile>classiimg_1_1_t_pixel_conversion.html</anchorfile>
-      <anchor>ae5f962aa7cd044bea385d0b7dcf6e8da</anchor>
-      <arglist>(const I_BYTE &amp;pixel) const</arglist>
+      <anchor>a63a447a28eaf3ea3ba7daaca5ed75ef9</anchor>
+      <arglist>(const quint8 &amp;pixel) const</arglist>
     </member>
     <member kind="function">
-      <type>I_BYTE</type>
+      <type>quint8</type>
       <name>operator()</name>
       <anchorfile>classiimg_1_1_t_pixel_conversion.html</anchorfile>
-      <anchor>a58474516e911fe8ddd9528991b3fc031</anchor>
+      <anchor>ad87bf0c7aa1a7e5a5f6e1d3da77cccf4</anchor>
       <arglist>(const float &amp;pixel) const</arglist>
     </member>
     <member kind="function">
-      <type>I_BYTE</type>
+      <type>quint8</type>
       <name>GetDest</name>
       <anchorfile>classiimg_1_1_t_pixel_conversion.html</anchorfile>
-      <anchor>adad21a1af611d029912ec2f498427d6d</anchor>
+      <anchor>a24fb795c3a5ebc5a5ebb61e249ecd906</anchor>
       <arglist>(const float &amp;pixel) const</arglist>
     </member>
     <member kind="variable">
@@ -23162,10 +23013,10 @@
       <arglist>(const QString &amp;text, double &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual I_SDWORD</type>
+      <type>virtual qint32</type>
       <name>GetInternalValue</name>
       <anchorfile>classimath_1_1_c_complex_double_manip.html</anchorfile>
-      <anchor>a51bd0ab7c15b2d15dbb5a0fab707434c</anchor>
+      <anchor>af723a221688f9b3be83a6535d6431e0b</anchor>
       <arglist>(double value) const </arglist>
     </member>
   </compound>
@@ -23640,18 +23491,18 @@
       <arglist>)(double value)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual I_SDWORD</type>
+      <type>virtual qint32</type>
       <name>GetInternalValue</name>
       <anchorfile>classimath_1_1_c_fixed_point_manip.html</anchorfile>
-      <anchor>a1aa2ae06402cd11d5704a04ca9f5b972</anchor>
+      <anchor>ac769de5d3b8ea58d00b01cdf24e1a4d3</anchor>
       <arglist>(double value) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual double</type>
       <name>GetNormalValue</name>
       <anchorfile>classimath_1_1_c_fixed_point_manip.html</anchorfile>
-      <anchor>a4be74d3c00abd16fbc14daca1a87f61d</anchor>
-      <arglist>(I_SDWORD intValue) const </arglist>
+      <anchor>a82ebf798f00a9ae2316f44ec365e6de5</anchor>
+      <arglist>(qint32 intValue) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QString</type>
@@ -28088,10 +27939,10 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_DWORD</type>
+      <type>virtual quint32</type>
       <name>GetMinimalVersion</name>
       <anchorfile>classiprm_1_1_c_params_set.html</anchorfile>
-      <anchor>aff94090a8764dfbdb02499bcd388142b</anchor>
+      <anchor>afae644efa9a789dc5c6f6c5a9c9de3de</anchor>
       <arglist>(int versionId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -28427,10 +28278,10 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_DWORD</type>
+      <type>virtual quint32</type>
       <name>GetMinimalVersion</name>
       <anchorfile>classiprm_1_1_c_variable_param_comp.html</anchorfile>
-      <anchor>ae6fbd05365a9962f9b1c0a6d345fa521</anchor>
+      <anchor>a309d31c093f16e2dbc6027b6b468918f</anchor>
       <arglist>(int versionId) const </arglist>
     </member>
   </compound>
@@ -32347,57 +32198,57 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a644a16d7b3a4ade1d8d108016bd4b6f4</anchor>
-      <arglist>(I_BYTE &amp;value)</arglist>
+      <anchor>a867b23e889823c6b69f475a05b5dcea8</anchor>
+      <arglist>(quint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>abd83979b4c2a2022af31e2bc0452a5e0</anchor>
-      <arglist>(I_SBYTE &amp;value)</arglist>
+      <anchor>a75f8f3b6e2f3ef1a963d473f180b6dc3</anchor>
+      <arglist>(qint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>ac4776c70193a3b87b109fc65a96309c2</anchor>
-      <arglist>(I_WORD &amp;value)</arglist>
+      <anchor>a2091bef56bcd9c3b3a4c1f03f4e9f7ae</anchor>
+      <arglist>(quint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>ace5edaade5becb13bcca166da02248e0</anchor>
-      <arglist>(I_SWORD &amp;value)</arglist>
+      <anchor>acc6e8f1eb654920489e96bc32f7bb679</anchor>
+      <arglist>(qint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a031c18514a3d2fbccb1fbc01e36845a8</anchor>
-      <arglist>(I_DWORD &amp;value)</arglist>
+      <anchor>a2259dc040ea2217bffc4d5bf02ca2d77</anchor>
+      <arglist>(quint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a8e35041fe6c1cec305410146ea321bef</anchor>
-      <arglist>(I_SDWORD &amp;value)</arglist>
+      <anchor>a72677e357c2b87071413fecb782eba44</anchor>
+      <arglist>(qint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a5a2ebe280e5471264665e327052cb1e6</anchor>
-      <arglist>(I_QWORD &amp;value)</arglist>
+      <anchor>a97a22c23f30a5bf1e0e5924ac05610eb</anchor>
+      <arglist>(quint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a3021e5fac13b1db392b325648435689c</anchor>
-      <arglist>(I_SQWORD &amp;value)</arglist>
+      <anchor>ad532e3db98cbd63be30a77e0f0269c24</anchor>
+      <arglist>(qint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -32536,57 +32387,57 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a607e4992a3c0196351215ded7059c6b4</anchor>
-      <arglist>(I_BYTE &amp;value)</arglist>
+      <anchor>a72a991862276d3ea3da9989b60d77ea2</anchor>
+      <arglist>(quint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>af06cf3d13082691079d9dcc03edaca3c</anchor>
-      <arglist>(I_SBYTE &amp;value)</arglist>
+      <anchor>afabb40cb186cb56c43556c2562e89c12</anchor>
+      <arglist>(qint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>aabb72c3dfcfbf64cde1aec82a7a020fe</anchor>
-      <arglist>(I_WORD &amp;value)</arglist>
+      <anchor>af24c68cf68c9c3412a101247aa9fb0b4</anchor>
+      <arglist>(quint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a9ca9ae8a9b7bce1ab78e5255b8bf06ec</anchor>
-      <arglist>(I_SWORD &amp;value)</arglist>
+      <anchor>ae1a21e4e42e59232aa7d7202241ddff6</anchor>
+      <arglist>(qint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a90763fe71bd3e7e89908fbb49e9e24f6</anchor>
-      <arglist>(I_DWORD &amp;value)</arglist>
+      <anchor>a4f22fb9bee9108c8858cfc951df61852</anchor>
+      <arglist>(quint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a4250d8ecbd70071c12d18ad9861145ea</anchor>
-      <arglist>(I_SDWORD &amp;value)</arglist>
+      <anchor>a2f22d1b009316cfd60a0e02524691451</anchor>
+      <arglist>(qint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a7671ad4f6ee9e0dac17cc04defa7c460</anchor>
-      <arglist>(I_QWORD &amp;value)</arglist>
+      <anchor>ac97aef7725fbebf5d5cbad0491d1ae40</anchor>
+      <arglist>(quint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a78664bd9f436271fcec667250b98df6e</anchor>
-      <arglist>(I_SQWORD &amp;value)</arglist>
+      <anchor>a2260a724039e3e6c782fc2af5d5e0cb2</anchor>
+      <arglist>(qint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39250,10 +39101,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>I_DWORD</type>
+      <type>quint32</type>
       <name>GetBinaryId</name>
       <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
-      <anchor>a869f3e553e9d04e13ba89e6e00f686cc</anchor>
+      <anchor>a77210bf0fabcef96eab80ad59d503172</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -39332,57 +39183,57 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>aa98a7ab9591de67d8e4f4b73a52edb52</anchor>
-      <arglist>(I_BYTE &amp;value)</arglist>
+      <anchor>a2d7155f16d44f1a585714d8437074868</anchor>
+      <arglist>(quint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a64539d9304951c5c5613126e856f8f08</anchor>
-      <arglist>(I_SBYTE &amp;value)</arglist>
+      <anchor>abbf8215b1cc7f0e7182a02f0b5614d1d</anchor>
+      <arglist>(qint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a174eb031a1e20e843c01d904a53816f6</anchor>
-      <arglist>(I_WORD &amp;value)</arglist>
+      <anchor>acf6fdc5522d06d4a2365217a6588d6fe</anchor>
+      <arglist>(quint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>abaabd3da1509d26aa9b7f475e4352913</anchor>
-      <arglist>(I_SWORD &amp;value)</arglist>
+      <anchor>ab1359b3072962c068410bf178e79e26c</anchor>
+      <arglist>(qint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a2671c382ed78d3b23cc876a274829ea4</anchor>
-      <arglist>(I_DWORD &amp;value)</arglist>
+      <anchor>a7a1e927ac835e5756cb668aa969998c4</anchor>
+      <arglist>(quint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a0fa82433c649697cf8abeaeb00d0ee1d</anchor>
-      <arglist>(I_SDWORD &amp;value)</arglist>
+      <anchor>ab9f25bc74ba6d330068bea54a0a2c6c3</anchor>
+      <arglist>(qint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a2d06bdeacd261616892d59aa18ad57ad</anchor>
-      <arglist>(I_QWORD &amp;value)</arglist>
+      <anchor>a1db406c153958635f9aa563f61c1d678</anchor>
+      <arglist>(quint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>adf7b3c19ba0c6950dcc04fe80c846249</anchor>
-      <arglist>(I_SQWORD &amp;value)</arglist>
+      <anchor>a72958c541db55100741f141fa5e20a27</anchor>
+      <arglist>(qint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39462,57 +39313,57 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a4e43acc86f6c0a21a726154e2cfd6c71</anchor>
-      <arglist>(I_BYTE &amp;value)</arglist>
+      <anchor>a097314ad49709490d16de27d439ec19b</anchor>
+      <arglist>(quint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>af77cd1465620c814542732de3b19836c</anchor>
-      <arglist>(I_SBYTE &amp;value)</arglist>
+      <anchor>a94bea296e558c89380217bc6d0cb51e9</anchor>
+      <arglist>(qint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>aa4be7b08777f6dd6d7ea7d205362163f</anchor>
-      <arglist>(I_WORD &amp;value)</arglist>
+      <anchor>a327a8ddda0b5c953b3115a55ddd65fa5</anchor>
+      <arglist>(quint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>ad9e81cbb89849559ada1308d206aac0c</anchor>
-      <arglist>(I_SWORD &amp;value)</arglist>
+      <anchor>a4f589695d0133c5ad47af48e1cbc4499</anchor>
+      <arglist>(qint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a74fcf760a833c2b0b05b673ca0b69519</anchor>
-      <arglist>(I_DWORD &amp;value)</arglist>
+      <anchor>a169a10a1d95f43b5af2bca43ccc19d58</anchor>
+      <arglist>(quint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a3c3c070bbd43f5b991106c82f41ac193</anchor>
-      <arglist>(I_SDWORD &amp;value)</arglist>
+      <anchor>a2d7dcfb1b82933905dd5b242c35b21a2</anchor>
+      <arglist>(qint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>ab011ed87ce9c6e0e091064bb5dd8b449</anchor>
-      <arglist>(I_QWORD &amp;value)</arglist>
+      <anchor>a50be620cabd5891271641086f12f491d</anchor>
+      <arglist>(quint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a0e099c336800128f6158be82628a5cd6</anchor>
-      <arglist>(I_SQWORD &amp;value)</arglist>
+      <anchor>a1ddc2fff549a44bed925f48217b6e16a</anchor>
+      <arglist>(qint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39565,8 +39416,8 @@
       <type></type>
       <name>CBitMemoryReadArchive</name>
       <anchorfile>classiser_1_1_c_bit_memory_read_archive.html</anchorfile>
-      <anchor>a898e949207f23b8d54ab0d05bd1bf7b6</anchor>
-      <arglist>(const std::vector&lt; I_BYTE &gt; &amp;data, bool serializeHeader=true)</arglist>
+      <anchor>abd2752336396b3fc695ba2aeabcc8a17</anchor>
+      <arglist>(const std::vector&lt; quint8 &gt; &amp;data, bool serializeHeader=true)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -39583,10 +39434,10 @@
       <arglist>(const CMemoryWriteArchive &amp;writeArchive, bool serializeHeader=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_DWORD</type>
+      <type>virtual quint32</type>
       <name>ReadValue</name>
       <anchorfile>classiser_1_1_c_bit_memory_read_archive.html</anchorfile>
-      <anchor>a0cb368b66a283c7840496ea06b07232c</anchor>
+      <anchor>a59cce117fe01628659e7fe752dc6100c</anchor>
       <arglist>(int bits)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -39647,8 +39498,8 @@
       <type>void</type>
       <name>WriteValue</name>
       <anchorfile>classiser_1_1_c_bit_memory_write_archive.html</anchorfile>
-      <anchor>a7fef31b09d80ffc5667dc7081cd72e13</anchor>
-      <arglist>(I_DWORD inputValue, int bits)</arglist>
+      <anchor>a29a39bc738d2a092d8fd0daaec5f5471</anchor>
+      <arglist>(quint32 inputValue, int bits)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39765,17 +39616,17 @@
     <name>iser::CFileReadArchive::TagStackElement</name>
     <filename>structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html</filename>
     <member kind="variable">
-      <type>I_DWORD</type>
+      <type>quint32</type>
       <name>tagBinaryId</name>
       <anchorfile>structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html</anchorfile>
-      <anchor>a4c132079eb3c221f1a464f42eb4bc6dc</anchor>
+      <anchor>a9134fe62c40a76ca7b511cabde348a2c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>I_DWORD</type>
+      <type>quint32</type>
       <name>endPosition</name>
       <anchorfile>structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html</anchorfile>
-      <anchor>a1e72a1b4137eebd180016dd039bc7d40</anchor>
+      <anchor>a426ef315f784a850392892ced02db9cd</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -39853,17 +39704,17 @@
     <name>iser::CFileWriteArchive::TagStackElement</name>
     <filename>structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html</filename>
     <member kind="variable">
-      <type>I_DWORD</type>
+      <type>quint32</type>
       <name>tagBinaryId</name>
       <anchorfile>structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html</anchorfile>
-      <anchor>aeb8e21f07b5072a1289fdca1759e8941</anchor>
+      <anchor>a3ad411d595bdd854889e487ad6013728</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>I_DWORD</type>
+      <type>quint32</type>
       <name>endFieldPosition</name>
       <anchorfile>structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html</anchorfile>
-      <anchor>a79641b75d244ed1ff85d693c00aa3ad6</anchor>
+      <anchor>a880a2cbd24ea66326495f471980d99de</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -39921,10 +39772,10 @@
       <arglist>(const ISerializable &amp;source, ISerializable &amp;result)</arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>const I_BYTE *</type>
+      <type>const quint8 *</type>
       <name>m_bufferPtr</name>
       <anchorfile>classiser_1_1_c_memory_read_archive.html</anchorfile>
-      <anchor>a4c5e49345cbba4fd61ace6614cbb8644</anchor>
+      <anchor>af5748b43ef886488acf68cd500b1885c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -40053,8 +39904,8 @@
       <type>virtual bool</type>
       <name>GetVersionNumber</name>
       <anchorfile>classiser_1_1_c_minimal_version_info.html</anchorfile>
-      <anchor>a96b77026908fd1a336675409eed39cd5</anchor>
-      <arglist>(int versionId, I_DWORD &amp;result) const </arglist>
+      <anchor>ad645cb984ed16819250390ccbebd873a</anchor>
+      <arglist>(int versionId, quint32 &amp;result) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -40074,8 +39925,8 @@
       <type>virtual QString</type>
       <name>GetEncodedVersionName</name>
       <anchorfile>classiser_1_1_c_minimal_version_info.html</anchorfile>
-      <anchor>a6deb50e2f0ffd3e6732bb5df09dae1a3</anchor>
-      <arglist>(int versionId, I_DWORD versionNumber) const </arglist>
+      <anchor>a844b4d57cc128a03a6055a3fd5493170</anchor>
+      <arglist>(int versionId, quint32 versionNumber) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40152,8 +40003,8 @@
       <type>bool</type>
       <name>InsertVersionId</name>
       <anchorfile>classiser_1_1_c_reader_version_info.html</anchorfile>
-      <anchor>a5033374fd75ab62ded9a6fe1ce738621</anchor>
-      <arglist>(int id, I_DWORD version, const QString &amp;description)</arglist>
+      <anchor>a9b6f3377b52fb88924536afc1f88ab66</anchor>
+      <arglist>(int id, quint32 version, const QString &amp;description)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -40166,8 +40017,8 @@
       <type>virtual bool</type>
       <name>GetVersionNumber</name>
       <anchorfile>classiser_1_1_c_reader_version_info.html</anchorfile>
-      <anchor>a71070b440ca061d2eaf93b5b3639873c</anchor>
-      <arglist>(int versionId, I_DWORD &amp;result) const </arglist>
+      <anchor>aaaf0f28da197f0ccf04a4bacf4a4b871</anchor>
+      <arglist>(int versionId, quint32 &amp;result) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -40187,8 +40038,8 @@
       <type>virtual QString</type>
       <name>GetEncodedVersionName</name>
       <anchorfile>classiser_1_1_c_reader_version_info.html</anchorfile>
-      <anchor>a8bd8a4b392579b4bd1df43bbb4ec9c62</anchor>
-      <arglist>(int versionId, I_DWORD versionNumber) const </arglist>
+      <anchor>abe8e9e0dcf6a0488f6eb079a9f6d1600</anchor>
+      <arglist>(int versionId, quint32 versionNumber) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>const VersionIdElement &amp;</type>
@@ -40205,14 +40056,14 @@
       <type></type>
       <name>VersionIdElement</name>
       <anchorfile>structiser_1_1_c_reader_version_info_1_1_version_id_element.html</anchorfile>
-      <anchor>acec0ff1bf279366d74e6dc6de055d59d</anchor>
-      <arglist>(I_DWORD _version, const QString &amp;_description)</arglist>
+      <anchor>a5d0373a1b8fd0629c3a567376b3bcee8</anchor>
+      <arglist>(quint32 _version, const QString &amp;_description)</arglist>
     </member>
     <member kind="variable">
-      <type>I_DWORD</type>
+      <type>quint32</type>
       <name>version</name>
       <anchorfile>structiser_1_1_c_reader_version_info_1_1_version_id_element.html</anchorfile>
-      <anchor>a5314ee2850f7617ba8fcee80afc93410</anchor>
+      <anchor>a1a7a58c94da95ad979e78a6f387a2be5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -40252,57 +40103,57 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>a65b846537083ed193e02a86807d984bc</anchor>
-      <arglist>(I_BYTE &amp;value)</arglist>
+      <anchor>ae77ee5f04ade029f99d6f7201ef0f1f8</anchor>
+      <arglist>(quint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>a0d5ea43190155abf60b342fe97b564eb</anchor>
-      <arglist>(I_SBYTE &amp;value)</arglist>
+      <anchor>aab4da617681c0e31b87e7eaf135c506e</anchor>
+      <arglist>(qint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>ac1173c76e78f1a848d3ab5012fbc495a</anchor>
-      <arglist>(I_WORD &amp;value)</arglist>
+      <anchor>ace6f302093f220d6bf3994b956d33c1c</anchor>
+      <arglist>(quint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>aeadc0d83907155cb5269fad429c16ca0</anchor>
-      <arglist>(I_SWORD &amp;value)</arglist>
+      <anchor>a1253d0fc7b7670df40dd01cdfd20397f</anchor>
+      <arglist>(qint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>afcacf686efa10ed8014419f15401341a</anchor>
-      <arglist>(I_DWORD &amp;value)</arglist>
+      <anchor>a664980bdd1cc690fef2e6cec7625b944</anchor>
+      <arglist>(quint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>a68093eedb27698ec5f80c2f091ae51a2</anchor>
-      <arglist>(I_SDWORD &amp;value)</arglist>
+      <anchor>ab4a7519abda83943719f81afd8e1b015</anchor>
+      <arglist>(qint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>a0639dadcdb1612bc2312909844f0ed74</anchor>
-      <arglist>(I_QWORD &amp;value)</arglist>
+      <anchor>aa32c87bc2da9766356fa02496c4e6899</anchor>
+      <arglist>(quint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>a04883e609b45bafa677cfc958e5baf37</anchor>
-      <arglist>(I_SQWORD &amp;value)</arglist>
+      <anchor>a50f844e45daf8b15434940e31a1c7dea</anchor>
+      <arglist>(qint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -40362,57 +40213,57 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_write_archive_base.html</anchorfile>
-      <anchor>a1b05fd6eb750cc74ea4fb4afe639c698</anchor>
-      <arglist>(I_BYTE &amp;value)</arglist>
+      <anchor>ace32773797bbe6e8610cc1f0c5bb56d7</anchor>
+      <arglist>(quint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_write_archive_base.html</anchorfile>
-      <anchor>ae2d8f2c9ed2f08781f0a9398a62e674d</anchor>
-      <arglist>(I_SBYTE &amp;value)</arglist>
+      <anchor>aaf325f96e2d6796c4353e3a4d6766228</anchor>
+      <arglist>(qint8 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_write_archive_base.html</anchorfile>
-      <anchor>a7626aa59cb8e4bc3209fc19948089c7a</anchor>
-      <arglist>(I_WORD &amp;value)</arglist>
+      <anchor>ab5d83218338e263882c69ff66d27a356</anchor>
+      <arglist>(quint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_write_archive_base.html</anchorfile>
-      <anchor>a2bfd10350d7474d3d67d6c04f1a0d65a</anchor>
-      <arglist>(I_SWORD &amp;value)</arglist>
+      <anchor>adede51284670880252c6c794c725a8ea</anchor>
+      <arglist>(qint16 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_write_archive_base.html</anchorfile>
-      <anchor>adfefa83bdfb8d043a4d5f825715314bd</anchor>
-      <arglist>(I_DWORD &amp;value)</arglist>
+      <anchor>a76a780148987c4422d3298b22fbc1e9c</anchor>
+      <arglist>(quint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_write_archive_base.html</anchorfile>
-      <anchor>a53665f513b65e569b2cadc2b4f3fe1e6</anchor>
-      <arglist>(I_SDWORD &amp;value)</arglist>
+      <anchor>a4b7ce949e06c7980f3fd65e9b45bffec</anchor>
+      <arglist>(qint32 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_write_archive_base.html</anchorfile>
-      <anchor>a19bc6ef324a0f3e8e0928a1b798c6d2f</anchor>
-      <arglist>(I_QWORD &amp;value)</arglist>
+      <anchor>a7d647e6216ef355266045d9ce7913ec1</anchor>
+      <arglist>(quint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_write_archive_base.html</anchorfile>
-      <anchor>ab059ce2b68607b857fd2c0ded203c67b</anchor>
-      <arglist>(I_SQWORD &amp;value)</arglist>
+      <anchor>ae24e11f31f4fb4c888c960bfe124f3c3</anchor>
+      <arglist>(qint64 &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -40499,8 +40350,8 @@
       <type>virtual bool</type>
       <name>GetVersionNumber</name>
       <anchorfile>classiser_1_1_c_write_archive_base_1_1_empty_version_info.html</anchorfile>
-      <anchor>a338c809831f3544de1c2bd85cf5b6175</anchor>
-      <arglist>(int versionId, I_DWORD &amp;result) const </arglist>
+      <anchor>a26064266c6b54efe8d4284a4e42bf6d5</anchor>
+      <arglist>(int versionId, quint32 &amp;result) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -40520,8 +40371,8 @@
       <type>virtual QString</type>
       <name>GetEncodedVersionName</name>
       <anchorfile>classiser_1_1_c_write_archive_base_1_1_empty_version_info.html</anchorfile>
-      <anchor>a755bb5c25873a98e7c21c4bb720fe6d6</anchor>
-      <arglist>(int versionId, I_DWORD versionNumber) const </arglist>
+      <anchor>ac1771d5ce29c48eada7c09537d531e7b</anchor>
+      <arglist>(int versionId, quint32 versionNumber) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40986,57 +40837,57 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_i_archive.html</anchorfile>
-      <anchor>a5b2aa331119a4b8de7fb3a3debddf529</anchor>
-      <arglist>(I_BYTE &amp;value)=0</arglist>
+      <anchor>a6d729f09c2ba05b71b7dc2bf6ddad943</anchor>
+      <arglist>(quint8 &amp;value)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_i_archive.html</anchorfile>
-      <anchor>a5728c763420977312bd2e4729ab86dac</anchor>
-      <arglist>(I_SBYTE &amp;value)=0</arglist>
+      <anchor>a708c547e578cb8b70b3f39951d673b1d</anchor>
+      <arglist>(qint8 &amp;value)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_i_archive.html</anchorfile>
-      <anchor>a30d4866f9b8e57970e780025ad14a9ab</anchor>
-      <arglist>(I_WORD &amp;value)=0</arglist>
+      <anchor>a4826b3eb7f1560e765a00002d89774a1</anchor>
+      <arglist>(quint16 &amp;value)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_i_archive.html</anchorfile>
-      <anchor>a9e5d52b86587de391678e015ee064dcd</anchor>
-      <arglist>(I_SWORD &amp;value)=0</arglist>
+      <anchor>ab5c7956c4d0fe066974feee166d70cb0</anchor>
+      <arglist>(qint16 &amp;value)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_i_archive.html</anchorfile>
-      <anchor>a84e6c90a59eda608a7bd7121fd994cf1</anchor>
-      <arglist>(I_DWORD &amp;value)=0</arglist>
+      <anchor>a91fdbccc3ecf4e4006dd38409aa15a9a</anchor>
+      <arglist>(quint32 &amp;value)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_i_archive.html</anchorfile>
-      <anchor>a8f908351a9c471c8cdc643efe00cfc16</anchor>
-      <arglist>(I_SDWORD &amp;value)=0</arglist>
+      <anchor>addf113063c18f2f1299ac6ef009cbef1</anchor>
+      <arglist>(qint32 &amp;value)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_i_archive.html</anchorfile>
-      <anchor>a0a86f1b56f9918c2acf7515a28d0258a</anchor>
-      <arglist>(I_QWORD &amp;value)=0</arglist>
+      <anchor>a9150d0fbdf6df981694414c0072b248b</anchor>
+      <arglist>(quint64 &amp;value)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_i_archive.html</anchorfile>
-      <anchor>a7e13325f9fb0c19406e72a8d84c2b67c</anchor>
-      <arglist>(I_SQWORD &amp;value)=0</arglist>
+      <anchor>a1a79740c3f01638b567fecfc90ce66c5</anchor>
+      <arglist>(qint64 &amp;value)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -41306,10 +41157,10 @@
       <arglist>(IArchive &amp;archive)=0</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual I_DWORD</type>
+      <type>virtual quint32</type>
       <name>GetMinimalVersion</name>
       <anchorfile>classiser_1_1_i_serializable.html</anchorfile>
-      <anchor>a27f3d8c7065ece5fa34fa44927c509a6</anchor>
+      <anchor>a455e034210010adc169a4966903822f6</anchor>
       <arglist>(int versionId) const </arglist>
     </member>
   </compound>
@@ -41352,8 +41203,8 @@
       <type>virtual bool</type>
       <name>GetVersionNumber</name>
       <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
-      <anchor>a9f44355a435b5ebfbfe0ea73ae399ec0</anchor>
-      <arglist>(int versionId, I_DWORD &amp;result) const =0</arglist>
+      <anchor>a440b5a30977a2dcbfef384aa40f490c1</anchor>
+      <arglist>(int versionId, quint32 &amp;result) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
@@ -41373,8 +41224,8 @@
       <type>virtual QString</type>
       <name>GetEncodedVersionName</name>
       <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
-      <anchor>aea7f3127caed1ee86040752d958482cc</anchor>
-      <arglist>(int versionId, I_DWORD versionNumber) const =0</arglist>
+      <anchor>a0841adb3f3af6fd0eb5546027b66b6b7</anchor>
+      <arglist>(int versionId, quint32 versionNumber) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -41689,71 +41540,6 @@
       <anchor>aa0638fe9e87cbd6a7fcf1d639e7f8a7fa6f29e9b940e6f1179dfdd41a39e59741</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
-      <name>TraceLevel</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a69b9ebbd3e17f150aaed949a61bc4a24</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InfoLevel</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a69b9ebbd3e17f150aaed949a61bc4a24a75dab897f169e695af37b4e9c1e27c5e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WarningLevel</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a69b9ebbd3e17f150aaed949a61bc4a24a523b3b29a369c655110603b9a908634f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ErrorLevel</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a69b9ebbd3e17f150aaed949a61bc4a24a0898edc62bccd6c37b187b1e91604c78</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CriticalLevel</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a69b9ebbd3e17f150aaed949a61bc4a24af33192b8ad71000d7f54e1ef6fce8463</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>const T &amp;</type>
-      <name>Min</name>
-      <anchorfile>group___main.html</anchorfile>
-      <anchor>gab2258500c5eb353e9e76798ab44a59cf</anchor>
-      <arglist>(const T &amp;value1, const T &amp;value2)</arglist>
-    </member>
-    <member kind="function">
-      <type>const T &amp;</type>
-      <name>Max</name>
-      <anchorfile>group___main.html</anchorfile>
-      <anchor>ga761fb858ab3e61d9682b99f0b32c06f7</anchor>
-      <arglist>(const T &amp;value1, const T &amp;value2)</arglist>
-    </member>
-    <member kind="function">
-      <type>const T &amp;</type>
-      <name>Max3</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>ae335a97bc1b6e54ae4a03238a15a68d6</anchor>
-      <arglist>(const T &amp;value1, const T &amp;value2, const T &amp;value3)</arglist>
-    </member>
-    <member kind="function">
-      <type>const T &amp;</type>
-      <name>Max4</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a628afc0b1abb650fd93426abe1ff4c3e</anchor>
-      <arglist>(const T &amp;value1, const T &amp;value2, const T &amp;value3, const T &amp;value4)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsBeetween</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>af36ed2630110e4dcacccaaddc4903c44</anchor>
-      <arglist>(const T &amp;value, const T &amp;value1, const T &amp;value2)</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>istd::CBase64</name>
@@ -41766,10 +41552,10 @@
       <arglist>(const void *dataPtrPtr, int size)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static std::vector&lt; I_BYTE &gt;</type>
+      <type>static std::vector&lt; quint8 &gt;</type>
       <name>ConvertFromBase64</name>
       <anchorfile>classistd_1_1_c_base64.html</anchorfile>
-      <anchor>a4ad446d2bf98220679d1f1c2ef547831</anchor>
+      <anchor>a3511de8844233487e8ee5b369c6e0881</anchor>
       <arglist>(const std::string &amp;base64String)</arglist>
     </member>
   </compound>
@@ -41787,8 +41573,8 @@
       <type>int</type>
       <name>GetFirstBitIndex</name>
       <anchorfile>classistd_1_1_c_bit_manip.html</anchorfile>
-      <anchor>ab9b7b5cdc2dc3b11a060310857dde7a7</anchor>
-      <arglist>(I_DWORD bits) const </arglist>
+      <anchor>a06c5845dfb5ad3e044d7999d81f0be6b</anchor>
+      <arglist>(quint32 bits) const </arglist>
     </member>
     <member kind="variable" static="yes">
       <type>static CBitManip</type>
@@ -42036,39 +41822,39 @@
     <name>istd::CCrcCalculator</name>
     <filename>classistd_1_1_c_crc_calculator.html</filename>
     <member kind="typedef">
-      <type>std::vector&lt; I_BYTE &gt;</type>
+      <type>std::vector&lt; quint8 &gt;</type>
       <name>ByteStream</name>
       <anchorfile>classistd_1_1_c_crc_calculator.html</anchorfile>
-      <anchor>a00bdccc5c7ae3867cc70e2aa6903c7d9</anchor>
+      <anchor>a335385002ed800814f4e0b98e836faef</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static I_DWORD</type>
+      <type>static quint32</type>
       <name>GetCrcFromData</name>
       <anchorfile>classistd_1_1_c_crc_calculator.html</anchorfile>
-      <anchor>a5a73c052e98f1e3bbb4ddda412dad0f7</anchor>
-      <arglist>(const I_BYTE *dataPtr, int dataSize)</arglist>
+      <anchor>abaeba72ab1756163d8677806349624f5</anchor>
+      <arglist>(const quint8 *dataPtr, int dataSize)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static I_DWORD</type>
+      <type>static quint32</type>
       <name>GetCrcFromStream</name>
       <anchorfile>classistd_1_1_c_crc_calculator.html</anchorfile>
-      <anchor>ab392748a86f2f39ca4acbf1ed6dd93f2</anchor>
+      <anchor>a80e67625cff67487d0f9cf7f87704496</anchor>
       <arglist>(const ByteStream &amp;byteStream)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static I_DWORD</type>
+      <type>static quint32</type>
       <name>GetCrcFromFile</name>
       <anchorfile>classistd_1_1_c_crc_calculator.html</anchorfile>
-      <anchor>aa5d50fdd6eade33a863bf2b61d98a321</anchor>
+      <anchor>a308558531cb95423a4c8d2f665d4e99c</anchor>
       <arglist>(const QString &amp;fileName)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
       <name>UpdateCrc</name>
       <anchorfile>classistd_1_1_c_crc_calculator.html</anchorfile>
-      <anchor>a0b8763e85a8be84aba45ca1edf44d9c7</anchor>
-      <arglist>(const I_BYTE &amp;byte, I_DWORD &amp;dwCrc32)</arglist>
+      <anchor>ac177b27b7b40fecf205ce49f45683f33</anchor>
+      <arglist>(const quint8 &amp;byte, quint32 &amp;dwCrc32)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -42106,8 +41892,8 @@
       <type></type>
       <name>CFastBinaryIndex</name>
       <anchorfile>classistd_1_1_c_fast_binary_index.html</anchorfile>
-      <anchor>aa6576628ac95100e009b4028339f0a00</anchor>
-      <arglist>(I_DWORD bits, int size, int dummy)</arglist>
+      <anchor>a9aaebf833fc20a41eff28a6e48ad3f44</anchor>
+      <arglist>(quint32 bits, int size, int dummy)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -42180,10 +41966,10 @@
       <arglist>(int index, int value)</arglist>
     </member>
     <member kind="function">
-      <type>I_DWORD</type>
+      <type>quint32</type>
       <name>GetBits</name>
       <anchorfile>classistd_1_1_c_fast_binary_index.html</anchorfile>
-      <anchor>aebecb97ecf294809e09991c5d863dbce</anchor>
+      <anchor>ad3480681a6591a4a3c988ad9351f7e23</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">

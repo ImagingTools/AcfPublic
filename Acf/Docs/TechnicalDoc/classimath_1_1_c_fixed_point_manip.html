@@ -101,8 +101,8 @@ Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef double(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a1ce4e3155cb2cd1881c0cd9edcaa379c">RoundingFuntionPtr</a> )(double value)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a1aa2ae06402cd11d5704a04ca9f5b972">GetInternalValue</a> (double value) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a4be74d3c00abd16fbc14daca1a87f61d">GetNormalValue</a> (<a class="el" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a> intValue) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual qint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#ac769de5d3b8ea58d00b01cdf24e1a4d3">GetInternalValue</a> (double value) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a82ebf798f00a9ae2316f44ec365e6de5">GetNormalValue</a> (qint32 intValue) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_fixed_point_manip.html#a10b5c3be06a284084c5cb56e599c671d">GetString</a> (const double &amp;value, int precision) const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
@@ -230,12 +230,12 @@ Static Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1aa2ae06402cd11d5704a04ca9f5b972"></a><!-- doxytag: member="imath::CFixedPointManip::GetInternalValue" ref="a1aa2ae06402cd11d5704a04ca9f5b972" args="(double value) const " -->
+<a class="anchor" id="ac769de5d3b8ea58d00b01cdf24e1a4d3"></a><!-- doxytag: member="imath::CFixedPointManip::GetInternalValue" ref="ac769de5d3b8ea58d00b01cdf24e1a4d3" args="(double value) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a> imath::CFixedPointManip::GetInternalValue </td>
+          <td class="memname">qint32 imath::CFixedPointManip::GetInternalValue </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -245,7 +245,7 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classimath_1_1_c_complex_double_manip.html#a51bd0ab7c15b2d15dbb5a0fab707434c">imath::CComplexDoubleManip</a>.</p>
+<p>Reimplemented in <a class="el" href="classimath_1_1_c_complex_double_manip.html#af723a221688f9b3be83a6535d6431e0b">imath::CComplexDoubleManip</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_fixed_point_manip_8h_source.html#l00133">133</a> of file <a class="el" href="_c_fixed_point_manip_8h_source.html">CFixedPointManip.h</a>.</p>
 
@@ -253,14 +253,14 @@ Static Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4be74d3c00abd16fbc14daca1a87f61d"></a><!-- doxytag: member="imath::CFixedPointManip::GetNormalValue" ref="a4be74d3c00abd16fbc14daca1a87f61d" args="(I_SDWORD intValue) const " -->
+<a class="anchor" id="a82ebf798f00a9ae2316f44ec365e6de5"></a><!-- doxytag: member="imath::CFixedPointManip::GetNormalValue" ref="a82ebf798f00a9ae2316f44ec365e6de5" args="(qint32 intValue) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">double imath::CFixedPointManip::GetNormalValue </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="istd_8h.html#a9af8f70f29558fb9f306d66fdf4b99ad">I_SDWORD</a>&#160;</td>
+          <td class="paramtype">qint32&#160;</td>
           <td class="paramname"><em>intValue</em></td><td>)</td>
           <td> const<code> [inline, protected, virtual]</code></td>
         </tr>
