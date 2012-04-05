@@ -4970,8 +4970,7 @@
     <name>IVersionInfo.h</name>
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>_i_version_info_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <class kind="class">iser::IVersionInfo</class>
     <namespace>iser</namespace>
   </compound>
@@ -40003,15 +40002,22 @@
       <type>bool</type>
       <name>InsertVersionId</name>
       <anchorfile>classiser_1_1_c_reader_version_info.html</anchorfile>
-      <anchor>a9b6f3377b52fb88924536afc1f88ab66</anchor>
-      <arglist>(int id, quint32 version, const QString &amp;description)</arglist>
+      <anchor>a9e736c6e313320b456c3fa8de782c116</anchor>
+      <arglist>(int versionId, quint32 versionNumber, const QString &amp;description)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>RemoveVersionId</name>
       <anchorfile>classiser_1_1_c_reader_version_info.html</anchorfile>
-      <anchor>a21a6f420eb1d1d3f4e9967708d5e92a2</anchor>
-      <arglist>(int id)</arglist>
+      <anchor>ad01e9fb9ea90a78d7a1ca2267fcc9dfc</anchor>
+      <arglist>(int versionId)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual VersionIds</type>
+      <name>GetVersionIds</name>
+      <anchorfile>classiser_1_1_c_reader_version_info.html</anchorfile>
+      <anchor>a14a76654dbaefb66125c96979a8ec507</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -40028,42 +40034,28 @@
       <arglist>(int versionId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual VersionIds</type>
-      <name>GetVersionIds</name>
-      <anchorfile>classiser_1_1_c_reader_version_info.html</anchorfile>
-      <anchor>a14a76654dbaefb66125c96979a8ec507</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetEncodedVersionName</name>
       <anchorfile>classiser_1_1_c_reader_version_info.html</anchorfile>
       <anchor>abe8e9e0dcf6a0488f6eb079a9f6d1600</anchor>
       <arglist>(int versionId, quint32 versionNumber) const </arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>const VersionIdElement &amp;</type>
-      <name>GetVersionIdElement</name>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
       <anchorfile>classiser_1_1_c_reader_version_info.html</anchorfile>
-      <anchor>afdf0469871a50891c7bacd84c19d1b7b</anchor>
-      <arglist>(int versionId) const </arglist>
+      <anchor>a41b41790e6a058a84ec19b4762bfdfea</anchor>
+      <arglist>(const istd::IChangeable &amp;object)</arglist>
     </member>
   </compound>
   <compound kind="struct">
     <name>iser::CReaderVersionInfo::VersionIdElement</name>
     <filename>structiser_1_1_c_reader_version_info_1_1_version_id_element.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>VersionIdElement</name>
-      <anchorfile>structiser_1_1_c_reader_version_info_1_1_version_id_element.html</anchorfile>
-      <anchor>a5d0373a1b8fd0629c3a567376b3bcee8</anchor>
-      <arglist>(quint32 _version, const QString &amp;_description)</arglist>
-    </member>
     <member kind="variable">
       <type>quint32</type>
-      <name>version</name>
+      <name>versionNumber</name>
       <anchorfile>structiser_1_1_c_reader_version_info_1_1_version_id_element.html</anchorfile>
-      <anchor>a1a7a58c94da95ad979e78a6f387a2be5</anchor>
+      <anchor>a171cac3d952140209261271466440a9e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -41167,7 +41159,7 @@
   <compound kind="class">
     <name>iser::IVersionInfo</name>
     <filename>classiser_1_1_i_version_info.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <name>VersionId</name>
       <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
@@ -41193,11 +41185,18 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::set&lt; int &gt;</type>
+      <type>QSet&lt; int &gt;</type>
       <name>VersionIds</name>
       <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
-      <anchor>a14c10439f5c53047c6b54b3a6168264c</anchor>
+      <anchor>a4be1aceeb8f7b19bba451c8471ed716b</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual VersionIds</type>
+      <name>GetVersionIds</name>
+      <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
+      <anchor>a5d91838bdf51104a85ee4ca251646a4b</anchor>
+      <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -41212,13 +41211,6 @@
       <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
       <anchor>abb7b458bc2e8bec8b5381d3abe8867d7</anchor>
       <arglist>(int versionId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual VersionIds</type>
-      <name>GetVersionIds</name>
-      <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
-      <anchor>a5d91838bdf51104a85ee4ca251646a4b</anchor>
-      <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>

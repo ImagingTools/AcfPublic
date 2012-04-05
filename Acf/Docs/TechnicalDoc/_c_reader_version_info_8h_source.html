@@ -29,57 +29,53 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iser_CReaderVersionInfo_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// STL includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_version_info_8h.html">iser/IVersionInfo.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_version_info_8h.html">iser/IVersionInfo.h</a>&quot;</span>
+<a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="keyword">namespace </span>iser
-<a name="l00014"></a>00014 {
+<a name="l00012"></a>00012 <span class="keyword">namespace </span>iser
+<a name="l00013"></a>00013 {
+<a name="l00014"></a>00014 
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016 
-<a name="l00023"></a><a class="code" href="classiser_1_1_c_reader_version_info.html">00023</a> <span class="keyword">class </span><a class="code" href="classiser_1_1_c_reader_version_info.html" title="Implementation of version designed to be automaticaly created during reading of ACF header...">CReaderVersionInfo</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiser_1_1_i_version_info.html" title="Provides access to version information.">IVersionInfo</a>
-<a name="l00024"></a>00024 {
-<a name="l00025"></a>00025 <span class="keyword">public</span>:
-<a name="l00029"></a>00029        <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_reader_version_info.html#ac3e9e7c4236a1b43f98c997c99888903" title="Remove all stored version infos.">Reset</a>();
-<a name="l00037"></a>00037        <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_reader_version_info.html#a9b6f3377b52fb88924536afc1f88ab66" title="Insert new version id with its actual version number and its description.">InsertVersionId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, quint32 version, <span class="keyword">const</span> QString&amp; description);
-<a name="l00042"></a>00042        <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_reader_version_info.html#a21a6f420eb1d1d3f4e9967708d5e92a2" title="Remove single version info.">RemoveVersionId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044        <span class="comment">// reimplemented (iser::IVersionInfo)</span>
+<a name="l00022"></a><a class="code" href="classiser_1_1_c_reader_version_info.html">00022</a> <span class="keyword">class </span><a class="code" href="classiser_1_1_c_reader_version_info.html" title="Implementation of version designed to be automaticaly created during reading of ACF header...">CReaderVersionInfo</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiser_1_1_i_version_info.html" title="Provides access to version information.">IVersionInfo</a>
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024 <span class="keyword">public</span>:
+<a name="l00028"></a>00028        <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_reader_version_info.html#ac3e9e7c4236a1b43f98c997c99888903" title="Remove all stored version infos.">Reset</a>();
+<a name="l00036"></a>00036        <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_reader_version_info.html#a9e736c6e313320b456c3fa8de782c116" title="Insert new version id with its actual version number and its description.">InsertVersionId</a>(<span class="keywordtype">int</span> versionId, quint32 versionNumber, <span class="keyword">const</span> QString&amp; description);
+<a name="l00041"></a>00041        <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_reader_version_info.html#ad01e9fb9ea90a78d7a1ca2267fcc9dfc" title="Remove single version info.">RemoveVersionId</a>(<span class="keywordtype">int</span> versionId);
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043        <span class="comment">// reimplemented (iser::IVersionInfo)</span>
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_i_version_info.html#a4be1aceeb8f7b19bba451c8471ed716b">VersionIds</a> <a class="code" href="classiser_1_1_c_reader_version_info.html#a14a76654dbaefb66125c96979a8ec507" title="Get list of version ID&#39;s.">GetVersionIds</a>() <span class="keyword">const</span>;
 <a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_reader_version_info.html#aaaf0f28da197f0ccf04a4bacf4a4b871" title="Get version of archived stream for specific versioning type.">GetVersionNumber</a>(<span class="keywordtype">int</span> versionId, quint32&amp; result) <span class="keyword">const</span>;
 <a name="l00046"></a>00046        <span class="keyword">virtual</span> QString <a class="code" href="classiser_1_1_c_reader_version_info.html#a799fd8d0728da646519e741c6defd3a6" title="Get description of version ID.">GetVersionIdDescription</a>(<span class="keywordtype">int</span> versionId) <span class="keyword">const</span>;
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_i_version_info.html#a14c10439f5c53047c6b54b3a6168264c">VersionIds</a> <a class="code" href="classiser_1_1_c_reader_version_info.html#a14a76654dbaefb66125c96979a8ec507" title="Get list of version ID&#39;s.">GetVersionIds</a>() <span class="keyword">const</span>;
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> QString <a class="code" href="classiser_1_1_c_reader_version_info.html#abe8e9e0dcf6a0488f6eb079a9f6d1600" title="Encode version number to human readable form.">GetEncodedVersionName</a>(<span class="keywordtype">int</span> versionId, quint32 versionNumber) <span class="keyword">const</span>;
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="keyword">protected</span>:
-<a name="l00051"></a><a class="code" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html">00051</a>        <span class="keyword">struct </span><a class="code" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html">VersionIdElement</a>
-<a name="l00052"></a>00052        {
-<a name="l00053"></a><a class="code" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html#a1a7a58c94da95ad979e78a6f387a2be5">00053</a>               quint32 <a class="code" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html#a1a7a58c94da95ad979e78a6f387a2be5">version</a>;
-<a name="l00054"></a><a class="code" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html#abb6a329c9229927f0ec462e13a63f56f">00054</a>               QString <a class="code" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html#abb6a329c9229927f0ec462e13a63f56f">description</a>;
-<a name="l00055"></a>00055 
-<a name="l00056"></a><a class="code" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html#a5d0373a1b8fd0629c3a567376b3bcee8">00056</a>               <a class="code" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html#a5d0373a1b8fd0629c3a567376b3bcee8">VersionIdElement</a>(quint32 _version, <span class="keyword">const</span> QString&amp; _description):version(_version), description(_description){}
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> QString <a class="code" href="classiser_1_1_c_reader_version_info.html#abe8e9e0dcf6a0488f6eb079a9f6d1600" title="Encode version number to human readable form.">GetEncodedVersionName</a>(<span class="keywordtype">int</span> versionId, quint32 versionNumber) <span class="keyword">const</span>;
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049        <span class="comment">// reimplemented (istd::IChangeable)</span>
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_reader_version_info.html#a41b41790e6a058a84ec19b4762bfdfea" title="Copy this object from another one.">CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>);
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="keyword">protected</span>:
+<a name="l00053"></a><a class="code" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html">00053</a>        <span class="keyword">struct </span><a class="code" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html">VersionIdElement</a>
+<a name="l00054"></a>00054        {
+<a name="l00055"></a><a class="code" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html#a171cac3d952140209261271466440a9e">00055</a>               quint32 <a class="code" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html#a171cac3d952140209261271466440a9e">versionNumber</a>;
+<a name="l00056"></a><a class="code" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html#abb6a329c9229927f0ec462e13a63f56f">00056</a>               QString <a class="code" href="structiser_1_1_c_reader_version_info_1_1_version_id_element.html#abb6a329c9229927f0ec462e13a63f56f">description</a>;
 <a name="l00057"></a>00057        };
 <a name="l00058"></a>00058 
-<a name="l00059"></a>00059        <span class="keyword">const</span> VersionIdElement&amp; <a class="code" href="classiser_1_1_c_reader_version_info.html#afdf0469871a50891c7bacd84c19d1b7b">GetVersionIdElement</a>(<span class="keywordtype">int</span> versionId) <span class="keyword">const</span>;
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 <span class="keyword">private</span>:
-<a name="l00062"></a>00062        <span class="keyword">typedef</span> std::map&lt;int, VersionIdElement&gt; VersionElements;
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064        VersionElements m_versionIdList;
+<a name="l00059"></a>00059 <span class="keyword">private</span>:
+<a name="l00060"></a>00060        <span class="keyword">typedef</span> QMap&lt;int, VersionIdElement&gt; VersionElements;
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062        VersionElements m_versionIdList;
+<a name="l00063"></a>00063 };
+<a name="l00064"></a>00064 
 <a name="l00065"></a>00065 
-<a name="l00066"></a>00066        <span class="keyword">static</span> VersionIdElement s_element;
-<a name="l00067"></a>00067 };
+<a name="l00066"></a>00066 } <span class="comment">// namespace iser</span>
+<a name="l00067"></a>00067 
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070 } <span class="comment">// namespace iser</span>
+<a name="l00069"></a>00069 <span class="preprocessor">#endif // !iser_CReaderVersionInfo_included</span>
+<a name="l00070"></a>00070 <span class="preprocessor"></span>
 <a name="l00071"></a>00071 
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073 <span class="preprocessor">#endif // !iser_CReaderVersionInfo_included</span>
-<a name="l00074"></a>00074 <span class="preprocessor"></span>
-<a name="l00075"></a>00075 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
