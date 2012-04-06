@@ -25,7 +25,7 @@
 
 
 // STL includes
-#include <map>
+#include <QtCore/QMap>
 
 
 // ACF includes
@@ -72,7 +72,7 @@ public:
 	virtual void InitProcessor(const iprm::IParamsSet* paramsPtr);
 
 private:
-	typedef std::map<int, int> TaskToStateMap;
+	typedef QMap<int, int> TaskToStateMap;
 
 	TaskToStateMap m_taskToStateMap;
 	int m_nextTaskId;
@@ -134,7 +134,7 @@ int TSyncProcessorWrap<Base>::WaitTaskFinished(
 	if (taskId >= 0){
 		TaskToStateMap::iterator foundIter = m_taskToStateMap.find(taskId);
 		if (foundIter != m_taskToStateMap.end()){
-			retVal = foundIter->second;
+			retVal = foundIter.value();
 
 			m_taskToStateMap.erase(foundIter);
 		}
@@ -143,7 +143,7 @@ int TSyncProcessorWrap<Base>::WaitTaskFinished(
 		for (		TaskToStateMap::const_iterator iter = m_taskToStateMap.begin();
 					iter != m_taskToStateMap.end();
 					++iter){	// we are looking for worst status value. This values are sorted worst => bigger.
-			int taskState = iter->second;
+			int taskState = iter.value();
 			if (taskState > retVal){
 				retVal = taskState;
 			}
@@ -160,7 +160,7 @@ template <class Base>
 void TSyncProcessorWrap<Base>::CancelTask(int taskId)
 {
 	if (taskId >= 0){
-		m_taskToStateMap.erase(taskId);
+		m_taskToStateMap.remove(taskId);
 	}
 	else{
 		m_taskToStateMap.clear();
@@ -172,7 +172,7 @@ template <class Base>
 int TSyncProcessorWrap<Base>::GetReadyTask()
 {
 	if (!m_taskToStateMap.empty()){
-		return m_taskToStateMap.begin()->first;
+		return m_taskToStateMap.begin().key();
 	}
 	else{
 		return -1;
@@ -188,14 +188,14 @@ int TSyncProcessorWrap<Base>::GetTaskState(int taskId) const
 	if (taskId >= 0){
 		TaskToStateMap::const_iterator foundIter = m_taskToStateMap.find(taskId);
 		if (foundIter != m_taskToStateMap.end()){
-			retVal = foundIter->second;
+			retVal = foundIter.value();
 		}
 	}
 	else{
 		for (		TaskToStateMap::const_iterator iter = m_taskToStateMap.begin();
 					iter != m_taskToStateMap.end();
 					++iter){	// we are looking for worst status value. This values are sorted worst => bigger.
-			int taskState = iter->second;
+			int taskState = iter.value();
 			if (taskState > retVal){
 				retVal = taskState;
 			}

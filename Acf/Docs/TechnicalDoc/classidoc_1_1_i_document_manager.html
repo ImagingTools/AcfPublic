@@ -90,9 +90,9 @@ Public Types</h2></td></tr>
 <br/>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags describing possible operations.  <a href="classidoc_1_1_i_document_manager.html#a89e647a0fda1965099fc82077d3be520">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; QString, <br class="typebreak"/>
-std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a1a34891bb0395d7f9483b3e6922e32b9">FileToTypeMap</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from file path to ducument type ID's.  <a href="#a1a34891bb0395d7f9483b3e6922e32b9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; QString, <br class="typebreak"/>
+std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a0f475260ad4256042f71dc309f56d2ca">FileToTypeMap</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from file path to ducument type ID's.  <a href="#a0f475260ad4256042f71dc309f56d2ca"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a7519e0784c64f6ae6c51df23faf70321">GetAllowedOperationFlags</a> (const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *viewPtr=NULL) const =0</td></tr>
@@ -117,9 +117,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID of document type managed by this object.  <a href="#a415ab9abd38841db354894b89dea664f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a47e60ea13da22040a06b7425a82134a7">FileNew</a> (const std::string &amp;documentTypeId, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> **newDocumentPtr=NULL)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new document with the document ID <code>documentTypeId</code>.  <a href="#a47e60ea13da22040a06b7425a82134a7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a310f01527df3677b0a64c38957437fd1">FileOpen</a> (const std::string *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, <a class="el" href="classidoc_1_1_i_document_manager.html#a1a34891bb0395d7f9483b3e6922e32b9">FileToTypeMap</a> *loadedMapPtr=NULL)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a310f01527df3677b0a64c38957437fd1">FileOpen</a> (const std::string *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, <a class="el" href="classidoc_1_1_i_document_manager.html#a0f475260ad4256042f71dc309f56d2ca">FileToTypeMap</a> *loadedMapPtr=NULL)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens document(s) from the file list.  <a href="#a310f01527df3677b0a64c38957437fd1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a404be3aa6734a8a787b764d76fb94250">FileSave</a> (int documentIndex=-1, bool requestFileName=false, <a class="el" href="classidoc_1_1_i_document_manager.html#a1a34891bb0395d7f9483b3e6922e32b9">FileToTypeMap</a> *savedMapPtr=NULL)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a404be3aa6734a8a787b764d76fb94250">FileSave</a> (int documentIndex=-1, bool requestFileName=false, <a class="el" href="classidoc_1_1_i_document_manager.html#a0f475260ad4256042f71dc309f56d2ca">FileToTypeMap</a> *savedMapPtr=NULL)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Save active document.  <a href="#a404be3aa6734a8a787b764d76fb94250"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a333b6a7c4cc31479099a1f35de46b777">FileClose</a> (int documentIndex=-1, bool *ignoredPtr=NULL)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Close current view.  <a href="#a333b6a7c4cc31479099a1f35de46b777"></a><br/></td></tr>
@@ -129,12 +129,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00029">29</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a1a34891bb0395d7f9483b3e6922e32b9"></a><!-- doxytag: member="idoc::IDocumentManager::FileToTypeMap" ref="a1a34891bb0395d7f9483b3e6922e32b9" args="" -->
+<a class="anchor" id="a0f475260ad4256042f71dc309f56d2ca"></a><!-- doxytag: member="idoc::IDocumentManager::FileToTypeMap" ref="a0f475260ad4256042f71dc309f56d2ca" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::map&lt;QString, std::string&gt; <a class="el" href="classidoc_1_1_i_document_manager.html#a1a34891bb0395d7f9483b3e6922e32b9">idoc::IDocumentManager::FileToTypeMap</a></td>
+          <td class="memname">typedef QMap&lt;QString, std::string&gt; <a class="el" href="classidoc_1_1_i_document_manager.html#a0f475260ad4256042f71dc309f56d2ca">idoc::IDocumentManager::FileToTypeMap</a></td>
         </tr>
       </table>
 </div>
@@ -373,7 +373,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_manager.html#a1a34891bb0395d7f9483b3e6922e32b9">FileToTypeMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_manager.html#a0f475260ad4256042f71dc309f56d2ca">FileToTypeMap</a> *&#160;</td>
           <td class="paramname"><em>loadedMapPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -420,7 +420,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_manager.html#a1a34891bb0395d7f9483b3e6922e32b9">FileToTypeMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_manager.html#a0f475260ad4256042f71dc309f56d2ca">FileToTypeMap</a> *&#160;</td>
           <td class="paramname"><em>savedMapPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>

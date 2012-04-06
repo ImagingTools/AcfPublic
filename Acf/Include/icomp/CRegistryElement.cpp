@@ -52,7 +52,7 @@ IRegistryElement::AttributeInfo* CRegistryElement::GetAttributeInfo(const std::s
 {
 	AttributeInfoMap::iterator iter = m_attributeInfos.find(attributeId);
 	if (iter != m_attributeInfos.end()){
-		return &iter->second;
+		return &iter.value();
 	}
 
 	return NULL;
@@ -84,7 +84,7 @@ IRegistryElement::Ids CRegistryElement::GetAttributeIds() const
 	for (		AttributeInfoMap::const_iterator iter = m_attributeInfos.begin();
 				iter != m_attributeInfos.end();
 				++iter){
-		retVal.insert(iter->first);
+		retVal.insert(iter.key());
 	}
 
 	return retVal;
@@ -178,7 +178,7 @@ const IRegistryElement::AttributeInfo* CRegistryElement::GetAttributeInfo(const 
 	AttributeInfoMap::const_iterator iter = m_attributeInfos.find(attributeId);
 
 	if (iter != m_attributeInfos.end()){
-		return &iter->second;
+		return &iter.value();
 	}
 
 	return NULL;
@@ -189,7 +189,7 @@ bool CRegistryElement::RemoveAttribute(const std::string& attributeId)
 {
 	istd::CChangeNotifier notifier(this);
 
-	return m_attributeInfos.erase(attributeId) > 0;
+	return m_attributeInfos.remove(attributeId) > 0;
 }
 
 
@@ -228,7 +228,7 @@ bool CRegistryElement::Serialize(iser::IArchive& archive)
 		for (		AttributeInfoMap::const_iterator checkInfoIter = m_attributeInfos.begin();	// calculate number of real used attributes
 					checkInfoIter != m_attributeInfos.end();
 					++checkInfoIter){
-			const AttributeInfo& info = checkInfoIter->second;
+			const AttributeInfo& info = checkInfoIter.value();
 
 			if (info.exportId.empty() && !info.attributePtr.IsValid()){
 				continue;
@@ -242,7 +242,7 @@ bool CRegistryElement::Serialize(iser::IArchive& archive)
 		for (		AttributeInfoMap::iterator iter = m_attributeInfos.begin();
 					iter != m_attributeInfos.end();
 					++iter){
-			AttributeInfo& info = iter->second;
+			AttributeInfo& info = iter.value();
 
 			if (info.exportId.empty() && !info.attributePtr.IsValid()){
 				continue;
@@ -251,7 +251,7 @@ bool CRegistryElement::Serialize(iser::IArchive& archive)
 			retVal = retVal && archive.BeginTag(attributeInfoTag);
 
 			retVal = retVal && archive.BeginTag(attributeIdTag);
-			std::string attributeId = iter->first;
+			std::string attributeId = iter.key();
 			retVal = retVal && archive.Process(attributeId);
 			retVal = retVal && archive.EndTag(attributeIdTag);
 

@@ -25,7 +25,7 @@
 
 
 // STL includes
-#include <map>
+#include <QtCore/QMap>
 #include <string>
 
 #include "istd/CClassInfo.h"
@@ -122,7 +122,7 @@ private:
 		bool isContextInitialized;
 	};
 
-	typedef std::map< std::string, ComponentInfo > ComponentMap;
+	typedef QMap< std::string, ComponentInfo > ComponentMap;
 
 	mutable ComponentMap m_componentMap;
 

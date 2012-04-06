@@ -99,7 +99,7 @@
 <a name="l00072"></a>00072        I_MULTIATTR(QString, m_typeIdsAttrPtr);
 <a name="l00073"></a>00073        I_MULTIATTR(QString, m_typeNamesAttrPtr);
 <a name="l00074"></a>00074 
-<a name="l00075"></a>00075        <span class="keyword">typedef</span> std::map&lt;iqt2d::IViewProvider*, int&gt; ConnectedSceneFlags;     <span class="comment">// maps connected scene provider to connection flags</span>
+<a name="l00075"></a>00075        <span class="keyword">typedef</span> QMap&lt;iqt2d::IViewProvider*, int&gt; ConnectedSceneFlags;  <span class="comment">// maps connected scene provider to connection flags</span>
 <a name="l00076"></a>00076        ConnectedSceneFlags m_connectedSceneFlags;
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* m_lastParamModelPtr;

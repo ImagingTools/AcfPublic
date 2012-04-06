@@ -25,7 +25,7 @@
 
 
 // STL includes
-#include <map>
+#include <QtCore/QMap>
 #include <string>
 
 
@@ -68,7 +68,7 @@ private:
 
 	const IComponentContext* m_parentPtr;
 
-	typedef std::map<std::string, const iser::IObject*> AttributeMap;
+	typedef QMap<std::string, const iser::IObject*> AttributeMap;
 	AttributeMap m_attributeMap;
 	std::string m_contextId;
 };

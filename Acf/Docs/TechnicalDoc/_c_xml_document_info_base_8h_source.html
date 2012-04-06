@@ -30,7 +30,7 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// STL includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
@@ -55,25 +55,25 @@
 <a name="l00040"></a>00040        <span class="keyword">static</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classiser_1_1_c_xml_document_info_base.html#a9e4bc4a67831288634c53b4efca5af39">GetElementSeparator</a>();
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042 <span class="keyword">protected</span>:
-<a name="l00043"></a><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_char_to_entity_map.html">00043</a>        <span class="keyword">class </span><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_char_to_entity_map.html">CharToEntityMap</a>: <span class="keyword">public</span> std::map&lt;char, std::string&gt;
+<a name="l00043"></a><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_char_to_entity_map.html">00043</a>        <span class="keyword">class </span><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_char_to_entity_map.html">CharToEntityMap</a>: <span class="keyword">public</span> QMap&lt;char, std::string&gt;
 <a name="l00044"></a>00044        {
 <a name="l00045"></a>00045        <span class="keyword">public</span>:
 <a name="l00046"></a>00046               <a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_char_to_entity_map.html#aad3653a30726a11050914c6abe71e323">CharToEntityMap</a>();
 <a name="l00047"></a>00047        };
 <a name="l00048"></a>00048 
-<a name="l00049"></a><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_chart_map.html">00049</a>        <span class="keyword">class </span><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_chart_map.html">EntityToChartMap</a>: <span class="keyword">public</span> std::map&lt;std::string, char&gt;
+<a name="l00049"></a><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_chart_map.html">00049</a>        <span class="keyword">class </span><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_chart_map.html">EntityToChartMap</a>: <span class="keyword">public</span> QMap&lt;std::string, char&gt;
 <a name="l00050"></a>00050        {
 <a name="l00051"></a>00051        <span class="keyword">public</span>:
 <a name="l00052"></a>00052               <a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_chart_map.html#afc2d50f87fdcf3a063e9488186031cad">EntityToChartMap</a>();
 <a name="l00053"></a>00053        };
 <a name="l00054"></a>00054 
-<a name="l00055"></a><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_wide_char_to_entity_map.html">00055</a>        <span class="keyword">class </span><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_wide_char_to_entity_map.html">WideCharToEntityMap</a>: <span class="keyword">public</span> std::map&lt;QChar, std::string &gt;
+<a name="l00055"></a><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_wide_char_to_entity_map.html">00055</a>        <span class="keyword">class </span><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_wide_char_to_entity_map.html">WideCharToEntityMap</a>: <span class="keyword">public</span> QMap&lt;QChar, std::string &gt;
 <a name="l00056"></a>00056        {
 <a name="l00057"></a>00057        <span class="keyword">public</span>:
 <a name="l00058"></a>00058               <a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_wide_char_to_entity_map.html#ac61b24874e133dad15c5e413a4cfaf85">WideCharToEntityMap</a>();
 <a name="l00059"></a>00059        };
 <a name="l00060"></a>00060 
-<a name="l00061"></a><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_wide_chart_map.html">00061</a>        <span class="keyword">class </span><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_wide_chart_map.html">EntityToWideChartMap</a>: <span class="keyword">public</span> std::map&lt;std::string, QChar&gt;
+<a name="l00061"></a><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_wide_chart_map.html">00061</a>        <span class="keyword">class </span><a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_wide_chart_map.html">EntityToWideChartMap</a>: <span class="keyword">public</span> QMap&lt;std::string, QChar&gt;
 <a name="l00062"></a>00062        {
 <a name="l00063"></a>00063        <span class="keyword">public</span>:
 <a name="l00064"></a>00064               <a class="code" href="classiser_1_1_c_xml_document_info_base_1_1_entity_to_wide_chart_map.html#ad9a1822a5a9704beba935ceb6ff5043a">EntityToWideChartMap</a>();

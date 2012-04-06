@@ -25,7 +25,7 @@
 
 
 // STL includes
-#include <map>
+#include <QtCore/QMap>
 
 #include "istd/IChangeable.h"
 
@@ -93,7 +93,7 @@ private:
 		bool isCancelable;
 	};
 
-	typedef std::map<int, ProgressInfo> ProgressMap;
+	typedef QMap<int, ProgressInfo> ProgressMap;
 
 	ProgressMap m_progressMap;
 

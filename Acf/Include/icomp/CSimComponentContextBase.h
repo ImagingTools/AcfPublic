@@ -25,7 +25,7 @@
 
 
 // STL includes
-#include <map>
+#include <QtCore/QMap>
 
 #include <QtCore/QString>
 
@@ -156,10 +156,10 @@ protected:
 	template <class AttrType>
 	bool IsAttributeTypeCorrect(const std::string& attributeId);
 
-	typedef std::map<std::string, IComponent*> ComponentsMap;
+	typedef QMap<std::string, IComponent*> ComponentsMap;
 	ComponentsMap m_componentsMap;
 
-	typedef std::map< std::string, const ComponentsFactory* > FactoriesMap;
+	typedef QMap< std::string, const ComponentsFactory* > FactoriesMap;
 	FactoriesMap m_factoriesMap;
 
 private:

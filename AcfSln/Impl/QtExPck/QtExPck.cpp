@@ -26,22 +26,14 @@
 #include "icomp/export.h"
 
 
-static struct StaticInit
-{
-	StaticInit()
-	{
-		Q_INIT_RESOURCE(iqtgui);
-	}
-
-} instance;
-
-
 namespace QtExPck
 {
 
 
+I_REGISTER_QT_RESOURCE(iqtgui);
+
 I_EXPORT_PACKAGE(
-			"QtExPck",
+			"AcfSln/QtExtension",
 			"Acf-Solutions extended package based on Qt",
 			"Extensions" IM_TAG("Qt") IM_PROJECT("ACF-Solutions") IM_COMPANY("ImagingTools") IM_AUTHOR("\"Witold Gantzke\" \"Kirill Lepskiy\""));
 

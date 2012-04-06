@@ -30,7 +30,7 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// STL includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
@@ -77,7 +77,7 @@
 <a name="l00075"></a>00075 
 <a name="l00076"></a>00076 <span class="keyword">private</span>:
 <a name="l00077"></a>00077        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;ObserverProxy&gt;</a> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">ObserverProxyPtr</a>;
-<a name="l00078"></a>00078        <span class="keyword">typedef</span> std::map&lt;int, ObserverProxyPtr&gt; ModelMap;
+<a name="l00078"></a>00078        <span class="keyword">typedef</span> QMap&lt;int, ObserverProxyPtr&gt; ModelMap;
 <a name="l00079"></a>00079 
 <a name="l00080"></a>00080        ModelMap m_modelMap;
 <a name="l00081"></a>00081 };
@@ -89,8 +89,8 @@
 <a name="l00087"></a><a class="code" href="classimod_1_1_c_multi_model_dispatcher_base.html#ac95053e3935765098a79b3dcf127e968">00087</a> Object* <a class="code" href="classimod_1_1_c_multi_model_dispatcher_base.html#ac95053e3935765098a79b3dcf127e968" title="Get concrete object instance of the obsered model.">CMultiModelDispatcherBase::GetObjectAt</a>(<span class="keywordtype">int</span> modelId)<span class="keyword"> const</span>
 <a name="l00088"></a>00088 <span class="keyword"></span>{
 <a name="l00089"></a>00089        <span class="keyword">typename</span> ModelMap::const_iterator foundIter = m_modelMap.find(modelId);
-<a name="l00090"></a>00090        <span class="keywordflow">if</span> ((foundIter != m_modelMap.end()) &amp;&amp; foundIter-&gt;second.IsValid()){
-<a name="l00091"></a>00091               <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>Object*<span class="keyword">&gt;</span>(foundIter-&gt;second-&gt;GetModelPtr());
+<a name="l00090"></a>00090        <span class="keywordflow">if</span> ((foundIter != m_modelMap.end()) &amp;&amp; foundIter.value().IsValid()){
+<a name="l00091"></a>00091               <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>Object*<span class="keyword">&gt;</span>(foundIter.value()-&gt;GetModelPtr());
 <a name="l00092"></a>00092        }
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;

@@ -35,7 +35,7 @@
 <a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QtCore/QLibrary&gt;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="comment">// STL includes</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="comment">// ACF includes</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_t_del_ptr_8h.html">istd/TDelPtr.h</a>&quot;</span>
@@ -132,7 +132,7 @@
 <a name="l00108"></a>00108 
 <a name="l00109"></a>00109 <span class="keyword">private</span>:
 <a name="l00110"></a>00110        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;QLibrary&gt;</a> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">LibraryPtr</a>;
-<a name="l00111"></a>00111        <span class="keyword">typedef</span> std::map&lt;QString, LibraryPtr&gt; DllCacheMap;
+<a name="l00111"></a>00111        <span class="keyword">typedef</span> QMap&lt;QString, LibraryPtr&gt; DllCacheMap;
 <a name="l00112"></a>00112 
 <a name="l00113"></a>00113        DllCacheMap m_dllCacheMap;
 <a name="l00114"></a>00114 
@@ -141,15 +141,15 @@
 <a name="l00117"></a>00117               <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;icomp::CCompositePackageStaticInfo&gt;</a> staticInfoPtr;
 <a name="l00118"></a>00118               QDir directory;
 <a name="l00119"></a>00119        };
-<a name="l00123"></a>00123        <span class="keyword">typedef</span> std::map&lt;std::string, QString&gt; RealPackagesMap;
+<a name="l00123"></a>00123        <span class="keyword">typedef</span> QMap&lt;std::string, QString&gt; RealPackagesMap;
 <a name="l00124"></a>00124        RealPackagesMap m_realPackagesMap;
 <a name="l00125"></a>00125 
-<a name="l00129"></a>00129        <span class="keyword">typedef</span> std::map&lt;std::string, CompositePackageInfo&gt; CompositePackagesMap;
+<a name="l00129"></a>00129        <span class="keyword">typedef</span> QMap&lt;std::string, CompositePackageInfo&gt; CompositePackagesMap;
 <a name="l00130"></a>00130        CompositePackagesMap m_compositePackagesMap;
 <a name="l00131"></a>00131 
 <a name="l00132"></a>00132        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;icomp::IRegistry&gt;</a> RegistryPtr;
-<a name="l00133"></a>00133        <span class="keyword">typedef</span> std::map&lt;QString, RegistryPtr&gt; RegistriesMap;
-<a name="l00134"></a>00134        <span class="keyword">typedef</span> std::map&lt;const icomp::IRegistry*, QFileInfo&gt; InvRegistriesMap;
+<a name="l00133"></a>00133        <span class="keyword">typedef</span> QMap&lt;QString, RegistryPtr&gt; RegistriesMap;
+<a name="l00134"></a>00134        <span class="keyword">typedef</span> QMap&lt;const icomp::IRegistry*, QFileInfo&gt; InvRegistriesMap;
 <a name="l00135"></a>00135 
 <a name="l00136"></a>00136        <span class="keyword">mutable</span> RegistriesMap m_registriesMap;
 <a name="l00137"></a>00137        <span class="keyword">mutable</span> InvRegistriesMap m_invRegistriesMap;

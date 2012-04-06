@@ -48,7 +48,7 @@ ifpf::IMonitoringSession* CMonitoringSessionsManager::GetSession(const QString& 
 {
 	MonitoringSessionsMap::const_iterator sessionIter = m_monitorSessionsMap.find(directoryPath);
 	if (sessionIter != m_monitorSessionsMap.end()){
-		return sessionIter->second.GetPtr();
+		return sessionIter.value().GetPtr();
 	}
 
 	ifpf::CMonitoringSession* newSessionPtr = new ifpf::CMonitoringSession;
@@ -73,7 +73,7 @@ bool CMonitoringSessionsManager::Serialize(iser::IArchive& archive)
 	retVal = retVal && archive.BeginMultiTag(monitoringSessionsTag, monitoringSessionTag, sessionsCount);
 	if (archive.IsStoring()){
 		for (MonitoringSessionsMap::iterator index = m_monitorSessionsMap.begin(); index != m_monitorSessionsMap.end(); index++){
-			QString directoryPath = index->first;
+			QString directoryPath = index.key();
 
 			retVal = retVal && archive.BeginTag(monitoringSessionTag);
 		
@@ -81,7 +81,7 @@ bool CMonitoringSessionsManager::Serialize(iser::IArchive& archive)
 			retVal = retVal && archive.Process(directoryPath);
 			retVal = retVal && archive.EndTag(directoryPathTag);
 			
-			retVal = retVal && index->second->Serialize(archive);
+			retVal = retVal && index.value()->Serialize(archive);
 
 			retVal = retVal && archive.EndTag(monitoringSessionTag);		
 		}

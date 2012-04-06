@@ -31,7 +31,7 @@ namespace IprPck
 
 
 I_EXPORT_PACKAGE(
-			"IprPck",
+			"AcfSln/IprPck",
 			"Image processing package",
 			"\"Image Processing\"" IM_PROJECT("ACF-Solutions") IM_TAG("\"Image Processing\"") IM_COMPANY("ImagingTools") IM_AUTHOR("\"Witold Gantzke\" \"Kirill Lepskiy\""));
 

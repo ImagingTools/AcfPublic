@@ -15265,24 +15265,24 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::map&lt; std::string, AttrInfo &gt;</type>
+      <type>QMap&lt; std::string, AttrInfo &gt;</type>
       <name>ElementIdToAttrInfoMap</name>
       <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a02ac9cadb7545ee8a1f971159f12a274</anchor>
+      <anchor>acf46f12a4b3667f1672a914df6963f65</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::map&lt; std::string, ElementIdToAttrInfoMap &gt;</type>
+      <type>QMap&lt; std::string, ElementIdToAttrInfoMap &gt;</type>
       <name>AttrInfosMap</name>
       <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>ad90e30f05b078a0b1fdc355013d627a2</anchor>
+      <anchor>a7f05157058e511a407b86f3617aac62a</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::map&lt; icomp::CComponentAddress, istd::TOptDelPtr&lt; const icomp::IComponentStaticInfo &gt; &gt;</type>
+      <type>QMap&lt; icomp::CComponentAddress, istd::TOptDelPtr&lt; const icomp::IComponentStaticInfo &gt; &gt;</type>
       <name>AddressToInfoMap</name>
       <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a5c12996c99fd9d5e0134fb6eb4a7b87b</anchor>
+      <anchor>a6c2356df966bf08fabf429468f191868</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -16503,10 +16503,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::map&lt; icomp::CComponentAddress, IconPtr &gt;</type>
+      <type>QMap&lt; icomp::CComponentAddress, IconPtr &gt;</type>
       <name>IconMap</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a38109f79c5b13b7545cf680c0f8901ea</anchor>
+      <anchor>a716ecd018a52c7ae5e305d062b63e105</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -17038,10 +17038,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::map&lt; std::string, const icomp::IRegistry::ElementInfo * &gt;</type>
+      <type>QMap&lt; std::string, const icomp::IRegistry::ElementInfo * &gt;</type>
       <name>Elements</name>
       <anchorfile>classicmpstr_1_1_i_element_selection_info.html</anchorfile>
-      <anchor>a1a326c112231c3110e7a2eb387727fcb</anchor>
+      <anchor>a4a7379e18bb110424f4141314a7528d3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -18773,17 +18773,17 @@
       <arglist>(const std::string &amp;attributeId, int *definitionLevelPtr=NULL) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::map&lt; std::string, IComponent * &gt;</type>
+      <type>QMap&lt; std::string, IComponent * &gt;</type>
       <name>ComponentsMap</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a55408001dc6578709d04f0ee74cea35c</anchor>
+      <anchor>a09185ab68aa758bbaee0bee24ee0e471</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::map&lt; std::string, const ComponentsFactory * &gt;</type>
+      <type>QMap&lt; std::string, const ComponentsFactory * &gt;</type>
       <name>FactoriesMap</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a1fee7fc96d180238c91203a3b2a780ed</anchor>
+      <anchor>a6a3e2d7fdebc62399236c079287230a9</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -19415,17 +19415,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::map&lt; std::string, std::string &gt;</type>
+      <type>QMap&lt; std::string, std::string &gt;</type>
       <name>ExportedInterfacesMap</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>ad5f52df82b29491450fe62e147c968c1</anchor>
+      <anchor>a60829593c3db433d452a0f7470916082</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::map&lt; std::string, std::string &gt;</type>
+      <type>QMap&lt; std::string, std::string &gt;</type>
       <name>ExportedComponentsMap</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>a103e7e88208ecf8d945fd68ba3334e50</anchor>
+      <anchor>aa283fa0298b8d71b7de1347f989b0c0c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -21908,10 +21908,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::map&lt; QString, std::string &gt;</type>
+      <type>QMap&lt; QString, std::string &gt;</type>
       <name>FileToTypeMap</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a1a34891bb0395d7f9483b3e6922e32b9</anchor>
+      <anchor>a0f475260ad4256042f71dc309f56d2ca</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -31971,10 +31971,10 @@
     <name>iqt::CSystem</name>
     <filename>classiqt_1_1_c_system.html</filename>
     <member kind="typedef">
-      <type>std::map&lt; QString, QString &gt;</type>
+      <type>QMap&lt; QString, QString &gt;</type>
       <name>EnvironmentVariables</name>
       <anchorfile>classiqt_1_1_c_system.html</anchorfile>
-      <anchor>a441c2b4d9f2ff25c90d915c1ec81c355</anchor>
+      <anchor>a24fd7f9658f88455a9ce12672bcfcb43</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" static="yes">
@@ -33841,10 +33841,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::map&lt; IViewProvider *, Shapes &gt;</type>
+      <type>QMap&lt; IViewProvider *, Shapes &gt;</type>
       <name>ShapesMap</name>
       <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>a868933541356569a33fca6b0a2ae68ea</anchor>
+      <anchor>a942f3df3886c1bf51ae766b71d12df8d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -54167,25 +54167,18 @@
       <arglist>(const i2d::CRect &amp;prevArea, const i2d::CRect &amp;newArea)</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::map&lt; IShape *, i2d::CRect &gt;</type>
+      <type>QMap&lt; IShape *, i2d::CRect &gt;</type>
       <name>ShapeMap</name>
       <anchorfile>classiview_1_1_t_layer_base_ex.html</anchorfile>
-      <anchor>a1d1acfbe0f79aa5d7301af4ef04e28e7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>ShapeMap::value_type</type>
-      <name>ShapeMapElement</name>
-      <anchorfile>classiview_1_1_t_layer_base_ex.html</anchorfile>
-      <anchor>ad8a826c268da3017eae4d81e8d183bb5</anchor>
+      <anchor>a9d7cc2d8d605d166ba97859902fb98b5</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>OnChangeShapeElement</name>
       <anchorfile>classiview_1_1_t_layer_base_ex.html</anchorfile>
-      <anchor>ab3d318761a9bfb711c2800381f239b4e</anchor>
-      <arglist>(ShapeMapElement &amp;element)</arglist>
+      <anchor>a54e398b79755adc06c28bcb71a99e220</anchor>
+      <arglist>(ShapeMap::Iterator elementIter)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>

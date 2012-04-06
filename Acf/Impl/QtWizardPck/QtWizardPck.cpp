@@ -26,22 +26,14 @@
 #include "icomp/export.h"
 
 
-static struct StaticInit
-{
-	StaticInit()
-	{
-		Q_INIT_RESOURCE(iqtgui);
-	}
-
-} instance;
-
-
 namespace QtWizardPck
 {
 
 
+I_REGISTER_QT_RESOURCE(iqtgui);
+
 I_EXPORT_PACKAGE(
-			"Acf/Qt/Wizard",
+			"Acf/Qt/Gui/Wizard",
 			"Wizard UI package",
 			IM_PROJECT("ACF") IM_TAG("Qt GUI Wizard") IM_COMPANY("ImagingTools") IM_AUTHOR("\"Witold Gantzke\" \"Kirill Lepskiy\""));
 

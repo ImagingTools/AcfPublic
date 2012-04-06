@@ -25,7 +25,7 @@
 
 
 // STL includes
-#include <map>
+#include <QtCore/QMap>
 
 // ACF includes
 #include "istd/TDelPtr.h"

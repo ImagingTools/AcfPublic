@@ -23,7 +23,9 @@
 #include "CMeilhausSimpleComp.h"
 
 
+// Qt includes
 #include <QtCore/QTime>
+#include <QtCore/QMapIterator>
 
 #include "CChannelSelectionNode.h"
 
@@ -143,7 +145,7 @@ int CMeilhausSimpleComp::WaitTaskFinished(int taskId, double timeoutTime, bool k
 	if (taskId >= 0){
 		TasksList::iterator foundIter = m_activeTaskList.find(taskId);
 		if (foundIter != m_activeTaskList.end()){
-			CMeContext* contextPtr = foundIter->second;
+			CMeContext* contextPtr = foundIter.value();
 			I_ASSERT(contextPtr != NULL);
 
 			retVal = WaitSingleTaskFinished(*contextPtr, timeoutTime, killOnTimeout);
@@ -161,7 +163,7 @@ int CMeilhausSimpleComp::WaitTaskFinished(int taskId, double timeoutTime, bool k
 
 		for (		TasksList::iterator iter = m_activeTaskList.begin();
 					iter != m_activeTaskList.end();){
-			CMeContext* contextPtr = iter->second;
+			CMeContext* contextPtr = iter.value();
 			I_ASSERT(contextPtr != NULL);
 
 			int taskState = WaitSingleTaskFinished(*contextPtr, localTimeout, killOnTimeout);
@@ -194,7 +196,7 @@ void CMeilhausSimpleComp::CancelTask(int taskId)
 	if (taskId >= 0){
 		TasksList::iterator foundIter = m_activeTaskList.find(taskId);
 		if (foundIter != m_activeTaskList.end()){
-			CMeContext* contextPtr = foundIter->second;
+			CMeContext* contextPtr = foundIter.value();
 			I_ASSERT(contextPtr != NULL);
 
 			delete contextPtr;
@@ -206,7 +208,7 @@ void CMeilhausSimpleComp::CancelTask(int taskId)
 		for (		TasksList::const_iterator iter = m_activeTaskList.begin();
 					iter != m_activeTaskList.end();
 					++iter){
-			CMeContext* contextPtr = iter->second;
+			CMeContext* contextPtr = iter.value();
 			I_ASSERT(contextPtr != NULL);
 
 			delete contextPtr;
@@ -222,11 +224,11 @@ int CMeilhausSimpleComp::GetReadyTask()
 	for (		TasksList::const_iterator iter = m_activeTaskList.begin();
 				iter != m_activeTaskList.end();
 				++iter){
-		CMeContext* contextPtr = iter->second;
+		CMeContext* contextPtr = iter.value();
 		I_ASSERT(contextPtr != NULL);
 
 		if (contextPtr->IsDone()){
-			return iter->first;
+			return iter.key();
 		}
 	}
 
@@ -241,13 +243,14 @@ int CMeilhausSimpleComp::GetTaskState(int taskId) const
 	if (taskId >= 0){
 		TasksList::const_iterator foundIter = m_activeTaskList.find(taskId);
 		if (foundIter != m_activeTaskList.end()){
-			contextPtr = foundIter->second;
+			contextPtr = foundIter.value();
 		}
 	}
 	else{
-		TasksList::const_reverse_iterator lastIter = m_activeTaskList.rbegin();
-		if (lastIter != m_activeTaskList.rend()){
-			contextPtr = lastIter->second;
+		QMapIterator<int, CMeContext*> lastIter(m_activeTaskList);
+		lastIter.toBack();
+		if (lastIter.hasPrevious()){
+			contextPtr = lastIter.previous().value();
 		}
 	}
 

@@ -30,7 +30,7 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// STL includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QtCore/QString&gt;</span>
 <a name="l00009"></a>00009 
@@ -124,11 +124,11 @@
 <a name="l00134"></a>00134        <span class="keyword">template</span> &lt;<span class="keyword">class</span> AttrType&gt;
 <a name="l00135"></a>00135        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a215433dea2f120f3f505ebe4c6f948e3" title="Check if attribute type is corrected.">IsAttributeTypeCorrect</a>(<span class="keyword">const</span> std::string&amp; attributeId);
 <a name="l00136"></a>00136 
-<a name="l00137"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a55408001dc6578709d04f0ee74cea35c">00137</a>        <span class="keyword">typedef</span> std::map&lt;std::string, IComponent*&gt; <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a55408001dc6578709d04f0ee74cea35c">ComponentsMap</a>;
-<a name="l00138"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8c2d13a82ac95c1847edda42c75ceee6">00138</a>        <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a55408001dc6578709d04f0ee74cea35c">ComponentsMap</a> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8c2d13a82ac95c1847edda42c75ceee6">m_componentsMap</a>;
+<a name="l00137"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a09185ab68aa758bbaee0bee24ee0e471">00137</a>        <span class="keyword">typedef</span> QMap&lt;std::string, IComponent*&gt; <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a09185ab68aa758bbaee0bee24ee0e471">ComponentsMap</a>;
+<a name="l00138"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8c2d13a82ac95c1847edda42c75ceee6">00138</a>        <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a09185ab68aa758bbaee0bee24ee0e471">ComponentsMap</a> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8c2d13a82ac95c1847edda42c75ceee6">m_componentsMap</a>;
 <a name="l00139"></a>00139 
-<a name="l00140"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a1fee7fc96d180238c91203a3b2a780ed">00140</a>        <span class="keyword">typedef</span> std::map&lt; std::string, const ComponentsFactory* &gt; <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a1fee7fc96d180238c91203a3b2a780ed">FactoriesMap</a>;
-<a name="l00141"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#abe193a448206d9ea37ed9816d6015900">00141</a>        <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a1fee7fc96d180238c91203a3b2a780ed">FactoriesMap</a> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#abe193a448206d9ea37ed9816d6015900">m_factoriesMap</a>;
+<a name="l00140"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a6a3e2d7fdebc62399236c079287230a9">00140</a>        <span class="keyword">typedef</span> QMap&lt; std::string, const ComponentsFactory* &gt; <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a6a3e2d7fdebc62399236c079287230a9">FactoriesMap</a>;
+<a name="l00141"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#abe193a448206d9ea37ed9816d6015900">00141</a>        <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a6a3e2d7fdebc62399236c079287230a9">FactoriesMap</a> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#abe193a448206d9ea37ed9816d6015900">m_factoriesMap</a>;
 <a name="l00142"></a>00142 
 <a name="l00143"></a>00143 <span class="keyword">private</span>:
 <a name="l00144"></a>00144        <a class="code" href="classicomp_1_1_c_registry_element.html">CRegistryElement</a> m_registryElement;

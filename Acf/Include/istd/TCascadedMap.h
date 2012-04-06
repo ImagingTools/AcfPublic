@@ -26,7 +26,7 @@
 
 // STL includes
 #include <vector>
-#include <map>
+#include <QtCore/QMap>
 
 // ACF includes
 #include "istd/TIMap.h"
@@ -141,7 +141,7 @@ public:
 private:
 	const TIMap<Key, Value>* m_parentPtr;
 
-	typedef std::map<KeyType, int> IndicesMap;
+	typedef QMap<KeyType, int> IndicesMap;
 	typedef std::pair<KeyType, ValueType> Pair;
 	typedef std::vector<Pair> PairList;
 
@@ -194,7 +194,7 @@ int TCascadedMap<Key, Value>::FindLocalIndex(const KeyType& key) const
 {
 	typename IndicesMap::const_iterator iter = m_positionsMap.find(key);
 	if (iter != m_positionsMap.end()){
-		return iter->second;
+		return iter.value();
 	}
 
 	return -1;
@@ -303,7 +303,7 @@ void TCascadedMap<Key, Value>::GetLocalKeys(Keys& result, bool doAppend) const
 	for (		typename IndicesMap::const_iterator iter = m_positionsMap.begin();
 				iter != m_positionsMap.end();
 				++iter){
-		result.insert(iter->first);
+		result.insert(iter.key());
 	}
 }
 
@@ -327,7 +327,7 @@ typename TCascadedMap<Key, Value>::ValueType& TCascadedMap<Key, Value>::operator
 {
 	typename IndicesMap::const_iterator iter = m_positionsMap.find(key);
 	if (iter != m_positionsMap.end()){
-		return m_pairList[iter->second].second;
+		return m_pairList[iter.value()].second;
 	}
 
 	int newIndex = int(m_pairList.size());
@@ -351,7 +351,7 @@ int TCascadedMap<Key, Value>::FindIndex(const KeyType& key) const
 {
 	typename IndicesMap::const_iterator iter = m_positionsMap.find(key);
 	if (iter != m_positionsMap.end()){
-		return iter->second;
+		return iter.value();
 	}
 
 	if (m_parentPtr != NULL){

@@ -25,7 +25,7 @@
 
 
 // STL includes
-#include <map>
+#include <QtCore/QMap>
 
 
 // ACF includes
@@ -97,7 +97,7 @@ protected:
 
 private:
 	typedef istd::TDelPtr<ObserverProxy> ObserverProxyPtr;
-	typedef std::map<int, ObserverProxyPtr> ModelMap;
+	typedef QMap<int, ObserverProxyPtr> ModelMap;
 
 	ModelMap m_modelMap;
 };
@@ -109,8 +109,8 @@ template <class Object>
 Object* CMultiModelDispatcherBase::GetObjectAt(int modelId) const
 {
 	typename ModelMap::const_iterator foundIter = m_modelMap.find(modelId);
-	if ((foundIter != m_modelMap.end()) && foundIter->second.IsValid()){
-		return dynamic_cast<Object*>(foundIter->second->GetModelPtr());
+	if ((foundIter != m_modelMap.end()) && foundIter.value().IsValid()){
+		return dynamic_cast<Object*>(foundIter.value()->GetModelPtr());
 	}
 
 	return NULL;

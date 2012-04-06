@@ -31,7 +31,7 @@ namespace AuthorizationPck
 
 
 I_EXPORT_PACKAGE(
-			"AuthorizationPck",
+			"AcfSln/AuthorizationPck",
 			"Package for security and authorization components",
 			IM_PROJECT("ACF-Solutions") IM_COMPANY("ImagingTools") IM_TAG("Authorization") IM_AUTHOR("\"Witold Gantzke\" \"Kirill Lepskiy\""));
 

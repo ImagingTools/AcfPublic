@@ -104,7 +104,7 @@ private:
 
 	typedef istd::TDelPtr<Session> SessionPtr;
 
-	typedef std::map<int, SessionPtr> IdToSessionMap;
+	typedef QMap<int, SessionPtr> IdToSessionMap;
 	IdToSessionMap m_idToSessionMap;
 
 	SingleData m_axisXData;

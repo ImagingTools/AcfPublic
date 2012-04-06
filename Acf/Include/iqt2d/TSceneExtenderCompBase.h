@@ -58,7 +58,7 @@ public:
 
 protected:
 	typedef istd::TPointerVector<iview::IShape> Shapes;
-	typedef std::map<IViewProvider*, Shapes> ShapesMap;
+	typedef QMap<IViewProvider*, Shapes> ShapesMap;
 
 	bool IsSceneIdSupported(int id) const;
 	const ShapesMap& GetShapesMap() const;
@@ -128,7 +128,7 @@ void TSceneExtenderCompBase<Base>::RemoveItemsFromScene(IViewProvider* providerP
 		iview::IShapeView* viewPtr = providerPtr->GetView();
 
 		if (viewPtr != NULL){
-			Shapes& shapes = iter->second;
+			Shapes& shapes = iter.value();
 
 			int shapesCount = shapes.GetCount();
 			for (int i = 0; i < shapesCount; ++i){
@@ -176,7 +176,7 @@ template <class Base>
 void TSceneExtenderCompBase<Base>::UpdateAllViews()
 {
 	for (ShapesMap::iterator index = m_shapesMap.begin(); index != m_shapesMap.end(); index++){
-		IViewProvider* viewProvderPtr = index->first;
+		IViewProvider* viewProvderPtr = index.key();
 		I_ASSERT(viewProvderPtr != NULL);
 
 		iview::IShapeView* viewPtr = viewProvderPtr->GetView();

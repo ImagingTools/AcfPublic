@@ -28,7 +28,7 @@
 #include "gige_cpp/IGigEVisionAPI.h"
 
 // STL includes
-#include <map>
+#include <QtCore/QMap>
 
 // ACF includes
 #include "istd/TPointerVector.h"
@@ -212,7 +212,7 @@ private:
 
 	typedef istd::TPointerVector<DeviceInfo> DeviceInfos;
 	DeviceInfos m_deviceInfos;
-	typedef std::map<quint32, int> IpAddressToIndexMap;
+	typedef QMap<quint32, int> IpAddressToIndexMap;
 	IpAddressToIndexMap m_ipAddressToIndexMap;
 
 	// static attributes

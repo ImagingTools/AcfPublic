@@ -64,7 +64,7 @@ bool CMinimalVersionInfo::GetVersionNumber(int versionId, quint32& result) const
 {
 	Versions::const_iterator iter = m_versions.find(versionId);
 	if (m_versions.find(versionId) != m_versions.end()){
-		const Info& info = iter->second;
+		const Info& info = iter.value();
 
 		result = info.version;
 
@@ -81,7 +81,7 @@ QString CMinimalVersionInfo::GetVersionIdDescription(int versionId) const
 {
 	Versions::const_iterator iter = m_versions.find(versionId);
 	if (m_versions.find(versionId) != m_versions.end()){
-		const Info& info = iter->second;
+		const Info& info = iter.value();
 
 		return info.description;
 	}
@@ -99,7 +99,7 @@ IVersionInfo::VersionIds CMinimalVersionInfo::GetVersionIds() const
 	for (		Versions::const_iterator iter = m_versions.begin();
 				iter != m_versions.end();
 				++iter){
-		retVal.insert(iter->first);
+		retVal.insert(iter.key());
 	}
 
 	return retVal;

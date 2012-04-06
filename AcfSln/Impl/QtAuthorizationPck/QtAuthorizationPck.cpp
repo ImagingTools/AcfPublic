@@ -30,22 +30,14 @@
 #include "icomp/export.h"
 
 
-static struct StaticInit
-{
-	StaticInit()
-	{
-		Q_INIT_RESOURCE(iqtgui);
-	}
-
-} instance;
-
-
 namespace QtAuthorizationPck
 {
 
 
+I_REGISTER_QT_RESOURCE(iqtgui);
+
 I_EXPORT_PACKAGE(
-			"AcfSln/QtAuthorizationPck",
+			"AcfSln/Gui/AuthorizationPck",
 			"GUI components for authorization",
 			"GUI Qt" IM_PROJECT("ACF-Solutions") IM_TAG("Authorization") IM_COMPANY("ImagingTools") IM_AUTHOR("\"Witold Gantzke\" \"Kirill Lepskiy\""));
 

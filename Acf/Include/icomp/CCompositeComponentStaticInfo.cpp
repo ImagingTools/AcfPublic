@@ -43,7 +43,7 @@ CCompositeComponentStaticInfo::CCompositeComponentStaticInfo(
 	for (		IRegistry::ExportedInterfacesMap::const_iterator interfaceIter = interfacesMap.begin();
 				interfaceIter != interfacesMap.end();
 				++interfaceIter){
-		const std::string& interfaceName = interfaceIter->first;
+		const std::string& interfaceName = interfaceIter.key();
 
 		RegisterInterfaceExtractor(interfaceName, NULL);
 	}
@@ -53,8 +53,8 @@ CCompositeComponentStaticInfo::CCompositeComponentStaticInfo(
 	for (		IRegistry::ExportedComponentsMap::const_iterator subcomponentIter = exportedComponentsMap.begin();
 				subcomponentIter != exportedComponentsMap.end();
 				++subcomponentIter){
-		const std::string& subcomponentId = subcomponentIter->first;
-		const std::string& elementId = subcomponentIter->second;
+		const std::string& subcomponentId = subcomponentIter.key();
+		const std::string& elementId = subcomponentIter.value();
 
 		std::string baseId;
 		std::string subId;
@@ -178,7 +178,7 @@ const IComponentStaticInfo* CCompositeComponentStaticInfo::GetEmbeddedComponentI
 {
 	EmbeddedComponentInfos::iterator infoIter = m_embeddedComponentInfos.find(embeddedId);
 	if (infoIter != m_embeddedComponentInfos.end()){
-		return infoIter->second.GetPtr();
+		return infoIter.value().GetPtr();
 	}
 
 	return NULL;
@@ -215,7 +215,7 @@ const IRegistry::ElementInfo* CCompositeComponentStaticInfo::GetElementInfoFromR
 				const IRegistry::ExportedComponentsMap& exportedComponentsMap = subRegistryPtr->GetExportedComponentsMap();
 				const IRegistry::ExportedComponentsMap::const_iterator foundComponentExportIter = exportedComponentsMap.find(subId);
 				if (foundComponentExportIter != exportedComponentsMap.end()){
-					subId = foundComponentExportIter->second;
+					subId = foundComponentExportIter.value();
 				}
 		
 				return GetElementInfoFromRegistry(*subRegistryPtr, subId, manager);

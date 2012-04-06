@@ -30,7 +30,7 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// STL includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
@@ -73,8 +73,8 @@
 <a name="l00046"></a>00046        <span class="keyword">const</span> Attribute* m_defaultValuePtr;
 <a name="l00047"></a>00047        <span class="keywordtype">int</span> m_attributeFlags;
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049        <span class="keyword">typedef</span> std::map&lt;std::string, int&gt; IdsToFlagsMap;
-<a name="l00050"></a>00050        <span class="keyword">typedef</span> std::map&lt;int, IdsToFlagsMap&gt; RelatedIdsMap;
+<a name="l00049"></a>00049        <span class="keyword">typedef</span> QMap&lt;std::string, int&gt; IdsToFlagsMap;
+<a name="l00050"></a>00050        <span class="keyword">typedef</span> QMap&lt;int, IdsToFlagsMap&gt; RelatedIdsMap;
 <a name="l00051"></a>00051        RelatedIdsMap m_relatedInterfacesMap;
 <a name="l00052"></a>00052 };
 <a name="l00053"></a>00053 
@@ -118,10 +118,10 @@
 <a name="l00091"></a>00091 
 <a name="l00092"></a>00092        IdsToFlagsMap::iterator foundIter = groupMap.find(<span class="keywordtype">id</span>);
 <a name="l00093"></a>00093        <span class="keywordflow">if</span> (foundIter != groupMap.end()){
-<a name="l00094"></a>00094               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>((flags &amp; (AF_REFERENCE | AF_FACTORY)) == (foundIter-&gt;second &amp; (AF_REFERENCE | AF_FACTORY)));    <span class="comment">// factory can be combined with factory only and reference with reference</span>
+<a name="l00094"></a>00094               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>((flags &amp; (AF_REFERENCE | AF_FACTORY)) == (foundIter.value() &amp; (AF_REFERENCE | AF_FACTORY)));    <span class="comment">// factory can be combined with factory only and reference with reference</span>
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096               foundIter-&gt;second |= flags &amp; AF_OBLIGATORY;      <span class="comment">// is obligatory if once obligatory registred is</span>
-<a name="l00097"></a>00097               foundIter-&gt;second &amp;= flags | ~AF_NULLABLE;       <span class="comment">// is nullable if always nullable registred is</span>
+<a name="l00096"></a>00096               foundIter.value() |= flags &amp; AF_OBLIGATORY;      <span class="comment">// is obligatory if once obligatory registred is</span>
+<a name="l00097"></a>00097               foundIter.value() &amp;= flags | ~AF_NULLABLE;       <span class="comment">// is nullable if always nullable registred is</span>
 <a name="l00098"></a>00098        }
 <a name="l00099"></a>00099        <span class="keywordflow">else</span>{
 <a name="l00100"></a>00100               groupMap[id] = flags;
@@ -164,13 +164,13 @@
 <a name="l00137"></a>00137 
 <a name="l00138"></a>00138        RelatedIdsMap::const_iterator foundGroupIter = m_relatedInterfacesMap.find(metaGroupId);
 <a name="l00139"></a>00139        <span class="keywordflow">if</span> (foundGroupIter != m_relatedInterfacesMap.end()){
-<a name="l00140"></a>00140               <span class="keyword">const</span> IdsToFlagsMap&amp; groupMap = foundGroupIter-&gt;second;
+<a name="l00140"></a>00140               <span class="keyword">const</span> IdsToFlagsMap&amp; groupMap = foundGroupIter.value();
 <a name="l00141"></a>00141 
 <a name="l00142"></a>00142               <span class="keywordflow">for</span> (         IdsToFlagsMap::const_iterator iter = groupMap.begin();
 <a name="l00143"></a>00143                                    iter != groupMap.end();
 <a name="l00144"></a>00144                                    ++iter){
-<a name="l00145"></a>00145                                           <span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span> = iter-&gt;first;
-<a name="l00146"></a>00146                      <span class="keywordtype">int</span> idFlags = iter-&gt;second;
+<a name="l00145"></a>00145                                           <span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span> = iter.key();
+<a name="l00146"></a>00146                      <span class="keywordtype">int</span> idFlags = iter.value();
 <a name="l00147"></a>00147 
 <a name="l00148"></a>00148                      <span class="keywordflow">if</span> (((idFlags &amp; flagsMask) == flags)){
 <a name="l00149"></a>00149                             retVal.insert(<span class="keywordtype">id</span>);

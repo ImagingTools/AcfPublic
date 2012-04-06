@@ -25,7 +25,7 @@
 
 
 // STL includes
-#include <map>
+#include <QtCore/QMap>
 
 // Qt includes
 #include <QtCore/QString>
@@ -41,7 +41,7 @@ namespace iqt
 class CSystem
 {
 public:
-	typedef std::map<QString, QString> EnvironmentVariables;
+	typedef QMap<QString, QString> EnvironmentVariables;
 
 	// static members
 	/**

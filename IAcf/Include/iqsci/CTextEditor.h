@@ -80,7 +80,7 @@ Q_SIGNALS:
 	void DataChanged();
 
 private:
-	typedef std::map<QString, QsciLexer*> LexerMap;
+	typedef QMap<QString, QsciLexer*> LexerMap;
 
 	LexerMap m_languages;
 

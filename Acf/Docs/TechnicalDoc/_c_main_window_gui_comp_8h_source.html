@@ -106,7 +106,7 @@
 <a name="l00082"></a>00082        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aeb833c20c7891c6c2c50a93efccb6b05">OnNewDocument</a>(<span class="keyword">const</span> std::string&amp; documentTypeId);
 <a name="l00083"></a>00083 
 <a name="l00084"></a>00084        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a7c304a1c1ca137a258362013f3ac4149">SerializeRecentFileList</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00085"></a>00085        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#af632bfbdaffa3ee16b6beefecf32f0ee">UpdateRecentFileList</a>(<span class="keyword">const</span> <a class="code" href="classidoc_1_1_i_document_manager.html#a1a34891bb0395d7f9483b3e6922e32b9" title="Map from file path to ducument type ID&#39;s.">idoc::IDocumentManager::FileToTypeMap</a>&amp; fileToTypeMap);
+<a name="l00085"></a>00085        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#af632bfbdaffa3ee16b6beefecf32f0ee">UpdateRecentFileList</a>(<span class="keyword">const</span> <a class="code" href="classidoc_1_1_i_document_manager.html#a0f475260ad4256042f71dc309f56d2ca" title="Map from file path to ducument type ID&#39;s.">idoc::IDocumentManager::FileToTypeMap</a>&amp; fileToTypeMap);
 <a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a641b65bb51bb2f5237758abf89c64f68">RemoveFromRecentFileList</a>(<span class="keyword">const</span> QString&amp; filePath);
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088        <span class="comment">// reimplemented (iqtgui::CSimpleMainWindowGuiComp)</span>
@@ -229,7 +229,7 @@
 <a name="l00205"></a>00205        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_openDocumentFolderCommand;
 <a name="l00206"></a>00206 
 <a name="l00207"></a>00207        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;iqtgui::CHierarchicalCommand&gt;</a> RecentGroupCommandPtr;
-<a name="l00208"></a>00208        <span class="keyword">typedef</span> std::map&lt;std::string, RecentGroupCommandPtr&gt; RecentFilesMap;
+<a name="l00208"></a>00208        <span class="keyword">typedef</span> QMap&lt;std::string, RecentGroupCommandPtr&gt; RecentFilesMap;
 <a name="l00209"></a>00209        RecentFilesMap m_recentFilesMap;
 <a name="l00210"></a>00210 
 <a name="l00211"></a>00211        I_REF(<a class="code" href="classibase_1_1_i_application_info.html" title="This interface provides some information about the application.">ibase::IApplicationInfo</a>, m_applicationInfoCompPtr);

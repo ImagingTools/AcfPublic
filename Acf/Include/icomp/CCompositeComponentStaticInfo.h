@@ -25,7 +25,7 @@
 
 
 // STL includes
-#include <map>
+#include <QtCore/QMap>
 
 
 // ACF includes
@@ -90,11 +90,11 @@ protected:
 
 private:
 	typedef istd::TDelPtr<IAttributeStaticInfo> AttrMetaInfoPtr;
-	typedef std::map<const IAttributeStaticInfo*, AttrMetaInfoPtr> AttrReplacers;
+	typedef QMap<const IAttributeStaticInfo*, AttrMetaInfoPtr> AttrReplacers;
 	AttrReplacers m_attrReplacers;
 
 	typedef istd::TDelPtr<icomp::CCompositeComponentStaticInfo> ComponentInfoPtr;
-	typedef std::map<std::string, ComponentInfoPtr> EmbeddedComponentInfos;
+	typedef QMap<std::string, ComponentInfoPtr> EmbeddedComponentInfos;
 	mutable EmbeddedComponentInfos m_embeddedComponentInfos;
 
 	QString m_description;

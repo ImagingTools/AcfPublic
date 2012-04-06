@@ -89,7 +89,7 @@
 <a name="l00071"></a>00071        BaseClass2::ComponentsMap::const_iterator iter = BaseClass2::m_componentsMap.find(componentId);
 <a name="l00072"></a>00072 
 <a name="l00073"></a>00073        <span class="keywordflow">if</span> (iter != BaseClass2::m_componentsMap.end()){
-<a name="l00074"></a>00074               <span class="keywordflow">return</span> iter-&gt;second;
+<a name="l00074"></a>00074               <span class="keywordflow">return</span> iter.value();
 <a name="l00075"></a>00075        }
 <a name="l00076"></a>00076 
 <a name="l00077"></a>00077        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
@@ -108,9 +108,9 @@
 <a name="l00090"></a>00090 <span class="keyword"></span>{
 <a name="l00091"></a>00091        FactoriesMap::const_iterator iter = m_factoriesMap.find(componentId);
 <a name="l00092"></a>00092        <span class="keywordflow">if</span> (iter != m_factoriesMap.end()){
-<a name="l00093"></a>00093               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(iter-&gt;second != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00093"></a>00093               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(iter.value() != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00094"></a>00094 
-<a name="l00095"></a>00095               <span class="keywordflow">return</span> iter-&gt;second-&gt;CreateInstance();
+<a name="l00095"></a>00095               <span class="keywordflow">return</span> iter.value()-&gt;CreateInstance();
 <a name="l00096"></a>00096        }
 <a name="l00097"></a>00097 
 <a name="l00098"></a>00098        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;

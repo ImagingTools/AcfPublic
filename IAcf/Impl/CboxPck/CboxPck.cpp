@@ -31,7 +31,7 @@ namespace CboxPck
 
 
 I_EXPORT_PACKAGE(
-			"Cbox",
+			"Iacf/Cbox",
 			"Package based on Crypto Box library CBIOS",
 			"Crypto Box Dongle" IM_PROJECT("ACF-Solutions") IM_COMPANY("ImagingTools") IM_AUTHOR("\"Witold Gantzke\" \"Kirill Lepskiy\""));
 

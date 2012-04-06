@@ -95,7 +95,7 @@ private:
 		istd::TSmartPtr<iqt::CBitmap> fileBitmapPtr;
 	};
 
-	typedef std::map<QString, FileInfo> PreviewCache;
+	typedef QMap<QString, FileInfo> PreviewCache;
 
 	mutable PreviewCache m_previewCache;
 };

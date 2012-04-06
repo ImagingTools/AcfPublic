@@ -79,12 +79,12 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">Ids</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr</a><br class="typebreak"/>
 &lt; <a class="el" href="classicomp_1_1_i_registry_element.html">IRegistryElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a9990a41d29aa4f1eaf0f719b546e1031">ElementPtr</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, <br class="typebreak"/>
-std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#ad5f52df82b29491450fe62e147c968c1">ExportedInterfacesMap</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map assigning interface ID (undecorated) to component ID exporting this interface.  <a href="#ad5f52df82b29491450fe62e147c968c1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, <br class="typebreak"/>
-std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a103e7e88208ecf8d945fd68ba3334e50">ExportedComponentsMap</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map assigning exported sub-component names to internal subcomponent ID's.  <a href="#a103e7e88208ecf8d945fd68ba3334e50"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; std::string, <br class="typebreak"/>
+std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a60829593c3db433d452a0f7470916082">ExportedInterfacesMap</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map assigning interface ID (undecorated) to component ID exporting this interface.  <a href="#a60829593c3db433d452a0f7470916082"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; std::string, <br class="typebreak"/>
+std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#aa283fa0298b8d71b7de1347f989b0c0c">ExportedComponentsMap</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map assigning exported sub-component names to internal subcomponent ID's.  <a href="#aa283fa0298b8d71b7de1347f989b0c0c"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#adb5a8799173714fa43a51830334cf6f8">GetElementIds</a> () const =0</td></tr>
@@ -108,10 +108,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a996586212f5891dbb265929caee78c52">RenameEmbeddedRegistry</a> (const std::string &amp;oldRegistryId, const std::string &amp;newRegistryId)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename a embedded registry.  <a href="#a996586212f5891dbb265929caee78c52"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classicomp_1_1_i_registry.html#ad5f52df82b29491450fe62e147c968c1">ExportedInterfacesMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a0de57529293ec2ac09705d4572e0d699">GetExportedInterfacesMap</a> () const =0</td></tr>
+<a class="el" href="classicomp_1_1_i_registry.html#a60829593c3db433d452a0f7470916082">ExportedInterfacesMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a0de57529293ec2ac09705d4572e0d699">GetExportedInterfacesMap</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to information structure of exported interfaces.  <a href="#a0de57529293ec2ac09705d4572e0d699"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classicomp_1_1_i_registry.html#a103e7e88208ecf8d945fd68ba3334e50">ExportedComponentsMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#aebcebe3775a74fba1d616527e8219a0b">GetExportedComponentsMap</a> () const =0</td></tr>
+<a class="el" href="classicomp_1_1_i_registry.html#aa283fa0298b8d71b7de1347f989b0c0c">ExportedComponentsMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#aebcebe3775a74fba1d616527e8219a0b">GetExportedComponentsMap</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to map used to convert exported sub-components to internal sub-component ID's.  <a href="#aebcebe3775a74fba1d616527e8219a0b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#ac37f5352329264b81afd5d44b21791d4">SetElementInterfaceExported</a> (const std::string &amp;elementId, const std::string &amp;interfaceName, bool state=true)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable exporting single or all interfaces of component.  <a href="#ac37f5352329264b81afd5d44b21791d4"></a><br/></td></tr>
@@ -147,12 +147,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a103e7e88208ecf8d945fd68ba3334e50"></a><!-- doxytag: member="icomp::IRegistry::ExportedComponentsMap" ref="a103e7e88208ecf8d945fd68ba3334e50" args="" -->
+<a class="anchor" id="aa283fa0298b8d71b7de1347f989b0c0c"></a><!-- doxytag: member="icomp::IRegistry::ExportedComponentsMap" ref="aa283fa0298b8d71b7de1347f989b0c0c" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::map&lt;std::string, std::string&gt; <a class="el" href="classicomp_1_1_i_registry.html#a103e7e88208ecf8d945fd68ba3334e50">icomp::IRegistry::ExportedComponentsMap</a></td>
+          <td class="memname">typedef QMap&lt;std::string, std::string&gt; <a class="el" href="classicomp_1_1_i_registry.html#aa283fa0298b8d71b7de1347f989b0c0c">icomp::IRegistry::ExportedComponentsMap</a></td>
         </tr>
       </table>
 </div>
@@ -164,12 +164,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad5f52df82b29491450fe62e147c968c1"></a><!-- doxytag: member="icomp::IRegistry::ExportedInterfacesMap" ref="ad5f52df82b29491450fe62e147c968c1" args="" -->
+<a class="anchor" id="a60829593c3db433d452a0f7470916082"></a><!-- doxytag: member="icomp::IRegistry::ExportedInterfacesMap" ref="a60829593c3db433d452a0f7470916082" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::map&lt;std::string, std::string&gt; <a class="el" href="classicomp_1_1_i_registry.html#ad5f52df82b29491450fe62e147c968c1">icomp::IRegistry::ExportedInterfacesMap</a></td>
+          <td class="memname">typedef QMap&lt;std::string, std::string&gt; <a class="el" href="classicomp_1_1_i_registry.html#a60829593c3db433d452a0f7470916082">icomp::IRegistry::ExportedInterfacesMap</a></td>
         </tr>
       </table>
 </div>
@@ -341,7 +341,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_registry.html#a103e7e88208ecf8d945fd68ba3334e50">ExportedComponentsMap</a>&amp; icomp::IRegistry::GetExportedComponentsMap </td>
+          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_registry.html#aa283fa0298b8d71b7de1347f989b0c0c">ExportedComponentsMap</a>&amp; icomp::IRegistry::GetExportedComponentsMap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -361,7 +361,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_registry.html#ad5f52df82b29491450fe62e147c968c1">ExportedInterfacesMap</a>&amp; icomp::IRegistry::GetExportedInterfacesMap </td>
+          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_registry.html#a60829593c3db433d452a0f7470916082">ExportedInterfacesMap</a>&amp; icomp::IRegistry::GetExportedInterfacesMap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>

@@ -25,7 +25,7 @@
 
 
 // STL includes
-#include <map>
+#include <QtCore/QMap>
 
 // Qt includes
 #include <QtCore/QDir>
@@ -59,7 +59,7 @@ public:
 	virtual QString GetComponentInfoPath(const icomp::CComponentAddress& address) const;
 
 private:
-	typedef std::map<std::string, QDir> PackageInfosMap;
+	typedef QMap<std::string, QDir> PackageInfosMap;
 	PackageInfosMap m_packageInfosMap;
 };
 

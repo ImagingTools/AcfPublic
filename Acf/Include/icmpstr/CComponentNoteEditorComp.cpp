@@ -62,7 +62,7 @@ void CComponentNoteEditorComp::UpdateGui(int /*updateFlags*/)
 					index != elements.end();
 					index++){
 
-			QString noteText = componentNoteControllerPtr->GetComponentNote(index->first);
+			QString noteText = componentNoteControllerPtr->GetComponentNote(index.key());
 			if (!noteText.isEmpty()){
 				notes.push_back(noteText);
 			}
@@ -90,7 +90,7 @@ void CComponentNoteEditorComp::UpdateModel()
 		if (elements.size() == 1){
 			QString currentNote = NoteEditor->toPlainText();
 
-			componentNoteControllerPtr->SetComponentNote(elements.begin()->first, currentNote);
+			componentNoteControllerPtr->SetComponentNote(elements.begin().key(), currentNote);
 		}
 	}
 }

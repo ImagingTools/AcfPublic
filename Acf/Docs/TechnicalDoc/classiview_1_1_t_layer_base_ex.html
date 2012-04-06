@@ -67,13 +67,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base_ex.html#a8f685cac03a045ed8efbaefdd98fdc27">OnAreaInvalidated</a> (const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;prevArea, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;newArea)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="classiview_1_1_i_shape.html">IShape</a> <br class="typebreak"/>
-*, <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base_ex.html#a1d1acfbe0f79aa5d7301af4ef04e28e7">ShapeMap</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef ShapeMap::value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base_ex.html#ad8a826c268da3017eae4d81e8d183bb5">ShapeMapElement</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; <a class="el" href="classiview_1_1_i_shape.html">IShape</a> <br class="typebreak"/>
+*, <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base_ex.html#a9d7cc2d8d605d166ba97859902fb98b5">ShapeMap</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base_ex.html#ab3d318761a9bfb711c2800381f239b4e">OnChangeShapeElement</a> (<a class="el" href="classiview_1_1_t_layer_base_ex.html#ad8a826c268da3017eae4d81e8d183bb5">ShapeMapElement</a> &amp;element)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base_ex.html#a34ee3b9bf877e2b4b459f17e80d51ec5">DisconnectShapeElement</a> (<a class="el" href="classiview_1_1_t_layer_base_ex.html#a1d1acfbe0f79aa5d7301af4ef04e28e7">ShapeMap</a> &amp;map, ShapeMap::iterator iter)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base_ex.html#a54e398b79755adc06c28bcb71a99e220">OnChangeShapeElement</a> (ShapeMap::Iterator elementIter)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base_ex.html#a34ee3b9bf877e2b4b459f17e80d51ec5">DisconnectShapeElement</a> (<a class="el" href="classiview_1_1_t_layer_base_ex.html#a9d7cc2d8d605d166ba97859902fb98b5">ShapeMap</a> &amp;map, ShapeMap::iterator iter)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base_ex.html#abc9248b3abe85f08ef3091fcfeb00d0c">InvalidateBoundingBox</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base_ex.html#afc4531b6c45c706182658bfa4adeaf84">GetBoundingBoxRef</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_layer_base_ex.html#af0a40fc37204f17c645d2612ad1034e1">SetBoundingBoxValid</a> () const </td></tr>
@@ -109,37 +108,20 @@ template&lt;class Layer, class View = IShapeView&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a1d1acfbe0f79aa5d7301af4ef04e28e7"></a><!-- doxytag: member="iview::TLayerBaseEx::ShapeMap" ref="a1d1acfbe0f79aa5d7301af4ef04e28e7" args="" -->
+<a class="anchor" id="a9d7cc2d8d605d166ba97859902fb98b5"></a><!-- doxytag: member="iview::TLayerBaseEx::ShapeMap" ref="a9d7cc2d8d605d166ba97859902fb98b5" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Layer, class View = IShapeView&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::map&lt;<a class="el" href="classiview_1_1_i_shape.html">IShape</a>*, <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a>&gt; <a class="el" href="classiview_1_1_t_layer_base_ex.html">iview::TLayerBaseEx</a>&lt; Layer, View &gt;::<a class="el" href="classiview_1_1_t_layer_base_ex.html#a1d1acfbe0f79aa5d7301af4ef04e28e7">ShapeMap</a><code> [protected]</code></td>
+          <td class="memname">typedef QMap&lt;<a class="el" href="classiview_1_1_i_shape.html">IShape</a>*, <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a>&gt; <a class="el" href="classiview_1_1_t_layer_base_ex.html">iview::TLayerBaseEx</a>&lt; Layer, View &gt;::<a class="el" href="classiview_1_1_t_layer_base_ex.html#a9d7cc2d8d605d166ba97859902fb98b5">ShapeMap</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00038">38</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad8a826c268da3017eae4d81e8d183bb5"></a><!-- doxytag: member="iview::TLayerBaseEx::ShapeMapElement" ref="ad8a826c268da3017eae4d81e8d183bb5" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Layer, class View = IShapeView&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef ShapeMap::value_type <a class="el" href="classiview_1_1_t_layer_base_ex.html">iview::TLayerBaseEx</a>&lt; Layer, View &gt;::<a class="el" href="classiview_1_1_t_layer_base_ex.html#ad8a826c268da3017eae4d81e8d183bb5">ShapeMapElement</a><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00039">39</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
 
 </div>
 </div>
@@ -160,7 +142,7 @@ template&lt;class Layer , class View &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00069">69</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00068">68</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
 
 </div>
 </div>
@@ -195,7 +177,7 @@ template&lt;class Layer , class View &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classiview_1_1_t_layer_base_ex.html">iview::TLayerBaseEx</a>&lt; Layer, View &gt;::DisconnectShapeElement </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiview_1_1_t_layer_base_ex.html#a1d1acfbe0f79aa5d7301af4ef04e28e7">ShapeMap</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classiview_1_1_t_layer_base_ex.html#a9d7cc2d8d605d166ba97859902fb98b5">ShapeMap</a> &amp;&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
@@ -213,7 +195,7 @@ template&lt;class Layer , class View &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00142">142</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00144">144</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
 
 <p>References <a class="el" href="_c_rect_8h_source.html#l00597">i2d::CRect::GetEmpty()</a>, and <a class="el" href="classiview_1_1_i_visualizable.html#a79013785ca34836be5a4b202ffcb32b8">iview::IVisualizable::OnDisconnectDisplay()</a>.</p>
 
@@ -235,7 +217,7 @@ template&lt;class Layer , class View &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00089">89</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00088">88</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
 
 </div>
 </div>
@@ -255,7 +237,7 @@ template&lt;class Layer , class View &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00162">162</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00164">164</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
 
 </div>
 </div>
@@ -275,7 +257,7 @@ template&lt;class Layer , class View &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00155">155</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00157">157</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
 
 </div>
 </div>
@@ -308,13 +290,13 @@ template&lt;class Layer , class View &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_t_layer_base.html#a7f2387b5687dd5e29ff110542d6aee81">iview::TLayerBase&lt; Layer, View &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00102">102</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00101">101</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
 
 <p>References <a class="el" href="_c_rect_8h_source.html#l00318">i2d::CRect::GetBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00283">i2d::CRect::GetLeft()</a>, <a class="el" href="_c_rect_8h_source.html#l00306">i2d::CRect::GetRight()</a>, <a class="el" href="_c_rect_8h_source.html#l00294">i2d::CRect::GetTop()</a>, <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="_c_rect_8h_source.html#l00368">i2d::CRect::IsEmpty()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab3d318761a9bfb711c2800381f239b4e"></a><!-- doxytag: member="iview::TLayerBaseEx::OnChangeShapeElement" ref="ab3d318761a9bfb711c2800381f239b4e" args="(ShapeMapElement &amp;element)" -->
+<a class="anchor" id="a54e398b79755adc06c28bcb71a99e220"></a><!-- doxytag: member="iview::TLayerBaseEx::OnChangeShapeElement" ref="a54e398b79755adc06c28bcb71a99e220" args="(ShapeMap::Iterator elementIter)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -323,17 +305,17 @@ template&lt;class Layer , class View &gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classiview_1_1_t_layer_base_ex.html">iview::TLayerBaseEx</a>&lt; Layer, View &gt;::OnChangeShapeElement </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiview_1_1_t_layer_base_ex.html#ad8a826c268da3017eae4d81e8d183bb5">ShapeMapElement</a> &amp;&#160;</td>
-          <td class="paramname"><em>element</em></td><td>)</td>
+          <td class="paramtype">ShapeMap::Iterator&#160;</td>
+          <td class="paramname"><em>elementIter</em></td><td>)</td>
           <td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00127">127</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00126">126</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
+<p>References <a class="el" href="classiview_1_1_i_shape.html#a3c683e05c0c2ca46e9ce3a9d2b67a199">iview::IShape::GetBoundingBox()</a>, <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
 </div>
 </div>
@@ -353,7 +335,7 @@ template&lt;class Layer , class View &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00169">169</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00171">171</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
 
 </div>
 </div>
@@ -376,7 +358,7 @@ template&lt;class Layer , class View &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_t_layer_base.html#a9c1e62a36f15b48f5cd936953c03dafc">iview::TLayerBase&lt; Layer, View &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00079">79</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_layer_base_ex_8h_source.html#l00078">78</a> of file <a class="el" href="_t_layer_base_ex_8h_source.html">TLayerBaseEx.h</a>.</p>
 
 </div>
 </div>

@@ -141,7 +141,7 @@ QString CSystem::FindVariableValue(const QString& varName)
 
 	EnvironmentVariables::const_iterator foundVarIter = environmentVariables.find(varName.toUpper());
 	if (foundVarIter != environmentVariables.end()){
-		return foundVarIter->second;
+		return foundVarIter.value();
 	}
 
 	return QString();

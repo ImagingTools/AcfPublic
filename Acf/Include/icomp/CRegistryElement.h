@@ -25,7 +25,7 @@
 
 
 // STL includes
-#include <map>
+#include <QtCore/QMap>
 #include <string>
 
 
@@ -62,7 +62,7 @@ public:
 private:
 	quint32 m_elementFlags;
 
-	typedef std::map< std::string, AttributeInfo> AttributeInfoMap;
+	typedef QMap< std::string, AttributeInfo> AttributeInfoMap;
 	AttributeInfoMap m_attributeInfos;
 };
 

@@ -32,7 +32,7 @@
 <a name="l00005"></a>00005 <span class="comment">// STL includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00007"></a>00007 <span class="preprocessor">#include &lt;set&gt;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="comment">// ACF includes</span>
@@ -69,9 +69,9 @@
 <a name="l00055"></a><a class="code" href="structicomp_1_1_i_registry_1_1_element_info.html#a10759c47fab9c6d2f1dcce3fe764f34d">00055</a>               <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a> <a class="code" href="structicomp_1_1_i_registry_1_1_element_info.html#a10759c47fab9c6d2f1dcce3fe764f34d" title="Address of component used to create its instance.">address</a>;  
 <a name="l00056"></a>00056        };
 <a name="l00057"></a>00057 
-<a name="l00061"></a><a class="code" href="classicomp_1_1_i_registry.html#ad5f52df82b29491450fe62e147c968c1">00061</a>        <span class="keyword">typedef</span> std::map&lt;std::string, std::string&gt; <a class="code" href="classicomp_1_1_i_registry.html#ad5f52df82b29491450fe62e147c968c1" title="Map assigning interface ID (undecorated) to component ID exporting this interface.">ExportedInterfacesMap</a>;
+<a name="l00061"></a><a class="code" href="classicomp_1_1_i_registry.html#a60829593c3db433d452a0f7470916082">00061</a>        <span class="keyword">typedef</span> QMap&lt;std::string, std::string&gt; <a class="code" href="classicomp_1_1_i_registry.html#a60829593c3db433d452a0f7470916082" title="Map assigning interface ID (undecorated) to component ID exporting this interface.">ExportedInterfacesMap</a>;
 <a name="l00062"></a>00062 
-<a name="l00066"></a><a class="code" href="classicomp_1_1_i_registry.html#a103e7e88208ecf8d945fd68ba3334e50">00066</a>        <span class="keyword">typedef</span> std::map&lt;std::string, std::string&gt; <a class="code" href="classicomp_1_1_i_registry.html#a103e7e88208ecf8d945fd68ba3334e50" title="Map assigning exported sub-component names to internal subcomponent ID&#39;s.">ExportedComponentsMap</a>;
+<a name="l00066"></a><a class="code" href="classicomp_1_1_i_registry.html#aa283fa0298b8d71b7de1347f989b0c0c">00066</a>        <span class="keyword">typedef</span> QMap&lt;std::string, std::string&gt; <a class="code" href="classicomp_1_1_i_registry.html#aa283fa0298b8d71b7de1347f989b0c0c" title="Map assigning exported sub-component names to internal subcomponent ID&#39;s.">ExportedComponentsMap</a>;
 <a name="l00067"></a>00067 
 <a name="l00071"></a>00071        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">Ids</a> <a class="code" href="classicomp_1_1_i_registry.html#adb5a8799173714fa43a51830334cf6f8" title="Get ID list of existing elements.">GetElementIds</a>() <span class="keyword">const</span> = 0;
 <a name="l00072"></a>00072 
@@ -96,9 +96,9 @@
 <a name="l00125"></a>00125 
 <a name="l00131"></a>00131        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_i_registry.html#a996586212f5891dbb265929caee78c52" title="Rename a embedded registry.">RenameEmbeddedRegistry</a>(<span class="keyword">const</span> std::string&amp; oldRegistryId, <span class="keyword">const</span> std::string&amp; newRegistryId) = 0;
 <a name="l00132"></a>00132 
-<a name="l00136"></a>00136        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html#ad5f52df82b29491450fe62e147c968c1" title="Map assigning interface ID (undecorated) to component ID exporting this interface.">ExportedInterfacesMap</a>&amp; <a class="code" href="classicomp_1_1_i_registry.html#a0de57529293ec2ac09705d4572e0d699" title="Get access to information structure of exported interfaces.">GetExportedInterfacesMap</a>() <span class="keyword">const</span> = 0;
+<a name="l00136"></a>00136        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html#a60829593c3db433d452a0f7470916082" title="Map assigning interface ID (undecorated) to component ID exporting this interface.">ExportedInterfacesMap</a>&amp; <a class="code" href="classicomp_1_1_i_registry.html#a0de57529293ec2ac09705d4572e0d699" title="Get access to information structure of exported interfaces.">GetExportedInterfacesMap</a>() <span class="keyword">const</span> = 0;
 <a name="l00137"></a>00137 
-<a name="l00141"></a>00141        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html#a103e7e88208ecf8d945fd68ba3334e50" title="Map assigning exported sub-component names to internal subcomponent ID&#39;s.">ExportedComponentsMap</a>&amp; <a class="code" href="classicomp_1_1_i_registry.html#aebcebe3775a74fba1d616527e8219a0b" title="Get access to map used to convert exported sub-components to internal sub-component ID&#39;s...">GetExportedComponentsMap</a>() <span class="keyword">const</span> = 0;
+<a name="l00141"></a>00141        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html#aa283fa0298b8d71b7de1347f989b0c0c" title="Map assigning exported sub-component names to internal subcomponent ID&#39;s.">ExportedComponentsMap</a>&amp; <a class="code" href="classicomp_1_1_i_registry.html#aebcebe3775a74fba1d616527e8219a0b" title="Get access to map used to convert exported sub-components to internal sub-component ID&#39;s...">GetExportedComponentsMap</a>() <span class="keyword">const</span> = 0;
 <a name="l00142"></a>00142 
 <a name="l00149"></a>00149        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_i_registry.html#ac37f5352329264b81afd5d44b21791d4" title="Enable or disable exporting single or all interfaces of component.">SetElementInterfaceExported</a>(
 <a name="l00150"></a>00150                             <span class="keyword">const</span> std::string&amp; elementId,

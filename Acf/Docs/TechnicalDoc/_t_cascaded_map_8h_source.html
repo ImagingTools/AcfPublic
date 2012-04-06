@@ -31,7 +31,7 @@
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// STL includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;vector&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_t_i_map_8h.html">istd/TIMap.h</a>&quot;</span>
@@ -89,7 +89,7 @@
 <a name="l00119"></a>00119 <span class="keyword">private</span>:
 <a name="l00120"></a>00120        <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html">TIMap&lt;Key, Value&gt;</a>* m_parentPtr;
 <a name="l00121"></a>00121 
-<a name="l00122"></a>00122        <span class="keyword">typedef</span> std::map&lt;KeyType, int&gt; IndicesMap;
+<a name="l00122"></a>00122        <span class="keyword">typedef</span> QMap&lt;KeyType, int&gt; IndicesMap;
 <a name="l00123"></a>00123        <span class="keyword">typedef</span> std::pair&lt;KeyType, ValueType&gt; Pair;
 <a name="l00124"></a>00124        <span class="keyword">typedef</span> std::vector&lt;Pair&gt; PairList;
 <a name="l00125"></a>00125 
@@ -138,11 +138,11 @@
 <a name="l00168"></a>00168 
 <a name="l00169"></a>00169 
 <a name="l00170"></a>00170 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> Value&gt;
-<a name="l00171"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#ae5e8758c30586d1c8c451d311800dbb0">00171</a> <span class="keywordtype">int</span> <a class="code" href="classistd_1_1_t_cascaded_map.html#ae5e8758c30586d1c8c451d311800dbb0" title="Find index index of specified key using local context only.">TCascadedMap&lt;Key, Value&gt;::FindLocalIndex</a>(<span class="keyword">const</span> KeyType&amp; key)<span class="keyword"> const</span>
+<a name="l00171"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#ae5e8758c30586d1c8c451d311800dbb0">00171</a> <span class="keywordtype">int</span> <a class="code" href="classistd_1_1_t_cascaded_map.html#ae5e8758c30586d1c8c451d311800dbb0" title="Find index index of specified key using local context only.">TCascadedMap&lt;Key, Value&gt;::FindLocalIndex</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a>&amp; key)<span class="keyword"> const</span>
 <a name="l00172"></a>00172 <span class="keyword"></span>{
 <a name="l00173"></a>00173        <span class="keyword">typename</span> IndicesMap::const_iterator iter = m_positionsMap.find(key);
 <a name="l00174"></a>00174        <span class="keywordflow">if</span> (iter != m_positionsMap.end()){
-<a name="l00175"></a>00175               <span class="keywordflow">return</span> iter-&gt;second;
+<a name="l00175"></a>00175               <span class="keywordflow">return</span> iter.value();
 <a name="l00176"></a>00176        }
 <a name="l00177"></a>00177 
 <a name="l00178"></a>00178        <span class="keywordflow">return</span> -1;
@@ -150,7 +150,7 @@
 <a name="l00180"></a>00180 
 <a name="l00181"></a>00181 
 <a name="l00182"></a>00182 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> Value&gt;
-<a name="l00183"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#afecf778aa47c65a58114f801cf4f957a">00183</a> <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">TCascadedMap&lt;Key, Value&gt;::ValueType</a>* <a class="code" href="classistd_1_1_t_cascaded_map.html#afecf778aa47c65a58114f801cf4f957a" title="Find value element associated with specified key using local context only.">TCascadedMap&lt;Key, Value&gt;::FindLocalElement</a>(<span class="keyword">const</span> KeyType&amp; key)<span class="keyword"> const</span>
+<a name="l00183"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#afecf778aa47c65a58114f801cf4f957a">00183</a> <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">TCascadedMap&lt;Key, Value&gt;::ValueType</a>* <a class="code" href="classistd_1_1_t_cascaded_map.html#afecf778aa47c65a58114f801cf4f957a" title="Find value element associated with specified key using local context only.">TCascadedMap&lt;Key, Value&gt;::FindLocalElement</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a>&amp; key)<span class="keyword"> const</span>
 <a name="l00184"></a>00184 <span class="keyword"></span>{
 <a name="l00185"></a>00185        <span class="keywordtype">int</span> index = FindLocalIndex(key);
 <a name="l00186"></a>00186        <span class="keywordflow">if</span> (index &gt;= 0){
@@ -162,7 +162,7 @@
 <a name="l00192"></a>00192 
 <a name="l00193"></a>00193 
 <a name="l00194"></a>00194 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> Value&gt;
-<a name="l00195"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#af4d7310dc6e02ad334293aeb6bfa647a">00195</a> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">TCascadedMap&lt;Key, Value&gt;::ValueType</a>* <a class="code" href="classistd_1_1_t_cascaded_map.html#afecf778aa47c65a58114f801cf4f957a" title="Find value element associated with specified key using local context only.">TCascadedMap&lt;Key, Value&gt;::FindLocalElement</a>(<span class="keyword">const</span> KeyType&amp; key)
+<a name="l00195"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#af4d7310dc6e02ad334293aeb6bfa647a">00195</a> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">TCascadedMap&lt;Key, Value&gt;::ValueType</a>* <a class="code" href="classistd_1_1_t_cascaded_map.html#afecf778aa47c65a58114f801cf4f957a" title="Find value element associated with specified key using local context only.">TCascadedMap&lt;Key, Value&gt;::FindLocalElement</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a>&amp; key)
 <a name="l00196"></a>00196 {
 <a name="l00197"></a>00197        <span class="keywordtype">int</span> index = FindLocalIndex(key);
 <a name="l00198"></a>00198        <span class="keywordflow">if</span> (index &gt;= 0){
@@ -217,7 +217,7 @@
 <a name="l00247"></a>00247 
 <a name="l00248"></a>00248 
 <a name="l00249"></a>00249 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> Value&gt;
-<a name="l00250"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#a3f740544f2ce01235beff95287218e60">00250</a> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_cascaded_map.html#a3f740544f2ce01235beff95287218e60" title="Insert element in local context.">TCascadedMap&lt;Key, Value&gt;::InsertLocal</a>(<span class="keyword">const</span> KeyType&amp; key, <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">ValueType</a>&amp; value)
+<a name="l00250"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#a3f740544f2ce01235beff95287218e60">00250</a> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_cascaded_map.html#a3f740544f2ce01235beff95287218e60" title="Insert element in local context.">TCascadedMap&lt;Key, Value&gt;::InsertLocal</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a>&amp; key, <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">ValueType</a>&amp; value)
 <a name="l00251"></a>00251 {
 <a name="l00252"></a>00252        <span class="keyword">typename</span> IndicesMap::const_iterator iter = m_positionsMap.find(key);
 <a name="l00253"></a>00253        <span class="keywordflow">if</span> (iter != m_positionsMap.end()){
@@ -251,7 +251,7 @@
 <a name="l00281"></a>00281        <span class="keywordflow">for</span> (         <span class="keyword">typename</span> IndicesMap::const_iterator iter = m_positionsMap.begin();
 <a name="l00282"></a>00282                             iter != m_positionsMap.end();
 <a name="l00283"></a>00283                             ++iter){
-<a name="l00284"></a>00284               result.insert(iter-&gt;first);
+<a name="l00284"></a>00284               result.insert(iter.key());
 <a name="l00285"></a>00285        }
 <a name="l00286"></a>00286 }
 <a name="l00287"></a>00287 
@@ -271,11 +271,11 @@
 <a name="l00301"></a>00301 
 <a name="l00302"></a>00302 
 <a name="l00303"></a>00303 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> Value&gt;
-<a name="l00304"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#a96128eb841fa786be6c97a564dc071e8">00304</a> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">TCascadedMap&lt;Key, Value&gt;::ValueType</a>&amp; <a class="code" href="classistd_1_1_t_cascaded_map.html#a96128eb841fa786be6c97a564dc071e8" title="Element access operator.">TCascadedMap&lt;Key, Value&gt;::operator[]</a>(<span class="keyword">const</span> KeyType&amp; key)
+<a name="l00304"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#a96128eb841fa786be6c97a564dc071e8">00304</a> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">TCascadedMap&lt;Key, Value&gt;::ValueType</a>&amp; <a class="code" href="classistd_1_1_t_cascaded_map.html#a96128eb841fa786be6c97a564dc071e8" title="Element access operator.">TCascadedMap&lt;Key, Value&gt;::operator[]</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a>&amp; key)
 <a name="l00305"></a>00305 {
 <a name="l00306"></a>00306        <span class="keyword">typename</span> IndicesMap::const_iterator iter = m_positionsMap.find(key);
 <a name="l00307"></a>00307        <span class="keywordflow">if</span> (iter != m_positionsMap.end()){
-<a name="l00308"></a>00308               <span class="keywordflow">return</span> m_pairList[iter-&gt;second].second;
+<a name="l00308"></a>00308               <span class="keywordflow">return</span> m_pairList[iter.value()].second;
 <a name="l00309"></a>00309        }
 <a name="l00310"></a>00310 
 <a name="l00311"></a>00311        <span class="keywordtype">int</span> newIndex = int(m_pairList.size());
@@ -288,18 +288,18 @@
 <a name="l00318"></a>00318 
 <a name="l00319"></a>00319 
 <a name="l00320"></a>00320 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> Value&gt;
-<a name="l00321"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#ae04cedf7c0f4cb77239ae9c914974404">00321</a> <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">TCascadedMap&lt;Key, Value&gt;::ValueType</a>&amp; <a class="code" href="classistd_1_1_t_cascaded_map.html#a96128eb841fa786be6c97a564dc071e8" title="Element access operator.">TCascadedMap&lt;Key, Value&gt;::operator[]</a>(<span class="keyword">const</span> KeyType&amp; key)<span class="keyword"> const</span>
+<a name="l00321"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#ae04cedf7c0f4cb77239ae9c914974404">00321</a> <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">TCascadedMap&lt;Key, Value&gt;::ValueType</a>&amp; <a class="code" href="classistd_1_1_t_cascaded_map.html#a96128eb841fa786be6c97a564dc071e8" title="Element access operator.">TCascadedMap&lt;Key, Value&gt;::operator[]</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a>&amp; key)<span class="keyword"> const</span>
 <a name="l00322"></a>00322 <span class="keyword"></span>{
 <a name="l00323"></a>00323        <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span><a class="code" href="classistd_1_1_t_cascaded_map.html" title="Helper class used to manage list of many connected in cascade maps.">TCascadedMap</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;<span class="keyword">operator</span>[](key);
 <a name="l00324"></a>00324 }
 <a name="l00325"></a>00325 
 <a name="l00326"></a>00326 
 <a name="l00327"></a>00327 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> Value&gt;
-<a name="l00328"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#a9cfe1736358c7c50d765bd9bca6721cf">00328</a> <span class="keywordtype">int</span> <a class="code" href="classistd_1_1_t_cascaded_map.html#a9cfe1736358c7c50d765bd9bca6721cf" title="Find index index of specified key.">TCascadedMap&lt;Key, Value&gt;::FindIndex</a>(<span class="keyword">const</span> KeyType&amp; key)<span class="keyword"> const</span>
+<a name="l00328"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#a9cfe1736358c7c50d765bd9bca6721cf">00328</a> <span class="keywordtype">int</span> <a class="code" href="classistd_1_1_t_cascaded_map.html#a9cfe1736358c7c50d765bd9bca6721cf" title="Find index index of specified key.">TCascadedMap&lt;Key, Value&gt;::FindIndex</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a>&amp; key)<span class="keyword"> const</span>
 <a name="l00329"></a>00329 <span class="keyword"></span>{
 <a name="l00330"></a>00330        <span class="keyword">typename</span> IndicesMap::const_iterator iter = m_positionsMap.find(key);
 <a name="l00331"></a>00331        <span class="keywordflow">if</span> (iter != m_positionsMap.end()){
-<a name="l00332"></a>00332               <span class="keywordflow">return</span> iter-&gt;second;
+<a name="l00332"></a>00332               <span class="keywordflow">return</span> iter.value();
 <a name="l00333"></a>00333        }
 <a name="l00334"></a>00334 
 <a name="l00335"></a>00335        <span class="keywordflow">if</span> (m_parentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
@@ -314,7 +314,7 @@
 <a name="l00344"></a>00344 
 <a name="l00345"></a>00345 
 <a name="l00346"></a>00346 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> Value&gt;
-<a name="l00347"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#a0bd06a8d166b71a075dcbcdc61ed971d">00347</a> <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">TCascadedMap&lt;Key, Value&gt;::ValueType</a>* <a class="code" href="classistd_1_1_t_cascaded_map.html#a0bd06a8d166b71a075dcbcdc61ed971d" title="Find value element associated with specified key.">TCascadedMap&lt;Key, Value&gt;::FindElement</a>(<span class="keyword">const</span> KeyType&amp; key)<span class="keyword"> const</span>
+<a name="l00347"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#a0bd06a8d166b71a075dcbcdc61ed971d">00347</a> <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">TCascadedMap&lt;Key, Value&gt;::ValueType</a>* <a class="code" href="classistd_1_1_t_cascaded_map.html#a0bd06a8d166b71a075dcbcdc61ed971d" title="Find value element associated with specified key.">TCascadedMap&lt;Key, Value&gt;::FindElement</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a>&amp; key)<span class="keyword"> const</span>
 <a name="l00348"></a>00348 <span class="keyword"></span>{
 <a name="l00349"></a>00349        <span class="keywordtype">int</span> index = FindIndex(key);
 <a name="l00350"></a>00350        <span class="keywordflow">if</span> (index &gt;= 0){

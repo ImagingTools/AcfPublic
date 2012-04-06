@@ -59,10 +59,10 @@
 <a name="l00035"></a><a class="code" href="classicmpstr_1_1_i_element_selection_info.html#a63c33646e2066bbeeef15c7f176c7429a541f91a51e5f77609236592592524fed">00035</a>               <a class="code" href="classicmpstr_1_1_i_element_selection_info.html#a63c33646e2066bbeeef15c7f176c7429a541f91a51e5f77609236592592524fed">CF_SELECTION</a> = 1 &lt;&lt; 31
 <a name="l00036"></a>00036        };
 <a name="l00037"></a>00037 
-<a name="l00038"></a><a class="code" href="classicmpstr_1_1_i_element_selection_info.html#a1a326c112231c3110e7a2eb387727fcb">00038</a>        <span class="keyword">typedef</span> std::map&lt;std::string, const icomp::IRegistry::ElementInfo*&gt; <a class="code" href="classicmpstr_1_1_i_element_selection_info.html#a1a326c112231c3110e7a2eb387727fcb">Elements</a>;
+<a name="l00038"></a><a class="code" href="classicmpstr_1_1_i_element_selection_info.html#a4a7379e18bb110424f4141314a7528d3">00038</a>        <span class="keyword">typedef</span> QMap&lt;std::string, const icomp::IRegistry::ElementInfo*&gt; <a class="code" href="classicmpstr_1_1_i_element_selection_info.html#a4a7379e18bb110424f4141314a7528d3">Elements</a>;
 <a name="l00039"></a>00039 
 <a name="l00044"></a>00044        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classicmpstr_1_1_i_element_selection_info.html#adc74e98e02bf20e86906aa685ad82dbd" title="Get registry containing selected element.">GetSelectedRegistry</a>() <span class="keyword">const</span> = 0;
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <a class="code" href="classicmpstr_1_1_i_element_selection_info.html#a1a326c112231c3110e7a2eb387727fcb">Elements</a> <a class="code" href="classicmpstr_1_1_i_element_selection_info.html#ac5ee1bd848258aa4a0bb4081c59b1c05" title="Get set of selected elements.">GetSelectedElements</a>() <span class="keyword">const</span> = 0;
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <a class="code" href="classicmpstr_1_1_i_element_selection_info.html#a4a7379e18bb110424f4141314a7528d3">Elements</a> <a class="code" href="classicmpstr_1_1_i_element_selection_info.html#ac5ee1bd848258aa4a0bb4081c59b1c05" title="Get set of selected elements.">GetSelectedElements</a>() <span class="keyword">const</span> = 0;
 <a name="l00051"></a>00051 };
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053 

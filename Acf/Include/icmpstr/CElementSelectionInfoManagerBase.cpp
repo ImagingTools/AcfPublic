@@ -64,8 +64,8 @@ QStringList CElementSelectionInfoManagerBase::GetExportAliases(const std::string
 		for (		icomp::IRegistry::ExportedComponentsMap::const_iterator iter = exportedMap.begin();
 					iter != exportedMap.end();
 					++iter){
-			if (iter->second == attributeName){
-				exportedAliases.append(QString::fromStdString(iter->first));
+			if (iter.value() == attributeName){
+				exportedAliases.append(QString::fromStdString(iter.key()));
 			}
 		}
 	}
@@ -78,7 +78,7 @@ const icomp::IComponentStaticInfo* CElementSelectionInfoManagerBase::GetComponen
 {
 	AddressToInfoMap::const_iterator foundInfoIter = m_adressToMetaInfoMap.find(address);
 	if (foundInfoIter != m_adressToMetaInfoMap.end()){
-		return foundInfoIter->second.GetPtr();
+		return foundInfoIter.value().GetPtr();
 	}
 
 	return NULL;
@@ -147,7 +147,7 @@ void CElementSelectionInfoManagerBase::UpdateAddressToMetaInfoMap()
 	for (		IElementSelectionInfo::Elements::const_iterator iter = selectedElements.begin();
 				iter != selectedElements.end();
 				++iter){
-		const icomp::IRegistry::ElementInfo* selectedInfoPtr = iter->second;
+		const icomp::IRegistry::ElementInfo* selectedInfoPtr = iter.value();
 		I_ASSERT(selectedInfoPtr != NULL);
 
 		const icomp::IRegistryElement* elementPtr = selectedInfoPtr->elementPtr.GetPtr();

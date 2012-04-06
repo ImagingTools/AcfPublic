@@ -30,7 +30,7 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// STL includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
@@ -72,7 +72,7 @@
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_sync_processor_wrap.html#a6f942530e7a40f0cb4f7f3b0076e8410">InitProcessor</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">iprm::IParamsSet</a>* paramsPtr);
 <a name="l00051"></a>00051 
 <a name="l00052"></a>00052 <span class="keyword">private</span>:
-<a name="l00053"></a>00053        <span class="keyword">typedef</span> std::map&lt;int, int&gt; TaskToStateMap;
+<a name="l00053"></a>00053        <span class="keyword">typedef</span> QMap&lt;int, int&gt; TaskToStateMap;
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055        TaskToStateMap m_taskToStateMap;
 <a name="l00056"></a>00056        <span class="keywordtype">int</span> m_nextTaskId;
@@ -134,7 +134,7 @@
 <a name="l00112"></a>00112        <span class="keywordflow">if</span> (taskId &gt;= 0){
 <a name="l00113"></a>00113               TaskToStateMap::iterator foundIter = m_taskToStateMap.find(taskId);
 <a name="l00114"></a>00114               <span class="keywordflow">if</span> (foundIter != m_taskToStateMap.end()){
-<a name="l00115"></a>00115                      retVal = foundIter-&gt;second;
+<a name="l00115"></a>00115                      retVal = foundIter.value();
 <a name="l00116"></a>00116 
 <a name="l00117"></a>00117                      m_taskToStateMap.erase(foundIter);
 <a name="l00118"></a>00118               }
@@ -143,7 +143,7 @@
 <a name="l00121"></a>00121               <span class="keywordflow">for</span> (         TaskToStateMap::const_iterator iter = m_taskToStateMap.begin();
 <a name="l00122"></a>00122                                    iter != m_taskToStateMap.end();
 <a name="l00123"></a>00123                                    ++iter){      <span class="comment">// we are looking for worst status value. This values are sorted worst =&gt; bigger.</span>
-<a name="l00124"></a>00124                      <span class="keywordtype">int</span> taskState = iter-&gt;second;
+<a name="l00124"></a>00124                      <span class="keywordtype">int</span> taskState = iter.value();
 <a name="l00125"></a>00125                      <span class="keywordflow">if</span> (taskState &gt; retVal){
 <a name="l00126"></a>00126                             retVal = taskState;
 <a name="l00127"></a>00127                      }
@@ -160,7 +160,7 @@
 <a name="l00138"></a><a class="code" href="classiproc_1_1_t_sync_processor_wrap.html#a0a5cd08f5800f4d01eeae041dd5a5aa7">00138</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_sync_processor_wrap.html#a0a5cd08f5800f4d01eeae041dd5a5aa7">TSyncProcessorWrap&lt;Base&gt;::CancelTask</a>(<span class="keywordtype">int</span> taskId)
 <a name="l00139"></a>00139 {
 <a name="l00140"></a>00140        <span class="keywordflow">if</span> (taskId &gt;= 0){
-<a name="l00141"></a>00141               m_taskToStateMap.erase(taskId);
+<a name="l00141"></a>00141               m_taskToStateMap.remove(taskId);
 <a name="l00142"></a>00142        }
 <a name="l00143"></a>00143        <span class="keywordflow">else</span>{
 <a name="l00144"></a>00144               m_taskToStateMap.clear();
@@ -172,7 +172,7 @@
 <a name="l00150"></a><a class="code" href="classiproc_1_1_t_sync_processor_wrap.html#a7644b6e2edc8e32f3e4a9987a2a97ab9">00150</a> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_t_sync_processor_wrap.html#a7644b6e2edc8e32f3e4a9987a2a97ab9">TSyncProcessorWrap&lt;Base&gt;::GetReadyTask</a>()
 <a name="l00151"></a>00151 {
 <a name="l00152"></a>00152        <span class="keywordflow">if</span> (!m_taskToStateMap.empty()){
-<a name="l00153"></a>00153               <span class="keywordflow">return</span> m_taskToStateMap.begin()-&gt;first;
+<a name="l00153"></a>00153               <span class="keywordflow">return</span> m_taskToStateMap.begin().key();
 <a name="l00154"></a>00154        }
 <a name="l00155"></a>00155        <span class="keywordflow">else</span>{
 <a name="l00156"></a>00156               <span class="keywordflow">return</span> -1;
@@ -188,14 +188,14 @@
 <a name="l00166"></a>00166        <span class="keywordflow">if</span> (taskId &gt;= 0){
 <a name="l00167"></a>00167               TaskToStateMap::const_iterator foundIter = m_taskToStateMap.find(taskId);
 <a name="l00168"></a>00168               <span class="keywordflow">if</span> (foundIter != m_taskToStateMap.end()){
-<a name="l00169"></a>00169                      retVal = foundIter-&gt;second;
+<a name="l00169"></a>00169                      retVal = foundIter.value();
 <a name="l00170"></a>00170               }
 <a name="l00171"></a>00171        }
 <a name="l00172"></a>00172        <span class="keywordflow">else</span>{
 <a name="l00173"></a>00173               <span class="keywordflow">for</span> (         TaskToStateMap::const_iterator iter = m_taskToStateMap.begin();
 <a name="l00174"></a>00174                                    iter != m_taskToStateMap.end();
 <a name="l00175"></a>00175                                    ++iter){      <span class="comment">// we are looking for worst status value. This values are sorted worst =&gt; bigger.</span>
-<a name="l00176"></a>00176                      <span class="keywordtype">int</span> taskState = iter-&gt;second;
+<a name="l00176"></a>00176                      <span class="keywordtype">int</span> taskState = iter.value();
 <a name="l00177"></a>00177                      <span class="keywordflow">if</span> (taskState &gt; retVal){
 <a name="l00178"></a>00178                             retVal = taskState;
 <a name="l00179"></a>00179                      }

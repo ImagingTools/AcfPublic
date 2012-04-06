@@ -68,12 +68,12 @@ Public Member Functions</h2></td></tr>
 Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector</a><br class="typebreak"/>
 &lt; <a class="el" href="classiview_1_1_i_shape.html">iview::IShape</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a761c50f2aa84a7ecd0e9ebcd976ae673">Shapes</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::map<br class="typebreak"/>
-&lt; <a class="el" href="classiqt2d_1_1_i_view_provider.html">IViewProvider</a> *, <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a761c50f2aa84a7ecd0e9ebcd976ae673">Shapes</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a868933541356569a33fca6b0a2ae68ea">ShapesMap</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; <a class="el" href="classiqt2d_1_1_i_view_provider.html">IViewProvider</a> <br class="typebreak"/>
+*, <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a761c50f2aa84a7ecd0e9ebcd976ae673">Shapes</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a942f3df3886c1bf51ae766b71d12df8d">ShapesMap</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#ae24d4f1dde611254d0929942bad37622">IsSceneIdSupported</a> (int id) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a868933541356569a33fca6b0a2ae68ea">ShapesMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a32afb4ca5dc03c0f63b0f4d840d0639e">GetShapesMap</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a942f3df3886c1bf51ae766b71d12df8d">ShapesMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a32afb4ca5dc03c0f63b0f4d840d0639e">GetShapesMap</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a3e1552a85bafc3ce11e45d68e5d4142b">UpdateAllViews</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a2cfddc21f2e3a0134525af0b40e01e52">CreateShapes</a> (int sceneId, <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a761c50f2aa84a7ecd0e9ebcd976ae673">Shapes</a> &amp;result)=0</td></tr>
 </table>
@@ -122,14 +122,14 @@ template&lt;class Base&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a868933541356569a33fca6b0a2ae68ea"></a><!-- doxytag: member="iqt2d::TSceneExtenderCompBase::ShapesMap" ref="a868933541356569a33fca6b0a2ae68ea" args="" -->
+<a class="anchor" id="a942f3df3886c1bf51ae766b71d12df8d"></a><!-- doxytag: member="iqt2d::TSceneExtenderCompBase::ShapesMap" ref="a942f3df3886c1bf51ae766b71d12df8d" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Base&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::map&lt;<a class="el" href="classiqt2d_1_1_i_view_provider.html">IViewProvider</a>*, <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a761c50f2aa84a7ecd0e9ebcd976ae673">Shapes</a>&gt; <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::<a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a868933541356569a33fca6b0a2ae68ea">ShapesMap</a><code> [protected]</code></td>
+          <td class="memname">typedef QMap&lt;<a class="el" href="classiqt2d_1_1_i_view_provider.html">IViewProvider</a>*, <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a761c50f2aa84a7ecd0e9ebcd976ae673">Shapes</a>&gt; <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::<a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a942f3df3886c1bf51ae766b71d12df8d">ShapesMap</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -217,7 +217,7 @@ template&lt;class Base&gt; </div>
 template&lt;class Base &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::<a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a868933541356569a33fca6b0a2ae68ea">ShapesMap</a> &amp; <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::GetShapesMap </td>
+          <td class="memname">const <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::<a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a942f3df3886c1bf51ae766b71d12df8d">ShapesMap</a> &amp; <a class="el" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::GetShapesMap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [protected]</code></td>

@@ -40,7 +40,7 @@ void CXmlDocumentInfoBase::EncodeXml(const std::string& text, std::string& xmlTe
 		char c = text[i];
 		CharToEntityMap::const_iterator iter = s_charToEntityMap.find(c);
 		if (iter != s_charToEntityMap.end()){
-			xmlText += iter->second;
+			xmlText += iter.value();
 		}
 		else if ((c >= ' ') && (c <= '}')){
 			xmlText += c;
@@ -76,7 +76,7 @@ void CXmlDocumentInfoBase::DecodeXml(const std::string& xmlText, std::string& te
 			else{
 				EntityToChartMap::const_iterator entityIter = s_entityToChartMap.find(xmlText.substr(ampPos, semicolonPos - ampPos + 1));
 				if (entityIter != s_entityToChartMap.end()){
-					text += entityIter->second;
+					text += entityIter.value();
 				}
 			}
 
@@ -100,7 +100,7 @@ void CXmlDocumentInfoBase::EncodeXml(const QString& text, std::string& xmlText)
 		QChar c = text.at(i);
 		WideCharToEntityMap::const_iterator iter = s_wideCharToEntityMap.find(c);
 		if (iter != s_wideCharToEntityMap.end()){
-			xmlText += iter->second;
+			xmlText += iter.value();
 		}
 		else if ((c >= ' ') && (c <= '}')){
 			xmlText += c.toAscii();
@@ -140,7 +140,7 @@ void CXmlDocumentInfoBase::DecodeXml(const std::string& xmlText, QString& text)
 			else{
 				EntityToWideChartMap::const_iterator entityIter = s_entityToWideChartMap.find(xmlText.substr(ampPos, semicolonPos - ampPos + 1));
 				if (entityIter != s_entityToWideChartMap.end()){
-					text += entityIter->second;
+					text += entityIter.value();
 				}
 			}
 

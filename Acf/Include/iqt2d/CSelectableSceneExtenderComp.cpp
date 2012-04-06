@@ -102,7 +102,7 @@ void CSelectableSceneExtenderComp::RemoveItemsFromScene(iqt2d::IViewProvider* pr
 		}
 	}
 
-	m_connectedSceneFlags.erase(providerPtr);
+	m_connectedSceneFlags.remove(providerPtr);
 }
 
 
@@ -126,10 +126,10 @@ void CSelectableSceneExtenderComp::AttachCurrent()
 			for (		ConnectedSceneFlags::const_iterator sceneIter = m_connectedSceneFlags.begin();
 						sceneIter != m_connectedSceneFlags.end();
 						++sceneIter){
-				iqt2d::IViewProvider* providerPtr = sceneIter->first;
+				iqt2d::IViewProvider* providerPtr = sceneIter.key();
 				I_ASSERT(providerPtr != NULL);
 
-				extenderPtr->AddItemsToScene(providerPtr, sceneIter->second);
+				extenderPtr->AddItemsToScene(providerPtr, sceneIter.value());
 			}
 		}
 	}
@@ -144,7 +144,7 @@ void CSelectableSceneExtenderComp::DetachCurrent()
 			for (		ConnectedSceneFlags::const_iterator sceneIter = m_connectedSceneFlags.begin();
 						sceneIter != m_connectedSceneFlags.end();
 						++sceneIter){
-				iqt2d::IViewProvider* providerPtr = sceneIter->first;
+				iqt2d::IViewProvider* providerPtr = sceneIter.key();
 				I_ASSERT(providerPtr != NULL);
 
 				extenderPtr->RemoveItemsFromScene(providerPtr);

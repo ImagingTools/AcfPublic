@@ -138,7 +138,7 @@ private:
 	I_REF(icomp::IComponentEnvironmentManager, m_envManagerCompPtr);
 	I_REF(IExternalMetaInfoManager, m_externalMetaInfoManagerCompPtr);
 
-	typedef std::map<icomp::CComponentAddress, QIcon> IconCache;
+	typedef QMap<icomp::CComponentAddress, QIcon> IconCache;
 	mutable IconCache m_iconCache;
 };
 

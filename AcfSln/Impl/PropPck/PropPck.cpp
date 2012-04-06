@@ -30,18 +30,10 @@ namespace PropPck
 {
 
 
-static struct StaticInit
-{
-	StaticInit()
-	{
-		Q_INIT_RESOURCE(iqtgui);
-	}
-
-} instance;
-
+I_REGISTER_QT_RESOURCE(iqtgui);
 
 I_EXPORT_PACKAGE(
-			"PropPck",
+			"AcfSln/PropPck",
 			"Property package",
 			IM_TAG("Property") IM_PROJECT("ACF-Solutions") IM_COMPANY("ImagingTools") IM_AUTHOR("\"Witold Gantzke\" \"Kirill Lepskiy\""));
 
