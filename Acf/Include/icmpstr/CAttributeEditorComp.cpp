@@ -1535,6 +1535,11 @@ void CAttributeEditorComp::OnGuiDestroyed()
 		m_registryPropGuiCompPtr->DestroyGui();
 	}
 
+	m_attributesTreeFilter.Reset();
+	m_interfacesTreeFilter.Reset();
+	m_subcomponentsTreeFilter.Reset();
+
+
 	BaseClass::OnGuiDestroyed();
 }
 
