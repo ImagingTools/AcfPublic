@@ -3871,7 +3871,7 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_t_scene_extender_comp_base_8h</filename>
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
-    <includes id="_i_shape_8h" name="IShape.h" local="yes" imported="no">iview/IShape.h</includes>
+    <includes id="_c_shape_base_8h" name="CShapeBase.h" local="yes" imported="no">iview/CShapeBase.h</includes>
     <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
     <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
     <class kind="class">iqt2d::TSceneExtenderCompBase</class>
@@ -5886,10 +5886,10 @@
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_view_base_8h</filename>
     <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
-    <includes id="_c_screen_transform_8h" name="CScreenTransform.h" local="yes" imported="no">iview/CScreenTransform.h</includes>
     <includes id="_i_logical_view_8h" name="ILogicalView.h" local="yes" imported="no">iview/ILogicalView.h</includes>
     <includes id="_i_draggable_8h" name="IDraggable.h" local="yes" imported="no">iview/IDraggable.h</includes>
     <includes id="_i_mouse_action_observer_8h" name="IMouseActionObserver.h" local="yes" imported="no">iview/IMouseActionObserver.h</includes>
+    <includes id="_c_screen_transform_8h" name="CScreenTransform.h" local="yes" imported="no">iview/CScreenTransform.h</includes>
     <includes id="_c_single_layer_8h" name="CSingleLayer.h" local="yes" imported="no">iview/CSingleLayer.h</includes>
     <includes id="_c_layer_base_8h" name="CLayerBase.h" local="yes" imported="no">iview/CLayerBase.h</includes>
     <includes id="_c_selectable_layer_base_8h" name="CSelectableLayerBase.h" local="yes" imported="no">iview/CSelectableLayerBase.h</includes>
@@ -6027,6 +6027,7 @@
     <includes id="_i_observer_8h" name="IObserver.h" local="yes" imported="no">imod/IObserver.h</includes>
     <includes id="_c_rect_8h" name="CRect.h" local="yes" imported="no">i2d/CRect.h</includes>
     <includes id="_i_visualizable_8h" name="IVisualizable.h" local="yes" imported="no">iview/IVisualizable.h</includes>
+    <includes id="_i_layer_8h" name="ILayer.h" local="yes" imported="no">iview/ILayer.h</includes>
     <class kind="class">iview::IShape</class>
     <namespace>iview</namespace>
   </compound>
@@ -6046,6 +6047,7 @@
     <includes id="_c_affine2d_8h" name="CAffine2d.h" local="yes" imported="no">i2d/CAffine2d.h</includes>
     <includes id="_i_display_8h" name="IDisplay.h" local="yes" imported="no">iview/IDisplay.h</includes>
     <includes id="_i_selectable_8h" name="ISelectable.h" local="yes" imported="no">iview/ISelectable.h</includes>
+    <includes id="_i_selectable_layer_8h" name="ISelectableLayer.h" local="yes" imported="no">iview/ISelectableLayer.h</includes>
     <class kind="class">iview::IShapeView</class>
     <namespace>iview</namespace>
   </compound>
@@ -45738,18 +45740,6 @@
     <filename>classiview_1_1_c_calibrated_view_base.html</filename>
     <base>iview::CViewBase</base>
     <base virtualness="virtual">iview::IVisualCalibrationInfo</base>
-    <member kind="enumeration">
-      <name>LayerType2</name>
-      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
-      <anchor>a46ece13b31ab67f60e97d03ad4d7e167</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>LT_CALIBRATION</name>
-      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
-      <anchor>a46ece13b31ab67f60e97d03ad4d7e167af3725e20080530c8c54fdbb121e70994</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>iview::CViewBase</type>
       <name>BaseClass</name>
@@ -45915,8 +45905,8 @@
       <type>virtual int</type>
       <name>InsertLayer</name>
       <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
-      <anchor>a70be41d93d9f32f6400ee6134dcb1d71</anchor>
-      <arglist>(iview::ILayer *layerPtr, int index=-1, int layerType=LT_NONE)</arglist>
+      <anchor>a702cf85673858d5158a43e0ca9dc60a4</anchor>
+      <arglist>(iview::ILayer *layerPtr, int index=-1, int layerType=ILayer::LT_NONE)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -49625,10 +49615,10 @@
       <arglist>(IShape *shapePtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>ConnectShape</name>
       <anchorfile>classiview_1_1_c_layer_base.html</anchorfile>
-      <anchor>a36e35fdaa0edb549363116b41f9e52f4</anchor>
+      <anchor>a87be98d4b1a2237ee568e540cd7dd3bc</anchor>
       <arglist>(IShape *shapePtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -51008,10 +50998,10 @@
       <arglist>(IShape *shapePtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>ConnectShape</name>
       <anchorfile>classiview_1_1_c_selectable_layer_base.html</anchorfile>
-      <anchor>acd96748934a3ef5a21c6083d3dc5372b</anchor>
+      <anchor>a2a04b66b5f9f6f4bad72a667b7da347b</anchor>
       <arglist>(IShape *shapePtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -51299,10 +51289,10 @@
       <arglist>(IShape *shapePtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>ConnectShape</name>
       <anchorfile>classiview_1_1_c_single_layer.html</anchorfile>
-      <anchor>a5b56652b7ac24e69e539c322dc1cc1b8</anchor>
+      <anchor>ad5235959cc872b337762e6c499c2602c</anchor>
       <arglist>(IShape *shapePtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -51979,8 +51969,8 @@
       <type>virtual int</type>
       <name>InsertLayer</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>ac4e3f13355591a1eacd6155be785f115</anchor>
-      <arglist>(ILayer *layerPtr, int index=-1, int layerType=LT_NONE)</arglist>
+      <anchor>a1aaf426c1dc40cef8369d21eda4866b2</anchor>
+      <arglist>(ILayer *layerPtr, int index=-1, int layerType=ILayer::LT_NONE)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -52011,32 +52001,11 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>ConnectShape</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>a469aea23d11c9333e5227906bd0fe5cc</anchor>
-      <arglist>(IShape *shapePtr, int layerIndex=-1)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ConnectBackgroundShape</name>
-      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>a054957793c9cbd3d129757e8558a7aa2</anchor>
-      <arglist>(iview::IShape *shapePtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ConnectInactiveShape</name>
-      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>a99898507f33830fae5fd73a63bc36332</anchor>
-      <arglist>(iview::IShape *shapePtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ConnectActiveShape</name>
-      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>aabb313194700c393abce3f2a54dd9e02</anchor>
-      <arglist>(iview::IInteractiveShape *shapePtr)</arglist>
+      <anchor>ad2b10f66ae7120711b3132ad817cd59e</anchor>
+      <arglist>(IShape *shapePtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ISelectableLayer *</type>
@@ -53150,6 +53119,42 @@
     <name>iview::ILayer</name>
     <filename>classiview_1_1_i_layer.html</filename>
     <base virtualness="virtual">iview::IDisplay</base>
+    <member kind="enumeration">
+      <name>LayerType</name>
+      <anchorfile>classiview_1_1_i_layer.html</anchorfile>
+      <anchor>a4bbfda5b29830e2cfcbce8e55fe5c003</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LT_NONE</name>
+      <anchorfile>classiview_1_1_i_layer.html</anchorfile>
+      <anchor>a4bbfda5b29830e2cfcbce8e55fe5c003a94e744c46ebd4e3010849d24f87d9d2c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LT_BACKGROUND</name>
+      <anchorfile>classiview_1_1_i_layer.html</anchorfile>
+      <anchor>a4bbfda5b29830e2cfcbce8e55fe5c003a48f4320c6a75344844c096c7c4237844</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LT_INACTIVE</name>
+      <anchorfile>classiview_1_1_i_layer.html</anchorfile>
+      <anchor>a4bbfda5b29830e2cfcbce8e55fe5c003a3e7d51f136e82893efdd50e575d22d4a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LT_ACTIVE</name>
+      <anchorfile>classiview_1_1_i_layer.html</anchorfile>
+      <anchor>a4bbfda5b29830e2cfcbce8e55fe5c003af4e202fd5632d403826a2d1ac834434d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LT_CALIBRATION</name>
+      <anchorfile>classiview_1_1_i_layer.html</anchorfile>
+      <anchor>a4bbfda5b29830e2cfcbce8e55fe5c003aa2f2129f3e8e34ed57f2fd8881afa6c2</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>OnConnectView</name>
@@ -53179,10 +53184,10 @@
       <arglist>(IShape *shapePtr)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>ConnectShape</name>
       <anchorfile>classiview_1_1_i_layer.html</anchorfile>
-      <anchor>af27558e1136f8ff65c37ffad84c69f94</anchor>
+      <anchor>adcc98cfe5559158b54c9d35ca6101b82</anchor>
       <arglist>(IShape *shapePtr)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -53619,6 +53624,13 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetLayerType</name>
+      <anchorfile>classiview_1_1_i_shape.html</anchorfile>
+      <anchor>ae87e78fa4921bf3e0a89eba0c48e41f9</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual imod::IModel *</type>
       <name>GetShapeModelPtr</name>
       <anchorfile>classiview_1_1_i_shape.html</anchorfile>
@@ -53671,36 +53683,6 @@
     <filename>classiview_1_1_i_shape_view.html</filename>
     <base virtualness="virtual">iview::IDisplay</base>
     <base virtualness="virtual">iview::ISelectable</base>
-    <member kind="enumeration">
-      <name>LayerType</name>
-      <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
-      <anchor>a360a05ad50af50cc48fdb916f8f5c6a5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>LT_NONE</name>
-      <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
-      <anchor>a360a05ad50af50cc48fdb916f8f5c6a5ae9a2a72e914b3c65f9ab842e48818ef0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>LT_BACKGROUND</name>
-      <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
-      <anchor>a360a05ad50af50cc48fdb916f8f5c6a5a70839324b8dcc9e78a7b6f329e81403a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>LT_INACTIVE</name>
-      <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
-      <anchor>a360a05ad50af50cc48fdb916f8f5c6a5acb17ecfbcaa5cffc226dc3cb21ae640c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>LT_ACTIVE</name>
-      <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
-      <anchor>a360a05ad50af50cc48fdb916f8f5c6a5aec30ce16be38309e062cc9b3b8467bd6</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>IShapeObserver</type>
       <name>BaseClass</name>
@@ -53754,8 +53736,8 @@
       <type>virtual int</type>
       <name>InsertLayer</name>
       <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
-      <anchor>abf0acb4d460341d4a5a930a64a22393f</anchor>
-      <arglist>(ILayer *layerPtr, int index=-1, int layerType=LT_NONE)=0</arglist>
+      <anchor>af44da22af046b188014c9724b53ebd29</anchor>
+      <arglist>(ILayer *layerPtr, int index=-1, int layerType=ILayer::LT_NONE)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -53786,32 +53768,11 @@
       <arglist>(int index) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>ConnectShape</name>
       <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
-      <anchor>a318b841f0315f4ea1e995ea6eb6fc4ae</anchor>
-      <arglist>(IShape *shapePtr, int layerIndex=-1)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>ConnectBackgroundShape</name>
-      <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
-      <anchor>adcc1951da539d42c5d21cafa5b539590</anchor>
-      <arglist>(iview::IShape *shapePtr)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>ConnectInactiveShape</name>
-      <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
-      <anchor>a5cbf16f85287fad70b8090721b2976c4</anchor>
-      <arglist>(iview::IShape *shapePtr)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>ConnectActiveShape</name>
-      <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
-      <anchor>a7729a1551abf5870cd34a90a6526c642</anchor>
-      <arglist>(iview::IInteractiveShape *shapePtr)=0</arglist>
+      <anchor>a4eb8c94c7f54c27dff5274b41a6dfac9</anchor>
+      <arglist>(IShape *shapePtr)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual ISelectableLayer *</type>
@@ -54280,6 +54241,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AssignToLayer</name>
+      <anchorfile>classiview_1_1_t_shape_base.html</anchorfile>
+      <anchor>a128b98ab3a895b500a76d33ba1559df5</anchor>
+      <arglist>(int layerType)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Invalidate</name>
       <anchorfile>classiview_1_1_t_shape_base.html</anchorfile>
@@ -54291,6 +54259,13 @@
       <name>GetDisplayPtr</name>
       <anchorfile>classiview_1_1_t_shape_base.html</anchorfile>
       <anchor>a21c192cbde64541b68993f520f716630</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetLayerType</name>
+      <anchorfile>classiview_1_1_t_shape_base.html</anchorfile>
+      <anchor>aa4ce429bff497dce39287bec67bf714d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">

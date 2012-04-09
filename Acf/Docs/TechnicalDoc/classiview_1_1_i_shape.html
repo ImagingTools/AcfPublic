@@ -87,7 +87,10 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape.html#ae87e78fa4921bf3e0a89eba0c48e41f9">GetLayerType</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get layer type of this shape object.  <a href="#ae87e78fa4921bf3e0a89eba0c48e41f9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape.html#a7e7b1ea2f47c6861f2086bbcd50dfc07">GetShapeModelPtr</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the model object associated with this shape.  <a href="#a7e7b1ea2f47c6861f2086bbcd50dfc07"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape.html#a3c683e05c0c2ca46e9ce3a9d2b67a199">GetBoundingBox</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return bounding box in client window coordinates.  <a href="#a3c683e05c0c2ca46e9ce3a9d2b67a199"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape.html#a32e67529ecdd06d4a8d22c79b5213b2b">SetUserColorShema</a> (const <a class="el" href="classiview_1_1_i_color_shema.html">IColorShema</a> *shemaPtr)=0</td></tr>
@@ -99,7 +102,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Common interface for all display console shapes. </p>
 <p>Shapes are a representants of model objects in display console. </p>
 
-<p>Definition at line <a class="el" href="_i_shape_8h_source.html#l00025">25</a> of file <a class="el" href="_i_shape_8h_source.html">IShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_shape_8h_source.html#l00026">26</a> of file <a class="el" href="_i_shape_8h_source.html">IShape.h</a>.</p>
 </div><hr/><h2>Member Enumeration Documentation</h2>
 <a class="anchor" id="a39a26cc5524c0e914dc5df5a089219c0"></a><!-- doxytag: member="iview::IShape::ChangeFlags" ref="a39a26cc5524c0e914dc5df5a089219c0" args="" -->
 <div class="memitem">
@@ -118,7 +121,7 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_shape_8h_source.html#l00030">30</a> of file <a class="el" href="_i_shape_8h_source.html">IShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_shape_8h_source.html#l00031">31</a> of file <a class="el" href="_i_shape_8h_source.html">IShape.h</a>.</p>
 
 </div>
 </div>
@@ -146,6 +149,27 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae87e78fa4921bf3e0a89eba0c48e41f9"></a><!-- doxytag: member="iview::IShape::GetLayerType" ref="ae87e78fa4921bf3e0a89eba0c48e41f9" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iview::IShape::GetLayerType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get layer type of this shape object. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiview_1_1_i_layer.html#a4bbfda5b29830e2cfcbce8e55fe5c003">ILayer::LayerType</a> </dd></dl>
+
+<p>Implemented in <a class="el" href="classiview_1_1_t_shape_base.html#aa4ce429bff497dce39287bec67bf714d">iview::TShapeBase&lt; IShape &gt;</a>, and <a class="el" href="classiview_1_1_t_shape_base.html#aa4ce429bff497dce39287bec67bf714d">iview::TShapeBase&lt; IInteractiveShape &gt;</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7e7b1ea2f47c6861f2086bbcd50dfc07"></a><!-- doxytag: member="iview::IShape::GetShapeModelPtr" ref="a7e7b1ea2f47c6861f2086bbcd50dfc07" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -159,6 +183,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Get the model object associated with this shape. </p>
 
 <p>Implemented in <a class="el" href="classiview_1_1_t_shape_base.html#a6d637515c236d90896a62db89d8df6fe">iview::TShapeBase&lt; IShape &gt;</a>, and <a class="el" href="classiview_1_1_t_shape_base.html#a6d637515c236d90896a62db89d8df6fe">iview::TShapeBase&lt; IInteractiveShape &gt;</a>.</p>
 

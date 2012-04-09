@@ -35,7 +35,7 @@
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_t_pointer_vector_8h.html">istd/TPointerVector.h</a>&quot;</span>
 <a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_shape_8h.html">iview/IShape.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_c_shape_base_8h.html">iview/CShapeBase.h</a>&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_view_provider_8h.html">iqt2d/IViewProvider.h</a>&quot;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_view_extender_8h.html">iqt2d/IViewExtender.h</a>&quot;</span>
@@ -104,100 +104,102 @@
 <a name="l00077"></a>00077                      <a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">iview::IShape</a>* shapePtr = shapes.<a class="code" href="classistd_1_1_t_pointer_vector.html#a60d0768b01159b4893f6d41aeb79a1f1" title="Get pointer at specified index.">GetAt</a>(i);
 <a name="l00078"></a>00078                      <span class="keywordflow">if</span> (shapePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00079"></a>00079                             <span class="keywordflow">if</span> (isBackground){
-<a name="l00080"></a>00080                                    viewPtr-&gt;<a class="code" href="classiview_1_1_i_shape_view.html#a5cbf16f85287fad70b8090721b2976c4" title="Connect shape to default inactive layer.">ConnectInactiveShape</a>(shapePtr);
-<a name="l00081"></a>00081                             }
-<a name="l00082"></a>00082                             <span class="keywordflow">else</span>{
-<a name="l00083"></a>00083                                    viewPtr-&gt;<a class="code" href="classiview_1_1_i_shape_view.html#a318b841f0315f4ea1e995ea6eb6fc4ae" title="Connect shape object to view.">ConnectShape</a>(shapePtr);
+<a name="l00080"></a>00080                                    <a class="code" href="classiview_1_1_c_shape_base.html">iview::CShapeBase</a>* shapeImplPtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classiview_1_1_c_shape_base.html">iview::CShapeBase</a>*<span class="keyword">&gt;</span>(shapePtr);
+<a name="l00081"></a>00081                                    <span class="keywordflow">if</span> (shapeImplPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00082"></a>00082                                           shapeImplPtr-&gt;<a class="code" href="classiview_1_1_t_shape_base.html#a128b98ab3a895b500a76d33ba1559df5">AssignToLayer</a>(<a class="code" href="classiview_1_1_i_layer.html#a4bbfda5b29830e2cfcbce8e55fe5c003a3e7d51f136e82893efdd50e575d22d4a" title="Layer with inactive shapes.">iview::ILayer::LT_INACTIVE</a>);
+<a name="l00083"></a>00083                                    }
 <a name="l00084"></a>00084                             }
-<a name="l00085"></a>00085                      }
-<a name="l00086"></a>00086               }
-<a name="l00087"></a>00087        }
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089        <span class="keywordflow">if</span> (m_slaveExtenderCompPtr.IsValid()){
-<a name="l00090"></a>00090               m_slaveExtenderCompPtr-&gt;AddItemsToScene(providerPtr, (flags | SF_BACKGROUND) &amp; ~SF_DIRECT);
-<a name="l00091"></a>00091        }
-<a name="l00092"></a>00092 }
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00096"></a><a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#ac3d6f86771fa1fd5d3acc08e47752bb1">00096</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#ac3d6f86771fa1fd5d3acc08e47752bb1" title="Called when items should be removed from specified scene.">TSceneExtenderCompBase&lt;Base&gt;::RemoveItemsFromScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>* providerPtr)
-<a name="l00097"></a>00097 {
-<a name="l00098"></a>00098        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(providerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100        <span class="keywordflow">if</span> (m_slaveExtenderCompPtr.IsValid()){
-<a name="l00101"></a>00101               m_slaveExtenderCompPtr-&gt;RemoveItemsFromScene(providerPtr);
-<a name="l00102"></a>00102        }
-<a name="l00103"></a>00103 
-<a name="l00104"></a>00104        ShapesMap::iterator iter = m_shapesMap.find(providerPtr);
-<a name="l00105"></a>00105        <span class="keywordflow">if</span> (iter != m_shapesMap.end()){
-<a name="l00106"></a>00106               <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>* viewPtr = providerPtr-&gt;<a class="code" href="classiqt2d_1_1_i_view_provider.html#aed42332764dc5898f6efc543aded8d54" title="Called when items should be removed from specified view.">GetView</a>();
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108               <span class="keywordflow">if</span> (viewPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00109"></a>00109                      <a class="code" href="classistd_1_1_t_pointer_vector.html" title="Implementation of a pointer container, which controls the live cycle of the pointer object...">Shapes</a>&amp; shapes = iter.value();
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111                      <span class="keywordtype">int</span> shapesCount = shapes.<a class="code" href="classistd_1_1_t_pointer_vector.html#a401c27b4ed89ebb81dfc22a1dc5581fb" title="Get number of stored elements.">GetCount</a>();
-<a name="l00112"></a>00112                      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; shapesCount; ++i){
-<a name="l00113"></a>00113                             <a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">iview::IShape</a>* shapePtr = shapes.<a class="code" href="classistd_1_1_t_pointer_vector.html#a60d0768b01159b4893f6d41aeb79a1f1" title="Get pointer at specified index.">GetAt</a>(i);
-<a name="l00114"></a>00114                             <span class="keywordflow">if</span> (shapePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00115"></a>00115                                    viewPtr-&gt;<a class="code" href="classiview_1_1_i_shape_observer.html#aca1acc27c4434a4122d6c4a0c984fa79" title="Disconnect shape object from view.">DisconnectShape</a>(shapePtr);
-<a name="l00116"></a>00116                             }
-<a name="l00117"></a>00117                      }
-<a name="l00118"></a>00118               }
-<a name="l00119"></a>00119 
-<a name="l00120"></a>00120               m_shapesMap.erase(iter);
-<a name="l00121"></a>00121        }
-<a name="l00122"></a>00122 }
-<a name="l00123"></a>00123 
-<a name="l00124"></a>00124 
-<a name="l00125"></a>00125 <span class="comment">// protected methods</span>
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086                             viewPtr-&gt;<a class="code" href="classiview_1_1_i_shape_view.html#a4eb8c94c7f54c27dff5274b41a6dfac9" title="Connect shape object to view.">ConnectShape</a>(shapePtr);
+<a name="l00087"></a>00087                      }
+<a name="l00088"></a>00088               }
+<a name="l00089"></a>00089        }
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091        <span class="keywordflow">if</span> (m_slaveExtenderCompPtr.IsValid()){
+<a name="l00092"></a>00092               m_slaveExtenderCompPtr-&gt;AddItemsToScene(providerPtr, (flags | SF_BACKGROUND) &amp; ~SF_DIRECT);
+<a name="l00093"></a>00093        }
+<a name="l00094"></a>00094 }
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00098"></a><a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#ac3d6f86771fa1fd5d3acc08e47752bb1">00098</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#ac3d6f86771fa1fd5d3acc08e47752bb1" title="Called when items should be removed from specified scene.">TSceneExtenderCompBase&lt;Base&gt;::RemoveItemsFromScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>* providerPtr)
+<a name="l00099"></a>00099 {
+<a name="l00100"></a>00100        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(providerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102        <span class="keywordflow">if</span> (m_slaveExtenderCompPtr.IsValid()){
+<a name="l00103"></a>00103               m_slaveExtenderCompPtr-&gt;RemoveItemsFromScene(providerPtr);
+<a name="l00104"></a>00104        }
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106        ShapesMap::iterator iter = m_shapesMap.find(providerPtr);
+<a name="l00107"></a>00107        <span class="keywordflow">if</span> (iter != m_shapesMap.end()){
+<a name="l00108"></a>00108               <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>* viewPtr = providerPtr-&gt;<a class="code" href="classiqt2d_1_1_i_view_provider.html#aed42332764dc5898f6efc543aded8d54" title="Called when items should be removed from specified view.">GetView</a>();
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110               <span class="keywordflow">if</span> (viewPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00111"></a>00111                      <a class="code" href="classistd_1_1_t_pointer_vector.html" title="Implementation of a pointer container, which controls the live cycle of the pointer object...">Shapes</a>&amp; shapes = iter.value();
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113                      <span class="keywordtype">int</span> shapesCount = shapes.<a class="code" href="classistd_1_1_t_pointer_vector.html#a401c27b4ed89ebb81dfc22a1dc5581fb" title="Get number of stored elements.">GetCount</a>();
+<a name="l00114"></a>00114                      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; shapesCount; ++i){
+<a name="l00115"></a>00115                             <a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">iview::IShape</a>* shapePtr = shapes.<a class="code" href="classistd_1_1_t_pointer_vector.html#a60d0768b01159b4893f6d41aeb79a1f1" title="Get pointer at specified index.">GetAt</a>(i);
+<a name="l00116"></a>00116                             <span class="keywordflow">if</span> (shapePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00117"></a>00117                                    viewPtr-&gt;<a class="code" href="classiview_1_1_i_shape_observer.html#aca1acc27c4434a4122d6c4a0c984fa79" title="Disconnect shape object from view.">DisconnectShape</a>(shapePtr);
+<a name="l00118"></a>00118                             }
+<a name="l00119"></a>00119                      }
+<a name="l00120"></a>00120               }
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122               m_shapesMap.erase(iter);
+<a name="l00123"></a>00123        }
+<a name="l00124"></a>00124 }
+<a name="l00125"></a>00125 
 <a name="l00126"></a>00126 
-<a name="l00127"></a>00127 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00128"></a><a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#ae24d4f1dde611254d0929942bad37622">00128</a> <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#ae24d4f1dde611254d0929942bad37622">TSceneExtenderCompBase&lt;Base&gt;::IsSceneIdSupported</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)<span class="keyword"> const</span>
-<a name="l00129"></a>00129 <span class="keyword"></span>{
-<a name="l00130"></a>00130        <span class="keywordflow">if</span> (m_idFiltersAttrPtr.IsValid()){
-<a name="l00131"></a>00131               <span class="keywordtype">int</span> filtersCount = m_idFiltersAttrPtr.GetCount();
-<a name="l00132"></a>00132               <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; filtersCount; ++i){
-<a name="l00133"></a>00133                      <span class="keywordtype">int</span> filterId = m_idFiltersAttrPtr[i];
-<a name="l00134"></a>00134                      <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == filterId){
-<a name="l00135"></a>00135                             <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00136"></a>00136                      }
-<a name="l00137"></a>00137               }
-<a name="l00138"></a>00138 
-<a name="l00139"></a>00139               <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00140"></a>00140        }
-<a name="l00141"></a>00141 
-<a name="l00142"></a>00142        <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00143"></a>00143 }
-<a name="l00144"></a>00144 
-<a name="l00145"></a>00145 
-<a name="l00146"></a>00146 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00147"></a><a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a32afb4ca5dc03c0f63b0f4d840d0639e">00147</a> <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a942f3df3886c1bf51ae766b71d12df8d">TSceneExtenderCompBase&lt;Base&gt;::ShapesMap</a>&amp; <a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a32afb4ca5dc03c0f63b0f4d840d0639e">TSceneExtenderCompBase&lt;Base&gt;::GetShapesMap</a>()<span class="keyword"> const</span>
-<a name="l00148"></a>00148 <span class="keyword"></span>{
-<a name="l00149"></a>00149        <span class="keywordflow">return</span> m_shapesMap;
-<a name="l00150"></a>00150 }
-<a name="l00151"></a>00151 
-<a name="l00152"></a>00152 
-<a name="l00153"></a>00153 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00154"></a><a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a3e1552a85bafc3ce11e45d68e5d4142b">00154</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a3e1552a85bafc3ce11e45d68e5d4142b">TSceneExtenderCompBase&lt;Base&gt;::UpdateAllViews</a>()
-<a name="l00155"></a>00155 {
-<a name="l00156"></a>00156        <span class="keywordflow">for</span> (ShapesMap::iterator index = m_shapesMap.begin(); index != m_shapesMap.end(); index++){
-<a name="l00157"></a>00157               <a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>* viewProvderPtr = index.key();
-<a name="l00158"></a>00158               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(viewProvderPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00159"></a>00159 
-<a name="l00160"></a>00160               <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>* viewPtr = viewProvderPtr-&gt;<a class="code" href="classiqt2d_1_1_i_view_provider.html#aed42332764dc5898f6efc543aded8d54" title="Called when items should be removed from specified view.">GetView</a>();
-<a name="l00161"></a>00161               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(viewPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00162"></a>00162 
-<a name="l00163"></a>00163               viewPtr-&gt;<a class="code" href="classiview_1_1_i_shape_view.html#ae8c68ecae45c174e4cd1714763e75585" title="Updates all invalidates shapes.">Update</a>();
-<a name="l00164"></a>00164        }
-<a name="l00165"></a>00165 }
-<a name="l00166"></a>00166 
-<a name="l00167"></a>00167 
-<a name="l00168"></a>00168 } <span class="comment">// namespace iqt2d</span>
+<a name="l00127"></a>00127 <span class="comment">// protected methods</span>
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00130"></a><a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#ae24d4f1dde611254d0929942bad37622">00130</a> <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#ae24d4f1dde611254d0929942bad37622">TSceneExtenderCompBase&lt;Base&gt;::IsSceneIdSupported</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)<span class="keyword"> const</span>
+<a name="l00131"></a>00131 <span class="keyword"></span>{
+<a name="l00132"></a>00132        <span class="keywordflow">if</span> (m_idFiltersAttrPtr.IsValid()){
+<a name="l00133"></a>00133               <span class="keywordtype">int</span> filtersCount = m_idFiltersAttrPtr.GetCount();
+<a name="l00134"></a>00134               <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; filtersCount; ++i){
+<a name="l00135"></a>00135                      <span class="keywordtype">int</span> filterId = m_idFiltersAttrPtr[i];
+<a name="l00136"></a>00136                      <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == filterId){
+<a name="l00137"></a>00137                             <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00138"></a>00138                      }
+<a name="l00139"></a>00139               }
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141               <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00142"></a>00142        }
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144        <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00145"></a>00145 }
+<a name="l00146"></a>00146 
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00149"></a><a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a32afb4ca5dc03c0f63b0f4d840d0639e">00149</a> <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a942f3df3886c1bf51ae766b71d12df8d">TSceneExtenderCompBase&lt;Base&gt;::ShapesMap</a>&amp; <a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a32afb4ca5dc03c0f63b0f4d840d0639e">TSceneExtenderCompBase&lt;Base&gt;::GetShapesMap</a>()<span class="keyword"> const</span>
+<a name="l00150"></a>00150 <span class="keyword"></span>{
+<a name="l00151"></a>00151        <span class="keywordflow">return</span> m_shapesMap;
+<a name="l00152"></a>00152 }
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154 
+<a name="l00155"></a>00155 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00156"></a><a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a3e1552a85bafc3ce11e45d68e5d4142b">00156</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a3e1552a85bafc3ce11e45d68e5d4142b">TSceneExtenderCompBase&lt;Base&gt;::UpdateAllViews</a>()
+<a name="l00157"></a>00157 {
+<a name="l00158"></a>00158        <span class="keywordflow">for</span> (ShapesMap::iterator index = m_shapesMap.begin(); index != m_shapesMap.end(); index++){
+<a name="l00159"></a>00159               <a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>* viewProvderPtr = index.key();
+<a name="l00160"></a>00160               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(viewProvderPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162               <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>* viewPtr = viewProvderPtr-&gt;<a class="code" href="classiqt2d_1_1_i_view_provider.html#aed42332764dc5898f6efc543aded8d54" title="Called when items should be removed from specified view.">GetView</a>();
+<a name="l00163"></a>00163               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(viewPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00164"></a>00164 
+<a name="l00165"></a>00165               viewPtr-&gt;<a class="code" href="classiview_1_1_i_shape_view.html#ae8c68ecae45c174e4cd1714763e75585" title="Updates all invalidates shapes.">Update</a>();
+<a name="l00166"></a>00166        }
+<a name="l00167"></a>00167 }
+<a name="l00168"></a>00168 
 <a name="l00169"></a>00169 
-<a name="l00170"></a>00170 
-<a name="l00171"></a>00171 <span class="preprocessor">#endif // !iqt2d_TSceneExtenderCompBase_included</span>
-<a name="l00172"></a>00172 <span class="preprocessor"></span>
-<a name="l00173"></a>00173 
+<a name="l00170"></a>00170 } <span class="comment">// namespace iqt2d</span>
+<a name="l00171"></a>00171 
+<a name="l00172"></a>00172 
+<a name="l00173"></a>00173 <span class="preprocessor">#endif // !iqt2d_TSceneExtenderCompBase_included</span>
+<a name="l00174"></a>00174 <span class="preprocessor"></span>
+<a name="l00175"></a>00175 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

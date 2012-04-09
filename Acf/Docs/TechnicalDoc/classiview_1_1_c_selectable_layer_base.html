@@ -49,7 +49,7 @@ Inheritance diagram for iview::CSelectableLayerBase:</div>
 <area href="classiview_1_1_t_layer_base_ex.html" alt="iview::TLayerBaseEx&lt; ISelectableLayer &gt;" shape="rect" coords="160,336,470,360"/>
 <area href="classiview_1_1_t_layer_base.html" alt="iview::TLayerBase&lt; ISelectableLayer, IShapeView &gt;" shape="rect" coords="160,280,470,304"/>
 <area href="classiview_1_1_i_selectable_layer.html" alt="iview::ISelectableLayer" shape="rect" coords="160,224,470,248"/>
-<area href="classiview_1_1_i_layer.html" alt="iview::ILayer" shape="rect" coords="0,168,310,192"/>
+<area href="classiview_1_1_i_layer.html" title="Interface for a logical layer in the console view." alt="iview::ILayer" shape="rect" coords="0,168,310,192"/>
 <area href="classiview_1_1_i_selectable.html" alt="iview::ISelectable" shape="rect" coords="320,168,630,192"/>
 <area href="classiview_1_1_i_display.html" alt="iview::IDisplay" shape="rect" coords="0,112,310,136"/>
 <area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="320,112,630,136"/>
@@ -108,8 +108,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">It is called after change shape selection state.  <a href="#a1aa7f075a6cb8ea47ff421ae348566d8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_selectable_layer_base.html#a6fa70c3e6abc552722108ce499c1696b">IsShapeConnected</a> (<a class="el" href="classiview_1_1_i_shape.html">IShape</a> *shapePtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if the shape is connected to the layer.  <a href="#a6fa70c3e6abc552722108ce499c1696b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_selectable_layer_base.html#acd96748934a3ef5a21c6083d3dc5372b">ConnectShape</a> (<a class="el" href="classiview_1_1_i_shape.html">IShape</a> *shapePtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect shape object to view.  <a href="#acd96748934a3ef5a21c6083d3dc5372b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_selectable_layer_base.html#a2a04b66b5f9f6f4bad72a667b7da347b">ConnectShape</a> (<a class="el" href="classiview_1_1_i_shape.html">IShape</a> *shapePtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect shape object to view.  <a href="#a2a04b66b5f9f6f4bad72a667b7da347b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_selectable_layer_base.html#ab02e856b81fbe3b2eedd2156889ce11e">GetShapesCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get count of all shapes on this layer.  <a href="#ab02e856b81fbe3b2eedd2156889ce11e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_selectable_layer_base.html#a883894f51de63edf818c15a36b864ee7">UpdateAllShapes</a> (int changeFlag)</td></tr>
@@ -244,12 +244,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acd96748934a3ef5a21c6083d3dc5372b"></a><!-- doxytag: member="iview::CSelectableLayerBase::ConnectShape" ref="acd96748934a3ef5a21c6083d3dc5372b" args="(IShape *shapePtr)" -->
+<a class="anchor" id="a2a04b66b5f9f6f4bad72a667b7da347b"></a><!-- doxytag: member="iview::CSelectableLayerBase::ConnectShape" ref="a2a04b66b5f9f6f4bad72a667b7da347b" args="(IShape *shapePtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iview::CSelectableLayerBase::ConnectShape </td>
+          <td class="memname">virtual bool iview::CSelectableLayerBase::ConnectShape </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiview_1_1_i_shape.html">IShape</a> *&#160;</td>
           <td class="paramname"><em>shapePtr</em></td><td>)</td>
@@ -269,7 +269,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if it was possible to connect this shape. </dd></dl>
 
-<p>Implements <a class="el" href="classiview_1_1_i_layer.html#af27558e1136f8ff65c37ffad84c69f94">iview::ILayer</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_i_layer.html#adcc98cfe5559158b54c9d35ca6101b82">iview::ILayer</a>.</p>
 
 </div>
 </div>

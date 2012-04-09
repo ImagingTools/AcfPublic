@@ -31,12 +31,16 @@
 </div>
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iview::ILayer Class Reference</div>  </div>
 </div>
 <div class="contents">
 <!-- doxytag: class="iview::ILayer" --><!-- doxytag: inherits="iview::IDisplay" -->
+<p>Interface for a logical layer in the console view.  
+ <a href="classiview_1_1_i_layer.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_i_layer_8h_source.html">ILayer.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iview::ILayer:</div>
@@ -61,6 +65,17 @@ Inheritance diagram for iview::ILayer:</div>
 
 <p><a href="classiview_1_1_i_layer-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_layer.html#a4bbfda5b29830e2cfcbce8e55fe5c003">LayerType</a> { <br/>
+&#160;&#160;<a class="el" href="classiview_1_1_i_layer.html#a4bbfda5b29830e2cfcbce8e55fe5c003a94e744c46ebd4e3010849d24f87d9d2c">LT_NONE</a>, 
+<a class="el" href="classiview_1_1_i_layer.html#a4bbfda5b29830e2cfcbce8e55fe5c003a48f4320c6a75344844c096c7c4237844">LT_BACKGROUND</a>, 
+<a class="el" href="classiview_1_1_i_layer.html#a4bbfda5b29830e2cfcbce8e55fe5c003a3e7d51f136e82893efdd50e575d22d4a">LT_INACTIVE</a>, 
+<a class="el" href="classiview_1_1_i_layer.html#a4bbfda5b29830e2cfcbce8e55fe5c003af4e202fd5632d403826a2d1ac834434d">LT_ACTIVE</a>, 
+<br/>
+&#160;&#160;<a class="el" href="classiview_1_1_i_layer.html#a4bbfda5b29830e2cfcbce8e55fe5c003aa2f2129f3e8e34ed57f2fd8881afa6c2">LT_CALIBRATION</a>
+<br/>
+ }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_layer.html#a11bc54064dc0036b20d15c2e06aa596b">OnConnectView</a> (<a class="el" href="classiview_1_1_i_shape_view.html">IShapeView</a> *viewPtr)=0</td></tr>
@@ -71,8 +86,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parent view of this layer.  <a href="#a82eb4ad72907c0b04f310acf51c159b3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_layer.html#a1343d41d46d0af26d06b2702230a27cb">IsShapeConnected</a> (<a class="el" href="classiview_1_1_i_shape.html">IShape</a> *shapePtr)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if the shape is connected to the layer.  <a href="#a1343d41d46d0af26d06b2702230a27cb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_layer.html#af27558e1136f8ff65c37ffad84c69f94">ConnectShape</a> (<a class="el" href="classiview_1_1_i_shape.html">IShape</a> *shapePtr)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect shape object to view.  <a href="#af27558e1136f8ff65c37ffad84c69f94"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_layer.html#adcc98cfe5559158b54c9d35ca6101b82">ConnectShape</a> (<a class="el" href="classiview_1_1_i_shape.html">IShape</a> *shapePtr)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect shape object to view.  <a href="#adcc98cfe5559158b54c9d35ca6101b82"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_layer.html#a1440394624298e8501f1bb79e632b1ff">GetShapesCount</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get count of all shapes on this layer.  <a href="#a1440394624298e8501f1bb79e632b1ff"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_layer.html#ac58bb7ab7dc0d0c08b3e2f69d1c59ac0">UpdateAllShapes</a> (int changeFlag)=0</td></tr>
@@ -87,15 +102,52 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make this layer visible.  <a href="#abee98421e143de92237014266d6ee3dc"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_i_layer_8h_source.html#l00018">18</a> of file <a class="el" href="_i_layer_8h_source.html">ILayer.h</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="af27558e1136f8ff65c37ffad84c69f94"></a><!-- doxytag: member="iview::ILayer::ConnectShape" ref="af27558e1136f8ff65c37ffad84c69f94" args="(IShape *shapePtr)=0" -->
+<div class="textblock"><p>Interface for a logical layer in the console view. </p>
+
+<p>Definition at line <a class="el" href="_i_layer_8h_source.html#l00022">22</a> of file <a class="el" href="_i_layer_8h_source.html">ILayer.h</a>.</p>
+</div><hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="a4bbfda5b29830e2cfcbce8e55fe5c003"></a><!-- doxytag: member="iview::ILayer::LayerType" ref="a4bbfda5b29830e2cfcbce8e55fe5c003" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iview::ILayer::ConnectShape </td>
+          <td class="memname">enum <a class="el" href="classiview_1_1_i_layer.html#a4bbfda5b29830e2cfcbce8e55fe5c003">iview::ILayer::LayerType</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a4bbfda5b29830e2cfcbce8e55fe5c003a94e744c46ebd4e3010849d24f87d9d2c"></a><!-- doxytag: member="LT_NONE" ref="a4bbfda5b29830e2cfcbce8e55fe5c003a94e744c46ebd4e3010849d24f87d9d2c" args="" -->LT_NONE</em>&nbsp;</td><td>
+<p>Layer type is not set. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4bbfda5b29830e2cfcbce8e55fe5c003a48f4320c6a75344844c096c7c4237844"></a><!-- doxytag: member="LT_BACKGROUND" ref="a4bbfda5b29830e2cfcbce8e55fe5c003a48f4320c6a75344844c096c7c4237844" args="" -->LT_BACKGROUND</em>&nbsp;</td><td>
+<p>Background layer. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4bbfda5b29830e2cfcbce8e55fe5c003a3e7d51f136e82893efdd50e575d22d4a"></a><!-- doxytag: member="LT_INACTIVE" ref="a4bbfda5b29830e2cfcbce8e55fe5c003a3e7d51f136e82893efdd50e575d22d4a" args="" -->LT_INACTIVE</em>&nbsp;</td><td>
+<p>Layer with inactive shapes. </p>
+<p>The user interaction with the shapes is impossible. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4bbfda5b29830e2cfcbce8e55fe5c003af4e202fd5632d403826a2d1ac834434d"></a><!-- doxytag: member="LT_ACTIVE" ref="a4bbfda5b29830e2cfcbce8e55fe5c003af4e202fd5632d403826a2d1ac834434d" args="" -->LT_ACTIVE</em>&nbsp;</td><td>
+<p>Layer with active shapes. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4bbfda5b29830e2cfcbce8e55fe5c003aa2f2129f3e8e34ed57f2fd8881afa6c2"></a><!-- doxytag: member="LT_CALIBRATION" ref="a4bbfda5b29830e2cfcbce8e55fe5c003aa2f2129f3e8e34ed57f2fd8881afa6c2" args="" -->LT_CALIBRATION</em>&nbsp;</td><td>
+<p>Calibration layer. </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_i_layer_8h_source.html#l00025">25</a> of file <a class="el" href="_i_layer_8h_source.html">ILayer.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="adcc98cfe5559158b54c9d35ca6101b82"></a><!-- doxytag: member="iview::ILayer::ConnectShape" ref="adcc98cfe5559158b54c9d35ca6101b82" args="(IShape *shapePtr)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::ILayer::ConnectShape </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiview_1_1_i_shape.html">IShape</a> *&#160;</td>
           <td class="paramname"><em>shapePtr</em></td><td>)</td>
@@ -115,7 +167,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if it was possible to connect this shape. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_selectable_layer_base.html#acd96748934a3ef5a21c6083d3dc5372b">iview::CSelectableLayerBase</a>, <a class="el" href="classiview_1_1_c_layer_base.html#a36e35fdaa0edb549363116b41f9e52f4">iview::CLayerBase</a>, and <a class="el" href="classiview_1_1_c_single_layer.html#a5b56652b7ac24e69e539c322dc1cc1b8">iview::CSingleLayer</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_selectable_layer_base.html#a2a04b66b5f9f6f4bad72a667b7da347b">iview::CSelectableLayerBase</a>, <a class="el" href="classiview_1_1_c_layer_base.html#a87be98d4b1a2237ee568e540cd7dd3bc">iview::CLayerBase</a>, and <a class="el" href="classiview_1_1_c_single_layer.html#ad5235959cc872b337762e6c499c2602c">iview::CSingleLayer</a>.</p>
 
 </div>
 </div>

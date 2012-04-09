@@ -53,20 +53,20 @@ public:
 	using BaseClass3::OnAttached;
 	using BaseClass3::OnDetached;
 
-	/**	Default contructor.
-	*/
 	TShapeBase();
 	TShapeBase(const TShapeBase<Base>& shape);
 	virtual ~TShapeBase();
 
 	virtual const i2d::CRect& GetBoundingBoxRef() const;
 	virtual void DisconnectFromModel();
+	virtual bool AssignToLayer(int layerType);
 
 	// reimplemented (iview::CShapeControl)
 	virtual void Invalidate(int changeFlags = 0);
 	virtual iview::IDisplay* GetDisplayPtr() const;
 
 	// reimplemented (iview::IShape)
+	virtual int GetLayerType() const;
 	imod::IModel* GetShapeModelPtr() const;
 	virtual i2d::CRect GetBoundingBox() const;
     virtual void SetUserColorShema(const IColorShema* shemaPtr);
@@ -134,6 +134,7 @@ private:
 	IDisplay* m_displayPtr;
 	mutable bool m_isBoundingBoxValid;
 	mutable i2d::CRect m_boundingBox;
+	int m_layerType;
 };
 
 
@@ -160,6 +161,11 @@ inline IDisplay* TShapeBase<Base>::GetDisplayPtr() const
 
 
 // reimplemented (iview::IShape)
+template <class Base>
+int TShapeBase<Base>::GetLayerType() const
+{
+	return m_layerType;
+}
 
 template <class Base>
 imod::IModel* TShapeBase<Base>::GetShapeModelPtr() const
@@ -243,6 +249,8 @@ TShapeBase<Base>::TShapeBase()
 	m_userColorShemaPtr = NULL;
 	m_displayPtr = NULL;
 	m_isBoundingBoxValid = false;
+	
+	m_layerType = iview::ILayer::LT_INACTIVE;
 }
 
 
@@ -258,6 +266,7 @@ TShapeBase<Base>::TShapeBase(const TShapeBase<Base>& shape)
 	m_isBoundingBoxValid = false;
 	m_shapeTransformMode = shape.m_shapeTransformMode;
 	m_shapeTransform.Reset();
+	m_layerType = shape.m_layerType;
 }
 
 
@@ -281,6 +290,19 @@ void TShapeBase<Base>::DisconnectFromModel()
 	if (modelPtr != NULL){
 		modelPtr->DetachObserver(this);
 	}
+}
+
+
+template <class Base>
+bool TShapeBase<Base>::AssignToLayer(int layerType)
+{
+	if (m_displayPtr != NULL){
+		return false;
+	}
+
+	m_layerType = layerType;
+
+	return true;
 }
 
 

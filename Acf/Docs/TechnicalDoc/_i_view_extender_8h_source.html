@@ -43,23 +43,24 @@
 <a name="l00019"></a><a class="code" href="classiqt2d_1_1_i_view_extender.html">00019</a> <span class="keyword">class </span><a class="code" href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects.">IViewExtender</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
 <a name="l00020"></a>00020 {
 <a name="l00021"></a>00021 <span class="keyword">public</span>:
-<a name="l00025"></a><a class="code" href="classiqt2d_1_1_i_view_extender.html#afc3716716624595bd3e0d451eb8dec41">00025</a>        <span class="keyword">enum</span> <a class="code" href="classiqt2d_1_1_i_view_extender.html#afc3716716624595bd3e0d451eb8dec41" title="Standard flags for items .">SceneFlags</a>{
-<a name="l00029"></a><a class="code" href="classiqt2d_1_1_i_view_extender.html#afc3716716624595bd3e0d451eb8dec41aef2a0742b2fa40eaacea39422dd53e81">00029</a>               <a class="code" href="classiqt2d_1_1_i_view_extender.html#afc3716716624595bd3e0d451eb8dec41aef2a0742b2fa40eaacea39422dd53e81" title="This flag is active if only shown elements will be used as background for other elements.">SF_BACKGROUND</a> = 1,
-<a name="l00033"></a><a class="code" href="classiqt2d_1_1_i_view_extender.html#afc3716716624595bd3e0d451eb8dec41a214cdb39d9c2faefaba55c8e01e02828">00033</a>               <a class="code" href="classiqt2d_1_1_i_view_extender.html#afc3716716624595bd3e0d451eb8dec41a214cdb39d9c2faefaba55c8e01e02828" title="This flag is set if this objects are added in direct call and will be reseted by delegation call to s...">SF_DIRECT</a> = 2,
-<a name="l00034"></a>00034        };
-<a name="l00035"></a>00035 
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_i_view_extender.html#ac29beac66239f36f9460b2fe9716e1b2" title="Called when items should be added to specified scene.">AddItemsToScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>* providerPtr, <span class="keywordtype">int</span> flags) = 0;
-<a name="l00040"></a>00040 
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_i_view_extender.html#a360fe9a6f3f33884ed0b99847a9157ba" title="Called when items should be removed from specified scene.">RemoveItemsFromScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>* providerPtr) = 0;
-<a name="l00045"></a>00045 };
-<a name="l00046"></a>00046 
+<a name="l00025"></a><a class="code" href="classiqt2d_1_1_i_view_extender.html#afc3716716624595bd3e0d451eb8dec41">00025</a>        <span class="keyword">enum</span> <a class="code" href="classiqt2d_1_1_i_view_extender.html#afc3716716624595bd3e0d451eb8dec41" title="Standard flags for items .">SceneFlags</a>
+<a name="l00026"></a>00026        {
+<a name="l00030"></a><a class="code" href="classiqt2d_1_1_i_view_extender.html#afc3716716624595bd3e0d451eb8dec41aef2a0742b2fa40eaacea39422dd53e81">00030</a>               <a class="code" href="classiqt2d_1_1_i_view_extender.html#afc3716716624595bd3e0d451eb8dec41aef2a0742b2fa40eaacea39422dd53e81" title="This flag is active if only shown elements will be used as background for other elements.">SF_BACKGROUND</a> = 1,
+<a name="l00034"></a><a class="code" href="classiqt2d_1_1_i_view_extender.html#afc3716716624595bd3e0d451eb8dec41a214cdb39d9c2faefaba55c8e01e02828">00034</a>               <a class="code" href="classiqt2d_1_1_i_view_extender.html#afc3716716624595bd3e0d451eb8dec41a214cdb39d9c2faefaba55c8e01e02828" title="This flag is set if this objects are added in direct call and will be reseted by delegation call to s...">SF_DIRECT</a> = 2
+<a name="l00035"></a>00035        };
+<a name="l00036"></a>00036 
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_i_view_extender.html#ac29beac66239f36f9460b2fe9716e1b2" title="Called when items should be added to specified scene.">AddItemsToScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>* providerPtr, <span class="keywordtype">int</span> flags) = 0;
+<a name="l00041"></a>00041 
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_i_view_extender.html#a360fe9a6f3f33884ed0b99847a9157ba" title="Called when items should be removed from specified scene.">RemoveItemsFromScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>* providerPtr) = 0;
+<a name="l00046"></a>00046 };
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 } <span class="comment">// namespace iqt2d</span>
-<a name="l00049"></a>00049 
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 } <span class="comment">// namespace iqt2d</span>
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="preprocessor">#endif // !iqt2d_ISceneExtender_included</span>
-<a name="l00052"></a>00052 <span class="preprocessor"></span>
-<a name="l00053"></a>00053 
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="preprocessor">#endif // !iqt2d_ISceneExtender_included</span>
+<a name="l00053"></a>00053 <span class="preprocessor"></span>
+<a name="l00054"></a>00054 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

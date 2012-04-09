@@ -12387,8 +12387,8 @@
       <type>void</type>
       <name>OnParamsChanged</name>
       <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
-      <anchor>abb91c1ae04a3856f73b95d94f6e4e860</anchor>
-      <arglist>(double value)</arglist>
+      <anchor>a552310b0ef244c0f4d6de6c3c56a07e4</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -12409,13 +12409,6 @@
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
       <anchor>ab6b231c0573dc2b612ee70e1b494ba40</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
-      <anchor>a0fc6b9cf2aefd527ab125cfd80be0f80</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -12646,10 +12639,17 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>CreateShapes</name>
+      <name>AddItemsToScene</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
-      <anchor>aa016338d123a7b48bb284c7f7536e958</anchor>
-      <arglist>(int sceneId, Shapes &amp;result)</arglist>
+      <anchor>a5a952165d7d8cc75974405429534c088</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveItemsFromScene</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a4fecb0821802b3f9c708868034195019</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

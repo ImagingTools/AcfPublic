@@ -48,7 +48,7 @@ Inheritance diagram for iview::CLayerBase:</div>
   <map id="iview::CLayerBase_map" name="iview::CLayerBase_map">
 <area href="classiview_1_1_t_layer_base_ex.html" alt="iview::TLayerBaseEx&lt; ILayer &gt;" shape="rect" coords="0,280,251,304"/>
 <area href="classiview_1_1_t_layer_base.html" alt="iview::TLayerBase&lt; ILayer, IShapeView &gt;" shape="rect" coords="0,224,251,248"/>
-<area href="classiview_1_1_i_layer.html" alt="iview::ILayer" shape="rect" coords="0,168,251,192"/>
+<area href="classiview_1_1_i_layer.html" title="Interface for a logical layer in the console view." alt="iview::ILayer" shape="rect" coords="0,168,251,192"/>
 <area href="classiview_1_1_i_display.html" alt="iview::IDisplay" shape="rect" coords="0,112,251,136"/>
 <area href="classiview_1_1_i_shape_observer.html" title="Common interface for all objects informed about shapes state changes." alt="iview::IShapeObserver" shape="rect" coords="0,56,251,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,251,24"/>
@@ -67,8 +67,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_layer_base.html#a8f5be2c2940649c9e265796b434e75d0">CalcBoundingBox</a> (<a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;result) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_layer_base.html#a18b7ef5312d71b30c6f021edfbd86b8e">IsShapeConnected</a> (<a class="el" href="classiview_1_1_i_shape.html">IShape</a> *shapePtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if the shape is connected to the layer.  <a href="#a18b7ef5312d71b30c6f021edfbd86b8e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_layer_base.html#a36e35fdaa0edb549363116b41f9e52f4">ConnectShape</a> (<a class="el" href="classiview_1_1_i_shape.html">IShape</a> *shapePtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect shape object to view.  <a href="#a36e35fdaa0edb549363116b41f9e52f4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_layer_base.html#a87be98d4b1a2237ee568e540cd7dd3bc">ConnectShape</a> (<a class="el" href="classiview_1_1_i_shape.html">IShape</a> *shapePtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect shape object to view.  <a href="#a87be98d4b1a2237ee568e540cd7dd3bc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_layer_base.html#a7b7b57b270940725386b396365195f5b">GetShapesCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get count of all shapes on this layer.  <a href="#a7b7b57b270940725386b396365195f5b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_layer_base.html#a6f72e006769d1e48e9597714f5d1a713">UpdateAllShapes</a> (int changeFlag)</td></tr>
@@ -159,12 +159,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a36e35fdaa0edb549363116b41f9e52f4"></a><!-- doxytag: member="iview::CLayerBase::ConnectShape" ref="a36e35fdaa0edb549363116b41f9e52f4" args="(IShape *shapePtr)" -->
+<a class="anchor" id="a87be98d4b1a2237ee568e540cd7dd3bc"></a><!-- doxytag: member="iview::CLayerBase::ConnectShape" ref="a87be98d4b1a2237ee568e540cd7dd3bc" args="(IShape *shapePtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iview::CLayerBase::ConnectShape </td>
+          <td class="memname">virtual bool iview::CLayerBase::ConnectShape </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiview_1_1_i_shape.html">IShape</a> *&#160;</td>
           <td class="paramname"><em>shapePtr</em></td><td>)</td>
@@ -184,7 +184,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if it was possible to connect this shape. </dd></dl>
 
-<p>Implements <a class="el" href="classiview_1_1_i_layer.html#af27558e1136f8ff65c37ffad84c69f94">iview::ILayer</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_i_layer.html#adcc98cfe5559158b54c9d35ca6101b82">iview::ILayer</a>.</p>
 
 </div>
 </div>

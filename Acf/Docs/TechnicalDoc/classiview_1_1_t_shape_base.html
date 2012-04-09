@@ -67,15 +67,16 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_shape_base.html#a51e97d8c0f9201b0c87f38686796a676">TShapeBase</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Default contructor.  <a href="#a51e97d8c0f9201b0c87f38686796a676"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_shape_base.html#a74c3a2c35a500d1d2aa1dc739142148d">TShapeBase</a> (const <a class="el" href="classiview_1_1_t_shape_base.html">TShapeBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt; &amp;shape)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_shape_base.html#a84a838359b6c5a7e80cfe1e839659549">~TShapeBase</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_shape_base.html#ad9ade234c3cc3f75366e8b4da72b4ba5">GetBoundingBoxRef</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_shape_base.html#aedb335d1fb87ce0b8f0327378d0f690e">DisconnectFromModel</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_shape_base.html#a128b98ab3a895b500a76d33ba1559df5">AssignToLayer</a> (int layerType)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_shape_base.html#ac22c48dd67e0789c6db4a79f3e0973a2">Invalidate</a> (int changeFlags=0)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Force this shape to repaint by next image update.  <a href="#ac22c48dd67e0789c6db4a79f3e0973a2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_display.html">iview::IDisplay</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_shape_base.html#a21c192cbde64541b68993f520f716630">GetDisplayPtr</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to display object.  <a href="#a21c192cbde64541b68993f520f716630"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_shape_base.html#aa4ce429bff497dce39287bec67bf714d">GetLayerType</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_shape_base.html#a6d637515c236d90896a62db89d8df6fe">GetShapeModelPtr</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_shape_base.html#a88b8a89761a1eefc809c0c03af376727">GetBoundingBox</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_t_shape_base.html#a1bac38d8fd41385cb4a01455db357fc1">SetUserColorShema</a> (const <a class="el" href="classiview_1_1_i_color_shema.html">IColorShema</a> *shemaPtr)</td></tr>
@@ -186,11 +187,9 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Default contructor. </p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00225">225</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00219">219</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
-
-<p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
+<p>References <a class="el" href="_i_layer_8h_source.html#l00040">iview::ILayer::LT_INACTIVE</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
 </div>
 </div>
@@ -211,7 +210,7 @@ template&lt;class Base&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00228">228</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00236">236</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -233,13 +232,38 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00243">243</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00252">252</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a128b98ab3a895b500a76d33ba1559df5"></a><!-- doxytag: member="iview::TShapeBase::AssignToLayer" ref="a128b98ab3a895b500a76d33ba1559df5" args="(int layerType)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classiview_1_1_t_shape_base.html">iview::TShapeBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::AssignToLayer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layerType</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00275">275</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+
+<p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00062">iqt2d::TSceneExtenderCompBase&lt; Base &gt;::AddItemsToScene()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac8122a1550808cea9e3150181e8d6dc5"></a><!-- doxytag: member="iview::TShapeBase::CalcBoundingBox" ref="ac8122a1550808cea9e3150181e8d6dc5" args="(i2d::CRect &amp;result) const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -280,7 +304,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00366">366</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00388">388</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -302,7 +326,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00256">256</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00265">265</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="classimod_1_1_i_model.html#a7397e5498b4db60234160a97f570eb66">imod::IModel::DetachObserver()</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -324,7 +348,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00277">277</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00299">299</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -344,7 +368,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00150">150</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00156">156</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -368,7 +392,7 @@ template&lt;class Base &gt; </div>
 <p>It can be called only when display is connected </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiview_1_1_t_shape_base.html#a1ce37c1160e788e6797caccd936f7889" title="Check if display is connected.">IsDisplayConnected()</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00357">357</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00379">379</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
 
@@ -394,7 +418,7 @@ template&lt;class Base &gt; </div>
 <p>It can be called only when display is connected </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiview_1_1_t_shape_base.html#a1ce37c1160e788e6797caccd936f7889" title="Check if display is connected.">IsDisplayConnected()</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00343">343</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00365">365</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -421,7 +445,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_shape_base.html#abc26858da9a056111d240d5312cb250c">iview::CInteractiveShapeBase</a>, and <a class="el" href="classiview_1_1_c_calibration_shape_base.html#a064fcb43846cddd9b7be21606e8ad87c">iview::CCalibrationShapeBase</a>.</p>
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00161">161</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00167">167</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="iview_8h_source.html#l00036">iview::CF_COLORS</a>, and <a class="el" href="iview_8h_source.html#l00031">iview::CF_TRANSFORM</a>.</p>
 
@@ -447,7 +471,27 @@ template&lt;class Base &gt; </div>
 
 <p>Implements <a class="el" href="classiview_1_1_c_shape_control.html#a109fc4869688f9610fa5824aa5726790">iview::CShapeControl</a>.</p>
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00134">134</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00135">135</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4ce429bff497dce39287bec67bf714d"></a><!-- doxytag: member="iview::TShapeBase::GetLayerType" ref="aa4ce429bff497dce39287bec67bf714d" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classiview_1_1_t_shape_base.html">iview::TShapeBase</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::GetLayerType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00143">143</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -467,7 +511,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00143">143</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00149">149</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -487,7 +531,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00185">185</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00191">191</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -512,7 +556,7 @@ template&lt;class Base &gt; </div>
 
 <p>Implements <a class="el" href="classiview_1_1_c_shape_control.html#a999a782bb08c639dbfb380bf54500671">iview::CShapeControl</a>.</p>
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00378">378</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00400">400</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
 
@@ -541,7 +585,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_perspective_calibration_shape.html#ab0419a5f3f67685d96991a817d3e8204">iview::CPerspectiveCalibrationShape</a>.</p>
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00123">123</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00124">124</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -568,7 +612,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_parallelogram_shape.html#ae4a71fd9e20e158a21d53ec5d001462c">iview::CInteractiveParallelogramShape</a>, <a class="el" href="classiview_1_1_c_interactive_transformable_rectangle_shape.html#a751e7abb1e04d12996dacff2ed1579af">iview::CInteractiveTransformableRectangleShape</a>, <a class="el" href="classiview_1_1_c_transformable_rectangle_calibration_shape.html#a0b9cda0d589519b1a75bef3bf35dc205">iview::CTransformableRectangleCalibrationShape</a>, <a class="el" href="classiview_1_1_c_interactive_arrow_shape.html#a4580a155c324050ebf1d251178e8c9e5">iview::CInteractiveArrowShape</a>, and <a class="el" href="classiview_1_1_c_interactive_rectangle_shape.html#a410004fe0a4cccbae830beb83ab0e41c">iview::CInteractiveRectangleShape</a>.</p>
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00168">168</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00174">174</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -588,7 +632,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00176">176</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00182">182</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -611,7 +655,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_calibration_shape_base.html#a52a6d63b9931c7aef77d22d3b1974eb3">iview::CCalibrationShapeBase</a>.</p>
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00210">210</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00216">216</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -633,7 +677,7 @@ template&lt;class Base &gt; </div>
 
 <p>Check if display is connected. </p>
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00192">192</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00198">198</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -659,7 +703,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_shape_control.html#aed62cfe6a6a30ba9f6acf275df0b58af">iview::CShapeControl</a>.</p>
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00203">203</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00209">209</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -682,7 +726,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_calibration_shape_base.html#aa69b478f07f4a244aa448d3a3bdd2bd1">iview::CCalibrationShapeBase</a>.</p>
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00307">307</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00329">329</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -707,7 +751,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_calibration_shape_base.html#ad1887283b9c2f94f74441e8da100fdcf">iview::CCalibrationShapeBase</a>.</p>
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00318">318</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00340">340</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -730,7 +774,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00327">327</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00349">349</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="iview_8h_source.html#l00031">iview::CF_TRANSFORM</a>.</p>
 
@@ -765,7 +809,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classimod_1_1_c_single_model_observer_base.html#a66f8d05283672d798a57262434229e93">imod::CSingleModelObserverBase</a>.</p>
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00268">268</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00290">290</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -786,7 +830,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00295">295</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="iview_2_t_shape_base_8h_source.html#l00317">317</a> of file <a class="el" href="iview_2_t_shape_base_8h_source.html">TShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 

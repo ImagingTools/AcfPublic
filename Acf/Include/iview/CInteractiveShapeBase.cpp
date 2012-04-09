@@ -43,6 +43,8 @@ CInteractiveShapeBase::CInteractiveShapeBase()
 {
 	m_isSelected = false;
 	m_isEditablePosition = true;
+
+	AssignToLayer(ILayer::LT_ACTIVE);
 }
 
 

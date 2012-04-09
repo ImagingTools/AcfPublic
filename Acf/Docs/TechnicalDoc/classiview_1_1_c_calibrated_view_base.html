@@ -76,8 +76,6 @@ Inheritance diagram for iview::CCalibratedViewBase:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a46ece13b31ab67f60e97d03ad4d7e167">LayerType2</a> { <a class="el" href="classiview_1_1_c_calibrated_view_base.html#a46ece13b31ab67f60e97d03ad4d7e167af3725e20080530c8c54fdbb121e70994">LT_CALIBRATION</a> =  0x100
- }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiview_1_1_c_view_base.html">iview::CViewBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a52f5fe4b9523a881eef75f7b978c58f7">BaseClass</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef QWidget&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a88408f3abdd7b35d80acc8fe5a929d73">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
@@ -113,8 +111,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform all shapes about changes.  <a href="#a5034161e88f77b5397e954fdae0603e0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a78329039f72a0cd2a790d7cd00bc17c9">InsertDefaultLayers</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert default layers, when there is no one user layer.  <a href="#a78329039f72a0cd2a790d7cd00bc17c9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a70be41d93d9f32f6400ee6134dcb1d71">InsertLayer</a> (<a class="el" href="classiview_1_1_i_layer.html">iview::ILayer</a> *layerPtr, int index=-1, int layerType=LT_NONE)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert layer to view.  <a href="#a70be41d93d9f32f6400ee6134dcb1d71"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a702cf85673858d5158a43e0ca9dc60a4">InsertLayer</a> (<a class="el" href="classiview_1_1_i_layer.html">iview::ILayer</a> *layerPtr, int index=-1, int layerType=ILayer::LT_NONE)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert layer to view.  <a href="#a702cf85673858d5158a43e0ca9dc60a4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#af26588318b4e7e10b988f7b837b27e50">RemoveLayer</a> (int index)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove layer from view.  <a href="#af26588318b4e7e10b988f7b837b27e50"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a7e8ecf4b089d2327f1b9fe91dd6913b5">IsGridVisible</a> () const </td></tr>
@@ -168,28 +166,6 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00039">39</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
-
-</div>
-</div>
-<hr/><h2>Member Enumeration Documentation</h2>
-<a class="anchor" id="a46ece13b31ab67f60e97d03ad4d7e167"></a><!-- doxytag: member="iview::CCalibratedViewBase::LayerType2" ref="a46ece13b31ab67f60e97d03ad4d7e167" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classiview_1_1_c_calibrated_view_base.html#a46ece13b31ab67f60e97d03ad4d7e167">iview::CCalibratedViewBase::LayerType2</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="a46ece13b31ab67f60e97d03ad4d7e167af3725e20080530c8c54fdbb121e70994"></a><!-- doxytag: member="LT_CALIBRATION" ref="a46ece13b31ab67f60e97d03ad4d7e167af3725e20080530c8c54fdbb121e70994" args="" -->LT_CALIBRATION</em>&nbsp;</td><td>
-</td></tr>
-</table>
-</dd>
-</dl>
-
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00041">41</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -362,7 +338,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classi2d_1_1_i_calibration_provider.html#aeea8b083da9ca252354e63a35358ea4d">i2d::ICalibrationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00223">223</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00218">218</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -380,7 +356,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00197">197</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00192">192</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -452,7 +428,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_visual_calibration_info.html#a42f1182e79458c5c891ba4048c42f976">iview::IVisualCalibrationInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00209">209</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00204">204</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -476,7 +452,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a70be41d93d9f32f6400ee6134dcb1d71"></a><!-- doxytag: member="iview::CCalibratedViewBase::InsertLayer" ref="a70be41d93d9f32f6400ee6134dcb1d71" args="(iview::ILayer *layerPtr, int index=&#45;1, int layerType=LT_NONE)" -->
+<a class="anchor" id="a702cf85673858d5158a43e0ca9dc60a4"></a><!-- doxytag: member="iview::CCalibratedViewBase::InsertLayer" ref="a702cf85673858d5158a43e0ca9dc60a4" args="(iview::ILayer *layerPtr, int index=&#45;1, int layerType=ILayer::LT_NONE)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -496,7 +472,7 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>layerType</em> = <code>LT_NONE</code>&#160;</td>
+          <td class="paramname"><em>layerType</em> = <code>ILayer::LT_NONE</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -516,10 +492,10 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiview_1_1_i_shape_view.html#a360a05ad50af50cc48fdb916f8f5c6a5">iview::IShapeView::LayerType</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd>iview::IShapeView::LayerType </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>index of this layer. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_view_base.html#ac4e3f13355591a1eacd6155be785f115">iview::CViewBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_view_base.html#a1aaf426c1dc40cef8369d21eda4866b2">iview::CViewBase</a>.</p>
 
 </div>
 </div>
@@ -573,7 +549,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_visual_calibration_info.html#a73faf58d0f619d9008366ff2f1cb1e2c">iview::IVisualCalibrationInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00215">215</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00210">210</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -595,7 +571,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_visual_calibration_info.html#ab129065d54a5fcf87669df4b49ade657">iview::IVisualCalibrationInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00203">203</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00198">198</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -674,9 +650,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set calibration object for this view. </p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00151">151</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00146">146</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
-<p>References <a class="el" href="_i_shape_8h_source.html#l00032">iview::IShape::CF_CALIB</a>, <a class="el" href="classiview_1_1_c_none_calibration.html#a09b33d461102c9e4e646ccf5811e1cba">iview::CNoneCalibration::GetInstance()</a>, <a class="el" href="classiview_1_1_c_view_base.html#a91e22abac9079c8afe0ccbce5843a408">iview::CViewBase::InvalidateBackground()</a>, <a class="el" href="istd_8h_source.html#l00063">NULL</a>, and <a class="el" href="classiview_1_1_c_calibrated_view_base.html#a5034161e88f77b5397e954fdae0603e0">UpdateAllShapes()</a>.</p>
+<p>References <a class="el" href="_i_shape_8h_source.html#l00033">iview::IShape::CF_CALIB</a>, <a class="el" href="classiview_1_1_c_none_calibration.html#a09b33d461102c9e4e646ccf5811e1cba">iview::CNoneCalibration::GetInstance()</a>, <a class="el" href="classiview_1_1_c_view_base.html#a91e22abac9079c8afe0ccbce5843a408">iview::CViewBase::InvalidateBackground()</a>, <a class="el" href="istd_8h_source.html#l00063">NULL</a>, and <a class="el" href="classiview_1_1_c_calibrated_view_base.html#a5034161e88f77b5397e954fdae0603e0">UpdateAllShapes()</a>.</p>
 
 </div>
 </div>
@@ -750,9 +726,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set if grid should be shown in milimeter. </p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00188">188</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00183">183</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
-<p>References <a class="el" href="_c_view_base_8h_source.html#l00539">iview::CViewBase::SetBackgroundBufferValid()</a>.</p>
+<p>References <a class="el" href="_c_view_base_8h_source.html#l00534">iview::CViewBase::SetBackgroundBufferValid()</a>.</p>
 
 </div>
 </div>
@@ -773,7 +749,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set grid visibility state. </p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00168">168</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00163">163</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 <p>References <a class="el" href="classiview_1_1_c_view_base.html#a91e22abac9079c8afe0ccbce5843a408">iview::CViewBase::InvalidateBackground()</a>.</p>
 
@@ -797,9 +773,9 @@ Protected Member Functions</h2></td></tr>
 <p>Set minimal grid size. </p>
 <p>It determines minimal distance between grid lines. </p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00177">177</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00172">172</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
-<p>References <a class="el" href="_c_view_base_8h_source.html#l00539">iview::CViewBase::SetBackgroundBufferValid()</a>.</p>
+<p>References <a class="el" href="_c_view_base_8h_source.html#l00534">iview::CViewBase::SetBackgroundBufferValid()</a>.</p>
 
 </div>
 </div>
@@ -822,7 +798,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_view_base.html#a3e50d7b720c7c76840a5247ed82e2d38">iview::CViewBase</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_calibrated_view_base_8h_source.html#l00151">SetCalibrationPtr()</a>.</p>
+<p>Referenced by <a class="el" href="_c_calibrated_view_base_8h_source.html#l00146">SetCalibrationPtr()</a>.</p>
 
 </div>
 </div>

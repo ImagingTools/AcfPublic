@@ -60,11 +60,6 @@ public:
 	typedef iview::CViewBase BaseClass;
 	typedef QWidget BaseClass2;
 
-	enum LayerType2
-	{
-		LT_CALIBRATION = 0x100
-	};
-
 	CCalibratedViewBase(QWidget* parentWidgetPtr = NULL);
 
 	/**
@@ -128,7 +123,7 @@ public:
 	virtual void InsertDefaultLayers();
 
 	// reimplemented (iview::IShapeView)
-	virtual int InsertLayer(iview::ILayer* layerPtr, int index = -1, int layerType = LT_NONE);
+	virtual int InsertLayer(iview::ILayer* layerPtr, int index = -1, int layerType = ILayer::LT_NONE);
 	virtual void RemoveLayer(int index);
 
 	// reimplemented (iview::IVisualCalibrationInfo)

@@ -30,7 +30,7 @@
 // ACF includes
 #include "istd/TPointerVector.h"
 
-#include "iview/IShape.h"
+#include "iview/CShapeBase.h"
 
 #include "iqt2d/IViewProvider.h"
 #include "iqt2d/IViewExtender.h"
@@ -99,11 +99,13 @@ void TSceneExtenderCompBase<Base>::AddItemsToScene(IViewProvider* providerPtr, i
 			iview::IShape* shapePtr = shapes.GetAt(i);
 			if (shapePtr != NULL){
 				if (isBackground){
-					viewPtr->ConnectInactiveShape(shapePtr);
+					iview::CShapeBase* shapeImplPtr = dynamic_cast<iview::CShapeBase*>(shapePtr);
+					if (shapeImplPtr != NULL){
+						shapeImplPtr->AssignToLayer(iview::ILayer::LT_INACTIVE);
+					}
 				}
-				else{
-					viewPtr->ConnectShape(shapePtr);
-				}
+
+				viewPtr->ConnectShape(shapePtr);
 			}
 		}
 	}
