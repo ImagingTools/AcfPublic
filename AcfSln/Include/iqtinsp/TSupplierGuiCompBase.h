@@ -94,7 +94,7 @@ protected:
 	/**
 		Do inspection test.
 	*/
-	bool DoTest();
+	virtual bool DoTest();
 
 	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void OnGuiModelAttached();

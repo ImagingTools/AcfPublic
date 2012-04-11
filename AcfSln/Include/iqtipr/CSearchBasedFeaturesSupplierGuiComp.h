@@ -45,7 +45,8 @@ namespace iqtipr
 {
 
 
-class CSearchBasedFeaturesSupplierGuiComp: public iqtinsp::TSupplierGuiCompBase<Ui::CSearchBasedFeaturesSupplierGuiComp>
+class CSearchBasedFeaturesSupplierGuiComp: 
+			public iqtinsp::TSupplierGuiCompBase<Ui::CSearchBasedFeaturesSupplierGuiComp>
 {
 	Q_OBJECT
 
@@ -90,6 +91,7 @@ protected:
 	};
 
 	// reimplemented (iqtinsp::TSupplierGuiCompBase)
+	virtual bool DoTest();
 	virtual QWidget* GetParamsWidget() const;
 
 	// reimplemented (iqt2d::IViewExtender)
